@@ -14,13 +14,6 @@ body {
     padding: 0;
     margin: 0;
 }
-
-/* Add padding in fullscreen mode */
-html:fullscreen body,
-html:-webkit-full-screen body,
-html:-moz-full-screen body {
-    padding: 20px;
-}
 .header {
     margin-bottom: 5px;
     padding-bottom: 10px;
@@ -147,6 +140,16 @@ svg { width: 100%; height: 100%; background: #ffffff; }
     transform: translateY(-1px);
 }
 
+/* Fullscreen mode padding */
+.fullscreen-container {
+    padding: 0;
+}
+
+body.is-fullscreen .fullscreen-container {
+    padding: 30px;
+    box-sizing: border-box;
+}
+
 .loading {
     text-align: center;
     padding: 40px;
@@ -156,6 +159,8 @@ svg { width: 100%; height: 100%; background: #ffffff; }
 </style>
 </head>
 <body>
+
+<div class="fullscreen-container">
 
 <!-- Fullscreen button -->
 <button class="fullscreen-btn" id="fullscreen-toggle">
@@ -181,6 +186,8 @@ svg { width: 100%; height: 100%; background: #ffffff; }
 <div class="legend-bar"></div>
 <span class="legend-value" id="range">—</span>
 </div>
+
+</div><!-- end fullscreen-container -->
 <script>
 let data = {};
 const info = {
@@ -349,10 +356,20 @@ function initMap() {
 document.getElementById('fullscreen-toggle').addEventListener('click', function() {
 	if (!document.fullscreenElement) {
 		document.documentElement.requestFullscreen();
+		document.body.classList.add('is-fullscreen');
 		this.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/></svg>';
 	} else {
 		document.exitFullscreen();
+		document.body.classList.remove('is-fullscreen');
 		this.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>';
+	}
+});
+
+// Also handle ESC key to exit fullscreen
+document.addEventListener('fullscreenchange', function() {
+	if (!document.fullscreenElement) {
+		document.body.classList.remove('is-fullscreen');
+		document.getElementById('fullscreen-toggle').innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>';
 	}
 });
 </script>
