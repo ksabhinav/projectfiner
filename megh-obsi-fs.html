@@ -183,7 +183,7 @@ return m[n]||n;
 }
 
 // Load data from CSV
-fetch('data.csv')
+fetch('data.csv?v=' + new Date().getTime())
   .then(response => {
     if (!response.ok) {
       throw new Error('Could not load data.csv - make sure it is in the same folder as this HTML file');
