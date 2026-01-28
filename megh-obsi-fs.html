@@ -7,6 +7,22 @@
 html {
     background: #ffffff;
 }
+
+/* Add padding when in fullscreen mode */
+html:fullscreen {
+    padding: 30px !important;
+    box-sizing: border-box !important;
+}
+
+html:-webkit-full-screen {
+    padding: 30px !important;
+    box-sizing: border-box !important;
+}
+
+html:-moz-full-screen {
+    padding: 30px !important;
+    box-sizing: border-box !important;
+}
 body { 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background: #ffffff;
@@ -140,12 +156,6 @@ svg { width: 100%; height: 100%; background: #ffffff; }
     transform: translateY(-1px);
 }
 
-.fullscreen-container {
-    width: 100%;
-    height: 100%;
-    transition: padding 0.2s ease;
-}
-
 .loading {
     text-align: center;
     padding: 40px;
@@ -155,8 +165,6 @@ svg { width: 100%; height: 100%; background: #ffffff; }
 </style>
 </head>
 <body>
-
-<div class="fullscreen-container">
 
 <!-- Fullscreen button -->
 <button class="fullscreen-btn" id="fullscreen-toggle">
@@ -182,8 +190,6 @@ svg { width: 100%; height: 100%; background: #ffffff; }
 <div class="legend-bar"></div>
 <span class="legend-value" id="range">—</span>
 </div>
-
-</div><!-- end fullscreen-container -->
 <script>
 let data = {};
 const info = {
@@ -350,24 +356,18 @@ function initMap() {
 
 // Fullscreen button functionality
 document.getElementById('fullscreen-toggle').addEventListener('click', function() {
-	const container = document.querySelector('.fullscreen-container');
 	if (!document.fullscreenElement) {
 		document.documentElement.requestFullscreen();
-		container.style.padding = '30px';
-		container.style.boxSizing = 'border-box';
 		this.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/></svg>';
 	} else {
 		document.exitFullscreen();
-		container.style.padding = '0';
 		this.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>';
 	}
 });
 
-// Also handle ESC key to exit fullscreen
+// Handle ESC key exit
 document.addEventListener('fullscreenchange', function() {
-	const container = document.querySelector('.fullscreen-container');
 	if (!document.fullscreenElement) {
-		container.style.padding = '0';
 		document.getElementById('fullscreen-toggle').innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>';
 	}
 });
