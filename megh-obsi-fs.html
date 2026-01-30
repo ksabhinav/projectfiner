@@ -248,8 +248,14 @@ fetch('data.csv?v=' + new Date().getTime())
     initMap();
   })
   .catch(error => {
-    console.error('Error loading data:', error);
-    document.querySelector('.loading').textContent = 'Error: Could not load data.csv. Make sure data.csv is in the same folder as this HTML file.';
+    console.error('Full error details:', error);
+    console.error('Error message:', error.message);
+    console.error('Error stack:', error.stack);
+    const loading = document.querySelector('.loading');
+    if (loading) {
+      loading.innerHTML = '<h2 style="color:red">Error: ' + error.message + '</h2><p>Check console (F12) for details</p>';
+    }
+    alert('Error: ' + error.message + '\n\nCheck that data.csv is in the same folder!');
   });
 
 function initMap() {
