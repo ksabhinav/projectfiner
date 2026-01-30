@@ -222,7 +222,7 @@ const m={
 }
 
 // Load data from CSV (with cache busting)
-fetch('data.csv?v=' + new Date().getTime())
+fetch('https://ksabhinav.github.io/projectfiner/data.csv?v=' + new Date().getTime())
   .then(response => {
     if (!response.ok) {
       throw new Error('Could not load data.csv - make sure it is in the same folder as this HTML file');
@@ -232,6 +232,8 @@ fetch('data.csv?v=' + new Date().getTime())
   .then(csv => {
     const lines = csv.trim().split('\n');
     const headers = lines[0].split(',');
+    
+    console.log('CSV Headers:', headers);
     
     // Parse CSV data
     for(let i = 1; i < lines.length; i++) {
@@ -245,6 +247,13 @@ fetch('data.csv?v=' + new Date().getTime())
     }
     
     console.log('Data loaded successfully:', data);
+    console.log('Number of districts loaded:', Object.keys(data).length);
+    
+    // Verify we have data before initializing
+    if(Object.keys(data).length === 0) {
+      throw new Error('No data was loaded from CSV');
+    }
+    
     initMap();
   })
   .catch(error => {
@@ -347,6 +356,14 @@ function initMap() {
 
   function update(){
     const vals=Object.values(data).map(d=>d[metric]).filter(v=>v>0);
+    
+    // Handle case where no valid values exist
+    if(vals.length === 0) {
+      console.error('No valid values found for metric:', metric);
+      document.getElementById('range').textContent='No data';
+      return;
+    }
+    
     const min=Math.min(...vals),max=Math.max(...vals);
     document.getElementById('title').textContent=info[metric].label;
     document.getElementById('desc').textContent=info[metric].desc;
