@@ -72,7 +72,7 @@ h1 {
 }
 #map {
     width: 100%;
-    height: 700px;
+    height: 750px;
     background: #ffffff;
     border: none;
     box-shadow: none;
@@ -182,7 +182,7 @@ svg { width: 100%; height: 100%; background: #ffffff; }
 </div>
 <div id="map">
 <div class="loading">Loading data...</div>
-<svg id="svg" viewBox="0 0 1000 750"></svg>
+<svg id="svg" viewBox="0 0 1000 850"></svg>
 <div class="tooltip" id="tooltip"></div>
 </div>
 
@@ -313,7 +313,7 @@ function initMap() {
       });
     }
     geoData.features.forEach(f=>scan(f.geometry.coordinates));
-    const w=1000,h=750,p=40;
+    const w=1000,h=850,p=25;
     const s=Math.min((w-2*p)/(maxX-minX),(h-2*p)/(maxY-minY));
     const geoW=(maxX-minX)*s;
     const geoH=(maxY-minY)*s;
