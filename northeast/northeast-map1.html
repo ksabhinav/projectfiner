@@ -425,11 +425,16 @@ function initMap() {
     p.setAttribute('d',path(f.geometry.coordinates,proj));
     p.setAttribute('data-state',stateName);
     
-    // Click handler - navigate to state page
+    // Click handler - navigate to state page in same window
     p.onclick = function() {
       const url = stateUrls[stateName];
       if(url) {
-        window.location.href = url;
+        // If embedded in iframe, navigate parent window, otherwise navigate current window
+        if(window.top !== window.self) {
+          window.top.location.href = url;
+        } else {
+          window.location.href = url;
+        }
       }
     };
     
