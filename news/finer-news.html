@@ -202,4 +202,55 @@ function renderNews(data){
         const date = formatDate(item.date);
 
         return `
-        <article clas
+        <article class="finer-news-item">
+
+            <div class="finer-news-meta">
+                <span class="finer-news-category">
+                    ${item.category ?? ""}
+                </span>
+                <span>${date}</span>
+            </div>
+
+            <h3 class="finer-news-headline">
+                <a href="${item.url}" target="_blank" rel="noopener">
+                    ${item.title}
+                </a>
+            </h3>
+
+            ${item.source ? `<div class="finer-news-source">${item.source}</div>`:''}
+
+        </article>
+        `;
+    }).join("");
+
+    container.innerHTML = html;
+}
+
+
+function formatDate(dateString){
+
+    if(!dateString) return "";
+
+    const date = new Date(dateString);
+
+    if(isNaN(date)) return "";
+
+    return date.toLocaleDateString("en-GB",{
+        day:"numeric",
+        month:"short"
+    });
+}
+
+
+/* INIT */
+
+if(!loadFromCache()){
+    loadNews();
+}else{
+    setTimeout(loadNews, 2000);
+}
+
+setInterval(loadNews, CACHE_TIME);
+
+})();
+</script>
