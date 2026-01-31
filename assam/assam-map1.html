@@ -313,9 +313,13 @@ function initMap() {
       });
     }
     geoData.features.forEach(f=>scan(f.geometry.coordinates));
-    const w=1000,h=600,p=50;
+    const w=1000,h=600,p=30;
     const s=Math.min((w-2*p)/(maxX-minX),(h-2*p)/(maxY-minY));
-    return(lon,lat)=>[(lon-minX)*s+p,(maxY-lat)*s+p];
+    const geoW=(maxX-minX)*s;
+    const geoH=(maxY-minY)*s;
+    const offsetX=(w-geoW)/2;
+    const offsetY=(h-geoH)/2;
+    return(lon,lat)=>[(lon-minX)*s+offsetX,(maxY-lat)*s+offsetY];
   }
 
   function path(coords,proj){
