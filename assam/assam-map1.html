@@ -302,25 +302,52 @@ function initMap() {
     return`rgb(${Math.round(c1[0]+(c2[0]-c1[0])*lr)},${Math.round(c1[1]+(c2[1]-c1[1])*lr)},${Math.round(c1[2]+(c2[2]-c1[2])*lr)})`;
   }
 
-  function project(coords){
+ function project(){
+
     let minX=Infinity,maxX=-Infinity,minY=Infinity,maxY=-Infinity;
+
     function scan(a){
-      a.forEach(i=>{
-        if(typeof i[0]==='number'){
-          minX=Math.min(minX,i[0]);maxX=Math.max(maxX,i[0]);
-          minY=Math.min(minY,i[1]);maxY=Math.max(maxY,i[1]);
-        }else scan(i);
-      });
+        a.forEach(i=>{
+            if(typeof i[0]==='number'){
+                minX=Math.min(minX,i[0]);
+                maxX=Math.max(maxX,i[0]);
+                minY=Math.min(minY,i[1]);
+                maxY=Math.max(maxY,i[1]);
+            }else scan(i);
+        });
     }
+
     geoData.features.forEach(f=>scan(f.geometry.coordinates));
-    const w=1000,h=850,p=25;
-    const s=Math.min((w-2*p)/(maxX-minX),(h-2*p)/(maxY-minY));
-    const geoW=(maxX-minX)*s;
-    const geoH=(maxY-minY)*s;
-    const offsetX=(w-geoW)/2;
-    const offsetY=(h-geoH)/2;
-    return(lon,lat)=>[(lon-minX)*s+offsetX,(maxY-lat)*s+offsetY];
-  }
+
+    // 🔥 KEY PART — compute ratio
+    const geoWidth = maxX - minX;
+    const geoHeight = maxY - minY;
+    const ratio = geoWidth / geoHeight;
+
+    // Choose ONE base dimension
+    const h = 850;
+    const w = h * ratio;
+
+    const padding = 5;
+
+    // Update SVG dynamically
+    const svg = document.getElementById('svg');
+    svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
+
+    const scale = Math.min(
+        (w - 2*padding) / geoWidth,
+        (h - 2*padding) / geoHeight
+    );
+
+    const offsetX = (w - geoWidth * scale) / 2;
+    const offsetY = (h - geoHeight * scale) / 2;
+
+    return (lon,lat)=>[
+        (lon-minX)*scale + offsetX,
+        (maxY-lat)*scale + offsetY
+    ];
+}
+
 
   function path(coords,proj){
     let d='';
