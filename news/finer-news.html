@@ -1,256 +1,90 @@
 <style>
 
-.finer-news-container{
-    font-family: var(--font-text);
-    max-width: 440px;
+.finer-news-container {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    max-height: 600px;
+    overflow-y: auto;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 /* Header */
 
-.finer-news-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    margin-bottom:1.6rem;
+.finer-news-header h2 {
+    margin: 0 0 1.2rem 0;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #6f6f6f;
+    background: none;
+    padding: 0;
 }
 
-.finer-news-title-main{
-    font-size:.85rem;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    color:#6b6b6b;
+/* Cards → now editorial rows */
+
+.finer-news-item {
+    background: transparent;
+    padding: .85rem 0;
+    border-radius: 0;
+    border-left: none;
+    border-bottom: 1px solid #e9e9e9;
+    margin-bottom: 0;
+    transition: none;
 }
 
-/* Items */
-
-.finer-news-item{
-    padding:1rem 0;
-    border-bottom:0.5px solid #ececec;
+.finer-news-item:hover {
+    transform: none;
 }
 
-.finer-news-item:last-child{
-    border-bottom:none;
+/* Meta */
+
+.finer-news-date {
+    font-size: .72rem;
+    color: #8a8a8a;
+    font-weight: 400;
 }
 
-/* Top row: category + date */
-
-.finer-news-meta{
-    display:flex;
-    justify-content:space-between;
-    font-size:.72rem;
-    color:#8c8c8c;
-    margin-bottom:.35rem;
-}
-
-/* Category */
-
-.finer-news-category{
-    letter-spacing:.04em;
+.finer-news-category {
+    font-size: .72rem;
+    background: none;
+    color: #8a8a8a;
+    padding: 0;
+    border-radius: 0;
+    margin-left: .4rem;
+    font-weight: 400;
 }
 
 /* Title */
 
-.finer-news-headline{
-    font-size:1rem;
-    line-height:1.5;
-    margin:0;
-    font-weight:500;
+.finer-news-title a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 1.45;
 }
 
-.finer-news-headline a{
-    text-decoration:none;
-    color:#222;
-}
-
-.finer-news-headline a:hover{
-    text-decoration:underline;
+.finer-news-title a:hover {
+    text-decoration: underline;
+    color: #222;
 }
 
 /* Source */
 
-.finer-news-source{
-    margin-top:.25rem;
-    font-size:.75rem;
-    color:#9a9a9a;
+.finer-news-source {
+    font-size: .75rem;
+    color: #9a9a9a;
+    font-style: normal;
 }
 
 /* States */
 
 .finer-news-loading,
-.finer-news-empty{
+.finer-news-empty {
+    text-align:left;
     color:#8a8a8a;
-    font-size:.9rem;
+    padding:.5rem 0;
 }
 
 </style>
-
-
-
-<div class="finer-news-container">
-
-    <div class="finer-news-header">
-        <div class="finer-news-title-main">
-            Financial Inclusion — News
-        </div>
-    </div>
-
-    <div id="finer-news-content" class="finer-news-loading">
-        Loading latest news…
-    </div>
-
-</div>
-
-
-
-<script>
-(function(){
-
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzzD3DGWjt8ttHoWnQSa9X0CnhLcLhN7ovf_BSCDHj6rywlOQY-CBIaz5hqN5zPcgp13w/exec";
-
-const CACHE_KEY = "finer_news_cache";
-const CACHE_TIME = 15 * 60 * 1000;
-
-
-/* CACHE */
-
-function loadFromCache(){
-
-    const cached = localStorage.getItem(CACHE_KEY);
-
-    if(!cached) return false;
-
-    const parsed = JSON.parse(cached);
-
-    if(Date.now() - parsed.timestamp > CACHE_TIME){
-        return false;
-    }
-
-    renderNews(parsed.data);
-    return true;
-}
-
-
-/* FETCH */
-
-async function fetchWithTimeout(url, timeout = 6000){
-
-    const controller = new AbortController();
-
-    const id = setTimeout(()=>controller.abort(), timeout);
-
-    const response = await fetch(url,{
-        signal: controller.signal,
-        cache:"no-store"
-    });
-
-    clearTimeout(id);
-
-    if(!response.ok){
-        throw new Error(`HTTP ${response.status}`);
-    }
-
-    return response.json();
-}
-
-
-async function loadNews(){
-
-    const container = document.getElementById("finer-news-content");
-
-    try{
-
-        const data = await fetchWithTimeout(WEB_APP_URL);
-
-        localStorage.setItem(CACHE_KEY, JSON.stringify({
-            timestamp: Date.now(),
-            data: data
-        }));
-
-        renderNews(data);
-
-    }catch(err){
-
-        console.error(err);
-
-        if(!loadFromCache()){
-            container.innerHTML = `
-                <div class="finer-news-empty">
-                    Unable to load news right now.
-                </div>
-            `;
-        }
-    }
-}
-
-
-/* RENDER */
-
-function renderNews(data){
-
-    const container = document.getElementById("finer-news-content");
-
-    if(!data.news || data.news.length === 0){
-        container.innerHTML = `
-            <div class="finer-news-empty">
-                No approved news items yet.
-            </div>`;
-        return;
-    }
-
-    const html = data.news.map(item=>{
-
-        const date = formatDate(item.date);
-
-        return `
-        <article class="finer-news-item">
-
-            <div class="finer-news-meta">
-                <span class="finer-news-category">
-                    ${item.category ?? ""}
-                </span>
-                <span>${date}</span>
-            </div>
-
-            <h3 class="finer-news-headline">
-                <a href="${item.url}" target="_blank" rel="noopener">
-                    ${item.title}
-                </a>
-            </h3>
-
-            ${item.source ? `<div class="finer-news-source">${item.source}</div>`:''}
-
-        </article>
-        `;
-    }).join("");
-
-    container.innerHTML = html;
-}
-
-
-function formatDate(dateString){
-
-    if(!dateString) return "";
-
-    const date = new Date(dateString);
-
-    if(isNaN(date)) return "";
-
-    return date.toLocaleDateString("en-GB",{
-        day:"numeric",
-        month:"short"
-    });
-}
-
-
-/* INIT */
-
-if(!loadFromCache()){
-    loadNews();
-}else{
-    setTimeout(loadNews, 2000);
-}
-
-setInterval(loadNews, CACHE_TIME);
-
-})();
-</script>
