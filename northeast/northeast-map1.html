@@ -187,31 +187,13 @@ svg {
 }
 .legend-bar {
     flex: 1;
-    height: 20px;
-    position: relative;
-    border: 2px solid #2b2b2b;
+    height: 16px;
+    background: linear-gradient(to right, #f8f8f8, #ffd6ba, #ffab91, #e07c3e, #d97028, #c05a1e);
+    border: none;
 }
 .legend-value {
     font-weight: 600;
     font-size: 16px;
-}
-.legend-center-line {
-    position: absolute;
-    width: 3px;
-    height: 28px;
-    background: #2b2b2b;
-    left: 50%;
-    top: -4px;
-    transform: translateX(-50%);
-}
-.legend-center-label {
-    position: absolute;
-    font-size: 11px;
-    font-weight: 600;
-    top: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
 }
 
 .fullscreen-btn {
@@ -263,10 +245,7 @@ svg {
 </div>
 
 <div class="legend">
-<div class="legend-bar" id="legend-bar">
-    <div class="legend-center-line"></div>
-    <div class="legend-center-label" id="center-label"></div>
-</div>
+<div class="legend-bar"></div>
 <span class="legend-value" id="range"></span>
 </div>
 
@@ -353,38 +332,15 @@ function initMap() {
     controls.appendChild(btn);
   });
   
-  // Diverging color scale: red (below avg) -> white (at avg) -> green (above avg)
-  function colorDiverging(value, center, min, max){
-    if(value == null || value === undefined) return '#f8f8f8';
-    
-    let colors, position;
-    if(value < center){
-      // Below average: dark red -> light red -> white
-      colors = [
-        [178, 34, 34],   // Dark red (firebrick)
-        [220, 20, 60],   // Crimson
-        [255, 99, 71],   // Tomato
-        [255, 160, 122], // Light salmon
-        [255, 228, 225]  // Misty rose (almost white)
-      ];
-      position = (value - min) / (center - min);
-    } else {
-      // Above average: white -> light green -> dark green
-      colors = [
-        [240, 255, 240], // Honeydew (almost white)
-        [144, 238, 144], // Light green
-        [60, 179, 113],  // Medium sea green
-        [46, 139, 87],   // Sea green
-        [34, 139, 34]    // Forest green
-      ];
-      position = (value - center) / (max - center);
-    }
-    
-    const i = Math.min(Math.floor(position * (colors.length - 1)), colors.length - 2);
-    const localPos = (position * (colors.length - 1)) - i;
-    const c1 = colors[i], c2 = colors[i + 1];
-    
-    return `rgb(${Math.round(c1[0]+(c2[0]-c1[0])*localPos)},${Math.round(c1[1]+(c2[1]-c1[1])*localPos)},${Math.round(c1[2]+(c2[2]-c1[2])*localPos)})`;
+  // Original orange color scheme
+  function color(v, min, max){
+    if(v == null || v === undefined) return '#f8f8f8';
+    const r = (v - min) / (max - min);
+    const c = [[248,248,248],[255,214,186],[255,171,145],[224,124,62],[217,112,40],[192,90,30]];
+    const i = Math.min(Math.floor(r * (c.length - 1)), c.length - 2);
+    const lr = (r * (c.length - 1)) - i;
+    const c1 = c[i], c2 = c[i + 1];
+    return`rgb(${Math.round(c1[0]+(c2[0]-c1[0])*lr)},${Math.round(c1[1]+(c2[1]-c1[1])*lr)},${Math.round(c1[2]+(c2[2]-c1[2])*lr)})`;
   }
 
   function project(){
@@ -483,37 +439,20 @@ function initMap() {
 
   function update(){
     const currentMetric = info[metric];
-    const natAvg = currentMetric.nationalAvg;
     
-    // Get actual data range
+    // Use actual data range (min-max of actual values)
     const vals = Object.values(data).map(d=>d[metric]).filter(v=>v!=null);
-    const dataMin = Math.min(...vals);
-    const dataMax = Math.max(...vals);
-    
-    // Extend range slightly beyond actual data for better visualization
-    const range = dataMax - dataMin;
-    const min = Math.max(0, dataMin - range * 0.1);
-    const max = Math.min(100, dataMax + range * 0.1);
+    const min = Math.min(...vals);
+    const max = Math.max(...vals);
     
     document.getElementById('title').textContent = currentMetric.label;
     document.getElementById('desc').textContent = currentMetric.desc;
-    document.getElementById('range').textContent = `${min.toFixed(0)}%–${max.toFixed(0)}%`;
-    document.getElementById('center-label').textContent = `India: ${natAvg}%`;
-    
-    // Update legend gradient
-    const legendBar = document.getElementById('legend-bar');
-    const redToWhite = 'linear-gradient(to right, rgb(178,34,34), rgb(220,20,60), rgb(255,99,71), rgb(255,160,122), rgb(255,228,225))';
-    const whiteToGreen = 'linear-gradient(to right, rgb(240,255,240), rgb(144,238,144), rgb(60,179,113), rgb(46,139,87), rgb(34,139,34))';
-    legendBar.style.background = `linear-gradient(to right, 
-      rgb(178,34,34) 0%, 
-      rgb(255,228,225) 50%, 
-      rgb(240,255,240) 50%, 
-      rgb(34,139,34) 100%)`;
+    document.getElementById('range').textContent = `${min.toFixed(1)}%–${max.toFixed(1)}%`;
     
     document.querySelectorAll('.state').forEach(p=>{
       const state=p.getAttribute('data-state');
       const d=data[state];
-      p.style.fill=d?colorDiverging(d[metric], natAvg, min, max):'#f8f8f8';
+      p.style.fill=d?color(d[metric], min, max):'#f8f8f8';
     });
   }
 
