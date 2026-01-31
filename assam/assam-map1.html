@@ -36,6 +36,44 @@ html:-moz-full-screen body {
     padding: 50px !important;
     box-sizing: border-box !important;
 }
+
+/* Make map fill screen in fullscreen */
+html:fullscreen #map {
+    flex: 1;
+    min-height: 0;
+    height: auto !important;
+}
+
+html:-webkit-full-screen #map {
+    flex: 1;
+    min-height: 0;
+    height: auto !important;
+}
+
+html:-moz-full-screen #map {
+    flex: 1;
+    min-height: 0;
+    height: auto !important;
+}
+
+body.is-fullscreen #map {
+    flex: 1;
+    min-height: 0;
+    height: auto !important;
+}
+
+body.is-fullscreen .label {
+    font-size: 11px !important;
+}
+
+body.is-fullscreen .header h1 {
+    font-size: 1.8rem;
+}
+
+body.is-fullscreen .btn {
+    font-size: 15px;
+    padding: 12px 20px;
+}
 .header {
     margin-bottom: 5px;
     padding-bottom: 10px;
@@ -435,9 +473,11 @@ function initMap() {
 document.getElementById('fullscreen-toggle').addEventListener('click', function() {
 	if (!document.fullscreenElement) {
 		document.documentElement.requestFullscreen();
+		document.body.classList.add('is-fullscreen');
 		this.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/></svg>';
 	} else {
 		document.exitFullscreen();
+		document.body.classList.remove('is-fullscreen');
 		this.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>';
 	}
 });
@@ -446,29 +486,11 @@ document.getElementById('fullscreen-toggle').addEventListener('click', function(
 document.addEventListener('fullscreenchange', function() {
 	const isFullscreen = !!document.fullscreenElement;
 	if (!isFullscreen) {
+		document.body.classList.remove('is-fullscreen');
 		document.getElementById('fullscreen-toggle').innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>';
+	} else {
+		document.body.classList.add('is-fullscreen');
 	}
-	
-	// Scale labels based on fullscreen state
-	const scale = isFullscreen ? 1.5 : 1;
-	document.querySelectorAll('.label').forEach(label => {
-		const baseFontSize = 7.5;
-		label.style.fontSize = (baseFontSize * scale) + 'px';
-	});
-});
-
-// Also handle window resize
-let resizeTimeout;
-window.addEventListener('resize', function() {
-	clearTimeout(resizeTimeout);
-	resizeTimeout = setTimeout(function() {
-		const isFullscreen = !!document.fullscreenElement;
-		const scale = isFullscreen ? 1.5 : 1;
-		document.querySelectorAll('.label').forEach(label => {
-			const baseFontSize = 7.5;
-			label.style.fontSize = (baseFontSize * scale) + 'px';
-		});
-	}, 250);
 });
 
 // Labels toggle functionality
