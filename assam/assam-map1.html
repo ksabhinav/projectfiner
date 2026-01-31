@@ -85,7 +85,11 @@ h1 {
     box-shadow: none;
     position: relative;
 }
-svg { width: 100%; height: 100%; background: #ffffff; }
+svg { 
+    width: 100%; 
+    height: 100%; 
+    background: #ffffff;
+}
 .district { 
     stroke: #fff;
     stroke-width: 2;
@@ -97,14 +101,14 @@ svg { width: 100%; height: 100%; background: #ffffff; }
     stroke-width: 3;
 }
 .label {
-    font-size: 9px;
+    font-size: 7.5px;
     font-weight: 600;
     pointer-events: none;
     text-anchor: middle;
     fill: #2b2b2b;
     paint-order: stroke;
     stroke: #ffffff;
-    stroke-width: 2.5px;
+    stroke-width: 3px;
     stroke-linecap: round;
     stroke-linejoin: round;
 }
@@ -202,7 +206,7 @@ svg { width: 100%; height: 100%; background: #ffffff; }
 </div>
 <div id="map">
 <div class="loading">Loading data...</div>
-<svg id="svg" viewBox="0 0 1000 850"></svg>
+<svg id="svg" viewBox="0 0 1000 850" preserveAspectRatio="xMidYMid meet"></svg>
 <div class="tooltip" id="tooltip"></div>
 </div>
 
@@ -365,16 +369,6 @@ function initMap() {
     });
     return[x/n,y/n];
   }
-  
-  function polygonArea(coords,proj){
-    const ring=coords[0][0][0] instanceof Array?coords[0][0]:coords[0];
-    let area=0;
-    const pts=ring.map(c=>proj(c[0],c[1]));
-    for(let i=0;i<pts.length-1;i++){
-      area+=pts[i][0]*pts[i+1][1]-pts[i+1][0]*pts[i][1];
-    }
-    return Math.abs(area)/2;
-  }
 
   const svg=document.getElementById('svg');
   const proj=project();
@@ -397,28 +391,20 @@ function initMap() {
     p.onmouseleave=()=>tooltip.style.display='none';
     
     const[cx,cy]=centroid(f.geometry.coordinates,proj);
-    const area=polygonArea(f.geometry.coordinates,proj);
     const t=document.createElementNS('http://www.w3.org/2000/svg','text');
     t.setAttribute('class','label');
     t.setAttribute('x',cx);
     t.setAttribute('y',cy);
     
-    // Smart label display - show only for larger districts or use abbreviations
-    let displayName=name;
-    if(area<2000){
-      // Very small districts - hide label completely
-      t.style.display='none';
-    }else if(area<5000){
-      // Small districts - use abbreviations
-      displayName=name.replace('Kamrup Metro','K.M')
-                     .replace('Kamrup Rural','K.R')
+    // Use shortened names for better readability
+    const shortName=name.replace('Kamrup Metro','K.Metro')
+                     .replace('Kamrup Rural','K.Rural')
                      .replace('West Karbi Anglong','W.Karbi')
-                     .replace('South Salmara','S.Sal')
-                     .replace('Karbi Anglong','K.Ang')
-                     .replace('Dima Hasao','D.Has');
-    }
+                     .replace('South Salmara','S.Salmara')
+                     .replace('Karbi Anglong','K.Anglong')
+                     .replace('Dima Hasao','D.Hasao');
     
-    t.textContent=displayName;
+    t.textContent=shortName;
     svg.appendChild(p);
     svg.appendChild(t);
   });
@@ -458,9 +444,31 @@ document.getElementById('fullscreen-toggle').addEventListener('click', function(
 
 // Handle ESC key exit
 document.addEventListener('fullscreenchange', function() {
-	if (!document.fullscreenElement) {
+	const isFullscreen = !!document.fullscreenElement;
+	if (!isFullscreen) {
 		document.getElementById('fullscreen-toggle').innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>';
 	}
+	
+	// Scale labels based on fullscreen state
+	const scale = isFullscreen ? 1.5 : 1;
+	document.querySelectorAll('.label').forEach(label => {
+		const baseFontSize = 7.5;
+		label.style.fontSize = (baseFontSize * scale) + 'px';
+	});
+});
+
+// Also handle window resize
+let resizeTimeout;
+window.addEventListener('resize', function() {
+	clearTimeout(resizeTimeout);
+	resizeTimeout = setTimeout(function() {
+		const isFullscreen = !!document.fullscreenElement;
+		const scale = isFullscreen ? 1.5 : 1;
+		document.querySelectorAll('.label').forEach(label => {
+			const baseFontSize = 7.5;
+			label.style.fontSize = (baseFontSize * scale) + 'px';
+		});
+	}, 250);
 });
 
 // Labels toggle functionality
