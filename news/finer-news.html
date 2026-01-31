@@ -1,0 +1,246 @@
+<style>
+    .finer-news-container {
+        background: #FF6B5B;
+        padding: 2rem;
+        border-radius: 10px;
+        max-height: 600px;
+        overflow-y: auto;
+    }
+    
+    .finer-news-header h2 {
+        margin: 0 0 1.5rem 0;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: white;
+        letter-spacing: 1px;
+        background: black;
+        padding: 0.5rem 1rem;
+        display: inline-block;
+    }
+    
+    .finer-news-item {
+        background: rgba(255,255,255,0.96);
+        padding: 1.1rem;
+        border-radius: 6px;
+        border-left: 4px solid #333;
+        margin-bottom: 1rem;
+        transition: transform .15s ease;
+    }
+    
+    .finer-news-item:hover {
+        transform: translateX(3px);
+    }
+    
+    .finer-news-date {
+        font-size: .8rem;
+        color: #666;
+        font-weight: 500;
+    }
+    
+    .finer-news-category {
+        font-size: .7rem;
+        background: #FF6B5B;
+        color: white;
+        padding: .15rem .55rem;
+        border-radius: 10px;
+        margin-left: .6rem;
+        font-weight: 600;
+    }
+    
+    .finer-news-title a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    
+    .finer-news-title a:hover {
+        color: #FF6B5B;
+    }
+    
+    .finer-news-source {
+        font-size: .85rem;
+        color: #777;
+        font-style: italic;
+    }
+    
+    .finer-news-loading,
+    .finer-news-empty {
+        text-align:center;
+        color:white;
+        padding:2rem;
+    }
+    </style>
+    
+    
+    <div class="finer-news-container">
+        <div class="finer-news-header">
+            <h2>News</h2>
+        </div>
+    
+        <div id="finer-news-content" class="finer-news-loading">
+            Loading latest news...
+        </div>
+    </div>
+    
+    
+    <script>
+    (function(){
+    
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzzD3DGWjt8ttHoWnQSa9X0CnhLcLhN7ovf_BSCDHj6rywlOQY-CBIaz5hqN5zPcgp13w/exec";
+    
+    const CACHE_KEY = "finer_news_cache";
+    const CACHE_TIME = 15 * 60 * 1000; // 15 minutes
+    
+    
+    /* ---------------------------
+       FAST LOAD (from cache)
+    --------------------------- */
+    
+    function loadFromCache(){
+    
+        const cached = localStorage.getItem(CACHE_KEY);
+    
+        if(!cached) return false;
+    
+        const parsed = JSON.parse(cached);
+    
+        if(Date.now() - parsed.timestamp > CACHE_TIME){
+            return false;
+        }
+    
+        renderNews(parsed.data);
+        return true;
+    }
+    
+    
+    /* ---------------------------
+       NETWORK FETCH
+    --------------------------- */
+    
+    async function fetchWithTimeout(url, timeout = 6000){
+    
+        const controller = new AbortController();
+    
+        const id = setTimeout(()=>controller.abort(), timeout);
+    
+        const response = await fetch(url,{
+            signal: controller.signal,
+            cache:"no-store"
+        });
+    
+        clearTimeout(id);
+    
+        if(!response.ok){
+            throw new Error(`HTTP ${response.status}`);
+        }
+    
+        return response.json();
+    }
+    
+    
+    async function loadNews(){
+    
+        const container = document.getElementById("finer-news-content");
+    
+        try{
+    
+            const data = await fetchWithTimeout(WEB_APP_URL);
+    
+            localStorage.setItem(CACHE_KEY, JSON.stringify({
+                timestamp: Date.now(),
+                data: data
+            }));
+    
+            renderNews(data);
+    
+        }catch(err){
+    
+            console.error(err);
+    
+            if(!loadFromCache()){
+                container.innerHTML = `
+                    <div class="finer-news-empty">
+                        Unable to load news right now.
+                    </div>
+                `;
+            }
+        }
+    }
+    
+    
+    /* ---------------------------
+       RENDER
+    --------------------------- */
+    
+    function renderNews(data){
+    
+        const container = document.getElementById("finer-news-content");
+    
+        if(!data.news || data.news.length === 0){
+            container.innerHTML = `
+                <div class="finer-news-empty">
+                    No approved news items yet.
+                </div>`;
+            return;
+        }
+    
+        const html = data.news.map(item=>{
+    
+            const date = formatDate(item.date);
+    
+            return `
+            <article class="finer-news-item">
+    
+                <div>
+                    <span class="finer-news-date">${date}</span>
+                    ${item.category ? `<span class="finer-news-category">${item.category}</span>`:''}
+                </div>
+    
+                <h3 class="finer-news-title">
+                    <a href="${item.url}" target="_blank" rel="noopener">
+                        ${item.title}
+                    </a>
+                </h3>
+    
+                ${item.source ? `<div class="finer-news-source">${item.source}</div>`:''}
+    
+            </article>
+            `;
+        }).join("");
+    
+        container.innerHTML = html;
+    }
+    
+    
+    function formatDate(dateString){
+    
+        if(!dateString) return "Recent";
+    
+        const date = new Date(dateString);
+    
+        if(isNaN(date)) return "Recent";
+    
+        return date.toLocaleDateString("en-GB",{
+            day:"numeric",
+            month:"short",
+            year:"numeric"
+        });
+    }
+    
+    
+    /* ---------------------------
+       INIT
+    --------------------------- */
+    
+    if(!loadFromCache()){
+        loadNews();
+    }else{
+        // refresh silently
+        setTimeout(loadNews, 2000);
+    }
+    
+    setInterval(loadNews, CACHE_TIME);
+    
+    })();
+    </script>
+    
