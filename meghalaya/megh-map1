@@ -222,10 +222,10 @@ const m={
 }
 
 // Load data from CSV (with cache busting)
-fetch('data.csv?v=' + new Date().getTime())
+fetch('megh-data.csv?v=' + new Date().getTime())
   .then(response => {
     if (!response.ok) {
-      throw new Error('Could not load data.csv - make sure it is in the same folder as this HTML file');
+      throw new Error('Could not load megh-data.csv - make sure it is in the same folder as this HTML file');
     }
     return response.text();
   })
@@ -249,7 +249,7 @@ fetch('data.csv?v=' + new Date().getTime())
   })
   .catch(error => {
     console.error('Error loading data:', error);
-    document.querySelector('.loading').textContent = 'Error: Could not load data.csv. Make sure data.csv is in the same folder as this HTML file.';
+    document.querySelector('.loading').textContent = 'Error: Could not load megh-data.csv. Make sure megh-data.csv is in the same folder as this HTML file.';
   });
 
 function initMap() {
