@@ -1,68 +1,77 @@
 <style>
 
 .finer-news-container{
-    font-family: Georgia, "Times New Roman", serif;
-    max-width: 420px;
-    margin: 0;
+    font-family: var(--font-text);
+    max-width: 440px;
 }
 
 /* Header */
 
 .finer-news-header{
-    font-size: .95rem;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    color: #666;
-    margin-bottom: 1.2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    margin-bottom:1.6rem;
+}
+
+.finer-news-title-main{
+    font-size:.85rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:#6b6b6b;
 }
 
 /* Items */
 
 .finer-news-item{
-    padding: .9rem 0;
-    border-bottom: 1px solid #e6e6e6;
+    padding:1rem 0;
+    border-bottom:0.5px solid #ececec;
 }
 
 .finer-news-item:last-child{
-    border-bottom: none;
+    border-bottom:none;
 }
 
-/* Meta */
+/* Top row: category + date */
 
 .finer-news-meta{
-    font-size: .75rem;
-    color: #8a8a8a;
-    margin-bottom: .25rem;
+    display:flex;
+    justify-content:space-between;
+    font-size:.72rem;
+    color:#8c8c8c;
+    margin-bottom:.35rem;
 }
 
+/* Category */
+
 .finer-news-category{
-    margin-left: .4rem;
+    letter-spacing:.04em;
 }
 
 /* Title */
 
-.finer-news-title{
-    font-size: .98rem;
-    font-weight: 500;
-    margin: .1rem 0;
-    line-height: 1.45;
+.finer-news-headline{
+    font-size:1rem;
+    line-height:1.5;
+    margin:0;
+    font-weight:500;
 }
 
-.finer-news-title a{
-    color: #222;
-    text-decoration: none;
+.finer-news-headline a{
+    text-decoration:none;
+    color:#222;
 }
 
-.finer-news-title a:hover{
-    text-decoration: underline;
+.finer-news-headline a:hover{
+    text-decoration:underline;
 }
 
 /* Source */
 
 .finer-news-source{
-    font-size: .78rem;
-    color: #9a9a9a;
-    margin-top: .15rem;
+    margin-top:.25rem;
+    font-size:.75rem;
+    color:#9a9a9a;
 }
 
 /* States */
@@ -71,7 +80,6 @@
 .finer-news-empty{
     color:#8a8a8a;
     font-size:.9rem;
-    padding:.5rem 0;
 }
 
 </style>
@@ -81,7 +89,9 @@
 <div class="finer-news-container">
 
     <div class="finer-news-header">
-        Latest News
+        <div class="finer-news-title-main">
+            Financial Inclusion — News
+        </div>
     </div>
 
     <div id="finer-news-content" class="finer-news-loading">
@@ -192,54 +202,4 @@ function renderNews(data){
         const date = formatDate(item.date);
 
         return `
-        <article class="finer-news-item">
-
-            <div class="finer-news-meta">
-                ${date}
-                ${item.category ? `<span class="finer-news-category">• ${item.category}</span>`:''}
-            </div>
-
-            <div class="finer-news-title">
-                <a href="${item.url}" target="_blank" rel="noopener">
-                    ${item.title}
-                </a>
-            </div>
-
-            ${item.source ? `<div class="finer-news-source">${item.source}</div>`:''}
-
-        </article>
-        `;
-    }).join("");
-
-    container.innerHTML = html;
-}
-
-
-function formatDate(dateString){
-
-    if(!dateString) return "Recent";
-
-    const date = new Date(dateString);
-
-    if(isNaN(date)) return "Recent";
-
-    return date.toLocaleDateString("en-GB",{
-        day:"numeric",
-        month:"short",
-        year:"numeric"
-    });
-}
-
-
-/* INIT */
-
-if(!loadFromCache()){
-    loadNews();
-}else{
-    setTimeout(loadNews, 2000);
-}
-
-setInterval(loadNews, CACHE_TIME);
-
-})();
-</script>
+        <article clas
