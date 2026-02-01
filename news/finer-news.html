@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Northeast India Financial Inclusion News</title>
+    <title>FINER News</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:wght@400;500;600&family=Crimson+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
             --primary-orange: #e76f3c;
             --dark-orange: #c85a2b;
-            --cream: #faf8f5;
             --dark-text: #2a2421;
             --medium-text: #4a4642;
             --light-gray: #e8e5e0;
             --border-color: #d4cfc7;
-            --card-shadow: 0 2px 8px rgba(42, 36, 33, 0.1);
+            --card-shadow: 0 2px 8px rgba(42, 36, 33, 0.08);
         }
         
         * {
@@ -30,64 +29,44 @@
         
         body {
             font-family: 'Source Serif 4', Georgia, serif;
-            background: var(--cream);
+            background: transparent;
             color: var(--dark-text);
             line-height: 1.7;
-            padding: 1.5rem;
+            padding: 0.75rem 0.5rem;
             overflow-x: hidden;
         }
         
         .container {
-            max-width: 1400px;
+            max-width: 100%;
             margin: 0 auto;
         }
         
         .header {
-            text-align: center;
-            padding-bottom: 1.5rem;
-            margin-bottom: 2rem;
-            border-bottom: 2px solid var(--border-color);
-            position: relative;
-        }
-        
-        .header::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 2px;
-            background: var(--primary-orange);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 0.5rem 0.75rem;
+            margin-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
         }
         
         .masthead {
             font-family: 'Playfair Display', serif;
-            font-size: 1.75rem;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
             color: var(--dark-text);
         }
         
-        .tagline {
-            font-family: 'Crimson Text', serif;
-            font-style: italic;
-            font-size: 0.9rem;
-            color: var(--medium-text);
-            letter-spacing: 0.3px;
-        }
-        
         .last-updated {
-            margin-top: 0.75rem;
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             color: var(--medium-text);
-            font-family: 'Crimson Text', serif;
+            font-style: italic;
         }
         
         .carousel-wrapper {
             position: relative;
-            padding: 0 60px;
+            padding: 0 50px;
         }
         
         .carousel-container {
@@ -110,15 +89,15 @@
         
         .carousel-track {
             display: flex;
-            gap: 1.5rem;
-            padding: 1rem 0.5rem 1.5rem;
-            animation: fadeIn 0.6s ease-out;
+            gap: 1rem;
+            padding: 0.5rem 0.25rem 1rem;
+            animation: fadeIn 0.5s ease-out;
         }
         
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(10px);
             }
             to {
                 opacity: 1;
@@ -127,20 +106,20 @@
         }
         
         .news-card {
-            min-width: 350px;
-            max-width: 350px;
+            min-width: 320px;
+            max-width: 320px;
             background: white;
-            border-radius: 8px;
+            border-radius: 6px;
             box-shadow: var(--card-shadow);
             border: 1px solid var(--border-color);
-            padding: 1.75rem;
+            padding: 1.25rem;
             display: flex;
             flex-direction: column;
             transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
             overflow: hidden;
-            height: 320px;
+            height: 240px;
         }
         
         .news-card::before {
@@ -149,16 +128,16 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-orange), var(--dark-orange));
+            height: 3px;
+            background: var(--primary-orange);
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.3s ease;
         }
         
         .news-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(42, 36, 33, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(42, 36, 33, 0.12);
         }
         
         .news-card:hover::before {
@@ -167,21 +146,20 @@
         
         .news-category {
             display: inline-block;
-            font-family: 'Crimson Text', serif;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             text-transform: uppercase;
-            letter-spacing: 1.2px;
+            letter-spacing: 1px;
             color: var(--primary-orange);
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             font-weight: 600;
         }
         
         .news-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             font-weight: 700;
-            line-height: 1.35;
-            margin-bottom: 0.75rem;
+            line-height: 1.3;
+            margin-bottom: 0.5rem;
             color: var(--dark-text);
             flex-grow: 0;
             display: -webkit-box;
@@ -191,67 +169,65 @@
         }
         
         .news-meta {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--medium-text);
-            margin-bottom: 1rem;
-            font-style: italic;
-            padding-bottom: 1rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.75rem;
             border-bottom: 1px solid var(--light-gray);
         }
         
         .news-source {
             font-weight: 600;
             color: var(--dark-text);
-            font-style: normal;
         }
         
         .read-more {
             display: inline-flex;
             align-items: center;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
             color: var(--primary-orange);
             text-decoration: none;
             transition: all 0.2s ease;
-            gap: 0.5rem;
+            gap: 0.4rem;
             margin-top: auto;
         }
         
         .read-more:hover {
             color: var(--dark-orange);
-            gap: 0.75rem;
+            gap: 0.6rem;
         }
         
         .read-more::after {
             content: '→';
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
         
         .nav-button {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            width: 48px;
-            height: 48px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: white;
-            border: 2px solid var(--border-color);
+            border: 1px solid var(--border-color);
             color: var(--dark-text);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all 0.3s ease;
             z-index: 10;
-            box-shadow: var(--card-shadow);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
         
         .nav-button:hover {
             background: var(--primary-orange);
             border-color: var(--primary-orange);
             color: white;
-            transform: translateY(-50%) scale(1.1);
+            transform: translateY(-50%) scale(1.08);
         }
         
         .nav-button:active {
@@ -267,7 +243,7 @@
         }
         
         .nav-button:disabled {
-            opacity: 0.3;
+            opacity: 0.2;
             cursor: not-allowed;
             pointer-events: none;
         }
@@ -276,14 +252,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 0.5rem;
-            margin-top: 1.5rem;
+            gap: 0.4rem;
+            margin-top: 0.75rem;
             flex-wrap: wrap;
         }
         
         .indicator {
-            width: 8px;
-            height: 8px;
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
             background: var(--border-color);
             cursor: pointer;
@@ -292,8 +268,8 @@
         
         .indicator.active {
             background: var(--primary-orange);
-            width: 24px;
-            border-radius: 4px;
+            width: 20px;
+            border-radius: 3px;
         }
         
         .indicator:hover:not(.active) {
@@ -302,9 +278,10 @@
         
         .loading {
             text-align: center;
-            padding: 3rem 1rem;
+            padding: 2rem 1rem;
             color: var(--medium-text);
             font-style: italic;
+            font-size: 0.9rem;
         }
         
         .loading::after {
@@ -320,52 +297,28 @@
         
         .error {
             background: #fef2f2;
-            border-left: 4px solid #dc2626;
-            padding: 1rem 1.25rem;
-            margin: 2rem 0;
-            border-radius: 4px;
-            font-size: 0.9rem;
+            border-left: 3px solid #dc2626;
+            padding: 0.75rem 1rem;
+            margin: 1rem 0;
+            border-radius: 3px;
+            font-size: 0.85rem;
         }
         
         .error-title {
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
             color: #991b1b;
         }
         
         .no-news {
             text-align: center;
-            padding: 3rem 1rem;
+            padding: 2rem 1rem;
             color: var(--medium-text);
             font-style: italic;
+            font-size: 0.9rem;
         }
         
         @media (max-width: 768px) {
-            .carousel-wrapper {
-                padding: 0 40px;
-            }
-            
-            .news-card {
-                min-width: 280px;
-                max-width: 280px;
-            }
-            
-            .nav-button {
-                width: 36px;
-                height: 36px;
-                font-size: 1.2rem;
-            }
-            
-            .masthead {
-                font-size: 1.5rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            body {
-                padding: 1rem;
-            }
-            
             .carousel-wrapper {
                 padding: 0 35px;
             }
@@ -373,11 +326,32 @@
             .news-card {
                 min-width: 260px;
                 max-width: 260px;
-                padding: 1.5rem;
+            }
+            
+            .nav-button {
+                width: 32px;
+                height: 32px;
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 0.5rem;
+            }
+            
+            .carousel-wrapper {
+                padding: 0 30px;
+            }
+            
+            .news-card {
+                min-width: 240px;
+                max-width: 240px;
+                padding: 1rem;
             }
             
             .news-title {
-                font-size: 1.15rem;
+                font-size: 1rem;
             }
         }
     </style>
@@ -385,8 +359,7 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="masthead">Financial Inclusion Chronicle</h1>
-            <p class="tagline">Northeast India</p>
+            <h1 class="masthead">FINER news</h1>
             <div class="last-updated" id="lastUpdated"></div>
         </header>
         
@@ -398,10 +371,9 @@
     <script>
         // Configuration - Replace with your Google Apps Script Web App URL
         const CONFIG = {
-            // IMPORTANT: After deploying your Apps Script, paste the Web App URL here
             API_URL: 'https://script.google.com/macros/s/AKfycbzcFofx5jdfR8UrbMsnlKfyC33bh1gUVeUPWR9owDSocz1BIiQfTRWYE9u3K31pxI-y8g/exec',
-            CACHE_DURATION: 5 * 60 * 1000, // 5 minutes
-            SCROLL_AMOUNT: 370, // Width of card + gap
+            CACHE_DURATION: 5 * 60 * 1000,
+            SCROLL_AMOUNT: 340,
         };
         
         let carouselContainer = null;
@@ -448,11 +420,10 @@
             }
         };
         
-        // Fetch news from Google Apps Script
+        // Fetch news
         async function fetchNews() {
             const container = document.getElementById('newsContainer');
             
-            // Check cache first
             const cachedData = cache.get();
             if (cachedData) {
                 displayCarousel(cachedData);
@@ -489,7 +460,7 @@
             const news = data.news || [];
             
             if (news.length === 0) {
-                container.innerHTML = '<div class="no-news">No approved news items available. Add items to your Google Sheet with Status = "Approved".</div>';
+                container.innerHTML = '<div class="no-news">No approved news items available.</div>';
                 return;
             }
             
@@ -501,13 +472,13 @@
                 const url = item.url || '#';
                 
                 return `
-                    <div class="news-card" onclick="openArticle('${escapeAttr(url)}')" style="animation-delay: ${index * 0.05}s">
+                    <div class="news-card" onclick="openArticle('${escapeAttr(url)}')" style="animation-delay: ${index * 0.04}s">
                         <div class="news-category">${category}</div>
                         <h2 class="news-title">${title}</h2>
                         <div class="news-meta">
                             <span class="news-source">${source}</span>${date ? ` • ${date}` : ''}
                         </div>
-                        ${url !== '#' ? `<a href="${escapeAttr(url)}" class="read-more" onclick="event.stopPropagation();" target="_blank" rel="noopener noreferrer">Read full article</a>` : ''}
+                        ${url !== '#' ? `<a href="${escapeAttr(url)}" class="read-more" onclick="event.stopPropagation();" target="_blank" rel="noopener noreferrer">Read article</a>` : ''}
                     </div>
                 `;
             }).join('');
@@ -534,7 +505,7 @@
             updateNavButtons();
         }
         
-        // Setup carousel interactions
+        // Setup carousel
         function setupCarousel() {
             let isDown = false;
             let startX;
@@ -565,124 +536,85 @@
                 carouselContainer.scrollLeft = scrollLeft - walk;
             });
             
-            // Track scroll position
             carouselContainer.addEventListener('scroll', () => {
                 updateIndicators();
                 updateNavButtons();
             });
             
-            // Keyboard navigation
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') {
-                    scrollPrev();
-                } else if (e.key === 'ArrowRight') {
-                    scrollNext();
-                }
+                if (e.key === 'ArrowLeft') scrollPrev();
+                else if (e.key === 'ArrowRight') scrollNext();
             });
         }
         
-        // Navigation functions
         function scrollNext() {
             if (carouselContainer) {
-                carouselContainer.scrollBy({
-                    left: CONFIG.SCROLL_AMOUNT,
-                    behavior: 'smooth'
-                });
+                carouselContainer.scrollBy({ left: CONFIG.SCROLL_AMOUNT, behavior: 'smooth' });
             }
         }
         
         function scrollPrev() {
             if (carouselContainer) {
-                carouselContainer.scrollBy({
-                    left: -CONFIG.SCROLL_AMOUNT,
-                    behavior: 'smooth'
-                });
+                carouselContainer.scrollBy({ left: -CONFIG.SCROLL_AMOUNT, behavior: 'smooth' });
             }
         }
         
         function scrollToIndex(index) {
             if (carouselContainer) {
-                carouselContainer.scrollTo({
-                    left: index * CONFIG.SCROLL_AMOUNT,
-                    behavior: 'smooth'
-                });
+                carouselContainer.scrollTo({ left: index * CONFIG.SCROLL_AMOUNT, behavior: 'smooth' });
             }
         }
         
-        // Update indicators
         function updateIndicators() {
             if (!carouselContainer) return;
-            
             const scrollLeft = carouselContainer.scrollLeft;
             const cardIndex = Math.round(scrollLeft / CONFIG.SCROLL_AMOUNT);
-            
             const indicators = document.querySelectorAll('.indicator');
             indicators.forEach((indicator, index) => {
                 indicator.classList.toggle('active', index === cardIndex);
             });
         }
         
-        // Update navigation buttons
         function updateNavButtons() {
             if (!carouselContainer) return;
-            
             const scrollLeft = carouselContainer.scrollLeft;
             const maxScroll = carouselContainer.scrollWidth - carouselContainer.clientWidth;
-            
             const prevBtn = document.querySelector('.nav-button.prev');
             const nextBtn = document.querySelector('.nav-button.next');
-            
             if (prevBtn) prevBtn.disabled = scrollLeft <= 0;
             if (nextBtn) nextBtn.disabled = scrollLeft >= maxScroll - 1;
         }
         
-        // Open article in new tab
         function openArticle(url) {
             if (url && url !== '#') {
                 window.open(url, '_blank', 'noopener,noreferrer');
             }
         }
         
-        // Display error message
         function displayError(error) {
             const container = document.getElementById('newsContainer');
             const isConfigError = CONFIG.API_URL.includes('YOUR_GOOGLE_APPS_SCRIPT');
-            
             container.innerHTML = `
                 <div class="error">
                     <div class="error-title">Unable to load news</div>
-                    <div>${escapeHtml(error.message || 'Please check your configuration and try again.')}</div>
-                    ${isConfigError ? `
-                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #fecaca;">
-                            <strong>Setup Required:</strong>
-                            <ol style="margin-top: 0.5rem; margin-left: 1.5rem;">
-                                <li>In your Google Sheet, go to Extensions → Apps Script</li>
-                                <li>Click Deploy → New deployment</li>
-                                <li>Select "Web app" and set "Who has access" to "Anyone"</li>
-                                <li>Copy the Web App URL</li>
-                                <li>Replace YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE in the HTML file</li>
-                            </ol>
-                        </div>
-                    ` : ''}
+                    <div>${escapeHtml(error.message || 'Please check configuration.')}</div>
+                    ${isConfigError ? '<div style="margin-top: 0.5rem; font-size: 0.8rem;">⚠️ Update API_URL in the HTML file with your Apps Script Web App URL</div>' : ''}
                 </div>
             `;
         }
         
-        // Update timestamp display
         function updateTimestamp(isoDate) {
             const date = isoDate ? new Date(isoDate) : new Date();
             const formatted = date.toLocaleString('en-IN', {
+                month: 'short',
                 day: 'numeric',
-                month: 'long',
-                year: 'numeric',
                 hour: '2-digit',
                 minute: '2-digit',
                 timeZone: 'Asia/Kolkata'
             });
-            document.getElementById('lastUpdated').textContent = `Last updated: ${formatted} IST`;
+            document.getElementById('lastUpdated').textContent = formatted;
         }
         
-        // Format date for display
         function formatDate(dateString) {
             try {
                 const date = new Date(dateString);
@@ -696,22 +628,17 @@
             }
         }
         
-        // Escape HTML to prevent XSS
         function escapeHtml(text) {
             const div = document.createElement('div');
             div.textContent = text;
             return div.innerHTML;
         }
         
-        // Escape attributes
         function escapeAttr(text) {
             return text.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
         }
         
-        // Initialize on page load
         fetchNews();
-        
-        // Refresh every 5 minutes
         setInterval(fetchNews, CONFIG.CACHE_DURATION);
     </script>
 </body>
