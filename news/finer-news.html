@@ -1,90 +1,718 @@
-<style>
-
-.finer-news-container {
-    background: transparent;
-    padding: 0;
-    border-radius: 0;
-    max-height: 600px;
-    overflow-y: auto;
-    font-family: Georgia, "Times New Roman", serif;
-}
-
-/* Header */
-
-.finer-news-header h2 {
-    margin: 0 0 1.2rem 0;
-    font-size: .9rem;
-    font-weight: 600;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    color: #6f6f6f;
-    background: none;
-    padding: 0;
-}
-
-/* Cards → now editorial rows */
-
-.finer-news-item {
-    background: transparent;
-    padding: .85rem 0;
-    border-radius: 0;
-    border-left: none;
-    border-bottom: 1px solid #e9e9e9;
-    margin-bottom: 0;
-    transition: none;
-}
-
-.finer-news-item:hover {
-    transform: none;
-}
-
-/* Meta */
-
-.finer-news-date {
-    font-size: .72rem;
-    color: #8a8a8a;
-    font-weight: 400;
-}
-
-.finer-news-category {
-    font-size: .72rem;
-    background: none;
-    color: #8a8a8a;
-    padding: 0;
-    border-radius: 0;
-    margin-left: .4rem;
-    font-weight: 400;
-}
-
-/* Title */
-
-.finer-news-title a {
-    color: #222;
-    text-decoration: none;
-    font-weight: 500;
-    line-height: 1.45;
-}
-
-.finer-news-title a:hover {
-    text-decoration: underline;
-    color: #222;
-}
-
-/* Source */
-
-.finer-news-source {
-    font-size: .75rem;
-    color: #9a9a9a;
-    font-style: normal;
-}
-
-/* States */
-
-.finer-news-loading,
-.finer-news-empty {
-    text-align:left;
-    color:#8a8a8a;
-    padding:.5rem 0;
-}
-
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northeast India Financial Inclusion News</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:wght@400;500;600&family=Crimson+Text:ital@0;1&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-orange: #e76f3c;
+            --dark-orange: #c85a2b;
+            --cream: #faf8f5;
+            --dark-text: #2a2421;
+            --medium-text: #4a4642;
+            --light-gray: #e8e5e0;
+            --border-color: #d4cfc7;
+            --card-shadow: 0 2px 8px rgba(42, 36, 33, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            background: var(--cream);
+            color: var(--dark-text);
+            line-height: 1.7;
+            padding: 1.5rem;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+            position: relative;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--primary-orange);
+        }
+        
+        .masthead {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+            color: var(--dark-text);
+        }
+        
+        .tagline {
+            font-family: 'Crimson Text', serif;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: var(--medium-text);
+            letter-spacing: 0.3px;
+        }
+        
+        .last-updated {
+            margin-top: 0.75rem;
+            font-size: 0.75rem;
+            color: var(--medium-text);
+            font-family: 'Crimson Text', serif;
+        }
+        
+        .carousel-wrapper {
+            position: relative;
+            padding: 0 60px;
+        }
+        
+        .carousel-container {
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            cursor: grab;
+            user-select: none;
+        }
+        
+        .carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .carousel-container:active {
+            cursor: grabbing;
+        }
+        
+        .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1rem 0.5rem 1.5rem;
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .news-card {
+            min-width: 350px;
+            max-width: 350px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            height: 320px;
+        }
+        
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-orange), var(--dark-orange));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(42, 36, 33, 0.15);
+        }
+        
+        .news-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .news-category {
+            display: inline-block;
+            font-family: 'Crimson Text', serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--primary-orange);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .news-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin-bottom: 0.75rem;
+            color: var(--dark-text);
+            flex-grow: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .news-meta {
+            font-size: 0.8rem;
+            color: var(--medium-text);
+            margin-bottom: 1rem;
+            font-style: italic;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .news-source {
+            font-weight: 600;
+            color: var(--dark-text);
+            font-style: normal;
+        }
+        
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-orange);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+        
+        .read-more:hover {
+            color: var(--dark-orange);
+            gap: 0.75rem;
+        }
+        
+        .read-more::after {
+            content: '→';
+            font-size: 1.1rem;
+        }
+        
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid var(--border-color);
+            color: var(--dark-text);
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .nav-button:hover {
+            background: var(--primary-orange);
+            border-color: var(--primary-orange);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .nav-button:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+        
+        .nav-button.prev {
+            left: 0;
+        }
+        
+        .nav-button.next {
+            right: 0;
+        }
+        
+        .nav-button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        .indicators {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--border-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator.active {
+            background: var(--primary-orange);
+            width: 24px;
+            border-radius: 4px;
+        }
+        
+        .indicator:hover:not(.active) {
+            background: var(--light-gray);
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--medium-text);
+            font-style: italic;
+        }
+        
+        .loading::after {
+            content: '...';
+            animation: ellipsis 1.5s infinite;
+        }
+        
+        @keyframes ellipsis {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
+        }
+        
+        .error {
+            background: #fef2f2;
+            border-left: 4px solid #dc2626;
+            padding: 1rem 1.25rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        .error-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #991b1b;
+        }
+        
+        .no-news {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--medium-text);
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .carousel-wrapper {
+                padding: 0 40px;
+            }
+            
+            .news-card {
+                min-width: 280px;
+                max-width: 280px;
+            }
+            
+            .nav-button {
+                width: 36px;
+                height: 36px;
+                font-size: 1.2rem;
+            }
+            
+            .masthead {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .carousel-wrapper {
+                padding: 0 35px;
+            }
+            
+            .news-card {
+                min-width: 260px;
+                max-width: 260px;
+                padding: 1.5rem;
+            }
+            
+            .news-title {
+                font-size: 1.15rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="masthead">Financial Inclusion Chronicle</h1>
+            <p class="tagline">Northeast India</p>
+            <div class="last-updated" id="lastUpdated"></div>
+        </header>
+        
+        <div id="newsContainer">
+            <div class="loading">Loading latest news</div>
+        </div>
+    </div>
+    
+    <script>
+        // Configuration - Replace with your Google Apps Script Web App URL
+        const CONFIG = {
+            // IMPORTANT: After deploying your Apps Script, paste the Web App URL here
+            API_URL: 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE',
+            CACHE_DURATION: 5 * 60 * 1000, // 5 minutes
+            SCROLL_AMOUNT: 370, // Width of card + gap
+        };
+        
+        let carouselContainer = null;
+        
+        // Cache management
+        const cache = {
+            data: null,
+            timestamp: null,
+            
+            set(data) {
+                this.data = data;
+                this.timestamp = Date.now();
+                try {
+                    localStorage.setItem('finerNewsCache', JSON.stringify({
+                        data: data,
+                        timestamp: this.timestamp
+                    }));
+                } catch (e) {
+                    console.warn('Could not save to localStorage:', e);
+                }
+            },
+            
+            get() {
+                if (this.data && this.timestamp && 
+                    (Date.now() - this.timestamp < CONFIG.CACHE_DURATION)) {
+                    return this.data;
+                }
+                
+                try {
+                    const cached = localStorage.getItem('finerNewsCache');
+                    if (cached) {
+                        const { data, timestamp } = JSON.parse(cached);
+                        if (Date.now() - timestamp < CONFIG.CACHE_DURATION) {
+                            this.data = data;
+                            this.timestamp = timestamp;
+                            return data;
+                        }
+                    }
+                } catch (e) {
+                    console.warn('Could not read from localStorage:', e);
+                }
+                
+                return null;
+            }
+        };
+        
+        // Fetch news from Google Apps Script
+        async function fetchNews() {
+            const container = document.getElementById('newsContainer');
+            
+            // Check cache first
+            const cachedData = cache.get();
+            if (cachedData) {
+                displayCarousel(cachedData);
+                updateTimestamp(cachedData.updated);
+                return;
+            }
+            
+            try {
+                const response = await fetch(CONFIG.API_URL);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+                
+                cache.set(data);
+                displayCarousel(data);
+                updateTimestamp(data.updated);
+                
+            } catch (error) {
+                console.error('Error fetching news:', error);
+                displayError(error);
+            }
+        }
+        
+        // Display carousel
+        function displayCarousel(data) {
+            const container = document.getElementById('newsContainer');
+            const news = data.news || [];
+            
+            if (news.length === 0) {
+                container.innerHTML = '<div class="no-news">No approved news items available. Add items to your Google Sheet with Status = "Approved".</div>';
+                return;
+            }
+            
+            const cardsHTML = news.map((item, index) => {
+                const category = escapeHtml(item.category || 'Financial Inclusion');
+                const title = escapeHtml(item.title || 'Untitled');
+                const source = escapeHtml(item.source || 'Source');
+                const date = item.date ? formatDate(item.date) : '';
+                const url = item.url || '#';
+                
+                return `
+                    <div class="news-card" onclick="openArticle('${escapeAttr(url)}')" style="animation-delay: ${index * 0.05}s">
+                        <div class="news-category">${category}</div>
+                        <h2 class="news-title">${title}</h2>
+                        <div class="news-meta">
+                            <span class="news-source">${source}</span>${date ? ` • ${date}` : ''}
+                        </div>
+                        ${url !== '#' ? `<a href="${escapeAttr(url)}" class="read-more" onclick="event.stopPropagation();" target="_blank" rel="noopener noreferrer">Read full article</a>` : ''}
+                    </div>
+                `;
+            }).join('');
+            
+            const indicatorsHTML = news.map((_, index) => 
+                `<div class="indicator ${index === 0 ? 'active' : ''}" onclick="scrollToIndex(${index})"></div>`
+            ).join('');
+            
+            container.innerHTML = `
+                <div class="carousel-wrapper">
+                    <button class="nav-button prev" onclick="scrollPrev()" aria-label="Previous">‹</button>
+                    <div class="carousel-container" id="carouselContainer">
+                        <div class="carousel-track">
+                            ${cardsHTML}
+                        </div>
+                    </div>
+                    <button class="nav-button next" onclick="scrollNext()" aria-label="Next">›</button>
+                </div>
+                ${news.length > 1 ? `<div class="indicators" id="indicators">${indicatorsHTML}</div>` : ''}
+            `;
+            
+            carouselContainer = document.getElementById('carouselContainer');
+            setupCarousel();
+            updateNavButtons();
+        }
+        
+        // Setup carousel interactions
+        function setupCarousel() {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+            
+            carouselContainer.addEventListener('mousedown', (e) => {
+                isDown = true;
+                carouselContainer.style.cursor = 'grabbing';
+                startX = e.pageX - carouselContainer.offsetLeft;
+                scrollLeft = carouselContainer.scrollLeft;
+            });
+            
+            carouselContainer.addEventListener('mouseleave', () => {
+                isDown = false;
+                carouselContainer.style.cursor = 'grab';
+            });
+            
+            carouselContainer.addEventListener('mouseup', () => {
+                isDown = false;
+                carouselContainer.style.cursor = 'grab';
+            });
+            
+            carouselContainer.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - carouselContainer.offsetLeft;
+                const walk = (x - startX) * 2;
+                carouselContainer.scrollLeft = scrollLeft - walk;
+            });
+            
+            // Track scroll position
+            carouselContainer.addEventListener('scroll', () => {
+                updateIndicators();
+                updateNavButtons();
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    scrollPrev();
+                } else if (e.key === 'ArrowRight') {
+                    scrollNext();
+                }
+            });
+        }
+        
+        // Navigation functions
+        function scrollNext() {
+            if (carouselContainer) {
+                carouselContainer.scrollBy({
+                    left: CONFIG.SCROLL_AMOUNT,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        function scrollPrev() {
+            if (carouselContainer) {
+                carouselContainer.scrollBy({
+                    left: -CONFIG.SCROLL_AMOUNT,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        function scrollToIndex(index) {
+            if (carouselContainer) {
+                carouselContainer.scrollTo({
+                    left: index * CONFIG.SCROLL_AMOUNT,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        // Update indicators
+        function updateIndicators() {
+            if (!carouselContainer) return;
+            
+            const scrollLeft = carouselContainer.scrollLeft;
+            const cardIndex = Math.round(scrollLeft / CONFIG.SCROLL_AMOUNT);
+            
+            const indicators = document.querySelectorAll('.indicator');
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === cardIndex);
+            });
+        }
+        
+        // Update navigation buttons
+        function updateNavButtons() {
+            if (!carouselContainer) return;
+            
+            const scrollLeft = carouselContainer.scrollLeft;
+            const maxScroll = carouselContainer.scrollWidth - carouselContainer.clientWidth;
+            
+            const prevBtn = document.querySelector('.nav-button.prev');
+            const nextBtn = document.querySelector('.nav-button.next');
+            
+            if (prevBtn) prevBtn.disabled = scrollLeft <= 0;
+            if (nextBtn) nextBtn.disabled = scrollLeft >= maxScroll - 1;
+        }
+        
+        // Open article in new tab
+        function openArticle(url) {
+            if (url && url !== '#') {
+                window.open(url, '_blank', 'noopener,noreferrer');
+            }
+        }
+        
+        // Display error message
+        function displayError(error) {
+            const container = document.getElementById('newsContainer');
+            const isConfigError = CONFIG.API_URL.includes('YOUR_GOOGLE_APPS_SCRIPT');
+            
+            container.innerHTML = `
+                <div class="error">
+                    <div class="error-title">Unable to load news</div>
+                    <div>${escapeHtml(error.message || 'Please check your configuration and try again.')}</div>
+                    ${isConfigError ? `
+                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #fecaca;">
+                            <strong>Setup Required:</strong>
+                            <ol style="margin-top: 0.5rem; margin-left: 1.5rem;">
+                                <li>In your Google Sheet, go to Extensions → Apps Script</li>
+                                <li>Click Deploy → New deployment</li>
+                                <li>Select "Web app" and set "Who has access" to "Anyone"</li>
+                                <li>Copy the Web App URL</li>
+                                <li>Replace YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE in the HTML file</li>
+                            </ol>
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+        }
+        
+        // Update timestamp display
+        function updateTimestamp(isoDate) {
+            const date = isoDate ? new Date(isoDate) : new Date();
+            const formatted = date.toLocaleString('en-IN', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                timeZone: 'Asia/Kolkata'
+            });
+            document.getElementById('lastUpdated').textContent = `Last updated: ${formatted} IST`;
+        }
+        
+        // Format date for display
+        function formatDate(dateString) {
+            try {
+                const date = new Date(dateString);
+                return date.toLocaleDateString('en-IN', {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric'
+                });
+            } catch (e) {
+                return dateString;
+            }
+        }
+        
+        // Escape HTML to prevent XSS
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        // Escape attributes
+        function escapeAttr(text) {
+            return text.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+        
+        // Initialize on page load
+        fetchNews();
+        
+        // Refresh every 5 minutes
+        setInterval(fetchNews, CONFIG.CACHE_DURATION);
+    </script>
+</body>
+</html>
