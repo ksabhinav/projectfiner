@@ -40,7 +40,7 @@
             scrollbar-width: thin;
             scrollbar-color: var(--primary-orange) transparent;
             cursor: grab;
-            padding: 0.25rem 0.25rem 0.5rem;
+            padding: 0.25rem 0 0.5rem 0;
         }
         
         .carousel-container::-webkit-scrollbar {
@@ -62,7 +62,7 @@
         
         .carousel-track {
             display: flex;
-            gap: 0.75rem;
+            gap: 0;
             animation: fadeIn 0.5s ease-out;
         }
         
@@ -328,14 +328,14 @@
         
         function scrollToCard(index) {
             if (carouselContainer) {
-                const cardWidth = carouselContainer.querySelector('.news-card').offsetWidth + 12;
+                const cardWidth = carouselContainer.querySelector('.news-card').offsetWidth;
                 carouselContainer.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
             }
         }
         
         function updateIndicators() {
             if (!carouselContainer) return;
-            const cardWidth = carouselContainer.querySelector('.news-card')?.offsetWidth + 12 || 1;
+            const cardWidth = carouselContainer.querySelector('.news-card')?.offsetWidth || 1;
             const index = Math.round(carouselContainer.scrollLeft / cardWidth);
             document.querySelectorAll('.indicator').forEach((ind, i) => {
                 ind.classList.toggle('active', i === index);
