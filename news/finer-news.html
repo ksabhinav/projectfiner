@@ -191,7 +191,7 @@
     
     <script>
         const CONFIG = {
-            API_URL: 'https://script.google.com/macros/s/AKfycbx9DjTNZnlbwZ3cLnvGY_woADV6gn4NmeEH212v9pQdvzJgIiRUyDMj58wFKmkIe__7UA/exec',
+            API_URL: 'https://script.google.com/macros/s/AKfycbwDdtX31DKjocmoSKAMaqxfA2kQlXAHLG7gVS6z2H-6LOaDXtNeoyjm1Julzc8lXSU-Bw/exec',
             CACHE_DURATION: 5 * 60 * 1000,
         };
         
@@ -251,19 +251,12 @@
             const container = document.getElementById('newsContainer');
             const news = data.news || [];
             
-            console.log('=== FINER News Debug ===');
-            console.log('First item:', news[0]);
-            console.log('Date field:', news[0]?.date);
-            console.log('Formatted date:', news[0]?.date ? formatDate(news[0].date) : 'NO DATE');
-            
             if (news.length === 0) {
                 container.innerHTML = '<div class="no-news">No news</div>';
                 return;
             }
             
-            const cardsHTML = news.map((item, i) => {
-                console.log(`Item ${i} date:`, item.date, '-> formatted:', formatDate(item.date));
-                return `
+            const cardsHTML = news.map((item, i) => `
                 <div class="news-card" onclick="openArticle('${escapeAttr(item.url || '#')}')" style="animation-delay: ${i * 0.03}s">
                     <div class="news-category">${escapeHtml(item.category || 'News')}</div>
                     <div class="news-title">${escapeHtml(item.title || 'Untitled')}</div>
@@ -271,8 +264,7 @@
                         <span class="news-source">${escapeHtml(item.source || 'Source')}</span>${item.date ? ` • ${formatDate(item.date)}` : ''}
                     </div>
                 </div>
-            `;
-            }).join('');
+            `).join('');
             
             const indicatorsHTML = news.length > 1 ? `
                 <div class="indicators">
