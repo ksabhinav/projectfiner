@@ -1,1 +1,469 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINER News - Swipe</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-orange: #e76f3c;
+            --dark-orange: #c85a2b;
+            --dark-text: #2a2421;
+            --medium-text: #666;
+            --border-color: #ddd;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            background: transparent;
+            color: var(--dark-text);
+            overflow: hidden;
+        }
+        
+        .swipe-container {
+            position: relative;
+            height: 280px;
+            perspective: 1000px;
+            padding: 0.5rem 0;
+        }
+        
+        .cards-stack {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .news-card {
+            position: absolute;
+            width: 100%;
+            background: white;
+            padding: 1.25rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            cursor: grab;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            user-select: none;
+        }
+        
+        .news-card:active {
+            cursor: grabbing;
+        }
+        
+        .news-card.active {
+            z-index: 10;
+            transform: scale(1) translateY(0);
+        }
+        
+        .news-card.next {
+            z-index: 9;
+            transform: scale(0.95) translateY(10px);
+            opacity: 0.7;
+        }
+        
+        .news-card.hidden {
+            z-index: 8;
+            transform: scale(0.9) translateY(20px);
+            opacity: 0.3;
+        }
+        
+        .news-card.swiped-left {
+            transform: translateX(-400px) rotate(-15deg);
+            opacity: 0;
+        }
+        
+        .news-card.swiped-right {
+            transform: translateX(400px) rotate(15deg);
+            opacity: 0;
+        }
+        
+        .news-category {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--primary-orange);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .news-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+            color: var(--dark-text);
+        }
+        
+        .news-meta {
+            font-size: 0.7rem;
+            color: var(--medium-text);
+            margin-bottom: 0.75rem;
+        }
+        
+        .news-source {
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+        
+        .read-more {
+            display: inline-block;
+            font-size: 0.7rem;
+            color: var(--primary-orange);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.4rem 0.8rem;
+            border: 1px solid var(--primary-orange);
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        
+        .read-more:hover {
+            background: var(--primary-orange);
+            color: white;
+        }
+        
+        .controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 0.75rem 0 0.25rem 0;
+        }
+        
+        .swipe-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid var(--border-color);
+            background: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            transition: all 0.2s;
+            color: var(--medium-text);
+        }
+        
+        .swipe-btn:hover:not(:disabled) {
+            border-color: var(--primary-orange);
+            color: var(--primary-orange);
+            transform: scale(1.1);
+        }
+        
+        .swipe-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        
+        .position-info {
+            font-size: 0.75rem;
+            color: var(--medium-text);
+            text-align: center;
+        }
+        
+        .position-current {
+            font-weight: 600;
+            color: var(--primary-orange);
+            font-size: 0.9rem;
+        }
+        
+        .swipe-hint {
+            text-align: center;
+            font-size: 0.65rem;
+            color: var(--medium-text);
+            font-style: italic;
+        }
+        
+        .loading, .no-news {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--medium-text);
+            font-style: italic;
+            font-size: 0.8rem;
+        }
+        
+        .loading::after {
+            content: '...';
+            animation: ellipsis 1.5s infinite;
+        }
+        
+        @keyframes ellipsis {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
+        }
+        
+        .error {
+            background: #fef2f2;
+            border-left: 3px solid #dc2626;
+            padding: 0.75rem;
+            margin: 1rem;
+            font-size: 0.7rem;
+            color: #991b1b;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="newsContainer">
+        <div class="loading">Loading</div>
+    </div>
+    
+    <script>
+        const CONFIG = {
+            API_URL: 'https://script.google.com/macros/s/AKfycbx9DjTNZnlbwZ3cLnvGY_woADV6gn4NmeEH212v9pQdvzJgIiRUyDMj58wFKmkIe__7UA/exec',
+            CACHE_DURATION: 5 * 60 * 1000,
+        };
+        
+        let currentIndex = 0;
+        let cards = [];
+        let startX = 0;
+        let currentX = 0;
+        let isDragging = false;
+        let newsData = [];
+        
+        const cache = {
+            data: null,
+            timestamp: null,
+            set(data) {
+                this.data = data;
+                this.timestamp = Date.now();
+            },
+            get() {
+                if (!this.data || !this.timestamp) return null;
+                if (Date.now() - this.timestamp > CONFIG.CACHE_DURATION) return null;
+                return this.data;
+            }
+        };
+        
+        async function fetchNews() {
+            const cachedData = cache.get();
+            if (cachedData) {
+                displaySwipeCards(cachedData);
+                return;
+            }
+            
+            try {
+                const response = await fetch(CONFIG.API_URL);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const data = await response.json();
+                if (data.error) throw new Error(data.error);
+                cache.set(data);
+                displaySwipeCards(data);
+            } catch (error) {
+                console.error('Error:', error);
+                displayError(error);
+            }
+        }
+        
+        function displaySwipeCards(data) {
+            const container = document.getElementById('newsContainer');
+            newsData = data.news || [];
+            
+            if (newsData.length === 0) {
+                container.innerHTML = '<div class="no-news">No news available</div>';
+                return;
+            }
+            
+            const cardsHTML = newsData.map((item, i) => `
+                <div class="news-card ${i === 0 ? 'active' : i === 1 ? 'next' : 'hidden'}" id="card-${i}" data-index="${i}">
+                    <div class="news-category">${escapeHtml(item.category || 'News')}</div>
+                    <div class="news-title">${escapeHtml(item.title || 'Untitled')}</div>
+                    <div class="news-meta">
+                        <span class="news-source">${escapeHtml(item.source || 'Source')}</span>${item.date ? ` • ${formatDate(item.date)}` : ''}
+                    </div>
+                    <a href="${escapeAttr(item.url || '#')}" target="_blank" rel="noopener noreferrer" class="read-more" onclick="event.stopPropagation()">Read more →</a>
+                </div>
+            `).join('');
+            
+            container.innerHTML = `
+                <div class="swipe-container">
+                    <div class="cards-stack" id="cardsStack">
+                        ${cardsHTML}
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <button class="swipe-btn" id="prevBtn" title="Previous">‹</button>
+                    <div class="position-info">
+                        <span class="position-current" id="current">1</span> of <span id="total">${newsData.length}</span>
+                    </div>
+                    <button class="swipe-btn" id="nextBtn" title="Next">›</button>
+                </div>
+                
+                <div class="swipe-hint">Swipe or drag cards</div>
+            `;
+            
+            setupSwipeCards();
+        }
+        
+        function setupSwipeCards() {
+            cards = document.querySelectorAll('.news-card');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            cards.forEach(card => {
+                card.addEventListener('mousedown', startDrag);
+                card.addEventListener('touchstart', startDrag, { passive: true });
+            });
+            
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('touchmove', drag, { passive: false });
+            document.addEventListener('mouseup', endDrag);
+            document.addEventListener('touchend', endDrag);
+            
+            prevBtn.onclick = () => swipeCard('left');
+            nextBtn.onclick = () => swipeCard('right');
+            
+            updateUI();
+        }
+        
+        function startDrag(e) {
+            const card = e.currentTarget;
+            if (!card.classList.contains('active')) return;
+            
+            isDragging = true;
+            startX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+            currentX = 0;
+        }
+        
+        function drag(e) {
+            if (!isDragging) return;
+            
+            const clientX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+            currentX = clientX - startX;
+            
+            const activeCard = document.querySelector('.news-card.active');
+            if (activeCard) {
+                const rotation = currentX / 20;
+                activeCard.style.transform = `translateX(${currentX}px) rotate(${rotation}deg)`;
+                activeCard.style.opacity = 1 - Math.abs(currentX) / 300;
+            }
+        }
+        
+        function endDrag() {
+            if (!isDragging) return;
+            isDragging = false;
+            
+            const threshold = 80;
+            
+            if (Math.abs(currentX) > threshold) {
+                swipeCard(currentX > 0 ? 'right' : 'left');
+            } else {
+                const activeCard = document.querySelector('.news-card.active');
+                if (activeCard) {
+                    activeCard.style.transform = '';
+                    activeCard.style.opacity = '';
+                }
+            }
+            
+            currentX = 0;
+        }
+        
+        function swipeCard(direction) {
+            const activeCard = cards[currentIndex];
+            
+            if (direction === 'right') {
+                activeCard.classList.add('swiped-right');
+                currentIndex = (currentIndex + 1) % newsData.length;
+            } else {
+                activeCard.classList.add('swiped-left');
+                currentIndex = (currentIndex - 1 + newsData.length) % newsData.length;
+            }
+            
+            setTimeout(() => {
+                activeCard.classList.remove('swiped-left', 'swiped-right');
+                activeCard.style.transform = '';
+                activeCard.style.opacity = '';
+                updateCardStates();
+            }, 300);
+        }
+        
+        function updateCardStates() {
+            cards.forEach((card, i) => {
+                card.classList.remove('active', 'next', 'hidden');
+                
+                if (i === currentIndex) {
+                    card.classList.add('active');
+                } else if (i === (currentIndex + 1) % newsData.length) {
+                    card.classList.add('next');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+            
+            updateUI();
+        }
+        
+        function updateUI() {
+            document.getElementById('current').textContent = currentIndex + 1;
+            
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            if (prevBtn && nextBtn) {
+                // Infinite loop - never disable
+                prevBtn.disabled = false;
+                nextBtn.disabled = false;
+            }
+        }
+        
+        function displayError(error) {
+            document.getElementById('newsContainer').innerHTML = `
+                <div class="error">Unable to load news. Please try again later.</div>
+            `;
+        }
+        
+        function formatDate(dateString) {
+            try {
+                return new Date(dateString).toLocaleDateString('en-IN', { 
+                    day: 'numeric', 
+                    month: 'short',
+                    year: 'numeric'
+                });
+            } catch (e) {
+                return dateString;
+            }
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        function escapeAttr(text) {
+            return text.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                const prevBtn = document.getElementById('prevBtn');
+                if (prevBtn) prevBtn.click();
+            }
+            if (e.key === 'ArrowRight') {
+                const nextBtn = document.getElementById('nextBtn');
+                if (nextBtn) nextBtn.click();
+            }
+        });
+        
+        fetchNews();
+        setInterval(fetchNews, CONFIG.CACHE_DURATION);
+    </script>
+</body>
+</html>
