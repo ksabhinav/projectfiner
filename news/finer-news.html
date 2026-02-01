@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IN NEWS</title>
+    <title>FINER News</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -124,33 +124,13 @@
         .news-meta {
             font-size: 0.65rem;
             color: var(--medium-text);
-            margin-bottom: 0.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
         
         .news-source {
             font-weight: 600;
             color: var(--dark-text);
-        }
-        
-        .read-more {
-            display: inline-flex;
-            align-items: center;
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: var(--primary-orange);
-            text-decoration: none;
-            gap: 0.3rem;
-            margin-top: 0.5rem;
-        }
-        
-        .read-more:hover {
-            color: var(--dark-orange);
-        }
-        
-        .read-more::after {
-            content: '→';
         }
         
         .indicators {
@@ -283,7 +263,6 @@
                     <div class="news-meta">
                         <span class="news-source">${escapeHtml(item.source || 'Source')}</span>${item.date ? ` • ${formatDate(item.date)}` : ''}
                     </div>
-                    ${item.url && item.url !== '#' ? `<a href="${escapeAttr(item.url)}" class="read-more" onclick="event.stopPropagation();" target="_blank" rel="noopener noreferrer">Read article</a>` : ''}
                 </div>
             `).join('');
             
