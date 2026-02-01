@@ -202,27 +202,10 @@
             data: null,
             timestamp: null,
             set(data) {
-                this.data = data;
-                this.timestamp = Date.now();
-                try {
-                    localStorage.setItem('finerNewsCache', JSON.stringify({ data, timestamp: this.timestamp }));
-                } catch (e) {}
+                // Caching disabled for debugging
             },
             get() {
-                if (this.data && this.timestamp && (Date.now() - this.timestamp < CONFIG.CACHE_DURATION)) {
-                    return this.data;
-                }
-                try {
-                    const cached = localStorage.getItem('finerNewsCache');
-                    if (cached) {
-                        const { data, timestamp } = JSON.parse(cached);
-                        if (Date.now() - timestamp < CONFIG.CACHE_DURATION) {
-                            this.data = data;
-                            this.timestamp = timestamp;
-                            return data;
-                        }
-                    }
-                } catch (e) {}
+                // Always return null to force fresh fetch
                 return null;
             }
         };
