@@ -15,10 +15,8 @@
             --primary-orange: #e76f3c;
             --dark-orange: #c85a2b;
             --dark-text: #2a2421;
-            --medium-text: #4a4642;
-            --light-gray: #e8e5e0;
-            --border-color: #d4cfc7;
-            --card-shadow: 0 2px 8px rgba(42, 36, 33, 0.08);
+            --medium-text: #666;
+            --border-color: #ddd;
         }
         
         * {
@@ -31,56 +29,51 @@
             font-family: 'Source Serif 4', Georgia, serif;
             background: transparent;
             color: var(--dark-text);
-            line-height: 1.7;
-            padding: 0.75rem 0.5rem;
-            overflow-x: hidden;
-        }
-        
-        .container {
-            max-width: 100%;
-            margin: 0 auto;
+            padding: 0;
+            overflow: hidden;
         }
         
         .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 0.5rem 0.75rem;
-            margin-bottom: 0.75rem;
+            padding: 0.75rem 0.5rem 0.5rem;
+            margin-bottom: 0.5rem;
             border-bottom: 1px solid var(--border-color);
         }
         
         .masthead {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 700;
-            letter-spacing: 0.3px;
             color: var(--dark-text);
+            margin-bottom: 0.25rem;
         }
         
         .last-updated {
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             color: var(--medium-text);
             font-style: italic;
-        }
-        
-        .carousel-wrapper {
-            position: relative;
-            padding: 0 50px;
         }
         
         .carousel-container {
             overflow-x: auto;
             overflow-y: hidden;
             scroll-behavior: smooth;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-orange) transparent;
             cursor: grab;
-            user-select: none;
+            padding: 0.5rem 0.25rem 0.75rem;
         }
         
         .carousel-container::-webkit-scrollbar {
-            display: none;
+            height: 4px;
+        }
+        
+        .carousel-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .carousel-container::-webkit-scrollbar-thumb {
+            background: var(--primary-orange);
+            border-radius: 2px;
         }
         
         .carousel-container:active {
@@ -89,37 +82,25 @@
         
         .carousel-track {
             display: flex;
-            gap: 1rem;
-            padding: 0.5rem 0.25rem 1rem;
+            gap: 0.75rem;
             animation: fadeIn 0.5s ease-out;
         }
         
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         
         .news-card {
-            min-width: 320px;
-            max-width: 320px;
+            min-width: 100%;
             background: white;
             border-radius: 6px;
-            box-shadow: var(--card-shadow);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
             border: 1px solid var(--border-color);
-            padding: 1.25rem;
-            display: flex;
-            flex-direction: column;
-            transition: all 0.3s ease;
+            padding: 1rem;
+            transition: all 0.2s ease;
             cursor: pointer;
             position: relative;
-            overflow: hidden;
-            height: 240px;
         }
         
         .news-card::before {
@@ -128,16 +109,14 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 3px;
+            height: 2px;
             background: var(--primary-orange);
             transform: scaleX(0);
-            transform-origin: left;
             transition: transform 0.3s ease;
         }
         
         .news-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(42, 36, 33, 0.12);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
         }
         
         .news-card:hover::before {
@@ -145,35 +124,29 @@
         }
         
         .news-category {
-            display: inline-block;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
             color: var(--primary-orange);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
             font-weight: 600;
         }
         
         .news-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             font-weight: 700;
             line-height: 1.3;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
             color: var(--dark-text);
-            flex-grow: 0;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
         }
         
         .news-meta {
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             color: var(--medium-text);
-            margin-bottom: 0.75rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 1px solid var(--light-gray);
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #f0f0f0;
         }
         
         .news-source {
@@ -184,82 +157,32 @@
         .read-more {
             display: inline-flex;
             align-items: center;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             font-weight: 600;
             color: var(--primary-orange);
             text-decoration: none;
-            transition: all 0.2s ease;
-            gap: 0.4rem;
-            margin-top: auto;
+            gap: 0.3rem;
+            margin-top: 0.5rem;
         }
         
         .read-more:hover {
             color: var(--dark-orange);
-            gap: 0.6rem;
         }
         
         .read-more::after {
             content: '→';
-            font-size: 1rem;
-        }
-        
-        .nav-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: white;
-            border: 1px solid var(--border-color);
-            color: var(--dark-text);
-            font-size: 1.3rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            z-index: 10;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-        
-        .nav-button:hover {
-            background: var(--primary-orange);
-            border-color: var(--primary-orange);
-            color: white;
-            transform: translateY(-50%) scale(1.08);
-        }
-        
-        .nav-button:active {
-            transform: translateY(-50%) scale(0.95);
-        }
-        
-        .nav-button.prev {
-            left: 0;
-        }
-        
-        .nav-button.next {
-            right: 0;
-        }
-        
-        .nav-button:disabled {
-            opacity: 0.2;
-            cursor: not-allowed;
-            pointer-events: none;
         }
         
         .indicators {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 0.4rem;
-            margin-top: 0.75rem;
-            flex-wrap: wrap;
+            gap: 0.35rem;
+            padding: 0.5rem 0;
         }
         
         .indicator {
-            width: 6px;
-            height: 6px;
+            width: 5px;
+            height: 5px;
             border-radius: 50%;
             background: var(--border-color);
             cursor: pointer;
@@ -268,20 +191,16 @@
         
         .indicator.active {
             background: var(--primary-orange);
-            width: 20px;
-            border-radius: 3px;
+            width: 16px;
+            border-radius: 2.5px;
         }
         
-        .indicator:hover:not(.active) {
-            background: var(--light-gray);
-        }
-        
-        .loading {
+        .loading, .no-news {
             text-align: center;
-            padding: 2rem 1rem;
+            padding: 1.5rem 0.5rem;
             color: var(--medium-text);
             font-style: italic;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
         
         .loading::after {
@@ -297,111 +216,47 @@
         
         .error {
             background: #fef2f2;
-            border-left: 3px solid #dc2626;
-            padding: 0.75rem 1rem;
-            margin: 1rem 0;
-            border-radius: 3px;
-            font-size: 0.85rem;
-        }
-        
-        .error-title {
-            font-weight: 600;
-            margin-bottom: 0.4rem;
+            border-left: 2px solid #dc2626;
+            padding: 0.5rem;
+            margin: 0.5rem;
+            font-size: 0.7rem;
             color: #991b1b;
-        }
-        
-        .no-news {
-            text-align: center;
-            padding: 2rem 1rem;
-            color: var(--medium-text);
-            font-style: italic;
-            font-size: 0.9rem;
-        }
-        
-        @media (max-width: 768px) {
-            .carousel-wrapper {
-                padding: 0 35px;
-            }
-            
-            .news-card {
-                min-width: 260px;
-                max-width: 260px;
-            }
-            
-            .nav-button {
-                width: 32px;
-                height: 32px;
-                font-size: 1.1rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            body {
-                padding: 0.5rem;
-            }
-            
-            .carousel-wrapper {
-                padding: 0 30px;
-            }
-            
-            .news-card {
-                min-width: 240px;
-                max-width: 240px;
-                padding: 1rem;
-            }
-            
-            .news-title {
-                font-size: 1rem;
-            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1 class="masthead">FINER news</h1>
-            <div class="last-updated" id="lastUpdated"></div>
-        </header>
-        
-        <div id="newsContainer">
-            <div class="loading">Loading latest news</div>
-        </div>
+    <div class="header">
+        <div class="masthead">FINER news</div>
+        <div class="last-updated" id="lastUpdated"></div>
+    </div>
+    
+    <div id="newsContainer">
+        <div class="loading">Loading</div>
     </div>
     
     <script>
-        // Configuration - Replace with your Google Apps Script Web App URL
         const CONFIG = {
-            API_URL: 'https://script.google.com/macros/s/AKfycbzcFofx5jdfR8UrbMsnlKfyC33bh1gUVeUPWR9owDSocz1BIiQfTRWYE9u3K31pxI-y8g/exec',
+            API_URL: 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE',
             CACHE_DURATION: 5 * 60 * 1000,
-            SCROLL_AMOUNT: 340,
         };
         
         let carouselContainer = null;
+        let currentIndex = 0;
         
-        // Cache management
         const cache = {
             data: null,
             timestamp: null,
-            
             set(data) {
                 this.data = data;
                 this.timestamp = Date.now();
                 try {
-                    localStorage.setItem('finerNewsCache', JSON.stringify({
-                        data: data,
-                        timestamp: this.timestamp
-                    }));
-                } catch (e) {
-                    console.warn('Could not save to localStorage:', e);
-                }
+                    localStorage.setItem('finerNewsCache', JSON.stringify({ data, timestamp: this.timestamp }));
+                } catch (e) {}
             },
-            
             get() {
-                if (this.data && this.timestamp && 
-                    (Date.now() - this.timestamp < CONFIG.CACHE_DURATION)) {
+                if (this.data && this.timestamp && (Date.now() - this.timestamp < CONFIG.CACHE_DURATION)) {
                     return this.data;
                 }
-                
                 try {
                     const cached = localStorage.getItem('finerNewsCache');
                     if (cached) {
@@ -412,18 +267,12 @@
                             return data;
                         }
                     }
-                } catch (e) {
-                    console.warn('Could not read from localStorage:', e);
-                }
-                
+                } catch (e) {}
                 return null;
             }
         };
         
-        // Fetch news
         async function fetchNews() {
-            const container = document.getElementById('newsContainer');
-            
             const cachedData = cache.get();
             if (cachedData) {
                 displayCarousel(cachedData);
@@ -433,196 +282,113 @@
             
             try {
                 const response = await fetch(CONFIG.API_URL);
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 const data = await response.json();
-                
-                if (data.error) {
-                    throw new Error(data.error);
-                }
-                
+                if (data.error) throw new Error(data.error);
                 cache.set(data);
                 displayCarousel(data);
                 updateTimestamp(data.updated);
-                
             } catch (error) {
-                console.error('Error fetching news:', error);
+                console.error('Error:', error);
                 displayError(error);
             }
         }
         
-        // Display carousel
         function displayCarousel(data) {
             const container = document.getElementById('newsContainer');
             const news = data.news || [];
             
             if (news.length === 0) {
-                container.innerHTML = '<div class="no-news">No approved news items available.</div>';
+                container.innerHTML = '<div class="no-news">No news</div>';
                 return;
             }
             
-            const cardsHTML = news.map((item, index) => {
-                const category = escapeHtml(item.category || 'Financial Inclusion');
-                const title = escapeHtml(item.title || 'Untitled');
-                const source = escapeHtml(item.source || 'Source');
-                const date = item.date ? formatDate(item.date) : '';
-                const url = item.url || '#';
-                
-                return `
-                    <div class="news-card" onclick="openArticle('${escapeAttr(url)}')" style="animation-delay: ${index * 0.04}s">
-                        <div class="news-category">${category}</div>
-                        <h2 class="news-title">${title}</h2>
-                        <div class="news-meta">
-                            <span class="news-source">${source}</span>${date ? ` • ${date}` : ''}
-                        </div>
-                        ${url !== '#' ? `<a href="${escapeAttr(url)}" class="read-more" onclick="event.stopPropagation();" target="_blank" rel="noopener noreferrer">Read article</a>` : ''}
+            const cardsHTML = news.map((item, i) => `
+                <div class="news-card" onclick="openArticle('${escapeAttr(item.url || '#')}')" style="animation-delay: ${i * 0.03}s">
+                    <div class="news-category">${escapeHtml(item.category || 'News')}</div>
+                    <div class="news-title">${escapeHtml(item.title || 'Untitled')}</div>
+                    <div class="news-meta">
+                        <span class="news-source">${escapeHtml(item.source || 'Source')}</span>${item.date ? ` • ${formatDate(item.date)}` : ''}
                     </div>
-                `;
-            }).join('');
+                    ${item.url && item.url !== '#' ? `<a href="${escapeAttr(item.url)}" class="read-more" onclick="event.stopPropagation();" target="_blank" rel="noopener noreferrer">Read article</a>` : ''}
+                </div>
+            `).join('');
             
-            const indicatorsHTML = news.map((_, index) => 
-                `<div class="indicator ${index === 0 ? 'active' : ''}" onclick="scrollToIndex(${index})"></div>`
-            ).join('');
+            const indicatorsHTML = news.length > 1 ? `
+                <div class="indicators">
+                    ${news.map((_, i) => `<div class="indicator ${i === 0 ? 'active' : ''}" onclick="scrollToCard(${i})"></div>`).join('')}
+                </div>
+            ` : '';
             
             container.innerHTML = `
-                <div class="carousel-wrapper">
-                    <button class="nav-button prev" onclick="scrollPrev()" aria-label="Previous">‹</button>
-                    <div class="carousel-container" id="carouselContainer">
-                        <div class="carousel-track">
-                            ${cardsHTML}
-                        </div>
-                    </div>
-                    <button class="nav-button next" onclick="scrollNext()" aria-label="Next">›</button>
+                <div class="carousel-container" id="carouselContainer">
+                    <div class="carousel-track">${cardsHTML}</div>
                 </div>
-                ${news.length > 1 ? `<div class="indicators" id="indicators">${indicatorsHTML}</div>` : ''}
+                ${indicatorsHTML}
             `;
             
             carouselContainer = document.getElementById('carouselContainer');
             setupCarousel();
-            updateNavButtons();
         }
         
-        // Setup carousel
         function setupCarousel() {
-            let isDown = false;
-            let startX;
-            let scrollLeft;
+            let isDown = false, startX, scrollLeft;
             
             carouselContainer.addEventListener('mousedown', (e) => {
                 isDown = true;
-                carouselContainer.style.cursor = 'grabbing';
                 startX = e.pageX - carouselContainer.offsetLeft;
                 scrollLeft = carouselContainer.scrollLeft;
             });
             
-            carouselContainer.addEventListener('mouseleave', () => {
-                isDown = false;
-                carouselContainer.style.cursor = 'grab';
-            });
-            
-            carouselContainer.addEventListener('mouseup', () => {
-                isDown = false;
-                carouselContainer.style.cursor = 'grab';
-            });
+            carouselContainer.addEventListener('mouseleave', () => isDown = false);
+            carouselContainer.addEventListener('mouseup', () => isDown = false);
             
             carouselContainer.addEventListener('mousemove', (e) => {
                 if (!isDown) return;
                 e.preventDefault();
                 const x = e.pageX - carouselContainer.offsetLeft;
-                const walk = (x - startX) * 2;
-                carouselContainer.scrollLeft = scrollLeft - walk;
+                carouselContainer.scrollLeft = scrollLeft - (x - startX) * 2;
             });
             
-            carouselContainer.addEventListener('scroll', () => {
-                updateIndicators();
-                updateNavButtons();
-            });
-            
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') scrollPrev();
-                else if (e.key === 'ArrowRight') scrollNext();
-            });
+            carouselContainer.addEventListener('scroll', updateIndicators);
         }
         
-        function scrollNext() {
+        function scrollToCard(index) {
             if (carouselContainer) {
-                carouselContainer.scrollBy({ left: CONFIG.SCROLL_AMOUNT, behavior: 'smooth' });
-            }
-        }
-        
-        function scrollPrev() {
-            if (carouselContainer) {
-                carouselContainer.scrollBy({ left: -CONFIG.SCROLL_AMOUNT, behavior: 'smooth' });
-            }
-        }
-        
-        function scrollToIndex(index) {
-            if (carouselContainer) {
-                carouselContainer.scrollTo({ left: index * CONFIG.SCROLL_AMOUNT, behavior: 'smooth' });
+                const cardWidth = carouselContainer.querySelector('.news-card').offsetWidth + 12;
+                carouselContainer.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
             }
         }
         
         function updateIndicators() {
             if (!carouselContainer) return;
-            const scrollLeft = carouselContainer.scrollLeft;
-            const cardIndex = Math.round(scrollLeft / CONFIG.SCROLL_AMOUNT);
-            const indicators = document.querySelectorAll('.indicator');
-            indicators.forEach((indicator, index) => {
-                indicator.classList.toggle('active', index === cardIndex);
+            const cardWidth = carouselContainer.querySelector('.news-card')?.offsetWidth + 12 || 1;
+            const index = Math.round(carouselContainer.scrollLeft / cardWidth);
+            document.querySelectorAll('.indicator').forEach((ind, i) => {
+                ind.classList.toggle('active', i === index);
             });
         }
         
-        function updateNavButtons() {
-            if (!carouselContainer) return;
-            const scrollLeft = carouselContainer.scrollLeft;
-            const maxScroll = carouselContainer.scrollWidth - carouselContainer.clientWidth;
-            const prevBtn = document.querySelector('.nav-button.prev');
-            const nextBtn = document.querySelector('.nav-button.next');
-            if (prevBtn) prevBtn.disabled = scrollLeft <= 0;
-            if (nextBtn) nextBtn.disabled = scrollLeft >= maxScroll - 1;
-        }
-        
         function openArticle(url) {
-            if (url && url !== '#') {
-                window.open(url, '_blank', 'noopener,noreferrer');
-            }
+            if (url && url !== '#') window.open(url, '_blank', 'noopener,noreferrer');
         }
         
         function displayError(error) {
-            const container = document.getElementById('newsContainer');
-            const isConfigError = CONFIG.API_URL.includes('YOUR_GOOGLE_APPS_SCRIPT');
-            container.innerHTML = `
-                <div class="error">
-                    <div class="error-title">Unable to load news</div>
-                    <div>${escapeHtml(error.message || 'Please check configuration.')}</div>
-                    ${isConfigError ? '<div style="margin-top: 0.5rem; font-size: 0.8rem;">⚠️ Update API_URL in the HTML file with your Apps Script Web App URL</div>' : ''}
-                </div>
+            document.getElementById('newsContainer').innerHTML = `
+                <div class="error">Unable to load news. ${CONFIG.API_URL.includes('YOUR_GOOGLE_APPS_SCRIPT') ? 'Please configure API_URL.' : ''}</div>
             `;
         }
         
         function updateTimestamp(isoDate) {
             const date = isoDate ? new Date(isoDate) : new Date();
-            const formatted = date.toLocaleString('en-IN', {
-                month: 'short',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit',
-                timeZone: 'Asia/Kolkata'
+            document.getElementById('lastUpdated').textContent = date.toLocaleString('en-IN', {
+                month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Kolkata'
             });
-            document.getElementById('lastUpdated').textContent = formatted;
         }
         
         function formatDate(dateString) {
             try {
-                const date = new Date(dateString);
-                return date.toLocaleDateString('en-IN', {
-                    day: 'numeric',
-                    month: 'short',
-                    year: 'numeric'
-                });
+                return new Date(dateString).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
             } catch (e) {
                 return dateString;
             }
