@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>UPI Market Concentration · (futile) attempts</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #FAF7F2;
+    --card: #ffffff;
+    --text: #1A1208;
+    --muted: #6B5E4C;
+    --accent: #C9440E;
+    --accent2: #E8A040;
+    --border: #E8E0D5;
+    --duopoly: #C9440E;
+    --third: #E8A040;
+    --rest: #BDB5A8;
+  }
+
+  body {
+    background: var(--bg);
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 24px 0 48px;
+    color: var(--text);
+  }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+
+  /* ── Card ── */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px;
+    margin-bottom: 20px;
+  }
+
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .card-sub {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+
+  /* ── Tabs ── */
+  .tab-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+
+  .tabs {
+    display: flex;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .tab {
+    padding: 7px 16px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: transparent;
+    color: var(--muted);
+    border: none;
+    font-family: 'IBM Plex Mono', monospace;
+    transition: all 0.15s;
+  }
+
+  .tab.active {
+    background: var(--text);
+    color: var(--bg);
+  }
+
+  /* ── Bar chart ── */
+  #chart-container { width: 100%; }
+
+  .bar-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    fill: var(--muted);
+  }
+
+  .axis text {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    fill: var(--muted);
+  }
+
+  .axis path, .axis line { display: none; }
+
+  .ref-line { stroke: var(--accent); stroke-dasharray: 4 3; stroke-width: 1.5; }
+
+  .ref-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    fill: var(--accent);
+  }
+
+  /* ── Legend ── */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    align-items: center;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .legend-dot {
+    width: 12px; height: 12px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .legend-cap {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--accent);
+  }
+
+  .legend-dash {
+    width: 20px;
+    border-top: 2px dashed var(--accent);
+  }
+
+  /* ── HHI decomp ── */
+  .hhi-bar {
+    display: flex;
+    height: 44px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .hhi-labels {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .hhi-seg-label .name {
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .hhi-seg-label .pct {
+    font-size: 10px;
+    color: var(--muted);
+  }
+
+  .callout {
+    margin-top: 24px;
+    padding: 16px 20px;
+    background: #FFF5F2;
+    border: 1px solid rgba(201,68,14,0.13);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.65;
+  }
+
+  /* ── Tooltip ── */
+  .tooltip {
+    position: fixed;
+    background: #1A1208;
+    color: #FAF7F2;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.1s;
+    z-index: 100;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    margin-top: 4px;
+  }
+
+  .footer-note { font-size: 10px; color: var(--muted); line-height: 1.6; }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--muted);
+    white-space: nowrap;
+    margin-left: 16px;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- Chart Card -->
+  <div class="card">
+    <div class="tab-row">
+      <div>
+        <div class="card-title">Market Share by App</div>
+        <div class="card-sub">92 apps listed · January 2026 · NPCI data</div>
+      </div>
+      <div class="tabs">
+        <button class="tab active" id="btn-volume" onclick="switchTab('volume')">Volume</button>
+        <button class="tab" id="btn-value" onclick="switchTab('value')">Value</button>
+      </div>
+    </div>
+
+    <div id="chart-container"></div>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#C9440E"></div> PhonePe &amp; Google Pay (duopoly)</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#E8A040"></div> Paytm (distant third)</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#BDB5A8"></div> All remaining apps</div>
+      <div class="legend-cap"><div class="legend-dash"></div> NPCI 30% cap (deferred to Dec 2026)</div>
+    </div>
+  </div>
+
+  <!-- HHI Decomp Card -->
+  <div class="card">
+    <div class="card-title">HHI Decomposed: Where Does Concentration Come From?</div>
+    <div class="card-sub">Each firm's contribution to the HHI score (share²) · Volume basis · Total HHI = 3,404</div>
+
+    <div class="hhi-bar" id="hhi-bar"></div>
+    <div class="hhi-labels" id="hhi-labels"></div>
+
+    <div class="callout">
+      PhonePe alone accounts for <strong>63.8%</strong> of the entire HHI score.
+      Google Pay contributes another <strong>33.9%</strong>. The remaining 90 apps
+      collectively contribute just <strong>2.3%</strong> — their presence is
+      mathematically negligible.
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-note">HHI = Σ(marketShareᵢ)² across all 92 apps. Source: NPCI Ecosystem Statistics, Jan 2026.</div>
+    <div class="footer-brand">(futile) attempts</div>
+  </div>
+
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+const DATA = {
+  volume: [
+    { name: "PhonePe",     share: 46.60, cat: "duopoly" },
+    { name: "Google Pay",  share: 33.98, cat: "duopoly" },
+    { name: "Paytm",       share:  7.80, cat: "third"   },
+    { name: "Navi",        share:  3.33, cat: "rest"    },
+    { name: "super.money", share:  1.40, cat: "rest"    },
+    { name: "BHIM",        share:  0.81, cat: "rest"    },
+    { name: "FamApp",      share:  0.76, cat: "rest"    },
+    { name: "CRED",        share:  0.74, cat: "rest"    },
+    { name: "Axis Bank",   share:  0.72, cat: "rest"    },
+    { name: "WhatsApp",    share:  0.53, cat: "rest"    },
+    { name: "Others (82)", share:  3.33, cat: "rest"    },
+  ],
+  value: [
+    { name: "PhonePe",     share: 49.18, cat: "duopoly" },
+    { name: "Google Pay",  share: 34.17, cat: "duopoly" },
+    { name: "Paytm",       share:  6.50, cat: "third"   },
+    { name: "CRED",        share:  2.10, cat: "rest"    },
+    { name: "Navi",        share:  1.36, cat: "rest"    },
+    { name: "BHIM",        share:  0.79, cat: "rest"    },
+    { name: "ICICI Bank",  share:  0.69, cat: "rest"    },
+    { name: "HDFC Bank",   share:  0.60, cat: "rest"    },
+    { name: "Groww",       share:  0.58, cat: "rest"    },
+    { name: "Axis Bank",   share:  0.47, cat: "rest"    },
+    { name: "Others (82)", share:  3.56, cat: "rest"    },
+  ]
+};
+
+const CAT_COLOR = { duopoly: "#C9440E", third: "#E8A040", rest: "#BDB5A8" };
+
+const HHI_SEGS = [
+  { name: "PhonePe",   pts: 2171.8, color: "#C9440E" },
+  { name: "Google Pay",pts: 1154.9, color: "#E06030" },
+  { name: "Paytm",     pts:   60.9, color: "#E8A040" },
+  { name: "All others",pts:   16.5, color: "#BDB5A8" },
+];
+const HHI_TOTAL = 3404.1;
+
+let currentTab = "volume";
+
+// ── Draw Chart ──────────────────────────────────────────────
+function drawChart(tab) {
+  const container = document.getElementById("chart-container");
+  container.innerHTML = "";
+
+  const data = DATA[tab];
+  const W = container.clientWidth || 700;
+  const barH = 22, gap = 8, labelW = 96, rightPad = 52, topPad = 4, botPad = 4;
+  const H = data.length * (barH + gap) - gap + topPad + botPad;
+  const chartW = W - labelW - rightPad;
+
+  const svg = d3.select("#chart-container")
+    .append("svg")
+    .attr("width", W)
+    .attr("height", H + 30);
+
+  const x = d3.scaleLinear().domain([0, 55]).range([0, chartW]);
+
+  // x axis
+  const xAxis = d3.axisBottom(x)
+    .ticks(6)
+    .tickFormat(d => d + "%");
+
+  svg.append("g")
+    .attr("class", "axis")
+    .attr("transform", `translate(${labelW}, ${H + topPad})`)
+    .call(xAxis);
+
+  // 30% ref line
+  svg.append("line")
+    .attr("class", "ref-line")
+    .attr("x1", labelW + x(30)).attr("x2", labelW + x(30))
+    .attr("y1", topPad).attr("y2", H + topPad);
+
+  svg.append("text")
+    .attr("class", "ref-label")
+    .attr("x", labelW + x(30) + 4)
+    .attr("y", topPad + 10)
+    .text("30% cap");
+
+  const tooltip = document.getElementById("tooltip");
+
+  data.forEach((d, i) => {
+    const y = topPad + i * (barH + gap);
+
+    // Label
+    svg.append("text")
+      .attr("x", labelW - 8)
+      .attr("y", y + barH / 2 + 4)
+      .attr("text-anchor", "end")
+      .attr("font-family", "'IBM Plex Mono', monospace")
+      .attr("font-size", 11)
+      .attr("fill", "#1A1208")
+      .text(d.name);
+
+    // Bar
+    const bar = svg.append("rect")
+      .attr("x", labelW)
+      .attr("y", y)
+      .attr("width", x(d.share))
+      .attr("height", barH)
+      .attr("rx", 3)
+      .attr("fill", CAT_COLOR[d.cat])
+      .style("cursor", "default")
+      .on("mousemove", (event) => {
+        tooltip.style.opacity = 1;
+        tooltip.style.left = (event.clientX + 12) + "px";
+        tooltip.style.top  = (event.clientY - 30) + "px";
+        tooltip.innerHTML = `<strong>${d.name}</strong><br/>${d.share.toFixed(2)}% market share`;
+      })
+      .on("mouseleave", () => { tooltip.style.opacity = 0; });
+
+    // Value label
+    svg.append("text")
+      .attr("class", "bar-label")
+      .attr("x", labelW + x(d.share) + 6)
+      .attr("y", y + barH / 2 + 4)
+      .text(d.share.toFixed(1) + "%");
+  });
+}
+
+// ── Draw HHI bar ─────────────────────────────────────────────
+function drawHHI() {
+  const bar = document.getElementById("hhi-bar");
+  const labels = document.getElementById("hhi-labels");
+
+  HHI_SEGS.forEach(seg => {
+    const pct = (seg.pts / HHI_TOTAL) * 100;
+
+    const div = document.createElement("div");
+    div.style.cssText = `width:${pct}%;background:${seg.color};`;
+    bar.appendChild(div);
+
+    const lbl = document.createElement("div");
+    lbl.className = "hhi-seg-label";
+    lbl.style.cssText = `width:${pct}%;padding-right:4px;`;
+    lbl.innerHTML = `<div class="name" style="color:${seg.color}">${seg.name}</div>
+                     <div class="pct">${pct.toFixed(1)}%</div>`;
+    labels.appendChild(lbl);
+  });
+}
+
+// ── Tab switch ────────────────────────────────────────────────
+function switchTab(tab) {
+  currentTab = tab;
+  document.getElementById("btn-volume").classList.toggle("active", tab === "volume");
+  document.getElementById("btn-value").classList.toggle("active", tab === "value");
+  drawChart(tab);
+}
+
+// ── Init ──────────────────────────────────────────────────────
+drawChart("volume");
+drawHHI();
+
+window.addEventListener("resize", () => drawChart(currentTab));
+</script>
+</body>
+</html>
