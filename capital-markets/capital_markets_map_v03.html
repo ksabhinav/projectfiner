@@ -80,6 +80,9 @@
   .dist-tooltip{font-family:'Georgia',serif;font-size:11px;background:#fff;border:1px solid #e0ddd8;padding:8px 10px;box-shadow:0 2px 6px rgba(0,0,0,0.1);line-height:1.6}
   .dist-tooltip strong{font-size:12px;color:#1a1410;display:block;margin-bottom:3px}
 
+  /* District name labels */
+  .dist-label{background:none!important;border:none!important;box-shadow:none!important;font-family:'Georgia',serif;font-size:9px;font-weight:700;color:#3a3228;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 3px #fff,1px 1px 2px rgba(255,255,255,0.9);letter-spacing:0.03em;white-space:nowrap;pointer-events:none;padding:0!important;opacity:0.85}
+
   /* Watermark */
   #wm{position:absolute;bottom:20px;right:110px;z-index:1000;font-family:'Georgia',serif;font-size:9px;font-style:italic;color:rgba(0,0,0,0.18);letter-spacing:0.06em;pointer-events:none}
 
@@ -244,7 +247,7 @@ const iconCDSL=makeIcon('#b8603e'), iconNSDL=makeIcon('#3d7a8e'), iconMFDI=makeI
 let cdslData=[],nsdlData=[],mfdiData=[],mfdcData=[],coordsMap={},distGeoJSON=null;
 let showCDSL=true,showNSDL=true,showMFDI=true,showMFDC=true,dpQuery='',stateFilter='';
 let currentView='choro'; // 'choro' or 'dots'
-let choroLayer=null, drilldownActive=false;
+let choroLayer=null, drilldownActive=false, distLabelsLayer=null;
 const markerCache={cdsl:[],nsdl:[],mfdi:[],mfdc:[]};
 
 // ── Choropleth colours ────────────────────────────────────────────────────────
@@ -328,6 +331,45 @@ function buildChoropleth() {
     [clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(c=>{ if(c._map) c.bringToFront(); });
   }
 }
+
+// ── District name labels ─────────────────────────────────────────────────────
+function buildDistrictLabels() {
+  if(distLabelsLayer) { map.removeLayer(distLabelsLayer); distLabelsLayer=null; }
+  if(!distGeoJSON) return;
+
+  distLabelsLayer = L.layerGroup();
+  distGeoJSON.features.forEach(f => {
+    const p = f.properties;
+    // Compute centroid from bounds
+    let latlngs;
+    try {
+      const tmp = L.geoJSON(f);
+      const c = tmp.getBounds().getCenter();
+      const label = L.marker(c, {
+        icon: L.divIcon({
+          className: 'dist-label',
+          html: p.DISTRICT,
+          iconSize: [0,0],
+          iconAnchor: [0,0]
+        }),
+        interactive: false
+      });
+      distLabelsLayer.addLayer(label);
+    } catch(e) {}
+  });
+}
+
+function updateLabelVisibility() {
+  if(!distLabelsLayer) return;
+  const z = map.getZoom();
+  if(z >= 7 && (currentView==='choro' || drilldownActive)) {
+    if(!map.hasLayer(distLabelsLayer)) distLabelsLayer.addTo(map);
+  } else {
+    if(map.hasLayer(distLabelsLayer)) map.removeLayer(distLabelsLayer);
+  }
+}
+
+map.on('zoomend', updateLabelVisibility);
 
 // State code matching from state name
 const STATE_NAME_CODE = {
@@ -470,6 +512,8 @@ Promise.all([
 
   buildStateDropdown([...cdsl,...nsdl,...mfdi,...mfdc]);
   buildChoropleth();
+  buildDistrictLabels();
+  updateLabelVisibility();
   updateStats();
 }).catch(err=>setStatus('Error: '+err.message));
 
