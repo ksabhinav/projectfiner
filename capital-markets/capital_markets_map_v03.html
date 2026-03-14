@@ -342,6 +342,13 @@ function stateCodeMatch(stateName, code) {
   return STATE_NAME_CODE[stateName?.toUpperCase()] === code;
 }
 
+// ── Auto-exit drilldown on zoom out ──────────────────────────────────────────
+map.on('zoomend', function() {
+  if(drilldownActive && map.getZoom() <= 6) {
+    exitDrilldown();
+  }
+});
+
 // ── Drill down into district ──────────────────────────────────────────────────
 function drillInto(feature, layer) {
   const p = feature.properties;
