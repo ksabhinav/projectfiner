@@ -344,7 +344,7 @@ function stateCodeMatch(stateName, code) {
 
 // ── Auto-exit drilldown on zoom out ──────────────────────────────────────────
 map.on('zoomend', function() {
-  if(drilldownActive && map.getZoom() <= 6) {
+  if(drilldownActive && map.getZoom() <= 8) {
     exitDrilldown();
   }
 });
