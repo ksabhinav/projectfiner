@@ -350,19 +350,20 @@ function buildDistrictLabels() {
 function updateLabelVisibility() {
   if(distLabelsLayer) { map.removeLayer(distLabelsLayer); distLabelsLayer=null; }
   const z = map.getZoom();
-  if(z < 7 || (currentView!=='choro' && !drilldownActive)) return;
+  if(z < 8 || (currentView!=='choro' && !drilldownActive)) return;
 
   const viewBounds = map.getBounds();
   distLabelsLayer = L.layerGroup();
 
-  // Only label districts visible in viewport, spaced to avoid overlap
+  // Only label districts visible in viewport, well spaced
   const placed = [];
-  const minPxGap = 60; // min pixel distance between labels
+  const minPxGapX = 120;
+  const minPxGapY = 30;
 
   distCentroids.forEach(d => {
     if(!viewBounds.intersects(d.bounds)) return;
     const px = map.latLngToContainerPoint(d.center);
-    const tooClose = placed.some(p => Math.abs(px.x-p.x) < minPxGap && Math.abs(px.y-p.y) < 18);
+    const tooClose = placed.some(p => Math.abs(px.x-p.x) < minPxGapX && Math.abs(px.y-p.y) < minPxGapY);
     if(tooClose) return;
     placed.push(px);
 
