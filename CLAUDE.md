@@ -2,7 +2,7 @@
 
 ## What This Project Is
 
-**Project FINER** (Financial Inclusion & Evaluation Research) is a static data platform focused on financial inclusion in India, with emphasis on the North East region. It publishes interactive maps, charts, and downloadable datasets covering banking infrastructure, credit access, government schemes, and capital markets.
+**Project FINER** (Financial Inclusion in the North East Region) is a static data platform focused on financial inclusion in India, with emphasis on the North East region. It publishes interactive maps, charts, and downloadable datasets covering banking infrastructure, credit access, government schemes, and capital markets.
 
 - **Hosted on**: GitHub Pages at `ksabhinav.github.io/projectfiner`
 - **Repo**: `https://github.com/ksabhinav/projectfiner.git`
