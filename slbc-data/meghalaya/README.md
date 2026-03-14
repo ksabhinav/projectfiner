@@ -14,13 +14,13 @@ District-level financial inclusion indicators for **Meghalaya**, extracted from 
 ```
 meghalaya/
   quarterly/                        # Per-quarter CSVs (chronological)
-    2020-06-jun/                    # June 2020
+    2020-06/                    # June 2020
       branch_network.csv
       education_loan.csv
       ...
-    2020-09-sep/                    # September 2020
+    2020-09/                    # September 2020
     ...
-    2025-09-sep/                    # September 2025 (latest)
+    2025-09/                    # September 2025 (latest)
 
   meghalaya_fi_timeseries.csv       # All districts x all quarters, wide format
   meghalaya_fi_timeseries.json      # Same data, grouped by quarter
@@ -30,28 +30,28 @@ meghalaya/
 
 ## Quarterly Folders
 
-Each folder under `quarterly/` is named `YYYY-MM-mon` for chronological sorting. Each contains one CSV per indicator category, with rows = districts and columns = fields for that indicator.
+Each folder under `quarterly/` is named `YYYY-MM` for chronological sorting. Each contains one CSV per indicator category, with rows = districts and columns = fields for that indicator.
 
 | Folder | Quarter | FY | Tables |
 |--------|---------|-----|--------|
-| `2020-06-jun` | June 2020 | 2020-21 | 22 |
-| `2020-09-sep` | September 2020 | 2020-21 | 28 |
-| `2020-12-dec` | December 2020 | 2020-21 | 31 |
-| `2021-06-jun` | June 2021 | 2021-22 | 2 |
-| `2021-09-sep` | September 2021 | 2021-22 | 1 |
-| `2021-12-dec` | December 2021 | 2021-22 | 1 |
-| `2022-03-mar` | March 2022 | 2021-22 | 42 |
-| `2022-06-jun` | June 2022 | 2022-23 | 44 |
-| `2022-09-sep` | September 2022 | 2022-23 | 43 |
-| `2022-12-dec` | December 2022 | 2022-23 | 43 |
-| `2023-03-mar` | March 2023 | 2022-23 | 44 |
-| `2023-09-sep` | September 2023 | 2023-24 | 44 |
-| `2023-12-dec` | December 2023 | 2023-24 | 44 |
-| `2024-06-jun` | June 2024 | 2024-25 | 43 |
-| `2024-09-sep` | September 2024 | 2024-25 | 43 |
-| `2024-12-dec` | December 2024 | 2024-25 | 44 |
-| `2025-06-jun` | June 2025 | 2025-26 | 43 |
-| `2025-09-sep` | September 2025 | 2025-26 | 44 |
+| `2020-06` | June 2020 | 2020-21 | 22 |
+| `2020-09` | September 2020 | 2020-21 | 28 |
+| `2020-12` | December 2020 | 2020-21 | 31 |
+| `2021-06` | June 2021 | 2021-22 | 2 |
+| `2021-09` | September 2021 | 2021-22 | 1 |
+| `2021-12` | December 2021 | 2021-22 | 1 |
+| `2022-03` | March 2022 | 2021-22 | 42 |
+| `2022-06` | June 2022 | 2022-23 | 44 |
+| `2022-09` | September 2022 | 2022-23 | 43 |
+| `2022-12` | December 2022 | 2022-23 | 43 |
+| `2023-03` | March 2023 | 2022-23 | 44 |
+| `2023-09` | September 2023 | 2023-24 | 44 |
+| `2023-12` | December 2023 | 2023-24 | 44 |
+| `2024-06` | June 2024 | 2024-25 | 43 |
+| `2024-09` | September 2024 | 2024-25 | 43 |
+| `2024-12` | December 2024 | 2024-25 | 44 |
+| `2025-06` | June 2025 | 2025-26 | 43 |
+| `2025-09` | September 2025 | 2025-26 | 44 |
 
 2021 quarters have fewer tables because only Excel files (from ZIP archives) were available, not full PDF booklets.
 
@@ -144,7 +144,7 @@ Each CSV filename corresponds to an indicator category. All values are district-
 ```python
 import pandas as pd
 
-df = pd.read_csv("quarterly/2025-09-sep/branch_network.csv")
+df = pd.read_csv("quarterly/2025-09/branch_network.csv")
 print(df)
 ```
 
