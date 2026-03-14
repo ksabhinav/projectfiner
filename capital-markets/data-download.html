@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Data Download — Capital Markets Access | Project FINER</title>
+<title>Data Download | Project FINER</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
@@ -50,23 +50,28 @@
   .btn svg{width:14px;height:14px;fill:currentColor}
   .btn.downloading{opacity:0.5;cursor:wait}
 
+  .section-label{font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#aaa09a;margin:32px 0 14px;padding-top:8px}
+  .state-link{display:block;background:#fff;border:1px solid #e8e5e0;border-radius:8px;overflow:hidden;transition:all 0.2s;text-decoration:none;color:inherit;margin-bottom:10px}
+  .state-link:hover{box-shadow:0 4px 16px rgba(0,0,0,0.06);transform:translateY(-1px)}
+  .state-link-inner{padding:20px 24px;border-left:3px solid #3d7a8e;display:flex;align-items:center;justify-content:space-between}
+  .state-link-name{font-size:15px;font-weight:700;color:#1a1410}
+  .state-link-meta{font-family:'Inter',sans-serif;font-size:11px;color:#888078;margin-top:3px}
+  .state-link-arrow{font-family:'Inter',sans-serif;font-size:18px;color:#ccc;transition:color 0.2s}
+  .state-link:hover .state-link-arrow{color:#3d7a8e}
+
   footer{padding:24px 40px;font-family:'Inter',sans-serif;font-size:9px;font-weight:500;color:rgba(0,0,0,0.15);letter-spacing:0.06em}
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Capital Markets Access — Data Download</h1>
-  <p><a href="capital_markets_map_v03.html">← Back to map</a> &nbsp;&middot;&nbsp; Project FINER</p>
+  <h1>Data Download &mdash; Project FINER</h1>
+  <p><a href="capital_markets_map_v03.html">&larr; Back to map</a> &nbsp;&middot;&nbsp; Project FINER</p>
 </header>
 
-<div class="stat-bar">
-  <div class="stat-row">
-    <div class="stat-item"><div class="stat-num">4</div><div class="stat-lbl">Datasets</div></div>
-  </div>
-</div>
-
 <div class="container">
+
+  <div class="section-label">Capital Markets Access</div>
 
   <div class="dataset" id="ds-cdsl">
     <div class="dataset-inner"><div class="dataset-head">
@@ -143,6 +148,18 @@
     </div>
     </div>
   </div>
+
+  <div class="section-label">SLBC &mdash; District-Level Financial Inclusion</div>
+
+  <a class="state-link" href="../slbc-data/meghalaya/download.html">
+    <div class="state-link-inner">
+      <div>
+        <div class="state-link-name">Meghalaya</div>
+        <div class="state-link-meta">18 quarters &middot; 12 districts &middot; 44 indicators &middot; 606 CSVs &middot; Jun 2020 &ndash; Sep 2025</div>
+      </div>
+      <div class="state-link-arrow">&rarr;</div>
+    </div>
+  </a>
 
 </div>
 
