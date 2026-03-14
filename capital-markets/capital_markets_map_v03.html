@@ -347,12 +347,7 @@ function drillInto(feature, layer) {
   const p = feature.properties;
   drilldownActive = true;
   document.getElementById('btn-back').style.display = 'block';
-
-  // Zoom to district bounds
-  map.flyToBounds(layer.getBounds(), {padding:[40,40], maxZoom:12, duration:1.0});
-
-  // Switch to dots view
-  setView('dots', true);
+  document.getElementById('legend').style.display = 'block';
 
   // Filter to this district's state
   const stateCode = STATE_NAME_CODE[p.STATE_UT?.toUpperCase()];
@@ -361,6 +356,10 @@ function drillInto(feature, layer) {
     document.getElementById('state-select').value = stateCode;
   }
 
+  // Keep choropleth, add dots on top
+  [clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(c=>{ if(!c._map) c.addTo(map); });
+  renderMarkers();
+
   // Update stats to show district info
   const total = getFilteredTotal(p);
   document.getElementById('stats').innerHTML =
@@ -368,13 +367,20 @@ function drillInto(feature, layer) {
      <span style="font-size:9px;color:#888078">${p.STATE_UT}</span><br>
      ${total.toLocaleString()} access points`;
 
-  renderMarkers();
+  // Zoom to district bounds
+  map.flyToBounds(layer.getBounds(), {padding:[40,40], maxZoom:12, duration:1.0});
 }
 
 function exitDrilldown() {
   drilldownActive = false;
   document.getElementById('btn-back').style.display = 'none';
-  setView('choro');
+  document.getElementById('legend').style.display = currentView==='dots' ? 'block' : 'none';
+
+  // Remove dots, keep choropleth
+  if(currentView==='choro') {
+    [clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(c=>{ if(c._map) map.removeLayer(c); });
+  }
+
   stateFilter = '';
   document.getElementById('state-select').value = '';
   map.flyToBounds(INDIA_BOUNDS, {padding:[20,20], duration:1.0});
@@ -451,7 +457,8 @@ function renderMarkers(){
   renderTimer=setTimeout(_doRender,80);
 }
 function _doRender(){
-  if(currentView==='choro'){ buildChoropleth(); updateStats(); return; }
+  if(currentView==='choro' && !drilldownActive){ buildChoropleth(); updateStats(); return; }
+  if(currentView==='choro' && drilldownActive){ buildChoropleth(); }
   const dq=dpQuery,sf=stateFilter;
   function passes(c){
     if(dq&&!c.n.toLowerCase().includes(dq))return false;
