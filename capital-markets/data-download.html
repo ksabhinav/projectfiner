@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Data Download — Capital Markets Access | Project FINER</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Georgia',serif;background:#f8f7f4;color:#1a1410;min-height:100vh}
+
+  header{padding:32px 40px 24px;border-bottom:1px solid #e0ddd8}
+  header h1{font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#1a1410;margin-bottom:4px}
+  header p{font-size:12px;color:#888078;font-style:italic}
+  header a{color:#b8603e;text-decoration:none;font-style:normal}
+  header a:hover{text-decoration:underline}
+
+  .container{max-width:900px;margin:0 auto;padding:32px 40px 60px}
+
+  .dataset{background:#fff;border:1px solid #e0ddd8;padding:24px 28px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+  .dataset-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+  .dataset h2{font-size:14px;font-weight:700;color:#1a1410;letter-spacing:0.02em}
+  .dataset-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px;vertical-align:middle}
+  .badge{font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:3px 8px;border:1px solid;border-radius:1px}
+
+  .meta{font-size:11px;color:#888078;line-height:1.8;margin-bottom:16px}
+  .meta strong{color:#555048}
+
+  .fields{font-family:'Inter',sans-serif;font-size:10px;color:#888078;margin-bottom:16px;line-height:1.7}
+  .fields code{background:#f4f2ee;padding:1px 5px;font-size:10px;color:#555048;border-radius:1px}
+
+  .btn-row{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{font-family:'Georgia',serif;font-size:11px;font-weight:700;padding:8px 18px;border:1px solid #e0ddd8;background:#faf9f7;color:#1a1410;cursor:pointer;letter-spacing:0.03em;transition:all 0.15s;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+  .btn:hover{background:#1a1410;color:#fff;border-color:#1a1410}
+  .btn svg{width:14px;height:14px;fill:currentColor}
+  .btn.downloading{opacity:0.5;cursor:wait}
+
+  .note{font-size:10px;color:#aaa09a;font-style:italic;margin-top:32px;line-height:1.7;border-top:1px solid #e8e5e0;padding-top:16px}
+
+  footer{padding:20px 40px;font-size:9px;font-style:italic;color:rgba(0,0,0,0.18);letter-spacing:0.06em}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Capital Markets Access — Data Download</h1>
+  <p><a href="capital_markets_map_v03.html">← Back to map</a> &nbsp;·&nbsp; Project FINER</p>
+</header>
+
+<div class="container">
+
+  <div class="dataset" id="ds-cdsl">
+    <div class="dataset-head">
+      <h2><span class="dataset-dot" style="background:#b8603e"></span>CDSL DP Service Centres</h2>
+      <span class="badge" style="color:#b8603e;border-color:#b8603e">20,612 records</span>
+    </div>
+    <div class="meta">
+      Depository Participant service centres registered with <strong>Central Depository Services Limited</strong>.<br>
+      Source: CDSL public register
+    </div>
+    <div class="fields">
+      Fields: <code>Name</code> <code>Address</code> <code>DP ID</code> <code>Pincode</code> <code>Email</code> <code>Website</code> <code>State</code> <code>City</code>
+    </div>
+    <div class="btn-row">
+      <button class="btn" onclick="download('cdsl','csv')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>CSV</button>
+      <button class="btn" onclick="download('cdsl','xlsx')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>Excel</button>
+    </div>
+  </div>
+
+  <div class="dataset" id="ds-nsdl">
+    <div class="dataset-head">
+      <h2><span class="dataset-dot" style="background:#3d7a8e"></span>NSDL DP Service Centres</h2>
+      <span class="badge" style="color:#3d7a8e;border-color:#3d7a8e">57,005 records</span>
+    </div>
+    <div class="meta">
+      Depository Participant service centres registered with <strong>National Securities Depository Limited</strong>.<br>
+      Source: NSDL public register
+    </div>
+    <div class="fields">
+      Fields: <code>Name</code> <code>Address</code> <code>DP ID</code> <code>Pincode</code> <code>Email</code> <code>Website</code> <code>Type</code> <code>State</code> <code>City</code>
+    </div>
+    <div class="btn-row">
+      <button class="btn" onclick="download('nsdl','csv')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>CSV</button>
+      <button class="btn" onclick="download('nsdl','xlsx')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>Excel</button>
+    </div>
+  </div>
+
+  <div class="dataset" id="ds-mfdi">
+    <div class="dataset-head">
+      <h2><span class="dataset-dot" style="background:#5a7a3a"></span>MF Distributors — Individual</h2>
+      <span class="badge" style="color:#5a7a3a;border-color:#5a7a3a">187,254 records</span>
+    </div>
+    <div class="meta">
+      Individual Mutual Fund Distributors registered with <strong>AMFI</strong>.<br>
+      Source: AMFI Locate MF Distributor
+    </div>
+    <div class="fields">
+      Fields: <code>Name</code> <code>ARN</code> <code>Pincode</code> <code>State</code> <code>Location</code> <code>City</code>
+    </div>
+    <div class="btn-row">
+      <button class="btn" onclick="download('mfdi','csv')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>CSV</button>
+      <button class="btn" onclick="download('mfdi','xlsx')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>Excel</button>
+    </div>
+  </div>
+
+  <div class="dataset" id="ds-mfdc">
+    <div class="dataset-head">
+      <h2><span class="dataset-dot" style="background:#8b6914"></span>MF Distributors — Corporate</h2>
+      <span class="badge" style="color:#8b6914;border-color:#8b6914">10,760 records</span>
+    </div>
+    <div class="meta">
+      Corporate Mutual Fund Distributors registered with <strong>AMFI</strong>.<br>
+      Source: AMFI Locate MF Distributor
+    </div>
+    <div class="fields">
+      Fields: <code>Name</code> <code>ARN</code> <code>Pincode</code> <code>State</code> <code>Location</code> <code>City</code>
+    </div>
+    <div class="btn-row">
+      <button class="btn" onclick="download('mfdc','csv')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>CSV</button>
+      <button class="btn" onclick="download('mfdc','xlsx')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>Excel</button>
+    </div>
+  </div>
+
+  <p class="note">
+    All data is sourced from publicly available registers maintained by CDSL, NSDL, and AMFI.<br>
+    Files are generated client-side from the same JSON data that powers the interactive map.
+  </p>
+</div>
+
+<footer>Project FINER &middot; 2024</footer>
+
+<script>
+const BASE = 'https://raw.githubusercontent.com/ksabhinav/projectfiner/main';
+const SOURCES = {
+  cdsl: {
+    url: `${BASE}/capital-markets/DPSCs/cdsl_dp_centres.json`,
+    filename: 'cdsl_dp_service_centres',
+    headers: ['Name','Address','DP ID','Pincode','Email','Website','State','City'],
+    keys: ['n','a','id','p','e','u','st','loc']
+  },
+  nsdl: {
+    url: `${BASE}/capital-markets/DPSCs/nsdl_dp_centres.json`,
+    filename: 'nsdl_dp_service_centres',
+    headers: ['Name','Address','DP ID','Pincode','Email','Website','Type','State','City'],
+    keys: ['n','a','id','p','e','u','t','st','loc']
+  },
+  mfdi: {
+    url: `${BASE}/capital-markets/MFDs/mfd_individual.json`,
+    filename: 'mfd_individual',
+    headers: ['Name','ARN','Pincode','State','Location','City'],
+    keys: ['n','arn','p','st','loc','c']
+  },
+  mfdc: {
+    url: `${BASE}/capital-markets/MFDs/mfd_corporate.json`,
+    filename: 'mfd_corporate',
+    headers: ['Name','ARN','Pincode','State','Location','City'],
+    keys: ['n','arn','p','st','loc','c']
+  }
+};
+
+const cache = {};
+
+async function download(id, fmt) {
+  const src = SOURCES[id];
+  const btn = event.target.closest('.btn');
+  btn.classList.add('downloading');
+  btn.textContent = 'Preparing...';
+
+  try {
+    if(!cache[id]) {
+      const res = await fetch(src.url);
+      cache[id] = await res.json();
+    }
+    const data = cache[id];
+
+    // Build rows with readable headers
+    const rows = [src.headers];
+    data.forEach(r => {
+      rows.push(src.keys.map(k => r[k] || ''));
+    });
+
+    if(fmt === 'csv') {
+      const csv = rows.map(r => r.map(v => {
+        const s = String(v).replace(/"/g, '""');
+        return s.includes(',') || s.includes('"') || s.includes('\n') ? `"${s}"` : s;
+      }).join(',')).join('\n');
+
+      const blob = new Blob(['\ufeff' + csv], {type:'text/csv;charset=utf-8;'});
+      saveBlob(blob, src.filename + '.csv');
+    } else {
+      const ws = XLSX.utils.aoa_to_sheet(rows);
+      // Set column widths
+      ws['!cols'] = src.headers.map(h => ({wch: Math.max(h.length + 2, 14)}));
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, 'Data');
+      XLSX.writeFile(wb, src.filename + '.xlsx');
+    }
+  } catch(e) {
+    alert('Download failed: ' + e.message);
+  }
+
+  btn.classList.remove('downloading');
+  btn.innerHTML = fmt === 'csv'
+    ? '<svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>CSV'
+    : '<svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>Excel';
+}
+
+function saveBlob(blob, name) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+</script>
+</body>
+</html>

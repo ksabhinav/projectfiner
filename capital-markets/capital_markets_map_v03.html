@@ -86,6 +86,9 @@
 
   /* Watermark */
   #wm{position:absolute;bottom:20px;right:110px;z-index:1000;font-family:'Georgia',serif;font-size:9px;font-style:italic;color:rgba(0,0,0,0.18);letter-spacing:0.06em;pointer-events:none}
+  #dl-link{position:absolute;bottom:20px;right:16px;z-index:1000;font-family:'Georgia',serif;font-size:9px;letter-spacing:0.04em}
+  #dl-link a{color:#b8603e;text-decoration:none;background:#fff;padding:5px 10px;border:1px solid #e0ddd8;box-shadow:0 1px 3px rgba(0,0,0,0.06)}
+  #dl-link a:hover{background:#1a1410;color:#fff;border-color:#1a1410}
 
   /* Back button */
   #btn-back{display:none;position:absolute;top:90px;right:16px;z-index:1000;background:#fff;border:1px solid #e0ddd8;padding:7px 12px;font-family:'Georgia',serif;font-size:10px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,0.06);color:#1a1410}
@@ -199,6 +202,7 @@
 </div>
 
 <div id="wm">Project FINER · 2024</div>
+<div id="dl-link"><a href="data-download.html">↓ Download Data</a></div>
 
 <script>
 const CDSL_URL    = 'https://raw.githubusercontent.com/ksabhinav/projectfiner/main/capital-markets/DPSCs/cdsl_dp_centres.json';
