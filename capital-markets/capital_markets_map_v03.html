@@ -88,7 +88,7 @@
   #wm{position:absolute;bottom:20px;right:110px;z-index:1000;font-family:'Georgia',serif;font-size:9px;font-style:italic;color:rgba(0,0,0,0.18);letter-spacing:0.06em;pointer-events:none}
 
   /* Back button */
-  #btn-back{display:none;position:absolute;top:16px;right:16px;z-index:1000;background:#fff;border:1px solid #e0ddd8;padding:7px 12px;font-family:'Georgia',serif;font-size:10px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,0.06);color:#1a1410}
+  #btn-back{display:none;position:absolute;top:90px;right:16px;z-index:1000;background:#fff;border:1px solid #e0ddd8;padding:7px 12px;font-family:'Georgia',serif;font-size:10px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,0.06);color:#1a1410}
   #btn-back:hover{background:#f8f7f4}
 
   /* Choropleth legend */
@@ -211,7 +211,8 @@ const DIST_URL    = 'https://raw.githubusercontent.com/ksabhinav/projectfiner/ma
 const INDIA_BOUNDS = L.latLngBounds(L.latLng(6.5,68.0), L.latLng(37.5,97.5));
 const NE_CODES = ['AS','ML','MN','MZ','NL','TR','AR','SK'];
 
-const map = L.map('map',{center:[22.5,82.5],zoom:5,minZoom:4,maxZoom:18,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false});
+const map = L.map('map',{center:[22.5,82.5],zoom:5,minZoom:4,maxZoom:18,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false});
+L.control.zoom({position:'topright'}).addTo(map);
 
 // White background instead of tile layer
 L.GridLayer.extend({createTile:function(){const t=document.createElement('canvas');t.width=t.height=256;const c=t.getContext('2d');c.fillStyle='#fff';c.fillRect(0,0,256,256);return t;}});
