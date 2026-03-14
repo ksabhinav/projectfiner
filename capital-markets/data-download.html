@@ -9,50 +9,69 @@
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:'Georgia',serif;background:#f8f7f4;color:#1a1410;min-height:100vh}
+  body{font-family:'Georgia',serif;background:#f5f4f1;color:#1a1410;min-height:100vh}
 
-  header{padding:32px 40px 24px;border-bottom:1px solid #e0ddd8}
-  header h1{font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#1a1410;margin-bottom:4px}
-  header p{font-size:12px;color:#888078;font-style:italic}
-  header a{color:#b8603e;text-decoration:none;font-style:normal}
-  header a:hover{text-decoration:underline}
+  header{padding:40px 40px 32px;background:#fff;border-bottom:1px solid #e0ddd8}
+  header h1{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1a1410;margin-bottom:6px}
+  header p{font-family:'Inter',sans-serif;font-size:11px;font-weight:400;color:#888078}
+  header a{color:#b8603e;text-decoration:none;font-weight:500;transition:color 0.15s}
+  header a:hover{color:#8a4a2e}
+
+  .stat-bar{background:#fff;border-bottom:1px solid #e8e5e0;padding:20px 40px}
+  .stat-row{max-width:900px;margin:0 auto;display:flex;gap:32px;flex-wrap:wrap}
+  .stat-item{text-align:center}
+  .stat-num{font-family:'Georgia',serif;font-size:22px;font-weight:700;color:#1a1410;line-height:1.2}
+  .stat-lbl{font-family:'Inter',sans-serif;font-size:8px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#aaa09a;margin-top:2px}
 
   .container{max-width:900px;margin:0 auto;padding:32px 40px 60px}
 
-  .dataset{background:#fff;border:1px solid #e0ddd8;padding:24px 28px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+  .dataset{background:#fff;border:1px solid #e8e5e0;padding:0;margin-bottom:16px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.03);overflow:hidden;transition:box-shadow 0.2s}
+  .dataset:hover{box-shadow:0 4px 16px rgba(0,0,0,0.06)}
+  .dataset-inner{padding:24px 28px;border-left:3px solid transparent}
+  #ds-cdsl .dataset-inner{border-left-color:#b8603e}
+  #ds-nsdl .dataset-inner{border-left-color:#3d7a8e}
+  #ds-mfdi .dataset-inner{border-left-color:#5a7a3a}
+  #ds-mfdc .dataset-inner{border-left-color:#8b6914}
   .dataset-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px}
-  .dataset h2{font-size:14px;font-weight:700;color:#1a1410;letter-spacing:0.02em}
+  .dataset h2{font-size:15px;font-weight:700;color:#1a1410;letter-spacing:0.01em}
   .dataset-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px;vertical-align:middle}
-  .badge{font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:3px 8px;border:1px solid;border-radius:1px}
+  .badge{font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:4px 10px;border:1px solid;border-radius:20px}
 
-  .meta{font-size:11px;color:#888078;line-height:1.8;margin-bottom:16px}
-  .meta strong{color:#555048}
+  .meta{font-family:'Inter',sans-serif;font-size:11px;font-weight:400;color:#888078;line-height:1.8;margin-bottom:14px}
+  .meta strong{color:#555048;font-weight:500}
 
-  .fields{font-family:'Inter',sans-serif;font-size:10px;color:#888078;margin-bottom:16px;line-height:1.7}
-  .fields code{background:#f4f2ee;padding:1px 5px;font-size:10px;color:#555048;border-radius:1px}
+  .fields{font-family:'Inter',sans-serif;font-size:10px;color:#888078;margin-bottom:16px;line-height:1.8}
+  .fields code{background:#f4f2ee;padding:2px 7px;font-size:10px;color:#555048;border-radius:3px;font-weight:500}
 
   .btn-row{display:flex;gap:10px;flex-wrap:wrap}
-  .btn{font-family:'Georgia',serif;font-size:11px;font-weight:700;padding:8px 18px;border:1px solid #e0ddd8;background:#faf9f7;color:#1a1410;cursor:pointer;letter-spacing:0.03em;transition:all 0.15s;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
-  .btn:hover{background:#1a1410;color:#fff;border-color:#1a1410}
+  .btn{font-family:'Inter',sans-serif;font-size:10px;font-weight:600;padding:9px 20px;border:1px solid #e0ddd8;background:#faf9f7;color:#1a1410;cursor:pointer;letter-spacing:0.04em;text-transform:uppercase;transition:all 0.2s;text-decoration:none;display:inline-flex;align-items:center;gap:7px;border-radius:5px}
+  .btn:hover{background:#1a1410;color:#fff;border-color:#1a1410;transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+  .btn:active{transform:translateY(0)}
   .btn svg{width:14px;height:14px;fill:currentColor}
   .btn.downloading{opacity:0.5;cursor:wait}
 
-  .note{font-size:10px;color:#aaa09a;font-style:italic;margin-top:32px;line-height:1.7;border-top:1px solid #e8e5e0;padding-top:16px}
-
-  footer{padding:20px 40px;font-size:9px;font-style:italic;color:rgba(0,0,0,0.18);letter-spacing:0.06em}
+  footer{padding:24px 40px;font-family:'Inter',sans-serif;font-size:9px;font-weight:500;color:rgba(0,0,0,0.15);letter-spacing:0.06em}
 </style>
 </head>
 <body>
 
 <header>
   <h1>Capital Markets Access — Data Download</h1>
-  <p><a href="capital_markets_map_v03.html">← Back to map</a> &nbsp;·&nbsp; Project FINER</p>
+  <p><a href="capital_markets_map_v03.html">← Back to map</a> &nbsp;&middot;&nbsp; Project FINER</p>
 </header>
+
+<div class="stat-bar">
+  <div class="stat-row">
+    <div class="stat-item"><div class="stat-num">275,631</div><div class="stat-lbl">Total Records</div></div>
+    <div class="stat-item"><div class="stat-num">4</div><div class="stat-lbl">Datasets</div></div>
+    <div class="stat-item"><div class="stat-num">3</div><div class="stat-lbl">Sources</div></div>
+  </div>
+</div>
 
 <div class="container">
 
   <div class="dataset" id="ds-cdsl">
-    <div class="dataset-head">
+    <div class="dataset-inner"><div class="dataset-head">
       <h2><span class="dataset-dot" style="background:#b8603e"></span>CDSL DP Service Centres</h2>
       <span class="badge" style="color:#b8603e;border-color:#b8603e">20,612 records</span>
     </div>
@@ -67,10 +86,11 @@
       <button class="btn" onclick="download('cdsl','csv')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>CSV</button>
       <button class="btn" onclick="download('cdsl','xlsx')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>Excel</button>
     </div>
+    </div>
   </div>
 
   <div class="dataset" id="ds-nsdl">
-    <div class="dataset-head">
+    <div class="dataset-inner"><div class="dataset-head">
       <h2><span class="dataset-dot" style="background:#3d7a8e"></span>NSDL DP Service Centres</h2>
       <span class="badge" style="color:#3d7a8e;border-color:#3d7a8e">57,005 records</span>
     </div>
@@ -85,10 +105,11 @@
       <button class="btn" onclick="download('nsdl','csv')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>CSV</button>
       <button class="btn" onclick="download('nsdl','xlsx')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>Excel</button>
     </div>
+    </div>
   </div>
 
   <div class="dataset" id="ds-mfdi">
-    <div class="dataset-head">
+    <div class="dataset-inner"><div class="dataset-head">
       <h2><span class="dataset-dot" style="background:#5a7a3a"></span>MF Distributors — Individual</h2>
       <span class="badge" style="color:#5a7a3a;border-color:#5a7a3a">187,254 records</span>
     </div>
@@ -103,10 +124,11 @@
       <button class="btn" onclick="download('mfdi','csv')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>CSV</button>
       <button class="btn" onclick="download('mfdi','xlsx')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>Excel</button>
     </div>
+    </div>
   </div>
 
   <div class="dataset" id="ds-mfdc">
-    <div class="dataset-head">
+    <div class="dataset-inner"><div class="dataset-head">
       <h2><span class="dataset-dot" style="background:#8b6914"></span>MF Distributors — Corporate</h2>
       <span class="badge" style="color:#8b6914;border-color:#8b6914">10,760 records</span>
     </div>
@@ -120,6 +142,7 @@
     <div class="btn-row">
       <button class="btn" onclick="download('mfdc','csv')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>CSV</button>
       <button class="btn" onclick="download('mfdc','xlsx')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>Excel</button>
+    </div>
     </div>
   </div>
 
