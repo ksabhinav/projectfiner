@@ -1,13 +1,1647 @@
 {
   "source": "SLBC NE (State Level Bankers Committee, North East Region)",
   "state": "Meghalaya",
-  "description": "District-level Financial Inclusion indicators across multiple quarters",
+  "description": "District-level Financial Inclusion indicators, quarterly from June 2020 to September 2025",
   "amount_unit": "Rs. Lakhs",
+  "num_periods": 16,
+  "total_records": 185,
+  "fields": [
+    "district",
+    "period",
+    "as_on_date",
+    "fy",
+    "digital_upi_no",
+    "branches_rural",
+    "branches_semi_urban",
+    "branches_urban",
+    "branches_total",
+    "atm_total",
+    "csp_total",
+    "pmsby_no",
+    "pmjjby_no",
+    "apy_no",
+    "mudra_os_no",
+    "aadhaar_auth_total",
+    "deposit_amt_lakhs",
+    "cdr"
+  ],
   "periods": [
     {
+      "period": "June 2020",
+      "num_districts": 11,
+      "districts": [
+        {
+          "district": "East Garo Hills",
+          "period": "June 2020",
+          "as_on_date": "30-06-2020",
+          "fy": "2020-21",
+          "digital_upi_no": "119823.08"
+        },
+        {
+          "district": "East Jaintia Hills",
+          "period": "June 2020",
+          "as_on_date": "30-06-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "East Khasi Hills",
+          "period": "June 2020",
+          "as_on_date": "30-06-2020",
+          "fy": "2020-21",
+          "digital_upi_no": "1400286.03"
+        },
+        {
+          "district": "North Garo Hills",
+          "period": "June 2020",
+          "as_on_date": "30-06-2020",
+          "fy": "2020-21",
+          "digital_upi_no": "1907.38"
+        },
+        {
+          "district": "Ri Bhoi",
+          "period": "June 2020",
+          "as_on_date": "30-06-2020",
+          "fy": "2020-21",
+          "digital_upi_no": "322357.82"
+        },
+        {
+          "district": "South Garo Hills",
+          "period": "June 2020",
+          "as_on_date": "30-06-2020",
+          "fy": "2020-21",
+          "digital_upi_no": "853.99"
+        },
+        {
+          "district": "South West Garo Hills",
+          "period": "June 2020",
+          "as_on_date": "30-06-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "South West Khasi Hills",
+          "period": "June 2020",
+          "as_on_date": "30-06-2020",
+          "fy": "2020-21",
+          "digital_upi_no": "563.78"
+        },
+        {
+          "district": "West Garo Hills",
+          "period": "June 2020",
+          "as_on_date": "30-06-2020",
+          "fy": "2020-21",
+          "digital_upi_no": "246229.28"
+        },
+        {
+          "district": "West Jaintia Hills",
+          "period": "June 2020",
+          "as_on_date": "30-06-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "West Khasi Hills",
+          "period": "June 2020",
+          "as_on_date": "30-06-2020",
+          "fy": "2020-21",
+          "digital_upi_no": "72410.97"
+        }
+      ]
+    },
+    {
+      "period": "September 2020",
+      "num_districts": 11,
+      "districts": [
+        {
+          "district": "East Garo Hills",
+          "period": "September 2020",
+          "as_on_date": "30-09-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "East Jaintia Hills",
+          "period": "September 2020",
+          "as_on_date": "30-09-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "East Khasi Hills",
+          "period": "September 2020",
+          "as_on_date": "30-09-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "North Garo Hills",
+          "period": "September 2020",
+          "as_on_date": "30-09-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "Ri Bhoi",
+          "period": "September 2020",
+          "as_on_date": "30-09-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "South Garo Hills",
+          "period": "September 2020",
+          "as_on_date": "30-09-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "South West Garo Hills",
+          "period": "September 2020",
+          "as_on_date": "30-09-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "South West Khasi Hills",
+          "period": "September 2020",
+          "as_on_date": "30-09-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "West Garo Hills",
+          "period": "September 2020",
+          "as_on_date": "30-09-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "West Jaintia Hills",
+          "period": "September 2020",
+          "as_on_date": "30-09-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "West Khasi Hills",
+          "period": "September 2020",
+          "as_on_date": "30-09-2020",
+          "fy": "2020-21"
+        }
+      ]
+    },
+    {
+      "period": "December 2020",
+      "num_districts": 11,
+      "districts": [
+        {
+          "district": "East Garo Hills",
+          "period": "December 2020",
+          "as_on_date": "31-12-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "East Jaintia Hills",
+          "period": "December 2020",
+          "as_on_date": "31-12-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "East Khasi Hills",
+          "period": "December 2020",
+          "as_on_date": "31-12-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "North Garo Hills",
+          "period": "December 2020",
+          "as_on_date": "31-12-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "Ri Bhoi",
+          "period": "December 2020",
+          "as_on_date": "31-12-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "South Garo Hills",
+          "period": "December 2020",
+          "as_on_date": "31-12-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "South West Garo Hills",
+          "period": "December 2020",
+          "as_on_date": "31-12-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "South West Khasi Hills",
+          "period": "December 2020",
+          "as_on_date": "31-12-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "West Garo Hills",
+          "period": "December 2020",
+          "as_on_date": "31-12-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "West Jaintia Hills",
+          "period": "December 2020",
+          "as_on_date": "31-12-2020",
+          "fy": "2020-21"
+        },
+        {
+          "district": "West Khasi Hills",
+          "period": "December 2020",
+          "as_on_date": "31-12-2020",
+          "fy": "2020-21"
+        }
+      ]
+    },
+    {
+      "period": "June 2021",
+      "num_districts": 11,
+      "districts": [
+        {
+          "district": "East Garo Hills",
+          "period": "June 2021",
+          "as_on_date": "30-06-2021",
+          "fy": "2021-22",
+          "branches_rural": "5",
+          "branches_semi_urban": "7",
+          "branches_urban": "1",
+          "branches_total": "13",
+          "atm_total": "9",
+          "csp_total": "32"
+        },
+        {
+          "district": "East Jaintia Hills",
+          "period": "June 2021",
+          "as_on_date": "30-06-2021",
+          "fy": "2021-22",
+          "branches_rural": "21",
+          "branches_semi_urban": "4",
+          "branches_urban": "0",
+          "branches_total": "25",
+          "atm_total": "15",
+          "csp_total": "42"
+        },
+        {
+          "district": "East Khasi Hills",
+          "period": "June 2021",
+          "as_on_date": "30-06-2021",
+          "fy": "2021-22",
+          "branches_rural": "51",
+          "branches_semi_urban": "28",
+          "branches_urban": "109",
+          "branches_total": "188",
+          "atm_total": "267",
+          "csp_total": "112"
+        },
+        {
+          "district": "North Garo Hills",
+          "period": "June 2021",
+          "as_on_date": "30-06-2021",
+          "fy": "2021-22",
+          "branches_rural": "7",
+          "branches_semi_urban": "3",
+          "branches_urban": "0",
+          "branches_total": "10",
+          "atm_total": "7",
+          "csp_total": "18"
+        },
+        {
+          "district": "Ri Bhoi",
+          "period": "June 2021",
+          "as_on_date": "30-06-2021",
+          "fy": "2021-22",
+          "branches_rural": "34",
+          "branches_semi_urban": "15",
+          "branches_urban": "1",
+          "branches_total": "50",
+          "atm_total": "38",
+          "csp_total": "55"
+        },
+        {
+          "district": "South Garo Hills",
+          "period": "June 2021",
+          "as_on_date": "30-06-2021",
+          "fy": "2021-22",
+          "branches_rural": "4",
+          "branches_semi_urban": "4",
+          "branches_urban": "1",
+          "branches_total": "9",
+          "atm_total": "3",
+          "csp_total": "19"
+        },
+        {
+          "district": "South West Garo Hills",
+          "period": "June 2021",
+          "as_on_date": "30-06-2021",
+          "fy": "2021-22",
+          "branches_rural": "10",
+          "branches_semi_urban": "3",
+          "branches_urban": "0",
+          "branches_total": "13",
+          "atm_total": "6",
+          "csp_total": "46"
+        },
+        {
+          "district": "South West Khasi Hills",
+          "period": "June 2021",
+          "as_on_date": "30-06-2021",
+          "fy": "2021-22",
+          "branches_rural": "6",
+          "branches_semi_urban": "1",
+          "branches_urban": "0",
+          "branches_total": "7",
+          "atm_total": "6",
+          "csp_total": "12"
+        },
+        {
+          "district": "West Garo Hills",
+          "period": "June 2021",
+          "as_on_date": "30-06-2021",
+          "fy": "2021-22",
+          "branches_rural": "18",
+          "branches_semi_urban": "18",
+          "branches_urban": "5",
+          "branches_total": "41",
+          "atm_total": "42",
+          "csp_total": "204"
+        },
+        {
+          "district": "West Jaintia Hills",
+          "period": "June 2021",
+          "as_on_date": "30-06-2021",
+          "fy": "2021-22",
+          "branches_rural": "19",
+          "branches_semi_urban": "19",
+          "branches_urban": "3",
+          "branches_total": "41",
+          "atm_total": "24",
+          "csp_total": "70"
+        },
+        {
+          "district": "West Khasi Hills",
+          "period": "June 2021",
+          "as_on_date": "30-06-2021",
+          "fy": "2021-22",
+          "branches_rural": "15",
+          "branches_semi_urban": "12",
+          "branches_urban": "2",
+          "branches_total": "29",
+          "atm_total": "11",
+          "csp_total": "99"
+        }
+      ]
+    },
+    {
+      "period": "March 2022",
+      "num_districts": 9,
+      "districts": [
+        {
+          "district": "East Garo Hills",
+          "period": "March 2022",
+          "as_on_date": "31-03-2022",
+          "fy": "2021-22",
+          "pmsby_no": "8446",
+          "pmjjby_no": "2512",
+          "apy_no": "1986",
+          "mudra_os_no": "799",
+          "aadhaar_auth_total": "27170"
+        },
+        {
+          "district": "East Khasi Hills",
+          "period": "March 2022",
+          "as_on_date": "31-03-2022",
+          "fy": "2021-22",
+          "pmsby_no": "66628",
+          "pmjjby_no": "32820",
+          "apy_no": "13795",
+          "mudra_os_no": "5509",
+          "aadhaar_auth_total": "140672"
+        },
+        {
+          "district": "North Garo Hills",
+          "period": "March 2022",
+          "as_on_date": "31-03-2022",
+          "fy": "2021-22",
+          "pmsby_no": "14981",
+          "pmjjby_no": "4771",
+          "apy_no": "5897",
+          "mudra_os_no": "289",
+          "aadhaar_auth_total": "43250"
+        },
+        {
+          "district": "Ri Bhoi",
+          "period": "March 2022",
+          "as_on_date": "31-03-2022",
+          "fy": "2021-22",
+          "pmsby_no": "33750",
+          "pmjjby_no": "10641",
+          "apy_no": "3539",
+          "mudra_os_no": "847",
+          "aadhaar_auth_total": "55906"
+        },
+        {
+          "district": "South Garo Hills",
+          "period": "March 2022",
+          "as_on_date": "31-03-2022",
+          "fy": "2021-22",
+          "pmsby_no": "3588",
+          "pmjjby_no": "1136",
+          "apy_no": "563",
+          "mudra_os_no": "235",
+          "aadhaar_auth_total": "16057"
+        },
+        {
+          "district": "South West Garo Hills",
+          "period": "March 2022",
+          "as_on_date": "31-03-2022",
+          "fy": "2021-22",
+          "pmsby_no": "17492",
+          "pmjjby_no": "6378",
+          "apy_no": "1808",
+          "mudra_os_no": "443",
+          "aadhaar_auth_total": "44061"
+        },
+        {
+          "district": "South West Khasi Hills",
+          "period": "March 2022",
+          "as_on_date": "31-03-2022",
+          "fy": "2021-22",
+          "pmsby_no": "4334",
+          "pmjjby_no": "3138",
+          "apy_no": "299",
+          "mudra_os_no": "160",
+          "aadhaar_auth_total": "17786"
+        },
+        {
+          "district": "West Garo Hills",
+          "period": "March 2022",
+          "as_on_date": "31-03-2022",
+          "fy": "2021-22",
+          "pmsby_no": "46233",
+          "pmjjby_no": "14765",
+          "apy_no": "6264",
+          "mudra_os_no": "2785",
+          "aadhaar_auth_total": "161492"
+        },
+        {
+          "district": "West Khasi Hills",
+          "period": "March 2022",
+          "as_on_date": "31-03-2022",
+          "fy": "2021-22",
+          "pmsby_no": "11115",
+          "pmjjby_no": "7266",
+          "apy_no": "1132",
+          "mudra_os_no": "270",
+          "aadhaar_auth_total": "72243"
+        }
+      ]
+    },
+    {
+      "period": "June 2022",
+      "num_districts": 12,
+      "districts": [
+        {
+          "district": "East Garo Hills",
+          "period": "June 2022",
+          "as_on_date": "30-06-2022",
+          "fy": "2022-23",
+          "pmsby_no": "8682",
+          "pmjjby_no": "2610",
+          "apy_no": "1641",
+          "digital_upi_no": "680668.3",
+          "mudra_os_no": "174"
+        },
+        {
+          "district": "East Jaintia Hills",
+          "period": "June 2022",
+          "as_on_date": "30-06-2022",
+          "fy": "2022-23",
+          "pmsby_no": "16079",
+          "pmjjby_no": "7356",
+          "apy_no": "1492",
+          "digital_upi_no": "2833234.51",
+          "mudra_os_no": "78"
+        },
+        {
+          "district": "East Khasi Hills",
+          "period": "June 2022",
+          "as_on_date": "30-06-2022",
+          "fy": "2022-23",
+          "pmsby_no": "74297",
+          "pmjjby_no": "38539",
+          "apy_no": "13012",
+          "digital_upi_no": "8391478.46",
+          "mudra_os_no": "1838"
+        },
+        {
+          "district": "Eastern West Khasi Hills",
+          "period": "June 2022",
+          "as_on_date": "30-06-2022",
+          "fy": "2022-23",
+          "pmsby_no": "6167",
+          "pmjjby_no": "5532",
+          "apy_no": "406",
+          "mudra_os_no": "23"
+        },
+        {
+          "district": "North Garo Hills",
+          "period": "June 2022",
+          "as_on_date": "30-06-2022",
+          "fy": "2022-23",
+          "pmsby_no": "15416",
+          "pmjjby_no": "4996",
+          "apy_no": "6060",
+          "digital_upi_no": "100.31",
+          "mudra_os_no": "110"
+        },
+        {
+          "district": "Ri Bhoi",
+          "period": "June 2022",
+          "as_on_date": "30-06-2022",
+          "fy": "2022-23",
+          "pmsby_no": "36570",
+          "pmjjby_no": "12690",
+          "apy_no": "3183",
+          "digital_upi_no": "2563907.32",
+          "mudra_os_no": "167"
+        },
+        {
+          "district": "South Garo Hills",
+          "period": "June 2022",
+          "as_on_date": "30-06-2022",
+          "fy": "2022-23",
+          "pmsby_no": "4057",
+          "pmjjby_no": "1390",
+          "apy_no": "710",
+          "digital_upi_no": "78.02",
+          "mudra_os_no": "69"
+        },
+        {
+          "district": "South West Garo Hills",
+          "period": "June 2022",
+          "as_on_date": "30-06-2022",
+          "fy": "2022-23",
+          "pmsby_no": "17989",
+          "pmjjby_no": "6682",
+          "apy_no": "1968",
+          "digital_upi_no": "628217.58",
+          "mudra_os_no": "96"
+        },
+        {
+          "district": "South West Khasi Hills",
+          "period": "June 2022",
+          "as_on_date": "30-06-2022",
+          "fy": "2022-23",
+          "pmsby_no": "4925",
+          "pmjjby_no": "3441",
+          "apy_no": "300",
+          "digital_upi_no": "456.88",
+          "mudra_os_no": "39"
+        },
+        {
+          "district": "West Garo Hills",
+          "period": "June 2022",
+          "as_on_date": "30-06-2022",
+          "fy": "2022-23",
+          "pmsby_no": "48343",
+          "pmjjby_no": "15344",
+          "apy_no": "6580",
+          "digital_upi_no": "1614730.76",
+          "mudra_os_no": "877"
+        },
+        {
+          "district": "West Jaintia Hills",
+          "period": "June 2022",
+          "as_on_date": "30-06-2022",
+          "fy": "2022-23",
+          "pmsby_no": "25754",
+          "pmjjby_no": "7587",
+          "apy_no": "2120",
+          "digital_upi_no": "1113293.59",
+          "mudra_os_no": "168"
+        },
+        {
+          "district": "West Khasi Hills",
+          "period": "June 2022",
+          "as_on_date": "30-06-2022",
+          "fy": "2022-23",
+          "pmsby_no": "9639",
+          "pmjjby_no": "5242",
+          "apy_no": "684",
+          "digital_upi_no": "518554.42",
+          "mudra_os_no": "35"
+        }
+      ]
+    },
+    {
+      "period": "September 2022",
+      "num_districts": 12,
+      "districts": [
+        {
+          "district": "East Garo Hills",
+          "period": "September 2022",
+          "as_on_date": "30-09-2022",
+          "fy": "2022-23",
+          "pmsby_no": "8685",
+          "pmjjby_no": "3232",
+          "apy_no": "1743",
+          "digital_upi_no": "1055029.31",
+          "mudra_os_no": "576"
+        },
+        {
+          "district": "East Jaintia Hills",
+          "period": "September 2022",
+          "as_on_date": "30-09-2022",
+          "fy": "2022-23",
+          "pmsby_no": "16025",
+          "pmjjby_no": "6992",
+          "apy_no": "1402",
+          "digital_upi_no": "4460997.48",
+          "mudra_os_no": "183"
+        },
+        {
+          "district": "East Khasi Hills",
+          "period": "September 2022",
+          "as_on_date": "30-09-2022",
+          "fy": "2022-23",
+          "pmsby_no": "76119",
+          "pmjjby_no": "38008",
+          "apy_no": "12794",
+          "digital_upi_no": "84683255.27",
+          "mudra_os_no": "5044"
+        },
+        {
+          "district": "Eastern West Khasi Hills",
+          "period": "September 2022",
+          "as_on_date": "30-09-2022",
+          "fy": "2022-23",
+          "pmsby_no": "6167",
+          "pmjjby_no": "6265",
+          "apy_no": "716",
+          "mudra_os_no": "33"
+        },
+        {
+          "district": "North Garo Hills",
+          "period": "September 2022",
+          "as_on_date": "30-09-2022",
+          "fy": "2022-23",
+          "pmsby_no": "15416",
+          "pmjjby_no": "6759",
+          "apy_no": "6464",
+          "digital_upi_no": "246.39",
+          "mudra_os_no": "179"
+        },
+        {
+          "district": "Ri Bhoi",
+          "period": "September 2022",
+          "as_on_date": "30-09-2022",
+          "fy": "2022-23",
+          "pmsby_no": "37205",
+          "pmjjby_no": "11453",
+          "apy_no": "3317",
+          "digital_upi_no": "3861284.71",
+          "mudra_os_no": "731"
+        },
+        {
+          "district": "South Garo Hills",
+          "period": "September 2022",
+          "as_on_date": "30-09-2022",
+          "fy": "2022-23",
+          "pmsby_no": "4057",
+          "pmjjby_no": "5650",
+          "apy_no": "836",
+          "digital_upi_no": "190.18",
+          "mudra_os_no": "121"
+        },
+        {
+          "district": "South West Garo Hills",
+          "period": "September 2022",
+          "as_on_date": "30-09-2022",
+          "fy": "2022-23",
+          "pmsby_no": "17989",
+          "pmjjby_no": "2390",
+          "apy_no": "2090",
+          "digital_upi_no": "1221055.62",
+          "mudra_os_no": "154"
+        },
+        {
+          "district": "South West Khasi Hills",
+          "period": "September 2022",
+          "as_on_date": "30-09-2022",
+          "fy": "2022-23",
+          "pmsby_no": "4925",
+          "pmjjby_no": "3252",
+          "apy_no": "223",
+          "digital_upi_no": "3856.42",
+          "mudra_os_no": "56"
+        },
+        {
+          "district": "West Garo Hills",
+          "period": "September 2022",
+          "as_on_date": "30-09-2022",
+          "fy": "2022-23",
+          "pmsby_no": "48533",
+          "pmjjby_no": "16621",
+          "apy_no": "7157",
+          "digital_upi_no": "60529395.23",
+          "mudra_os_no": "1659"
+        },
+        {
+          "district": "West Jaintia Hills",
+          "period": "September 2022",
+          "as_on_date": "30-09-2022",
+          "fy": "2022-23",
+          "pmsby_no": "24019",
+          "pmjjby_no": "7547",
+          "apy_no": "2315",
+          "digital_upi_no": "1697109.79",
+          "mudra_os_no": "647"
+        },
+        {
+          "district": "West Khasi Hills",
+          "period": "September 2022",
+          "as_on_date": "30-09-2022",
+          "fy": "2022-23",
+          "pmsby_no": "9640",
+          "pmjjby_no": "4176",
+          "apy_no": "1295",
+          "digital_upi_no": "757548.07",
+          "mudra_os_no": "104"
+        }
+      ]
+    },
+    {
+      "period": "December 2022",
+      "num_districts": 12,
+      "districts": [
+        {
+          "district": "East Garo Hills",
+          "period": "December 2022",
+          "as_on_date": "31-12-2022",
+          "fy": "2022-23",
+          "pmsby_no": "8685",
+          "pmjjby_no": "2610",
+          "apy_no": "1934",
+          "digital_upi_no": "6339.51",
+          "mudra_os_no": "906"
+        },
+        {
+          "district": "East Jaintia Hills",
+          "period": "December 2022",
+          "as_on_date": "31-12-2022",
+          "fy": "2022-23",
+          "pmsby_no": "16065",
+          "pmjjby_no": "7339",
+          "apy_no": "1831",
+          "digital_upi_no": "29305.04",
+          "mudra_os_no": "264"
+        },
+        {
+          "district": "East Khasi Hills",
+          "period": "December 2022",
+          "as_on_date": "31-12-2022",
+          "fy": "2022-23",
+          "pmsby_no": "76444",
+          "pmjjby_no": "39140",
+          "apy_no": "15695",
+          "digital_upi_no": "205111.71",
+          "mudra_os_no": "8366"
+        },
+        {
+          "district": "Eastern West Khasi Hills",
+          "period": "December 2022",
+          "as_on_date": "31-12-2022",
+          "fy": "2022-23",
+          "pmsby_no": "6222",
+          "pmjjby_no": "5560",
+          "apy_no": "666",
+          "mudra_os_no": "47"
+        },
+        {
+          "district": "North Garo Hills",
+          "period": "December 2022",
+          "as_on_date": "31-12-2022",
+          "fy": "2022-23",
+          "pmsby_no": "15417",
+          "pmjjby_no": "4996",
+          "apy_no": "6874",
+          "digital_upi_no": "489.25",
+          "mudra_os_no": "128"
+        },
+        {
+          "district": "Ri Bhoi",
+          "period": "December 2022",
+          "as_on_date": "31-12-2022",
+          "fy": "2022-23",
+          "pmsby_no": "37319",
+          "pmjjby_no": "13061",
+          "apy_no": "3654",
+          "digital_upi_no": "32813.06",
+          "mudra_os_no": "1365"
+        },
+        {
+          "district": "South Garo Hills",
+          "period": "December 2022",
+          "as_on_date": "31-12-2022",
+          "fy": "2022-23",
+          "pmsby_no": "4057",
+          "pmjjby_no": "1390",
+          "apy_no": "926",
+          "digital_upi_no": "368.15",
+          "mudra_os_no": "94"
+        },
+        {
+          "district": "South West Garo Hills",
+          "period": "December 2022",
+          "as_on_date": "31-12-2022",
+          "fy": "2022-23",
+          "pmsby_no": "17989",
+          "pmjjby_no": "6682",
+          "apy_no": "2164",
+          "digital_upi_no": "11211.58",
+          "mudra_os_no": "117"
+        },
+        {
+          "district": "South West Khasi Hills",
+          "period": "December 2022",
+          "as_on_date": "31-12-2022",
+          "fy": "2022-23",
+          "pmsby_no": "4925",
+          "pmjjby_no": "3441",
+          "apy_no": "344",
+          "digital_upi_no": "482.33",
+          "mudra_os_no": "64"
+        },
+        {
+          "district": "West Garo Hills",
+          "period": "December 2022",
+          "as_on_date": "31-12-2022",
+          "fy": "2022-23",
+          "pmsby_no": "48678",
+          "pmjjby_no": "15517",
+          "apy_no": "7998",
+          "digital_upi_no": "23365.78",
+          "mudra_os_no": "2131"
+        },
+        {
+          "district": "West Jaintia Hills",
+          "period": "December 2022",
+          "as_on_date": "31-12-2022",
+          "fy": "2022-23",
+          "pmsby_no": "24136",
+          "pmjjby_no": "7710",
+          "apy_no": "2392",
+          "digital_upi_no": "15482.73",
+          "mudra_os_no": "1027"
+        },
+        {
+          "district": "West Khasi Hills",
+          "period": "December 2022",
+          "as_on_date": "31-12-2022",
+          "fy": "2022-23",
+          "pmsby_no": "9666",
+          "pmjjby_no": "5280",
+          "apy_no": "959",
+          "digital_upi_no": "7103.25",
+          "mudra_os_no": "196"
+        }
+      ]
+    },
+    {
+      "period": "March 2023",
+      "num_districts": 12,
+      "districts": [
+        {
+          "district": "East Garo Hills",
+          "period": "March 2023",
+          "as_on_date": "31-03-2023",
+          "fy": "2022-23",
+          "branches_rural": "5",
+          "branches_semi_urban": "9",
+          "branches_urban": "1",
+          "branches_total": "15",
+          "atm_total": "12",
+          "csp_total": "56",
+          "pmsby_no": "23053",
+          "pmjjby_no": "3592",
+          "apy_no": "2206",
+          "digital_upi_no": "8614.34",
+          "mudra_os_no": "1149"
+        },
+        {
+          "district": "East Jaintia Hills",
+          "period": "March 2023",
+          "as_on_date": "31-03-2023",
+          "fy": "2022-23",
+          "branches_rural": "23",
+          "branches_semi_urban": "3",
+          "branches_urban": "0",
+          "branches_total": "27",
+          "atm_total": "18",
+          "csp_total": "104",
+          "pmsby_no": "20261",
+          "pmjjby_no": "6513",
+          "apy_no": "1903",
+          "digital_upi_no": "44307.09",
+          "mudra_os_no": "272"
+        },
+        {
+          "district": "East Khasi Hills",
+          "period": "March 2023",
+          "as_on_date": "31-03-2023",
+          "fy": "2022-23",
+          "branches_rural": "55",
+          "branches_semi_urban": "21",
+          "branches_urban": "105",
+          "branches_total": "188",
+          "atm_total": "301",
+          "csp_total": "194",
+          "pmsby_no": "95397",
+          "pmjjby_no": "36231",
+          "apy_no": "15488",
+          "digital_upi_no": "282021.73",
+          "mudra_os_no": "12815"
+        },
+        {
+          "district": "Eastern West Khasi Hills",
+          "period": "March 2023",
+          "as_on_date": "31-03-2023",
+          "fy": "2022-23",
+          "branches_rural": "7",
+          "branches_semi_urban": "4",
+          "branches_urban": "1",
+          "branches_total": "12",
+          "atm_total": "6",
+          "csp_total": "48",
+          "pmsby_no": "7138",
+          "pmjjby_no": "5664",
+          "apy_no": "751",
+          "mudra_os_no": "55"
+        },
+        {
+          "district": "North Garo Hills",
+          "period": "March 2023",
+          "as_on_date": "31-03-2023",
+          "fy": "2022-23",
+          "branches_rural": "7",
+          "branches_semi_urban": "2",
+          "branches_urban": "0",
+          "branches_total": "11",
+          "atm_total": "7",
+          "csp_total": "87",
+          "pmsby_no": "25697",
+          "pmjjby_no": "4412",
+          "apy_no": "7573",
+          "digital_upi_no": "715.96",
+          "mudra_os_no": "137"
+        },
+        {
+          "district": "Ri Bhoi",
+          "period": "March 2023",
+          "as_on_date": "31-03-2023",
+          "fy": "2022-23",
+          "branches_rural": "32",
+          "branches_semi_urban": "14",
+          "branches_urban": "1",
+          "branches_total": "48",
+          "atm_total": "42",
+          "csp_total": "108",
+          "pmsby_no": "48183",
+          "pmjjby_no": "11498",
+          "apy_no": "3848",
+          "digital_upi_no": "48171.25",
+          "mudra_os_no": "2213"
+        },
+        {
+          "district": "South Garo Hills",
+          "period": "March 2023",
+          "as_on_date": "31-03-2023",
+          "fy": "2022-23",
+          "branches_rural": "3",
+          "branches_semi_urban": "2",
+          "branches_urban": "1",
+          "branches_total": "8",
+          "atm_total": "3",
+          "csp_total": "57",
+          "pmsby_no": "10273",
+          "pmjjby_no": "1750",
+          "apy_no": "1086",
+          "digital_upi_no": "538.03",
+          "mudra_os_no": "114"
+        },
+        {
+          "district": "South West Garo Hills",
+          "period": "March 2023",
+          "as_on_date": "31-03-2023",
+          "fy": "2022-23",
+          "branches_rural": "10",
+          "branches_semi_urban": "1",
+          "branches_urban": "0",
+          "branches_total": "13",
+          "atm_total": "7",
+          "csp_total": "91",
+          "pmsby_no": "45102",
+          "pmjjby_no": "8765",
+          "apy_no": "2375",
+          "digital_upi_no": "19345.41",
+          "mudra_os_no": "139"
+        },
+        {
+          "district": "South West Khasi Hills",
+          "period": "March 2023",
+          "as_on_date": "31-03-2023",
+          "fy": "2022-23",
+          "branches_rural": "7",
+          "branches_semi_urban": "1",
+          "branches_urban": "0",
+          "branches_total": "8",
+          "atm_total": "9",
+          "csp_total": "25",
+          "pmsby_no": "7743",
+          "pmjjby_no": "2952",
+          "apy_no": "400",
+          "digital_upi_no": "716.1",
+          "mudra_os_no": "83"
+        },
+        {
+          "district": "West Garo Hills",
+          "period": "March 2023",
+          "as_on_date": "31-03-2023",
+          "fy": "2022-23",
+          "branches_rural": "20",
+          "branches_semi_urban": "41",
+          "branches_urban": "5",
+          "branches_total": "45",
+          "atm_total": "52",
+          "csp_total": "395",
+          "pmsby_no": "114449",
+          "pmjjby_no": "20566",
+          "apy_no": "8896",
+          "digital_upi_no": "32130.15",
+          "mudra_os_no": "2574"
+        },
+        {
+          "district": "West Jaintia Hills",
+          "period": "March 2023",
+          "as_on_date": "31-03-2023",
+          "fy": "2022-23",
+          "branches_rural": "19",
+          "branches_semi_urban": "19",
+          "branches_urban": "4",
+          "branches_total": "43",
+          "atm_total": "32",
+          "csp_total": "105",
+          "pmsby_no": "31510",
+          "pmjjby_no": "8119",
+          "apy_no": "2042",
+          "digital_upi_no": "22896.86",
+          "mudra_os_no": "1575"
+        },
+        {
+          "district": "West Khasi Hills",
+          "period": "March 2023",
+          "as_on_date": "31-03-2023",
+          "fy": "2022-23",
+          "branches_rural": "8",
+          "branches_semi_urban": "6",
+          "branches_urban": "1",
+          "branches_total": "16",
+          "atm_total": "8",
+          "csp_total": "106",
+          "pmsby_no": "13350",
+          "pmjjby_no": "5144",
+          "apy_no": "1073",
+          "digital_upi_no": "10093.91",
+          "mudra_os_no": "259"
+        }
+      ]
+    },
+    {
+      "period": "September 2023",
+      "num_districts": 12,
+      "districts": [
+        {
+          "district": "East Garo Hills",
+          "period": "September 2023",
+          "as_on_date": "30-09-2023",
+          "fy": "2023-24",
+          "pmsby_no": "19636",
+          "pmjjby_no": "7365",
+          "apy_no": "2750",
+          "digital_upi_no": "6523.99"
+        },
+        {
+          "district": "East Jaintia Hills",
+          "period": "September 2023",
+          "as_on_date": "30-09-2023",
+          "fy": "2023-24",
+          "pmsby_no": "27913",
+          "pmjjby_no": "15456",
+          "apy_no": "2194",
+          "digital_upi_no": "34545.97"
+        },
+        {
+          "district": "East Khasi Hills",
+          "period": "September 2023",
+          "as_on_date": "30-09-2023",
+          "fy": "2023-24",
+          "pmsby_no": "101575",
+          "pmjjby_no": "59233",
+          "apy_no": "17138",
+          "digital_upi_no": "346391.19"
+        },
+        {
+          "district": "Eastern West Khasi Hills",
+          "period": "September 2023",
+          "as_on_date": "30-09-2023",
+          "fy": "2023-24",
+          "pmsby_no": "14958",
+          "pmjjby_no": "7638",
+          "apy_no": "848"
+        },
+        {
+          "district": "North Garo Hills",
+          "period": "September 2023",
+          "as_on_date": "30-09-2023",
+          "fy": "2023-24",
+          "pmsby_no": "21403",
+          "pmjjby_no": "8302",
+          "apy_no": "8164",
+          "digital_upi_no": "1253.35"
+        },
+        {
+          "district": "Ri Bhoi",
+          "period": "September 2023",
+          "as_on_date": "30-09-2023",
+          "fy": "2023-24",
+          "pmsby_no": "44023",
+          "pmjjby_no": "18906",
+          "apy_no": "4349",
+          "digital_upi_no": "37272.36"
+        },
+        {
+          "district": "South Garo Hills",
+          "period": "September 2023",
+          "as_on_date": "30-09-2023",
+          "fy": "2023-24",
+          "pmsby_no": "8901",
+          "pmjjby_no": "2925",
+          "apy_no": "1479",
+          "digital_upi_no": "873.28"
+        },
+        {
+          "district": "South West Garo Hills",
+          "period": "September 2023",
+          "as_on_date": "30-09-2023",
+          "fy": "2023-24",
+          "pmsby_no": "35200",
+          "pmjjby_no": "11786",
+          "apy_no": "3078",
+          "digital_upi_no": "17023.25"
+        },
+        {
+          "district": "South West Khasi Hills",
+          "period": "September 2023",
+          "as_on_date": "30-09-2023",
+          "fy": "2023-24",
+          "pmsby_no": "11669",
+          "pmjjby_no": "4100",
+          "apy_no": "562",
+          "digital_upi_no": "843.23"
+        },
+        {
+          "district": "West Garo Hills",
+          "period": "September 2023",
+          "as_on_date": "30-09-2023",
+          "fy": "2023-24",
+          "pmsby_no": "89830",
+          "pmjjby_no": "31297",
+          "apy_no": "11610",
+          "digital_upi_no": "28999.27"
+        },
+        {
+          "district": "West Jaintia Hills",
+          "period": "September 2023",
+          "as_on_date": "30-09-2023",
+          "fy": "2023-24",
+          "pmsby_no": "40258",
+          "pmjjby_no": "21617",
+          "apy_no": "2420",
+          "digital_upi_no": "20792.69"
+        },
+        {
+          "district": "West Khasi Hills",
+          "period": "September 2023",
+          "as_on_date": "30-09-2023",
+          "fy": "2023-24",
+          "pmsby_no": "22216",
+          "pmjjby_no": "11690",
+          "apy_no": "1195",
+          "digital_upi_no": "8934.46"
+        }
+      ]
+    },
+    {
+      "period": "December 2023",
+      "num_districts": 12,
+      "districts": [
+        {
+          "district": "East Garo Hills",
+          "period": "December 2023",
+          "as_on_date": "31-12-2023",
+          "fy": "2023-24",
+          "pmsby_no": "19636",
+          "pmjjby_no": "7365",
+          "apy_no": "2655",
+          "digital_upi_no": "12919.77"
+        },
+        {
+          "district": "East Jaintia Hills",
+          "period": "December 2023",
+          "as_on_date": "31-12-2023",
+          "fy": "2023-24",
+          "pmsby_no": "27922",
+          "pmjjby_no": "15475",
+          "apy_no": "2216",
+          "digital_upi_no": "56969.69"
+        },
+        {
+          "district": "East Khasi Hills",
+          "period": "December 2023",
+          "as_on_date": "31-12-2023",
+          "fy": "2023-24",
+          "pmsby_no": "103057",
+          "pmjjby_no": "60120",
+          "apy_no": "17972",
+          "digital_upi_no": "546763.48"
+        },
+        {
+          "district": "Eastern West Khasi Hills",
+          "period": "December 2023",
+          "as_on_date": "31-12-2023",
+          "fy": "2023-24",
+          "pmsby_no": "14960",
+          "pmjjby_no": "7639",
+          "apy_no": "900",
+          "digital_upi_no": "6038.04"
+        },
+        {
+          "district": "North Garo Hills",
+          "period": "December 2023",
+          "as_on_date": "31-12-2023",
+          "fy": "2023-24",
+          "pmsby_no": "21404",
+          "pmjjby_no": "8303",
+          "apy_no": "8247",
+          "digital_upi_no": "3072.26"
+        },
+        {
+          "district": "Ri Bhoi",
+          "period": "December 2023",
+          "as_on_date": "31-12-2023",
+          "fy": "2023-24",
+          "pmsby_no": "44133",
+          "pmjjby_no": "19002",
+          "apy_no": "4684",
+          "digital_upi_no": "58444.41"
+        },
+        {
+          "district": "South Garo Hills",
+          "period": "December 2023",
+          "as_on_date": "31-12-2023",
+          "fy": "2023-24",
+          "pmsby_no": "8901",
+          "pmjjby_no": "2925",
+          "apy_no": "1446",
+          "digital_upi_no": "2009.3"
+        },
+        {
+          "district": "South West Garo Hills",
+          "period": "December 2023",
+          "as_on_date": "31-12-2023",
+          "fy": "2023-24",
+          "pmsby_no": "35200",
+          "pmjjby_no": "11786",
+          "apy_no": "3068",
+          "digital_upi_no": "28455.24"
+        },
+        {
+          "district": "South West Khasi Hills",
+          "period": "December 2023",
+          "as_on_date": "31-12-2023",
+          "fy": "2023-24",
+          "pmsby_no": "11669",
+          "pmjjby_no": "4100",
+          "apy_no": "503",
+          "digital_upi_no": "1930.05"
+        },
+        {
+          "district": "West Garo Hills",
+          "period": "December 2023",
+          "as_on_date": "31-12-2023",
+          "fy": "2023-24",
+          "pmsby_no": "89722",
+          "pmjjby_no": "31391",
+          "apy_no": "11949",
+          "digital_upi_no": "49060.42"
+        },
+        {
+          "district": "West Jaintia Hills",
+          "period": "December 2023",
+          "as_on_date": "31-12-2023",
+          "fy": "2023-24",
+          "pmsby_no": "41124",
+          "pmjjby_no": "22071",
+          "apy_no": "2690",
+          "digital_upi_no": "31359.26"
+        },
+        {
+          "district": "West Khasi Hills",
+          "period": "December 2023",
+          "as_on_date": "31-12-2023",
+          "fy": "2023-24",
+          "pmsby_no": "22217",
+          "pmjjby_no": "11691",
+          "apy_no": "1226",
+          "digital_upi_no": "14885.2"
+        }
+      ]
+    },
+    {
+      "period": "June 2024",
+      "num_districts": 12,
+      "districts": [
+        {
+          "district": "East Garo Hills",
+          "period": "June 2024",
+          "as_on_date": "30-06-2024",
+          "fy": "2024-25",
+          "deposit_amt_lakhs": "52308.86",
+          "cdr": "68.52",
+          "pmsby_no": "26215",
+          "pmjjby_no": "8757",
+          "apy_no": "2825",
+          "digital_upi_no": "24202.31"
+        },
+        {
+          "district": "East Jaintia Hills",
+          "period": "June 2024",
+          "as_on_date": "30-06-2024",
+          "fy": "2024-25",
+          "deposit_amt_lakhs": "169832.07",
+          "cdr": "21.33",
+          "pmsby_no": "28372",
+          "pmjjby_no": "16848",
+          "apy_no": "2373",
+          "digital_upi_no": "59579.27"
+        },
+        {
+          "district": "East Khasi Hills",
+          "period": "June 2024",
+          "as_on_date": "30-06-2024",
+          "fy": "2024-25",
+          "deposit_amt_lakhs": "2625998.79",
+          "cdr": "43.34",
+          "pmsby_no": "136627",
+          "pmjjby_no": "71747",
+          "apy_no": "19573",
+          "digital_upi_no": "581129.96"
+        },
+        {
+          "district": "Eastern West Khasi Hills",
+          "period": "June 2024",
+          "as_on_date": "30-06-2024",
+          "fy": "2024-25",
+          "deposit_amt_lakhs": "47504.63",
+          "cdr": "39.12",
+          "pmsby_no": "17774",
+          "pmjjby_no": "10663",
+          "apy_no": "1081",
+          "digital_upi_no": "7709.84"
+        },
+        {
+          "district": "North Garo Hills",
+          "period": "June 2024",
+          "as_on_date": "30-06-2024",
+          "fy": "2024-25",
+          "deposit_amt_lakhs": "39472",
+          "cdr": "67.16",
+          "pmsby_no": "30549",
+          "pmjjby_no": "10637",
+          "apy_no": "8946",
+          "digital_upi_no": "22889.42"
+        },
+        {
+          "district": "Ri Bhoi",
+          "period": "June 2024",
+          "as_on_date": "30-06-2024",
+          "fy": "2024-25",
+          "deposit_amt_lakhs": "226535.87",
+          "cdr": "110.67",
+          "pmsby_no": "59985",
+          "pmjjby_no": "29635",
+          "apy_no": "5213",
+          "digital_upi_no": "98299.26"
+        },
+        {
+          "district": "South Garo Hills",
+          "period": "June 2024",
+          "as_on_date": "30-06-2024",
+          "fy": "2024-25",
+          "deposit_amt_lakhs": "31412.27",
+          "cdr": "58.22",
+          "pmsby_no": "12873",
+          "pmjjby_no": "4249",
+          "apy_no": "1670",
+          "digital_upi_no": "15798.78"
+        },
+        {
+          "district": "South West Garo Hills",
+          "period": "June 2024",
+          "as_on_date": "30-06-2024",
+          "fy": "2024-25",
+          "deposit_amt_lakhs": "38650.95",
+          "cdr": "66.28",
+          "pmsby_no": "47457",
+          "pmjjby_no": "13515",
+          "apy_no": "3770",
+          "digital_upi_no": "27102.11"
+        },
+        {
+          "district": "South West Khasi Hills",
+          "period": "June 2024",
+          "as_on_date": "30-06-2024",
+          "fy": "2024-25",
+          "deposit_amt_lakhs": "34933.82",
+          "cdr": "38.31",
+          "pmsby_no": "13289",
+          "pmjjby_no": "4715",
+          "apy_no": "560",
+          "digital_upi_no": "6477.5"
+        },
+        {
+          "district": "West Garo Hills",
+          "period": "June 2024",
+          "as_on_date": "30-06-2024",
+          "fy": "2024-25",
+          "deposit_amt_lakhs": "249728.78",
+          "cdr": "58.43",
+          "pmsby_no": "115884",
+          "pmjjby_no": "35174",
+          "apy_no": "14303",
+          "digital_upi_no": "162504.21"
+        },
+        {
+          "district": "West Jaintia Hills",
+          "period": "June 2024",
+          "as_on_date": "30-06-2024",
+          "fy": "2024-25",
+          "deposit_amt_lakhs": "293928.69",
+          "cdr": "29.46",
+          "pmsby_no": "45169",
+          "pmjjby_no": "24792",
+          "apy_no": "3076",
+          "digital_upi_no": "60968.4"
+        },
+        {
+          "district": "West Khasi Hills",
+          "period": "June 2024",
+          "as_on_date": "30-06-2024",
+          "fy": "2024-25",
+          "deposit_amt_lakhs": "68553.61",
+          "cdr": "39.87",
+          "pmsby_no": "18785",
+          "pmjjby_no": "10659",
+          "apy_no": "1309",
+          "digital_upi_no": "17555.4"
+        }
+      ]
+    },
+    {
+      "period": "September 2024",
+      "num_districts": 12,
+      "districts": [
+        {
+          "district": "East Garo Hills",
+          "period": "September 2024",
+          "as_on_date": "30-09-2024",
+          "fy": "2024-25",
+          "pmsby_no": "26205",
+          "pmjjby_no": "8753",
+          "apy_no": "2942",
+          "digital_upi_no": "47241.73"
+        },
+        {
+          "district": "East Jaintia Hills",
+          "period": "September 2024",
+          "as_on_date": "30-09-2024",
+          "fy": "2024-25",
+          "pmsby_no": "28394",
+          "pmjjby_no": "16873",
+          "apy_no": "2423",
+          "digital_upi_no": "94064.77"
+        },
+        {
+          "district": "East Khasi Hills",
+          "period": "September 2024",
+          "as_on_date": "30-09-2024",
+          "fy": "2024-25",
+          "pmsby_no": "139247",
+          "pmjjby_no": "72903",
+          "apy_no": "20830",
+          "digital_upi_no": "947520.4"
+        },
+        {
+          "district": "Eastern West Khasi Hills",
+          "period": "September 2024",
+          "as_on_date": "30-09-2024",
+          "fy": "2024-25",
+          "pmsby_no": "17780",
+          "pmjjby_no": "10667",
+          "apy_no": "1164",
+          "digital_upi_no": "17365.24"
+        },
+        {
+          "district": "North Garo Hills",
+          "period": "September 2024",
+          "as_on_date": "30-09-2024",
+          "fy": "2024-25",
+          "pmsby_no": "30552",
+          "pmjjby_no": "10639",
+          "apy_no": "9167",
+          "digital_upi_no": "49387.64"
+        },
+        {
+          "district": "Ri Bhoi",
+          "period": "September 2024",
+          "as_on_date": "30-09-2024",
+          "fy": "2024-25",
+          "pmsby_no": "59868",
+          "pmjjby_no": "29606",
+          "apy_no": "5472",
+          "digital_upi_no": "153404.48"
+        },
+        {
+          "district": "South Garo Hills",
+          "period": "September 2024",
+          "as_on_date": "30-09-2024",
+          "fy": "2024-25",
+          "pmsby_no": "12873",
+          "pmjjby_no": "4249",
+          "apy_no": "1771",
+          "digital_upi_no": "32367.55"
+        },
+        {
+          "district": "South West Garo Hills",
+          "period": "September 2024",
+          "as_on_date": "30-09-2024",
+          "fy": "2024-25",
+          "pmsby_no": "47457",
+          "pmjjby_no": "13515",
+          "apy_no": "4113",
+          "digital_upi_no": "57619.96"
+        },
+        {
+          "district": "South West Khasi Hills",
+          "period": "September 2024",
+          "as_on_date": "30-09-2024",
+          "fy": "2024-25",
+          "pmsby_no": "13289",
+          "pmjjby_no": "4712",
+          "apy_no": "594",
+          "digital_upi_no": "13986.64"
+        },
+        {
+          "district": "West Garo Hills",
+          "period": "September 2024",
+          "as_on_date": "30-09-2024",
+          "fy": "2024-25",
+          "pmsby_no": "115868",
+          "pmjjby_no": "35130",
+          "apy_no": "15174",
+          "digital_upi_no": "258353.31"
+        },
+        {
+          "district": "West Jaintia Hills",
+          "period": "September 2024",
+          "as_on_date": "30-09-2024",
+          "fy": "2024-25",
+          "pmsby_no": "45400",
+          "pmjjby_no": "25047",
+          "apy_no": "3297",
+          "digital_upi_no": "82672.26"
+        },
+        {
+          "district": "West Khasi Hills",
+          "period": "September 2024",
+          "as_on_date": "30-09-2024",
+          "fy": "2024-25",
+          "pmsby_no": "18788",
+          "pmjjby_no": "10661",
+          "apy_no": "1401",
+          "digital_upi_no": "36251.95"
+        }
+      ]
+    },
+    {
       "period": "December 2024",
-      "as_on_date": "31-12-2024",
-      "financial_year": "2024-25",
       "num_districts": 12,
       "districts": [
         {
@@ -17,8 +1651,9 @@
           "fy": "2024-25",
           "deposit_amt_lakhs": "52933.58",
           "cdr": "70.49",
-          "sc_st_os_no": "4234",
-          "sc_st_os_amt": "7161.52",
+          "pmsby_no": "21335",
+          "pmjjby_no": "7197",
+          "apy_no": "2031",
           "digital_upi_no": "73856.23"
         },
         {
@@ -28,8 +1663,9 @@
           "fy": "2024-25",
           "deposit_amt_lakhs": "173622.25",
           "cdr": "25.5",
-          "sc_st_os_no": "14650",
-          "sc_st_os_amt": "27821.89",
+          "pmsby_no": "32335",
+          "pmjjby_no": "18255",
+          "apy_no": "2628",
           "digital_upi_no": "152492.22"
         },
         {
@@ -39,8 +1675,9 @@
           "fy": "2024-25",
           "deposit_amt_lakhs": "2646563.73",
           "cdr": "42.97",
-          "sc_st_os_no": "154090",
-          "sc_st_os_amt": "624773.34",
+          "pmsby_no": "162965",
+          "pmjjby_no": "81330",
+          "apy_no": "21822",
           "digital_upi_no": "378272101.3"
         },
         {
@@ -50,8 +1687,9 @@
           "fy": "2024-25",
           "deposit_amt_lakhs": "53038.75",
           "cdr": "36.86",
-          "sc_st_os_no": "36387",
-          "sc_st_os_amt": "50652.73",
+          "pmsby_no": "17786",
+          "pmjjby_no": "10673",
+          "apy_no": "1279",
           "digital_upi_no": "29010.63"
         },
         {
@@ -61,8 +1699,9 @@
           "fy": "2024-25",
           "deposit_amt_lakhs": "44031.31",
           "cdr": "69.7",
-          "sc_st_os_no": "15167",
-          "sc_st_os_amt": "45931.17",
+          "pmsby_no": "35425",
+          "pmjjby_no": "12198",
+          "apy_no": "10296",
           "digital_upi_no": "86527.62"
         },
         {
@@ -72,8 +1711,9 @@
           "fy": "2024-25",
           "deposit_amt_lakhs": "235363.14",
           "cdr": "114.73",
-          "sc_st_os_no": "31512",
-          "sc_st_os_amt": "38447.88",
+          "pmsby_no": "54914",
+          "pmjjby_no": "24814",
+          "apy_no": "5731",
           "digital_upi_no": "274776629.9"
         },
         {
@@ -83,8 +1723,9 @@
           "fy": "2024-25",
           "deposit_amt_lakhs": "30017.01",
           "cdr": "59.77",
-          "sc_st_os_no": "3658",
-          "sc_st_os_amt": "4374.2",
+          "pmsby_no": "12873",
+          "pmjjby_no": "4249",
+          "apy_no": "1887",
           "digital_upi_no": "52538.64"
         },
         {
@@ -94,8 +1735,9 @@
           "fy": "2024-25",
           "deposit_amt_lakhs": "39815.74",
           "cdr": "67.93",
-          "sc_st_os_no": "6317",
-          "sc_st_os_amt": "8522.25",
+          "pmsby_no": "44989",
+          "pmjjby_no": "12344",
+          "apy_no": "4358",
           "digital_upi_no": "95674.85"
         },
         {
@@ -105,8 +1747,9 @@
           "fy": "2024-25",
           "deposit_amt_lakhs": "35301.96",
           "cdr": "39.74",
-          "sc_st_os_no": "4030",
-          "sc_st_os_amt": "5774.76",
+          "pmsby_no": "13289",
+          "pmjjby_no": "4712",
+          "apy_no": "643",
           "digital_upi_no": "23457.22"
         },
         {
@@ -116,8 +1759,9 @@
           "fy": "2024-25",
           "deposit_amt_lakhs": "259935.03",
           "cdr": "59.43",
-          "sc_st_os_no": "15785",
-          "sc_st_os_amt": "29395.88",
+          "pmsby_no": "129083",
+          "pmjjby_no": "43292",
+          "apy_no": "15909",
           "digital_upi_no": "68641381.35"
         },
         {
@@ -127,8 +1771,9 @@
           "fy": "2024-25",
           "deposit_amt_lakhs": "294387.41",
           "cdr": "31.1",
-          "sc_st_os_no": "26874",
-          "sc_st_os_amt": "77012.66",
+          "pmsby_no": "50165",
+          "pmjjby_no": "26537",
+          "apy_no": "3587",
           "digital_upi_no": "132695.58"
         },
         {
@@ -138,16 +1783,15 @@
           "fy": "2024-25",
           "deposit_amt_lakhs": "69587.32",
           "cdr": "41.62",
-          "sc_st_os_no": "14086",
-          "sc_st_os_amt": "20625.11",
+          "pmsby_no": "21507",
+          "pmjjby_no": "11173",
+          "apy_no": "1642",
           "digital_upi_no": "58859.17"
         }
       ]
     },
     {
       "period": "June 2025",
-      "as_on_date": "30-06-2025",
-      "financial_year": "2025-26",
       "num_districts": 12,
       "districts": [
         {
@@ -155,8 +1799,11 @@
           "period": "June 2025",
           "as_on_date": "30-06-2025",
           "fy": "2025-26",
-          "sc_st_os_no": "3723",
-          "sc_st_os_amt": "4147.98",
+          "deposit_amt_lakhs": "60056.17",
+          "cdr": "61.56",
+          "pmsby_no": "24729",
+          "pmjjby_no": "8041",
+          "apy_no": "2139",
           "digital_upi_no": "35942.71"
         },
         {
@@ -164,8 +1811,11 @@
           "period": "June 2025",
           "as_on_date": "30-06-2025",
           "fy": "2025-26",
-          "sc_st_os_no": "5450",
-          "sc_st_os_amt": "12579.22",
+          "deposit_amt_lakhs": "172466.7",
+          "cdr": "22.97",
+          "pmsby_no": "35075",
+          "pmjjby_no": "20495",
+          "apy_no": "3145",
           "digital_upi_no": "67049.03"
         },
         {
@@ -173,8 +1823,11 @@
           "period": "June 2025",
           "as_on_date": "30-06-2025",
           "fy": "2025-26",
-          "sc_st_os_no": "69660",
-          "sc_st_os_amt": "200742.63",
+          "deposit_amt_lakhs": "2707266.71",
+          "cdr": "44.75",
+          "pmsby_no": "184782",
+          "pmjjby_no": "87525",
+          "apy_no": "23163",
           "digital_upi_no": "630790.22"
         },
         {
@@ -182,8 +1835,11 @@
           "period": "June 2025",
           "as_on_date": "30-06-2025",
           "fy": "2025-26",
-          "sc_st_os_no": "10295",
-          "sc_st_os_amt": "12647.91",
+          "deposit_amt_lakhs": "52896.44",
+          "cdr": "39.93",
+          "pmsby_no": "22161",
+          "pmjjby_no": "13466",
+          "apy_no": "1294",
           "digital_upi_no": "15493.17"
         },
         {
@@ -191,8 +1847,11 @@
           "period": "June 2025",
           "as_on_date": "30-06-2025",
           "fy": "2025-26",
-          "sc_st_os_no": "5178",
-          "sc_st_os_amt": "5821.09",
+          "deposit_amt_lakhs": "44371.39",
+          "cdr": "73.76",
+          "pmsby_no": "41042",
+          "pmjjby_no": "13768",
+          "apy_no": "10779",
           "digital_upi_no": "37258.72"
         },
         {
@@ -200,8 +1859,11 @@
           "period": "June 2025",
           "as_on_date": "30-06-2025",
           "fy": "2025-26",
-          "sc_st_os_no": "24406",
-          "sc_st_os_amt": "38270.62",
+          "deposit_amt_lakhs": "244725.56",
+          "cdr": "115.73",
+          "pmsby_no": "77142",
+          "pmjjby_no": "35785",
+          "apy_no": "6328",
           "digital_upi_no": "108141.9"
         },
         {
@@ -209,8 +1871,11 @@
           "period": "June 2025",
           "as_on_date": "30-06-2025",
           "fy": "2025-26",
-          "sc_st_os_no": "3312",
-          "sc_st_os_amt": "3223.88",
+          "deposit_amt_lakhs": "29519.53",
+          "cdr": "61.85",
+          "pmsby_no": "17813",
+          "pmjjby_no": "6513",
+          "apy_no": "2142",
           "digital_upi_no": "20034.96"
         },
         {
@@ -218,8 +1883,11 @@
           "period": "June 2025",
           "as_on_date": "30-06-2025",
           "fy": "2025-26",
-          "sc_st_os_no": "6093",
-          "sc_st_os_amt": "8014.58",
+          "deposit_amt_lakhs": "39854.61",
+          "cdr": "69.58",
+          "pmsby_no": "54327",
+          "pmjjby_no": "14830",
+          "apy_no": "5071",
           "digital_upi_no": "54082.75"
         },
         {
@@ -227,8 +1895,11 @@
           "period": "June 2025",
           "as_on_date": "30-06-2025",
           "fy": "2025-26",
-          "sc_st_os_no": "4216",
-          "sc_st_os_amt": "5482.47",
+          "deposit_amt_lakhs": "35434.2",
+          "cdr": "41.56",
+          "pmsby_no": "16086",
+          "pmjjby_no": "6462",
+          "apy_no": "961",
           "digital_upi_no": "11558.24"
         },
         {
@@ -236,8 +1907,11 @@
           "period": "June 2025",
           "as_on_date": "30-06-2025",
           "fy": "2025-26",
-          "sc_st_os_no": "15020",
-          "sc_st_os_amt": "25657.64",
+          "deposit_amt_lakhs": "287164.9",
+          "cdr": "57.16",
+          "pmsby_no": "138740",
+          "pmjjby_no": "40485",
+          "apy_no": "17414",
           "digital_upi_no": "196397.8"
         },
         {
@@ -245,8 +1919,11 @@
           "period": "June 2025",
           "as_on_date": "30-06-2025",
           "fy": "2025-26",
-          "sc_st_os_no": "11390",
-          "sc_st_os_amt": "38478.17",
+          "deposit_amt_lakhs": "308785.08",
+          "cdr": "31.56",
+          "pmsby_no": "54710",
+          "pmjjby_no": "26849",
+          "apy_no": "5596",
           "digital_upi_no": "68381.11"
         },
         {
@@ -254,16 +1931,17 @@
           "period": "June 2025",
           "as_on_date": "30-06-2025",
           "fy": "2025-26",
-          "sc_st_os_no": "9461",
-          "sc_st_os_amt": "13659.57",
+          "deposit_amt_lakhs": "68693.71",
+          "cdr": "44.74",
+          "pmsby_no": "26005",
+          "pmjjby_no": "14558",
+          "apy_no": "1717",
           "digital_upi_no": "28837.17"
         }
       ]
     },
     {
       "period": "September 2025",
-      "as_on_date": "30-09-2025",
-      "financial_year": "2025-26",
       "num_districts": 12,
       "districts": [
         {
@@ -279,8 +1957,9 @@
           "csp_total": "296",
           "deposit_amt_lakhs": "59350.17",
           "cdr": "63.36",
-          "sc_st_os_no": "3782",
-          "sc_st_os_amt": "4268.36",
+          "pmsby_no": "24884",
+          "pmjjby_no": "8175",
+          "apy_no": "2334",
           "digital_upi_no": "67249.15"
         },
         {
@@ -296,8 +1975,9 @@
           "csp_total": "156",
           "deposit_amt_lakhs": "169582.14",
           "cdr": "24.15",
-          "sc_st_os_no": "5842",
-          "sc_st_os_amt": "13426.11",
+          "pmsby_no": "36675",
+          "pmjjby_no": "21235",
+          "apy_no": "3516",
           "digital_upi_no": "125195.26"
         },
         {
@@ -313,8 +1993,9 @@
           "csp_total": "1006",
           "deposit_amt_lakhs": "2723095.7",
           "cdr": "44.88",
-          "sc_st_os_no": "70659",
-          "sc_st_os_amt": "210968.37",
+          "pmsby_no": "195977",
+          "pmjjby_no": "92288",
+          "apy_no": "25669",
           "digital_upi_no": "1236308.53"
         },
         {
@@ -330,8 +2011,9 @@
           "csp_total": "60",
           "deposit_amt_lakhs": "55598.33",
           "cdr": "39.92",
-          "sc_st_os_no": "10703",
-          "sc_st_os_amt": "13355.84",
+          "pmsby_no": "22261",
+          "pmjjby_no": "13525",
+          "apy_no": "1577",
           "digital_upi_no": "30234.33"
         },
         {
@@ -347,8 +2029,9 @@
           "csp_total": "88",
           "deposit_amt_lakhs": "46490.77",
           "cdr": "73.22",
-          "sc_st_os_no": "5286",
-          "sc_st_os_amt": "5941.78",
+          "pmsby_no": "41209",
+          "pmjjby_no": "13828",
+          "apy_no": "11505",
           "digital_upi_no": "73396.88"
         },
         {
@@ -364,8 +2047,9 @@
           "csp_total": "201",
           "deposit_amt_lakhs": "248586.14",
           "cdr": "116.84",
-          "sc_st_os_no": "24976",
-          "sc_st_os_amt": "39391.35",
+          "pmsby_no": "78473",
+          "pmjjby_no": "36778",
+          "apy_no": "7005",
           "digital_upi_no": "210600.57"
         },
         {
@@ -381,8 +2065,9 @@
           "csp_total": "66",
           "deposit_amt_lakhs": "30172.1",
           "cdr": "61.12",
-          "sc_st_os_no": "3464",
-          "sc_st_os_amt": "3305.82",
+          "pmsby_no": "18032",
+          "pmjjby_no": "6648",
+          "apy_no": "2281",
           "digital_upi_no": "39639.49"
         },
         {
@@ -398,8 +2083,9 @@
           "csp_total": "238",
           "deposit_amt_lakhs": "42236.1",
           "cdr": "68.72",
-          "sc_st_os_no": "6220",
-          "sc_st_os_amt": "8100.49",
+          "pmsby_no": "56173",
+          "pmjjby_no": "15402",
+          "apy_no": "5729",
           "digital_upi_no": "108129.77"
         },
         {
@@ -415,8 +2101,9 @@
           "csp_total": "58",
           "deposit_amt_lakhs": "34396.55",
           "cdr": "44.35",
-          "sc_st_os_no": "4461",
-          "sc_st_os_amt": "5730.83",
+          "pmsby_no": "15978",
+          "pmjjby_no": "6656",
+          "apy_no": "1079",
           "digital_upi_no": "23105.68"
         },
         {
@@ -432,8 +2119,9 @@
           "csp_total": "769",
           "deposit_amt_lakhs": "297787.74",
           "cdr": "56.93",
-          "sc_st_os_no": "15761",
-          "sc_st_os_amt": "26563.27",
+          "pmsby_no": "137823",
+          "pmjjby_no": "40339",
+          "apy_no": "19473",
           "digital_upi_no": "371224.86"
         },
         {
@@ -449,8 +2137,9 @@
           "csp_total": "194",
           "deposit_amt_lakhs": "316261.07",
           "cdr": "31.63",
-          "sc_st_os_no": "11808",
-          "sc_st_os_amt": "40102.13",
+          "pmsby_no": "59570",
+          "pmjjby_no": "28956",
+          "apy_no": "6251",
           "digital_upi_no": "127511.03"
         },
         {
@@ -466,8 +2155,9 @@
           "csp_total": "231",
           "deposit_amt_lakhs": "71169.37",
           "cdr": "44.57",
-          "sc_st_os_no": "9856",
-          "sc_st_os_amt": "14242.57",
+          "pmsby_no": "28321",
+          "pmjjby_no": "14891",
+          "apy_no": "1924",
           "digital_upi_no": "56236.94"
         }
       ]
