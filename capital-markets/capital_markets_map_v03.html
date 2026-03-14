@@ -333,43 +333,50 @@ function buildChoropleth() {
 }
 
 // ── District name labels ─────────────────────────────────────────────────────
-function buildDistrictLabels() {
-  if(distLabelsLayer) { map.removeLayer(distLabelsLayer); distLabelsLayer=null; }
-  if(!distGeoJSON) return;
+let distCentroids = [];
 
-  distLabelsLayer = L.layerGroup();
+function buildDistrictLabels() {
+  if(!distGeoJSON) return;
+  distCentroids = [];
   distGeoJSON.features.forEach(f => {
-    const p = f.properties;
-    // Compute centroid from bounds
-    let latlngs;
     try {
       const tmp = L.geoJSON(f);
-      const c = tmp.getBounds().getCenter();
-      const label = L.marker(c, {
-        icon: L.divIcon({
-          className: 'dist-label',
-          html: p.DISTRICT,
-          iconSize: [0,0],
-          iconAnchor: [0,0]
-        }),
-        interactive: false
-      });
-      distLabelsLayer.addLayer(label);
+      const b = tmp.getBounds();
+      distCentroids.push({ center: b.getCenter(), name: f.properties.DISTRICT, bounds: b });
     } catch(e) {}
   });
 }
 
 function updateLabelVisibility() {
-  if(!distLabelsLayer) return;
+  if(distLabelsLayer) { map.removeLayer(distLabelsLayer); distLabelsLayer=null; }
   const z = map.getZoom();
-  if(z >= 7 && (currentView==='choro' || drilldownActive)) {
-    if(!map.hasLayer(distLabelsLayer)) distLabelsLayer.addTo(map);
-  } else {
-    if(map.hasLayer(distLabelsLayer)) map.removeLayer(distLabelsLayer);
-  }
+  if(z < 7 || (currentView!=='choro' && !drilldownActive)) return;
+
+  const viewBounds = map.getBounds();
+  distLabelsLayer = L.layerGroup();
+
+  // Only label districts visible in viewport, spaced to avoid overlap
+  const placed = [];
+  const minPxGap = 60; // min pixel distance between labels
+
+  distCentroids.forEach(d => {
+    if(!viewBounds.intersects(d.bounds)) return;
+    const px = map.latLngToContainerPoint(d.center);
+    const tooClose = placed.some(p => Math.abs(px.x-p.x) < minPxGap && Math.abs(px.y-p.y) < 18);
+    if(tooClose) return;
+    placed.push(px);
+
+    distLabelsLayer.addLayer(L.marker(d.center, {
+      icon: L.divIcon({ className:'dist-label', html:d.name, iconSize:[0,0], iconAnchor:[0,0] }),
+      interactive: false
+    }));
+  });
+
+  distLabelsLayer.addTo(map);
 }
 
 map.on('zoomend', updateLabelVisibility);
+map.on('moveend', updateLabelVisibility);
 
 // State code matching from state name
 const STATE_NAME_CODE = {
