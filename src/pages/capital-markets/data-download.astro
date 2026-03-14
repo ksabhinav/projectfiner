@@ -1,0 +1,51 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import DownloadManager from '../../components/DownloadManager.svelte';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<PageLayout
+  title="Data Download | Project FINER"
+  pageTitle="Data Download — Project FINER"
+  backLink={{ href: `${base}capital-markets/map`, label: 'Back to map' }}
+>
+  <div class="container">
+    <div class="section-label">SLBC — District-Level Financial Inclusion</div>
+
+    <a class="state-link" href={`${base}slbc-data/meghalaya/download`}>
+      <div class="state-link-inner">
+        <div>
+          <div class="state-link-name">Meghalaya</div>
+          <div class="state-link-meta">18 quarters &middot; 12 districts &middot; 44 indicators &middot; 606 CSVs &middot; Jun 2020 – Sep 2025</div>
+        </div>
+        <div class="state-link-arrow">&rarr;</div>
+      </div>
+    </a>
+
+    <div class="section-label">Capital Markets Access</div>
+
+    <DownloadManager client:load />
+  </div>
+</PageLayout>
+
+<style>
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 40px 60px; }
+  .state-link {
+    display: block;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 10px;
+  }
+  .state-link:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-1px); }
+  .state-link-inner { padding: 20px 24px; border-left: 3px solid var(--teal); display: flex; align-items: center; justify-content: space-between; }
+  .state-link-name { font-size: 15px; font-weight: 700; color: var(--text); }
+  .state-link-meta { font-family: var(--font-sans); font-size: 11px; color: var(--muted); margin-top: 3px; }
+  .state-link-arrow { font-family: var(--font-sans); font-size: 18px; color: #ccc; transition: color 0.2s; }
+  .state-link:hover .state-link-arrow { color: var(--teal); }
+</style>

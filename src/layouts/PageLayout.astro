@@ -1,0 +1,20 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  pageTitle: string;
+  subtitle?: string;
+  backLink?: { href: string; label: string };
+}
+
+const { title, pageTitle, subtitle, backLink } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <Header title={pageTitle} subtitle={subtitle} backLink={backLink} />
+  <slot />
+  <Footer />
+</BaseLayout>

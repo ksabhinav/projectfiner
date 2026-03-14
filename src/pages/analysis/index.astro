@@ -1,0 +1,20 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import DataExplorer from '../../components/analysis/DataExplorer.svelte';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<PageLayout
+  title="Analyze Data | Project FINER"
+  pageTitle="Data Analysis"
+  subtitle="Explore SLBC financial inclusion data interactively — pick indicators, compare districts, generate charts. Upload your own CSV to overlay custom data."
+>
+  <div class="container">
+    <DataExplorer client:load />
+  </div>
+</PageLayout>
+
+<style>
+  .container { max-width: 1200px; margin: 0 auto; padding: 32px 40px 60px; }
+</style>

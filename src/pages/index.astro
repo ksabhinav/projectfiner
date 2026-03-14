@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Project FINER — Financial Inclusion & Evaluation Research">
+  <Header title="Project FINER" subtitle="Financial Inclusion & Evaluation Research — data on banking infrastructure, credit access, government schemes, and capital markets across India's North East." />
+
+  <div class="container">
+    <div class="section-label">Explore</div>
+
+    <a class="card-link" href={`${base}capital-markets/map`}>
+      <div class="card-inner" style="border-left-color: var(--accent)">
+        <div class="card-head">
+          <h2>Capital Markets Access Map</h2>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+        <p class="card-desc">Interactive map of 275,000+ depository participant centres and mutual fund distributors across India.</p>
+      </div>
+    </a>
+
+    <a class="card-link" href={`${base}slbc-data`}>
+      <div class="card-inner" style="border-left-color: var(--teal)">
+        <div class="card-head">
+          <h2>SLBC Financial Inclusion Data</h2>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+        <p class="card-desc">District-level indicators from SLBC quarterly booklets — banking, credit, government schemes. 18 quarters, 44 indicators.</p>
+      </div>
+    </a>
+
+    <a class="card-link" href={`${base}capital-markets/data-download`}>
+      <div class="card-inner" style="border-left-color: var(--olive)">
+        <div class="card-head">
+          <h2>Download Datasets</h2>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+        <p class="card-desc">CSV and Excel downloads for all datasets — CDSL, NSDL, MFDs, and SLBC district-level data.</p>
+      </div>
+    </a>
+
+    <a class="card-link" href={`${base}analysis`}>
+      <div class="card-inner" style="border-left-color: var(--gold)">
+        <div class="card-head">
+          <h2>Analyze Data</h2>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+        <p class="card-desc">Interactive data explorer — pick indicators, compare districts, generate scatter plots and correlations. Upload your own data.</p>
+      </div>
+    </a>
+  </div>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 40px 60px; }
+  .card-link {
+    display: block;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    transition: all 0.2s;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 12px;
+  }
+  .card-link:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-1px); }
+  .card-inner { padding: 24px 28px; border-left: 3px solid transparent; }
+  .card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+  h2 { font-size: 16px; font-weight: 700; color: var(--text); }
+  .card-arrow { font-family: var(--font-sans); font-size: 18px; color: #ccc; transition: color 0.2s; }
+  .card-link:hover .card-arrow { color: var(--accent); }
+  .card-desc { font-family: var(--font-sans); font-size: 12px; color: var(--muted); line-height: 1.6; }
+</style>

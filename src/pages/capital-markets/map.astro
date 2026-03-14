@@ -1,0 +1,299 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Capital Markets Access — India | Project FINER">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+
+  <div id="map"></div>
+
+  <div id="panel">
+    <div id="panel-head"><h1>Capital Markets Access</h1></div>
+    <div id="panel-body">
+      <div class="view-row" style="margin-bottom:10px">
+        <button class="view-btn active" id="vbtn-choro">Access Map</button>
+        <button class="view-btn" id="vbtn-dots">Points</button>
+      </div>
+
+      <div class="grp open dpsc-active" id="grp-dpsc">
+        <div class="grp-master" id="grp-dpsc-master">
+          <div class="master-dot"></div>
+          <span class="grp-title">DP Service Centres</span>
+          <span class="grp-arrow">▾</span>
+        </div>
+        <div class="grp-subs">
+          <button class="sub-btn on-cdsl" id="tog-cdsl"><span class="sub-dot"></span>CDSL</button>
+          <button class="sub-btn on-nsdl" id="tog-nsdl"><span class="sub-dot"></span>NSDL</button>
+        </div>
+      </div>
+      <div class="grp open mfd-active" id="grp-mfd">
+        <div class="grp-master" id="grp-mfd-master">
+          <div class="master-dot"></div>
+          <span class="grp-title">MF Distributors</span>
+          <span class="grp-arrow">▾</span>
+        </div>
+        <div class="grp-subs">
+          <button class="sub-btn on-mfdi" id="tog-mfdi"><span class="sub-dot"></span>Individual</button>
+          <button class="sub-btn on-mfdc" id="tog-mfdc"><span class="sub-dot"></span>Corporate</button>
+        </div>
+      </div>
+
+      <div style="height:1px;background:#e8e5e0;margin:10px 0"></div>
+
+      <div class="field">
+        <span class="flabel">Search</span>
+        <input class="finput" type="text" id="search-dp" placeholder="Search by name…" />
+      </div>
+      <div class="field" style="position:relative">
+        <span class="flabel">Go to city</span>
+        <input class="finput" type="text" id="search-loc" placeholder="e.g. Shillong, Tura…" autocomplete="off" />
+        <div id="loc-sugg"></div>
+      </div>
+      <div class="field">
+        <span class="flabel">State</span>
+        <select class="finput" id="state-select">
+          <option value="">All India</option>
+        </select>
+      </div>
+
+      <div id="stats">Loading…</div>
+      <button id="btn-reset">↺ Reset</button>
+    </div>
+  </div>
+
+  <button id="btn-back">← Back to map</button>
+
+  <div id="legend">
+    <div class="lr"><div class="ldot" style="background:#b8603e"></div>CDSL service centre</div>
+    <div class="lr"><div class="ldot" style="background:#3d7a8e"></div>NSDL service centre</div>
+    <div class="lr"><div class="ldot" style="background:#5a7a3a"></div>MFD individual</div>
+    <div class="lr"><div class="ldot" style="background:#8b6914"></div>MFD corporate</div>
+  </div>
+
+  <div id="choro-legend">
+    <div style="font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:#aaa09a;margin-bottom:4px">Total access points per district</div>
+    <div class="choro-scale">
+      <div class="choro-swatch" style="background:#f7f4ef"></div>
+      <div class="choro-swatch" style="background:#e8d5b7"></div>
+      <div class="choro-swatch" style="background:#d4a96a"></div>
+      <div class="choro-swatch" style="background:#b8603e"></div>
+      <div class="choro-swatch" style="background:#7a2010"></div>
+    </div>
+    <div class="choro-labels"><span>0</span><span>10</span><span>100</span><span>1k</span><span>10k+</span></div>
+    <div style="display:flex;align-items:center;gap:5px;margin-top:6px;padding-top:5px;border-top:1px solid #e8e5e0">
+      <div style="width:12px;height:12px;background:#e8e4dc;border:1px solid #ccc8c0;flex-shrink:0"></div>
+      <span style="font-size:8px;color:#aaa09a;letter-spacing:0.04em">No coverage</span>
+    </div>
+  </div>
+
+  <div id="wm">Project FINER</div>
+  <div id="dl-link"><a href={`${base}capital-markets/data-download`}>↓ Download Data</a></div>
+
+  <script is:inline define:vars={{ base }}>
+    // Data URLs use base path
+    const CDSL_URL   = base + 'DPSCs/cdsl_dp_centres.json';
+    const NSDL_URL   = base + 'DPSCs/nsdl_dp_centres.json';
+    const COORDS_URL = base + 'pincode_coords.json';
+    const MFDI_URL   = base + 'MFDs/mfd_individual.json';
+    const MFDC_URL   = base + 'MFDs/mfd_corporate.json';
+    const DIST_URL   = base + 'data/district_boundaries.geojson';
+  </script>
+
+  <script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script is:inline src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script is:inline>
+    // Full map logic — kept as inline JS for Leaflet compatibility
+    const INDIA_BOUNDS = L.latLngBounds(L.latLng(6.5,68.0), L.latLng(37.5,97.5));
+    const NE_CODES = ['AS','ML','MN','MZ','NL','TR','AR','SK'];
+
+    const map = L.map('map',{center:[22.5,82.5],zoom:5,minZoom:4,maxZoom:18,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false});
+    L.control.zoom({position:'topright'}).addTo(map);
+
+    (new (L.GridLayer.extend({createTile:function(){const t=document.createElement('canvas');t.width=t.height=256;const c=t.getContext('2d');c.fillStyle='#fff';c.fillRect(0,0,256,256);return t;}}))).addTo(map);
+
+    fetch('https://raw.githubusercontent.com/datameet/maps/master/Country/india-land-simplified.geojson')
+      .then(r=>r.json()).then(geo=>{
+        L.geoJSON(geo,{style:{fillColor:'#faf9f7',fillOpacity:1,color:'#ccc8c0',weight:1.2,opacity:0.6},interactive:false}).addTo(map);
+      }).catch(()=>{});
+
+    function makeCluster(fill,text){
+      return L.markerClusterGroup({chunkedLoading:true,maxClusterRadius:45,showCoverageOnHover:false,
+        iconCreateFunction:c=>{const n=c.getChildCount(),s=n>1000?46:n>100?36:28;
+          return L.divIcon({html:'<div style="background:'+fill+';width:'+s+'px;height:'+s+'px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:'+text+';font-weight:700;font-size:'+(s>36?11:9)+'px;font-family:Georgia,serif;border:2px solid rgba(255,255,255,0.85)">'+( n>999?'1k+':n)+'</div>',className:'',iconSize:[s,s]});}
+      }).addTo(map);
+    }
+    const clusterCDSL = makeCluster('#b8603e','#fff');
+    const clusterNSDL = makeCluster('#3d7a8e','#fff');
+    const clusterMFDI = makeCluster('#5a7a3a','#fff');
+    const clusterMFDC = makeCluster('#8b6914','#fff');
+
+    function makeIcon(color){return L.divIcon({html:'<div style="width:7px;height:7px;border-radius:50%;background:'+color+';border:1.5px solid rgba(255,255,255,0.9)"></div>',className:'',iconSize:[7,7],iconAnchor:[3,3]});}
+    const iconCDSL=makeIcon('#b8603e'), iconNSDL=makeIcon('#3d7a8e'), iconMFDI=makeIcon('#5a7a3a'), iconMFDC=makeIcon('#8b6914');
+
+    let cdslData=[],nsdlData=[],mfdiData=[],mfdcData=[],coordsMap={},distGeoJSON=null;
+    let showCDSL=true,showNSDL=true,showMFDI=true,showMFDC=true,dpQuery='',stateFilter='';
+    let currentView='choro';
+    let choroLayer=null, drilldownActive=false, distLabelsLayer=null;
+    const markerCache={cdsl:[],nsdl:[],mfdi:[],mfdc:[]};
+
+    function choroColor(total){if(total===0)return'#e8e4dc';if(total<5)return'#f0e6d2';if(total<20)return'#e8d5b7';if(total<100)return'#d4a96a';if(total<500)return'#b8603e';return'#7a2010';}
+    function getFilteredTotal(props){let t=0;if(showCDSL)t+=props.cdsl_cnt||0;if(showNSDL)t+=props.nsdl_cnt||0;if(showMFDI)t+=props.mfdi_cnt||0;if(showMFDC)t+=props.mfdc_cnt||0;return t;}
+    function choroStyle(feature){const total=getFilteredTotal(feature.properties);return{fillColor:choroColor(total),fillOpacity:total===0?0.6:0.78,color:'#c8bfb0',weight:0.5,opacity:0.7};}
+
+    const STATE_NAME_CODE={'ANDHRA PRADESH':'AP','ARUNACHAL PRADESH':'AR','ASSAM':'AS','BIHAR':'BR','CHHATTISGARH':'CT','GOA':'GA','GUJARAT':'GJ','HARYANA':'HR','HIMACHAL PRADESH':'HP','JHARKHAND':'JH','KARNATAKA':'KA','KERALA':'KL','MADHYA PRADESH':'MP','MAHARASHTRA':'MH','MANIPUR':'MN','MEGHALAYA':'ML','MIZORAM':'MZ','NAGALAND':'NL','ODISHA':'OR','PUNJAB':'PB','RAJASTHAN':'RJ','SIKKIM':'SK','TAMIL NADU':'TN','TELANGANA':'TS','TRIPURA':'TR','UTTAR PRADESH':'UP','UTTARAKHAND':'UK','WEST BENGAL':'WB','JAMMU AND KASHMIR':'JK','LADAKH':'JK','DELHI':'DL','CHANDIGARH':'CH','PUDUCHERRY':'PY','ANDAMAN & NICOBAR':'AN','LAKSHADWEEP':'LD','DADRA & NAGAR HAVELI & DAMAN & DIU':'DN'};
+    function stateCodeMatch(stateName,code){return STATE_NAME_CODE[stateName?.toUpperCase()]===code;}
+
+    function buildChoropleth(){
+      if(choroLayer){map.removeLayer(choroLayer);choroLayer=null;}
+      if(!distGeoJSON||currentView!=='choro')return;
+      const sf=stateFilter;
+      const filtered={...distGeoJSON,features:distGeoJSON.features.filter(f=>{if(!sf)return true;if(sf==='_NE')return NE_CODES.some(code=>stateCodeMatch(f.properties.STATE_UT,code));return stateCodeMatch(f.properties.STATE_UT,sf);})};
+      choroLayer=L.geoJSON(filtered,{style:choroStyle,onEachFeature:(feature,layer)=>{const p=feature.properties;const total=getFilteredTotal(p);layer.on({mouseover:e=>{e.target.setStyle({weight:2,color:'#6b4c2a',fillOpacity:0.9});e.target.bindTooltip('<div class="dist-tooltip"><strong>'+p.DISTRICT+'</strong> <span style="font-size:10px;color:#888078">'+p.STATE_UT+'</span><br>Total: <strong>'+total.toLocaleString()+'</strong><br><span style="color:#b8603e">CDSL '+(showCDSL?p.cdsl_cnt:'-')+'</span> · <span style="color:#3d7a8e">NSDL '+(showNSDL?p.nsdl_cnt:'-')+'</span> · <span style="color:#5a7a3a">MFD-I '+(showMFDI?p.mfdi_cnt:'-')+'</span> · <span style="color:#8b6914">MFD-C '+(showMFDC?p.mfdc_cnt:'-')+'</span></div>',{sticky:true,className:'',offset:[10,0]}).openTooltip();},mouseout:e=>{choroLayer.resetStyle(e.target);e.target.closeTooltip();},click:e=>drillInto(feature,layer)});}}).addTo(map);
+    }
+
+    let distCentroids=[];
+    function buildDistrictLabels(){if(!distGeoJSON)return;distCentroids=[];distGeoJSON.features.forEach(f=>{try{const tmp=L.geoJSON(f);const b=tmp.getBounds();distCentroids.push({center:b.getCenter(),name:f.properties.DISTRICT,bounds:b});}catch(e){}});}
+    function updateLabelVisibility(){if(distLabelsLayer){map.removeLayer(distLabelsLayer);distLabelsLayer=null;}const z=map.getZoom();if(z<8||(currentView!=='choro'&&!drilldownActive))return;const viewBounds=map.getBounds();distLabelsLayer=L.layerGroup();const placed=[];distCentroids.forEach(d=>{if(!viewBounds.intersects(d.bounds))return;const px=map.latLngToContainerPoint(d.center);const tooClose=placed.some(p=>Math.abs(px.x-p.x)<120&&Math.abs(px.y-p.y)<30);if(tooClose)return;placed.push(px);distLabelsLayer.addLayer(L.marker(d.center,{icon:L.divIcon({className:'dist-label',html:d.name,iconSize:[0,0],iconAnchor:[0,0]}),interactive:false}));});distLabelsLayer.addTo(map);}
+    map.on('zoomend',updateLabelVisibility);map.on('moveend',updateLabelVisibility);
+    map.on('zoomend',function(){if(drilldownActive&&map.getZoom()<=8)exitDrilldown();});
+
+    function drillInto(feature,layer){const p=feature.properties;drilldownActive=true;document.getElementById('btn-back').style.display='block';document.getElementById('legend').style.display='block';const stateCode=STATE_NAME_CODE[p.STATE_UT?.toUpperCase()];if(stateCode){stateFilter=stateCode;document.getElementById('state-select').value=stateCode;}map.getContainer().classList.add('clusters-hidden');map.getContainer().classList.remove('clusters-visible');[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(c=>{if(!c._map)c.addTo(map);});renderMarkers();const total=getFilteredTotal(p);document.getElementById('stats').innerHTML='<strong>'+p.DISTRICT+'</strong><br><span style="font-size:9px;color:#888078">'+p.STATE_UT+'</span><br>'+total.toLocaleString()+' access points';map.flyToBounds(layer.getBounds(),{padding:[40,40],maxZoom:12,duration:1.0});map.once('moveend',function(){map.getContainer().classList.remove('clusters-hidden');map.getContainer().classList.add('clusters-visible');});}
+
+    function exitDrilldown(){drilldownActive=false;document.getElementById('btn-back').style.display='none';map.getContainer().classList.remove('clusters-visible');map.getContainer().classList.add('clusters-hidden');setTimeout(function(){if(currentView==='choro'){[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(c=>{if(c._map)map.removeLayer(c);});document.getElementById('legend').style.display='none';}map.getContainer().classList.remove('clusters-hidden');stateFilter='';document.getElementById('state-select').value='';map.flyToBounds(INDIA_BOUNDS,{padding:[20,20],duration:1.0});renderMarkers();},400);}
+
+    function setView(mode){currentView=mode;document.getElementById('vbtn-choro').className='view-btn'+(mode==='choro'?' active':'');document.getElementById('vbtn-dots').className='view-btn'+(mode==='dots'?' active':'');document.getElementById('legend').style.display=mode==='dots'?'block':'none';document.getElementById('choro-legend').style.display=mode==='choro'?'block':'none';if(mode==='choro'){[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(c=>{if(c._map)map.removeLayer(c);});buildChoropleth();}else{if(choroLayer){map.removeLayer(choroLayer);choroLayer=null;}[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(c=>{if(!c._map)c.addTo(map);});renderMarkers();}}
+
+    function buildMarkersOnce(data,icon,popupFn){return data.map(c=>{const ll=coordsMap[c.p];if(!ll)return null;const m=L.marker([ll[0]+(Math.random()-0.5)*0.002,ll[1]+(Math.random()-0.5)*0.002],{icon});m.on('click',function(){if(!this._pb){this.bindPopup(popupFn(c),{maxWidth:260}).openPopup();this._pb=true;}});m._data=c;return m;}).filter(Boolean);}
+
+    function buildPopup(c,dep){const email=c.e?'<a href="mailto:'+c.e+'">'+c.e+'</a>':'—';const type=c.t?'<div style="font-size:9px;color:#888078;font-style:italic;margin-bottom:4px">'+c.t+'</div>':'';return'<div class="pname">'+c.n+'</div><span class="pbadge '+dep+'">'+dep.toUpperCase()+'</span>'+type+'<div class="paddr">'+c.a.slice(0,140)+'</div><div class="pmeta">✉ '+email+'<br>Pin '+c.p+'</div>';}
+    function buildMFDPopup(c,type){const cls=type==='Corporate'?'mfdc':'mfdi';return'<div class="pname">'+c.n+'</div><span class="pbadge '+cls+'">MFD '+type+'</span><div style="font-size:9px;color:#888078;margin-bottom:4px">'+(c.c||'')+'</div><div class="pmeta">ARN: '+c.arn+'<br>Pin: '+c.p+'</div>';}
+
+    setStatus('Fetching data…');
+    Promise.all([fetch(CDSL_URL).then(r=>r.json()),fetch(NSDL_URL).then(r=>r.json()),fetch(COORDS_URL).then(r=>r.json()),fetch(MFDI_URL).then(r=>r.json()),fetch(MFDC_URL).then(r=>r.json()),fetch(DIST_URL).then(r=>r.json())]).then(([cdsl,nsdl,coords,mfdi,mfdc,dist])=>{cdslData=cdsl;nsdlData=nsdl;coordsMap=coords;mfdiData=mfdi;mfdcData=mfdc;distGeoJSON=dist;setStatus('Building markers…');markerCache.cdsl=buildMarkersOnce(cdsl,iconCDSL,c=>buildPopup(c,'cdsl'));markerCache.nsdl=buildMarkersOnce(nsdl,iconNSDL,c=>buildPopup(c,'nsdl'));markerCache.mfdi=buildMarkersOnce(mfdi,iconMFDI,c=>buildMFDPopup(c,'Individual'));markerCache.mfdc=buildMarkersOnce(mfdc,iconMFDC,c=>buildMFDPopup(c,'Corporate'));clusterCDSL.addLayers(markerCache.cdsl);clusterNSDL.addLayers(markerCache.nsdl);clusterMFDI.addLayers(markerCache.mfdi);clusterMFDC.addLayers(markerCache.mfdc);[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(c=>map.removeLayer(c));buildStateDropdown([...cdsl,...nsdl,...mfdi,...mfdc]);buildChoropleth();buildDistrictLabels();updateLabelVisibility();updateStats();}).catch(err=>setStatus('Error: '+err.message));
+
+    let renderTimer=null;
+    function renderMarkers(){clearTimeout(renderTimer);renderTimer=setTimeout(_doRender,80);}
+    function _doRender(){if(currentView==='choro'&&!drilldownActive){buildChoropleth();updateStats();return;}if(currentView==='choro'&&drilldownActive){buildChoropleth();}const dq=dpQuery,sf=stateFilter;function passes(c){if(dq&&!c.n.toLowerCase().includes(dq))return false;if(sf==='_NE')return NE_CODES.includes(c.st);if(sf&&sf!=='_SEP')return c.st===sf;return true;}[{cache:markerCache.cdsl,cluster:clusterCDSL,show:showCDSL},{cache:markerCache.nsdl,cluster:clusterNSDL,show:showNSDL},{cache:markerCache.mfdi,cluster:clusterMFDI,show:showMFDI},{cache:markerCache.mfdc,cluster:clusterMFDC,show:showMFDC}].forEach(({cache,cluster,show})=>{cluster.clearLayers();if(!show)return;cluster.addLayers(cache.filter(m=>passes(m._data)));});updateStats();}
+
+    function updateStats(){const dq=dpQuery,sf=stateFilter;function passes(c){if(dq&&!c.n.toLowerCase().includes(dq))return false;if(sf==='_NE')return NE_CODES.includes(c.st);if(sf&&sf!=='_SEP')return c.st===sf;return true;}if(drilldownActive)return;const pC=showCDSL?markerCache.cdsl.filter(m=>passes(m._data)).length:0;const pN=showNSDL?markerCache.nsdl.filter(m=>passes(m._data)).length:0;const pM=showMFDI?markerCache.mfdi.filter(m=>passes(m._data)).length:0;const pMC=showMFDC?markerCache.mfdc.filter(m=>passes(m._data)).length:0;document.getElementById('stats').innerHTML='Showing <strong>'+(pC+pN+pM+pMC).toLocaleString()+'</strong> total<br><span style="color:#b8603e">CDSL '+pC.toLocaleString()+'</span> · <span style="color:#3d7a8e">NSDL '+pN.toLocaleString()+'</span><br><span style="color:#5a7a3a">MFD-I '+pM.toLocaleString()+'</span> · <span style="color:#8b6914">MFD-C '+pMC.toLocaleString()+'</span>';const any=dpQuery||stateFilter||document.getElementById('search-loc').value.trim();document.getElementById('btn-reset').style.display=any?'block':'none';}
+
+    function buildStateDropdown(all){const NAMES={AS:'Assam',ML:'Meghalaya',MN:'Manipur',MZ:'Mizoram',NL:'Nagaland',TR:'Tripura',AR:'Arunachal Pradesh',SK:'Sikkim',DL:'Delhi',MH:'Maharashtra',GJ:'Gujarat',KA:'Karnataka',TN:'Tamil Nadu',KL:'Kerala',AP:'Andhra Pradesh',TS:'Telangana',WB:'West Bengal',UP:'Uttar Pradesh',RJ:'Rajasthan',MP:'Madhya Pradesh',HR:'Haryana',PB:'Punjab',BR:'Bihar',JH:'Jharkhand',OR:'Odisha',HP:'Himachal Pradesh',UK:'Uttarakhand',GA:'Goa',CH:'Chandigarh',CT:'Chhattisgarh',JK:'J&K / Ladakh'};const counts={};all.forEach(c=>{if(c.st)counts[c.st]=(counts[c.st]||0)+1;});const sel=document.getElementById('state-select');const neOpt=document.createElement('option');neOpt.value='_NE';neOpt.textContent='── North East India';sel.appendChild(neOpt);NE_CODES.forEach(code=>{if(!counts[code])return;const o=document.createElement('option');o.value=code;o.textContent=(NAMES[code]||code)+' ('+counts[code].toLocaleString()+')';sel.appendChild(o);});const sep=document.createElement('option');sep.value='_SEP';sep.textContent='──────────────';sel.appendChild(sep);Object.entries(counts).filter(([k])=>!NE_CODES.includes(k)).sort((a,b)=>b[1]-a[1]).forEach(([code,cnt])=>{const o=document.createElement('option');o.value=code;o.textContent=(NAMES[code]||code)+' ('+cnt.toLocaleString()+')';sel.appendChild(o);});}
+
+    // Event listeners
+    document.getElementById('vbtn-choro').addEventListener('click',()=>setView('choro'));
+    document.getElementById('vbtn-dots').addEventListener('click',()=>setView('dots'));
+    document.getElementById('search-dp').addEventListener('input',e=>{dpQuery=e.target.value.trim().toLowerCase();renderMarkers();});
+    document.getElementById('state-select').addEventListener('change',e=>{const val=e.target.value;if(val==='_SEP'){e.target.value=stateFilter;return;}stateFilter=val;renderMarkers();if(!val){map.flyToBounds(INDIA_BOUNDS,{padding:[20,20],duration:1.2});return;}const lats=[],lons=[];[...(showCDSL?markerCache.cdsl:[]),...(showNSDL?markerCache.nsdl:[]),...(showMFDI?markerCache.mfdi:[]),...(showMFDC?markerCache.mfdc:[])].forEach(m=>{const c=m._data;const match=val==='_NE'?NE_CODES.includes(c.st):c.st===val;if(!match)return;const ll=coordsMap[c.p];if(ll){lats.push(ll[0]);lons.push(ll[1]);}});if(!lats.length)return;map.flyToBounds([[Math.min(...lats)-0.3,Math.min(...lons)-0.3],[Math.max(...lats)+0.3,Math.max(...lons)+0.3]],{padding:[40,40],maxZoom:10,duration:1.2});});
+    document.getElementById('btn-reset').addEventListener('click',()=>{dpQuery='';stateFilter='';drilldownActive=false;document.getElementById('search-dp').value='';document.getElementById('search-loc').value='';document.getElementById('state-select').value='';document.getElementById('btn-back').style.display='none';document.getElementById('loc-sugg').style.display='none';showCDSL=showNSDL=showMFDI=showMFDC=true;['cdsl','nsdl'].forEach(l=>{document.getElementById('tog-'+l).className='sub-btn on-'+l;});document.getElementById('tog-mfdi').className='sub-btn on-mfdi';document.getElementById('tog-mfdc').className='sub-btn on-mfdc';document.getElementById('grp-dpsc').className='grp open dpsc-active';document.getElementById('grp-mfd').className='grp open mfd-active';map.flyToBounds(INDIA_BOUNDS,{padding:[20,20],duration:1.2});setView('choro');});
+    document.getElementById('btn-back').addEventListener('click',exitDrilldown);
+
+    // Layer toggles
+    document.getElementById('grp-dpsc-master').addEventListener('click',()=>{const el=document.getElementById('grp-dpsc');const isOpen=el.classList.contains('open');el.classList.toggle('open',!isOpen);showCDSL=showNSDL=!isOpen;el.classList.toggle('dpsc-active',!isOpen);['cdsl','nsdl'].forEach(l=>{document.getElementById('tog-'+l).className='sub-btn '+(!isOpen?'on-'+l:'off');});renderMarkers();});
+    document.getElementById('grp-mfd-master').addEventListener('click',()=>{const el=document.getElementById('grp-mfd');const isOpen=el.classList.contains('open');el.classList.toggle('open',!isOpen);showMFDI=showMFDC=!isOpen;el.classList.toggle('mfd-active',!isOpen);document.getElementById('tog-mfdi').className='sub-btn '+(!isOpen?'on-mfdi':'off');document.getElementById('tog-mfdc').className='sub-btn '+(!isOpen?'on-mfdc':'off');renderMarkers();});
+    ['cdsl','nsdl','mfdi','mfdc'].forEach(layer=>{document.getElementById('tog-'+layer).addEventListener('click',e=>{e.stopPropagation();const cls='on-'+layer;if(layer==='cdsl')showCDSL=!showCDSL;if(layer==='nsdl')showNSDL=!showNSDL;if(layer==='mfdi')showMFDI=!showMFDI;if(layer==='mfdc')showMFDC=!showMFDC;const isOn=layer==='cdsl'?showCDSL:layer==='nsdl'?showNSDL:layer==='mfdc'?showMFDC:showMFDI;document.getElementById('tog-'+layer).className='sub-btn '+(isOn?cls:'off');renderMarkers();});});
+
+    // Location search
+    let locTimer=null;const locInput=document.getElementById('search-loc');const locSugg=document.getElementById('loc-sugg');
+    locInput.addEventListener('input',e=>{const v=e.target.value;clearTimeout(locTimer);if(v.length<2){locSugg.style.display='none';return;}locTimer=setTimeout(()=>{fetch('https://photon.komoot.io/api/?q='+encodeURIComponent(v+' India')+'&limit=6&lang=en').then(r=>r.json()).then(data=>{const fs=(data.features||[]).filter(f=>{const[lon,lat]=f.geometry.coordinates;return lon>=68&&lon<=97&&lat>=6&&lat<=38;}).slice(0,5);if(!fs.length){locSugg.style.display='none';return;}locSugg.innerHTML=fs.map(f=>{const p=f.properties,name=p.name||p.city||p.state||'';const sub=[p.city,p.state].filter(Boolean).join(', ');const[lon,lat]=f.geometry.coordinates;return'<div class="sugg-item" data-lat="'+lat+'" data-lon="'+lon+'" data-name="'+name.replace(/"/g,'&quot;')+'"><span>'+name+'</span><small>'+sub+'</small></div>';}).join('');locSugg.style.display='block';}).catch(()=>{locSugg.style.display='none';});},350);});
+    locSugg.addEventListener('click',e=>{const item=e.target.closest('.sugg-item');if(!item)return;const lat=parseFloat(item.dataset.lat),lon=parseFloat(item.dataset.lon);map.flyTo([lat,lon],12,{duration:1.2});locSugg.style.display='none';locInput.value=item.dataset.name;document.getElementById('btn-reset').style.display='block';});
+    locInput.addEventListener('keydown',e=>{if(e.key==='Enter'){const f=locSugg.querySelector('.sugg-item');if(f)f.click();}if(e.key==='Escape')locSugg.style.display='none';});
+    document.addEventListener('click',e=>{if(!e.target.closest('#panel'))locSugg.style.display='none';});
+
+    function setStatus(msg){document.getElementById('stats').textContent=msg;}
+  </script>
+</BaseLayout>
+
+<style is:global>
+  body { height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+  #map { flex: 1; }
+  .leaflet-marker-pane { transition: opacity 0.4s ease; }
+  .clusters-hidden .leaflet-marker-pane { opacity: 0; pointer-events: none; }
+  .clusters-visible .leaflet-marker-pane { opacity: 1; }
+
+  #panel{position:absolute;top:16px;left:16px;z-index:1000;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.7);width:240px;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,0.06),0 1px 3px rgba(0,0,0,0.04);overflow:hidden}
+  #panel-head{padding:14px 16px 12px;border-bottom:1px solid rgba(232,229,224,0.6);position:relative}
+  #panel-head::after{content:'';position:absolute;bottom:-1px;left:16px;width:32px;height:2px;background:#b8603e;border-radius:1px}
+  #panel-head h1{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#1a1410}
+  #panel-body{padding:12px 16px 14px}
+
+  .view-row{display:flex;gap:0;margin-bottom:12px;border:1px solid #e0ddd8;border-radius:6px;overflow:hidden}
+  .view-btn{flex:1;padding:7px 0;border:none;background:#faf9f7;font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#aaa09a;cursor:pointer;transition:all 0.2s;border-right:1px solid #e0ddd8}
+  .view-btn:last-child{border-right:none}
+  .view-btn.active{background:#1a1410;color:#fff}
+
+  .grp{margin-bottom:10px}.grp:last-of-type{margin-bottom:0}
+  .grp-master{display:flex;align-items:center;gap:8px;padding:5px 0;cursor:pointer;user-select:none}
+  .master-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;background:#ccc8c0;transition:background 0.2s}
+  .grp-title{flex:1;font-family:'Inter',sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:#555048}
+  .grp-arrow{font-size:9px;color:#aaa09a;transition:transform 0.25s ease}
+  .grp.open .grp-arrow{transform:rotate(180deg)}
+  .grp-subs{display:none;padding:6px 0 2px 16px;border-left:1px solid #f0ede8;margin-left:3px;gap:5px}
+  .grp.open .grp-subs{display:flex}
+  .sub-btn{flex:1;padding:5px 0;border:1px solid #e8e5e0;border-radius:4px;background:#faf9f7;font-family:'Inter',sans-serif;font-size:8.5px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#aaa09a;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:4px;transition:all 0.2s}
+  .sub-btn:hover{transform:translateY(-1px);box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+  .sub-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;background:#ccc8c0;transition:background 0.2s}
+  .sub-btn.on-cdsl{border-color:#b8603e;color:#b8603e;background:rgba(184,96,62,0.06)}.sub-btn.on-cdsl .sub-dot{background:#b8603e}
+  .sub-btn.on-nsdl{border-color:#3d7a8e;color:#3d7a8e;background:rgba(61,122,142,0.06)}.sub-btn.on-nsdl .sub-dot{background:#3d7a8e}
+  .sub-btn.on-mfdi{border-color:#5a7a3a;color:#5a7a3a;background:rgba(90,122,58,0.06)}.sub-btn.on-mfdi .sub-dot{background:#5a7a3a}
+  .sub-btn.on-mfdc{border-color:#8b6914;color:#8b6914;background:rgba(139,105,20,0.06)}.sub-btn.on-mfdc .sub-dot{background:#8b6914}
+  .sub-btn.off{border-color:#e8e5e0;color:#ccc8c0}.sub-btn.off .sub-dot{background:#ccc8c0}
+  .grp.dpsc-active .master-dot{background:#b8603e}
+  .grp.mfd-active .master-dot{background:#5a7a3a}
+
+  .field{margin-bottom:10px}
+  .flabel{display:block;font-family:'Inter',sans-serif;font-size:8px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#aaa09a;margin-bottom:4px}
+  .finput{width:100%;padding:6px 0;border:0;border-bottom:1px solid #dedad4;background:transparent;color:#1a1410;font-size:11px;font-family:'Georgia',serif;outline:none;transition:border-color 0.2s}
+  .finput:focus{border-color:#b8603e}
+  .finput::placeholder{color:#c8c0b8;font-style:italic}
+  select.finput{cursor:pointer;appearance:none}
+
+  #stats{margin-top:12px;padding-top:10px;border-top:1px solid rgba(232,229,224,0.6);font-family:'Inter',sans-serif;font-size:10px;color:#888078;line-height:1.8}
+  #stats strong{color:#1a1410;font-weight:600}
+  #btn-reset{display:none;margin-top:8px;background:none;border:none;font-family:'Inter',sans-serif;font-size:9px;font-weight:500;color:#b8603e;cursor:pointer;text-decoration:none;padding:0;letter-spacing:0.03em;transition:color 0.15s}
+  #btn-reset:hover{color:#8a4a2e}
+
+  #loc-sugg{position:absolute;top:calc(100% + 1px);left:0;right:0;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border:1px solid #e0ddd8;border-top:none;z-index:3000;display:none;box-shadow:0 8px 24px rgba(0,0,0,0.08);border-radius:0 0 8px 8px}
+  .sugg-item{padding:7px 0;font-size:10px;cursor:pointer;border-bottom:1px solid #f0ede8;color:#1a1410;line-height:1.4;transition:color 0.15s}
+  .sugg-item:last-child{border-bottom:none}
+  .sugg-item:hover{color:#b8603e}
+  .sugg-item small{display:block;color:#aaa09a;font-size:9px;font-style:italic}
+
+  #legend{position:absolute;bottom:20px;left:16px;z-index:1000;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);border:1px solid rgba(224,221,216,0.7);padding:10px 14px;box-shadow:0 4px 16px rgba(0,0,0,0.05);border-radius:8px}
+  .lr{display:flex;align-items:center;gap:8px;margin-bottom:4px;font-family:'Inter',sans-serif;font-size:9px;font-weight:500;color:#555048;letter-spacing:0.03em}
+  .lr:last-child{margin-bottom:0}
+  .ldot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
+  .dist-tooltip{font-family:'Inter',sans-serif;font-size:11px;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border:1px solid rgba(224,221,216,0.7);padding:10px 12px;box-shadow:0 4px 16px rgba(0,0,0,0.1);line-height:1.7;border-radius:6px}
+  .dist-tooltip strong{font-family:'Georgia',serif;font-size:13px;color:#1a1410;display:block;margin-bottom:3px}
+  .dist-label{background:none!important;border:none!important;box-shadow:none!important;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:8.5px;font-weight:600;color:#555048;text-transform:uppercase;letter-spacing:0.06em;text-shadow:0 0 4px #fff,0 0 4px #fff,1px 0 3px #fff,-1px 0 3px #fff,0 1px 3px #fff,0 -1px 3px #fff;white-space:nowrap;pointer-events:none;padding:0!important;opacity:0.75}
+
+  #choro-legend{display:none;position:absolute;bottom:20px;left:16px;z-index:1000;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);border:1px solid rgba(224,221,216,0.7);padding:10px 14px;box-shadow:0 4px 16px rgba(0,0,0,0.05);border-radius:8px}
+  .choro-scale{display:flex;gap:2px;margin-top:4px;align-items:center}
+  .choro-swatch{height:12px;flex:1;border-radius:2px}
+  .choro-labels{display:flex;justify-content:space-between;font-family:'Inter',sans-serif;font-size:8px;font-weight:500;color:#aaa09a;margin-top:3px;letter-spacing:0.04em}
+
+  .leaflet-popup-content-wrapper{background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);border:1px solid rgba(224,221,216,0.7);border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.1);color:#1a1410;font-family:'Georgia',serif}
+  .leaflet-popup-tip{background:rgba(255,255,255,0.96)}
+  .leaflet-popup-content{margin:12px 14px}
+  .pname{font-weight:700;font-size:12px;margin-bottom:4px;line-height:1.3;color:#1a1410}
+  .pbadge{display:inline-block;padding:2px 8px;font-size:8px;margin-bottom:6px;letter-spacing:0.1em;text-transform:uppercase;font-family:'Inter',sans-serif;font-weight:600;border-radius:3px}
+  .pbadge.cdsl{color:#b8603e;border:1px solid #b8603e;background:rgba(184,96,62,0.06)}.pbadge.nsdl{color:#3d7a8e;border:1px solid #3d7a8e;background:rgba(61,122,142,0.06)}.pbadge.mfdi{color:#5a7a3a;border:1px solid #5a7a3a;background:rgba(90,122,58,0.06)}.pbadge.mfdc{color:#8b6914;border:1px solid #8b6914;background:rgba(139,105,20,0.06)}
+  .paddr{font-size:9px;color:#555048;line-height:1.55;margin-bottom:4px}
+  .pmeta{font-size:9px;color:#aaa09a}
+  .pmeta a{color:#b8603e;text-decoration:none}
+  .leaflet-attribution-flag{display:none!important}
+  .leaflet-control-zoom{border-radius:8px!important;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)!important;border:1px solid rgba(224,221,216,0.7)!important}
+  .leaflet-control-zoom a{font-family:'Inter',sans-serif!important;font-weight:500!important;color:#555048!important;border-color:rgba(232,229,224,0.6)!important;background:rgba(255,255,255,0.92)!important;width:32px!important;height:32px!important;line-height:32px!important}
+  .leaflet-control-zoom a:hover{background:#fff!important}
+
+  #wm{position:absolute;bottom:20px;right:110px;z-index:1000;font-family:'Inter',sans-serif;font-size:9px;font-weight:500;color:rgba(0,0,0,0.15);letter-spacing:0.06em;pointer-events:none}
+  #dl-link{position:absolute;top:16px;right:60px;z-index:1000}
+  #dl-link a{color:#fff;text-decoration:none;background:#b8603e;padding:10px 20px;border:none;box-shadow:0 2px 8px rgba(184,96,62,0.3);font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;border-radius:6px;display:inline-flex;align-items:center;gap:6px;transition:all 0.2s}
+  #dl-link a:hover{background:#8a4a2e;box-shadow:0 4px 12px rgba(184,96,62,0.35);transform:translateY(-1px)}
+  #btn-back{display:none;position:absolute;top:90px;right:16px;z-index:1000;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);border:1px solid rgba(224,221,216,0.7);padding:8px 14px;font-family:'Inter',sans-serif;font-size:10px;font-weight:500;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.05);color:#1a1410;border-radius:6px;transition:all 0.2s}
+  #btn-back:hover{background:#fff;box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+</style>

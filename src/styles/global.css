@@ -1,0 +1,141 @@
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Design Tokens ── */
+:root {
+  --bg: #f5f4f1;
+  --card: #ffffff;
+  --text: #1a1410;
+  --muted: #888078;
+  --label: #aaa09a;
+  --accent: #b8603e;
+  --accent-dark: #8a4a2e;
+  --teal: #3d7a8e;
+  --olive: #5a7a3a;
+  --gold: #8b6914;
+  --border: #e8e5e0;
+  --border-dark: #e0ddd8;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  --card-shadow-hover: 0 4px 16px rgba(0,0,0,0.06);
+  --btn-bg: #faf9f7;
+  --font-serif: 'Georgia', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+body {
+  font-family: var(--font-serif);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+a { color: var(--accent); text-decoration: none; font-weight: 500; transition: color 0.15s; }
+a:hover { color: var(--accent-dark); }
+
+/* ── Section Label ── */
+.section-label {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--label);
+  margin-bottom: 16px;
+}
+
+/* ── Card ── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transition: all 0.2s;
+}
+.card:hover {
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* ── Buttons ── */
+.btn {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 9px 20px;
+  border: 1px solid var(--border-dark);
+  background: var(--btn-bg);
+  color: var(--text);
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 5px;
+}
+.btn:hover {
+  background: var(--text);
+  color: #fff;
+  border-color: var(--text);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.btn:active { transform: translateY(0); }
+.btn svg { width: 14px; height: 14px; fill: currentColor; }
+.btn.downloading { opacity: 0.5; cursor: wait; }
+
+/* ── Badge ── */
+.badge {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid;
+  border-radius: 20px;
+}
+
+/* ── Stat Bar ── */
+.stat-bar {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 20px 40px;
+}
+.stat-row {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.stat-item { text-align: center; }
+.stat-num {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+.stat-lbl {
+  font-family: var(--font-sans);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--label);
+  margin-top: 2px;
+}
+
+/* ── Footer ── */
+.site-footer {
+  padding: 24px 40px;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  color: rgba(0,0,0,0.15);
+  letter-spacing: 0.06em;
+}
