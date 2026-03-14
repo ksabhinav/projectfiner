@@ -13,6 +13,9 @@
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:'Georgia',serif;background:#f8f7f4;height:100vh;display:flex;flex-direction:column;overflow:hidden}
   #map{flex:1}
+  .leaflet-marker-pane, .leaflet-overlay-pane .leaflet-zoom-animated { transition: opacity 0.4s ease; }
+  .clusters-hidden .leaflet-marker-pane { opacity: 0; pointer-events: none; }
+  .clusters-visible .leaflet-marker-pane { opacity: 1; }
 
   /* Panel */
   #panel{position:absolute;top:16px;left:16px;z-index:1000;background:#fff;border:1px solid #e0ddd8;width:228px;box-shadow:0 1px 4px rgba(0,0,0,0.08)}
@@ -363,7 +366,9 @@ function drillInto(feature, layer) {
     document.getElementById('state-select').value = stateCode;
   }
 
-  // Keep choropleth, add dots on top
+  // Start with dots hidden, add clusters, render, then fade in after zoom
+  map.getContainer().classList.add('clusters-hidden');
+  map.getContainer().classList.remove('clusters-visible');
   [clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(c=>{ if(!c._map) c.addTo(map); });
   renderMarkers();
 
@@ -374,24 +379,35 @@ function drillInto(feature, layer) {
      <span style="font-size:9px;color:#888078">${p.STATE_UT}</span><br>
      ${total.toLocaleString()} access points`;
 
-  // Zoom to district bounds
+  // Zoom to district bounds, fade in dots after arrival
   map.flyToBounds(layer.getBounds(), {padding:[40,40], maxZoom:12, duration:1.0});
+  map.once('moveend', function() {
+    map.getContainer().classList.remove('clusters-hidden');
+    map.getContainer().classList.add('clusters-visible');
+  });
 }
 
 function exitDrilldown() {
   drilldownActive = false;
   document.getElementById('btn-back').style.display = 'none';
-  document.getElementById('legend').style.display = currentView==='dots' ? 'block' : 'none';
 
-  // Remove dots, keep choropleth
-  if(currentView==='choro') {
-    [clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(c=>{ if(c._map) map.removeLayer(c); });
-  }
+  // Fade out dots first
+  map.getContainer().classList.remove('clusters-visible');
+  map.getContainer().classList.add('clusters-hidden');
 
-  stateFilter = '';
-  document.getElementById('state-select').value = '';
-  map.flyToBounds(INDIA_BOUNDS, {padding:[20,20], duration:1.0});
-  renderMarkers();
+  // After fade completes, remove clusters and fly back
+  setTimeout(function() {
+    if(currentView==='choro') {
+      [clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(c=>{ if(c._map) map.removeLayer(c); });
+      document.getElementById('legend').style.display = 'none';
+    }
+    map.getContainer().classList.remove('clusters-hidden');
+
+    stateFilter = '';
+    document.getElementById('state-select').value = '';
+    map.flyToBounds(INDIA_BOUNDS, {padding:[20,20], duration:1.0});
+    renderMarkers();
+  }, 400);
 }
 
 // ── View switching ────────────────────────────────────────────────────────────
