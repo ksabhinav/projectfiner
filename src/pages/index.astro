@@ -879,6 +879,7 @@ const base = import.meta.env.BASE_URL;
         buildDistrictLabels_banking();
         buildChoropleth_banking();
         updateLabelVisibility_banking();
+        flyToNE();
       }).catch(function(err) {
         document.getElementById('stats-banking').textContent = 'Error: ' + err.message;
       });
@@ -1043,11 +1044,12 @@ const base = import.meta.env.BASE_URL;
         if (!slbcLoaded) {
           document.getElementById('stats-banking').textContent = 'Loading FI data…';
           loadBankingData();
+          // flyToNE will be called after data loads in loadBankingData callback
         } else {
           buildChoropleth_banking();
           updateLabelVisibility_banking();
+          flyToNE();
         }
-        flyToNE();
       }
     }
 
