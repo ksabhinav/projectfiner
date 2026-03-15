@@ -87,7 +87,7 @@ const base = import.meta.env.BASE_URL;
             <option value="branch_network">Branch Network</option>
             <option value="kcc">Kisan Credit Card</option>
             <option value="shg">Self Help Groups</option>
-            <option value="digital_transactions">Digital Transactions</option>
+            <option value="digital_transactions" selected>Digital Transactions</option>
             <option value="aadhaar_authentication">Aadhaar Authentication</option>
           </select>
         </div>
@@ -450,7 +450,7 @@ const base = import.meta.env.BASE_URL;
 
     // Banking state
     var slbcData = {};
-    var currentIndicator = 'credit_deposit_ratio';
+    var currentIndicator = 'digital_transactions';
     var currentMetricIdx = 0;
     var currentQuarter = '';
     var bankingStateFilter = '';
