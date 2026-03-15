@@ -106,39 +106,39 @@ const base = import.meta.env.BASE_URL;
       credit_deposit_ratio: {
         title: 'Credit-Deposit Ratio',
         metrics: [
-          { field: 'overall_cd_ratio', label: 'Overall CD Ratio (%)', unit: '%', fallbacks: ['cd_ratio', 'current_c_d_ratio', 'cdr'] },
-          { field: 'total_deposit', label: 'Total Deposits (₹ Lakh)', unit: '₹L', fallbacks: ['deposit'] },
+          { field: 'overall_cd_ratio', label: 'Overall CD Ratio (%)', unit: '%', fallbacks: ['cd_ratio', 'current_c_d_ratio', 'cdr', 'overall'] },
+          { field: 'total_deposit', label: 'Total Deposits (₹ Lakh)', unit: '₹L', fallbacks: ['deposit', 'deposits_rural'] },
           { field: 'total_advance', label: 'Total Advances (₹ Lakh)', unit: '₹L', fallbacks: ['advance', 'advances'] },
-          { field: 'total_branch', label: 'Total Branches', unit: '' },
+          { field: 'total_branch', label: 'Total Branches', unit: '', fallbacks: ['total', 'no_of_brs'] },
         ],
       },
       pmjdy: {
         title: 'PM Jan Dhan Yojana',
         metrics: [
-          { field: 'total_pmjdy_no', label: 'Total PMJDY Accounts', unit: '', fallbacks: ['pmjdy_no', 'total_no', 'no_of_pmjdy_accounts'] },
+          { field: 'total_pmjdy_no', label: 'Total PMJDY Accounts', unit: '', fallbacks: ['pmjdy_no', 'total_no', 'no_of_pmjdy_accounts', 'pmjdy'] },
           { field: 'no_of_zero_balance_a_c', label: 'Zero Balance Accounts', unit: '' },
           { field: 'no_of_aadhaar_seeded', label: 'Aadhaar Seeded', unit: '' },
           { field: 'no_of_rupay_card_issued', label: 'RuPay Cards Issued', unit: '' },
-          { field: 'female_no', label: 'Female Accounts', unit: '' },
+          { field: 'female_no', label: 'Female Accounts', unit: '', fallbacks: ['no_of_women_pmjdy_accounts'] },
           { field: 'rural_no', label: 'Rural Accounts', unit: '' },
         ],
       },
       branch_network: {
         title: 'Branch Network',
         metrics: [
-          { field: 'total_branch', label: 'Total Branches', unit: '' },
-          { field: 'branch_rural', label: 'Rural Branches', unit: '' },
-          { field: 'branch_semi_urban', label: 'Semi-Urban Branches', unit: '' },
-          { field: 'branch_urban', label: 'Urban Branches', unit: '' },
-          { field: 'total_atm', label: 'Total ATMs', unit: '' },
-          { field: 'total_csp', label: 'Total CSPs', unit: '' },
+          { field: 'total_branch', label: 'Total Branches', unit: '', fallbacks: ['total', 'no_of_branches'] },
+          { field: 'branch_rural', label: 'Rural Branches', unit: '', fallbacks: ['atm_rural'] },
+          { field: 'branch_semi_urban', label: 'Semi-Urban Branches', unit: '', fallbacks: ['semi_urban'] },
+          { field: 'branch_urban', label: 'Urban Branches', unit: '', fallbacks: ['urban'] },
+          { field: 'total_atm', label: 'Total ATMs', unit: '', fallbacks: ['no_of_atm'] },
+          { field: 'total_csp', label: 'Total CSPs', unit: '', fallbacks: ['bc_total'] },
         ],
       },
       kcc: {
         title: 'Kisan Credit Card',
         metrics: [
-          { field: 'total_no_of_kcc', label: 'Total KCC Issued', unit: '', fallbacks: ['no_of_kcc', 'kcc_no', 'total_kcc_no'] },
-          { field: 'outstanding_amt', label: 'Outstanding Amount (₹ Lakh)', unit: '₹L', fallbacks: ['total_outstanding', 'total_o_s_kcc_amt', 'kcc_outstanding'] },
+          { field: 'total_no_of_kcc', label: 'Total KCC Issued', unit: '', fallbacks: ['no_of_kcc', 'kcc_no', 'total_kcc_no', 'total_no', 'o_s_position_no_of_cards_issued', 'cum_no_app_sanc', 'no_of_kcc_issued_during_quarter_including_renewal'] },
+          { field: 'outstanding_amt', label: 'Outstanding Amount (₹ Lakh)', unit: '₹L', fallbacks: ['total_outstanding', 'total_o_s_kcc_amt', 'kcc_outstanding', 'kcc_outstanding', 'o_s_position_limit_sanctioned', 'kcc_limit_sanctioned_in_rs_lakhs'] },
           { field: 'no_of_rupay_card_issued', label: 'RuPay Cards Issued', unit: '' },
           { field: 'kcc_card_activated', label: 'Cards Activated', unit: '', fallbacks: ['card_activated'] },
         ],
@@ -146,16 +146,16 @@ const base = import.meta.env.BASE_URL;
       shg: {
         title: 'Self Help Groups',
         metrics: [
-          { field: 'savings_linked_no', label: 'Savings Linked SHGs', unit: '', fallbacks: ['savings_linked', 'credit_linked_no'] },
-          { field: 'credit_linked_no', label: 'Credit Linked SHGs', unit: '', fallbacks: ['credit_linked'] },
-          { field: 'shg_o_s_amt', label: 'Outstanding Amount (₹ Lakh)', unit: '₹L', fallbacks: ['outstanding_amt', 'shg_o_s'] },
+          { field: 'savings_linked_no', label: 'Savings Linked SHGs', unit: '', fallbacks: ['savings_linked', 'credit_linked_no', 'credit_linked', 'current_fy_savings_linked_no', 'no_of_shgs', 'deposit_linkage_no_of_groups'] },
+          { field: 'credit_linked_no', label: 'Credit Linked SHGs', unit: '', fallbacks: ['credit_linked', 'current_fy_credit_linked_no', 'credit_linkage_loan_given_by_banks_no'] },
+          { field: 'shg_o_s_amt', label: 'Outstanding Amount (₹ Lakh)', unit: '₹L', fallbacks: ['outstanding_amt', 'shg_o_s', 'outstanding_accounts'] },
           { field: 'shg_npa_pct', label: 'SHG NPA %', unit: '%' },
         ],
       },
       digital_transactions: {
         title: 'Digital Transactions',
         metrics: [
-          { field: 'bhim_upi_a_c', label: 'BHIM/UPI Transactions', unit: '', fallbacks: ['bhim_upi'] },
+          { field: 'bhim_upi_a_c', label: 'BHIM/UPI Transactions', unit: '', fallbacks: ['bhim_upi', 'coverage_pct'] },
           { field: 'bhim_upi_amt', label: 'UPI Amount (₹ Lakh)', unit: '₹L' },
           { field: 'imps_a_c', label: 'IMPS Transactions', unit: '', fallbacks: ['imps'] },
           { field: 'cards_debit_credit_a_c', label: 'Card Transactions', unit: '', fallbacks: ['cards_debit_credit', 'cards_debit'] },
@@ -266,15 +266,50 @@ const base = import.meta.env.BASE_URL;
         .replace(/[^A-Z\s]/g, '').replace(/\s+/g, ' ').trim();
     }
 
-    // Get metric value from a district record
+    // GeoJSON → SLBC district name aliases (GeoJSON normalized → SLBC normalized)
+    const DISTRICT_ALIASES = {
+      'PAPUMPARE': 'PAPUM PARE',
+      'KEYI PANYOR': 'CAPITAL COMPLEX',
+      'DARANG': 'DARRANG',
+      'MARIGAON': 'MORIGAON',
+      'SIBSAGAR': 'SIVASAGAR',
+      'SRIBHUMI': 'KARIMGANJ',
+      'WEST KARBI ANAGLONG': 'WEST KARBI ANGLONG',
+      'KAMJANG': 'KAMJONG',
+      'RIBHOI': 'RI BHOI',
+      'GOMTI': 'GOMATI',
+    };
+
+    // Cross-category fallbacks: when a category lacks the field, try other categories
+    // e.g., Assam's branch_network has no total_branch, but credit_deposit_ratio does
+    const CROSS_CATEGORY_FALLBACKS = {
+      'branch_network': ['credit_deposit_ratio', 'kcc', 'digital_transactions'],
+    };
+
+    // Get metric value from a district record, with cross-category fallback
     function getVal(record, cat, field, fallbacks) {
-      const key = cat + '__' + field;
-      let v = record[key];
+      // Try primary category
+      var key = cat + '__' + field;
+      var v = record[key];
       if (v != null && v !== '' && !isNaN(Number(v))) return Number(v);
       if (fallbacks) {
-        for (const fb of fallbacks) {
-          v = record[cat + '__' + fb];
+        for (var i = 0; i < fallbacks.length; i++) {
+          v = record[cat + '__' + fallbacks[i]];
           if (v != null && v !== '' && !isNaN(Number(v))) return Number(v);
+        }
+      }
+      // Try cross-category fallbacks
+      var crossCats = CROSS_CATEGORY_FALLBACKS[cat];
+      if (crossCats) {
+        for (var c = 0; c < crossCats.length; c++) {
+          v = record[crossCats[c] + '__' + field];
+          if (v != null && v !== '' && !isNaN(Number(v))) return Number(v);
+          if (fallbacks) {
+            for (var j = 0; j < fallbacks.length; j++) {
+              v = record[crossCats[c] + '__' + fallbacks[j]];
+              if (v != null && v !== '' && !isNaN(Number(v))) return Number(v);
+            }
+          }
         }
       }
       return null;
@@ -358,7 +393,7 @@ const base = import.meta.env.BASE_URL;
       choroLayer = L.geoJSON(filtered, {
         style: function(feature) {
           const dn = normDist(feature.properties.DISTRICT);
-          const data = lookup.get(dn);
+          const data = lookup.get(dn) || lookup.get(DISTRICT_ALIASES[dn]);
           const val = data ? data.value : null;
           return {
             fillColor: getColor(val, breaks, ramp),
@@ -371,7 +406,7 @@ const base = import.meta.env.BASE_URL;
         onEachFeature: function(feature, layer) {
           const p = feature.properties;
           const dn = normDist(p.DISTRICT);
-          const data = lookup.get(dn);
+          const data = lookup.get(dn) || lookup.get(DISTRICT_ALIASES[dn]);
 
           layer.on({
             mouseover: function(e) {
