@@ -1,7 +1,7 @@
 {
   "source": "SLBC Sikkim (State Level Bankers Committee, Sikkim - Convener: SBI)",
   "state": "Sikkim",
-  "description": "District-wise banking & financial inclusion data extracted from SLBC Sikkim agenda papers",
+  "description": "Complete district-wise FI time-series",
   "num_periods": 4,
   "total_records": 24,
   "total_fields": 8,
@@ -18,10 +18,10 @@
           "branch_network_total": "89",
           "atm_network_total": "124",
           "digital_payments_total_no._of_operative_sb_accounts": "294290",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "277548",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "277548",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "94.31%",
           "digital_payments_total_no._of_operative_current_accounts": "10011",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "8119",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "8119",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "81.00%"
         },
         {
@@ -40,10 +40,10 @@
           "branch_network_total": "16",
           "atm_network_total": "17",
           "digital_payments_total_no._of_operative_sb_accounts": "36682",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "33388",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "33388",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "90.88%",
           "digital_payments_total_no._of_operative_current_accounts": "642",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "512",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "512",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "79.75%"
         },
         {
@@ -54,10 +54,10 @@
           "branch_network_total": "41",
           "atm_network_total": "43",
           "digital_payments_total_no._of_operative_sb_accounts": "73811",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "71399",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "71399",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "96.73",
           "digital_payments_total_no._of_operative_current_accounts": "1269",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "469",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "469",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "36.95%"
         },
         {
@@ -68,10 +68,10 @@
           "branch_network_total": "24",
           "atm_network_total": "32",
           "digital_payments_total_no._of_operative_sb_accounts": "77950",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "76838",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "76838",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "98.57%",
           "digital_payments_total_no._of_operative_current_accounts": "816",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "743",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "743",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "91.05%"
         },
         {
@@ -82,10 +82,10 @@
           "branch_network_total": "8",
           "atm_network_total": "5",
           "digital_payments_total_no._of_operative_sb_accounts": "40496",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "40344",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "40344",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "99.62%",
           "digital_payments_total_no._of_operative_current_accounts": "448",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "389",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "389",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "86.83%"
         }
       ]
@@ -102,10 +102,10 @@
           "branch_network_total": "90",
           "atm_network_total": "124",
           "digital_payments_total_no._of_operative_sb_accounts": "344124",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "334830",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "334830",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "97.30%",
           "digital_payments_total_no._of_operative_current_accounts": "11508",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "10083",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "10083",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "87.62%"
         },
         {
@@ -116,10 +116,10 @@
           "branch_network_total": "16",
           "atm_network_total": "17",
           "digital_payments_total_no._of_operative_sb_accounts": "77668",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "74488",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "74488",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "95.91%",
           "digital_payments_total_no._of_operative_current_accounts": "1411",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "1333",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "1333",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "94.47%"
         },
         {
@@ -130,10 +130,10 @@
           "branch_network_total": "16",
           "atm_network_total": "17",
           "digital_payments_total_no._of_operative_sb_accounts": "49682",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "46126",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "46126",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "92.84%",
           "digital_payments_total_no._of_operative_current_accounts": "989",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "882",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "882",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "89.18%"
         },
         {
@@ -144,10 +144,10 @@
           "branch_network_total": "41",
           "atm_network_total": "43",
           "digital_payments_total_no._of_operative_sb_accounts": "153989",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "146513",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "146513",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "95.15%",
           "digital_payments_total_no._of_operative_current_accounts": "9616",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "9230",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "9230",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "95.99%"
         },
         {
@@ -158,10 +158,10 @@
           "branch_network_total": "26",
           "atm_network_total": "35",
           "digital_payments_total_no._of_operative_sb_accounts": "125943",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "111248",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "111248",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "88.33%",
           "digital_payments_total_no._of_operative_current_accounts": "2245",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "1977",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "1977",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "88.06%"
         },
         {
@@ -172,10 +172,10 @@
           "branch_network_total": "8",
           "atm_network_total": "5",
           "digital_payments_total_no._of_operative_sb_accounts": "87047",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "79886",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "79886",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "91.77%",
           "digital_payments_total_no._of_operative_current_accounts": "651",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "398",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "398",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "61.14%"
         }
       ]
@@ -192,10 +192,10 @@
           "branch_network_total": "90",
           "atm_network_total": "124",
           "digital_payments_total_no._of_operative_sb_accounts": "344153",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "334894",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "334894",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "97.31%",
           "digital_payments_total_no._of_operative_current_accounts": "11527",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "10207",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "10207",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "88.55%"
         },
         {
@@ -206,10 +206,10 @@
           "branch_network_total": "16",
           "atm_network_total": "17",
           "digital_payments_total_no._of_operative_sb_accounts": "78404",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "75182",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "75182",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "95.89%",
           "digital_payments_total_no._of_operative_current_accounts": "1438",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "1339",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "1339",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "93.12%"
         },
         {
@@ -220,10 +220,10 @@
           "branch_network_total": "16",
           "atm_network_total": "17",
           "digital_payments_total_no._of_operative_sb_accounts": "50501",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "46779",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "46779",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "92.63%",
           "digital_payments_total_no._of_operative_current_accounts": "1022",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "936",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "936",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "91.59%"
         },
         {
@@ -234,10 +234,10 @@
           "branch_network_total": "41",
           "atm_network_total": "43",
           "digital_payments_total_no._of_operative_sb_accounts": "154083",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "149412",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "149412",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "96.97%",
           "digital_payments_total_no._of_operative_current_accounts": "9696",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "9217",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "9217",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "95.06%"
         },
         {
@@ -248,10 +248,10 @@
           "branch_network_total": "27",
           "atm_network_total": "35",
           "digital_payments_total_no._of_operative_sb_accounts": "128150",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "115402",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "115402",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "90.05%",
           "digital_payments_total_no._of_operative_current_accounts": "2260",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "2055",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "2055",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "90.93%"
         },
         {
@@ -262,10 +262,10 @@
           "branch_network_total": "9",
           "atm_network_total": "5",
           "digital_payments_total_no._of_operative_sb_accounts": "97021",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "89426",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "89426",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "92.17%",
           "digital_payments_total_no._of_operative_current_accounts": "725",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "629",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "629",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "86.76%"
         }
       ]
@@ -282,10 +282,10 @@
           "branch_network_total": "92",
           "atm_network_total": "129",
           "digital_payments_total_no._of_operative_sb_accounts": "347466",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "336809",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "336809",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "96.93%",
           "digital_payments_total_no._of_operative_current_accounts": "12073",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "10937",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "10937",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "90.59%"
         },
         {
@@ -296,10 +296,10 @@
           "branch_network_total": "17",
           "atm_network_total": "17",
           "digital_payments_total_no._of_operative_sb_accounts": "79424",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "76099",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "76099",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "95.81%",
           "digital_payments_total_no._of_operative_current_accounts": "1555",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "1450",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "1450",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "93.25%"
         },
         {
@@ -310,10 +310,10 @@
           "branch_network_total": "16",
           "atm_network_total": "17",
           "digital_payments_total_no._of_operative_sb_accounts": "50712",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "47157",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "47157",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "92.99%",
           "digital_payments_total_no._of_operative_current_accounts": "1057",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "980",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "980",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "92.72%"
         },
         {
@@ -324,10 +324,10 @@
           "branch_network_total": "41",
           "atm_network_total": "43",
           "digital_payments_total_no._of_operative_sb_accounts": "157909",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "146936",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "146936",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "93.05%",
           "digital_payments_total_no._of_operative_current_accounts": "9349",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "8835",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "8835",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "94.50%"
         },
         {
@@ -338,10 +338,10 @@
           "branch_network_total": "28",
           "atm_network_total": "36",
           "digital_payments_total_no._of_operative_sb_accounts": "129415",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "115817",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "115817",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "89.49%",
           "digital_payments_total_no._of_operative_current_accounts": "2296",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "1890",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "1890",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "82.32%"
         },
         {
@@ -352,10 +352,10 @@
           "branch_network_total": "11",
           "atm_network_total": "6",
           "digital_payments_total_no._of_operative_sb_accounts": "103704",
-          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_-_debit/_rupay_cards/_net_banking/_mobile_banking/_upi/_ussd": "92453",
+          "digital_payments_total_no._of_operative_sb_accounts_covered_with_at_least_one_of_the_facilities_debit/rupay_cards/net_banking/mobile_banking/upi/ussd": "92453",
           "digital_payments_%_of_such_accounts_out_of_total_operative_savings_accounts": "89.15%",
           "digital_payments_total_no._of_operative_current_accounts": "772",
-          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_-_net_banking/_pos/_qr_etc.": "660",
+          "digital_payments_total_no._of_operative_current_accounts_covered_with_at_least_one_of_facilities_net_banking/pos/qr_etc": "660",
           "digital_payments_%_of_such_accounts_out_of_total_operative_current_accounts": "85.49%"
         }
       ]
