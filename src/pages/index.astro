@@ -792,8 +792,8 @@ const base = import.meta.env.BASE_URL;
       // Hide endpoint label when thumb is near it
       var startEl = document.getElementById('tl-start-label');
       var endEl = document.getElementById('tl-end-label');
-      if (startEl) startEl.style.opacity = pct > 85 ? '0' : '1';
-      if (endEl) endEl.style.opacity = pct < 15 ? '0' : '1';
+      if (startEl) startEl.style.opacity = pct < 15 ? '0' : '1';
+      if (endEl) endEl.style.opacity = pct > 85 ? '0' : '1';
     }
 
     function populateSlider() {
@@ -804,15 +804,15 @@ const base = import.meta.env.BASE_URL;
           if (rec.period) qSet.add(rec.period);
         }
       }
-      sortedQuarters = Array.from(qSet).sort();
-      currentQIdx = sortedQuarters.length - 1;
+      sortedQuarters = Array.from(qSet).sort().reverse();
+      currentQIdx = 0;
       currentQuarter = sortedQuarters[currentQIdx];
       document.getElementById('quarter-label').textContent = fmtQuarter(currentQuarter);
 
-      // Set endpoint labels (top=earliest, bottom=latest — time flows down)
+      // Set endpoint labels (top=latest, bottom=earliest — time flows up)
       if (sortedQuarters.length > 0) {
-        document.getElementById('tl-end-label').textContent = sortedQuarters[0].substring(0, 4);
-        document.getElementById('tl-start-label').textContent = sortedQuarters[sortedQuarters.length - 1].substring(0, 4);
+        document.getElementById('tl-start-label').textContent = sortedQuarters[0].substring(0, 4);
+        document.getElementById('tl-end-label').textContent = sortedQuarters[sortedQuarters.length - 1].substring(0, 4);
       }
 
       // Build tick marks (subtle year markers, no labels on dots)
