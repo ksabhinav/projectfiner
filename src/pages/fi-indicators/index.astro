@@ -137,7 +137,7 @@ const base = import.meta.env.BASE_URL;
       kcc: {
         title: 'Kisan Credit Card',
         metrics: [
-          { field: 'total_no_of_kcc', label: 'Total KCC Issued', unit: '', fallbacks: ['no_of_kcc', 'kcc_no', 'total_kcc_no', 'total_no', 'o_s_position_no_of_cards_issued', 'cum_no_app_sanc', 'no_of_kcc_issued_during_quarter_including_renewal'] },
+          { field: 'total_no_of_kcc', label: 'Total KCC Issued', unit: '', fallbacks: ['no_of_kcc', 'kcc_no', 'total_kcc_no', 'total_no', 'o_s_position_no_of_cards_issued', 'cum_no_app_sanc', 'no_of_kcc_issued_during_quarter_including_renewal', 'rupay_card_issued_in_kcc'] },
           { field: 'outstanding_amt', label: 'Outstanding Amount (₹ Lakh)', unit: '₹L', fallbacks: ['total_outstanding', 'total_o_s_kcc_amt', 'kcc_outstanding', 'kcc_outstanding', 'o_s_position_limit_sanctioned', 'kcc_limit_sanctioned_in_rs_lakhs'] },
           { field: 'no_of_rupay_card_issued', label: 'RuPay Cards Issued', unit: '' },
           { field: 'kcc_card_activated', label: 'Cards Activated', unit: '', fallbacks: ['card_activated'] },
@@ -283,7 +283,8 @@ const base = import.meta.env.BASE_URL;
     // Cross-category fallbacks: when a category lacks the field, try other categories
     // e.g., Assam's branch_network has no total_branch, but credit_deposit_ratio does
     const CROSS_CATEGORY_FALLBACKS = {
-      'branch_network': ['credit_deposit_ratio', 'kcc', 'digital_transactions'],
+      'branch_network': ['credit_deposit_ratio', 'kcc', 'fi_kcc', 'digital_transactions'],
+      'kcc': ['fi_kcc'],
     };
 
     // Get metric value from a district record, with cross-category fallback
@@ -317,6 +318,7 @@ const base = import.meta.env.BASE_URL;
 
     // ── Build district → SLBC data lookup ──
     // Returns Map<normalizedDistrictName, { value, allMetrics }> for the current indicator/metric/quarter
+    // Falls back to nearest prior quarter when a state doesn't have data for the selected quarter
     function buildDistrictLookup() {
       const ind = INDICATORS[currentIndicator];
       const metric = ind.metrics[currentMetricIdx];
@@ -326,8 +328,23 @@ const base = import.meta.env.BASE_URL;
         const records = slbcData[slug];
         if (!records || !records.length) continue;
 
+        // Check if this state has data for the exact quarter
+        let useQuarter = currentQuarter;
+        const hasExact = records.some(function(r) { return r.period === currentQuarter; });
+        if (!hasExact) {
+          // Find the nearest prior quarter for this state
+          const stateQuarters = [...new Set(records.map(function(r) { return r.period; }))]
+            .filter(function(q) { return q <= currentQuarter; })
+            .sort();
+          if (stateQuarters.length) {
+            useQuarter = stateQuarters[stateQuarters.length - 1];
+          } else {
+            continue; // no prior data at all
+          }
+        }
+
         for (const rec of records) {
-          if (rec.period !== currentQuarter) continue;
+          if (rec.period !== useQuarter) continue;
           const dn = normDist(rec.district);
           if (!dn) continue;
 
@@ -337,7 +354,12 @@ const base = import.meta.env.BASE_URL;
           for (const m of ind.metrics) {
             allVals[m.label] = getVal(rec, currentIndicator, m.field, m.fallbacks);
           }
-          lookup.set(dn, { value: val, metrics: allVals, district: rec.district });
+          const entry = { value: val, metrics: allVals, district: rec.district };
+          // Note if using a fallback quarter
+          if (useQuarter !== currentQuarter) {
+            entry.fallbackQuarter = useQuarter;
+          }
+          lookup.set(dn, entry);
         }
       }
       return lookup;
@@ -371,14 +393,6 @@ const base = import.meta.env.BASE_URL;
       const ind = INDICATORS[currentIndicator];
       const metric = ind.metrics[currentMetricIdx];
 
-      // Collect all values for auto-breaks
-      const allVals = [];
-      lookup.forEach(v => { if (v.value !== null) allVals.push(v.value); });
-      const breaks = computeBreaks(allVals);
-
-      // Update legend
-      updateLegend(metric.label, breaks, ramp);
-
       // Filter to NE states + optional state filter
       const filtered = {
         ...distGeoJSON,
@@ -389,6 +403,18 @@ const base = import.meta.env.BASE_URL;
           return true;
         }),
       };
+
+      // Collect values only for visible (filtered) districts for auto-breaks
+      const allVals = [];
+      filtered.features.forEach(function(f) {
+        const dn = normDist(f.properties.DISTRICT);
+        const data = lookup.get(dn) || lookup.get(DISTRICT_ALIASES[dn]);
+        if (data && data.value !== null) allVals.push(data.value);
+      });
+      const breaks = computeBreaks(allVals);
+
+      // Update legend
+      updateLegend(metric.label, breaks, ramp);
 
       choroLayer = L.geoJSON(filtered, {
         style: function(feature) {
@@ -414,6 +440,9 @@ const base = import.meta.env.BASE_URL;
               let tip = '<div class="dist-tooltip"><strong>' + p.DISTRICT + '</strong> '
                 + '<span style="font-size:10px;color:#888078">' + p.STATE_UT + '</span>';
               if (data) {
+                if (data.fallbackQuarter) {
+                  tip += '<br><span style="font-size:9px;color:#b8603e;font-style:italic">Data from ' + fmtQuarter(data.fallbackQuarter) + '</span>';
+                }
                 for (const [label, val] of Object.entries(data.metrics)) {
                   const formatted = val !== null ? fmtNum(val) : '—';
                   const isCurrent = label === metric.label;
