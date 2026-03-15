@@ -18,9 +18,9 @@
             "Recovery Amt",
             "%",
             "Overdues Amt",
-            "Overdues %",
-            "GrossNPA Amt",
-            "GrossNPA %"
+            "Overdues Pct",
+            "Gross NPA Amt",
+            "Gross NPA Pct"
           ],
           "num_districts": 11,
           "districts": {
@@ -31,9 +31,9 @@
               "Recovery Amt": "2495.34",
               "%": "35",
               "Overdues Amt": "4560.73",
-              "Overdues %": "65",
-              "GrossNPA Amt": "5562.36",
-              "GrossNPA %": "9"
+              "Overdues Pct": "65",
+              "Gross NPA Amt": "5562.36",
+              "Gross NPA Pct": "9"
             },
             "Kiphire": {
               "No. of A/C": "1172",
@@ -42,9 +42,9 @@
               "Recovery Amt": "41.16",
               "%": "27",
               "Overdues Amt": "109.25",
-              "Overdues %": "73",
-              "GrossNPA Amt": "54.35",
-              "GrossNPA %": "6"
+              "Overdues Pct": "73",
+              "Gross NPA Amt": "54.35",
+              "Gross NPA Pct": "6"
             },
             "Kohima": {
               "No. of A/C": "20368",
@@ -53,9 +53,9 @@
               "Recovery Amt": "338.77",
               "%": "18",
               "Overdues Amt": "1550.88",
-              "Overdues %": "82",
-              "GrossNPA Amt": "2102.04",
-              "GrossNPA %": "10"
+              "Overdues Pct": "82",
+              "Gross NPA Amt": "2102.04",
+              "Gross NPA Pct": "10"
             },
             "Longleng": {
               "No. of A/C": "552",
@@ -64,9 +64,9 @@
               "Recovery Amt": "2.92",
               "%": "4",
               "Overdues Amt": "62.65",
-              "Overdues %": "96",
-              "GrossNPA Amt": "67.9",
-              "GrossNPA %": "15"
+              "Overdues Pct": "96",
+              "Gross NPA Amt": "67.9",
+              "Gross NPA Pct": "15"
             },
             "Mokokchung": {
               "No. of A/C": "13420",
@@ -75,9 +75,9 @@
               "Recovery Amt": "396.66",
               "%": "20",
               "Overdues Amt": "1555.08",
-              "Overdues %": "80",
-              "GrossNPA Amt": "1346.15",
-              "GrossNPA %": "10"
+              "Overdues Pct": "80",
+              "Gross NPA Amt": "1346.15",
+              "Gross NPA Pct": "10"
             },
             "Mon": {
               "No. of A/C": "1353",
@@ -86,9 +86,9 @@
               "Recovery Amt": "47.27",
               "%": "38",
               "Overdues Amt": "78",
-              "Overdues %": "62",
-              "GrossNPA Amt": "128.22",
-              "GrossNPA %": "16"
+              "Overdues Pct": "62",
+              "Gross NPA Amt": "128.22",
+              "Gross NPA Pct": "16"
             },
             "Peren": {
               "No. of A/C": "3907",
@@ -97,9 +97,9 @@
               "Recovery Amt": "79.13",
               "%": "5",
               "Overdues Amt": "1583.41",
-              "Overdues %": "95",
-              "GrossNPA Amt": "356.3",
-              "GrossNPA %": "11"
+              "Overdues Pct": "95",
+              "Gross NPA Amt": "356.3",
+              "Gross NPA Pct": "11"
             },
             "Phek": {
               "No. of A/C": "4037",
@@ -108,9 +108,9 @@
               "Recovery Amt": "161.6",
               "%": "23",
               "Overdues Amt": "533.55",
-              "Overdues %": "77",
-              "GrossNPA Amt": "612.46",
-              "GrossNPA %": "23"
+              "Overdues Pct": "77",
+              "Gross NPA Amt": "612.46",
+              "Gross NPA Pct": "23"
             },
             "Tuensang": {
               "No. of A/C": "5256",
@@ -119,9 +119,9 @@
               "Recovery Amt": "79.87",
               "%": "10",
               "Overdues Amt": "756.47",
-              "Overdues %": "90",
-              "GrossNPA Amt": "151.7",
-              "GrossNPA %": "5"
+              "Overdues Pct": "90",
+              "Gross NPA Amt": "151.7",
+              "Gross NPA Pct": "5"
             },
             "Wokha": {
               "No. of A/C": "2602",
@@ -130,9 +130,9 @@
               "Recovery Amt": "127.31",
               "%": "15",
               "Overdues Amt": "710.15",
-              "Overdues %": "85",
-              "GrossNPA Amt": "464.53",
-              "GrossNPA %": "17"
+              "Overdues Pct": "85",
+              "Gross NPA Amt": "464.53",
+              "Gross NPA Pct": "17"
             },
             "Zunheboto": {
               "No. of A/C": "2417",
@@ -141,9 +141,9 @@
               "Recovery Amt": "115.88",
               "%": "32",
               "Overdues Amt": "243.25",
-              "Overdues %": "68",
-              "GrossNPA Amt": "399.55",
-              "GrossNPA %": "26"
+              "Overdues Pct": "68",
+              "Gross NPA Amt": "399.55",
+              "Gross NPA Pct": "26"
             }
           }
         },
@@ -222,9 +222,9 @@
             "Recovery Amt",
             "%",
             "Overdues Amt",
-            "Overdues %",
-            "GrossNPA Amt",
-            "GrossNPA %"
+            "Overdues Pct",
+            "Gross NPA Amt",
+            "Gross NPA Pct"
           ],
           "num_districts": 11,
           "districts": {
@@ -235,9 +235,9 @@
               "Recovery Amt": "406.19",
               "%": "16",
               "Overdues Amt": "2170.79",
-              "Overdues %": "84",
-              "GrossNPA Amt": "1535.66",
-              "GrossNPA %": "16"
+              "Overdues Pct": "84",
+              "Gross NPA Amt": "1535.66",
+              "Gross NPA Pct": "16"
             },
             "Kiphire": {
               "No. of A/C": "935",
@@ -246,9 +246,9 @@
               "Recovery Amt": "35",
               "%": "25",
               "Overdues Amt": "105.8",
-              "Overdues %": "75",
-              "GrossNPA Amt": "38.07",
-              "GrossNPA %": "11"
+              "Overdues Pct": "75",
+              "Gross NPA Amt": "38.07",
+              "Gross NPA Pct": "11"
             },
             "Kohima": {
               "No. of A/C": "14234",
@@ -257,9 +257,9 @@
               "Recovery Amt": "22.95",
               "%": "3",
               "Overdues Amt": "646.95",
-              "Overdues %": "97",
-              "GrossNPA Amt": "547.76",
-              "GrossNPA %": "14"
+              "Overdues Pct": "97",
+              "Gross NPA Amt": "547.76",
+              "Gross NPA Pct": "14"
             },
             "Longleng": {
               "No. of A/C": "306",
@@ -268,9 +268,9 @@
               "Recovery Amt": "0",
               "%": "0",
               "Overdues Amt": "51.07",
-              "Overdues %": "100",
-              "GrossNPA Amt": "24.21",
-              "GrossNPA %": "24"
+              "Overdues Pct": "100",
+              "Gross NPA Amt": "24.21",
+              "Gross NPA Pct": "24"
             },
             "Mokokchung": {
               "No. of A/C": "11994",
@@ -279,9 +279,9 @@
               "Recovery Amt": "234.6",
               "%": "16",
               "Overdues Amt": "1243.68",
-              "Overdues %": "84",
-              "GrossNPA Amt": "602.27",
-              "GrossNPA %": "8"
+              "Overdues Pct": "84",
+              "Gross NPA Amt": "602.27",
+              "Gross NPA Pct": "8"
             },
             "Mon": {
               "No. of A/C": "1001",
@@ -290,9 +290,9 @@
               "Recovery Amt": "28.5",
               "%": "30",
               "Overdues Amt": "64.98",
-              "Overdues %": "70",
-              "GrossNPA Amt": "73.63",
-              "GrossNPA %": "21"
+              "Overdues Pct": "70",
+              "Gross NPA Amt": "73.63",
+              "Gross NPA Pct": "21"
             },
             "Peren": {
               "No. of A/C": "3642",
@@ -301,9 +301,9 @@
               "Recovery Amt": "63.98",
               "%": "4",
               "Overdues Amt": "1562.78",
-              "Overdues %": "96",
-              "GrossNPA Amt": "270.58",
-              "GrossNPA %": "10"
+              "Overdues Pct": "96",
+              "Gross NPA Amt": "270.58",
+              "Gross NPA Pct": "10"
             },
             "Phek": {
               "No. of A/C": "3699",
@@ -312,9 +312,9 @@
               "Recovery Amt": "138.75",
               "%": "24",
               "Overdues Amt": "439.15",
-              "Overdues %": "76",
-              "GrossNPA Amt": "248.7",
-              "GrossNPA %": "14"
+              "Overdues Pct": "76",
+              "Gross NPA Amt": "248.7",
+              "Gross NPA Pct": "14"
             },
             "Tuensang": {
               "No. of A/C": "4954",
@@ -323,9 +323,9 @@
               "Recovery Amt": "65.22",
               "%": "8",
               "Overdues Amt": "748.88",
-              "Overdues %": "92",
-              "GrossNPA Amt": "124.9",
-              "GrossNPA %": "5"
+              "Overdues Pct": "92",
+              "Gross NPA Amt": "124.9",
+              "Gross NPA Pct": "5"
             },
             "Wokha": {
               "No. of A/C": "2126",
@@ -334,9 +334,9 @@
               "Recovery Amt": "55.53",
               "%": "8",
               "Overdues Amt": "659.57",
-              "Overdues %": "92",
-              "GrossNPA Amt": "370.44",
-              "GrossNPA %": "28"
+              "Overdues Pct": "92",
+              "Gross NPA Amt": "370.44",
+              "Gross NPA Pct": "28"
             },
             "Zunheboto": {
               "No. of A/C": "1963",
@@ -345,9 +345,9 @@
               "Recovery Amt": "93.93",
               "%": "30",
               "Overdues Amt": "223.66",
-              "Overdues %": "70",
-              "GrossNPA Amt": "279.44",
-              "GrossNPA %": "43"
+              "Overdues Pct": "70",
+              "Gross NPA Amt": "279.44",
+              "Gross NPA Pct": "43"
             }
           }
         },
@@ -664,7 +664,7 @@
             "Total Outstanding",
             "Demand Raised",
             "Recovery Amt",
-            "Recovery %",
+            "Recovery Pct",
             "Overdues"
           ],
           "num_districts": 11,
@@ -674,7 +674,7 @@
               "Total Outstanding": "42.98",
               "Demand Raised": "29.97",
               "Recovery Amt": "26",
-              "Recovery %": "87",
+              "Recovery Pct": "87",
               "Overdues": "3.97"
             },
             "Kiphire": {
@@ -682,7 +682,7 @@
               "Total Outstanding": "1.5",
               "Demand Raised": "0.82",
               "Recovery Amt": "0.82",
-              "Recovery %": "100",
+              "Recovery Pct": "100",
               "Overdues": "0"
             },
             "Kohima": {
@@ -690,7 +690,7 @@
               "Total Outstanding": "32.35",
               "Demand Raised": "8.32",
               "Recovery Amt": "7.22",
-              "Recovery %": "87",
+              "Recovery Pct": "87",
               "Overdues": "1.1"
             },
             "Longleng": {
@@ -698,7 +698,7 @@
               "Total Outstanding": "33.75",
               "Demand Raised": "0.4",
               "Recovery Amt": "0.4",
-              "Recovery %": "100",
+              "Recovery Pct": "100",
               "Overdues": "0"
             },
             "Mokokchung": {
@@ -706,7 +706,7 @@
               "Total Outstanding": "14.96",
               "Demand Raised": "4.84",
               "Recovery Amt": "3.38",
-              "Recovery %": "70",
+              "Recovery Pct": "70",
               "Overdues": "1.46"
             },
             "Mon": {
@@ -714,7 +714,7 @@
               "Total Outstanding": "0",
               "Demand Raised": "0",
               "Recovery Amt": "0",
-              "Recovery %": "",
+              "Recovery Pct": "",
               "Overdues": "0"
             },
             "Peren": {
@@ -722,7 +722,7 @@
               "Total Outstanding": "0",
               "Demand Raised": "0",
               "Recovery Amt": "0",
-              "Recovery %": "",
+              "Recovery Pct": "",
               "Overdues": "0"
             },
             "Phek": {
@@ -730,7 +730,7 @@
               "Total Outstanding": "13.5",
               "Demand Raised": "0.5",
               "Recovery Amt": "0.5",
-              "Recovery %": "100",
+              "Recovery Pct": "100",
               "Overdues": "0"
             },
             "Tuensang": {
@@ -738,7 +738,7 @@
               "Total Outstanding": "0",
               "Demand Raised": "0",
               "Recovery Amt": "0",
-              "Recovery %": "",
+              "Recovery Pct": "",
               "Overdues": "0"
             },
             "Wokha": {
@@ -746,7 +746,7 @@
               "Total Outstanding": "0",
               "Demand Raised": "0",
               "Recovery Amt": "0",
-              "Recovery %": "",
+              "Recovery Pct": "",
               "Overdues": "0"
             },
             "Zunheboto": {
@@ -754,7 +754,7 @@
               "Total Outstanding": "0",
               "Demand Raised": "0",
               "Recovery Amt": "0",
-              "Recovery %": "",
+              "Recovery Pct": "",
               "Overdues": "0"
             }
           }
@@ -766,7 +766,7 @@
             "Total Outstanding",
             "Demand Raised",
             "Recovery Amt",
-            "Recovery %",
+            "Recovery Pct",
             "Overdues"
           ],
           "num_districts": 11,
@@ -776,7 +776,7 @@
               "Total Outstanding": "1291.24",
               "Demand Raised": "997.00",
               "Recovery Amt": "88",
-              "Recovery %": "8.83",
+              "Recovery Pct": "8.83",
               "Overdues": "909"
             },
             "Kiphire": {
@@ -784,7 +784,7 @@
               "Total Outstanding": "685.4",
               "Demand Raised": "15.81",
               "Recovery Amt": "0.64",
-              "Recovery %": "4.05",
+              "Recovery Pct": "4.05",
               "Overdues": "15.17"
             },
             "Kohima": {
@@ -792,7 +792,7 @@
               "Total Outstanding": "1007.47",
               "Demand Raised": "149.18",
               "Recovery Amt": "41.58",
-              "Recovery %": "27.87",
+              "Recovery Pct": "27.87",
               "Overdues": "107.6"
             },
             "Longleng": {
@@ -800,7 +800,7 @@
               "Total Outstanding": "416.96",
               "Demand Raised": "150.00",
               "Recovery Amt": "0.96",
-              "Recovery %": "0.64",
+              "Recovery Pct": "0.64",
               "Overdues": "149.04"
             },
             "Mokokchung": {
@@ -808,7 +808,7 @@
               "Total Outstanding": "531.74",
               "Demand Raised": "260.00",
               "Recovery Amt": "17.08",
-              "Recovery %": "6.57",
+              "Recovery Pct": "6.57",
               "Overdues": "242.92"
             },
             "Mon": {
@@ -816,7 +816,7 @@
               "Total Outstanding": "406.49",
               "Demand Raised": "566.00",
               "Recovery Amt": "3.8",
-              "Recovery %": "0.67",
+              "Recovery Pct": "0.67",
               "Overdues": "562.2"
             },
             "Peren": {
@@ -824,7 +824,7 @@
               "Total Outstanding": "317.05",
               "Demand Raised": "101.55",
               "Recovery Amt": "3.67",
-              "Recovery %": "3.61",
+              "Recovery Pct": "3.61",
               "Overdues": "97.88"
             },
             "Phek": {
@@ -832,7 +832,7 @@
               "Total Outstanding": "505.06",
               "Demand Raised": "60.50",
               "Recovery Amt": "10.24",
-              "Recovery %": "16.93",
+              "Recovery Pct": "16.93",
               "Overdues": "50.26"
             },
             "Tuensang": {
@@ -840,7 +840,7 @@
               "Total Outstanding": "378.79",
               "Demand Raised": "83.00",
               "Recovery Amt": "14.36",
-              "Recovery %": "17.30",
+              "Recovery Pct": "17.30",
               "Overdues": "68.64"
             },
             "Wokha": {
@@ -848,7 +848,7 @@
               "Total Outstanding": "409.78",
               "Demand Raised": "308.00",
               "Recovery Amt": "10.72",
-              "Recovery %": "3.48",
+              "Recovery Pct": "3.48",
               "Overdues": "297.28"
             },
             "Zunheboto": {
@@ -856,7 +856,7 @@
               "Total Outstanding": "481.31",
               "Demand Raised": "250.00",
               "Recovery Amt": "3.6",
-              "Recovery %": "1.44",
+              "Recovery Pct": "1.44",
               "Overdues": "246.4"
             }
           }
@@ -1343,7 +1343,7 @@
             "Total Outstanding",
             "Demand Raised",
             "Recovery Amt",
-            "Recovery %",
+            "Recovery Pct",
             "Overdues"
           ],
           "num_districts": 11,
@@ -1353,7 +1353,7 @@
               "Total Outstanding": "7.78",
               "Demand Raised": "2.86",
               "Recovery Amt": "0.67",
-              "Recovery %": "23",
+              "Recovery Pct": "23",
               "Overdues": "2.19"
             },
             "Kiphire": {
@@ -1361,7 +1361,7 @@
               "Total Outstanding": "1.47",
               "Demand Raised": "1.47",
               "Recovery Amt": "1.32",
-              "Recovery %": "90",
+              "Recovery Pct": "90",
               "Overdues": "0.15"
             },
             "Kohima": {
@@ -1369,7 +1369,7 @@
               "Total Outstanding": "2.16",
               "Demand Raised": "1.96",
               "Recovery Amt": "1.79",
-              "Recovery %": "91",
+              "Recovery Pct": "91",
               "Overdues": "0.17"
             },
             "Longleng": {
@@ -1377,7 +1377,7 @@
               "Total Outstanding": "0",
               "Demand Raised": "0",
               "Recovery Amt": "0",
-              "Recovery %": "",
+              "Recovery Pct": "",
               "Overdues": "0"
             },
             "Mokokchung": {
@@ -1385,7 +1385,7 @@
               "Total Outstanding": "8.21",
               "Demand Raised": "1.92",
               "Recovery Amt": "0.46",
-              "Recovery %": "24",
+              "Recovery Pct": "24",
               "Overdues": "1.46"
             },
             "Mon": {
@@ -1393,7 +1393,7 @@
               "Total Outstanding": "0",
               "Demand Raised": "0",
               "Recovery Amt": "0",
-              "Recovery %": "",
+              "Recovery Pct": "",
               "Overdues": "0"
             },
             "Peren": {
@@ -1401,7 +1401,7 @@
               "Total Outstanding": "0",
               "Demand Raised": "0",
               "Recovery Amt": "0",
-              "Recovery %": "",
+              "Recovery Pct": "",
               "Overdues": "0"
             },
             "Phek": {
@@ -1409,7 +1409,7 @@
               "Total Outstanding": "0.06",
               "Demand Raised": "0.05",
               "Recovery Amt": "0.05",
-              "Recovery %": "100",
+              "Recovery Pct": "100",
               "Overdues": "0"
             },
             "Tuensang": {
@@ -1417,7 +1417,7 @@
               "Total Outstanding": "0",
               "Demand Raised": "0",
               "Recovery Amt": "0",
-              "Recovery %": "",
+              "Recovery Pct": "",
               "Overdues": "0"
             },
             "Wokha": {
@@ -1425,7 +1425,7 @@
               "Total Outstanding": "0",
               "Demand Raised": "0",
               "Recovery Amt": "0",
-              "Recovery %": "",
+              "Recovery Pct": "",
               "Overdues": "0"
             },
             "Zunheboto": {
@@ -1433,7 +1433,7 @@
               "Total Outstanding": "1.53",
               "Demand Raised": "0.54",
               "Recovery Amt": "0.54",
-              "Recovery %": "100",
+              "Recovery Pct": "100",
               "Overdues": "0"
             }
           }
@@ -1445,7 +1445,7 @@
             "Total Outstanding",
             "Demand Raised",
             "Recovery Amt",
-            "Recovery %",
+            "Recovery Pct",
             "Overdues"
           ],
           "num_districts": 11,
@@ -1455,7 +1455,7 @@
               "Total Outstanding": "1808.2",
               "Demand Raised": "733.95",
               "Recovery Amt": "175.61",
-              "Recovery %": "24",
+              "Recovery Pct": "24",
               "Overdues": "558.34"
             },
             "Kiphire": {
@@ -1463,7 +1463,7 @@
               "Total Outstanding": "730.15",
               "Demand Raised": "6.07",
               "Recovery Amt": "1.56",
-              "Recovery %": "26",
+              "Recovery Pct": "26",
               "Overdues": "4.51"
             },
             "Kohima": {
@@ -1471,7 +1471,7 @@
               "Total Outstanding": "912.99",
               "Demand Raised": "239.02",
               "Recovery Amt": "18.34",
-              "Recovery %": "8",
+              "Recovery Pct": "8",
               "Overdues": "220.68"
             },
             "Longleng": {
@@ -1479,7 +1479,7 @@
               "Total Outstanding": "388.03",
               "Demand Raised": "6.55",
               "Recovery Amt": "1.36",
-              "Recovery %": "21",
+              "Recovery Pct": "21",
               "Overdues": "5.19"
             },
             "Mokokchung": {
@@ -1487,7 +1487,7 @@
               "Total Outstanding": "933.89",
               "Demand Raised": "237.82",
               "Recovery Amt": "44.21",
-              "Recovery %": "19",
+              "Recovery Pct": "19",
               "Overdues": "193.61"
             },
             "Mon": {
@@ -1495,7 +1495,7 @@
               "Total Outstanding": "178.24",
               "Demand Raised": "11.95",
               "Recovery Amt": "2",
-              "Recovery %": "17",
+              "Recovery Pct": "17",
               "Overdues": "9.95"
             },
             "Peren": {
@@ -1503,7 +1503,7 @@
               "Total Outstanding": "336.39",
               "Demand Raised": "20.2",
               "Recovery Amt": "3.85",
-              "Recovery %": "19",
+              "Recovery Pct": "19",
               "Overdues": "16.35"
             },
             "Phek": {
@@ -1511,7 +1511,7 @@
               "Total Outstanding": "570.25",
               "Demand Raised": "77.44",
               "Recovery Amt": "9.85",
-              "Recovery %": "13",
+              "Recovery Pct": "13",
               "Overdues": "67.59"
             },
             "Tuensang": {
@@ -1519,7 +1519,7 @@
               "Total Outstanding": "366.18",
               "Demand Raised": "9.48",
               "Recovery Amt": "1.5",
-              "Recovery %": "16",
+              "Recovery Pct": "16",
               "Overdues": "7.98"
             },
             "Wokha": {
@@ -1527,7 +1527,7 @@
               "Total Outstanding": "441.26",
               "Demand Raised": "303.2",
               "Recovery Amt": "0.08",
-              "Recovery %": "0",
+              "Recovery Pct": "0",
               "Overdues": "303.12"
             },
             "Zunheboto": {
@@ -1535,7 +1535,7 @@
               "Total Outstanding": "484.8",
               "Demand Raised": "18.11",
               "Recovery Amt": "1.75",
-              "Recovery %": "10",
+              "Recovery Pct": "10",
               "Overdues": "16.36"
             }
           }
@@ -1682,9 +1682,9 @@
             "Recovery Amt",
             "%",
             "Overdues Amt",
-            "Overdues %",
-            "GrossNPA Amt",
-            "GrossN-Pa %"
+            "Overdues Pct",
+            "Gross NPA Amt",
+            "Gross NPA Pct"
           ],
           "num_districts": 11,
           "districts": {
@@ -1695,9 +1695,9 @@
               "Recovery Amt": "1563.66",
               "%": "27",
               "Overdues Amt": "4249.82",
-              "Overdues %": "73",
-              "GrossNPA Amt": "8443.88",
-              "GrossN-Pa %": "11"
+              "Overdues Pct": "73",
+              "Gross NPA Amt": "8443.88",
+              "Gross NPA Pct": "11"
             },
             "Kiphire": {
               "No. of A/C": "1542",
@@ -1706,9 +1706,9 @@
               "Recovery Amt": "35.64",
               "%": "32",
               "Overdues Amt": "77.38",
-              "Overdues %": "68",
-              "GrossNPA Amt": "86.38",
-              "GrossN-Pa %": "5"
+              "Overdues Pct": "68",
+              "Gross NPA Amt": "86.38",
+              "Gross NPA Pct": "5"
             },
             "Kohima": {
               "No. of A/C": "11471",
@@ -1717,9 +1717,9 @@
               "Recovery Amt": "388.97",
               "%": "19",
               "Overdues Amt": "1614.18",
-              "Overdues %": "81",
-              "GrossNPA Amt": "2305.04",
-              "GrossN-Pa %": "10"
+              "Overdues Pct": "81",
+              "Gross NPA Amt": "2305.04",
+              "Gross NPA Pct": "10"
             },
             "Longleng": {
               "No. of A/C": "803",
@@ -1728,9 +1728,9 @@
               "Recovery Amt": "22.93",
               "%": "55",
               "Overdues Amt": "18.81",
-              "Overdues %": "45",
-              "GrossNPA Amt": "118.43",
-              "GrossN-Pa %": "12"
+              "Overdues Pct": "45",
+              "Gross NPA Amt": "118.43",
+              "Gross NPA Pct": "12"
             },
             "Mokokchung": {
               "No. of A/C": "13398",
@@ -1739,9 +1739,9 @@
               "Recovery Amt": "1106.46",
               "%": "56",
               "Overdues Amt": "877.83",
-              "Overdues %": "44",
-              "GrossNPA Amt": "1263.12",
-              "GrossN-Pa %": "8"
+              "Overdues Pct": "44",
+              "Gross NPA Amt": "1263.12",
+              "Gross NPA Pct": "8"
             },
             "Mon": {
               "No. of A/C": "1591",
@@ -1750,9 +1750,9 @@
               "Recovery Amt": "42.75",
               "%": "12",
               "Overdues Amt": "309.09",
-              "Overdues %": "88",
-              "GrossNPA Amt": "283.13",
-              "GrossN-Pa %": "21"
+              "Overdues Pct": "88",
+              "Gross NPA Amt": "283.13",
+              "Gross NPA Pct": "21"
             },
             "Peren": {
               "No. of A/C": "4301",
@@ -1761,9 +1761,9 @@
               "Recovery Amt": "461.98",
               "%": "54",
               "Overdues Amt": "390.04",
-              "Overdues %": "46",
-              "GrossNPA Amt": "539.76",
-              "GrossN-Pa %": "13"
+              "Overdues Pct": "46",
+              "Gross NPA Amt": "539.76",
+              "Gross NPA Pct": "13"
             },
             "Phek": {
               "No. of A/C": "4517",
@@ -1772,9 +1772,9 @@
               "Recovery Amt": "448.09",
               "%": "58",
               "Overdues Amt": "318.67",
-              "Overdues %": "42",
-              "GrossNPA Amt": "945.69",
-              "GrossN-Pa %": "25"
+              "Overdues Pct": "42",
+              "Gross NPA Amt": "945.69",
+              "Gross NPA Pct": "25"
             },
             "Tuensang": {
               "No. of A/C": "5884",
@@ -1783,9 +1783,9 @@
               "Recovery Amt": "628.29",
               "%": "80",
               "Overdues Amt": "156.17",
-              "Overdues %": "20",
-              "GrossNPA Amt": "237.78",
-              "GrossN-Pa %": "7"
+              "Overdues Pct": "20",
+              "Gross NPA Amt": "237.78",
+              "Gross NPA Pct": "7"
             },
             "Wokha": {
               "No. of A/C": "3007",
@@ -1794,9 +1794,9 @@
               "Recovery Amt": "89.45",
               "%": "24",
               "Overdues Amt": "281.53",
-              "Overdues %": "76",
-              "GrossNPA Amt": "340.15",
-              "GrossN-Pa %": "10"
+              "Overdues Pct": "76",
+              "Gross NPA Amt": "340.15",
+              "Gross NPA Pct": "10"
             },
             "Zunheboto": {
               "No. of A/C": "3072",
@@ -1805,9 +1805,9 @@
               "Recovery Amt": "135.18",
               "%": "46",
               "Overdues Amt": "161.7",
-              "Overdues %": "54",
-              "GrossNPA Amt": "317.02",
-              "GrossN-Pa %": "13"
+              "Overdues Pct": "54",
+              "Gross NPA Amt": "317.02",
+              "Gross NPA Pct": "13"
             }
           }
         },
@@ -2088,7 +2088,7 @@
             "Total Outstanding",
             "Demand Raised",
             "Recovery Amt",
-            "Recovery %",
+            "Recovery Pct",
             "Overdues"
           ],
           "num_districts": 11,
@@ -2098,7 +2098,7 @@
               "Total Outstanding": "8.07",
               "Demand Raised": "2.13",
               "Recovery Amt": "0.42",
-              "Recovery %": "20",
+              "Recovery Pct": "20",
               "Overdues": "1.71"
             },
             "Kiphire": {
@@ -2106,7 +2106,7 @@
               "Total Outstanding": "1.47",
               "Demand Raised": "1.47",
               "Recovery Amt": "1.32",
-              "Recovery %": "90",
+              "Recovery Pct": "90",
               "Overdues": "0.15"
             },
             "Kohima": {
@@ -2114,7 +2114,7 @@
               "Total Outstanding": "7.09",
               "Demand Raised": "2.23",
               "Recovery Amt": "2.05",
-              "Recovery %": "92",
+              "Recovery Pct": "92",
               "Overdues": "0.18"
             },
             "Longleng": {
@@ -2122,7 +2122,7 @@
               "Total Outstanding": "0",
               "Demand Raised": "0",
               "Recovery Amt": "0",
-              "Recovery %": "",
+              "Recovery Pct": "",
               "Overdues": "0"
             },
             "Mokokchung": {
@@ -2130,7 +2130,7 @@
               "Total Outstanding": "4.65",
               "Demand Raised": "1.77",
               "Recovery Amt": "0.31",
-              "Recovery %": "18",
+              "Recovery Pct": "18",
               "Overdues": "1.46"
             },
             "Mon": {
@@ -2138,7 +2138,7 @@
               "Total Outstanding": "175.87",
               "Demand Raised": "175.87",
               "Recovery Amt": "0",
-              "Recovery %": "0",
+              "Recovery Pct": "0",
               "Overdues": "175.87"
             },
             "Peren": {
@@ -2146,7 +2146,7 @@
               "Total Outstanding": "0",
               "Demand Raised": "0",
               "Recovery Amt": "0",
-              "Recovery %": "",
+              "Recovery Pct": "",
               "Overdues": "0"
             },
             "Phek": {
@@ -2154,7 +2154,7 @@
               "Total Outstanding": "0.06",
               "Demand Raised": "0.05",
               "Recovery Amt": "0.05",
-              "Recovery %": "100",
+              "Recovery Pct": "100",
               "Overdues": "0"
             },
             "Tuensang": {
@@ -2162,7 +2162,7 @@
               "Total Outstanding": "0",
               "Demand Raised": "0",
               "Recovery Amt": "0",
-              "Recovery %": "",
+              "Recovery Pct": "",
               "Overdues": "0"
             },
             "Wokha": {
@@ -2170,7 +2170,7 @@
               "Total Outstanding": "3.88",
               "Demand Raised": "0.29",
               "Recovery Amt": "0.29",
-              "Recovery %": "100",
+              "Recovery Pct": "100",
               "Overdues": "0"
             },
             "Zunheboto": {
@@ -2178,7 +2178,7 @@
               "Total Outstanding": "1.45",
               "Demand Raised": "0.12",
               "Recovery Amt": "0.12",
-              "Recovery %": "100",
+              "Recovery Pct": "100",
               "Overdues": "0"
             }
           }
@@ -2316,7 +2316,7 @@
             "Total Outstanding",
             "Demand Raised",
             "Recovery Amt",
-            "Recovery %",
+            "Recovery Pct",
             "Overdues"
           ],
           "num_districts": 11,
@@ -2326,7 +2326,7 @@
               "Total Outstanding": "2337.92",
               "Demand Raised": "1015.65",
               "Recovery Amt": "31.89",
-              "Recovery %": "3",
+              "Recovery Pct": "3",
               "Overdues": "983.76"
             },
             "Kiphire": {
@@ -2334,7 +2334,7 @@
               "Total Outstanding": "148.75",
               "Demand Raised": "6.87",
               "Recovery Amt": "0.51",
-              "Recovery %": "7",
+              "Recovery Pct": "7",
               "Overdues": "6.36"
             },
             "Kohima": {
@@ -2342,7 +2342,7 @@
               "Total Outstanding": "915.61",
               "Demand Raised": "308.67",
               "Recovery Amt": "15.02",
-              "Recovery %": "5",
+              "Recovery Pct": "5",
               "Overdues": "293.65"
             },
             "Longleng": {
@@ -2350,7 +2350,7 @@
               "Total Outstanding": "279.76",
               "Demand Raised": "6.19",
               "Recovery Amt": "0.46",
-              "Recovery %": "7",
+              "Recovery Pct": "7",
               "Overdues": "5.73"
             },
             "Mokokchung": {
@@ -2358,7 +2358,7 @@
               "Total Outstanding": "909.54",
               "Demand Raised": "268.36",
               "Recovery Amt": "50.47",
-              "Recovery %": "19",
+              "Recovery Pct": "19",
               "Overdues": "217.89"
             },
             "Mon": {
@@ -2366,7 +2366,7 @@
               "Total Outstanding": "162.87",
               "Demand Raised": "10.38",
               "Recovery Amt": "0.78",
-              "Recovery %": "8",
+              "Recovery Pct": "8",
               "Overdues": "9.6"
             },
             "Peren": {
@@ -2374,7 +2374,7 @@
               "Total Outstanding": "342.45",
               "Demand Raised": "33.62",
               "Recovery Amt": "1.05",
-              "Recovery %": "3",
+              "Recovery Pct": "3",
               "Overdues": "32.57"
             },
             "Phek": {
@@ -2382,7 +2382,7 @@
               "Total Outstanding": "572.34",
               "Demand Raised": "78.58",
               "Recovery Amt": "2.12",
-              "Recovery %": "3",
+              "Recovery Pct": "3",
               "Overdues": "76.46"
             },
             "Tuensang": {
@@ -2390,7 +2390,7 @@
               "Total Outstanding": "412.04",
               "Demand Raised": "4.97",
               "Recovery Amt": "0.37",
-              "Recovery %": "7",
+              "Recovery Pct": "7",
               "Overdues": "4.6"
             },
             "Wokha": {
@@ -2398,7 +2398,7 @@
               "Total Outstanding": "158.17",
               "Demand Raised": "1.88",
               "Recovery Amt": "0.14",
-              "Recovery %": "7",
+              "Recovery Pct": "7",
               "Overdues": "1.74"
             },
             "Zunheboto": {
@@ -2406,7 +2406,7 @@
               "Total Outstanding": "456.46",
               "Demand Raised": "27.81",
               "Recovery Amt": "1.3",
-              "Recovery %": "5",
+              "Recovery Pct": "5",
               "Overdues": "26.51"
             }
           }
@@ -6630,7 +6630,7 @@
             "SHG O/S Amt",
             "SHG NPA No.",
             "SHG NPA Amt",
-            "SHG NPA Amt. %"
+            "SHG NPA Pct"
           ],
           "num_districts": 16,
           "districts": {
@@ -6647,7 +6647,7 @@
               "SHG O/S Amt": "717.91",
               "SHG NPA No.": "17",
               "SHG NPA Amt": "31.35",
-              "SHG NPA Amt. %": "4.37"
+              "SHG NPA Pct": "4.37"
             },
             "Dimapur": {
               "During the Quarter Savings Linked No.": "3250",
@@ -6662,7 +6662,7 @@
               "SHG O/S Amt": "2833.56",
               "SHG NPA No.": "213",
               "SHG NPA Amt": "351.35",
-              "SHG NPA Amt. %": "12.40"
+              "SHG NPA Pct": "12.40"
             },
             "Kiphire": {
               "During the Quarter Savings Linked No.": "1093",
@@ -6677,7 +6677,7 @@
               "SHG O/S Amt": "314.67",
               "SHG NPA No.": "22",
               "SHG NPA Amt": "26.03",
-              "SHG NPA Amt. %": "8.27"
+              "SHG NPA Pct": "8.27"
             },
             "Kohima": {
               "During the Quarter Savings Linked No.": "2346",
@@ -6692,7 +6692,7 @@
               "SHG O/S Amt": "616.23",
               "SHG NPA No.": "60",
               "SHG NPA Amt": "76.78",
-              "SHG NPA Amt. %": "12.46"
+              "SHG NPA Pct": "12.46"
             },
             "Longleng": {
               "During the Quarter Savings Linked No.": "326",
@@ -6707,7 +6707,7 @@
               "SHG O/S Amt": "95.16",
               "SHG NPA No.": "2",
               "SHG NPA Amt": "1.14",
-              "SHG NPA Amt. %": "1.20"
+              "SHG NPA Pct": "1.20"
             },
             "Mokokchung": {
               "During the Quarter Savings Linked No.": "2278",
@@ -6722,7 +6722,7 @@
               "SHG O/S Amt": "1388.70",
               "SHG NPA No.": "195",
               "SHG NPA Amt": "242.25",
-              "SHG NPA Amt. %": "17.44"
+              "SHG NPA Pct": "17.44"
             },
             "Mon": {
               "During the Quarter Savings Linked No.": "2349",
@@ -6737,7 +6737,7 @@
               "SHG O/S Amt": "338.45",
               "SHG NPA No.": "58",
               "SHG NPA Amt": "48.11",
-              "SHG NPA Amt. %": "14.21"
+              "SHG NPA Pct": "14.21"
             },
             "Niuland": {
               "During the Quarter Savings Linked No.": "72",
@@ -6752,7 +6752,7 @@
               "SHG O/S Amt": "242.19",
               "SHG NPA No.": "1",
               "SHG NPA Amt": "1.54",
-              "SHG NPA Amt. %": "0.64"
+              "SHG NPA Pct": "0.64"
             },
             "Noklak": {
               "During the Quarter Savings Linked No.": "205",
@@ -6767,7 +6767,7 @@
               "SHG O/S Amt": "18.15",
               "SHG NPA No.": "1",
               "SHG NPA Amt": "2.98",
-              "SHG NPA Amt. %": "16.42"
+              "SHG NPA Pct": "16.42"
             },
             "Peren": {
               "During the Quarter Savings Linked No.": "678",
@@ -6782,7 +6782,7 @@
               "SHG O/S Amt": "1653.64",
               "SHG NPA No.": "14",
               "SHG NPA Amt": "32.35",
-              "SHG NPA Amt. %": "1.96"
+              "SHG NPA Pct": "1.96"
             },
             "Phek": {
               "During the Quarter Savings Linked No.": "2234",
@@ -6797,7 +6797,7 @@
               "SHG O/S Amt": "835.82",
               "SHG NPA No.": "63",
               "SHG NPA Amt": "71.18",
-              "SHG NPA Amt. %": "8.52"
+              "SHG NPA Pct": "8.52"
             },
             "Shamator": {
               "During the Quarter Savings Linked No.": "197",
@@ -6812,7 +6812,7 @@
               "SHG O/S Amt": "39.25",
               "SHG NPA No.": "0",
               "SHG NPA Amt": "0.00",
-              "SHG NPA Amt. %": "0.00"
+              "SHG NPA Pct": "0.00"
             },
             "Tseminyu": {
               "During the Quarter Savings Linked No.": "663",
@@ -6827,7 +6827,7 @@
               "SHG O/S Amt": "31.40",
               "SHG NPA No.": "7",
               "SHG NPA Amt": "6.19",
-              "SHG NPA Amt. %": "19.71"
+              "SHG NPA Pct": "19.71"
             },
             "Tuensang": {
               "During the Quarter Savings Linked No.": "2001",
@@ -6842,7 +6842,7 @@
               "SHG O/S Amt": "313.81",
               "SHG NPA No.": "42",
               "SHG NPA Amt": "31.96",
-              "SHG NPA Amt. %": "10.18"
+              "SHG NPA Pct": "10.18"
             },
             "Wokha": {
               "During the Quarter Savings Linked No.": "1050",
@@ -6857,7 +6857,7 @@
               "SHG O/S Amt": "660.08",
               "SHG NPA No.": "22",
               "SHG NPA Amt": "17.04",
-              "SHG NPA Amt. %": "2.58"
+              "SHG NPA Pct": "2.58"
             },
             "Zunheboto": {
               "During the Quarter Savings Linked No.": "1367",
@@ -6872,7 +6872,7 @@
               "SHG O/S Amt": "271.82",
               "SHG NPA No.": "49",
               "SHG NPA Amt": "41.00",
-              "SHG NPA Amt. %": "15.08"
+              "SHG NPA Pct": "15.08"
             }
           }
         },
@@ -6995,7 +6995,7 @@
             "NRLM Irregular A/C Amt",
             "NRLM NPA No.",
             "NRLM NPA Amt",
-            "NRLM NPA Amt. %"
+            "NRLM NPA Pct"
           ],
           "num_districts": 16,
           "districts": {
@@ -7008,7 +7008,7 @@
               "NRLM Irregular A/C Amt": "3.77",
               "NRLM NPA No.": "0",
               "NRLM NPA Amt": "0.00",
-              "NRLM NPA Amt. %": "0.00"
+              "NRLM NPA Pct": "0.00"
             },
             "Dimapur": {
               "Current Year Self-Help Group No.": "196",
@@ -7019,7 +7019,7 @@
               "NRLM Irregular A/C Amt": "4.92",
               "NRLM NPA No.": "5",
               "NRLM NPA Amt": "3.10",
-              "NRLM NPA Amt. %": "0.30"
+              "NRLM NPA Pct": "0.30"
             },
             "Kiphire": {
               "Current Year Self-Help Group No.": "11",
@@ -7030,7 +7030,7 @@
               "NRLM Irregular A/C Amt": "3.45",
               "NRLM NPA No.": "4",
               "NRLM NPA Amt": "2.57",
-              "NRLM NPA Amt. %": "8.83"
+              "NRLM NPA Pct": "8.83"
             },
             "Kohima": {
               "Current Year Self-Help Group No.": "68",
@@ -7041,7 +7041,7 @@
               "NRLM Irregular A/C Amt": "6.73",
               "NRLM NPA No.": "5",
               "NRLM NPA Amt": "5.87",
-              "NRLM NPA Amt. %": "2.02"
+              "NRLM NPA Pct": "2.02"
             },
             "Longleng": {
               "Current Year Self-Help Group No.": "52",
@@ -7052,7 +7052,7 @@
               "NRLM Irregular A/C Amt": "4.91",
               "NRLM NPA No.": "2",
               "NRLM NPA Amt": "1.14",
-              "NRLM NPA Amt. %": "1.48"
+              "NRLM NPA Pct": "1.48"
             },
             "Mokokchung": {
               "Current Year Self-Help Group No.": "218",
@@ -7063,7 +7063,7 @@
               "NRLM Irregular A/C Amt": "16.35",
               "NRLM NPA No.": "19",
               "NRLM NPA Amt": "20.35",
-              "NRLM NPA Amt. %": "2.15"
+              "NRLM NPA Pct": "2.15"
             },
             "Mon": {
               "Current Year Self-Help Group No.": "77",
@@ -7074,7 +7074,7 @@
               "NRLM Irregular A/C Amt": "16.56",
               "NRLM NPA No.": "12",
               "NRLM NPA Amt": "13.35",
-              "NRLM NPA Amt. %": "4.99"
+              "NRLM NPA Pct": "4.99"
             },
             "Niuland": {
               "Current Year Self-Help Group No.": "35",
@@ -7085,7 +7085,7 @@
               "NRLM Irregular A/C Amt": "1.19",
               "NRLM NPA No.": "1",
               "NRLM NPA Amt": "1.54",
-              "NRLM NPA Amt. %": "0.71"
+              "NRLM NPA Pct": "0.71"
             },
             "Noklak": {
               "Current Year Self-Help Group No.": "11",
@@ -7096,7 +7096,7 @@
               "NRLM Irregular A/C Amt": "0.00",
               "NRLM NPA No.": "1",
               "NRLM NPA Amt": "2.98",
-              "NRLM NPA Amt. %": "16.42"
+              "NRLM NPA Pct": "16.42"
             },
             "Peren": {
               "Current Year Self-Help Group No.": "252",
@@ -7107,7 +7107,7 @@
               "NRLM Irregular A/C Amt": "16.99",
               "NRLM NPA No.": "6",
               "NRLM NPA Amt": "22.43",
-              "NRLM NPA Amt. %": "1.48"
+              "NRLM NPA Pct": "1.48"
             },
             "Phek": {
               "Current Year Self-Help Group No.": "99",
@@ -7118,7 +7118,7 @@
               "NRLM Irregular A/C Amt": "32.48",
               "NRLM NPA No.": "22",
               "NRLM NPA Amt": "32.50",
-              "NRLM NPA Amt. %": "7.07"
+              "NRLM NPA Pct": "7.07"
             },
             "Shamator": {
               "Current Year Self-Help Group No.": "17",
@@ -7129,7 +7129,7 @@
               "NRLM Irregular A/C Amt": "0.00",
               "NRLM NPA No.": "0",
               "NRLM NPA Amt": "0.00",
-              "NRLM NPA Amt. %": "0.00"
+              "NRLM NPA Pct": "0.00"
             },
             "Tseminyu": {
               "Current Year Self-Help Group No.": "2",
@@ -7140,7 +7140,7 @@
               "NRLM Irregular A/C Amt": "2.12",
               "NRLM NPA No.": "3",
               "NRLM NPA Amt": "1.98",
-              "NRLM NPA Amt. %": "12.01"
+              "NRLM NPA Pct": "12.01"
             },
             "Tuensang": {
               "Current Year Self-Help Group No.": "69",
@@ -7151,7 +7151,7 @@
               "NRLM Irregular A/C Amt": "8.92",
               "NRLM NPA No.": "11",
               "NRLM NPA Amt": "15.48",
-              "NRLM NPA Amt. %": "9.88"
+              "NRLM NPA Pct": "9.88"
             },
             "Wokha": {
               "Current Year Self-Help Group No.": "70",
@@ -7162,7 +7162,7 @@
               "NRLM Irregular A/C Amt": "9.47",
               "NRLM NPA No.": "4",
               "NRLM NPA Amt": "3.60",
-              "NRLM NPA Amt. %": "1.14"
+              "NRLM NPA Pct": "1.14"
             },
             "Zunheboto": {
               "Current Year Self-Help Group No.": "53",
@@ -7173,7 +7173,7 @@
               "NRLM Irregular A/C Amt": "14.04",
               "NRLM NPA No.": "3",
               "NRLM NPA Amt": "1.92",
-              "NRLM NPA Amt. %": "1.16"
+              "NRLM NPA Pct": "1.16"
             }
           }
         },
@@ -7368,7 +7368,7 @@
             "SUI O/S Amt",
             "SUI NPA No.",
             "SUI NPA Amt",
-            "SUI NPA Amt. %"
+            "SUI NPA Pct"
           ],
           "num_districts": 16,
           "districts": {
@@ -7385,7 +7385,7 @@
               "SUI O/S Amt": "607.56",
               "SUI NPA No.": "0",
               "SUI NPA Amt": "0.00",
-              "SUI NPA Amt. %": "0.00"
+              "SUI NPA Pct": "0.00"
             },
             "Dimapur": {
               "Current Year No. of Female Account": "17",
@@ -7400,7 +7400,7 @@
               "SUI O/S Amt": "3799.23",
               "SUI NPA No.": "20",
               "SUI NPA Amt": "260.20",
-              "SUI NPA Amt. %": "6.85"
+              "SUI NPA Pct": "6.85"
             },
             "Kiphire": {
               "Current Year No. of Female Account": "0",
@@ -7415,7 +7415,7 @@
               "SUI O/S Amt": "29.55",
               "SUI NPA No.": "0",
               "SUI NPA Amt": "0.00",
-              "SUI NPA Amt. %": "0.00"
+              "SUI NPA Pct": "0.00"
             },
             "Kohima": {
               "Current Year No. of Female Account": "10",
@@ -7430,7 +7430,7 @@
               "SUI O/S Amt": "1899.98",
               "SUI NPA No.": "2",
               "SUI NPA Amt": "38.33",
-              "SUI NPA Amt. %": "2.02"
+              "SUI NPA Pct": "2.02"
             },
             "Longleng": {
               "Current Year No. of Female Account": "0",
@@ -7445,7 +7445,7 @@
               "SUI O/S Amt": "0.00",
               "SUI NPA No.": "0",
               "SUI NPA Amt": "0.00",
-              "SUI NPA Amt. %": "0.00"
+              "SUI NPA Pct": "0.00"
             },
             "Mokokchung": {
               "Current Year No. of Female Account": "2",
@@ -7460,7 +7460,7 @@
               "SUI O/S Amt": "903.13",
               "SUI NPA No.": "4",
               "SUI NPA Amt": "16.45",
-              "SUI NPA Amt. %": "1.82"
+              "SUI NPA Pct": "1.82"
             },
             "Mon": {
               "Current Year No. of Female Account": "3",
@@ -7475,7 +7475,7 @@
               "SUI O/S Amt": "262.83",
               "SUI NPA No.": "1",
               "SUI NPA Amt": "5.37",
-              "SUI NPA Amt. %": "2.04"
+              "SUI NPA Pct": "2.04"
             },
             "Niuland": {
               "Current Year No. of Female Account": "0",
@@ -7490,7 +7490,7 @@
               "SUI O/S Amt": "13.40",
               "SUI NPA No.": "0",
               "SUI NPA Amt": "0.00",
-              "SUI NPA Amt. %": "0.00"
+              "SUI NPA Pct": "0.00"
             },
             "Noklak": {
               "Current Year No. of Female Account": "0",
@@ -7505,7 +7505,7 @@
               "SUI O/S Amt": "0.00",
               "SUI NPA No.": "0",
               "SUI NPA Amt": "0.00",
-              "SUI NPA Amt. %": "0.00"
+              "SUI NPA Pct": "0.00"
             },
             "Peren": {
               "Current Year No. of Female Account": "2",
@@ -7520,7 +7520,7 @@
               "SUI O/S Amt": "137.90",
               "SUI NPA No.": "0",
               "SUI NPA Amt": "0.00",
-              "SUI NPA Amt. %": "0.00"
+              "SUI NPA Pct": "0.00"
             },
             "Phek": {
               "Current Year No. of Female Account": "0",
@@ -7535,7 +7535,7 @@
               "SUI O/S Amt": "160.13",
               "SUI NPA No.": "0",
               "SUI NPA Amt": "0.00",
-              "SUI NPA Amt. %": "0.00"
+              "SUI NPA Pct": "0.00"
             },
             "Shamator": {
               "Current Year No. of Female Account": "1",
@@ -7550,7 +7550,7 @@
               "SUI O/S Amt": "28.06",
               "SUI NPA No.": "0",
               "SUI NPA Amt": "0.00",
-              "SUI NPA Amt. %": "0.00"
+              "SUI NPA Pct": "0.00"
             },
             "Tseminyu": {
               "Current Year No. of Female Account": "0",
@@ -7565,7 +7565,7 @@
               "SUI O/S Amt": "53.90",
               "SUI NPA No.": "0",
               "SUI NPA Amt": "0.00",
-              "SUI NPA Amt. %": "0.00"
+              "SUI NPA Pct": "0.00"
             },
             "Tuensang": {
               "Current Year No. of Female Account": "0",
@@ -7580,7 +7580,7 @@
               "SUI O/S Amt": "65.54",
               "SUI NPA No.": "0",
               "SUI NPA Amt": "0.00",
-              "SUI NPA Amt. %": "0.00"
+              "SUI NPA Pct": "0.00"
             },
             "Wokha": {
               "Current Year No. of Female Account": "1",
@@ -7595,7 +7595,7 @@
               "SUI O/S Amt": "319.66",
               "SUI NPA No.": "0",
               "SUI NPA Amt": "0.00",
-              "SUI NPA Amt. %": "0.00"
+              "SUI NPA Pct": "0.00"
             },
             "Zunheboto": {
               "Current Year No. of Female Account": "4",
@@ -7610,7 +7610,7 @@
               "SUI O/S Amt": "514.78",
               "SUI NPA No.": "0",
               "SUI NPA Amt": "0.00",
-              "SUI NPA Amt. %": "0.00"
+              "SUI NPA Pct": "0.00"
             }
           }
         },
@@ -7625,7 +7625,7 @@
             "PMEGP O/S Amt",
             "PMEGP NPA No.",
             "PMEGP NPA Amt",
-            "PMEGP NPA Amt. %"
+            "PMEGP NPA Pct"
           ],
           "num_districts": 16,
           "districts": {
@@ -7638,7 +7638,7 @@
               "PMEGP O/S Amt": "705.37",
               "PMEGP NPA No.": "44",
               "PMEGP NPA Amt": "129.38",
-              "PMEGP NPA Amt. %": "18.34"
+              "PMEGP NPA Pct": "18.34"
             },
             "Dimapur": {
               "CY Sanction A/C No.": "263",
@@ -7649,7 +7649,7 @@
               "PMEGP O/S Amt": "2405.46",
               "PMEGP NPA No.": "305",
               "PMEGP NPA Amt": "830.13",
-              "PMEGP NPA Amt. %": "34.51"
+              "PMEGP NPA Pct": "34.51"
             },
             "Kiphire": {
               "CY Sanction A/C No.": "49",
@@ -7660,7 +7660,7 @@
               "PMEGP O/S Amt": "587.82",
               "PMEGP NPA No.": "26",
               "PMEGP NPA Amt": "47.00",
-              "PMEGP NPA Amt. %": "8.00"
+              "PMEGP NPA Pct": "8.00"
             },
             "Kohima": {
               "CY Sanction A/C No.": "209",
@@ -7671,7 +7671,7 @@
               "PMEGP O/S Amt": "1429.16",
               "PMEGP NPA No.": "150",
               "PMEGP NPA Amt": "236.51",
-              "PMEGP NPA Amt. %": "16.55"
+              "PMEGP NPA Pct": "16.55"
             },
             "Longleng": {
               "CY Sanction A/C No.": "3",
@@ -7682,7 +7682,7 @@
               "PMEGP O/S Amt": "242.05",
               "PMEGP NPA No.": "4",
               "PMEGP NPA Amt": "6.55",
-              "PMEGP NPA Amt. %": "2.71"
+              "PMEGP NPA Pct": "2.71"
             },
             "Mokokchung": {
               "CY Sanction A/C No.": "62",
@@ -7693,7 +7693,7 @@
               "PMEGP O/S Amt": "1055.60",
               "PMEGP NPA No.": "191",
               "PMEGP NPA Amt": "681.04",
-              "PMEGP NPA Amt. %": "64.52"
+              "PMEGP NPA Pct": "64.52"
             },
             "Mon": {
               "CY Sanction A/C No.": "88",
@@ -7704,7 +7704,7 @@
               "PMEGP O/S Amt": "666.63",
               "PMEGP NPA No.": "13",
               "PMEGP NPA Amt": "19.12",
-              "PMEGP NPA Amt. %": "2.87"
+              "PMEGP NPA Pct": "2.87"
             },
             "Niuland": {
               "CY Sanction A/C No.": "24",
@@ -7715,7 +7715,7 @@
               "PMEGP O/S Amt": "211.92",
               "PMEGP NPA No.": "16",
               "PMEGP NPA Amt": "42.87",
-              "PMEGP NPA Amt. %": "20.23"
+              "PMEGP NPA Pct": "20.23"
             },
             "Noklak": {
               "CY Sanction A/C No.": "5",
@@ -7726,7 +7726,7 @@
               "PMEGP O/S Amt": "121.18",
               "PMEGP NPA No.": "0",
               "PMEGP NPA Amt": "0.00",
-              "PMEGP NPA Amt. %": "0.00"
+              "PMEGP NPA Pct": "0.00"
             },
             "Peren": {
               "CY Sanction A/C No.": "19",
@@ -7737,7 +7737,7 @@
               "PMEGP O/S Amt": "471.24",
               "PMEGP NPA No.": "28",
               "PMEGP NPA Amt": "62.82",
-              "PMEGP NPA Amt. %": "13.33"
+              "PMEGP NPA Pct": "13.33"
             },
             "Phek": {
               "CY Sanction A/C No.": "103",
@@ -7748,7 +7748,7 @@
               "PMEGP O/S Amt": "1068.65",
               "PMEGP NPA No.": "176",
               "PMEGP NPA Amt": "505.22",
-              "PMEGP NPA Amt. %": "47.28"
+              "PMEGP NPA Pct": "47.28"
             },
             "Shamator": {
               "CY Sanction A/C No.": "10",
@@ -7759,7 +7759,7 @@
               "PMEGP O/S Amt": "55.81",
               "PMEGP NPA No.": "0",
               "PMEGP NPA Amt": "0.00",
-              "PMEGP NPA Amt. %": "0.00"
+              "PMEGP NPA Pct": "0.00"
             },
             "Tseminyu": {
               "CY Sanction A/C No.": "41",
@@ -7770,7 +7770,7 @@
               "PMEGP O/S Amt": "170.62",
               "PMEGP NPA No.": "7",
               "PMEGP NPA Amt": "22.39",
-              "PMEGP NPA Amt. %": "13.12"
+              "PMEGP NPA Pct": "13.12"
             },
             "Tuensang": {
               "CY Sanction A/C No.": "39",
@@ -7781,7 +7781,7 @@
               "PMEGP O/S Amt": "526.61",
               "PMEGP NPA No.": "6",
               "PMEGP NPA Amt": "11.67",
-              "PMEGP NPA Amt. %": "2.22"
+              "PMEGP NPA Pct": "2.22"
             },
             "Wokha": {
               "CY Sanction A/C No.": "91",
@@ -7792,7 +7792,7 @@
               "PMEGP O/S Amt": "550.85",
               "PMEGP NPA No.": "32",
               "PMEGP NPA Amt": "46.56",
-              "PMEGP NPA Amt. %": "8.45"
+              "PMEGP NPA Pct": "8.45"
             },
             "Zunheboto": {
               "CY Sanction A/C No.": "120",
@@ -7803,7 +7803,7 @@
               "PMEGP O/S Amt": "567.94",
               "PMEGP NPA No.": "27",
               "PMEGP NPA Amt": "27.26",
-              "PMEGP NPA Amt. %": "4.80"
+              "PMEGP NPA Pct": "4.80"
             }
           }
         },
