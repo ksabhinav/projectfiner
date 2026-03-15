@@ -2302,76 +2302,76 @@
           "fields": [
             "Outstanding No.",
             "Outstanding Amt",
-            "Disbursed No.",
-            "Disbursed Amt"
+            "CY Disbursed No.",
+            "CY Disbursed Amt"
           ],
           "num_districts": 11,
           "districts": {
             "East Garo Hills": {
               "Outstanding No.": "3935",
               "Outstanding Amt": "5379.75",
-              "Disbursed No.": "1135",
-              "Disbursed Amt": "1916.62"
+              "CY Disbursed No.": "1135",
+              "CY Disbursed Amt": "1916.62"
             },
             "East Jaintia Hills": {
               "Outstanding No.": "1659",
               "Outstanding Amt": "3754.95",
-              "Disbursed No.": "476",
-              "Disbursed Amt": "979.5"
+              "CY Disbursed No.": "476",
+              "CY Disbursed Amt": "979.5"
             },
             "East Khasi Hills": {
               "Outstanding No.": "67174",
               "Outstanding Amt": "117139.68",
-              "Disbursed No.": "21421",
-              "Disbursed Amt": "30274.02"
+              "CY Disbursed No.": "21421",
+              "CY Disbursed Amt": "30274.02"
             },
             "North Garo Hills": {
               "Outstanding No.": "2772",
               "Outstanding Amt": "3836.18",
-              "Disbursed No.": "588",
-              "Disbursed Amt": "1164.77"
+              "CY Disbursed No.": "588",
+              "CY Disbursed Amt": "1164.77"
             },
             "Ri Bhoi": {
               "Outstanding No.": "27759",
               "Outstanding Amt": "30986.38",
-              "Disbursed No.": "7996",
-              "Disbursed Amt": "7821.55"
+              "CY Disbursed No.": "7996",
+              "CY Disbursed Amt": "7821.55"
             },
             "South Garo Hills": {
               "Outstanding No.": "870",
               "Outstanding Amt": "2066.83",
-              "Disbursed No.": "288",
-              "Disbursed Amt": "521.66"
+              "CY Disbursed No.": "288",
+              "CY Disbursed Amt": "521.66"
             },
             "South West Garo Hills": {
               "Outstanding No.": "3570",
               "Outstanding Amt": "4155.13",
-              "Disbursed No.": "1223",
-              "Disbursed Amt": "1650.36"
+              "CY Disbursed No.": "1223",
+              "CY Disbursed Amt": "1650.36"
             },
             "South West Khasi Hills": {
               "Outstanding No.": "1779",
               "Outstanding Amt": "2201.24",
-              "Disbursed No.": "383",
-              "Disbursed Amt": "655.79"
+              "CY Disbursed No.": "383",
+              "CY Disbursed Amt": "655.79"
             },
             "West Garo Hills": {
               "Outstanding No.": "12789",
               "Outstanding Amt": "24462.89",
-              "Disbursed No.": "4657",
-              "Disbursed Amt": "7817.22"
+              "CY Disbursed No.": "4657",
+              "CY Disbursed Amt": "7817.22"
             },
             "West Jaintia Hills": {
               "Outstanding No.": "10213",
               "Outstanding Amt": "14251.91",
-              "Disbursed No.": "2945",
-              "Disbursed Amt": "3841.87"
+              "CY Disbursed No.": "2945",
+              "CY Disbursed Amt": "3841.87"
             },
             "West Khasi Hills": {
               "Outstanding No.": "9229",
               "Outstanding Amt": "9999.98",
-              "Disbursed No.": "2382",
-              "Disbursed Amt": "2421.93"
+              "CY Disbursed No.": "2382",
+              "CY Disbursed Amt": "2421.93"
             }
           }
         },
@@ -4857,8 +4857,8 @@
         "non_ps_outstanding": {
           "page": 34,
           "fields": [
-            "NPS Amt.% NPA",
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "NPS Amt. % NPA",
+            "Total Non-Priority NPA Amt",
             "Tot NPA Priorityrityrity No. Sec Non",
             "Total NPS O/S Amt",
             "Total NPS O/S No.",
@@ -4876,8 +4876,8 @@
           "num_districts": 5,
           "districts": {
             "East Garo Hills": {
-              "NPS Amt.% NPA": "2.63",
-              "Total Non-Priorityrityrityrity NPA Amt": "581.85",
+              "NPS Amt. % NPA": "2.63",
+              "Total Non-Priority NPA Amt": "581.85",
               "Tot NPA Priorityrityrity No. Sec Non": "290",
               "Total NPS O/S Amt": "22126.33",
               "Total NPS O/S No.": "6058",
@@ -4893,8 +4893,8 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Khasi Hills": {
-              "NPS Amt.% NPA": "15.66",
-              "Total Non-Priorityrityrityrity NPA Amt": "89992.9",
+              "NPS Amt. % NPA": "15.66",
+              "Total Non-Priority NPA Amt": "89992.9",
               "Tot NPA Priorityrityrity No. Sec Non": "2017",
               "Total NPS O/S Amt": "574530.8",
               "Total NPS O/S No.": "86562",
@@ -4910,8 +4910,8 @@
               "Agriculture No. (NPS)": "0"
             },
             "Ri Bhoi": {
-              "NPS Amt.% NPA": "1.33",
-              "Total Non-Priorityrityrityrity NPA Amt": "1639.64",
+              "NPS Amt. % NPA": "1.33",
+              "Total Non-Priority NPA Amt": "1639.64",
               "Tot NPA Priorityrityrity No. Sec Non": "469",
               "Total NPS O/S Amt": "123392.21",
               "Total NPS O/S No.": "24572",
@@ -4927,8 +4927,8 @@
               "Agriculture No. (NPS)": "2"
             },
             "West Garo Hills": {
-              "NPS Amt.% NPA": "3.3",
-              "Total Non-Priorityrityrityrity NPA Amt": "2975.16",
+              "NPS Amt. % NPA": "3.3",
+              "Total Non-Priority NPA Amt": "2975.16",
               "Tot NPA Priorityrityrity No. Sec Non": "1057",
               "Total NPS O/S Amt": "90224.57",
               "Total NPS O/S No.": "23321",
@@ -4944,8 +4944,8 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Khasi Hills": {
-              "NPS Amt.% NPA": "1.58",
-              "Total Non-Priorityrityrityrity NPA Amt": "197.38",
+              "NPS Amt. % NPA": "1.58",
+              "Total Non-Priority NPA Amt": "197.38",
               "Tot NPA Priorityrityrity No. Sec Non": "72",
               "Total NPS O/S Amt": "12490.6",
               "Total NPS O/S No.": "4079",
@@ -6078,7 +6078,7 @@
         "non_ps_npa": {
           "page": 65,
           "fields": [
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "Total Non-Priority NPA Amt",
             "Sec Tot NPA Non No. Priorityrityrity",
             "Other Amt (NPS)",
             "Other No. (NPS)",
@@ -6094,7 +6094,7 @@
           "num_districts": 12,
           "districts": {
             "Eastern West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "203.43",
+              "Total Non-Priority NPA Amt": "203.43",
               "Sec Tot NPA Non No. Priorityrityrity": "64",
               "Other Amt (NPS)": "197.64",
               "Other No. (NPS)": "58",
@@ -6108,7 +6108,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "581.85",
+              "Total Non-Priority NPA Amt": "581.85",
               "Sec Tot NPA Non No. Priorityrityrity": "290",
               "Other Amt (NPS)": "459.96",
               "Other No. (NPS)": "207",
@@ -6122,7 +6122,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "769.31",
+              "Total Non-Priority NPA Amt": "769.31",
               "Sec Tot NPA Non No. Priorityrityrity": "168",
               "Other Amt (NPS)": "477.22",
               "Other No. (NPS)": "121",
@@ -6136,7 +6136,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "89992.9",
+              "Total Non-Priority NPA Amt": "89992.9",
               "Sec Tot NPA Non No. Priorityrityrity": "2017",
               "Other Amt (NPS)": "89101.12",
               "Other No. (NPS)": "1491",
@@ -6150,7 +6150,7 @@
               "Agriculture No. (NPS)": "2"
             },
             "North Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "609.7",
+              "Total Non-Priority NPA Amt": "609.7",
               "Sec Tot NPA Non No. Priorityrityrity": "333",
               "Other Amt (NPS)": "396.87",
               "Other No. (NPS)": "213",
@@ -6164,7 +6164,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "Ri Bhoi": {
-              "Total Non-Priorityrityrityrity NPA Amt": "1639.64",
+              "Total Non-Priority NPA Amt": "1639.64",
               "Sec Tot NPA Non No. Priorityrityrity": "469",
               "Other Amt (NPS)": "1533.89",
               "Other No. (NPS)": "424",
@@ -6178,7 +6178,7 @@
               "Agriculture No. (NPS)": "3"
             },
             "South Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "302.48",
+              "Total Non-Priority NPA Amt": "302.48",
               "Sec Tot NPA Non No. Priorityrityrity": "187",
               "Other Amt (NPS)": "202.87",
               "Other No. (NPS)": "125",
@@ -6192,7 +6192,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "558.49",
+              "Total Non-Priority NPA Amt": "558.49",
               "Sec Tot NPA Non No. Priorityrityrity": "220",
               "Other Amt (NPS)": "490.19",
               "Other No. (NPS)": "177",
@@ -6206,7 +6206,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "90.72",
+              "Total Non-Priority NPA Amt": "90.72",
               "Sec Tot NPA Non No. Priorityrityrity": "35",
               "Other Amt (NPS)": "79.9",
               "Other No. (NPS)": "24",
@@ -6220,7 +6220,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "2975.16",
+              "Total Non-Priority NPA Amt": "2975.16",
               "Sec Tot NPA Non No. Priorityrityrity": "1057",
               "Other Amt (NPS)": "2406.2",
               "Other No. (NPS)": "704",
@@ -6234,7 +6234,7 @@
               "Agriculture No. (NPS)": "3"
             },
             "West Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "669.14",
+              "Total Non-Priority NPA Amt": "669.14",
               "Sec Tot NPA Non No. Priorityrityrity": "244",
               "Other Amt (NPS)": "516.13",
               "Other No. (NPS)": "157",
@@ -6248,7 +6248,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "197.38",
+              "Total Non-Priority NPA Amt": "197.38",
               "Sec Tot NPA Non No. Priorityrityrity": "72",
               "Other Amt (NPS)": "151.54",
               "Other No. (NPS)": "38",
@@ -6963,7 +6963,7 @@
         "pmmy_mudra_os_npa": {
           "page": 86,
           "fields": [
-            "NPA Amt.% MUDRA",
+            "NPA Amt. % MUDRA",
             "Total MUDRA NPA Amt",
             "Total MUDRA NPA No.",
             "Total MUDRA O/S Amt",
@@ -6984,7 +6984,7 @@
           "num_districts": 1,
           "districts": {
             "Ri Bhoi": {
-              "NPA Amt.% MUDRA": "16.57",
+              "NPA Amt. % MUDRA": "16.57",
               "Total MUDRA NPA Amt": "802.09",
               "Total MUDRA NPA No.": "1260",
               "Total MUDRA O/S Amt": "4839.71",
@@ -9976,8 +9976,8 @@
         "non_ps_outstanding": {
           "page": 33,
           "fields": [
-            "NPS Amt.% NPA",
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "NPS Amt. % NPA",
+            "Total Non-Priority NPA Amt",
             "Tot NPA Priorityrityrity No. Sec Non",
             "Total NPS O/S Amt",
             "Total NPS O/S No.",
@@ -9995,8 +9995,8 @@
           "num_districts": 5,
           "districts": {
             "East Garo Hills": {
-              "NPS Amt.% NPA": "1.45",
-              "Total Non-Priorityrityrityrity NPA Amt": "375.94",
+              "NPS Amt. % NPA": "1.45",
+              "Total Non-Priority NPA Amt": "375.94",
               "Tot NPA Priorityrityrity No. Sec Non": "266",
               "Total NPS O/S Amt": "25977.7",
               "Total NPS O/S No.": "6803",
@@ -10012,8 +10012,8 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Khasi Hills": {
-              "NPS Amt.% NPA": "0.46",
-              "Total Non-Priorityrityrityrity NPA Amt": "3576.74",
+              "NPS Amt. % NPA": "0.46",
+              "Total Non-Priority NPA Amt": "3576.74",
               "Tot NPA Priorityrityrity No. Sec Non": "1896",
               "Total NPS O/S Amt": "779128.33",
               "Total NPS O/S No.": "103861",
@@ -10029,8 +10029,8 @@
               "Agriculture No. (NPS)": "12"
             },
             "Ri Bhoi": {
-              "NPS Amt.% NPA": "0.93",
-              "Total Non-Priorityrityrityrity NPA Amt": "1415.14",
+              "NPS Amt. % NPA": "0.93",
+              "Total Non-Priority NPA Amt": "1415.14",
               "Tot NPA Priorityrityrity No. Sec Non": "689",
               "Total NPS O/S Amt": "151910.07",
               "Total NPS O/S No.": "29071",
@@ -10046,8 +10046,8 @@
               "Agriculture No. (NPS)": "3"
             },
             "West Garo Hills": {
-              "NPS Amt.% NPA": "2.64",
-              "Total Non-Priorityrityrityrity NPA Amt": "2662.14",
+              "NPS Amt. % NPA": "2.64",
+              "Total Non-Priority NPA Amt": "2662.14",
               "Tot NPA Priorityrityrity No. Sec Non": "1633",
               "Total NPS O/S Amt": "100713.82",
               "Total NPS O/S No.": "26211",
@@ -10063,8 +10063,8 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Khasi Hills": {
-              "NPS Amt.% NPA": "0.76",
-              "Total Non-Priorityrityrityrity NPA Amt": "110.13",
+              "NPS Amt. % NPA": "0.76",
+              "Total Non-Priority NPA Amt": "110.13",
               "Tot NPA Priorityrityrity No. Sec Non": "78",
               "Total NPS O/S Amt": "14455.64",
               "Total NPS O/S No.": "4124",
@@ -11196,7 +11196,7 @@
         "non_ps_npa": {
           "page": 64,
           "fields": [
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "Total Non-Priority NPA Amt",
             "Sec Tot NPA Non No. Priorityrityrity",
             "Other Amt (NPS)",
             "Other No. (NPS)",
@@ -11210,7 +11210,7 @@
           "num_districts": 12,
           "districts": {
             "Eastern West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "36.53",
+              "Total Non-Priority NPA Amt": "36.53",
               "Sec Tot NPA Non No. Priorityrityrity": "39",
               "Other Amt (NPS)": "33.29",
               "Other No. (NPS)": "35",
@@ -11222,7 +11222,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "375.94",
+              "Total Non-Priority NPA Amt": "375.94",
               "Sec Tot NPA Non No. Priorityrityrity": "266",
               "Other Amt (NPS)": "253.93",
               "Other No. (NPS)": "171",
@@ -11234,7 +11234,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "593",
+              "Total Non-Priority NPA Amt": "593",
               "Sec Tot NPA Non No. Priorityrityrity": "203",
               "Other Amt (NPS)": "307.15",
               "Other No. (NPS)": "161",
@@ -11246,7 +11246,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "3576.74",
+              "Total Non-Priority NPA Amt": "3576.74",
               "Sec Tot NPA Non No. Priorityrityrity": "1896",
               "Other Amt (NPS)": "1982.7",
               "Other No. (NPS)": "1260",
@@ -11258,7 +11258,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "North Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "366.48",
+              "Total Non-Priority NPA Amt": "366.48",
               "Sec Tot NPA Non No. Priorityrityrity": "259",
               "Other Amt (NPS)": "174.36",
               "Other No. (NPS)": "142",
@@ -11270,7 +11270,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "Ri Bhoi": {
-              "Total Non-Priorityrityrityrity NPA Amt": "1415.14",
+              "Total Non-Priority NPA Amt": "1415.14",
               "Sec Tot NPA Non No. Priorityrityrity": "689",
               "Other Amt (NPS)": "1297.2",
               "Other No. (NPS)": "597",
@@ -11282,7 +11282,7 @@
               "Agriculture No. (NPS)": "2"
             },
             "South Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "226.2",
+              "Total Non-Priority NPA Amt": "226.2",
               "Sec Tot NPA Non No. Priorityrityrity": "159",
               "Other Amt (NPS)": "107.42",
               "Other No. (NPS)": "86",
@@ -11294,7 +11294,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "South West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "235.25",
+              "Total Non-Priority NPA Amt": "235.25",
               "Sec Tot NPA Non No. Priorityrityrity": "183",
               "Other Amt (NPS)": "176.18",
               "Other No. (NPS)": "137",
@@ -11306,7 +11306,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "South West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "63.44",
+              "Total Non-Priority NPA Amt": "63.44",
               "Sec Tot NPA Non No. Priorityrityrity": "26",
               "Other Amt (NPS)": "27.23",
               "Other No. (NPS)": "14",
@@ -11318,7 +11318,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "2662.14",
+              "Total Non-Priority NPA Amt": "2662.14",
               "Sec Tot NPA Non No. Priorityrityrity": "1633",
               "Other Amt (NPS)": "1504.69",
               "Other No. (NPS)": "985",
@@ -11330,7 +11330,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "461.17",
+              "Total Non-Priority NPA Amt": "461.17",
               "Sec Tot NPA Non No. Priorityrityrity": "304",
               "Other Amt (NPS)": "271.75",
               "Other No. (NPS)": "212",
@@ -11342,7 +11342,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "110.13",
+              "Total Non-Priority NPA Amt": "110.13",
               "Sec Tot NPA Non No. Priorityrityrity": "78",
               "Other Amt (NPS)": "79.72",
               "Other No. (NPS)": "44",
@@ -12087,7 +12087,7 @@
         "pmmy_mudra_os_npa": {
           "page": 89,
           "fields": [
-            "NPA Amt.% MUDRA",
+            "NPA Amt. % MUDRA",
             "Total MUDRA NPA Amt",
             "Total MUDRA NPA No.",
             "Total MUDRA O/S Amt",
@@ -12108,7 +12108,7 @@
           "num_districts": 1,
           "districts": {
             "Ri Bhoi": {
-              "NPA Amt.% MUDRA": "12.78",
+              "NPA Amt. % MUDRA": "12.78",
               "Total MUDRA NPA Amt": "681.35",
               "Total MUDRA NPA No.": "1264",
               "Total MUDRA O/S Amt": "5331.2",
@@ -15159,8 +15159,8 @@
         "non_ps_outstanding": {
           "page": 30,
           "fields": [
-            "NPS Amt.% NPA",
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "NPS Amt. % NPA",
+            "Total Non-Priority NPA Amt",
             "Tot NPA Priorityrityrity No. Sec Non",
             "Total NPS O/S Amt",
             "Total NPS O/S No.",
@@ -15178,8 +15178,8 @@
           "num_districts": 5,
           "districts": {
             "East Garo Hills": {
-              "NPS Amt.% NPA": "1.95",
-              "Total Non-Priorityrityrityrity NPA Amt": "520.49",
+              "NPS Amt. % NPA": "1.95",
+              "Total Non-Priority NPA Amt": "520.49",
               "Tot NPA Priorityrityrity No. Sec Non": "245",
               "Total NPS O/S Amt": "26683.49",
               "Total NPS O/S No.": "7338",
@@ -15195,8 +15195,8 @@
               "Agriculture No. (NPS)": "140"
             },
             "East Khasi Hills": {
-              "NPS Amt.% NPA": "0.52",
-              "Total Non-Priorityrityrityrity NPA Amt": "4215.65",
+              "NPS Amt. % NPA": "0.52",
+              "Total Non-Priority NPA Amt": "4215.65",
               "Tot NPA Priorityrityrity No. Sec Non": "2491",
               "Total NPS O/S Amt": "804421.01",
               "Total NPS O/S No.": "117988",
@@ -15212,8 +15212,8 @@
               "Agriculture No. (NPS)": "78"
             },
             "Ri Bhoi": {
-              "NPS Amt.% NPA": "1.3",
-              "Total Non-Priorityrityrityrity NPA Amt": "2168.3",
+              "NPS Amt. % NPA": "1.3",
+              "Total Non-Priority NPA Amt": "2168.3",
               "Tot NPA Priorityrityrity No. Sec Non": "1271",
               "Total NPS O/S Amt": "166540.05",
               "Total NPS O/S No.": "31303",
@@ -15229,8 +15229,8 @@
               "Agriculture No. (NPS)": "15"
             },
             "West Garo Hills": {
-              "NPS Amt.% NPA": "2.05",
-              "Total Non-Priorityrityrityrity NPA Amt": "2235.86",
+              "NPS Amt. % NPA": "2.05",
+              "Total Non-Priority NPA Amt": "2235.86",
               "Tot NPA Priorityrityrity No. Sec Non": "1432",
               "Total NPS O/S Amt": "109131.52",
               "Total NPS O/S No.": "29245",
@@ -15246,8 +15246,8 @@
               "Agriculture No. (NPS)": "247"
             },
             "West Khasi Hills": {
-              "NPS Amt.% NPA": "0.6",
-              "Total Non-Priorityrityrityrity NPA Amt": "91.76",
+              "NPS Amt. % NPA": "0.6",
+              "Total Non-Priority NPA Amt": "91.76",
               "Tot NPA Priorityrityrity No. Sec Non": "56",
               "Total NPS O/S Amt": "15270.57",
               "Total NPS O/S No.": "4332",
@@ -16367,7 +16367,7 @@
         "non_ps_npa": {
           "page": 62,
           "fields": [
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "Total Non-Priority NPA Amt",
             "Sec Tot NPA Non No. Priorityrityrity",
             "Other Amt (NPS)",
             "Other No. (NPS)",
@@ -16383,7 +16383,7 @@
           "num_districts": 12,
           "districts": {
             "Eastern West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "35.29",
+              "Total Non-Priority NPA Amt": "35.29",
               "Sec Tot NPA Non No. Priorityrityrity": "27",
               "Other Amt (NPS)": "24.24",
               "Other No. (NPS)": "22",
@@ -16397,7 +16397,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "520.49",
+              "Total Non-Priority NPA Amt": "520.49",
               "Sec Tot NPA Non No. Priorityrityrity": "245",
               "Other Amt (NPS)": "349.54",
               "Other No. (NPS)": "154",
@@ -16411,7 +16411,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "348.77",
+              "Total Non-Priority NPA Amt": "348.77",
               "Sec Tot NPA Non No. Priorityrityrity": "225",
               "Other Amt (NPS)": "292.78",
               "Other No. (NPS)": "177",
@@ -16425,7 +16425,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "East Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "4215.65",
+              "Total Non-Priority NPA Amt": "4215.65",
               "Sec Tot NPA Non No. Priorityrityrity": "2491",
               "Other Amt (NPS)": "3005.03",
               "Other No. (NPS)": "1869",
@@ -16439,7 +16439,7 @@
               "Agriculture No. (NPS)": "7"
             },
             "North Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "330.95",
+              "Total Non-Priority NPA Amt": "330.95",
               "Sec Tot NPA Non No. Priorityrityrity": "169",
               "Other Amt (NPS)": "146.32",
               "Other No. (NPS)": "64",
@@ -16453,7 +16453,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "Ri Bhoi": {
-              "Total Non-Priorityrityrityrity NPA Amt": "2168.3",
+              "Total Non-Priority NPA Amt": "2168.3",
               "Sec Tot NPA Non No. Priorityrityrity": "1271",
               "Other Amt (NPS)": "1973.58",
               "Other No. (NPS)": "1192",
@@ -16467,7 +16467,7 @@
               "Agriculture No. (NPS)": "4"
             },
             "South Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "233.87",
+              "Total Non-Priority NPA Amt": "233.87",
               "Sec Tot NPA Non No. Priorityrityrity": "132",
               "Other Amt (NPS)": "109.6",
               "Other No. (NPS)": "55",
@@ -16481,7 +16481,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "234.74",
+              "Total Non-Priority NPA Amt": "234.74",
               "Sec Tot NPA Non No. Priorityrityrity": "169",
               "Other Amt (NPS)": "172.66",
               "Other No. (NPS)": "123",
@@ -16495,7 +16495,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "23.78",
+              "Total Non-Priority NPA Amt": "23.78",
               "Sec Tot NPA Non No. Priorityrityrity": "14",
               "Other Amt (NPS)": "21.42",
               "Other No. (NPS)": "10",
@@ -16509,7 +16509,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "2235.86",
+              "Total Non-Priority NPA Amt": "2235.86",
               "Sec Tot NPA Non No. Priorityrityrity": "1432",
               "Other Amt (NPS)": "962.02",
               "Other No. (NPS)": "693",
@@ -16523,7 +16523,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "West Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "483.45",
+              "Total Non-Priority NPA Amt": "483.45",
               "Sec Tot NPA Non No. Priorityrityrity": "382",
               "Other Amt (NPS)": "346.84",
               "Other No. (NPS)": "285",
@@ -16537,7 +16537,7 @@
               "Agriculture No. (NPS)": "11"
             },
             "West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "91.76",
+              "Total Non-Priority NPA Amt": "91.76",
               "Sec Tot NPA Non No. Priorityrityrity": "56",
               "Other Amt (NPS)": "75.72",
               "Other No. (NPS)": "31",
@@ -16875,7 +16875,7 @@
             "AH Outstanding Amt",
             "Total AH KCC No.",
             "KCC Animal Husbandry Disbursed Amt",
-            "KCC Animal Husbandry Issued No.",
+            "KCC Animal Husbandry New Issued No.",
             "KCC Card Activated",
             "RuPay Card Issued No.",
             "Total KCC O/S Amt",
@@ -16895,7 +16895,7 @@
               "AH Outstanding Amt": "88.16",
               "Total AH KCC No.": "104",
               "KCC Animal Husbandry Disbursed Amt": "14.44",
-              "KCC Animal Husbandry Issued No.": "20",
+              "KCC Animal Husbandry New Issued No.": "20",
               "KCC Card Activated": "4673",
               "RuPay Card Issued No.": "11662",
               "Total KCC O/S Amt": "21465.13",
@@ -17470,7 +17470,7 @@
         "pmmy_mudra_os_npa": {
           "page": 87,
           "fields": [
-            "NPA Amt.% MUDRA",
+            "NPA Amt. % MUDRA",
             "Total MUDRA NPA Amt",
             "Total MUDRA NPA No.",
             "Total MUDRA O/S Amt",
@@ -17491,7 +17491,7 @@
           "num_districts": 1,
           "districts": {
             "Ri Bhoi": {
-              "NPA Amt.% MUDRA": "8.71",
+              "NPA Amt. % MUDRA": "8.71",
               "Total MUDRA NPA Amt": "550.54",
               "Total MUDRA NPA No.": "818",
               "Total MUDRA O/S Amt": "6322.26",
@@ -19769,81 +19769,81 @@
           "fields": [
             "Agriculture",
             "Msme",
-            "Other Priorityrityrityrity Sectors",
+            "Other Priority Sectors",
             "Loan to Weaker Section",
-            "Total Priorityrityrityrity Sector"
+            "Total Priority Sector"
           ],
           "num_districts": 10,
           "districts": {
             "East Garo Hills": {
               "Agriculture": "6452",
               "Msme": "1034",
-              "Other Priorityrityrityrity Sectors": "144",
+              "Other Priority Sectors": "144",
               "Loan to Weaker Section": "580",
-              "Total Priorityrityrityrity Sector": "7630"
+              "Total Priority Sector": "7630"
             },
             "East Jaintia Hills": {
               "Agriculture": "1871",
               "Msme": "1838",
-              "Other Priorityrityrityrity Sectors": "140",
+              "Other Priority Sectors": "140",
               "Loan to Weaker Section": "1234",
-              "Total Priorityrityrityrity Sector": "3849"
+              "Total Priority Sector": "3849"
             },
             "East Khasi Hills": {
               "Agriculture": "38449",
               "Msme": "34545",
-              "Other Priorityrityrityrity Sectors": "16028",
+              "Other Priority Sectors": "16028",
               "Loan to Weaker Section": "52051",
-              "Total Priorityrityrityrity Sector": "89022"
+              "Total Priority Sector": "89022"
             },
             "North Garo Hills": {
               "Agriculture": "8584",
               "Msme": "483",
-              "Other Priorityrityrityrity Sectors": "184",
+              "Other Priority Sectors": "184",
               "Loan to Weaker Section": "230",
-              "Total Priorityrityrityrity Sector": "9251"
+              "Total Priority Sector": "9251"
             },
             "South Garo Hills": {
               "Agriculture": "2713",
               "Msme": "413",
-              "Other Priorityrityrityrity Sectors": "90",
+              "Other Priority Sectors": "90",
               "Loan to Weaker Section": "222",
-              "Total Priorityrityrityrity Sector": "3216"
+              "Total Priority Sector": "3216"
             },
             "South West Garo Hills": {
               "Agriculture": "6391",
               "Msme": "941",
-              "Other Priorityrityrityrity Sectors": "222",
+              "Other Priority Sectors": "222",
               "Loan to Weaker Section": "803",
-              "Total Priorityrityrityrity Sector": "7554"
+              "Total Priority Sector": "7554"
             },
             "South West Khasi Hills": {
               "Agriculture": "2269",
               "Msme": "643",
-              "Other Priorityrityrityrity Sectors": "105",
+              "Other Priority Sectors": "105",
               "Loan to Weaker Section": "1860",
-              "Total Priorityrityrityrity Sector": "3017"
+              "Total Priority Sector": "3017"
             },
             "West Garo Hills": {
               "Agriculture": "14761",
               "Msme": "5399",
-              "Other Priorityrityrityrity Sectors": "918",
+              "Other Priority Sectors": "918",
               "Loan to Weaker Section": "3400",
-              "Total Priorityrityrityrity Sector": "21078"
+              "Total Priority Sector": "21078"
             },
             "West Jaintia Hills": {
               "Agriculture": "7118",
               "Msme": "4791",
-              "Other Priorityrityrityrity Sectors": "2943",
+              "Other Priority Sectors": "2943",
               "Loan to Weaker Section": "4184",
-              "Total Priorityrityrityrity Sector": "14852"
+              "Total Priority Sector": "14852"
             },
             "West Khasi Hills": {
               "Agriculture": "16455",
               "Msme": "3132",
-              "Other Priorityrityrityrity Sectors": "607",
+              "Other Priority Sectors": "607",
               "Loan to Weaker Section": "7806",
-              "Total Priorityrityrityrity Sector": "20194"
+              "Total Priority Sector": "20194"
             }
           }
         },
@@ -21200,64 +21200,64 @@
           "fields": [
             "Outstanding No.",
             "Outstanding Amt",
-            "Disbursed No.",
-            "Disbursed Amt"
+            "CY Disbursed No.",
+            "CY Disbursed Amt"
           ],
           "num_districts": 9,
           "districts": {
             "East Garo Hills": {
               "Outstanding No.": "3336",
               "Outstanding Amt": "4401.39",
-              "Disbursed No.": "227",
-              "Disbursed Amt": "288.11"
+              "CY Disbursed No.": "227",
+              "CY Disbursed Amt": "288.11"
             },
             "East Khasi Hills": {
               "Outstanding No.": "63811",
               "Outstanding Amt": "106976.38",
-              "Disbursed No.": "3850",
-              "Disbursed Amt": "5661.23"
+              "CY Disbursed No.": "3850",
+              "CY Disbursed Amt": "5661.23"
             },
             "North Garo Hills": {
               "Outstanding No.": "2702",
               "Outstanding Amt": "3319.47",
-              "Disbursed No.": "147",
-              "Disbursed Amt": "93.44"
+              "CY Disbursed No.": "147",
+              "CY Disbursed Amt": "93.44"
             },
             "Ri Bhoi": {
               "Outstanding No.": "18214",
               "Outstanding Amt": "24876.85",
-              "Disbursed No.": "732",
-              "Disbursed Amt": "738.33"
+              "CY Disbursed No.": "732",
+              "CY Disbursed Amt": "738.33"
             },
             "South Garo Hills": {
               "Outstanding No.": "639",
               "Outstanding Amt": "1748.7",
-              "Disbursed No.": "78",
-              "Disbursed Amt": "88.49"
+              "CY Disbursed No.": "78",
+              "CY Disbursed Amt": "88.49"
             },
             "South West Garo Hills": {
               "Outstanding No.": "3141",
               "Outstanding Amt": "3380.87",
-              "Disbursed No.": "268",
-              "Disbursed Amt": "228.65"
+              "CY Disbursed No.": "268",
+              "CY Disbursed Amt": "228.65"
             },
             "South West Khasi Hills": {
               "Outstanding No.": "1729",
               "Outstanding Amt": "2070.81",
-              "Disbursed No.": "76",
-              "Disbursed Amt": "109.37"
+              "CY Disbursed No.": "76",
+              "CY Disbursed Amt": "109.37"
             },
             "West Garo Hills": {
               "Outstanding No.": "10264",
               "Outstanding Amt": "21135.04",
-              "Disbursed No.": "833",
-              "Disbursed Amt": "1084.54"
+              "CY Disbursed No.": "833",
+              "CY Disbursed Amt": "1084.54"
             },
             "West Khasi Hills": {
               "Outstanding No.": "9195",
               "Outstanding Amt": "10379.74",
-              "Disbursed No.": "304",
-              "Disbursed Amt": "386.83"
+              "CY Disbursed No.": "304",
+              "CY Disbursed Amt": "386.83"
             }
           }
         },
@@ -22978,8 +22978,8 @@
         "non_ps_outstanding": {
           "page": 29,
           "fields": [
-            "NPS Amt.% NPA",
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "NPS Amt. % NPA",
+            "Total Non-Priority NPA Amt",
             "Tot NPA Priorityrityrity No. Sec Non",
             "Total NPS O/S Amt",
             "Total NPS O/S No.",
@@ -22997,8 +22997,8 @@
           "num_districts": 5,
           "districts": {
             "East Garo Hills": {
-              "NPS Amt.% NPA": "1.98",
-              "Total Non-Priorityrityrityrity NPA Amt": "313.91",
+              "NPS Amt. % NPA": "1.98",
+              "Total Non-Priority NPA Amt": "313.91",
               "Tot NPA Priorityrityrity No. Sec Non": "260",
               "Total NPS O/S Amt": "15843.4",
               "Total NPS O/S No.": "5405",
@@ -23014,8 +23014,8 @@
               "Agriculture No. (NPS)": "4"
             },
             "East Khasi Hills": {
-              "NPS Amt.% NPA": "14.17",
-              "Total Non-Priorityrityrityrity NPA Amt": "69290.14",
+              "NPS Amt. % NPA": "14.17",
+              "Total Non-Priority NPA Amt": "69290.14",
               "Tot NPA Priorityrityrity No. Sec Non": "1895",
               "Total NPS O/S Amt": "488832.44",
               "Total NPS O/S No.": "78828",
@@ -23031,8 +23031,8 @@
               "Agriculture No. (NPS)": "9"
             },
             "Ri Bhoi": {
-              "NPS Amt.% NPA": "0.98",
-              "Total Non-Priorityrityrityrity NPA Amt": "867.26",
+              "NPS Amt. % NPA": "0.98",
+              "Total Non-Priority NPA Amt": "867.26",
               "Tot NPA Priorityrityrity No. Sec Non": "388",
               "Total NPS O/S Amt": "88618.05",
               "Total NPS O/S No.": "22276",
@@ -23048,8 +23048,8 @@
               "Agriculture No. (NPS)": "9"
             },
             "West Garo Hills": {
-              "NPS Amt.% NPA": "1.82",
-              "Total Non-Priorityrityrityrity NPA Amt": "1141.8",
+              "NPS Amt. % NPA": "1.82",
+              "Total Non-Priority NPA Amt": "1141.8",
               "Tot NPA Priorityrityrity No. Sec Non": "594",
               "Total NPS O/S Amt": "62811.02",
               "Total NPS O/S No.": "19983",
@@ -23065,8 +23065,8 @@
               "Agriculture No. (NPS)": "13"
             },
             "West Khasi Hills": {
-              "NPS Amt.% NPA": "1.25",
-              "Total Non-Priorityrityrityrity NPA Amt": "122.11",
+              "NPS Amt. % NPA": "1.25",
+              "Total Non-Priority NPA Amt": "122.11",
               "Tot NPA Priorityrityrity No. Sec Non": "70",
               "Total NPS O/S Amt": "9767.73",
               "Total NPS O/S No.": "3883",
@@ -24299,7 +24299,7 @@
         "non_ps_npa": {
           "page": 60,
           "fields": [
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "Total Non-Priority NPA Amt",
             "Sec Tot NPA Non No. Priorityrityrity",
             "Other Amt (NPS)",
             "Other No. (NPS)",
@@ -24313,7 +24313,7 @@
           "num_districts": 12,
           "districts": {
             "Eastern West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "20.23",
+              "Total Non-Priority NPA Amt": "20.23",
               "Sec Tot NPA Non No. Priorityrityrity": "26",
               "Other Amt (NPS)": "18.43",
               "Other No. (NPS)": "20",
@@ -24325,7 +24325,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "313.91",
+              "Total Non-Priority NPA Amt": "313.91",
               "Sec Tot NPA Non No. Priorityrityrity": "260",
               "Other Amt (NPS)": "154.26",
               "Other No. (NPS)": "156",
@@ -24337,7 +24337,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "329.84",
+              "Total Non-Priority NPA Amt": "329.84",
               "Sec Tot NPA Non No. Priorityrityrity": "78",
               "Other Amt (NPS)": "54.82",
               "Other No. (NPS)": "44",
@@ -24349,7 +24349,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "69290.14",
+              "Total Non-Priority NPA Amt": "69290.14",
               "Sec Tot NPA Non No. Priorityrityrity": "1895",
               "Other Amt (NPS)": "68508.45",
               "Other No. (NPS)": "1418",
@@ -24361,7 +24361,7 @@
               "Agriculture No. (NPS)": "2"
             },
             "North Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "339.03",
+              "Total Non-Priority NPA Amt": "339.03",
               "Sec Tot NPA Non No. Priorityrityrity": "261",
               "Other Amt (NPS)": "125.43",
               "Other No. (NPS)": "143",
@@ -24373,7 +24373,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "Ri Bhoi": {
-              "Total Non-Priorityrityrityrity NPA Amt": "867.26",
+              "Total Non-Priority NPA Amt": "867.26",
               "Sec Tot NPA Non No. Priorityrityrity": "388",
               "Other Amt (NPS)": "629.29",
               "Other No. (NPS)": "318",
@@ -24385,7 +24385,7 @@
               "Agriculture No. (NPS)": "2"
             },
             "South Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "182.69",
+              "Total Non-Priority NPA Amt": "182.69",
               "Sec Tot NPA Non No. Priorityrityrity": "158",
               "Other Amt (NPS)": "61.63",
               "Other No. (NPS)": "88",
@@ -24397,7 +24397,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "197.58",
+              "Total Non-Priority NPA Amt": "197.58",
               "Sec Tot NPA Non No. Priorityrityrity": "147",
               "Other Amt (NPS)": "128.97",
               "Other No. (NPS)": "100",
@@ -24409,7 +24409,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "74.37",
+              "Total Non-Priority NPA Amt": "74.37",
               "Sec Tot NPA Non No. Priorityrityrity": "38",
               "Other Amt (NPS)": "42.57",
               "Other No. (NPS)": "26",
@@ -24421,7 +24421,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "1141.8",
+              "Total Non-Priority NPA Amt": "1141.8",
               "Sec Tot NPA Non No. Priorityrityrity": "594",
               "Other Amt (NPS)": "592.46",
               "Other No. (NPS)": "284",
@@ -24433,7 +24433,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "328.79",
+              "Total Non-Priority NPA Amt": "328.79",
               "Sec Tot NPA Non No. Priorityrityrity": "213",
               "Other Amt (NPS)": "118.94",
               "Other No. (NPS)": "87",
@@ -24445,7 +24445,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "122.11",
+              "Total Non-Priority NPA Amt": "122.11",
               "Sec Tot NPA Non No. Priorityrityrity": "70",
               "Other Amt (NPS)": "62.15",
               "Other No. (NPS)": "31",
@@ -25158,7 +25158,7 @@
         "pmmy_mudra_os_npa": {
           "page": 82,
           "fields": [
-            "NPA Amt.% MUDRA",
+            "NPA Amt. % MUDRA",
             "Total MUDRA NPA Amt",
             "Total MUDRA NPA No.",
             "Total MUDRA O/S Amt",
@@ -25179,7 +25179,7 @@
           "num_districts": 1,
           "districts": {
             "Ri Bhoi": {
-              "NPA Amt.% MUDRA": "15.16",
+              "NPA Amt. % MUDRA": "15.16",
               "Total MUDRA NPA Amt": "709.76",
               "Total MUDRA NPA No.": "952",
               "Total MUDRA O/S Amt": "4683.01",
@@ -28248,8 +28248,8 @@
         "non_ps_outstanding": {
           "page": 36,
           "fields": [
-            "NPS Amt.% NPA",
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "NPS Amt. % NPA",
+            "Total Non-Priority NPA Amt",
             "Tot NPA Priorityrityrity No. Sec Non",
             "Total NPS O/S Amt",
             "Total NPS O/S No.",
@@ -28267,8 +28267,8 @@
           "num_districts": 5,
           "districts": {
             "East Garo Hills": {
-              "NPS Amt.% NPA": "1.67",
-              "Total Non-Priorityrityrityrity NPA Amt": "433.21",
+              "NPS Amt. % NPA": "1.67",
+              "Total Non-Priority NPA Amt": "433.21",
               "Tot NPA Priorityrityrity No. Sec Non": "214",
               "Total NPS O/S Amt": "25972.43",
               "Total NPS O/S No.": "6856",
@@ -28284,8 +28284,8 @@
               "Agriculture No. (NPS)": "75"
             },
             "East Khasi Hills": {
-              "NPS Amt.% NPA": "0.51",
-              "Total Non-Priorityrityrityrity NPA Amt": "4149.75",
+              "NPS Amt. % NPA": "0.51",
+              "Total Non-Priority NPA Amt": "4149.75",
               "Tot NPA Priorityrityrity No. Sec Non": "2329",
               "Total NPS O/S Amt": "818459.76",
               "Total NPS O/S No.": "110841",
@@ -28301,8 +28301,8 @@
               "Agriculture No. (NPS)": "57"
             },
             "Ri Bhoi": {
-              "NPS Amt.% NPA": "1.04",
-              "Total Non-Priorityrityrityrity NPA Amt": "1654.57",
+              "NPS Amt. % NPA": "1.04",
+              "Total Non-Priority NPA Amt": "1654.57",
               "Tot NPA Priorityrityrity No. Sec Non": "1139",
               "Total NPS O/S Amt": "158573.47",
               "Total NPS O/S No.": "29656",
@@ -28318,8 +28318,8 @@
               "Agriculture No. (NPS)": "15"
             },
             "West Garo Hills": {
-              "NPS Amt.% NPA": "2.29",
-              "Total Non-Priorityrityrityrity NPA Amt": "2385.53",
+              "NPS Amt. % NPA": "2.29",
+              "Total Non-Priority NPA Amt": "2385.53",
               "Tot NPA Priorityrityrity No. Sec Non": "1335",
               "Total NPS O/S Amt": "104207.12",
               "Total NPS O/S No.": "27267",
@@ -28335,8 +28335,8 @@
               "Agriculture No. (NPS)": "141"
             },
             "West Khasi Hills": {
-              "NPS Amt.% NPA": "0.74",
-              "Total Non-Priorityrityrityrity NPA Amt": "107.52",
+              "NPS Amt. % NPA": "0.74",
+              "Total Non-Priority NPA Amt": "107.52",
               "Tot NPA Priorityrityrity No. Sec Non": "68",
               "Total NPS O/S Amt": "14586.49",
               "Total NPS O/S No.": "4119",
@@ -28366,7 +28366,7 @@
             "Amount Achv% Agri(PS)",
             "Agri Amount Achieved (PS)",
             "Agri Achieved No. (PS)",
-            "Agri Target Amt (PS)",
+            "Agri Target Amount (PS)",
             "Agri Target No. (PS)"
           ],
           "num_districts": 9,
@@ -28382,7 +28382,7 @@
               "Amount Achv% Agri(PS)": "6.09",
               "Agri Amount Achieved (PS)": "540",
               "Agri Achieved No. (PS)": "748",
-              "Agri Target Amt (PS)": "8871.2",
+              "Agri Target Amount (PS)": "8871.2",
               "Agri Target No. (PS)": "16766"
             },
             "East Jaintia Hills": {
@@ -28396,7 +28396,7 @@
               "Amount Achv% Agri(PS)": "8.76",
               "Agri Amount Achieved (PS)": "221.53",
               "Agri Achieved No. (PS)": "205",
-              "Agri Target Amt (PS)": "2528",
+              "Agri Target Amount (PS)": "2528",
               "Agri Target No. (PS)": "1598"
             },
             "East Khasi Hills": {
@@ -28410,7 +28410,7 @@
               "Amount Achv% Agri(PS)": "29.06",
               "Agri Amount Achieved (PS)": "4461.78",
               "Agri Achieved No. (PS)": "3292",
-              "Agri Target Amt (PS)": "15354",
+              "Agri Target Amount (PS)": "15354",
               "Agri Target No. (PS)": "16826"
             },
             "North Garo Hills": {
@@ -28424,7 +28424,7 @@
               "Amount Achv% Agri(PS)": "7.01",
               "Agri Amount Achieved (PS)": "396.1",
               "Agri Achieved No. (PS)": "542",
-              "Agri Target Amt (PS)": "5648.27",
+              "Agri Target Amount (PS)": "5648.27",
               "Agri Target No. (PS)": "10130"
             },
             "Ri Bhoi": {
@@ -28438,7 +28438,7 @@
               "Amount Achv% Agri(PS)": "14.42",
               "Agri Amount Achieved (PS)": "2904.19",
               "Agri Achieved No. (PS)": "3413",
-              "Agri Target Amt (PS)": "20141.18",
+              "Agri Target Amount (PS)": "20141.18",
               "Agri Target No. (PS)": "22888"
             },
             "South Garo Hills": {
@@ -28452,7 +28452,7 @@
               "Amount Achv% Agri(PS)": "2.64",
               "Agri Amount Achieved (PS)": "120.82",
               "Agri Achieved No. (PS)": "217",
-              "Agri Target Amt (PS)": "4577",
+              "Agri Target Amount (PS)": "4577",
               "Agri Target No. (PS)": "4009"
             },
             "West Garo Hills": {
@@ -28466,7 +28466,7 @@
               "Amount Achv% Agri(PS)": "10.66",
               "Agri Amount Achieved (PS)": "2143.17",
               "Agri Achieved No. (PS)": "1701",
-              "Agri Target Amt (PS)": "20103.46",
+              "Agri Target Amount (PS)": "20103.46",
               "Agri Target No. (PS)": "21250"
             },
             "West Jaintia Hills": {
@@ -28480,7 +28480,7 @@
               "Amount Achv% Agri(PS)": "8.9",
               "Agri Amount Achieved (PS)": "665.51",
               "Agri Achieved No. (PS)": "737",
-              "Agri Target Amt (PS)": "7476",
+              "Agri Target Amount (PS)": "7476",
               "Agri Target No. (PS)": "6484"
             },
             "West Khasi Hills": {
@@ -28494,7 +28494,7 @@
               "Amount Achv% Agri(PS)": "10.67",
               "Agri Amount Achieved (PS)": "547.25",
               "Agri Achieved No. (PS)": "816",
-              "Agri Target Amt (PS)": "5128",
+              "Agri Target Amount (PS)": "5128",
               "Agri Target No. (PS)": "6991"
             }
           }
@@ -29568,7 +29568,7 @@
         "non_ps_npa": {
           "page": 68,
           "fields": [
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "Total Non-Priority NPA Amt",
             "Sec Tot NPA Non No. Priorityrityrity",
             "Other Amt (NPS)",
             "Other No. (NPS)",
@@ -29582,7 +29582,7 @@
           "num_districts": 12,
           "districts": {
             "Eastern West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "47.67",
+              "Total Non-Priority NPA Amt": "47.67",
               "Sec Tot NPA Non No. Priorityrityrity": "29",
               "Other Amt (NPS)": "35.02",
               "Other No. (NPS)": "23",
@@ -29594,7 +29594,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "433.21",
+              "Total Non-Priority NPA Amt": "433.21",
               "Sec Tot NPA Non No. Priorityrityrity": "214",
               "Other Amt (NPS)": "284.26",
               "Other No. (NPS)": "122",
@@ -29606,7 +29606,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "243.15",
+              "Total Non-Priority NPA Amt": "243.15",
               "Sec Tot NPA Non No. Priorityrityrity": "192",
               "Other Amt (NPS)": "185.52",
               "Other No. (NPS)": "152",
@@ -29618,7 +29618,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "4149.75",
+              "Total Non-Priority NPA Amt": "4149.75",
               "Sec Tot NPA Non No. Priorityrityrity": "2329",
               "Other Amt (NPS)": "2648.59",
               "Other No. (NPS)": "1759",
@@ -29630,7 +29630,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "North Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "339",
+              "Total Non-Priority NPA Amt": "339",
               "Sec Tot NPA Non No. Priorityrityrity": "167",
               "Other Amt (NPS)": "152.17",
               "Other No. (NPS)": "62",
@@ -29642,7 +29642,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "Ri Bhoi": {
-              "Total Non-Priorityrityrityrity NPA Amt": "1654.57",
+              "Total Non-Priority NPA Amt": "1654.57",
               "Sec Tot NPA Non No. Priorityrityrity": "1139",
               "Other Amt (NPS)": "1534.88",
               "Other No. (NPS)": "1081",
@@ -29654,7 +29654,7 @@
               "Agriculture No. (NPS)": "2"
             },
             "South Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "299.41",
+              "Total Non-Priority NPA Amt": "299.41",
               "Sec Tot NPA Non No. Priorityrityrity": "145",
               "Other Amt (NPS)": "161.23",
               "Other No. (NPS)": "68",
@@ -29666,7 +29666,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "253.57",
+              "Total Non-Priority NPA Amt": "253.57",
               "Sec Tot NPA Non No. Priorityrityrity": "156",
               "Other Amt (NPS)": "200.51",
               "Other No. (NPS)": "116",
@@ -29678,7 +29678,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "10.67",
+              "Total Non-Priority NPA Amt": "10.67",
               "Sec Tot NPA Non No. Priorityrityrity": "15",
               "Other Amt (NPS)": "3.08",
               "Other No. (NPS)": "10",
@@ -29690,7 +29690,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "2385.53",
+              "Total Non-Priority NPA Amt": "2385.53",
               "Sec Tot NPA Non No. Priorityrityrity": "1335",
               "Other Amt (NPS)": "1118.98",
               "Other No. (NPS)": "641",
@@ -29702,7 +29702,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "458.4",
+              "Total Non-Priority NPA Amt": "458.4",
               "Sec Tot NPA Non No. Priorityrityrity": "317",
               "Other Amt (NPS)": "300.91",
               "Other No. (NPS)": "229",
@@ -29714,7 +29714,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "107.52",
+              "Total Non-Priority NPA Amt": "107.52",
               "Sec Tot NPA Non No. Priorityrityrity": "68",
               "Other Amt (NPS)": "82.35",
               "Other No. (NPS)": "37",
@@ -30459,7 +30459,7 @@
         "pmmy_mudra_os_npa": {
           "page": 91,
           "fields": [
-            "NPA Amt.% MUDRA",
+            "NPA Amt. % MUDRA",
             "Total MUDRA NPA Amt",
             "Total MUDRA NPA No.",
             "Total MUDRA O/S Amt",
@@ -30480,7 +30480,7 @@
           "num_districts": 1,
           "districts": {
             "Ri Bhoi": {
-              "NPA Amt.% MUDRA": "9.32",
+              "NPA Amt. % MUDRA": "9.32",
               "Total MUDRA NPA Amt": "531.27",
               "Total MUDRA NPA No.": "1042",
               "Total MUDRA O/S Amt": "5702.32",
@@ -33424,8 +33424,8 @@
         "non_ps_outstanding": {
           "page": 34,
           "fields": [
-            "NPS Amt.% NPA",
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "NPS Amt. % NPA",
+            "Total Non-Priority NPA Amt",
             "Tot NPA Priorityrityrity No. Sec Non",
             "Total NPS O/S Amt",
             "Total NPS O/S No.",
@@ -33443,8 +33443,8 @@
           "num_districts": 9,
           "districts": {
             "East Garo Hills": {
-              "NPS Amt.% NPA": "1.82",
-              "Total Non-Priorityrityrityrity NPA Amt": "457.03",
+              "NPS Amt. % NPA": "1.82",
+              "Total Non-Priority NPA Amt": "457.03",
               "Tot NPA Priorityrityrity No. Sec Non": "236",
               "Total NPS O/S Amt": "25106.29",
               "Total NPS O/S No.": "7048",
@@ -33460,8 +33460,8 @@
               "Agriculture No. (NPS)": "144"
             },
             "East Jaintia Hills": {
-              "NPS Amt.% NPA": "1.31",
-              "Total Non-Priorityrityrityrity NPA Amt": "245.81",
+              "NPS Amt. % NPA": "1.31",
+              "Total Non-Priority NPA Amt": "245.81",
               "Tot NPA Priorityrityrity No. Sec Non": "182",
               "Total NPS O/S Amt": "18831.7",
               "Total NPS O/S No.": "6034",
@@ -33477,8 +33477,8 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Khasi Hills": {
-              "NPS Amt.% NPA": "0.54",
-              "Total Non-Priorityrityrityrity NPA Amt": "3858.35",
+              "NPS Amt. % NPA": "0.54",
+              "Total Non-Priority NPA Amt": "3858.35",
               "Tot NPA Priorityrityrity No. Sec Non": "2394",
               "Total NPS O/S Amt": "720697.52",
               "Total NPS O/S No.": "112317",
@@ -33494,8 +33494,8 @@
               "Agriculture No. (NPS)": "60"
             },
             "North Garo Hills": {
-              "NPS Amt.% NPA": "1.42",
-              "Total Non-Priorityrityrityrity NPA Amt": "319.81",
+              "NPS Amt. % NPA": "1.42",
+              "Total Non-Priority NPA Amt": "319.81",
               "Tot NPA Priorityrityrity No. Sec Non": "154",
               "Total NPS O/S Amt": "22562.96",
               "Total NPS O/S No.": "5381",
@@ -33511,8 +33511,8 @@
               "Agriculture No. (NPS)": "0"
             },
             "Ri Bhoi": {
-              "NPS Amt.% NPA": "1.5",
-              "Total Non-Priorityrityrityrity NPA Amt": "2244.46",
+              "NPS Amt. % NPA": "1.5",
+              "Total Non-Priority NPA Amt": "2244.46",
               "Tot NPA Priorityrityrity No. Sec Non": "1152",
               "Total NPS O/S Amt": "149190.53",
               "Total NPS O/S No.": "29281",
@@ -33528,8 +33528,8 @@
               "Agriculture No. (NPS)": "8"
             },
             "South Garo Hills": {
-              "NPS Amt.% NPA": "1.77",
-              "Total Non-Priorityrityrityrity NPA Amt": "218.27",
+              "NPS Amt. % NPA": "1.77",
+              "Total Non-Priority NPA Amt": "218.27",
               "Tot NPA Priorityrityrity No. Sec Non": "136",
               "Total NPS O/S Amt": "12316.22",
               "Total NPS O/S No.": "2492",
@@ -33545,8 +33545,8 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Garo Hills": {
-              "NPS Amt.% NPA": "2.14",
-              "Total Non-Priorityrityrityrity NPA Amt": "2351.8",
+              "NPS Amt. % NPA": "2.14",
+              "Total Non-Priority NPA Amt": "2351.8",
               "Tot NPA Priorityrityrity No. Sec Non": "1553",
               "Total NPS O/S Amt": "110096.83",
               "Total NPS O/S No.": "28390",
@@ -33562,8 +33562,8 @@
               "Agriculture No. (NPS)": "254"
             },
             "West Jaintia Hills": {
-              "NPS Amt.% NPA": "0.99",
-              "Total Non-Priorityrityrityrity NPA Amt": "449.51",
+              "NPS Amt. % NPA": "0.99",
+              "Total Non-Priority NPA Amt": "449.51",
               "Tot NPA Priorityrityrity No. Sec Non": "320",
               "Total NPS O/S Amt": "45527.77",
               "Total NPS O/S No.": "11408",
@@ -33579,8 +33579,8 @@
               "Agriculture No. (NPS)": "219"
             },
             "West Khasi Hills": {
-              "NPS Amt.% NPA": "0.63",
-              "Total Non-Priorityrityrityrity NPA Amt": "98.37",
+              "NPS Amt. % NPA": "0.63",
+              "Total Non-Priority NPA Amt": "98.37",
               "Tot NPA Priorityrityrity No. Sec Non": "58",
               "Total NPS O/S Amt": "15516.08",
               "Total NPS O/S No.": "4165",
@@ -34790,7 +34790,7 @@
         "non_ps_npa": {
           "page": 66,
           "fields": [
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "Total Non-Priority NPA Amt",
             "Sec Tot NPA Non No. Priorityrityrity",
             "Other Amt (NPS)",
             "Other No. (NPS)",
@@ -34806,7 +34806,7 @@
           "num_districts": 12,
           "districts": {
             "Eastern West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "29.63",
+              "Total Non-Priority NPA Amt": "29.63",
               "Sec Tot NPA Non No. Priorityrityrity": "31",
               "Other Amt (NPS)": "19.16",
               "Other No. (NPS)": "26",
@@ -34820,7 +34820,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "457.03",
+              "Total Non-Priority NPA Amt": "457.03",
               "Sec Tot NPA Non No. Priorityrityrity": "236",
               "Other Amt (NPS)": "234.99",
               "Other No. (NPS)": "132",
@@ -34834,7 +34834,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "245.81",
+              "Total Non-Priority NPA Amt": "245.81",
               "Sec Tot NPA Non No. Priorityrityrity": "182",
               "Other Amt (NPS)": "189.61",
               "Other No. (NPS)": "139",
@@ -34848,7 +34848,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "3858.35",
+              "Total Non-Priority NPA Amt": "3858.35",
               "Sec Tot NPA Non No. Priorityrityrity": "2394",
               "Other Amt (NPS)": "2743.48",
               "Other No. (NPS)": "1834",
@@ -34862,7 +34862,7 @@
               "Agriculture No. (NPS)": "9"
             },
             "North Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "319.81",
+              "Total Non-Priority NPA Amt": "319.81",
               "Sec Tot NPA Non No. Priorityrityrity": "154",
               "Other Amt (NPS)": "97.97",
               "Other No. (NPS)": "51",
@@ -34876,7 +34876,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "Ri Bhoi": {
-              "Total Non-Priorityrityrityrity NPA Amt": "2244.46",
+              "Total Non-Priority NPA Amt": "2244.46",
               "Sec Tot NPA Non No. Priorityrityrity": "1152",
               "Other Amt (NPS)": "2097.64",
               "Other No. (NPS)": "1081",
@@ -34890,7 +34890,7 @@
               "Agriculture No. (NPS)": "2"
             },
             "South Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "218.27",
+              "Total Non-Priority NPA Amt": "218.27",
               "Sec Tot NPA Non No. Priorityrityrity": "136",
               "Other Amt (NPS)": "82.55",
               "Other No. (NPS)": "55",
@@ -34904,7 +34904,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "249.16",
+              "Total Non-Priority NPA Amt": "249.16",
               "Sec Tot NPA Non No. Priorityrityrity": "168",
               "Other Amt (NPS)": "187.83",
               "Other No. (NPS)": "123",
@@ -34918,7 +34918,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "19.86",
+              "Total Non-Priority NPA Amt": "19.86",
               "Sec Tot NPA Non No. Priorityrityrity": "14",
               "Other Amt (NPS)": "18.12",
               "Other No. (NPS)": "11",
@@ -34932,7 +34932,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "2351.8",
+              "Total Non-Priority NPA Amt": "2351.8",
               "Sec Tot NPA Non No. Priorityrityrity": "1553",
               "Other Amt (NPS)": "1175.87",
               "Other No. (NPS)": "897",
@@ -34946,7 +34946,7 @@
               "Agriculture No. (NPS)": "8"
             },
             "West Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "449.51",
+              "Total Non-Priority NPA Amt": "449.51",
               "Sec Tot NPA Non No. Priorityrityrity": "320",
               "Other Amt (NPS)": "303.19",
               "Other No. (NPS)": "228",
@@ -34960,7 +34960,7 @@
               "Agriculture No. (NPS)": "15"
             },
             "West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "98.37",
+              "Total Non-Priority NPA Amt": "98.37",
               "Sec Tot NPA Non No. Priorityrityrity": "58",
               "Other Amt (NPS)": "70.35",
               "Other No. (NPS)": "32",
@@ -35840,7 +35840,7 @@
         "pmmy_mudra_os_npa": {
           "page": 92,
           "fields": [
-            "NPA Amt.% MUDRA",
+            "NPA Amt. % MUDRA",
             "Total MUDRA NPA Amt",
             "Total MUDRA NPA No.",
             "Total MUDRA O/S Amt",
@@ -35863,7 +35863,7 @@
           "num_districts": 1,
           "districts": {
             "Ri Bhoi": {
-              "NPA Amt.% MUDRA": "9.93",
+              "NPA Amt. % MUDRA": "9.93",
               "Total MUDRA NPA Amt": "639.98",
               "Total MUDRA NPA No.": "598",
               "Total MUDRA O/S Amt": "6447.39",
@@ -38905,7 +38905,7 @@
             "Amount Achv% Agri(PS)",
             "Agri Amount Achieved (PS)",
             "Agri Achieved No. (PS)",
-            "Agri Target Amt (PS)",
+            "Agri Target Amount (PS)",
             "Agri Target No. (PS)"
           ],
           "num_districts": 9,
@@ -38920,7 +38920,7 @@
               "Amount Achv% Agri(PS)": "8.43",
               "Agri Amount Achieved (PS)": "961.03",
               "Agri Achieved No. (PS)": "1323",
-              "Agri Target Amt (PS)": "11394",
+              "Agri Target Amount (PS)": "11394",
               "Agri Target No. (PS)": "9364"
             },
             "East Khasi Hills": {
@@ -38933,7 +38933,7 @@
               "Amount Achv% Agri(PS)": "19.32",
               "Agri Amount Achieved (PS)": "6921.16",
               "Agri Achieved No. (PS)": "8132",
-              "Agri Target Amt (PS)": "35828",
+              "Agri Target Amount (PS)": "35828",
               "Agri Target No. (PS)": "32272"
             },
             "North Garo Hills": {
@@ -38946,7 +38946,7 @@
               "Amount Achv% Agri(PS)": "11.91",
               "Agri Amount Achieved (PS)": "844.98",
               "Agri Achieved No. (PS)": "1142",
-              "Agri Target Amt (PS)": "7096",
+              "Agri Target Amount (PS)": "7096",
               "Agri Target No. (PS)": "4109"
             },
             "Ri Bhoi": {
@@ -38959,7 +38959,7 @@
               "Amount Achv% Agri(PS)": "26.26",
               "Agri Amount Achieved (PS)": "6201.11",
               "Agri Achieved No. (PS)": "9742",
-              "Agri Target Amt (PS)": "23617",
+              "Agri Target Amount (PS)": "23617",
               "Agri Target No. (PS)": "12380"
             },
             "South Garo Hills": {
@@ -38972,7 +38972,7 @@
               "Amount Achv% Agri(PS)": "8.92",
               "Agri Amount Achieved (PS)": "513.11",
               "Agri Achieved No. (PS)": "526",
-              "Agri Target Amt (PS)": "5753",
+              "Agri Target Amount (PS)": "5753",
               "Agri Target No. (PS)": "6948"
             },
             "South West Garo Hills": {
@@ -38985,7 +38985,7 @@
               "Amount Achv% Agri(PS)": "14.72",
               "Agri Amount Achieved (PS)": "955.67",
               "Agri Achieved No. (PS)": "1468",
-              "Agri Target Amt (PS)": "6492",
+              "Agri Target Amount (PS)": "6492",
               "Agri Target No. (PS)": "6916"
             },
             "South West Khasi Hills": {
@@ -38998,7 +38998,7 @@
               "Amount Achv% Agri(PS)": "16.13",
               "Agri Amount Achieved (PS)": "739.32",
               "Agri Achieved No. (PS)": "1192",
-              "Agri Target Amt (PS)": "4583",
+              "Agri Target Amount (PS)": "4583",
               "Agri Target No. (PS)": "2840"
             },
             "West Garo Hills": {
@@ -39011,7 +39011,7 @@
               "Amount Achv% Agri(PS)": "11.69",
               "Agri Amount Achieved (PS)": "1846.68",
               "Agri Achieved No. (PS)": "3054",
-              "Agri Target Amt (PS)": "15798",
+              "Agri Target Amount (PS)": "15798",
               "Agri Target No. (PS)": "17027"
             },
             "West Khasi Hills": {
@@ -39024,7 +39024,7 @@
               "Amount Achv% Agri(PS)": "17.53",
               "Agri Amount Achieved (PS)": "1962.82",
               "Agri Achieved No. (PS)": "3699",
-              "Agri Target Amt (PS)": "11195",
+              "Agri Target Amount (PS)": "11195",
               "Agri Target No. (PS)": "6962"
             }
           }
@@ -40060,8 +40060,8 @@
         "education_loan": {
           "page": 61,
           "fields": [
-            "Total Non-Priorityrityrityrity Sector NPA Amt",
-            "Total Non-Priorityrityrityrity Sector NPA No.",
+            "Total Non-Priority Sector NPA Amt",
+            "Total Non-Priority Sector NPA No.",
             "Other NPS Amt",
             "Other NPS No.",
             "Personal Loan Amt",
@@ -40074,8 +40074,8 @@
           "num_districts": 9,
           "districts": {
             "East Garo Hills": {
-              "Total Non-Priorityrityrityrity Sector NPA Amt": "209.05",
-              "Total Non-Priorityrityrityrity Sector NPA No.": "224",
+              "Total Non-Priority Sector NPA Amt": "209.05",
+              "Total Non-Priority Sector NPA No.": "224",
               "Other NPS Amt": "71.31",
               "Other NPS No.": "134",
               "Personal Loan Amt": "136.74",
@@ -40086,8 +40086,8 @@
               "Agri NPS No.": "1"
             },
             "East Khasi Hills": {
-              "Total Non-Priorityrityrityrity Sector NPA Amt": "45186.13",
-              "Total Non-Priorityrityrityrity Sector NPA No.": "1727",
+              "Total Non-Priority Sector NPA Amt": "45186.13",
+              "Total Non-Priority Sector NPA No.": "1727",
               "Other NPS Amt": "44523.33",
               "Other NPS No.": "1321",
               "Personal Loan Amt": "592.4",
@@ -40098,8 +40098,8 @@
               "Agri NPS No.": "0"
             },
             "North Garo Hills": {
-              "Total Non-Priorityrityrityrity Sector NPA Amt": "263.84",
-              "Total Non-Priorityrityrityrity Sector NPA No.": "236",
+              "Total Non-Priority Sector NPA Amt": "263.84",
+              "Total Non-Priority Sector NPA No.": "236",
               "Other NPS Amt": "39.77",
               "Other NPS No.": "123",
               "Personal Loan Amt": "224.07",
@@ -40110,8 +40110,8 @@
               "Agri NPS No.": "0"
             },
             "Ri Bhoi": {
-              "Total Non-Priorityrityrityrity Sector NPA Amt": "543.08",
-              "Total Non-Priorityrityrityrity Sector NPA No.": "320",
+              "Total Non-Priority Sector NPA Amt": "543.08",
+              "Total Non-Priority Sector NPA No.": "320",
               "Other NPS Amt": "364.49",
               "Other NPS No.": "268",
               "Personal Loan Amt": "72.03",
@@ -40122,8 +40122,8 @@
               "Agri NPS No.": "2"
             },
             "South Garo Hills": {
-              "Total Non-Priorityrityrityrity Sector NPA Amt": "116.25",
-              "Total Non-Priorityrityrityrity Sector NPA No.": "133",
+              "Total Non-Priority Sector NPA Amt": "116.25",
+              "Total Non-Priority Sector NPA No.": "133",
               "Other NPS Amt": "11.83",
               "Other NPS No.": "72",
               "Personal Loan Amt": "104.42",
@@ -40134,8 +40134,8 @@
               "Agri NPS No.": "0"
             },
             "South West Garo Hills": {
-              "Total Non-Priorityrityrityrity Sector NPA Amt": "116.55",
-              "Total Non-Priorityrityrityrity Sector NPA No.": "113",
+              "Total Non-Priority Sector NPA Amt": "116.55",
+              "Total Non-Priority Sector NPA No.": "113",
               "Other NPS Amt": "57.28",
               "Other NPS No.": "72",
               "Personal Loan Amt": "59.27",
@@ -40146,8 +40146,8 @@
               "Agri NPS No.": "0"
             },
             "South West Khasi Hills": {
-              "Total Non-Priorityrityrityrity Sector NPA Amt": "6.3",
-              "Total Non-Priorityrityrityrity Sector NPA No.": "12",
+              "Total Non-Priority Sector NPA Amt": "6.3",
+              "Total Non-Priority Sector NPA No.": "12",
               "Other NPS Amt": "1.29",
               "Other NPS No.": "7",
               "Personal Loan Amt": "5.01",
@@ -40158,8 +40158,8 @@
               "Agri NPS No.": "0"
             },
             "West Garo Hills": {
-              "Total Non-Priorityrityrityrity Sector NPA Amt": "718.64",
-              "Total Non-Priorityrityrityrity Sector NPA No.": "483",
+              "Total Non-Priority Sector NPA Amt": "718.64",
+              "Total Non-Priority Sector NPA No.": "483",
               "Other NPS Amt": "293.45",
               "Other NPS No.": "223",
               "Personal Loan Amt": "425.19",
@@ -40170,8 +40170,8 @@
               "Agri NPS No.": "0"
             },
             "West Khasi Hills": {
-              "Total Non-Priorityrityrityrity Sector NPA Amt": "146.32",
-              "Total Non-Priorityrityrityrity Sector NPA No.": "100",
+              "Total Non-Priority Sector NPA Amt": "146.32",
+              "Total Non-Priority Sector NPA No.": "100",
               "Other NPS Amt": "97.45",
               "Other NPS No.": "60",
               "Personal Loan Amt": "48.87",
@@ -40768,7 +40768,7 @@
         "pmmy_mudra_os_npa": {
           "page": 83,
           "fields": [
-            "NPA Amt.% MUDRA",
+            "NPA Amt. % MUDRA",
             "Total MUDRA NPA Amt",
             "Total MUDRA NPA No.",
             "Total MUDRA O/S Amt",
@@ -40789,7 +40789,7 @@
           "num_districts": 1,
           "districts": {
             "Ri Bhoi": {
-              "NPA Amt.% MUDRA": "14.57",
+              "NPA Amt. % MUDRA": "14.57",
               "Total MUDRA NPA Amt": "679.56",
               "Total MUDRA NPA No.": "883",
               "Total MUDRA O/S Amt": "4664.09",
@@ -43288,8 +43288,8 @@
         "non_ps_outstanding": {
           "page": 29,
           "fields": [
-            "NPS Amt.% NPA",
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "NPS Amt. % NPA",
+            "Total Non-Priority NPA Amt",
             "Tot NPA Priorityrityrity No. Sec Non",
             "Total NPS O/S Amt",
             "Total NPS O/S No.",
@@ -43307,8 +43307,8 @@
           "num_districts": 5,
           "districts": {
             "East Garo Hills": {
-              "NPS Amt.% NPA": "1.76",
-              "Total Non-Priorityrityrityrity NPA Amt": "396.15",
+              "NPS Amt. % NPA": "1.76",
+              "Total Non-Priority NPA Amt": "396.15",
               "Tot NPA Priorityrityrity No. Sec Non": "293",
               "Total NPS O/S Amt": "22473.84",
               "Total NPS O/S No.": "6242",
@@ -43324,8 +43324,8 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Khasi Hills": {
-              "NPS Amt.% NPA": "0.43",
-              "Total Non-Priorityrityrityrity NPA Amt": "2977.65",
+              "NPS Amt. % NPA": "0.43",
+              "Total Non-Priority NPA Amt": "2977.65",
               "Tot NPA Priorityrityrity No. Sec Non": "1730",
               "Total NPS O/S Amt": "696608.64",
               "Total NPS O/S No.": "92216",
@@ -43341,8 +43341,8 @@
               "Agriculture No. (NPS)": "0"
             },
             "Ri Bhoi": {
-              "NPS Amt.% NPA": "0.82",
-              "Total Non-Priorityrityrityrity NPA Amt": "1017.88",
+              "NPS Amt. % NPA": "0.82",
+              "Total Non-Priority NPA Amt": "1017.88",
               "Tot NPA Priorityrityrity No. Sec Non": "449",
               "Total NPS O/S Amt": "124695.52",
               "Total NPS O/S No.": "25464",
@@ -43358,8 +43358,8 @@
               "Agriculture No. (NPS)": "2"
             },
             "West Garo Hills": {
-              "NPS Amt.% NPA": "1.91",
-              "Total Non-Priorityrityrityrity NPA Amt": "1796.66",
+              "NPS Amt. % NPA": "1.91",
+              "Total Non-Priority NPA Amt": "1796.66",
               "Tot NPA Priorityrityrity No. Sec Non": "1034",
               "Total NPS O/S Amt": "94075.55",
               "Total NPS O/S No.": "24162",
@@ -43375,8 +43375,8 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Khasi Hills": {
-              "NPS Amt.% NPA": "0.97",
-              "Total Non-Priorityrityrityrity NPA Amt": "128.12",
+              "NPS Amt. % NPA": "0.97",
+              "Total Non-Priority NPA Amt": "128.12",
               "Tot NPA Priorityrityrity No. Sec Non": "76",
               "Total NPS O/S Amt": "13197.21",
               "Total NPS O/S No.": "4109",
@@ -44513,7 +44513,7 @@
         "non_ps_npa": {
           "page": 60,
           "fields": [
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "Total Non-Priority NPA Amt",
             "Sec Tot NPA Non No. Priorityrityrity",
             "Other Amt (NPS)",
             "Other No. (NPS)",
@@ -44529,7 +44529,7 @@
           "num_districts": 12,
           "districts": {
             "Eastern West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "41.04",
+              "Total Non-Priority NPA Amt": "41.04",
               "Sec Tot NPA Non No. Priorityrityrity": "41",
               "Other Amt (NPS)": "31.68",
               "Other No. (NPS)": "33",
@@ -44543,7 +44543,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "396.15",
+              "Total Non-Priority NPA Amt": "396.15",
               "Sec Tot NPA Non No. Priorityrityrity": "293",
               "Other Amt (NPS)": "268.52",
               "Other No. (NPS)": "205",
@@ -44557,7 +44557,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "504.3",
+              "Total Non-Priority NPA Amt": "504.3",
               "Sec Tot NPA Non No. Priorityrityrity": "168",
               "Other Amt (NPS)": "206.55",
               "Other No. (NPS)": "119",
@@ -44571,7 +44571,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "2977.65",
+              "Total Non-Priority NPA Amt": "2977.65",
               "Sec Tot NPA Non No. Priorityrityrity": "1730",
               "Other Amt (NPS)": "2160.83",
               "Other No. (NPS)": "1241",
@@ -44585,7 +44585,7 @@
               "Agriculture No. (NPS)": "2"
             },
             "North Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "388.94",
+              "Total Non-Priority NPA Amt": "388.94",
               "Sec Tot NPA Non No. Priorityrityrity": "326",
               "Other Amt (NPS)": "178.57",
               "Other No. (NPS)": "206",
@@ -44599,7 +44599,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "Ri Bhoi": {
-              "Total Non-Priorityrityrityrity NPA Amt": "1017.88",
+              "Total Non-Priority NPA Amt": "1017.88",
               "Sec Tot NPA Non No. Priorityrityrity": "449",
               "Other Amt (NPS)": "887.53",
               "Other No. (NPS)": "398",
@@ -44613,7 +44613,7 @@
               "Agriculture No. (NPS)": "3"
             },
             "South Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "235.6",
+              "Total Non-Priority NPA Amt": "235.6",
               "Sec Tot NPA Non No. Priorityrityrity": "192",
               "Other Amt (NPS)": "125.99",
               "Other No. (NPS)": "126",
@@ -44627,7 +44627,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "326.91",
+              "Total Non-Priority NPA Amt": "326.91",
               "Sec Tot NPA Non No. Priorityrityrity": "206",
               "Other Amt (NPS)": "260.24",
               "Other No. (NPS)": "161",
@@ -44641,7 +44641,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "37.46",
+              "Total Non-Priority NPA Amt": "37.46",
               "Sec Tot NPA Non No. Priorityrityrity": "28",
               "Other Amt (NPS)": "27.81",
               "Other No. (NPS)": "20",
@@ -44655,7 +44655,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "1796.66",
+              "Total Non-Priority NPA Amt": "1796.66",
               "Sec Tot NPA Non No. Priorityrityrity": "1034",
               "Other Amt (NPS)": "1242.93",
               "Other No. (NPS)": "690",
@@ -44669,7 +44669,7 @@
               "Agriculture No. (NPS)": "4"
             },
             "West Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "375.62",
+              "Total Non-Priority NPA Amt": "375.62",
               "Sec Tot NPA Non No. Priorityrityrity": "206",
               "Other Amt (NPS)": "189.28",
               "Other No. (NPS)": "110",
@@ -44683,7 +44683,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "128.12",
+              "Total Non-Priority NPA Amt": "128.12",
               "Sec Tot NPA Non No. Priorityrityrity": "76",
               "Other Amt (NPS)": "89.96",
               "Other No. (NPS)": "43",
@@ -45402,7 +45402,7 @@
         "pmmy_mudra_os_npa": {
           "page": 82,
           "fields": [
-            "NPA Amt.% MUDRA",
+            "NPA Amt. % MUDRA",
             "Total MUDRA NPA Amt",
             "Total MUDRA NPA No.",
             "Total MUDRA O/S Amt",
@@ -45423,7 +45423,7 @@
           "num_districts": 1,
           "districts": {
             "Ri Bhoi": {
-              "NPA Amt.% MUDRA": "8.14",
+              "NPA Amt. % MUDRA": "8.14",
               "Total MUDRA NPA Amt": "402.83",
               "Total MUDRA NPA No.": "577",
               "Total MUDRA O/S Amt": "4946.32",
@@ -49559,8 +49559,8 @@
             "ST Disbursement Amt",
             "ST Outstanding No.",
             "ST Outstanding Amt",
-            "Os No.",
-            "Os Amt",
+            "O/S No.",
+            "O/S Amt",
             "Disb No.",
             "Disb Amt"
           ],
@@ -49575,8 +49575,8 @@
               "ST Disbursement Amt": "111.1",
               "ST Outstanding No.": "3518",
               "ST Outstanding Amt": "4313.88",
-              "Os No.": "3739",
-              "Os Amt": "4957.13",
+              "O/S No.": "3739",
+              "O/S Amt": "4957.13",
               "Disb No.": "680",
               "Disb Amt": "917.67"
             },
@@ -49589,8 +49589,8 @@
               "ST Disbursement Amt": "586.91",
               "ST Outstanding No.": "4267",
               "ST Outstanding Amt": "8806.8",
-              "Os No.": "1638",
-              "Os Amt": "3483.85",
+              "O/S No.": "1638",
+              "O/S Amt": "3483.85",
               "Disb No.": "257",
               "Disb Amt": "399.54"
             },
@@ -49603,8 +49603,8 @@
               "ST Disbursement Amt": "9855.92",
               "ST Outstanding No.": "59210",
               "ST Outstanding Amt": "194755.27",
-              "Os No.": "60717",
-              "Os Amt": "103375.85",
+              "O/S No.": "60717",
+              "O/S Amt": "103375.85",
               "Disb No.": "10867",
               "Disb Amt": "14775.81"
             },
@@ -49617,8 +49617,8 @@
               "ST Disbursement Amt": "293.59",
               "ST Outstanding No.": "7059",
               "ST Outstanding Amt": "4067.13",
-              "Os No.": "2749",
-              "Os Amt": "3477.73",
+              "O/S No.": "2749",
+              "O/S Amt": "3477.73",
               "Disb No.": "374",
               "Disb Amt": "465.74"
             },
@@ -49631,8 +49631,8 @@
               "ST Disbursement Amt": "2631.54",
               "ST Outstanding No.": "21664",
               "ST Outstanding Amt": "24529.9",
-              "Os No.": "25127",
-              "Os Amt": "30649.73",
+              "O/S No.": "25127",
+              "O/S Amt": "30649.73",
               "Disb No.": "3477",
               "Disb Amt": "3613.02"
             },
@@ -49645,8 +49645,8 @@
               "ST Disbursement Amt": "256.27",
               "ST Outstanding No.": "3188",
               "ST Outstanding Amt": "3483.41",
-              "Os No.": "872",
-              "Os Amt": "2007.38",
+              "O/S No.": "872",
+              "O/S Amt": "2007.38",
               "Disb No.": "227",
               "Disb Amt": "309.09"
             },
@@ -49659,8 +49659,8 @@
               "ST Disbursement Amt": "666.44",
               "ST Outstanding No.": "3470",
               "ST Outstanding Amt": "5369.22",
-              "Os No.": "3290",
-              "Os Amt": "3508.54",
+              "O/S No.": "3290",
+              "O/S Amt": "3508.54",
               "Disb No.": "679",
               "Disb Amt": "626.87"
             },
@@ -49673,8 +49673,8 @@
               "ST Disbursement Amt": "316.37",
               "ST Outstanding No.": "2670",
               "ST Outstanding Amt": "3438.91",
-              "Os No.": "1789",
-              "Os Amt": "2139.05",
+              "O/S No.": "1789",
+              "O/S Amt": "2139.05",
               "Disb No.": "261",
               "Disb Amt": "373.23"
             },
@@ -49687,8 +49687,8 @@
               "ST Disbursement Amt": "1298.68",
               "ST Outstanding No.": "13975",
               "ST Outstanding Amt": "19056.01",
-              "Os No.": "11027",
-              "Os Amt": "22169.01",
+              "O/S No.": "11027",
+              "O/S Amt": "22169.01",
               "Disb No.": "2486",
               "Disb Amt": "3695.05"
             },
@@ -49701,8 +49701,8 @@
               "ST Disbursement Amt": "1885.85",
               "ST Outstanding No.": "12317",
               "ST Outstanding Amt": "32628.25",
-              "Os No.": "8783",
-              "Os Amt": "11680.16",
+              "O/S No.": "8783",
+              "O/S Amt": "11680.16",
               "Disb No.": "2432",
               "Disb Amt": "4109.94"
             },
@@ -49715,8 +49715,8 @@
               "ST Disbursement Amt": "1488.58",
               "ST Outstanding No.": "15633",
               "ST Outstanding Amt": "15337.69",
-              "Os No.": "9129",
-              "Os Amt": "9719.34",
+              "O/S No.": "9129",
+              "O/S Amt": "9719.34",
               "Disb No.": "1439",
               "Disb Amt": "1324.68"
             }
@@ -52168,8 +52168,8 @@
         "non_ps_outstanding": {
           "page": 30,
           "fields": [
-            "NPS Amt.% NPA",
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "NPS Amt. % NPA",
+            "Total Non-Priority NPA Amt",
             "Tot NPA Priorityrityrity No. Sec Non",
             "Total NPS O/S Amt",
             "Total NPS O/S No.",
@@ -52187,8 +52187,8 @@
           "num_districts": 5,
           "districts": {
             "East Garo Hills": {
-              "NPS Amt.% NPA": "1.94",
-              "Total Non-Priorityrityrityrity NPA Amt": "409.07",
+              "NPS Amt. % NPA": "1.94",
+              "Total Non-Priority NPA Amt": "409.07",
               "Tot NPA Priorityrityrity No. Sec Non": "304",
               "Total NPS O/S Amt": "21083.6",
               "Total NPS O/S No.": "5873",
@@ -52204,8 +52204,8 @@
               "Agriculture No. (NPS)": "4"
             },
             "East Khasi Hills": {
-              "NPS Amt.% NPA": "15.1",
-              "Total Non-Priorityrityrityrity NPA Amt": "89448.9",
+              "NPS Amt. % NPA": "15.1",
+              "Total Non-Priority NPA Amt": "89448.9",
               "Tot NPA Priorityrityrity No. Sec Non": "2190",
               "Total NPS O/S Amt": "592436.92",
               "Total NPS O/S No.": "86128",
@@ -52221,8 +52221,8 @@
               "Agriculture No. (NPS)": "15"
             },
             "Ri Bhoi": {
-              "NPS Amt.% NPA": "0.94",
-              "Total Non-Priorityrityrityrity NPA Amt": "1121.12",
+              "NPS Amt. % NPA": "0.94",
+              "Total Non-Priority NPA Amt": "1121.12",
               "Tot NPA Priorityrityrity No. Sec Non": "711",
               "Total NPS O/S Amt": "119759.81",
               "Total NPS O/S No.": "24328",
@@ -52238,8 +52238,8 @@
               "Agriculture No. (NPS)": "15"
             },
             "West Garo Hills": {
-              "NPS Amt.% NPA": "1.98",
-              "Total Non-Priorityrityrityrity NPA Amt": "1703.6",
+              "NPS Amt. % NPA": "1.98",
+              "Total Non-Priority NPA Amt": "1703.6",
               "Tot NPA Priorityrityrity No. Sec Non": "960",
               "Total NPS O/S Amt": "86143.78",
               "Total NPS O/S No.": "22395",
@@ -52255,8 +52255,8 @@
               "Agriculture No. (NPS)": "20"
             },
             "West Khasi Hills": {
-              "NPS Amt.% NPA": "1.32",
-              "Total Non-Priorityrityrityrity NPA Amt": "160.51",
+              "NPS Amt. % NPA": "1.32",
+              "Total Non-Priority NPA Amt": "160.51",
               "Tot NPA Priorityrityrity No. Sec Non": "73",
               "Total NPS O/S Amt": "12179.03",
               "Total NPS O/S No.": "4045",
@@ -53393,7 +53393,7 @@
         "non_ps_npa": {
           "page": 61,
           "fields": [
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "Total Non-Priority NPA Amt",
             "Sec Tot NPA Non No. Priorityrityrity",
             "Other Amt (NPS)",
             "Other No. (NPS)",
@@ -53409,7 +53409,7 @@
           "num_districts": 12,
           "districts": {
             "Eastern West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "115.15",
+              "Total Non-Priority NPA Amt": "115.15",
               "Sec Tot NPA Non No. Priorityrityrity": "70",
               "Other Amt (NPS)": "102.36",
               "Other No. (NPS)": "64",
@@ -53423,7 +53423,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "409.07",
+              "Total Non-Priority NPA Amt": "409.07",
               "Sec Tot NPA Non No. Priorityrityrity": "304",
               "Other Amt (NPS)": "278.09",
               "Other No. (NPS)": "213",
@@ -53437,7 +53437,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "518.41",
+              "Total Non-Priority NPA Amt": "518.41",
               "Sec Tot NPA Non No. Priorityrityrity": "144",
               "Other Amt (NPS)": "235.97",
               "Other No. (NPS)": "113",
@@ -53451,7 +53451,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "89448.9",
+              "Total Non-Priority NPA Amt": "89448.9",
               "Sec Tot NPA Non No. Priorityrityrity": "2190",
               "Other Amt (NPS)": "88507.35",
               "Other No. (NPS)": "1769",
@@ -53465,7 +53465,7 @@
               "Agriculture No. (NPS)": "2"
             },
             "North Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "436.21",
+              "Total Non-Priority NPA Amt": "436.21",
               "Sec Tot NPA Non No. Priorityrityrity": "328",
               "Other Amt (NPS)": "215.16",
               "Other No. (NPS)": "207",
@@ -53479,7 +53479,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "Ri Bhoi": {
-              "Total Non-Priorityrityrityrity NPA Amt": "1121.12",
+              "Total Non-Priority NPA Amt": "1121.12",
               "Sec Tot NPA Non No. Priorityrityrity": "711",
               "Other Amt (NPS)": "987.51",
               "Other No. (NPS)": "657",
@@ -53493,7 +53493,7 @@
               "Agriculture No. (NPS)": "2"
             },
             "South Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "193.47",
+              "Total Non-Priority NPA Amt": "193.47",
               "Sec Tot NPA Non No. Priorityrityrity": "179",
               "Other Amt (NPS)": "93.93",
               "Other No. (NPS)": "117",
@@ -53507,7 +53507,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "304.51",
+              "Total Non-Priority NPA Amt": "304.51",
               "Sec Tot NPA Non No. Priorityrityrity": "213",
               "Other Amt (NPS)": "240.12",
               "Other No. (NPS)": "169",
@@ -53521,7 +53521,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "63.97",
+              "Total Non-Priority NPA Amt": "63.97",
               "Sec Tot NPA Non No. Priorityrityrity": "40",
               "Other Amt (NPS)": "46.84",
               "Other No. (NPS)": "28",
@@ -53535,7 +53535,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "1703.6",
+              "Total Non-Priority NPA Amt": "1703.6",
               "Sec Tot NPA Non No. Priorityrityrity": "960",
               "Other Amt (NPS)": "1138.45",
               "Other No. (NPS)": "650",
@@ -53549,7 +53549,7 @@
               "Agriculture No. (NPS)": "4"
             },
             "West Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "649.55",
+              "Total Non-Priority NPA Amt": "649.55",
               "Sec Tot NPA Non No. Priorityrityrity": "290",
               "Other Amt (NPS)": "460.81",
               "Other No. (NPS)": "182",
@@ -53563,7 +53563,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "160.51",
+              "Total Non-Priority NPA Amt": "160.51",
               "Sec Tot NPA Non No. Priorityrityrity": "73",
               "Other Amt (NPS)": "101.45",
               "Other No. (NPS)": "34",
@@ -54278,7 +54278,7 @@
         "pmmy_mudra_os_npa": {
           "page": 83,
           "fields": [
-            "NPA Amt.% MUDRA",
+            "NPA Amt. % MUDRA",
             "Total MUDRA NPA Amt",
             "Total MUDRA NPA No.",
             "Total MUDRA O/S Amt",
@@ -54299,7 +54299,7 @@
           "num_districts": 1,
           "districts": {
             "Ri Bhoi": {
-              "NPA Amt.% MUDRA": "15.78",
+              "NPA Amt. % MUDRA": "15.78",
               "Total MUDRA NPA Amt": "786.73",
               "Total MUDRA NPA No.": "1328",
               "Total MUDRA O/S Amt": "4986.66",
@@ -57388,8 +57388,8 @@
         "non_ps_outstanding": {
           "page": 30,
           "fields": [
-            "NPS Amt.% NPA",
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "NPS Amt. % NPA",
+            "Total Non-Priority NPA Amt",
             "Tot NPA Priorityrityrity No. Sec Non",
             "Total NPS O/S Amt",
             "Total NPS O/S No.",
@@ -57407,8 +57407,8 @@
           "num_districts": 5,
           "districts": {
             "East Garo Hills": {
-              "NPS Amt.% NPA": "1.56",
-              "Total Non-Priorityrityrityrity NPA Amt": "380.09",
+              "NPS Amt. % NPA": "1.56",
+              "Total Non-Priority NPA Amt": "380.09",
               "Tot NPA Priorityrityrity No. Sec Non": "229",
               "Total NPS O/S Amt": "24361.76",
               "Total NPS O/S No.": "6616",
@@ -57424,8 +57424,8 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Khasi Hills": {
-              "NPS Amt.% NPA": "0.38",
-              "Total Non-Priorityrityrityrity NPA Amt": "2931.32",
+              "NPS Amt. % NPA": "0.38",
+              "Total Non-Priority NPA Amt": "2931.32",
               "Tot NPA Priorityrityrity No. Sec Non": "1671",
               "Total NPS O/S Amt": "772956.47",
               "Total NPS O/S No.": "99250",
@@ -57441,8 +57441,8 @@
               "Agriculture No. (NPS)": "4"
             },
             "Ri Bhoi": {
-              "NPS Amt.% NPA": "1.03",
-              "Total Non-Priorityrityrityrity NPA Amt": "1432.82",
+              "NPS Amt. % NPA": "1.03",
+              "Total Non-Priority NPA Amt": "1432.82",
               "Tot NPA Priorityrityrity No. Sec Non": "593",
               "Total NPS O/S Amt": "139433.44",
               "Total NPS O/S No.": "27944",
@@ -57458,8 +57458,8 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Garo Hills": {
-              "NPS Amt.% NPA": "2.5",
-              "Total Non-Priorityrityrityrity NPA Amt": "2437.8",
+              "NPS Amt. % NPA": "2.5",
+              "Total Non-Priority NPA Amt": "2437.8",
               "Tot NPA Priorityrityrity No. Sec Non": "1347",
               "Total NPS O/S Amt": "97631.65",
               "Total NPS O/S No.": "25852",
@@ -57475,8 +57475,8 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Khasi Hills": {
-              "NPS Amt.% NPA": "0.86",
-              "Total Non-Priorityrityrityrity NPA Amt": "121.67",
+              "NPS Amt. % NPA": "0.86",
+              "Total Non-Priority NPA Amt": "121.67",
               "Tot NPA Priorityrityrity No. Sec Non": "68",
               "Total NPS O/S Amt": "14223.95",
               "Total NPS O/S No.": "4116",
@@ -58600,7 +58600,7 @@
         "non_ps_npa": {
           "page": 61,
           "fields": [
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "Total Non-Priority NPA Amt",
             "Sec Tot NPA Non No. Priorityrityrity",
             "Other Amt (NPS)",
             "Other No. (NPS)",
@@ -58614,7 +58614,7 @@
           "num_districts": 12,
           "districts": {
             "Eastern West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "49.85",
+              "Total Non-Priority NPA Amt": "49.85",
               "Sec Tot NPA Non No. Priorityrityrity": "35",
               "Other Amt (NPS)": "36.07",
               "Other No. (NPS)": "28",
@@ -58626,7 +58626,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "East Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "380.09",
+              "Total Non-Priority NPA Amt": "380.09",
               "Sec Tot NPA Non No. Priorityrityrity": "229",
               "Other Amt (NPS)": "252.91",
               "Other No. (NPS)": "140",
@@ -58638,7 +58638,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "483.07",
+              "Total Non-Priority NPA Amt": "483.07",
               "Sec Tot NPA Non No. Priorityrityrity": "189",
               "Other Amt (NPS)": "191.21",
               "Other No. (NPS)": "147",
@@ -58650,7 +58650,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "2931.32",
+              "Total Non-Priority NPA Amt": "2931.32",
               "Sec Tot NPA Non No. Priorityrityrity": "1671",
               "Other Amt (NPS)": "1960.21",
               "Other No. (NPS)": "1102",
@@ -58662,7 +58662,7 @@
               "Agriculture No. (NPS)": "2"
             },
             "North Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "372.4",
+              "Total Non-Priority NPA Amt": "372.4",
               "Sec Tot NPA Non No. Priorityrityrity": "241",
               "Other Amt (NPS)": "179.97",
               "Other No. (NPS)": "128",
@@ -58674,7 +58674,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "Ri Bhoi": {
-              "Total Non-Priorityrityrityrity NPA Amt": "1432.82",
+              "Total Non-Priority NPA Amt": "1432.82",
               "Sec Tot NPA Non No. Priorityrityrity": "593",
               "Other Amt (NPS)": "1319.5",
               "Other No. (NPS)": "526",
@@ -58686,7 +58686,7 @@
               "Agriculture No. (NPS)": "2"
             },
             "South Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "251.08",
+              "Total Non-Priority NPA Amt": "251.08",
               "Sec Tot NPA Non No. Priorityrityrity": "160",
               "Other Amt (NPS)": "133.54",
               "Other No. (NPS)": "90",
@@ -58698,7 +58698,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "270.73",
+              "Total Non-Priority NPA Amt": "270.73",
               "Sec Tot NPA Non No. Priorityrityrity": "188",
               "Other Amt (NPS)": "212.84",
               "Other No. (NPS)": "143",
@@ -58710,7 +58710,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "South West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "59.49",
+              "Total Non-Priority NPA Amt": "59.49",
               "Sec Tot NPA Non No. Priorityrityrity": "31",
               "Other Amt (NPS)": "24.8",
               "Other No. (NPS)": "19",
@@ -58722,7 +58722,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "2437.8",
+              "Total Non-Priority NPA Amt": "2437.8",
               "Sec Tot NPA Non No. Priorityrityrity": "1347",
               "Other Amt (NPS)": "1290.46",
               "Other No. (NPS)": "740",
@@ -58734,7 +58734,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "West Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "472.51",
+              "Total Non-Priority NPA Amt": "472.51",
               "Sec Tot NPA Non No. Priorityrityrity": "277",
               "Other Amt (NPS)": "279.22",
               "Other No. (NPS)": "181",
@@ -58746,7 +58746,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "121.67",
+              "Total Non-Priority NPA Amt": "121.67",
               "Sec Tot NPA Non No. Priorityrityrity": "68",
               "Other Amt (NPS)": "90.83",
               "Other No. (NPS)": "34",
@@ -59491,7 +59491,7 @@
         "pmmy_mudra_os_npa": {
           "page": 83,
           "fields": [
-            "NPA Amt.% MUDRA",
+            "NPA Amt. % MUDRA",
             "Total MUDRA NPA Amt",
             "Total MUDRA NPA No.",
             "Total MUDRA O/S Amt",
@@ -59512,7 +59512,7 @@
           "num_districts": 1,
           "districts": {
             "Ri Bhoi": {
-              "NPA Amt.% MUDRA": "13.38",
+              "NPA Amt. % MUDRA": "13.38",
               "Total MUDRA NPA Amt": "661.39",
               "Total MUDRA NPA No.": "1308",
               "Total MUDRA O/S Amt": "4944.44",
@@ -62424,8 +62424,8 @@
         "non_ps_outstanding": {
           "page": 34,
           "fields": [
-            "NPS Amt.% NPA",
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "NPS Amt. % NPA",
+            "Total Non-Priority NPA Amt",
             "Tot NPA Priorityrityrity No. Sec Non",
             "Total NPS O/S Amt",
             "Total NPS O/S No.",
@@ -62443,8 +62443,8 @@
           "num_districts": 5,
           "districts": {
             "East Garo Hills": {
-              "NPS Amt.% NPA": "1.8",
-              "Total Non-Priorityrityrityrity NPA Amt": "478.46",
+              "NPS Amt. % NPA": "1.8",
+              "Total Non-Priority NPA Amt": "478.46",
               "Tot NPA Priorityrityrity No. Sec Non": "237",
               "Total NPS O/S Amt": "26535.18",
               "Total NPS O/S No.": "7499",
@@ -62460,8 +62460,8 @@
               "Agriculture No. (NPS)": "134"
             },
             "East Khasi Hills": {
-              "NPS Amt.% NPA": "1.24",
-              "Total Non-Priorityrityrityrity NPA Amt": "10301.25",
+              "NPS Amt. % NPA": "1.24",
+              "Total Non-Priority NPA Amt": "10301.25",
               "Tot NPA Priorityrityrity No. Sec Non": "2425",
               "Total NPS O/S Amt": "829141.54",
               "Total NPS O/S No.": "116726",
@@ -62477,8 +62477,8 @@
               "Agriculture No. (NPS)": "93"
             },
             "Ri Bhoi": {
-              "NPS Amt.% NPA": "1.27",
-              "Total Non-Priorityrityrityrity NPA Amt": "2009.66",
+              "NPS Amt. % NPA": "1.27",
+              "Total Non-Priority NPA Amt": "2009.66",
               "Tot NPA Priorityrityrity No. Sec Non": "1191",
               "Total NPS O/S Amt": "158701.46",
               "Total NPS O/S No.": "30883",
@@ -62494,8 +62494,8 @@
               "Agriculture No. (NPS)": "18"
             },
             "West Garo Hills": {
-              "NPS Amt.% NPA": "2.28",
-              "Total Non-Priorityrityrityrity NPA Amt": "2396.91",
+              "NPS Amt. % NPA": "2.28",
+              "Total Non-Priority NPA Amt": "2396.91",
               "Tot NPA Priorityrityrity No. Sec Non": "1396",
               "Total NPS O/S Amt": "105076.9",
               "Total NPS O/S No.": "28828",
@@ -62511,8 +62511,8 @@
               "Agriculture No. (NPS)": "232"
             },
             "West Khasi Hills": {
-              "NPS Amt.% NPA": "0.69",
-              "Total Non-Priorityrityrityrity NPA Amt": "101.05",
+              "NPS Amt. % NPA": "0.69",
+              "Total Non-Priority NPA Amt": "101.05",
               "Tot NPA Priorityrityrity No. Sec Non": "55",
               "Total NPS O/S Amt": "14616.32",
               "Total NPS O/S No.": "4263",
@@ -62542,7 +62542,7 @@
             "Amount Achv% Agri(PS)",
             "Agri Amount Achieved (PS)",
             "Agri Achieved No. (PS)",
-            "Agri Target Amt (PS)",
+            "Agri Target Amount (PS)",
             "Agri Target No. (PS)"
           ],
           "num_districts": 9,
@@ -62558,7 +62558,7 @@
               "Amount Achv% Agri(PS)": "10.89",
               "Agri Amount Achieved (PS)": "965.84",
               "Agri Achieved No. (PS)": "1296",
-              "Agri Target Amt (PS)": "8871.2",
+              "Agri Target Amount (PS)": "8871.2",
               "Agri Target No. (PS)": "16766"
             },
             "East Jaintia Hills": {
@@ -62572,7 +62572,7 @@
               "Amount Achv% Agri(PS)": "34.48",
               "Agri Amount Achieved (PS)": "871.58",
               "Agri Achieved No. (PS)": "653",
-              "Agri Target Amt (PS)": "2528",
+              "Agri Target Amount (PS)": "2528",
               "Agri Target No. (PS)": "1598"
             },
             "East Khasi Hills": {
@@ -62586,7 +62586,7 @@
               "Amount Achv% Agri(PS)": "51.29",
               "Agri Amount Achieved (PS)": "7875.58",
               "Agri Achieved No. (PS)": "6713",
-              "Agri Target Amt (PS)": "15354",
+              "Agri Target Amount (PS)": "15354",
               "Agri Target No. (PS)": "16826"
             },
             "North Garo Hills": {
@@ -62600,7 +62600,7 @@
               "Amount Achv% Agri(PS)": "16.66",
               "Agri Amount Achieved (PS)": "941.16",
               "Agri Achieved No. (PS)": "1160",
-              "Agri Target Amt (PS)": "5648.27",
+              "Agri Target Amount (PS)": "5648.27",
               "Agri Target No. (PS)": "10130"
             },
             "Ri Bhoi": {
@@ -62614,7 +62614,7 @@
               "Amount Achv% Agri(PS)": "31.56",
               "Agri Amount Achieved (PS)": "6356.89",
               "Agri Achieved No. (PS)": "7020",
-              "Agri Target Amt (PS)": "20141.18",
+              "Agri Target Amount (PS)": "20141.18",
               "Agri Target No. (PS)": "22888"
             },
             "South Garo Hills": {
@@ -62628,7 +62628,7 @@
               "Amount Achv% Agri(PS)": "8.54",
               "Agri Amount Achieved (PS)": "390.69",
               "Agri Achieved No. (PS)": "551",
-              "Agri Target Amt (PS)": "4577",
+              "Agri Target Amount (PS)": "4577",
               "Agri Target No. (PS)": "4009"
             },
             "West Garo Hills": {
@@ -62642,7 +62642,7 @@
               "Amount Achv% Agri(PS)": "17.51",
               "Agri Amount Achieved (PS)": "3520.44",
               "Agri Achieved No. (PS)": "4081",
-              "Agri Target Amt (PS)": "20103.46",
+              "Agri Target Amount (PS)": "20103.46",
               "Agri Target No. (PS)": "21250"
             },
             "West Jaintia Hills": {
@@ -62656,7 +62656,7 @@
               "Amount Achv% Agri(PS)": "23.97",
               "Agri Amount Achieved (PS)": "1791.76",
               "Agri Achieved No. (PS)": "1653",
-              "Agri Target Amt (PS)": "7476",
+              "Agri Target Amount (PS)": "7476",
               "Agri Target No. (PS)": "6484"
             },
             "West Khasi Hills": {
@@ -62670,7 +62670,7 @@
               "Amount Achv% Agri(PS)": "26.86",
               "Agri Amount Achieved (PS)": "1377.42",
               "Agri Achieved No. (PS)": "1473",
-              "Agri Target Amt (PS)": "5128",
+              "Agri Target Amount (PS)": "5128",
               "Agri Target No. (PS)": "6991"
             }
           }
@@ -63744,7 +63744,7 @@
         "non_ps_npa": {
           "page": 66,
           "fields": [
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "Total Non-Priority NPA Amt",
             "Sec Tot NPA Non No. Priorityrityrity",
             "Other Amt (NPS)",
             "Other No. (NPS)",
@@ -63760,7 +63760,7 @@
           "num_districts": 12,
           "districts": {
             "Eastern West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "35.55",
+              "Total Non-Priority NPA Amt": "35.55",
               "Sec Tot NPA Non No. Priorityrityrity": "29",
               "Other Amt (NPS)": "24.2",
               "Other No. (NPS)": "24",
@@ -63774,7 +63774,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "478.46",
+              "Total Non-Priority NPA Amt": "478.46",
               "Sec Tot NPA Non No. Priorityrityrity": "237",
               "Other Amt (NPS)": "317.5",
               "Other No. (NPS)": "147",
@@ -63788,7 +63788,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "230.69",
+              "Total Non-Priority NPA Amt": "230.69",
               "Sec Tot NPA Non No. Priorityrityrity": "202",
               "Other Amt (NPS)": "166.29",
               "Other No. (NPS)": "149",
@@ -63802,7 +63802,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "10301.25",
+              "Total Non-Priority NPA Amt": "10301.25",
               "Sec Tot NPA Non No. Priorityrityrity": "2425",
               "Other Amt (NPS)": "9016.01",
               "Other No. (NPS)": "1814",
@@ -63816,7 +63816,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "North Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "345.14",
+              "Total Non-Priority NPA Amt": "345.14",
               "Sec Tot NPA Non No. Priorityrityrity": "164",
               "Other Amt (NPS)": "163.13",
               "Other No. (NPS)": "62",
@@ -63830,7 +63830,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "Ri Bhoi": {
-              "Total Non-Priorityrityrityrity NPA Amt": "2009.66",
+              "Total Non-Priority NPA Amt": "2009.66",
               "Sec Tot NPA Non No. Priorityrityrity": "1191",
               "Other Amt (NPS)": "1776.29",
               "Other No. (NPS)": "1128",
@@ -63844,7 +63844,7 @@
               "Agriculture No. (NPS)": "4"
             },
             "South Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "236.63",
+              "Total Non-Priority NPA Amt": "236.63",
               "Sec Tot NPA Non No. Priorityrityrity": "139",
               "Other Amt (NPS)": "106.55",
               "Other No. (NPS)": "61",
@@ -63858,7 +63858,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "209.26",
+              "Total Non-Priority NPA Amt": "209.26",
               "Sec Tot NPA Non No. Priorityrityrity": "143",
               "Other Amt (NPS)": "150.2",
               "Other No. (NPS)": "100",
@@ -63872,7 +63872,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "14.67",
+              "Total Non-Priority NPA Amt": "14.67",
               "Sec Tot NPA Non No. Priorityrityrity": "12",
               "Other Amt (NPS)": "11.82",
               "Other No. (NPS)": "7",
@@ -63886,7 +63886,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "2396.91",
+              "Total Non-Priority NPA Amt": "2396.91",
               "Sec Tot NPA Non No. Priorityrityrity": "1396",
               "Other Amt (NPS)": "1019.82",
               "Other No. (NPS)": "661",
@@ -63900,7 +63900,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "429.85",
+              "Total Non-Priority NPA Amt": "429.85",
               "Sec Tot NPA Non No. Priorityrityrity": "310",
               "Other Amt (NPS)": "291.81",
               "Other No. (NPS)": "233",
@@ -63914,7 +63914,7 @@
               "Agriculture No. (NPS)": "6"
             },
             "West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "101.05",
+              "Total Non-Priority NPA Amt": "101.05",
               "Sec Tot NPA Non No. Priorityrityrity": "55",
               "Other Amt (NPS)": "76.94",
               "Other No. (NPS)": "28",
@@ -64661,7 +64661,7 @@
         "pmmy_mudra_os_npa": {
           "page": 90,
           "fields": [
-            "NPA Amt.% MUDRA",
+            "NPA Amt. % MUDRA",
             "Total MUDRA NPA Amt",
             "Total MUDRA NPA No.",
             "Total MUDRA O/S Amt",
@@ -64682,7 +64682,7 @@
           "num_districts": 1,
           "districts": {
             "Ri Bhoi": {
-              "NPA Amt.% MUDRA": "8.3",
+              "NPA Amt. % MUDRA": "8.3",
               "Total MUDRA NPA Amt": "489.35",
               "Total MUDRA NPA No.": "789",
               "Total MUDRA O/S Amt": "5892.55",
@@ -67920,8 +67920,8 @@
         "non_ps_outstanding": {
           "page": 28,
           "fields": [
-            "NPS Amt.% NPA",
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "NPS Amt. % NPA",
+            "Total Non-Priority NPA Amt",
             "Tot NPA Priorityrityrity No. Sec Non",
             "Total NPS O/S Amt",
             "Total NPS O/S No.",
@@ -67939,8 +67939,8 @@
           "num_districts": 9,
           "districts": {
             "East Garo Hills": {
-              "NPS Amt.% NPA": "1.49",
-              "Total Non-Priorityrityrityrity NPA Amt": "375.19",
+              "NPS Amt. % NPA": "1.49",
+              "Total Non-Priority NPA Amt": "375.19",
               "Tot NPA Priorityrityrity No. Sec Non": "245",
               "Total NPS O/S Amt": "25201.29",
               "Total NPS O/S No.": "7284",
@@ -67956,8 +67956,8 @@
               "Agriculture No. (NPS)": "143"
             },
             "East Jaintia Hills": {
-              "NPS Amt.% NPA": "1.5",
-              "Total Non-Priorityrityrityrity NPA Amt": "293.23",
+              "NPS Amt. % NPA": "1.5",
+              "Total Non-Priority NPA Amt": "293.23",
               "Tot NPA Priorityrityrity No. Sec Non": "199",
               "Total NPS O/S Amt": "19608.08",
               "Total NPS O/S No.": "6263",
@@ -67973,8 +67973,8 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Khasi Hills": {
-              "NPS Amt.% NPA": "0.56",
-              "Total Non-Priorityrityrityrity NPA Amt": "4125.94",
+              "NPS Amt. % NPA": "0.56",
+              "Total Non-Priority NPA Amt": "4125.94",
               "Tot NPA Priorityrityrity No. Sec Non": "2368",
               "Total NPS O/S Amt": "740303.88",
               "Total NPS O/S No.": "118432",
@@ -67990,8 +67990,8 @@
               "Agriculture No. (NPS)": "18"
             },
             "North Garo Hills": {
-              "NPS Amt.% NPA": "1.26",
-              "Total Non-Priorityrityrityrity NPA Amt": "294.66",
+              "NPS Amt. % NPA": "1.26",
+              "Total Non-Priority NPA Amt": "294.66",
               "Tot NPA Priorityrityrity No. Sec Non": "180",
               "Total NPS O/S Amt": "23419.02",
               "Total NPS O/S No.": "5657",
@@ -68007,8 +68007,8 @@
               "Agriculture No. (NPS)": "0"
             },
             "Ri Bhoi": {
-              "NPS Amt.% NPA": "1.59",
-              "Total Non-Priorityrityrityrity NPA Amt": "2374.31",
+              "NPS Amt. % NPA": "1.59",
+              "Total Non-Priority NPA Amt": "2374.31",
               "Tot NPA Priorityrityrity No. Sec Non": "1223",
               "Total NPS O/S Amt": "148925.68",
               "Total NPS O/S No.": "31057",
@@ -68024,8 +68024,8 @@
               "Agriculture No. (NPS)": "2"
             },
             "South Garo Hills": {
-              "NPS Amt.% NPA": "1.76",
-              "Total Non-Priorityrityrityrity NPA Amt": "215.19",
+              "NPS Amt. % NPA": "1.76",
+              "Total Non-Priority NPA Amt": "215.19",
               "Tot NPA Priorityrityrity No. Sec Non": "144",
               "Total NPS O/S Amt": "12194.08",
               "Total NPS O/S No.": "2617",
@@ -68041,8 +68041,8 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Garo Hills": {
-              "NPS Amt.% NPA": "2.05",
-              "Total Non-Priorityrityrityrity NPA Amt": "2312.82",
+              "NPS Amt. % NPA": "2.05",
+              "Total Non-Priority NPA Amt": "2312.82",
               "Tot NPA Priorityrityrity No. Sec Non": "1705",
               "Total NPS O/S Amt": "112843.27",
               "Total NPS O/S No.": "29484",
@@ -68058,8 +68058,8 @@
               "Agriculture No. (NPS)": "244"
             },
             "West Jaintia Hills": {
-              "NPS Amt.% NPA": "0.79",
-              "Total Non-Priorityrityrityrity NPA Amt": "369.82",
+              "NPS Amt. % NPA": "0.79",
+              "Total Non-Priority NPA Amt": "369.82",
               "Tot NPA Priorityrityrity No. Sec Non": "300",
               "Total NPS O/S Amt": "46894.24",
               "Total NPS O/S No.": "11833",
@@ -68075,8 +68075,8 @@
               "Agriculture No. (NPS)": "103"
             },
             "West Khasi Hills": {
-              "NPS Amt.% NPA": "0.52",
-              "Total Non-Priorityrityrityrity NPA Amt": "82.69",
+              "NPS Amt. % NPA": "0.52",
+              "Total Non-Priority NPA Amt": "82.69",
               "Tot NPA Priorityrityrity No. Sec Non": "60",
               "Total NPS O/S Amt": "15813.08",
               "Total NPS O/S No.": "4249",
@@ -69290,7 +69290,7 @@
         "non_ps_npa": {
           "page": 60,
           "fields": [
-            "Total Non-Priorityrityrityrity NPA Amt",
+            "Total Non-Priority NPA Amt",
             "Sec Tot NPA Non No. Priorityrityrity",
             "Other Amt (NPS)",
             "Other No. (NPS)",
@@ -69304,7 +69304,7 @@
           "num_districts": 12,
           "districts": {
             "Eastern West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "29.46",
+              "Total Non-Priority NPA Amt": "29.46",
               "Sec Tot NPA Non No. Priorityrityrity": "30",
               "Other Amt (NPS)": "19.97",
               "Other No. (NPS)": "26",
@@ -69316,7 +69316,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "375.19",
+              "Total Non-Priority NPA Amt": "375.19",
               "Sec Tot NPA Non No. Priorityrityrity": "245",
               "Other Amt (NPS)": "197.18",
               "Other No. (NPS)": "141",
@@ -69328,7 +69328,7 @@
               "Agriculture No. (NPS)": "5"
             },
             "East Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "293.23",
+              "Total Non-Priority NPA Amt": "293.23",
               "Sec Tot NPA Non No. Priorityrityrity": "199",
               "Other Amt (NPS)": "236.7",
               "Other No. (NPS)": "160",
@@ -69340,7 +69340,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "East Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "4125.94",
+              "Total Non-Priority NPA Amt": "4125.94",
               "Sec Tot NPA Non No. Priorityrityrity": "2368",
               "Other Amt (NPS)": "2758.02",
               "Other No. (NPS)": "1852",
@@ -69352,7 +69352,7 @@
               "Agriculture No. (NPS)": "5"
             },
             "North Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "294.66",
+              "Total Non-Priority NPA Amt": "294.66",
               "Sec Tot NPA Non No. Priorityrityrity": "180",
               "Other Amt (NPS)": "72.73",
               "Other No. (NPS)": "79",
@@ -69364,7 +69364,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "Ri Bhoi": {
-              "Total Non-Priorityrityrityrity NPA Amt": "2374.31",
+              "Total Non-Priority NPA Amt": "2374.31",
               "Sec Tot NPA Non No. Priorityrityrity": "1223",
               "Other Amt (NPS)": "2157.23",
               "Other No. (NPS)": "1147",
@@ -69376,7 +69376,7 @@
               "Agriculture No. (NPS)": "2"
             },
             "South Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "215.19",
+              "Total Non-Priority NPA Amt": "215.19",
               "Sec Tot NPA Non No. Priorityrityrity": "144",
               "Other Amt (NPS)": "73.38",
               "Other No. (NPS)": "60",
@@ -69388,7 +69388,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "South West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "264.08",
+              "Total Non-Priority NPA Amt": "264.08",
               "Sec Tot NPA Non No. Priorityrityrity": "214",
               "Other Amt (NPS)": "198.97",
               "Other No. (NPS)": "166",
@@ -69400,7 +69400,7 @@
               "Agriculture No. (NPS)": "1"
             },
             "South West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "33.14",
+              "Total Non-Priority NPA Amt": "33.14",
               "Sec Tot NPA Non No. Priorityrityrity": "17",
               "Other Amt (NPS)": "29.67",
               "Other No. (NPS)": "13",
@@ -69412,7 +69412,7 @@
               "Agriculture No. (NPS)": "0"
             },
             "West Garo Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "2312.82",
+              "Total Non-Priority NPA Amt": "2312.82",
               "Sec Tot NPA Non No. Priorityrityrity": "1705",
               "Other Amt (NPS)": "1007.92",
               "Other No. (NPS)": "1018",
@@ -69424,7 +69424,7 @@
               "Agriculture No. (NPS)": "11"
             },
             "West Jaintia Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "369.82",
+              "Total Non-Priority NPA Amt": "369.82",
               "Sec Tot NPA Non No. Priorityrityrity": "300",
               "Other Amt (NPS)": "256.93",
               "Other No. (NPS)": "210",
@@ -69436,7 +69436,7 @@
               "Agriculture No. (NPS)": "22"
             },
             "West Khasi Hills": {
-              "Total Non-Priorityrityrityrity NPA Amt": "82.69",
+              "Total Non-Priority NPA Amt": "82.69",
               "Sec Tot NPA Non No. Priorityrityrity": "60",
               "Other Amt (NPS)": "41.08",
               "Other No. (NPS)": "31",
@@ -70327,7 +70327,7 @@
         "pmmy_mudra_os_npa": {
           "page": 86,
           "fields": [
-            "NPA Amt.% MUDRA",
+            "NPA Amt. % MUDRA",
             "Total MUDRA NPA Amt",
             "Total MUDRA NPA No.",
             "Total MUDRA O/S Amt",
@@ -70350,7 +70350,7 @@
           "num_districts": 1,
           "districts": {
             "Ri Bhoi": {
-              "NPA Amt.% MUDRA": "8.36",
+              "NPA Amt. % MUDRA": "8.36",
               "Total MUDRA NPA Amt": "620.46",
               "Total MUDRA NPA No.": "876",
               "Total MUDRA O/S Amt": "7425.48",
