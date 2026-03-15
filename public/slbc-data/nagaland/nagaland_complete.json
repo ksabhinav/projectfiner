@@ -433,8 +433,8 @@
           "page": 52,
           "fields": [
             "Crop Loan Achievement",
-            "Insurance Number (PMFBY)",
-            "Insurance Amount (PMFBY)",
+            "Insurance Number (Pmfby)",
+            "Insurance Amount (Pmfby)",
             "Insurance Number (Others)",
             "Insurance Amount (Others)"
           ],
@@ -442,78 +442,78 @@
           "districts": {
             "Dimapur": {
               "Crop Loan Achievement": "1146.24",
-              "Insurance Number (PMFBY)": "220",
-              "Insurance Amount (PMFBY)": "100",
+              "Insurance Number (Pmfby)": "220",
+              "Insurance Amount (Pmfby)": "100",
               "Insurance Number (Others)": "56",
               "Insurance Amount (Others)": "14"
             },
             "Kiphire": {
               "Crop Loan Achievement": "52.53",
-              "Insurance Number (PMFBY)": "0",
-              "Insurance Amount (PMFBY)": "0",
+              "Insurance Number (Pmfby)": "0",
+              "Insurance Amount (Pmfby)": "0",
               "Insurance Number (Others)": "0",
               "Insurance Amount (Others)": "0"
             },
             "Kohima": {
               "Crop Loan Achievement": "599.49",
-              "Insurance Number (PMFBY)": "141",
-              "Insurance Amount (PMFBY)": "48",
+              "Insurance Number (Pmfby)": "141",
+              "Insurance Amount (Pmfby)": "48",
               "Insurance Number (Others)": "3",
               "Insurance Amount (Others)": "0.91"
             },
             "Longleng": {
               "Crop Loan Achievement": "22.44",
-              "Insurance Number (PMFBY)": "0",
-              "Insurance Amount (PMFBY)": "0",
+              "Insurance Number (Pmfby)": "0",
+              "Insurance Amount (Pmfby)": "0",
               "Insurance Number (Others)": "0",
               "Insurance Amount (Others)": "0"
             },
             "Mokokchung": {
               "Crop Loan Achievement": "1473.07",
-              "Insurance Number (PMFBY)": "0",
-              "Insurance Amount (PMFBY)": "0",
+              "Insurance Number (Pmfby)": "0",
+              "Insurance Amount (Pmfby)": "0",
               "Insurance Number (Others)": "10",
               "Insurance Amount (Others)": "4"
             },
             "Mon": {
               "Crop Loan Achievement": "21.25",
-              "Insurance Number (PMFBY)": "0",
-              "Insurance Amount (PMFBY)": "0",
+              "Insurance Number (Pmfby)": "0",
+              "Insurance Amount (Pmfby)": "0",
               "Insurance Number (Others)": "0",
               "Insurance Amount (Others)": "0"
             },
             "Peren": {
               "Crop Loan Achievement": "770.77",
-              "Insurance Number (PMFBY)": "0",
-              "Insurance Amount (PMFBY)": "0",
+              "Insurance Number (Pmfby)": "0",
+              "Insurance Amount (Pmfby)": "0",
               "Insurance Number (Others)": "0",
               "Insurance Amount (Others)": "0"
             },
             "Phek": {
               "Crop Loan Achievement": "581.37",
-              "Insurance Number (PMFBY)": "0",
-              "Insurance Amount (PMFBY)": "0",
+              "Insurance Number (Pmfby)": "0",
+              "Insurance Amount (Pmfby)": "0",
               "Insurance Number (Others)": "0",
               "Insurance Amount (Others)": "0"
             },
             "Tuensang": {
               "Crop Loan Achievement": "954.96",
-              "Insurance Number (PMFBY)": "0",
-              "Insurance Amount (PMFBY)": "0",
+              "Insurance Number (Pmfby)": "0",
+              "Insurance Amount (Pmfby)": "0",
               "Insurance Number (Others)": "0",
               "Insurance Amount (Others)": "0"
             },
             "Wokha": {
               "Crop Loan Achievement": "208.44",
-              "Insurance Number (PMFBY)": "0",
-              "Insurance Amount (PMFBY)": "0",
+              "Insurance Number (Pmfby)": "0",
+              "Insurance Amount (Pmfby)": "0",
               "Insurance Number (Others)": "0",
               "Insurance Amount (Others)": "0"
             },
             "Zunheboto": {
               "Crop Loan Achievement": "40.73",
-              "Insurance Number (PMFBY)": "0",
-              "Insurance Amount (PMFBY)": "0",
+              "Insurance Number (Pmfby)": "0",
+              "Insurance Amount (Pmfby)": "0",
               "Insurance Number (Others)": "16",
               "Insurance Amount (Others)": "5.84"
             }
@@ -1684,7 +1684,7 @@
             "Overdues Amt",
             "Overdues %",
             "GrossNPA Amt",
-            "GrossN- PA %"
+            "GrossN- Pa %"
           ],
           "num_districts": 11,
           "districts": {
@@ -1697,7 +1697,7 @@
               "Overdues Amt": "4249.82",
               "Overdues %": "73",
               "GrossNPA Amt": "8443.88",
-              "GrossN- PA %": "11"
+              "GrossN- Pa %": "11"
             },
             "Kiphire": {
               "No. of A/C": "1542",
@@ -1708,7 +1708,7 @@
               "Overdues Amt": "77.38",
               "Overdues %": "68",
               "GrossNPA Amt": "86.38",
-              "GrossN- PA %": "5"
+              "GrossN- Pa %": "5"
             },
             "Kohima": {
               "No. of A/C": "11471",
@@ -1719,7 +1719,7 @@
               "Overdues Amt": "1614.18",
               "Overdues %": "81",
               "GrossNPA Amt": "2305.04",
-              "GrossN- PA %": "10"
+              "GrossN- Pa %": "10"
             },
             "Longleng": {
               "No. of A/C": "803",
@@ -1730,7 +1730,7 @@
               "Overdues Amt": "18.81",
               "Overdues %": "45",
               "GrossNPA Amt": "118.43",
-              "GrossN- PA %": "12"
+              "GrossN- Pa %": "12"
             },
             "Mokokchung": {
               "No. of A/C": "13398",
@@ -1741,7 +1741,7 @@
               "Overdues Amt": "877.83",
               "Overdues %": "44",
               "GrossNPA Amt": "1263.12",
-              "GrossN- PA %": "8"
+              "GrossN- Pa %": "8"
             },
             "Mon": {
               "No. of A/C": "1591",
@@ -1752,7 +1752,7 @@
               "Overdues Amt": "309.09",
               "Overdues %": "88",
               "GrossNPA Amt": "283.13",
-              "GrossN- PA %": "21"
+              "GrossN- Pa %": "21"
             },
             "Peren": {
               "No. of A/C": "4301",
@@ -1763,7 +1763,7 @@
               "Overdues Amt": "390.04",
               "Overdues %": "46",
               "GrossNPA Amt": "539.76",
-              "GrossN- PA %": "13"
+              "GrossN- Pa %": "13"
             },
             "Phek": {
               "No. of A/C": "4517",
@@ -1774,7 +1774,7 @@
               "Overdues Amt": "318.67",
               "Overdues %": "42",
               "GrossNPA Amt": "945.69",
-              "GrossN- PA %": "25"
+              "GrossN- Pa %": "25"
             },
             "Tuensang": {
               "No. of A/C": "5884",
@@ -1785,7 +1785,7 @@
               "Overdues Amt": "156.17",
               "Overdues %": "20",
               "GrossNPA Amt": "237.78",
-              "GrossN- PA %": "7"
+              "GrossN- Pa %": "7"
             },
             "Wokha": {
               "No. of A/C": "3007",
@@ -1796,7 +1796,7 @@
               "Overdues Amt": "281.53",
               "Overdues %": "76",
               "GrossNPA Amt": "340.15",
-              "GrossN- PA %": "10"
+              "GrossN- Pa %": "10"
             },
             "Zunheboto": {
               "No. of A/C": "3072",
@@ -1807,7 +1807,7 @@
               "Overdues Amt": "161.7",
               "Overdues %": "54",
               "GrossNPA Amt": "317.02",
-              "GrossN- PA %": "13"
+              "GrossN- Pa %": "13"
             }
           }
         },
@@ -1960,8 +1960,8 @@
           "fields": [
             "Urban Number",
             "Urban Amt",
-            "Semi Urban Number",
-            "Semi Urban Amt",
+            "Semi-Urban Number",
+            "Semi-Urban Amt",
             "Rural Number",
             "Rural Amt",
             "Total Number",
@@ -1972,8 +1972,8 @@
             "Dimapur": {
               "Urban Number": "392",
               "Urban Amt": "5656.58",
-              "Semi Urban Number": "715",
-              "Semi Urban Amt": "11112.89",
+              "Semi-Urban Number": "715",
+              "Semi-Urban Amt": "11112.89",
               "Rural Number": "87",
               "Rural Amt": "1243.4",
               "Total Number": "1194",
@@ -1982,8 +1982,8 @@
             "Kiphire": {
               "Urban Number": "0",
               "Urban Amt": "0",
-              "Semi Urban Number": "3",
-              "Semi Urban Amt": "22.97",
+              "Semi-Urban Number": "3",
+              "Semi-Urban Amt": "22.97",
               "Rural Number": "0",
               "Rural Amt": "0",
               "Total Number": "3",
@@ -1992,8 +1992,8 @@
             "Kohima": {
               "Urban Number": "19",
               "Urban Amt": "309.55",
-              "Semi Urban Number": "290",
-              "Semi Urban Amt": "4080.53",
+              "Semi-Urban Number": "290",
+              "Semi-Urban Amt": "4080.53",
               "Rural Number": "11",
               "Rural Amt": "42.87",
               "Total Number": "320",
@@ -2002,8 +2002,8 @@
             "Longleng": {
               "Urban Number": "0",
               "Urban Amt": "0",
-              "Semi Urban Number": "0",
-              "Semi Urban Amt": "0",
+              "Semi-Urban Number": "0",
+              "Semi-Urban Amt": "0",
               "Rural Number": "1",
               "Rural Amt": "19.07",
               "Total Number": "1",
@@ -2012,8 +2012,8 @@
             "Mokokchung": {
               "Urban Number": "0",
               "Urban Amt": "0",
-              "Semi Urban Number": "131",
-              "Semi Urban Amt": "794.63",
+              "Semi-Urban Number": "131",
+              "Semi-Urban Amt": "794.63",
               "Rural Number": "8",
               "Rural Amt": "42.27",
               "Total Number": "139",
@@ -2022,8 +2022,8 @@
             "Mon": {
               "Urban Number": "0",
               "Urban Amt": "0",
-              "Semi Urban Number": "22",
-              "Semi Urban Amt": "127.32",
+              "Semi-Urban Number": "22",
+              "Semi-Urban Amt": "127.32",
               "Rural Number": "1",
               "Rural Amt": "2.62",
               "Total Number": "23",
@@ -2032,8 +2032,8 @@
             "Peren": {
               "Urban Number": "0",
               "Urban Amt": "0",
-              "Semi Urban Number": "0",
-              "Semi Urban Amt": "0",
+              "Semi-Urban Number": "0",
+              "Semi-Urban Amt": "0",
               "Rural Number": "13",
               "Rural Amt": "112.13",
               "Total Number": "13",
@@ -2042,8 +2042,8 @@
             "Phek": {
               "Urban Number": "0",
               "Urban Amt": "0",
-              "Semi Urban Number": "2",
-              "Semi Urban Amt": "7.36",
+              "Semi-Urban Number": "2",
+              "Semi-Urban Amt": "7.36",
               "Rural Number": "5",
               "Rural Amt": "28.87",
               "Total Number": "7",
@@ -2052,8 +2052,8 @@
             "Tuensang": {
               "Urban Number": "0",
               "Urban Amt": "0",
-              "Semi Urban Number": "7",
-              "Semi Urban Amt": "41.25",
+              "Semi-Urban Number": "7",
+              "Semi-Urban Amt": "41.25",
               "Rural Number": "5",
               "Rural Amt": "11.89",
               "Total Number": "12",
@@ -2062,8 +2062,8 @@
             "Wokha": {
               "Urban Number": "0",
               "Urban Amt": "0",
-              "Semi Urban Number": "35",
-              "Semi Urban Amt": "323.76",
+              "Semi-Urban Number": "35",
+              "Semi-Urban Amt": "323.76",
               "Rural Number": "3",
               "Rural Amt": "52.02",
               "Total Number": "38",
@@ -2072,8 +2072,8 @@
             "Zunheboto": {
               "Urban Number": "0",
               "Urban Amt": "0",
-              "Semi Urban Number": "16",
-              "Semi Urban Amt": "65.83",
+              "Semi-Urban Number": "16",
+              "Semi-Urban Amt": "65.83",
               "Rural Number": "6",
               "Rural Amt": "79.42",
               "Total Number": "22",
@@ -2807,7 +2807,7 @@
         "flc_report": {
           "page": 107,
           "fields": [
-            "SL. NO",
+            "Sl. No.",
             "FLC Code",
             "Date of camp",
             "Block",
@@ -2817,7 +2817,7 @@
           "num_districts": 3,
           "districts": {
             "Mokokchung": {
-              "SL. NO": "5",
+              "Sl. No.": "5",
               "FLC Code": "14201",
               "Date of camp": "4/20/2021",
               "Block": "Changtongnya",
@@ -2825,7 +2825,7 @@
               "No of participants": "39"
             },
             "Kiphire": {
-              "SL. NO": "15",
+              "Sl. No.": "15",
               "FLC Code": "14501",
               "Date of camp": "6/27/2021",
               "Block": "Pungro",
@@ -2833,7 +2833,7 @@
               "No of participants": "40"
             },
             "Wokha": {
-              "SL. NO": "16",
+              "Sl. No.": "16",
               "FLC Code": "14701",
               "Date of camp": "5/12/2021",
               "Block": "Baghty",
@@ -3156,10 +3156,10 @@
             "Small Amt",
             "Medium No.",
             "Medium Amt",
-            "Other MSME No.",
-            "Other MSME Amt",
-            "MSME Total O/S No.",
-            "MSME Total O/S Amt"
+            "Other Msme No.",
+            "Other Msme Amt",
+            "Msme Total O/S No.",
+            "Msme Total O/S Amt"
           ],
           "num_districts": 12,
           "districts": {
@@ -3170,10 +3170,10 @@
               "Small Amt": "17031.93",
               "Medium No.": "189",
               "Medium Amt": "7901.32",
-              "Other MSME No.": "224",
-              "Other MSME Amt": "1165.51",
-              "MSME Total O/S No.": "9928",
-              "MSME Total O/S Amt": "61005.09"
+              "Other Msme No.": "224",
+              "Other Msme Amt": "1165.51",
+              "Msme Total O/S No.": "9928",
+              "Msme Total O/S Amt": "61005.09"
             },
             "Kiphire": {
               "Micro No.": "519",
@@ -3182,10 +3182,10 @@
               "Small Amt": "14.12",
               "Medium No.": "0",
               "Medium Amt": "0.00",
-              "Other MSME No.": "2",
-              "Other MSME Amt": "5.81",
-              "MSME Total O/S No.": "524",
-              "MSME Total O/S Amt": "927.00"
+              "Other Msme No.": "2",
+              "Other Msme Amt": "5.81",
+              "Msme Total O/S No.": "524",
+              "Msme Total O/S Amt": "927.00"
             },
             "Kohima": {
               "Micro No.": "3364",
@@ -3194,10 +3194,10 @@
               "Small Amt": "6086.89",
               "Medium No.": "189",
               "Medium Amt": "1222.73",
-              "Other MSME No.": "119",
-              "Other MSME Amt": "367.24",
-              "MSME Total O/S No.": "4012",
-              "MSME Total O/S Amt": "20186.21"
+              "Other Msme No.": "119",
+              "Other Msme Amt": "367.24",
+              "Msme Total O/S No.": "4012",
+              "Msme Total O/S Amt": "20186.21"
             },
             "Longleng": {
               "Micro No.": "328",
@@ -3206,10 +3206,10 @@
               "Small Amt": "9.94",
               "Medium No.": "0",
               "Medium Amt": "0.00",
-              "Other MSME No.": "34",
-              "Other MSME Amt": "51.04",
-              "MSME Total O/S No.": "363",
-              "MSME Total O/S Amt": "583.08"
+              "Other Msme No.": "34",
+              "Other Msme Amt": "51.04",
+              "Msme Total O/S No.": "363",
+              "Msme Total O/S Amt": "583.08"
             },
             "Mokokchung": {
               "Micro No.": "1678",
@@ -3218,10 +3218,10 @@
               "Small Amt": "1263.57",
               "Medium No.": "27",
               "Medium Amt": "43.89",
-              "Other MSME No.": "50",
-              "Other MSME Amt": "208.83",
-              "MSME Total O/S No.": "1863",
-              "MSME Total O/S Amt": "5860.59"
+              "Other Msme No.": "50",
+              "Other Msme Amt": "208.83",
+              "Msme Total O/S No.": "1863",
+              "Msme Total O/S Amt": "5860.59"
             },
             "Mon": {
               "Micro No.": "817",
@@ -3230,10 +3230,10 @@
               "Small Amt": "72.23",
               "Medium No.": "0",
               "Medium Amt": "0.00",
-              "Other MSME No.": "28",
-              "Other MSME Amt": "59.82",
-              "MSME Total O/S No.": "848",
-              "MSME Total O/S Amt": "1534.57"
+              "Other Msme No.": "28",
+              "Other Msme Amt": "59.82",
+              "Msme Total O/S No.": "848",
+              "Msme Total O/S Amt": "1534.57"
             },
             "Noklak": {
               "Micro No.": "137",
@@ -3242,10 +3242,10 @@
               "Small Amt": "7.56",
               "Medium No.": "0",
               "Medium Amt": "0.00",
-              "Other MSME No.": "4",
-              "Other MSME Amt": "15.91",
-              "MSME Total O/S No.": "142",
-              "MSME Total O/S Amt": "177.44"
+              "Other Msme No.": "4",
+              "Other Msme Amt": "15.91",
+              "Msme Total O/S No.": "142",
+              "Msme Total O/S Amt": "177.44"
             },
             "Peren": {
               "Micro No.": "393",
@@ -3254,10 +3254,10 @@
               "Small Amt": "47.39",
               "Medium No.": "0",
               "Medium Amt": "0.00",
-              "Other MSME No.": "16",
-              "Other MSME Amt": "44.05",
-              "MSME Total O/S No.": "413",
-              "MSME Total O/S Amt": "873.34"
+              "Other Msme No.": "16",
+              "Other Msme Amt": "44.05",
+              "Msme Total O/S No.": "413",
+              "Msme Total O/S Amt": "873.34"
             },
             "Phek": {
               "Micro No.": "548",
@@ -3266,10 +3266,10 @@
               "Small Amt": "121.20",
               "Medium No.": "0",
               "Medium Amt": "0.00",
-              "Other MSME No.": "11",
-              "Other MSME Amt": "33.56",
-              "MSME Total O/S No.": "577",
-              "MSME Total O/S Amt": "1528.79"
+              "Other Msme No.": "11",
+              "Other Msme Amt": "33.56",
+              "Msme Total O/S No.": "577",
+              "Msme Total O/S Amt": "1528.79"
             },
             "Tuensang": {
               "Micro No.": "591",
@@ -3278,10 +3278,10 @@
               "Small Amt": "44.07",
               "Medium No.": "0",
               "Medium Amt": "0.00",
-              "Other MSME No.": "6",
-              "Other MSME Amt": "10.4",
-              "MSME Total O/S No.": "602",
-              "MSME Total O/S Amt": "931.12"
+              "Other Msme No.": "6",
+              "Other Msme Amt": "10.4",
+              "Msme Total O/S No.": "602",
+              "Msme Total O/S Amt": "931.12"
             },
             "Wokha": {
               "Micro No.": "610",
@@ -3290,10 +3290,10 @@
               "Small Amt": "757.68",
               "Medium No.": "77",
               "Medium Amt": "247.90",
-              "Other MSME No.": "54",
-              "Other MSME Amt": "96.62",
-              "MSME Total O/S No.": "776",
-              "MSME Total O/S Amt": "3326.11"
+              "Other Msme No.": "54",
+              "Other Msme Amt": "96.62",
+              "Msme Total O/S No.": "776",
+              "Msme Total O/S Amt": "3326.11"
             },
             "Zunheboto": {
               "Micro No.": "731",
@@ -3302,10 +3302,10 @@
               "Small Amt": "269.36",
               "Medium No.": "0",
               "Medium Amt": "0.00",
-              "Other MSME No.": "124",
-              "Other MSME Amt": "272.6",
-              "MSME Total O/S No.": "876",
-              "MSME Total O/S Amt": "1710.16"
+              "Other Msme No.": "124",
+              "Other Msme Amt": "272.6",
+              "Msme Total O/S No.": "876",
+              "Msme Total O/S Amt": "1710.16"
             }
           }
         },
@@ -3482,10 +3482,10 @@
             "Medium Amt",
             "KVIC No.",
             "KVIC Amt",
-            "Other MSME No.",
-            "Other MSME Amt",
-            "Tot MSME (PS) NPA No.",
-            "Tot MSME (PS) NPA Amt"
+            "Other Msme No.",
+            "Other Msme Amt",
+            "Tot Msme (PS) NPA No.",
+            "Tot Msme (PS) NPA Amt"
           ],
           "num_districts": 12,
           "districts": {
@@ -3498,10 +3498,10 @@
               "Medium Amt": "140.41",
               "KVIC No.": "10",
               "KVIC Amt": "51.85",
-              "Other MSME No.": "19",
-              "Other MSME Amt": "36.52",
-              "Tot MSME (PS) NPA No.": "2794",
-              "Tot MSME (PS) NPA Amt": "7189.05"
+              "Other Msme No.": "19",
+              "Other Msme Amt": "36.52",
+              "Tot Msme (PS) NPA No.": "2794",
+              "Tot Msme (PS) NPA Amt": "7189.05"
             },
             "Kiphire": {
               "Micro No.": "35",
@@ -3512,10 +3512,10 @@
               "Medium Amt": "0",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0",
-              "Tot MSME (PS) NPA No.": "36",
-              "Tot MSME (PS) NPA Amt": "52.18"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0",
+              "Tot Msme (PS) NPA No.": "36",
+              "Tot Msme (PS) NPA Amt": "52.18"
             },
             "Kohima": {
               "Micro No.": "772",
@@ -3526,10 +3526,10 @@
               "Medium Amt": "45.26",
               "KVIC No.": "8",
               "KVIC Amt": "31.28",
-              "Other MSME No.": "12",
-              "Other MSME Amt": "22.01",
-              "Tot MSME (PS) NPA No.": "886",
-              "Tot MSME (PS) NPA Amt": "2781.63"
+              "Other Msme No.": "12",
+              "Other Msme Amt": "22.01",
+              "Tot Msme (PS) NPA No.": "886",
+              "Tot Msme (PS) NPA Amt": "2781.63"
             },
             "Longleng": {
               "Micro No.": "14",
@@ -3540,10 +3540,10 @@
               "Medium Amt": "0",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0",
-              "Tot MSME (PS) NPA No.": "14",
-              "Tot MSME (PS) NPA Amt": "11.73"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0",
+              "Tot Msme (PS) NPA No.": "14",
+              "Tot Msme (PS) NPA Amt": "11.73"
             },
             "Mokokchung": {
               "Micro No.": "222",
@@ -3554,10 +3554,10 @@
               "Medium Amt": "0",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0",
-              "Tot MSME (PS) NPA No.": "249",
-              "Tot MSME (PS) NPA Amt": "981.14"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0",
+              "Tot Msme (PS) NPA No.": "249",
+              "Tot Msme (PS) NPA Amt": "981.14"
             },
             "Mon": {
               "Micro No.": "131",
@@ -3568,10 +3568,10 @@
               "Medium Amt": "0",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0",
-              "Tot MSME (PS) NPA No.": "131",
-              "Tot MSME (PS) NPA Amt": "212.68"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0",
+              "Tot Msme (PS) NPA No.": "131",
+              "Tot Msme (PS) NPA Amt": "212.68"
             },
             "Noklak": {
               "Micro No.": "5",
@@ -3582,10 +3582,10 @@
               "Medium Amt": "0",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0",
-              "Tot MSME (PS) NPA No.": "5",
-              "Tot MSME (PS) NPA Amt": "0.36"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0",
+              "Tot Msme (PS) NPA No.": "5",
+              "Tot Msme (PS) NPA Amt": "0.36"
             },
             "Peren": {
               "Micro No.": "122",
@@ -3596,10 +3596,10 @@
               "Medium Amt": "0",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "4",
-              "Other MSME Amt": "8.99",
-              "Tot MSME (PS) NPA No.": "126",
-              "Tot MSME (PS) NPA Amt": "287.11"
+              "Other Msme No.": "4",
+              "Other Msme Amt": "8.99",
+              "Tot Msme (PS) NPA No.": "126",
+              "Tot Msme (PS) NPA Amt": "287.11"
             },
             "Phek": {
               "Micro No.": "251",
@@ -3610,10 +3610,10 @@
               "Medium Amt": "0",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "3",
-              "Other MSME Amt": "12.98",
-              "Tot MSME (PS) NPA No.": "257",
-              "Tot MSME (PS) NPA Amt": "654.55"
+              "Other Msme No.": "3",
+              "Other Msme Amt": "12.98",
+              "Tot Msme (PS) NPA No.": "257",
+              "Tot Msme (PS) NPA Amt": "654.55"
             },
             "Tuensang": {
               "Micro No.": "18",
@@ -3624,10 +3624,10 @@
               "Medium Amt": "0",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0",
-              "Tot MSME (PS) NPA No.": "18",
-              "Tot MSME (PS) NPA Amt": "25.9"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0",
+              "Tot Msme (PS) NPA No.": "18",
+              "Tot Msme (PS) NPA Amt": "25.9"
             },
             "Wokha": {
               "Micro No.": "90",
@@ -3638,10 +3638,10 @@
               "Medium Amt": "0",
               "KVIC No.": "25",
               "KVIC Amt": "41.92",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0",
-              "Tot MSME (PS) NPA No.": "115",
-              "Tot MSME (PS) NPA Amt": "220.24"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0",
+              "Tot Msme (PS) NPA No.": "115",
+              "Tot Msme (PS) NPA Amt": "220.24"
             },
             "Zunheboto": {
               "Micro No.": "29",
@@ -3652,10 +3652,10 @@
               "Medium Amt": "0",
               "KVIC No.": "6",
               "KVIC Amt": "21.54",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0",
-              "Tot MSME (PS) NPA No.": "39",
-              "Tot MSME (PS) NPA Amt": "98.49"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0",
+              "Tot Msme (PS) NPA No.": "39",
+              "Tot Msme (PS) NPA Amt": "98.49"
             }
           }
         },
@@ -4066,8 +4066,8 @@
           "fields": [
             "Agri (PS) Target No.",
             "Agri (PS) Target Amt",
-            "MSME (PS) Target No.",
-            "MSME (PS) Target Amt",
+            "Msme (PS) Target No.",
+            "Msme (PS) Target Amt",
             "Other PS Target No.",
             "Other PS Target Amt",
             "Total (PS) Target No.",
@@ -4078,8 +4078,8 @@
             "Chumoukedima": {
               "Agri (PS) Target No.": "3319",
               "Agri (PS) Target Amt": "5106.66",
-              "MSME (PS) Target No.": "1685",
-              "MSME (PS) Target Amt": "9353.99",
+              "Msme (PS) Target No.": "1685",
+              "Msme (PS) Target Amt": "9353.99",
               "Other PS Target No.": "820",
               "Other PS Target Amt": "2469.03",
               "Total (PS) Target No.": "5824",
@@ -4088,8 +4088,8 @@
             "Dimapur": {
               "Agri (PS) Target No.": "2245",
               "Agri (PS) Target Amt": "4372.49",
-              "MSME (PS) Target No.": "2681",
-              "MSME (PS) Target Amt": "54274.00",
+              "Msme (PS) Target No.": "2681",
+              "Msme (PS) Target Amt": "54274.00",
               "Other PS Target No.": "1024",
               "Other PS Target Amt": "7536.80",
               "Total (PS) Target No.": "5950",
@@ -4098,8 +4098,8 @@
             "Kiphire": {
               "Agri (PS) Target No.": "1840",
               "Agri (PS) Target Amt": "1807.70",
-              "MSME (PS) Target No.": "668",
-              "MSME (PS) Target Amt": "1250.00",
+              "Msme (PS) Target No.": "668",
+              "Msme (PS) Target Amt": "1250.00",
               "Other PS Target No.": "136",
               "Other PS Target Amt": "429.37",
               "Total (PS) Target No.": "2644",
@@ -4108,8 +4108,8 @@
             "Kohima": {
               "Agri (PS) Target No.": "4743",
               "Agri (PS) Target Amt": "6477.51",
-              "MSME (PS) Target No.": "4690",
-              "MSME (PS) Target Amt": "16000.00",
+              "Msme (PS) Target No.": "4690",
+              "Msme (PS) Target Amt": "16000.00",
               "Other PS Target No.": "1930",
               "Other PS Target Amt": "6213.75",
               "Total (PS) Target No.": "11363",
@@ -4118,8 +4118,8 @@
             "Longleng": {
               "Agri (PS) Target No.": "1141",
               "Agri (PS) Target Amt": "1458.73",
-              "MSME (PS) Target No.": "131",
-              "MSME (PS) Target Amt": "800.10",
+              "Msme (PS) Target No.": "131",
+              "Msme (PS) Target Amt": "800.10",
               "Other PS Target No.": "243",
               "Other PS Target Amt": "429.33",
               "Total (PS) Target No.": "1515",
@@ -4128,8 +4128,8 @@
             "Mokokchung": {
               "Agri (PS) Target No.": "8750",
               "Agri (PS) Target Amt": "10048.12",
-              "MSME (PS) Target No.": "1897",
-              "MSME (PS) Target Amt": "6060.00",
+              "Msme (PS) Target No.": "1897",
+              "Msme (PS) Target Amt": "6060.00",
               "Other PS Target No.": "443",
               "Other PS Target Amt": "2119.08",
               "Total (PS) Target No.": "11090",
@@ -4138,8 +4138,8 @@
             "Mon": {
               "Agri (PS) Target No.": "1929",
               "Agri (PS) Target Amt": "3283.86",
-              "MSME (PS) Target No.": "764",
-              "MSME (PS) Target Amt": "3820.00",
+              "Msme (PS) Target No.": "764",
+              "Msme (PS) Target Amt": "3820.00",
               "Other PS Target No.": "142",
               "Other PS Target Amt": "1342.55",
               "Total (PS) Target No.": "2835",
@@ -4148,8 +4148,8 @@
             "Niuland": {
               "Agri (PS) Target No.": "649",
               "Agri (PS) Target Amt": "1001.51",
-              "MSME (PS) Target No.": "152",
-              "MSME (PS) Target Amt": "908.00",
+              "Msme (PS) Target No.": "152",
+              "Msme (PS) Target Amt": "908.00",
               "Other PS Target No.": "96",
               "Other PS Target Amt": "379.54",
               "Total (PS) Target No.": "897",
@@ -4158,8 +4158,8 @@
             "Noklak": {
               "Agri (PS) Target No.": "0",
               "Agri (PS) Target Amt": "923.04",
-              "MSME (PS) Target No.": "0",
-              "MSME (PS) Target Amt": "704.80",
+              "Msme (PS) Target No.": "0",
+              "Msme (PS) Target Amt": "704.80",
               "Other PS Target No.": "0",
               "Other PS Target Amt": "358.34",
               "Total (PS) Target No.": "0",
@@ -4168,8 +4168,8 @@
             "Peren": {
               "Agri (PS) Target No.": "1680",
               "Agri (PS) Target Amt": "3444.56",
-              "MSME (PS) Target No.": "200",
-              "MSME (PS) Target Amt": "1820.00",
+              "Msme (PS) Target No.": "200",
+              "Msme (PS) Target Amt": "1820.00",
               "Other PS Target No.": "149",
               "Other PS Target Amt": "489.50",
               "Total (PS) Target No.": "2029",
@@ -4178,8 +4178,8 @@
             "Phek": {
               "Agri (PS) Target No.": "4468",
               "Agri (PS) Target Amt": "3588.20",
-              "MSME (PS) Target No.": "474",
-              "MSME (PS) Target Amt": "4400.01",
+              "Msme (PS) Target No.": "474",
+              "Msme (PS) Target Amt": "4400.01",
               "Other PS Target No.": "433",
               "Other PS Target Amt": "1090.20",
               "Total (PS) Target No.": "5375",
@@ -4188,8 +4188,8 @@
             "Shamator": {
               "Agri (PS) Target No.": "0",
               "Agri (PS) Target Amt": "1125.63",
-              "MSME (PS) Target No.": "0",
-              "MSME (PS) Target Amt": "678.56",
+              "Msme (PS) Target No.": "0",
+              "Msme (PS) Target Amt": "678.56",
               "Other PS Target No.": "0",
               "Other PS Target Amt": "285.40",
               "Total (PS) Target No.": "0",
@@ -4198,8 +4198,8 @@
             "Tseminyu": {
               "Agri (PS) Target No.": "2286",
               "Agri (PS) Target Amt": "2598.89",
-              "MSME (PS) Target No.": "1020",
-              "MSME (PS) Target Amt": "4999.90",
+              "Msme (PS) Target No.": "1020",
+              "Msme (PS) Target Amt": "4999.90",
               "Other PS Target No.": "790",
               "Other PS Target Amt": "2214.51",
               "Total (PS) Target No.": "4096",
@@ -4208,8 +4208,8 @@
             "Tuensang": {
               "Agri (PS) Target No.": "0",
               "Agri (PS) Target Amt": "3157.69",
-              "MSME (PS) Target No.": "0",
-              "MSME (PS) Target Amt": "1121.50",
+              "Msme (PS) Target No.": "0",
+              "Msme (PS) Target Amt": "1121.50",
               "Other PS Target No.": "0",
               "Other PS Target Amt": "735.50",
               "Total (PS) Target No.": "0",
@@ -4218,8 +4218,8 @@
             "Wokha": {
               "Agri (PS) Target No.": "2881",
               "Agri (PS) Target Amt": "3326.55",
-              "MSME (PS) Target No.": "1405",
-              "MSME (PS) Target Amt": "3143.10",
+              "Msme (PS) Target No.": "1405",
+              "Msme (PS) Target Amt": "3143.10",
               "Other PS Target No.": "1784",
               "Other PS Target Amt": "3722.60",
               "Total (PS) Target No.": "6070",
@@ -4228,8 +4228,8 @@
             "Zunheboto": {
               "Agri (PS) Target No.": "1349",
               "Agri (PS) Target Amt": "2325.59",
-              "MSME (PS) Target No.": "1155",
-              "MSME (PS) Target Amt": "4381.60",
+              "Msme (PS) Target No.": "1155",
+              "Msme (PS) Target Amt": "4381.60",
               "Other PS Target No.": "495",
               "Other PS Target Amt": "2788.00",
               "Total (PS) Target No.": "2999",
@@ -4241,8 +4241,8 @@
           "page": 31,
           "fields": [
             "Sponsor Bank",
-            "NGO Allotted",
-            "Block Identified for setting up CFL",
+            "Ngo Allotted",
+            "Block Identified for setting up Cfl",
             "Adjacent Block 1",
             "Adjacent Block 2"
           ],
@@ -4250,106 +4250,106 @@
           "districts": {
             "Chumoukedima": {
               "Sponsor Bank": "BOB",
-              "NGO Allotted": "",
-              "Block Identified for setting up CFL": "",
+              "Ngo Allotted": "",
+              "Block Identified for setting up Cfl": "",
               "Adjacent Block 1": "",
               "Adjacent Block 2": ""
             },
             "Kiphire": {
               "Sponsor Bank": "SBI",
-              "NGO Allotted": "",
-              "Block Identified for setting up CFL": "",
+              "Ngo Allotted": "",
+              "Block Identified for setting up Cfl": "",
               "Adjacent Block 1": "Khongsa",
               "Adjacent Block 2": "NA"
             },
             "Kohima": {
               "Sponsor Bank": "SBI",
-              "NGO Allotted": "",
-              "Block Identified for setting up CFL": "",
+              "Ngo Allotted": "",
+              "Block Identified for setting up Cfl": "",
               "Adjacent Block 1": "Sechu",
               "Adjacent Block 2": "Zakhama"
             },
             "Longleng": {
               "Sponsor Bank": "SBI",
-              "NGO Allotted": "",
-              "Block Identified for setting up CFL": "",
+              "Ngo Allotted": "",
+              "Block Identified for setting up Cfl": "",
               "Adjacent Block 1": "Sakshi",
               "Adjacent Block 2": "Longleng"
             },
             "Mokokchung": {
               "Sponsor Bank": "SBI",
-              "NGO Allotted": "",
-              "Block Identified for setting up CFL": "",
+              "Ngo Allotted": "",
+              "Block Identified for setting up Cfl": "",
               "Adjacent Block 1": "",
               "Adjacent Block 2": "Kubolong"
             },
             "Mon": {
               "Sponsor Bank": "SBI",
-              "NGO Allotted": "",
-              "Block Identified for setting up CFL": "",
+              "Ngo Allotted": "",
+              "Block Identified for setting up Cfl": "",
               "Adjacent Block 1": "Wakching",
               "Adjacent Block 2": "Naginimora"
             },
             "Niuland": {
               "Sponsor Bank": "SBI",
-              "NGO Allotted": "",
-              "Block Identified for setting up CFL": "",
+              "Ngo Allotted": "",
+              "Block Identified for setting up Cfl": "",
               "Adjacent Block 1": "",
               "Adjacent Block 2": ""
             },
             "Noklak": {
               "Sponsor Bank": "SBI",
-              "NGO Allotted": "",
-              "Block Identified for setting up CFL": "",
+              "Ngo Allotted": "",
+              "Block Identified for setting up Cfl": "",
               "Adjacent Block 1": "NA",
               "Adjacent Block 2": "NA"
             },
             "Peren": {
               "Sponsor Bank": "SBI",
-              "NGO Allotted": "",
-              "Block Identified for setting up CFL": "",
+              "Ngo Allotted": "",
+              "Block Identified for setting up Cfl": "",
               "Adjacent Block 1": "Jalukie",
               "Adjacent Block 2": "NA"
             },
             "Phek": {
               "Sponsor Bank": "SBI",
-              "NGO Allotted": "",
-              "Block Identified for setting up CFL": "",
+              "Ngo Allotted": "",
+              "Block Identified for setting up Cfl": "",
               "Adjacent Block 1": "Weziho",
               "Adjacent Block 2": ""
             },
             "Shamator": {
               "Sponsor Bank": "SBI",
-              "NGO Allotted": "",
-              "Block Identified for setting up CFL": "",
+              "Ngo Allotted": "",
+              "Block Identified for setting up Cfl": "",
               "Adjacent Block 1": "Sansangyu",
               "Adjacent Block 2": "Chessore"
             },
             "Tseminyu": {
               "Sponsor Bank": "SBI",
-              "NGO Allotted": "",
-              "Block Identified for setting up CFL": "",
+              "Ngo Allotted": "",
+              "Block Identified for setting up Cfl": "",
               "Adjacent Block 1": "Botsa",
               "Adjacent Block 2": "Tseminyu"
             },
             "Tuensang": {
               "Sponsor Bank": "SBI",
-              "NGO Allotted": "",
-              "Block Identified for setting up CFL": "",
+              "Ngo Allotted": "",
+              "Block Identified for setting up Cfl": "",
               "Adjacent Block 1": "Chare",
               "Adjacent Block 2": "Noksen"
             },
             "Wokha": {
               "Sponsor Bank": "SBI",
-              "NGO Allotted": "",
-              "Block Identified for setting up CFL": "",
+              "Ngo Allotted": "",
+              "Block Identified for setting up Cfl": "",
               "Adjacent Block 1": "Chukitong",
               "Adjacent Block 2": "Wozhuro"
             },
             "Zunheboto": {
               "Sponsor Bank": "SBI",
-              "NGO Allotted": "",
-              "Block Identified for setting up CFL": "",
+              "Ngo Allotted": "",
+              "Block Identified for setting up Cfl": "",
               "Adjacent Block 1": "",
               "Adjacent Block 2": ""
             }
@@ -4370,7 +4370,7 @@
             "Branch Urban",
             "Total Branch",
             "ATM Rural",
-            "ATM Semi- Urban",
+            "ATM Semi-Urban",
             "ATM Urban",
             "Total ATM",
             "Out Of Total CSP, Fixed Point CSP",
@@ -4385,7 +4385,7 @@
               "Branch Urban": "0",
               "Total Branch": "25",
               "ATM Rural": "8",
-              "ATM Semi- Urban": "13",
+              "ATM Semi-Urban": "13",
               "ATM Urban": "0",
               "Total ATM": "21",
               "Out Of Total CSP, Fixed Point CSP": "90",
@@ -4398,7 +4398,7 @@
               "Branch Urban": "43",
               "Total Branch": "61",
               "ATM Rural": "5",
-              "ATM Semi- Urban": "12",
+              "ATM Semi-Urban": "12",
               "ATM Urban": "131",
               "Total ATM": "148",
               "Out Of Total CSP, Fixed Point CSP": "104",
@@ -4411,7 +4411,7 @@
               "Branch Urban": "0",
               "Total Branch": "4",
               "ATM Rural": "1",
-              "ATM Semi- Urban": "4",
+              "ATM Semi-Urban": "4",
               "ATM Urban": "0",
               "Total ATM": "5",
               "Out Of Total CSP, Fixed Point CSP": "31",
@@ -4424,7 +4424,7 @@
               "Branch Urban": "0",
               "Total Branch": "56",
               "ATM Rural": "6",
-              "ATM Semi- Urban": "93",
+              "ATM Semi-Urban": "93",
               "ATM Urban": "0",
               "Total ATM": "99",
               "Out Of Total CSP, Fixed Point CSP": "65",
@@ -4437,7 +4437,7 @@
               "Branch Urban": "0",
               "Total Branch": "4",
               "ATM Rural": "4",
-              "ATM Semi- Urban": "1",
+              "ATM Semi-Urban": "1",
               "ATM Urban": "0",
               "Total ATM": "5",
               "Out Of Total CSP, Fixed Point CSP": "11",
@@ -4450,7 +4450,7 @@
               "Branch Urban": "1",
               "Total Branch": "26",
               "ATM Rural": "10",
-              "ATM Semi- Urban": "28",
+              "ATM Semi-Urban": "28",
               "ATM Urban": "0",
               "Total ATM": "38",
               "Out Of Total CSP, Fixed Point CSP": "16",
@@ -4463,7 +4463,7 @@
               "Branch Urban": "0",
               "Total Branch": "15",
               "ATM Rural": "4",
-              "ATM Semi- Urban": "9",
+              "ATM Semi-Urban": "9",
               "ATM Urban": "0",
               "Total ATM": "13",
               "Out Of Total CSP, Fixed Point CSP": "149",
@@ -4476,7 +4476,7 @@
               "Branch Urban": "0",
               "Total Branch": "2",
               "ATM Rural": "2",
-              "ATM Semi- Urban": "0",
+              "ATM Semi-Urban": "0",
               "ATM Urban": "0",
               "Total ATM": "2",
               "Out Of Total CSP, Fixed Point CSP": "6",
@@ -4489,7 +4489,7 @@
               "Branch Urban": "0",
               "Total Branch": "2",
               "ATM Rural": "1",
-              "ATM Semi- Urban": "1",
+              "ATM Semi-Urban": "1",
               "ATM Urban": "0",
               "Total ATM": "2",
               "Out Of Total CSP, Fixed Point CSP": "21",
@@ -4502,7 +4502,7 @@
               "Branch Urban": "0",
               "Total Branch": "6",
               "ATM Rural": "5",
-              "ATM Semi- Urban": "1",
+              "ATM Semi-Urban": "1",
               "ATM Urban": "0",
               "Total ATM": "6",
               "Out Of Total CSP, Fixed Point CSP": "28",
@@ -4515,7 +4515,7 @@
               "Branch Urban": "0",
               "Total Branch": "9",
               "ATM Rural": "5",
-              "ATM Semi- Urban": "4",
+              "ATM Semi-Urban": "4",
               "ATM Urban": "0",
               "Total ATM": "9",
               "Out Of Total CSP, Fixed Point CSP": "22",
@@ -4528,7 +4528,7 @@
               "Branch Urban": "0",
               "Total Branch": "2",
               "ATM Rural": "1",
-              "ATM Semi- Urban": "0",
+              "ATM Semi-Urban": "0",
               "ATM Urban": "0",
               "Total ATM": "1",
               "Out Of Total CSP, Fixed Point CSP": "10",
@@ -4541,7 +4541,7 @@
               "Branch Urban": "0",
               "Total Branch": "3",
               "ATM Rural": "2",
-              "ATM Semi- Urban": "1",
+              "ATM Semi-Urban": "1",
               "ATM Urban": "0",
               "Total ATM": "3",
               "Out Of Total CSP, Fixed Point CSP": "3",
@@ -4554,7 +4554,7 @@
               "Branch Urban": "0",
               "Total Branch": "7",
               "ATM Rural": "1",
-              "ATM Semi- Urban": "8",
+              "ATM Semi-Urban": "8",
               "ATM Urban": "0",
               "Total ATM": "9",
               "Out Of Total CSP, Fixed Point CSP": "8",
@@ -4567,7 +4567,7 @@
               "Branch Urban": "0",
               "Total Branch": "14",
               "ATM Rural": "2",
-              "ATM Semi- Urban": "8",
+              "ATM Semi-Urban": "8",
               "ATM Urban": "0",
               "Total ATM": "10",
               "Out Of Total CSP, Fixed Point CSP": "38",
@@ -4580,7 +4580,7 @@
               "Branch Urban": "0",
               "Total Branch": "13",
               "ATM Rural": "4",
-              "ATM Semi- Urban": "8",
+              "ATM Semi-Urban": "8",
               "ATM Urban": "0",
               "Total ATM": "12",
               "Out Of Total CSP, Fixed Point CSP": "20",
@@ -4593,242 +4593,242 @@
           "page": 5,
           "fields": [
             "Dep Rural",
-            "Dep Semi- Urban",
+            "Dep Semi-Urban",
             "Dep Urban",
             "Total Deposit",
             "Adv Rural",
-            "Adv Semi- Urban",
+            "Adv Semi-Urban",
             "Adv Urban",
             "Total Advances",
-            "CDR Rural",
-            "CDR Semi Urban",
-            "CDR Urban",
+            "Cdr Rural",
+            "Cdr Semi-Urban",
+            "Cdr Urban",
             "Overall CD Ratio"
           ],
           "num_districts": 16,
           "districts": {
             "Chumoukedima": {
               "Dep Rural": "50014.22",
-              "Dep Semi- Urban": "71722.30",
+              "Dep Semi-Urban": "71722.30",
               "Dep Urban": "0.00",
               "Total Deposit": "121736.52",
               "Adv Rural": "41090.34",
-              "Adv Semi- Urban": "62839.54",
+              "Adv Semi-Urban": "62839.54",
               "Adv Urban": "472.74",
               "Total Advances": "104402.62",
-              "CDR Rural": "82.16",
-              "CDR Semi Urban": "87.62",
-              "CDR Urban": "0.00",
+              "Cdr Rural": "82.16",
+              "Cdr Semi-Urban": "87.62",
+              "Cdr Urban": "0.00",
               "Overall CD Ratio": "85.76"
             },
             "Dimapur": {
               "Dep Rural": "33512.58",
-              "Dep Semi- Urban": "50798.03",
+              "Dep Semi-Urban": "50798.03",
               "Dep Urban": "558970.86",
               "Total Deposit": "643281.47",
               "Adv Rural": "22295.47",
-              "Adv Semi- Urban": "73553.35",
+              "Adv Semi-Urban": "73553.35",
               "Adv Urban": "318920.26",
               "Total Advances": "414769.08",
-              "CDR Rural": "66.53",
-              "CDR Semi Urban": "144.80",
-              "CDR Urban": "57.05",
+              "Cdr Rural": "66.53",
+              "Cdr Semi-Urban": "144.80",
+              "Cdr Urban": "57.05",
               "Overall CD Ratio": "64.48"
             },
             "Kiphire": {
               "Dep Rural": "3188.99",
-              "Dep Semi- Urban": "9248.88",
+              "Dep Semi-Urban": "9248.88",
               "Dep Urban": "0.00",
               "Total Deposit": "12437.87",
               "Adv Rural": "4526.66",
-              "Adv Semi- Urban": "14972.13",
+              "Adv Semi-Urban": "14972.13",
               "Adv Urban": "0.00",
               "Total Advances": "19498.79",
-              "CDR Rural": "141.95",
-              "CDR Semi Urban": "161.88",
-              "CDR Urban": "0.00",
+              "Cdr Rural": "141.95",
+              "Cdr Semi-Urban": "161.88",
+              "Cdr Urban": "0.00",
               "Overall CD Ratio": "156.77"
             },
             "Kohima": {
               "Dep Rural": "44186.19",
-              "Dep Semi- Urban": "736983.28",
+              "Dep Semi-Urban": "736983.28",
               "Dep Urban": "0.00",
               "Total Deposit": "781169.47",
               "Adv Rural": "17887.40",
-              "Adv Semi- Urban": "210716.18",
+              "Adv Semi-Urban": "210716.18",
               "Adv Urban": "1327.52",
               "Total Advances": "229931.10",
-              "CDR Rural": "40.48",
-              "CDR Semi Urban": "28.59",
-              "CDR Urban": "0.00",
+              "Cdr Rural": "40.48",
+              "Cdr Semi-Urban": "28.59",
+              "Cdr Urban": "0.00",
               "Overall CD Ratio": "29.43"
             },
             "Longleng": {
               "Dep Rural": "10406.23",
-              "Dep Semi- Urban": "144.55",
+              "Dep Semi-Urban": "144.55",
               "Dep Urban": "0.00",
               "Total Deposit": "10550.78",
               "Adv Rural": "14293.98",
-              "Adv Semi- Urban": "76.81",
+              "Adv Semi-Urban": "76.81",
               "Adv Urban": "0.00",
               "Total Advances": "14370.79",
-              "CDR Rural": "137.36",
-              "CDR Semi Urban": "53.14",
-              "CDR Urban": "0.00",
+              "Cdr Rural": "137.36",
+              "Cdr Semi-Urban": "53.14",
+              "Cdr Urban": "0.00",
               "Overall CD Ratio": "136.21"
             },
             "Mokokchung": {
               "Dep Rural": "33615.86",
-              "Dep Semi- Urban": "58137.32",
+              "Dep Semi-Urban": "58137.32",
               "Dep Urban": "0.00",
               "Total Deposit": "91753.18",
               "Adv Rural": "28450.59",
-              "Adv Semi- Urban": "61683.69",
+              "Adv Semi-Urban": "61683.69",
               "Adv Urban": "272.68",
               "Total Advances": "90406.96",
-              "CDR Rural": "84.63",
-              "CDR Semi Urban": "106.10",
-              "CDR Urban": "0.00",
+              "Cdr Rural": "84.63",
+              "Cdr Semi-Urban": "106.10",
+              "Cdr Urban": "0.00",
               "Overall CD Ratio": "98.53"
             },
             "Mon": {
               "Dep Rural": "15515.95",
-              "Dep Semi- Urban": "26681.52",
+              "Dep Semi-Urban": "26681.52",
               "Dep Urban": "0.00",
               "Total Deposit": "42197.47",
               "Adv Rural": "18101.98",
-              "Adv Semi- Urban": "26324.06",
+              "Adv Semi-Urban": "26324.06",
               "Adv Urban": "0.00",
               "Total Advances": "44426.04",
-              "CDR Rural": "116.67",
-              "CDR Semi Urban": "98.66",
-              "CDR Urban": "0.00",
+              "Cdr Rural": "116.67",
+              "Cdr Semi-Urban": "98.66",
+              "Cdr Urban": "0.00",
               "Overall CD Ratio": "105.28"
             },
             "Niuland": {
               "Dep Rural": "1747.91",
-              "Dep Semi- Urban": "0.00",
+              "Dep Semi-Urban": "0.00",
               "Dep Urban": "0.00",
               "Total Deposit": "1747.91",
               "Adv Rural": "3515.66",
-              "Adv Semi- Urban": "0.00",
+              "Adv Semi-Urban": "0.00",
               "Adv Urban": "0.00",
               "Total Advances": "3515.66",
-              "CDR Rural": "201.14",
-              "CDR Semi Urban": "",
-              "CDR Urban": "0.00",
+              "Cdr Rural": "201.14",
+              "Cdr Semi-Urban": "",
+              "Cdr Urban": "0.00",
               "Overall CD Ratio": "201.14"
             },
             "Noklak": {
               "Dep Rural": "4776.58",
-              "Dep Semi- Urban": "230.83",
+              "Dep Semi-Urban": "230.83",
               "Dep Urban": "0.00",
               "Total Deposit": "5007.41",
               "Adv Rural": "3659.77",
-              "Adv Semi- Urban": "218.08",
+              "Adv Semi-Urban": "218.08",
               "Adv Urban": "0.00",
               "Total Advances": "3877.85",
-              "CDR Rural": "76.62",
-              "CDR Semi Urban": "94.48",
-              "CDR Urban": "0.00",
+              "Cdr Rural": "76.62",
+              "Cdr Semi-Urban": "94.48",
+              "Cdr Urban": "0.00",
               "Overall CD Ratio": "77.44"
             },
             "Peren": {
               "Dep Rural": "18552.11",
-              "Dep Semi- Urban": "1977.46",
+              "Dep Semi-Urban": "1977.46",
               "Dep Urban": "0.00",
               "Total Deposit": "20529.57",
               "Adv Rural": "24137.75",
-              "Adv Semi- Urban": "1087.22",
+              "Adv Semi-Urban": "1087.22",
               "Adv Urban": "0.00",
               "Total Advances": "25224.97",
-              "CDR Rural": "130.11",
-              "CDR Semi Urban": "54.98",
-              "CDR Urban": "0.00",
+              "Cdr Rural": "130.11",
+              "Cdr Semi-Urban": "54.98",
+              "Cdr Urban": "0.00",
               "Overall CD Ratio": "122.87"
             },
             "Phek": {
               "Dep Rural": "16545.93",
-              "Dep Semi- Urban": "17955.17",
+              "Dep Semi-Urban": "17955.17",
               "Dep Urban": "0.00",
               "Total Deposit": "34501.10",
               "Adv Rural": "14707.30",
-              "Adv Semi- Urban": "22213.53",
+              "Adv Semi-Urban": "22213.53",
               "Adv Urban": "0.00",
               "Total Advances": "36920.83",
-              "CDR Rural": "88.89",
-              "CDR Semi Urban": "123.72",
-              "CDR Urban": "0.00",
+              "Cdr Rural": "88.89",
+              "Cdr Semi-Urban": "123.72",
+              "Cdr Urban": "0.00",
               "Overall CD Ratio": "107.01"
             },
             "Shamator": {
               "Dep Rural": "1851.87",
-              "Dep Semi- Urban": "0.00",
+              "Dep Semi-Urban": "0.00",
               "Dep Urban": "0.00",
               "Total Deposit": "1851.87",
               "Adv Rural": "2932.67",
-              "Adv Semi- Urban": "0.00",
+              "Adv Semi-Urban": "0.00",
               "Adv Urban": "0.00",
               "Total Advances": "2932.67",
-              "CDR Rural": "158.36",
-              "CDR Semi Urban": "",
-              "CDR Urban": "0.00",
+              "Cdr Rural": "158.36",
+              "Cdr Semi-Urban": "",
+              "Cdr Urban": "0.00",
               "Overall CD Ratio": "158.36"
             },
             "Tseminyu": {
               "Dep Rural": "6334.29",
-              "Dep Semi- Urban": "1860.38",
+              "Dep Semi-Urban": "1860.38",
               "Dep Urban": "0.00",
               "Total Deposit": "8194.67",
               "Adv Rural": "9168.03",
-              "Adv Semi- Urban": "609.68",
+              "Adv Semi-Urban": "609.68",
               "Adv Urban": "0.00",
               "Total Advances": "9777.71",
-              "CDR Rural": "144.74",
-              "CDR Semi Urban": "32.77",
-              "CDR Urban": "0.00",
+              "Cdr Rural": "144.74",
+              "Cdr Semi-Urban": "32.77",
+              "Cdr Urban": "0.00",
               "Overall CD Ratio": "119.32"
             },
             "Tuensang": {
               "Dep Rural": "4497.09",
-              "Dep Semi- Urban": "21368.82",
+              "Dep Semi-Urban": "21368.82",
               "Dep Urban": "0.00",
               "Total Deposit": "25865.91",
               "Adv Rural": "6609.71",
-              "Adv Semi- Urban": "33893.16",
+              "Adv Semi-Urban": "33893.16",
               "Adv Urban": "0.00",
               "Total Advances": "40502.87",
-              "CDR Rural": "146.98",
-              "CDR Semi Urban": "158.61",
-              "CDR Urban": "0.00",
+              "Cdr Rural": "146.98",
+              "Cdr Semi-Urban": "158.61",
+              "Cdr Urban": "0.00",
               "Overall CD Ratio": "156.59"
             },
             "Wokha": {
               "Dep Rural": "11389.22",
-              "Dep Semi- Urban": "33292.84",
+              "Dep Semi-Urban": "33292.84",
               "Dep Urban": "0.00",
               "Total Deposit": "44682.06",
               "Adv Rural": "9859.55",
-              "Adv Semi- Urban": "31728.65",
+              "Adv Semi-Urban": "31728.65",
               "Adv Urban": "143.27",
               "Total Advances": "41731.47",
-              "CDR Rural": "86.57",
-              "CDR Semi Urban": "95.30",
-              "CDR Urban": "0.00",
+              "Cdr Rural": "86.57",
+              "Cdr Semi-Urban": "95.30",
+              "Cdr Urban": "0.00",
               "Overall CD Ratio": "93.40"
             },
             "Zunheboto": {
               "Dep Rural": "15755.26",
-              "Dep Semi- Urban": "18010.44",
+              "Dep Semi-Urban": "18010.44",
               "Dep Urban": "6.00",
               "Total Deposit": "33771.70",
               "Adv Rural": "13170.84",
-              "Adv Semi- Urban": "31448.57",
+              "Adv Semi-Urban": "31448.57",
               "Adv Urban": "0.00",
               "Total Advances": "44619.41",
-              "CDR Rural": "83.60",
-              "CDR Semi Urban": "174.61",
-              "CDR Urban": "0.00",
+              "Cdr Rural": "83.60",
+              "Cdr Semi-Urban": "174.61",
+              "Cdr Urban": "0.00",
               "Overall CD Ratio": "132.12"
             }
           }
@@ -5052,10 +5052,10 @@
             "Small Amt",
             "Medium No.",
             "Medium Amt",
-            "Other MSME No.",
-            "Other MSME Amt",
-            "MSME Total O/S No.",
-            "MSME Total O/S Amt"
+            "Other Msme No.",
+            "Other Msme Amt",
+            "Msme Total O/S No.",
+            "Msme Total O/S Amt"
           ],
           "num_districts": 16,
           "districts": {
@@ -5066,10 +5066,10 @@
               "Small Amt": "1713.36",
               "Medium No.": "17",
               "Medium Amt": "269.32",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "MSME Total O/S No.": "2726",
-              "MSME Total O/S Amt": "6809.28"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Msme Total O/S No.": "2726",
+              "Msme Total O/S Amt": "6809.28"
             },
             "Dimapur": {
               "Micro No.": "9372",
@@ -5078,10 +5078,10 @@
               "Small Amt": "27146.36",
               "Medium No.": "90",
               "Medium Amt": "9539.99",
-              "Other MSME No.": "253",
-              "Other MSME Amt": "628.37",
-              "MSME Total O/S No.": "11101",
-              "MSME Total O/S Amt": "94377.89"
+              "Other Msme No.": "253",
+              "Other Msme Amt": "628.37",
+              "Msme Total O/S No.": "11101",
+              "Msme Total O/S Amt": "94377.89"
             },
             "Kiphire": {
               "Micro No.": "651",
@@ -5090,10 +5090,10 @@
               "Small Amt": "29.31",
               "Medium No.": "0",
               "Medium Amt": "0.00",
-              "Other MSME No.": "5",
-              "Other MSME Amt": "1.37",
-              "MSME Total O/S No.": "681",
-              "MSME Total O/S Amt": "986.74"
+              "Other Msme No.": "5",
+              "Other Msme Amt": "1.37",
+              "Msme Total O/S No.": "681",
+              "Msme Total O/S Amt": "986.74"
             },
             "Kohima": {
               "Micro No.": "6091",
@@ -5102,10 +5102,10 @@
               "Small Amt": "7452.73",
               "Medium No.": "10",
               "Medium Amt": "112.63",
-              "Other MSME No.": "122",
-              "Other MSME Amt": "192.84",
-              "MSME Total O/S No.": "6498",
-              "MSME Total O/S Amt": "31350.79"
+              "Other Msme No.": "122",
+              "Other Msme Amt": "192.84",
+              "Msme Total O/S No.": "6498",
+              "Msme Total O/S Amt": "31350.79"
             },
             "Longleng": {
               "Micro No.": "374",
@@ -5114,10 +5114,10 @@
               "Small Amt": "37.18",
               "Medium No.": "0",
               "Medium Amt": "0.00",
-              "Other MSME No.": "17",
-              "Other MSME Amt": "26.47",
-              "MSME Total O/S No.": "436",
-              "MSME Total O/S Amt": "966.60"
+              "Other Msme No.": "17",
+              "Other Msme Amt": "26.47",
+              "Msme Total O/S No.": "436",
+              "Msme Total O/S Amt": "966.60"
             },
             "Mokokchung": {
               "Micro No.": "1891",
@@ -5126,10 +5126,10 @@
               "Small Amt": "648.20",
               "Medium No.": "2",
               "Medium Amt": "12.77",
-              "Other MSME No.": "78",
-              "Other MSME Amt": "261.65",
-              "MSME Total O/S No.": "2073",
-              "MSME Total O/S Amt": "7457.99"
+              "Other Msme No.": "78",
+              "Other Msme Amt": "261.65",
+              "Msme Total O/S No.": "2073",
+              "Msme Total O/S Amt": "7457.99"
             },
             "Mon": {
               "Micro No.": "1358",
@@ -5138,10 +5138,10 @@
               "Small Amt": "359.51",
               "Medium No.": "0",
               "Medium Amt": "0.00",
-              "Other MSME No.": "9",
-              "Other MSME Amt": "7.20",
-              "MSME Total O/S No.": "1502",
-              "MSME Total O/S Amt": "2947.35"
+              "Other Msme No.": "9",
+              "Other Msme Amt": "7.20",
+              "Msme Total O/S No.": "1502",
+              "Msme Total O/S Amt": "2947.35"
             },
             "Niuland": {
               "Micro No.": "235",
@@ -5150,10 +5150,10 @@
               "Small Amt": "22.15",
               "Medium No.": "0",
               "Medium Amt": "0.00",
-              "Other MSME No.": "73",
-              "Other MSME Amt": "150.34",
-              "MSME Total O/S No.": "312",
-              "MSME Total O/S Amt": "562.47"
+              "Other Msme No.": "73",
+              "Other Msme Amt": "150.34",
+              "Msme Total O/S No.": "312",
+              "Msme Total O/S Amt": "562.47"
             },
             "Noklak": {
               "Micro No.": "73",
@@ -5162,10 +5162,10 @@
               "Small Amt": "19.34",
               "Medium No.": "0",
               "Medium Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "MSME Total O/S No.": "98",
-              "MSME Total O/S Amt": "225.84"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Msme Total O/S No.": "98",
+              "Msme Total O/S Amt": "225.84"
             },
             "Peren": {
               "Micro No.": "601",
@@ -5174,10 +5174,10 @@
               "Small Amt": "50.00",
               "Medium No.": "0",
               "Medium Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "MSME Total O/S No.": "620",
-              "MSME Total O/S Amt": "1282.96"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Msme Total O/S No.": "620",
+              "Msme Total O/S Amt": "1282.96"
             },
             "Phek": {
               "Micro No.": "932",
@@ -5186,10 +5186,10 @@
               "Small Amt": "42.66",
               "Medium No.": "4",
               "Medium Amt": "9.64",
-              "Other MSME No.": "1",
-              "Other MSME Amt": "0.02",
-              "MSME Total O/S No.": "960",
-              "MSME Total O/S Amt": "2125.92"
+              "Other Msme No.": "1",
+              "Other Msme Amt": "0.02",
+              "Msme Total O/S No.": "960",
+              "Msme Total O/S Amt": "2125.92"
             },
             "Shamator": {
               "Micro No.": "110",
@@ -5198,10 +5198,10 @@
               "Small Amt": "3.34",
               "Medium No.": "0",
               "Medium Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "MSME Total O/S No.": "119",
-              "MSME Total O/S Amt": "309.07"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Msme Total O/S No.": "119",
+              "Msme Total O/S Amt": "309.07"
             },
             "Tseminyu": {
               "Micro No.": "220",
@@ -5210,10 +5210,10 @@
               "Small Amt": "86.44",
               "Medium No.": "0",
               "Medium Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "MSME Total O/S No.": "245",
-              "MSME Total O/S Amt": "683.24"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Msme Total O/S No.": "245",
+              "Msme Total O/S Amt": "683.24"
             },
             "Tuensang": {
               "Micro No.": "581",
@@ -5222,10 +5222,10 @@
               "Small Amt": "250.29",
               "Medium No.": "2",
               "Medium Amt": "5.56",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "MSME Total O/S No.": "722",
-              "MSME Total O/S Amt": "1537.51"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Msme Total O/S No.": "722",
+              "Msme Total O/S Amt": "1537.51"
             },
             "Wokha": {
               "Micro No.": "936",
@@ -5234,10 +5234,10 @@
               "Small Amt": "845.62",
               "Medium No.": "1",
               "Medium Amt": "0.15",
-              "Other MSME No.": "31",
-              "Other MSME Amt": "67.94",
-              "MSME Total O/S No.": "1126",
-              "MSME Total O/S Amt": "4153.02"
+              "Other Msme No.": "31",
+              "Other Msme Amt": "67.94",
+              "Msme Total O/S No.": "1126",
+              "Msme Total O/S Amt": "4153.02"
             },
             "Zunheboto": {
               "Micro No.": "805",
@@ -5246,10 +5246,10 @@
               "Small Amt": "161.59",
               "Medium No.": "0",
               "Medium Amt": "0.00",
-              "Other MSME No.": "35",
-              "Other MSME Amt": "96.60",
-              "MSME Total O/S No.": "939",
-              "MSME Total O/S Amt": "3271.92"
+              "Other Msme No.": "35",
+              "Other Msme Amt": "96.60",
+              "Msme Total O/S No.": "939",
+              "Msme Total O/S Amt": "3271.92"
             }
           }
         },
@@ -5474,10 +5474,10 @@
             "Medium Amt",
             "KVIC No.",
             "KVIC Amt",
-            "Other MSME No.",
-            "Other MSME Amt",
-            "Tot MSME (PS) NPA No.",
-            "Tot MSME (PS) NPA Amt"
+            "Other Msme No.",
+            "Other Msme Amt",
+            "Tot Msme (PS) NPA No.",
+            "Tot Msme (PS) NPA Amt"
           ],
           "num_districts": 16,
           "districts": {
@@ -5490,10 +5490,10 @@
               "Medium Amt": "0.00",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "Tot MSME (PS) NPA No.": "400",
-              "Tot MSME (PS) NPA Amt": "365.83"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Tot Msme (PS) NPA No.": "400",
+              "Tot Msme (PS) NPA Amt": "365.83"
             },
             "Dimapur": {
               "Micro No.": "1985",
@@ -5504,10 +5504,10 @@
               "Medium Amt": "0.00",
               "KVIC No.": "8",
               "KVIC Amt": "18.93",
-              "Other MSME No.": "8",
-              "Other MSME Amt": "10.82",
-              "Tot MSME (PS) NPA No.": "2055",
-              "Tot MSME (PS) NPA Amt": "6603.39"
+              "Other Msme No.": "8",
+              "Other Msme Amt": "10.82",
+              "Tot Msme (PS) NPA No.": "2055",
+              "Tot Msme (PS) NPA Amt": "6603.39"
             },
             "Kiphire": {
               "Micro No.": "74",
@@ -5518,10 +5518,10 @@
               "Medium Amt": "0.00",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "Tot MSME (PS) NPA No.": "74",
-              "Tot MSME (PS) NPA Amt": "77.94"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Tot Msme (PS) NPA No.": "74",
+              "Tot Msme (PS) NPA Amt": "77.94"
             },
             "Kohima": {
               "Micro No.": "856",
@@ -5532,10 +5532,10 @@
               "Medium Amt": "0.54",
               "KVIC No.": "31",
               "KVIC Amt": "74.01",
-              "Other MSME No.": "7",
-              "Other MSME Amt": "9.70",
-              "Tot MSME (PS) NPA No.": "913",
-              "Tot MSME (PS) NPA Amt": "2412.24"
+              "Other Msme No.": "7",
+              "Other Msme Amt": "9.70",
+              "Tot Msme (PS) NPA No.": "913",
+              "Tot Msme (PS) NPA Amt": "2412.24"
             },
             "Longleng": {
               "Micro No.": "46",
@@ -5546,10 +5546,10 @@
               "Medium Amt": "0.00",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "Tot MSME (PS) NPA No.": "46",
-              "Tot MSME (PS) NPA Amt": "54.93"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Tot Msme (PS) NPA No.": "46",
+              "Tot Msme (PS) NPA Amt": "54.93"
             },
             "Mokokchung": {
               "Micro No.": "253",
@@ -5560,10 +5560,10 @@
               "Medium Amt": "0.00",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "Tot MSME (PS) NPA No.": "265",
-              "Tot MSME (PS) NPA Amt": "917.74"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Tot Msme (PS) NPA No.": "265",
+              "Tot Msme (PS) NPA Amt": "917.74"
             },
             "Mon": {
               "Micro No.": "188",
@@ -5574,10 +5574,10 @@
               "Medium Amt": "0.00",
               "KVIC No.": "1",
               "KVIC Amt": "2.46",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "Tot MSME (PS) NPA No.": "190",
-              "Tot MSME (PS) NPA Amt": "236.43"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Tot Msme (PS) NPA No.": "190",
+              "Tot Msme (PS) NPA Amt": "236.43"
             },
             "Niuland": {
               "Micro No.": "17",
@@ -5588,10 +5588,10 @@
               "Medium Amt": "0.00",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "Tot MSME (PS) NPA No.": "17",
-              "Tot MSME (PS) NPA Amt": "17.39"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Tot Msme (PS) NPA No.": "17",
+              "Tot Msme (PS) NPA Amt": "17.39"
             },
             "Noklak": {
               "Micro No.": "4",
@@ -5602,10 +5602,10 @@
               "Medium Amt": "0.00",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "Tot MSME (PS) NPA No.": "4",
-              "Tot MSME (PS) NPA Amt": "0.83"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Tot Msme (PS) NPA No.": "4",
+              "Tot Msme (PS) NPA Amt": "0.83"
             },
             "Peren": {
               "Micro No.": "112",
@@ -5616,10 +5616,10 @@
               "Medium Amt": "0.00",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "Tot MSME (PS) NPA No.": "112",
-              "Tot MSME (PS) NPA Amt": "129.55"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Tot Msme (PS) NPA No.": "112",
+              "Tot Msme (PS) NPA Amt": "129.55"
             },
             "Phek": {
               "Micro No.": "235",
@@ -5630,10 +5630,10 @@
               "Medium Amt": "0.00",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "Tot MSME (PS) NPA No.": "237",
-              "Tot MSME (PS) NPA Amt": "595.47"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Tot Msme (PS) NPA No.": "237",
+              "Tot Msme (PS) NPA Amt": "595.47"
             },
             "Shamator": {
               "Micro No.": "2",
@@ -5644,10 +5644,10 @@
               "Medium Amt": "0.00",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "Tot MSME (PS) NPA No.": "2",
-              "Tot MSME (PS) NPA Amt": "0.80"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Tot Msme (PS) NPA No.": "2",
+              "Tot Msme (PS) NPA Amt": "0.80"
             },
             "Tseminyu": {
               "Micro No.": "40",
@@ -5658,10 +5658,10 @@
               "Medium Amt": "0.00",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "Tot MSME (PS) NPA No.": "40",
-              "Tot MSME (PS) NPA Amt": "113.23"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Tot Msme (PS) NPA No.": "40",
+              "Tot Msme (PS) NPA Amt": "113.23"
             },
             "Tuensang": {
               "Micro No.": "64",
@@ -5672,10 +5672,10 @@
               "Medium Amt": "0.00",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "Tot MSME (PS) NPA No.": "66",
-              "Tot MSME (PS) NPA Amt": "42.67"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Tot Msme (PS) NPA No.": "66",
+              "Tot Msme (PS) NPA Amt": "42.67"
             },
             "Wokha": {
               "Micro No.": "128",
@@ -5686,10 +5686,10 @@
               "Medium Amt": "0.00",
               "KVIC No.": "12",
               "KVIC Amt": "17.50",
-              "Other MSME No.": "0",
-              "Other MSME Amt": "0.00",
-              "Tot MSME (PS) NPA No.": "141",
-              "Tot MSME (PS) NPA Amt": "213.35"
+              "Other Msme No.": "0",
+              "Other Msme Amt": "0.00",
+              "Tot Msme (PS) NPA No.": "141",
+              "Tot Msme (PS) NPA Amt": "213.35"
             },
             "Zunheboto": {
               "Micro No.": "93",
@@ -5700,10 +5700,10 @@
               "Medium Amt": "0.00",
               "KVIC No.": "0",
               "KVIC Amt": "0.00",
-              "Other MSME No.": "1",
-              "Other MSME Amt": "2.43",
-              "Tot MSME (PS) NPA No.": "94",
-              "Tot MSME (PS) NPA Amt": "154.88"
+              "Other Msme No.": "1",
+              "Other Msme Amt": "2.43",
+              "Tot Msme (PS) NPA No.": "94",
+              "Tot Msme (PS) NPA Amt": "154.88"
             }
           }
         },
@@ -5990,8 +5990,8 @@
           "fields": [
             "Agri (PS) Target No.",
             "Agri (PS) Target Amt",
-            "MSME (PS) Target No.",
-            "MSME (PS) Target Amt",
+            "Msme (PS) Target No.",
+            "Msme (PS) Target Amt",
             "Other PS Target No.",
             "Other PS Target Amt",
             "Total (PS) Target No.",
@@ -6002,8 +6002,8 @@
             "Chumoukedima": {
               "Agri (PS) Target No.": "3319",
               "Agri (PS) Target Amt": "5106.66",
-              "MSME (PS) Target No.": "1685",
-              "MSME (PS) Target Amt": "9353.99",
+              "Msme (PS) Target No.": "1685",
+              "Msme (PS) Target Amt": "9353.99",
               "Other PS Target No.": "820",
               "Other PS Target Amt": "2469.03",
               "Total (PS) Target No.": "5824",
@@ -6012,8 +6012,8 @@
             "Dimapur": {
               "Agri (PS) Target No.": "2245",
               "Agri (PS) Target Amt": "4372.49",
-              "MSME (PS) Target No.": "2681",
-              "MSME (PS) Target Amt": "54274.00",
+              "Msme (PS) Target No.": "2681",
+              "Msme (PS) Target Amt": "54274.00",
               "Other PS Target No.": "1024",
               "Other PS Target Amt": "7536.80",
               "Total (PS) Target No.": "5950",
@@ -6022,8 +6022,8 @@
             "Kiphire": {
               "Agri (PS) Target No.": "1840",
               "Agri (PS) Target Amt": "1807.70",
-              "MSME (PS) Target No.": "668",
-              "MSME (PS) Target Amt": "1250.00",
+              "Msme (PS) Target No.": "668",
+              "Msme (PS) Target Amt": "1250.00",
               "Other PS Target No.": "136",
               "Other PS Target Amt": "429.37",
               "Total (PS) Target No.": "2644",
@@ -6032,8 +6032,8 @@
             "Kohima": {
               "Agri (PS) Target No.": "4743",
               "Agri (PS) Target Amt": "6477.51",
-              "MSME (PS) Target No.": "4690",
-              "MSME (PS) Target Amt": "16000.00",
+              "Msme (PS) Target No.": "4690",
+              "Msme (PS) Target Amt": "16000.00",
               "Other PS Target No.": "1930",
               "Other PS Target Amt": "6213.75",
               "Total (PS) Target No.": "11363",
@@ -6042,8 +6042,8 @@
             "Longleng": {
               "Agri (PS) Target No.": "1141",
               "Agri (PS) Target Amt": "1458.73",
-              "MSME (PS) Target No.": "131",
-              "MSME (PS) Target Amt": "800.10",
+              "Msme (PS) Target No.": "131",
+              "Msme (PS) Target Amt": "800.10",
               "Other PS Target No.": "243",
               "Other PS Target Amt": "429.33",
               "Total (PS) Target No.": "1515",
@@ -6052,8 +6052,8 @@
             "Mokokchung": {
               "Agri (PS) Target No.": "8750",
               "Agri (PS) Target Amt": "10048.12",
-              "MSME (PS) Target No.": "1897",
-              "MSME (PS) Target Amt": "6060.00",
+              "Msme (PS) Target No.": "1897",
+              "Msme (PS) Target Amt": "6060.00",
               "Other PS Target No.": "443",
               "Other PS Target Amt": "2119.08",
               "Total (PS) Target No.": "11090",
@@ -6062,8 +6062,8 @@
             "Mon": {
               "Agri (PS) Target No.": "1929",
               "Agri (PS) Target Amt": "3283.86",
-              "MSME (PS) Target No.": "764",
-              "MSME (PS) Target Amt": "3820.00",
+              "Msme (PS) Target No.": "764",
+              "Msme (PS) Target Amt": "3820.00",
               "Other PS Target No.": "142",
               "Other PS Target Amt": "1342.55",
               "Total (PS) Target No.": "2835",
@@ -6072,8 +6072,8 @@
             "Niuland": {
               "Agri (PS) Target No.": "649",
               "Agri (PS) Target Amt": "1001.51",
-              "MSME (PS) Target No.": "152",
-              "MSME (PS) Target Amt": "908.00",
+              "Msme (PS) Target No.": "152",
+              "Msme (PS) Target Amt": "908.00",
               "Other PS Target No.": "96",
               "Other PS Target Amt": "379.54",
               "Total (PS) Target No.": "897",
@@ -6082,8 +6082,8 @@
             "Noklak": {
               "Agri (PS) Target No.": "0",
               "Agri (PS) Target Amt": "923.04",
-              "MSME (PS) Target No.": "0",
-              "MSME (PS) Target Amt": "704.80",
+              "Msme (PS) Target No.": "0",
+              "Msme (PS) Target Amt": "704.80",
               "Other PS Target No.": "0",
               "Other PS Target Amt": "358.34",
               "Total (PS) Target No.": "0",
@@ -6092,8 +6092,8 @@
             "Peren": {
               "Agri (PS) Target No.": "1680",
               "Agri (PS) Target Amt": "3444.56",
-              "MSME (PS) Target No.": "200",
-              "MSME (PS) Target Amt": "1820.00",
+              "Msme (PS) Target No.": "200",
+              "Msme (PS) Target Amt": "1820.00",
               "Other PS Target No.": "149",
               "Other PS Target Amt": "489.50",
               "Total (PS) Target No.": "2029",
@@ -6102,8 +6102,8 @@
             "Phek": {
               "Agri (PS) Target No.": "4468",
               "Agri (PS) Target Amt": "3588.20",
-              "MSME (PS) Target No.": "474",
-              "MSME (PS) Target Amt": "4400.01",
+              "Msme (PS) Target No.": "474",
+              "Msme (PS) Target Amt": "4400.01",
               "Other PS Target No.": "433",
               "Other PS Target Amt": "1090.20",
               "Total (PS) Target No.": "5375",
@@ -6112,8 +6112,8 @@
             "Shamator": {
               "Agri (PS) Target No.": "0",
               "Agri (PS) Target Amt": "1125.63",
-              "MSME (PS) Target No.": "0",
-              "MSME (PS) Target Amt": "678.56",
+              "Msme (PS) Target No.": "0",
+              "Msme (PS) Target Amt": "678.56",
               "Other PS Target No.": "0",
               "Other PS Target Amt": "285.40",
               "Total (PS) Target No.": "0",
@@ -6122,8 +6122,8 @@
             "Tseminyu": {
               "Agri (PS) Target No.": "2286",
               "Agri (PS) Target Amt": "2598.89",
-              "MSME (PS) Target No.": "1020",
-              "MSME (PS) Target Amt": "4999.90",
+              "Msme (PS) Target No.": "1020",
+              "Msme (PS) Target Amt": "4999.90",
               "Other PS Target No.": "790",
               "Other PS Target Amt": "2214.51",
               "Total (PS) Target No.": "4096",
@@ -6132,8 +6132,8 @@
             "Tuensang": {
               "Agri (PS) Target No.": "0",
               "Agri (PS) Target Amt": "3157.69",
-              "MSME (PS) Target No.": "0",
-              "MSME (PS) Target Amt": "1121.50",
+              "Msme (PS) Target No.": "0",
+              "Msme (PS) Target Amt": "1121.50",
               "Other PS Target No.": "0",
               "Other PS Target Amt": "735.50",
               "Total (PS) Target No.": "0",
@@ -6142,8 +6142,8 @@
             "Wokha": {
               "Agri (PS) Target No.": "2881",
               "Agri (PS) Target Amt": "3326.55",
-              "MSME (PS) Target No.": "1405",
-              "MSME (PS) Target Amt": "3143.10",
+              "Msme (PS) Target No.": "1405",
+              "Msme (PS) Target Amt": "3143.10",
               "Other PS Target No.": "1784",
               "Other PS Target Amt": "3722.60",
               "Total (PS) Target No.": "6070",
@@ -6152,8 +6152,8 @@
             "Zunheboto": {
               "Agri (PS) Target No.": "1349",
               "Agri (PS) Target Amt": "2325.59",
-              "MSME (PS) Target No.": "1155",
-              "MSME (PS) Target Amt": "4381.60",
+              "Msme (PS) Target No.": "1155",
+              "Msme (PS) Target Amt": "4381.60",
               "Other PS Target No.": "495",
               "Other PS Target Amt": "2788.00",
               "Total (PS) Target No.": "2999",
@@ -7617,10 +7617,10 @@
         "pmegp": {
           "page": 65,
           "fields": [
-            "CY SANCTION A/C No.",
-            "CY SANCTION Amt",
-            "CY DISBURSED A/C No.",
-            "CY DISBURSED Amt",
+            "CY Sanction A/C No.",
+            "CY Sanction Amt",
+            "CY Disbursed A/C No.",
+            "CY Disbursed Amt",
             "PMEGP O/S No.",
             "PMEGP O/S Amt",
             "PMEGP NPA No.",
@@ -7630,10 +7630,10 @@
           "num_districts": 16,
           "districts": {
             "Chumoukedima": {
-              "CY SANCTION A/C No.": "59",
-              "CY SANCTION Amt": "262.56",
-              "CY DISBURSED A/C No.": "58",
-              "CY DISBURSED Amt": "239.73",
+              "CY Sanction A/C No.": "59",
+              "CY Sanction Amt": "262.56",
+              "CY Disbursed A/C No.": "58",
+              "CY Disbursed Amt": "239.73",
               "PMEGP O/S No.": "269",
               "PMEGP O/S Amt": "705.37",
               "PMEGP NPA No.": "44",
@@ -7641,10 +7641,10 @@
               "PMEGP NPA Amt. %": "18.34"
             },
             "Dimapur": {
-              "CY SANCTION A/C No.": "263",
-              "CY SANCTION Amt": "2598.41",
-              "CY DISBURSED A/C No.": "184",
-              "CY DISBURSED Amt": "1199.63",
+              "CY Sanction A/C No.": "263",
+              "CY Sanction Amt": "2598.41",
+              "CY Disbursed A/C No.": "184",
+              "CY Disbursed Amt": "1199.63",
               "PMEGP O/S No.": "795",
               "PMEGP O/S Amt": "2405.46",
               "PMEGP NPA No.": "305",
@@ -7652,10 +7652,10 @@
               "PMEGP NPA Amt. %": "34.51"
             },
             "Kiphire": {
-              "CY SANCTION A/C No.": "49",
-              "CY SANCTION Amt": "164.75",
-              "CY DISBURSED A/C No.": "49",
-              "CY DISBURSED Amt": "146.82",
+              "CY Sanction A/C No.": "49",
+              "CY Sanction Amt": "164.75",
+              "CY Disbursed A/C No.": "49",
+              "CY Disbursed Amt": "146.82",
               "PMEGP O/S No.": "307",
               "PMEGP O/S Amt": "587.82",
               "PMEGP NPA No.": "26",
@@ -7663,10 +7663,10 @@
               "PMEGP NPA Amt. %": "8.00"
             },
             "Kohima": {
-              "CY SANCTION A/C No.": "209",
-              "CY SANCTION Amt": "1468.52",
-              "CY DISBURSED A/C No.": "148",
-              "CY DISBURSED Amt": "652.73",
+              "CY Sanction A/C No.": "209",
+              "CY Sanction Amt": "1468.52",
+              "CY Disbursed A/C No.": "148",
+              "CY Disbursed Amt": "652.73",
               "PMEGP O/S No.": "614",
               "PMEGP O/S Amt": "1429.16",
               "PMEGP NPA No.": "150",
@@ -7674,10 +7674,10 @@
               "PMEGP NPA Amt. %": "16.55"
             },
             "Longleng": {
-              "CY SANCTION A/C No.": "3",
-              "CY SANCTION Amt": "15.20",
-              "CY DISBURSED A/C No.": "3",
-              "CY DISBURSED Amt": "13.07",
+              "CY Sanction A/C No.": "3",
+              "CY Sanction Amt": "15.20",
+              "CY Disbursed A/C No.": "3",
+              "CY Disbursed Amt": "13.07",
               "PMEGP O/S No.": "130",
               "PMEGP O/S Amt": "242.05",
               "PMEGP NPA No.": "4",
@@ -7685,10 +7685,10 @@
               "PMEGP NPA Amt. %": "2.71"
             },
             "Mokokchung": {
-              "CY SANCTION A/C No.": "62",
-              "CY SANCTION Amt": "542.13",
-              "CY DISBURSED A/C No.": "17",
-              "CY DISBURSED Amt": "102.65",
+              "CY Sanction A/C No.": "62",
+              "CY Sanction Amt": "542.13",
+              "CY Disbursed A/C No.": "17",
+              "CY Disbursed Amt": "102.65",
               "PMEGP O/S No.": "304",
               "PMEGP O/S Amt": "1055.60",
               "PMEGP NPA No.": "191",
@@ -7696,10 +7696,10 @@
               "PMEGP NPA Amt. %": "64.52"
             },
             "Mon": {
-              "CY SANCTION A/C No.": "88",
-              "CY SANCTION Amt": "488.07",
-              "CY DISBURSED A/C No.": "41",
-              "CY DISBURSED Amt": "140.34",
+              "CY Sanction A/C No.": "88",
+              "CY Sanction Amt": "488.07",
+              "CY Disbursed A/C No.": "41",
+              "CY Disbursed Amt": "140.34",
               "PMEGP O/S No.": "295",
               "PMEGP O/S Amt": "666.63",
               "PMEGP NPA No.": "13",
@@ -7707,10 +7707,10 @@
               "PMEGP NPA Amt. %": "2.87"
             },
             "Niuland": {
-              "CY SANCTION A/C No.": "24",
-              "CY SANCTION Amt": "72.39",
-              "CY DISBURSED A/C No.": "24",
-              "CY DISBURSED Amt": "59.43",
+              "CY Sanction A/C No.": "24",
+              "CY Sanction Amt": "72.39",
+              "CY Disbursed A/C No.": "24",
+              "CY Disbursed Amt": "59.43",
               "PMEGP O/S No.": "85",
               "PMEGP O/S Amt": "211.92",
               "PMEGP NPA No.": "16",
@@ -7718,10 +7718,10 @@
               "PMEGP NPA Amt. %": "20.23"
             },
             "Noklak": {
-              "CY SANCTION A/C No.": "5",
-              "CY SANCTION Amt": "26.29",
-              "CY DISBURSED A/C No.": "5",
-              "CY DISBURSED Amt": "22.52",
+              "CY Sanction A/C No.": "5",
+              "CY Sanction Amt": "26.29",
+              "CY Disbursed A/C No.": "5",
+              "CY Disbursed Amt": "22.52",
               "PMEGP O/S No.": "56",
               "PMEGP O/S Amt": "121.18",
               "PMEGP NPA No.": "0",
@@ -7729,10 +7729,10 @@
               "PMEGP NPA Amt. %": "0.00"
             },
             "Peren": {
-              "CY SANCTION A/C No.": "19",
-              "CY SANCTION Amt": "78.39",
-              "CY DISBURSED A/C No.": "21",
-              "CY DISBURSED Amt": "75.42",
+              "CY Sanction A/C No.": "19",
+              "CY Sanction Amt": "78.39",
+              "CY Disbursed A/C No.": "21",
+              "CY Disbursed Amt": "75.42",
               "PMEGP O/S No.": "207",
               "PMEGP O/S Amt": "471.24",
               "PMEGP NPA No.": "28",
@@ -7740,10 +7740,10 @@
               "PMEGP NPA Amt. %": "13.33"
             },
             "Phek": {
-              "CY SANCTION A/C No.": "103",
-              "CY SANCTION Amt": "340.47",
-              "CY DISBURSED A/C No.": "103",
-              "CY DISBURSED Amt": "314.45",
+              "CY Sanction A/C No.": "103",
+              "CY Sanction Amt": "340.47",
+              "CY Disbursed A/C No.": "103",
+              "CY Disbursed Amt": "314.45",
               "PMEGP O/S No.": "388",
               "PMEGP O/S Amt": "1068.65",
               "PMEGP NPA No.": "176",
@@ -7751,10 +7751,10 @@
               "PMEGP NPA Amt. %": "47.28"
             },
             "Shamator": {
-              "CY SANCTION A/C No.": "10",
-              "CY SANCTION Amt": "39.71",
-              "CY DISBURSED A/C No.": "10",
-              "CY DISBURSED Amt": "34.41",
+              "CY Sanction A/C No.": "10",
+              "CY Sanction Amt": "39.71",
+              "CY Disbursed A/C No.": "10",
+              "CY Disbursed Amt": "34.41",
               "PMEGP O/S No.": "24",
               "PMEGP O/S Amt": "55.81",
               "PMEGP NPA No.": "0",
@@ -7762,10 +7762,10 @@
               "PMEGP NPA Amt. %": "0.00"
             },
             "Tseminyu": {
-              "CY SANCTION A/C No.": "41",
-              "CY SANCTION Amt": "125.46",
-              "CY DISBURSED A/C No.": "42",
-              "CY DISBURSED Amt": "125.47",
+              "CY Sanction A/C No.": "41",
+              "CY Sanction Amt": "125.46",
+              "CY Disbursed A/C No.": "42",
+              "CY Disbursed Amt": "125.47",
               "PMEGP O/S No.": "68",
               "PMEGP O/S Amt": "170.62",
               "PMEGP NPA No.": "7",
@@ -7773,10 +7773,10 @@
               "PMEGP NPA Amt. %": "13.12"
             },
             "Tuensang": {
-              "CY SANCTION A/C No.": "39",
-              "CY SANCTION Amt": "161.74",
-              "CY DISBURSED A/C No.": "39",
-              "CY DISBURSED Amt": "143.20",
+              "CY Sanction A/C No.": "39",
+              "CY Sanction Amt": "161.74",
+              "CY Disbursed A/C No.": "39",
+              "CY Disbursed Amt": "143.20",
               "PMEGP O/S No.": "260",
               "PMEGP O/S Amt": "526.61",
               "PMEGP NPA No.": "6",
@@ -7784,10 +7784,10 @@
               "PMEGP NPA Amt. %": "2.22"
             },
             "Wokha": {
-              "CY SANCTION A/C No.": "91",
-              "CY SANCTION Amt": "605.96",
-              "CY DISBURSED A/C No.": "59",
-              "CY DISBURSED Amt": "276.00",
+              "CY Sanction A/C No.": "91",
+              "CY Sanction Amt": "605.96",
+              "CY Disbursed A/C No.": "59",
+              "CY Disbursed Amt": "276.00",
               "PMEGP O/S No.": "186",
               "PMEGP O/S Amt": "550.85",
               "PMEGP NPA No.": "32",
@@ -7795,10 +7795,10 @@
               "PMEGP NPA Amt. %": "8.45"
             },
             "Zunheboto": {
-              "CY SANCTION A/C No.": "120",
-              "CY SANCTION Amt": "535.36",
-              "CY DISBURSED A/C No.": "48",
-              "CY DISBURSED Amt": "193.60",
+              "CY Sanction A/C No.": "120",
+              "CY Sanction Amt": "535.36",
+              "CY Disbursed A/C No.": "48",
+              "CY Disbursed Amt": "193.60",
               "PMEGP O/S No.": "222",
               "PMEGP O/S Amt": "567.94",
               "PMEGP NPA No.": "27",
@@ -8055,10 +8055,10 @@
           "page": 83,
           "fields": [
             "Enrolment under PMJJBY",
-            "eligible cases under PMJJBY",
+            "Eligible cases under PMJJBY",
             "renewals under PMJJBY",
             "Enrolment under PMSBY",
-            "eligible cases under PMSBY",
+            "Eligible cases under PMSBY",
             "renewals under PMSBY",
             "Enrolment under APY",
             "Total Enrolment No."
@@ -8067,160 +8067,160 @@
           "districts": {
             "Chumoukedima": {
               "Enrolment under PMJJBY": "9196",
-              "eligible cases under PMJJBY": "80916",
+              "Eligible cases under PMJJBY": "80916",
               "renewals under PMJJBY": "4894",
               "Enrolment under PMSBY": "26800",
-              "eligible cases under PMSBY": "108646",
+              "Eligible cases under PMSBY": "108646",
               "renewals under PMSBY": "16387",
               "Enrolment under APY": "2206",
               "Total Enrolment No.": "38202"
             },
             "Dimapur": {
               "Enrolment under PMJJBY": "33247",
-              "eligible cases under PMJJBY": "232157",
+              "Eligible cases under PMJJBY": "232157",
               "renewals under PMJJBY": "20212",
               "Enrolment under PMSBY": "95697",
-              "eligible cases under PMSBY": "315125",
+              "Eligible cases under PMSBY": "315125",
               "renewals under PMSBY": "58564",
               "Enrolment under APY": "13104",
               "Total Enrolment No.": "142048"
             },
             "Kiphire": {
               "Enrolment under PMJJBY": "6394",
-              "eligible cases under PMJJBY": "12754",
+              "Eligible cases under PMJJBY": "12754",
               "renewals under PMJJBY": "5688",
               "Enrolment under PMSBY": "18870",
-              "eligible cases under PMSBY": "23115",
+              "Eligible cases under PMSBY": "23115",
               "renewals under PMSBY": "12577",
               "Enrolment under APY": "1473",
               "Total Enrolment No.": "26737"
             },
             "Kohima": {
               "Enrolment under PMJJBY": "21114",
-              "eligible cases under PMJJBY": "145983",
+              "Eligible cases under PMJJBY": "145983",
               "renewals under PMJJBY": "14431",
               "Enrolment under PMSBY": "68044",
-              "eligible cases under PMSBY": "199137",
+              "Eligible cases under PMSBY": "199137",
               "renewals under PMSBY": "46549",
               "Enrolment under APY": "6306",
               "Total Enrolment No.": "95464"
             },
             "Longleng": {
               "Enrolment under PMJJBY": "4760",
-              "eligible cases under PMJJBY": "8360",
+              "Eligible cases under PMJJBY": "8360",
               "renewals under PMJJBY": "3554",
               "Enrolment under PMSBY": "14966",
-              "eligible cases under PMSBY": "15804",
+              "Eligible cases under PMSBY": "15804",
               "renewals under PMSBY": "9811",
               "Enrolment under APY": "1341",
               "Total Enrolment No.": "21067"
             },
             "Mokokchung": {
               "Enrolment under PMJJBY": "16338",
-              "eligible cases under PMJJBY": "54668",
+              "Eligible cases under PMJJBY": "54668",
               "renewals under PMJJBY": "8806",
               "Enrolment under PMSBY": "45498",
-              "eligible cases under PMSBY": "83971",
+              "Eligible cases under PMSBY": "83971",
               "renewals under PMSBY": "29026",
               "Enrolment under APY": "2878",
               "Total Enrolment No.": "64714"
             },
             "Mon": {
               "Enrolment under PMJJBY": "8366",
-              "eligible cases under PMJJBY": "49176",
+              "Eligible cases under PMJJBY": "49176",
               "renewals under PMJJBY": "5491",
               "Enrolment under PMSBY": "31734",
-              "eligible cases under PMSBY": "79319",
+              "Eligible cases under PMSBY": "79319",
               "renewals under PMSBY": "23393",
               "Enrolment under APY": "1488",
               "Total Enrolment No.": "41588"
             },
             "Niuland": {
               "Enrolment under PMJJBY": "1971",
-              "eligible cases under PMJJBY": "2193",
+              "Eligible cases under PMJJBY": "2193",
               "renewals under PMJJBY": "409",
               "Enrolment under PMSBY": "4103",
-              "eligible cases under PMSBY": "3795",
+              "Eligible cases under PMSBY": "3795",
               "renewals under PMSBY": "1723",
               "Enrolment under APY": "308",
               "Total Enrolment No.": "6382"
             },
             "Noklak": {
               "Enrolment under PMJJBY": "968",
-              "eligible cases under PMJJBY": "5697",
+              "Eligible cases under PMJJBY": "5697",
               "renewals under PMJJBY": "332",
               "Enrolment under PMSBY": "2366",
-              "eligible cases under PMSBY": "10264",
+              "Eligible cases under PMSBY": "10264",
               "renewals under PMSBY": "1398",
               "Enrolment under APY": "114",
               "Total Enrolment No.": "3448"
             },
             "Peren": {
               "Enrolment under PMJJBY": "4838",
-              "eligible cases under PMJJBY": "18509",
+              "Eligible cases under PMJJBY": "18509",
               "renewals under PMJJBY": "2615",
               "Enrolment under PMSBY": "14355",
-              "eligible cases under PMSBY": "31245",
+              "Eligible cases under PMSBY": "31245",
               "renewals under PMSBY": "9574",
               "Enrolment under APY": "536",
               "Total Enrolment No.": "19729"
             },
             "Phek": {
               "Enrolment under PMJJBY": "7576",
-              "eligible cases under PMJJBY": "30325",
+              "Eligible cases under PMJJBY": "30325",
               "renewals under PMJJBY": "5196",
               "Enrolment under PMSBY": "21954",
-              "eligible cases under PMSBY": "49774",
+              "Eligible cases under PMSBY": "49774",
               "renewals under PMSBY": "14381",
               "Enrolment under APY": "1146",
               "Total Enrolment No.": "30676"
             },
             "Shamator": {
               "Enrolment under PMJJBY": "1729",
-              "eligible cases under PMJJBY": "2733",
+              "Eligible cases under PMJJBY": "2733",
               "renewals under PMJJBY": "838",
               "Enrolment under PMSBY": "4376",
-              "eligible cases under PMSBY": "5144",
+              "Eligible cases under PMSBY": "5144",
               "renewals under PMSBY": "2058",
               "Enrolment under APY": "332",
               "Total Enrolment No.": "6437"
             },
             "Tseminyu": {
               "Enrolment under PMJJBY": "815",
-              "eligible cases under PMJJBY": "5047",
+              "Eligible cases under PMJJBY": "5047",
               "renewals under PMJJBY": "555",
               "Enrolment under PMSBY": "2312",
-              "eligible cases under PMSBY": "8405",
+              "Eligible cases under PMSBY": "8405",
               "renewals under PMSBY": "1575",
               "Enrolment under APY": "175",
               "Total Enrolment No.": "3302"
             },
             "Tuensang": {
               "Enrolment under PMJJBY": "6394",
-              "eligible cases under PMJJBY": "22073",
+              "Eligible cases under PMJJBY": "22073",
               "renewals under PMJJBY": "3231",
               "Enrolment under PMSBY": "18730",
-              "eligible cases under PMSBY": "40407",
+              "Eligible cases under PMSBY": "40407",
               "renewals under PMSBY": "12415",
               "Enrolment under APY": "700",
               "Total Enrolment No.": "25824"
             },
             "Wokha": {
               "Enrolment under PMJJBY": "8183",
-              "eligible cases under PMJJBY": "31092",
+              "Eligible cases under PMJJBY": "31092",
               "renewals under PMJJBY": "5449",
               "Enrolment under PMSBY": "28882",
-              "eligible cases under PMSBY": "47717",
+              "Eligible cases under PMSBY": "47717",
               "renewals under PMSBY": "19893",
               "Enrolment under APY": "1906",
               "Total Enrolment No.": "38971"
             },
             "Zunheboto": {
               "Enrolment under PMJJBY": "8228",
-              "eligible cases under PMJJBY": "25462",
+              "Eligible cases under PMJJBY": "25462",
               "renewals under PMJJBY": "5115",
               "Enrolment under PMSBY": "24890",
-              "eligible cases under PMSBY": "41654",
+              "Eligible cases under PMSBY": "41654",
               "renewals under PMSBY": "14608",
               "Enrolment under APY": "1618",
               "Total Enrolment No.": "34736"
