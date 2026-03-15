@@ -205,7 +205,7 @@ const base = import.meta.env.BASE_URL;
     };
 
     // Map init — single map, center India at zoom 5
-    var map = L.map('map',{center:[22.5,82.5],zoom:5,minZoom:4,maxZoom:18,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false});
+    var map = L.map('map',{center:[22,82.5],zoom:4,minZoom:4,maxZoom:18,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false});
     L.control.zoom({position:'topright'}).addTo(map);
 
     // Fly to NE with panel-aware centering (single smooth animation)
@@ -237,11 +237,16 @@ const base = import.meta.env.BASE_URL;
     // White canvas tile
     (new (L.GridLayer.extend({createTile:function(){var t=document.createElement('canvas');t.width=t.height=256;var c=t.getContext('2d');c.fillStyle='#fff';c.fillRect(0,0,256,256);return t;}}))).addTo(map);
 
-    // India outline
-    fetch('https://raw.githubusercontent.com/datameet/maps/master/Country/india-land-simplified.geojson')
-      .then(function(r){return r.json();}).then(function(geo){
-        L.geoJSON(geo,{style:{fillColor:'#faf9f7',fillOpacity:1,color:'#ccc8c0',weight:1.2,opacity:0.6},interactive:false}).addTo(map);
-      }).catch(function(){});
+    // India outline — load district boundaries early for immediate outline
+    var indiaOutlineLayer = null;
+    fetch(_B + 'data/district_boundaries.geojson')
+      .then(function(r) { return r.json(); })
+      .then(function(geo) {
+        indiaOutlineLayer = L.geoJSON(geo, {
+          style: { fillColor: '#faf9f7', fillOpacity: 1, color: '#e0ddd8', weight: 0.8, opacity: 0.5 },
+          interactive: false
+        }).addTo(map);
+      }).catch(function() {});
 
     // State name → code mapping
     var STATE_NAME_CODE={'ANDHRA PRADESH':'AP','ARUNACHAL PRADESH':'AR','ASSAM':'AS','BIHAR':'BR','CHHATTISGARH':'CT','GOA':'GA','GUJARAT':'GJ','HARYANA':'HR','HIMACHAL PRADESH':'HP','JHARKHAND':'JH','KARNATAKA':'KA','KERALA':'KL','MADHYA PRADESH':'MP','MAHARASHTRA':'MH','MANIPUR':'MN','MEGHALAYA':'ML','MIZORAM':'MZ','NAGALAND':'NL','ODISHA':'OR','PUNJAB':'PB','RAJASTHAN':'RJ','SIKKIM':'SK','TAMIL NADU':'TN','TELANGANA':'TS','TRIPURA':'TR','UTTAR PRADESH':'UP','UTTARAKHAND':'UK','WEST BENGAL':'WB','JAMMU AND KASHMIR':'JK','LADAKH':'JK','DELHI':'DL','CHANDIGARH':'CH','PUDUCHERRY':'PY','ANDAMAN & NICOBAR':'AN','LAKSHADWEEP':'LD','DADRA & NAGAR HAVELI & DAMAN & DIU':'DN'};
@@ -614,6 +619,7 @@ const base = import.meta.env.BASE_URL;
 
     function buildChoropleth_banking() {
       if (choroLayer) { map.removeLayer(choroLayer); choroLayer = null; }
+      if (indiaOutlineLayer) { map.removeLayer(indiaOutlineLayer); indiaOutlineLayer = null; }
       if (!distGeoJSON || !currentQuarter) return;
 
       var lookup = buildDistrictLookup();
