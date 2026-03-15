@@ -377,14 +377,6 @@
   <div class="loading-msg error-msg">{error}</div>
 {:else}
   <div class="trend-tracker">
-    <!-- Sub-navigation -->
-    <nav class="sub-nav">
-      <a href="{baseUrl}analysis/" class="sub-nav-pill">Explorer</a>
-      <a href="{baseUrl}analysis/rankings/" class="sub-nav-pill">Rankings</a>
-      <a href="{baseUrl}analysis/trends/" class="sub-nav-pill active">Trends</a>
-      <a href="{baseUrl}analysis/insights/" class="sub-nav-pill">Insights</a>
-    </nav>
-
     <!-- Controls row -->
     <div class="controls-row">
       <div class="control-group">
@@ -530,35 +522,6 @@
   .error-msg { color: #c44830; }
 
   .trend-tracker { display: flex; flex-direction: column; gap: 20px; }
-
-  /* Sub-navigation */
-  .sub-nav {
-    display: flex;
-    gap: 0;
-    border: 1px solid var(--border-dark);
-    border-radius: 6px;
-    overflow: hidden;
-    align-self: flex-start;
-  }
-  .sub-nav-pill {
-    padding: 9px 20px;
-    font-family: var(--font-sans);
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--muted);
-    text-decoration: none;
-    background: var(--btn-bg);
-    border-right: 1px solid var(--border-dark);
-    transition: all 0.2s;
-  }
-  .sub-nav-pill:last-child { border-right: none; }
-  .sub-nav-pill:hover { color: var(--text); background: #fff; }
-  .sub-nav-pill.active {
-    background: var(--text);
-    color: #fff;
-  }
 
   /* Controls row */
   .controls-row {
@@ -775,7 +738,5 @@
     .controls-row { flex-direction: column; align-items: stretch; }
     .select { min-width: unset; width: 100%; }
     .card-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
-    .sub-nav { align-self: stretch; }
-    .sub-nav-pill { flex: 1; text-align: center; padding: 9px 10px; }
   }
 </style>

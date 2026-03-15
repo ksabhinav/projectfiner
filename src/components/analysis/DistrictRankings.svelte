@@ -72,17 +72,13 @@
     return quarterKeys.filter(qkey => masterData.quarters[qkey]?.tables?.[selectedCategory]);
   });
 
-  // Available fields for selected category
+  // Available fields for selected category in the selected quarter
   let availableFields: string[] = $derived.by(() => {
-    if (!masterData || !selectedCategory) return [];
-    const fields = new Set<string>();
-    for (const qkey of quarterKeys) {
-      const q = masterData.quarters[qkey];
-      if (!q || !q.tables?.[selectedCategory]) continue;
-      (q.tables[selectedCategory].fields || []).forEach((f: string) => fields.add(f));
-    }
-    // Filter out "District" field
-    return [...fields].filter(f => f.toLowerCase() !== 'district').sort();
+    if (!masterData || !selectedCategory || !selectedQuarter) return [];
+    const q = masterData.quarters[selectedQuarter];
+    if (!q || !q.tables?.[selectedCategory]) return [];
+    const fields = q.tables[selectedCategory].fields || [];
+    return fields.filter((f: string) => f.toLowerCase() !== 'district').sort();
   });
 
   // CD ratio detection
@@ -284,7 +280,9 @@
 
   $effect(() => {
     if (availableFields.length > 0 && !availableFields.includes(selectedField)) {
-      selectedField = availableFields[0];
+      // Prefer ratio/percentage fields as default
+      const ratioField = availableFields.find(f => /ratio|cd ratio/i.test(f));
+      selectedField = ratioField || availableFields[0];
     }
   });
 
@@ -301,14 +299,6 @@
     loading = false;
   });
 </script>
-
-<!-- Sub-nav pill bar -->
-<nav class="sub-nav">
-  <a href="{baseUrl}analysis/" class="pill">Explorer</a>
-  <a href="{baseUrl}analysis/rankings/" class="pill active" aria-current="page">Rankings</a>
-  <a href="{baseUrl}analysis/trends/" class="pill">Trends</a>
-  <a href="{baseUrl}analysis/insights/" class="pill">Insights</a>
-</nav>
 
 {#if loading}
   <div class="loading-msg">Loading rankings data...</div>
@@ -458,35 +448,6 @@
 {/if}
 
 <style>
-  /* Sub-nav */
-  .sub-nav {
-    display: flex;
-    gap: 4px;
-    margin-bottom: 24px;
-    padding: 4px;
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    width: fit-content;
-  }
-  .pill {
-    font-family: var(--font-sans);
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    padding: 8px 18px;
-    border-radius: 6px;
-    color: var(--muted);
-    text-decoration: none;
-    transition: all 0.15s;
-  }
-  .pill:hover { color: var(--text); background: #faf9f7; }
-  .pill.active {
-    background: var(--text);
-    color: #fff;
-  }
-
   /* Layout */
   .rankings-layout {
     display: grid;

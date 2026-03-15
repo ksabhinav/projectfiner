@@ -3,15 +3,19 @@ interface Props {
   title: string;
   subtitle?: string;
   backLink?: { href: string; label: string };
+  activeSubNav?: string; // 'explorer' | 'rankings' | 'trends' | 'insights'
 }
 
-const { title, subtitle, backLink } = Astro.props;
+const { title, subtitle, backLink, activeSubNav } = Astro.props;
 const base = import.meta.env.BASE_URL;
 ---
 
 <header class="site-header">
-  <nav class="site-nav">
-    <a href={`${base}`} class="nav-brand">Project FINER</a>
+  <!-- Top navigation bar -->
+  <nav class="top-bar">
+    <a href={`${base}`} class="brand">
+      Project <em>FINER</em>
+    </a>
     <div class="nav-links">
       <a href={`${base}`}>Map</a>
       <a href={`${base}?mode=banking`}>FI Indicators</a>
@@ -20,64 +24,207 @@ const base = import.meta.env.BASE_URL;
       <a href={`${base}analysis`}>Analysis</a>
     </div>
   </nav>
-  <div class="header-content">
-    <h1>{title}</h1>
-    {subtitle && <p set:html={subtitle} />}
-    {backLink && <p><a href={backLink.href}>&larr; {backLink.label}</a></p>}
+
+  <!-- Page title section -->
+  <div class={`page-hero ${activeSubNav ? 'has-subnav' : ''}`}>
+    <div class="hero-inner">
+      <h1 class="page-title">{title}</h1>
+      {subtitle && <p class="page-subtitle" set:html={subtitle} />}
+      {backLink && <a href={backLink.href} class="back-link">&larr; {backLink.label}</a>}
+    </div>
+
+    <!-- Sub-navigation for analysis pages -->
+    {activeSubNav && (
+      <nav class="sub-nav">
+        <a href={`${base}analysis/`} class={activeSubNav === 'explorer' ? 'active' : ''}>Explorer</a>
+        <a href={`${base}analysis/rankings/`} class={activeSubNav === 'rankings' ? 'active' : ''} aria-current={activeSubNav === 'rankings' ? 'page' : undefined}>Rankings</a>
+        <a href={`${base}analysis/trends/`} class={activeSubNav === 'trends' ? 'active' : ''}>Trends</a>
+        <a href={`${base}analysis/insights/`} class={activeSubNav === 'insights' ? 'active' : ''}>Insights</a>
+      </nav>
+    )}
   </div>
 </header>
 
 <style>
   .site-header {
-    background: #fff;
-    border-bottom: 1px solid var(--border-dark);
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(224, 221, 216, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
-  .site-nav {
+
+  /* ── Top bar ── */
+  .top-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 40px;
-    border-bottom: 1px solid var(--border);
-    font-family: var(--font-sans);
-    font-size: 11px;
+    padding: 14px 40px;
+    border-bottom: 1px solid rgba(232, 229, 224, 0.4);
   }
-  .nav-brand {
-    font-family: 'Playfair Display', serif;
+
+  .brand {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .brand em {
     font-style: italic;
-    font-size: 14px;
-    color: var(--muted);
+    font-weight: 400;
   }
-  .nav-brand:hover { color: var(--text); }
+  .brand:hover {
+    color: var(--accent);
+  }
+
   .nav-links {
     display: flex;
-    gap: 24px;
+    gap: 28px;
   }
   .nav-links a {
-    color: var(--muted);
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-size: 10px;
-  }
-  .nav-links a:hover { color: var(--accent); }
-  .header-content {
-    padding: 28px 40px 24px;
-  }
-  .header-content h1 {
     font-family: var(--font-sans);
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 600;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
+    color: var(--label);
+    text-decoration: none;
+    transition: color 0.2s;
+    padding: 2px 0;
+  }
+  .nav-links a:hover {
     color: var(--text);
+  }
+
+  /* ── Page hero ── */
+  .page-hero {
+    padding: 24px 40px 24px;
+    position: relative;
+  }
+  .page-hero.has-subnav {
+    padding-bottom: 0;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 40px;
+    width: 36px;
+    height: 2px;
+    background: linear-gradient(90deg, #b8603e, #d4845f);
+    border-radius: 1px;
+  }
+
+  .hero-inner {
+    padding-top: 4px;
+  }
+
+  .page-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.01em;
     margin-bottom: 6px;
   }
-  .header-content p {
+
+  .page-subtitle {
     font-family: var(--font-sans);
     font-size: 11px;
     font-weight: 400;
     color: var(--muted);
     line-height: 1.7;
     max-width: 640px;
+    margin-bottom: 0;
+  }
+
+  .back-link {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .back-link:hover {
+    color: var(--accent-dark);
+  }
+
+  /* ── Sub-navigation ── */
+  .sub-nav {
+    display: flex;
+    gap: 0;
+    margin-top: 20px;
+    border: 1px solid rgba(224, 221, 216, 0.6);
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    width: fit-content;
+    background: rgba(250, 249, 247, 0.6);
+  }
+
+  .sub-nav a {
+    padding: 10px 24px;
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--label);
+    text-decoration: none;
+    border-right: 1px solid rgba(224, 221, 216, 0.4);
+    transition: all 0.25s;
+  }
+  .sub-nav a:last-child {
+    border-right: none;
+  }
+  .sub-nav a:hover {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.8);
+  }
+  .sub-nav a.active {
+    color: var(--text);
+    background: #fff;
+    box-shadow: inset 0 -2px 0 var(--accent);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .top-bar {
+      flex-direction: column;
+      gap: 12px;
+      padding: 12px 20px;
+    }
+    .nav-links {
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .page-hero {
+      padding: 20px 20px 20px;
+    }
+    .page-hero.has-subnav {
+      padding-bottom: 0;
+    }
+    .page-hero::before {
+      left: 20px;
+    }
+    .page-title {
+      font-size: 18px;
+    }
+    .sub-nav {
+      width: 100%;
+    }
+    .sub-nav a {
+      flex: 1;
+      text-align: center;
+      padding: 10px 12px;
+      font-size: 9px;
+    }
   }
 </style>

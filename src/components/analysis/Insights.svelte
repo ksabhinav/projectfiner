@@ -28,35 +28,9 @@
     return categoryColors[cat] || '#888078';
   }
 
-  const NAV_ITEMS = [
-    { label: 'Explorer', href: `${baseUrl}analysis/` },
-    { label: 'Rankings', href: `${baseUrl}analysis/rankings/` },
-    { label: 'Trends', href: `${baseUrl}analysis/trends/` },
-    { label: 'Insights', href: `${baseUrl}analysis/insights/` },
-  ];
 </script>
 
 <div class="insights-page">
-  <!-- Sub-nav -->
-  <nav class="sub-nav">
-    {#each NAV_ITEMS as item}
-      <a
-        href={item.href}
-        class="sub-nav-pill"
-        class:active={item.label === 'Insights'}
-      >{item.label}</a>
-    {/each}
-  </nav>
-
-  <!-- Hero -->
-  <div class="hero">
-    <h2 class="hero-title">Key Findings</h2>
-    <p class="hero-desc">
-      Curated data stories drawn from SLBC financial inclusion data across Assam, Meghalaya, Manipur, Mizoram, and Bihar.
-      Each insight highlights a pattern, disparity, or trend worth exploring further.
-    </p>
-  </div>
-
   <!-- Filter pills -->
   <div class="filter-bar">
     {#each INSIGHT_CATEGORIES as cat}
@@ -104,56 +78,7 @@
   .insights-page {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 40px 60px;
-  }
-
-  /* Sub-nav */
-  .sub-nav {
-    display: flex;
-    gap: 6px;
-    padding: 20px 0 24px;
-  }
-  .sub-nav-pill {
-    font-family: var(--font-sans);
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 7px 16px;
-    border: 1px solid var(--border-dark);
-    border-radius: 20px;
-    background: var(--btn-bg);
-    color: var(--muted);
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-  .sub-nav-pill:hover {
-    color: var(--text);
-    border-color: var(--text);
-  }
-  .sub-nav-pill.active {
-    background: var(--text);
-    color: #fff;
-    border-color: var(--text);
-  }
-
-  /* Hero */
-  .hero {
-    margin-bottom: 28px;
-  }
-  .hero-title {
-    font-family: var(--font-serif);
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 8px;
-  }
-  .hero-desc {
-    font-family: var(--font-sans);
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.7;
-    max-width: 640px;
+    padding: 32px 40px 60px;
   }
 
   /* Filter pills */
