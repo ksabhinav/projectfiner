@@ -1,15 +1,25 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { CATEGORY_INFO, QUARTER_ORDER, QUARTER_LABELS, prettyCategoryName } from '../../lib/slbc-categories';
+  import { CATEGORY_INFO, prettyCategoryName } from '../../lib/slbc-categories';
 
   const base = import.meta.env.BASE_URL;
+
+  const STATES = [
+    { name: 'Meghalaya', slug: 'meghalaya' },
+    { name: 'Assam', slug: 'assam' },
+    { name: 'Manipur', slug: 'manipur' },
+    { name: 'Mizoram', slug: 'mizoram' },
+    { name: 'Nagaland', slug: 'nagaland' },
+  ];
 
   let Plotly: any = $state(null);
   let masterData: any = $state(null);
   let loading = $state(true);
+  let loadingState = $state(false);
   let error = $state('');
 
   // User selections
+  let selectedState = $state('meghalaya');
   let selectedCategory = $state('branch_network');
   let selectedFieldX = $state('');
   let selectedFieldY = $state('');
@@ -22,11 +32,30 @@
   let customData: { headers: string[]; rows: string[][] } | null = $state(null);
   let useCustomData = $state(false);
 
+  // Quarter keys derived from master data
+  let quarterKeys: string[] = $derived.by(() => {
+    if (!masterData?.quarters) return [];
+    return Object.keys(masterData.quarters).sort();
+  });
+
+  function quarterLabel(qkey: string): string {
+    const q = masterData?.quarters?.[qkey];
+    if (q?.period) return q.period;
+    // Handle both YYYY-MM and name_year formats
+    if (/^\d{4}-\d{2}$/.test(qkey)) {
+      const [y, m] = qkey.split('-');
+      const months: Record<string, string> = { '01':'Jan','02':'Feb','03':'Mar','04':'Apr','05':'May','06':'Jun','07':'Jul','08':'Aug','09':'Sep','10':'Oct','11':'Nov','12':'Dec' };
+      return `${months[m] || m} ${y}`;
+    }
+    // snake_case like june_2020
+    return qkey.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  }
+
   // Derived
   let availableCategories: string[] = $derived.by(() => {
     if (!masterData) return [];
     const cats = new Set<string>();
-    for (const qkey of QUARTER_ORDER) {
+    for (const qkey of quarterKeys) {
       const q = masterData.quarters[qkey];
       if (!q) continue;
       Object.keys(q.tables).forEach(c => cats.add(c));
@@ -38,7 +67,7 @@
     if (useCustomData && customData) return customData.headers;
     if (!masterData || !selectedCategory) return [];
     const fields = new Set<string>();
-    for (const qkey of QUARTER_ORDER) {
+    for (const qkey of quarterKeys) {
       const q = masterData.quarters[qkey];
       if (!q || !q.tables[selectedCategory]) continue;
       (q.tables[selectedCategory].fields || []).forEach((f: string) => fields.add(f));
@@ -48,19 +77,29 @@
 
   let availableQuarters: string[] = $derived.by(() => {
     if (!masterData || !selectedCategory) return [];
-    return QUARTER_ORDER.filter(qkey => masterData.quarters[qkey]?.tables[selectedCategory]);
+    return quarterKeys.filter(qkey => masterData.quarters[qkey]?.tables[selectedCategory]);
   });
 
-  // Districts constant
-  const DISTRICTS = [
-    'East Garo Hills', 'East Jaintia Hills', 'East Khasi Hills', 'Eastern West Khasi Hills',
-    'North Garo Hills', 'Ri Bhoi', 'South Garo Hills', 'South West Garo Hills',
-    'South West Khasi Hills', 'West Garo Hills', 'West Jaintia Hills', 'West Khasi Hills'
-  ];
+  // Districts derived from data
+  let allDistricts: string[] = $derived.by(() => {
+    if (!masterData) return [];
+    const dists = new Set<string>();
+    for (const q of Object.values(masterData.quarters) as any[]) {
+      for (const tbl of Object.values(q.tables) as any[]) {
+        const dd = tbl.districts || tbl.data || {};
+        Object.keys(dd).forEach(d => dists.add(d));
+      }
+    }
+    return [...dists].sort();
+  });
 
-  const DISTRICT_COLORS = [
+  const PALETTE = [
     '#b8603e', '#3d7a8e', '#5a7a3a', '#8b6914', '#d4553a', '#2c6e8a',
-    '#7a9a4a', '#a07820', '#c44830', '#4a8a6a', '#6b5e4c', '#9a6040'
+    '#7a9a4a', '#a07820', '#c44830', '#4a8a6a', '#6b5e4c', '#9a6040',
+    '#8e4585', '#4682b4', '#cd853f', '#6b8e23', '#bc8f8f', '#708090',
+    '#b0c4de', '#daa520', '#8fbc8f', '#e9967a', '#5f9ea0', '#d2691e',
+    '#9acd32', '#6495ed', '#db7093', '#556b2f', '#ff7f50', '#2e8b57',
+    '#a0522d', '#4169e1', '#bdb76b', '#8b4513', '#20b2aa',
   ];
 
   function getChartData(): { x: number[]; y: number[]; labels: string[]; districts: string[] } {
@@ -88,7 +127,7 @@
         if (!isNaN(xVal) && !isNaN(yVal)) {
           x.push(xVal);
           y.push(yVal);
-          labels.push(`${dist} (${QUARTER_LABELS[qkey]})`);
+          labels.push(`${dist} (${quarterLabel(qkey)})`);
           districts.push(dist);
         }
       }
@@ -167,7 +206,8 @@
 
     if (chartType === 'scatter') {
       if (colorByDistrict && !useCustomData) {
-        const traces = DISTRICTS.filter(d => districts.includes(d)).map((dist, i) => {
+        const uniqueDists = allDistricts.filter(d => districts.includes(d));
+        const traces = uniqueDists.map((dist, i) => {
           const idx = x.map((_, j) => j).filter(j => districts[j] === dist);
           return {
             x: idx.map(j => x[j]),
@@ -176,7 +216,7 @@
             name: dist,
             type: 'scatter' as const,
             mode: 'markers' as const,
-            marker: { size: 8, color: DISTRICT_COLORS[DISTRICTS.indexOf(dist) % DISTRICT_COLORS.length], opacity: 0.8 },
+            marker: { size: 8, color: PALETTE[i % PALETTE.length], opacity: 0.8 },
           };
         });
         Plotly.newPlot(chartEl, traces, layout, config);
@@ -195,7 +235,8 @@
       }], { ...layout, xaxis: { ...layout.xaxis, title: '' } }, config);
     } else if (chartType === 'line') {
       if (colorByDistrict && !useCustomData) {
-        const traces = DISTRICTS.filter(d => districts.includes(d)).map((dist, i) => {
+        const uniqueDists = allDistricts.filter(d => districts.includes(d));
+        const traces = uniqueDists.map((dist, i) => {
           const idx = x.map((_, j) => j).filter(j => districts[j] === dist);
           return {
             x: idx.map(j => labels[j]),
@@ -203,7 +244,7 @@
             name: dist,
             type: 'scatter' as const,
             mode: 'lines+markers' as const,
-            line: { color: DISTRICT_COLORS[DISTRICTS.indexOf(dist) % DISTRICT_COLORS.length], width: 2 },
+            line: { color: PALETTE[i % PALETTE.length], width: 2 },
             marker: { size: 5 },
           };
         });
@@ -248,6 +289,23 @@
     Plotly.downloadImage(chartEl, { format: 'png', width: 1200, height: 800, scale: 2, filename: 'finer_chart' });
   }
 
+  async function loadStateData(slug: string) {
+    loadingState = true;
+    try {
+      const res = await fetch(`${base}slbc-data/${slug}/${slug}_complete.json`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      masterData = await res.json();
+      selectedCategory = 'branch_network';
+      selectedQuarter = '';
+      selectedFieldX = '';
+      selectedFieldY = '';
+    } catch (e: any) {
+      error = `Failed to load ${slug} data.`;
+      masterData = null;
+    }
+    loadingState = false;
+  }
+
   // Auto-select first fields when category changes
   $effect(() => {
     if (availableFields.length >= 2 && !useCustomData) {
@@ -269,13 +327,19 @@
     renderChart();
   });
 
+  // Load state data when state changes
+  $effect(() => {
+    if (selectedState && !loading) {
+      loadStateData(selectedState);
+    }
+  });
+
   onMount(async () => {
-    const [plotlyModule, masterRes] = await Promise.all([
+    const [plotlyModule] = await Promise.all([
       import('plotly.js-dist-min'),
-      fetch(`${base}slbc-data/meghalaya/meghalaya_complete.json`),
     ]);
     Plotly = plotlyModule.default || plotlyModule;
-    masterData = await masterRes.json();
+    await loadStateData(selectedState);
     loading = false;
   });
 </script>
@@ -295,6 +359,20 @@
           <button class="toggle-btn" class:active={useCustomData} onclick={() => { useCustomData = true; }}>Your Data</button>
         </div>
       </div>
+
+      {#if !useCustomData}
+        <div class="control-section">
+          <div class="ctrl-label">State</div>
+          <select bind:value={selectedState} class="select">
+            {#each STATES as st}
+              <option value={st.slug}>{st.name}</option>
+            {/each}
+          </select>
+          {#if loadingState}
+            <div class="file-info">Loading...</div>
+          {/if}
+        </div>
+      {/if}
 
       {#if useCustomData}
         <div class="control-section">
@@ -319,7 +397,7 @@
           <select bind:value={selectedQuarter} class="select">
             <option value="">All quarters</option>
             {#each availableQuarters as qkey}
-              <option value={qkey}>{QUARTER_LABELS[qkey]}</option>
+              <option value={qkey}>{quarterLabel(qkey)}</option>
             {/each}
           </select>
         </div>

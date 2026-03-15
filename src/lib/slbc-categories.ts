@@ -16,6 +16,7 @@ export const CATEGORY_INFO: Record<string, string> = {
   digital_transactions:                'Digital transactions (UPI, IMPS, BHIM)',
   education_loan:                      'Education loans',
   fi_kcc:                              'FI & KCC progress',
+  flc_report:                          'Financial Literacy Centre report',
   fi_village_banking:                  'Village banking outlets',
   govt_sponsored_npa:                  'Government sponsored schemes NPA',
   housing_pmay:                        'Housing loans / PMAY',
@@ -25,6 +26,7 @@ export const CATEGORY_INFO: Record<string, string> = {
   kcc:                                 'Kisan Credit Card',
   kcc_crop:                            'KCC crop-wise details',
   ldm_details:                         'Lead District Manager details',
+  minority:                             'Lending to minorities',
   minority_disbursement:               'Lending to minorities - disbursement',
   minority_outstanding:                'Lending to minorities - outstanding',
   msme_npa:                            'MSME NPA',
@@ -38,12 +40,17 @@ export const CATEGORY_INFO: Record<string, string> = {
   pmegp:                               'PM Employment Generation Programme',
   pmjdy:                               'PM Jan Dhan Yojana',
   pmmy_mudra_disbursement:             'PMMY/Mudra disbursement',
+  pmfme:                               'PM Formalisation of Micro Food Enterprises',
   pmmy_mudra_os_npa:                   'PMMY/Mudra outstanding & NPA',
+  priority_sector_analysis:            'Priority sector lending analysis',
+  recovery_bakijai:                    'Recovery & Bakijai',
   rseti:                               'Rural Self Employment Training',
   sc_st_finance:                       'Lending to SC/ST',
   shg:                                 'Self Help Groups',
   social_security:                     'Social security (PMSBY, PMJJBY, APY)',
   sui:                                 'Stand Up India',
+  segregation_advances:                'Segregation of advances',
+  tea_garden_labourers:                'Tea garden labourers',
   uncategorized:                       'Other / Uncategorized',
   weaker_section_os:                   'Weaker section lending',
   women_finance:                       'Lending to women',
@@ -85,5 +92,6 @@ export function prettyCategoryName(cat: string): string {
     .replace(/Sc St/,'SC/ST').replace(/Pmay/,'PMAY').replace(/Fi /,'FI ')
     .replace(/Ldm/,'LDM').replace(/Rseti/,'RSETI').replace(/ Os$/,' O/S')
     .replace(/ Ps /,' PS ').replace(/ Ps$/,' PS').replace(/ Nps/,' NPS')
-    .replace(/Dcc/,'DCC');
+    .replace(/Dcc/,'DCC').replace(/Flc/,'FLC').replace(/Pmfme/,'PMFME')
+    .replace(/Pmfby/,'PMFBY').replace(/Blbc/,'BLBC');
 }

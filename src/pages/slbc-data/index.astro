@@ -4,14 +4,14 @@ import PageLayout from '../../layouts/PageLayout.astro';
 const base = import.meta.env.BASE_URL;
 
 const states = [
+  { name: 'Assam', meta: '29 quarters · 35 districts · 44+ indicators · 946 CSVs', href: `${base}slbc-data/assam/download`, active: true },
   { name: 'Meghalaya', meta: '18 quarters · 12 districts · 44 indicators · 606 CSVs', href: `${base}slbc-data/meghalaya/download`, active: true },
-  { name: 'Assam', meta: 'Coming soon', href: '#', active: false },
-  { name: 'Manipur', meta: 'Coming soon', href: '#', active: false },
-  { name: 'Mizoram', meta: 'Coming soon', href: '#', active: false },
-  { name: 'Nagaland', meta: 'Coming soon', href: '#', active: false },
-  { name: 'Sikkim', meta: 'Coming soon', href: '#', active: false },
-  { name: 'Tripura', meta: 'Coming soon', href: '#', active: false },
-  { name: 'Arunachal Pradesh', meta: 'Coming soon', href: '#', active: false },
+  { name: 'Manipur', meta: '16 districts · Multiple quarters', href: `${base}slbc-data/manipur/download`, active: true },
+  { name: 'Mizoram', meta: '11 districts · Multiple quarters', href: `${base}slbc-data/mizoram/download`, active: true },
+  { name: 'Nagaland', meta: '16 districts · Multiple quarters', href: `${base}slbc-data/nagaland/download`, active: true },
+  { name: 'Arunachal Pradesh', meta: 'No data available on SLBC NE', href: '#', active: false },
+  { name: 'Sikkim', meta: 'No data available on SLBC NE', href: '#', active: false },
+  { name: 'Tripura', meta: 'No data available on SLBC NE', href: '#', active: false },
 ];
 ---
 
