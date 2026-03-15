@@ -5,11 +5,14 @@
   const base = import.meta.env.BASE_URL;
 
   const STATES = [
-    { name: 'Meghalaya', slug: 'meghalaya' },
     { name: 'Assam', slug: 'assam' },
+    { name: 'Meghalaya', slug: 'meghalaya' },
     { name: 'Manipur', slug: 'manipur' },
+    { name: 'Arunachal Pradesh', slug: 'arunachal-pradesh' },
     { name: 'Mizoram', slug: 'mizoram' },
+    { name: 'Tripura', slug: 'tripura' },
     { name: 'Nagaland', slug: 'nagaland' },
+    { name: 'Sikkim', slug: 'sikkim' },
   ];
 
   let Plotly: any = $state(null);
