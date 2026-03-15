@@ -29,7 +29,7 @@ Preview at `http://localhost:8090/`.
 
 ```
 projectfiner/
-├── astro.config.mjs                        # Astro config (base: '/projectfiner/', static output)
+├── astro.config.mjs                        # Astro config (base: '/', static output, site: projectfiner.com)
 ├── package.json                            # Dependencies: astro, @astrojs/svelte, svelte, d3, plotly, xlsx
 ├── .github/workflows/deploy.yml            # GitHub Actions: build + deploy to Pages
 │
@@ -39,7 +39,7 @@ projectfiner/
 │   │   └── PageLayout.astro                # Extends BaseLayout with Header + Footer
 │   │
 │   ├── components/
-│   │   ├── Header.astro                    # Shared nav bar (Map, SLBC Data, Downloads, Analysis)
+│   │   ├── Header.astro                    # Shared nav bar (Map, FI Indicators, SLBC Data, Downloads, Analysis)
 │   │   ├── Footer.astro                    # Simple footer with dynamic year
 │   │   ├── MeghalayaDownload.svelte        # SLBC download UI (indicator/quarter tabs, CSV/Excel)
 │   │   ├── DownloadManager.svelte          # Capital markets download cards (CDSL/NSDL/MFD)
@@ -48,6 +48,8 @@ projectfiner/
 │   │
 │   ├── pages/
 │   │   ├── index.astro                     # HOMEPAGE — Full-screen Leaflet capital markets map
+│   │   ├── fi-indicators/
+│   │   │   └── index.astro                 # FI Indicators choropleth map (7 indicators, all 8 NE states)
 │   │   ├── slbc-data/
 │   │   │   ├── index.astro                 # State listing (Meghalaya active, 7 coming-soon)
 │   │   │   └── meghalaya/
@@ -75,12 +77,13 @@ projectfiner/
     │   └── mfd_corporate.json              # 10,760 corporate MF distributors
     ├── Maps/                               # GeoJSON: DISTRICT_BOUNDARY, STATE_BOUNDARY, HQs, etc.
     ├── data/
-    │   └── district_boundaries.geojson     # District boundaries with capital markets counts
+    │   └── district_boundaries.geojson     # District boundaries (808 total, 131 NE) with capital markets counts
     ├── pincode_coords.json                 # Pincode → [lat, lng] lookup
-    ├── slbc-data/meghalaya/
-    │   ├── meghalaya_complete.json          # Master JSON (~3MB) — all quarters, all indicators
-    │   ├── meghalaya_fi_timeseries.csv      # Wide-format CSV: all districts × all quarters
-    │   ├── quarterly/                      # 18 folders (YYYY-MM format), 606 CSVs total
+    ├── slbc-data/{state}/                  # All 8 NE states' SLBC data
+    │   ├── {state}_complete.json           # Master JSON — all quarters, all indicators
+    │   ├── {state}_fi_timeseries.json      # Timeseries JSON (nested: periods → districts)
+    │   ├── {state}_fi_timeseries.csv       # Wide-format CSV: all districts × all quarters
+    │   ├── quarterly/                      # Folders (YYYY-MM format), CSVs per category
     │   └── raw-csv/                        # Flat CSVs by category
     └── digital-payments/                   # PhonePe Pulse UPI data (FY22–FY24)
 ```
@@ -100,11 +103,11 @@ projectfiner/
 - Plotly.js loaded dynamically in DataExplorer via `import('plotly.js-dist-min')`
 
 ### Base URL
-- `import.meta.env.BASE_URL` returns `/projectfiner/` (with trailing slash)
+- `import.meta.env.BASE_URL` returns `/` (with trailing slash) for the custom domain `projectfiner.com`
 - All hrefs in Astro templates use `${base}path` (no extra `/` needed since base has trailing slash)
 - Inline scripts access base via `window.__FINER_BASE` set by a `define:vars` script block
 
-## Two Main Data Sections
+## Three Main Data Sections
 
 ### 1. Capital Markets Access
 
@@ -137,27 +140,53 @@ Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) q
 **Source**: [SLBC NE - Meghalaya Booklets](https://slbcne.nic.in/meghalaya/booklet.php)
 
 **Coverage**:
-- 18 quarters: June 2020 — September 2025
-- 12 districts (all Meghalaya districts)
-- 44 indicator categories per quarter (for 2022 onwards; 2021 has fewer — Excel-only)
-- 606 CSV files total
+- Quarters range from March 2018 to September 2025 (varies by state — not all states have every quarter)
+- 48 indicator categories per quarter (for 2022 onwards; 2021 has fewer)
 - All monetary values in **Rs. Lakhs** (1 Lakh = ₹100,000)
 
-**JSON structure** (`meghalaya_complete.json`):
+**State data availability** (latest quarter):
+| State | Latest Quarter | Total Quarters |
+|-------|---------------|----------------|
+| Assam | Sep 2025 | 30 |
+| Manipur | Sep 2025 | 39 |
+| Tripura | Sep 2025 | 32 |
+| Mizoram | Sep 2025 | 22 |
+| Meghalaya | Sep 2025 | 15 |
+| Arunachal Pradesh | Mar 2025 | 18 |
+| Nagaland | Mar 2025 | 7 |
+| Sikkim | Mar 2025 | 4 |
+
+**Timeseries JSON structure** (`{state}_fi_timeseries.json`):
 ```json
 {
-  "source": "...",
-  "state": "Meghalaya",
+  "periods": [
+    {
+      "period": "June 2020",
+      "districts": [
+        {
+          "district": "East Garo Hills",
+          "period": "June 2020",
+          "credit_deposit_ratio__total_deposit": 12345.67,
+          "branch_network__total_branch": 23,
+          ...
+        }
+      ]
+    }
+  ]
+}
+```
+**Important**: This is a nested structure (NOT a flat array). Must flatten with `periods → districts` before use.
+
+**Complete JSON structure** (`{state}_complete.json`):
+```json
+{
   "quarters": {
     "june_2020": {
       "period": "June 2020",
-      "fy": "2020-21",
       "tables": {
         "branch_network": {
-          "fields": ["Branches Rural", "Branches Semi-Urban", ...],
-          "districts": {
-            "East Garo Hills": { "Branches Rural": "23", ... }
-          }
+          "fields": ["total_branch", "branch_rural", ...],
+          "districts": { "East Garo Hills": { "total_branch": "23", ... } }
         }
       }
     }
@@ -167,7 +196,58 @@ Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) q
 
 **Important**: Quarter keys in the JSON use snake_case (`june_2020`, `sept_2025`), while folder names on disk use `YYYY-MM` format (`2020-06`, `2025-09`). Mapped via `QUARTER_FOLDERS` and `QUARTER_LABELS` in `src/lib/slbc-categories.ts`.
 
-### 3. Analysis / Data Explorer
+### 3. FI Indicators Choropleth (`/fi-indicators`)
+
+Full-screen Leaflet choropleth map showing 7 key financial inclusion indicators across all 8 NE states at the district level.
+
+**7 Indicators**: Credit-Deposit Ratio, PM Jan Dhan Yojana, Branch Network, Kisan Credit Card, Self Help Groups, Digital Transactions, Aadhaar Authentication
+
+**Key architecture decisions**:
+- Built as inline JS (`<script is:inline>`) in an Astro page — NOT Svelte — because Leaflet is too imperative
+- Loads all 8 state timeseries JSONs in parallel via `Promise.all()`
+- Uses `flattenTimeseries()` to handle nested JSON structure
+- Uses `normalizePeriod()` to convert "June 2020" → "2020-06" for sorting
+
+**Critical data matching patterns**:
+
+1. **Quarter fallback**: Not all states have data for every quarter. When the selected quarter (e.g. Sep 2025) isn't available for a state (e.g. AP latest is Mar 2025), the map falls back to the nearest prior quarter. Tooltip shows "Data from Mar 2025" in italic.
+
+2. **Field name fallbacks**: Same indicator is stored under different field names across states. Each metric has a `fallbacks` array:
+   ```js
+   { field: 'total_no_of_kcc', fallbacks: ['no_of_kcc', 'kcc_no', 'total_kcc_no', 'total_no', ...] }
+   ```
+
+3. **Cross-category fallbacks**: Some states store fields under unexpected categories:
+   - Assam: `total_branch` is under `credit_deposit_ratio`, not `branch_network`
+   - AP: KCC data is under `fi_kcc`, not `kcc`
+   ```js
+   const CROSS_CATEGORY_FALLBACKS = {
+     'branch_network': ['credit_deposit_ratio', 'kcc', 'fi_kcc', 'digital_transactions'],
+     'kcc': ['fi_kcc'],
+   };
+   ```
+
+4. **District name aliases**: GeoJSON and SLBC use different spellings for same districts:
+   ```js
+   const DISTRICT_ALIASES = {
+     'PAPUMPARE': 'PAPUM PARE',       // AP
+     'KEYI PANYOR': 'CAPITAL COMPLEX', // AP
+     'DARANG': 'DARRANG',             // Assam
+     'SIBSAGAR': 'SIVASAGAR',         // Assam
+     'KAMJANG': 'KAMJONG',            // Manipur
+     'RIBHOI': 'RI BHOI',            // Meghalaya
+     'GOMTI': 'GOMATI',              // Tripura
+     // ... more
+   };
+   ```
+
+5. **Adaptive color scale**: Color breaks recompute based on visible (filtered) districts, so single-state views show meaningful variation instead of being washed out by other states' outliers.
+
+**Color ramps**: Green for CD Ratio, blue for Digital Transactions, terracotta for all others.
+
+**GeoJSON property**: District state is stored as `STATE_UT` (not `STATE`) in `district_boundaries.geojson`. District name is `DISTRICT`.
+
+### 4. Analysis / Data Explorer
 
 Interactive data exploration page (`/analysis`) built with Svelte + Plotly.js:
 - Load SLBC Meghalaya data or upload custom CSV
@@ -235,13 +315,22 @@ Leaflet and MarkerCluster are loaded via CDN (unpkg) in inline scripts.
 
 1. **Base URL**: `base` in `astro.config.mjs` is `/` for the custom domain `projectfiner.com`.
 2. **`define:vars` IIFE**: Astro wraps `define:vars` scripts in an IIFE, so variables aren't accessible in subsequent `<script is:inline>` blocks. Use `window.__FINER_BASE` to pass the base URL.
-3. **Leaflet kept as inline JS**: The map is ~700 lines of imperative DOM code. Converting to Svelte would be complex and Leaflet has SSR issues. Keep it as `<script is:inline>`.
+3. **Leaflet kept as inline JS**: Both maps (homepage + FI indicators) are imperative DOM code. Converting to Svelte would be complex and Leaflet has SSR issues. Keep as `<script is:inline>`.
 4. **JSON quarter keys vs folder names**: Master JSON uses `june_2020` but disk folders are `2020-06`. Mapped in `slbc-categories.ts`.
 5. **Large JSON files**: Some data files are 15–18MB. They load fine in browser but be aware of GitHub's 100MB file limit.
 6. **2021 SLBC quarters have very few tables** (1–2 each) because only Excel ZIP archives were available.
 7. **PDF text reversal**: SLBC PDFs have landscape-rotated pages where cell text is stored backwards (`str[::-1]`).
 8. **SLBC category classification**: NPS tables must be classified with high-priority rules to avoid false matches from field names containing "Education" and "Loan".
 9. **Homepage IS the map**: The capital markets map is the homepage (`/`). Old `/capital-markets/map` redirects to `/`.
+10. **Timeseries JSON is nested, NOT flat**: Structure is `{ periods: [{ period, districts: [{...}] }] }`. Must flatten before use. The `flattenTimeseries()` function handles this.
+11. **Period format mismatch**: Timeseries JSON stores periods as "June 2020", "September 2024" etc., but code normalizes to "2020-06" format. Always use `normalizePeriod()`.
+12. **State file naming**: Slug uses hyphens (`arunachal-pradesh`), NOT underscores. File path: `slbc-data/arunachal-pradesh/arunachal-pradesh_fi_timeseries.json`.
+13. **GeoJSON uses `STATE_UT`**: The state property in `district_boundaries.geojson` is `STATE_UT`, not `STATE`. District names are in `DISTRICT` property (uppercase).
+14. **States have different latest quarters**: AP/Nagaland/Sikkim latest is Mar 2025; others have Sep 2025. The FI indicators page handles this with quarter fallback.
+15. **Same indicator, different category names**: KCC data lives under `kcc` in some states and `fi_kcc` in others (e.g. Arunachal Pradesh). Must use cross-category fallbacks.
+16. **Same indicator, different field names**: e.g. KCC count is `total_no_of_kcc` in Meghalaya, `rupay_card_issued_in_kcc` in AP, `o_s_position_no_of_cards_issued` in Nagaland. Must use field fallback arrays.
+17. **Map height 0 bug**: If `body` has `min-height: 100vh` from `global.css`, the flex layout for full-screen maps breaks. Override with `min-height: unset` on map pages.
+18. **District name mismatches between GeoJSON and SLBC**: GeoJSON has "PAPUMPARE" but SLBC has "PAPUM PARE", GeoJSON has "DARANG" but SLBC has "DARRANG", etc. Always use `DISTRICT_ALIASES` mapping.
 
 ## Data Quality Pipeline
 
@@ -252,3 +341,25 @@ SLBC data goes through multiple cleaning passes after PDF extraction:
 4. **Date-embedded field redistribution** — Fields like "CD Ratio March 2024" split into correct quarters
 5. **Fuzzy deduplication** — Merge near-duplicate field names (OCR artifacts)
 6. **Final comprehensive fix** — Comma number parsing, NPA disambiguation, garbled name fixes, long name shortening
+7. **Cross-state field standardization** — Run via `public/slbc-data/standardize_fields.py`. Handles:
+   - Manipur OCR spacing fixes (`total_bran ch` → `total_branch`)
+   - Meghalaya reversed word order (`rural_branch` → `branch_rural`)
+   - Abbreviation normalization (`term_loan` → `tl`, `tot` → `total`)
+   - Typo fixes and singular/plural normalization
+   - Applied across timeseries CSV, timeseries JSON, complete JSON, and quarterly CSVs for all 8 states
+
+## FI Indicators — Field Mapping Reference
+
+When adding new states or updating indicators, these are the known field name variations by state:
+
+| Indicator | Standard Field | Variations |
+|-----------|---------------|------------|
+| CD Ratio | `overall_cd_ratio` | `cd_ratio`, `current_c_d_ratio`, `cdr` |
+| PMJDY | `total_pmjdy_no` | `pmjdy_no`, `total_no`, `no_of_pmjdy_accounts` |
+| Branches | `total_branch` | `total`, `no_of_branches`, `no_of_brs` |
+| KCC | `total_no_of_kcc` | `no_of_kcc`, `total_kcc_no`, `total_no`, `rupay_card_issued_in_kcc`, `o_s_position_no_of_cards_issued` |
+| SHG | `savings_linked_no` | `savings_linked`, `credit_linked_no`, `current_fy_savings_linked_no`, `deposit_linkage_no_of_groups` |
+| Digital | `bhim_upi_a_c` | `bhim_upi`, `coverage_pct` |
+| Aadhaar | `no_of_aadhaar_seeded_casa` | `aadhaar_seeded_casa` |
+
+**Category mismatches**: AP uses `fi_kcc` instead of `kcc`; Assam stores `total_branch` under `credit_deposit_ratio` instead of `branch_network`.
