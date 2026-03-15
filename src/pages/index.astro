@@ -15,7 +15,7 @@ const base = import.meta.env.BASE_URL;
     <div id="panel-head">
       <h1>Project <em>FINER</em></h1>
       <p class="panel-sub">Financial Inclusion in the North East Region</p>
-      <p class="panel-stats">121 Districts &middot; 8 States &middot; 7 Indicators</p>
+      <p class="panel-stats">159 Districts &middot; 9 States &middot; 7 Indicators</p>
     </div>
 
     <div id="panel-body">
@@ -102,8 +102,9 @@ const base = import.meta.env.BASE_URL;
         <div class="field">
           <span class="flabel">State</span>
           <select class="finput banking-input" id="sel-state">
-            <option value="">All NE States</option>
+            <option value="">All States</option>
             <option value="ASSAM">Assam</option>
+            <option value="BIHAR">Bihar</option>
             <option value="MEGHALAYA">Meghalaya</option>
             <option value="MANIPUR">Manipur</option>
             <option value="ARUNACHAL PRADESH">Arunachal Pradesh</option>
@@ -194,14 +195,15 @@ const base = import.meta.env.BASE_URL;
     var DIST_URL   = _B + 'data/district_boundaries.geojson';
 
     var INDIA_BOUNDS = L.latLngBounds(L.latLng(6.5,68.0), L.latLng(37.5,110.0));
-    var NE_BOUNDS    = L.latLngBounds(L.latLng(21.5, 88.0), L.latLng(29.5, 97.5));
-    var NE_CENTER    = [25.5, 93.0]; // Visual center of NE region
-    var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK'];
-    var NE_STATES    = ['ASSAM','MEGHALAYA','MANIPUR','MIZORAM','NAGALAND','TRIPURA','ARUNACHAL PRADESH','SIKKIM'];
+    var NE_BOUNDS    = L.latLngBounds(L.latLng(21.5, 83.5), L.latLng(29.5, 97.5));
+    var NE_CENTER    = [25.5, 90.0]; // Visual center of NE + Bihar region
+    var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK','BR'];
+    var NE_STATES    = ['ASSAM','MEGHALAYA','MANIPUR','MIZORAM','NAGALAND','TRIPURA','ARUNACHAL PRADESH','SIKKIM','BIHAR'];
     var STATE_SLUGS  = {
       'ASSAM': 'assam', 'MEGHALAYA': 'meghalaya', 'MANIPUR': 'manipur',
       'MIZORAM': 'mizoram', 'NAGALAND': 'nagaland', 'TRIPURA': 'tripura',
       'ARUNACHAL PRADESH': 'arunachal-pradesh', 'SIKKIM': 'sikkim',
+      'BIHAR': 'bihar',
     };
 
     // Map init — single map, center India at zoom 5
@@ -470,6 +472,9 @@ const base = import.meta.env.BASE_URL;
       'KAMJANG': 'KAMJONG',
       'RIBHOI': 'RI BHOI',
       'GOMTI': 'GOMATI',
+      'PURBA CHAMPARAN': 'PURBI CHAMPARAN',
+      'KAIMUR (BHABUA)': 'KAIMUR',
+      'PASHCHIM CHAMPARAN': 'PASHCHIMI CHAMPARAN',
     };
 
     // Cross-category fallbacks
