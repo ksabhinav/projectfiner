@@ -193,7 +193,7 @@ const base = import.meta.env.BASE_URL;
     var MFDC_URL   = _B + 'MFDs/mfd_corporate.json';
     var DIST_URL   = _B + 'data/district_boundaries.geojson';
 
-    var INDIA_BOUNDS = L.latLngBounds(L.latLng(6.5,68.0), L.latLng(37.5,97.5));
+    var INDIA_BOUNDS = L.latLngBounds(L.latLng(6.5,68.0), L.latLng(37.5,110.0));
     var NE_BOUNDS    = L.latLngBounds(L.latLng(21.5, 88.0), L.latLng(29.5, 97.5));
     var NE_CENTER    = [25.5, 93.0]; // Visual center of NE region
     var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK'];
@@ -208,23 +208,29 @@ const base = import.meta.env.BASE_URL;
     var map = L.map('map',{center:[22.5,82.5],zoom:5,minZoom:4,maxZoom:18,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false});
     L.control.zoom({position:'topright'}).addTo(map);
 
-    // Fly to NE with panel-aware centering
+    // Fly to NE with panel-aware centering (single smooth animation)
     function flyToNE(animate) {
-      var dur = animate !== false ? 1.0 : 0;
       var panelW = 306; // 290px panel + 16px margin
       var tlW = 40;     // timeline slider width
-      map.fitBounds(NE_BOUNDS, { animate: false });
-      var zoom = map.getZoom();
-      var nePixel = map.latLngToContainerPoint(NE_CENTER);
       var mapSize = map.getSize();
+      var zoom = map.getBoundsZoom(NE_BOUNDS);
+      // Where the usable area center is in pixels
       var usableCenterX = (panelW + (mapSize.x - tlW)) / 2;
       var usableCenterY = mapSize.y / 2;
-      var dx = nePixel.x - usableCenterX;
-      var dy = nePixel.y - usableCenterY;
-      if (dur > 0) {
-        map.panBy([dx, dy], { animate: true, duration: dur });
+      // Where the map center is in pixels
+      var mapCenterX = mapSize.x / 2;
+      var mapCenterY = mapSize.y / 2;
+      // Use Leaflet's CRS projection to convert pixel offset to lat/lng
+      var neProjPx = map.project(NE_CENTER, zoom);
+      // Shift: we want NE_CENTER at usableCenterPixel, not at mapCenterPixel
+      // So the map center in projected coords needs to be offset
+      var adjustedProjX = neProjPx.x + (mapCenterX - usableCenterX);
+      var adjustedProjY = neProjPx.y + (mapCenterY - usableCenterY);
+      var adjustedCenter = map.unproject([adjustedProjX, adjustedProjY], zoom);
+      if (animate !== false) {
+        map.flyTo(adjustedCenter, zoom, { duration: 1.2 });
       } else {
-        map.panBy([dx, dy], { animate: false });
+        map.setView(adjustedCenter, zoom, { animate: false });
       }
     }
 
