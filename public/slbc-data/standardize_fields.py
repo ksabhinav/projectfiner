@@ -27,7 +27,7 @@ from collections import defaultdict, Counter
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent
-STATES = ['assam', 'meghalaya', 'manipur', 'arunachal-pradesh', 'mizoram', 'tripura', 'nagaland', 'sikkim']
+STATES = ['assam', 'meghalaya', 'manipur', 'arunachal-pradesh', 'mizoram', 'tripura', 'nagaland', 'sikkim', 'bihar']
 
 # ─── Statistics tracking ───
 stats = {
@@ -36,6 +36,8 @@ stats = {
     'abbreviation': 0,
     'typo': 0,
     'singular_plural': 0,
+    'bihar_field': 0,
+    'bihar_category': 0,
     'merges': 0,
     'renames_per_state': defaultdict(int),
     'fields_before': defaultdict(int),
@@ -572,6 +574,186 @@ MEGHALAYA_HR_FIXES = {
 
 
 # ═══════════════════════════════════════════════════════════════════════
+# ISSUE 6: Bihar field name standardization
+# ═══════════════════════════════════════════════════════════════════════
+# Bihar SLBC data uses completely different category and field naming
+# conventions compared to NE states. Bihar uses human-readable names in
+# timeseries JSON/CSV (e.g. cd_ratio__CD Ratio) whereas NE states use
+# snake_case (e.g. credit_deposit_ratio__overall_cd_ratio).
+#
+# Two transformations are needed:
+#   a) Category renames:  cd_ratio -> credit_deposit_ratio, etc.
+#   b) Field name mapping: human-readable Bihar names -> NE snake_case
+#
+# For quarterly CSVs / complete.json, only field names need renaming
+# (the category is the CSV filename / table name, handled separately).
+
+# Category renames for Bihar timeseries JSON/CSV
+BIHAR_CATEGORY_RENAMES = {
+    'cd_ratio': 'credit_deposit_ratio',
+    'kcc_progress': 'kcc',
+    'kcc_outstanding_npa': 'kcc',
+    'kcc_ah_progress': 'kcc_ah',
+    'kcc_ah_outstanding_npa': 'kcc_ah',
+    'kcc_fisheries_progress': 'kcc_fisheries',
+    'kcc_fisheries_outstanding_npa': 'kcc_fisheries',
+    'pmsby': 'social_security',
+}
+
+# Bihar field name mappings: human-readable -> snake_case (for timeseries JSON/CSV).
+# Applied AFTER to_snake conversion, so keys here are already snake_case.
+# Format: { 'bihar_snake_field': 'ne_standard_snake_field' }
+BIHAR_SNAKE_FIXES = {
+    # ── credit_deposit_ratio (was cd_ratio) ──
+    'cd_ratio': 'overall_cd_ratio',
+    'deposits': 'total_deposit',
+    'advances': 'total_advance',
+    'branch': 'total_branch',
+
+    # ── branch_network ──
+    'total': 'total_branch',
+    'rural': 'branch_rural',
+    'semi_urban': 'branch_semi_urban',
+    'urban': 'branch_urban',
+
+    # ── atm_network (keep as-is but standardize) ──
+    # 'rural', 'semi_urban', 'urban', 'total' already handled above
+
+    # ── digital_transactions ──
+    'bhim_upi_no': 'bhim_upi_a_c',
+    'bhim_aadhaar_no': 'bhim_aadhaar_a_c',
+    'bharat_qr_code_no': 'bharat_qr_code_a_c',
+    'imps_no': 'imps_a_c',
+    'cards_debit_credit_no': 'cards_debit_credit_a_c',
+    'ussd_no': 'ussd_a_c',
+    'amt': 'amt',  # keep as-is
+
+    # ── pmjdy ──
+    'pmjdy_opened': 'total_pmjdy_no',
+    'total_pmjdy': 'total_pmjdy_no',
+    'total_pmjdy_accounts': 'total_pmjdy_no',
+    'total_pmjdy_accounts_no': 'total_pmjdy_no',
+    'zero_balance_a_c': 'no_of_zero_balance_a_c',
+    'zero_balance_a_c_no': 'no_of_zero_balance_a_c',
+    'aadhaar_seeded': 'no_of_aadhaar_seeded',
+    'aadhaar_seeded_no': 'no_of_aadhaar_seeded',
+    'rupay_card_issued': 'no_of_rupay_card_issued',
+    'rupay_card_issued_no': 'no_of_rupay_card_issued',
+    'rupay_card_activated': 'no_of_rupay_card_activated',
+    'rupay_card_activated_no': 'no_of_rupay_card_activated',
+    'deposits_held_in_the_a_c': 'amt_deposits_held_in_the_a_c',
+    'deposits_held_in_the_a_c_amt_in_crore': 'amt_deposits_held_in_the_a_c',
+    'pmjjby_enrolled': 'enrolment_under_pmjjby',
+    'pmsby_enrolled': 'enrolment_under_pmsby',
+    'apy_subscribed': 'enrolment_under_apy',
+    'camp_conducted': 'camp_conducted',
+    'no_of_gp': 'no_of_gp',
+    'pmjjby_claim_disbursed': 'pmjjby_claim_disbursed',
+    'pmsby_claim_disbursed': 'pmsby_claim_disbursed',
+    'nominations_done_in_pmjdy_acc': 'nominations_done_in_pmjdy_acc',
+    'nominations_done_other_than_pmjdy_acc': 'nominations_done_other_than_pmjdy_acc',
+    're_kyc_done_for_pmjdy_acc_a': 're_kyc_done_for_pmjdy_acc',
+    're_kyc_done_for_other_than_pmjdy_acc_b': 're_kyc_done_for_other_than_pmjdy_acc',
+    'total_re_kyc_done_a_b': 'total_re_kyc_done',
+    # PMJDY accounts opened variants (period-specific field names)
+    'no_of_pmjdy_accounts_opened_in_2024_25_as_on_31_12_2024': 'pmjdy_accounts_opened_current_fy',
+    'pmjdy_accounts_opened_in_2024_25_as_on_31_03_2025_no': 'pmjdy_accounts_opened_current_fy',
+    'pmjdy_accounts_opened_in_2025_26_as_on_30_06_2025': 'pmjdy_accounts_opened_current_fy',
+
+    # ── aadhaar_authentication ──
+    'number_of_operative_casa': 'no_of_operative_casa',
+    'number_of_aadhaar_seeded_casa': 'no_of_aadhaar_seeded_casa',
+    'number_of_authenticated_casa': 'no_of_authenticated_casa',
+
+    # ── kcc_progress -> kcc ──
+    'total_kcc_new_renew_target_no': 'total_no_of_kcc',
+    'total_kcc_new_renew_sanction_no': 'total_no_of_kcc',
+    'kcc_new_target_no': 'kcc_new_target_no',
+    'kcc_renew_target_no': 'kcc_renew_target_no',
+    'kcc_new_target_no': 'kcc_new_target_no',
+    'disbursed_no': 'kcc_disbursed_no',
+    'achievement_no': 'achievement_pct_no',
+    'rs_in_lakh_kcc_due_for_renewal_no': 'kcc_due_for_renewal_no',
+    'sanction_no': 'kcc_sanction_no',
+    'kcc_renew_sanction_no': 'kcc_renew_sanction_no',
+
+    # ── kcc_outstanding_npa -> kcc ──
+    'kcc_outstanding_as_on_30_09_2025_no': 'total_o_s_kcc_no',
+    'kcc_outstanding_as_on_30_06_2025_no': 'total_o_s_kcc_no',
+    'kcc_npa_as_on_30_09_2025_no': 'kcc_npa_no',
+    'kcc_npa_as_on_30_06_2025_no': 'kcc_npa_no',
+    'rupay_card_issued_no': 'no_of_rupay_card_issued',
+    'rupay_card_activated_no': 'kcc_card_activated',
+    'age_npa_no': 'kcc_npa_pct',
+    'kcc_disbursed_during_financial_year_including_renewal_no': 'no_of_kcc_issued_during_quarter_including_renewal',
+    'kcc_disbursed_during_quarter_including_renewal_no': 'kcc_disbursed_during_quarter_no',
+
+    # ── social_security (was pmsby) ──
+    'enrolment_under_pmjjby_during_fy_2025_26_as_on_30_09_2025': 'enrolment_under_pmjjby',
+    'enrolment_under_pmsby_during_fy_2025_26_as_on_30_09_2025': 'enrolment_under_pmsby',
+    'enrolment_under_apy_during_fy_2025_26_as_on_30_09_2025': 'enrolment_under_apy',
+    'total_no_of_enrolment_under_pmjjby': 'total_enrolment_under_pmjjby',
+    'total_no_of_enrolment_under_pmsby': 'total_enrolment_under_pmsby',
+    'total_no_of_enrolment_under_apy': 'total_enrolment_under_apy',
+    'total_no_of_eligible_cases_under_pmjjby': 'eligible_cases_under_pmjjby',
+    'total_no_of_eligible_cases_under_pmsby': 'eligible_cases_under_pmsby',
+    'total_no_of_renewals_under_pmjjby': 'renewals_under_pmjjby',
+    'total_no_of_renewals_under_pmsby': 'renewals_under_pmsby',
+}
+
+# Bihar human-readable field renames (for quarterly CSVs and complete.json)
+BIHAR_HR_FIXES = {
+    # cd_ratio
+    'CD Ratio': 'Overall CD Ratio',
+    'Deposits': 'Total Deposit',
+    'Advances': 'Total Advance',
+    'Branch': 'Total Branch',
+
+    # branch_network
+    'Total': 'Total Branch',
+    'Rural': 'Branch Rural',
+    'Semi-Urban': 'Branch Semi-Urban',
+    'Urban': 'Branch Urban',
+
+    # digital_transactions
+    'BHIM/UPI No.': 'BHIM/UPI A/C',
+    'BHIM Aadhaar No.': 'BHIM Aadhaar A/C',
+    'Bharat QR Code No.': 'Bharat QR Code A/C',
+    'IMPS No.': 'IMPS A/C',
+    'Cards (Debit & Credit) No.': 'Cards (Debit & Credit) A/C',
+    'USSD No.': 'USSD A/C',
+
+    # pmjdy
+    'PMJDY Opened': 'Total PMJDY No.',
+    'Total PMJDY': 'Total PMJDY No.',
+    'Total PMJDY Accounts': 'Total PMJDY No.',
+    'Zero Balance A/c': 'No. of Zero Balance A/C',
+    'Aadhaar Seeded': 'No. of Aadhaar Seeded',
+    'Rupay Card Issued': 'No. of Rupay Card Issued',
+    'Rupay Card Activated': 'No. of Rupay Card Activated',
+    'PMJJBY Enrolled': 'Enrolment Under PMJJBY',
+    'PMSBY Enrolled': 'Enrolment Under PMSBY',
+    'APY Subscribed': 'Enrolment Under APY',
+
+    # aadhaar_authentication
+    'Number of operative\nCASA': 'No. of Operative CASA',
+    'Number of Aadhaar\nseeded CASA': 'No. of Aadhaar Seeded CASA',
+    'Number of Authenticated\nCASA': 'No. of Authenticated CASA',
+    'Number of operative CASA': 'No. of Operative CASA',
+    'Number of Aadhaar seeded CASA': 'No. of Aadhaar Seeded CASA',
+    'Number of Authenticated CASA': 'No. of Authenticated CASA',
+
+    # kcc_progress
+    'TOTAL KCC (NEW+RENEW) TARGET NO.': 'Total No. of KCC',
+    'TOTAL KCC (NEW+RENEW) SANCTION NO.': 'Total No. of KCC',
+    'KCC NEW TARGET NO.': 'KCC New Target No.',
+    'KCC RENEW TARGET NO.': 'KCC Renew Target No.',
+    'DISBURSED NO.': 'Disbursed No.',
+    '% ACHIEVEMENT NO.': '% Achievement No.',
+}
+
+
+# ═══════════════════════════════════════════════════════════════════════
 # ISSUE 4: Typos (substring replacement, all states)
 # ═══════════════════════════════════════════════════════════════════════
 
@@ -700,6 +882,14 @@ def standardize_snake_field(field, state):
     original = field
     issues = set()
 
+    # Issue 6: Bihar-specific field renames (applied first since Bihar
+    # field names are fundamentally different from NE states)
+    if state == 'bihar' and field in BIHAR_SNAKE_FIXES:
+        new = BIHAR_SNAKE_FIXES[field]
+        if new != field:
+            field = new
+            issues.add('bihar_field')
+
     # Issue 1: Spacing/merged-word fixes (originally from Manipur PDFs,
     # but the same patterns can appear in other states too)
     if field in MANIPUR_SNAKE_FIXES:
@@ -741,6 +931,19 @@ def standardize_hr_field(field, state):
     """Apply standardization to a human-readable field name. Returns (new_field, changed)."""
     original = field
     changed = False
+
+    # Issue 6: Bihar HR fixes (applied first since Bihar names differ fundamentally)
+    if state == 'bihar':
+        # Try exact match first
+        if field in BIHAR_HR_FIXES:
+            field = BIHAR_HR_FIXES[field]
+            changed = field != original
+        else:
+            # Try with newlines collapsed to spaces
+            normalized = re.sub(r'\s+', ' ', field).strip()
+            if normalized in BIHAR_HR_FIXES:
+                field = BIHAR_HR_FIXES[normalized]
+                changed = field != original
 
     # Issue 1: Spacing/merged-word HR fixes (apply to all states)
     if field in MANIPUR_HR_FIXES:
@@ -839,12 +1042,25 @@ def process_timeseries_csv(state):
         if '__' not in col:
             continue
         cat, field = col.split('__', 1)
+
+        # Bihar: convert human-readable field to snake_case first, then apply fixes
+        if state == 'bihar':
+            field = to_snake(field)
+
         new_field, issues = standardize_snake_field(field, state)
-        if new_field != field:
-            new_col = f'{cat}__{new_field}'
+
+        # Bihar: also rename categories
+        new_cat = cat
+        if state == 'bihar' and cat in BIHAR_CATEGORY_RENAMES:
+            new_cat = BIHAR_CATEGORY_RENAMES[cat]
+            issues.add('bihar_category')
+
+        if new_field != field or new_cat != cat:
+            new_col = f'{new_cat}__{new_field}'
             rename_map[col] = new_col
             for issue in issues:
-                stats[issue] += 1
+                if issue in stats:
+                    stats[issue] += 1
             stats['renames_per_state'][state] += 1
 
     if not rename_map:
@@ -884,8 +1100,19 @@ def process_timeseries_json(state):
             for key, val in district.items():
                 if '__' in key:
                     cat, field = key.split('__', 1)
+
+                    # Bihar: convert human-readable field to snake_case first
+                    if state == 'bihar':
+                        field = to_snake(field)
+
                     new_field, _ = standardize_snake_field(field, state)
-                    new_key = f'{cat}__{new_field}'
+
+                    # Bihar: also rename categories
+                    new_cat = cat
+                    if state == 'bihar' and cat in BIHAR_CATEGORY_RENAMES:
+                        new_cat = BIHAR_CATEGORY_RENAMES[cat]
+
+                    new_key = f'{new_cat}__{new_field}'
                     if new_key != key:
                         rename_count += 1
                 else:
@@ -1044,6 +1271,8 @@ def main():
     print(f'  Abbreviation fixes:      {stats["abbreviation"]}')
     print(f'  Typo fixes:              {stats["typo"]}')
     print(f'  Singular/plural:         {stats["singular_plural"]}')
+    print(f'  Bihar field renames:     {stats["bihar_field"]}')
+    print(f'  Bihar category renames:  {stats["bihar_category"]}')
     print(f'  Column merges:           {stats["merges"]}')
 
     print('\nPer-state summary (timeseries CSV):')
