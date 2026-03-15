@@ -1,1 +1,563 @@
-{"source":"SLBC NE (State Level Bankers Committee, North East Region)","state":"Sikkim","description":"Complete district-wise banking & financial inclusion data","amount_unit":"Rs. Lakhs","quarters":{"2023-09":{"period":"September 2023","as_on_date":"30-09-2023","fy":"2023-24","tables":{"atm_network":{"fields":["District","Total"],"num_districts":6,"districts":{"Mangan":{"District":"Mangan","Total":"17"},"Gangtok":{"District":"Gangtok","Total":"124"},"Pakyong":{"District":"Pakyong","Total":"32"},"Namchi":{"District":"Namchi","Total":"43"},"Gyalshing":{"District":"Gyalshing","Total":"17"},"Soreng":{"District":"Soreng","Total":"5"}}},"branch_network":{"fields":["District","Total"],"num_districts":6,"districts":{"Mangan":{"District":"Mangan","Total":"16"},"Gangtok":{"District":"Gangtok","Total":"89"},"Pakyong":{"District":"Pakyong","Total":"24"},"Namchi":{"District":"Namchi","Total":"41"},"Gyalshing":{"District":"Gyalshing","Total":"16"},"Soreng":{"District":"Soreng","Total":"8"}}},"digital_payments":{"fields":["District","Total No. of Operative Sb Accounts","Digital Coverage SB A/C","% of such Accounts out of total Operative Savings Accounts","Total No. of Operative Current Accounts","Digital Coverage Current A/C","% of such Accounts out of total Operative Current Accounts"],"num_districts":5,"districts":{"Mangan":{"District":"Mangan","Total No. of Operative Sb Accounts":"36682","Digital Coverage SB A/C":"33388","% of such Accounts out of total Operative Savings Accounts":"90.88%","Total No. of Operative Current Accounts":"642","Digital Coverage Current A/C":"512","% of such Accounts out of total Operative Current Accounts":"79.75%"},"Soreng":{"District":"Soreng","Total No. of Operative Sb Accounts":"40496","Digital Coverage SB A/C":"40344","% of such Accounts out of total Operative Savings Accounts":"99.62%","Total No. of Operative Current Accounts":"448","Digital Coverage Current A/C":"389","% of such Accounts out of total Operative Current Accounts":"86.83%"},"Namchi":{"District":"Namchi","Total No. of Operative Sb Accounts":"73811","Digital Coverage SB A/C":"71399","% of such Accounts out of total Operative Savings Accounts":"96.73","Total No. of Operative Current Accounts":"1269","Digital Coverage Current A/C":"469","% of such Accounts out of total Operative Current Accounts":"36.95%"},"Pakyong":{"District":"Pakyong","Total No. of Operative Sb Accounts":"77950","Digital Coverage SB A/C":"76838","% of such Accounts out of total Operative Savings Accounts":"98.57%","Total No. of Operative Current Accounts":"816","Digital Coverage Current A/C":"743","% of such Accounts out of total Operative Current Accounts":"91.05%"},"Gangtok":{"District":"Gangtok","Total No. of Operative Sb Accounts":"294290","Digital Coverage SB A/C":"277548","% of such Accounts out of total Operative Savings Accounts":"94.31%","Total No. of Operative Current Accounts":"10011","Digital Coverage Current A/C":"8119","% of such Accounts out of total Operative Current Accounts":"81.00%"}}}}},"2024-06":{"period":"June 2024","as_on_date":"30-06-2024","fy":"2024-25","tables":{"atm_network":{"fields":["District","Total"],"num_districts":6,"districts":{"Mangan":{"District":"Mangan","Total":"17"},"Gangtok":{"District":"Gangtok","Total":"124"},"Pakyong":{"District":"Pakyong","Total":"35"},"Namchi":{"District":"Namchi","Total":"43"},"Gyalshing":{"District":"Gyalshing","Total":"17"},"Soreng":{"District":"Soreng","Total":"5"}}},"branch_network":{"fields":["District","Total"],"num_districts":6,"districts":{"Mangan":{"District":"Mangan","Total":"16"},"Gangtok":{"District":"Gangtok","Total":"90"},"Pakyong":{"District":"Pakyong","Total":"26"},"Namchi":{"District":"Namchi","Total":"41"},"Gyalshing":{"District":"Gyalshing","Total":"16"},"Soreng":{"District":"Soreng","Total":"8"}}},"digital_payments":{"fields":["District","Total No. of Operative Sb Accounts","Digital Coverage SB A/C","% of such Accounts out of total Operative Savings Accounts","Total No. of Operative Current Accounts","Digital Coverage Current A/C","% of such Accounts out of total Operative Current Accounts"],"num_districts":6,"districts":{"Gyalshing":{"District":"Gyalshing","Total No. of Operative Sb Accounts":"77668","Digital Coverage SB A/C":"74488","% of such Accounts out of total Operative Savings Accounts":"95.91%","Total No. of Operative Current Accounts":"1411","Digital Coverage Current A/C":"1333","% of such Accounts out of total Operative Current Accounts":"94.47%"},"Mangan":{"District":"Mangan","Total No. of Operative Sb Accounts":"49682","Digital Coverage SB A/C":"46126","% of such Accounts out of total Operative Savings Accounts":"92.84%","Total No. of Operative Current Accounts":"989","Digital Coverage Current A/C":"882","% of such Accounts out of total Operative Current Accounts":"89.18%"},"Soreng":{"District":"Soreng","Total No. of Operative Sb Accounts":"87047","Digital Coverage SB A/C":"79886","% of such Accounts out of total Operative Savings Accounts":"91.77%","Total No. of Operative Current Accounts":"651","Digital Coverage Current A/C":"398","% of such Accounts out of total Operative Current Accounts":"61.14%"},"Namchi":{"District":"Namchi","Total No. of Operative Sb Accounts":"153989","Digital Coverage SB A/C":"146513","% of such Accounts out of total Operative Savings Accounts":"95.15%","Total No. of Operative Current Accounts":"9616","Digital Coverage Current A/C":"9230","% of such Accounts out of total Operative Current Accounts":"95.99%"},"Pakyong":{"District":"Pakyong","Total No. of Operative Sb Accounts":"125943","Digital Coverage SB A/C":"111248","% of such Accounts out of total Operative Savings Accounts":"88.33%","Total No. of Operative Current Accounts":"2245","Digital Coverage Current A/C":"1977","% of such Accounts out of total Operative Current Accounts":"88.06%"},"Gangtok":{"District":"Gangtok","Total No. of Operative Sb Accounts":"344124","Digital Coverage SB A/C":"334830","% of such Accounts out of total Operative Savings Accounts":"97.30%","Total No. of Operative Current Accounts":"11508","Digital Coverage Current A/C":"10083","% of such Accounts out of total Operative Current Accounts":"87.62%"}}}}},"2024-09":{"period":"September 2024","as_on_date":"30-09-2024","fy":"2024-25","tables":{"atm_network":{"fields":["District","Total"],"num_districts":6,"districts":{"Mangan":{"District":"Mangan","Total":"17"},"Gangtok":{"District":"Gangtok","Total":"124"},"Pakyong":{"District":"Pakyong","Total":"35"},"Namchi":{"District":"Namchi","Total":"43"},"Gyalshing":{"District":"Gyalshing","Total":"17"},"Soreng":{"District":"Soreng","Total":"5"}}},"branch_network":{"fields":["District","Total"],"num_districts":6,"districts":{"Mangan":{"District":"Mangan","Total":"16"},"Gangtok":{"District":"Gangtok","Total":"90"},"Pakyong":{"District":"Pakyong","Total":"27"},"Namchi":{"District":"Namchi","Total":"41"},"Gyalshing":{"District":"Gyalshing","Total":"16"},"Soreng":{"District":"Soreng","Total":"9"}}},"digital_payments":{"fields":["District","Total No. of Operative Sb Accounts","Digital Coverage SB A/C","% of such Accounts out of total Operative Savings Accounts","Total No. of Operative Current Accounts","Digital Coverage Current A/C","% of such Accounts out of total Operative Current Accounts"],"num_districts":6,"districts":{"Gyalshing":{"District":"Gyalshing","Total No. of Operative Sb Accounts":"78404","Digital Coverage SB A/C":"75182","% of such Accounts out of total Operative Savings Accounts":"95.89%","Total No. of Operative Current Accounts":"1438","Digital Coverage Current A/C":"1339","% of such Accounts out of total Operative Current Accounts":"93.12%"},"Mangan":{"District":"Mangan","Total No. of Operative Sb Accounts":"50501","Digital Coverage SB A/C":"46779","% of such Accounts out of total Operative Savings Accounts":"92.63%","Total No. of Operative Current Accounts":"1022","Digital Coverage Current A/C":"936","% of such Accounts out of total Operative Current Accounts":"91.59%"},"Soreng":{"District":"Soreng","Total No. of Operative Sb Accounts":"97021","Digital Coverage SB A/C":"89426","% of such Accounts out of total Operative Savings Accounts":"92.17%","Total No. of Operative Current Accounts":"725","Digital Coverage Current A/C":"629","% of such Accounts out of total Operative Current Accounts":"86.76%"},"Namchi":{"District":"Namchi","Total No. of Operative Sb Accounts":"154083","Digital Coverage SB A/C":"149412","% of such Accounts out of total Operative Savings Accounts":"96.97%","Total No. of Operative Current Accounts":"9696","Digital Coverage Current A/C":"9217","% of such Accounts out of total Operative Current Accounts":"95.06%"},"Pakyong":{"District":"Pakyong","Total No. of Operative Sb Accounts":"128150","Digital Coverage SB A/C":"115402","% of such Accounts out of total Operative Savings Accounts":"90.05%","Total No. of Operative Current Accounts":"2260","Digital Coverage Current A/C":"2055","% of such Accounts out of total Operative Current Accounts":"90.93%"},"Gangtok":{"District":"Gangtok","Total No. of Operative Sb Accounts":"344153","Digital Coverage SB A/C":"334894","% of such Accounts out of total Operative Savings Accounts":"97.31%","Total No. of Operative Current Accounts":"11527","Digital Coverage Current A/C":"10207","% of such Accounts out of total Operative Current Accounts":"88.55%"}}}}},"2025-03":{"period":"March 2025","as_on_date":"31-03-2025","fy":"2024-25","tables":{"atm_network":{"fields":["District","Total"],"num_districts":6,"districts":{"Mangan":{"District":"Mangan","Total":"17"},"Gangtok":{"District":"Gangtok","Total":"129"},"Pakyong":{"District":"Pakyong","Total":"36"},"Namchi":{"District":"Namchi","Total":"43"},"Gyalshing":{"District":"Gyalshing","Total":"17"},"Soreng":{"District":"Soreng","Total":"6"}}},"branch_network":{"fields":["District","Total"],"num_districts":6,"districts":{"Mangan":{"District":"Mangan","Total":"16"},"Gangtok":{"District":"Gangtok","Total":"92"},"Pakyong":{"District":"Pakyong","Total":"28"},"Namchi":{"District":"Namchi","Total":"41"},"Gyalshing":{"District":"Gyalshing","Total":"17"},"Soreng":{"District":"Soreng","Total":"11"}}},"digital_payments":{"fields":["District","Total No. of Operative Sb Accounts","Digital Coverage SB A/C","% of such Accounts out of total Operative Savings Accounts","Total No. of Operative Current Accounts","Digital Coverage Current A/C","% of such Accounts out of total Operative Current Accounts"],"num_districts":6,"districts":{"Gyalshing":{"District":"Gyalshing","Total No. of Operative Sb Accounts":"79424","Digital Coverage SB A/C":"76099","% of such Accounts out of total Operative Savings Accounts":"95.81%","Total No. of Operative Current Accounts":"1555","Digital Coverage Current A/C":"1450","% of such Accounts out of total Operative Current Accounts":"93.25%"},"Mangan":{"District":"Mangan","Total No. of Operative Sb Accounts":"50712","Digital Coverage SB A/C":"47157","% of such Accounts out of total Operative Savings Accounts":"92.99%","Total No. of Operative Current Accounts":"1057","Digital Coverage Current A/C":"980","% of such Accounts out of total Operative Current Accounts":"92.72%"},"Soreng":{"District":"Soreng","Total No. of Operative Sb Accounts":"103704","Digital Coverage SB A/C":"92453","% of such Accounts out of total Operative Savings Accounts":"89.15%","Total No. of Operative Current Accounts":"772","Digital Coverage Current A/C":"660","% of such Accounts out of total Operative Current Accounts":"85.49%"},"Namchi":{"District":"Namchi","Total No. of Operative Sb Accounts":"157909","Digital Coverage SB A/C":"146936","% of such Accounts out of total Operative Savings Accounts":"93.05%","Total No. of Operative Current Accounts":"9349","Digital Coverage Current A/C":"8835","% of such Accounts out of total Operative Current Accounts":"94.50%"},"Pakyong":{"District":"Pakyong","Total No. of Operative Sb Accounts":"129415","Digital Coverage SB A/C":"115817","% of such Accounts out of total Operative Savings Accounts":"89.49%","Total No. of Operative Current Accounts":"2296","Digital Coverage Current A/C":"1890","% of such Accounts out of total Operative Current Accounts":"82.32%"},"Gangtok":{"District":"Gangtok","Total No. of Operative Sb Accounts":"347466","Digital Coverage SB A/C":"336809","% of such Accounts out of total Operative Savings Accounts":"96.93%","Total No. of Operative Current Accounts":"12073","Digital Coverage Current A/C":"10937","% of such Accounts out of total Operative Current Accounts":"90.59%"}}}}}}}
+{
+  "source": "SLBC NE (State Level Bankers Committee, North East Region)",
+  "state": "Sikkim",
+  "description": "Complete district-wise banking & financial inclusion data",
+  "amount_unit": "Rs. Lakhs",
+  "quarters": {
+    "2023-09": {
+      "period": "September 2023",
+      "as_on_date": "30-09-2023",
+      "fy": "2023-24",
+      "tables": {
+        "atm_network": {
+          "fields": [
+            "District",
+            "Total"
+          ],
+          "num_districts": 6,
+          "districts": {
+            "Mangan": {
+              "District": "Mangan",
+              "Total": "17"
+            },
+            "Gangtok": {
+              "District": "Gangtok",
+              "Total": "124"
+            },
+            "Pakyong": {
+              "District": "Pakyong",
+              "Total": "32"
+            },
+            "Namchi": {
+              "District": "Namchi",
+              "Total": "43"
+            },
+            "Gyalshing": {
+              "District": "Gyalshing",
+              "Total": "17"
+            },
+            "Soreng": {
+              "District": "Soreng",
+              "Total": "5"
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "District",
+            "Total"
+          ],
+          "num_districts": 6,
+          "districts": {
+            "Mangan": {
+              "District": "Mangan",
+              "Total": "16"
+            },
+            "Gangtok": {
+              "District": "Gangtok",
+              "Total": "89"
+            },
+            "Pakyong": {
+              "District": "Pakyong",
+              "Total": "24"
+            },
+            "Namchi": {
+              "District": "Namchi",
+              "Total": "41"
+            },
+            "Gyalshing": {
+              "District": "Gyalshing",
+              "Total": "16"
+            },
+            "Soreng": {
+              "District": "Soreng",
+              "Total": "8"
+            }
+          }
+        },
+        "digital_payments": {
+          "fields": [
+            "District",
+            "Total No. of Operative Sb Accounts",
+            "Digital Coverage SB A/C",
+            "% of such Accounts out of total Operative Savings Accounts",
+            "Total No. of Operative Current Accounts",
+            "Digital Coverage Current A/C",
+            "% of such Accounts out of total Operative Current Accounts"
+          ],
+          "num_districts": 5,
+          "districts": {
+            "Mangan": {
+              "District": "Mangan",
+              "Total No. of Operative Sb Accounts": "36682",
+              "Digital Coverage SB A/C": "33388",
+              "% of such Accounts out of total Operative Savings Accounts": "90.88%",
+              "Total No. of Operative Current Accounts": "642",
+              "Digital Coverage Current A/C": "512",
+              "% of such Accounts out of total Operative Current Accounts": "79.75%"
+            },
+            "Soreng": {
+              "District": "Soreng",
+              "Total No. of Operative Sb Accounts": "40496",
+              "Digital Coverage SB A/C": "40344",
+              "% of such Accounts out of total Operative Savings Accounts": "99.62%",
+              "Total No. of Operative Current Accounts": "448",
+              "Digital Coverage Current A/C": "389",
+              "% of such Accounts out of total Operative Current Accounts": "86.83%"
+            },
+            "Namchi": {
+              "District": "Namchi",
+              "Total No. of Operative Sb Accounts": "73811",
+              "Digital Coverage SB A/C": "71399",
+              "% of such Accounts out of total Operative Savings Accounts": "96.73",
+              "Total No. of Operative Current Accounts": "1269",
+              "Digital Coverage Current A/C": "469",
+              "% of such Accounts out of total Operative Current Accounts": "36.95%"
+            },
+            "Pakyong": {
+              "District": "Pakyong",
+              "Total No. of Operative Sb Accounts": "77950",
+              "Digital Coverage SB A/C": "76838",
+              "% of such Accounts out of total Operative Savings Accounts": "98.57%",
+              "Total No. of Operative Current Accounts": "816",
+              "Digital Coverage Current A/C": "743",
+              "% of such Accounts out of total Operative Current Accounts": "91.05%"
+            },
+            "Gangtok": {
+              "District": "Gangtok",
+              "Total No. of Operative Sb Accounts": "294290",
+              "Digital Coverage SB A/C": "277548",
+              "% of such Accounts out of total Operative Savings Accounts": "94.31%",
+              "Total No. of Operative Current Accounts": "10011",
+              "Digital Coverage Current A/C": "8119",
+              "% of such Accounts out of total Operative Current Accounts": "81.00%"
+            }
+          }
+        }
+      }
+    },
+    "2024-06": {
+      "period": "June 2024",
+      "as_on_date": "30-06-2024",
+      "fy": "2024-25",
+      "tables": {
+        "atm_network": {
+          "fields": [
+            "District",
+            "Total"
+          ],
+          "num_districts": 6,
+          "districts": {
+            "Mangan": {
+              "District": "Mangan",
+              "Total": "17"
+            },
+            "Gangtok": {
+              "District": "Gangtok",
+              "Total": "124"
+            },
+            "Pakyong": {
+              "District": "Pakyong",
+              "Total": "35"
+            },
+            "Namchi": {
+              "District": "Namchi",
+              "Total": "43"
+            },
+            "Gyalshing": {
+              "District": "Gyalshing",
+              "Total": "17"
+            },
+            "Soreng": {
+              "District": "Soreng",
+              "Total": "5"
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "District",
+            "Total"
+          ],
+          "num_districts": 6,
+          "districts": {
+            "Mangan": {
+              "District": "Mangan",
+              "Total": "16"
+            },
+            "Gangtok": {
+              "District": "Gangtok",
+              "Total": "90"
+            },
+            "Pakyong": {
+              "District": "Pakyong",
+              "Total": "26"
+            },
+            "Namchi": {
+              "District": "Namchi",
+              "Total": "41"
+            },
+            "Gyalshing": {
+              "District": "Gyalshing",
+              "Total": "16"
+            },
+            "Soreng": {
+              "District": "Soreng",
+              "Total": "8"
+            }
+          }
+        },
+        "digital_payments": {
+          "fields": [
+            "District",
+            "Total No. of Operative Sb Accounts",
+            "Digital Coverage SB A/C",
+            "% of such Accounts out of total Operative Savings Accounts",
+            "Total No. of Operative Current Accounts",
+            "Digital Coverage Current A/C",
+            "% of such Accounts out of total Operative Current Accounts"
+          ],
+          "num_districts": 6,
+          "districts": {
+            "Gyalshing": {
+              "District": "Gyalshing",
+              "Total No. of Operative Sb Accounts": "77668",
+              "Digital Coverage SB A/C": "74488",
+              "% of such Accounts out of total Operative Savings Accounts": "95.91%",
+              "Total No. of Operative Current Accounts": "1411",
+              "Digital Coverage Current A/C": "1333",
+              "% of such Accounts out of total Operative Current Accounts": "94.47%"
+            },
+            "Mangan": {
+              "District": "Mangan",
+              "Total No. of Operative Sb Accounts": "49682",
+              "Digital Coverage SB A/C": "46126",
+              "% of such Accounts out of total Operative Savings Accounts": "92.84%",
+              "Total No. of Operative Current Accounts": "989",
+              "Digital Coverage Current A/C": "882",
+              "% of such Accounts out of total Operative Current Accounts": "89.18%"
+            },
+            "Soreng": {
+              "District": "Soreng",
+              "Total No. of Operative Sb Accounts": "87047",
+              "Digital Coverage SB A/C": "79886",
+              "% of such Accounts out of total Operative Savings Accounts": "91.77%",
+              "Total No. of Operative Current Accounts": "651",
+              "Digital Coverage Current A/C": "398",
+              "% of such Accounts out of total Operative Current Accounts": "61.14%"
+            },
+            "Namchi": {
+              "District": "Namchi",
+              "Total No. of Operative Sb Accounts": "153989",
+              "Digital Coverage SB A/C": "146513",
+              "% of such Accounts out of total Operative Savings Accounts": "95.15%",
+              "Total No. of Operative Current Accounts": "9616",
+              "Digital Coverage Current A/C": "9230",
+              "% of such Accounts out of total Operative Current Accounts": "95.99%"
+            },
+            "Pakyong": {
+              "District": "Pakyong",
+              "Total No. of Operative Sb Accounts": "125943",
+              "Digital Coverage SB A/C": "111248",
+              "% of such Accounts out of total Operative Savings Accounts": "88.33%",
+              "Total No. of Operative Current Accounts": "2245",
+              "Digital Coverage Current A/C": "1977",
+              "% of such Accounts out of total Operative Current Accounts": "88.06%"
+            },
+            "Gangtok": {
+              "District": "Gangtok",
+              "Total No. of Operative Sb Accounts": "344124",
+              "Digital Coverage SB A/C": "334830",
+              "% of such Accounts out of total Operative Savings Accounts": "97.30%",
+              "Total No. of Operative Current Accounts": "11508",
+              "Digital Coverage Current A/C": "10083",
+              "% of such Accounts out of total Operative Current Accounts": "87.62%"
+            }
+          }
+        }
+      }
+    },
+    "2024-09": {
+      "period": "September 2024",
+      "as_on_date": "30-09-2024",
+      "fy": "2024-25",
+      "tables": {
+        "atm_network": {
+          "fields": [
+            "District",
+            "Total"
+          ],
+          "num_districts": 6,
+          "districts": {
+            "Mangan": {
+              "District": "Mangan",
+              "Total": "17"
+            },
+            "Gangtok": {
+              "District": "Gangtok",
+              "Total": "124"
+            },
+            "Pakyong": {
+              "District": "Pakyong",
+              "Total": "35"
+            },
+            "Namchi": {
+              "District": "Namchi",
+              "Total": "43"
+            },
+            "Gyalshing": {
+              "District": "Gyalshing",
+              "Total": "17"
+            },
+            "Soreng": {
+              "District": "Soreng",
+              "Total": "5"
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "District",
+            "Total"
+          ],
+          "num_districts": 6,
+          "districts": {
+            "Mangan": {
+              "District": "Mangan",
+              "Total": "16"
+            },
+            "Gangtok": {
+              "District": "Gangtok",
+              "Total": "90"
+            },
+            "Pakyong": {
+              "District": "Pakyong",
+              "Total": "27"
+            },
+            "Namchi": {
+              "District": "Namchi",
+              "Total": "41"
+            },
+            "Gyalshing": {
+              "District": "Gyalshing",
+              "Total": "16"
+            },
+            "Soreng": {
+              "District": "Soreng",
+              "Total": "9"
+            }
+          }
+        },
+        "digital_payments": {
+          "fields": [
+            "District",
+            "Total No. of Operative Sb Accounts",
+            "Digital Coverage SB A/C",
+            "% of such Accounts out of total Operative Savings Accounts",
+            "Total No. of Operative Current Accounts",
+            "Digital Coverage Current A/C",
+            "% of such Accounts out of total Operative Current Accounts"
+          ],
+          "num_districts": 6,
+          "districts": {
+            "Gyalshing": {
+              "District": "Gyalshing",
+              "Total No. of Operative Sb Accounts": "78404",
+              "Digital Coverage SB A/C": "75182",
+              "% of such Accounts out of total Operative Savings Accounts": "95.89%",
+              "Total No. of Operative Current Accounts": "1438",
+              "Digital Coverage Current A/C": "1339",
+              "% of such Accounts out of total Operative Current Accounts": "93.12%"
+            },
+            "Mangan": {
+              "District": "Mangan",
+              "Total No. of Operative Sb Accounts": "50501",
+              "Digital Coverage SB A/C": "46779",
+              "% of such Accounts out of total Operative Savings Accounts": "92.63%",
+              "Total No. of Operative Current Accounts": "1022",
+              "Digital Coverage Current A/C": "936",
+              "% of such Accounts out of total Operative Current Accounts": "91.59%"
+            },
+            "Soreng": {
+              "District": "Soreng",
+              "Total No. of Operative Sb Accounts": "97021",
+              "Digital Coverage SB A/C": "89426",
+              "% of such Accounts out of total Operative Savings Accounts": "92.17%",
+              "Total No. of Operative Current Accounts": "725",
+              "Digital Coverage Current A/C": "629",
+              "% of such Accounts out of total Operative Current Accounts": "86.76%"
+            },
+            "Namchi": {
+              "District": "Namchi",
+              "Total No. of Operative Sb Accounts": "154083",
+              "Digital Coverage SB A/C": "149412",
+              "% of such Accounts out of total Operative Savings Accounts": "96.97%",
+              "Total No. of Operative Current Accounts": "9696",
+              "Digital Coverage Current A/C": "9217",
+              "% of such Accounts out of total Operative Current Accounts": "95.06%"
+            },
+            "Pakyong": {
+              "District": "Pakyong",
+              "Total No. of Operative Sb Accounts": "128150",
+              "Digital Coverage SB A/C": "115402",
+              "% of such Accounts out of total Operative Savings Accounts": "90.05%",
+              "Total No. of Operative Current Accounts": "2260",
+              "Digital Coverage Current A/C": "2055",
+              "% of such Accounts out of total Operative Current Accounts": "90.93%"
+            },
+            "Gangtok": {
+              "District": "Gangtok",
+              "Total No. of Operative Sb Accounts": "344153",
+              "Digital Coverage SB A/C": "334894",
+              "% of such Accounts out of total Operative Savings Accounts": "97.31%",
+              "Total No. of Operative Current Accounts": "11527",
+              "Digital Coverage Current A/C": "10207",
+              "% of such Accounts out of total Operative Current Accounts": "88.55%"
+            }
+          }
+        }
+      }
+    },
+    "2025-03": {
+      "period": "March 2025",
+      "as_on_date": "31-03-2025",
+      "fy": "2024-25",
+      "tables": {
+        "atm_network": {
+          "fields": [
+            "District",
+            "Total"
+          ],
+          "num_districts": 6,
+          "districts": {
+            "Mangan": {
+              "District": "Mangan",
+              "Total": "17"
+            },
+            "Gangtok": {
+              "District": "Gangtok",
+              "Total": "129"
+            },
+            "Pakyong": {
+              "District": "Pakyong",
+              "Total": "36"
+            },
+            "Namchi": {
+              "District": "Namchi",
+              "Total": "43"
+            },
+            "Gyalshing": {
+              "District": "Gyalshing",
+              "Total": "17"
+            },
+            "Soreng": {
+              "District": "Soreng",
+              "Total": "6"
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "District",
+            "Total"
+          ],
+          "num_districts": 6,
+          "districts": {
+            "Mangan": {
+              "District": "Mangan",
+              "Total": "16"
+            },
+            "Gangtok": {
+              "District": "Gangtok",
+              "Total": "92"
+            },
+            "Pakyong": {
+              "District": "Pakyong",
+              "Total": "28"
+            },
+            "Namchi": {
+              "District": "Namchi",
+              "Total": "41"
+            },
+            "Gyalshing": {
+              "District": "Gyalshing",
+              "Total": "17"
+            },
+            "Soreng": {
+              "District": "Soreng",
+              "Total": "11"
+            }
+          }
+        },
+        "digital_payments": {
+          "fields": [
+            "District",
+            "Total No. of Operative Sb Accounts",
+            "Digital Coverage SB A/C",
+            "% of such Accounts out of total Operative Savings Accounts",
+            "Total No. of Operative Current Accounts",
+            "Digital Coverage Current A/C",
+            "% of such Accounts out of total Operative Current Accounts"
+          ],
+          "num_districts": 6,
+          "districts": {
+            "Gyalshing": {
+              "District": "Gyalshing",
+              "Total No. of Operative Sb Accounts": "79424",
+              "Digital Coverage SB A/C": "76099",
+              "% of such Accounts out of total Operative Savings Accounts": "95.81%",
+              "Total No. of Operative Current Accounts": "1555",
+              "Digital Coverage Current A/C": "1450",
+              "% of such Accounts out of total Operative Current Accounts": "93.25%"
+            },
+            "Mangan": {
+              "District": "Mangan",
+              "Total No. of Operative Sb Accounts": "50712",
+              "Digital Coverage SB A/C": "47157",
+              "% of such Accounts out of total Operative Savings Accounts": "92.99%",
+              "Total No. of Operative Current Accounts": "1057",
+              "Digital Coverage Current A/C": "980",
+              "% of such Accounts out of total Operative Current Accounts": "92.72%"
+            },
+            "Soreng": {
+              "District": "Soreng",
+              "Total No. of Operative Sb Accounts": "103704",
+              "Digital Coverage SB A/C": "92453",
+              "% of such Accounts out of total Operative Savings Accounts": "89.15%",
+              "Total No. of Operative Current Accounts": "772",
+              "Digital Coverage Current A/C": "660",
+              "% of such Accounts out of total Operative Current Accounts": "85.49%"
+            },
+            "Namchi": {
+              "District": "Namchi",
+              "Total No. of Operative Sb Accounts": "157909",
+              "Digital Coverage SB A/C": "146936",
+              "% of such Accounts out of total Operative Savings Accounts": "93.05%",
+              "Total No. of Operative Current Accounts": "9349",
+              "Digital Coverage Current A/C": "8835",
+              "% of such Accounts out of total Operative Current Accounts": "94.50%"
+            },
+            "Pakyong": {
+              "District": "Pakyong",
+              "Total No. of Operative Sb Accounts": "129415",
+              "Digital Coverage SB A/C": "115817",
+              "% of such Accounts out of total Operative Savings Accounts": "89.49%",
+              "Total No. of Operative Current Accounts": "2296",
+              "Digital Coverage Current A/C": "1890",
+              "% of such Accounts out of total Operative Current Accounts": "82.32%"
+            },
+            "Gangtok": {
+              "District": "Gangtok",
+              "Total No. of Operative Sb Accounts": "347466",
+              "Digital Coverage SB A/C": "336809",
+              "% of such Accounts out of total Operative Savings Accounts": "96.93%",
+              "Total No. of Operative Current Accounts": "12073",
+              "Digital Coverage Current A/C": "10937",
+              "% of such Accounts out of total Operative Current Accounts": "90.59%"
+            }
+          }
+        }
+      }
+    }
+  }
+}
