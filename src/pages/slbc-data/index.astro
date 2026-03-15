@@ -1,91 +1,13 @@
 ---
-import PageLayout from '../../layouts/PageLayout.astro';
-
 const base = import.meta.env.BASE_URL;
-
-const states = [
-  { name: 'Assam', meta: '30 quarters · 35 districts · 51 categories · 948 CSVs', href: `${base}slbc-data/assam/download`, active: true },
-  { name: 'Meghalaya', meta: '15 quarters · 12 districts · 48 categories · 604 CSVs', href: `${base}slbc-data/meghalaya/download`, active: true },
-  { name: 'Manipur', meta: '39 quarters · 16 districts · 45 categories · 620 CSVs', href: `${base}slbc-data/manipur/download`, active: true },
-  { name: 'Arunachal Pradesh', meta: '18 quarters · 26 districts · 46 categories · 519 CSVs', href: `${base}slbc-data/arunachal-pradesh/download`, active: true },
-  { name: 'Mizoram', meta: '22 quarters · 11 districts · 38 categories · 241 CSVs', href: `${base}slbc-data/mizoram/download`, active: true },
-  { name: 'Tripura', meta: '33 quarters · 8 districts · 21 categories · 160 CSVs', href: `${base}slbc-data/tripura/download`, active: true },
-  { name: 'Nagaland', meta: '7 quarters · 16 districts · 25 categories · 57 CSVs', href: `${base}slbc-data/nagaland/download`, active: true },
-  { name: 'Sikkim', meta: '4 quarters · 6 districts · 3 categories · 12 CSVs', href: `${base}slbc-data/sikkim/download`, active: true },
-];
 ---
-
-<PageLayout
-  title="SLBC Data — Financial Inclusion | Project FINER"
-  pageTitle="SLBC Data — District-Level Financial Inclusion"
-  subtitle="Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) quarterly booklets. District-level indicators covering banking infrastructure, credit, government schemes, and more."
->
-  <div class="container">
-    <div class="section-label">North East Region</div>
-
-    {states.map(state => (
-      <a class:list={['state-card', { coming: !state.active }]} href={state.href}>
-        <div class="state-inner">
-          <div>
-            <div class="state-name">{state.name}</div>
-            <div class="state-meta">{state.meta}</div>
-          </div>
-          <div class="state-arrow">&rarr;</div>
-        </div>
-      </a>
-    ))}
-
-    <div class="section-label" style="margin-top: 40px;">Other States</div>
-
-    <a class="state-card" href={`${base}slbc-data/bihar/download`}>
-      <div class="state-inner">
-        <div>
-          <div class="state-name">Bihar</div>
-          <div class="state-meta">25 quarters · 38 districts · 60 categories · 334 CSVs</div>
-        </div>
-        <div class="state-arrow">&rarr;</div>
-      </div>
-    </a>
-
-    <a class="state-card" href={`${base}slbc-data/west-bengal/download`}>
-      <div class="state-inner">
-        <div>
-          <div class="state-name">West Bengal</div>
-          <div class="state-meta">38 quarters · 23 districts · 22 categories · 331 CSVs</div>
-        </div>
-        <div class="state-arrow">&rarr;</div>
-      </div>
-    </a>
-  </div>
-</PageLayout>
-
-<style>
-  .container { max-width: 900px; margin: 0 auto; padding: 32px 40px 60px; }
-  .state-card {
-    display: block;
-    background: #fff;
-    border: 1px solid var(--border);
-    padding: 0;
-    margin-bottom: 12px;
-    border-radius: 8px;
-    box-shadow: var(--card-shadow);
-    overflow: hidden;
-    transition: all 0.2s;
-    text-decoration: none;
-    color: inherit;
-  }
-  .state-card:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-1px); }
-  .state-inner {
-    padding: 24px 28px;
-    border-left: 3px solid var(--accent);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .state-name { font-size: 16px; font-weight: 700; color: var(--text); }
-  .state-meta { font-family: var(--font-sans); font-size: 11px; color: var(--muted); margin-top: 4px; }
-  .state-arrow { font-family: var(--font-sans); font-size: 18px; color: #ccc; transition: color 0.2s; }
-  .state-card:hover .state-arrow { color: var(--accent); }
-  .coming { opacity: 0.4; pointer-events: none; }
-  .coming .state-inner { border-left-color: #ccc; }
-</style>
+<html>
+  <head>
+    <meta http-equiv="refresh" content={`0;url=${base}capital-markets/data-download`} />
+    <link rel="canonical" href={`${base}capital-markets/data-download`} />
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <a href={`${base}capital-markets/data-download`}>Redirecting to Downloads...</a>
+  </body>
+</html>

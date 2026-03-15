@@ -15,7 +15,7 @@ const base = import.meta.env.BASE_URL;
     <div id="panel-head">
       <h1>Project <em>FINER</em></h1>
       <p class="panel-sub">Financial Inclusion in the North East Region</p>
-      <p class="panel-stats">159 Districts &middot; 9 States &middot; 7 Indicators</p>
+      <p class="panel-stats">182 Districts &middot; 10 States &middot; 7 Indicators</p>
     </div>
 
     <div id="panel-body">
@@ -112,6 +112,7 @@ const base = import.meta.env.BASE_URL;
             <option value="TRIPURA">Tripura</option>
             <option value="NAGALAND">Nagaland</option>
             <option value="SIKKIM">Sikkim</option>
+            <option value="WEST BENGAL">West Bengal</option>
           </select>
         </div>
 
@@ -196,14 +197,14 @@ const base = import.meta.env.BASE_URL;
 
     var INDIA_BOUNDS = L.latLngBounds(L.latLng(6.5,68.0), L.latLng(37.5,110.0));
     var NE_BOUNDS    = L.latLngBounds(L.latLng(21.5, 83.5), L.latLng(29.5, 97.5));
-    var NE_CENTER    = [25.5, 90.0]; // Visual center of NE + Bihar region
-    var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK','BR'];
-    var NE_STATES    = ['ASSAM','MEGHALAYA','MANIPUR','MIZORAM','NAGALAND','TRIPURA','ARUNACHAL PRADESH','SIKKIM','BIHAR'];
+    var NE_CENTER    = [25.5, 90.0]; // Visual center of NE + Bihar + WB region
+    var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK','BR','WB'];
+    var NE_STATES    = ['ASSAM','MEGHALAYA','MANIPUR','MIZORAM','NAGALAND','TRIPURA','ARUNACHAL PRADESH','SIKKIM','BIHAR','WEST BENGAL'];
     var STATE_SLUGS  = {
       'ASSAM': 'assam', 'MEGHALAYA': 'meghalaya', 'MANIPUR': 'manipur',
       'MIZORAM': 'mizoram', 'NAGALAND': 'nagaland', 'TRIPURA': 'tripura',
       'ARUNACHAL PRADESH': 'arunachal-pradesh', 'SIKKIM': 'sikkim',
-      'BIHAR': 'bihar',
+      'BIHAR': 'bihar', 'WEST BENGAL': 'west-bengal',
     };
 
     // Map init — single map, center India at zoom 5
@@ -405,8 +406,8 @@ const base = import.meta.env.BASE_URL;
       kcc: {
         title: 'Kisan Credit Card',
         metrics: [
-          { field: 'total_no_of_kcc', label: 'Total KCC Issued', unit: '', fallbacks: ['no_of_kcc', 'kcc_no', 'total_kcc_no', 'total_no', 'o_s_position_no_of_cards_issued', 'cum_no_app_sanc', 'no_of_kcc_issued_during_quarter_including_renewal', 'rupay_card_issued_in_kcc'] },
-          { field: 'outstanding_amt', label: 'Outstanding Amount (₹ Lakh)', unit: '₹L', fallbacks: ['total_outstanding', 'total_o_s_kcc_amt', 'kcc_outstanding', 'kcc_outstanding', 'o_s_position_limit_sanctioned', 'kcc_limit_sanctioned_in_rs_lakhs'] },
+          { field: 'total_no_of_kcc', label: 'Total KCC Issued', unit: '', fallbacks: ['no_of_kcc', 'kcc_no', 'total_kcc_no', 'total_no', 'o_s_position_no_of_cards_issued', 'cum_no_app_sanc', 'no_of_kcc_issued_during_quarter_including_renewal', 'rupay_card_issued_in_kcc', 'target_no'] },
+          { field: 'outstanding_amt', label: 'Outstanding Amount (₹ Lakh)', unit: '₹L', fallbacks: ['total_outstanding', 'total_o_s_kcc_amt', 'kcc_outstanding', 'kcc_outstanding', 'o_s_position_limit_sanctioned', 'kcc_limit_sanctioned_in_rs_lakhs', 'amount'] },
           { field: 'no_of_rupay_card_issued', label: 'RuPay Cards Issued', unit: '' },
           { field: 'kcc_card_activated', label: 'Cards Activated', unit: '', fallbacks: ['card_activated'] },
         ],
@@ -414,16 +415,16 @@ const base = import.meta.env.BASE_URL;
       shg: {
         title: 'Self Help Groups',
         metrics: [
-          { field: 'savings_linked_no', label: 'Savings Linked SHGs', unit: '', fallbacks: ['savings_linked', 'credit_linked_no', 'credit_linked', 'current_fy_savings_linked_no', 'no_of_shgs', 'deposit_linkage_no_of_groups'] },
-          { field: 'credit_linked_no', label: 'Credit Linked SHGs', unit: '', fallbacks: ['credit_linked', 'current_fy_credit_linked_no', 'credit_linkage_loan_given_by_banks_no'] },
-          { field: 'shg_o_s_amt', label: 'Outstanding Amount (₹ Lakh)', unit: '₹L', fallbacks: ['outstanding_amt', 'shg_o_s', 'outstanding_accounts'] },
+          { field: 'savings_linked_no', label: 'Savings Linked SHGs', unit: '', fallbacks: ['savings_linked', 'credit_linked_no', 'credit_linked', 'current_fy_savings_linked_no', 'no_of_shgs', 'deposit_linkage_no_of_groups', 'total_sanction_no', 'total_sanctioned'] },
+          { field: 'credit_linked_no', label: 'Credit Linked SHGs', unit: '', fallbacks: ['credit_linked', 'current_fy_credit_linked_no', 'credit_linkage_loan_given_by_banks_no', 'total_disbursement_no'] },
+          { field: 'shg_o_s_amt', label: 'Outstanding Amount (₹ Lakh)', unit: '₹L', fallbacks: ['outstanding_amt', 'shg_o_s', 'outstanding_accounts', 'total_outsanding_no'] },
           { field: 'shg_npa_pct', label: 'SHG NPA %', unit: '%' },
         ],
       },
       digital_transactions: {
         title: 'Digital Transactions',
         metrics: [
-          { field: 'bhim_upi_a_c', label: 'BHIM/UPI Transactions', unit: '', fallbacks: ['bhim_upi', 'coverage_pct'] },
+          { field: 'bhim_upi_a_c', label: 'BHIM/UPI Transactions', unit: '', fallbacks: ['bhim_upi', 'coverage_pct', 'achievement', 'no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode'] },
           { field: 'bhim_upi_amt', label: 'UPI Amount (₹ Lakh)', unit: '₹L' },
           { field: 'imps_a_c', label: 'IMPS Transactions', unit: '', fallbacks: ['imps'] },
           { field: 'cards_debit_credit_a_c', label: 'Card Transactions', unit: '', fallbacks: ['cards_debit_credit', 'cards_debit'] },
@@ -475,12 +476,28 @@ const base = import.meta.env.BASE_URL;
       'PURBA CHAMPARAN': 'PURBI CHAMPARAN',
       'KAIMUR (BHABUA)': 'KAIMUR',
       'PASHCHIM CHAMPARAN': 'PASHCHIMI CHAMPARAN',
+      // West Bengal — GeoJSON vs SLBC
+      'ALIPUR DUAR': 'ALIPURDUAR',
+      'BIRBHAM': 'BIRBHUM',
+      'DARJILING': 'DARJEELING',
+      'HAORA': 'HOWRAH',
+      'HUGLI': 'HOOGHLY',
+      'KOCH BIHAR': 'COOCH BEHAR',
+      'MALDAH': 'MALDA',
+      'NORTH TWENTY-FOUR PARGANAS': 'NORTH 24 PARGANAS',
+      'PASCHIM BARDDHAMAN': 'PASCHIM BARDHAMAN',
+      'PURBA BARDDHAMAN': 'PURBA BARDHAMAN',
+      'PURULIYA': 'PURULIA',
+      'SOUTH 24PARGANAS': 'SOUTH 24 PARGANAS',
     };
 
     // Cross-category fallbacks
     var CROSS_CATEGORY_FALLBACKS = {
       'branch_network': ['credit_deposit_ratio', 'kcc', 'fi_kcc', 'digital_transactions'],
       'kcc': ['fi_kcc'],
+      'shg': ['shg_nrlm', 'nrlm'],
+      'digital_transactions': ['digital_payments'],
+      'social_security': ['social_security_schemes'],
     };
 
     function normalizePeriod(p) {

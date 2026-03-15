@@ -4,7 +4,7 @@ import DownloadManager from '../../components/DownloadManager.svelte';
 
 const base = import.meta.env.BASE_URL;
 
-const states = [
+const neStates = [
   { name: 'Assam', meta: '30 quarters · 35 districts · 51 categories · 948 CSVs', slug: 'assam' },
   { name: 'Meghalaya', meta: '15 quarters · 12 districts · 48 categories · 604 CSVs', slug: 'meghalaya' },
   { name: 'Manipur', meta: '39 quarters · 16 districts · 45 categories · 620 CSVs', slug: 'manipur' },
@@ -14,17 +14,25 @@ const states = [
   { name: 'Nagaland', meta: '7 quarters · 16 districts · 25 categories · 57 CSVs', slug: 'nagaland' },
   { name: 'Sikkim', meta: '4 quarters · 6 districts · 3 categories · 12 CSVs', slug: 'sikkim' },
 ];
+
+const otherStates = [
+  { name: 'Bihar', meta: '25 quarters · 38 districts · 60 categories · 334 CSVs', slug: 'bihar' },
+  { name: 'West Bengal', meta: '38 quarters · 23 districts · 22 categories · 331 CSVs', slug: 'west-bengal' },
+];
 ---
 
 <PageLayout
   title="Data Download | Project FINER"
   pageTitle="Data Download — Project FINER"
-  backLink={{ href: `${base}`, label: 'Back to map' }}
+  subtitle="Machine-readable datasets covering capital markets access and district-level financial inclusion across India."
 >
   <div class="container">
     <div class="section-label">SLBC — District-Level Financial Inclusion</div>
+    <p class="section-desc">Extracted from State Level Bankers' Committee (SLBC) quarterly booklets. District-level indicators covering banking infrastructure, credit, government schemes, and more.</p>
 
-    {states.map(state => (
+    <div class="sub-label">North East Region</div>
+
+    {neStates.map(state => (
       <a class="state-link" href={`${base}slbc-data/${state.slug}/download`}>
         <div class="state-link-inner">
           <div>
@@ -36,7 +44,22 @@ const states = [
       </a>
     ))}
 
-    <div class="section-label">Capital Markets Access</div>
+    <div class="sub-label" style="margin-top: 28px;">Other States</div>
+
+    {otherStates.map(state => (
+      <a class="state-link" href={`${base}slbc-data/${state.slug}/download`}>
+        <div class="state-link-inner">
+          <div>
+            <div class="state-link-name">{state.name}</div>
+            <div class="state-link-meta">{state.meta}</div>
+          </div>
+          <div class="state-link-arrow">&rarr;</div>
+        </div>
+      </a>
+    ))}
+
+    <div class="section-label" style="margin-top: 48px;">Capital Markets Access</div>
+    <p class="section-desc">DP service centres (CDSL, NSDL) and mutual fund distributor locations across India.</p>
 
     <DownloadManager client:load />
   </div>
@@ -44,6 +67,23 @@ const states = [
 
 <style>
   .container { max-width: 900px; margin: 0 auto; padding: 32px 40px 60px; }
+  .section-desc {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 640px;
+  }
+  .sub-label {
+    font-family: var(--font-sans);
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--label);
+    margin-bottom: 10px;
+  }
   .state-link {
     display: block;
     background: #fff;
@@ -56,9 +96,9 @@ const states = [
     margin-bottom: 10px;
   }
   .state-link:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-1px); }
-  .state-link-inner { padding: 20px 24px; border-left: 3px solid var(--teal); display: flex; align-items: center; justify-content: space-between; }
+  .state-link-inner { padding: 20px 24px; border-left: 3px solid var(--accent); display: flex; align-items: center; justify-content: space-between; }
   .state-link-name { font-size: 15px; font-weight: 700; color: var(--text); }
   .state-link-meta { font-family: var(--font-sans); font-size: 11px; color: var(--muted); margin-top: 3px; }
   .state-link-arrow { font-family: var(--font-sans); font-size: 18px; color: #ccc; transition: color 0.2s; }
-  .state-link:hover .state-link-arrow { color: var(--teal); }
+  .state-link:hover .state-link-arrow { color: var(--accent); }
 </style>
