@@ -3,25 +3,38 @@ import PageLayout from '../../layouts/PageLayout.astro';
 import DownloadManager from '../../components/DownloadManager.svelte';
 
 const base = import.meta.env.BASE_URL;
+
+const states = [
+  { name: 'Assam', meta: '30 quarters · 35 districts · 51 categories · 948 CSVs', slug: 'assam' },
+  { name: 'Meghalaya', meta: '15 quarters · 12 districts · 48 categories · 604 CSVs', slug: 'meghalaya' },
+  { name: 'Manipur', meta: '39 quarters · 16 districts · 45 categories · 620 CSVs', slug: 'manipur' },
+  { name: 'Arunachal Pradesh', meta: '18 quarters · 26 districts · 46 categories · 519 CSVs', slug: 'arunachal-pradesh' },
+  { name: 'Mizoram', meta: '22 quarters · 11 districts · 38 categories · 241 CSVs', slug: 'mizoram' },
+  { name: 'Tripura', meta: '33 quarters · 8 districts · 21 categories · 160 CSVs', slug: 'tripura' },
+  { name: 'Nagaland', meta: '7 quarters · 16 districts · 25 categories · 57 CSVs', slug: 'nagaland' },
+  { name: 'Sikkim', meta: '4 quarters · 6 districts · 3 categories · 12 CSVs', slug: 'sikkim' },
+];
 ---
 
 <PageLayout
   title="Data Download | Project FINER"
   pageTitle="Data Download — Project FINER"
-  backLink={{ href: `${base}capital-markets/map`, label: 'Back to map' }}
+  backLink={{ href: `${base}`, label: 'Back to map' }}
 >
   <div class="container">
     <div class="section-label">SLBC — District-Level Financial Inclusion</div>
 
-    <a class="state-link" href={`${base}slbc-data/meghalaya/download`}>
-      <div class="state-link-inner">
-        <div>
-          <div class="state-link-name">Meghalaya</div>
-          <div class="state-link-meta">18 quarters &middot; 12 districts &middot; 44 indicators &middot; 606 CSVs &middot; Jun 2020 – Sep 2025</div>
+    {states.map(state => (
+      <a class="state-link" href={`${base}slbc-data/${state.slug}/download`}>
+        <div class="state-link-inner">
+          <div>
+            <div class="state-link-name">{state.name}</div>
+            <div class="state-link-meta">{state.meta}</div>
+          </div>
+          <div class="state-link-arrow">&rarr;</div>
         </div>
-        <div class="state-link-arrow">&rarr;</div>
-      </div>
-    </a>
+      </a>
+    ))}
 
     <div class="section-label">Capital Markets Access</div>
 
