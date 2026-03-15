@@ -379,10 +379,8 @@
 
     const config = {
       responsive: true,
-      displayModeBar: true,
-      displaylogo: false,
-      modeBarButtonsToRemove: ['select2d', 'lasso2d', 'autoScale2d'],
-      toImageButtonOptions: { format: 'png', width: 1200, height: 600, scale: 2, filename: `${metric.field}_${selectedDistrict}` },
+      displayModeBar: false,
+      staticPlot: false,
     };
 
     Plotly.newPlot(expandedChartEl, [trace], layout, config);
@@ -402,6 +400,19 @@
       const mod = await import('plotly.js-dist-min');
       Plotly = mod.default || mod;
     }
+  }
+
+  function downloadChart() {
+    if (!Plotly || !expandedChartEl || !expandedCard) return;
+    const metric = filteredMetrics.find(m => m.key === expandedCard);
+    if (!metric) return;
+    Plotly.downloadImage(expandedChartEl, {
+      format: 'png',
+      width: 1200,
+      height: 600,
+      scale: 2,
+      filename: `${metric.field}_${selectedDistrict}`,
+    });
   }
 </script>
 
@@ -585,7 +596,13 @@
                 {/if}
               </div>
             {/if}
-            <button class="ec-close" onclick={() => expandedCard = null}>&times;</button>
+            <div class="ec-actions">
+              <button class="ec-download" onclick={downloadChart} title="Download as PNG">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Download PNG</span>
+              </button>
+              <button class="ec-close" onclick={() => expandedCard = null}>&times;</button>
+            </div>
           </div>
           <div bind:this={expandedChartEl} class="plotly-chart"></div>
         </div>
@@ -907,6 +924,30 @@
   .ec-badge.good { color: #2d7d46; background: rgba(45,125,70,0.08); }
   .ec-badge.bad { color: #c44830; background: rgba(196,72,48,0.08); }
 
+  .ec-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+  .ec-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-sans);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ec-download:hover { border-color: var(--accent); color: var(--accent); }
   .ec-close {
     font-family: var(--font-sans);
     font-size: 20px;
