@@ -4,12 +4,12 @@
 
 **Project FINER** (Financial Inclusion in the North East Region) is a static data platform focused on financial inclusion in India, with emphasis on the North East region. It publishes interactive maps, charts, and downloadable datasets covering banking infrastructure, credit access, government schemes, and capital markets.
 
-- **Hosted on**: GitHub Pages at `ksabhinav.github.io/projectfiner`
+- **Hosted on**: GitHub Pages with custom domain at `projectfiner.com`
 - **Repo**: `https://github.com/ksabhinav/projectfiner.git`
 - **Branch**: `main`
 - **Framework**: Astro 6 + Svelte 5 (static site generation)
 - **Deployment**: GitHub Actions (`.github/workflows/deploy.yml`) — builds with `npm run build`, deploys to GitHub Pages
-- **Base URL**: `/projectfiner/` (trailing slash required — set in `astro.config.mjs`)
+- **Base URL**: `/` (set in `astro.config.mjs`, site: `https://projectfiner.com`)
 
 ## Dev Server
 
@@ -23,7 +23,7 @@
 }
 ```
 
-Preview at `http://localhost:8090/projectfiner/`.
+Preview at `http://localhost:8090/`.
 
 ## Repository Structure
 
@@ -133,7 +133,7 @@ u = website, st = state, loc = city/location, t = type, arn = ARN, c = city
 
 Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) quarterly PDF booklets.
 
-**Currently available**: Meghalaya (other NE states listed as "coming soon")
+**Currently available**: All 8 NE states — Assam, Meghalaya, Manipur, Arunachal Pradesh, Mizoram, Tripura, Nagaland, Sikkim
 **Source**: [SLBC NE - Meghalaya Booklets](https://slbcne.nic.in/meghalaya/booklet.php)
 
 **Coverage**:
@@ -233,7 +233,7 @@ Leaflet and MarkerCluster are loaded via CDN (unpkg) in inline scripts.
 
 ## Common Gotchas
 
-1. **Base URL trailing slash**: `base` in `astro.config.mjs` must be `/projectfiner/` (with trailing slash) or all `${base}path` links break.
+1. **Base URL**: `base` in `astro.config.mjs` is `/` for the custom domain `projectfiner.com`.
 2. **`define:vars` IIFE**: Astro wraps `define:vars` scripts in an IIFE, so variables aren't accessible in subsequent `<script is:inline>` blocks. Use `window.__FINER_BASE` to pass the base URL.
 3. **Leaflet kept as inline JS**: The map is ~700 lines of imperative DOM code. Converting to Svelte would be complex and Leaflet has SSR issues. Keep it as `<script is:inline>`.
 4. **JSON quarter keys vs folder names**: Master JSON uses `june_2020` but disk folders are `2020-06`. Mapped in `slbc-categories.ts`.
@@ -242,3 +242,13 @@ Leaflet and MarkerCluster are loaded via CDN (unpkg) in inline scripts.
 7. **PDF text reversal**: SLBC PDFs have landscape-rotated pages where cell text is stored backwards (`str[::-1]`).
 8. **SLBC category classification**: NPS tables must be classified with high-priority rules to avoid false matches from field names containing "Education" and "Loan".
 9. **Homepage IS the map**: The capital markets map is the homepage (`/`). Old `/capital-markets/map` redirects to `/`.
+
+## Data Quality Pipeline
+
+SLBC data goes through multiple cleaning passes after PDF extraction:
+1. **District cleanup** — Remove bank names, TOC entries, page numbers from district lists using canonical district lists + fuzzy matching
+2. **Bank-wise table removal** — Only district-level aggregates are kept
+3. **Field normalization** — Standardize AC/A/C, Amt/Amt., case/pluralization variants
+4. **Date-embedded field redistribution** — Fields like "CD Ratio March 2024" split into correct quarters
+5. **Fuzzy deduplication** — Merge near-duplicate field names (OCR artifacts)
+6. **Final comprehensive fix** — Comma number parsing, NPA disambiguation, garbled name fixes, long name shortening
