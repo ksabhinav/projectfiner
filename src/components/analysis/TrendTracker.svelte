@@ -17,6 +17,8 @@
     { name: 'Tripura', slug: 'tripura' },
     { name: 'Nagaland', slug: 'nagaland' },
     { name: 'Sikkim', slug: 'sikkim' },
+    { name: 'Bihar', slug: 'bihar' },
+    { name: 'West Bengal', slug: 'west-bengal' },
   ];
 
   // NPA-related categories where a decrease is good

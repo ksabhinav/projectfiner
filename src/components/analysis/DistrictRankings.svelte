@@ -19,6 +19,7 @@
     { name: 'Nagaland', slug: 'nagaland' },
     { name: 'Sikkim', slug: 'sikkim' },
     { name: 'Bihar', slug: 'bihar' },
+    { name: 'West Bengal', slug: 'west-bengal' },
   ];
 
   const SINGLE_STATES = STATES.filter(s => s.slug !== 'all');

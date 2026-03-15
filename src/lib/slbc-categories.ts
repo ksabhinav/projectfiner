@@ -54,6 +54,27 @@ export const CATEGORY_INFO: Record<string, string> = {
   uncategorized:                       'Other / Uncategorized',
   weaker_section_os:                   'Weaker section lending',
   women_finance:                       'Lending to women',
+  // West Bengal specific categories
+  acp_priority_sector:                 'ACP Priority Sector targets & achievement',
+  aif:                                 'Agriculture Infrastructure Fund',
+  apy:                                 'Atal Pension Yojana',
+  digital_payments:                    'Digital payments ecosystem',
+  financial_literacy:                  'Financial Literacy Centres & camps',
+  kcc_animal_husbandry:                'KCC Animal Husbandry',
+  kcc_fishery:                         'KCC Fishery',
+  mudra:                               'MUDRA loans (Shishu, Kishor, Tarun)',
+  msme:                                'MSME clusters & credit linkage',
+  nlm:                                 'National Livestock Mission',
+  npa_recovery:                        'NPA & recovery position',
+  sarfaesi:                            'SARFAESI recovery',
+  shg_nrlm:                            'SHG credit linkage (NRLM)',
+  shg_nulm:                            'SHG credit linkage (NULM)',
+  social_security_schemes:             'Social security schemes (PMJJBY, PMSBY, APY)',
+  svskp:                               'Swarnjayanti Gram Swarozgar Yojana',
+  farm_sector:                         'Farm sector lending',
+  non_farm_sector:                     'Non-farm sector lending',
+  weaker_section:                      'Weaker section lending',
+  housing_loan:                        'Housing loans',
 };
 
 export const QUARTER_ORDER = [
@@ -93,5 +114,7 @@ export function prettyCategoryName(cat: string): string {
     .replace(/Ldm/,'LDM').replace(/Rseti/,'RSETI').replace(/ Os$/,' O/S')
     .replace(/ Ps /,' PS ').replace(/ Ps$/,' PS').replace(/ Nps/,' NPS')
     .replace(/Dcc/,'DCC').replace(/Flc/,'FLC').replace(/Pmfme/,'PMFME')
-    .replace(/Pmfby/,'PMFBY').replace(/Blbc/,'BLBC');
+    .replace(/Pmfby/,'PMFBY').replace(/Blbc/,'BLBC')
+    .replace(/Aif/,'AIF').replace(/Apy/,'APY').replace(/Nlm/,'NLM')
+    .replace(/Mudra/,'MUDRA').replace(/Sarfaesi/,'SARFAESI');
 }

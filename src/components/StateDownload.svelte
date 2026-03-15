@@ -21,9 +21,11 @@
     if (/^\d{4}-\d{2}$/.test(qkey)) return qkey; // already YYYY-MM
     // Handle snake_case like june_2020, sept_2025, mar_2022, dec_2023
     const monthMap: Record<string, string> = {
-      jan: '01', feb: '02', mar: '03', apr: '04', may: '05', june: '06',
-      jun: '06', jul: '07', aug: '08', sept: '09', sep: '09', oct: '10',
-      nov: '11', dec: '12',
+      jan: '01', january: '01', feb: '02', february: '02', mar: '03', march: '03',
+      apr: '04', april: '04', may: '05', june: '06', jun: '06',
+      jul: '07', july: '07', aug: '08', august: '08',
+      sept: '09', sep: '09', september: '09', oct: '10', october: '10',
+      nov: '11', november: '11', dec: '12', december: '12',
     };
     const parts = qkey.split('_');
     if (parts.length === 2) {

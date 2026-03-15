@@ -13,6 +13,8 @@
     { name: 'Tripura', slug: 'tripura' },
     { name: 'Nagaland', slug: 'nagaland' },
     { name: 'Sikkim', slug: 'sikkim' },
+    { name: 'Bihar', slug: 'bihar' },
+    { name: 'West Bengal', slug: 'west-bengal' },
   ];
 
   let Plotly: any = $state(null);

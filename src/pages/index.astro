@@ -947,6 +947,7 @@ const base = import.meta.env.BASE_URL;
       });
       document.addEventListener('mousemove', function(e) {
         if (!dragging || sortedQuarters.length === 0) return;
+        e.preventDefault();
         var idx = posToIdx(e.clientY);
         if (idx !== currentQIdx) {
           setTimelinePosition(idx);
@@ -954,6 +955,7 @@ const base = import.meta.env.BASE_URL;
           sliderTimer = setTimeout(function() { buildChoropleth_banking(); }, 120);
         }
       });
+      document.addEventListener('selectstart', function(e) { if (dragging) e.preventDefault(); });
       document.addEventListener('mouseup', function() { dragging = false; });
 
       // Touch support
@@ -1120,7 +1122,7 @@ const base = import.meta.env.BASE_URL;
   select.finput{cursor:pointer;appearance:none}
 
   /* Vertical timeline */
-  #time-slider{position:absolute;right:16px;top:50%;transform:translateY(-50%);z-index:1000;display:flex;flex-direction:column;align-items:center;gap:6px}
+  #time-slider{position:absolute;right:16px;top:50%;transform:translateY(-50%);z-index:1000;display:flex;flex-direction:column;align-items:center;gap:6px;user-select:none;-webkit-user-select:none}
   .tl-bound{font-family:'Inter',sans-serif;font-size:9px;font-weight:500;letter-spacing:0.04em;color:#bbb5ad;text-align:center;transition:opacity 0.2s}
   #timeline-track{position:relative;width:3px;height:160px;background:rgba(200,192,184,0.5);border-radius:2px;cursor:pointer}
   #timeline-fill{position:absolute;top:0;left:0;width:100%;background:rgba(184,96,62,0.35);border-radius:2px;transition:height 0.15s ease}
