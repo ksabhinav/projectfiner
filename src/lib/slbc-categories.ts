@@ -106,6 +106,43 @@ export const CATEGORY_INFO: Record<string, string> = {
   shg_p2:                              'SHG (contd.)',
   shg_p3:                              'SHG (contd. 3)',
   women_finance_p2:                    'Women finance (contd.)',
+  // Odisha specific categories
+  acp_district_agri:                   'ACP District-wise Agriculture',
+  acp_district_agri_allied:            'ACP District-wise Agri & Allied',
+  acp_district_ancillary:              'ACP District-wise Ancillary',
+  acp_district_msme:                   'ACP District-wise MSME',
+  acp_district_total:                  'ACP District-wise Total',
+  bharatnet:                           'BharatNet connectivity',
+  bharatnet_p2:                        'BharatNet (contd.)',
+  bharatnet_p3:                        'BharatNet (contd. 3)',
+  bharatnet_p4:                        'BharatNet (contd. 4)',
+  branch_network_p2:                   'Branch network (contd.)',
+  branch_network_p3:                   'Branch network (contd. 3)',
+  branch_network_p4:                   'Branch network (contd. 4)',
+  cgtmse:                              'CGTMSE coverage',
+  cgtmse_p2:                           'CGTMSE (contd.)',
+  cm_srim:                             'CM SRIM scheme',
+  digital_coverage_business:           'Digital coverage - business accounts',
+  digital_coverage_savings:            'Digital coverage - savings accounts',
+  digital_coverage_savings_p2:         'Digital coverage - savings (contd.)',
+  digital_coverage_savings_p3:         'Digital coverage - savings (contd. 3)',
+  digital_coverage_savings_p4:         'Digital coverage - savings (contd. 4)',
+  district_misc:                       'District miscellaneous data',
+  key_indicators:                      'Key indicators (CD ratio, deposits, advances)',
+  npa:                                 'Non-Performing Assets',
+  pm_surya_ghar:                       'PM Surya Ghar',
+  pmjdy_p2:                            'PMJDY (contd.)',
+  pmjdy_p3:                            'PMJDY (contd. 3)',
+  pmjdy_p4:                            'PMJDY (contd. 4)',
+  rseti_p3:                            'RSETI (contd. 3)',
+  rseti_p4:                            'RSETI (contd. 4)',
+  rseti_p5:                            'RSETI (contd. 5)',
+  rseti_p6:                            'RSETI (contd. 6)',
+  social_security_claims:              'Social security claims',
+  stand_up_india:                      'Stand Up India',
+  stand_up_india_p2:                   'Stand Up India (contd.)',
+  suy:                                 'SUY scheme',
+  town_hall_msme:                      'Town Hall MSME',
 };
 
 export const QUARTER_ORDER = [
@@ -114,7 +151,7 @@ export const QUARTER_ORDER = [
   'mar_2022','june_2022','sept_2022','dec_2022',
   'mar_2023','june_2023','sept_2023','dec_2023',
   'mar_2024','june_2024','sept_2024','dec_2024',
-  'mar_2025','june_2025','sept_2025',
+  'mar_2025','june_2025','sept_2025','dec_2025',
 ];
 
 export const QUARTER_LABELS: Record<string, string> = {
@@ -123,7 +160,7 @@ export const QUARTER_LABELS: Record<string, string> = {
   mar_2022:'Mar 2022', june_2022:'Jun 2022', sept_2022:'Sep 2022', dec_2022:'Dec 2022',
   mar_2023:'Mar 2023', june_2023:'Jun 2023', sept_2023:'Sep 2023', dec_2023:'Dec 2023',
   mar_2024:'Mar 2024', june_2024:'Jun 2024', sept_2024:'Sep 2024', dec_2024:'Dec 2024',
-  mar_2025:'Mar 2025', june_2025:'Jun 2025', sept_2025:'Sep 2025',
+  mar_2025:'Mar 2025', june_2025:'Jun 2025', sept_2025:'Sep 2025', dec_2025:'Dec 2025',
 };
 
 export const QUARTER_FOLDERS: Record<string, string> = {
@@ -132,7 +169,7 @@ export const QUARTER_FOLDERS: Record<string, string> = {
   mar_2022:'2022-03', june_2022:'2022-06', sept_2022:'2022-09', dec_2022:'2022-12',
   mar_2023:'2023-03', june_2023:'2023-06', sept_2023:'2023-09', dec_2023:'2023-12',
   mar_2024:'2024-03', june_2024:'2024-06', sept_2024:'2024-09', dec_2024:'2024-12',
-  mar_2025:'2025-03', june_2025:'2025-06', sept_2025:'2025-09',
+  mar_2025:'2025-03', june_2025:'2025-06', sept_2025:'2025-09', dec_2025:'2025-12',
 };
 
 export function prettyCategoryName(cat: string): string {

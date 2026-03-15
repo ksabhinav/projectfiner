@@ -15,7 +15,7 @@ const base = import.meta.env.BASE_URL;
     <div id="panel-head">
       <h1>Project <em>FINER</em></h1>
       <p class="panel-sub">Financial Inclusion in the North East Region</p>
-      <p class="panel-stats">206 Districts &middot; 11 States &middot; 7 Indicators</p>
+      <p class="panel-stats">236 Districts &middot; 12 States &middot; 7 Indicators</p>
     </div>
 
     <div id="panel-body">
@@ -112,6 +112,7 @@ const base = import.meta.env.BASE_URL;
             <option value="MIZORAM">Mizoram</option>
             <option value="TRIPURA">Tripura</option>
             <option value="NAGALAND">Nagaland</option>
+            <option value="ODISHA">Odisha</option>
             <option value="SIKKIM">Sikkim</option>
             <option value="WEST BENGAL">West Bengal</option>
           </select>
@@ -197,15 +198,16 @@ const base = import.meta.env.BASE_URL;
     var DIST_URL   = _B + 'data/district_boundaries.geojson';
 
     var INDIA_BOUNDS = L.latLngBounds(L.latLng(6.5,68.0), L.latLng(37.5,110.0));
-    var NE_BOUNDS    = L.latLngBounds(L.latLng(21.5, 83.0), L.latLng(29.5, 97.5));
+    var NE_BOUNDS    = L.latLngBounds(L.latLng(17.5, 81.5), L.latLng(29.5, 97.5));
     var NE_CENTER    = [25.5, 90.0]; // Visual center of NE + Bihar + WB + Jharkhand region
-    var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK','BR','WB','JH'];
-    var NE_STATES    = ['ASSAM','MEGHALAYA','MANIPUR','MIZORAM','NAGALAND','TRIPURA','ARUNACHAL PRADESH','SIKKIM','BIHAR','WEST BENGAL','JHARKHAND'];
+    var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK','BR','WB','JH','OR'];
+    var NE_STATES    = ['ASSAM','MEGHALAYA','MANIPUR','MIZORAM','NAGALAND','TRIPURA','ARUNACHAL PRADESH','SIKKIM','BIHAR','WEST BENGAL','JHARKHAND','ODISHA'];
     var STATE_SLUGS  = {
       'ASSAM': 'assam', 'MEGHALAYA': 'meghalaya', 'MANIPUR': 'manipur',
       'MIZORAM': 'mizoram', 'NAGALAND': 'nagaland', 'TRIPURA': 'tripura',
       'ARUNACHAL PRADESH': 'arunachal-pradesh', 'SIKKIM': 'sikkim',
       'BIHAR': 'bihar', 'WEST BENGAL': 'west-bengal', 'JHARKHAND': 'jharkhand',
+      'ODISHA': 'odisha',
     };
 
     // Map init — single map, center India at zoom 5
@@ -377,8 +379,8 @@ const base = import.meta.env.BASE_URL;
         title: 'Credit-Deposit Ratio',
         metrics: [
           { field: 'overall_cd_ratio', label: 'Overall CD Ratio (%)', unit: '%', fallbacks: ['cd_ratio', 'current_c_d_ratio', 'cdr', 'overall', 'cd_ratio_incl_pou'] },
-          { field: 'total_deposit', label: 'Total Deposits (₹ Lakh)', unit: '₹L', fallbacks: ['deposit', 'deposits_rural'] },
-          { field: 'total_advance', label: 'Total Advances (₹ Lakh)', unit: '₹L', fallbacks: ['advance', 'advances'] },
+          { field: 'total_deposit', label: 'Total Deposits (₹ Lakh)', unit: '₹L', fallbacks: ['deposit', 'deposits_rural', 'september_2025_total_deposit'] },
+          { field: 'total_advance', label: 'Total Advances (₹ Lakh)', unit: '₹L', fallbacks: ['advance', 'advances', 'total_advance_utilized_in_the_state'] },
           { field: 'total_branch', label: 'Total Branches', unit: '', fallbacks: ['total', 'no_of_brs'] },
         ],
       },
@@ -396,7 +398,7 @@ const base = import.meta.env.BASE_URL;
       branch_network: {
         title: 'Branch Network',
         metrics: [
-          { field: 'total_branch', label: 'Total Branches', unit: '', fallbacks: ['total', 'no_of_branches', 'total_no_of_br'] },
+          { field: 'total_branch', label: 'Total Branches', unit: '', fallbacks: ['total', 'no_of_branches', 'total_no_of_br', 'total_branche_s'] },
           { field: 'branch_rural', label: 'Rural Branches', unit: '', fallbacks: ['atm_rural'] },
           { field: 'branch_semi_urban', label: 'Semi-Urban Branches', unit: '', fallbacks: ['semi_urban'] },
           { field: 'branch_urban', label: 'Urban Branches', unit: '', fallbacks: ['urban'] },
@@ -482,6 +484,13 @@ const base = import.meta.env.BASE_URL;
       'PASHCHIM CHAMPARAN': 'PASHCHIMI CHAMPARAN',
       // Jharkhand — GeoJSON vs SLBC
       'SARAIKELA-KHARSAWAN': 'SERAIKELA-KHARSAWAN',
+      // Odisha — GeoJSON vs SLBC
+      'ANUGUL': 'ANGUL',
+      'JAJAPUR': 'JAJPUR',
+      'KEONJHAR (KENDUJHAR)': 'KEONJHAR',
+      'NABARANGAPUR': 'NABARANGPUR',
+      'NUAPARHA': 'NUAPADA',
+      'RAYAGARHA': 'RAYAGADA',
       // West Bengal — GeoJSON vs SLBC
       'ALIPUR DUAR': 'ALIPURDUAR',
       'BIRBHAM': 'BIRBHUM',
@@ -499,11 +508,13 @@ const base = import.meta.env.BASE_URL;
 
     // Cross-category fallbacks
     var CROSS_CATEGORY_FALLBACKS = {
-      'branch_network': ['credit_deposit_ratio', 'kcc', 'fi_kcc', 'digital_transactions'],
+      'branch_network': ['credit_deposit_ratio', 'kcc', 'fi_kcc', 'digital_transactions', 'branch_network_p2'],
+      'credit_deposit_ratio': ['key_indicators'],
       'kcc': ['fi_kcc'],
       'shg': ['shg_nrlm', 'nrlm', 'shg_p2'],
-      'digital_transactions': ['digital_payments'],
-      'social_security': ['social_security_schemes'],
+      'digital_transactions': ['digital_payments', 'digital_coverage_savings', 'digital_coverage_business'],
+      'social_security': ['social_security_schemes', 'social_security_claims'],
+      'pmjdy': ['pmjdy_p2', 'pmjdy_p3'],
     };
 
     function normalizePeriod(p) {
