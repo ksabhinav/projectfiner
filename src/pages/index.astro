@@ -195,6 +195,7 @@ const base = import.meta.env.BASE_URL;
 
     var INDIA_BOUNDS = L.latLngBounds(L.latLng(6.5,68.0), L.latLng(37.5,97.5));
     var NE_BOUNDS    = L.latLngBounds(L.latLng(21.5, 88.0), L.latLng(29.5, 97.5));
+    var NE_CENTER    = [25.5, 93.0]; // Visual center of NE region
     var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK'];
     var NE_STATES    = ['ASSAM','MEGHALAYA','MANIPUR','MIZORAM','NAGALAND','TRIPURA','ARUNACHAL PRADESH','SIKKIM'];
     var STATE_SLUGS  = {
@@ -206,6 +207,26 @@ const base = import.meta.env.BASE_URL;
     // Map init — single map, center India at zoom 5
     var map = L.map('map',{center:[22.5,82.5],zoom:5,minZoom:4,maxZoom:18,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false});
     L.control.zoom({position:'topright'}).addTo(map);
+
+    // Fly to NE with panel-aware centering
+    function flyToNE(animate) {
+      var dur = animate !== false ? 1.0 : 0;
+      var panelW = 306; // 290px panel + 16px margin
+      var tlW = 40;     // timeline slider width
+      map.fitBounds(NE_BOUNDS, { animate: false });
+      var zoom = map.getZoom();
+      var nePixel = map.latLngToContainerPoint(NE_CENTER);
+      var mapSize = map.getSize();
+      var usableCenterX = (panelW + (mapSize.x - tlW)) / 2;
+      var usableCenterY = mapSize.y / 2;
+      var dx = nePixel.x - usableCenterX;
+      var dy = nePixel.y - usableCenterY;
+      if (dur > 0) {
+        map.panBy([dx, dy], { animate: true, duration: dur });
+      } else {
+        map.panBy([dx, dy], { animate: false });
+      }
+    }
 
     // White canvas tile
     (new (L.GridLayer.extend({createTile:function(){var t=document.createElement('canvas');t.width=t.height=256;var c=t.getContext('2d');c.fillStyle='#fff';c.fillRect(0,0,256,256);return t;}}))).addTo(map);
@@ -960,14 +981,14 @@ const base = import.meta.env.BASE_URL;
           map.flyToBounds(group.getBounds(), { padding: [40, 40], maxZoom: 9, duration: 1.0 });
         }
       } else {
-        map.flyToBounds(NE_BOUNDS, { paddingTopLeft: [320, 20], paddingBottomRight: [40, 20], duration: 1.0 });
+        flyToNE();
       }
     });
 
     document.getElementById('btn-reset-banking').addEventListener('click', function() {
       bankingStateFilter = '';
       document.getElementById('sel-state').value = '';
-      map.flyToBounds(NE_BOUNDS, { paddingTopLeft: [320, 20], paddingBottomRight: [40, 20], duration: 1.0 });
+      flyToNE();
       if (slbcLoaded) {
         buildChoropleth_banking();
         updateLabelVisibility_banking();
@@ -1020,7 +1041,7 @@ const base = import.meta.env.BASE_URL;
           buildChoropleth_banking();
           updateLabelVisibility_banking();
         }
-        map.flyToBounds(NE_BOUNDS, { paddingTopLeft: [320, 20], paddingBottomRight: [40, 20], duration: 1.0 });
+        flyToNE();
       }
     }
 
