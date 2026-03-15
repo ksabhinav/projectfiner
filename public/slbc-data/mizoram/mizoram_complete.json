@@ -1051,88 +1051,88 @@
           "fields": [
             "District",
             "Block Name",
-            "Number of Operative CASA",
-            "Number of Aadhaar Seeded CASA",
-            "Number of Authenticated CASA"
+            "No. of Operative CASA",
+            "No. of Aadhaar Seeded CASA",
+            "No. of Authenticated CASA"
           ],
           "num_districts": 11,
           "districts": {
             "Aizawl": {
               "District": "Aizawl",
               "Block Name": "Thingsulthliah",
-              "Number of Operative CASA": "18784",
-              "Number of Aadhaar Seeded CASA": "14587",
-              "Number of Authenticated CASA": "5175"
+              "No. of Operative CASA": "18784",
+              "No. of Aadhaar Seeded CASA": "14587",
+              "No. of Authenticated CASA": "5175"
             },
             "Champhai": {
               "District": "Champhai",
               "Block Name": "Champhai",
-              "Number of Operative CASA": "45015",
-              "Number of Aadhaar Seeded CASA": "30507",
-              "Number of Authenticated CASA": "12008"
+              "No. of Operative CASA": "45015",
+              "No. of Aadhaar Seeded CASA": "30507",
+              "No. of Authenticated CASA": "12008"
             },
             "Hnahthial": {
               "District": "Hnahthial",
               "Block Name": "Hnahthial",
-              "Number of Operative CASA": "13607",
-              "Number of Aadhaar Seeded CASA": "8535",
-              "Number of Authenticated CASA": "3502"
+              "No. of Operative CASA": "13607",
+              "No. of Aadhaar Seeded CASA": "8535",
+              "No. of Authenticated CASA": "3502"
             },
             "Khawzawl": {
               "District": "Khawzawl",
               "Block Name": "Khawzawl",
-              "Number of Operative CASA": "16633",
-              "Number of Aadhaar Seeded CASA": "10922",
-              "Number of Authenticated CASA": "2018"
+              "No. of Operative CASA": "16633",
+              "No. of Aadhaar Seeded CASA": "10922",
+              "No. of Authenticated CASA": "2018"
             },
             "Kolasib": {
               "District": "Kolasib",
               "Block Name": "N. THINGDAWL",
-              "Number of Operative CASA": "25951",
-              "Number of Aadhaar Seeded CASA": "17610",
-              "Number of Authenticated CASA": "2976"
+              "No. of Operative CASA": "25951",
+              "No. of Aadhaar Seeded CASA": "17610",
+              "No. of Authenticated CASA": "2976"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
               "Block Name": "S Bungtlang",
-              "Number of Operative CASA": "9132",
-              "Number of Aadhaar Seeded CASA": "422",
-              "Number of Authenticated CASA": "0"
+              "No. of Operative CASA": "9132",
+              "No. of Aadhaar Seeded CASA": "422",
+              "No. of Authenticated CASA": "0"
             },
             "Lunglei": {
               "District": "Lunglei",
               "Block Name": "Lungsen",
-              "Number of Operative CASA": "10576",
-              "Number of Aadhaar Seeded CASA": "4225",
-              "Number of Authenticated CASA": "3895"
+              "No. of Operative CASA": "10576",
+              "No. of Aadhaar Seeded CASA": "4225",
+              "No. of Authenticated CASA": "3895"
             },
             "Mamit": {
               "District": "Mamit",
               "Block Name": "Reiek",
-              "Number of Operative CASA": "5354",
-              "Number of Aadhaar Seeded CASA": "3027",
-              "Number of Authenticated CASA": "2354"
+              "No. of Operative CASA": "5354",
+              "No. of Aadhaar Seeded CASA": "3027",
+              "No. of Authenticated CASA": "2354"
             },
             "Saiha": {
               "District": "Saiha",
               "Block Name": "Saiha",
-              "Number of Operative CASA": "37290",
-              "Number of Aadhaar Seeded CASA": "21865",
-              "Number of Authenticated CASA": "7102"
+              "No. of Operative CASA": "37290",
+              "No. of Aadhaar Seeded CASA": "21865",
+              "No. of Authenticated CASA": "7102"
             },
             "Saitual": {
               "District": "Saitual",
               "Block Name": "Ngopa",
-              "Number of Operative CASA": "9901",
-              "Number of Aadhaar Seeded CASA": "4776",
-              "Number of Authenticated CASA": "2109"
+              "No. of Operative CASA": "9901",
+              "No. of Aadhaar Seeded CASA": "4776",
+              "No. of Authenticated CASA": "2109"
             },
             "Serchhip": {
               "District": "Serchhip",
               "Block Name": "Serchhip",
-              "Number of Operative CASA": "35884",
-              "Number of Aadhaar Seeded CASA": "24047",
-              "Number of Authenticated CASA": "4958"
+              "No. of Operative CASA": "35884",
+              "No. of Aadhaar Seeded CASA": "24047",
+              "No. of Authenticated CASA": "4958"
             }
           }
         },
@@ -2252,77 +2252,77 @@
         "credit_deposit_ratio": {
           "fields": [
             "District",
-            "Deposit",
-            "Advances",
-            "CD Ratio"
+            "Total Deposit",
+            "Total Advance",
+            "Overall CD Ratio"
           ],
           "num_districts": 11,
           "districts": {
             "Aizawl": {
               "District": "Aizawl",
-              "Deposit": "45024.21",
-              "Advances": "14641.41",
-              "CD Ratio": "32.52"
+              "Total Deposit": "45024.21",
+              "Total Advance": "14641.41",
+              "Overall CD Ratio": "32.52"
             },
             "Champhai": {
               "District": "Champhai",
-              "Deposit": "7729.46",
-              "Advances": "3586.6",
-              "CD Ratio": "46.4"
+              "Total Deposit": "7729.46",
+              "Total Advance": "3586.6",
+              "Overall CD Ratio": "46.4"
             },
             "Hnahthial": {
               "District": "Hnahthial",
-              "Deposit": "15514.42",
-              "Advances": "5182.86",
-              "CD Ratio": "33.41"
+              "Total Deposit": "15514.42",
+              "Total Advance": "5182.86",
+              "Overall CD Ratio": "33.41"
             },
             "Khawzawl": {
               "District": "Khawzawl",
-              "Deposit": "3995.93",
-              "Advances": "2852.12",
-              "CD Ratio": "71.38"
+              "Total Deposit": "3995.93",
+              "Total Advance": "2852.12",
+              "Overall CD Ratio": "71.38"
             },
             "Kolasib": {
               "District": "Kolasib",
-              "Deposit": "13864.22",
-              "Advances": "8331.64",
-              "CD Ratio": "60.09"
+              "Total Deposit": "13864.22",
+              "Total Advance": "8331.64",
+              "Overall CD Ratio": "60.09"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
-              "Deposit": "11088.72",
-              "Advances": "9531.05",
-              "CD Ratio": "85.95"
+              "Total Deposit": "11088.72",
+              "Total Advance": "9531.05",
+              "Overall CD Ratio": "85.95"
             },
             "Lunglei": {
               "District": "Lunglei",
-              "Deposit": "7929.63",
-              "Advances": "4351.6",
-              "CD Ratio": "54.88"
+              "Total Deposit": "7929.63",
+              "Total Advance": "4351.6",
+              "Overall CD Ratio": "54.88"
             },
             "Mamit": {
               "District": "Mamit",
-              "Deposit": "24164.16",
-              "Advances": "14406.68",
-              "CD Ratio": "59.62"
+              "Total Deposit": "24164.16",
+              "Total Advance": "14406.68",
+              "Overall CD Ratio": "59.62"
             },
             "Saiha": {
               "District": "Saiha",
-              "Deposit": "3401.19",
-              "Advances": "2330.73",
-              "CD Ratio": "68.53"
+              "Total Deposit": "3401.19",
+              "Total Advance": "2330.73",
+              "Overall CD Ratio": "68.53"
             },
             "Saitual": {
               "District": "Saitual",
-              "Deposit": "6507.28",
-              "Advances": "4420.95",
-              "CD Ratio": "67.94"
+              "Total Deposit": "6507.28",
+              "Total Advance": "4420.95",
+              "Overall CD Ratio": "67.94"
             },
             "Serchhip": {
               "District": "Serchhip",
-              "Deposit": "21565.25",
-              "Advances": "9802.81",
-              "CD Ratio": "45.46"
+              "Total Deposit": "21565.25",
+              "Total Advance": "9802.81",
+              "Overall CD Ratio": "45.46"
             }
           }
         },
@@ -3956,7 +3956,7 @@
             "Male No.",
             "Female No.",
             "No. of Zero Balance A/C",
-            "Amt Deposits Held In The A/C",
+            "Amt. Deposits held in the A/C",
             "No. of Rupay Card Issued",
             "No. of Rupay Card Activated",
             "No. of Aadhaar Seeded"
@@ -3971,7 +3971,7 @@
               "Male No.": "28651.0",
               "Female No.": "31117.0",
               "No. of Zero Balance A/C": "10841.0",
-              "Amt Deposits Held In The A/C": "8145.98",
+              "Amt. Deposits held in the A/C": "8145.98",
               "No. of Rupay Card Issued": "37299.0",
               "No. of Rupay Card Activated": "23508.0",
               "No. of Aadhaar Seeded": "36634.0"
@@ -3984,7 +3984,7 @@
               "Male No.": "2945.0",
               "Female No.": "3662.0",
               "No. of Zero Balance A/C": "408.0",
-              "Amt Deposits Held In The A/C": "316.37",
+              "Amt. Deposits held in the A/C": "316.37",
               "No. of Rupay Card Issued": "1150.0",
               "No. of Rupay Card Activated": "922.0",
               "No. of Aadhaar Seeded": "3692.0"
@@ -3997,7 +3997,7 @@
               "Male No.": "4715.0",
               "Female No.": "2721.0",
               "No. of Zero Balance A/C": "266.0",
-              "Amt Deposits Held In The A/C": "324.32",
+              "Amt. Deposits held in the A/C": "324.32",
               "No. of Rupay Card Issued": "3088.0",
               "No. of Rupay Card Activated": "2415.0",
               "No. of Aadhaar Seeded": "4025.0"
@@ -4010,7 +4010,7 @@
               "Male No.": "5573.0",
               "Female No.": "8169.0",
               "No. of Zero Balance A/C": "1709.0",
-              "Amt Deposits Held In The A/C": "691.09",
+              "Amt. Deposits held in the A/C": "691.09",
               "No. of Rupay Card Issued": "3102.0",
               "No. of Rupay Card Activated": "2333.0",
               "No. of Aadhaar Seeded": "7616.0"
@@ -4023,7 +4023,7 @@
               "Male No.": "2546.0",
               "Female No.": "4183.0",
               "No. of Zero Balance A/C": "437.0",
-              "Amt Deposits Held In The A/C": "317.61",
+              "Amt. Deposits held in the A/C": "317.61",
               "No. of Rupay Card Issued": "2021.0",
               "No. of Rupay Card Activated": "1550.0",
               "No. of Aadhaar Seeded": "4051.0"
@@ -4036,7 +4036,7 @@
               "Male No.": "4377.0",
               "Female No.": "4661.0",
               "No. of Zero Balance A/C": "1211.0",
-              "Amt Deposits Held In The A/C": "280.87",
+              "Amt. Deposits held in the A/C": "280.87",
               "No. of Rupay Card Issued": "2016.0",
               "No. of Rupay Card Activated": "1458.0",
               "No. of Aadhaar Seeded": "4511.0"
@@ -4049,7 +4049,7 @@
               "Male No.": "443.0",
               "Female No.": "487.0",
               "No. of Zero Balance A/C": "236.0",
-              "Amt Deposits Held In The A/C": "57.7",
+              "Amt. Deposits held in the A/C": "57.7",
               "No. of Rupay Card Issued": "250.0",
               "No. of Rupay Card Activated": "173.0",
               "No. of Aadhaar Seeded": "729.0"
@@ -4062,7 +4062,7 @@
               "Male No.": "4544.0",
               "Female No.": "5888.0",
               "No. of Zero Balance A/C": "1077.0",
-              "Amt Deposits Held In The A/C": "355.75",
+              "Amt. Deposits held in the A/C": "355.75",
               "No. of Rupay Card Issued": "2406.0",
               "No. of Rupay Card Activated": "1707.0",
               "No. of Aadhaar Seeded": "5784.0"
@@ -4075,7 +4075,7 @@
               "Male No.": "3904.0",
               "Female No.": "4269.0",
               "No. of Zero Balance A/C": "1291.0",
-              "Amt Deposits Held In The A/C": "357.06",
+              "Amt. Deposits held in the A/C": "357.06",
               "No. of Rupay Card Issued": "1276.0",
               "No. of Rupay Card Activated": "704.0",
               "No. of Aadhaar Seeded": "1918.0"
@@ -4088,7 +4088,7 @@
               "Male No.": "4542.0",
               "Female No.": "6640.0",
               "No. of Zero Balance A/C": "1259.0",
-              "Amt Deposits Held In The A/C": "562.89",
+              "Amt. Deposits held in the A/C": "562.89",
               "No. of Rupay Card Issued": "1887.0",
               "No. of Rupay Card Activated": "1454.0",
               "No. of Aadhaar Seeded": "6686.0"
@@ -4101,7 +4101,7 @@
               "Male No.": "5691.0",
               "Female No.": "6932.0",
               "No. of Zero Balance A/C": "605.0",
-              "Amt Deposits Held In The A/C": "752.32",
+              "Amt. Deposits held in the A/C": "752.32",
               "No. of Rupay Card Issued": "3492.0",
               "No. of Rupay Card Activated": "2094.0",
               "No. of Aadhaar Seeded": "7846.0"
@@ -5412,7 +5412,7 @@
             "Branch Rural",
             "Semi-Urban",
             "Urban",
-            "Total",
+            "Total Branch",
             "ATM Rural",
             "BC Fixed",
             "Others"
@@ -5424,7 +5424,7 @@
               "Branch Rural": "17",
               "Semi-Urban": "1",
               "Urban": "124",
-              "Total": "51",
+              "Total Branch": "51",
               "ATM Rural": "4",
               "BC Fixed": "21",
               "Others": "0"
@@ -5434,7 +5434,7 @@
               "Branch Rural": "5",
               "Semi-Urban": "10",
               "Urban": "0",
-              "Total": "39",
+              "Total Branch": "39",
               "ATM Rural": "0",
               "BC Fixed": "6",
               "Others": "1"
@@ -5444,7 +5444,7 @@
               "Branch Rural": "2",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "3",
+              "Total Branch": "3",
               "ATM Rural": "0",
               "BC Fixed": "0",
               "Others": "2"
@@ -5454,7 +5454,7 @@
               "Branch Rural": "4",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "20",
+              "Total Branch": "20",
               "ATM Rural": "1",
               "BC Fixed": "0",
               "Others": "0"
@@ -5464,7 +5464,7 @@
               "Branch Rural": "7",
               "Semi-Urban": "7",
               "Urban": "0",
-              "Total": "32",
+              "Total Branch": "32",
               "ATM Rural": "2",
               "BC Fixed": "2",
               "Others": "0"
@@ -5474,7 +5474,7 @@
               "Branch Rural": "5",
               "Semi-Urban": "6",
               "Urban": "0",
-              "Total": "50",
+              "Total Branch": "50",
               "ATM Rural": "0",
               "BC Fixed": "9",
               "Others": "0"
@@ -5484,7 +5484,7 @@
               "Branch Rural": "5",
               "Semi-Urban": "15",
               "Urban": "0",
-              "Total": "21",
+              "Total Branch": "21",
               "ATM Rural": "1",
               "BC Fixed": "13",
               "Others": "4"
@@ -5494,7 +5494,7 @@
               "Branch Rural": "9",
               "Semi-Urban": "4",
               "Urban": "0",
-              "Total": "36",
+              "Total Branch": "36",
               "ATM Rural": "2",
               "BC Fixed": "1",
               "Others": "0"
@@ -5504,7 +5504,7 @@
               "Branch Rural": "1",
               "Semi-Urban": "5",
               "Urban": "0",
-              "Total": "24",
+              "Total Branch": "24",
               "ATM Rural": "0",
               "BC Fixed": "4",
               "Others": "1"
@@ -5514,7 +5514,7 @@
               "Branch Rural": "4",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "9",
+              "Total Branch": "9",
               "ATM Rural": "1",
               "BC Fixed": "1",
               "Others": "0"
@@ -5524,7 +5524,7 @@
               "Branch Rural": "9",
               "Semi-Urban": "4",
               "Urban": "0",
-              "Total": "24",
+              "Total Branch": "24",
               "ATM Rural": "1",
               "BC Fixed": "0",
               "Others": "0"
@@ -5534,11 +5534,11 @@
         "credit_deposit_ratio": {
           "fields": [
             "District",
-            "Deposits Rural",
+            "Dep Rural",
             "Semi-Urban",
             "Urban",
             "Total",
-            "Advances Rural",
+            "Adv Rural",
             "CD Ratio Rural",
             "Overall"
           ],
@@ -5546,111 +5546,111 @@
           "districts": {
             "Aizawl": {
               "District": "Aizawl",
-              "Deposits Rural": "43858.98",
+              "Dep Rural": "43858.98",
               "Semi-Urban": "23.94",
               "Urban": "37.68",
               "Total": "379440.52",
-              "Advances Rural": "14681.51",
+              "Adv Rural": "14681.51",
               "CD Ratio Rural": "33.47",
               "Overall": "37.39"
             },
             "Champhai": {
               "District": "Champhai",
-              "Deposits Rural": "6849.54",
+              "Dep Rural": "6849.54",
               "Semi-Urban": "42.2",
               "Urban": "",
               "Total": "26369.21",
-              "Advances Rural": "3460.75",
+              "Adv Rural": "3460.75",
               "CD Ratio Rural": "50.53",
               "Overall": "43.14"
             },
             "Hnahthial": {
               "District": "Hnahthial",
-              "Deposits Rural": "15369.65",
+              "Dep Rural": "15369.65",
               "Semi-Urban": "36.32",
               "Urban": "",
               "Total": "5841.18",
-              "Advances Rural": "5331.32",
+              "Adv Rural": "5331.32",
               "CD Ratio Rural": "34.69",
               "Overall": "34.82"
             },
             "Khawzawl": {
               "District": "Khawzawl",
-              "Deposits Rural": "6173.36",
+              "Dep Rural": "6173.36",
               "Semi-Urban": "48.15",
               "Urban": "",
               "Total": "8735.70",
-              "Advances Rural": "3049.38",
+              "Adv Rural": "3049.38",
               "CD Ratio Rural": "49.40",
               "Overall": "48.58"
             },
             "Kolasib": {
               "District": "Kolasib",
-              "Deposits Rural": "10760.50",
+              "Dep Rural": "10760.50",
               "Semi-Urban": "51.8",
               "Urban": "",
               "Total": "27602.38",
-              "Advances Rural": "6521.65",
+              "Adv Rural": "6521.65",
               "CD Ratio Rural": "60.61",
               "Overall": "53.64"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
-              "Deposits Rural": "11777.68",
+              "Dep Rural": "11777.68",
               "Semi-Urban": "81.63",
               "Urban": "",
               "Total": "37152.57",
-              "Advances Rural": "9918.63",
+              "Adv Rural": "9918.63",
               "CD Ratio Rural": "84.22",
               "Overall": "82.3"
             },
             "Lunglei": {
               "District": "Lunglei",
-              "Deposits Rural": "8702.17",
+              "Dep Rural": "8702.17",
               "Semi-Urban": "61.87",
               "Urban": "",
               "Total": "53251.00",
-              "Advances Rural": "4483.38",
+              "Adv Rural": "4483.38",
               "CD Ratio Rural": "51.52",
               "Overall": "60.84"
             },
             "Mamit": {
               "District": "Mamit",
-              "Deposits Rural": "24262.99",
+              "Dep Rural": "24262.99",
               "Semi-Urban": "97.28",
               "Urban": "",
               "Total": "17174.33",
-              "Advances Rural": "14793.40",
+              "Adv Rural": "14793.40",
               "CD Ratio Rural": "60.97",
               "Overall": "64.3"
             },
             "Saiha": {
               "District": "Saiha",
-              "Deposits Rural": "3389.05",
+              "Dep Rural": "3389.05",
               "Semi-Urban": "74.83",
               "Urban": "",
               "Total": "26944.65",
-              "Advances Rural": "2404.79",
+              "Adv Rural": "2404.79",
               "CD Ratio Rural": "70.96",
               "Overall": "74.47"
             },
             "Saitual": {
               "District": "Saitual",
-              "Deposits Rural": "6522.83",
+              "Dep Rural": "6522.83",
               "Semi-Urban": "41.77",
               "Urban": "",
               "Total": "9606.30",
-              "Advances Rural": "4345.28",
+              "Adv Rural": "4345.28",
               "CD Ratio Rural": "66.62",
               "Overall": "50.24"
             },
             "Serchhip": {
               "District": "Serchhip",
-              "Deposits Rural": "21000.05",
+              "Dep Rural": "21000.05",
               "Semi-Urban": "50.8",
               "Urban": "",
               "Total": "23382.52",
-              "Advances Rural": "9902.11",
+              "Adv Rural": "9902.11",
               "CD Ratio Rural": "47.15",
               "Overall": "49.19"
             }
@@ -6731,7 +6731,7 @@
             "Self Help Groups No.",
             "Women Beneficiaries No.",
             "Minority Communities No.",
-            "PMJDY No.",
+            "Total PMJDY No.",
             "Others No.",
             "TOTAL No."
           ],
@@ -6748,7 +6748,7 @@
               "Self Help Groups No.": "9",
               "Women Beneficiaries No.": "5881",
               "Minority Communities No.": "5232",
-              "PMJDY No.": "111",
+              "Total PMJDY No.": "111",
               "Others No.": "2648",
               "TOTAL No.": "44911"
             },
@@ -6763,7 +6763,7 @@
               "Self Help Groups No.": "0",
               "Women Beneficiaries No.": "32",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0",
               "TOTAL No.": "171"
             },
@@ -6778,7 +6778,7 @@
               "Self Help Groups No.": "0",
               "Women Beneficiaries No.": "41",
               "Minority Communities No.": "207",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0",
               "TOTAL No.": "656"
             },
@@ -6793,7 +6793,7 @@
               "Self Help Groups No.": "3",
               "Women Beneficiaries No.": "108",
               "Minority Communities No.": "153",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "4",
               "TOTAL No.": "737"
             },
@@ -6808,7 +6808,7 @@
               "Self Help Groups No.": "0",
               "Women Beneficiaries No.": "10",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0",
               "TOTAL No.": "149"
             },
@@ -6823,7 +6823,7 @@
               "Self Help Groups No.": "0",
               "Women Beneficiaries No.": "9",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0",
               "TOTAL No.": "163"
             },
@@ -6838,7 +6838,7 @@
               "Self Help Groups No.": "0",
               "Women Beneficiaries No.": "5",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0",
               "TOTAL No.": "70"
             },
@@ -6853,7 +6853,7 @@
               "Self Help Groups No.": "0",
               "Women Beneficiaries No.": "215",
               "Minority Communities No.": "296",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "3",
               "TOTAL No.": "1516"
             },
@@ -6868,7 +6868,7 @@
               "Self Help Groups No.": "0",
               "Women Beneficiaries No.": "4",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0",
               "TOTAL No.": "59"
             },
@@ -6883,7 +6883,7 @@
               "Self Help Groups No.": "0",
               "Women Beneficiaries No.": "31",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0",
               "TOTAL No.": "242"
             },
@@ -6898,7 +6898,7 @@
               "Self Help Groups No.": "6",
               "Women Beneficiaries No.": "211",
               "Minority Communities No.": "356",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "43",
               "TOTAL No.": "1378"
             }
@@ -7500,9 +7500,9 @@
             "District",
             "Block Name",
             "Total Branch",
-            "Number of Operative CASA",
-            "Number of Aadhaar Seeded CASA",
-            "Number of Authenticated CASA"
+            "No. of Operative CASA",
+            "No. of Aadhaar Seeded CASA",
+            "No. of Authenticated CASA"
           ],
           "num_districts": 11,
           "districts": {
@@ -7510,89 +7510,89 @@
               "District": "Aizawl",
               "Block Name": "Tlangnuam",
               "Total Branch": "95",
-              "Number of Operative CASA": "401825",
-              "Number of Aadhaar Seeded CASA": "266935",
-              "Number of Authenticated CASA": "133652"
+              "No. of Operative CASA": "401825",
+              "No. of Aadhaar Seeded CASA": "266935",
+              "No. of Authenticated CASA": "133652"
             },
             "Champhai": {
               "District": "Champhai",
               "Block Name": "Khawbung",
               "Total Branch": "3",
-              "Number of Operative CASA": "7663",
-              "Number of Aadhaar Seeded CASA": "5337",
-              "Number of Authenticated CASA": "0"
+              "No. of Operative CASA": "7663",
+              "No. of Aadhaar Seeded CASA": "5337",
+              "No. of Authenticated CASA": "0"
             },
             "Hnahthial": {
               "District": "Hnahthial",
               "Block Name": "Hnahthial",
               "Total Branch": "5",
-              "Number of Operative CASA": "14675",
-              "Number of Aadhaar Seeded CASA": "9596",
-              "Number of Authenticated CASA": "3609"
+              "No. of Operative CASA": "14675",
+              "No. of Aadhaar Seeded CASA": "9596",
+              "No. of Authenticated CASA": "3609"
             },
             "Khawzawl": {
               "District": "Khawzawl",
               "Block Name": "Khawzawl",
               "Total Branch": "7",
-              "Number of Operative CASA": "17695",
-              "Number of Aadhaar Seeded CASA": "11929",
-              "Number of Authenticated CASA": "2460"
+              "No. of Operative CASA": "17695",
+              "No. of Aadhaar Seeded CASA": "11929",
+              "No. of Authenticated CASA": "2460"
             },
             "Kolasib": {
               "District": "Kolasib",
               "Block Name": "N. Thingdawl",
               "Total Branch": "7",
-              "Number of Operative CASA": "27857",
-              "Number of Aadhaar Seeded CASA": "19412",
-              "Number of Authenticated CASA": "329"
+              "No. of Operative CASA": "27857",
+              "No. of Aadhaar Seeded CASA": "19412",
+              "No. of Authenticated CASA": "329"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
               "Block Name": "Sangau",
               "Total Branch": "2",
-              "Number of Operative CASA": "4896",
-              "Number of Aadhaar Seeded CASA": "3336",
-              "Number of Authenticated CASA": "0"
+              "No. of Operative CASA": "4896",
+              "No. of Aadhaar Seeded CASA": "3336",
+              "No. of Authenticated CASA": "0"
             },
             "Lunglei": {
               "District": "Lunglei",
               "Block Name": "W. Bunghmun",
               "Total Branch": "2",
-              "Number of Operative CASA": "3118",
-              "Number of Aadhaar Seeded CASA": "2487",
-              "Number of Authenticated CASA": "0"
+              "No. of Operative CASA": "3118",
+              "No. of Aadhaar Seeded CASA": "2487",
+              "No. of Authenticated CASA": "0"
             },
             "Mamit": {
               "District": "Mamit",
               "Block Name": "Zawlnuam",
               "Total Branch": "8",
-              "Number of Operative CASA": "23626",
-              "Number of Aadhaar Seeded CASA": "13763",
-              "Number of Authenticated CASA": "3621"
+              "No. of Operative CASA": "23626",
+              "No. of Aadhaar Seeded CASA": "13763",
+              "No. of Authenticated CASA": "3621"
             },
             "Saiha": {
               "District": "Saiha",
               "Block Name": "Tuipang",
               "Total Branch": "1",
-              "Number of Operative CASA": "2486",
-              "Number of Aadhaar Seeded CASA": "1405",
-              "Number of Authenticated CASA": "0"
+              "No. of Operative CASA": "2486",
+              "No. of Aadhaar Seeded CASA": "1405",
+              "No. of Authenticated CASA": "0"
             },
             "Saitual": {
               "District": "Saitual",
               "Block Name": "Phullen",
               "Total Branch": "5",
-              "Number of Operative CASA": "9805",
-              "Number of Aadhaar Seeded CASA": "6902",
-              "Number of Authenticated CASA": "0"
+              "No. of Operative CASA": "9805",
+              "No. of Aadhaar Seeded CASA": "6902",
+              "No. of Authenticated CASA": "0"
             },
             "Serchhip": {
               "District": "Serchhip",
               "Block Name": "Serchhip",
               "Total Branch": "12",
-              "Number of Operative CASA": "37458",
-              "Number of Aadhaar Seeded CASA": "27509",
-              "Number of Authenticated CASA": "6576"
+              "No. of Operative CASA": "37458",
+              "No. of Aadhaar Seeded CASA": "27509",
+              "No. of Authenticated CASA": "6576"
             }
           }
         },
@@ -8013,7 +8013,7 @@
             "Branch Rural",
             "Semi-Urban",
             "Urban",
-            "Total",
+            "Total Branch",
             "ATM Rural",
             "CSP Outlet Fixed",
             "Others"
@@ -8025,7 +8025,7 @@
               "Branch Rural": "18",
               "Semi-Urban": "0",
               "Urban": "125",
-              "Total": "45",
+              "Total Branch": "45",
               "ATM Rural": "5",
               "CSP Outlet Fixed": "44",
               "Others": "1"
@@ -8035,7 +8035,7 @@
               "Branch Rural": "6",
               "Semi-Urban": "10",
               "Urban": "0",
-              "Total": "30",
+              "Total Branch": "30",
               "ATM Rural": "0",
               "CSP Outlet Fixed": "29",
               "Others": "1"
@@ -8045,7 +8045,7 @@
               "Branch Rural": "4",
               "Semi-Urban": "1",
               "Urban": "0",
-              "Total": "2",
+              "Total Branch": "2",
               "ATM Rural": "0",
               "CSP Outlet Fixed": "0",
               "Others": "2"
@@ -8055,7 +8055,7 @@
               "Branch Rural": "4",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "17",
+              "Total Branch": "17",
               "ATM Rural": "1",
               "CSP Outlet Fixed": "17",
               "Others": "0"
@@ -8065,7 +8065,7 @@
               "Branch Rural": "7",
               "Semi-Urban": "8",
               "Urban": "0",
-              "Total": "27",
+              "Total Branch": "27",
               "ATM Rural": "2",
               "CSP Outlet Fixed": "27",
               "Others": "0"
@@ -8075,7 +8075,7 @@
               "Branch Rural": "5",
               "Semi-Urban": "6",
               "Urban": "0",
-              "Total": "43",
+              "Total Branch": "43",
               "ATM Rural": "0",
               "CSP Outlet Fixed": "43",
               "Others": "0"
@@ -8085,7 +8085,7 @@
               "Branch Rural": "7",
               "Semi-Urban": "14",
               "Urban": "0",
-              "Total": "21",
+              "Total Branch": "21",
               "ATM Rural": "1",
               "CSP Outlet Fixed": "17",
               "Others": "4"
@@ -8095,7 +8095,7 @@
               "Branch Rural": "11",
               "Semi-Urban": "4",
               "Urban": "0",
-              "Total": "33",
+              "Total Branch": "33",
               "ATM Rural": "1",
               "CSP Outlet Fixed": "33",
               "Others": "0"
@@ -8105,7 +8105,7 @@
               "Branch Rural": "1",
               "Semi-Urban": "5",
               "Urban": "0",
-              "Total": "17",
+              "Total Branch": "17",
               "ATM Rural": "0",
               "CSP Outlet Fixed": "16",
               "Others": "1"
@@ -8115,7 +8115,7 @@
               "Branch Rural": "6",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "9",
+              "Total Branch": "9",
               "ATM Rural": "1",
               "CSP Outlet Fixed": "9",
               "Others": "0"
@@ -8125,7 +8125,7 @@
               "Branch Rural": "9",
               "Semi-Urban": "4",
               "Urban": "0",
-              "Total": "20",
+              "Total Branch": "20",
               "ATM Rural": "1",
               "CSP Outlet Fixed": "20",
               "Others": "0"
@@ -8136,11 +8136,11 @@
           "fields": [
             "District",
             "Total Branch",
-            "Deposits Rural",
+            "Dep Rural",
             "Semi-Urban",
             "Urban",
             "Total",
-            "Advances Rural",
+            "Adv Rural",
             "CD Ratio Rural",
             "Overall"
           ],
@@ -8149,121 +8149,121 @@
             "Aizawl": {
               "District": "Aizawl",
               "Total Branch": "106",
-              "Deposits Rural": "42548.91",
+              "Dep Rural": "42548.91",
               "Semi-Urban": "",
               "Urban": "41.27",
               "Total": "407625.65",
-              "Advances Rural": "17954.32",
+              "Adv Rural": "17954.32",
               "CD Ratio Rural": "42.20",
               "Overall": "41.31"
             },
             "Champhai": {
               "District": "Champhai",
               "Total Branch": "16",
-              "Deposits Rural": "6868.47",
+              "Dep Rural": "6868.47",
               "Semi-Urban": "58.70",
               "Urban": "",
               "Total": "31101.38",
-              "Advances Rural": "4464.15",
+              "Adv Rural": "4464.15",
               "CD Ratio Rural": "64.99",
               "Overall": "59.67"
             },
             "Hnahthial": {
               "District": "Hnahthial",
               "Total Branch": "5",
-              "Deposits Rural": "14623.63",
+              "Dep Rural": "14623.63",
               "Semi-Urban": "51.23",
               "Urban": "",
               "Total": "7026.26",
-              "Advances Rural": "6386.92",
+              "Adv Rural": "6386.92",
               "CD Ratio Rural": "43.68",
               "Overall": "44.28"
             },
             "Khawzawl": {
               "District": "Khawzawl",
               "Total Branch": "7",
-              "Deposits Rural": "6123.46",
+              "Dep Rural": "6123.46",
               "Semi-Urban": "59.18",
               "Urban": "",
               "Total": "9331.67",
-              "Advances Rural": "3338.29",
+              "Adv Rural": "3338.29",
               "CD Ratio Rural": "54.52",
               "Overall": "57.42"
             },
             "Kolasib": {
               "District": "Kolasib",
               "Total Branch": "18",
-              "Deposits Rural": "11825.32",
+              "Dep Rural": "11825.32",
               "Semi-Urban": "64.62",
               "Urban": "",
               "Total": "31920.90",
-              "Advances Rural": "7600.30",
+              "Adv Rural": "7600.30",
               "CD Ratio Rural": "64.27",
               "Overall": "64.55"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
               "Total Branch": "12",
-              "Deposits Rural": "11742.97",
+              "Dep Rural": "11742.97",
               "Semi-Urban": "91.26",
               "Urban": "",
               "Total": "40363.28",
-              "Advances Rural": "11810.91",
+              "Adv Rural": "11810.91",
               "CD Ratio Rural": "100.58",
               "Overall": "93.85"
             },
             "Lunglei": {
               "District": "Lunglei",
               "Total Branch": "19",
-              "Deposits Rural": "9138.13",
+              "Dep Rural": "9138.13",
               "Semi-Urban": "62.69",
               "Urban": "",
               "Total": "60442.64",
-              "Advances Rural": "5013.09",
+              "Adv Rural": "5013.09",
               "CD Ratio Rural": "54.86",
               "Overall": "62.00"
             },
             "Mamit": {
               "District": "Mamit",
               "Total Branch": "12",
-              "Deposits Rural": "22959.88",
+              "Dep Rural": "22959.88",
               "Semi-Urban": "120.72",
               "Urban": "",
               "Total": "18428.57",
-              "Advances Rural": "15800.47",
+              "Adv Rural": "15800.47",
               "CD Ratio Rural": "68.82",
               "Overall": "73.34"
             },
             "Saiha": {
               "District": "Saiha",
               "Total Branch": "6",
-              "Deposits Rural": "3565.38",
+              "Dep Rural": "3565.38",
               "Semi-Urban": "87.28",
               "Urban": "",
               "Total": "29283.02",
-              "Advances Rural": "2813.66",
+              "Adv Rural": "2813.66",
               "CD Ratio Rural": "78.92",
               "Overall": "86.44"
             },
             "Saitual": {
               "District": "Saitual",
               "Total Branch": "10",
-              "Deposits Rural": "6420.31",
+              "Dep Rural": "6420.31",
               "Semi-Urban": "58.32",
               "Urban": "",
               "Total": "11143.81",
-              "Advances Rural": "5177.61",
+              "Adv Rural": "5177.61",
               "CD Ratio Rural": "80.64",
               "Overall": "66.93"
             },
             "Serchhip": {
               "District": "Serchhip",
               "Total Branch": "15",
-              "Deposits Rural": "22835.35",
+              "Dep Rural": "22835.35",
               "Semi-Urban": "61.82",
               "Urban": "",
               "Total": "27749.85",
-              "Advances Rural": "12255.08",
+              "Adv Rural": "12255.08",
               "CD Ratio Rural": "53.67",
               "Overall": "58.02"
             }
@@ -9277,7 +9277,7 @@
             "Self Help Groups No.",
             "Women Beneficiaries No.",
             "Minority Communities No.",
-            "PMJDY No.",
+            "Total PMJDY No.",
             "Others No."
           ],
           "num_districts": 11,
@@ -9294,7 +9294,7 @@
               "Self Help Groups No.": "30",
               "Women Beneficiaries No.": "8618",
               "Minority Communities No.": "3769",
-              "PMJDY No.": "149",
+              "Total PMJDY No.": "149",
               "Others No.": "2146"
             },
             "Champhai": {
@@ -9309,7 +9309,7 @@
               "Self Help Groups No.": "157",
               "Women Beneficiaries No.": "36",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             },
             "Hnahthial": {
@@ -9324,7 +9324,7 @@
               "Self Help Groups No.": "8",
               "Women Beneficiaries No.": "79",
               "Minority Communities No.": "284",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             },
             "Khawzawl": {
@@ -9339,7 +9339,7 @@
               "Self Help Groups No.": "59",
               "Women Beneficiaries No.": "121",
               "Minority Communities No.": "157",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "17"
             },
             "Kolasib": {
@@ -9354,7 +9354,7 @@
               "Self Help Groups No.": "65",
               "Women Beneficiaries No.": "98",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             },
             "Lawngtlai": {
@@ -9369,7 +9369,7 @@
               "Self Help Groups No.": "45",
               "Women Beneficiaries No.": "50",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             },
             "Lunglei": {
@@ -9384,7 +9384,7 @@
               "Self Help Groups No.": "4",
               "Women Beneficiaries No.": "25",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             },
             "Mamit": {
@@ -9399,7 +9399,7 @@
               "Self Help Groups No.": "66",
               "Women Beneficiaries No.": "207",
               "Minority Communities No.": "304",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "15"
             },
             "Saiha": {
@@ -9414,7 +9414,7 @@
               "Self Help Groups No.": "37",
               "Women Beneficiaries No.": "31",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             },
             "Saitual": {
@@ -9429,7 +9429,7 @@
               "Self Help Groups No.": "0",
               "Women Beneficiaries No.": "104",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             },
             "Serchhip": {
@@ -9444,7 +9444,7 @@
               "Self Help Groups No.": "78",
               "Women Beneficiaries No.": "290",
               "Minority Communities No.": "448",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "41"
             }
           }
@@ -10618,9 +10618,9 @@
             "Branch Rural",
             "Semi-Urban",
             "Urban",
-            "Total",
+            "Total Branch",
             "ATM Rural",
-            "CSP Fixed",
+            "Out Of Total CSP, Fixed Point CSP",
             "Others"
           ],
           "num_districts": 11,
@@ -10630,9 +10630,9 @@
               "Branch Rural": "18",
               "Semi-Urban": "0",
               "Urban": "124",
-              "Total": "51",
+              "Total Branch": "51",
               "ATM Rural": "6",
-              "CSP Fixed": "48",
+              "Out Of Total CSP, Fixed Point CSP": "48",
               "Others": "3"
             },
             "Champhai": {
@@ -10640,9 +10640,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "10",
               "Urban": "0",
-              "Total": "36",
+              "Total Branch": "36",
               "ATM Rural": "0",
-              "CSP Fixed": "32",
+              "Out Of Total CSP, Fixed Point CSP": "32",
               "Others": "4"
             },
             "Hnahthial": {
@@ -10650,9 +10650,9 @@
               "Branch Rural": "3",
               "Semi-Urban": "1",
               "Urban": "0",
-              "Total": "4",
+              "Total Branch": "4",
               "ATM Rural": "0",
-              "CSP Fixed": "3",
+              "Out Of Total CSP, Fixed Point CSP": "3",
               "Others": "1"
             },
             "Khawzawl": {
@@ -10660,9 +10660,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "20",
+              "Total Branch": "20",
               "ATM Rural": "1",
-              "CSP Fixed": "20",
+              "Out Of Total CSP, Fixed Point CSP": "20",
               "Others": "0"
             },
             "Kolasib": {
@@ -10670,9 +10670,9 @@
               "Branch Rural": "7",
               "Semi-Urban": "8",
               "Urban": "0",
-              "Total": "33",
+              "Total Branch": "33",
               "ATM Rural": "2",
-              "CSP Fixed": "32",
+              "Out Of Total CSP, Fixed Point CSP": "32",
               "Others": "1"
             },
             "Lawngtlai": {
@@ -10680,9 +10680,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "4",
               "Urban": "0",
-              "Total": "76",
+              "Total Branch": "76",
               "ATM Rural": "1",
-              "CSP Fixed": "52",
+              "Out Of Total CSP, Fixed Point CSP": "52",
               "Others": "24"
             },
             "Lunglei": {
@@ -10690,9 +10690,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "15",
               "Urban": "0",
-              "Total": "20",
+              "Total Branch": "20",
               "ATM Rural": "1",
-              "CSP Fixed": "18",
+              "Out Of Total CSP, Fixed Point CSP": "18",
               "Others": "2"
             },
             "Mamit": {
@@ -10700,9 +10700,9 @@
               "Branch Rural": "11",
               "Semi-Urban": "4",
               "Urban": "0",
-              "Total": "36",
+              "Total Branch": "36",
               "ATM Rural": "2",
-              "CSP Fixed": "36",
+              "Out Of Total CSP, Fixed Point CSP": "36",
               "Others": "0"
             },
             "Saiha": {
@@ -10710,9 +10710,9 @@
               "Branch Rural": "1",
               "Semi-Urban": "5",
               "Urban": "0",
-              "Total": "24",
+              "Total Branch": "24",
               "ATM Rural": "0",
-              "CSP Fixed": "23",
+              "Out Of Total CSP, Fixed Point CSP": "23",
               "Others": "1"
             },
             "Saitual": {
@@ -10720,9 +10720,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "11",
+              "Total Branch": "11",
               "ATM Rural": "1",
-              "CSP Fixed": "9",
+              "Out Of Total CSP, Fixed Point CSP": "9",
               "Others": "2"
             },
             "Serchhip": {
@@ -10730,9 +10730,9 @@
               "Branch Rural": "9",
               "Semi-Urban": "4",
               "Urban": "0",
-              "Total": "24",
+              "Total Branch": "24",
               "ATM Rural": "1",
-              "CSP Fixed": "23",
+              "Out Of Total CSP, Fixed Point CSP": "23",
               "Others": "1"
             }
           }
@@ -11272,7 +11272,7 @@
             "Female No.",
             "Total PMJDY No.",
             "No. of Zero Balance A/C",
-            "Amt Deposits Held In The A/C",
+            "Amt. Deposits held in the A/C",
             "No. of Rupay Card Issued",
             "No. of Rupay Card Activated",
             "No. of Aadhaar Seeded"
@@ -11289,7 +11289,7 @@
               "Female No.": "29270",
               "Total PMJDY No.": "54919",
               "No. of Zero Balance A/C": "6021",
-              "Amt Deposits Held In The A/C": "4197.96",
+              "Amt. Deposits held in the A/C": "4197.96",
               "No. of Rupay Card Issued": "40341",
               "No. of Rupay Card Activated": "16099",
               "No. of Aadhaar Seeded": "33322"
@@ -11304,7 +11304,7 @@
               "Female No.": "3486",
               "Total PMJDY No.": "6237",
               "No. of Zero Balance A/C": "295",
-              "Amt Deposits Held In The A/C": "291.11",
+              "Amt. Deposits held in the A/C": "291.11",
               "No. of Rupay Card Issued": "1286",
               "No. of Rupay Card Activated": "913",
               "No. of Aadhaar Seeded": "4150"
@@ -11319,7 +11319,7 @@
               "Female No.": "3350",
               "Total PMJDY No.": "8110",
               "No. of Zero Balance A/C": "226",
-              "Amt Deposits Held In The A/C": "418.09",
+              "Amt. Deposits held in the A/C": "418.09",
               "No. of Rupay Card Issued": "3878",
               "No. of Rupay Card Activated": "2907",
               "No. of Aadhaar Seeded": "5007"
@@ -11334,7 +11334,7 @@
               "Female No.": "8449",
               "Total PMJDY No.": "14077",
               "No. of Zero Balance A/C": "1493",
-              "Amt Deposits Held In The A/C": "754.01",
+              "Amt. Deposits held in the A/C": "754.01",
               "No. of Rupay Card Issued": "3963",
               "No. of Rupay Card Activated": "2650",
               "No. of Aadhaar Seeded": "8804"
@@ -11349,7 +11349,7 @@
               "Female No.": "5053",
               "Total PMJDY No.": "8753",
               "No. of Zero Balance A/C": "641",
-              "Amt Deposits Held In The A/C": "459.40",
+              "Amt. Deposits held in the A/C": "459.40",
               "No. of Rupay Card Issued": "5014",
               "No. of Rupay Card Activated": "1745",
               "No. of Aadhaar Seeded": "5311"
@@ -11364,7 +11364,7 @@
               "Female No.": "4078",
               "Total PMJDY No.": "7724",
               "No. of Zero Balance A/C": "887",
-              "Amt Deposits Held In The A/C": "244.18",
+              "Amt. Deposits held in the A/C": "244.18",
               "No. of Rupay Card Issued": "2204",
               "No. of Rupay Card Activated": "1582",
               "No. of Aadhaar Seeded": "4320"
@@ -11379,7 +11379,7 @@
               "Female No.": "502",
               "Total PMJDY No.": "932",
               "No. of Zero Balance A/C": "156",
-              "Amt Deposits Held In The A/C": "102.36",
+              "Amt. Deposits held in the A/C": "102.36",
               "No. of Rupay Card Issued": "276",
               "No. of Rupay Card Activated": "155",
               "No. of Aadhaar Seeded": "741"
@@ -11394,7 +11394,7 @@
               "Female No.": "6266",
               "Total PMJDY No.": "10978",
               "No. of Zero Balance A/C": "932",
-              "Amt Deposits Held In The A/C": "369.69",
+              "Amt. Deposits held in the A/C": "369.69",
               "No. of Rupay Card Issued": "3405",
               "No. of Rupay Card Activated": "2509",
               "No. of Aadhaar Seeded": "6212"
@@ -11409,7 +11409,7 @@
               "Female No.": "4341",
               "Total PMJDY No.": "8012",
               "No. of Zero Balance A/C": "1255",
-              "Amt Deposits Held In The A/C": "386.68",
+              "Amt. Deposits held in the A/C": "386.68",
               "No. of Rupay Card Issued": "1501",
               "No. of Rupay Card Activated": "933",
               "No. of Aadhaar Seeded": "2498"
@@ -11424,7 +11424,7 @@
               "Female No.": "6555",
               "Total PMJDY No.": "11152",
               "No. of Zero Balance A/C": "1169",
-              "Amt Deposits Held In The A/C": "540.74",
+              "Amt. Deposits held in the A/C": "540.74",
               "No. of Rupay Card Issued": "2283",
               "No. of Rupay Card Activated": "1598",
               "No. of Aadhaar Seeded": "7035"
@@ -11439,7 +11439,7 @@
               "Female No.": "6621",
               "Total PMJDY No.": "11499",
               "No. of Zero Balance A/C": "591",
-              "Amt Deposits Held In The A/C": "855.52",
+              "Amt. Deposits held in the A/C": "855.52",
               "No. of Rupay Card Issued": "4290",
               "No. of Rupay Card Activated": "2575",
               "No. of Aadhaar Seeded": "8215"
@@ -11684,9 +11684,9 @@
             "District",
             "Block Name",
             "Total Branch",
-            "Number of Operative CASA",
-            "Number of Aadhaar Seeded CASA",
-            "Number of Authenticated CASA"
+            "No. of Operative CASA",
+            "No. of Aadhaar Seeded CASA",
+            "No. of Authenticated CASA"
           ],
           "num_districts": 11,
           "districts": {
@@ -11694,89 +11694,89 @@
               "District": "Aizawl",
               "Block Name": "Tlangnuam",
               "Total Branch": "95",
-              "Number of Operative CASA": "397290",
-              "Number of Aadhaar Seeded CASA": "267835",
-              "Number of Authenticated CASA": "134924"
+              "No. of Operative CASA": "397290",
+              "No. of Aadhaar Seeded CASA": "267835",
+              "No. of Authenticated CASA": "134924"
             },
             "Champhai": {
               "District": "Champhai",
               "Block Name": "Khawbung",
               "Total Branch": "3",
-              "Number of Operative CASA": "7401",
-              "Number of Aadhaar Seeded CASA": "5273",
-              "Number of Authenticated CASA": "0"
+              "No. of Operative CASA": "7401",
+              "No. of Aadhaar Seeded CASA": "5273",
+              "No. of Authenticated CASA": "0"
             },
             "Hnahthial": {
               "District": "Hnahthial",
               "Block Name": "Hnahthial",
               "Total Branch": "5",
-              "Number of Operative CASA": "15546",
-              "Number of Aadhaar Seeded CASA": "10311",
-              "Number of Authenticated CASA": "3641"
+              "No. of Operative CASA": "15546",
+              "No. of Aadhaar Seeded CASA": "10311",
+              "No. of Authenticated CASA": "3641"
             },
             "Khawzawl": {
               "District": "Khawzawl",
               "Block Name": "Khawzawl",
               "Total Branch": "8",
-              "Number of Operative CASA": "20182",
-              "Number of Aadhaar Seeded CASA": "13965",
-              "Number of Authenticated CASA": "3362"
+              "No. of Operative CASA": "20182",
+              "No. of Aadhaar Seeded CASA": "13965",
+              "No. of Authenticated CASA": "3362"
             },
             "Kolasib": {
               "District": "Kolasib",
               "Block Name": "N. Thingdawl",
               "Total Branch": "7",
-              "Number of Operative CASA": "28746",
-              "Number of Aadhaar Seeded CASA": "20613",
-              "Number of Authenticated CASA": "384"
+              "No. of Operative CASA": "28746",
+              "No. of Aadhaar Seeded CASA": "20613",
+              "No. of Authenticated CASA": "384"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
               "Block Name": "Sangau",
               "Total Branch": "2",
-              "Number of Operative CASA": "5228",
-              "Number of Aadhaar Seeded CASA": "3785",
-              "Number of Authenticated CASA": "0"
+              "No. of Operative CASA": "5228",
+              "No. of Aadhaar Seeded CASA": "3785",
+              "No. of Authenticated CASA": "0"
             },
             "Lunglei": {
               "District": "Lunglei",
               "Block Name": "W. Bunghmun",
               "Total Branch": "2",
-              "Number of Operative CASA": "3198",
-              "Number of Aadhaar Seeded CASA": "2544",
-              "Number of Authenticated CASA": "0"
+              "No. of Operative CASA": "3198",
+              "No. of Aadhaar Seeded CASA": "2544",
+              "No. of Authenticated CASA": "0"
             },
             "Mamit": {
               "District": "Mamit",
               "Block Name": "Zawlnuam",
               "Total Branch": "8",
-              "Number of Operative CASA": "25006",
-              "Number of Aadhaar Seeded CASA": "14904",
-              "Number of Authenticated CASA": "3817"
+              "No. of Operative CASA": "25006",
+              "No. of Aadhaar Seeded CASA": "14904",
+              "No. of Authenticated CASA": "3817"
             },
             "Saiha": {
               "District": "Saiha",
               "Block Name": "Tuipang",
               "Total Branch": "1",
-              "Number of Operative CASA": "2591",
-              "Number of Aadhaar Seeded CASA": "1475",
-              "Number of Authenticated CASA": "0"
+              "No. of Operative CASA": "2591",
+              "No. of Aadhaar Seeded CASA": "1475",
+              "No. of Authenticated CASA": "0"
             },
             "Saitual": {
               "District": "Saitual",
               "Block Name": "Phullen",
               "Total Branch": "6",
-              "Number of Operative CASA": "14427",
-              "Number of Aadhaar Seeded CASA": "9976",
-              "Number of Authenticated CASA": "2325"
+              "No. of Operative CASA": "14427",
+              "No. of Aadhaar Seeded CASA": "9976",
+              "No. of Authenticated CASA": "2325"
             },
             "Serchhip": {
               "District": "Serchhip",
               "Block Name": "Serchhip",
               "Total Branch": "12",
-              "Number of Operative CASA": "36239",
-              "Number of Aadhaar Seeded CASA": "25273",
-              "Number of Authenticated CASA": "4066"
+              "No. of Operative CASA": "36239",
+              "No. of Aadhaar Seeded CASA": "25273",
+              "No. of Authenticated CASA": "4066"
             }
           }
         },
@@ -11899,9 +11899,9 @@
             "Branch Rural",
             "Semi-Urban",
             "Urban",
-            "Total",
+            "Total Branch",
             "ATM Rural",
-            "CSP Fixed",
+            "Out Of Total CSP, Fixed Point CSP",
             "Others"
           ],
           "num_districts": 11,
@@ -11911,9 +11911,9 @@
               "Branch Rural": "20",
               "Semi-Urban": "1",
               "Urban": "125",
-              "Total": "63",
+              "Total Branch": "63",
               "ATM Rural": "6",
-              "CSP Fixed": "44",
+              "Out Of Total CSP, Fixed Point CSP": "44",
               "Others": "3"
             },
             "Champhai": {
@@ -11921,9 +11921,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "10",
               "Urban": "0",
-              "Total": "36",
+              "Total Branch": "36",
               "ATM Rural": "0",
-              "CSP Fixed": "32",
+              "Out Of Total CSP, Fixed Point CSP": "32",
               "Others": "1"
             },
             "Hnahthial": {
@@ -11931,9 +11931,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "0",
               "Urban": "0",
-              "Total": "6",
+              "Total Branch": "6",
               "ATM Rural": "1",
-              "CSP Fixed": "1",
+              "Out Of Total CSP, Fixed Point CSP": "1",
               "Others": "1"
             },
             "Khawzawl": {
@@ -11941,9 +11941,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "21",
+              "Total Branch": "21",
               "ATM Rural": "1",
-              "CSP Fixed": "21",
+              "Out Of Total CSP, Fixed Point CSP": "21",
               "Others": "0"
             },
             "Kolasib": {
@@ -11951,9 +11951,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "9",
               "Urban": "0",
-              "Total": "39",
+              "Total Branch": "39",
               "ATM Rural": "0",
-              "CSP Fixed": "30",
+              "Out Of Total CSP, Fixed Point CSP": "30",
               "Others": "0"
             },
             "Lawngtlai": {
@@ -11961,9 +11961,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "4",
               "Urban": "0",
-              "Total": "56",
+              "Total Branch": "56",
               "ATM Rural": "1",
-              "CSP Fixed": "43",
+              "Out Of Total CSP, Fixed Point CSP": "43",
               "Others": "3"
             },
             "Lunglei": {
@@ -11971,9 +11971,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "15",
               "Urban": "0",
-              "Total": "20",
+              "Total Branch": "20",
               "ATM Rural": "1",
-              "CSP Fixed": "10",
+              "Out Of Total CSP, Fixed Point CSP": "10",
               "Others": "3"
             },
             "Mamit": {
@@ -11981,9 +11981,9 @@
               "Branch Rural": "12",
               "Semi-Urban": "1",
               "Urban": "0",
-              "Total": "38",
+              "Total Branch": "38",
               "ATM Rural": "5",
-              "CSP Fixed": "36",
+              "Out Of Total CSP, Fixed Point CSP": "36",
               "Others": "0"
             },
             "Saiha": {
@@ -11991,9 +11991,9 @@
               "Branch Rural": "1",
               "Semi-Urban": "7",
               "Urban": "0",
-              "Total": "28",
+              "Total Branch": "28",
               "ATM Rural": "0",
-              "CSP Fixed": "24",
+              "Out Of Total CSP, Fixed Point CSP": "24",
               "Others": "1"
             },
             "Saitual": {
@@ -12001,9 +12001,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "9",
+              "Total Branch": "9",
               "ATM Rural": "1",
-              "CSP Fixed": "8",
+              "Out Of Total CSP, Fixed Point CSP": "8",
               "Others": "1"
             },
             "Serchhip": {
@@ -12011,9 +12011,9 @@
               "Branch Rural": "8",
               "Semi-Urban": "5",
               "Urban": "0",
-              "Total": "26",
+              "Total Branch": "26",
               "ATM Rural": "1",
-              "CSP Fixed": "23",
+              "Out Of Total CSP, Fixed Point CSP": "23",
               "Others": "0"
             }
           }
@@ -12022,11 +12022,11 @@
           "fields": [
             "District",
             "Total Branch",
-            "Deposits Rural",
+            "Dep Rural",
             "Semi-Urban",
             "Urban",
             "Total",
-            "Advances Rural",
+            "Adv Rural",
             "CD Ratio Rural",
             "Overall"
           ],
@@ -12035,121 +12035,121 @@
             "Aizawl": {
               "District": "Aizawl",
               "Total Branch": "108",
-              "Deposits Rural": "42959.07",
+              "Dep Rural": "42959.07",
               "Semi-Urban": "",
               "Urban": "41.36",
               "Total": "443946.55",
-              "Advances Rural": "19638.32",
+              "Adv Rural": "19638.32",
               "CD Ratio Rural": "45.71",
               "Overall": "41.54"
             },
             "Champhai": {
               "District": "Champhai",
               "Total Branch": "17",
-              "Deposits Rural": "5520.50",
+              "Dep Rural": "5520.50",
               "Semi-Urban": "71.07",
               "Urban": "",
               "Total": "32344.90",
-              "Advances Rural": "3490.39",
+              "Adv Rural": "3490.39",
               "CD Ratio Rural": "63.23",
               "Overall": "70.42"
             },
             "Hnahthial": {
               "District": "Hnahthial",
               "Total Branch": "5",
-              "Deposits Rural": "15130.50",
+              "Dep Rural": "15130.50",
               "Semi-Urban": "54.16",
               "Urban": "",
               "Total": "8128.04",
-              "Advances Rural": "7395.53",
+              "Adv Rural": "7395.53",
               "CD Ratio Rural": "48.88",
               "Overall": "49.32"
             },
             "Khawzawl": {
               "District": "Khawzawl",
               "Total Branch": "8",
-              "Deposits Rural": "7022.09",
+              "Dep Rural": "7022.09",
               "Semi-Urban": "68.26",
               "Urban": "",
               "Total": "11392.40",
-              "Advances Rural": "4976.27",
+              "Adv Rural": "4976.27",
               "CD Ratio Rural": "70.87",
               "Overall": "69.38"
             },
             "Kolasib": {
               "District": "Kolasib",
               "Total Branch": "20",
-              "Deposits Rural": "11980.55",
+              "Dep Rural": "11980.55",
               "Semi-Urban": "69.43",
               "Urban": "",
               "Total": "34823.82",
-              "Advances Rural": "8156.40",
+              "Adv Rural": "8156.40",
               "CD Ratio Rural": "68.08",
               "Overall": "69.12"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
               "Total Branch": "12",
-              "Deposits Rural": "11152.84",
+              "Dep Rural": "11152.84",
               "Semi-Urban": "101.25",
               "Urban": "",
               "Total": "44662.77",
-              "Advances Rural": "13061.51",
+              "Adv Rural": "13061.51",
               "CD Ratio Rural": "117.11",
               "Overall": "105.48"
             },
             "Lunglei": {
               "District": "Lunglei",
               "Total Branch": "21",
-              "Deposits Rural": "9824.23",
+              "Dep Rural": "9824.23",
               "Semi-Urban": "65.99",
               "Urban": "",
               "Total": "64382.44",
-              "Advances Rural": "5451.72",
+              "Adv Rural": "5451.72",
               "CD Ratio Rural": "55.49",
               "Overall": "65.12"
             },
             "Mamit": {
               "District": "Mamit",
               "Total Branch": "13",
-              "Deposits Rural": "25430.86",
+              "Dep Rural": "25430.86",
               "Semi-Urban": "90.11",
               "Urban": "",
               "Total": "21145.72",
-              "Advances Rural": "18343.35",
+              "Adv Rural": "18343.35",
               "CD Ratio Rural": "72.13",
               "Overall": "74.12"
             },
             "Saiha": {
               "District": "Saiha",
               "Total Branch": "7",
-              "Deposits Rural": "3083.22",
+              "Dep Rural": "3083.22",
               "Semi-Urban": "91.07",
               "Urban": "",
               "Total": "30619.93",
-              "Advances Rural": "2906.07",
+              "Adv Rural": "2906.07",
               "CD Ratio Rural": "94.25",
               "Overall": "91.40"
             },
             "Saitual": {
               "District": "Saitual",
               "Total Branch": "10",
-              "Deposits Rural": "7161.62",
+              "Dep Rural": "7161.62",
               "Semi-Urban": "54.95",
               "Urban": "",
               "Total": "11725.33",
-              "Advances Rural": "5607.00",
+              "Adv Rural": "5607.00",
               "CD Ratio Rural": "78.29",
               "Overall": "64.14"
             },
             "Serchhip": {
               "District": "Serchhip",
               "Total Branch": "15",
-              "Deposits Rural": "20305.58",
+              "Dep Rural": "20305.58",
               "Semi-Urban": "67.47",
               "Urban": "",
               "Total": "29049.28",
-              "Advances Rural": "12259.62",
+              "Adv Rural": "12259.62",
               "CD Ratio Rural": "60.38",
               "Overall": "64.36"
             }
@@ -13127,7 +13127,7 @@
             "Self Help Groups No.",
             "Women Beneficiaries No.",
             "Minority Communities No.",
-            "PMJDY No.",
+            "Total PMJDY No.",
             "Others No."
           ],
           "num_districts": 11,
@@ -13144,7 +13144,7 @@
               "Self Help Groups No.": "178",
               "Women Beneficiaries No.": "9865",
               "Minority Communities No.": "3985",
-              "PMJDY No.": "91",
+              "Total PMJDY No.": "91",
               "Others No.": "7766"
             },
             "Champhai": {
@@ -13159,7 +13159,7 @@
               "Self Help Groups No.": "317",
               "Women Beneficiaries No.": "236",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             },
             "Hnahthial": {
@@ -13174,7 +13174,7 @@
               "Self Help Groups No.": "43",
               "Women Beneficiaries No.": "196",
               "Minority Communities No.": "292",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             },
             "Khawzawl": {
@@ -13189,7 +13189,7 @@
               "Self Help Groups No.": "285",
               "Women Beneficiaries No.": "579",
               "Minority Communities No.": "353",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "13"
             },
             "Kolasib": {
@@ -13204,7 +13204,7 @@
               "Self Help Groups No.": "267",
               "Women Beneficiaries No.": "445",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             },
             "Lawngtlai": {
@@ -13219,7 +13219,7 @@
               "Self Help Groups No.": "102",
               "Women Beneficiaries No.": "99",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             },
             "Lunglei": {
@@ -13234,7 +13234,7 @@
               "Self Help Groups No.": "8",
               "Women Beneficiaries No.": "59",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             },
             "Mamit": {
@@ -13249,7 +13249,7 @@
               "Self Help Groups No.": "237",
               "Women Beneficiaries No.": "431",
               "Minority Communities No.": "274",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "14"
             },
             "Saiha": {
@@ -13264,7 +13264,7 @@
               "Self Help Groups No.": "160",
               "Women Beneficiaries No.": "116",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             },
             "Saitual": {
@@ -13279,7 +13279,7 @@
               "Self Help Groups No.": "47",
               "Women Beneficiaries No.": "518",
               "Minority Communities No.": "219",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "6"
             },
             "Serchhip": {
@@ -13294,7 +13294,7 @@
               "Self Help Groups No.": "267",
               "Women Beneficiaries No.": "511",
               "Minority Communities No.": "380",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "35"
             }
           }
@@ -13674,9 +13674,9 @@
             "District",
             "Block Name",
             "Total Branch",
-            "Number of Operative CASA",
-            "Number of Aadhaar Seeded CASA",
-            "Number of Authenticated CASA"
+            "No. of Operative CASA",
+            "No. of Aadhaar Seeded CASA",
+            "No. of Authenticated CASA"
           ],
           "num_districts": 11,
           "districts": {
@@ -13684,89 +13684,89 @@
               "District": "Aizawl",
               "Block Name": "TLANGNUAM",
               "Total Branch": "92",
-              "Number of Operative CASA": "389873",
-              "Number of Aadhaar Seeded CASA": "269050",
-              "Number of Authenticated CASA": "133608"
+              "No. of Operative CASA": "389873",
+              "No. of Aadhaar Seeded CASA": "269050",
+              "No. of Authenticated CASA": "133608"
             },
             "Champhai": {
               "District": "Champhai",
               "Block Name": "CHAMPHAI",
               "Total Branch": "14",
-              "Number of Operative CASA": "49238",
-              "Number of Aadhaar Seeded CASA": "33309",
-              "Number of Authenticated CASA": "10036"
+              "No. of Operative CASA": "49238",
+              "No. of Aadhaar Seeded CASA": "33309",
+              "No. of Authenticated CASA": "10036"
             },
             "Hnahthial": {
               "District": "Hnahthial",
               "Block Name": "HNAHTHIAL",
               "Total Branch": "5",
-              "Number of Operative CASA": "16092",
-              "Number of Aadhaar Seeded CASA": "10704",
-              "Number of Authenticated CASA": "3665"
+              "No. of Operative CASA": "16092",
+              "No. of Aadhaar Seeded CASA": "10704",
+              "No. of Authenticated CASA": "3665"
             },
             "Khawzawl": {
               "District": "Khawzawl",
               "Block Name": "KHAWZAWL",
               "Total Branch": "8",
-              "Number of Operative CASA": "20641",
-              "Number of Aadhaar Seeded CASA": "14442",
-              "Number of Authenticated CASA": "3352"
+              "No. of Operative CASA": "20641",
+              "No. of Aadhaar Seeded CASA": "14442",
+              "No. of Authenticated CASA": "3352"
             },
             "Kolasib": {
               "District": "Kolasib",
               "Block Name": "BILKHAWTHLIR",
               "Total Branch": "14",
-              "Number of Operative CASA": "51118",
-              "Number of Aadhaar Seeded CASA": "28784",
-              "Number of Authenticated CASA": "12907"
+              "No. of Operative CASA": "51118",
+              "No. of Aadhaar Seeded CASA": "28784",
+              "No. of Authenticated CASA": "12907"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
               "Block Name": "SANGAU",
               "Total Branch": "2",
-              "Number of Operative CASA": "5418",
-              "Number of Aadhaar Seeded CASA": "4003",
-              "Number of Authenticated CASA": "0"
+              "No. of Operative CASA": "5418",
+              "No. of Aadhaar Seeded CASA": "4003",
+              "No. of Authenticated CASA": "0"
             },
             "Lunglei": {
               "District": "Lunglei",
               "Block Name": "WEST BUNGHMUN",
               "Total Branch": "2",
-              "Number of Operative CASA": "3230",
-              "Number of Aadhaar Seeded CASA": "2556",
-              "Number of Authenticated CASA": "0"
+              "No. of Operative CASA": "3230",
+              "No. of Aadhaar Seeded CASA": "2556",
+              "No. of Authenticated CASA": "0"
             },
             "Mamit": {
               "District": "Mamit",
               "Block Name": "WEST PHAILENG",
               "Total Branch": "3",
-              "Number of Operative CASA": "10162",
-              "Number of Aadhaar Seeded CASA": "7430",
-              "Number of Authenticated CASA": "0"
+              "No. of Operative CASA": "10162",
+              "No. of Aadhaar Seeded CASA": "7430",
+              "No. of Authenticated CASA": "0"
             },
             "Saiha": {
               "District": "Saiha",
               "Block Name": "SAIHA",
               "Total Branch": "6",
-              "Number of Operative CASA": "38456",
-              "Number of Aadhaar Seeded CASA": "22102",
-              "Number of Authenticated CASA": "6732"
+              "No. of Operative CASA": "38456",
+              "No. of Aadhaar Seeded CASA": "22102",
+              "No. of Authenticated CASA": "6732"
             },
             "Saitual": {
               "District": "Saitual",
               "Block Name": "PHULLEN",
               "Total Branch": "6",
-              "Number of Operative CASA": "14679",
-              "Number of Aadhaar Seeded CASA": "10234",
-              "Number of Authenticated CASA": "2311"
+              "No. of Operative CASA": "14679",
+              "No. of Aadhaar Seeded CASA": "10234",
+              "No. of Authenticated CASA": "2311"
             },
             "Serchhip": {
               "District": "Serchhip",
               "Block Name": "SERCHHIP",
               "Total Branch": "12",
-              "Number of Operative CASA": "37020",
-              "Number of Aadhaar Seeded CASA": "25845",
-              "Number of Authenticated CASA": "4058"
+              "No. of Operative CASA": "37020",
+              "No. of Aadhaar Seeded CASA": "25845",
+              "No. of Authenticated CASA": "4058"
             }
           }
         },
@@ -14086,9 +14086,9 @@
             "Branch Rural",
             "Semi-Urban",
             "Urban",
-            "Total",
+            "Total Branch",
             "ATM Rural",
-            "CSP Fixed",
+            "Out Of Total CSP, Fixed Point CSP",
             "Others"
           ],
           "num_districts": 11,
@@ -14098,9 +14098,9 @@
               "Branch Rural": "20",
               "Semi-Urban": "0",
               "Urban": "127",
-              "Total": "68",
+              "Total Branch": "68",
               "ATM Rural": "5",
-              "CSP Fixed": "46",
+              "Out Of Total CSP, Fixed Point CSP": "46",
               "Others": "16"
             },
             "Champhai": {
@@ -14108,9 +14108,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "10",
               "Urban": "0",
-              "Total": "35",
+              "Total Branch": "35",
               "ATM Rural": "0",
-              "CSP Fixed": "32",
+              "Out Of Total CSP, Fixed Point CSP": "32",
               "Others": "3"
             },
             "Hnahthial": {
@@ -14118,9 +14118,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "0",
               "Urban": "0",
-              "Total": "5",
+              "Total Branch": "5",
               "ATM Rural": "1",
-              "CSP Fixed": "1",
+              "Out Of Total CSP, Fixed Point CSP": "1",
               "Others": "4"
             },
             "Khawzawl": {
@@ -14128,9 +14128,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "20",
+              "Total Branch": "20",
               "ATM Rural": "1",
-              "CSP Fixed": "20",
+              "Out Of Total CSP, Fixed Point CSP": "20",
               "Others": "0"
             },
             "Kolasib": {
@@ -14138,9 +14138,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "11",
               "Urban": "0",
-              "Total": "36",
+              "Total Branch": "36",
               "ATM Rural": "0",
-              "CSP Fixed": "32",
+              "Out Of Total CSP, Fixed Point CSP": "32",
               "Others": "4"
             },
             "Lawngtlai": {
@@ -14148,9 +14148,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "4",
               "Urban": "0",
-              "Total": "53",
+              "Total Branch": "53",
               "ATM Rural": "1",
-              "CSP Fixed": "53",
+              "Out Of Total CSP, Fixed Point CSP": "53",
               "Others": "0"
             },
             "Lunglei": {
@@ -14158,9 +14158,9 @@
               "Branch Rural": "7",
               "Semi-Urban": "15",
               "Urban": "0",
-              "Total": "20",
+              "Total Branch": "20",
               "ATM Rural": "1",
-              "CSP Fixed": "16",
+              "Out Of Total CSP, Fixed Point CSP": "16",
               "Others": "4"
             },
             "Mamit": {
@@ -14168,9 +14168,9 @@
               "Branch Rural": "12",
               "Semi-Urban": "1",
               "Urban": "0",
-              "Total": "34",
+              "Total Branch": "34",
               "ATM Rural": "5",
-              "CSP Fixed": "34",
+              "Out Of Total CSP, Fixed Point CSP": "34",
               "Others": "0"
             },
             "Saiha": {
@@ -14178,9 +14178,9 @@
               "Branch Rural": "1",
               "Semi-Urban": "7",
               "Urban": "0",
-              "Total": "24",
+              "Total Branch": "24",
               "ATM Rural": "0",
-              "CSP Fixed": "23",
+              "Out Of Total CSP, Fixed Point CSP": "23",
               "Others": "1"
             },
             "Saitual": {
@@ -14188,9 +14188,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "8",
+              "Total Branch": "8",
               "ATM Rural": "1",
-              "CSP Fixed": "8",
+              "Out Of Total CSP, Fixed Point CSP": "8",
               "Others": "0"
             },
             "Serchhip": {
@@ -14198,9 +14198,9 @@
               "Branch Rural": "8",
               "Semi-Urban": "5",
               "Urban": "0",
-              "Total": "23",
+              "Total Branch": "23",
               "ATM Rural": "1",
-              "CSP Fixed": "23",
+              "Out Of Total CSP, Fixed Point CSP": "23",
               "Others": "0"
             }
           }
@@ -14209,11 +14209,11 @@
           "fields": [
             "District",
             "Total Branch",
-            "Deposits Rural",
+            "Dep Rural",
             "Semi-Urban",
             "Urban",
             "Total",
-            "Advances Rural",
+            "Adv Rural",
             "CD Ratio Rural",
             "Overall"
           ],
@@ -14222,121 +14222,121 @@
             "Aizawl": {
               "District": "Aizawl",
               "Total Branch": "110",
-              "Deposits Rural": "43887.51",
+              "Dep Rural": "43887.51",
               "Semi-Urban": "",
               "Urban": "42.96",
               "Total": "461186.7",
-              "Advances Rural": "20816.22",
+              "Adv Rural": "20816.22",
               "CD Ratio Rural": "47.43",
               "Overall": "43.15"
             },
             "Champhai": {
               "District": "Champhai",
               "Total Branch": "17",
-              "Deposits Rural": "5457.41",
+              "Dep Rural": "5457.41",
               "Semi-Urban": "74.34",
               "Urban": "0",
               "Total": "33798.04",
-              "Advances Rural": "3652.37",
+              "Adv Rural": "3652.37",
               "CD Ratio Rural": "66.92",
               "Overall": "73.98"
             },
             "Hnahthial": {
               "District": "Hnahthial",
               "Total Branch": "5",
-              "Deposits Rural": "15967.34",
+              "Dep Rural": "15967.34",
               "Semi-Urban": "55.88",
               "Urban": "0",
               "Total": "8888.33",
-              "Advances Rural": "8037.58",
+              "Adv Rural": "8037.58",
               "CD Ratio Rural": "50.34",
               "Overall": "50.83"
             },
             "Khawzawl": {
               "District": "Khawzawl",
               "Total Branch": "8",
-              "Deposits Rural": "7706.26",
+              "Dep Rural": "7706.26",
               "Semi-Urban": "71.02",
               "Urban": "0",
               "Total": "11798.51",
-              "Advances Rural": "5180.85",
+              "Adv Rural": "5180.85",
               "CD Ratio Rural": "67.23",
               "Overall": "69.3"
             },
             "Kolasib": {
               "District": "Kolasib",
               "Total Branch": "20",
-              "Deposits Rural": "12036.15",
+              "Dep Rural": "12036.15",
               "Semi-Urban": "71.57",
               "Urban": "0",
               "Total": "36143.74",
-              "Advances Rural": "8448.5",
+              "Adv Rural": "8448.5",
               "CD Ratio Rural": "70.19",
               "Overall": "71.29"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
               "Total Branch": "12",
-              "Deposits Rural": "11463.75",
+              "Dep Rural": "11463.75",
               "Semi-Urban": "96.33",
               "Urban": "0",
               "Total": "47671.79",
-              "Advances Rural": "14143.86",
+              "Adv Rural": "14143.86",
               "CD Ratio Rural": "123.38",
               "Overall": "103.08"
             },
             "Lunglei": {
               "District": "Lunglei",
               "Total Branch": "22",
-              "Deposits Rural": "11337.08",
+              "Dep Rural": "11337.08",
               "Semi-Urban": "64.09",
               "Urban": "0",
               "Total": "67112.48",
-              "Advances Rural": "5690.17",
+              "Adv Rural": "5690.17",
               "CD Ratio Rural": "50.19",
               "Overall": "62.82"
             },
             "Mamit": {
               "District": "Mamit",
               "Total Branch": "13",
-              "Deposits Rural": "26099.64",
+              "Dep Rural": "26099.64",
               "Semi-Urban": "100.1",
               "Urban": "0",
               "Total": "21627.87",
-              "Advances Rural": "18727.32",
+              "Adv Rural": "18727.32",
               "CD Ratio Rural": "71.75",
               "Overall": "74.61"
             },
             "Saiha": {
               "District": "Saiha",
               "Total Branch": "7",
-              "Deposits Rural": "3095.59",
+              "Dep Rural": "3095.59",
               "Semi-Urban": "91.79",
               "Urban": "0",
               "Total": "31243.07",
-              "Advances Rural": "3028.42",
+              "Adv Rural": "3028.42",
               "CD Ratio Rural": "97.83",
               "Overall": "92.38"
             },
             "Saitual": {
               "District": "Saitual",
               "Total Branch": "10",
-              "Deposits Rural": "6928.54",
+              "Dep Rural": "6928.54",
               "Semi-Urban": "51.65",
               "Urban": "0",
               "Total": "12219.64",
-              "Advances Rural": "5840.88",
+              "Adv Rural": "5840.88",
               "CD Ratio Rural": "84.3",
               "Overall": "63.44"
             },
             "Serchhip": {
               "District": "Serchhip",
               "Total Branch": "15",
-              "Deposits Rural": "19740.31",
+              "Dep Rural": "19740.31",
               "Semi-Urban": "65.82",
               "Urban": "0",
               "Total": "29561.29",
-              "Advances Rural": "12995.68",
+              "Adv Rural": "12995.68",
               "CD Ratio Rural": "65.83",
               "Overall": "65.92"
             }
@@ -15677,7 +15677,7 @@
             "Self Help Groups No.",
             "Women Beneficiaries No.",
             "Minority Communities No.",
-            "PMJDY No.",
+            "Total PMJDY No.",
             "Others No."
           ],
           "num_districts": 11,
@@ -15694,7 +15694,7 @@
               "Self Help Groups No.": "308",
               "Women Beneficiaries No.": "11528",
               "Minority Communities No.": "3988",
-              "PMJDY No.": "160",
+              "Total PMJDY No.": "160",
               "Others No.": "7793"
             },
             "Champhai": {
@@ -15709,7 +15709,7 @@
               "Self Help Groups No.": "299",
               "Women Beneficiaries No.": "109",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             },
             "Hnahthial": {
@@ -15724,7 +15724,7 @@
               "Self Help Groups No.": "43",
               "Women Beneficiaries No.": "183",
               "Minority Communities No.": "309",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             },
             "Khawzawl": {
@@ -15739,7 +15739,7 @@
               "Self Help Groups No.": "267",
               "Women Beneficiaries No.": "461",
               "Minority Communities No.": "348",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "12"
             },
             "Kolasib": {
@@ -15754,7 +15754,7 @@
               "Self Help Groups No.": "246",
               "Women Beneficiaries No.": "452",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             },
             "Lawngtlai": {
@@ -15769,7 +15769,7 @@
               "Self Help Groups No.": "82",
               "Women Beneficiaries No.": "43",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             },
             "Lunglei": {
@@ -15784,7 +15784,7 @@
               "Self Help Groups No.": "226",
               "Women Beneficiaries No.": "2891",
               "Minority Communities No.": "798",
-              "PMJDY No.": "30",
+              "Total PMJDY No.": "30",
               "Others No.": "799"
             },
             "Mamit": {
@@ -15799,7 +15799,7 @@
               "Self Help Groups No.": "220",
               "Women Beneficiaries No.": "318",
               "Minority Communities No.": "252",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "1"
             },
             "Saiha": {
@@ -15814,7 +15814,7 @@
               "Self Help Groups No.": "127",
               "Women Beneficiaries No.": "1846",
               "Minority Communities No.": "116",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "17"
             },
             "Saitual": {
@@ -15829,7 +15829,7 @@
               "Self Help Groups No.": "38",
               "Women Beneficiaries No.": "521",
               "Minority Communities No.": "224",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "3"
             },
             "Serchhip": {
@@ -15844,7 +15844,7 @@
               "Self Help Groups No.": "178",
               "Women Beneficiaries No.": "247",
               "Minority Communities No.": "0",
-              "PMJDY No.": "0",
+              "Total PMJDY No.": "0",
               "Others No.": "0"
             }
           }
@@ -16569,88 +16569,88 @@
           "fields": [
             "District",
             "Total Branch",
-            "Number of Operative CASA",
-            "Number of Aadhaar Seeded CASA",
-            "Number of Authenticated CASA"
+            "No. of Operative CASA",
+            "No. of Aadhaar Seeded CASA",
+            "No. of Authenticated CASA"
           ],
           "num_districts": 11,
           "districts": {
             "Aizawl": {
               "District": "Aizawl",
               "Total Branch": "110",
-              "Number of Operative CASA": "449715",
-              "Number of Aadhaar Seeded CASA": "313011",
-              "Number of Authenticated CASA": "138516"
+              "No. of Operative CASA": "449715",
+              "No. of Aadhaar Seeded CASA": "313011",
+              "No. of Authenticated CASA": "138516"
             },
             "Champhai": {
               "District": "Champhai",
               "Total Branch": "17",
-              "Number of Operative CASA": "60056",
-              "Number of Aadhaar Seeded CASA": "41981",
-              "Number of Authenticated CASA": "10064"
+              "No. of Operative CASA": "60056",
+              "No. of Aadhaar Seeded CASA": "41981",
+              "No. of Authenticated CASA": "10064"
             },
             "Hnahthial": {
               "District": "Hnahthial",
               "Total Branch": "5",
-              "Number of Operative CASA": "16894",
-              "Number of Aadhaar Seeded CASA": "11449",
-              "Number of Authenticated CASA": "3682"
+              "No. of Operative CASA": "16894",
+              "No. of Aadhaar Seeded CASA": "11449",
+              "No. of Authenticated CASA": "3682"
             },
             "Khawzawl": {
               "District": "Khawzawl",
               "Total Branch": "8",
-              "Number of Operative CASA": "21461",
-              "Number of Aadhaar Seeded CASA": "15217",
-              "Number of Authenticated CASA": "3333"
+              "No. of Operative CASA": "21461",
+              "No. of Aadhaar Seeded CASA": "15217",
+              "No. of Authenticated CASA": "3333"
             },
             "Kolasib": {
               "District": "Kolasib",
               "Total Branch": "20",
-              "Number of Operative CASA": "78123",
-              "Number of Aadhaar Seeded CASA": "48991",
-              "Number of Authenticated CASA": "13453"
+              "No. of Operative CASA": "78123",
+              "No. of Aadhaar Seeded CASA": "48991",
+              "No. of Authenticated CASA": "13453"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
               "Total Branch": "12",
-              "Number of Operative CASA": "88159",
-              "Number of Aadhaar Seeded CASA": "45815",
-              "Number of Authenticated CASA": "17546"
+              "No. of Operative CASA": "88159",
+              "No. of Aadhaar Seeded CASA": "45815",
+              "No. of Authenticated CASA": "17546"
             },
             "Lunglei": {
               "District": "Lunglei",
               "Total Branch": "22",
-              "Number of Operative CASA": "100458",
-              "Number of Aadhaar Seeded CASA": "65177",
-              "Number of Authenticated CASA": "20211"
+              "No. of Operative CASA": "100458",
+              "No. of Aadhaar Seeded CASA": "65177",
+              "No. of Authenticated CASA": "20211"
             },
             "Mamit": {
               "District": "Mamit",
               "Total Branch": "13",
-              "Number of Operative CASA": "42690",
-              "Number of Aadhaar Seeded CASA": "27277",
-              "Number of Authenticated CASA": "6234"
+              "No. of Operative CASA": "42690",
+              "No. of Aadhaar Seeded CASA": "27277",
+              "No. of Authenticated CASA": "6234"
             },
             "Saiha": {
               "District": "Saiha",
               "Total Branch": "7",
-              "Number of Operative CASA": "44169",
-              "Number of Aadhaar Seeded CASA": "27037",
-              "Number of Authenticated CASA": "6709"
+              "No. of Operative CASA": "44169",
+              "No. of Aadhaar Seeded CASA": "27037",
+              "No. of Authenticated CASA": "6709"
             },
             "Saitual": {
               "District": "Saitual",
               "Total Branch": "10",
-              "Number of Operative CASA": "25236",
-              "Number of Aadhaar Seeded CASA": "17089",
-              "Number of Authenticated CASA": "4344"
+              "No. of Operative CASA": "25236",
+              "No. of Aadhaar Seeded CASA": "17089",
+              "No. of Authenticated CASA": "4344"
             },
             "Serchhip": {
               "District": "Serchhip",
               "Total Branch": "15",
-              "Number of Operative CASA": "46553",
-              "Number of Aadhaar Seeded CASA": "33143",
-              "Number of Authenticated CASA": "4048"
+              "No. of Operative CASA": "46553",
+              "No. of Aadhaar Seeded CASA": "33143",
+              "No. of Authenticated CASA": "4048"
             }
           }
         },
@@ -16773,9 +16773,9 @@
             "Branch Rural",
             "Semi-Urban",
             "Urban",
-            "Total",
+            "Total Branch",
             "ATM Rural",
-            "CSP Fixed",
+            "Out Of Total CSP, Fixed Point CSP",
             "Others"
           ],
           "num_districts": 11,
@@ -16785,9 +16785,9 @@
               "Branch Rural": "20",
               "Semi-Urban": "1",
               "Urban": "126",
-              "Total": "69",
+              "Total Branch": "69",
               "ATM Rural": "5",
-              "CSP Fixed": "51",
+              "Out Of Total CSP, Fixed Point CSP": "51",
               "Others": "18"
             },
             "Champhai": {
@@ -16795,9 +16795,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "9",
               "Urban": "0",
-              "Total": "35",
+              "Total Branch": "35",
               "ATM Rural": "0",
-              "CSP Fixed": "32",
+              "Out Of Total CSP, Fixed Point CSP": "32",
               "Others": "3"
             },
             "Hnahthial": {
@@ -16805,9 +16805,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "0",
               "Urban": "0",
-              "Total": "6",
+              "Total Branch": "6",
               "ATM Rural": "1",
-              "CSP Fixed": "2",
+              "Out Of Total CSP, Fixed Point CSP": "2",
               "Others": "4"
             },
             "Khawzawl": {
@@ -16815,9 +16815,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "20",
+              "Total Branch": "20",
               "ATM Rural": "1",
-              "CSP Fixed": "20",
+              "Out Of Total CSP, Fixed Point CSP": "20",
               "Others": "0"
             },
             "Kolasib": {
@@ -16825,9 +16825,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "11",
               "Urban": "0",
-              "Total": "36",
+              "Total Branch": "36",
               "ATM Rural": "1",
-              "CSP Fixed": "32",
+              "Out Of Total CSP, Fixed Point CSP": "32",
               "Others": "4"
             },
             "Lawngtlai": {
@@ -16835,9 +16835,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "4",
               "Urban": "0",
-              "Total": "57",
+              "Total Branch": "57",
               "ATM Rural": "1",
-              "CSP Fixed": "57",
+              "Out Of Total CSP, Fixed Point CSP": "57",
               "Others": "0"
             },
             "Lunglei": {
@@ -16845,9 +16845,9 @@
               "Branch Rural": "7",
               "Semi-Urban": "15",
               "Urban": "0",
-              "Total": "38",
+              "Total Branch": "38",
               "ATM Rural": "1",
-              "CSP Fixed": "31",
+              "Out Of Total CSP, Fixed Point CSP": "31",
               "Others": "7"
             },
             "Mamit": {
@@ -16855,9 +16855,9 @@
               "Branch Rural": "12",
               "Semi-Urban": "1",
               "Urban": "0",
-              "Total": "34",
+              "Total Branch": "34",
               "ATM Rural": "4",
-              "CSP Fixed": "34",
+              "Out Of Total CSP, Fixed Point CSP": "34",
               "Others": "0"
             },
             "Saiha": {
@@ -16865,9 +16865,9 @@
               "Branch Rural": "1",
               "Semi-Urban": "7",
               "Urban": "0",
-              "Total": "24",
+              "Total Branch": "24",
               "ATM Rural": "0",
-              "CSP Fixed": "23",
+              "Out Of Total CSP, Fixed Point CSP": "23",
               "Others": "1"
             },
             "Saitual": {
@@ -16875,9 +16875,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "9",
+              "Total Branch": "9",
               "ATM Rural": "1",
-              "CSP Fixed": "9",
+              "Out Of Total CSP, Fixed Point CSP": "9",
               "Others": "0"
             },
             "Serchhip": {
@@ -16885,9 +16885,9 @@
               "Branch Rural": "8",
               "Semi-Urban": "5",
               "Urban": "0",
-              "Total": "23",
+              "Total Branch": "23",
               "ATM Rural": "1",
-              "CSP Fixed": "23",
+              "Out Of Total CSP, Fixed Point CSP": "23",
               "Others": "0"
             }
           }
@@ -17956,88 +17956,88 @@
           "fields": [
             "District",
             "Total Branch",
-            "Number of Operative CASA",
-            "Number of Aadhaar Seeded CASA",
-            "Number of Authenticated CASA"
+            "No. of Operative CASA",
+            "No. of Aadhaar Seeded CASA",
+            "No. of Authenticated CASA"
           ],
           "num_districts": 11,
           "districts": {
             "Aizawl": {
               "District": "Aizawl",
               "Total Branch": "110",
-              "Number of Operative CASA": "452778",
-              "Number of Aadhaar Seeded CASA": "316563",
-              "Number of Authenticated CASA": "137822"
+              "No. of Operative CASA": "452778",
+              "No. of Aadhaar Seeded CASA": "316563",
+              "No. of Authenticated CASA": "137822"
             },
             "Champhai": {
               "District": "Champhai",
               "Total Branch": "17",
-              "Number of Operative CASA": "60667",
-              "Number of Aadhaar Seeded CASA": "42363",
-              "Number of Authenticated CASA": "10054"
+              "No. of Operative CASA": "60667",
+              "No. of Aadhaar Seeded CASA": "42363",
+              "No. of Authenticated CASA": "10054"
             },
             "Hnahthial": {
               "District": "Hnahthial",
               "Total Branch": "5",
-              "Number of Operative CASA": "17010",
-              "Number of Aadhaar Seeded CASA": "11962",
-              "Number of Authenticated CASA": "3703"
+              "No. of Operative CASA": "17010",
+              "No. of Aadhaar Seeded CASA": "11962",
+              "No. of Authenticated CASA": "3703"
             },
             "Khawzawl": {
               "District": "Khawzawl",
               "Total Branch": "8",
-              "Number of Operative CASA": "21528",
-              "Number of Aadhaar Seeded CASA": "15420",
-              "Number of Authenticated CASA": "3362"
+              "No. of Operative CASA": "21528",
+              "No. of Aadhaar Seeded CASA": "15420",
+              "No. of Authenticated CASA": "3362"
             },
             "Kolasib": {
               "District": "Kolasib",
               "Total Branch": "20",
-              "Number of Operative CASA": "77331",
-              "Number of Aadhaar Seeded CASA": "49890",
-              "Number of Authenticated CASA": "13211"
+              "No. of Operative CASA": "77331",
+              "No. of Aadhaar Seeded CASA": "49890",
+              "No. of Authenticated CASA": "13211"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
               "Total Branch": "12",
-              "Number of Operative CASA": "87421",
-              "Number of Aadhaar Seeded CASA": "52026",
-              "Number of Authenticated CASA": "17528"
+              "No. of Operative CASA": "87421",
+              "No. of Aadhaar Seeded CASA": "52026",
+              "No. of Authenticated CASA": "17528"
             },
             "Lunglei": {
               "District": "Lunglei",
               "Total Branch": "22",
-              "Number of Operative CASA": "100473",
-              "Number of Aadhaar Seeded CASA": "65834",
-              "Number of Authenticated CASA": "20132"
+              "No. of Operative CASA": "100473",
+              "No. of Aadhaar Seeded CASA": "65834",
+              "No. of Authenticated CASA": "20132"
             },
             "Mamit": {
               "District": "Mamit",
               "Total Branch": "13",
-              "Number of Operative CASA": "45329",
-              "Number of Aadhaar Seeded CASA": "30508",
-              "Number of Authenticated CASA": "6316"
+              "No. of Operative CASA": "45329",
+              "No. of Aadhaar Seeded CASA": "30508",
+              "No. of Authenticated CASA": "6316"
             },
             "Saiha": {
               "District": "Saiha",
               "Total Branch": "7",
-              "Number of Operative CASA": "44584",
-              "Number of Aadhaar Seeded CASA": "28888",
-              "Number of Authenticated CASA": "6689"
+              "No. of Operative CASA": "44584",
+              "No. of Aadhaar Seeded CASA": "28888",
+              "No. of Authenticated CASA": "6689"
             },
             "Saitual": {
               "District": "Saitual",
               "Total Branch": "10",
-              "Number of Operative CASA": "25335",
-              "Number of Aadhaar Seeded CASA": "17809",
-              "Number of Authenticated CASA": "4323"
+              "No. of Operative CASA": "25335",
+              "No. of Aadhaar Seeded CASA": "17809",
+              "No. of Authenticated CASA": "4323"
             },
             "Serchhip": {
               "District": "Serchhip",
               "Total Branch": "15",
-              "Number of Operative CASA": "46768",
-              "Number of Aadhaar Seeded CASA": "33896",
-              "Number of Authenticated CASA": "4099"
+              "No. of Operative CASA": "46768",
+              "No. of Aadhaar Seeded CASA": "33896",
+              "No. of Authenticated CASA": "4099"
             }
           }
         },
@@ -18160,9 +18160,9 @@
             "Branch Rural",
             "Semi-Urban",
             "Urban",
-            "Total",
+            "Total Branch",
             "ATM Rural",
-            "CSP Fixed",
+            "Out Of Total CSP, Fixed Point CSP",
             "Others"
           ],
           "num_districts": 11,
@@ -18172,9 +18172,9 @@
               "Branch Rural": "20",
               "Semi-Urban": "0",
               "Urban": "128",
-              "Total": "70",
+              "Total Branch": "70",
               "ATM Rural": "5",
-              "CSP Fixed": "44",
+              "Out Of Total CSP, Fixed Point CSP": "44",
               "Others": "22"
             },
             "Champhai": {
@@ -18182,9 +18182,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "10",
               "Urban": "0",
-              "Total": "35",
+              "Total Branch": "35",
               "ATM Rural": "0",
-              "CSP Fixed": "32",
+              "Out Of Total CSP, Fixed Point CSP": "32",
               "Others": "3"
             },
             "Hnahthial": {
@@ -18192,9 +18192,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "1",
               "Urban": "0",
-              "Total": "7",
+              "Total Branch": "7",
               "ATM Rural": "1",
-              "CSP Fixed": "3",
+              "Out Of Total CSP, Fixed Point CSP": "3",
               "Others": "4"
             },
             "Khawzawl": {
@@ -18202,9 +18202,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "20",
+              "Total Branch": "20",
               "ATM Rural": "1",
-              "CSP Fixed": "20",
+              "Out Of Total CSP, Fixed Point CSP": "20",
               "Others": "0"
             },
             "Kolasib": {
@@ -18212,9 +18212,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "10",
               "Urban": "0",
-              "Total": "37",
+              "Total Branch": "37",
               "ATM Rural": "1",
-              "CSP Fixed": "32",
+              "Out Of Total CSP, Fixed Point CSP": "32",
               "Others": "4"
             },
             "Lawngtlai": {
@@ -18222,9 +18222,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "5",
               "Urban": "0",
-              "Total": "55",
+              "Total Branch": "55",
               "ATM Rural": "1",
-              "CSP Fixed": "55",
+              "Out Of Total CSP, Fixed Point CSP": "55",
               "Others": "0"
             },
             "Lunglei": {
@@ -18232,9 +18232,9 @@
               "Branch Rural": "7",
               "Semi-Urban": "16",
               "Urban": "0",
-              "Total": "39",
+              "Total Branch": "39",
               "ATM Rural": "1",
-              "CSP Fixed": "32",
+              "Out Of Total CSP, Fixed Point CSP": "32",
               "Others": "7"
             },
             "Mamit": {
@@ -18242,9 +18242,9 @@
               "Branch Rural": "12",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "34",
+              "Total Branch": "34",
               "ATM Rural": "4",
-              "CSP Fixed": "34",
+              "Out Of Total CSP, Fixed Point CSP": "34",
               "Others": "0"
             },
             "Saiha": {
@@ -18252,9 +18252,9 @@
               "Branch Rural": "1",
               "Semi-Urban": "7",
               "Urban": "0",
-              "Total": "26",
+              "Total Branch": "26",
               "ATM Rural": "0",
-              "CSP Fixed": "25",
+              "Out Of Total CSP, Fixed Point CSP": "25",
               "Others": "1"
             },
             "Saitual": {
@@ -18262,9 +18262,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "10",
+              "Total Branch": "10",
               "ATM Rural": "1",
-              "CSP Fixed": "10",
+              "Out Of Total CSP, Fixed Point CSP": "10",
               "Others": "0"
             },
             "Serchhip": {
@@ -18272,9 +18272,9 @@
               "Branch Rural": "8",
               "Semi-Urban": "5",
               "Urban": "0",
-              "Total": "23",
+              "Total Branch": "23",
               "ATM Rural": "1",
-              "CSP Fixed": "23",
+              "Out Of Total CSP, Fixed Point CSP": "23",
               "Others": "0"
             }
           }
@@ -19343,88 +19343,88 @@
           "fields": [
             "District",
             "Total Branch",
-            "Number of Operative CASA",
-            "Number of Aadhaar Seeded CASA",
-            "Number of Authenticated CASA"
+            "No. of Operative CASA",
+            "No. of Aadhaar Seeded CASA",
+            "No. of Authenticated CASA"
           ],
           "num_districts": 11,
           "districts": {
             "Aizawl": {
               "District": "Aizawl",
               "Total Branch": "110",
-              "Number of Operative CASA": "547496",
-              "Number of Aadhaar Seeded CASA": "374820",
-              "Number of Authenticated CASA": "133686"
+              "No. of Operative CASA": "547496",
+              "No. of Aadhaar Seeded CASA": "374820",
+              "No. of Authenticated CASA": "133686"
             },
             "Champhai": {
               "District": "Champhai",
               "Total Branch": "17",
-              "Number of Operative CASA": "76957",
-              "Number of Aadhaar Seeded CASA": "52699",
-              "Number of Authenticated CASA": "10441"
+              "No. of Operative CASA": "76957",
+              "No. of Aadhaar Seeded CASA": "52699",
+              "No. of Authenticated CASA": "10441"
             },
             "Hnahthial": {
               "District": "Hnahthial",
               "Total Branch": "5",
-              "Number of Operative CASA": "22324",
-              "Number of Aadhaar Seeded CASA": "16306",
-              "Number of Authenticated CASA": "3725"
+              "No. of Operative CASA": "22324",
+              "No. of Aadhaar Seeded CASA": "16306",
+              "No. of Authenticated CASA": "3725"
             },
             "Khawzawl": {
               "District": "Khawzawl",
               "Total Branch": "8",
-              "Number of Operative CASA": "31905",
-              "Number of Aadhaar Seeded CASA": "23682",
-              "Number of Authenticated CASA": "3760"
+              "No. of Operative CASA": "31905",
+              "No. of Aadhaar Seeded CASA": "23682",
+              "No. of Authenticated CASA": "3760"
             },
             "Kolasib": {
               "District": "Kolasib",
               "Total Branch": "20",
-              "Number of Operative CASA": "93003",
-              "Number of Aadhaar Seeded CASA": "60681",
-              "Number of Authenticated CASA": "11278"
+              "No. of Operative CASA": "93003",
+              "No. of Aadhaar Seeded CASA": "60681",
+              "No. of Authenticated CASA": "11278"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
               "Total Branch": "12",
-              "Number of Operative CASA": "114569",
-              "Number of Aadhaar Seeded CASA": "73353",
-              "Number of Authenticated CASA": "17777"
+              "No. of Operative CASA": "114569",
+              "No. of Aadhaar Seeded CASA": "73353",
+              "No. of Authenticated CASA": "17777"
             },
             "Lunglei": {
               "District": "Lunglei",
               "Total Branch": "22",
-              "Number of Operative CASA": "135785",
-              "Number of Aadhaar Seeded CASA": "88306",
-              "Number of Authenticated CASA": "20731"
+              "No. of Operative CASA": "135785",
+              "No. of Aadhaar Seeded CASA": "88306",
+              "No. of Authenticated CASA": "20731"
             },
             "Mamit": {
               "District": "Mamit",
               "Total Branch": "13",
-              "Number of Operative CASA": "63204",
-              "Number of Aadhaar Seeded CASA": "45485",
-              "Number of Authenticated CASA": "6367"
+              "No. of Operative CASA": "63204",
+              "No. of Aadhaar Seeded CASA": "45485",
+              "No. of Authenticated CASA": "6367"
             },
             "Saiha": {
               "District": "Saiha",
               "Total Branch": "7",
-              "Number of Operative CASA": "65280",
-              "Number of Aadhaar Seeded CASA": "41949",
-              "Number of Authenticated CASA": "6916"
+              "No. of Operative CASA": "65280",
+              "No. of Aadhaar Seeded CASA": "41949",
+              "No. of Authenticated CASA": "6916"
             },
             "Saitual": {
               "District": "Saitual",
               "Total Branch": "10",
-              "Number of Operative CASA": "27806",
-              "Number of Aadhaar Seeded CASA": "20853",
-              "Number of Authenticated CASA": "4293"
+              "No. of Operative CASA": "27806",
+              "No. of Aadhaar Seeded CASA": "20853",
+              "No. of Authenticated CASA": "4293"
             },
             "Serchhip": {
               "District": "Serchhip",
               "Total Branch": "15",
-              "Number of Operative CASA": "64143",
-              "Number of Aadhaar Seeded CASA": "45981",
-              "Number of Authenticated CASA": "4243"
+              "No. of Operative CASA": "64143",
+              "No. of Aadhaar Seeded CASA": "45981",
+              "No. of Authenticated CASA": "4243"
             }
           }
         },
@@ -19547,9 +19547,9 @@
             "Branch Rural",
             "Semi-Urban",
             "Urban",
-            "Total",
+            "Total Branch",
             "ATM Rural",
-            "CSP Fixed",
+            "Out Of Total CSP, Fixed Point CSP",
             "Others"
           ],
           "num_districts": 11,
@@ -19559,9 +19559,9 @@
               "Branch Rural": "21",
               "Semi-Urban": "0",
               "Urban": "131",
-              "Total": "207",
+              "Total Branch": "207",
               "ATM Rural": "6",
-              "CSP Fixed": "83",
+              "Out Of Total CSP, Fixed Point CSP": "83",
               "Others": "124"
             },
             "Champhai": {
@@ -19569,9 +19569,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "9",
               "Urban": "0",
-              "Total": "41",
+              "Total Branch": "41",
               "ATM Rural": "0",
-              "CSP Fixed": "38",
+              "Out Of Total CSP, Fixed Point CSP": "38",
               "Others": "3"
             },
             "Hnahthial": {
@@ -19579,9 +19579,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "0",
               "Urban": "0",
-              "Total": "8",
+              "Total Branch": "8",
               "ATM Rural": "1",
-              "CSP Fixed": "8",
+              "Out Of Total CSP, Fixed Point CSP": "8",
               "Others": "0"
             },
             "Khawzawl": {
@@ -19589,9 +19589,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "22",
+              "Total Branch": "22",
               "ATM Rural": "1",
-              "CSP Fixed": "22",
+              "Out Of Total CSP, Fixed Point CSP": "22",
               "Others": "0"
             },
             "Kolasib": {
@@ -19599,9 +19599,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "14",
               "Urban": "0",
-              "Total": "53",
+              "Total Branch": "53",
               "ATM Rural": "1",
-              "CSP Fixed": "49",
+              "Out Of Total CSP, Fixed Point CSP": "49",
               "Others": "4"
             },
             "Lawngtlai": {
@@ -19609,9 +19609,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "5",
               "Urban": "0",
-              "Total": "82",
+              "Total Branch": "82",
               "ATM Rural": "1",
-              "CSP Fixed": "82",
+              "Out Of Total CSP, Fixed Point CSP": "82",
               "Others": "0"
             },
             "Lunglei": {
@@ -19619,9 +19619,9 @@
               "Branch Rural": "8",
               "Semi-Urban": "14",
               "Urban": "0",
-              "Total": "74",
+              "Total Branch": "74",
               "ATM Rural": "1",
-              "CSP Fixed": "67",
+              "Out Of Total CSP, Fixed Point CSP": "67",
               "Others": "7"
             },
             "Mamit": {
@@ -19629,9 +19629,9 @@
               "Branch Rural": "11",
               "Semi-Urban": "0",
               "Urban": "0",
-              "Total": "43",
+              "Total Branch": "43",
               "ATM Rural": "4",
-              "CSP Fixed": "42",
+              "Out Of Total CSP, Fixed Point CSP": "42",
               "Others": "1"
             },
             "Saiha": {
@@ -19639,9 +19639,9 @@
               "Branch Rural": "2",
               "Semi-Urban": "5",
               "Urban": "0",
-              "Total": "38",
+              "Total Branch": "38",
               "ATM Rural": "0",
-              "CSP Fixed": "37",
+              "Out Of Total CSP, Fixed Point CSP": "37",
               "Others": "1"
             },
             "Saitual": {
@@ -19649,9 +19649,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "1",
               "Urban": "0",
-              "Total": "12",
+              "Total Branch": "12",
               "ATM Rural": "1",
-              "CSP Fixed": "11",
+              "Out Of Total CSP, Fixed Point CSP": "11",
               "Others": "1"
             },
             "Serchhip": {
@@ -19659,9 +19659,9 @@
               "Branch Rural": "8",
               "Semi-Urban": "4",
               "Urban": "0",
-              "Total": "44",
+              "Total Branch": "44",
               "ATM Rural": "1",
-              "CSP Fixed": "40",
+              "Out Of Total CSP, Fixed Point CSP": "40",
               "Others": "4"
             }
           }
@@ -20730,88 +20730,88 @@
           "fields": [
             "District",
             "Total Branch",
-            "Number of Operative CASA",
-            "Number of Aadhaar Seeded CASA",
-            "Number of Authenticated CASA"
+            "No. of Operative CASA",
+            "No. of Aadhaar Seeded CASA",
+            "No. of Authenticated CASA"
           ],
           "num_districts": 11,
           "districts": {
             "Aizawl": {
               "District": "Aizawl",
               "Total Branch": "116",
-              "Number of Operative CASA": "540961",
-              "Number of Aadhaar Seeded CASA": "409348",
-              "Number of Authenticated CASA": "151559"
+              "No. of Operative CASA": "540961",
+              "No. of Aadhaar Seeded CASA": "409348",
+              "No. of Authenticated CASA": "151559"
             },
             "Champhai": {
               "District": "Champhai",
               "Total Branch": "17",
-              "Number of Operative CASA": "80598",
-              "Number of Aadhaar Seeded CASA": "55833",
-              "Number of Authenticated CASA": "14568"
+              "No. of Operative CASA": "80598",
+              "No. of Aadhaar Seeded CASA": "55833",
+              "No. of Authenticated CASA": "14568"
             },
             "Hnahthial": {
               "District": "Hnahthial",
               "Total Branch": "5",
-              "Number of Operative CASA": "24802",
-              "Number of Aadhaar Seeded CASA": "17957",
-              "Number of Authenticated CASA": "3783"
+              "No. of Operative CASA": "24802",
+              "No. of Aadhaar Seeded CASA": "17957",
+              "No. of Authenticated CASA": "3783"
             },
             "Khawzawl": {
               "District": "Khawzawl",
               "Total Branch": "9",
-              "Number of Operative CASA": "33366",
-              "Number of Aadhaar Seeded CASA": "25340",
-              "Number of Authenticated CASA": "3935"
+              "No. of Operative CASA": "33366",
+              "No. of Aadhaar Seeded CASA": "25340",
+              "No. of Authenticated CASA": "3935"
             },
             "Kolasib": {
               "District": "Kolasib",
               "Total Branch": "21",
-              "Number of Operative CASA": "92636",
-              "Number of Aadhaar Seeded CASA": "66293",
-              "Number of Authenticated CASA": "17087"
+              "No. of Operative CASA": "92636",
+              "No. of Aadhaar Seeded CASA": "66293",
+              "No. of Authenticated CASA": "17087"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
               "Total Branch": "12",
-              "Number of Operative CASA": "113675",
-              "Number of Aadhaar Seeded CASA": "76328",
-              "Number of Authenticated CASA": "20904"
+              "No. of Operative CASA": "113675",
+              "No. of Aadhaar Seeded CASA": "76328",
+              "No. of Authenticated CASA": "20904"
             },
             "Lunglei": {
               "District": "Lunglei",
               "Total Branch": "23",
-              "Number of Operative CASA": "144049",
-              "Number of Aadhaar Seeded CASA": "95243",
-              "Number of Authenticated CASA": "26098"
+              "No. of Operative CASA": "144049",
+              "No. of Aadhaar Seeded CASA": "95243",
+              "No. of Authenticated CASA": "26098"
             },
             "Mamit": {
               "District": "Mamit",
               "Total Branch": "13",
-              "Number of Operative CASA": "68033",
-              "Number of Aadhaar Seeded CASA": "50364",
-              "Number of Authenticated CASA": "9371"
+              "No. of Operative CASA": "68033",
+              "No. of Aadhaar Seeded CASA": "50364",
+              "No. of Authenticated CASA": "9371"
             },
             "Saiha": {
               "District": "Saiha",
               "Total Branch": "7",
-              "Number of Operative CASA": "68906",
-              "Number of Aadhaar Seeded CASA": "43946",
-              "Number of Authenticated CASA": "10279"
+              "No. of Operative CASA": "68906",
+              "No. of Aadhaar Seeded CASA": "43946",
+              "No. of Authenticated CASA": "10279"
             },
             "Saitual": {
               "District": "Saitual",
               "Total Branch": "10",
-              "Number of Operative CASA": "30169",
-              "Number of Aadhaar Seeded CASA": "22063",
-              "Number of Authenticated CASA": "4283"
+              "No. of Operative CASA": "30169",
+              "No. of Aadhaar Seeded CASA": "22063",
+              "No. of Authenticated CASA": "4283"
             },
             "Serchhip": {
               "District": "Serchhip",
               "Total Branch": "16",
-              "Number of Operative CASA": "66775",
-              "Number of Aadhaar Seeded CASA": "50305",
-              "Number of Authenticated CASA": "5161"
+              "No. of Operative CASA": "66775",
+              "No. of Aadhaar Seeded CASA": "50305",
+              "No. of Authenticated CASA": "5161"
             }
           }
         },
@@ -20934,9 +20934,9 @@
             "Branch Rural",
             "Semi-Urban",
             "Urban",
-            "Total",
+            "Total Branch",
             "ATM Rural",
-            "CSP Fixed",
+            "Out Of Total CSP, Fixed Point CSP",
             "Others"
           ],
           "num_districts": 11,
@@ -20946,9 +20946,9 @@
               "Branch Rural": "21",
               "Semi-Urban": "0",
               "Urban": "133",
-              "Total": "220",
+              "Total Branch": "220",
               "ATM Rural": "5",
-              "CSP Fixed": "97",
+              "Out Of Total CSP, Fixed Point CSP": "97",
               "Others": "123"
             },
             "Champhai": {
@@ -20956,9 +20956,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "9",
               "Urban": "0",
-              "Total": "44",
+              "Total Branch": "44",
               "ATM Rural": "0",
-              "CSP Fixed": "41",
+              "Out Of Total CSP, Fixed Point CSP": "41",
               "Others": "3"
             },
             "Hnahthial": {
@@ -20966,9 +20966,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "1",
               "Urban": "0",
-              "Total": "12",
+              "Total Branch": "12",
               "ATM Rural": "1",
-              "CSP Fixed": "8",
+              "Out Of Total CSP, Fixed Point CSP": "8",
               "Others": "4"
             },
             "Khawzawl": {
@@ -20976,9 +20976,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "3",
               "Urban": "0",
-              "Total": "22",
+              "Total Branch": "22",
               "ATM Rural": "1",
-              "CSP Fixed": "22",
+              "Out Of Total CSP, Fixed Point CSP": "22",
               "Others": "0"
             },
             "Kolasib": {
@@ -20986,9 +20986,9 @@
               "Branch Rural": "7",
               "Semi-Urban": "11",
               "Urban": "0",
-              "Total": "54",
+              "Total Branch": "54",
               "ATM Rural": "1",
-              "CSP Fixed": "50",
+              "Out Of Total CSP, Fixed Point CSP": "50",
               "Others": "4"
             },
             "Lawngtlai": {
@@ -20996,9 +20996,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "5",
               "Urban": "0",
-              "Total": "94",
+              "Total Branch": "94",
               "ATM Rural": "1",
-              "CSP Fixed": "94",
+              "Out Of Total CSP, Fixed Point CSP": "94",
               "Others": "0"
             },
             "Lunglei": {
@@ -21006,9 +21006,9 @@
               "Branch Rural": "7",
               "Semi-Urban": "17",
               "Urban": "0",
-              "Total": "72",
+              "Total Branch": "72",
               "ATM Rural": "1",
-              "CSP Fixed": "65",
+              "Out Of Total CSP, Fixed Point CSP": "65",
               "Others": "7"
             },
             "Mamit": {
@@ -21016,9 +21016,9 @@
               "Branch Rural": "12",
               "Semi-Urban": "1",
               "Urban": "0",
-              "Total": "54",
+              "Total Branch": "54",
               "ATM Rural": "4",
-              "CSP Fixed": "53",
+              "Out Of Total CSP, Fixed Point CSP": "53",
               "Others": "1"
             },
             "Saiha": {
@@ -21026,9 +21026,9 @@
               "Branch Rural": "1",
               "Semi-Urban": "6",
               "Urban": "0",
-              "Total": "41",
+              "Total Branch": "41",
               "ATM Rural": "0",
-              "CSP Fixed": "40",
+              "Out Of Total CSP, Fixed Point CSP": "40",
               "Others": "1"
             },
             "Saitual": {
@@ -21036,9 +21036,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "13",
+              "Total Branch": "13",
               "ATM Rural": "0",
-              "CSP Fixed": "12",
+              "Out Of Total CSP, Fixed Point CSP": "12",
               "Others": "1"
             },
             "Serchhip": {
@@ -21046,9 +21046,9 @@
               "Branch Rural": "8",
               "Semi-Urban": "6",
               "Urban": "0",
-              "Total": "55",
+              "Total Branch": "55",
               "ATM Rural": "1",
-              "CSP Fixed": "55",
+              "Out Of Total CSP, Fixed Point CSP": "55",
               "Others": "0"
             }
           }
@@ -22199,88 +22199,88 @@
           "fields": [
             "District",
             "Total Branch",
-            "Number of Operative CASA",
-            "Number of Aadhaar Seeded CASA",
-            "Number of Authenticated CASA"
+            "No. of Operative CASA",
+            "No. of Aadhaar Seeded CASA",
+            "No. of Authenticated CASA"
           ],
           "num_districts": 11,
           "districts": {
             "Aizawl": {
               "District": "Aizawl",
               "Total Branch": "128",
-              "Number of Operative CASA": "573226",
-              "Number of Aadhaar Seeded CASA": "417906",
-              "Number of Authenticated CASA": "160029"
+              "No. of Operative CASA": "573226",
+              "No. of Aadhaar Seeded CASA": "417906",
+              "No. of Authenticated CASA": "160029"
             },
             "Champhai": {
               "District": "Champhai",
               "Total Branch": "18",
-              "Number of Operative CASA": "91032",
-              "Number of Aadhaar Seeded CASA": "64316",
-              "Number of Authenticated CASA": "15501"
+              "No. of Operative CASA": "91032",
+              "No. of Aadhaar Seeded CASA": "64316",
+              "No. of Authenticated CASA": "15501"
             },
             "Hnahthial": {
               "District": "Hnahthial",
               "Total Branch": "5",
-              "Number of Operative CASA": "26685",
-              "Number of Aadhaar Seeded CASA": "20088",
-              "Number of Authenticated CASA": "3890"
+              "No. of Operative CASA": "26685",
+              "No. of Aadhaar Seeded CASA": "20088",
+              "No. of Authenticated CASA": "3890"
             },
             "Khawzawl": {
               "District": "Khawzawl",
               "Total Branch": "8",
-              "Number of Operative CASA": "38001",
-              "Number of Aadhaar Seeded CASA": "29552",
-              "Number of Authenticated CASA": "3608"
+              "No. of Operative CASA": "38001",
+              "No. of Aadhaar Seeded CASA": "29552",
+              "No. of Authenticated CASA": "3608"
             },
             "Kolasib": {
               "District": "Kolasib",
               "Total Branch": "25",
-              "Number of Operative CASA": "100004",
-              "Number of Aadhaar Seeded CASA": "71599",
-              "Number of Authenticated CASA": "19084"
+              "No. of Operative CASA": "100004",
+              "No. of Aadhaar Seeded CASA": "71599",
+              "No. of Authenticated CASA": "19084"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
               "Total Branch": "12",
-              "Number of Operative CASA": "132690",
-              "Number of Aadhaar Seeded CASA": "94264",
-              "Number of Authenticated CASA": "28253"
+              "No. of Operative CASA": "132690",
+              "No. of Aadhaar Seeded CASA": "94264",
+              "No. of Authenticated CASA": "28253"
             },
             "Lunglei": {
               "District": "Lunglei",
               "Total Branch": "23",
-              "Number of Operative CASA": "154195",
-              "Number of Aadhaar Seeded CASA": "104623",
-              "Number of Authenticated CASA": "30019"
+              "No. of Operative CASA": "154195",
+              "No. of Aadhaar Seeded CASA": "104623",
+              "No. of Authenticated CASA": "30019"
             },
             "Mamit": {
               "District": "Mamit",
               "Total Branch": "13",
-              "Number of Operative CASA": "85310",
-              "Number of Aadhaar Seeded CASA": "63477",
-              "Number of Authenticated CASA": "10361"
+              "No. of Operative CASA": "85310",
+              "No. of Aadhaar Seeded CASA": "63477",
+              "No. of Authenticated CASA": "10361"
             },
             "Saiha": {
               "District": "Saiha",
               "Total Branch": "7",
-              "Number of Operative CASA": "76119",
-              "Number of Aadhaar Seeded CASA": "50745",
-              "Number of Authenticated CASA": "12856"
+              "No. of Operative CASA": "76119",
+              "No. of Aadhaar Seeded CASA": "50745",
+              "No. of Authenticated CASA": "12856"
             },
             "Saitual": {
               "District": "Saitual",
               "Total Branch": "10",
-              "Number of Operative CASA": "49547",
-              "Number of Aadhaar Seeded CASA": "37895",
-              "Number of Authenticated CASA": "4596"
+              "No. of Operative CASA": "49547",
+              "No. of Aadhaar Seeded CASA": "37895",
+              "No. of Authenticated CASA": "4596"
             },
             "Serchhip": {
               "District": "Serchhip",
               "Total Branch": "17",
-              "Number of Operative CASA": "72736",
-              "Number of Aadhaar Seeded CASA": "55641",
-              "Number of Authenticated CASA": "5848"
+              "No. of Operative CASA": "72736",
+              "No. of Aadhaar Seeded CASA": "55641",
+              "No. of Authenticated CASA": "5848"
             }
           }
         },
@@ -22403,9 +22403,9 @@
             "Branch Rural",
             "Semi-Urban",
             "Urban",
-            "Total",
+            "Total Branch",
             "ATM Rural",
-            "CSP Fixed",
+            "Out Of Total CSP, Fixed Point CSP",
             "Others"
           ],
           "num_districts": 11,
@@ -22415,9 +22415,9 @@
               "Branch Rural": "21",
               "Semi-Urban": "0",
               "Urban": "139",
-              "Total": "177",
+              "Total Branch": "177",
               "ATM Rural": "6",
-              "CSP Fixed": "69",
+              "Out Of Total CSP, Fixed Point CSP": "69",
               "Others": "145"
             },
             "Champhai": {
@@ -22425,9 +22425,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "10",
               "Urban": "0",
-              "Total": "56",
+              "Total Branch": "56",
               "ATM Rural": "0",
-              "CSP Fixed": "38",
+              "Out Of Total CSP, Fixed Point CSP": "38",
               "Others": "3"
             },
             "Hnahthial": {
@@ -22435,9 +22435,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "1",
               "Urban": "0",
-              "Total": "16",
+              "Total Branch": "16",
               "ATM Rural": "1",
-              "CSP Fixed": "15",
+              "Out Of Total CSP, Fixed Point CSP": "15",
               "Others": "1"
             },
             "Khawzawl": {
@@ -22445,9 +22445,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "27",
+              "Total Branch": "27",
               "ATM Rural": "2",
-              "CSP Fixed": "21",
+              "Out Of Total CSP, Fixed Point CSP": "21",
               "Others": "0"
             },
             "Kolasib": {
@@ -22455,9 +22455,9 @@
               "Branch Rural": "7",
               "Semi-Urban": "14",
               "Urban": "0",
-              "Total": "83",
+              "Total Branch": "83",
               "ATM Rural": "1",
-              "CSP Fixed": "32",
+              "Out Of Total CSP, Fixed Point CSP": "32",
               "Others": "6"
             },
             "Lawngtlai": {
@@ -22465,9 +22465,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "6",
               "Urban": "0",
-              "Total": "109",
+              "Total Branch": "109",
               "ATM Rural": "1",
-              "CSP Fixed": "75",
+              "Out Of Total CSP, Fixed Point CSP": "75",
               "Others": "0"
             },
             "Lunglei": {
@@ -22475,9 +22475,9 @@
               "Branch Rural": "7",
               "Semi-Urban": "14",
               "Urban": "3",
-              "Total": "95",
+              "Total Branch": "95",
               "ATM Rural": "1",
-              "CSP Fixed": "39",
+              "Out Of Total CSP, Fixed Point CSP": "39",
               "Others": "3"
             },
             "Mamit": {
@@ -22485,9 +22485,9 @@
               "Branch Rural": "12",
               "Semi-Urban": "1",
               "Urban": "0",
-              "Total": "79",
+              "Total Branch": "79",
               "ATM Rural": "4",
-              "CSP Fixed": "50",
+              "Out Of Total CSP, Fixed Point CSP": "50",
               "Others": "0"
             },
             "Saiha": {
@@ -22495,9 +22495,9 @@
               "Branch Rural": "1",
               "Semi-Urban": "6",
               "Urban": "0",
-              "Total": "54",
+              "Total Branch": "54",
               "ATM Rural": "0",
-              "CSP Fixed": "35",
+              "Out Of Total CSP, Fixed Point CSP": "35",
               "Others": "1"
             },
             "Saitual": {
@@ -22505,9 +22505,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "15",
+              "Total Branch": "15",
               "ATM Rural": "1",
-              "CSP Fixed": "15",
+              "Out Of Total CSP, Fixed Point CSP": "15",
               "Others": "0"
             },
             "Serchhip": {
@@ -22515,9 +22515,9 @@
               "Branch Rural": "9",
               "Semi-Urban": "7",
               "Urban": "0",
-              "Total": "67",
+              "Total Branch": "67",
               "ATM Rural": "1",
-              "CSP Fixed": "33",
+              "Out Of Total CSP, Fixed Point CSP": "33",
               "Others": "0"
             }
           }
@@ -23586,88 +23586,88 @@
           "fields": [
             "District",
             "Total Branch",
-            "Number of Operative CASA",
-            "Number of Aadhaar Seeded CASA",
-            "Number of Authenticated CASA"
+            "No. of Operative CASA",
+            "No. of Aadhaar Seeded CASA",
+            "No. of Authenticated CASA"
           ],
           "num_districts": 11,
           "districts": {
             "Aizawl": {
               "District": "Aizawl",
               "Total Branch": "120",
-              "Number of Operative CASA": "521420",
-              "Number of Aadhaar Seeded CASA": "378937",
-              "Number of Authenticated CASA": "151695"
+              "No. of Operative CASA": "521420",
+              "No. of Aadhaar Seeded CASA": "378937",
+              "No. of Authenticated CASA": "151695"
             },
             "Champhai": {
               "District": "Champhai",
               "Total Branch": "17",
-              "Number of Operative CASA": "82514",
-              "Number of Aadhaar Seeded CASA": "57780",
-              "Number of Authenticated CASA": "14555"
+              "No. of Operative CASA": "82514",
+              "No. of Aadhaar Seeded CASA": "57780",
+              "No. of Authenticated CASA": "14555"
             },
             "Hnahthial": {
               "District": "Hnahthial",
               "Total Branch": "5",
-              "Number of Operative CASA": "24874",
-              "Number of Aadhaar Seeded CASA": "18123",
-              "Number of Authenticated CASA": "4000"
+              "No. of Operative CASA": "24874",
+              "No. of Aadhaar Seeded CASA": "18123",
+              "No. of Authenticated CASA": "4000"
             },
             "Khawzawl": {
               "District": "Khawzawl",
               "Total Branch": "9",
-              "Number of Operative CASA": "34000",
-              "Number of Aadhaar Seeded CASA": "25784",
-              "Number of Authenticated CASA": "3572"
+              "No. of Operative CASA": "34000",
+              "No. of Aadhaar Seeded CASA": "25784",
+              "No. of Authenticated CASA": "3572"
             },
             "Kolasib": {
               "District": "Kolasib",
               "Total Branch": "21",
-              "Number of Operative CASA": "94539",
-              "Number of Aadhaar Seeded CASA": "66460",
-              "Number of Authenticated CASA": "17987"
+              "No. of Operative CASA": "94539",
+              "No. of Aadhaar Seeded CASA": "66460",
+              "No. of Authenticated CASA": "17987"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
               "Total Branch": "12",
-              "Number of Operative CASA": "122858",
-              "Number of Aadhaar Seeded CASA": "82372",
-              "Number of Authenticated CASA": "22862"
+              "No. of Operative CASA": "122858",
+              "No. of Aadhaar Seeded CASA": "82372",
+              "No. of Authenticated CASA": "22862"
             },
             "Lunglei": {
               "District": "Lunglei",
               "Total Branch": "23",
-              "Number of Operative CASA": "140378",
-              "Number of Aadhaar Seeded CASA": "91816",
-              "Number of Authenticated CASA": "26618"
+              "No. of Operative CASA": "140378",
+              "No. of Aadhaar Seeded CASA": "91816",
+              "No. of Authenticated CASA": "26618"
             },
             "Mamit": {
               "District": "Mamit",
               "Total Branch": "13",
-              "Number of Operative CASA": "79167",
-              "Number of Aadhaar Seeded CASA": "58577",
-              "Number of Authenticated CASA": "9916"
+              "No. of Operative CASA": "79167",
+              "No. of Aadhaar Seeded CASA": "58577",
+              "No. of Authenticated CASA": "9916"
             },
             "Saiha": {
               "District": "Saiha",
               "Total Branch": "7",
-              "Number of Operative CASA": "68240",
-              "Number of Aadhaar Seeded CASA": "43543",
-              "Number of Authenticated CASA": "11289"
+              "No. of Operative CASA": "68240",
+              "No. of Aadhaar Seeded CASA": "43543",
+              "No. of Authenticated CASA": "11289"
             },
             "Saitual": {
               "District": "Saitual",
               "Total Branch": "10",
-              "Number of Operative CASA": "47100",
-              "Number of Aadhaar Seeded CASA": "35637",
-              "Number of Authenticated CASA": "4646"
+              "No. of Operative CASA": "47100",
+              "No. of Aadhaar Seeded CASA": "35637",
+              "No. of Authenticated CASA": "4646"
             },
             "Serchhip": {
               "District": "Serchhip",
               "Total Branch": "16",
-              "Number of Operative CASA": "68943",
-              "Number of Aadhaar Seeded CASA": "52430",
-              "Number of Authenticated CASA": "5509"
+              "No. of Operative CASA": "68943",
+              "No. of Aadhaar Seeded CASA": "52430",
+              "No. of Authenticated CASA": "5509"
             }
           }
         },
@@ -23790,9 +23790,9 @@
             "Branch Rural",
             "Semi-Urban",
             "Urban",
-            "Total",
+            "Total Branch",
             "ATM Rural",
-            "CSP Fixed",
+            "Out Of Total CSP, Fixed Point CSP",
             "Others"
           ],
           "num_districts": 11,
@@ -23802,9 +23802,9 @@
               "Branch Rural": "20",
               "Semi-Urban": "1",
               "Urban": "139",
-              "Total": "172",
+              "Total Branch": "172",
               "ATM Rural": "5",
-              "CSP Fixed": "68",
+              "Out Of Total CSP, Fixed Point CSP": "68",
               "Others": "148"
             },
             "Champhai": {
@@ -23812,9 +23812,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "10",
               "Urban": "0",
-              "Total": "53",
+              "Total Branch": "53",
               "ATM Rural": "0",
-              "CSP Fixed": "39",
+              "Out Of Total CSP, Fixed Point CSP": "39",
               "Others": "3"
             },
             "Hnahthial": {
@@ -23822,9 +23822,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "1",
               "Urban": "0",
-              "Total": "12",
+              "Total Branch": "12",
               "ATM Rural": "1",
-              "CSP Fixed": "8",
+              "Out Of Total CSP, Fixed Point CSP": "8",
               "Others": "4"
             },
             "Khawzawl": {
@@ -23832,9 +23832,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "25",
+              "Total Branch": "25",
               "ATM Rural": "2",
-              "CSP Fixed": "20",
+              "Out Of Total CSP, Fixed Point CSP": "20",
               "Others": "0"
             },
             "Kolasib": {
@@ -23842,9 +23842,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "14",
               "Urban": "0",
-              "Total": "81",
+              "Total Branch": "81",
               "ATM Rural": "0",
-              "CSP Fixed": "33",
+              "Out Of Total CSP, Fixed Point CSP": "33",
               "Others": "6"
             },
             "Lawngtlai": {
@@ -23852,9 +23852,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "5",
               "Urban": "0",
-              "Total": "105",
+              "Total Branch": "105",
               "ATM Rural": "1",
-              "CSP Fixed": "73",
+              "Out Of Total CSP, Fixed Point CSP": "73",
               "Others": "0"
             },
             "Lunglei": {
@@ -23862,9 +23862,9 @@
               "Branch Rural": "7",
               "Semi-Urban": "14",
               "Urban": "3",
-              "Total": "105",
+              "Total Branch": "105",
               "ATM Rural": "1",
-              "CSP Fixed": "48",
+              "Out Of Total CSP, Fixed Point CSP": "48",
               "Others": "7"
             },
             "Mamit": {
@@ -23872,9 +23872,9 @@
               "Branch Rural": "12",
               "Semi-Urban": "1",
               "Urban": "0",
-              "Total": "71",
+              "Total Branch": "71",
               "ATM Rural": "4",
-              "CSP Fixed": "50",
+              "Out Of Total CSP, Fixed Point CSP": "50",
               "Others": "0"
             },
             "Saiha": {
@@ -23882,9 +23882,9 @@
               "Branch Rural": "1",
               "Semi-Urban": "6",
               "Urban": "0",
-              "Total": "49",
+              "Total Branch": "49",
               "ATM Rural": "0",
-              "CSP Fixed": "33",
+              "Out Of Total CSP, Fixed Point CSP": "33",
               "Others": "1"
             },
             "Saitual": {
@@ -23892,9 +23892,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "17",
+              "Total Branch": "17",
               "ATM Rural": "0",
-              "CSP Fixed": "17",
+              "Out Of Total CSP, Fixed Point CSP": "17",
               "Others": "0"
             },
             "Serchhip": {
@@ -23902,9 +23902,9 @@
               "Branch Rural": "8",
               "Semi-Urban": "6",
               "Urban": "0",
-              "Total": "66",
+              "Total Branch": "66",
               "ATM Rural": "1",
-              "CSP Fixed": "34",
+              "Out Of Total CSP, Fixed Point CSP": "34",
               "Others": "0"
             }
           }
@@ -25044,88 +25044,88 @@
           "fields": [
             "District",
             "Total Branch",
-            "Number of Operative CASA",
-            "Number of Aadhaar Seeded CASA",
-            "Number of Authenticated CASA"
+            "No. of Operative CASA",
+            "No. of Aadhaar Seeded CASA",
+            "No. of Authenticated CASA"
           ],
           "num_districts": 11,
           "districts": {
             "Aizawl": {
               "District": "Aizawl",
               "Total Branch": "129",
-              "Number of Operative CASA": "587745",
-              "Number of Aadhaar Seeded CASA": "413868",
-              "Number of Authenticated CASA": "162680"
+              "No. of Operative CASA": "587745",
+              "No. of Aadhaar Seeded CASA": "413868",
+              "No. of Authenticated CASA": "162680"
             },
             "Champhai": {
               "District": "Champhai",
               "Total Branch": "18",
-              "Number of Operative CASA": "93148",
-              "Number of Aadhaar Seeded CASA": "64443",
-              "Number of Authenticated CASA": "14280"
+              "No. of Operative CASA": "93148",
+              "No. of Aadhaar Seeded CASA": "64443",
+              "No. of Authenticated CASA": "14280"
             },
             "Hnahthial": {
               "District": "Hnahthial",
               "Total Branch": "5",
-              "Number of Operative CASA": "27341",
-              "Number of Aadhaar Seeded CASA": "20823",
-              "Number of Authenticated CASA": "3951"
+              "No. of Operative CASA": "27341",
+              "No. of Aadhaar Seeded CASA": "20823",
+              "No. of Authenticated CASA": "3951"
             },
             "Khawzawl": {
               "District": "Khawzawl",
               "Total Branch": "8",
-              "Number of Operative CASA": "37270",
-              "Number of Aadhaar Seeded CASA": "29467",
-              "Number of Authenticated CASA": "3129"
+              "No. of Operative CASA": "37270",
+              "No. of Aadhaar Seeded CASA": "29467",
+              "No. of Authenticated CASA": "3129"
             },
             "Kolasib": {
               "District": "Kolasib",
               "Total Branch": "25",
-              "Number of Operative CASA": "101271",
-              "Number of Aadhaar Seeded CASA": "69083",
-              "Number of Authenticated CASA": "17755"
+              "No. of Operative CASA": "101271",
+              "No. of Aadhaar Seeded CASA": "69083",
+              "No. of Authenticated CASA": "17755"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
               "Total Branch": "12",
-              "Number of Operative CASA": "127667",
-              "Number of Aadhaar Seeded CASA": "90146",
-              "Number of Authenticated CASA": "21775"
+              "No. of Operative CASA": "127667",
+              "No. of Aadhaar Seeded CASA": "90146",
+              "No. of Authenticated CASA": "21775"
             },
             "Lunglei": {
               "District": "Lunglei",
               "Total Branch": "23",
-              "Number of Operative CASA": "152105",
-              "Number of Aadhaar Seeded CASA": "102467",
-              "Number of Authenticated CASA": "25548"
+              "No. of Operative CASA": "152105",
+              "No. of Aadhaar Seeded CASA": "102467",
+              "No. of Authenticated CASA": "25548"
             },
             "Mamit": {
               "District": "Mamit",
               "Total Branch": "12",
-              "Number of Operative CASA": "82456",
-              "Number of Aadhaar Seeded CASA": "62419",
-              "Number of Authenticated CASA": "7468"
+              "No. of Operative CASA": "82456",
+              "No. of Aadhaar Seeded CASA": "62419",
+              "No. of Authenticated CASA": "7468"
             },
             "Saiha": {
               "District": "Saiha",
               "Total Branch": "8",
-              "Number of Operative CASA": "75377",
-              "Number of Aadhaar Seeded CASA": "50412",
-              "Number of Authenticated CASA": "11604"
+              "No. of Operative CASA": "75377",
+              "No. of Aadhaar Seeded CASA": "50412",
+              "No. of Authenticated CASA": "11604"
             },
             "Saitual": {
               "District": "Saitual",
               "Total Branch": "10",
-              "Number of Operative CASA": "50611",
-              "Number of Aadhaar Seeded CASA": "39309",
-              "Number of Authenticated CASA": "4607"
+              "No. of Operative CASA": "50611",
+              "No. of Aadhaar Seeded CASA": "39309",
+              "No. of Authenticated CASA": "4607"
             },
             "Serchhip": {
               "District": "Serchhip",
               "Total Branch": "18",
-              "Number of Operative CASA": "74928",
-              "Number of Aadhaar Seeded CASA": "57378",
-              "Number of Authenticated CASA": "5905"
+              "No. of Operative CASA": "74928",
+              "No. of Aadhaar Seeded CASA": "57378",
+              "No. of Authenticated CASA": "5905"
             }
           }
         },
@@ -25248,9 +25248,9 @@
             "Branch Rural",
             "Semi-Urban",
             "Urban",
-            "Total",
+            "Total Branch",
             "ATM Rural",
-            "CSP Fixed",
+            "Out Of Total CSP, Fixed Point CSP",
             "Others"
           ],
           "num_districts": 11,
@@ -25260,9 +25260,9 @@
               "Branch Rural": "22",
               "Semi-Urban": "0",
               "Urban": "141",
-              "Total": "200",
+              "Total Branch": "200",
               "ATM Rural": "7",
-              "CSP Fixed": "186",
+              "Out Of Total CSP, Fixed Point CSP": "186",
               "Others": "143"
             },
             "Champhai": {
@@ -25270,9 +25270,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "10",
               "Urban": "0",
-              "Total": "56",
+              "Total Branch": "56",
               "ATM Rural": "0",
-              "CSP Fixed": "53",
+              "Out Of Total CSP, Fixed Point CSP": "53",
               "Others": "3"
             },
             "Hnahthial": {
@@ -25280,9 +25280,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "1",
               "Urban": "0",
-              "Total": "15",
+              "Total Branch": "15",
               "ATM Rural": "1",
-              "CSP Fixed": "13",
+              "Out Of Total CSP, Fixed Point CSP": "13",
               "Others": "2"
             },
             "Khawzawl": {
@@ -25290,9 +25290,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "29",
+              "Total Branch": "29",
               "ATM Rural": "2",
-              "CSP Fixed": "29",
+              "Out Of Total CSP, Fixed Point CSP": "29",
               "Others": "0"
             },
             "Kolasib": {
@@ -25300,9 +25300,9 @@
               "Branch Rural": "7",
               "Semi-Urban": "14",
               "Urban": "0",
-              "Total": "90",
+              "Total Branch": "90",
               "ATM Rural": "1",
-              "CSP Fixed": "84",
+              "Out Of Total CSP, Fixed Point CSP": "84",
               "Others": "6"
             },
             "Lawngtlai": {
@@ -25310,9 +25310,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "6",
               "Urban": "0",
-              "Total": "108",
+              "Total Branch": "108",
               "ATM Rural": "1",
-              "CSP Fixed": "108",
+              "Out Of Total CSP, Fixed Point CSP": "108",
               "Others": "0"
             },
             "Lunglei": {
@@ -25320,9 +25320,9 @@
               "Branch Rural": "7",
               "Semi-Urban": "18",
               "Urban": "0",
-              "Total": "108",
+              "Total Branch": "108",
               "ATM Rural": "1",
-              "CSP Fixed": "99",
+              "Out Of Total CSP, Fixed Point CSP": "99",
               "Others": "9"
             },
             "Mamit": {
@@ -25330,9 +25330,9 @@
               "Branch Rural": "11",
               "Semi-Urban": "1",
               "Urban": "0",
-              "Total": "87",
+              "Total Branch": "87",
               "ATM Rural": "4",
-              "CSP Fixed": "87",
+              "Out Of Total CSP, Fixed Point CSP": "87",
               "Others": "0"
             },
             "Saiha": {
@@ -25340,9 +25340,9 @@
               "Branch Rural": "1",
               "Semi-Urban": "7",
               "Urban": "0",
-              "Total": "55",
+              "Total Branch": "55",
               "ATM Rural": "0",
-              "CSP Fixed": "54",
+              "Out Of Total CSP, Fixed Point CSP": "54",
               "Others": "1"
             },
             "Saitual": {
@@ -25350,9 +25350,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "2",
               "Urban": "0",
-              "Total": "17",
+              "Total Branch": "17",
               "ATM Rural": "1",
-              "CSP Fixed": "17",
+              "Out Of Total CSP, Fixed Point CSP": "17",
               "Others": "0"
             },
             "Serchhip": {
@@ -25360,9 +25360,9 @@
               "Branch Rural": "8",
               "Semi-Urban": "8",
               "Urban": "0",
-              "Total": "71",
+              "Total Branch": "71",
               "ATM Rural": "1",
-              "CSP Fixed": "71",
+              "Out Of Total CSP, Fixed Point CSP": "71",
               "Others": "0"
             }
           }
@@ -26306,88 +26306,88 @@
           "fields": [
             "District",
             "Total Branch",
-            "Number of Operative CASA",
-            "Number of Aadhaar Seeded CASA",
-            "Number of Authenticated CASA"
+            "No. of Operative CASA",
+            "No. of Aadhaar Seeded CASA",
+            "No. of Authenticated CASA"
           ],
           "num_districts": 11,
           "districts": {
             "Aizawl": {
               "District": "Aizawl",
               "Total Branch": "129",
-              "Number of Operative CASA": "589750",
-              "Number of Aadhaar Seeded CASA": "438791",
-              "Number of Authenticated CASA": "161250"
+              "No. of Operative CASA": "589750",
+              "No. of Aadhaar Seeded CASA": "438791",
+              "No. of Authenticated CASA": "161250"
             },
             "Champhai": {
               "District": "Champhai",
               "Total Branch": "18",
-              "Number of Operative CASA": "93308",
-              "Number of Aadhaar Seeded CASA": "70116",
-              "Number of Authenticated CASA": "14080"
+              "No. of Operative CASA": "93308",
+              "No. of Aadhaar Seeded CASA": "70116",
+              "No. of Authenticated CASA": "14080"
             },
             "Hnahthial": {
               "District": "Hnahthial",
               "Total Branch": "5",
-              "Number of Operative CASA": "27351",
-              "Number of Aadhaar Seeded CASA": "22006",
-              "Number of Authenticated CASA": "3948"
+              "No. of Operative CASA": "27351",
+              "No. of Aadhaar Seeded CASA": "22006",
+              "No. of Authenticated CASA": "3948"
             },
             "Khawzawl": {
               "District": "Khawzawl",
               "Total Branch": "8",
-              "Number of Operative CASA": "37699",
-              "Number of Aadhaar Seeded CASA": "33290",
-              "Number of Authenticated CASA": "4250"
+              "No. of Operative CASA": "37699",
+              "No. of Aadhaar Seeded CASA": "33290",
+              "No. of Authenticated CASA": "4250"
             },
             "Kolasib": {
               "District": "Kolasib",
               "Total Branch": "25",
-              "Number of Operative CASA": "103674",
-              "Number of Aadhaar Seeded CASA": "77478",
-              "Number of Authenticated CASA": "17197"
+              "No. of Operative CASA": "103674",
+              "No. of Aadhaar Seeded CASA": "77478",
+              "No. of Authenticated CASA": "17197"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
               "Total Branch": "12",
-              "Number of Operative CASA": "128834",
-              "Number of Aadhaar Seeded CASA": "97011",
-              "Number of Authenticated CASA": "21732"
+              "No. of Operative CASA": "128834",
+              "No. of Aadhaar Seeded CASA": "97011",
+              "No. of Authenticated CASA": "21732"
             },
             "Lunglei": {
               "District": "Lunglei",
               "Total Branch": "23",
-              "Number of Operative CASA": "152007",
-              "Number of Aadhaar Seeded CASA": "112933",
-              "Number of Authenticated CASA": "24932"
+              "No. of Operative CASA": "152007",
+              "No. of Aadhaar Seeded CASA": "112933",
+              "No. of Authenticated CASA": "24932"
             },
             "Mamit": {
               "District": "Mamit",
               "Total Branch": "12",
-              "Number of Operative CASA": "82792",
-              "Number of Aadhaar Seeded CASA": "68446",
-              "Number of Authenticated CASA": "7569"
+              "No. of Operative CASA": "82792",
+              "No. of Aadhaar Seeded CASA": "68446",
+              "No. of Authenticated CASA": "7569"
             },
             "Saiha": {
               "District": "Saiha",
               "Total Branch": "8",
-              "Number of Operative CASA": "75775",
-              "Number of Aadhaar Seeded CASA": "53531",
-              "Number of Authenticated CASA": "11718"
+              "No. of Operative CASA": "75775",
+              "No. of Aadhaar Seeded CASA": "53531",
+              "No. of Authenticated CASA": "11718"
             },
             "Saitual": {
               "District": "Saitual",
               "Total Branch": "10",
-              "Number of Operative CASA": "50560",
-              "Number of Aadhaar Seeded CASA": "43472",
-              "Number of Authenticated CASA": "4583"
+              "No. of Operative CASA": "50560",
+              "No. of Aadhaar Seeded CASA": "43472",
+              "No. of Authenticated CASA": "4583"
             },
             "Serchhip": {
               "District": "Serchhip",
               "Total Branch": "18",
-              "Number of Operative CASA": "76224",
-              "Number of Aadhaar Seeded CASA": "62869",
-              "Number of Authenticated CASA": "6016"
+              "No. of Operative CASA": "76224",
+              "No. of Aadhaar Seeded CASA": "62869",
+              "No. of Authenticated CASA": "6016"
             }
           }
         },
@@ -26510,9 +26510,9 @@
             "Branch Rural",
             "Semi-Urban",
             "Urban",
-            "Total",
+            "Total Branch",
             "ATM Rural",
-            "CSP Fixed",
+            "Out Of Total CSP, Fixed Point CSP",
             "Others"
           ],
           "num_districts": 11,
@@ -26522,9 +26522,9 @@
               "Branch Rural": "22",
               "Semi-Urban": "1",
               "Urban": "141",
-              "Total": "325",
+              "Total Branch": "325",
               "ATM Rural": "6",
-              "CSP Fixed": "309",
+              "Out Of Total CSP, Fixed Point CSP": "309",
               "Others": "16"
             },
             "Champhai": {
@@ -26532,9 +26532,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "8",
               "Urban": "1",
-              "Total": "129",
+              "Total Branch": "129",
               "ATM Rural": "0",
-              "CSP Fixed": "123",
+              "Out Of Total CSP, Fixed Point CSP": "123",
               "Others": "6"
             },
             "Hnahthial": {
@@ -26542,9 +26542,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "0",
               "Urban": "1",
-              "Total": "15",
+              "Total Branch": "15",
               "ATM Rural": "1",
-              "CSP Fixed": "15",
+              "Out Of Total CSP, Fixed Point CSP": "15",
               "Others": "0"
             },
             "Khawzawl": {
@@ -26552,9 +26552,9 @@
               "Branch Rural": "4",
               "Semi-Urban": "1",
               "Urban": "1",
-              "Total": "29",
+              "Total Branch": "29",
               "ATM Rural": "2",
-              "CSP Fixed": "29",
+              "Out Of Total CSP, Fixed Point CSP": "29",
               "Others": "0"
             },
             "Kolasib": {
@@ -26562,9 +26562,9 @@
               "Branch Rural": "7",
               "Semi-Urban": "12",
               "Urban": "2",
-              "Total": "163",
+              "Total Branch": "163",
               "ATM Rural": "1",
-              "CSP Fixed": "157",
+              "Out Of Total CSP, Fixed Point CSP": "157",
               "Others": "5"
             },
             "Lawngtlai": {
@@ -26572,9 +26572,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "4",
               "Urban": "2",
-              "Total": "189",
+              "Total Branch": "189",
               "ATM Rural": "2",
-              "CSP Fixed": "189",
+              "Out Of Total CSP, Fixed Point CSP": "189",
               "Others": "0"
             },
             "Lunglei": {
@@ -26582,9 +26582,9 @@
               "Branch Rural": "7",
               "Semi-Urban": "15",
               "Urban": "3",
-              "Total": "198",
+              "Total Branch": "198",
               "ATM Rural": "1",
-              "CSP Fixed": "195",
+              "Out Of Total CSP, Fixed Point CSP": "195",
               "Others": "3"
             },
             "Mamit": {
@@ -26592,9 +26592,9 @@
               "Branch Rural": "11",
               "Semi-Urban": "0",
               "Urban": "1",
-              "Total": "100",
+              "Total Branch": "100",
               "ATM Rural": "4",
-              "CSP Fixed": "100",
+              "Out Of Total CSP, Fixed Point CSP": "100",
               "Others": "0"
             },
             "Saiha": {
@@ -26602,9 +26602,9 @@
               "Branch Rural": "1",
               "Semi-Urban": "5",
               "Urban": "1",
-              "Total": "61",
+              "Total Branch": "61",
               "ATM Rural": "0",
-              "CSP Fixed": "60",
+              "Out Of Total CSP, Fixed Point CSP": "60",
               "Others": "1"
             },
             "Saitual": {
@@ -26612,9 +26612,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "1",
               "Urban": "1",
-              "Total": "14",
+              "Total Branch": "14",
               "ATM Rural": "1",
-              "CSP Fixed": "14",
+              "Out Of Total CSP, Fixed Point CSP": "14",
               "Others": "0"
             },
             "Serchhip": {
@@ -26622,9 +26622,9 @@
               "Branch Rural": "9",
               "Semi-Urban": "4",
               "Urban": "3",
-              "Total": "97",
+              "Total Branch": "97",
               "ATM Rural": "1",
-              "CSP Fixed": "97",
+              "Out Of Total CSP, Fixed Point CSP": "97",
               "Others": "0"
             }
           }
@@ -27705,88 +27705,88 @@
           "fields": [
             "District",
             "Total Branch",
-            "Number of Operative CASA",
-            "Number of Aadhaar Seeded CASA",
-            "Number of Authenticated CASA"
+            "No. of Operative CASA",
+            "No. of Aadhaar Seeded CASA",
+            "No. of Authenticated CASA"
           ],
           "num_districts": 11,
           "districts": {
             "Aizawl": {
               "District": "Aizawl",
               "Total Branch": "132",
-              "Number of Operative CASA": "601941",
-              "Number of Aadhaar Seeded CASA": "462330",
-              "Number of Authenticated CASA": "151228"
+              "No. of Operative CASA": "601941",
+              "No. of Aadhaar Seeded CASA": "462330",
+              "No. of Authenticated CASA": "151228"
             },
             "Champhai": {
               "District": "Champhai",
               "Total Branch": "20",
-              "Number of Operative CASA": "94470",
-              "Number of Aadhaar Seeded CASA": "71798",
-              "Number of Authenticated CASA": "14175"
+              "No. of Operative CASA": "94470",
+              "No. of Aadhaar Seeded CASA": "71798",
+              "No. of Authenticated CASA": "14175"
             },
             "Hnahthial": {
               "District": "Hnahthial",
               "Total Branch": "5",
-              "Number of Operative CASA": "27303",
-              "Number of Aadhaar Seeded CASA": "22328",
-              "Number of Authenticated CASA": "3945"
+              "No. of Operative CASA": "27303",
+              "No. of Aadhaar Seeded CASA": "22328",
+              "No. of Authenticated CASA": "3945"
             },
             "Khawzawl": {
               "District": "Khawzawl",
               "Total Branch": "8",
-              "Number of Operative CASA": "38551",
-              "Number of Aadhaar Seeded CASA": "33714",
-              "Number of Authenticated CASA": "3133"
+              "No. of Operative CASA": "38551",
+              "No. of Aadhaar Seeded CASA": "33714",
+              "No. of Authenticated CASA": "3133"
             },
             "Kolasib": {
               "District": "Kolasib",
               "Total Branch": "26",
-              "Number of Operative CASA": "107655",
-              "Number of Aadhaar Seeded CASA": "85829",
-              "Number of Authenticated CASA": "15491"
+              "No. of Operative CASA": "107655",
+              "No. of Aadhaar Seeded CASA": "85829",
+              "No. of Authenticated CASA": "15491"
             },
             "Lawngtlai": {
               "District": "Lawngtlai",
               "Total Branch": "13",
-              "Number of Operative CASA": "128492",
-              "Number of Aadhaar Seeded CASA": "97912",
-              "Number of Authenticated CASA": "20886"
+              "No. of Operative CASA": "128492",
+              "No. of Aadhaar Seeded CASA": "97912",
+              "No. of Authenticated CASA": "20886"
             },
             "Lunglei": {
               "District": "Lunglei",
               "Total Branch": "25",
-              "Number of Operative CASA": "152475",
-              "Number of Aadhaar Seeded CASA": "114158",
-              "Number of Authenticated CASA": "24640"
+              "No. of Operative CASA": "152475",
+              "No. of Aadhaar Seeded CASA": "114158",
+              "No. of Authenticated CASA": "24640"
             },
             "Mamit": {
               "District": "Mamit",
               "Total Branch": "12",
-              "Number of Operative CASA": "82543",
-              "Number of Aadhaar Seeded CASA": "69095",
-              "Number of Authenticated CASA": "7430"
+              "No. of Operative CASA": "82543",
+              "No. of Aadhaar Seeded CASA": "69095",
+              "No. of Authenticated CASA": "7430"
             },
             "Saiha": {
               "District": "Saiha",
               "Total Branch": "8",
-              "Number of Operative CASA": "76236",
-              "Number of Aadhaar Seeded CASA": "54652",
-              "Number of Authenticated CASA": "11744"
+              "No. of Operative CASA": "76236",
+              "No. of Aadhaar Seeded CASA": "54652",
+              "No. of Authenticated CASA": "11744"
             },
             "Saitual": {
               "District": "Saitual",
               "Total Branch": "10",
-              "Number of Operative CASA": "50330",
-              "Number of Aadhaar Seeded CASA": "44002",
-              "Number of Authenticated CASA": "4583"
+              "No. of Operative CASA": "50330",
+              "No. of Aadhaar Seeded CASA": "44002",
+              "No. of Authenticated CASA": "4583"
             },
             "Serchhip": {
               "District": "Serchhip",
               "Total Branch": "19",
-              "Number of Operative CASA": "76526",
-              "Number of Aadhaar Seeded CASA": "63835",
-              "Number of Authenticated CASA": "6212"
+              "No. of Operative CASA": "76526",
+              "No. of Aadhaar Seeded CASA": "63835",
+              "No. of Authenticated CASA": "6212"
             }
           }
         },
@@ -27909,9 +27909,9 @@
             "Branch Rural",
             "Semi-Urban",
             "Urban",
-            "Total",
+            "Total Branch",
             "ATM Rural",
-            "CSP Fixed",
+            "Out Of Total CSP, Fixed Point CSP",
             "Others"
           ],
           "num_districts": 11,
@@ -27921,9 +27921,9 @@
               "Branch Rural": "23",
               "Semi-Urban": "0",
               "Urban": "135",
-              "Total": "251",
+              "Total Branch": "251",
               "ATM Rural": "8",
-              "CSP Fixed": "235",
+              "Out Of Total CSP, Fixed Point CSP": "235",
               "Others": "138"
             },
             "Champhai": {
@@ -27931,9 +27931,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "9",
               "Urban": "0",
-              "Total": "123",
+              "Total Branch": "123",
               "ATM Rural": "0",
-              "CSP Fixed": "113",
+              "Out Of Total CSP, Fixed Point CSP": "113",
               "Others": "10"
             },
             "Hnahthial": {
@@ -27941,9 +27941,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "0",
               "Urban": "0",
-              "Total": "16",
+              "Total Branch": "16",
               "ATM Rural": "2",
-              "CSP Fixed": "16",
+              "Out Of Total CSP, Fixed Point CSP": "16",
               "Others": "0"
             },
             "Khawzawl": {
@@ -27951,9 +27951,9 @@
               "Branch Rural": "5",
               "Semi-Urban": "1",
               "Urban": "0",
-              "Total": "19",
+              "Total Branch": "19",
               "ATM Rural": "3",
-              "CSP Fixed": "19",
+              "Out Of Total CSP, Fixed Point CSP": "19",
               "Others": "0"
             },
             "Kolasib": {
@@ -27961,9 +27961,9 @@
               "Branch Rural": "7",
               "Semi-Urban": "14",
               "Urban": "0",
-              "Total": "131",
+              "Total Branch": "131",
               "ATM Rural": "1",
-              "CSP Fixed": "125",
+              "Out Of Total CSP, Fixed Point CSP": "125",
               "Others": "5"
             },
             "Lawngtlai": {
@@ -27971,9 +27971,9 @@
               "Branch Rural": "6",
               "Semi-Urban": "4",
               "Urban": "0",
-              "Total": "184",
+              "Total Branch": "184",
               "ATM Rural": "3",
-              "CSP Fixed": "184",
+              "Out Of Total CSP, Fixed Point CSP": "184",
               "Others": "0"
             },
             "Lunglei": {
@@ -27981,9 +27981,9 @@
               "Branch Rural": "8",
               "Semi-Urban": "13",
               "Urban": "2",
-              "Total": "171",
+              "Total Branch": "171",
               "ATM Rural": "2",
-              "CSP Fixed": "169",
+              "Out Of Total CSP, Fixed Point CSP": "169",
               "Others": "2"
             },
             "Mamit": {
@@ -27991,9 +27991,9 @@
               "Branch Rural": "12",
               "Semi-Urban": "0",
               "Urban": "0",
-              "Total": "76",
+              "Total Branch": "76",
               "ATM Rural": "5",
-              "CSP Fixed": "76",
+              "Out Of Total CSP, Fixed Point CSP": "76",
               "Others": "0"
             },
             "Saiha": {
@@ -28001,9 +28001,9 @@
               "Branch Rural": "1",
               "Semi-Urban": "6",
               "Urban": "0",
-              "Total": "51",
+              "Total Branch": "51",
               "ATM Rural": "0",
-              "CSP Fixed": "50",
+              "Out Of Total CSP, Fixed Point CSP": "50",
               "Others": "1"
             },
             "Saitual": {
@@ -28011,9 +28011,9 @@
               "Branch Rural": "7",
               "Semi-Urban": "1",
               "Urban": "0",
-              "Total": "14",
+              "Total Branch": "14",
               "ATM Rural": "2",
-              "CSP Fixed": "14",
+              "Out Of Total CSP, Fixed Point CSP": "14",
               "Others": "0"
             },
             "Serchhip": {
@@ -28021,9 +28021,9 @@
               "Branch Rural": "11",
               "Semi-Urban": "4",
               "Urban": "0",
-              "Total": "75",
+              "Total Branch": "75",
               "ATM Rural": "4",
-              "CSP Fixed": "75",
+              "Out Of Total CSP, Fixed Point CSP": "75",
               "Others": "0"
             }
           }

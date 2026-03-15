@@ -9,277 +9,6 @@
       "as_on_date": "31-03-2019",
       "fy": "2018-19",
       "tables": {
-        "cd_ratio": {
-          "fields": [
-            "District",
-            "Total Branch",
-            "Total Deposit",
-            "Total Advance",
-            "Overall CD Ratio"
-          ],
-          "num_districts": 37,
-          "districts": {
-            "Araria": {
-              "District": "Araria",
-              "Total Branch": "147",
-              "Total Deposit": "394954",
-              "Total Advance": "212773",
-              "Overall CD Ratio": "53.87"
-            },
-            "Arwal": {
-              "District": "Arwal",
-              "Total Branch": "58",
-              "Total Deposit": "144167",
-              "Total Advance": "50348",
-              "Overall CD Ratio": "34.92"
-            },
-            "Aurangabad": {
-              "District": "Aurangabad",
-              "Total Branch": "181",
-              "Total Deposit": "664177",
-              "Total Advance": "253470",
-              "Overall CD Ratio": "38.16"
-            },
-            "Begusarai": {
-              "District": "Begusarai",
-              "Total Branch": "221",
-              "Total Deposit": "815266",
-              "Total Advance": "435549",
-              "Overall CD Ratio": "53.42"
-            },
-            "Bhagalpur": {
-              "District": "Bhagalpur",
-              "Total Branch": "270",
-              "Total Deposit": "454828",
-              "Total Advance": "",
-              "Overall CD Ratio": "37.10"
-            },
-            "Bhojpur": {
-              "District": "Bhojpur",
-              "Total Branch": "226",
-              "Total Deposit": "912670",
-              "Total Advance": "268336",
-              "Overall CD Ratio": "29.40"
-            },
-            "Buxar": {
-              "District": "Buxar",
-              "Total Branch": "153",
-              "Total Deposit": "497511",
-              "Total Advance": "219729",
-              "Overall CD Ratio": "44.17"
-            },
-            "Darbhanga": {
-              "District": "Darbhanga",
-              "Total Branch": "241",
-              "Total Deposit": "971543",
-              "Total Advance": "324491",
-              "Overall CD Ratio": "33.40"
-            },
-            "Purbi Champaran": {
-              "District": "Purbi Champaran",
-              "Total Branch": "271",
-              "Total Deposit": "881648",
-              "Total Advance": "428651",
-              "Overall CD Ratio": "48.62"
-            },
-            "Gaya": {
-              "District": "Gaya",
-              "Total Branch": "300",
-              "Total Deposit": "1371265",
-              "Total Advance": "521304",
-              "Overall CD Ratio": "38.02"
-            },
-            "Gopalganj": {
-              "District": "Gopalganj",
-              "Total Branch": "182",
-              "Total Deposit": "660200",
-              "Total Advance": "226643",
-              "Overall CD Ratio": "34.33"
-            },
-            "Jamui": {
-              "District": "Jamui",
-              "Total Branch": "113",
-              "Total Deposit": "353317",
-              "Total Advance": "160538",
-              "Overall CD Ratio": "45.44"
-            },
-            "Jehanabad": {
-              "District": "Jehanabad",
-              "Total Branch": "94",
-              "Total Deposit": "98838",
-              "Total Advance": "",
-              "Overall CD Ratio": "34.82"
-            },
-            "Kaimur (Bhabua)": {
-              "District": "Kaimur (Bhabua)",
-              "Total Branch": "122",
-              "Total Deposit": "347824",
-              "Total Advance": "182945",
-              "Overall CD Ratio": "52.60"
-            },
-            "Katihar": {
-              "District": "Katihar",
-              "Total Branch": "176",
-              "Total Deposit": "528527",
-              "Total Advance": "250973",
-              "Overall CD Ratio": "47.49"
-            },
-            "Khagaria": {
-              "District": "Khagaria",
-              "Total Branch": "115",
-              "Total Deposit": "288760",
-              "Total Advance": "154194",
-              "Overall CD Ratio": "53.40"
-            },
-            "Kishanganj": {
-              "District": "Kishanganj",
-              "Total Branch": "104",
-              "Total Deposit": "275446",
-              "Total Advance": "162671",
-              "Overall CD Ratio": "59.06"
-            },
-            "Lakhisarai": {
-              "District": "Lakhisarai",
-              "Total Branch": "76",
-              "Total Deposit": "273631",
-              "Total Advance": "106919",
-              "Overall CD Ratio": "39.07"
-            },
-            "Madhepura": {
-              "District": "Madhepura",
-              "Total Branch": "110",
-              "Total Deposit": "279970",
-              "Total Advance": "137010",
-              "Overall CD Ratio": "48.94"
-            },
-            "Madhubani": {
-              "District": "Madhubani",
-              "Total Branch": "274",
-              "Total Deposit": "744905",
-              "Total Advance": "254581",
-              "Overall CD Ratio": "34.18"
-            },
-            "Munger": {
-              "District": "Munger",
-              "Total Branch": "130",
-              "Total Deposit": "582605",
-              "Total Advance": "182621",
-              "Overall CD Ratio": "31.35"
-            },
-            "Muzaffarpur": {
-              "District": "Muzaffarpur",
-              "Total Branch": "373",
-              "Total Deposit": "1543080",
-              "Total Advance": "757157",
-              "Overall CD Ratio": "49.07"
-            },
-            "Nalanda": {
-              "District": "Nalanda",
-              "Total Branch": "246",
-              "Total Deposit": "867467",
-              "Total Advance": "300925",
-              "Overall CD Ratio": "34.69"
-            },
-            "Nawada": {
-              "District": "Nawada",
-              "Total Branch": "135",
-              "Total Deposit": "441660",
-              "Total Advance": "172472",
-              "Overall CD Ratio": "39.05"
-            },
-            "Patna": {
-              "District": "Patna",
-              "Total Branch": "912",
-              "Total Deposit": "11549194",
-              "Total Advance": "4145498",
-              "Overall CD Ratio": "35.89"
-            },
-            "Purnia": {
-              "District": "Purnia",
-              "Total Branch": "213",
-              "Total Deposit": "576984",
-              "Total Advance": "415647",
-              "Overall CD Ratio": "72.04"
-            },
-            "Rohtas": {
-              "District": "Rohtas",
-              "Total Branch": "224",
-              "Total Deposit": "831746",
-              "Total Advance": "373629",
-              "Overall CD Ratio": "44.92"
-            },
-            "Saharsa": {
-              "District": "Saharsa",
-              "Total Branch": "98",
-              "Total Deposit": "346088",
-              "Total Advance": "156076",
-              "Overall CD Ratio": "45.10"
-            },
-            "Samastipur": {
-              "District": "Samastipur",
-              "Total Branch": "282",
-              "Total Deposit": "923410",
-              "Total Advance": "419185",
-              "Overall CD Ratio": "45.40"
-            },
-            "Saran": {
-              "District": "Saran",
-              "Total Branch": "250",
-              "Total Deposit": "1092460",
-              "Total Advance": "319207",
-              "Overall CD Ratio": "29.22"
-            },
-            "Sheikhpura": {
-              "District": "Sheikhpura",
-              "Total Branch": "62",
-              "Total Deposit": "69997",
-              "Total Advance": "",
-              "Overall CD Ratio": "41.89"
-            },
-            "Sheohar": {
-              "District": "Sheohar",
-              "Total Branch": "45",
-              "Total Deposit": "95843",
-              "Total Advance": "44675",
-              "Overall CD Ratio": "46.61"
-            },
-            "Sitamarhi": {
-              "District": "Sitamarhi",
-              "Total Branch": "165",
-              "Total Deposit": "540513",
-              "Total Advance": "208518",
-              "Overall CD Ratio": "38.58"
-            },
-            "Siwan": {
-              "District": "Siwan",
-              "Total Branch": "233",
-              "Total Deposit": "982638",
-              "Total Advance": "309454",
-              "Overall CD Ratio": "31.49"
-            },
-            "Supaul": {
-              "District": "Supaul",
-              "Total Branch": "120",
-              "Total Deposit": "313613",
-              "Total Advance": "154424",
-              "Overall CD Ratio": "49.24"
-            },
-            "Vaishali": {
-              "District": "Vaishali",
-              "Total Branch": "234",
-              "Total Deposit": "854531",
-              "Total Advance": "337835",
-              "Overall CD Ratio": "39.53"
-            },
-            "Pashchim Champaran": {
-              "District": "Pashchim Champaran",
-              "Total Branch": "200",
-              "Total Deposit": "576171",
-              "Total Advance": "301328",
-              "Overall CD Ratio": "52.30"
-            }
-          }
-        },
         "npa_position": {
           "fields": [
             "District",
@@ -845,6 +574,277 @@
               "Col_1": "87"
             }
           }
+        },
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "Total Branch",
+            "Total Deposit",
+            "Total Advance",
+            "Overall CD Ratio"
+          ],
+          "num_districts": 37,
+          "districts": {
+            "Araria": {
+              "District": "Araria",
+              "Total Branch": "147",
+              "Total Deposit": "394954",
+              "Total Advance": "212773",
+              "Overall CD Ratio": "53.87"
+            },
+            "Arwal": {
+              "District": "Arwal",
+              "Total Branch": "58",
+              "Total Deposit": "144167",
+              "Total Advance": "50348",
+              "Overall CD Ratio": "34.92"
+            },
+            "Aurangabad": {
+              "District": "Aurangabad",
+              "Total Branch": "181",
+              "Total Deposit": "664177",
+              "Total Advance": "253470",
+              "Overall CD Ratio": "38.16"
+            },
+            "Begusarai": {
+              "District": "Begusarai",
+              "Total Branch": "221",
+              "Total Deposit": "815266",
+              "Total Advance": "435549",
+              "Overall CD Ratio": "53.42"
+            },
+            "Bhagalpur": {
+              "District": "Bhagalpur",
+              "Total Branch": "270",
+              "Total Deposit": "454828",
+              "Total Advance": "",
+              "Overall CD Ratio": "37.10"
+            },
+            "Bhojpur": {
+              "District": "Bhojpur",
+              "Total Branch": "226",
+              "Total Deposit": "912670",
+              "Total Advance": "268336",
+              "Overall CD Ratio": "29.40"
+            },
+            "Buxar": {
+              "District": "Buxar",
+              "Total Branch": "153",
+              "Total Deposit": "497511",
+              "Total Advance": "219729",
+              "Overall CD Ratio": "44.17"
+            },
+            "Darbhanga": {
+              "District": "Darbhanga",
+              "Total Branch": "241",
+              "Total Deposit": "971543",
+              "Total Advance": "324491",
+              "Overall CD Ratio": "33.40"
+            },
+            "Purbi Champaran": {
+              "District": "Purbi Champaran",
+              "Total Branch": "271",
+              "Total Deposit": "881648",
+              "Total Advance": "428651",
+              "Overall CD Ratio": "48.62"
+            },
+            "Gaya": {
+              "District": "Gaya",
+              "Total Branch": "300",
+              "Total Deposit": "1371265",
+              "Total Advance": "521304",
+              "Overall CD Ratio": "38.02"
+            },
+            "Gopalganj": {
+              "District": "Gopalganj",
+              "Total Branch": "182",
+              "Total Deposit": "660200",
+              "Total Advance": "226643",
+              "Overall CD Ratio": "34.33"
+            },
+            "Jamui": {
+              "District": "Jamui",
+              "Total Branch": "113",
+              "Total Deposit": "353317",
+              "Total Advance": "160538",
+              "Overall CD Ratio": "45.44"
+            },
+            "Jehanabad": {
+              "District": "Jehanabad",
+              "Total Branch": "94",
+              "Total Deposit": "98838",
+              "Total Advance": "",
+              "Overall CD Ratio": "34.82"
+            },
+            "Kaimur (Bhabua)": {
+              "District": "Kaimur (Bhabua)",
+              "Total Branch": "122",
+              "Total Deposit": "347824",
+              "Total Advance": "182945",
+              "Overall CD Ratio": "52.60"
+            },
+            "Katihar": {
+              "District": "Katihar",
+              "Total Branch": "176",
+              "Total Deposit": "528527",
+              "Total Advance": "250973",
+              "Overall CD Ratio": "47.49"
+            },
+            "Khagaria": {
+              "District": "Khagaria",
+              "Total Branch": "115",
+              "Total Deposit": "288760",
+              "Total Advance": "154194",
+              "Overall CD Ratio": "53.40"
+            },
+            "Kishanganj": {
+              "District": "Kishanganj",
+              "Total Branch": "104",
+              "Total Deposit": "275446",
+              "Total Advance": "162671",
+              "Overall CD Ratio": "59.06"
+            },
+            "Lakhisarai": {
+              "District": "Lakhisarai",
+              "Total Branch": "76",
+              "Total Deposit": "273631",
+              "Total Advance": "106919",
+              "Overall CD Ratio": "39.07"
+            },
+            "Madhepura": {
+              "District": "Madhepura",
+              "Total Branch": "110",
+              "Total Deposit": "279970",
+              "Total Advance": "137010",
+              "Overall CD Ratio": "48.94"
+            },
+            "Madhubani": {
+              "District": "Madhubani",
+              "Total Branch": "274",
+              "Total Deposit": "744905",
+              "Total Advance": "254581",
+              "Overall CD Ratio": "34.18"
+            },
+            "Munger": {
+              "District": "Munger",
+              "Total Branch": "130",
+              "Total Deposit": "582605",
+              "Total Advance": "182621",
+              "Overall CD Ratio": "31.35"
+            },
+            "Muzaffarpur": {
+              "District": "Muzaffarpur",
+              "Total Branch": "373",
+              "Total Deposit": "1543080",
+              "Total Advance": "757157",
+              "Overall CD Ratio": "49.07"
+            },
+            "Nalanda": {
+              "District": "Nalanda",
+              "Total Branch": "246",
+              "Total Deposit": "867467",
+              "Total Advance": "300925",
+              "Overall CD Ratio": "34.69"
+            },
+            "Nawada": {
+              "District": "Nawada",
+              "Total Branch": "135",
+              "Total Deposit": "441660",
+              "Total Advance": "172472",
+              "Overall CD Ratio": "39.05"
+            },
+            "Patna": {
+              "District": "Patna",
+              "Total Branch": "912",
+              "Total Deposit": "11549194",
+              "Total Advance": "4145498",
+              "Overall CD Ratio": "35.89"
+            },
+            "Purnia": {
+              "District": "Purnia",
+              "Total Branch": "213",
+              "Total Deposit": "576984",
+              "Total Advance": "415647",
+              "Overall CD Ratio": "72.04"
+            },
+            "Rohtas": {
+              "District": "Rohtas",
+              "Total Branch": "224",
+              "Total Deposit": "831746",
+              "Total Advance": "373629",
+              "Overall CD Ratio": "44.92"
+            },
+            "Saharsa": {
+              "District": "Saharsa",
+              "Total Branch": "98",
+              "Total Deposit": "346088",
+              "Total Advance": "156076",
+              "Overall CD Ratio": "45.10"
+            },
+            "Samastipur": {
+              "District": "Samastipur",
+              "Total Branch": "282",
+              "Total Deposit": "923410",
+              "Total Advance": "419185",
+              "Overall CD Ratio": "45.40"
+            },
+            "Saran": {
+              "District": "Saran",
+              "Total Branch": "250",
+              "Total Deposit": "1092460",
+              "Total Advance": "319207",
+              "Overall CD Ratio": "29.22"
+            },
+            "Sheikhpura": {
+              "District": "Sheikhpura",
+              "Total Branch": "62",
+              "Total Deposit": "69997",
+              "Total Advance": "",
+              "Overall CD Ratio": "41.89"
+            },
+            "Sheohar": {
+              "District": "Sheohar",
+              "Total Branch": "45",
+              "Total Deposit": "95843",
+              "Total Advance": "44675",
+              "Overall CD Ratio": "46.61"
+            },
+            "Sitamarhi": {
+              "District": "Sitamarhi",
+              "Total Branch": "165",
+              "Total Deposit": "540513",
+              "Total Advance": "208518",
+              "Overall CD Ratio": "38.58"
+            },
+            "Siwan": {
+              "District": "Siwan",
+              "Total Branch": "233",
+              "Total Deposit": "982638",
+              "Total Advance": "309454",
+              "Overall CD Ratio": "31.49"
+            },
+            "Supaul": {
+              "District": "Supaul",
+              "Total Branch": "120",
+              "Total Deposit": "313613",
+              "Total Advance": "154424",
+              "Overall CD Ratio": "49.24"
+            },
+            "Vaishali": {
+              "District": "Vaishali",
+              "Total Branch": "234",
+              "Total Deposit": "854531",
+              "Total Advance": "337835",
+              "Overall CD Ratio": "39.53"
+            },
+            "Pashchim Champaran": {
+              "District": "Pashchim Champaran",
+              "Total Branch": "200",
+              "Total Deposit": "576171",
+              "Total Advance": "301328",
+              "Overall CD Ratio": "52.30"
+            }
+          }
         }
       }
     },
@@ -853,7 +853,7 @@
       "as_on_date": "30-09-2019",
       "fy": "2019-20",
       "tables": {
-        "cd_ratio": {
+        "credit_deposit_ratio": {
           "fields": [
             "District",
             "Total Branch",
@@ -1135,256 +1135,6 @@
       "as_on_date": "31-03-2020",
       "fy": "2019-20",
       "tables": {
-        "cd_ratio": {
-          "fields": [
-            "District",
-            "Total Branch",
-            "Total Deposit",
-            "Total Advance",
-            "Overall CD Ratio"
-          ],
-          "num_districts": 34,
-          "districts": {
-            "Araria": {
-              "District": "Araria",
-              "Total Branch": "",
-              "Total Deposit": "242014",
-              "Total Advance": "",
-              "Overall CD Ratio": "57.72"
-            },
-            "Arwal": {
-              "District": "Arwal",
-              "Total Branch": "",
-              "Total Deposit": "48854",
-              "Total Advance": "",
-              "Overall CD Ratio": "30.30"
-            },
-            "Aurangabad": {
-              "District": "Aurangabad",
-              "Total Branch": "",
-              "Total Deposit": "310562",
-              "Total Advance": "",
-              "Overall CD Ratio": "41.31"
-            },
-            "Begusarai": {
-              "District": "Begusarai",
-              "Total Branch": "",
-              "Total Deposit": "440522",
-              "Total Advance": "",
-              "Overall CD Ratio": "53.43"
-            },
-            "Bhagalpur": {
-              "District": "Bhagalpur",
-              "Total Branch": "",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "36.97"
-            },
-            "Bhojpur": {
-              "District": "Bhojpur",
-              "Total Branch": "",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "29.54"
-            },
-            "Buxar": {
-              "District": "Buxar",
-              "Total Branch": "",
-              "Total Deposit": "219571",
-              "Total Advance": "",
-              "Overall CD Ratio": "40.01"
-            },
-            "Darbhanga": {
-              "District": "Darbhanga",
-              "Total Branch": "",
-              "Total Deposit": "355686",
-              "Total Advance": "",
-              "Overall CD Ratio": "31.69"
-            },
-            "Purbi Champaran": {
-              "District": "Purbi Champaran",
-              "Total Branch": "",
-              "Total Deposit": "463866",
-              "Total Advance": "",
-              "Overall CD Ratio": "49.77"
-            },
-            "Gaya": {
-              "District": "Gaya",
-              "Total Branch": "",
-              "Total Deposit": "588517",
-              "Total Advance": "",
-              "Overall CD Ratio": "38.86"
-            },
-            "Gopalganj": {
-              "District": "Gopalganj",
-              "Total Branch": "",
-              "Total Deposit": "242590",
-              "Total Advance": "",
-              "Overall CD Ratio": "32.35"
-            },
-            "Jehanabad": {
-              "District": "Jehanabad",
-              "Total Branch": "",
-              "Total Deposit": "101800",
-              "Total Advance": "",
-              "Overall CD Ratio": "31.33"
-            },
-            "Kaimur (Bhabua)": {
-              "District": "Kaimur (Bhabua)",
-              "Total Branch": "",
-              "Total Deposit": "205820",
-              "Total Advance": "",
-              "Overall CD Ratio": "58.56"
-            },
-            "Khagaria": {
-              "District": "Khagaria",
-              "Total Branch": "",
-              "Total Deposit": "178947",
-              "Total Advance": "",
-              "Overall CD Ratio": "58.33"
-            },
-            "Kishanganj": {
-              "District": "Kishanganj",
-              "Total Branch": "",
-              "Total Deposit": "179846",
-              "Total Advance": "",
-              "Overall CD Ratio": ""
-            },
-            "Lakhisarai": {
-              "District": "Lakhisarai",
-              "Total Branch": "",
-              "Total Deposit": "101597",
-              "Total Advance": "",
-              "Overall CD Ratio": "35.53"
-            },
-            "Madhepura": {
-              "District": "Madhepura",
-              "Total Branch": "",
-              "Total Deposit": "151407",
-              "Total Advance": "",
-              "Overall CD Ratio": "47.70"
-            },
-            "Madhubani": {
-              "District": "Madhubani",
-              "Total Branch": "",
-              "Total Deposit": "281077",
-              "Total Advance": "",
-              "Overall CD Ratio": "32.32"
-            },
-            "Muzaffarpur": {
-              "District": "Muzaffarpur",
-              "Total Branch": "",
-              "Total Deposit": "1775583",
-              "Total Advance": "850941",
-              "Overall CD Ratio": "47.92"
-            },
-            "Nalanda": {
-              "District": "Nalanda",
-              "Total Branch": "",
-              "Total Deposit": "968873",
-              "Total Advance": "322843",
-              "Overall CD Ratio": "33.32"
-            },
-            "Nawada": {
-              "District": "Nawada",
-              "Total Branch": "",
-              "Total Deposit": "475442",
-              "Total Advance": "194613",
-              "Overall CD Ratio": "40.93"
-            },
-            "Patna": {
-              "District": "Patna",
-              "Total Branch": "",
-              "Total Deposit": "17905661",
-              "Total Advance": "3964982",
-              "Overall CD Ratio": "33.63"
-            },
-            "Purnia": {
-              "District": "Purnia",
-              "Total Branch": "",
-              "Total Deposit": "619190",
-              "Total Advance": "449558",
-              "Overall CD Ratio": ""
-            },
-            "Rohtas": {
-              "District": "Rohtas",
-              "Total Branch": "",
-              "Total Deposit": "888214",
-              "Total Advance": "398263",
-              "Overall CD Ratio": "44.84"
-            },
-            "Saharsa": {
-              "District": "Saharsa",
-              "Total Branch": "",
-              "Total Deposit": "387830",
-              "Total Advance": "185304",
-              "Overall CD Ratio": "47.78"
-            },
-            "Samastipur": {
-              "District": "Samastipur",
-              "Total Branch": "",
-              "Total Deposit": "972108",
-              "Total Advance": "454952",
-              "Overall CD Ratio": "46.80"
-            },
-            "Saran": {
-              "District": "Saran",
-              "Total Branch": "",
-              "Total Deposit": "1264832",
-              "Total Advance": "341257",
-              "Overall CD Ratio": "26.98"
-            },
-            "Sheikhpura": {
-              "District": "Sheikhpura",
-              "Total Branch": "",
-              "Total Deposit": "173167",
-              "Total Advance": "71425",
-              "Overall CD Ratio": "41.25"
-            },
-            "Sheohar": {
-              "District": "Sheohar",
-              "Total Branch": "",
-              "Total Deposit": "88392",
-              "Total Advance": "54443",
-              "Overall CD Ratio": "61.59"
-            },
-            "Sitamarhi": {
-              "District": "Sitamarhi",
-              "Total Branch": "",
-              "Total Deposit": "580732",
-              "Total Advance": "223778",
-              "Overall CD Ratio": "38.53"
-            },
-            "Siwan": {
-              "District": "Siwan",
-              "Total Branch": "",
-              "Total Deposit": "1509641",
-              "Total Advance": "404300",
-              "Overall CD Ratio": "35.13"
-            },
-            "Supaul": {
-              "District": "Supaul",
-              "Total Branch": "",
-              "Total Deposit": "365831",
-              "Total Advance": "",
-              "Overall CD Ratio": ""
-            },
-            "Vaishali": {
-              "District": "Vaishali",
-              "Total Branch": "",
-              "Total Deposit": "951240",
-              "Total Advance": "527462",
-              "Overall CD Ratio": "55.45"
-            },
-            "Pashchim Champaran": {
-              "District": "Pashchim Champaran",
-              "Total Branch": "",
-              "Total Deposit": "609370",
-              "Total Advance": "333205",
-              "Overall CD Ratio": "54.68"
-            }
-          }
-        },
         "minority_disbursement": {
           "fields": [
             "District",
@@ -2098,6 +1848,256 @@
               "Col_4": "85886"
             }
           }
+        },
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "Total Branch",
+            "Total Deposit",
+            "Total Advance",
+            "Overall CD Ratio"
+          ],
+          "num_districts": 34,
+          "districts": {
+            "Araria": {
+              "District": "Araria",
+              "Total Branch": "",
+              "Total Deposit": "242014",
+              "Total Advance": "",
+              "Overall CD Ratio": "57.72"
+            },
+            "Arwal": {
+              "District": "Arwal",
+              "Total Branch": "",
+              "Total Deposit": "48854",
+              "Total Advance": "",
+              "Overall CD Ratio": "30.30"
+            },
+            "Aurangabad": {
+              "District": "Aurangabad",
+              "Total Branch": "",
+              "Total Deposit": "310562",
+              "Total Advance": "",
+              "Overall CD Ratio": "41.31"
+            },
+            "Begusarai": {
+              "District": "Begusarai",
+              "Total Branch": "",
+              "Total Deposit": "440522",
+              "Total Advance": "",
+              "Overall CD Ratio": "53.43"
+            },
+            "Bhagalpur": {
+              "District": "Bhagalpur",
+              "Total Branch": "",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "36.97"
+            },
+            "Bhojpur": {
+              "District": "Bhojpur",
+              "Total Branch": "",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "29.54"
+            },
+            "Buxar": {
+              "District": "Buxar",
+              "Total Branch": "",
+              "Total Deposit": "219571",
+              "Total Advance": "",
+              "Overall CD Ratio": "40.01"
+            },
+            "Darbhanga": {
+              "District": "Darbhanga",
+              "Total Branch": "",
+              "Total Deposit": "355686",
+              "Total Advance": "",
+              "Overall CD Ratio": "31.69"
+            },
+            "Purbi Champaran": {
+              "District": "Purbi Champaran",
+              "Total Branch": "",
+              "Total Deposit": "463866",
+              "Total Advance": "",
+              "Overall CD Ratio": "49.77"
+            },
+            "Gaya": {
+              "District": "Gaya",
+              "Total Branch": "",
+              "Total Deposit": "588517",
+              "Total Advance": "",
+              "Overall CD Ratio": "38.86"
+            },
+            "Gopalganj": {
+              "District": "Gopalganj",
+              "Total Branch": "",
+              "Total Deposit": "242590",
+              "Total Advance": "",
+              "Overall CD Ratio": "32.35"
+            },
+            "Jehanabad": {
+              "District": "Jehanabad",
+              "Total Branch": "",
+              "Total Deposit": "101800",
+              "Total Advance": "",
+              "Overall CD Ratio": "31.33"
+            },
+            "Kaimur (Bhabua)": {
+              "District": "Kaimur (Bhabua)",
+              "Total Branch": "",
+              "Total Deposit": "205820",
+              "Total Advance": "",
+              "Overall CD Ratio": "58.56"
+            },
+            "Khagaria": {
+              "District": "Khagaria",
+              "Total Branch": "",
+              "Total Deposit": "178947",
+              "Total Advance": "",
+              "Overall CD Ratio": "58.33"
+            },
+            "Kishanganj": {
+              "District": "Kishanganj",
+              "Total Branch": "",
+              "Total Deposit": "179846",
+              "Total Advance": "",
+              "Overall CD Ratio": ""
+            },
+            "Lakhisarai": {
+              "District": "Lakhisarai",
+              "Total Branch": "",
+              "Total Deposit": "101597",
+              "Total Advance": "",
+              "Overall CD Ratio": "35.53"
+            },
+            "Madhepura": {
+              "District": "Madhepura",
+              "Total Branch": "",
+              "Total Deposit": "151407",
+              "Total Advance": "",
+              "Overall CD Ratio": "47.70"
+            },
+            "Madhubani": {
+              "District": "Madhubani",
+              "Total Branch": "",
+              "Total Deposit": "281077",
+              "Total Advance": "",
+              "Overall CD Ratio": "32.32"
+            },
+            "Muzaffarpur": {
+              "District": "Muzaffarpur",
+              "Total Branch": "",
+              "Total Deposit": "1775583",
+              "Total Advance": "850941",
+              "Overall CD Ratio": "47.92"
+            },
+            "Nalanda": {
+              "District": "Nalanda",
+              "Total Branch": "",
+              "Total Deposit": "968873",
+              "Total Advance": "322843",
+              "Overall CD Ratio": "33.32"
+            },
+            "Nawada": {
+              "District": "Nawada",
+              "Total Branch": "",
+              "Total Deposit": "475442",
+              "Total Advance": "194613",
+              "Overall CD Ratio": "40.93"
+            },
+            "Patna": {
+              "District": "Patna",
+              "Total Branch": "",
+              "Total Deposit": "17905661",
+              "Total Advance": "3964982",
+              "Overall CD Ratio": "33.63"
+            },
+            "Purnia": {
+              "District": "Purnia",
+              "Total Branch": "",
+              "Total Deposit": "619190",
+              "Total Advance": "449558",
+              "Overall CD Ratio": ""
+            },
+            "Rohtas": {
+              "District": "Rohtas",
+              "Total Branch": "",
+              "Total Deposit": "888214",
+              "Total Advance": "398263",
+              "Overall CD Ratio": "44.84"
+            },
+            "Saharsa": {
+              "District": "Saharsa",
+              "Total Branch": "",
+              "Total Deposit": "387830",
+              "Total Advance": "185304",
+              "Overall CD Ratio": "47.78"
+            },
+            "Samastipur": {
+              "District": "Samastipur",
+              "Total Branch": "",
+              "Total Deposit": "972108",
+              "Total Advance": "454952",
+              "Overall CD Ratio": "46.80"
+            },
+            "Saran": {
+              "District": "Saran",
+              "Total Branch": "",
+              "Total Deposit": "1264832",
+              "Total Advance": "341257",
+              "Overall CD Ratio": "26.98"
+            },
+            "Sheikhpura": {
+              "District": "Sheikhpura",
+              "Total Branch": "",
+              "Total Deposit": "173167",
+              "Total Advance": "71425",
+              "Overall CD Ratio": "41.25"
+            },
+            "Sheohar": {
+              "District": "Sheohar",
+              "Total Branch": "",
+              "Total Deposit": "88392",
+              "Total Advance": "54443",
+              "Overall CD Ratio": "61.59"
+            },
+            "Sitamarhi": {
+              "District": "Sitamarhi",
+              "Total Branch": "",
+              "Total Deposit": "580732",
+              "Total Advance": "223778",
+              "Overall CD Ratio": "38.53"
+            },
+            "Siwan": {
+              "District": "Siwan",
+              "Total Branch": "",
+              "Total Deposit": "1509641",
+              "Total Advance": "404300",
+              "Overall CD Ratio": "35.13"
+            },
+            "Supaul": {
+              "District": "Supaul",
+              "Total Branch": "",
+              "Total Deposit": "365831",
+              "Total Advance": "",
+              "Overall CD Ratio": ""
+            },
+            "Vaishali": {
+              "District": "Vaishali",
+              "Total Branch": "",
+              "Total Deposit": "951240",
+              "Total Advance": "527462",
+              "Overall CD Ratio": "55.45"
+            },
+            "Pashchim Champaran": {
+              "District": "Pashchim Champaran",
+              "Total Branch": "",
+              "Total Deposit": "609370",
+              "Total Advance": "333205",
+              "Overall CD Ratio": "54.68"
+            }
+          }
         }
       }
     },
@@ -2106,277 +2106,6 @@
       "as_on_date": "30-06-2020",
       "fy": "2020-21",
       "tables": {
-        "cd_ratio": {
-          "fields": [
-            "District",
-            "Total Branch",
-            "Total Deposit",
-            "Total Advance",
-            "Overall CD Ratio"
-          ],
-          "num_districts": 37,
-          "districts": {
-            "Araria": {
-              "District": "Araria",
-              "Total Branch": "156",
-              "Total Deposit": "426343",
-              "Total Advance": "246210",
-              "Overall CD Ratio": "57.75"
-            },
-            "Arwal": {
-              "District": "Arwal",
-              "Total Branch": "60",
-              "Total Deposit": "169623",
-              "Total Advance": "48465",
-              "Overall CD Ratio": "28.57"
-            },
-            "Aurangabad": {
-              "District": "Aurangabad",
-              "Total Branch": "184",
-              "Total Deposit": "733820",
-              "Total Advance": "329463",
-              "Overall CD Ratio": "44.90"
-            },
-            "Begusarai": {
-              "District": "Begusarai",
-              "Total Branch": "224",
-              "Total Deposit": "865453",
-              "Total Advance": "442345",
-              "Overall CD Ratio": "51.11"
-            },
-            "Bhagalpur": {
-              "District": "Bhagalpur",
-              "Total Branch": "278",
-              "Total Deposit": "1369598",
-              "Total Advance": "494104",
-              "Overall CD Ratio": "36.08"
-            },
-            "Bhojpur": {
-              "District": "Bhojpur",
-              "Total Branch": "232",
-              "Total Deposit": "1098995",
-              "Total Advance": "299001",
-              "Overall CD Ratio": "27.21"
-            },
-            "Buxar": {
-              "District": "Buxar",
-              "Total Branch": "153",
-              "Total Deposit": "587222",
-              "Total Advance": "216502",
-              "Overall CD Ratio": "36.87"
-            },
-            "Darbhanga": {
-              "District": "Darbhanga",
-              "Total Branch": "242",
-              "Total Deposit": "1160550",
-              "Total Advance": "375116",
-              "Overall CD Ratio": "32.32"
-            },
-            "Purbi Champaran": {
-              "District": "Purbi Champaran",
-              "Total Branch": "278",
-              "Total Deposit": "984024",
-              "Total Advance": "491471",
-              "Overall CD Ratio": "49.95"
-            },
-            "Gaya": {
-              "District": "Gaya",
-              "Total Branch": "305",
-              "Total Deposit": "1558743",
-              "Total Advance": "592242",
-              "Overall CD Ratio": "37.99"
-            },
-            "Gopalganj": {
-              "District": "Gopalganj",
-              "Total Branch": "182",
-              "Total Deposit": "798062",
-              "Total Advance": "252152",
-              "Overall CD Ratio": "31.60"
-            },
-            "Jamui": {
-              "District": "Jamui",
-              "Total Branch": "116",
-              "Total Deposit": "349189",
-              "Total Advance": "148957",
-              "Overall CD Ratio": "42.66"
-            },
-            "Jehanabad": {
-              "District": "Jehanabad",
-              "Total Branch": "95",
-              "Total Deposit": "383245",
-              "Total Advance": "122966",
-              "Overall CD Ratio": ""
-            },
-            "Kaimur (Bhabua)": {
-              "District": "Kaimur (Bhabua)",
-              "Total Branch": "120",
-              "Total Deposit": "358637",
-              "Total Advance": "",
-              "Overall CD Ratio": ""
-            },
-            "Katihar": {
-              "District": "Katihar",
-              "Total Branch": "178",
-              "Total Deposit": "595510",
-              "Total Advance": "291001",
-              "Overall CD Ratio": "48.87"
-            },
-            "Khagaria": {
-              "District": "Khagaria",
-              "Total Branch": "115",
-              "Total Deposit": "317517",
-              "Total Advance": "179993",
-              "Overall CD Ratio": "56.69"
-            },
-            "Kishanganj": {
-              "District": "Kishanganj",
-              "Total Branch": "108",
-              "Total Deposit": "294640",
-              "Total Advance": "177649",
-              "Overall CD Ratio": "60.29"
-            },
-            "Lakhisarai": {
-              "District": "Lakhisarai",
-              "Total Branch": "79",
-              "Total Deposit": "323897",
-              "Total Advance": "107154",
-              "Overall CD Ratio": "33.08"
-            },
-            "Madhepura": {
-              "District": "Madhepura",
-              "Total Branch": "112",
-              "Total Deposit": "322628",
-              "Total Advance": "164719",
-              "Overall CD Ratio": "51.06"
-            },
-            "Madhubani": {
-              "District": "Madhubani",
-              "Total Branch": "274",
-              "Total Deposit": "895963",
-              "Total Advance": "284104",
-              "Overall CD Ratio": "31.71"
-            },
-            "Munger": {
-              "District": "Munger",
-              "Total Branch": "132",
-              "Total Deposit": "693826",
-              "Total Advance": "189023",
-              "Overall CD Ratio": "27.24"
-            },
-            "Muzaffarpur": {
-              "District": "Muzaffarpur",
-              "Total Branch": "381",
-              "Total Deposit": "1770020",
-              "Total Advance": "827631",
-              "Overall CD Ratio": "46.76"
-            },
-            "Nalanda": {
-              "District": "Nalanda",
-              "Total Branch": "249",
-              "Total Deposit": "1004143",
-              "Total Advance": "321701",
-              "Overall CD Ratio": "32.04"
-            },
-            "Nawada": {
-              "District": "Nawada",
-              "Total Branch": "137",
-              "Total Deposit": "500844",
-              "Total Advance": "200249",
-              "Overall CD Ratio": "39.98"
-            },
-            "Patna": {
-              "District": "Patna",
-              "Total Branch": "921",
-              "Total Deposit": "15895121",
-              "Total Advance": "4081274",
-              "Overall CD Ratio": "35.22"
-            },
-            "Purnia": {
-              "District": "Purnia",
-              "Total Branch": "221",
-              "Total Deposit": "642371",
-              "Total Advance": "469145",
-              "Overall CD Ratio": "73.03"
-            },
-            "Rohtas": {
-              "District": "Rohtas",
-              "Total Branch": "226",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": ""
-            },
-            "Saharsa": {
-              "District": "Saharsa",
-              "Total Branch": "102",
-              "Total Deposit": "401650",
-              "Total Advance": "166900",
-              "Overall CD Ratio": "41.55"
-            },
-            "Samastipur": {
-              "District": "Samastipur",
-              "Total Branch": "285",
-              "Total Deposit": "460381",
-              "Total Advance": "",
-              "Overall CD Ratio": "45.81"
-            },
-            "Saran": {
-              "District": "Saran",
-              "Total Branch": "262",
-              "Total Deposit": "347599",
-              "Total Advance": "",
-              "Overall CD Ratio": "26.20"
-            },
-            "Sheikhpura": {
-              "District": "Sheikhpura",
-              "Total Branch": "",
-              "Total Deposit": "70415",
-              "Total Advance": "",
-              "Overall CD Ratio": "39.28"
-            },
-            "Sheohar": {
-              "District": "Sheohar",
-              "Total Branch": "46",
-              "Total Deposit": "44061",
-              "Total Advance": "",
-              "Overall CD Ratio": "53.45"
-            },
-            "Sitamarhi": {
-              "District": "Sitamarhi",
-              "Total Branch": "169",
-              "Total Deposit": "234146",
-              "Total Advance": "",
-              "Overall CD Ratio": "38.92"
-            },
-            "Siwan": {
-              "District": "Siwan",
-              "Total Branch": "242",
-              "Total Deposit": "405177",
-              "Total Advance": "",
-              "Overall CD Ratio": "33.49"
-            },
-            "Supaul": {
-              "District": "Supaul",
-              "Total Branch": "120",
-              "Total Deposit": "170767",
-              "Total Advance": "",
-              "Overall CD Ratio": "46.66"
-            },
-            "Vaishali": {
-              "District": "Vaishali",
-              "Total Branch": "241",
-              "Total Deposit": "527516",
-              "Total Advance": "",
-              "Overall CD Ratio": "52.97"
-            },
-            "Pashchim Champaran": {
-              "District": "Pashchim Champaran",
-              "Total Branch": "205",
-              "Total Deposit": "123431",
-              "Total Advance": "",
-              "Overall CD Ratio": "56.59"
-            }
-          }
-        },
         "npa_position": {
           "fields": [
             "District",
@@ -3127,15 +2856,8 @@
               "Col_1": "0"
             }
           }
-        }
-      }
-    },
-    "2020-09": {
-      "period": "September 2020",
-      "as_on_date": "30-09-2020",
-      "fy": "2020-21",
-      "tables": {
-        "cd_ratio": {
+        },
+        "credit_deposit_ratio": {
           "fields": [
             "District",
             "Total Branch",
@@ -3148,264 +2870,271 @@
             "Araria": {
               "District": "Araria",
               "Total Branch": "156",
-              "Total Deposit": "434482",
-              "Total Advance": "254880",
-              "Overall CD Ratio": "58.66"
+              "Total Deposit": "426343",
+              "Total Advance": "246210",
+              "Overall CD Ratio": "57.75"
             },
             "Arwal": {
               "District": "Arwal",
               "Total Branch": "60",
-              "Total Deposit": "171479",
-              "Total Advance": "49254",
-              "Overall CD Ratio": "28.72"
+              "Total Deposit": "169623",
+              "Total Advance": "48465",
+              "Overall CD Ratio": "28.57"
             },
             "Aurangabad": {
               "District": "Aurangabad",
               "Total Branch": "184",
-              "Total Deposit": "766166",
-              "Total Advance": "341779",
-              "Overall CD Ratio": "44.61"
+              "Total Deposit": "733820",
+              "Total Advance": "329463",
+              "Overall CD Ratio": "44.90"
             },
             "Begusarai": {
               "District": "Begusarai",
-              "Total Branch": "223",
-              "Total Deposit": "877373",
-              "Total Advance": "447645",
-              "Overall CD Ratio": "51.02"
+              "Total Branch": "224",
+              "Total Deposit": "865453",
+              "Total Advance": "442345",
+              "Overall CD Ratio": "51.11"
             },
             "Bhagalpur": {
               "District": "Bhagalpur",
-              "Total Branch": "279",
-              "Total Deposit": "1382230",
-              "Total Advance": "489911",
-              "Overall CD Ratio": "35.44"
+              "Total Branch": "278",
+              "Total Deposit": "1369598",
+              "Total Advance": "494104",
+              "Overall CD Ratio": "36.08"
             },
             "Bhojpur": {
               "District": "Bhojpur",
-              "Total Branch": "233",
-              "Total Deposit": "1141741",
-              "Total Advance": "305285",
-              "Overall CD Ratio": "26.74"
+              "Total Branch": "232",
+              "Total Deposit": "1098995",
+              "Total Advance": "299001",
+              "Overall CD Ratio": "27.21"
             },
             "Buxar": {
               "District": "Buxar",
-              "Total Branch": "154",
-              "Total Deposit": "613471",
-              "Total Advance": "221362",
-              "Overall CD Ratio": "36.08"
+              "Total Branch": "153",
+              "Total Deposit": "587222",
+              "Total Advance": "216502",
+              "Overall CD Ratio": "36.87"
             },
             "Darbhanga": {
               "District": "Darbhanga",
               "Total Branch": "242",
-              "Total Deposit": "1194835",
-              "Total Advance": "379951",
-              "Overall CD Ratio": "31.80"
+              "Total Deposit": "1160550",
+              "Total Advance": "375116",
+              "Overall CD Ratio": "32.32"
             },
             "Purbi Champaran": {
               "District": "Purbi Champaran",
               "Total Branch": "278",
-              "Total Deposit": "983990",
-              "Total Advance": "503983",
-              "Overall CD Ratio": "51.22"
+              "Total Deposit": "984024",
+              "Total Advance": "491471",
+              "Overall CD Ratio": "49.95"
             },
             "Gaya": {
               "District": "Gaya",
-              "Total Branch": "308",
-              "Total Deposit": "1606656",
-              "Total Advance": "606841",
-              "Overall CD Ratio": "37.77"
+              "Total Branch": "305",
+              "Total Deposit": "1558743",
+              "Total Advance": "592242",
+              "Overall CD Ratio": "37.99"
             },
             "Gopalganj": {
               "District": "Gopalganj",
               "Total Branch": "182",
-              "Total Deposit": "828556",
-              "Total Advance": "263241",
-              "Overall CD Ratio": "31.77"
+              "Total Deposit": "798062",
+              "Total Advance": "252152",
+              "Overall CD Ratio": "31.60"
             },
             "Jamui": {
               "District": "Jamui",
               "Total Branch": "116",
-              "Total Deposit": "353908",
-              "Total Advance": "150358",
-              "Overall CD Ratio": "42.49"
+              "Total Deposit": "349189",
+              "Total Advance": "148957",
+              "Overall CD Ratio": "42.66"
             },
             "Jehanabad": {
               "District": "Jehanabad",
               "Total Branch": "95",
-              "Total Deposit": "391255",
-              "Total Advance": "125260",
-              "Overall CD Ratio": "32.01"
+              "Total Deposit": "383245",
+              "Total Advance": "122966",
+              "Overall CD Ratio": ""
             },
             "Kaimur (Bhabua)": {
               "District": "Kaimur (Bhabua)",
-              "Total Branch": "119",
-              "Total Deposit": "360255",
-              "Total Advance": "193476",
-              "Overall CD Ratio": "53.71"
+              "Total Branch": "120",
+              "Total Deposit": "358637",
+              "Total Advance": "",
+              "Overall CD Ratio": ""
             },
             "Katihar": {
               "District": "Katihar",
-              "Total Branch": "179",
-              "Total Deposit": "613186",
-              "Total Advance": "301969",
-              "Overall CD Ratio": "49.25"
+              "Total Branch": "178",
+              "Total Deposit": "595510",
+              "Total Advance": "291001",
+              "Overall CD Ratio": "48.87"
             },
             "Khagaria": {
               "District": "Khagaria",
               "Total Branch": "115",
-              "Total Deposit": "328674",
-              "Total Advance": "184807",
-              "Overall CD Ratio": "56.23"
+              "Total Deposit": "317517",
+              "Total Advance": "179993",
+              "Overall CD Ratio": "56.69"
             },
             "Kishanganj": {
               "District": "Kishanganj",
               "Total Branch": "108",
-              "Total Deposit": "303396",
-              "Total Advance": "183761",
-              "Overall CD Ratio": "60.57"
+              "Total Deposit": "294640",
+              "Total Advance": "177649",
+              "Overall CD Ratio": "60.29"
             },
             "Lakhisarai": {
               "District": "Lakhisarai",
               "Total Branch": "79",
-              "Total Deposit": "301135",
-              "Total Advance": "99336",
-              "Overall CD Ratio": "32.99"
+              "Total Deposit": "323897",
+              "Total Advance": "107154",
+              "Overall CD Ratio": "33.08"
             },
             "Madhepura": {
               "District": "Madhepura",
-              "Total Branch": "111",
-              "Total Deposit": "340299",
-              "Total Advance": "172367",
-              "Overall CD Ratio": "50.65"
+              "Total Branch": "112",
+              "Total Deposit": "322628",
+              "Total Advance": "164719",
+              "Overall CD Ratio": "51.06"
             },
             "Madhubani": {
               "District": "Madhubani",
               "Total Branch": "274",
-              "Total Deposit": "902881",
-              "Total Advance": "292271",
-              "Overall CD Ratio": "32.37"
+              "Total Deposit": "895963",
+              "Total Advance": "284104",
+              "Overall CD Ratio": "31.71"
             },
             "Munger": {
               "District": "Munger",
-              "Total Branch": "130",
-              "Total Deposit": "718125",
-              "Total Advance": "185726",
-              "Overall CD Ratio": "25.86"
+              "Total Branch": "132",
+              "Total Deposit": "693826",
+              "Total Advance": "189023",
+              "Overall CD Ratio": "27.24"
             },
             "Muzaffarpur": {
               "District": "Muzaffarpur",
-              "Total Branch": "380",
-              "Total Deposit": "1838273",
-              "Total Advance": "853943",
-              "Overall CD Ratio": "46.45"
+              "Total Branch": "381",
+              "Total Deposit": "1770020",
+              "Total Advance": "827631",
+              "Overall CD Ratio": "46.76"
             },
             "Nalanda": {
               "District": "Nalanda",
-              "Total Branch": "251",
-              "Total Deposit": "1044547",
-              "Total Advance": "326308",
-              "Overall CD Ratio": "31.24"
+              "Total Branch": "249",
+              "Total Deposit": "1004143",
+              "Total Advance": "321701",
+              "Overall CD Ratio": "32.04"
             },
             "Nawada": {
               "District": "Nawada",
               "Total Branch": "137",
-              "Total Deposit": "510969",
-              "Total Advance": "198276",
-              "Overall CD Ratio": "38.80"
+              "Total Deposit": "500844",
+              "Total Advance": "200249",
+              "Overall CD Ratio": "39.98"
             },
             "Patna": {
               "District": "Patna",
-              "Total Branch": "928",
-              "Total Deposit": "11826506",
-              "Total Advance": "4194974",
-              "Overall CD Ratio": "35.47"
+              "Total Branch": "921",
+              "Total Deposit": "15895121",
+              "Total Advance": "4081274",
+              "Overall CD Ratio": "35.22"
             },
             "Purnia": {
               "District": "Purnia",
-              "Total Branch": "223",
-              "Total Deposit": "664114",
-              "Total Advance": "498576",
-              "Overall CD Ratio": "75.07"
+              "Total Branch": "221",
+              "Total Deposit": "642371",
+              "Total Advance": "469145",
+              "Overall CD Ratio": "73.03"
             },
             "Rohtas": {
               "District": "Rohtas",
-              "Total Branch": "227",
-              "Total Deposit": "946456",
-              "Total Advance": "404386",
-              "Overall CD Ratio": "42.73"
+              "Total Branch": "226",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": ""
             },
             "Saharsa": {
               "District": "Saharsa",
-              "Total Branch": "103",
-              "Total Deposit": "417993",
-              "Total Advance": "173374",
-              "Overall CD Ratio": "41.48"
+              "Total Branch": "102",
+              "Total Deposit": "401650",
+              "Total Advance": "166900",
+              "Overall CD Ratio": "41.55"
             },
             "Samastipur": {
               "District": "Samastipur",
               "Total Branch": "285",
-              "Total Deposit": "1028606",
-              "Total Advance": "478476",
-              "Overall CD Ratio": "46.52"
+              "Total Deposit": "460381",
+              "Total Advance": "",
+              "Overall CD Ratio": "45.81"
             },
             "Saran": {
               "District": "Saran",
-              "Total Branch": "260",
-              "Total Deposit": "1366991",
-              "Total Advance": "356073",
-              "Overall CD Ratio": "26.05"
+              "Total Branch": "262",
+              "Total Deposit": "347599",
+              "Total Advance": "",
+              "Overall CD Ratio": "26.20"
             },
             "Sheikhpura": {
               "District": "Sheikhpura",
-              "Total Branch": "61",
-              "Total Deposit": "185029",
-              "Total Advance": "72153",
-              "Overall CD Ratio": "39.00"
+              "Total Branch": "",
+              "Total Deposit": "70415",
+              "Total Advance": "",
+              "Overall CD Ratio": "39.28"
             },
             "Sheohar": {
               "District": "Sheohar",
-              "Total Branch": "45",
-              "Total Deposit": "19441",
-              "Total Advance": "50146",
-              "Overall CD Ratio": "53.11"
+              "Total Branch": "46",
+              "Total Deposit": "44061",
+              "Total Advance": "",
+              "Overall CD Ratio": "53.45"
             },
             "Sitamarhi": {
               "District": "Sitamarhi",
-              "Total Branch": "171",
-              "Total Deposit": "606845",
-              "Total Advance": "239012",
-              "Overall CD Ratio": "39.39"
+              "Total Branch": "169",
+              "Total Deposit": "234146",
+              "Total Advance": "",
+              "Overall CD Ratio": "38.92"
             },
             "Siwan": {
               "District": "Siwan",
               "Total Branch": "242",
-              "Total Deposit": "1246916",
-              "Total Advance": "402880",
-              "Overall CD Ratio": "32.31"
+              "Total Deposit": "405177",
+              "Total Advance": "",
+              "Overall CD Ratio": "33.49"
             },
             "Supaul": {
               "District": "Supaul",
-              "Total Branch": "119",
-              "Total Deposit": "380789",
-              "Total Advance": "177881",
-              "Overall CD Ratio": "46.71"
+              "Total Branch": "120",
+              "Total Deposit": "170767",
+              "Total Advance": "",
+              "Overall CD Ratio": "46.66"
             },
             "Vaishali": {
               "District": "Vaishali",
-              "Total Branch": "243",
-              "Total Deposit": "1020433",
-              "Total Advance": "517286",
-              "Overall CD Ratio": "50.69"
+              "Total Branch": "241",
+              "Total Deposit": "527516",
+              "Total Advance": "",
+              "Overall CD Ratio": "52.97"
             },
             "Pashchim Champaran": {
               "District": "Pashchim Champaran",
-              "Total Branch": "206",
-              "Total Deposit": "621507",
-              "Total Advance": "345411",
-              "Overall CD Ratio": "55.58"
+              "Total Branch": "205",
+              "Total Deposit": "123431",
+              "Total Advance": "",
+              "Overall CD Ratio": "56.59"
             }
           }
-        },
+        }
+      }
+    },
+    "2020-09": {
+      "period": "September 2020",
+      "as_on_date": "30-09-2020",
+      "fy": "2020-21",
+      "tables": {
         "branch_network": {
           "fields": [
             "District",
@@ -3909,15 +3638,8 @@
               "Col_2": "122"
             }
           }
-        }
-      }
-    },
-    "2020-12": {
-      "period": "December 2020",
-      "as_on_date": "31-12-2020",
-      "fy": "2020-21",
-      "tables": {
-        "cd_ratio": {
+        },
+        "credit_deposit_ratio": {
           "fields": [
             "District",
             "Total Branch",
@@ -3929,265 +3651,272 @@
           "districts": {
             "Araria": {
               "District": "Araria",
-              "Total Branch": "155",
-              "Total Deposit": "425144",
-              "Total Advance": "",
-              "Overall CD Ratio": "62.21"
+              "Total Branch": "156",
+              "Total Deposit": "434482",
+              "Total Advance": "254880",
+              "Overall CD Ratio": "58.66"
             },
             "Arwal": {
               "District": "Arwal",
               "Total Branch": "60",
-              "Total Deposit": "167244",
-              "Total Advance": "",
-              "Overall CD Ratio": "31.51"
+              "Total Deposit": "171479",
+              "Total Advance": "49254",
+              "Overall CD Ratio": "28.72"
             },
             "Aurangabad": {
               "District": "Aurangabad",
-              "Total Branch": "185",
-              "Total Deposit": "745973",
-              "Total Advance": "",
-              "Overall CD Ratio": "47.64"
+              "Total Branch": "184",
+              "Total Deposit": "766166",
+              "Total Advance": "341779",
+              "Overall CD Ratio": "44.61"
             },
             "Begusarai": {
               "District": "Begusarai",
               "Total Branch": "223",
-              "Total Deposit": "863388",
-              "Total Advance": "",
-              "Overall CD Ratio": "54.12"
+              "Total Deposit": "877373",
+              "Total Advance": "447645",
+              "Overall CD Ratio": "51.02"
             },
             "Bhagalpur": {
               "District": "Bhagalpur",
-              "Total Branch": "276",
-              "Total Deposit": "1386076",
-              "Total Advance": "",
-              "Overall CD Ratio": "36.50"
+              "Total Branch": "279",
+              "Total Deposit": "1382230",
+              "Total Advance": "489911",
+              "Overall CD Ratio": "35.44"
             },
             "Bhojpur": {
               "District": "Bhojpur",
               "Total Branch": "233",
-              "Total Deposit": "1116301",
-              "Total Advance": "",
-              "Overall CD Ratio": "29.47"
+              "Total Deposit": "1141741",
+              "Total Advance": "305285",
+              "Overall CD Ratio": "26.74"
             },
             "Buxar": {
               "District": "Buxar",
               "Total Branch": "154",
-              "Total Deposit": "602584",
-              "Total Advance": "",
-              "Overall CD Ratio": "37.69"
+              "Total Deposit": "613471",
+              "Total Advance": "221362",
+              "Overall CD Ratio": "36.08"
             },
             "Darbhanga": {
               "District": "Darbhanga",
-              "Total Branch": "244",
-              "Total Deposit": "1180970",
-              "Total Advance": "",
-              "Overall CD Ratio": "34.31"
+              "Total Branch": "242",
+              "Total Deposit": "1194835",
+              "Total Advance": "379951",
+              "Overall CD Ratio": "31.80"
             },
             "Purbi Champaran": {
               "District": "Purbi Champaran",
               "Total Branch": "278",
-              "Total Deposit": "948698",
-              "Total Advance": "",
-              "Overall CD Ratio": "55.14"
+              "Total Deposit": "983990",
+              "Total Advance": "503983",
+              "Overall CD Ratio": "51.22"
             },
             "Gaya": {
               "District": "Gaya",
-              "Total Branch": "306",
-              "Total Deposit": "1605716",
-              "Total Advance": "",
-              "Overall CD Ratio": "38.98"
+              "Total Branch": "308",
+              "Total Deposit": "1606656",
+              "Total Advance": "606841",
+              "Overall CD Ratio": "37.77"
             },
             "Gopalganj": {
               "District": "Gopalganj",
-              "Total Branch": "183",
-              "Total Deposit": "798856",
-              "Total Advance": "",
-              "Overall CD Ratio": "33.70"
+              "Total Branch": "182",
+              "Total Deposit": "828556",
+              "Total Advance": "263241",
+              "Overall CD Ratio": "31.77"
             },
             "Jamui": {
               "District": "Jamui",
               "Total Branch": "116",
-              "Total Deposit": "400698",
-              "Total Advance": "",
-              "Overall CD Ratio": "44.96"
+              "Total Deposit": "353908",
+              "Total Advance": "150358",
+              "Overall CD Ratio": "42.49"
             },
             "Jehanabad": {
               "District": "Jehanabad",
               "Total Branch": "95",
-              "Total Deposit": "344254",
-              "Total Advance": "",
-              "Overall CD Ratio": "31.04"
+              "Total Deposit": "391255",
+              "Total Advance": "125260",
+              "Overall CD Ratio": "32.01"
             },
             "Kaimur (Bhabua)": {
               "District": "Kaimur (Bhabua)",
               "Total Branch": "119",
-              "Total Deposit": "351075",
-              "Total Advance": "",
-              "Overall CD Ratio": "55.49"
+              "Total Deposit": "360255",
+              "Total Advance": "193476",
+              "Overall CD Ratio": "53.71"
             },
             "Katihar": {
               "District": "Katihar",
               "Total Branch": "179",
-              "Total Deposit": "598718",
-              "Total Advance": "",
-              "Overall CD Ratio": "52.03"
+              "Total Deposit": "613186",
+              "Total Advance": "301969",
+              "Overall CD Ratio": "49.25"
             },
             "Khagaria": {
               "District": "Khagaria",
-              "Total Branch": "114",
-              "Total Deposit": "326730",
-              "Total Advance": "",
-              "Overall CD Ratio": "56.38"
+              "Total Branch": "115",
+              "Total Deposit": "328674",
+              "Total Advance": "184807",
+              "Overall CD Ratio": "56.23"
             },
             "Kishanganj": {
               "District": "Kishanganj",
-              "Total Branch": "106",
-              "Total Deposit": "301956",
-              "Total Advance": "",
-              "Overall CD Ratio": "61.93"
+              "Total Branch": "108",
+              "Total Deposit": "303396",
+              "Total Advance": "183761",
+              "Overall CD Ratio": "60.57"
             },
             "Lakhisarai": {
               "District": "Lakhisarai",
               "Total Branch": "79",
-              "Total Deposit": "299616",
-              "Total Advance": "",
-              "Overall CD Ratio": "34.56"
+              "Total Deposit": "301135",
+              "Total Advance": "99336",
+              "Overall CD Ratio": "32.99"
             },
             "Madhepura": {
               "District": "Madhepura",
               "Total Branch": "111",
-              "Total Deposit": "332591",
-              "Total Advance": "",
-              "Overall CD Ratio": "52.51"
+              "Total Deposit": "340299",
+              "Total Advance": "172367",
+              "Overall CD Ratio": "50.65"
             },
             "Madhubani": {
               "District": "Madhubani",
-              "Total Branch": "271",
-              "Total Deposit": "883205",
-              "Total Advance": "",
-              "Overall CD Ratio": ""
+              "Total Branch": "274",
+              "Total Deposit": "902881",
+              "Total Advance": "292271",
+              "Overall CD Ratio": "32.37"
             },
             "Munger": {
               "District": "Munger",
-              "Total Branch": "129",
-              "Total Deposit": "713814",
-              "Total Advance": "",
-              "Overall CD Ratio": "26.90"
+              "Total Branch": "130",
+              "Total Deposit": "718125",
+              "Total Advance": "185726",
+              "Overall CD Ratio": "25.86"
             },
             "Muzaffarpur": {
               "District": "Muzaffarpur",
-              "Total Branch": "379",
-              "Total Deposit": "1840303",
-              "Total Advance": "",
-              "Overall CD Ratio": "47.79"
+              "Total Branch": "380",
+              "Total Deposit": "1838273",
+              "Total Advance": "853943",
+              "Overall CD Ratio": "46.45"
             },
             "Nalanda": {
               "District": "Nalanda",
               "Total Branch": "251",
-              "Total Deposit": "1040106",
-              "Total Advance": "",
-              "Overall CD Ratio": "32.62"
+              "Total Deposit": "1044547",
+              "Total Advance": "326308",
+              "Overall CD Ratio": "31.24"
             },
             "Nawada": {
               "District": "Nawada",
               "Total Branch": "137",
-              "Total Deposit": "499893",
-              "Total Advance": "",
-              "Overall CD Ratio": "39.76"
+              "Total Deposit": "510969",
+              "Total Advance": "198276",
+              "Overall CD Ratio": "38.80"
             },
             "Patna": {
               "District": "Patna",
-              "Total Branch": "925",
-              "Total Deposit": "11936981",
-              "Total Advance": "",
-              "Overall CD Ratio": "36.81"
+              "Total Branch": "928",
+              "Total Deposit": "11826506",
+              "Total Advance": "4194974",
+              "Overall CD Ratio": "35.47"
             },
             "Purnia": {
               "District": "Purnia",
-              "Total Branch": "221",
-              "Total Deposit": "649495",
-              "Total Advance": "",
-              "Overall CD Ratio": "79.43"
+              "Total Branch": "223",
+              "Total Deposit": "664114",
+              "Total Advance": "498576",
+              "Overall CD Ratio": "75.07"
             },
             "Rohtas": {
               "District": "Rohtas",
-              "Total Branch": "226",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "44.45"
+              "Total Branch": "227",
+              "Total Deposit": "946456",
+              "Total Advance": "404386",
+              "Overall CD Ratio": "42.73"
             },
             "Saharsa": {
               "District": "Saharsa",
-              "Total Branch": "101",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "44.08"
+              "Total Branch": "103",
+              "Total Deposit": "417993",
+              "Total Advance": "173374",
+              "Overall CD Ratio": "41.48"
             },
             "Samastipur": {
               "District": "Samastipur",
-              "Total Branch": "283",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "48.60"
+              "Total Branch": "285",
+              "Total Deposit": "1028606",
+              "Total Advance": "478476",
+              "Overall CD Ratio": "46.52"
             },
             "Saran": {
               "District": "Saran",
-              "Total Branch": "259",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "28.37"
+              "Total Branch": "260",
+              "Total Deposit": "1366991",
+              "Total Advance": "356073",
+              "Overall CD Ratio": "26.05"
             },
             "Sheikhpura": {
               "District": "Sheikhpura",
               "Total Branch": "61",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "34.49"
+              "Total Deposit": "185029",
+              "Total Advance": "72153",
+              "Overall CD Ratio": "39.00"
             },
             "Sheohar": {
               "District": "Sheohar",
               "Total Branch": "45",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "57.81"
+              "Total Deposit": "19441",
+              "Total Advance": "50146",
+              "Overall CD Ratio": "53.11"
             },
             "Sitamarhi": {
               "District": "Sitamarhi",
-              "Total Branch": "172",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "41.83"
+              "Total Branch": "171",
+              "Total Deposit": "606845",
+              "Total Advance": "239012",
+              "Overall CD Ratio": "39.39"
             },
             "Siwan": {
               "District": "Siwan",
-              "Total Branch": "244",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "33.88"
+              "Total Branch": "242",
+              "Total Deposit": "1246916",
+              "Total Advance": "402880",
+              "Overall CD Ratio": "32.31"
             },
             "Supaul": {
               "District": "Supaul",
               "Total Branch": "119",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "49.05"
+              "Total Deposit": "380789",
+              "Total Advance": "177881",
+              "Overall CD Ratio": "46.71"
             },
             "Vaishali": {
               "District": "Vaishali",
-              "Total Branch": "242",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "52.19"
+              "Total Branch": "243",
+              "Total Deposit": "1020433",
+              "Total Advance": "517286",
+              "Overall CD Ratio": "50.69"
             },
             "Pashchim Champaran": {
               "District": "Pashchim Champaran",
-              "Total Branch": "205",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "59.70"
+              "Total Branch": "206",
+              "Total Deposit": "621507",
+              "Total Advance": "345411",
+              "Overall CD Ratio": "55.58"
             }
           }
-        },
+        }
+      }
+    },
+    "2020-12": {
+      "period": "December 2020",
+      "as_on_date": "31-12-2020",
+      "fy": "2020-21",
+      "tables": {
         "branch_network": {
           "fields": [
             "District",
@@ -5060,6 +4789,277 @@
               "Col_1": "2163135"
             }
           }
+        },
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "Total Branch",
+            "Total Deposit",
+            "Total Advance",
+            "Overall CD Ratio"
+          ],
+          "num_districts": 37,
+          "districts": {
+            "Araria": {
+              "District": "Araria",
+              "Total Branch": "155",
+              "Total Deposit": "425144",
+              "Total Advance": "",
+              "Overall CD Ratio": "62.21"
+            },
+            "Arwal": {
+              "District": "Arwal",
+              "Total Branch": "60",
+              "Total Deposit": "167244",
+              "Total Advance": "",
+              "Overall CD Ratio": "31.51"
+            },
+            "Aurangabad": {
+              "District": "Aurangabad",
+              "Total Branch": "185",
+              "Total Deposit": "745973",
+              "Total Advance": "",
+              "Overall CD Ratio": "47.64"
+            },
+            "Begusarai": {
+              "District": "Begusarai",
+              "Total Branch": "223",
+              "Total Deposit": "863388",
+              "Total Advance": "",
+              "Overall CD Ratio": "54.12"
+            },
+            "Bhagalpur": {
+              "District": "Bhagalpur",
+              "Total Branch": "276",
+              "Total Deposit": "1386076",
+              "Total Advance": "",
+              "Overall CD Ratio": "36.50"
+            },
+            "Bhojpur": {
+              "District": "Bhojpur",
+              "Total Branch": "233",
+              "Total Deposit": "1116301",
+              "Total Advance": "",
+              "Overall CD Ratio": "29.47"
+            },
+            "Buxar": {
+              "District": "Buxar",
+              "Total Branch": "154",
+              "Total Deposit": "602584",
+              "Total Advance": "",
+              "Overall CD Ratio": "37.69"
+            },
+            "Darbhanga": {
+              "District": "Darbhanga",
+              "Total Branch": "244",
+              "Total Deposit": "1180970",
+              "Total Advance": "",
+              "Overall CD Ratio": "34.31"
+            },
+            "Purbi Champaran": {
+              "District": "Purbi Champaran",
+              "Total Branch": "278",
+              "Total Deposit": "948698",
+              "Total Advance": "",
+              "Overall CD Ratio": "55.14"
+            },
+            "Gaya": {
+              "District": "Gaya",
+              "Total Branch": "306",
+              "Total Deposit": "1605716",
+              "Total Advance": "",
+              "Overall CD Ratio": "38.98"
+            },
+            "Gopalganj": {
+              "District": "Gopalganj",
+              "Total Branch": "183",
+              "Total Deposit": "798856",
+              "Total Advance": "",
+              "Overall CD Ratio": "33.70"
+            },
+            "Jamui": {
+              "District": "Jamui",
+              "Total Branch": "116",
+              "Total Deposit": "400698",
+              "Total Advance": "",
+              "Overall CD Ratio": "44.96"
+            },
+            "Jehanabad": {
+              "District": "Jehanabad",
+              "Total Branch": "95",
+              "Total Deposit": "344254",
+              "Total Advance": "",
+              "Overall CD Ratio": "31.04"
+            },
+            "Kaimur (Bhabua)": {
+              "District": "Kaimur (Bhabua)",
+              "Total Branch": "119",
+              "Total Deposit": "351075",
+              "Total Advance": "",
+              "Overall CD Ratio": "55.49"
+            },
+            "Katihar": {
+              "District": "Katihar",
+              "Total Branch": "179",
+              "Total Deposit": "598718",
+              "Total Advance": "",
+              "Overall CD Ratio": "52.03"
+            },
+            "Khagaria": {
+              "District": "Khagaria",
+              "Total Branch": "114",
+              "Total Deposit": "326730",
+              "Total Advance": "",
+              "Overall CD Ratio": "56.38"
+            },
+            "Kishanganj": {
+              "District": "Kishanganj",
+              "Total Branch": "106",
+              "Total Deposit": "301956",
+              "Total Advance": "",
+              "Overall CD Ratio": "61.93"
+            },
+            "Lakhisarai": {
+              "District": "Lakhisarai",
+              "Total Branch": "79",
+              "Total Deposit": "299616",
+              "Total Advance": "",
+              "Overall CD Ratio": "34.56"
+            },
+            "Madhepura": {
+              "District": "Madhepura",
+              "Total Branch": "111",
+              "Total Deposit": "332591",
+              "Total Advance": "",
+              "Overall CD Ratio": "52.51"
+            },
+            "Madhubani": {
+              "District": "Madhubani",
+              "Total Branch": "271",
+              "Total Deposit": "883205",
+              "Total Advance": "",
+              "Overall CD Ratio": ""
+            },
+            "Munger": {
+              "District": "Munger",
+              "Total Branch": "129",
+              "Total Deposit": "713814",
+              "Total Advance": "",
+              "Overall CD Ratio": "26.90"
+            },
+            "Muzaffarpur": {
+              "District": "Muzaffarpur",
+              "Total Branch": "379",
+              "Total Deposit": "1840303",
+              "Total Advance": "",
+              "Overall CD Ratio": "47.79"
+            },
+            "Nalanda": {
+              "District": "Nalanda",
+              "Total Branch": "251",
+              "Total Deposit": "1040106",
+              "Total Advance": "",
+              "Overall CD Ratio": "32.62"
+            },
+            "Nawada": {
+              "District": "Nawada",
+              "Total Branch": "137",
+              "Total Deposit": "499893",
+              "Total Advance": "",
+              "Overall CD Ratio": "39.76"
+            },
+            "Patna": {
+              "District": "Patna",
+              "Total Branch": "925",
+              "Total Deposit": "11936981",
+              "Total Advance": "",
+              "Overall CD Ratio": "36.81"
+            },
+            "Purnia": {
+              "District": "Purnia",
+              "Total Branch": "221",
+              "Total Deposit": "649495",
+              "Total Advance": "",
+              "Overall CD Ratio": "79.43"
+            },
+            "Rohtas": {
+              "District": "Rohtas",
+              "Total Branch": "226",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "44.45"
+            },
+            "Saharsa": {
+              "District": "Saharsa",
+              "Total Branch": "101",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "44.08"
+            },
+            "Samastipur": {
+              "District": "Samastipur",
+              "Total Branch": "283",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "48.60"
+            },
+            "Saran": {
+              "District": "Saran",
+              "Total Branch": "259",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "28.37"
+            },
+            "Sheikhpura": {
+              "District": "Sheikhpura",
+              "Total Branch": "61",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "34.49"
+            },
+            "Sheohar": {
+              "District": "Sheohar",
+              "Total Branch": "45",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "57.81"
+            },
+            "Sitamarhi": {
+              "District": "Sitamarhi",
+              "Total Branch": "172",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "41.83"
+            },
+            "Siwan": {
+              "District": "Siwan",
+              "Total Branch": "244",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "33.88"
+            },
+            "Supaul": {
+              "District": "Supaul",
+              "Total Branch": "119",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "49.05"
+            },
+            "Vaishali": {
+              "District": "Vaishali",
+              "Total Branch": "242",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "52.19"
+            },
+            "Pashchim Champaran": {
+              "District": "Pashchim Champaran",
+              "Total Branch": "205",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "59.70"
+            }
+          }
         }
       }
     },
@@ -5068,130 +5068,6 @@
       "as_on_date": "31-03-2021",
       "fy": "2020-21",
       "tables": {
-        "cd_ratio": {
-          "fields": [
-            "District",
-            "Total Branch",
-            "Total Deposit",
-            "Total Advance",
-            "Overall CD Ratio"
-          ],
-          "num_districts": 16,
-          "districts": {
-            "Munger": {
-              "District": "Munger",
-              "Total Branch": "",
-              "Total Deposit": "7403",
-              "Total Advance": "2048",
-              "Overall CD Ratio": "27.67"
-            },
-            "Jehanabad": {
-              "District": "Jehanabad",
-              "Total Branch": "",
-              "Total Deposit": "3590",
-              "Total Advance": "1044",
-              "Overall CD Ratio": ""
-            },
-            "Arwal": {
-              "District": "Arwal",
-              "Total Branch": "1995",
-              "Total Deposit": "582",
-              "Total Advance": "",
-              "Overall CD Ratio": ""
-            },
-            "Bhojpur": {
-              "District": "Bhojpur",
-              "Total Branch": "",
-              "Total Deposit": "15191",
-              "Total Advance": "",
-              "Overall CD Ratio": "29.61"
-            },
-            "Saran": {
-              "District": "Saran",
-              "Total Branch": "",
-              "Total Deposit": "13076",
-              "Total Advance": "3989",
-              "Overall CD Ratio": ""
-            },
-            "Nalanda": {
-              "District": "Nalanda",
-              "Total Branch": "",
-              "Total Deposit": "10559",
-              "Total Advance": "3495",
-              "Overall CD Ratio": ""
-            },
-            "Gopalganj": {
-              "District": "Gopalganj",
-              "Total Branch": "",
-              "Total Deposit": "2672",
-              "Total Advance": "",
-              "Overall CD Ratio": ""
-            },
-            "Darbhanga": {
-              "District": "Darbhanga",
-              "Total Branch": "",
-              "Total Deposit": "18991",
-              "Total Advance": "4141",
-              "Overall CD Ratio": ""
-            },
-            "Siwan": {
-              "District": "Siwan",
-              "Total Branch": "",
-              "Total Deposit": "12309",
-              "Total Advance": "4320",
-              "Overall CD Ratio": "35.10"
-            },
-            "Aurangabad": {
-              "District": "Aurangabad",
-              "Total Branch": "",
-              "Total Deposit": "8246",
-              "Total Advance": "2914",
-              "Overall CD Ratio": "35.34"
-            },
-            "Lakhisarai": {
-              "District": "Lakhisarai",
-              "Total Branch": "",
-              "Total Deposit": "3244",
-              "Total Advance": "1841",
-              "Overall CD Ratio": "36.51"
-            },
-            "Bhagalpur": {
-              "District": "Bhagalpur",
-              "Total Branch": "",
-              "Total Deposit": "13995",
-              "Total Advance": "5238",
-              "Overall CD Ratio": "37.43"
-            },
-            "Buxar": {
-              "District": "Buxar",
-              "Total Branch": "",
-              "Total Deposit": "6208",
-              "Total Advance": "2325",
-              "Overall CD Ratio": "37.45"
-            },
-            "Sheikhpura": {
-              "District": "Sheikhpura",
-              "Total Branch": "",
-              "Total Deposit": "2251",
-              "Total Advance": "849",
-              "Overall CD Ratio": "37.73"
-            },
-            "Gaya": {
-              "District": "Gaya",
-              "Total Branch": "",
-              "Total Deposit": "16248",
-              "Total Advance": "6351",
-              "Overall CD Ratio": "39.09"
-            },
-            "Madhubani": {
-              "District": "Madhubani",
-              "Total Branch": "",
-              "Total Deposit": "8245",
-              "Total Advance": "3233",
-              "Overall CD Ratio": "39.21"
-            }
-          }
-        },
         "branch_network": {
           "fields": [
             "District",
@@ -5701,6 +5577,130 @@
               "Col_3": "118"
             }
           }
+        },
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "Total Branch",
+            "Total Deposit",
+            "Total Advance",
+            "Overall CD Ratio"
+          ],
+          "num_districts": 16,
+          "districts": {
+            "Munger": {
+              "District": "Munger",
+              "Total Branch": "",
+              "Total Deposit": "7403",
+              "Total Advance": "2048",
+              "Overall CD Ratio": "27.67"
+            },
+            "Jehanabad": {
+              "District": "Jehanabad",
+              "Total Branch": "",
+              "Total Deposit": "3590",
+              "Total Advance": "1044",
+              "Overall CD Ratio": ""
+            },
+            "Arwal": {
+              "District": "Arwal",
+              "Total Branch": "1995",
+              "Total Deposit": "582",
+              "Total Advance": "",
+              "Overall CD Ratio": ""
+            },
+            "Bhojpur": {
+              "District": "Bhojpur",
+              "Total Branch": "",
+              "Total Deposit": "15191",
+              "Total Advance": "",
+              "Overall CD Ratio": "29.61"
+            },
+            "Saran": {
+              "District": "Saran",
+              "Total Branch": "",
+              "Total Deposit": "13076",
+              "Total Advance": "3989",
+              "Overall CD Ratio": ""
+            },
+            "Nalanda": {
+              "District": "Nalanda",
+              "Total Branch": "",
+              "Total Deposit": "10559",
+              "Total Advance": "3495",
+              "Overall CD Ratio": ""
+            },
+            "Gopalganj": {
+              "District": "Gopalganj",
+              "Total Branch": "",
+              "Total Deposit": "2672",
+              "Total Advance": "",
+              "Overall CD Ratio": ""
+            },
+            "Darbhanga": {
+              "District": "Darbhanga",
+              "Total Branch": "",
+              "Total Deposit": "18991",
+              "Total Advance": "4141",
+              "Overall CD Ratio": ""
+            },
+            "Siwan": {
+              "District": "Siwan",
+              "Total Branch": "",
+              "Total Deposit": "12309",
+              "Total Advance": "4320",
+              "Overall CD Ratio": "35.10"
+            },
+            "Aurangabad": {
+              "District": "Aurangabad",
+              "Total Branch": "",
+              "Total Deposit": "8246",
+              "Total Advance": "2914",
+              "Overall CD Ratio": "35.34"
+            },
+            "Lakhisarai": {
+              "District": "Lakhisarai",
+              "Total Branch": "",
+              "Total Deposit": "3244",
+              "Total Advance": "1841",
+              "Overall CD Ratio": "36.51"
+            },
+            "Bhagalpur": {
+              "District": "Bhagalpur",
+              "Total Branch": "",
+              "Total Deposit": "13995",
+              "Total Advance": "5238",
+              "Overall CD Ratio": "37.43"
+            },
+            "Buxar": {
+              "District": "Buxar",
+              "Total Branch": "",
+              "Total Deposit": "6208",
+              "Total Advance": "2325",
+              "Overall CD Ratio": "37.45"
+            },
+            "Sheikhpura": {
+              "District": "Sheikhpura",
+              "Total Branch": "",
+              "Total Deposit": "2251",
+              "Total Advance": "849",
+              "Overall CD Ratio": "37.73"
+            },
+            "Gaya": {
+              "District": "Gaya",
+              "Total Branch": "",
+              "Total Deposit": "16248",
+              "Total Advance": "6351",
+              "Overall CD Ratio": "39.09"
+            },
+            "Madhubani": {
+              "District": "Madhubani",
+              "Total Branch": "",
+              "Total Deposit": "8245",
+              "Total Advance": "3233",
+              "Overall CD Ratio": "39.21"
+            }
+          }
         }
       }
     },
@@ -5709,207 +5709,6 @@
       "as_on_date": "30-06-2021",
       "fy": "2021-22",
       "tables": {
-        "cd_ratio": {
-          "fields": [
-            "District",
-            "Total Branch",
-            "Total Deposit",
-            "Total Advance",
-            "Overall CD Ratio"
-          ],
-          "num_districts": 27,
-          "districts": {
-            "Araria": {
-              "District": "Araria",
-              "Total Branch": "161",
-              "Total Deposit": "278767",
-              "Total Advance": "",
-              "Overall CD Ratio": "55.37"
-            },
-            "Arwal": {
-              "District": "Arwal",
-              "Total Branch": "",
-              "Total Deposit": "58192",
-              "Total Advance": "",
-              "Overall CD Ratio": "29.17"
-            },
-            "Aurangabad": {
-              "District": "Aurangabad",
-              "Total Branch": "",
-              "Total Deposit": "291405",
-              "Total Advance": "",
-              "Overall CD Ratio": "35.34"
-            },
-            "Begusarai": {
-              "District": "Begusarai",
-              "Total Branch": "",
-              "Total Deposit": "528372",
-              "Total Advance": "",
-              "Overall CD Ratio": "57.36"
-            },
-            "Bhagalpur": {
-              "District": "Bhagalpur",
-              "Total Branch": "",
-              "Total Deposit": "523801",
-              "Total Advance": "",
-              "Overall CD Ratio": "37.43"
-            },
-            "Buxar": {
-              "District": "Buxar",
-              "Total Branch": "",
-              "Total Deposit": "2001018",
-              "Total Advance": "620808",
-              "Overall CD Ratio": ""
-            },
-            "Purbi Champaran": {
-              "District": "Purbi Champaran",
-              "Total Branch": "",
-              "Total Deposit": "948085",
-              "Total Advance": "540812",
-              "Overall CD Ratio": "57.04"
-            },
-            "Gaya": {
-              "District": "Gaya",
-              "Total Branch": "",
-              "Total Deposit": "1624750",
-              "Total Advance": "635133",
-              "Overall CD Ratio": ""
-            },
-            "Gopalganj": {
-              "District": "Gopalganj",
-              "Total Branch": "",
-              "Total Deposit": "778078",
-              "Total Advance": "267225",
-              "Overall CD Ratio": "34.34"
-            },
-            "Jamui": {
-              "District": "Jamui",
-              "Total Branch": "",
-              "Total Deposit": "427964",
-              "Total Advance": "190806",
-              "Overall CD Ratio": "44.58"
-            },
-            "Jehanabad": {
-              "District": "Jehanabad",
-              "Total Branch": "",
-              "Total Deposit": "104358",
-              "Total Advance": "",
-              "Overall CD Ratio": "29.07"
-            },
-            "Kaimur (Bhabua)": {
-              "District": "Kaimur (Bhabua)",
-              "Total Branch": "",
-              "Total Deposit": "230544",
-              "Total Advance": "",
-              "Overall CD Ratio": "55.39"
-            },
-            "Katihar": {
-              "District": "Katihar",
-              "Total Branch": "",
-              "Total Deposit": "328155",
-              "Total Advance": "",
-              "Overall CD Ratio": "53.15"
-            },
-            "Khagaria": {
-              "District": "Khagaria",
-              "Total Branch": "",
-              "Total Deposit": "187201",
-              "Total Advance": "",
-              "Overall CD Ratio": "55.48"
-            },
-            "Kishanganj": {
-              "District": "Kishanganj",
-              "Total Branch": "",
-              "Total Deposit": "192000",
-              "Total Advance": "",
-              "Overall CD Ratio": "61.71"
-            },
-            "Lakhisarai": {
-              "District": "Lakhisarai",
-              "Total Branch": "",
-              "Total Deposit": "118434",
-              "Total Advance": "",
-              "Overall CD Ratio": "36.51"
-            },
-            "Madhepura": {
-              "District": "Madhepura",
-              "Total Branch": "",
-              "Total Deposit": "199298",
-              "Total Advance": "",
-              "Overall CD Ratio": "51.86"
-            },
-            "Nalanda": {
-              "District": "Nalanda",
-              "Total Branch": "",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "33.10"
-            },
-            "Saharsa": {
-              "District": "Saharsa",
-              "Total Branch": "",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "44.89"
-            },
-            "Samastipur": {
-              "District": "Samastipur",
-              "Total Branch": "",
-              "Total Deposit": "1014591",
-              "Total Advance": "",
-              "Overall CD Ratio": "48.67"
-            },
-            "Saran": {
-              "District": "Saran",
-              "Total Branch": "",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "30.50"
-            },
-            "Sheikhpura": {
-              "District": "Sheikhpura",
-              "Total Branch": "",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "37.73"
-            },
-            "Sheohar": {
-              "District": "Sheohar",
-              "Total Branch": "",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "56.49"
-            },
-            "Sitamarhi": {
-              "District": "Sitamarhi",
-              "Total Branch": "",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": "44.75"
-            },
-            "Siwan": {
-              "District": "Siwan",
-              "Total Branch": "",
-              "Total Deposit": "10108",
-              "Total Advance": "",
-              "Overall CD Ratio": "35.10"
-            },
-            "Vaishali": {
-              "District": "Vaishali",
-              "Total Branch": "",
-              "Total Deposit": "957013",
-              "Total Advance": "546955",
-              "Overall CD Ratio": "57.15"
-            },
-            "Pashchim Champaran": {
-              "District": "Pashchim Champaran",
-              "Total Branch": "",
-              "Total Deposit": "745433",
-              "Total Advance": "388702",
-              "Overall CD Ratio": "52.14"
-            }
-          }
-        },
         "branch_network": {
           "fields": [
             "District",
@@ -5922,7 +5721,7 @@
             "Col_7",
             "Col_8",
             "Col_9",
-            "Col_10"
+            "Col"
           ],
           "num_districts": 18,
           "districts": {
@@ -5937,7 +5736,7 @@
               "Col_7": "10",
               "Col_8": "95",
               "Col_9": "1563796",
-              "Col_10": "727"
+              "Col": "727"
             },
             "Arwal": {
               "District": "Arwal",
@@ -6427,6 +6226,207 @@
               "Col_5": "1089322"
             }
           }
+        },
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "Total Branch",
+            "Total Deposit",
+            "Total Advance",
+            "Overall CD Ratio"
+          ],
+          "num_districts": 27,
+          "districts": {
+            "Araria": {
+              "District": "Araria",
+              "Total Branch": "161",
+              "Total Deposit": "278767",
+              "Total Advance": "",
+              "Overall CD Ratio": "55.37"
+            },
+            "Arwal": {
+              "District": "Arwal",
+              "Total Branch": "",
+              "Total Deposit": "58192",
+              "Total Advance": "",
+              "Overall CD Ratio": "29.17"
+            },
+            "Aurangabad": {
+              "District": "Aurangabad",
+              "Total Branch": "",
+              "Total Deposit": "291405",
+              "Total Advance": "",
+              "Overall CD Ratio": "35.34"
+            },
+            "Begusarai": {
+              "District": "Begusarai",
+              "Total Branch": "",
+              "Total Deposit": "528372",
+              "Total Advance": "",
+              "Overall CD Ratio": "57.36"
+            },
+            "Bhagalpur": {
+              "District": "Bhagalpur",
+              "Total Branch": "",
+              "Total Deposit": "523801",
+              "Total Advance": "",
+              "Overall CD Ratio": "37.43"
+            },
+            "Buxar": {
+              "District": "Buxar",
+              "Total Branch": "",
+              "Total Deposit": "2001018",
+              "Total Advance": "620808",
+              "Overall CD Ratio": ""
+            },
+            "Purbi Champaran": {
+              "District": "Purbi Champaran",
+              "Total Branch": "",
+              "Total Deposit": "948085",
+              "Total Advance": "540812",
+              "Overall CD Ratio": "57.04"
+            },
+            "Gaya": {
+              "District": "Gaya",
+              "Total Branch": "",
+              "Total Deposit": "1624750",
+              "Total Advance": "635133",
+              "Overall CD Ratio": ""
+            },
+            "Gopalganj": {
+              "District": "Gopalganj",
+              "Total Branch": "",
+              "Total Deposit": "778078",
+              "Total Advance": "267225",
+              "Overall CD Ratio": "34.34"
+            },
+            "Jamui": {
+              "District": "Jamui",
+              "Total Branch": "",
+              "Total Deposit": "427964",
+              "Total Advance": "190806",
+              "Overall CD Ratio": "44.58"
+            },
+            "Jehanabad": {
+              "District": "Jehanabad",
+              "Total Branch": "",
+              "Total Deposit": "104358",
+              "Total Advance": "",
+              "Overall CD Ratio": "29.07"
+            },
+            "Kaimur (Bhabua)": {
+              "District": "Kaimur (Bhabua)",
+              "Total Branch": "",
+              "Total Deposit": "230544",
+              "Total Advance": "",
+              "Overall CD Ratio": "55.39"
+            },
+            "Katihar": {
+              "District": "Katihar",
+              "Total Branch": "",
+              "Total Deposit": "328155",
+              "Total Advance": "",
+              "Overall CD Ratio": "53.15"
+            },
+            "Khagaria": {
+              "District": "Khagaria",
+              "Total Branch": "",
+              "Total Deposit": "187201",
+              "Total Advance": "",
+              "Overall CD Ratio": "55.48"
+            },
+            "Kishanganj": {
+              "District": "Kishanganj",
+              "Total Branch": "",
+              "Total Deposit": "192000",
+              "Total Advance": "",
+              "Overall CD Ratio": "61.71"
+            },
+            "Lakhisarai": {
+              "District": "Lakhisarai",
+              "Total Branch": "",
+              "Total Deposit": "118434",
+              "Total Advance": "",
+              "Overall CD Ratio": "36.51"
+            },
+            "Madhepura": {
+              "District": "Madhepura",
+              "Total Branch": "",
+              "Total Deposit": "199298",
+              "Total Advance": "",
+              "Overall CD Ratio": "51.86"
+            },
+            "Nalanda": {
+              "District": "Nalanda",
+              "Total Branch": "",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "33.10"
+            },
+            "Saharsa": {
+              "District": "Saharsa",
+              "Total Branch": "",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "44.89"
+            },
+            "Samastipur": {
+              "District": "Samastipur",
+              "Total Branch": "",
+              "Total Deposit": "1014591",
+              "Total Advance": "",
+              "Overall CD Ratio": "48.67"
+            },
+            "Saran": {
+              "District": "Saran",
+              "Total Branch": "",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "30.50"
+            },
+            "Sheikhpura": {
+              "District": "Sheikhpura",
+              "Total Branch": "",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "37.73"
+            },
+            "Sheohar": {
+              "District": "Sheohar",
+              "Total Branch": "",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "56.49"
+            },
+            "Sitamarhi": {
+              "District": "Sitamarhi",
+              "Total Branch": "",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": "44.75"
+            },
+            "Siwan": {
+              "District": "Siwan",
+              "Total Branch": "",
+              "Total Deposit": "10108",
+              "Total Advance": "",
+              "Overall CD Ratio": "35.10"
+            },
+            "Vaishali": {
+              "District": "Vaishali",
+              "Total Branch": "",
+              "Total Deposit": "957013",
+              "Total Advance": "546955",
+              "Overall CD Ratio": "57.15"
+            },
+            "Pashchim Champaran": {
+              "District": "Pashchim Champaran",
+              "Total Branch": "",
+              "Total Deposit": "745433",
+              "Total Advance": "388702",
+              "Overall CD Ratio": "52.14"
+            }
+          }
         }
       }
     },
@@ -6435,270 +6435,6 @@
       "as_on_date": "30-09-2021",
       "fy": "2021-22",
       "tables": {
-        "cd_ratio": {
-          "fields": [
-            "District",
-            "Total Branch",
-            "Total Deposit",
-            "Total Advance",
-            "Overall CD Ratio"
-          ],
-          "num_districts": 36,
-          "districts": {
-            "Araria": {
-              "District": "Araria",
-              "Total Branch": "160",
-              "Total Deposit": "287458",
-              "Total Advance": "",
-              "Overall CD Ratio": "67.84"
-            },
-            "Arwal": {
-              "District": "Arwal",
-              "Total Branch": "60",
-              "Total Deposit": "59090",
-              "Total Advance": "",
-              "Overall CD Ratio": "35.37"
-            },
-            "Aurangabad": {
-              "District": "Aurangabad",
-              "Total Branch": "186",
-              "Total Deposit": "296793",
-              "Total Advance": "",
-              "Overall CD Ratio": "40.67"
-            },
-            "Begusarai": {
-              "District": "Begusarai",
-              "Total Branch": "226",
-              "Total Deposit": "527418",
-              "Total Advance": "",
-              "Overall CD Ratio": "58.66"
-            },
-            "Bhagalpur": {
-              "District": "Bhagalpur",
-              "Total Branch": "275",
-              "Total Deposit": "554605",
-              "Total Advance": "",
-              "Overall CD Ratio": "36.77"
-            },
-            "Bhojpur": {
-              "District": "Bhojpur",
-              "Total Branch": "234",
-              "Total Deposit": "374339",
-              "Total Advance": "",
-              "Overall CD Ratio": "34.37"
-            },
-            "Buxar": {
-              "District": "Buxar",
-              "Total Branch": "154",
-              "Total Deposit": "237959",
-              "Total Advance": "",
-              "Overall CD Ratio": ""
-            },
-            "Darbhanga": {
-              "District": "Darbhanga",
-              "Total Branch": "245",
-              "Total Deposit": "428150",
-              "Total Advance": "",
-              "Overall CD Ratio": "36.14"
-            },
-            "Purbi Champaran": {
-              "District": "Purbi Champaran",
-              "Total Branch": "284",
-              "Total Deposit": "579312",
-              "Total Advance": "",
-              "Overall CD Ratio": "60.39"
-            },
-            "Gaya": {
-              "District": "Gaya",
-              "Total Branch": "303",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": ""
-            },
-            "Gopalganj": {
-              "District": "Gopalganj",
-              "Total Branch": "184",
-              "Total Deposit": "287372",
-              "Total Advance": "",
-              "Overall CD Ratio": "36.42"
-            },
-            "Jehanabad": {
-              "District": "Jehanabad",
-              "Total Branch": "94",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": ""
-            },
-            "Kaimur (Bhabua)": {
-              "District": "Kaimur (Bhabua)",
-              "Total Branch": "181",
-              "Total Deposit": "196316",
-              "Total Advance": "",
-              "Overall CD Ratio": "49.82"
-            },
-            "Katihar": {
-              "District": "Katihar",
-              "Total Branch": "184",
-              "Total Deposit": "355936",
-              "Total Advance": "",
-              "Overall CD Ratio": "55.77"
-            },
-            "Khagaria": {
-              "District": "Khagaria",
-              "Total Branch": "171",
-              "Total Deposit": "188349",
-              "Total Advance": "",
-              "Overall CD Ratio": "55.48"
-            },
-            "Kishanganj": {
-              "District": "Kishanganj",
-              "Total Branch": "108",
-              "Total Deposit": "307533",
-              "Total Advance": "192954",
-              "Overall CD Ratio": "62.74"
-            },
-            "Lakhisarai": {
-              "District": "Lakhisarai",
-              "Total Branch": "80",
-              "Total Deposit": "305810",
-              "Total Advance": "111596",
-              "Overall CD Ratio": "36.49"
-            },
-            "Madhepura": {
-              "District": "Madhepura",
-              "Total Branch": "171",
-              "Total Deposit": "340363",
-              "Total Advance": "185288",
-              "Overall CD Ratio": "54.44"
-            },
-            "Madhubani": {
-              "District": "Madhubani",
-              "Total Branch": "276",
-              "Total Deposit": "833186",
-              "Total Advance": "331332",
-              "Overall CD Ratio": "39.77"
-            },
-            "Munger": {
-              "District": "Munger",
-              "Total Branch": "131",
-              "Total Deposit": "739528",
-              "Total Advance": "193867",
-              "Overall CD Ratio": "26.21"
-            },
-            "Muzaffarpur": {
-              "District": "Muzaffarpur",
-              "Total Branch": "379",
-              "Total Deposit": "1896275",
-              "Total Advance": "987638",
-              "Overall CD Ratio": "52.08"
-            },
-            "Nalanda": {
-              "District": "Nalanda",
-              "Total Branch": "251",
-              "Total Deposit": "1061644",
-              "Total Advance": "355375",
-              "Overall CD Ratio": "33.47"
-            },
-            "Nawada": {
-              "District": "Nawada",
-              "Total Branch": "140",
-              "Total Deposit": "",
-              "Total Advance": "",
-              "Overall CD Ratio": ""
-            },
-            "Patna": {
-              "District": "Patna",
-              "Total Branch": "929",
-              "Total Deposit": "12770374",
-              "Total Advance": "5462438",
-              "Overall CD Ratio": "42.77"
-            },
-            "Purnia": {
-              "District": "Purnia",
-              "Total Branch": "225",
-              "Total Deposit": "697603",
-              "Total Advance": "532784",
-              "Overall CD Ratio": "76.37"
-            },
-            "Rohtas": {
-              "District": "Rohtas",
-              "Total Branch": "227",
-              "Total Deposit": "967250",
-              "Total Advance": "417540",
-              "Overall CD Ratio": "43.17"
-            },
-            "Saharsa": {
-              "District": "Saharsa",
-              "Total Branch": "103",
-              "Total Deposit": "422710",
-              "Total Advance": "198749",
-              "Overall CD Ratio": "47.02"
-            },
-            "Samastipur": {
-              "District": "Samastipur",
-              "Total Branch": "285",
-              "Total Deposit": "1032132",
-              "Total Advance": "502429",
-              "Overall CD Ratio": "48.68"
-            },
-            "Saran": {
-              "District": "Saran",
-              "Total Branch": "259",
-              "Total Deposit": "1278674",
-              "Total Advance": "405838",
-              "Overall CD Ratio": "31.74"
-            },
-            "Sheikhpura": {
-              "District": "Sheikhpura",
-              "Total Branch": "",
-              "Total Deposit": "191800",
-              "Total Advance": "77739",
-              "Overall CD Ratio": "40.53"
-            },
-            "Sheohar": {
-              "District": "Sheohar",
-              "Total Branch": "",
-              "Total Deposit": "94148",
-              "Total Advance": "58487",
-              "Overall CD Ratio": "62.12"
-            },
-            "Sitamarhi": {
-              "District": "Sitamarhi",
-              "Total Branch": "168",
-              "Total Deposit": "608871",
-              "Total Advance": "274376",
-              "Overall CD Ratio": "45.06"
-            },
-            "Siwan": {
-              "District": "Siwan",
-              "Total Branch": "245",
-              "Total Deposit": "1213332",
-              "Total Advance": "469640",
-              "Overall CD Ratio": "38.71"
-            },
-            "Supaul": {
-              "District": "Supaul",
-              "Total Branch": "121",
-              "Total Deposit": "386318",
-              "Total Advance": "195333",
-              "Overall CD Ratio": "50.56"
-            },
-            "Vaishali": {
-              "District": "Vaishali",
-              "Total Branch": "247",
-              "Total Deposit": "1019216",
-              "Total Advance": "604456",
-              "Overall CD Ratio": "59.31"
-            },
-            "Pashchim Champaran": {
-              "District": "Pashchim Champaran",
-              "Total Branch": "210",
-              "Total Deposit": "645972",
-              "Total Advance": "372233",
-              "Overall CD Ratio": "57.62"
-            }
-          }
-        },
         "branch_network": {
           "fields": [
             "District",
@@ -7015,6 +6751,270 @@
               "Col_3": "1289308"
             }
           }
+        },
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "Total Branch",
+            "Total Deposit",
+            "Total Advance",
+            "Overall CD Ratio"
+          ],
+          "num_districts": 36,
+          "districts": {
+            "Araria": {
+              "District": "Araria",
+              "Total Branch": "160",
+              "Total Deposit": "287458",
+              "Total Advance": "",
+              "Overall CD Ratio": "67.84"
+            },
+            "Arwal": {
+              "District": "Arwal",
+              "Total Branch": "60",
+              "Total Deposit": "59090",
+              "Total Advance": "",
+              "Overall CD Ratio": "35.37"
+            },
+            "Aurangabad": {
+              "District": "Aurangabad",
+              "Total Branch": "186",
+              "Total Deposit": "296793",
+              "Total Advance": "",
+              "Overall CD Ratio": "40.67"
+            },
+            "Begusarai": {
+              "District": "Begusarai",
+              "Total Branch": "226",
+              "Total Deposit": "527418",
+              "Total Advance": "",
+              "Overall CD Ratio": "58.66"
+            },
+            "Bhagalpur": {
+              "District": "Bhagalpur",
+              "Total Branch": "275",
+              "Total Deposit": "554605",
+              "Total Advance": "",
+              "Overall CD Ratio": "36.77"
+            },
+            "Bhojpur": {
+              "District": "Bhojpur",
+              "Total Branch": "234",
+              "Total Deposit": "374339",
+              "Total Advance": "",
+              "Overall CD Ratio": "34.37"
+            },
+            "Buxar": {
+              "District": "Buxar",
+              "Total Branch": "154",
+              "Total Deposit": "237959",
+              "Total Advance": "",
+              "Overall CD Ratio": ""
+            },
+            "Darbhanga": {
+              "District": "Darbhanga",
+              "Total Branch": "245",
+              "Total Deposit": "428150",
+              "Total Advance": "",
+              "Overall CD Ratio": "36.14"
+            },
+            "Purbi Champaran": {
+              "District": "Purbi Champaran",
+              "Total Branch": "284",
+              "Total Deposit": "579312",
+              "Total Advance": "",
+              "Overall CD Ratio": "60.39"
+            },
+            "Gaya": {
+              "District": "Gaya",
+              "Total Branch": "303",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": ""
+            },
+            "Gopalganj": {
+              "District": "Gopalganj",
+              "Total Branch": "184",
+              "Total Deposit": "287372",
+              "Total Advance": "",
+              "Overall CD Ratio": "36.42"
+            },
+            "Jehanabad": {
+              "District": "Jehanabad",
+              "Total Branch": "94",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": ""
+            },
+            "Kaimur (Bhabua)": {
+              "District": "Kaimur (Bhabua)",
+              "Total Branch": "181",
+              "Total Deposit": "196316",
+              "Total Advance": "",
+              "Overall CD Ratio": "49.82"
+            },
+            "Katihar": {
+              "District": "Katihar",
+              "Total Branch": "184",
+              "Total Deposit": "355936",
+              "Total Advance": "",
+              "Overall CD Ratio": "55.77"
+            },
+            "Khagaria": {
+              "District": "Khagaria",
+              "Total Branch": "171",
+              "Total Deposit": "188349",
+              "Total Advance": "",
+              "Overall CD Ratio": "55.48"
+            },
+            "Kishanganj": {
+              "District": "Kishanganj",
+              "Total Branch": "108",
+              "Total Deposit": "307533",
+              "Total Advance": "192954",
+              "Overall CD Ratio": "62.74"
+            },
+            "Lakhisarai": {
+              "District": "Lakhisarai",
+              "Total Branch": "80",
+              "Total Deposit": "305810",
+              "Total Advance": "111596",
+              "Overall CD Ratio": "36.49"
+            },
+            "Madhepura": {
+              "District": "Madhepura",
+              "Total Branch": "171",
+              "Total Deposit": "340363",
+              "Total Advance": "185288",
+              "Overall CD Ratio": "54.44"
+            },
+            "Madhubani": {
+              "District": "Madhubani",
+              "Total Branch": "276",
+              "Total Deposit": "833186",
+              "Total Advance": "331332",
+              "Overall CD Ratio": "39.77"
+            },
+            "Munger": {
+              "District": "Munger",
+              "Total Branch": "131",
+              "Total Deposit": "739528",
+              "Total Advance": "193867",
+              "Overall CD Ratio": "26.21"
+            },
+            "Muzaffarpur": {
+              "District": "Muzaffarpur",
+              "Total Branch": "379",
+              "Total Deposit": "1896275",
+              "Total Advance": "987638",
+              "Overall CD Ratio": "52.08"
+            },
+            "Nalanda": {
+              "District": "Nalanda",
+              "Total Branch": "251",
+              "Total Deposit": "1061644",
+              "Total Advance": "355375",
+              "Overall CD Ratio": "33.47"
+            },
+            "Nawada": {
+              "District": "Nawada",
+              "Total Branch": "140",
+              "Total Deposit": "",
+              "Total Advance": "",
+              "Overall CD Ratio": ""
+            },
+            "Patna": {
+              "District": "Patna",
+              "Total Branch": "929",
+              "Total Deposit": "12770374",
+              "Total Advance": "5462438",
+              "Overall CD Ratio": "42.77"
+            },
+            "Purnia": {
+              "District": "Purnia",
+              "Total Branch": "225",
+              "Total Deposit": "697603",
+              "Total Advance": "532784",
+              "Overall CD Ratio": "76.37"
+            },
+            "Rohtas": {
+              "District": "Rohtas",
+              "Total Branch": "227",
+              "Total Deposit": "967250",
+              "Total Advance": "417540",
+              "Overall CD Ratio": "43.17"
+            },
+            "Saharsa": {
+              "District": "Saharsa",
+              "Total Branch": "103",
+              "Total Deposit": "422710",
+              "Total Advance": "198749",
+              "Overall CD Ratio": "47.02"
+            },
+            "Samastipur": {
+              "District": "Samastipur",
+              "Total Branch": "285",
+              "Total Deposit": "1032132",
+              "Total Advance": "502429",
+              "Overall CD Ratio": "48.68"
+            },
+            "Saran": {
+              "District": "Saran",
+              "Total Branch": "259",
+              "Total Deposit": "1278674",
+              "Total Advance": "405838",
+              "Overall CD Ratio": "31.74"
+            },
+            "Sheikhpura": {
+              "District": "Sheikhpura",
+              "Total Branch": "",
+              "Total Deposit": "191800",
+              "Total Advance": "77739",
+              "Overall CD Ratio": "40.53"
+            },
+            "Sheohar": {
+              "District": "Sheohar",
+              "Total Branch": "",
+              "Total Deposit": "94148",
+              "Total Advance": "58487",
+              "Overall CD Ratio": "62.12"
+            },
+            "Sitamarhi": {
+              "District": "Sitamarhi",
+              "Total Branch": "168",
+              "Total Deposit": "608871",
+              "Total Advance": "274376",
+              "Overall CD Ratio": "45.06"
+            },
+            "Siwan": {
+              "District": "Siwan",
+              "Total Branch": "245",
+              "Total Deposit": "1213332",
+              "Total Advance": "469640",
+              "Overall CD Ratio": "38.71"
+            },
+            "Supaul": {
+              "District": "Supaul",
+              "Total Branch": "121",
+              "Total Deposit": "386318",
+              "Total Advance": "195333",
+              "Overall CD Ratio": "50.56"
+            },
+            "Vaishali": {
+              "District": "Vaishali",
+              "Total Branch": "247",
+              "Total Deposit": "1019216",
+              "Total Advance": "604456",
+              "Overall CD Ratio": "59.31"
+            },
+            "Pashchim Champaran": {
+              "District": "Pashchim Champaran",
+              "Total Branch": "210",
+              "Total Deposit": "645972",
+              "Total Advance": "372233",
+              "Overall CD Ratio": "57.62"
+            }
+          }
         }
       }
     },
@@ -7023,7 +7023,7 @@
       "as_on_date": "30-06-2019",
       "fy": "2019-20",
       "tables": {
-        "cd_ratio": {
+        "credit_deposit_ratio": {
           "fields": [
             "District",
             "Total Branch",

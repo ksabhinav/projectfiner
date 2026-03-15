@@ -163,7 +163,7 @@
             "District",
             "Deposit Amount (D)",
             "Advance Amount (A)",
-            "Current C:D Ratio"
+            "Overall CD Ratio"
           ],
           "num_districts": 11,
           "districts": {
@@ -171,67 +171,67 @@
               "District": "Mon",
               "Deposit Amount (D)": "24716.42",
               "Advance Amount (A)": "13027.53",
-              "Current C:D Ratio": "52.71"
+              "Overall CD Ratio": "52.71"
             },
             "Kohima": {
               "District": "Kohima",
               "Deposit Amount (D)": "462932.24",
               "Advance Amount (A)": "95312.37",
-              "Current C:D Ratio": "20.59"
+              "Overall CD Ratio": "20.59"
             },
             "Dimapur": {
               "District": "Dimapur",
               "Deposit Amount (D)": "530392.22",
               "Advance Amount (A)": "234614.72",
-              "Current C:D Ratio": "44.23"
+              "Overall CD Ratio": "44.23"
             },
             "Tuensang": {
               "District": "Tuensang",
               "Deposit Amount (D)": "20008.48",
               "Advance Amount (A)": "21263.45",
-              "Current C:D Ratio": "106.27"
+              "Overall CD Ratio": "106.27"
             },
             "Kiphire": {
               "District": "Kiphire",
               "Deposit Amount (D)": "8104.16",
               "Advance Amount (A)": "5634.63",
-              "Current C:D Ratio": "69.53"
+              "Overall CD Ratio": "69.53"
             },
             "Phek": {
               "District": "Phek",
               "Deposit Amount (D)": "24383.04",
               "Advance Amount (A)": "13512.04",
-              "Current C:D Ratio": "55.42"
+              "Overall CD Ratio": "55.42"
             },
             "Zunheboto": {
               "District": "Zunheboto",
               "Deposit Amount (D)": "24657.01",
               "Advance Amount (A)": "16447.67",
-              "Current C:D Ratio": "66.71"
+              "Overall CD Ratio": "66.71"
             },
             "Wokha": {
               "District": "Wokha",
               "Deposit Amount (D)": "24713.87",
               "Advance Amount (A)": "31515.42",
-              "Current C:D Ratio": "127.52"
+              "Overall CD Ratio": "127.52"
             },
             "Mokokchung": {
               "District": "Mokokchung",
               "Deposit Amount (D)": "58646.58",
               "Advance Amount (A)": "48153.26",
-              "Current C:D Ratio": "82.11"
+              "Overall CD Ratio": "82.11"
             },
             "Longleng": {
               "District": "Longleng",
               "Deposit Amount (D)": "4700.00",
               "Advance Amount (A)": "3537",
-              "Current C:D Ratio": "75.26"
+              "Overall CD Ratio": "75.26"
             },
             "Peren": {
               "District": "Peren",
               "Deposit Amount (D)": "9618.29",
               "Advance Amount (A)": "10150.03",
-              "Current C:D Ratio": "105.53"
+              "Overall CD Ratio": "105.53"
             }
           }
         },
@@ -1843,7 +1843,7 @@
             "District",
             "Deposit Amount (D)",
             "Advance Amount (A)",
-            "Current C:D Ratio"
+            "Overall CD Ratio"
           ],
           "num_districts": 11,
           "districts": {
@@ -1851,67 +1851,67 @@
               "District": "Mon",
               "Deposit Amount (D)": "25187.48",
               "Advance Amount (A)": "14176.2",
-              "Current C:D Ratio": "56.28"
+              "Overall CD Ratio": "56.28"
             },
             "Kohima": {
               "District": "Kohima",
               "Deposit Amount (D)": "463052.86",
               "Advance Amount (A)": "103572.89",
-              "Current C:D Ratio": "22.37"
+              "Overall CD Ratio": "22.37"
             },
             "Dimapur": {
               "District": "Dimapur",
               "Deposit Amount (D)": "527467.51",
               "Advance Amount (A)": "251597.44",
-              "Current C:D Ratio": "47.7"
+              "Overall CD Ratio": "47.7"
             },
             "Tuensang": {
               "District": "Tuensang",
               "Deposit Amount (D)": "19465.25",
               "Advance Amount (A)": "22847.59",
-              "Current C:D Ratio": "117.38"
+              "Overall CD Ratio": "117.38"
             },
             "Kiphire": {
               "District": "Kiphire",
               "Deposit Amount (D)": "7368.91",
               "Advance Amount (A)": "6615.49",
-              "Current C:D Ratio": "89.78"
+              "Overall CD Ratio": "89.78"
             },
             "Phek": {
               "District": "Phek",
               "Deposit Amount (D)": "21286.28",
               "Advance Amount (A)": "14607.99",
-              "Current C:D Ratio": "68.63"
+              "Overall CD Ratio": "68.63"
             },
             "Zunheboto": {
               "District": "Zunheboto",
               "Deposit Amount (D)": "21999.13",
               "Advance Amount (A)": "17956.63",
-              "Current C:D Ratio": "81.62"
+              "Overall CD Ratio": "81.62"
             },
             "Wokha": {
               "District": "Wokha",
               "Deposit Amount (D)": "27761.12",
               "Advance Amount (A)": "19284.91",
-              "Current C:D Ratio": "69.47"
+              "Overall CD Ratio": "69.47"
             },
             "Mokokchung": {
               "District": "Mokokchung",
               "Deposit Amount (D)": "60584.71",
               "Advance Amount (A)": "51650.47",
-              "Current C:D Ratio": "85.25"
+              "Overall CD Ratio": "85.25"
             },
             "Longleng": {
               "District": "Longleng",
               "Deposit Amount (D)": "5163.1",
               "Advance Amount (A)": "3733.55",
-              "Current C:D Ratio": "72.31"
+              "Overall CD Ratio": "72.31"
             },
             "Peren": {
               "District": "Peren",
               "Deposit Amount (D)": "9230.93",
               "Advance Amount (A)": "11238.8",
-              "Current C:D Ratio": "121.75"
+              "Overall CD Ratio": "121.75"
             }
           }
         },
@@ -3141,83 +3141,83 @@
         "aadhaar_authentication": {
           "fields": [
             "District",
-            "Number of operative CASA",
-            "Number of Aadhaar seeded CASA",
-            "Number of Authenticated CASA"
+            "No. of Operative CASA",
+            "No. of Aadhaar Seeded CASA",
+            "No. of Authenticated CASA"
           ],
           "num_districts": 12,
           "districts": {
             "Dimapur": {
               "District": "Dimapur",
-              "Number of operative CASA": "545147",
-              "Number of Aadhaar seeded CASA": "244319",
-              "Number of Authenticated CASA": "227374"
+              "No. of Operative CASA": "545147",
+              "No. of Aadhaar Seeded CASA": "244319",
+              "No. of Authenticated CASA": "227374"
             },
             "Kiphire": {
               "District": "Kiphire",
-              "Number of operative CASA": "43432",
-              "Number of Aadhaar seeded CASA": "12887",
-              "Number of Authenticated CASA": "8602"
+              "No. of Operative CASA": "43432",
+              "No. of Aadhaar Seeded CASA": "12887",
+              "No. of Authenticated CASA": "8602"
             },
             "Kohima": {
               "District": "Kohima",
-              "Number of operative CASA": "274410",
-              "Number of Aadhaar seeded CASA": "123846",
-              "Number of Authenticated CASA": "111619"
+              "No. of Operative CASA": "274410",
+              "No. of Aadhaar Seeded CASA": "123846",
+              "No. of Authenticated CASA": "111619"
             },
             "Longleng": {
               "District": "Longleng",
-              "Number of operative CASA": "25841",
-              "Number of Aadhaar seeded CASA": "8031",
-              "Number of Authenticated CASA": "10407"
+              "No. of Operative CASA": "25841",
+              "No. of Aadhaar Seeded CASA": "8031",
+              "No. of Authenticated CASA": "10407"
             },
             "Mokokchung": {
               "District": "Mokokchung",
-              "Number of operative CASA": "168376",
-              "Number of Aadhaar seeded CASA": "74711",
-              "Number of Authenticated CASA": "65310"
+              "No. of Operative CASA": "168376",
+              "No. of Aadhaar Seeded CASA": "74711",
+              "No. of Authenticated CASA": "65310"
             },
             "Mon": {
               "District": "Mon",
-              "Number of operative CASA": "123466",
-              "Number of Aadhaar seeded CASA": "53465",
-              "Number of Authenticated CASA": "44072"
+              "No. of Operative CASA": "123466",
+              "No. of Aadhaar Seeded CASA": "53465",
+              "No. of Authenticated CASA": "44072"
             },
             "Noklak": {
               "District": "Noklak",
-              "Number of operative CASA": "16620",
-              "Number of Aadhaar seeded CASA": "4875",
-              "Number of Authenticated CASA": "5301"
+              "No. of Operative CASA": "16620",
+              "No. of Aadhaar Seeded CASA": "4875",
+              "No. of Authenticated CASA": "5301"
             },
             "Peren": {
               "District": "Peren",
-              "Number of operative CASA": "45999",
-              "Number of Aadhaar seeded CASA": "17150",
-              "Number of Authenticated CASA": "15294"
+              "No. of Operative CASA": "45999",
+              "No. of Aadhaar Seeded CASA": "17150",
+              "No. of Authenticated CASA": "15294"
             },
             "Phek": {
               "District": "Phek",
-              "Number of operative CASA": "80839",
-              "Number of Aadhaar seeded CASA": "35147",
-              "Number of Authenticated CASA": "32178"
+              "No. of Operative CASA": "80839",
+              "No. of Aadhaar Seeded CASA": "35147",
+              "No. of Authenticated CASA": "32178"
             },
             "Tuensang": {
               "District": "Tuensang",
-              "Number of operative CASA": "79673",
-              "Number of Aadhaar seeded CASA": "21780",
-              "Number of Authenticated CASA": "22454"
+              "No. of Operative CASA": "79673",
+              "No. of Aadhaar Seeded CASA": "21780",
+              "No. of Authenticated CASA": "22454"
             },
             "Wokha": {
               "District": "Wokha",
-              "Number of operative CASA": "76495",
-              "Number of Aadhaar seeded CASA": "36281",
-              "Number of Authenticated CASA": "28835"
+              "No. of Operative CASA": "76495",
+              "No. of Aadhaar Seeded CASA": "36281",
+              "No. of Authenticated CASA": "28835"
             },
             "Zunheboto": {
               "District": "Zunheboto",
-              "Number of operative CASA": "82323",
-              "Number of Aadhaar seeded CASA": "23690",
-              "Number of Authenticated CASA": "21232"
+              "No. of Operative CASA": "82323",
+              "No. of Aadhaar Seeded CASA": "23690",
+              "No. of Authenticated CASA": "21232"
             }
           }
         },
@@ -4749,107 +4749,107 @@
         "aadhaar_authentication": {
           "fields": [
             "District",
-            "Number of operative CASA",
-            "Number of Aadhaar seeded CASA",
-            "Number of Authenticated CASA"
+            "No. of Operative CASA",
+            "No. of Aadhaar Seeded CASA",
+            "No. of Authenticated CASA"
           ],
           "num_districts": 16,
           "districts": {
             "Chumoukedima": {
               "District": "Chumoukedima",
-              "Number of operative CASA": "153864",
-              "Number of Aadhaar seeded CASA": "68691",
-              "Number of Authenticated CASA": "81381"
+              "No. of Operative CASA": "153864",
+              "No. of Aadhaar Seeded CASA": "68691",
+              "No. of Authenticated CASA": "81381"
             },
             "Dimapur": {
               "District": "Dimapur",
-              "Number of operative CASA": "394164",
-              "Number of Aadhaar seeded CASA": "200452",
-              "Number of Authenticated CASA": "193535"
+              "No. of Operative CASA": "394164",
+              "No. of Aadhaar Seeded CASA": "200452",
+              "No. of Authenticated CASA": "193535"
             },
             "Kiphire": {
               "District": "Kiphire",
-              "Number of operative CASA": "46105",
-              "Number of Aadhaar seeded CASA": "22844",
-              "Number of Authenticated CASA": "14482"
+              "No. of Operative CASA": "46105",
+              "No. of Aadhaar Seeded CASA": "22844",
+              "No. of Authenticated CASA": "14482"
             },
             "Kohima": {
               "District": "Kohima",
-              "Number of operative CASA": "174160",
-              "Number of Aadhaar seeded CASA": "142279",
-              "Number of Authenticated CASA": "126617"
+              "No. of Operative CASA": "174160",
+              "No. of Aadhaar Seeded CASA": "142279",
+              "No. of Authenticated CASA": "126617"
             },
             "Longleng": {
               "District": "Longleng",
-              "Number of operative CASA": "28847",
-              "Number of Aadhaar seeded CASA": "20142",
-              "Number of Authenticated CASA": "11795"
+              "No. of Operative CASA": "28847",
+              "No. of Aadhaar Seeded CASA": "20142",
+              "No. of Authenticated CASA": "11795"
             },
             "Mokokchung": {
               "District": "Mokokchung",
-              "Number of operative CASA": "157648",
-              "Number of Aadhaar seeded CASA": "77821",
-              "Number of Authenticated CASA": "64015"
+              "No. of Operative CASA": "157648",
+              "No. of Aadhaar Seeded CASA": "77821",
+              "No. of Authenticated CASA": "64015"
             },
             "Mon": {
               "District": "Mon",
-              "Number of operative CASA": "130803",
-              "Number of Aadhaar seeded CASA": "71798",
-              "Number of Authenticated CASA": "44607"
+              "No. of Operative CASA": "130803",
+              "No. of Aadhaar Seeded CASA": "71798",
+              "No. of Authenticated CASA": "44607"
             },
             "Niuland": {
               "District": "Niuland",
-              "Number of operative CASA": "8869",
-              "Number of Aadhaar seeded CASA": "4770",
-              "Number of Authenticated CASA": "1859"
+              "No. of Operative CASA": "8869",
+              "No. of Aadhaar Seeded CASA": "4770",
+              "No. of Authenticated CASA": "1859"
             },
             "Noklak": {
               "District": "Noklak",
-              "Number of operative CASA": "14206",
-              "Number of Aadhaar seeded CASA": "7895",
-              "Number of Authenticated CASA": "4996"
+              "No. of Operative CASA": "14206",
+              "No. of Aadhaar Seeded CASA": "7895",
+              "No. of Authenticated CASA": "4996"
             },
             "Peren": {
               "District": "Peren",
-              "Number of operative CASA": "51276",
-              "Number of Aadhaar seeded CASA": "26143",
-              "Number of Authenticated CASA": "17160"
+              "No. of Operative CASA": "51276",
+              "No. of Aadhaar Seeded CASA": "26143",
+              "No. of Authenticated CASA": "17160"
             },
             "Phek": {
               "District": "Phek",
-              "Number of operative CASA": "89509",
-              "Number of Aadhaar seeded CASA": "46317",
-              "Number of Authenticated CASA": "35008"
+              "No. of Operative CASA": "89509",
+              "No. of Aadhaar Seeded CASA": "46317",
+              "No. of Authenticated CASA": "35008"
             },
             "Shamator": {
               "District": "Shamator",
-              "Number of operative CASA": "9529",
-              "Number of Aadhaar seeded CASA": "4732",
-              "Number of Authenticated CASA": "1931"
+              "No. of Operative CASA": "9529",
+              "No. of Aadhaar Seeded CASA": "4732",
+              "No. of Authenticated CASA": "1931"
             },
             "Tseminyu": {
               "District": "Tseminyu",
-              "Number of operative CASA": "19792",
-              "Number of Aadhaar seeded CASA": "8892",
-              "Number of Authenticated CASA": "8279"
+              "No. of Operative CASA": "19792",
+              "No. of Aadhaar Seeded CASA": "8892",
+              "No. of Authenticated CASA": "8279"
             },
             "Tuensang": {
               "District": "Tuensang",
-              "Number of operative CASA": "71845",
-              "Number of Aadhaar seeded CASA": "28892",
-              "Number of Authenticated CASA": "22132"
+              "No. of Operative CASA": "71845",
+              "No. of Aadhaar Seeded CASA": "28892",
+              "No. of Authenticated CASA": "22132"
             },
             "Wokha": {
               "District": "Wokha",
-              "Number of operative CASA": "81248",
-              "Number of Aadhaar seeded CASA": "43394",
-              "Number of Authenticated CASA": "32841"
+              "No. of Operative CASA": "81248",
+              "No. of Aadhaar Seeded CASA": "43394",
+              "No. of Authenticated CASA": "32841"
             },
             "Zunheboto": {
               "District": "Zunheboto",
-              "Number of operative CASA": "84331",
-              "Number of Aadhaar seeded CASA": "31613",
-              "Number of Authenticated CASA": "26853"
+              "No. of Operative CASA": "84331",
+              "No. of Aadhaar Seeded CASA": "31613",
+              "No. of Authenticated CASA": "26853"
             }
           }
         },
