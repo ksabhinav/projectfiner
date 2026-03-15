@@ -424,10 +424,13 @@ const base = import.meta.env.BASE_URL;
       digital_transactions: {
         title: 'Digital Transactions',
         metrics: [
-          { field: 'bhim_upi_a_c', label: 'BHIM/UPI Transactions', unit: '', fallbacks: ['bhim_upi', 'coverage_pct', 'achievement', 'no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode'] },
-          { field: 'bhim_upi_amt', label: 'UPI Amount (₹ Lakh)', unit: '₹L' },
+          { field: 'bhim_upi_a_c', label: 'BHIM/UPI Transactions', unit: '', fallbacks: ['bhim_upi', 'bhim_aadhaar_a_c'] },
+          { field: 'coverage_sb_pct', label: 'SB Digital Coverage %', unit: '%', fallbacks: ['coverage_pct', 'achievement'] },
+          { field: 'digital_coverage_sb_a_c', label: 'SB A/Cs Digitally Covered', unit: '', fallbacks: ['total_operative_sb_a_c', 'no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode'] },
           { field: 'imps_a_c', label: 'IMPS Transactions', unit: '', fallbacks: ['imps'] },
           { field: 'cards_debit_credit_a_c', label: 'Card Transactions', unit: '', fallbacks: ['cards_debit_credit', 'cards_debit'] },
+          { field: 'ussd_a_c', label: 'USSD Transactions', unit: '', fallbacks: ['ussd'] },
+          { field: 'bharat_qr_code_a_c', label: 'Bharat QR Transactions', unit: '' },
         ],
       },
       aadhaar_authentication: {
