@@ -192,51 +192,33 @@
         "credit_deposit_ratio": {
           "page": 35,
           "fields": [
-            "CD Ratio March’2017",
-            "CD Ratio March’2018",
-            "CD Ratio Since March’2017"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio March’2017": "45",
-              "CD Ratio March’2018": "49",
-              "CD Ratio Since March’2017": "+4"
+              "CD Ratio": "49"
             },
             "Unakoti": {
-              "CD Ratio March’2017": "55",
-              "CD Ratio March’2018": "59",
-              "CD Ratio Since March’2017": "+4"
+              "CD Ratio": "59"
             },
             "South Tripura": {
-              "CD Ratio March’2017": "46",
-              "CD Ratio March’2018": "50",
-              "CD Ratio Since March’2017": "+4"
+              "CD Ratio": "50"
             },
             "Gomati": {
-              "CD Ratio March’2017": "85",
-              "CD Ratio March’2018": "93",
-              "CD Ratio Since March’2017": "+8"
+              "CD Ratio": "93"
             },
             "West Tripura": {
-              "CD Ratio March’2017": "32",
-              "CD Ratio March’2018": "36",
-              "CD Ratio Since March’2017": "+4"
+              "CD Ratio": "36"
             },
             "Sepahijala": {
-              "CD Ratio March’2017": "62",
-              "CD Ratio March’2018": "67",
-              "CD Ratio Since March’2017": "+5"
+              "CD Ratio": "67"
             },
             "Khowai": {
-              "CD Ratio March’2017": "64",
-              "CD Ratio March’2018": "69",
-              "CD Ratio Since March’2017": "+5"
+              "CD Ratio": "69"
             },
             "Dhalai": {
-              "CD Ratio March’2017": "62",
-              "CD Ratio March’2018": "66",
-              "CD Ratio Since March’2017": "+4"
+              "CD Ratio": "66"
             }
           }
         }
@@ -481,51 +463,33 @@
         "credit_deposit_ratio": {
           "page": 113,
           "fields": [
-            "CD Ratio March’2018",
-            "CD Ratio June’2018",
-            "CD Ratio Since March’2018"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio March’2018": "49",
-              "CD Ratio June’2018": "57",
-              "CD Ratio Since March’2018": "+8"
+              "CD Ratio": "57"
             },
             "Unakoti": {
-              "CD Ratio March’2018": "59",
-              "CD Ratio June’2018": "67",
-              "CD Ratio Since March’2018": "+8"
+              "CD Ratio": "67"
             },
             "South Tripura": {
-              "CD Ratio March’2018": "50",
-              "CD Ratio June’2018": "60",
-              "CD Ratio Since March’2018": "+10"
+              "CD Ratio": "60"
             },
             "Gomati": {
-              "CD Ratio March’2018": "93",
-              "CD Ratio June’2018": "64",
-              "CD Ratio Since March’2018": "(-)29"
+              "CD Ratio": "64"
             },
             "West Tripura": {
-              "CD Ratio March’2018": "36",
-              "CD Ratio June’2018": "38",
-              "CD Ratio Since March’2018": "+2"
+              "CD Ratio": "38"
             },
             "Sepahijala": {
-              "CD Ratio March’2018": "67",
-              "CD Ratio June’2018": "73",
-              "CD Ratio Since March’2018": "+6"
+              "CD Ratio": "73"
             },
             "Khowai": {
-              "CD Ratio March’2018": "69",
-              "CD Ratio June’2018": "69",
-              "CD Ratio Since March’2018": "No change"
+              "CD Ratio": "69"
             },
             "Dhalai": {
-              "CD Ratio March’2018": "66",
-              "CD Ratio June’2018": "74",
-              "CD Ratio Since March’2018": "+8"
+              "CD Ratio": "74"
             }
           }
         }
@@ -1192,60 +1156,33 @@
         "credit_deposit_ratio": {
           "page": 94,
           "fields": [
-            "CD Ratio March 2018",
-            "CD Ratio December 2017",
-            "CD Ratio December 2018",
-            "CD Ratio Since December 2017"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio March 2018": "49",
-              "CD Ratio December 2017": "47",
-              "CD Ratio December 2018": "58",
-              "CD Ratio Since December 2017": "+11"
+              "CD Ratio": "58"
             },
             "Unakoti": {
-              "CD Ratio March 2018": "59",
-              "CD Ratio December 2017": "56",
-              "CD Ratio December 2018": "67",
-              "CD Ratio Since December 2017": "+11"
+              "CD Ratio": "67"
             },
             "South Tripura": {
-              "CD Ratio March 2018": "50",
-              "CD Ratio December 2017": "48",
-              "CD Ratio December 2018": "57",
-              "CD Ratio Since December 2017": "+9"
+              "CD Ratio": "57"
             },
             "Gomati": {
-              "CD Ratio March 2018": "93",
-              "CD Ratio December 2017": "89",
-              "CD Ratio December 2018": "164",
-              "CD Ratio Since December 2017": "+75"
+              "CD Ratio": "164"
             },
             "West Tripura": {
-              "CD Ratio March 2018": "36",
-              "CD Ratio December 2017": "35",
-              "CD Ratio December 2018": "36",
-              "CD Ratio Since December 2017": "+1"
+              "CD Ratio": "36"
             },
             "Sepahijala": {
-              "CD Ratio March 2018": "67",
-              "CD Ratio December 2017": "65",
-              "CD Ratio December 2018": "68",
-              "CD Ratio Since December 2017": "+3"
+              "CD Ratio": "68"
             },
             "Khowai": {
-              "CD Ratio March 2018": "69",
-              "CD Ratio December 2017": "66",
-              "CD Ratio December 2018": "67",
-              "CD Ratio Since December 2017": "+1"
+              "CD Ratio": "67"
             },
             "Dhalai": {
-              "CD Ratio March 2018": "66",
-              "CD Ratio December 2017": "63",
-              "CD Ratio December 2018": "73",
-              "CD Ratio Since December 2017": "+10"
+              "CD Ratio": "73"
             }
           }
         },
@@ -1683,60 +1620,33 @@
         "credit_deposit_ratio": {
           "page": 87,
           "fields": [
-            "CD Ratio March 2018",
-            "CD Ratio December 2018",
-            "CD Ratio March 2019",
-            "CD Ratio Since March 2018"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio March 2018": "49",
-              "CD Ratio December 2018": "58",
-              "CD Ratio March 2019": "51",
-              "CD Ratio Since March 2018": "+2"
+              "CD Ratio": "51"
             },
             "Unakoti": {
-              "CD Ratio March 2018": "59",
-              "CD Ratio December 2018": "67",
-              "CD Ratio March 2019": "59",
-              "CD Ratio Since March 2018": "No Change"
+              "CD Ratio": "59"
             },
             "South Tripura": {
-              "CD Ratio March 2018": "50",
-              "CD Ratio December 2018": "57",
-              "CD Ratio March 2019": "53",
-              "CD Ratio Since March 2018": "+3"
+              "CD Ratio": "53"
             },
             "Gomati": {
-              "CD Ratio March 2018": "93",
-              "CD Ratio December 2018": "164",
-              "CD Ratio March 2019": "54",
-              "CD Ratio Since March 2018": "-39"
+              "CD Ratio": "54"
             },
             "West Tripura": {
-              "CD Ratio March 2018": "36",
-              "CD Ratio December 2018": "36",
-              "CD Ratio March 2019": "52",
-              "CD Ratio Since March 2018": "+16"
+              "CD Ratio": "52"
             },
             "Sepahijala": {
-              "CD Ratio March 2018": "67",
-              "CD Ratio December 2018": "68",
-              "CD Ratio March 2019": "62",
-              "CD Ratio Since March 2018": "-5"
+              "CD Ratio": "62"
             },
             "Khowai": {
-              "CD Ratio March 2018": "69",
-              "CD Ratio December 2018": "67",
-              "CD Ratio March 2019": "61",
-              "CD Ratio Since March 2018": "-8"
+              "CD Ratio": "61"
             },
             "Dhalai": {
-              "CD Ratio March 2018": "66",
-              "CD Ratio December 2018": "73",
-              "CD Ratio March 2019": "67",
-              "CD Ratio Since March 2018": "+1"
+              "CD Ratio": "67"
             }
           }
         }
@@ -1781,60 +1691,33 @@
         "credit_deposit_ratio": {
           "page": 35,
           "fields": [
-            "CD Ratio Dec 2018",
-            "CD Ratio March 2019",
-            "CD Ratio Dec 2019",
-            "CD Ratio Since Dec 2018"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio Dec 2018": "58",
-              "CD Ratio March 2019": "51",
-              "CD Ratio Dec 2019": "53",
-              "CD Ratio Since Dec 2018": "-5"
+              "CD Ratio": "53"
             },
             "Unakoti": {
-              "CD Ratio Dec 2018": "67",
-              "CD Ratio March 2019": "59",
-              "CD Ratio Dec 2019": "72",
-              "CD Ratio Since Dec 2018": "+5"
+              "CD Ratio": "72"
             },
             "South Tripura": {
-              "CD Ratio Dec 2018": "57",
-              "CD Ratio March 2019": "53",
-              "CD Ratio Dec 2019": "60",
-              "CD Ratio Since Dec 2018": "+3"
+              "CD Ratio": "60"
             },
             "Gomati": {
-              "CD Ratio Dec 2018": "164",
-              "CD Ratio March 2019": "54",
-              "CD Ratio Dec 2019": "70",
-              "CD Ratio Since Dec 2018": "-94"
+              "CD Ratio": "70"
             },
             "West Tripura": {
-              "CD Ratio Dec 2018": "36",
-              "CD Ratio March 2019": "52",
-              "CD Ratio Dec 2019": "49",
-              "CD Ratio Since Dec 2018": "+13"
+              "CD Ratio": "49"
             },
             "Sepahijala": {
-              "CD Ratio Dec 2018": "68",
-              "CD Ratio March 2019": "62",
-              "CD Ratio Dec 2019": "73",
-              "CD Ratio Since Dec 2018": "+5"
+              "CD Ratio": "73"
             },
             "Khowai": {
-              "CD Ratio Dec 2018": "67",
-              "CD Ratio March 2019": "61",
-              "CD Ratio Dec 2019": "67",
-              "CD Ratio Since Dec 2018": "No change"
+              "CD Ratio": "67"
             },
             "Dhalai": {
-              "CD Ratio Dec 2018": "73",
-              "CD Ratio March 2019": "67",
-              "CD Ratio Dec 2019": "94",
-              "CD Ratio Since Dec 2018": "+21"
+              "CD Ratio": "94"
             }
           }
         },
@@ -2028,60 +1911,33 @@
         "credit_deposit_ratio": {
           "page": 33,
           "fields": [
-            "CD Ratio March 2018",
-            "CD Ratio March 2019",
-            "CD Ratio March 2020",
-            "CD Ratio Since March 2019"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio March 2018": "49",
-              "CD Ratio March 2019": "51",
-              "CD Ratio March 2020": "52",
-              "CD Ratio Since March 2019": "+1"
+              "CD Ratio": "52"
             },
             "Unakoti": {
-              "CD Ratio March 2018": "59",
-              "CD Ratio March 2019": "59",
-              "CD Ratio March 2020": "75",
-              "CD Ratio Since March 2019": "+16"
+              "CD Ratio": "75"
             },
             "South Tripura": {
-              "CD Ratio March 2018": "50",
-              "CD Ratio March 2019": "53",
-              "CD Ratio March 2020": "57",
-              "CD Ratio Since March 2019": "+4"
+              "CD Ratio": "57"
             },
             "Gomati": {
-              "CD Ratio March 2018": "93",
-              "CD Ratio March 2019": "54",
-              "CD Ratio March 2020": "64",
-              "CD Ratio Since March 2019": "+10"
+              "CD Ratio": "64"
             },
             "West Tripura": {
-              "CD Ratio March 2018": "36",
-              "CD Ratio March 2019": "52",
-              "CD Ratio March 2020": "51",
-              "CD Ratio Since March 2019": "-1"
+              "CD Ratio": "51"
             },
             "Sepahijala": {
-              "CD Ratio March 2018": "67",
-              "CD Ratio March 2019": "62",
-              "CD Ratio March 2020": "72",
-              "CD Ratio Since March 2019": "+10"
+              "CD Ratio": "72"
             },
             "Khowai": {
-              "CD Ratio March 2018": "69",
-              "CD Ratio March 2019": "61",
-              "CD Ratio March 2020": "65",
-              "CD Ratio Since March 2019": "+4"
+              "CD Ratio": "65"
             },
             "Dhalai": {
-              "CD Ratio March 2018": "66",
-              "CD Ratio March 2019": "67",
-              "CD Ratio March 2020": "96",
-              "CD Ratio Since March 2019": "+29"
+              "CD Ratio": "96"
             }
           }
         },
@@ -2318,6 +2174,39 @@
               "Out of persons participated, no. of persons opened bank A/C after attending the camp": "14"
             }
           }
+        },
+        "pmjdy": {
+          "page": null,
+          "fields": [
+            "No. of PMJDY Accounts"
+          ],
+          "num_districts": 8,
+          "districts": {
+            "West Tripura": {
+              "No. of PMJDY Accounts": "225815"
+            },
+            "Sepahijala": {
+              "No. of PMJDY Accounts": "83379"
+            },
+            "Khowai": {
+              "No. of PMJDY Accounts": "80885"
+            },
+            "Dhalai": {
+              "No. of PMJDY Accounts": "94085"
+            },
+            "Gomati": {
+              "No. of PMJDY Accounts": "88278"
+            },
+            "South Tripura": {
+              "No. of PMJDY Accounts": "125087"
+            },
+            "Unakoti": {
+              "No. of PMJDY Accounts": "76149"
+            },
+            "North Tripura": {
+              "No. of PMJDY Accounts": "114889"
+            }
+          }
         }
       }
     },
@@ -2329,60 +2218,33 @@
         "credit_deposit_ratio": {
           "page": 34,
           "fields": [
-            "CD Ratio September 2019",
-            "CD Ratio March 2020",
-            "CD Ratio September 2020",
-            "CD Ratio Since September 2019"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio September 2019": "55",
-              "CD Ratio March 2020": "52",
-              "CD Ratio September 2020": "57",
-              "CD Ratio Since September 2019": "+2"
+              "CD Ratio": "57"
             },
             "Unakoti": {
-              "CD Ratio September 2019": "66",
-              "CD Ratio March 2020": "75",
-              "CD Ratio September 2020": "78",
-              "CD Ratio Since September 2019": "+12"
+              "CD Ratio": "78"
             },
             "South Tripura": {
-              "CD Ratio September 2019": "61",
-              "CD Ratio March 2020": "57",
-              "CD Ratio September 2020": "58",
-              "CD Ratio Since September 2019": "-3"
+              "CD Ratio": "58"
             },
             "Gomati": {
-              "CD Ratio September 2019": "65",
-              "CD Ratio March 2020": "64",
-              "CD Ratio September 2020": "61",
-              "CD Ratio Since September 2019": "-4"
+              "CD Ratio": "61"
             },
             "West Tripura": {
-              "CD Ratio September 2019": "48",
-              "CD Ratio March 2020": "51",
-              "CD Ratio September 2020": "45",
-              "CD Ratio Since September 2019": "-3"
+              "CD Ratio": "45"
             },
             "Sepahijala": {
-              "CD Ratio September 2019": "79",
-              "CD Ratio March 2020": "72",
-              "CD Ratio September 2020": "74",
-              "CD Ratio Since September 2019": "-5"
+              "CD Ratio": "74"
             },
             "Khowai": {
-              "CD Ratio September 2019": "73",
-              "CD Ratio March 2020": "65",
-              "CD Ratio September 2020": "63",
-              "CD Ratio Since September 2019": "-10"
+              "CD Ratio": "63"
             },
             "Dhalai": {
-              "CD Ratio September 2019": "102",
-              "CD Ratio March 2020": "96",
-              "CD Ratio September 2020": "93",
-              "CD Ratio Since September 2019": "-9"
+              "CD Ratio": "93"
             }
           }
         },
@@ -2482,60 +2344,33 @@
         "credit_deposit_ratio": {
           "page": 36,
           "fields": [
-            "CD Ratio December 2019",
-            "CD Ratio March 2020",
-            "CD Ratio December 2020",
-            "CD Ratio Since December 2019"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio December 2019": "53",
-              "CD Ratio March 2020": "52",
-              "CD Ratio December 2020": "57",
-              "CD Ratio Since December 2019": "+4"
+              "CD Ratio": "57"
             },
             "Unakoti": {
-              "CD Ratio December 2019": "72",
-              "CD Ratio March 2020": "75",
-              "CD Ratio December 2020": "61",
-              "CD Ratio Since December 2019": "-11"
+              "CD Ratio": "61"
             },
             "South Tripura": {
-              "CD Ratio December 2019": "60",
-              "CD Ratio March 2020": "57",
-              "CD Ratio December 2020": "61",
-              "CD Ratio Since December 2019": "+1"
+              "CD Ratio": "61"
             },
             "Gomati": {
-              "CD Ratio December 2019": "70",
-              "CD Ratio March 2020": "64",
-              "CD Ratio December 2020": "60",
-              "CD Ratio Since December 2019": "-10"
+              "CD Ratio": "60"
             },
             "West Tripura": {
-              "CD Ratio December 2019": "49",
-              "CD Ratio March 2020": "51",
-              "CD Ratio December 2020": "48",
-              "CD Ratio Since December 2019": "-1"
+              "CD Ratio": "48"
             },
             "Sepahijala": {
-              "CD Ratio December 2019": "73",
-              "CD Ratio March 2020": "72",
-              "CD Ratio December 2020": "71",
-              "CD Ratio Since December 2019": "-2"
+              "CD Ratio": "71"
             },
             "Khowai": {
-              "CD Ratio December 2019": "67",
-              "CD Ratio March 2020": "65",
-              "CD Ratio December 2020": "61",
-              "CD Ratio Since December 2019": "-6"
+              "CD Ratio": "61"
             },
             "Dhalai": {
-              "CD Ratio December 2019": "94",
-              "CD Ratio March 2020": "96",
-              "CD Ratio December 2020": "97",
-              "CD Ratio Since December 2019": "+3"
+              "CD Ratio": "97"
             }
           }
         },
@@ -2806,60 +2641,33 @@
         "credit_deposit_ratio": {
           "page": 35,
           "fields": [
-            "CD Ratio March 2019",
-            "CD Ratio March 2020",
-            "CD Ratio March 2021",
-            "CD Ratio Since March 2020"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio March 2019": "51",
-              "CD Ratio March 2020": "52",
-              "CD Ratio March 2021": "62",
-              "CD Ratio Since March 2020": "+10"
+              "CD Ratio": "62"
             },
             "Unakoti": {
-              "CD Ratio March 2019": "59",
-              "CD Ratio March 2020": "75",
-              "CD Ratio March 2021": "64",
-              "CD Ratio Since March 2020": "-11"
+              "CD Ratio": "64"
             },
             "South Tripura": {
-              "CD Ratio March 2019": "53",
-              "CD Ratio March 2020": "57",
-              "CD Ratio March 2021": "57",
-              "CD Ratio Since March 2020": "No Change"
+              "CD Ratio": "57"
             },
             "Gomati": {
-              "CD Ratio March 2019": "54",
-              "CD Ratio March 2020": "64",
-              "CD Ratio March 2021": "63",
-              "CD Ratio Since March 2020": "-1"
+              "CD Ratio": "63"
             },
             "West Tripura": {
-              "CD Ratio March 2019": "52",
-              "CD Ratio March 2020": "51",
-              "CD Ratio March 2021": "47",
-              "CD Ratio Since March 2020": "-4"
+              "CD Ratio": "47"
             },
             "Sepahijala": {
-              "CD Ratio March 2019": "62",
-              "CD Ratio March 2020": "72",
-              "CD Ratio March 2021": "68",
-              "CD Ratio Since March 2020": "-4"
+              "CD Ratio": "68"
             },
             "Khowai": {
-              "CD Ratio March 2019": "61",
-              "CD Ratio March 2020": "65",
-              "CD Ratio March 2021": "52",
-              "CD Ratio Since March 2020": "-13"
+              "CD Ratio": "52"
             },
             "Dhalai": {
-              "CD Ratio March 2019": "67",
-              "CD Ratio March 2020": "96",
-              "CD Ratio March 2021": "96",
-              "CD Ratio Since March 2020": "No Change"
+              "CD Ratio": "96"
             }
           }
         },
@@ -3119,6 +2927,81 @@
               "Annexure No.": ""
             }
           }
+        },
+        "branch_network": {
+          "page": null,
+          "fields": [
+            "No. of ATM"
+          ],
+          "num_districts": 8,
+          "districts": {
+            "West Tripura": {
+              "No. of ATM": "279"
+            },
+            "Sepahijala": {
+              "No. of ATM": "40"
+            },
+            "Khowai": {
+              "No. of ATM": "26"
+            },
+            "Dhalai": {
+              "No. of ATM": "40"
+            },
+            "Gomati": {
+              "No. of ATM": "57"
+            },
+            "South Tripura": {
+              "No. of ATM": "41"
+            },
+            "Unakoti": {
+              "No. of ATM": "22"
+            },
+            "North Tripura": {
+              "No. of ATM": "54"
+            }
+          }
+        },
+        "pmjdy": {
+          "page": null,
+          "fields": [
+            "No. of PMJDY Accounts",
+            "No. of Women PMJDY Accounts"
+          ],
+          "num_districts": 8,
+          "districts": {
+            "West Tripura": {
+              "No. of PMJDY Accounts": "224370",
+              "No. of Women PMJDY Accounts": "112702"
+            },
+            "Sepahijala": {
+              "No. of PMJDY Accounts": "84700",
+              "No. of Women PMJDY Accounts": "44104"
+            },
+            "Khowai": {
+              "No. of PMJDY Accounts": "85611",
+              "No. of Women PMJDY Accounts": "45488"
+            },
+            "Dhalai": {
+              "No. of PMJDY Accounts": "100511",
+              "No. of Women PMJDY Accounts": "49364"
+            },
+            "Gomati": {
+              "No. of PMJDY Accounts": "98663",
+              "No. of Women PMJDY Accounts": "48781"
+            },
+            "South Tripura": {
+              "No. of PMJDY Accounts": "123903",
+              "No. of Women PMJDY Accounts": "60735"
+            },
+            "Unakoti": {
+              "No. of PMJDY Accounts": "76391",
+              "No. of Women PMJDY Accounts": "43802"
+            },
+            "North Tripura": {
+              "No. of PMJDY Accounts": "117125",
+              "No. of Women PMJDY Accounts": "60012"
+            }
+          }
         }
       }
     },
@@ -3130,60 +3013,33 @@
         "credit_deposit_ratio": {
           "page": 34,
           "fields": [
-            "CD Ratio June 2020",
-            "CD Ratio March 2021",
-            "CD Ratio June 2021",
-            "CD Ratio Since June 2020"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio June 2020": "51",
-              "CD Ratio March 2021": "62",
-              "CD Ratio June 2021": "58",
-              "CD Ratio Since June 2020": "+7"
+              "CD Ratio": "58"
             },
             "Unakoti": {
-              "CD Ratio June 2020": "72",
-              "CD Ratio March 2021": "64",
-              "CD Ratio June 2021": "63",
-              "CD Ratio Since June 2020": "-9"
+              "CD Ratio": "63"
             },
             "South Tripura": {
-              "CD Ratio June 2020": "57",
-              "CD Ratio March 2021": "57",
-              "CD Ratio June 2021": "59",
-              "CD Ratio Since June 2020": "+2"
+              "CD Ratio": "59"
             },
             "Gomati": {
-              "CD Ratio June 2020": "62",
-              "CD Ratio March 2021": "63",
-              "CD Ratio June 2021": "64",
-              "CD Ratio Since June 2020": "+2"
+              "CD Ratio": "64"
             },
             "West Tripura": {
-              "CD Ratio June 2020": "45",
-              "CD Ratio March 2021": "47",
-              "CD Ratio June 2021": "48",
-              "CD Ratio Since June 2020": "+3"
+              "CD Ratio": "48"
             },
             "Sepahijala": {
-              "CD Ratio June 2020": "67",
-              "CD Ratio March 2021": "68",
-              "CD Ratio June 2021": "65",
-              "CD Ratio Since June 2020": "-2"
+              "CD Ratio": "65"
             },
             "Khowai": {
-              "CD Ratio June 2020": "63",
-              "CD Ratio March 2021": "52",
-              "CD Ratio June 2021": "60",
-              "CD Ratio Since June 2020": "-3"
+              "CD Ratio": "60"
             },
             "Dhalai": {
-              "CD Ratio June 2020": "93",
-              "CD Ratio March 2021": "96",
-              "CD Ratio June 2021": "87",
-              "CD Ratio Since June 2020": "-6"
+              "CD Ratio": "87"
             }
           }
         },
@@ -3263,60 +3119,33 @@
         "credit_deposit_ratio": {
           "page": 33,
           "fields": [
-            "CD Ratio September 2020",
-            "CD Ratio March 2021",
-            "CD Ratio September 2021",
-            "CD Ratio Since September 2020"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio September 2020": "57",
-              "CD Ratio March 2021": "62",
-              "CD Ratio September 2021": "60",
-              "CD Ratio Since September 2020": "+3"
+              "CD Ratio": "60"
             },
             "Unakoti": {
-              "CD Ratio September 2020": "78",
-              "CD Ratio March 2021": "64",
-              "CD Ratio September 2021": "66",
-              "CD Ratio Since September 2020": "-12"
+              "CD Ratio": "66"
             },
             "South Tripura": {
-              "CD Ratio September 2020": "58",
-              "CD Ratio March 2021": "57",
-              "CD Ratio September 2021": "58",
-              "CD Ratio Since September 2020": "No Change"
+              "CD Ratio": "58"
             },
             "Gomati": {
-              "CD Ratio September 2020": "61",
-              "CD Ratio March 2021": "63",
-              "CD Ratio September 2021": "76",
-              "CD Ratio Since September 2020": "+15"
+              "CD Ratio": "76"
             },
             "West Tripura": {
-              "CD Ratio September 2020": "45",
-              "CD Ratio March 2021": "47",
-              "CD Ratio September 2021": "48",
-              "CD Ratio Since September 2020": "+3"
+              "CD Ratio": "48"
             },
             "Sepahijala": {
-              "CD Ratio September 2020": "74",
-              "CD Ratio March 2021": "68",
-              "CD Ratio September 2021": "50",
-              "CD Ratio Since September 2020": "-24"
+              "CD Ratio": "50"
             },
             "Khowai": {
-              "CD Ratio September 2020": "63",
-              "CD Ratio March 2021": "52",
-              "CD Ratio September 2021": "60",
-              "CD Ratio Since September 2020": "-3"
+              "CD Ratio": "60"
             },
             "Dhalai": {
-              "CD Ratio September 2020": "93",
-              "CD Ratio March 2021": "96",
-              "CD Ratio September 2021": "89",
-              "CD Ratio Since September 2020": "-4"
+              "CD Ratio": "89"
             }
           }
         },
@@ -3458,101 +3287,65 @@
         "credit_deposit_ratio": {
           "page": 34,
           "fields": [
-            "CD Ratio December 2020",
-            "CD Ratio March 2021",
-            "CD Ratio December 2021",
-            "CD Ratio Since December 2020"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio December 2020": "57",
-              "CD Ratio March 2021": "62",
-              "CD Ratio December 2021": "64",
-              "CD Ratio Since December 2020": "+7"
+              "CD Ratio": "64"
             },
             "Unakoti": {
-              "CD Ratio December 2020": "61",
-              "CD Ratio March 2021": "64",
-              "CD Ratio December 2021": "72",
-              "CD Ratio Since December 2020": "+11"
+              "CD Ratio": "72"
             },
             "South Tripura": {
-              "CD Ratio December 2020": "61",
-              "CD Ratio March 2021": "57",
-              "CD Ratio December 2021": "67",
-              "CD Ratio Since December 2020": "+6"
+              "CD Ratio": "67"
             },
             "Gomati": {
-              "CD Ratio December 2020": "60",
-              "CD Ratio March 2021": "63",
-              "CD Ratio December 2021": "67",
-              "CD Ratio Since December 2020": "+7"
+              "CD Ratio": "67"
             },
             "West Tripura": {
-              "CD Ratio December 2020": "48",
-              "CD Ratio March 2021": "47",
-              "CD Ratio December 2021": "48",
-              "CD Ratio Since December 2020": "No Change"
+              "CD Ratio": "48"
             },
             "Sepahijala": {
-              "CD Ratio December 2020": "71",
-              "CD Ratio March 2021": "68",
-              "CD Ratio December 2021": "56",
-              "CD Ratio Since December 2020": "-15"
+              "CD Ratio": "56"
             },
             "Khowai": {
-              "CD Ratio December 2020": "61",
-              "CD Ratio March 2021": "52",
-              "CD Ratio December 2021": "66",
-              "CD Ratio Since December 2020": "+5"
+              "CD Ratio": "66"
             },
             "Dhalai": {
-              "CD Ratio December 2020": "97",
-              "CD Ratio March 2021": "96",
-              "CD Ratio December 2021": "99",
-              "CD Ratio Since December 2020": "+2"
+              "CD Ratio": "99"
             }
           }
         },
         "branch_network": {
           "page": 73,
           "fields": [
-            "S.No.",
             "No of Gp’s/Vc’s"
           ],
           "num_districts": 8,
           "districts": {
             "West Tripura": {
-              "S.No.": "1",
               "No of Gp’s/Vc’s": "50"
             },
             "Sepahijala": {
-              "S.No.": "2",
               "No of Gp’s/Vc’s": "66"
             },
             "Gomati": {
-              "S.No.": "3",
               "No of Gp’s/Vc’s": "56"
             },
             "South Tripura": {
-              "S.No.": "4",
               "No of Gp’s/Vc’s": "55"
             },
             "Khowai": {
-              "S.No.": "5",
               "No of Gp’s/Vc’s": "29"
             },
             "Dhalai": {
-              "S.No.": "6",
               "No of Gp’s/Vc’s": "48"
             },
             "Unakoti": {
-              "S.No.": "7",
               "No of Gp’s/Vc’s": "25"
             },
             "North Tripura": {
-              "S.No.": "8",
               "No of Gp’s/Vc’s": "39"
             }
           }
@@ -3701,60 +3494,33 @@
         "credit_deposit_ratio": {
           "page": 35,
           "fields": [
-            "CD Ratio March 2020",
-            "CD Ratio March 2021",
-            "CD Ratio March 2022",
-            "CD Ratio Since March 2021"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio March 2020": "52",
-              "CD Ratio March 2021": "62",
-              "CD Ratio March 2022": "62",
-              "CD Ratio Since March 2021": "No Change"
+              "CD Ratio": "62"
             },
             "Unakoti": {
-              "CD Ratio March 2020": "75",
-              "CD Ratio March 2021": "64",
-              "CD Ratio March 2022": "67",
-              "CD Ratio Since March 2021": "+3"
+              "CD Ratio": "67"
             },
             "South Tripura": {
-              "CD Ratio March 2020": "57",
-              "CD Ratio March 2021": "57",
-              "CD Ratio March 2022": "63",
-              "CD Ratio Since March 2021": "+6"
+              "CD Ratio": "63"
             },
             "Gomati": {
-              "CD Ratio March 2020": "64",
-              "CD Ratio March 2021": "63",
-              "CD Ratio March 2022": "63",
-              "CD Ratio Since March 2021": "No Change"
+              "CD Ratio": "63"
             },
             "West Tripura": {
-              "CD Ratio March 2020": "51",
-              "CD Ratio March 2021": "47",
-              "CD Ratio March 2022": "51",
-              "CD Ratio Since March 2021": "+4"
+              "CD Ratio": "51"
             },
             "Sepahijala": {
-              "CD Ratio March 2020": "72",
-              "CD Ratio March 2021": "68",
-              "CD Ratio March 2022": "65",
-              "CD Ratio Since March 2021": "-3"
+              "CD Ratio": "65"
             },
             "Khowai": {
-              "CD Ratio March 2020": "65",
-              "CD Ratio March 2021": "52",
-              "CD Ratio March 2022": "58",
-              "CD Ratio Since March 2021": "+6"
+              "CD Ratio": "58"
             },
             "Dhalai": {
-              "CD Ratio March 2020": "96",
-              "CD Ratio March 2021": "96",
-              "CD Ratio March 2022": "99",
-              "CD Ratio Since March 2021": "+3"
+              "CD Ratio": "99"
             }
           }
         },
@@ -3937,6 +3703,123 @@
               "ATM Allocation": "Punjab National Bank"
             }
           }
+        },
+        "branch_network": {
+          "page": null,
+          "fields": [
+            "No. of ATM",
+            "No. of Branches"
+          ],
+          "num_districts": 8,
+          "districts": {
+            "West Tripura": {
+              "No. of ATM": "279",
+              "No. of Branches": "197"
+            },
+            "Sepahijala": {
+              "No. of ATM": "42",
+              "No. of Branches": "60"
+            },
+            "Khowai": {
+              "No. of ATM": "25",
+              "No. of Branches": "40"
+            },
+            "Dhalai": {
+              "No. of ATM": "39",
+              "No. of Branches": "47"
+            },
+            "Gomati": {
+              "No. of ATM": "57",
+              "No. of Branches": "63"
+            },
+            "South Tripura": {
+              "No. of ATM": "41",
+              "No. of Branches": "60"
+            },
+            "Unakoti": {
+              "No. of ATM": "22",
+              "No. of Branches": "34"
+            },
+            "North Tripura": {
+              "No. of ATM": "53",
+              "No. of Branches": "46"
+            }
+          }
+        },
+        "bc_coverage": {
+          "page": null,
+          "fields": [
+            "No. of BC/CSP"
+          ],
+          "num_districts": 8,
+          "districts": {
+            "West Tripura": {
+              "No. of BC/CSP": "195"
+            },
+            "Sepahijala": {
+              "No. of BC/CSP": "198"
+            },
+            "Khowai": {
+              "No. of BC/CSP": "190"
+            },
+            "Dhalai": {
+              "No. of BC/CSP": "212"
+            },
+            "Gomati": {
+              "No. of BC/CSP": "161"
+            },
+            "South Tripura": {
+              "No. of BC/CSP": "144"
+            },
+            "Unakoti": {
+              "No. of BC/CSP": "138"
+            },
+            "North Tripura": {
+              "No. of BC/CSP": "108"
+            }
+          }
+        },
+        "pmjdy": {
+          "page": null,
+          "fields": [
+            "No. of PMJDY Accounts",
+            "No. of Women PMJDY Accounts"
+          ],
+          "num_districts": 8,
+          "districts": {
+            "West Tripura": {
+              "No. of PMJDY Accounts": "206639",
+              "No. of Women PMJDY Accounts": "116795"
+            },
+            "Sepahijala": {
+              "No. of PMJDY Accounts": "77249",
+              "No. of Women PMJDY Accounts": "44616"
+            },
+            "Khowai": {
+              "No. of PMJDY Accounts": "83774",
+              "No. of Women PMJDY Accounts": "47258"
+            },
+            "Dhalai": {
+              "No. of PMJDY Accounts": "94046",
+              "No. of Women PMJDY Accounts": "52255"
+            },
+            "Gomati": {
+              "No. of PMJDY Accounts": "95158",
+              "No. of Women PMJDY Accounts": "51017"
+            },
+            "South Tripura": {
+              "No. of PMJDY Accounts": "109120",
+              "No. of Women PMJDY Accounts": "62334"
+            },
+            "Unakoti": {
+              "No. of PMJDY Accounts": "75904",
+              "No. of Women PMJDY Accounts": "44862"
+            },
+            "North Tripura": {
+              "No. of PMJDY Accounts": "114279",
+              "No. of Women PMJDY Accounts": "61420"
+            }
+          }
         }
       }
     },
@@ -3948,60 +3831,33 @@
         "credit_deposit_ratio": {
           "page": 34,
           "fields": [
-            "CD Ratio June 2021",
-            "CD Ratio March 2022",
-            "CD Ratio June 2022",
-            "CD Ratio Since June 2021"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio June 2021": "58",
-              "CD Ratio March 2022": "62",
-              "CD Ratio June 2022": "61",
-              "CD Ratio Since June 2021": "+3"
+              "CD Ratio": "61"
             },
             "Unakoti": {
-              "CD Ratio June 2021": "63",
-              "CD Ratio March 2022": "67",
-              "CD Ratio June 2022": "68",
-              "CD Ratio Since June 2021": "+5"
+              "CD Ratio": "68"
             },
             "South Tripura": {
-              "CD Ratio June 2021": "59",
-              "CD Ratio March 2022": "63",
-              "CD Ratio June 2022": "61",
-              "CD Ratio Since June 2021": "+2"
+              "CD Ratio": "61"
             },
             "Gomati": {
-              "CD Ratio June 2021": "64",
-              "CD Ratio March 2022": "63",
-              "CD Ratio June 2022": "66",
-              "CD Ratio Since June 2021": "+2"
+              "CD Ratio": "66"
             },
             "West Tripura": {
-              "CD Ratio June 2021": "48",
-              "CD Ratio March 2022": "51",
-              "CD Ratio June 2022": "51",
-              "CD Ratio Since June 2021": "+3"
+              "CD Ratio": "51"
             },
             "Sepahijala": {
-              "CD Ratio June 2021": "65",
-              "CD Ratio March 2022": "65",
-              "CD Ratio June 2022": "72",
-              "CD Ratio Since June 2021": "+7"
+              "CD Ratio": "72"
             },
             "Khowai": {
-              "CD Ratio June 2021": "60",
-              "CD Ratio March 2022": "58",
-              "CD Ratio June 2022": "64",
-              "CD Ratio Since June 2021": "+4"
+              "CD Ratio": "64"
             },
             "Dhalai": {
-              "CD Ratio June 2021": "87",
-              "CD Ratio March 2022": "99",
-              "CD Ratio June 2022": "103",
-              "CD Ratio Since June 2021": "+16"
+              "CD Ratio": "103"
             }
           }
         },
@@ -4176,69 +4032,51 @@
         "pmjdy": {
           "page": 19,
           "fields": [
-            "Population (Census 2011)",
-            "No. of PMJDY accounts as on March 2020",
-            "No. of PMJDY accounts as on March 2021",
-            "No. of PMJDY accounts as on March 2022",
-            "PMJDY accounts per one lakh population as on March 2022 (Census 2011)"
+            "Population",
+            "No. of PMJDY Accounts",
+            "PMJDY Accounts Per Lakh Population"
           ],
           "num_districts": 8,
           "districts": {
             "West Tripura": {
-              "Population (Census 2011)": "717366",
-              "No. of PMJDY accounts as on March 2020": "225815",
-              "No. of PMJDY accounts as on March 2021": "224370",
-              "No. of PMJDY accounts as on March 2022": "206639",
-              "PMJDY accounts per one lakh population as on March 2022 (Census 2011)": "28805"
+              "Population": "717366",
+              "No. of PMJDY Accounts": "206639",
+              "PMJDY Accounts Per Lakh Population": "28805"
             },
             "Sepahijala": {
-              "Population (Census 2011)": "585320",
-              "No. of PMJDY accounts as on March 2020": "83379",
-              "No. of PMJDY accounts as on March 2021": "84700",
-              "No. of PMJDY accounts as on March 2022": "77249",
-              "PMJDY accounts per one lakh population as on March 2022 (Census 2011)": "13198"
+              "Population": "585320",
+              "No. of PMJDY Accounts": "77249",
+              "PMJDY Accounts Per Lakh Population": "13198"
             },
             "Khowai": {
-              "Population (Census 2011)": "342864",
-              "No. of PMJDY accounts as on March 2020": "80885",
-              "No. of PMJDY accounts as on March 2021": "85611",
-              "No. of PMJDY accounts as on March 2022": "83774",
-              "PMJDY accounts per one lakh population as on March 2022 (Census 2011)": "24434"
+              "Population": "342864",
+              "No. of PMJDY Accounts": "83774",
+              "PMJDY Accounts Per Lakh Population": "24434"
             },
             "Dhalai": {
-              "Population (Census 2011)": "404091",
-              "No. of PMJDY accounts as on March 2020": "94085",
-              "No. of PMJDY accounts as on March 2021": "100511",
-              "No. of PMJDY accounts as on March 2022": "94046",
-              "PMJDY accounts per one lakh population as on March 2022 (Census 2011)": "23273"
+              "Population": "404091",
+              "No. of PMJDY Accounts": "94046",
+              "PMJDY Accounts Per Lakh Population": "23273"
             },
             "Gomati": {
-              "Population (Census 2011)": "482759",
-              "No. of PMJDY accounts as on March 2020": "88278",
-              "No. of PMJDY accounts as on March 2021": "98663",
-              "No. of PMJDY accounts as on March 2022": "95158",
-              "PMJDY accounts per one lakh population as on March 2022 (Census 2011)": "19711"
+              "Population": "482759",
+              "No. of PMJDY Accounts": "95158",
+              "PMJDY Accounts Per Lakh Population": "19711"
             },
             "South Tripura": {
-              "Population (Census 2011)": "421618",
-              "No. of PMJDY accounts as on March 2020": "125087",
-              "No. of PMJDY accounts as on March 2021": "123903",
-              "No. of PMJDY accounts as on March 2022": "109120",
-              "PMJDY accounts per one lakh population as on March 2022 (Census 2011)": "25881"
+              "Population": "421618",
+              "No. of PMJDY Accounts": "109120",
+              "PMJDY Accounts Per Lakh Population": "25881"
             },
             "Unakoti": {
-              "Population (Census 2011)": "265766",
-              "No. of PMJDY accounts as on March 2020": "76149",
-              "No. of PMJDY accounts as on March 2021": "76391",
-              "No. of PMJDY accounts as on March 2022": "75904",
-              "PMJDY accounts per one lakh population as on March 2022 (Census 2011)": "28560"
+              "Population": "265766",
+              "No. of PMJDY Accounts": "75904",
+              "PMJDY Accounts Per Lakh Population": "28560"
             },
             "North Tripura": {
-              "Population (Census 2011)": "454133",
-              "No. of PMJDY accounts as on March 2020": "114889",
-              "No. of PMJDY accounts as on March 2021": "117125",
-              "No. of PMJDY accounts as on March 2022": "114279",
-              "PMJDY accounts per one lakh population as on March 2022 (Census 2011)": "25164"
+              "Population": "454133",
+              "No. of PMJDY Accounts": "114279",
+              "PMJDY Accounts Per Lakh Population": "25164"
             }
           }
         },
@@ -4447,60 +4285,33 @@
         "credit_deposit_ratio": {
           "page": 32,
           "fields": [
-            "CD Ratio December 2021",
-            "CD Ratio March 2022",
-            "CD Ratio December 2022",
-            "CD Ratio Since December 2021"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio December 2021": "64",
-              "CD Ratio March 2022": "62",
-              "CD Ratio December 2022": "60",
-              "CD Ratio Since December 2021": "-4"
+              "CD Ratio": "60"
             },
             "Unakoti": {
-              "CD Ratio December 2021": "72",
-              "CD Ratio March 2022": "67",
-              "CD Ratio December 2022": "69",
-              "CD Ratio Since December 2021": "-3"
+              "CD Ratio": "69"
             },
             "South Tripura": {
-              "CD Ratio December 2021": "67",
-              "CD Ratio March 2022": "63",
-              "CD Ratio December 2022": "65",
-              "CD Ratio Since December 2021": "-2"
+              "CD Ratio": "65"
             },
             "Gomati": {
-              "CD Ratio December 2021": "67",
-              "CD Ratio March 2022": "63",
-              "CD Ratio December 2022": "67",
-              "CD Ratio Since December 2021": "No Change"
+              "CD Ratio": "67"
             },
             "West Tripura": {
-              "CD Ratio December 2021": "48",
-              "CD Ratio March 2022": "51",
-              "CD Ratio December 2022": "50",
-              "CD Ratio Since December 2021": "+2"
+              "CD Ratio": "50"
             },
             "Sepahijala": {
-              "CD Ratio December 2021": "56",
-              "CD Ratio March 2022": "65",
-              "CD Ratio December 2022": "69",
-              "CD Ratio Since December 2021": "+13"
+              "CD Ratio": "69"
             },
             "Khowai": {
-              "CD Ratio December 2021": "66",
-              "CD Ratio March 2022": "58",
-              "CD Ratio December 2022": "64",
-              "CD Ratio Since December 2021": "-2"
+              "CD Ratio": "64"
             },
             "Dhalai": {
-              "CD Ratio December 2021": "99",
-              "CD Ratio March 2022": "99",
-              "CD Ratio December 2022": "98",
-              "CD Ratio Since December 2021": "-1"
+              "CD Ratio": "98"
             }
           }
         },
@@ -4538,138 +4349,102 @@
         "branch_network": {
           "page": 17,
           "fields": [
-            "Population (Census 2011)",
-            "No. of ATM as on March 2021",
-            "No. of ATM as on March 2022",
-            "No. of ATM as on March 2023",
-            "ATM per one lakh population as on March 2023 (Census 2011)"
+            "Population",
+            "No. of ATM",
+            "ATM Per Lakh Population"
           ],
           "num_districts": 8,
           "districts": {
             "West Tripura": {
-              "Population (Census 2011)": "717366",
-              "No. of ATM as on March 2021": "279",
-              "No. of ATM as on March 2022": "279",
-              "No. of ATM as on March 2023": "271",
-              "ATM per one lakh population as on March 2023 (Census 2011)": "38"
+              "Population": "717366",
+              "No. of ATM": "271",
+              "ATM Per Lakh Population": "38"
             },
             "Sepahijala": {
-              "Population (Census 2011)": "585320",
-              "No. of ATM as on March 2021": "40",
-              "No. of ATM as on March 2022": "42",
-              "No. of ATM as on March 2023": "47",
-              "ATM per one lakh population as on March 2023 (Census 2011)": "8"
+              "Population": "585320",
+              "No. of ATM": "47",
+              "ATM Per Lakh Population": "8"
             },
             "Khowai": {
-              "Population (Census 2011)": "342864",
-              "No. of ATM as on March 2021": "26",
-              "No. of ATM as on March 2022": "25",
-              "No. of ATM as on March 2023": "28",
-              "ATM per one lakh population as on March 2023 (Census 2011)": "8"
+              "Population": "342864",
+              "No. of ATM": "28",
+              "ATM Per Lakh Population": "8"
             },
             "Dhalai": {
-              "Population (Census 2011)": "404091",
-              "No. of ATM as on March 2021": "40",
-              "No. of ATM as on March 2022": "39",
-              "No. of ATM as on March 2023": "39",
-              "ATM per one lakh population as on March 2023 (Census 2011)": "10"
+              "Population": "404091",
+              "No. of ATM": "39",
+              "ATM Per Lakh Population": "10"
             },
             "Gomati": {
-              "Population (Census 2011)": "482759",
-              "No. of ATM as on March 2021": "57",
-              "No. of ATM as on March 2022": "57",
-              "No. of ATM as on March 2023": "55",
-              "ATM per one lakh population as on March 2023 (Census 2011)": "11"
+              "Population": "482759",
+              "No. of ATM": "55",
+              "ATM Per Lakh Population": "11"
             },
             "South Tripura": {
-              "Population (Census 2011)": "421618",
-              "No. of ATM as on March 2021": "41",
-              "No. of ATM as on March 2022": "41",
-              "No. of ATM as on March 2023": "45",
-              "ATM per one lakh population as on March 2023 (Census 2011)": "11"
+              "Population": "421618",
+              "No. of ATM": "45",
+              "ATM Per Lakh Population": "11"
             },
             "Unakoti": {
-              "Population (Census 2011)": "265766",
-              "No. of ATM as on March 2021": "22",
-              "No. of ATM as on March 2022": "22",
-              "No. of ATM as on March 2023": "22",
-              "ATM per one lakh population as on March 2023 (Census 2011)": "8"
+              "Population": "265766",
+              "No. of ATM": "22",
+              "ATM Per Lakh Population": "8"
             },
             "North Tripura": {
-              "Population (Census 2011)": "454133",
-              "No. of ATM as on March 2021": "54",
-              "No. of ATM as on March 2022": "53",
-              "No. of ATM as on March 2023": "57",
-              "ATM per one lakh population as on March 2023 (Census 2011)": "13"
+              "Population": "454133",
+              "No. of ATM": "57",
+              "ATM Per Lakh Population": "13"
             }
           }
         },
         "pmjdy": {
           "page": 18,
           "fields": [
-            "Population (Census 2011)",
-            "No. of PMJDY accounts as on March 2021",
-            "No. of PMJDY accounts as on March 2022",
-            "No. of PMJDY accounts as on March 2023",
-            "PMJDY accounts per one lakh population as on March 2023 (Census 2011)"
+            "Population",
+            "No. of PMJDY Accounts",
+            "PMJDY Accounts Per Lakh Population"
           ],
           "num_districts": 8,
           "districts": {
             "West Tripura": {
-              "Population (Census 2011)": "717366",
-              "No. of PMJDY accounts as on March 2021": "224370",
-              "No. of PMJDY accounts as on March 2022": "206639",
-              "No. of PMJDY accounts as on March 2023": "230480",
-              "PMJDY accounts per one lakh population as on March 2023 (Census 2011)": "32129"
+              "Population": "717366",
+              "No. of PMJDY Accounts": "230480",
+              "PMJDY Accounts Per Lakh Population": "32129"
             },
             "Sepahijala": {
-              "Population (Census 2011)": "585320",
-              "No. of PMJDY accounts as on March 2021": "84700",
-              "No. of PMJDY accounts as on March 2022": "77249",
-              "No. of PMJDY accounts as on March 2023": "85746",
-              "PMJDY accounts per one lakh population as on March 2023 (Census 2011)": "14649"
+              "Population": "585320",
+              "No. of PMJDY Accounts": "85746",
+              "PMJDY Accounts Per Lakh Population": "14649"
             },
             "Khowai": {
-              "Population (Census 2011)": "342864",
-              "No. of PMJDY accounts as on March 2021": "85611",
-              "No. of PMJDY accounts as on March 2022": "83774",
-              "No. of PMJDY accounts as on March 2023": "92989",
-              "PMJDY accounts per one lakh population as on March 2023 (Census 2011)": "27121"
+              "Population": "342864",
+              "No. of PMJDY Accounts": "92989",
+              "PMJDY Accounts Per Lakh Population": "27121"
             },
             "Dhalai": {
-              "Population (Census 2011)": "404091",
-              "No. of PMJDY accounts as on March 2021": "100511",
-              "No. of PMJDY accounts as on March 2022": "94046",
-              "No. of PMJDY accounts as on March 2023": "104391",
-              "PMJDY accounts per one lakh population as on March 2023 (Census 2011)": "25834"
+              "Population": "404091",
+              "No. of PMJDY Accounts": "104391",
+              "PMJDY Accounts Per Lakh Population": "25834"
             },
             "Gomati": {
-              "Population (Census 2011)": "482759",
-              "No. of PMJDY accounts as on March 2021": "98663",
-              "No. of PMJDY accounts as on March 2022": "95158",
-              "No. of PMJDY accounts as on March 2023": "105625",
-              "PMJDY accounts per one lakh population as on March 2023 (Census 2011)": "21879"
+              "Population": "482759",
+              "No. of PMJDY Accounts": "105625",
+              "PMJDY Accounts Per Lakh Population": "21879"
             },
             "South Tripura": {
-              "Population (Census 2011)": "421618",
-              "No. of PMJDY accounts as on March 2021": "123903",
-              "No. of PMJDY accounts as on March 2022": "109120",
-              "No. of PMJDY accounts as on March 2023": "121123",
-              "PMJDY accounts per one lakh population as on March 2023 (Census 2011)": "28728"
+              "Population": "421618",
+              "No. of PMJDY Accounts": "121123",
+              "PMJDY Accounts Per Lakh Population": "28728"
             },
             "Unakoti": {
-              "Population (Census 2011)": "265766",
-              "No. of PMJDY accounts as on March 2021": "76391",
-              "No. of PMJDY accounts as on March 2022": "75904",
-              "No. of PMJDY accounts as on March 2023": "84253",
-              "PMJDY accounts per one lakh population as on March 2023 (Census 2011)": "31702"
+              "Population": "265766",
+              "No. of PMJDY Accounts": "84253",
+              "PMJDY Accounts Per Lakh Population": "31702"
             },
             "North Tripura": {
-              "Population (Census 2011)": "454133",
-              "No. of PMJDY accounts as on March 2021": "117125",
-              "No. of PMJDY accounts as on March 2022": "114279",
-              "No. of PMJDY accounts as on March 2023": "126850",
-              "PMJDY accounts per one lakh population as on March 2023 (Census 2011)": "27932"
+              "Population": "454133",
+              "No. of PMJDY Accounts": "126850",
+              "PMJDY Accounts Per Lakh Population": "27932"
             }
           }
         },
@@ -4966,60 +4741,33 @@
         "credit_deposit_ratio": {
           "page": 34,
           "fields": [
-            "CD Ratio September 2022",
-            "CD Ratio March 2023",
-            "CD Ratio September 2023",
-            "CD Ratio Since March 2023"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio September 2022": "63",
-              "CD Ratio March 2023": "59",
-              "CD Ratio September 2023": "60",
-              "CD Ratio Since March 2023": "+1"
+              "CD Ratio": "60"
             },
             "Unakoti": {
-              "CD Ratio September 2022": "67",
-              "CD Ratio March 2023": "66",
-              "CD Ratio September 2023": "58",
-              "CD Ratio Since March 2023": "-8"
+              "CD Ratio": "58"
             },
             "South Tripura": {
-              "CD Ratio September 2022": "62",
-              "CD Ratio March 2023": "63",
-              "CD Ratio September 2023": "66",
-              "CD Ratio Since March 2023": "+3"
+              "CD Ratio": "66"
             },
             "Gomati": {
-              "CD Ratio September 2022": "65",
-              "CD Ratio March 2023": "64",
-              "CD Ratio September 2023": "67",
-              "CD Ratio Since March 2023": "+3"
+              "CD Ratio": "67"
             },
             "West Tripura": {
-              "CD Ratio September 2022": "50",
-              "CD Ratio March 2023": "47",
-              "CD Ratio September 2023": "50",
-              "CD Ratio Since March 2023": "+3"
+              "CD Ratio": "50"
             },
             "Sepahijala": {
-              "CD Ratio September 2022": "69",
-              "CD Ratio March 2023": "67",
-              "CD Ratio September 2023": "59",
-              "CD Ratio Since March 2023": "-8"
+              "CD Ratio": "59"
             },
             "Khowai": {
-              "CD Ratio September 2022": "64",
-              "CD Ratio March 2023": "63",
-              "CD Ratio September 2023": "65",
-              "CD Ratio Since March 2023": "+2"
+              "CD Ratio": "65"
             },
             "Dhalai": {
-              "CD Ratio September 2022": "95",
-              "CD Ratio March 2023": "96",
-              "CD Ratio September 2023": "96",
-              "CD Ratio Since March 2023": "No Change"
+              "CD Ratio": "96"
             }
           }
         },
@@ -5071,60 +4819,33 @@
         "credit_deposit_ratio": {
           "page": 35,
           "fields": [
-            "CD Ratio December 2022",
-            "CD Ratio March 2023",
-            "CD Ratio December 2023",
-            "CD Ratio Since March 2023"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio December 2022": "60",
-              "CD Ratio March 2023": "59",
-              "CD Ratio December 2023": "61",
-              "CD Ratio Since March 2023": "+2"
+              "CD Ratio": "61"
             },
             "Unakoti": {
-              "CD Ratio December 2022": "69",
-              "CD Ratio March 2023": "66",
-              "CD Ratio December 2023": "69",
-              "CD Ratio Since March 2023": "+3"
+              "CD Ratio": "69"
             },
             "South Tripura": {
-              "CD Ratio December 2022": "65",
-              "CD Ratio March 2023": "63",
-              "CD Ratio December 2023": "67",
-              "CD Ratio Since March 2023": "+4"
+              "CD Ratio": "67"
             },
             "Gomati": {
-              "CD Ratio December 2022": "67",
-              "CD Ratio March 2023": "64",
-              "CD Ratio December 2023": "71",
-              "CD Ratio Since March 2023": "+7"
+              "CD Ratio": "71"
             },
             "West Tripura": {
-              "CD Ratio December 2022": "50",
-              "CD Ratio March 2023": "47",
-              "CD Ratio December 2023": "43",
-              "CD Ratio Since March 2023": "-4"
+              "CD Ratio": "43"
             },
             "Sepahijala": {
-              "CD Ratio December 2022": "69",
-              "CD Ratio March 2023": "67",
-              "CD Ratio December 2023": "68",
-              "CD Ratio Since March 2023": "+1"
+              "CD Ratio": "68"
             },
             "Khowai": {
-              "CD Ratio December 2022": "64",
-              "CD Ratio March 2023": "63",
-              "CD Ratio December 2023": "66",
-              "CD Ratio Since March 2023": "+3"
+              "CD Ratio": "66"
             },
             "Dhalai": {
-              "CD Ratio December 2022": "98",
-              "CD Ratio March 2023": "96",
-              "CD Ratio December 2023": "98",
-              "CD Ratio Since March 2023": "+2"
+              "CD Ratio": "98"
             }
           }
         },
@@ -5241,60 +4962,33 @@
         "credit_deposit_ratio": {
           "page": 25,
           "fields": [
-            "CD Ratio March 2023",
-            "CD Ratio December 2023",
-            "CD Ratio March 2024",
-            "CD Ratio Since March 2023"
+            "CD Ratio"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio March 2023": "59",
-              "CD Ratio December 2023": "61",
-              "CD Ratio March 2024": "59",
-              "CD Ratio Since March 2023": "No Change"
+              "CD Ratio": "59"
             },
             "Unakoti": {
-              "CD Ratio March 2023": "66",
-              "CD Ratio December 2023": "69",
-              "CD Ratio March 2024": "68",
-              "CD Ratio Since March 2023": "+2"
+              "CD Ratio": "68"
             },
             "South Tripura": {
-              "CD Ratio March 2023": "63",
-              "CD Ratio December 2023": "67",
-              "CD Ratio March 2024": "63",
-              "CD Ratio Since March 2023": "No Change"
+              "CD Ratio": "63"
             },
             "Gomati": {
-              "CD Ratio March 2023": "64",
-              "CD Ratio December 2023": "71",
-              "CD Ratio March 2024": "69",
-              "CD Ratio Since March 2023": "+5"
+              "CD Ratio": "69"
             },
             "West Tripura": {
-              "CD Ratio March 2023": "47",
-              "CD Ratio December 2023": "43",
-              "CD Ratio March 2024": "42",
-              "CD Ratio Since March 2023": "-5"
+              "CD Ratio": "42"
             },
             "Sepahijala": {
-              "CD Ratio March 2023": "67",
-              "CD Ratio December 2023": "68",
-              "CD Ratio March 2024": "64",
-              "CD Ratio Since March 2023": "-3"
+              "CD Ratio": "64"
             },
             "Khowai": {
-              "CD Ratio March 2023": "63",
-              "CD Ratio December 2023": "66",
-              "CD Ratio March 2024": "65",
-              "CD Ratio Since March 2023": "+2"
+              "CD Ratio": "65"
             },
             "Dhalai": {
-              "CD Ratio March 2023": "96",
-              "CD Ratio December 2023": "98",
-              "CD Ratio March 2024": "98",
-              "CD Ratio Since March 2023": "+2"
+              "CD Ratio": "98"
             }
           }
         },
@@ -5359,6 +5053,80 @@
               "Annexure No.": ""
             }
           }
+        },
+        "branch_network": {
+          "page": null,
+          "fields": [
+            "No. of Branches"
+          ],
+          "num_districts": 8,
+          "districts": {
+            "West Tripura": {
+              "No. of Branches": "219"
+            },
+            "Sepahijala": {
+              "No. of Branches": "63"
+            },
+            "Khowai": {
+              "No. of Branches": "45"
+            },
+            "Dhalai": {
+              "No. of Branches": "50"
+            },
+            "Gomati": {
+              "No. of Branches": "66"
+            },
+            "South Tripura": {
+              "No. of Branches": "65"
+            },
+            "Unakoti": {
+              "No. of Branches": "36"
+            },
+            "North Tripura": {
+              "No. of Branches": "52"
+            }
+          }
+        },
+        "bc_coverage": {
+          "page": null,
+          "fields": [
+            "No. of BC/CSP"
+          ],
+          "num_districts": 8,
+          "districts": {
+            "West Tripura": {
+              "No. of BC/CSP": "557"
+            },
+            "Sepahijala": {
+              "No. of BC/CSP": "369"
+            },
+            "Khowai": {
+              "No. of BC/CSP": "233"
+            },
+            "Dhalai": {
+              "No. of BC/CSP": "284"
+            },
+            "Gomati": {
+              "No. of BC/CSP": "382"
+            },
+            "South Tripura": {
+              "No. of BC/CSP": "298"
+            },
+            "Unakoti": {
+              "No. of BC/CSP": "174"
+            },
+            "North Tripura": {
+              "No. of BC/CSP": "517"
+            }
+          }
+        },
+        "pmjdy": {
+          "page": null,
+          "fields": [
+            "No. of Women PMJDY Accounts"
+          ],
+          "num_districts": 0,
+          "districts": {}
         }
       }
     },
@@ -5370,243 +5138,153 @@
         "branch_network": {
           "page": 13,
           "fields": [
-            "Population (Census 2011)",
-            "No. of Branches as on March 2022",
-            "No. of Branches as on March 2023",
-            "No. of Branches as on March 2024",
-            "No. of Branches as on June 2024",
-            "Branch per one lakh population as on June2024 (Census 2011)"
+            "Population",
+            "No. of Branches",
+            "Branches Per Lakh Population"
           ],
           "num_districts": 8,
           "districts": {
             "West Tripura": {
-              "Population (Census 2011)": "717366",
-              "No. of Branches as on March 2022": "197",
-              "No. of Branches as on March 2023": "210",
-              "No. of Branches as on March 2024": "219",
-              "No. of Branches as on June 2024": "219",
-              "Branch per one lakh population as on June2024 (Census 2011)": "31"
+              "Population": "717366",
+              "No. of Branches": "219",
+              "Branches Per Lakh Population": "31"
             },
             "Sepahijala": {
-              "Population (Census 2011)": "585320",
-              "No. of Branches as on March 2022": "60",
-              "No. of Branches as on March 2023": "59",
-              "No. of Branches as on March 2024": "63",
-              "No. of Branches as on June 2024": "63",
-              "Branch per one lakh population as on June2024 (Census 2011)": "11"
+              "Population": "585320",
+              "No. of Branches": "63",
+              "Branches Per Lakh Population": "11"
             },
             "Khowai": {
-              "Population (Census 2011)": "342864",
-              "No. of Branches as on March 2022": "40",
-              "No. of Branches as on March 2023": "41",
-              "No. of Branches as on March 2024": "45",
-              "No. of Branches as on June 2024": "45",
-              "Branch per one lakh population as on June2024 (Census 2011)": "13"
+              "Population": "342864",
+              "No. of Branches": "45",
+              "Branches Per Lakh Population": "13"
             },
             "Dhalai": {
-              "Population (Census 2011)": "404091",
-              "No. of Branches as on March 2022": "47",
-              "No. of Branches as on March 2023": "49",
-              "No. of Branches as on March 2024": "50",
-              "No. of Branches as on June 2024": "50",
-              "Branch per one lakh population as on June2024 (Census 2011)": "12"
+              "Population": "404091",
+              "No. of Branches": "50",
+              "Branches Per Lakh Population": "12"
             },
             "Gomati": {
-              "Population (Census 2011)": "482759",
-              "No. of Branches as on March 2022": "63",
-              "No. of Branches as on March 2023": "65",
-              "No. of Branches as on March 2024": "66",
-              "No. of Branches as on June 2024": "66",
-              "Branch per one lakh population as on June2024 (Census 2011)": "14"
+              "Population": "482759",
+              "No. of Branches": "66",
+              "Branches Per Lakh Population": "14"
             },
             "South Tripura": {
-              "Population (Census 2011)": "421618",
-              "No. of Branches as on March 2022": "60",
-              "No. of Branches as on March 2023": "63",
-              "No. of Branches as on March 2024": "65",
-              "No. of Branches as on June 2024": "65",
-              "Branch per one lakh population as on June2024 (Census 2011)": "15"
+              "Population": "421618",
+              "No. of Branches": "65",
+              "Branches Per Lakh Population": "15"
             },
             "Unakoti": {
-              "Population (Census 2011)": "265766",
-              "No. of Branches as on March 2022": "34",
-              "No. of Branches as on March 2023": "35",
-              "No. of Branches as on March 2024": "36",
-              "No. of Branches as on June 2024": "36",
-              "Branch per one lakh population as on June2024 (Census 2011)": "14"
+              "Population": "265766",
+              "No. of Branches": "36",
+              "Branches Per Lakh Population": "14"
             },
             "North Tripura": {
-              "Population (Census 2011)": "454133",
-              "No. of Branches as on March 2022": "46",
-              "No. of Branches as on March 2023": "49",
-              "No. of Branches as on March 2024": "52",
-              "No. of Branches as on June 2024": "52",
-              "Branch per one lakh population as on June2024 (Census 2011)": "11"
+              "Population": "454133",
+              "No. of Branches": "52",
+              "Branches Per Lakh Population": "11"
             }
           }
         },
         "bc_coverage": {
           "page": 13,
           "fields": [
-            "Population (Census 2011)",
-            "No. of BC/CSP as on March 2022",
-            "No. of BC/CSP as on March 2023",
-            "No. of BC/CSP as on March 2024",
-            "No. of BC/CSP as on June 2024",
-            "BC/CSP per one lakh population as on June 2024 (Census 2011)"
+            "Population",
+            "No. of BC/CSP",
+            "BC/CSP Per Lakh Population"
           ],
           "num_districts": 8,
           "districts": {
             "West Tripura": {
-              "Population (Census 2011)": "717366",
-              "No. of BC/CSP as on March 2022": "195",
-              "No. of BC/CSP as on March 2023": "194",
-              "No. of BC/CSP as on March 2024": "557",
-              "No. of BC/CSP as on June 2024": "559",
-              "BC/CSP per one lakh population as on June 2024 (Census 2011)": "78"
+              "Population": "717366",
+              "No. of BC/CSP": "559",
+              "BC/CSP Per Lakh Population": "78"
             },
             "Sepahijala": {
-              "Population (Census 2011)": "585320",
-              "No. of BC/CSP as on March 2022": "198",
-              "No. of BC/CSP as on March 2023": "199",
-              "No. of BC/CSP as on March 2024": "369",
-              "No. of BC/CSP as on June 2024": "369",
-              "BC/CSP per one lakh population as on June 2024 (Census 2011)": "63"
+              "Population": "585320",
+              "No. of BC/CSP": "369",
+              "BC/CSP Per Lakh Population": "63"
             },
             "Khowai": {
-              "Population (Census 2011)": "342864",
-              "No. of BC/CSP as on March 2022": "190",
-              "No. of BC/CSP as on March 2023": "189",
-              "No. of BC/CSP as on March 2024": "233",
-              "No. of BC/CSP as on June 2024": "235",
-              "BC/CSP per one lakh population as on June 2024 (Census 2011)": "69"
+              "Population": "342864",
+              "No. of BC/CSP": "235",
+              "BC/CSP Per Lakh Population": "69"
             },
             "Dhalai": {
-              "Population (Census 2011)": "404091",
-              "No. of BC/CSP as on March 2022": "212",
-              "No. of BC/CSP as on March 2023": "214",
-              "No. of BC/CSP as on March 2024": "284",
-              "No. of BC/CSP as on June 2024": "286",
-              "BC/CSP per one lakh population as on June 2024 (Census 2011)": "71"
+              "Population": "404091",
+              "No. of BC/CSP": "286",
+              "BC/CSP Per Lakh Population": "71"
             },
             "Gomati": {
-              "Population (Census 2011)": "482759",
-              "No. of BC/CSP as on March 2022": "161",
-              "No. of BC/CSP as on March 2023": "165",
-              "No. of BC/CSP as on March 2024": "382",
-              "No. of BC/CSP as on June 2024": "383",
-              "BC/CSP per one lakh population as on June 2024 (Census 2011)": "79"
+              "Population": "482759",
+              "No. of BC/CSP": "383",
+              "BC/CSP Per Lakh Population": "79"
             },
             "South Tripura": {
-              "Population (Census 2011)": "421618",
-              "No. of BC/CSP as on March 2022": "144",
-              "No. of BC/CSP as on March 2023": "148",
-              "No. of BC/CSP as on March 2024": "298",
-              "No. of BC/CSP as on June 2024": "300",
-              "BC/CSP per one lakh population as on June 2024 (Census 2011)": "71"
+              "Population": "421618",
+              "No. of BC/CSP": "300",
+              "BC/CSP Per Lakh Population": "71"
             },
             "Unakoti": {
-              "Population (Census 2011)": "265766",
-              "No. of BC/CSP as on March 2022": "138",
-              "No. of BC/CSP as on March 2023": "144",
-              "No. of BC/CSP as on March 2024": "174",
-              "No. of BC/CSP as on June 2024": "176",
-              "BC/CSP per one lakh population as on June 2024 (Census 2011)": "66"
+              "Population": "265766",
+              "No. of BC/CSP": "176",
+              "BC/CSP Per Lakh Population": "66"
             },
             "North Tripura": {
-              "Population (Census 2011)": "454133",
-              "No. of BC/CSP as on March 2022": "108",
-              "No. of BC/CSP as on March 2023": "118",
-              "No. of BC/CSP as on March 2024": "517",
-              "No. of BC/CSP as on June 2024": "518",
-              "BC/CSP per one lakh population as on June 2024 (Census 2011)": "114"
+              "Population": "454133",
+              "No. of BC/CSP": "518",
+              "BC/CSP Per Lakh Population": "114"
             }
           }
         },
         "pmjdy": {
           "page": 14,
           "fields": [
-            "Women Population (Census 2011)",
-            "No. of Women PMJDY accounts as on March 2021",
-            "No. of Women PMJDY accounts as on March 2022",
-            "No. of Women PMJDY accounts as on March 2023",
-            "No. of Women PMJDY accounts as on March 2024",
-            "No. of Women PMJDY accounts as on June 2024",
-            "Women PMJDY accounts per one lakh population as on June 2024 (Census 2011)"
+            "Women Population",
+            "No. of Women PMJDY Accounts",
+            "Women PMJDY Accounts Per Lakh Population"
           ],
           "num_districts": 8,
           "districts": {
             "West Tripura": {
-              "Women Population (Census 2011)": "355287",
-              "No. of Women PMJDY accounts as on March 2021": "112702",
-              "No. of Women PMJDY accounts as on March 2022": "116795",
-              "No. of Women PMJDY accounts as on March 2023": "129513",
-              "No. of Women PMJDY accounts as on March 2024": "148983 150224 42282",
-              "No. of Women PMJDY accounts as on June 2024": "",
-              "Women PMJDY accounts per one lakh population as on June 2024 (Census 2011)": ""
+              "Women Population": "355287",
+              "No. of Women PMJDY Accounts": "",
+              "Women PMJDY Accounts Per Lakh Population": ""
             },
             "Sepahijala": {
-              "Women Population (Census 2011)": "289889",
-              "No. of Women PMJDY accounts as on March 2021": "44104",
-              "No. of Women PMJDY accounts as on March 2022": "44616",
-              "No. of Women PMJDY accounts as on March 2023": "49390",
-              "No. of Women PMJDY accounts as on March 2024": "49513 52067 17961",
-              "No. of Women PMJDY accounts as on June 2024": "",
-              "Women PMJDY accounts per one lakh population as on June 2024 (Census 2011)": ""
+              "Women Population": "289889",
+              "No. of Women PMJDY Accounts": "",
+              "Women PMJDY Accounts Per Lakh Population": ""
             },
             "Khowai": {
-              "Women Population (Census 2011)": "169809",
-              "No. of Women PMJDY accounts as on March 2021": "45488",
-              "No. of Women PMJDY accounts as on March 2022": "47258",
-              "No. of Women PMJDY accounts as on March 2023": "52315",
-              "No. of Women PMJDY accounts as on March 2024": "49126 51375 30254",
-              "No. of Women PMJDY accounts as on June 2024": "",
-              "Women PMJDY accounts per one lakh population as on June 2024 (Census 2011)": ""
+              "Women Population": "169809",
+              "No. of Women PMJDY Accounts": "",
+              "Women PMJDY Accounts Per Lakh Population": ""
             },
             "Dhalai": {
-              "Women Population (Census 2011)": "200132",
-              "No. of Women PMJDY accounts as on March 2021": "49364",
-              "No. of Women PMJDY accounts as on March 2022": "52255",
-              "No. of Women PMJDY accounts as on March 2023": "57846",
-              "No. of Women PMJDY accounts as on March 2024": "68602 71992 35972",
-              "No. of Women PMJDY accounts as on June 2024": "",
-              "Women PMJDY accounts per one lakh population as on June 2024 (Census 2011)": ""
+              "Women Population": "200132",
+              "No. of Women PMJDY Accounts": "",
+              "Women PMJDY Accounts Per Lakh Population": ""
             },
             "Gomati": {
-              "Women Population (Census 2011)": "239094",
-              "No. of Women PMJDY accounts as on March 2021": "48781",
-              "No. of Women PMJDY accounts as on March 2022": "51017",
-              "No. of Women PMJDY accounts as on March 2023": "56476",
-              "No. of Women PMJDY accounts as on March 2024": "59745 62984 26343",
-              "No. of Women PMJDY accounts as on June 2024": "",
-              "Women PMJDY accounts per one lakh population as on June 2024 (Census 2011)": ""
+              "Women Population": "239094",
+              "No. of Women PMJDY Accounts": "",
+              "Women PMJDY Accounts Per Lakh Population": ""
             },
             "South Tripura": {
-              "Women Population (Census 2011)": "208813",
-              "No. of Women PMJDY accounts as on March 2021": "60735",
-              "No. of Women PMJDY accounts as on March 2022": "62334",
-              "No. of Women PMJDY accounts as on March 2023": "69004",
-              "No. of Women PMJDY accounts as on March 2024": "70670 74503 35679",
-              "No. of Women PMJDY accounts as on June 2024": "",
-              "Women PMJDY accounts per one lakh population as on June 2024 (Census 2011)": ""
+              "Women Population": "208813",
+              "No. of Women PMJDY Accounts": "",
+              "Women PMJDY Accounts Per Lakh Population": ""
             },
             "Unakoti": {
-              "Women Population (Census 2011)": "131625",
-              "No. of Women PMJDY accounts as on March 2021": "43802",
-              "No. of Women PMJDY accounts as on March 2022": "44862",
-              "No. of Women PMJDY accounts as on March 2023": "49662",
-              "No. of Women PMJDY accounts as on March 2024": "53514 57049 43342",
-              "No. of Women PMJDY accounts as on June 2024": "",
-              "Women PMJDY accounts per one lakh population as on June 2024 (Census 2011)": ""
+              "Women Population": "131625",
+              "No. of Women PMJDY Accounts": "",
+              "Women PMJDY Accounts Per Lakh Population": ""
             },
             "North Tripura": {
-              "Women Population (Census 2011)": "224917",
-              "No. of Women PMJDY accounts as on March 2021": "60012",
-              "No. of Women PMJDY accounts as on March 2022": "61420",
-              "No. of Women PMJDY accounts as on March 2023": "67992",
-              "No. of Women PMJDY accounts as on March 2024": "75559 80192 35654",
-              "No. of Women PMJDY accounts as on June 2024": "",
-              "Women PMJDY accounts per one lakh population as on June 2024 (Census 2011)": ""
+              "Women Population": "224917",
+              "No. of Women PMJDY Accounts": "",
+              "Women PMJDY Accounts Per Lakh Population": ""
             }
           }
         },
@@ -6103,69 +5781,42 @@
         "credit_deposit_ratio": {
           "page": 28,
           "fields": [
-            "CD Ratio Sept 2023",
-            "CD Ratio March 2024",
-            "CD Ratio June 2024",
-            "CD Ratio Sept 2024",
-            "CD Ratio Q-O-Q change"
+            "CD Ratio",
+            "CD Ratio QoQ Change"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio Sept 2023": "60",
-              "CD Ratio March 2024": "59",
-              "CD Ratio June 2024": "73",
-              "CD Ratio Sept 2024": "64",
-              "CD Ratio Q-O-Q change": "-9"
+              "CD Ratio": "64",
+              "CD Ratio QoQ Change": "-9"
             },
             "Unakoti": {
-              "CD Ratio Sept 2023": "58",
-              "CD Ratio March 2024": "68",
-              "CD Ratio June 2024": "69",
-              "CD Ratio Sept 2024": "69",
-              "CD Ratio Q-O-Q change": "No change"
+              "CD Ratio": "69",
+              "CD Ratio QoQ Change": "No change"
             },
             "South Tripura": {
-              "CD Ratio Sept 2023": "66",
-              "CD Ratio March 2024": "63",
-              "CD Ratio June 2024": "68",
-              "CD Ratio Sept 2024": "65",
-              "CD Ratio Q-O-Q change": "-3"
+              "CD Ratio": "65",
+              "CD Ratio QoQ Change": "-3"
             },
             "Gomati": {
-              "CD Ratio Sept 2023": "67",
-              "CD Ratio March 2024": "69",
-              "CD Ratio June 2024": "65",
-              "CD Ratio Sept 2024": "69",
-              "CD Ratio Q-O-Q change": "+4"
+              "CD Ratio": "69",
+              "CD Ratio QoQ Change": "+4"
             },
             "West Tripura": {
-              "CD Ratio Sept 2023": "50",
-              "CD Ratio March 2024": "42",
-              "CD Ratio June 2024": "43",
-              "CD Ratio Sept 2024": "43",
-              "CD Ratio Q-O-Q change": "No change"
+              "CD Ratio": "43",
+              "CD Ratio QoQ Change": "No change"
             },
             "Sepahijala": {
-              "CD Ratio Sept 2023": "59",
-              "CD Ratio March 2024": "64",
-              "CD Ratio June 2024": "58",
-              "CD Ratio Sept 2024": "61",
-              "CD Ratio Q-O-Q change": "+3"
+              "CD Ratio": "61",
+              "CD Ratio QoQ Change": "+3"
             },
             "Khowai": {
-              "CD Ratio Sept 2023": "65",
-              "CD Ratio March 2024": "65",
-              "CD Ratio June 2024": "67",
-              "CD Ratio Sept 2024": "63",
-              "CD Ratio Q-O-Q change": "-4"
+              "CD Ratio": "63",
+              "CD Ratio QoQ Change": "-4"
             },
             "Dhalai": {
-              "CD Ratio Sept 2023": "96",
-              "CD Ratio March 2024": "98",
-              "CD Ratio June 2024": "83",
-              "CD Ratio Sept 2024": "98",
-              "CD Ratio Q-O-Q change": "+15"
+              "CD Ratio": "98",
+              "CD Ratio QoQ Change": "+15"
             }
           }
         },
@@ -6629,69 +6280,42 @@
         "credit_deposit_ratio": {
           "page": 29,
           "fields": [
-            "CD Ratio Dec 2023",
-            "CD Ratio March 2024",
-            "CD Ratio Sept 2024",
-            "CD Ratio Dec 2024",
-            "CD Ratio Y-O-Y change"
+            "CD Ratio",
+            "CD Ratio YoY Change"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "CD Ratio Dec 2023": "61",
-              "CD Ratio March 2024": "59",
-              "CD Ratio Sept 2024": "64",
-              "CD Ratio Dec 2024": "64",
-              "CD Ratio Y-O-Y change": "+3"
+              "CD Ratio": "64",
+              "CD Ratio YoY Change": "+3"
             },
             "Unakoti": {
-              "CD Ratio Dec 2023": "69",
-              "CD Ratio March 2024": "68",
-              "CD Ratio Sept 2024": "69",
-              "CD Ratio Dec 2024": "72",
-              "CD Ratio Y-O-Y change": "+3"
+              "CD Ratio": "72",
+              "CD Ratio YoY Change": "+3"
             },
             "South Tripura": {
-              "CD Ratio Dec 2023": "67",
-              "CD Ratio March 2024": "63",
-              "CD Ratio Sept 2024": "65",
-              "CD Ratio Dec 2024": "62",
-              "CD Ratio Y-O-Y change": "-5"
+              "CD Ratio": "62",
+              "CD Ratio YoY Change": "-5"
             },
             "Gomati": {
-              "CD Ratio Dec 2023": "71",
-              "CD Ratio March 2024": "69",
-              "CD Ratio Sept 2024": "69",
-              "CD Ratio Dec 2024": "71",
-              "CD Ratio Y-O-Y change": "No change"
+              "CD Ratio": "71",
+              "CD Ratio YoY Change": "No change"
             },
             "West Tripura": {
-              "CD Ratio Dec 2023": "43",
-              "CD Ratio March 2024": "42",
-              "CD Ratio Sept 2024": "43",
-              "CD Ratio Dec 2024": "41",
-              "CD Ratio Y-O-Y change": "-2"
+              "CD Ratio": "41",
+              "CD Ratio YoY Change": "-2"
             },
             "Sepahijala": {
-              "CD Ratio Dec 2023": "68",
-              "CD Ratio March 2024": "64",
-              "CD Ratio Sept 2024": "61",
-              "CD Ratio Dec 2024": "66",
-              "CD Ratio Y-O-Y change": "-2"
+              "CD Ratio": "66",
+              "CD Ratio YoY Change": "-2"
             },
             "Khowai": {
-              "CD Ratio Dec 2023": "66",
-              "CD Ratio March 2024": "65",
-              "CD Ratio Sept 2024": "63",
-              "CD Ratio Dec 2024": "67",
-              "CD Ratio Y-O-Y change": "+1"
+              "CD Ratio": "67",
+              "CD Ratio YoY Change": "+1"
             },
             "Dhalai": {
-              "CD Ratio Dec 2023": "98",
-              "CD Ratio March 2024": "98",
-              "CD Ratio Sept 2024": "98",
-              "CD Ratio Dec 2024": "100",
-              "CD Ratio Y-O-Y change": "+2"
+              "CD Ratio": "100",
+              "CD Ratio YoY Change": "+2"
             }
           }
         },
@@ -7119,87 +6743,51 @@
         "credit_deposit_ratio": {
           "page": 17,
           "fields": [
-            "C D Ratio March 2024",
-            "June 2024",
-            "Sept 2024",
-            "Dec 2024",
-            "March 2025",
-            "Q-o-Q change",
-            "Y-o-Y change"
+            "CD Ratio",
+            "CD Ratio QoQ Change",
+            "CD Ratio YoY Change"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "C D Ratio March 2024": "59",
-              "June 2024": "73",
-              "Sept 2024": "64",
-              "Dec 2024": "64",
-              "March 2025": "63",
-              "Q-o-Q change": "-1",
-              "Y-o-Y change": "+4"
+              "CD Ratio": "63",
+              "CD Ratio QoQ Change": "-1",
+              "CD Ratio YoY Change": "+4"
             },
             "Unakoti": {
-              "C D Ratio March 2024": "68",
-              "June 2024": "69",
-              "Sept 2024": "69",
-              "Dec 2024": "72",
-              "March 2025": "69",
-              "Q-o-Q change": "-3",
-              "Y-o-Y change": "+1"
+              "CD Ratio": "69",
+              "CD Ratio QoQ Change": "-3",
+              "CD Ratio YoY Change": "+1"
             },
             "South Tripura": {
-              "C D Ratio March 2024": "63",
-              "June 2024": "68",
-              "Sept 2024": "65",
-              "Dec 2024": "62",
-              "March 2025": "60",
-              "Q-o-Q change": "-2",
-              "Y-o-Y change": "-3"
+              "CD Ratio": "60",
+              "CD Ratio QoQ Change": "-2",
+              "CD Ratio YoY Change": "-3"
             },
             "Gomati": {
-              "C D Ratio March 2024": "69",
-              "June 2024": "65",
-              "Sept 2024": "69",
-              "Dec 2024": "71",
-              "March 2025": "70",
-              "Q-o-Q change": "-1",
-              "Y-o-Y change": "+1"
+              "CD Ratio": "70",
+              "CD Ratio QoQ Change": "-1",
+              "CD Ratio YoY Change": "+1"
             },
             "West Tripura": {
-              "C D Ratio March 2024": "42",
-              "June 2024": "43",
-              "Sept 2024": "43",
-              "Dec 2024": "41",
-              "March 2025": "39",
-              "Q-o-Q change": "-2",
-              "Y-o-Y change": "-3"
+              "CD Ratio": "39",
+              "CD Ratio QoQ Change": "-2",
+              "CD Ratio YoY Change": "-3"
             },
             "Sepahijala": {
-              "C D Ratio March 2024": "64",
-              "June 2024": "58",
-              "Sept 2024": "61",
-              "Dec 2024": "66",
-              "March 2025": "59",
-              "Q-o-Q change": "-7",
-              "Y-o-Y change": "-5"
+              "CD Ratio": "59",
+              "CD Ratio QoQ Change": "-7",
+              "CD Ratio YoY Change": "-5"
             },
             "Khowai": {
-              "C D Ratio March 2024": "65",
-              "June 2024": "67",
-              "Sept 2024": "63",
-              "Dec 2024": "67",
-              "March 2025": "62",
-              "Q-o-Q change": "-5",
-              "Y-o-Y change": "-3"
+              "CD Ratio": "62",
+              "CD Ratio QoQ Change": "-5",
+              "CD Ratio YoY Change": "-3"
             },
             "Dhalai": {
-              "C D Ratio March 2024": "98",
-              "June 2024": "83",
-              "Sept 2024": "98",
-              "Dec 2024": "100",
-              "March 2025": "98",
-              "Q-o-Q change": "-2",
-              "Y-o-Y change": "No change"
+              "CD Ratio": "98",
+              "CD Ratio QoQ Change": "-2",
+              "CD Ratio YoY Change": "No change"
             }
           }
         },
@@ -7635,78 +7223,51 @@
         "credit_deposit_ratio": {
           "page": 18,
           "fields": [
-            "C D Ratio March 2024",
-            "June 2024",
-            "March 2025",
-            "June 2025",
-            "Q-o-Q change",
-            "Y-o-Y change"
+            "CD Ratio",
+            "CD Ratio QoQ Change",
+            "CD Ratio YoY Change"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "C D Ratio March 2024": "59",
-              "June 2024": "73",
-              "March 2025": "63",
-              "June 2025": "63",
-              "Q-o-Q change": "No Change",
-              "Y-o-Y change": "-10"
+              "CD Ratio": "63",
+              "CD Ratio QoQ Change": "No Change",
+              "CD Ratio YoY Change": "-10"
             },
             "Unakoti": {
-              "C D Ratio March 2024": "68",
-              "June 2024": "69",
-              "March 2025": "69",
-              "June 2025": "71",
-              "Q-o-Q change": "+2",
-              "Y-o-Y change": "+2"
+              "CD Ratio": "71",
+              "CD Ratio QoQ Change": "+2",
+              "CD Ratio YoY Change": "+2"
             },
             "South Tripura": {
-              "C D Ratio March 2024": "63",
-              "June 2024": "68",
-              "March 2025": "60",
-              "June 2025": "66",
-              "Q-o-Q change": "+6",
-              "Y-o-Y change": "-2"
+              "CD Ratio": "66",
+              "CD Ratio QoQ Change": "+6",
+              "CD Ratio YoY Change": "-2"
             },
             "Gomati": {
-              "C D Ratio March 2024": "69",
-              "June 2024": "65",
-              "March 2025": "70",
-              "June 2025": "66",
-              "Q-o-Q change": "-4",
-              "Y-o-Y change": "+1"
+              "CD Ratio": "66",
+              "CD Ratio QoQ Change": "-4",
+              "CD Ratio YoY Change": "+1"
             },
             "West Tripura": {
-              "C D Ratio March 2024": "42",
-              "June 2024": "43",
-              "March 2025": "39",
-              "June 2025": "40",
-              "Q-o-Q change": "+1",
-              "Y-o-Y change": "-3"
+              "CD Ratio": "40",
+              "CD Ratio QoQ Change": "+1",
+              "CD Ratio YoY Change": "-3"
             },
             "Sepahijala": {
-              "C D Ratio March 2024": "64",
-              "June 2024": "58",
-              "March 2025": "59",
-              "June 2025": "58",
-              "Q-o-Q change": "-1",
-              "Y-o-Y change": "No change"
+              "CD Ratio": "58",
+              "CD Ratio QoQ Change": "-1",
+              "CD Ratio YoY Change": "No change"
             },
             "Khowai": {
-              "C D Ratio March 2024": "65",
-              "June 2024": "67",
-              "March 2025": "62",
-              "June 2025": "62",
-              "Q-o-Q change": "No Change",
-              "Y-o-Y change": "-5"
+              "CD Ratio": "62",
+              "CD Ratio QoQ Change": "No Change",
+              "CD Ratio YoY Change": "-5"
             },
             "Dhalai": {
-              "C D Ratio March 2024": "98",
-              "June 2024": "83",
-              "March 2025": "98",
-              "June 2025": "99",
-              "Q-o-Q change": "+1",
-              "Y-o-Y change": "+16"
+              "CD Ratio": "99",
+              "CD Ratio QoQ Change": "+1",
+              "CD Ratio YoY Change": "+16"
             }
           }
         },
@@ -8091,87 +7652,51 @@
         "credit_deposit_ratio": {
           "page": 17,
           "fields": [
-            "March 2024",
-            "C D Ratio Sept 2024",
-            "March 2025",
-            "June 2025",
-            "Sept 2025",
-            "Q-o-Q change",
-            "Y-o-Y change"
+            "CD Ratio",
+            "CD Ratio QoQ Change",
+            "CD Ratio YoY Change"
           ],
           "num_districts": 8,
           "districts": {
             "North Tripura": {
-              "March 2024": "59",
-              "C D Ratio Sept 2024": "64",
-              "March 2025": "63",
-              "June 2025": "63",
-              "Sept 2025": "60",
-              "Q-o-Q change": "-3",
-              "Y-o-Y change": "-4"
+              "CD Ratio": "60",
+              "CD Ratio QoQ Change": "-3",
+              "CD Ratio YoY Change": "-4"
             },
             "Unakoti": {
-              "March 2024": "68",
-              "C D Ratio Sept 2024": "69",
-              "March 2025": "69",
-              "June 2025": "71",
-              "Sept 2025": "69",
-              "Q-o-Q change": "-2",
-              "Y-o-Y change": "No change"
+              "CD Ratio": "69",
+              "CD Ratio QoQ Change": "-2",
+              "CD Ratio YoY Change": "No change"
             },
             "South Tripura": {
-              "March 2024": "63",
-              "C D Ratio Sept 2024": "65",
-              "March 2025": "60",
-              "June 2025": "66",
-              "Sept 2025": "58",
-              "Q-o-Q change": "-8",
-              "Y-o-Y change": "-7"
+              "CD Ratio": "58",
+              "CD Ratio QoQ Change": "-8",
+              "CD Ratio YoY Change": "-7"
             },
             "Gomati": {
-              "March 2024": "69",
-              "C D Ratio Sept 2024": "69",
-              "March 2025": "70",
-              "June 2025": "66",
-              "Sept 2025": "68",
-              "Q-o-Q change": "+2",
-              "Y-o-Y change": "-1"
+              "CD Ratio": "68",
+              "CD Ratio QoQ Change": "+2",
+              "CD Ratio YoY Change": "-1"
             },
             "West Tripura": {
-              "March 2024": "42",
-              "C D Ratio Sept 2024": "43",
-              "March 2025": "39",
-              "June 2025": "40",
-              "Sept 2025": "40",
-              "Q-o-Q change": "No change",
-              "Y-o-Y change": "-3"
+              "CD Ratio": "40",
+              "CD Ratio QoQ Change": "No change",
+              "CD Ratio YoY Change": "-3"
             },
             "Sepahijala": {
-              "March 2024": "64",
-              "C D Ratio Sept 2024": "61",
-              "March 2025": "59",
-              "June 2025": "58",
-              "Sept 2025": "59",
-              "Q-o-Q change": "+1",
-              "Y-o-Y change": "-2"
+              "CD Ratio": "59",
+              "CD Ratio QoQ Change": "+1",
+              "CD Ratio YoY Change": "-2"
             },
             "Khowai": {
-              "March 2024": "65",
-              "C D Ratio Sept 2024": "63",
-              "March 2025": "62",
-              "June 2025": "62",
-              "Sept 2025": "60",
-              "Q-o-Q change": "-2",
-              "Y-o-Y change": "-3"
+              "CD Ratio": "60",
+              "CD Ratio QoQ Change": "-2",
+              "CD Ratio YoY Change": "-3"
             },
             "Dhalai": {
-              "March 2024": "98",
-              "C D Ratio Sept 2024": "98",
-              "March 2025": "98",
-              "June 2025": "99",
-              "Sept 2025": "92",
-              "Q-o-Q change": "-7",
-              "Y-o-Y change": "-6"
+              "CD Ratio": "92",
+              "CD Ratio QoQ Change": "-7",
+              "CD Ratio YoY Change": "-6"
             }
           }
         },
@@ -8646,6 +8171,323 @@
               "Eligible Operative Current/Business Accounts covered with Mobile Banking etc. No. of accounts covered": "4486",
               "Eligible Operative Current/Business Accounts covered with at least one of facilities - Net Banking/Pos/QR/Mobile Banking No. of accounts covered": "8812",
               "No. of Operative Current/Business Accounts ineligible for digital coverage as per bank's Board approved policies": "511"
+            }
+          }
+        }
+      }
+    },
+    "2017-03": {
+      "period": "March 2017",
+      "as_on_date": "31-03-2017",
+      "fy": "2016-17",
+      "tables": {
+        "credit_deposit_ratio": {
+          "page": null,
+          "fields": [
+            "CD Ratio"
+          ],
+          "num_districts": 8,
+          "districts": {
+            "North Tripura": {
+              "CD Ratio": "45"
+            },
+            "Unakoti": {
+              "CD Ratio": "55"
+            },
+            "South Tripura": {
+              "CD Ratio": "46"
+            },
+            "Gomati": {
+              "CD Ratio": "85"
+            },
+            "West Tripura": {
+              "CD Ratio": "32"
+            },
+            "Sepahijala": {
+              "CD Ratio": "62"
+            },
+            "Khowai": {
+              "CD Ratio": "64"
+            },
+            "Dhalai": {
+              "CD Ratio": "62"
+            }
+          }
+        }
+      }
+    },
+    "2017-12": {
+      "period": "December 2017",
+      "as_on_date": "31-12-2017",
+      "fy": "2017-18",
+      "tables": {
+        "credit_deposit_ratio": {
+          "page": null,
+          "fields": [
+            "CD Ratio"
+          ],
+          "num_districts": 8,
+          "districts": {
+            "North Tripura": {
+              "CD Ratio": "47"
+            },
+            "Unakoti": {
+              "CD Ratio": "56"
+            },
+            "South Tripura": {
+              "CD Ratio": "48"
+            },
+            "Gomati": {
+              "CD Ratio": "89"
+            },
+            "West Tripura": {
+              "CD Ratio": "35"
+            },
+            "Sepahijala": {
+              "CD Ratio": "65"
+            },
+            "Khowai": {
+              "CD Ratio": "66"
+            },
+            "Dhalai": {
+              "CD Ratio": "63"
+            }
+          }
+        }
+      }
+    },
+    "2019-09": {
+      "period": "September 2019",
+      "as_on_date": "30-09-2019",
+      "fy": "2019-20",
+      "tables": {
+        "credit_deposit_ratio": {
+          "page": null,
+          "fields": [
+            "CD Ratio"
+          ],
+          "num_districts": 8,
+          "districts": {
+            "North Tripura": {
+              "CD Ratio": "55"
+            },
+            "Unakoti": {
+              "CD Ratio": "66"
+            },
+            "South Tripura": {
+              "CD Ratio": "61"
+            },
+            "Gomati": {
+              "CD Ratio": "65"
+            },
+            "West Tripura": {
+              "CD Ratio": "48"
+            },
+            "Sepahijala": {
+              "CD Ratio": "79"
+            },
+            "Khowai": {
+              "CD Ratio": "73"
+            },
+            "Dhalai": {
+              "CD Ratio": "102"
+            }
+          }
+        }
+      }
+    },
+    "2020-06": {
+      "period": "June 2020",
+      "as_on_date": "30-06-2020",
+      "fy": "2020-21",
+      "tables": {
+        "credit_deposit_ratio": {
+          "page": null,
+          "fields": [
+            "CD Ratio"
+          ],
+          "num_districts": 8,
+          "districts": {
+            "North Tripura": {
+              "CD Ratio": "51"
+            },
+            "Unakoti": {
+              "CD Ratio": "72"
+            },
+            "South Tripura": {
+              "CD Ratio": "57"
+            },
+            "Gomati": {
+              "CD Ratio": "62"
+            },
+            "West Tripura": {
+              "CD Ratio": "45"
+            },
+            "Sepahijala": {
+              "CD Ratio": "67"
+            },
+            "Khowai": {
+              "CD Ratio": "63"
+            },
+            "Dhalai": {
+              "CD Ratio": "93"
+            }
+          }
+        }
+      }
+    },
+    "2023-03": {
+      "period": "March 2023",
+      "as_on_date": "31-03-2023",
+      "fy": "2022-23",
+      "tables": {
+        "credit_deposit_ratio": {
+          "page": null,
+          "fields": [
+            "CD Ratio"
+          ],
+          "num_districts": 8,
+          "districts": {
+            "North Tripura": {
+              "CD Ratio": "59"
+            },
+            "Unakoti": {
+              "CD Ratio": "66"
+            },
+            "South Tripura": {
+              "CD Ratio": "63"
+            },
+            "Gomati": {
+              "CD Ratio": "64"
+            },
+            "West Tripura": {
+              "CD Ratio": "47"
+            },
+            "Sepahijala": {
+              "CD Ratio": "67"
+            },
+            "Khowai": {
+              "CD Ratio": "63"
+            },
+            "Dhalai": {
+              "CD Ratio": "96"
+            }
+          }
+        },
+        "branch_network": {
+          "page": null,
+          "fields": [
+            "No. of ATM",
+            "No. of Branches"
+          ],
+          "num_districts": 8,
+          "districts": {
+            "West Tripura": {
+              "No. of ATM": "271",
+              "No. of Branches": "210"
+            },
+            "Sepahijala": {
+              "No. of ATM": "47",
+              "No. of Branches": "59"
+            },
+            "Khowai": {
+              "No. of ATM": "28",
+              "No. of Branches": "41"
+            },
+            "Dhalai": {
+              "No. of ATM": "39",
+              "No. of Branches": "49"
+            },
+            "Gomati": {
+              "No. of ATM": "55",
+              "No. of Branches": "65"
+            },
+            "South Tripura": {
+              "No. of ATM": "45",
+              "No. of Branches": "63"
+            },
+            "Unakoti": {
+              "No. of ATM": "22",
+              "No. of Branches": "35"
+            },
+            "North Tripura": {
+              "No. of ATM": "57",
+              "No. of Branches": "49"
+            }
+          }
+        },
+        "bc_coverage": {
+          "page": null,
+          "fields": [
+            "No. of BC/CSP"
+          ],
+          "num_districts": 8,
+          "districts": {
+            "West Tripura": {
+              "No. of BC/CSP": "194"
+            },
+            "Sepahijala": {
+              "No. of BC/CSP": "199"
+            },
+            "Khowai": {
+              "No. of BC/CSP": "189"
+            },
+            "Dhalai": {
+              "No. of BC/CSP": "214"
+            },
+            "Gomati": {
+              "No. of BC/CSP": "165"
+            },
+            "South Tripura": {
+              "No. of BC/CSP": "148"
+            },
+            "Unakoti": {
+              "No. of BC/CSP": "144"
+            },
+            "North Tripura": {
+              "No. of BC/CSP": "118"
+            }
+          }
+        },
+        "pmjdy": {
+          "page": null,
+          "fields": [
+            "No. of PMJDY Accounts",
+            "No. of Women PMJDY Accounts"
+          ],
+          "num_districts": 8,
+          "districts": {
+            "West Tripura": {
+              "No. of PMJDY Accounts": "230480",
+              "No. of Women PMJDY Accounts": "129513"
+            },
+            "Sepahijala": {
+              "No. of PMJDY Accounts": "85746",
+              "No. of Women PMJDY Accounts": "49390"
+            },
+            "Khowai": {
+              "No. of PMJDY Accounts": "92989",
+              "No. of Women PMJDY Accounts": "52315"
+            },
+            "Dhalai": {
+              "No. of PMJDY Accounts": "104391",
+              "No. of Women PMJDY Accounts": "57846"
+            },
+            "Gomati": {
+              "No. of PMJDY Accounts": "105625",
+              "No. of Women PMJDY Accounts": "56476"
+            },
+            "South Tripura": {
+              "No. of PMJDY Accounts": "121123",
+              "No. of Women PMJDY Accounts": "69004"
+            },
+            "Unakoti": {
+              "No. of PMJDY Accounts": "84253",
+              "No. of Women PMJDY Accounts": "49662"
+            },
+            "North Tripura": {
+              "No. of PMJDY Accounts": "126850",
+              "No. of Women PMJDY Accounts": "67992"
             }
           }
         }
