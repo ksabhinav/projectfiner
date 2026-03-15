@@ -318,7 +318,7 @@ const base = import.meta.env.BASE_URL;
 
     // ── Build district → SLBC data lookup ──
     // Returns Map<normalizedDistrictName, { value, allMetrics }> for the current indicator/metric/quarter
-    // Falls back to nearest prior quarter when a state doesn't have data for the selected quarter
+    // Falls back to nearest prior quarter per-indicator when data is missing
     function buildDistrictLookup() {
       const ind = INDICATORS[currentIndicator];
       const metric = ind.metrics[currentMetricIdx];
@@ -328,20 +328,29 @@ const base = import.meta.env.BASE_URL;
         const records = slbcData[slug];
         if (!records || !records.length) continue;
 
-        // Check if this state has data for the exact quarter
-        let useQuarter = currentQuarter;
-        const hasExact = records.some(function(r) { return r.period === currentQuarter; });
-        if (!hasExact) {
-          // Find the nearest prior quarter for this state
-          const stateQuarters = [...new Set(records.map(function(r) { return r.period; }))]
-            .filter(function(q) { return q <= currentQuarter; })
-            .sort();
-          if (stateQuarters.length) {
-            useQuarter = stateQuarters[stateQuarters.length - 1];
-          } else {
-            continue; // no prior data at all
+        // Find the best quarter for this state AND this indicator
+        // Strategy: try the current quarter first, if it has no data for the indicator,
+        // walk backwards through available quarters until we find one that does
+        const stateQuarters = [...new Set(records.map(function(r) { return r.period; }))]
+          .filter(function(q) { return q <= currentQuarter; })
+          .sort();
+        if (!stateQuarters.length) continue;
+
+        let useQuarter = null;
+        // Try from most recent backwards
+        for (let qi = stateQuarters.length - 1; qi >= 0; qi--) {
+          const q = stateQuarters[qi];
+          const qRecords = records.filter(function(r) { return r.period === q; });
+          // Check if any district has data for the primary metric in this quarter
+          const hasIndicatorData = qRecords.some(function(r) {
+            return getVal(r, currentIndicator, metric.field, metric.fallbacks) !== null;
+          });
+          if (hasIndicatorData) {
+            useQuarter = q;
+            break;
           }
         }
+        if (!useQuarter) continue;
 
         for (const rec of records) {
           if (rec.period !== useQuarter) continue;
