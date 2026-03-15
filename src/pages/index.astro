@@ -234,8 +234,8 @@ const base = import.meta.env.BASE_URL;
       }
     }
 
-    // White canvas tile
-    (new (L.GridLayer.extend({createTile:function(){var t=document.createElement('canvas');t.width=t.height=256;var c=t.getContext('2d');c.fillStyle='#fff';c.fillRect(0,0,256,256);return t;}}))).addTo(map);
+    // White canvas tile (HiDPI aware)
+    (new (L.GridLayer.extend({createTile:function(){var t=document.createElement('canvas');var r=window.devicePixelRatio||1;t.width=t.height=256*r;t.style.width=t.style.height='256px';var c=t.getContext('2d');c.scale(r,r);c.fillStyle='#fff';c.fillRect(0,0,256,256);return t;}}))).addTo(map);
 
     // India outline (simplified from datameet composite — includes coastline + correct Kashmir boundary)
     fetch(_B + 'Maps/india-outline.geojson')
