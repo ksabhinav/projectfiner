@@ -14,6 +14,7 @@
     { name: 'Nagaland', slug: 'nagaland' },
     { name: 'Sikkim', slug: 'sikkim' },
     { name: 'Bihar', slug: 'bihar' },
+    { name: 'Jharkhand', slug: 'jharkhand' },
     { name: 'West Bengal', slug: 'west-bengal' },
   ];
 

@@ -1,0 +1,31 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import StateDownload from '../../../components/StateDownload.svelte';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<PageLayout
+  title="Jharkhand SLBC Data Download | Project FINER"
+  pageTitle="Jharkhand — SLBC Financial Inclusion Data"
+  subtitle={`District-level indicators from SLBC Jharkhand quarterly booklets. All amounts in Rs. Lakhs.<br><a href="${base}slbc-data">&larr; All states</a> &nbsp;&middot;&nbsp; Source: <a href="http://slbcjharkhand.in/agenda.html" target="_blank">slbcjharkhand.in</a>`}
+>
+  <div class="stat-bar">
+    <div class="stat-row">
+      <div class="stat-item"><div class="stat-num">10</div><div class="stat-lbl">Quarters</div></div>
+      <div class="stat-item"><div class="stat-num">24</div><div class="stat-lbl">Districts</div></div>
+      <div class="stat-item"><div class="stat-num">64</div><div class="stat-lbl">Indicators</div></div>
+      <div class="stat-item"><div class="stat-num">472</div><div class="stat-lbl">CSV Files</div></div>
+      <div class="stat-item"><div class="stat-num">Jun 2023</div><div class="stat-lbl">From</div></div>
+      <div class="stat-item"><div class="stat-num">Sep 2025</div><div class="stat-lbl">To</div></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <StateDownload client:load stateName="Jharkhand" stateSlug="jharkhand" />
+  </div>
+</PageLayout>
+
+<style>
+  .container { max-width: 960px; margin: 0 auto; padding: 32px 40px 60px; }
+</style>

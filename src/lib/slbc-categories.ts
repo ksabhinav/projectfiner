@@ -75,33 +75,64 @@ export const CATEGORY_INFO: Record<string, string> = {
   non_farm_sector:                     'Non-farm sector lending',
   weaker_section:                      'Weaker section lending',
   housing_loan:                        'Housing loans',
+  // Jharkhand specific categories
+  acp_disbursement_agri_p2:            'ACP Agri disbursement (contd.)',
+  acp_disbursement_non_ps:             'ACP Non-PS disbursement',
+  acp_disbursement_non_ps_p2:          'ACP Non-PS disbursement (contd.)',
+  acp_disbursement_other_ps_p2:        'ACP Other PS disbursement (contd.)',
+  acp_disbursement_other_ps_p3:        'ACP Other PS disbursement (contd. 3)',
+  ads_progress:                        'Advance Data System progress',
+  agri_npa_p2:                         'Agriculture NPA (contd.)',
+  business_correspondents:             'Business Correspondents',
+  doubling_farmers_income:             'Doubling Farmers Income',
+  doubling_farmers_income_p2:          'Doubling Farmers Income (contd.)',
+  doubling_farmers_income_p3:          'Doubling Farmers Income (contd. 3)',
+  govt_sponsored_npa:                  'Govt Sponsored Schemes NPA',
+  guruji_credit_card:                  'Guruji Credit Card',
+  investment_utilization:              'Investment / Place of Utilization',
+  npa_recovery_p2:                     'NPA recovery (contd.)',
+  other_ps_npa:                        'Other Priority Sector NPA',
+  pm_svanidhi:                         'PM SVANidhi',
+  pm_svanidhi_p2:                      'PM SVANidhi (contd.)',
+  pm_vishwakarma:                      'PM Vishwakarma',
+  pmmy_mudra_disbursement:             'PMMY/Mudra disbursement',
+  pmmy_mudra_os_npa:                   'PMMY/Mudra O/S & NPA',
+  priority_sector_npa:                 'Priority Sector NPA',
+  priority_sector_outstanding:         'Priority Sector outstanding',
+  recovery_certificate:                'Certificate Cases recovery',
+  recovery_drt:                        'DRT Cases recovery',
+  rseti_p2:                            'RSETI (contd.)',
+  sc_st_finance_p2:                    'SC/ST finance (contd.)',
+  shg_p2:                              'SHG (contd.)',
+  shg_p3:                              'SHG (contd. 3)',
+  women_finance_p2:                    'Women finance (contd.)',
 };
 
 export const QUARTER_ORDER = [
   'june_2020','sept_2020','dec_2020',
   'june_2021','sept_2021','dec_2021',
   'mar_2022','june_2022','sept_2022','dec_2022',
-  'mar_2023','sept_2023','dec_2023',
-  'june_2024','sept_2024','dec_2024',
-  'june_2025','sept_2025',
+  'mar_2023','june_2023','sept_2023','dec_2023',
+  'mar_2024','june_2024','sept_2024','dec_2024',
+  'mar_2025','june_2025','sept_2025',
 ];
 
 export const QUARTER_LABELS: Record<string, string> = {
   june_2020:'Jun 2020', sept_2020:'Sep 2020', dec_2020:'Dec 2020',
   june_2021:'Jun 2021', sept_2021:'Sep 2021', dec_2021:'Dec 2021',
   mar_2022:'Mar 2022', june_2022:'Jun 2022', sept_2022:'Sep 2022', dec_2022:'Dec 2022',
-  mar_2023:'Mar 2023', sept_2023:'Sep 2023', dec_2023:'Dec 2023',
-  june_2024:'Jun 2024', sept_2024:'Sep 2024', dec_2024:'Dec 2024',
-  june_2025:'Jun 2025', sept_2025:'Sep 2025',
+  mar_2023:'Mar 2023', june_2023:'Jun 2023', sept_2023:'Sep 2023', dec_2023:'Dec 2023',
+  mar_2024:'Mar 2024', june_2024:'Jun 2024', sept_2024:'Sep 2024', dec_2024:'Dec 2024',
+  mar_2025:'Mar 2025', june_2025:'Jun 2025', sept_2025:'Sep 2025',
 };
 
 export const QUARTER_FOLDERS: Record<string, string> = {
   june_2020:'2020-06', sept_2020:'2020-09', dec_2020:'2020-12',
   june_2021:'2021-06', sept_2021:'2021-09', dec_2021:'2021-12',
   mar_2022:'2022-03', june_2022:'2022-06', sept_2022:'2022-09', dec_2022:'2022-12',
-  mar_2023:'2023-03', sept_2023:'2023-09', dec_2023:'2023-12',
-  june_2024:'2024-06', sept_2024:'2024-09', dec_2024:'2024-12',
-  june_2025:'2025-06', sept_2025:'2025-09',
+  mar_2023:'2023-03', june_2023:'2023-06', sept_2023:'2023-09', dec_2023:'2023-12',
+  mar_2024:'2024-03', june_2024:'2024-06', sept_2024:'2024-09', dec_2024:'2024-12',
+  mar_2025:'2025-03', june_2025:'2025-06', sept_2025:'2025-09',
 };
 
 export function prettyCategoryName(cat: string): string {
