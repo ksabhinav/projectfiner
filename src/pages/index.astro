@@ -443,8 +443,7 @@ const base = import.meta.env.BASE_URL;
     var RAMP_BLUE    = ['#f0f5fa','#c8ddf0','#8ab8d4','#4a90b8','#2a6a8e','#104060'];
 
     function getRamp(indicator) {
-      if (indicator === 'credit_deposit_ratio') return RAMP_GREEN;
-      if (indicator === 'digital_transactions') return RAMP_BLUE;
+      // All indicators use terracotta for now
       return RAMP_DEFAULT;
     }
 
