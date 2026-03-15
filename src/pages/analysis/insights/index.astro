@@ -1,0 +1,14 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import Insights from '../../../components/analysis/Insights.svelte';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<PageLayout
+  title="Key Findings | Project FINER"
+  pageTitle="Pre-built Insights"
+  subtitle="Curated data stories highlighting key patterns, disparities, and trends from SLBC financial inclusion data across North Eastern states and Bihar."
+>
+  <Insights client:load baseUrl={base} />
+</PageLayout>
