@@ -17,12 +17,12 @@
           "fy": "2023-24",
           "atm_network__total": "124",
           "branch_network__total": "89",
-          "digital_payments__total_no_of_operative_sb_accounts": "294290",
-          "digital_payments__digital_coverage_sb_a_c": "277548",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "94.31%",
-          "digital_payments__total_no_of_operative_current_accounts": "10011",
-          "digital_payments__digital_coverage_current_a_c": "8119",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "81.00%"
+          "digital_transactions__total_operative_sb_a_c": "294290",
+          "digital_transactions__digital_coverage_sb_a_c": "277548",
+          "digital_transactions__coverage_sb_pct": "94.31%",
+          "digital_transactions__total_operative_ca_a_c": "10011",
+          "digital_transactions__digital_coverage_ca_a_c": "8119",
+          "digital_transactions__coverage_ca_pct": "81.00%"
         },
         {
           "district": "Gyalshing",
@@ -39,12 +39,12 @@
           "fy": "2023-24",
           "atm_network__total": "17",
           "branch_network__total": "16",
-          "digital_payments__total_no_of_operative_sb_accounts": "36682",
-          "digital_payments__digital_coverage_sb_a_c": "33388",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "90.88%",
-          "digital_payments__total_no_of_operative_current_accounts": "642",
-          "digital_payments__digital_coverage_current_a_c": "512",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "79.75%"
+          "digital_transactions__total_operative_sb_a_c": "36682",
+          "digital_transactions__digital_coverage_sb_a_c": "33388",
+          "digital_transactions__coverage_sb_pct": "90.88%",
+          "digital_transactions__total_operative_ca_a_c": "642",
+          "digital_transactions__digital_coverage_ca_a_c": "512",
+          "digital_transactions__coverage_ca_pct": "79.75%"
         },
         {
           "district": "Namchi",
@@ -53,12 +53,12 @@
           "fy": "2023-24",
           "atm_network__total": "43",
           "branch_network__total": "41",
-          "digital_payments__total_no_of_operative_sb_accounts": "73811",
-          "digital_payments__digital_coverage_sb_a_c": "71399",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "96.73",
-          "digital_payments__total_no_of_operative_current_accounts": "1269",
-          "digital_payments__digital_coverage_current_a_c": "469",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "36.95%"
+          "digital_transactions__total_operative_sb_a_c": "73811",
+          "digital_transactions__digital_coverage_sb_a_c": "71399",
+          "digital_transactions__coverage_sb_pct": "96.73",
+          "digital_transactions__total_operative_ca_a_c": "1269",
+          "digital_transactions__digital_coverage_ca_a_c": "469",
+          "digital_transactions__coverage_ca_pct": "36.95%"
         },
         {
           "district": "Pakyong",
@@ -67,12 +67,12 @@
           "fy": "2023-24",
           "atm_network__total": "32",
           "branch_network__total": "24",
-          "digital_payments__total_no_of_operative_sb_accounts": "77950",
-          "digital_payments__digital_coverage_sb_a_c": "76838",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "98.57%",
-          "digital_payments__total_no_of_operative_current_accounts": "816",
-          "digital_payments__digital_coverage_current_a_c": "743",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "91.05%"
+          "digital_transactions__total_operative_sb_a_c": "77950",
+          "digital_transactions__digital_coverage_sb_a_c": "76838",
+          "digital_transactions__coverage_sb_pct": "98.57%",
+          "digital_transactions__total_operative_ca_a_c": "816",
+          "digital_transactions__digital_coverage_ca_a_c": "743",
+          "digital_transactions__coverage_ca_pct": "91.05%"
         },
         {
           "district": "Soreng",
@@ -81,12 +81,12 @@
           "fy": "2023-24",
           "atm_network__total": "5",
           "branch_network__total": "8",
-          "digital_payments__total_no_of_operative_sb_accounts": "40496",
-          "digital_payments__digital_coverage_sb_a_c": "40344",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "99.62%",
-          "digital_payments__total_no_of_operative_current_accounts": "448",
-          "digital_payments__digital_coverage_current_a_c": "389",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "86.83%"
+          "digital_transactions__total_operative_sb_a_c": "40496",
+          "digital_transactions__digital_coverage_sb_a_c": "40344",
+          "digital_transactions__coverage_sb_pct": "99.62%",
+          "digital_transactions__total_operative_ca_a_c": "448",
+          "digital_transactions__digital_coverage_ca_a_c": "389",
+          "digital_transactions__coverage_ca_pct": "86.83%"
         }
       ]
     },
@@ -101,12 +101,12 @@
           "fy": "2024-25",
           "atm_network__total": "124",
           "branch_network__total": "90",
-          "digital_payments__total_no_of_operative_sb_accounts": "344124",
-          "digital_payments__digital_coverage_sb_a_c": "334830",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "97.30%",
-          "digital_payments__total_no_of_operative_current_accounts": "11508",
-          "digital_payments__digital_coverage_current_a_c": "10083",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "87.62%"
+          "digital_transactions__total_operative_sb_a_c": "344124",
+          "digital_transactions__digital_coverage_sb_a_c": "334830",
+          "digital_transactions__coverage_sb_pct": "97.30%",
+          "digital_transactions__total_operative_ca_a_c": "11508",
+          "digital_transactions__digital_coverage_ca_a_c": "10083",
+          "digital_transactions__coverage_ca_pct": "87.62%"
         },
         {
           "district": "Gyalshing",
@@ -115,12 +115,12 @@
           "fy": "2024-25",
           "atm_network__total": "17",
           "branch_network__total": "16",
-          "digital_payments__total_no_of_operative_sb_accounts": "77668",
-          "digital_payments__digital_coverage_sb_a_c": "74488",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "95.91%",
-          "digital_payments__total_no_of_operative_current_accounts": "1411",
-          "digital_payments__digital_coverage_current_a_c": "1333",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "94.47%"
+          "digital_transactions__total_operative_sb_a_c": "77668",
+          "digital_transactions__digital_coverage_sb_a_c": "74488",
+          "digital_transactions__coverage_sb_pct": "95.91%",
+          "digital_transactions__total_operative_ca_a_c": "1411",
+          "digital_transactions__digital_coverage_ca_a_c": "1333",
+          "digital_transactions__coverage_ca_pct": "94.47%"
         },
         {
           "district": "Mangan",
@@ -129,12 +129,12 @@
           "fy": "2024-25",
           "atm_network__total": "17",
           "branch_network__total": "16",
-          "digital_payments__total_no_of_operative_sb_accounts": "49682",
-          "digital_payments__digital_coverage_sb_a_c": "46126",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "92.84%",
-          "digital_payments__total_no_of_operative_current_accounts": "989",
-          "digital_payments__digital_coverage_current_a_c": "882",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "89.18%"
+          "digital_transactions__total_operative_sb_a_c": "49682",
+          "digital_transactions__digital_coverage_sb_a_c": "46126",
+          "digital_transactions__coverage_sb_pct": "92.84%",
+          "digital_transactions__total_operative_ca_a_c": "989",
+          "digital_transactions__digital_coverage_ca_a_c": "882",
+          "digital_transactions__coverage_ca_pct": "89.18%"
         },
         {
           "district": "Namchi",
@@ -143,12 +143,12 @@
           "fy": "2024-25",
           "atm_network__total": "43",
           "branch_network__total": "41",
-          "digital_payments__total_no_of_operative_sb_accounts": "153989",
-          "digital_payments__digital_coverage_sb_a_c": "146513",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "95.15%",
-          "digital_payments__total_no_of_operative_current_accounts": "9616",
-          "digital_payments__digital_coverage_current_a_c": "9230",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "95.99%"
+          "digital_transactions__total_operative_sb_a_c": "153989",
+          "digital_transactions__digital_coverage_sb_a_c": "146513",
+          "digital_transactions__coverage_sb_pct": "95.15%",
+          "digital_transactions__total_operative_ca_a_c": "9616",
+          "digital_transactions__digital_coverage_ca_a_c": "9230",
+          "digital_transactions__coverage_ca_pct": "95.99%"
         },
         {
           "district": "Pakyong",
@@ -157,12 +157,12 @@
           "fy": "2024-25",
           "atm_network__total": "35",
           "branch_network__total": "26",
-          "digital_payments__total_no_of_operative_sb_accounts": "125943",
-          "digital_payments__digital_coverage_sb_a_c": "111248",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "88.33%",
-          "digital_payments__total_no_of_operative_current_accounts": "2245",
-          "digital_payments__digital_coverage_current_a_c": "1977",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "88.06%"
+          "digital_transactions__total_operative_sb_a_c": "125943",
+          "digital_transactions__digital_coverage_sb_a_c": "111248",
+          "digital_transactions__coverage_sb_pct": "88.33%",
+          "digital_transactions__total_operative_ca_a_c": "2245",
+          "digital_transactions__digital_coverage_ca_a_c": "1977",
+          "digital_transactions__coverage_ca_pct": "88.06%"
         },
         {
           "district": "Soreng",
@@ -171,12 +171,12 @@
           "fy": "2024-25",
           "atm_network__total": "5",
           "branch_network__total": "8",
-          "digital_payments__total_no_of_operative_sb_accounts": "87047",
-          "digital_payments__digital_coverage_sb_a_c": "79886",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "91.77%",
-          "digital_payments__total_no_of_operative_current_accounts": "651",
-          "digital_payments__digital_coverage_current_a_c": "398",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "61.14%"
+          "digital_transactions__total_operative_sb_a_c": "87047",
+          "digital_transactions__digital_coverage_sb_a_c": "79886",
+          "digital_transactions__coverage_sb_pct": "91.77%",
+          "digital_transactions__total_operative_ca_a_c": "651",
+          "digital_transactions__digital_coverage_ca_a_c": "398",
+          "digital_transactions__coverage_ca_pct": "61.14%"
         }
       ]
     },
@@ -191,12 +191,12 @@
           "fy": "2024-25",
           "atm_network__total": "124",
           "branch_network__total": "90",
-          "digital_payments__total_no_of_operative_sb_accounts": "344153",
-          "digital_payments__digital_coverage_sb_a_c": "334894",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "97.31%",
-          "digital_payments__total_no_of_operative_current_accounts": "11527",
-          "digital_payments__digital_coverage_current_a_c": "10207",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "88.55%"
+          "digital_transactions__total_operative_sb_a_c": "344153",
+          "digital_transactions__digital_coverage_sb_a_c": "334894",
+          "digital_transactions__coverage_sb_pct": "97.31%",
+          "digital_transactions__total_operative_ca_a_c": "11527",
+          "digital_transactions__digital_coverage_ca_a_c": "10207",
+          "digital_transactions__coverage_ca_pct": "88.55%"
         },
         {
           "district": "Gyalshing",
@@ -205,12 +205,12 @@
           "fy": "2024-25",
           "atm_network__total": "17",
           "branch_network__total": "16",
-          "digital_payments__total_no_of_operative_sb_accounts": "78404",
-          "digital_payments__digital_coverage_sb_a_c": "75182",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "95.89%",
-          "digital_payments__total_no_of_operative_current_accounts": "1438",
-          "digital_payments__digital_coverage_current_a_c": "1339",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "93.12%"
+          "digital_transactions__total_operative_sb_a_c": "78404",
+          "digital_transactions__digital_coverage_sb_a_c": "75182",
+          "digital_transactions__coverage_sb_pct": "95.89%",
+          "digital_transactions__total_operative_ca_a_c": "1438",
+          "digital_transactions__digital_coverage_ca_a_c": "1339",
+          "digital_transactions__coverage_ca_pct": "93.12%"
         },
         {
           "district": "Mangan",
@@ -219,12 +219,12 @@
           "fy": "2024-25",
           "atm_network__total": "17",
           "branch_network__total": "16",
-          "digital_payments__total_no_of_operative_sb_accounts": "50501",
-          "digital_payments__digital_coverage_sb_a_c": "46779",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "92.63%",
-          "digital_payments__total_no_of_operative_current_accounts": "1022",
-          "digital_payments__digital_coverage_current_a_c": "936",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "91.59%"
+          "digital_transactions__total_operative_sb_a_c": "50501",
+          "digital_transactions__digital_coverage_sb_a_c": "46779",
+          "digital_transactions__coverage_sb_pct": "92.63%",
+          "digital_transactions__total_operative_ca_a_c": "1022",
+          "digital_transactions__digital_coverage_ca_a_c": "936",
+          "digital_transactions__coverage_ca_pct": "91.59%"
         },
         {
           "district": "Namchi",
@@ -233,12 +233,12 @@
           "fy": "2024-25",
           "atm_network__total": "43",
           "branch_network__total": "41",
-          "digital_payments__total_no_of_operative_sb_accounts": "154083",
-          "digital_payments__digital_coverage_sb_a_c": "149412",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "96.97%",
-          "digital_payments__total_no_of_operative_current_accounts": "9696",
-          "digital_payments__digital_coverage_current_a_c": "9217",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "95.06%"
+          "digital_transactions__total_operative_sb_a_c": "154083",
+          "digital_transactions__digital_coverage_sb_a_c": "149412",
+          "digital_transactions__coverage_sb_pct": "96.97%",
+          "digital_transactions__total_operative_ca_a_c": "9696",
+          "digital_transactions__digital_coverage_ca_a_c": "9217",
+          "digital_transactions__coverage_ca_pct": "95.06%"
         },
         {
           "district": "Pakyong",
@@ -247,12 +247,12 @@
           "fy": "2024-25",
           "atm_network__total": "35",
           "branch_network__total": "27",
-          "digital_payments__total_no_of_operative_sb_accounts": "128150",
-          "digital_payments__digital_coverage_sb_a_c": "115402",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "90.05%",
-          "digital_payments__total_no_of_operative_current_accounts": "2260",
-          "digital_payments__digital_coverage_current_a_c": "2055",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "90.93%"
+          "digital_transactions__total_operative_sb_a_c": "128150",
+          "digital_transactions__digital_coverage_sb_a_c": "115402",
+          "digital_transactions__coverage_sb_pct": "90.05%",
+          "digital_transactions__total_operative_ca_a_c": "2260",
+          "digital_transactions__digital_coverage_ca_a_c": "2055",
+          "digital_transactions__coverage_ca_pct": "90.93%"
         },
         {
           "district": "Soreng",
@@ -261,12 +261,12 @@
           "fy": "2024-25",
           "atm_network__total": "5",
           "branch_network__total": "9",
-          "digital_payments__total_no_of_operative_sb_accounts": "97021",
-          "digital_payments__digital_coverage_sb_a_c": "89426",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "92.17%",
-          "digital_payments__total_no_of_operative_current_accounts": "725",
-          "digital_payments__digital_coverage_current_a_c": "629",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "86.76%"
+          "digital_transactions__total_operative_sb_a_c": "97021",
+          "digital_transactions__digital_coverage_sb_a_c": "89426",
+          "digital_transactions__coverage_sb_pct": "92.17%",
+          "digital_transactions__total_operative_ca_a_c": "725",
+          "digital_transactions__digital_coverage_ca_a_c": "629",
+          "digital_transactions__coverage_ca_pct": "86.76%"
         }
       ]
     },
@@ -281,12 +281,12 @@
           "fy": "2024-25",
           "atm_network__total": "129",
           "branch_network__total": "92",
-          "digital_payments__total_no_of_operative_sb_accounts": "347466",
-          "digital_payments__digital_coverage_sb_a_c": "336809",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "96.93%",
-          "digital_payments__total_no_of_operative_current_accounts": "12073",
-          "digital_payments__digital_coverage_current_a_c": "10937",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "90.59%"
+          "digital_transactions__total_operative_sb_a_c": "347466",
+          "digital_transactions__digital_coverage_sb_a_c": "336809",
+          "digital_transactions__coverage_sb_pct": "96.93%",
+          "digital_transactions__total_operative_ca_a_c": "12073",
+          "digital_transactions__digital_coverage_ca_a_c": "10937",
+          "digital_transactions__coverage_ca_pct": "90.59%"
         },
         {
           "district": "Gyalshing",
@@ -295,12 +295,12 @@
           "fy": "2024-25",
           "atm_network__total": "17",
           "branch_network__total": "17",
-          "digital_payments__total_no_of_operative_sb_accounts": "79424",
-          "digital_payments__digital_coverage_sb_a_c": "76099",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "95.81%",
-          "digital_payments__total_no_of_operative_current_accounts": "1555",
-          "digital_payments__digital_coverage_current_a_c": "1450",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "93.25%"
+          "digital_transactions__total_operative_sb_a_c": "79424",
+          "digital_transactions__digital_coverage_sb_a_c": "76099",
+          "digital_transactions__coverage_sb_pct": "95.81%",
+          "digital_transactions__total_operative_ca_a_c": "1555",
+          "digital_transactions__digital_coverage_ca_a_c": "1450",
+          "digital_transactions__coverage_ca_pct": "93.25%"
         },
         {
           "district": "Mangan",
@@ -309,12 +309,12 @@
           "fy": "2024-25",
           "atm_network__total": "17",
           "branch_network__total": "16",
-          "digital_payments__total_no_of_operative_sb_accounts": "50712",
-          "digital_payments__digital_coverage_sb_a_c": "47157",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "92.99%",
-          "digital_payments__total_no_of_operative_current_accounts": "1057",
-          "digital_payments__digital_coverage_current_a_c": "980",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "92.72%"
+          "digital_transactions__total_operative_sb_a_c": "50712",
+          "digital_transactions__digital_coverage_sb_a_c": "47157",
+          "digital_transactions__coverage_sb_pct": "92.99%",
+          "digital_transactions__total_operative_ca_a_c": "1057",
+          "digital_transactions__digital_coverage_ca_a_c": "980",
+          "digital_transactions__coverage_ca_pct": "92.72%"
         },
         {
           "district": "Namchi",
@@ -323,12 +323,12 @@
           "fy": "2024-25",
           "atm_network__total": "43",
           "branch_network__total": "41",
-          "digital_payments__total_no_of_operative_sb_accounts": "157909",
-          "digital_payments__digital_coverage_sb_a_c": "146936",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "93.05%",
-          "digital_payments__total_no_of_operative_current_accounts": "9349",
-          "digital_payments__digital_coverage_current_a_c": "8835",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "94.50%"
+          "digital_transactions__total_operative_sb_a_c": "157909",
+          "digital_transactions__digital_coverage_sb_a_c": "146936",
+          "digital_transactions__coverage_sb_pct": "93.05%",
+          "digital_transactions__total_operative_ca_a_c": "9349",
+          "digital_transactions__digital_coverage_ca_a_c": "8835",
+          "digital_transactions__coverage_ca_pct": "94.50%"
         },
         {
           "district": "Pakyong",
@@ -337,12 +337,12 @@
           "fy": "2024-25",
           "atm_network__total": "36",
           "branch_network__total": "28",
-          "digital_payments__total_no_of_operative_sb_accounts": "129415",
-          "digital_payments__digital_coverage_sb_a_c": "115817",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "89.49%",
-          "digital_payments__total_no_of_operative_current_accounts": "2296",
-          "digital_payments__digital_coverage_current_a_c": "1890",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "82.32%"
+          "digital_transactions__total_operative_sb_a_c": "129415",
+          "digital_transactions__digital_coverage_sb_a_c": "115817",
+          "digital_transactions__coverage_sb_pct": "89.49%",
+          "digital_transactions__total_operative_ca_a_c": "2296",
+          "digital_transactions__digital_coverage_ca_a_c": "1890",
+          "digital_transactions__coverage_ca_pct": "82.32%"
         },
         {
           "district": "Soreng",
@@ -351,12 +351,12 @@
           "fy": "2024-25",
           "atm_network__total": "6",
           "branch_network__total": "11",
-          "digital_payments__total_no_of_operative_sb_accounts": "103704",
-          "digital_payments__digital_coverage_sb_a_c": "92453",
-          "digital_payments__of_such_accounts_out_of_total_operative_savings_accounts": "89.15%",
-          "digital_payments__total_no_of_operative_current_accounts": "772",
-          "digital_payments__digital_coverage_current_a_c": "660",
-          "digital_payments__of_such_accounts_out_of_total_operative_current_accounts": "85.49%"
+          "digital_transactions__total_operative_sb_a_c": "103704",
+          "digital_transactions__digital_coverage_sb_a_c": "92453",
+          "digital_transactions__coverage_sb_pct": "89.15%",
+          "digital_transactions__total_operative_ca_a_c": "772",
+          "digital_transactions__digital_coverage_ca_a_c": "660",
+          "digital_transactions__coverage_ca_pct": "85.49%"
         }
       ]
     }

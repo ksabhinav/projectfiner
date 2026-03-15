@@ -3552,41 +3552,41 @@
         "branch_network": {
           "fields": [
             "District",
-            "No. of Gp’s/Vc’s"
+            "No. of Gp\u2019s/Vc\u2019s"
           ],
           "num_districts": 8,
           "districts": {
             "West Tripura": {
               "District": "West Tripura",
-              "No. of Gp’s/Vc’s": "50"
+              "No. of Gp\u2019s/Vc\u2019s": "50"
             },
             "Sepahijala": {
               "District": "Sepahijala",
-              "No. of Gp’s/Vc’s": "66"
+              "No. of Gp\u2019s/Vc\u2019s": "66"
             },
             "Gomati": {
               "District": "Gomati",
-              "No. of Gp’s/Vc’s": "56"
+              "No. of Gp\u2019s/Vc\u2019s": "56"
             },
             "South Tripura": {
               "District": "South Tripura",
-              "No. of Gp’s/Vc’s": "55"
+              "No. of Gp\u2019s/Vc\u2019s": "55"
             },
             "Khowai": {
               "District": "Khowai",
-              "No. of Gp’s/Vc’s": "29"
+              "No. of Gp\u2019s/Vc\u2019s": "29"
             },
             "Dhalai": {
               "District": "Dhalai",
-              "No. of Gp’s/Vc’s": "48"
+              "No. of Gp\u2019s/Vc\u2019s": "48"
             },
             "Unakoti": {
               "District": "Unakoti",
-              "No. of Gp’s/Vc’s": "25"
+              "No. of Gp\u2019s/Vc\u2019s": "25"
             },
             "North Tripura": {
               "District": "North Tripura",
-              "No. of Gp’s/Vc’s": "39"
+              "No. of Gp\u2019s/Vc\u2019s": "39"
             }
           }
         },
@@ -4883,51 +4883,6 @@
             }
           }
         },
-        "digital_coverage": {
-          "fields": [
-            "District",
-            "Coverage % Savings A/C Digital",
-            "Coverage % Current A/C Digital"
-          ],
-          "num_districts": 7,
-          "districts": {
-            "Dhalai": {
-              "District": "Dhalai",
-              "Coverage % Savings A/C Digital": "95.61",
-              "Coverage % Current A/C Digital": "81.65"
-            },
-            "Gomati": {
-              "District": "Gomati",
-              "Coverage % Savings A/C Digital": "97.27",
-              "Coverage % Current A/C Digital": "88.47"
-            },
-            "Khowai": {
-              "District": "Khowai",
-              "Coverage % Savings A/C Digital": "94.26",
-              "Coverage % Current A/C Digital": "84.39"
-            },
-            "North Tripura": {
-              "District": "North Tripura",
-              "Coverage % Savings A/C Digital": "95.72",
-              "Coverage % Current A/C Digital": "83.73"
-            },
-            "Sepahijala": {
-              "District": "Sepahijala",
-              "Coverage % Savings A/C Digital": "94.79",
-              "Coverage % Current A/C Digital": "85.74"
-            },
-            "South Tripura": {
-              "District": "South Tripura",
-              "Coverage % Savings A/C Digital": "95.63",
-              "Coverage % Current A/C Digital": "79.24"
-            },
-            "West Tripura": {
-              "District": "West Tripura",
-              "Coverage % Savings A/C Digital": "100.00",
-              "Coverage % Current A/C Digital": "100.00"
-            }
-          }
-        },
         "pmjdy": {
           "fields": [
             "District",
@@ -5167,6 +5122,51 @@
               "Coverage Pct for women accounts": "7.22"
             }
           }
+        },
+        "digital_transactions": {
+          "fields": [
+            "District",
+            "Coverage % Savings A/C Digital",
+            "Coverage % Current A/C Digital"
+          ],
+          "num_districts": 7,
+          "districts": {
+            "Dhalai": {
+              "District": "Dhalai",
+              "Coverage % Savings A/C Digital": "95.61",
+              "Coverage % Current A/C Digital": "81.65"
+            },
+            "Gomati": {
+              "District": "Gomati",
+              "Coverage % Savings A/C Digital": "97.27",
+              "Coverage % Current A/C Digital": "88.47"
+            },
+            "Khowai": {
+              "District": "Khowai",
+              "Coverage % Savings A/C Digital": "94.26",
+              "Coverage % Current A/C Digital": "84.39"
+            },
+            "North Tripura": {
+              "District": "North Tripura",
+              "Coverage % Savings A/C Digital": "95.72",
+              "Coverage % Current A/C Digital": "83.73"
+            },
+            "Sepahijala": {
+              "District": "Sepahijala",
+              "Coverage % Savings A/C Digital": "94.79",
+              "Coverage % Current A/C Digital": "85.74"
+            },
+            "South Tripura": {
+              "District": "South Tripura",
+              "Coverage % Savings A/C Digital": "95.63",
+              "Coverage % Current A/C Digital": "79.24"
+            },
+            "West Tripura": {
+              "District": "West Tripura",
+              "Coverage % Savings A/C Digital": "100.00",
+              "Coverage % Current A/C Digital": "100.00"
+            }
+          }
         }
       }
     },
@@ -5216,7 +5216,7 @@
             }
           }
         },
-        "digital_coverage": {
+        "digital_transactions": {
           "fields": [
             "District",
             "Coverage % Savings A/C Digital",
@@ -5309,51 +5309,6 @@
             }
           }
         },
-        "digital_coverage": {
-          "fields": [
-            "District",
-            "Coverage % Savings A/C Digital",
-            "Coverage % Current A/C Digital"
-          ],
-          "num_districts": 7,
-          "districts": {
-            "Dhalai": {
-              "District": "Dhalai",
-              "Coverage % Savings A/C Digital": "100.00",
-              "Coverage % Current A/C Digital": "100.00"
-            },
-            "Gomati": {
-              "District": "Gomati",
-              "Coverage % Savings A/C Digital": "100.00",
-              "Coverage % Current A/C Digital": "100.00"
-            },
-            "Khowai": {
-              "District": "Khowai",
-              "Coverage % Savings A/C Digital": "100.00",
-              "Coverage % Current A/C Digital": "100.00"
-            },
-            "North Tripura": {
-              "District": "North Tripura",
-              "Coverage % Savings A/C Digital": "100.00",
-              "Coverage % Current A/C Digital": "100.00"
-            },
-            "Sepahijala": {
-              "District": "Sepahijala",
-              "Coverage % Savings A/C Digital": "100.00",
-              "Coverage % Current A/C Digital": "100.00"
-            },
-            "South Tripura": {
-              "District": "South Tripura",
-              "Coverage % Savings A/C Digital": "100.00",
-              "Coverage % Current A/C Digital": "100.00"
-            },
-            "West Tripura": {
-              "District": "West Tripura",
-              "Coverage % Savings A/C Digital": "100.00",
-              "Coverage % Current A/C Digital": "100.00"
-            }
-          }
-        },
         "kcc": {
           "fields": [
             "District",
@@ -5398,6 +5353,51 @@
               "Total Applications": "193",
               "New KCC Sanctioned": "191",
               "Application Rejected": "2"
+            }
+          }
+        },
+        "digital_transactions": {
+          "fields": [
+            "District",
+            "Coverage % Savings A/C Digital",
+            "Coverage % Current A/C Digital"
+          ],
+          "num_districts": 7,
+          "districts": {
+            "Dhalai": {
+              "District": "Dhalai",
+              "Coverage % Savings A/C Digital": "100.00",
+              "Coverage % Current A/C Digital": "100.00"
+            },
+            "Gomati": {
+              "District": "Gomati",
+              "Coverage % Savings A/C Digital": "100.00",
+              "Coverage % Current A/C Digital": "100.00"
+            },
+            "Khowai": {
+              "District": "Khowai",
+              "Coverage % Savings A/C Digital": "100.00",
+              "Coverage % Current A/C Digital": "100.00"
+            },
+            "North Tripura": {
+              "District": "North Tripura",
+              "Coverage % Savings A/C Digital": "100.00",
+              "Coverage % Current A/C Digital": "100.00"
+            },
+            "Sepahijala": {
+              "District": "Sepahijala",
+              "Coverage % Savings A/C Digital": "100.00",
+              "Coverage % Current A/C Digital": "100.00"
+            },
+            "South Tripura": {
+              "District": "South Tripura",
+              "Coverage % Savings A/C Digital": "100.00",
+              "Coverage % Current A/C Digital": "100.00"
+            },
+            "West Tripura": {
+              "District": "West Tripura",
+              "Coverage % Savings A/C Digital": "100.00",
+              "Coverage % Current A/C Digital": "100.00"
             }
           }
         }
@@ -5531,7 +5531,7 @@
             }
           }
         },
-        "digital_coverage": {
+        "digital_transactions": {
           "fields": [
             "District",
             "Coverage % Savings A/C Digital",
@@ -5953,36 +5953,46 @@
             }
           }
         },
-        "digital_coverage": {
+        "digital_transactions": {
           "fields": [
             "District",
+            "No. of accounts covered",
+            "Coverage Pct",
             "Coverage % Savings A/C Digital",
             "Coverage % Current A/C Digital"
           ],
-          "num_districts": 7,
+          "num_districts": 4,
           "districts": {
             "Dhalai": {
               "District": "Dhalai",
+              "No. of accounts covered": "5287",
+              "Coverage Pct": "100.00",
               "Coverage % Savings A/C Digital": "100.00",
               "Coverage % Current A/C Digital": "100.00"
             },
             "Gomati": {
               "District": "Gomati",
+              "No. of accounts covered": "10718",
+              "Coverage Pct": "100.00",
               "Coverage % Savings A/C Digital": "100.00",
               "Coverage % Current A/C Digital": "100.00"
             },
             "Khowai": {
               "District": "Khowai",
-              "Coverage % Savings A/C Digital": "100.00",
-              "Coverage % Current A/C Digital": "100.00"
-            },
-            "North Tripura": {
-              "District": "North Tripura",
+              "No. of accounts covered": "5929",
+              "Coverage Pct": "100.00",
               "Coverage % Savings A/C Digital": "100.00",
               "Coverage % Current A/C Digital": "100.00"
             },
             "Sepahijala": {
               "District": "Sepahijala",
+              "No. of accounts covered": "8383",
+              "Coverage Pct": "100.01",
+              "Coverage % Savings A/C Digital": "100.00",
+              "Coverage % Current A/C Digital": "100.00"
+            },
+            "North Tripura": {
+              "District": "North Tripura",
               "Coverage % Savings A/C Digital": "100.00",
               "Coverage % Current A/C Digital": "100.00"
             },
@@ -5995,36 +6005,6 @@
               "District": "West Tripura",
               "Coverage % Savings A/C Digital": "100.00",
               "Coverage % Current A/C Digital": "100.00"
-            }
-          }
-        },
-        "digital_transactions": {
-          "fields": [
-            "District",
-            "No. of accounts covered",
-            "Coverage Pct"
-          ],
-          "num_districts": 4,
-          "districts": {
-            "Dhalai": {
-              "District": "Dhalai",
-              "No. of accounts covered": "5287",
-              "Coverage Pct": "100.00"
-            },
-            "Gomati": {
-              "District": "Gomati",
-              "No. of accounts covered": "10718",
-              "Coverage Pct": "100.00"
-            },
-            "Khowai": {
-              "District": "Khowai",
-              "No. of accounts covered": "5929",
-              "Coverage Pct": "100.00"
-            },
-            "Sepahijala": {
-              "District": "Sepahijala",
-              "No. of accounts covered": "8383",
-              "Coverage Pct": "100.01"
             }
           }
         },
@@ -6213,7 +6193,7 @@
               "Allocated Bank": "IDFC First Bank",
               "Village Name": "Manu Chhailengta R.F. (Part) Village Code: 272532",
               "Population": "5843",
-              "Reply from Bank": "Bank yet to give response to SLBC desk after Bank’s Earlier reply was not accepted by the house.",
+              "Reply from Bank": "Bank yet to give response to SLBC desk after Bank\u2019s Earlier reply was not accepted by the house.",
               "Suggestion made by house": "IDFC Bank is requested to proceed for opening of branch at the allotted location.",
               "Sub District": "Longtharai Valley"
             },
@@ -6240,7 +6220,7 @@
               "Allocated Bank": "Federal Bank",
               "Village Name": "Purba Rajnagar Village Code: 271934",
               "Population": "4301",
-              "Reply from Bank": "Allocated to concerned Bank by SLBC on 17.05.2023. Bank’s reply to DFS: Assigned team is doing a detailed feasibility study of the location.",
+              "Reply from Bank": "Allocated to concerned Bank by SLBC on 17.05.2023. Bank\u2019s reply to DFS: Assigned team is doing a detailed feasibility study of the location.",
               "Suggestion made by house": "SLBC desk has been advised to take update from Fedral Bank through email.",
               "Sub District": "Khowai"
             }
@@ -6364,36 +6344,71 @@
             }
           }
         },
-        "digital_coverage": {
+        "digital_transactions": {
           "fields": [
             "District",
+            "Total No. of Eligible Operative Current/Business Accounts",
+            "Current A/C Net Banking Coverage",
+            "Coverage Pct",
+            "Current A/C POS/QR Coverage",
+            "Current A/C Mobile Banking Coverage",
+            "Digital Coverage Current A/C",
+            "Current A/C Ineligible for Digital Coverage",
             "Coverage % Savings A/C Digital",
             "Coverage % Current A/C Digital"
           ],
-          "num_districts": 7,
+          "num_districts": 4,
           "districts": {
             "Dhalai": {
               "District": "Dhalai",
+              "Total No. of Eligible Operative Current/Business Accounts": "5372",
+              "Current A/C Net Banking Coverage": "1714",
+              "Coverage Pct": "100.00",
+              "Current A/C POS/QR Coverage": "2729",
+              "Current A/C Mobile Banking Coverage": "2616",
+              "Digital Coverage Current A/C": "5372",
+              "Current A/C Ineligible for Digital Coverage": "380",
               "Coverage % Savings A/C Digital": "100.00",
               "Coverage % Current A/C Digital": "100.00"
             },
             "Gomati": {
               "District": "Gomati",
+              "Total No. of Eligible Operative Current/Business Accounts": "10824",
+              "Current A/C Net Banking Coverage": "3222",
+              "Coverage Pct": "100.00",
+              "Current A/C POS/QR Coverage": "3911",
+              "Current A/C Mobile Banking Coverage": "3508",
+              "Digital Coverage Current A/C": "10824",
+              "Current A/C Ineligible for Digital Coverage": "581",
               "Coverage % Savings A/C Digital": "100.00",
               "Coverage % Current A/C Digital": "100.00"
             },
             "Khowai": {
               "District": "Khowai",
-              "Coverage % Savings A/C Digital": "100.00",
-              "Coverage % Current A/C Digital": "100.00"
-            },
-            "North Tripura": {
-              "District": "North Tripura",
+              "Total No. of Eligible Operative Current/Business Accounts": "5959",
+              "Current A/C Net Banking Coverage": "2155",
+              "Coverage Pct": "100.00",
+              "Current A/C POS/QR Coverage": "2747",
+              "Current A/C Mobile Banking Coverage": "2987",
+              "Digital Coverage Current A/C": "5959",
+              "Current A/C Ineligible for Digital Coverage": "403",
               "Coverage % Savings A/C Digital": "100.00",
               "Coverage % Current A/C Digital": "100.00"
             },
             "Sepahijala": {
               "District": "Sepahijala",
+              "Total No. of Eligible Operative Current/Business Accounts": "8391",
+              "Current A/C Net Banking Coverage": "2317",
+              "Coverage Pct": "100.00",
+              "Current A/C POS/QR Coverage": "4044",
+              "Current A/C Mobile Banking Coverage": "4115",
+              "Digital Coverage Current A/C": "8391",
+              "Current A/C Ineligible for Digital Coverage": "506",
+              "Coverage % Savings A/C Digital": "100.00",
+              "Coverage % Current A/C Digital": "100.00"
+            },
+            "North Tripura": {
+              "District": "North Tripura",
               "Coverage % Savings A/C Digital": "100.00",
               "Coverage % Current A/C Digital": "100.00"
             },
@@ -6406,61 +6421,6 @@
               "District": "West Tripura",
               "Coverage % Savings A/C Digital": "100.00",
               "Coverage % Current A/C Digital": "100.00"
-            }
-          }
-        },
-        "digital_transactions": {
-          "fields": [
-            "District",
-            "Total No. of Eligible Operative Current/Business Accounts",
-            "Current A/C Net Banking Coverage",
-            "Coverage Pct",
-            "Current A/C POS/QR Coverage",
-            "Current A/C Mobile Banking Coverage",
-            "Digital Coverage Current A/C",
-            "Current A/C Ineligible for Digital Coverage"
-          ],
-          "num_districts": 4,
-          "districts": {
-            "Dhalai": {
-              "District": "Dhalai",
-              "Total No. of Eligible Operative Current/Business Accounts": "5372",
-              "Current A/C Net Banking Coverage": "1714",
-              "Coverage Pct": "100.00",
-              "Current A/C POS/QR Coverage": "2729",
-              "Current A/C Mobile Banking Coverage": "2616",
-              "Digital Coverage Current A/C": "5372",
-              "Current A/C Ineligible for Digital Coverage": "380"
-            },
-            "Gomati": {
-              "District": "Gomati",
-              "Total No. of Eligible Operative Current/Business Accounts": "10824",
-              "Current A/C Net Banking Coverage": "3222",
-              "Coverage Pct": "100.00",
-              "Current A/C POS/QR Coverage": "3911",
-              "Current A/C Mobile Banking Coverage": "3508",
-              "Digital Coverage Current A/C": "10824",
-              "Current A/C Ineligible for Digital Coverage": "581"
-            },
-            "Khowai": {
-              "District": "Khowai",
-              "Total No. of Eligible Operative Current/Business Accounts": "5959",
-              "Current A/C Net Banking Coverage": "2155",
-              "Coverage Pct": "100.00",
-              "Current A/C POS/QR Coverage": "2747",
-              "Current A/C Mobile Banking Coverage": "2987",
-              "Digital Coverage Current A/C": "5959",
-              "Current A/C Ineligible for Digital Coverage": "403"
-            },
-            "Sepahijala": {
-              "District": "Sepahijala",
-              "Total No. of Eligible Operative Current/Business Accounts": "8391",
-              "Current A/C Net Banking Coverage": "2317",
-              "Coverage Pct": "100.00",
-              "Current A/C POS/QR Coverage": "4044",
-              "Current A/C Mobile Banking Coverage": "4115",
-              "Digital Coverage Current A/C": "8391",
-              "Current A/C Ineligible for Digital Coverage": "506"
             }
           }
         },
@@ -6671,7 +6631,7 @@
               "Allocated Bank": "IDFC First Bank",
               "Village Name": "Manu Chhailengta R.F. (Part) Village Code: 272532",
               "Population": "5843",
-              "Reply from Bank": "Bank yet to give response to SLBC desk after Bank’s Earlier reply was not accepted by the house.",
+              "Reply from Bank": "Bank yet to give response to SLBC desk after Bank\u2019s Earlier reply was not accepted by the house.",
               "Suggestion made by house": "IDFC Bank is requested to proceed for opening of branch at the allotted location.",
               "Sub District": "Longtha rai Valley"
             },
@@ -6680,7 +6640,7 @@
               "Allocated Bank": "ICICI Bank",
               "Village Name": "Taiyangpara Village Code: 272721",
               "Population": "4334",
-              "Reply from Bank": "ICICI Bank has been allocated alternate location at “Dasmanipara” due to Infrastructure issues within 05 km of radius vide our email letter dated 31.08.2024",
+              "Reply from Bank": "ICICI Bank has been allocated alternate location at \u201cDasmanipara\u201d due to Infrastructure issues within 05 km of radius vide our email letter dated 31.08.2024",
               "Suggestion made by house": "",
               "Sub District": "Dasda"
             },
@@ -6698,7 +6658,7 @@
               "Allocated Bank": "Federal Bank",
               "Village Name": "Purba Rajnagar Village Code: 271934",
               "Population": "4301",
-              "Reply from Bank": "Allocated to concerned Bank by SLBC on 17.05.2023. Bank’s reply to DFS: Assigned team is doing a detailed feasibility study of the location.",
+              "Reply from Bank": "Allocated to concerned Bank by SLBC on 17.05.2023. Bank\u2019s reply to DFS: Assigned team is doing a detailed feasibility study of the location.",
               "Suggestion made by house": "Federal Bank to expedite the process.",
               "Sub District": "Khowai"
             }
@@ -6927,51 +6887,6 @@
             }
           }
         },
-        "digital_coverage": {
-          "fields": [
-            "District",
-            "Coverage % Savings A/C Digital",
-            "Coverage % Current A/C Digital"
-          ],
-          "num_districts": 7,
-          "districts": {
-            "Dhalai": {
-              "District": "Dhalai",
-              "Coverage % Savings A/C Digital": "100.00",
-              "Coverage % Current A/C Digital": "100.00"
-            },
-            "Gomati": {
-              "District": "Gomati",
-              "Coverage % Savings A/C Digital": "100.00",
-              "Coverage % Current A/C Digital": "100.00"
-            },
-            "Khowai": {
-              "District": "Khowai",
-              "Coverage % Savings A/C Digital": "100.00",
-              "Coverage % Current A/C Digital": "100.00"
-            },
-            "North Tripura": {
-              "District": "North Tripura",
-              "Coverage % Savings A/C Digital": "100.00",
-              "Coverage % Current A/C Digital": "100.00"
-            },
-            "Sepahijala": {
-              "District": "Sepahijala",
-              "Coverage % Savings A/C Digital": "100.00",
-              "Coverage % Current A/C Digital": "100.00"
-            },
-            "South Tripura": {
-              "District": "South Tripura",
-              "Coverage % Savings A/C Digital": "100.00",
-              "Coverage % Current A/C Digital": "100.00"
-            },
-            "West Tripura": {
-              "District": "West Tripura",
-              "Coverage % Savings A/C Digital": "100.00",
-              "Coverage % Current A/C Digital": "100.00"
-            }
-          }
-        },
         "digital_transactions": {
           "fields": [
             "District",
@@ -6983,7 +6898,9 @@
             "Coverage Pct for women accounts",
             "Total No. of Accou % nts covered",
             "Out of total no. of women Accounts (G6), no of women",
-            "Total No. of % Accounts covered"
+            "Total No. of % Accounts covered",
+            "Coverage % Savings A/C Digital",
+            "Coverage % Current A/C Digital"
           ],
           "num_districts": 4,
           "districts": {
@@ -6997,7 +6914,9 @@
               "Coverage Pct for women accounts": "100.00",
               "Total No. of Accou % nts covered": "38684",
               "Out of total no. of women Accounts (G6), no of women": "13922",
-              "Total No. of % Accounts covered": "565801"
+              "Total No. of % Accounts covered": "565801",
+              "Coverage % Savings A/C Digital": "100.00",
+              "Coverage % Current A/C Digital": "100.00"
             },
             "Gomati": {
               "District": "Gomati",
@@ -7009,7 +6928,9 @@
               "Coverage Pct for women accounts": "100.00",
               "Total No. of Accou % nts covered": "83908",
               "Out of total no. of women Accounts (G6), no of women": "32783",
-              "Total No. of % Accounts covered": "738701"
+              "Total No. of % Accounts covered": "738701",
+              "Coverage % Savings A/C Digital": "100.00",
+              "Coverage % Current A/C Digital": "100.00"
             },
             "Khowai": {
               "District": "Khowai",
@@ -7021,7 +6942,9 @@
               "Coverage Pct for women accounts": "100.00",
               "Total No. of Accou % nts covered": "52829",
               "Out of total no. of women Accounts (G6), no of women": "24598",
-              "Total No. of % Accounts covered": "504128"
+              "Total No. of % Accounts covered": "504128",
+              "Coverage % Savings A/C Digital": "100.00",
+              "Coverage % Current A/C Digital": "100.00"
             },
             "Sepahijala": {
               "District": "Sepahijala",
@@ -7033,7 +6956,24 @@
               "Coverage Pct for women accounts": "100.00",
               "Total No. of Accou % nts covered": "67191",
               "Out of total no. of women Accounts (G6), no of women": "26740",
-              "Total No. of % Accounts covered": "696106"
+              "Total No. of % Accounts covered": "696106",
+              "Coverage % Savings A/C Digital": "100.00",
+              "Coverage % Current A/C Digital": "100.00"
+            },
+            "North Tripura": {
+              "District": "North Tripura",
+              "Coverage % Savings A/C Digital": "100.00",
+              "Coverage % Current A/C Digital": "100.00"
+            },
+            "South Tripura": {
+              "District": "South Tripura",
+              "Coverage % Savings A/C Digital": "100.00",
+              "Coverage % Current A/C Digital": "100.00"
+            },
+            "West Tripura": {
+              "District": "West Tripura",
+              "Coverage % Savings A/C Digital": "100.00",
+              "Coverage % Current A/C Digital": "100.00"
             }
           }
         },
@@ -7500,36 +7440,71 @@
             }
           }
         },
-        "digital_coverage": {
+        "digital_transactions": {
           "fields": [
             "District",
+            "Total No. of Eligible Operative Current/Business Accounts",
+            "Current A/C Net Banking Coverage",
+            "Coverage Pct",
+            "Current A/C POS/QR Coverage",
+            "Current A/C Mobile Banking Coverage",
+            "Digital Coverage Current A/C",
+            "Current A/C Ineligible for Digital Coverage",
             "Coverage percentage (%) of eligible savings accounts",
             "Coverage percentage (%) of eligible current accounts"
           ],
-          "num_districts": 7,
+          "num_districts": 4,
           "districts": {
             "Dhalai": {
               "District": "Dhalai",
+              "Total No. of Eligible Operative Current/Business Accounts": "5498",
+              "Current A/C Net Banking Coverage": "1770",
+              "Coverage Pct": "100.00",
+              "Current A/C POS/QR Coverage": "2814",
+              "Current A/C Mobile Banking Coverage": "2690",
+              "Digital Coverage Current A/C": "5498",
+              "Current A/C Ineligible for Digital Coverage": "356",
               "Coverage percentage (%) of eligible savings accounts": "100.00",
               "Coverage percentage (%) of eligible current accounts": "100.00"
             },
             "Gomati": {
               "District": "Gomati",
+              "Total No. of Eligible Operative Current/Business Accounts": "11436",
+              "Current A/C Net Banking Coverage": "3797",
+              "Coverage Pct": "100.00",
+              "Current A/C POS/QR Coverage": "4226",
+              "Current A/C Mobile Banking Coverage": "3655",
+              "Digital Coverage Current A/C": "11436",
+              "Current A/C Ineligible for Digital Coverage": "586",
               "Coverage percentage (%) of eligible savings accounts": "100.00",
               "Coverage percentage (%) of eligible current accounts": "100.00"
             },
             "Khowai": {
               "District": "Khowai",
-              "Coverage percentage (%) of eligible savings accounts": "100.00",
-              "Coverage percentage (%) of eligible current accounts": "100.00"
-            },
-            "North Tripura": {
-              "District": "North Tripura",
+              "Total No. of Eligible Operative Current/Business Accounts": "5925",
+              "Current A/C Net Banking Coverage": "2113",
+              "Coverage Pct": "100.00",
+              "Current A/C POS/QR Coverage": "2802",
+              "Current A/C Mobile Banking Coverage": "3240",
+              "Digital Coverage Current A/C": "5925",
+              "Current A/C Ineligible for Digital Coverage": "407",
               "Coverage percentage (%) of eligible savings accounts": "100.00",
               "Coverage percentage (%) of eligible current accounts": "100.00"
             },
             "Sepahijala": {
               "District": "Sepahijala",
+              "Total No. of Eligible Operative Current/Business Accounts": "8823",
+              "Current A/C Net Banking Coverage": "2588",
+              "Coverage Pct": "100.00",
+              "Current A/C POS/QR Coverage": "3987",
+              "Current A/C Mobile Banking Coverage": "4486",
+              "Digital Coverage Current A/C": "8823",
+              "Current A/C Ineligible for Digital Coverage": "511",
+              "Coverage percentage (%) of eligible savings accounts": "100.00",
+              "Coverage percentage (%) of eligible current accounts": "100.00"
+            },
+            "North Tripura": {
+              "District": "North Tripura",
               "Coverage percentage (%) of eligible savings accounts": "100.00",
               "Coverage percentage (%) of eligible current accounts": "100.00"
             },
@@ -7542,61 +7517,6 @@
               "District": "West Tripura",
               "Coverage percentage (%) of eligible savings accounts": "100.00",
               "Coverage percentage (%) of eligible current accounts": "100.00"
-            }
-          }
-        },
-        "digital_transactions": {
-          "fields": [
-            "District",
-            "Total No. of Eligible Operative Current/Business Accounts",
-            "Current A/C Net Banking Coverage",
-            "Coverage Pct",
-            "Current A/C POS/QR Coverage",
-            "Current A/C Mobile Banking Coverage",
-            "Digital Coverage Current A/C",
-            "Current A/C Ineligible for Digital Coverage"
-          ],
-          "num_districts": 4,
-          "districts": {
-            "Dhalai": {
-              "District": "Dhalai",
-              "Total No. of Eligible Operative Current/Business Accounts": "5498",
-              "Current A/C Net Banking Coverage": "1770",
-              "Coverage Pct": "100.00",
-              "Current A/C POS/QR Coverage": "2814",
-              "Current A/C Mobile Banking Coverage": "2690",
-              "Digital Coverage Current A/C": "5498",
-              "Current A/C Ineligible for Digital Coverage": "356"
-            },
-            "Gomati": {
-              "District": "Gomati",
-              "Total No. of Eligible Operative Current/Business Accounts": "11436",
-              "Current A/C Net Banking Coverage": "3797",
-              "Coverage Pct": "100.00",
-              "Current A/C POS/QR Coverage": "4226",
-              "Current A/C Mobile Banking Coverage": "3655",
-              "Digital Coverage Current A/C": "11436",
-              "Current A/C Ineligible for Digital Coverage": "586"
-            },
-            "Khowai": {
-              "District": "Khowai",
-              "Total No. of Eligible Operative Current/Business Accounts": "5925",
-              "Current A/C Net Banking Coverage": "2113",
-              "Coverage Pct": "100.00",
-              "Current A/C POS/QR Coverage": "2802",
-              "Current A/C Mobile Banking Coverage": "3240",
-              "Digital Coverage Current A/C": "5925",
-              "Current A/C Ineligible for Digital Coverage": "407"
-            },
-            "Sepahijala": {
-              "District": "Sepahijala",
-              "Total No. of Eligible Operative Current/Business Accounts": "8823",
-              "Current A/C Net Banking Coverage": "2588",
-              "Coverage Pct": "100.00",
-              "Current A/C POS/QR Coverage": "3987",
-              "Current A/C Mobile Banking Coverage": "4486",
-              "Digital Coverage Current A/C": "8823",
-              "Current A/C Ineligible for Digital Coverage": "511"
             }
           }
         },
@@ -7972,36 +7892,71 @@
             }
           }
         },
-        "digital_coverage": {
+        "digital_transactions": {
           "fields": [
             "District",
+            "Total No. of Eligible Operative Current/Business Accounts",
+            "Current A/C Net Banking Coverage",
+            "Coverage Pct",
+            "Current A/C POS/QR Coverage",
+            "Current A/C Mobile Banking Coverage",
+            "Digital Coverage Current A/C",
+            "Current A/C Ineligible for Digital Coverage",
             "Coverage percentage (%) of eligible savings accounts",
             "Coverage percentage (%) of eligible current accounts"
           ],
-          "num_districts": 7,
+          "num_districts": 4,
           "districts": {
             "Dhalai": {
               "District": "Dhalai",
+              "Total No. of Eligible Operative Current/Business Accounts": "5498",
+              "Current A/C Net Banking Coverage": "1769",
+              "Coverage Pct": "100.00",
+              "Current A/C POS/QR Coverage": "2814",
+              "Current A/C Mobile Banking Coverage": "2690",
+              "Digital Coverage Current A/C": "5498",
+              "Current A/C Ineligible for Digital Coverage": "356",
               "Coverage percentage (%) of eligible savings accounts": "100.00",
               "Coverage percentage (%) of eligible current accounts": "100.00"
             },
             "Gomati": {
               "District": "Gomati",
+              "Total No. of Eligible Operative Current/Business Accounts": "11453",
+              "Current A/C Net Banking Coverage": "3797",
+              "Coverage Pct": "100.00",
+              "Current A/C POS/QR Coverage": "4226",
+              "Current A/C Mobile Banking Coverage": "3655",
+              "Digital Coverage Current A/C": "11453",
+              "Current A/C Ineligible for Digital Coverage": "561",
               "Coverage percentage (%) of eligible savings accounts": "100.00",
               "Coverage percentage (%) of eligible current accounts": "100.00"
             },
             "Khowai": {
               "District": "Khowai",
-              "Coverage percentage (%) of eligible savings accounts": "100.00",
-              "Coverage percentage (%) of eligible current accounts": "100.00"
-            },
-            "North Tripura": {
-              "District": "North Tripura",
+              "Total No. of Eligible Operative Current/Business Accounts": "5925",
+              "Current A/C Net Banking Coverage": "2113",
+              "Coverage Pct": "100.00",
+              "Current A/C POS/QR Coverage": "2802",
+              "Current A/C Mobile Banking Coverage": "3240",
+              "Digital Coverage Current A/C": "5925",
+              "Current A/C Ineligible for Digital Coverage": "407",
               "Coverage percentage (%) of eligible savings accounts": "100.00",
               "Coverage percentage (%) of eligible current accounts": "100.00"
             },
             "Sepahijala": {
               "District": "Sepahijala",
+              "Total No. of Eligible Operative Current/Business Accounts": "8831",
+              "Current A/C Net Banking Coverage": "2588",
+              "Coverage Pct": "100.00",
+              "Current A/C POS/QR Coverage": "3987",
+              "Current A/C Mobile Banking Coverage": "4486",
+              "Digital Coverage Current A/C": "8831",
+              "Current A/C Ineligible for Digital Coverage": "511",
+              "Coverage percentage (%) of eligible savings accounts": "100.00",
+              "Coverage percentage (%) of eligible current accounts": "100.00"
+            },
+            "North Tripura": {
+              "District": "North Tripura",
               "Coverage percentage (%) of eligible savings accounts": "100.00",
               "Coverage percentage (%) of eligible current accounts": "100.00"
             },
@@ -8014,61 +7969,6 @@
               "District": "West Tripura",
               "Coverage percentage (%) of eligible savings accounts": "100.00",
               "Coverage percentage (%) of eligible current accounts": "100.00"
-            }
-          }
-        },
-        "digital_transactions": {
-          "fields": [
-            "District",
-            "Total No. of Eligible Operative Current/Business Accounts",
-            "Current A/C Net Banking Coverage",
-            "Coverage Pct",
-            "Current A/C POS/QR Coverage",
-            "Current A/C Mobile Banking Coverage",
-            "Digital Coverage Current A/C",
-            "Current A/C Ineligible for Digital Coverage"
-          ],
-          "num_districts": 4,
-          "districts": {
-            "Dhalai": {
-              "District": "Dhalai",
-              "Total No. of Eligible Operative Current/Business Accounts": "5498",
-              "Current A/C Net Banking Coverage": "1769",
-              "Coverage Pct": "100.00",
-              "Current A/C POS/QR Coverage": "2814",
-              "Current A/C Mobile Banking Coverage": "2690",
-              "Digital Coverage Current A/C": "5498",
-              "Current A/C Ineligible for Digital Coverage": "356"
-            },
-            "Gomati": {
-              "District": "Gomati",
-              "Total No. of Eligible Operative Current/Business Accounts": "11453",
-              "Current A/C Net Banking Coverage": "3797",
-              "Coverage Pct": "100.00",
-              "Current A/C POS/QR Coverage": "4226",
-              "Current A/C Mobile Banking Coverage": "3655",
-              "Digital Coverage Current A/C": "11453",
-              "Current A/C Ineligible for Digital Coverage": "561"
-            },
-            "Khowai": {
-              "District": "Khowai",
-              "Total No. of Eligible Operative Current/Business Accounts": "5925",
-              "Current A/C Net Banking Coverage": "2113",
-              "Coverage Pct": "100.00",
-              "Current A/C POS/QR Coverage": "2802",
-              "Current A/C Mobile Banking Coverage": "3240",
-              "Digital Coverage Current A/C": "5925",
-              "Current A/C Ineligible for Digital Coverage": "407"
-            },
-            "Sepahijala": {
-              "District": "Sepahijala",
-              "Total No. of Eligible Operative Current/Business Accounts": "8831",
-              "Current A/C Net Banking Coverage": "2588",
-              "Coverage Pct": "100.00",
-              "Current A/C POS/QR Coverage": "3987",
-              "Current A/C Mobile Banking Coverage": "4486",
-              "Digital Coverage Current A/C": "8831",
-              "Current A/C Ineligible for Digital Coverage": "511"
             }
           }
         },
@@ -8479,36 +8379,71 @@
             }
           }
         },
-        "digital_coverage": {
+        "digital_transactions": {
           "fields": [
             "District",
+            "Total No. of Eligible Operative Current/Business Accounts",
+            "Current A/C Net Banking Coverage",
+            "Coverage Pct",
+            "Current A/C POS/QR Coverage",
+            "Current A/C Mobile Banking Coverage",
+            "Digital Coverage Current A/C",
+            "Current A/C Ineligible for Digital Coverage",
             "Coverage percentage (%) of eligible savings accounts",
             "Coverage percentage (%) of eligible current accounts"
           ],
-          "num_districts": 7,
+          "num_districts": 4,
           "districts": {
             "Dhalai": {
               "District": "Dhalai",
+              "Total No. of Eligible Operative Current/Business Accounts": "5521",
+              "Current A/C Net Banking Coverage": "1769",
+              "Coverage Pct": "100.00",
+              "Current A/C POS/QR Coverage": "2814",
+              "Current A/C Mobile Banking Coverage": "2690",
+              "Digital Coverage Current A/C": "5521",
+              "Current A/C Ineligible for Digital Coverage": "356",
               "Coverage percentage (%) of eligible savings accounts": "100.00",
               "Coverage percentage (%) of eligible current accounts": "100.00"
             },
             "Gomati": {
               "District": "Gomati",
+              "Total No. of Eligible Operative Current/Business Accounts": "11503",
+              "Current A/C Net Banking Coverage": "3797",
+              "Coverage Pct": "100.00",
+              "Current A/C POS/QR Coverage": "4226",
+              "Current A/C Mobile Banking Coverage": "3655",
+              "Digital Coverage Current A/C": "11503",
+              "Current A/C Ineligible for Digital Coverage": "561",
               "Coverage percentage (%) of eligible savings accounts": "100.00",
               "Coverage percentage (%) of eligible current accounts": "100.00"
             },
             "Khowai": {
               "District": "Khowai",
-              "Coverage percentage (%) of eligible savings accounts": "100.00",
-              "Coverage percentage (%) of eligible current accounts": "100.00"
-            },
-            "North Tripura": {
-              "District": "North Tripura",
+              "Total No. of Eligible Operative Current/Business Accounts": "6023",
+              "Current A/C Net Banking Coverage": "2113",
+              "Coverage Pct": "100.00",
+              "Current A/C POS/QR Coverage": "2802",
+              "Current A/C Mobile Banking Coverage": "3240",
+              "Digital Coverage Current A/C": "6023",
+              "Current A/C Ineligible for Digital Coverage": "407",
               "Coverage percentage (%) of eligible savings accounts": "100.00",
               "Coverage percentage (%) of eligible current accounts": "100.00"
             },
             "Sepahijala": {
               "District": "Sepahijala",
+              "Total No. of Eligible Operative Current/Business Accounts": "8812",
+              "Current A/C Net Banking Coverage": "2588",
+              "Coverage Pct": "100.00",
+              "Current A/C POS/QR Coverage": "4004",
+              "Current A/C Mobile Banking Coverage": "4486",
+              "Digital Coverage Current A/C": "8812",
+              "Current A/C Ineligible for Digital Coverage": "511",
+              "Coverage percentage (%) of eligible savings accounts": "100.00",
+              "Coverage percentage (%) of eligible current accounts": "100.00"
+            },
+            "North Tripura": {
+              "District": "North Tripura",
               "Coverage percentage (%) of eligible savings accounts": "100.00",
               "Coverage percentage (%) of eligible current accounts": "100.00"
             },
@@ -8521,61 +8456,6 @@
               "District": "West Tripura",
               "Coverage percentage (%) of eligible savings accounts": "100.00",
               "Coverage percentage (%) of eligible current accounts": "100.00"
-            }
-          }
-        },
-        "digital_transactions": {
-          "fields": [
-            "District",
-            "Total No. of Eligible Operative Current/Business Accounts",
-            "Current A/C Net Banking Coverage",
-            "Coverage Pct",
-            "Current A/C POS/QR Coverage",
-            "Current A/C Mobile Banking Coverage",
-            "Digital Coverage Current A/C",
-            "Current A/C Ineligible for Digital Coverage"
-          ],
-          "num_districts": 4,
-          "districts": {
-            "Dhalai": {
-              "District": "Dhalai",
-              "Total No. of Eligible Operative Current/Business Accounts": "5521",
-              "Current A/C Net Banking Coverage": "1769",
-              "Coverage Pct": "100.00",
-              "Current A/C POS/QR Coverage": "2814",
-              "Current A/C Mobile Banking Coverage": "2690",
-              "Digital Coverage Current A/C": "5521",
-              "Current A/C Ineligible for Digital Coverage": "356"
-            },
-            "Gomati": {
-              "District": "Gomati",
-              "Total No. of Eligible Operative Current/Business Accounts": "11503",
-              "Current A/C Net Banking Coverage": "3797",
-              "Coverage Pct": "100.00",
-              "Current A/C POS/QR Coverage": "4226",
-              "Current A/C Mobile Banking Coverage": "3655",
-              "Digital Coverage Current A/C": "11503",
-              "Current A/C Ineligible for Digital Coverage": "561"
-            },
-            "Khowai": {
-              "District": "Khowai",
-              "Total No. of Eligible Operative Current/Business Accounts": "6023",
-              "Current A/C Net Banking Coverage": "2113",
-              "Coverage Pct": "100.00",
-              "Current A/C POS/QR Coverage": "2802",
-              "Current A/C Mobile Banking Coverage": "3240",
-              "Digital Coverage Current A/C": "6023",
-              "Current A/C Ineligible for Digital Coverage": "407"
-            },
-            "Sepahijala": {
-              "District": "Sepahijala",
-              "Total No. of Eligible Operative Current/Business Accounts": "8812",
-              "Current A/C Net Banking Coverage": "2588",
-              "Coverage Pct": "100.00",
-              "Current A/C POS/QR Coverage": "4004",
-              "Current A/C Mobile Banking Coverage": "4486",
-              "Digital Coverage Current A/C": "8812",
-              "Current A/C Ineligible for Digital Coverage": "511"
             }
           }
         },

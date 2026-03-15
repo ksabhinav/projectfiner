@@ -16294,105 +16294,6 @@
             }
           }
         },
-        "digital_payments": {
-          "fields": [
-            "no_of_eligible_operative_sb_a_c",
-            "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode",
-            "achievement",
-            "no_of_eligible_operative_ca_a_c",
-            "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode",
-            "achievement"
-          ],
-          "districts": {
-            "Alipurduar": {
-              "no_of_eligible_operative_sb_a_c": "2389143.0",
-              "achievement": "94.5"
-            },
-            "Bankura": {
-              "no_of_eligible_operative_sb_a_c": "3883488.0",
-              "achievement": "90.65"
-            },
-            "Birbhum": {
-              "no_of_eligible_operative_sb_a_c": "4078042.0",
-              "achievement": "92.36"
-            },
-            "Cooch Behar": {
-              "no_of_eligible_operative_sb_a_c": "3833958.0",
-              "achievement": "92.84"
-            },
-            "Dakshin Dinajpur": {
-              "no_of_eligible_operative_sb_a_c": "2012093.0",
-              "achievement": "91.99"
-            },
-            "Darjeeling": {
-              "no_of_eligible_operative_sb_a_c": "1929715.0",
-              "achievement": "92.73"
-            },
-            "Hooghly": {
-              "no_of_eligible_operative_sb_a_c": "6809628.0",
-              "achievement": "90.13",
-              "no_of_eligible_operative_ca_a_c": "134378.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "121116.0"
-            },
-            "Jalpaiguri": {
-              "no_of_eligible_operative_sb_a_c": "2925240.0",
-              "achievement": "92.33"
-            },
-            "Jhargram": {
-              "no_of_eligible_operative_sb_a_c": "1049013.0",
-              "achievement": "85.59"
-            },
-            "Kalimpong": {
-              "no_of_eligible_operative_sb_a_c": "320519.0",
-              "achievement": "77.06",
-              "no_of_eligible_operative_ca_a_c": "5217.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "4020.0"
-            },
-            "Kolkata": {
-              "no_of_eligible_operative_sb_a_c": "9156918.0",
-              "achievement": "86.03",
-              "no_of_eligible_operative_ca_a_c": "509302.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "438136.0"
-            },
-            "Malda": {
-              "no_of_eligible_operative_sb_a_c": "4582273.0",
-              "achievement": "90.36"
-            },
-            "Murshidabad": {
-              "no_of_eligible_operative_sb_a_c": "7165455.0",
-              "achievement": "93.28",
-              "no_of_eligible_operative_ca_a_c": "100486.0"
-            },
-            "Paschim Bardhaman": {
-              "no_of_eligible_operative_sb_a_c": "3464487.0",
-              "achievement": "87.93",
-              "no_of_eligible_operative_ca_a_c": "139613.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "122762.0"
-            },
-            "Paschim Medinipur": {
-              "no_of_eligible_operative_sb_a_c": "5447390.0",
-              "achievement": "90.58"
-            },
-            "Purba Bardhaman": {
-              "no_of_eligible_operative_sb_a_c": "4872570.0",
-              "achievement": "90.34"
-            },
-            "Purba Medinipur": {
-              "no_of_eligible_operative_sb_a_c": "4887825.0",
-              "achievement": "83.32",
-              "no_of_eligible_operative_ca_a_c": "124845.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "104024.0"
-            },
-            "Purulia": {
-              "no_of_eligible_operative_sb_a_c": "3014708.0",
-              "achievement": "87.13"
-            },
-            "Uttar Dinajpur": {
-              "no_of_eligible_operative_sb_a_c": "3332596.0",
-              "achievement": "92.98"
-            }
-          }
-        },
         "financial_literacy": {
           "fields": [
             "no_of_flcs",
@@ -17194,6 +17095,105 @@
               "total_to_be_trained": "1000.0",
               "achievement_no_of_programs": "90.91",
               "total_trained": "84.5"
+            }
+          }
+        },
+        "digital_transactions": {
+          "fields": [
+            "total_operative_sb_a_c",
+            "digital_coverage_sb_a_c",
+            "coverage_sb_pct",
+            "total_operative_ca_a_c",
+            "digital_coverage_ca_a_c",
+            "coverage_sb_pct"
+          ],
+          "districts": {
+            "Alipurduar": {
+              "total_operative_sb_a_c": "2389143.0",
+              "coverage_sb_pct": "94.5"
+            },
+            "Bankura": {
+              "total_operative_sb_a_c": "3883488.0",
+              "coverage_sb_pct": "90.65"
+            },
+            "Birbhum": {
+              "total_operative_sb_a_c": "4078042.0",
+              "coverage_sb_pct": "92.36"
+            },
+            "Cooch Behar": {
+              "total_operative_sb_a_c": "3833958.0",
+              "coverage_sb_pct": "92.84"
+            },
+            "Dakshin Dinajpur": {
+              "total_operative_sb_a_c": "2012093.0",
+              "coverage_sb_pct": "91.99"
+            },
+            "Darjeeling": {
+              "total_operative_sb_a_c": "1929715.0",
+              "coverage_sb_pct": "92.73"
+            },
+            "Hooghly": {
+              "total_operative_sb_a_c": "6809628.0",
+              "coverage_sb_pct": "90.13",
+              "total_operative_ca_a_c": "134378.0",
+              "digital_coverage_ca_a_c": "121116.0"
+            },
+            "Jalpaiguri": {
+              "total_operative_sb_a_c": "2925240.0",
+              "coverage_sb_pct": "92.33"
+            },
+            "Jhargram": {
+              "total_operative_sb_a_c": "1049013.0",
+              "coverage_sb_pct": "85.59"
+            },
+            "Kalimpong": {
+              "total_operative_sb_a_c": "320519.0",
+              "coverage_sb_pct": "77.06",
+              "total_operative_ca_a_c": "5217.0",
+              "digital_coverage_ca_a_c": "4020.0"
+            },
+            "Kolkata": {
+              "total_operative_sb_a_c": "9156918.0",
+              "coverage_sb_pct": "86.03",
+              "total_operative_ca_a_c": "509302.0",
+              "digital_coverage_ca_a_c": "438136.0"
+            },
+            "Malda": {
+              "total_operative_sb_a_c": "4582273.0",
+              "coverage_sb_pct": "90.36"
+            },
+            "Murshidabad": {
+              "total_operative_sb_a_c": "7165455.0",
+              "coverage_sb_pct": "93.28",
+              "total_operative_ca_a_c": "100486.0"
+            },
+            "Paschim Bardhaman": {
+              "total_operative_sb_a_c": "3464487.0",
+              "coverage_sb_pct": "87.93",
+              "total_operative_ca_a_c": "139613.0",
+              "digital_coverage_ca_a_c": "122762.0"
+            },
+            "Paschim Medinipur": {
+              "total_operative_sb_a_c": "5447390.0",
+              "coverage_sb_pct": "90.58"
+            },
+            "Purba Bardhaman": {
+              "total_operative_sb_a_c": "4872570.0",
+              "coverage_sb_pct": "90.34"
+            },
+            "Purba Medinipur": {
+              "total_operative_sb_a_c": "4887825.0",
+              "coverage_sb_pct": "83.32",
+              "total_operative_ca_a_c": "124845.0",
+              "digital_coverage_ca_a_c": "104024.0"
+            },
+            "Purulia": {
+              "total_operative_sb_a_c": "3014708.0",
+              "coverage_sb_pct": "87.13"
+            },
+            "Uttar Dinajpur": {
+              "total_operative_sb_a_c": "3332596.0",
+              "coverage_sb_pct": "92.98"
             }
           }
         }
@@ -29568,135 +29568,6 @@
             }
           }
         },
-        "digital_payments": {
-          "fields": [
-            "no_of_eligible_operative_sb_a_c",
-            "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode",
-            "achievement",
-            "no_of_eligible_operative_ca_a_c",
-            "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode",
-            "achievement"
-          ],
-          "districts": {
-            "Alipurduar": {
-              "no_of_eligible_operative_sb_a_c": "2300333.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "2054740.0",
-              "achievement": "89.73",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "27777.0"
-            },
-            "Bankura": {
-              "no_of_eligible_operative_sb_a_c": "3705775.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "3466535.0",
-              "achievement": "81.96",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "31183.0"
-            },
-            "Birbhum": {
-              "no_of_eligible_operative_sb_a_c": "4100371.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "3458024.0",
-              "achievement": "85.24",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "52373.0"
-            },
-            "Cooch Behar": {
-              "no_of_eligible_operative_sb_a_c": "3807033.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "3119670.0",
-              "achievement": "81.65",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "35418.0"
-            },
-            "Dakshin Dinajpur": {
-              "no_of_eligible_operative_sb_a_c": "2002855.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "1834165.0",
-              "achievement": "78.29",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "16604.0"
-            },
-            "Darjeeling": {
-              "no_of_eligible_operative_sb_a_c": "3060722.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "2792361.0",
-              "achievement": "86.9",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "70897.0"
-            },
-            "Hooghly": {
-              "no_of_eligible_operative_sb_a_c": "6675773.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "6106264.0",
-              "achievement": "85.2",
-              "no_of_eligible_operative_ca_a_c": "132647.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "113019.0"
-            },
-            "Jalpaiguri": {
-              "no_of_eligible_operative_sb_a_c": "2825905.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "2462861.0",
-              "achievement": "87.84",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "38731.0"
-            },
-            "Jhargram": {
-              "no_of_eligible_operative_sb_a_c": "1002309.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "879381.0",
-              "achievement": "74.16",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "9358.0"
-            },
-            "Kalimpong": {
-              "achievement": "70.46",
-              "no_of_eligible_operative_ca_a_c": "5277.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "3718.0"
-            },
-            "Kolkata": {
-              "no_of_eligible_operative_sb_a_c": "8874778.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "8380452.0",
-              "achievement": "81.73",
-              "no_of_eligible_operative_ca_a_c": "535633.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "437763.0"
-            },
-            "Malda": {
-              "no_of_eligible_operative_sb_a_c": "4995176.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "4791854.0",
-              "achievement": "85.25",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "57651.0"
-            },
-            "Murshidabad": {
-              "no_of_eligible_operative_sb_a_c": "6321545.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "5960220.0",
-              "achievement": "86.78",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "86415.0"
-            },
-            "Paschim Bardhaman": {
-              "no_of_eligible_operative_sb_a_c": "3934659.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "3327225.0",
-              "achievement": "85.19",
-              "no_of_eligible_operative_ca_a_c": "151979.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "129478.0"
-            },
-            "Paschim Medinipur": {
-              "no_of_eligible_operative_sb_a_c": "5209820.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "4694725.0",
-              "achievement": "84.35",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "69200.0"
-            },
-            "Purba Bardhaman": {
-              "no_of_eligible_operative_sb_a_c": "4710644.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "4271245.0",
-              "achievement": "85.39",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "76266.0"
-            },
-            "Purba Medinipur": {
-              "no_of_eligible_operative_sb_a_c": "6537759.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "5214321.0",
-              "achievement": "75.07",
-              "no_of_eligible_operative_ca_a_c": "146521.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "109998.0"
-            },
-            "Purulia": {
-              "no_of_eligible_operative_sb_a_c": "2796693.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "2615224.0",
-              "achievement": "78.54",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "19226.0"
-            },
-            "Uttar Dinajpur": {
-              "no_of_eligible_operative_sb_a_c": "3876106.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "3636051.0",
-              "achievement": "86.1",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "45551.0"
-            }
-          }
-        },
         "rseti": {
           "fields": [
             "sponsored_bank",
@@ -29797,6 +29668,135 @@
               "total_to_be_trained": "1000.0",
               "achievement_no_of_programs": "15.15",
               "total_trained": "14.1"
+            }
+          }
+        },
+        "digital_transactions": {
+          "fields": [
+            "total_operative_sb_a_c",
+            "digital_coverage_sb_a_c",
+            "coverage_sb_pct",
+            "total_operative_ca_a_c",
+            "digital_coverage_ca_a_c",
+            "coverage_sb_pct"
+          ],
+          "districts": {
+            "Alipurduar": {
+              "total_operative_sb_a_c": "2300333.0",
+              "digital_coverage_sb_a_c": "2054740.0",
+              "coverage_sb_pct": "89.73",
+              "digital_coverage_ca_a_c": "27777.0"
+            },
+            "Bankura": {
+              "total_operative_sb_a_c": "3705775.0",
+              "digital_coverage_sb_a_c": "3466535.0",
+              "coverage_sb_pct": "81.96",
+              "digital_coverage_ca_a_c": "31183.0"
+            },
+            "Birbhum": {
+              "total_operative_sb_a_c": "4100371.0",
+              "digital_coverage_sb_a_c": "3458024.0",
+              "coverage_sb_pct": "85.24",
+              "digital_coverage_ca_a_c": "52373.0"
+            },
+            "Cooch Behar": {
+              "total_operative_sb_a_c": "3807033.0",
+              "digital_coverage_sb_a_c": "3119670.0",
+              "coverage_sb_pct": "81.65",
+              "digital_coverage_ca_a_c": "35418.0"
+            },
+            "Dakshin Dinajpur": {
+              "total_operative_sb_a_c": "2002855.0",
+              "digital_coverage_sb_a_c": "1834165.0",
+              "coverage_sb_pct": "78.29",
+              "digital_coverage_ca_a_c": "16604.0"
+            },
+            "Darjeeling": {
+              "total_operative_sb_a_c": "3060722.0",
+              "digital_coverage_sb_a_c": "2792361.0",
+              "coverage_sb_pct": "86.9",
+              "digital_coverage_ca_a_c": "70897.0"
+            },
+            "Hooghly": {
+              "total_operative_sb_a_c": "6675773.0",
+              "digital_coverage_sb_a_c": "6106264.0",
+              "coverage_sb_pct": "85.2",
+              "total_operative_ca_a_c": "132647.0",
+              "digital_coverage_ca_a_c": "113019.0"
+            },
+            "Jalpaiguri": {
+              "total_operative_sb_a_c": "2825905.0",
+              "digital_coverage_sb_a_c": "2462861.0",
+              "coverage_sb_pct": "87.84",
+              "digital_coverage_ca_a_c": "38731.0"
+            },
+            "Jhargram": {
+              "total_operative_sb_a_c": "1002309.0",
+              "digital_coverage_sb_a_c": "879381.0",
+              "coverage_sb_pct": "74.16",
+              "digital_coverage_ca_a_c": "9358.0"
+            },
+            "Kalimpong": {
+              "coverage_sb_pct": "70.46",
+              "total_operative_ca_a_c": "5277.0",
+              "digital_coverage_ca_a_c": "3718.0"
+            },
+            "Kolkata": {
+              "total_operative_sb_a_c": "8874778.0",
+              "digital_coverage_sb_a_c": "8380452.0",
+              "coverage_sb_pct": "81.73",
+              "total_operative_ca_a_c": "535633.0",
+              "digital_coverage_ca_a_c": "437763.0"
+            },
+            "Malda": {
+              "total_operative_sb_a_c": "4995176.0",
+              "digital_coverage_sb_a_c": "4791854.0",
+              "coverage_sb_pct": "85.25",
+              "digital_coverage_ca_a_c": "57651.0"
+            },
+            "Murshidabad": {
+              "total_operative_sb_a_c": "6321545.0",
+              "digital_coverage_sb_a_c": "5960220.0",
+              "coverage_sb_pct": "86.78",
+              "digital_coverage_ca_a_c": "86415.0"
+            },
+            "Paschim Bardhaman": {
+              "total_operative_sb_a_c": "3934659.0",
+              "digital_coverage_sb_a_c": "3327225.0",
+              "coverage_sb_pct": "85.19",
+              "total_operative_ca_a_c": "151979.0",
+              "digital_coverage_ca_a_c": "129478.0"
+            },
+            "Paschim Medinipur": {
+              "total_operative_sb_a_c": "5209820.0",
+              "digital_coverage_sb_a_c": "4694725.0",
+              "coverage_sb_pct": "84.35",
+              "digital_coverage_ca_a_c": "69200.0"
+            },
+            "Purba Bardhaman": {
+              "total_operative_sb_a_c": "4710644.0",
+              "digital_coverage_sb_a_c": "4271245.0",
+              "coverage_sb_pct": "85.39",
+              "digital_coverage_ca_a_c": "76266.0"
+            },
+            "Purba Medinipur": {
+              "total_operative_sb_a_c": "6537759.0",
+              "digital_coverage_sb_a_c": "5214321.0",
+              "coverage_sb_pct": "75.07",
+              "total_operative_ca_a_c": "146521.0",
+              "digital_coverage_ca_a_c": "109998.0"
+            },
+            "Purulia": {
+              "total_operative_sb_a_c": "2796693.0",
+              "digital_coverage_sb_a_c": "2615224.0",
+              "coverage_sb_pct": "78.54",
+              "digital_coverage_ca_a_c": "19226.0"
+            },
+            "Uttar Dinajpur": {
+              "total_operative_sb_a_c": "3876106.0",
+              "digital_coverage_sb_a_c": "3636051.0",
+              "coverage_sb_pct": "86.1",
+              "digital_coverage_ca_a_c": "45551.0"
             }
           }
         }
@@ -32190,104 +32190,6 @@
             }
           }
         },
-        "digital_payments": {
-          "fields": [
-            "no_of_eligible_operative_sb_a_c",
-            "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode",
-            "achievement",
-            "no_of_eligible_operative_ca_a_c",
-            "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode",
-            "achievement"
-          ],
-          "districts": {
-            "Alipurduar": {
-              "no_of_eligible_operative_sb_a_c": "2070219.0",
-              "achievement": "96.1"
-            },
-            "Bankura": {
-              "no_of_eligible_operative_sb_a_c": "3913731.0",
-              "achievement": "91.27"
-            },
-            "Birbhum": {
-              "no_of_eligible_operative_sb_a_c": "4072236.0",
-              "achievement": "95.16"
-            },
-            "Cooch Behar": {
-              "no_of_eligible_operative_sb_a_c": "3213643.0",
-              "achievement": "97.74"
-            },
-            "Dakshin Dinajpur": {
-              "no_of_eligible_operative_sb_a_c": "2091883.0",
-              "achievement": "94.51"
-            },
-            "Darjeeling": {
-              "no_of_eligible_operative_sb_a_c": "2274010.0",
-              "achievement": "90.18"
-            },
-            "Hooghly": {
-              "no_of_eligible_operative_sb_a_c": "7214941.0",
-              "achievement": "88.93",
-              "no_of_eligible_operative_ca_a_c": "146109.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "129935.0"
-            },
-            "Jalpaiguri": {
-              "no_of_eligible_operative_sb_a_c": "3060499.0",
-              "achievement": "92.81"
-            },
-            "Jhargram": {
-              "no_of_eligible_operative_sb_a_c": "1043864.0",
-              "achievement": "89.21"
-            },
-            "Kalimpong": {
-              "no_of_eligible_operative_sb_a_c": "382462.0",
-              "achievement": "73.18",
-              "no_of_eligible_operative_ca_a_c": "5674.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "4152.0"
-            },
-            "Kolkata": {
-              "no_of_eligible_operative_sb_a_c": "9121090.0",
-              "achievement": "88.69",
-              "no_of_eligible_operative_ca_a_c": "550945.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "488658.0"
-            },
-            "Malda": {
-              "no_of_eligible_operative_sb_a_c": "4936480.0",
-              "achievement": "92.62"
-            },
-            "Murshidabad": {
-              "no_of_eligible_operative_sb_a_c": "7694348.0",
-              "achievement": "92.97",
-              "no_of_eligible_operative_ca_a_c": "112428.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "104522.0"
-            },
-            "Paschim Bardhaman": {
-              "no_of_eligible_operative_sb_a_c": "3289330.0",
-              "achievement": "90.86"
-            },
-            "Paschim Medinipur": {
-              "no_of_eligible_operative_sb_a_c": "5567847.0",
-              "achievement": "90.46"
-            },
-            "Purba Bardhaman": {
-              "no_of_eligible_operative_sb_a_c": "5035992.0",
-              "achievement": "91.34"
-            },
-            "Purba Medinipur": {
-              "no_of_eligible_operative_sb_a_c": "4000821.0",
-              "achievement": "84.64",
-              "no_of_eligible_operative_ca_a_c": "132740.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "112345.0"
-            },
-            "Purulia": {
-              "no_of_eligible_operative_sb_a_c": "3084548.0",
-              "achievement": "90.22"
-            },
-            "Uttar Dinajpur": {
-              "no_of_eligible_operative_sb_a_c": "3667812.0",
-              "achievement": "93.75"
-            }
-          }
-        },
         "pmjdy": {
           "fields": [
             "district_name_24_paraganas_north",
@@ -32628,6 +32530,104 @@
               "total_no_of_pmsby_32_52_766": "1722940.0",
               "total_no_of_apy_5_35_428": "331421.0",
               "total_enrolment_uner_social_security_schemes_49_88_793": "2689644.0"
+            }
+          }
+        },
+        "digital_transactions": {
+          "fields": [
+            "total_operative_sb_a_c",
+            "digital_coverage_sb_a_c",
+            "coverage_sb_pct",
+            "total_operative_ca_a_c",
+            "digital_coverage_ca_a_c",
+            "coverage_sb_pct"
+          ],
+          "districts": {
+            "Alipurduar": {
+              "total_operative_sb_a_c": "2070219.0",
+              "coverage_sb_pct": "96.1"
+            },
+            "Bankura": {
+              "total_operative_sb_a_c": "3913731.0",
+              "coverage_sb_pct": "91.27"
+            },
+            "Birbhum": {
+              "total_operative_sb_a_c": "4072236.0",
+              "coverage_sb_pct": "95.16"
+            },
+            "Cooch Behar": {
+              "total_operative_sb_a_c": "3213643.0",
+              "coverage_sb_pct": "97.74"
+            },
+            "Dakshin Dinajpur": {
+              "total_operative_sb_a_c": "2091883.0",
+              "coverage_sb_pct": "94.51"
+            },
+            "Darjeeling": {
+              "total_operative_sb_a_c": "2274010.0",
+              "coverage_sb_pct": "90.18"
+            },
+            "Hooghly": {
+              "total_operative_sb_a_c": "7214941.0",
+              "coverage_sb_pct": "88.93",
+              "total_operative_ca_a_c": "146109.0",
+              "digital_coverage_ca_a_c": "129935.0"
+            },
+            "Jalpaiguri": {
+              "total_operative_sb_a_c": "3060499.0",
+              "coverage_sb_pct": "92.81"
+            },
+            "Jhargram": {
+              "total_operative_sb_a_c": "1043864.0",
+              "coverage_sb_pct": "89.21"
+            },
+            "Kalimpong": {
+              "total_operative_sb_a_c": "382462.0",
+              "coverage_sb_pct": "73.18",
+              "total_operative_ca_a_c": "5674.0",
+              "digital_coverage_ca_a_c": "4152.0"
+            },
+            "Kolkata": {
+              "total_operative_sb_a_c": "9121090.0",
+              "coverage_sb_pct": "88.69",
+              "total_operative_ca_a_c": "550945.0",
+              "digital_coverage_ca_a_c": "488658.0"
+            },
+            "Malda": {
+              "total_operative_sb_a_c": "4936480.0",
+              "coverage_sb_pct": "92.62"
+            },
+            "Murshidabad": {
+              "total_operative_sb_a_c": "7694348.0",
+              "coverage_sb_pct": "92.97",
+              "total_operative_ca_a_c": "112428.0",
+              "digital_coverage_ca_a_c": "104522.0"
+            },
+            "Paschim Bardhaman": {
+              "total_operative_sb_a_c": "3289330.0",
+              "coverage_sb_pct": "90.86"
+            },
+            "Paschim Medinipur": {
+              "total_operative_sb_a_c": "5567847.0",
+              "coverage_sb_pct": "90.46"
+            },
+            "Purba Bardhaman": {
+              "total_operative_sb_a_c": "5035992.0",
+              "coverage_sb_pct": "91.34"
+            },
+            "Purba Medinipur": {
+              "total_operative_sb_a_c": "4000821.0",
+              "coverage_sb_pct": "84.64",
+              "total_operative_ca_a_c": "132740.0",
+              "digital_coverage_ca_a_c": "112345.0"
+            },
+            "Purulia": {
+              "total_operative_sb_a_c": "3084548.0",
+              "coverage_sb_pct": "90.22"
+            },
+            "Uttar Dinajpur": {
+              "total_operative_sb_a_c": "3667812.0",
+              "coverage_sb_pct": "93.75"
             }
           }
         }
@@ -45564,90 +45564,6 @@
             }
           }
         },
-        "digital_payments": {
-          "fields": [
-            "no_of_eligible_operative_sb_a_c",
-            "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode",
-            "achievement",
-            "no_of_eligible_operative_ca_a_c",
-            "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode",
-            "achievement"
-          ],
-          "districts": {
-            "Alipurduar": {
-              "achievement": "84.17"
-            },
-            "Bankura": {
-              "achievement": "79.06"
-            },
-            "Birbhum": {
-              "achievement": "80.72"
-            },
-            "Cooch Behar": {
-              "achievement": "78.75"
-            },
-            "Dakshin Dinajpur": {
-              "achievement": "76.03"
-            },
-            "Darjeeling": {
-              "achievement": "81.15"
-            },
-            "Hooghly": {
-              "achievement": "78.24",
-              "no_of_eligible_operative_ca_a_c": "102309.0"
-            },
-            "Jalpaiguri": {
-              "achievement": "79.89"
-            },
-            "Jhargram": {
-              "no_of_eligible_operative_sb_a_c": "921793.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "798403.0",
-              "achievement": "59.19",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "7044.0"
-            },
-            "Kalimpong": {
-              "no_of_eligible_operative_sb_a_c": "343555.0",
-              "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": "250848.0",
-              "achievement": "68.08",
-              "no_of_eligible_operative_ca_a_c": "4367.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "2973.0"
-            },
-            "Kolkata": {
-              "achievement": "79.08",
-              "no_of_eligible_operative_ca_a_c": "500854.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "396095.0"
-            },
-            "Malda": {
-              "achievement": "78.44"
-            },
-            "Murshidabad": {
-              "achievement": "81.46",
-              "no_of_eligible_operative_ca_a_c": "102011.0"
-            },
-            "Paschim Bardhaman": {
-              "achievement": "84.45",
-              "no_of_eligible_operative_ca_a_c": "152610.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "128878.0"
-            },
-            "Paschim Medinipur": {
-              "achievement": "75.46"
-            },
-            "Purba Bardhaman": {
-              "achievement": "80.81"
-            },
-            "Purba Medinipur": {
-              "achievement": "73.53",
-              "no_of_eligible_operative_ca_a_c": "146735.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "107899.0"
-            },
-            "Purulia": {
-              "achievement": "75.32"
-            },
-            "Uttar Dinajpur": {
-              "achievement": "82.79"
-            }
-          }
-        },
         "financial_literacy": {
           "fields": [
             "no_of_flcs",
@@ -46416,6 +46332,90 @@
               "aap_target_for_fy_2023_24_no_of_programs": "32.0",
               "total_trained": "101.18",
               "achievement_no_of_programs": "87.5"
+            }
+          }
+        },
+        "digital_transactions": {
+          "fields": [
+            "total_operative_sb_a_c",
+            "digital_coverage_sb_a_c",
+            "coverage_sb_pct",
+            "total_operative_ca_a_c",
+            "digital_coverage_ca_a_c",
+            "coverage_sb_pct"
+          ],
+          "districts": {
+            "Alipurduar": {
+              "coverage_sb_pct": "84.17"
+            },
+            "Bankura": {
+              "coverage_sb_pct": "79.06"
+            },
+            "Birbhum": {
+              "coverage_sb_pct": "80.72"
+            },
+            "Cooch Behar": {
+              "coverage_sb_pct": "78.75"
+            },
+            "Dakshin Dinajpur": {
+              "coverage_sb_pct": "76.03"
+            },
+            "Darjeeling": {
+              "coverage_sb_pct": "81.15"
+            },
+            "Hooghly": {
+              "coverage_sb_pct": "78.24",
+              "total_operative_ca_a_c": "102309.0"
+            },
+            "Jalpaiguri": {
+              "coverage_sb_pct": "79.89"
+            },
+            "Jhargram": {
+              "total_operative_sb_a_c": "921793.0",
+              "digital_coverage_sb_a_c": "798403.0",
+              "coverage_sb_pct": "59.19",
+              "digital_coverage_ca_a_c": "7044.0"
+            },
+            "Kalimpong": {
+              "total_operative_sb_a_c": "343555.0",
+              "digital_coverage_sb_a_c": "250848.0",
+              "coverage_sb_pct": "68.08",
+              "total_operative_ca_a_c": "4367.0",
+              "digital_coverage_ca_a_c": "2973.0"
+            },
+            "Kolkata": {
+              "coverage_sb_pct": "79.08",
+              "total_operative_ca_a_c": "500854.0",
+              "digital_coverage_ca_a_c": "396095.0"
+            },
+            "Malda": {
+              "coverage_sb_pct": "78.44"
+            },
+            "Murshidabad": {
+              "coverage_sb_pct": "81.46",
+              "total_operative_ca_a_c": "102011.0"
+            },
+            "Paschim Bardhaman": {
+              "coverage_sb_pct": "84.45",
+              "total_operative_ca_a_c": "152610.0",
+              "digital_coverage_ca_a_c": "128878.0"
+            },
+            "Paschim Medinipur": {
+              "coverage_sb_pct": "75.46"
+            },
+            "Purba Bardhaman": {
+              "coverage_sb_pct": "80.81"
+            },
+            "Purba Medinipur": {
+              "coverage_sb_pct": "73.53",
+              "total_operative_ca_a_c": "146735.0",
+              "digital_coverage_ca_a_c": "107899.0"
+            },
+            "Purulia": {
+              "coverage_sb_pct": "75.32"
+            },
+            "Uttar Dinajpur": {
+              "coverage_sb_pct": "82.79"
             }
           }
         }
@@ -48077,103 +48077,6 @@
             }
           }
         },
-        "digital_payments": {
-          "fields": [
-            "no_of_eligible_operative_sb_a_c",
-            "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode",
-            "achievement",
-            "no_of_eligible_operative_ca_a_c",
-            "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode",
-            "achievement"
-          ],
-          "districts": {
-            "Alipurduar": {
-              "no_of_eligible_operative_sb_a_c": "2088611.0",
-              "achievement": "94.99"
-            },
-            "Bankura": {
-              "no_of_eligible_operative_sb_a_c": "3963691.0",
-              "achievement": "87.03"
-            },
-            "Birbhum": {
-              "no_of_eligible_operative_sb_a_c": "4162953.0",
-              "achievement": "94.38"
-            },
-            "Cooch Behar": {
-              "no_of_eligible_operative_sb_a_c": "3217035.0",
-              "achievement": "95.51"
-            },
-            "Dakshin Dinajpur": {
-              "no_of_eligible_operative_sb_a_c": "2113402.0",
-              "achievement": "96.22"
-            },
-            "Darjeeling": {
-              "no_of_eligible_operative_sb_a_c": "2305461.0",
-              "achievement": "87.26"
-            },
-            "Hooghly": {
-              "no_of_eligible_operative_sb_a_c": "7295664.0",
-              "achievement": "86.89",
-              "no_of_eligible_operative_ca_a_c": "148454.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "128998.0"
-            },
-            "Jalpaiguri": {
-              "no_of_eligible_operative_sb_a_c": "3071111.0",
-              "achievement": "89.92"
-            },
-            "Jhargram": {
-              "no_of_eligible_operative_sb_a_c": "1053562.0",
-              "achievement": "85.23"
-            },
-            "Kalimpong": {
-              "no_of_eligible_operative_sb_a_c": "386775.0",
-              "achievement": "74.45",
-              "no_of_eligible_operative_ca_a_c": "5952.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "4431.0"
-            },
-            "Kolkata": {
-              "no_of_eligible_operative_sb_a_c": "9184792.0",
-              "achievement": "87.02",
-              "no_of_eligible_operative_ca_a_c": "540406.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "470253.0"
-            },
-            "Malda": {
-              "no_of_eligible_operative_sb_a_c": "4998935.0",
-              "achievement": "89.02"
-            },
-            "Murshidabad": {
-              "no_of_eligible_operative_sb_a_c": "7775844.0",
-              "achievement": "91.11",
-              "no_of_eligible_operative_ca_a_c": "108315.0"
-            },
-            "Paschim Bardhaman": {
-              "no_of_eligible_operative_sb_a_c": "3356554.0",
-              "achievement": "88.95"
-            },
-            "Paschim Medinipur": {
-              "no_of_eligible_operative_sb_a_c": "5618200.0",
-              "achievement": "88.94"
-            },
-            "Purba Bardhaman": {
-              "no_of_eligible_operative_sb_a_c": "5147850.0",
-              "achievement": "88.91"
-            },
-            "Purba Medinipur": {
-              "no_of_eligible_operative_sb_a_c": "4981230.0",
-              "achievement": "78.13",
-              "no_of_eligible_operative_ca_a_c": "142589.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "111407.0"
-            },
-            "Purulia": {
-              "no_of_eligible_operative_sb_a_c": "3118464.0",
-              "achievement": "86.69"
-            },
-            "Uttar Dinajpur": {
-              "no_of_eligible_operative_sb_a_c": "3619793.0",
-              "achievement": "91.5"
-            }
-          }
-        },
         "financial_literacy": {
           "fields": [
             "no_of_flcs",
@@ -49008,6 +48911,103 @@
               "total_to_be_trained": "1000.0",
               "achievement_no_of_programs": "109.0",
               "total_trained": "102.0"
+            }
+          }
+        },
+        "digital_transactions": {
+          "fields": [
+            "total_operative_sb_a_c",
+            "digital_coverage_sb_a_c",
+            "coverage_sb_pct",
+            "total_operative_ca_a_c",
+            "digital_coverage_ca_a_c",
+            "coverage_sb_pct"
+          ],
+          "districts": {
+            "Alipurduar": {
+              "total_operative_sb_a_c": "2088611.0",
+              "coverage_sb_pct": "94.99"
+            },
+            "Bankura": {
+              "total_operative_sb_a_c": "3963691.0",
+              "coverage_sb_pct": "87.03"
+            },
+            "Birbhum": {
+              "total_operative_sb_a_c": "4162953.0",
+              "coverage_sb_pct": "94.38"
+            },
+            "Cooch Behar": {
+              "total_operative_sb_a_c": "3217035.0",
+              "coverage_sb_pct": "95.51"
+            },
+            "Dakshin Dinajpur": {
+              "total_operative_sb_a_c": "2113402.0",
+              "coverage_sb_pct": "96.22"
+            },
+            "Darjeeling": {
+              "total_operative_sb_a_c": "2305461.0",
+              "coverage_sb_pct": "87.26"
+            },
+            "Hooghly": {
+              "total_operative_sb_a_c": "7295664.0",
+              "coverage_sb_pct": "86.89",
+              "total_operative_ca_a_c": "148454.0",
+              "digital_coverage_ca_a_c": "128998.0"
+            },
+            "Jalpaiguri": {
+              "total_operative_sb_a_c": "3071111.0",
+              "coverage_sb_pct": "89.92"
+            },
+            "Jhargram": {
+              "total_operative_sb_a_c": "1053562.0",
+              "coverage_sb_pct": "85.23"
+            },
+            "Kalimpong": {
+              "total_operative_sb_a_c": "386775.0",
+              "coverage_sb_pct": "74.45",
+              "total_operative_ca_a_c": "5952.0",
+              "digital_coverage_ca_a_c": "4431.0"
+            },
+            "Kolkata": {
+              "total_operative_sb_a_c": "9184792.0",
+              "coverage_sb_pct": "87.02",
+              "total_operative_ca_a_c": "540406.0",
+              "digital_coverage_ca_a_c": "470253.0"
+            },
+            "Malda": {
+              "total_operative_sb_a_c": "4998935.0",
+              "coverage_sb_pct": "89.02"
+            },
+            "Murshidabad": {
+              "total_operative_sb_a_c": "7775844.0",
+              "coverage_sb_pct": "91.11",
+              "total_operative_ca_a_c": "108315.0"
+            },
+            "Paschim Bardhaman": {
+              "total_operative_sb_a_c": "3356554.0",
+              "coverage_sb_pct": "88.95"
+            },
+            "Paschim Medinipur": {
+              "total_operative_sb_a_c": "5618200.0",
+              "coverage_sb_pct": "88.94"
+            },
+            "Purba Bardhaman": {
+              "total_operative_sb_a_c": "5147850.0",
+              "coverage_sb_pct": "88.91"
+            },
+            "Purba Medinipur": {
+              "total_operative_sb_a_c": "4981230.0",
+              "coverage_sb_pct": "78.13",
+              "total_operative_ca_a_c": "142589.0",
+              "digital_coverage_ca_a_c": "111407.0"
+            },
+            "Purulia": {
+              "total_operative_sb_a_c": "3118464.0",
+              "coverage_sb_pct": "86.69"
+            },
+            "Uttar Dinajpur": {
+              "total_operative_sb_a_c": "3619793.0",
+              "coverage_sb_pct": "91.5"
             }
           }
         }
@@ -61812,103 +61812,6 @@
             }
           }
         },
-        "digital_payments": {
-          "fields": [
-            "no_of_eligible_operative_sb_a_c",
-            "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode",
-            "achievement",
-            "no_of_eligible_operative_ca_a_c",
-            "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode",
-            "achievement"
-          ],
-          "districts": {
-            "Alipurduar": {
-              "no_of_eligible_operative_sb_a_c": "2455481.0",
-              "achievement": "89.73"
-            },
-            "Bankura": {
-              "no_of_eligible_operative_sb_a_c": "3896740.0",
-              "achievement": "87.5"
-            },
-            "Birbhum": {
-              "no_of_eligible_operative_sb_a_c": "4066081.0",
-              "achievement": "95.3"
-            },
-            "Cooch Behar": {
-              "no_of_eligible_operative_sb_a_c": "3934455.0",
-              "achievement": "96.67"
-            },
-            "Dakshin Dinajpur": {
-              "no_of_eligible_operative_sb_a_c": "2105721.0",
-              "achievement": "95.21"
-            },
-            "Darjeeling": {
-              "no_of_eligible_operative_sb_a_c": "2279786.0",
-              "achievement": "89.75"
-            },
-            "Hooghly": {
-              "no_of_eligible_operative_sb_a_c": "7191686.0",
-              "achievement": "89.39",
-              "no_of_eligible_operative_ca_a_c": "145965.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "130480.0"
-            },
-            "Jalpaiguri": {
-              "no_of_eligible_operative_sb_a_c": "3067648.0",
-              "achievement": "93.73"
-            },
-            "Jhargram": {
-              "no_of_eligible_operative_sb_a_c": "1039383.0",
-              "achievement": "87.0"
-            },
-            "Kalimpong": {
-              "no_of_eligible_operative_sb_a_c": "383573.0",
-              "achievement": "72.93",
-              "no_of_eligible_operative_ca_a_c": "5715.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "4168.0"
-            },
-            "Kolkata": {
-              "no_of_eligible_operative_sb_a_c": "9123768.0",
-              "achievement": "89.23",
-              "no_of_eligible_operative_ca_a_c": "550250.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "491012.0"
-            },
-            "Malda": {
-              "no_of_eligible_operative_sb_a_c": "4962178.0",
-              "achievement": "92.39"
-            },
-            "Murshidabad": {
-              "no_of_eligible_operative_sb_a_c": "7687847.0",
-              "achievement": "93.54",
-              "no_of_eligible_operative_ca_a_c": "112312.0",
-              "no_of_operative_ca_a_c_covered_with_at_least_one_digital_mode": "105059.0"
-            },
-            "Paschim Bardhaman": {
-              "no_of_eligible_operative_sb_a_c": "3286369.0",
-              "achievement": "91.13"
-            },
-            "Paschim Medinipur": {
-              "no_of_eligible_operative_sb_a_c": "5515746.0",
-              "achievement": "91.29"
-            },
-            "Purba Bardhaman": {
-              "no_of_eligible_operative_sb_a_c": "4997549.0",
-              "achievement": "91.9"
-            },
-            "Purba Medinipur": {
-              "no_of_eligible_operative_sb_a_c": "3980819.0",
-              "achievement": "83.21",
-              "no_of_eligible_operative_ca_a_c": "112520.0"
-            },
-            "Purulia": {
-              "no_of_eligible_operative_sb_a_c": "3066946.0",
-              "achievement": "90.78"
-            },
-            "Uttar Dinajpur": {
-              "no_of_eligible_operative_sb_a_c": "3638771.0",
-              "achievement": "94.2"
-            }
-          }
-        },
         "financial_literacy": {
           "fields": [
             "no_of_flcs",
@@ -62674,6 +62577,103 @@
               "aapb_achieved_in_current_fy_2025_26": "118.0",
               "annual_target_achievement_in_current_fy_2025_26": "132.0",
               "cumulative_apy_accounts_opened_since_inception": "209552.0"
+            }
+          }
+        },
+        "digital_transactions": {
+          "fields": [
+            "total_operative_sb_a_c",
+            "digital_coverage_sb_a_c",
+            "coverage_sb_pct",
+            "total_operative_ca_a_c",
+            "digital_coverage_ca_a_c",
+            "coverage_sb_pct"
+          ],
+          "districts": {
+            "Alipurduar": {
+              "total_operative_sb_a_c": "2455481.0",
+              "coverage_sb_pct": "89.73"
+            },
+            "Bankura": {
+              "total_operative_sb_a_c": "3896740.0",
+              "coverage_sb_pct": "87.5"
+            },
+            "Birbhum": {
+              "total_operative_sb_a_c": "4066081.0",
+              "coverage_sb_pct": "95.3"
+            },
+            "Cooch Behar": {
+              "total_operative_sb_a_c": "3934455.0",
+              "coverage_sb_pct": "96.67"
+            },
+            "Dakshin Dinajpur": {
+              "total_operative_sb_a_c": "2105721.0",
+              "coverage_sb_pct": "95.21"
+            },
+            "Darjeeling": {
+              "total_operative_sb_a_c": "2279786.0",
+              "coverage_sb_pct": "89.75"
+            },
+            "Hooghly": {
+              "total_operative_sb_a_c": "7191686.0",
+              "coverage_sb_pct": "89.39",
+              "total_operative_ca_a_c": "145965.0",
+              "digital_coverage_ca_a_c": "130480.0"
+            },
+            "Jalpaiguri": {
+              "total_operative_sb_a_c": "3067648.0",
+              "coverage_sb_pct": "93.73"
+            },
+            "Jhargram": {
+              "total_operative_sb_a_c": "1039383.0",
+              "coverage_sb_pct": "87.0"
+            },
+            "Kalimpong": {
+              "total_operative_sb_a_c": "383573.0",
+              "coverage_sb_pct": "72.93",
+              "total_operative_ca_a_c": "5715.0",
+              "digital_coverage_ca_a_c": "4168.0"
+            },
+            "Kolkata": {
+              "total_operative_sb_a_c": "9123768.0",
+              "coverage_sb_pct": "89.23",
+              "total_operative_ca_a_c": "550250.0",
+              "digital_coverage_ca_a_c": "491012.0"
+            },
+            "Malda": {
+              "total_operative_sb_a_c": "4962178.0",
+              "coverage_sb_pct": "92.39"
+            },
+            "Murshidabad": {
+              "total_operative_sb_a_c": "7687847.0",
+              "coverage_sb_pct": "93.54",
+              "total_operative_ca_a_c": "112312.0",
+              "digital_coverage_ca_a_c": "105059.0"
+            },
+            "Paschim Bardhaman": {
+              "total_operative_sb_a_c": "3286369.0",
+              "coverage_sb_pct": "91.13"
+            },
+            "Paschim Medinipur": {
+              "total_operative_sb_a_c": "5515746.0",
+              "coverage_sb_pct": "91.29"
+            },
+            "Purba Bardhaman": {
+              "total_operative_sb_a_c": "4997549.0",
+              "coverage_sb_pct": "91.9"
+            },
+            "Purba Medinipur": {
+              "total_operative_sb_a_c": "3980819.0",
+              "coverage_sb_pct": "83.21",
+              "total_operative_ca_a_c": "112520.0"
+            },
+            "Purulia": {
+              "total_operative_sb_a_c": "3066946.0",
+              "coverage_sb_pct": "90.78"
+            },
+            "Uttar Dinajpur": {
+              "total_operative_sb_a_c": "3638771.0",
+              "coverage_sb_pct": "94.2"
             }
           }
         }

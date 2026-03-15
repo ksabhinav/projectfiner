@@ -317,40 +317,72 @@
       y: validY,
       type: 'scatter',
       mode: 'lines+markers',
-      line: { color: '#b8603e', width: 2.5 },
-      marker: { size: 7, color: '#b8603e' },
-      hovertemplate: '%{x}<br>%{y:,.2f}<extra></extra>',
+      line: { color: '#b8603e', width: 2.5, shape: 'spline', smoothing: 0.8 },
+      marker: { size: 6, color: '#b8603e', line: { color: '#fff', width: 1.5 } },
+      hovertemplate: '<b>%{x}</b><br>%{y:,.2f}<extra></extra>',
+      fill: 'tozeroy',
+      fillcolor: 'rgba(184, 96, 62, 0.06)',
     };
 
     const layout = {
-      title: {
-        text: `${metric.label} (${metric.categoryLabel})`,
-        font: { family: 'Georgia, serif', size: 15, color: '#1a1410' },
-      },
       xaxis: {
-        title: 'Quarter',
-        gridcolor: '#e8e5e0',
+        gridcolor: '#f0eeeb',
         zerolinecolor: '#e0ddd8',
         tickangle: -45,
-        tickfont: { family: 'Inter, sans-serif', size: 10 },
+        tickfont: { family: 'Inter, sans-serif', size: 10, color: '#888078' },
+        showline: true,
+        linecolor: '#e8e5e0',
+        linewidth: 1,
       },
       yaxis: {
-        title: metric.label,
-        gridcolor: '#e8e5e0',
+        gridcolor: '#f0eeeb',
         zerolinecolor: '#e0ddd8',
-        tickfont: { family: 'IBM Plex Mono, monospace', size: 10 },
+        tickfont: { family: 'IBM Plex Mono, monospace', size: 10, color: '#888078' },
+        showline: false,
+        tickformat: validY.some(v => Math.abs(v) >= 10000) ? ',.0f' : undefined,
       },
-      paper_bgcolor: '#fff',
-      plot_bgcolor: '#fff',
+      paper_bgcolor: 'rgba(0,0,0,0)',
+      plot_bgcolor: 'rgba(0,0,0,0)',
       font: { family: 'Inter, sans-serif', size: 11, color: '#1a1410' },
-      margin: { l: 70, r: 30, t: 50, b: 80 },
+      margin: { l: 70, r: 24, t: 16, b: 70 },
       hovermode: 'x unified',
+      hoverlabel: {
+        bgcolor: '#1a1410',
+        font: { family: 'IBM Plex Mono, monospace', size: 12, color: '#fff' },
+        bordercolor: 'transparent',
+      },
+      shapes: validY.length > 0 ? [{
+        type: 'line',
+        x0: validX[validX.length - 1],
+        x1: validX[validX.length - 1],
+        y0: 0,
+        y1: 1,
+        yref: 'paper',
+        line: { color: '#b8603e', width: 1, dash: 'dot' },
+      }] : [],
+      annotations: validY.length > 0 ? [{
+        x: validX[validX.length - 1],
+        y: validY[validY.length - 1],
+        text: `<b>${formatValue(validY[validY.length - 1])}</b>`,
+        showarrow: true,
+        arrowhead: 0,
+        arrowcolor: '#b8603e',
+        ax: 40,
+        ay: -30,
+        font: { family: 'IBM Plex Mono, monospace', size: 12, color: '#b8603e' },
+        bgcolor: 'rgba(255,255,255,0.9)',
+        bordercolor: '#b8603e',
+        borderwidth: 1,
+        borderpad: 4,
+      }] : [],
     };
 
     const config = {
       responsive: true,
       displayModeBar: true,
-      toImageButtonOptions: { format: 'png', width: 1200, height: 600, scale: 2 },
+      displaylogo: false,
+      modeBarButtonsToRemove: ['select2d', 'lasso2d', 'autoScale2d'],
+      toImageButtonOptions: { format: 'png', width: 1200, height: 600, scale: 2, filename: `${metric.field}_${selectedDistrict}` },
     };
 
     Plotly.newPlot(expandedChartEl, [trace], layout, config);
@@ -407,15 +439,23 @@
     <!-- District summary header -->
     {#if districtSummary}
       <div class="district-header">
-        <div class="dh-name">{districtSummary.district}</div>
-        <div class="dh-meta">
-          <span class="dh-state">{districtSummary.state}</span>
-          <span class="dh-sep">/</span>
-          <span class="dh-quarters">{districtSummary.quarters} quarters</span>
-          <span class="dh-sep">/</span>
-          <span class="dh-range">{districtSummary.dateRange}</span>
-          <span class="dh-sep">/</span>
-          <span class="dh-metrics">{districtSummary.totalMetrics} metrics</span>
+        <div class="dh-left">
+          <div class="dh-name">{districtSummary.district}</div>
+          <div class="dh-meta">
+            <span class="dh-state">{districtSummary.state}</span>
+            <span class="dh-sep">·</span>
+            <span>{districtSummary.dateRange}</span>
+          </div>
+        </div>
+        <div class="dh-stats">
+          <div class="dh-stat">
+            <div class="dh-stat-num">{districtSummary.quarters}</div>
+            <div class="dh-stat-label">Quarters</div>
+          </div>
+          <div class="dh-stat">
+            <div class="dh-stat-num">{districtSummary.totalMetrics}</div>
+            <div class="dh-stat-label">Metrics</div>
+          </div>
         </div>
       </div>
     {/if}
@@ -474,37 +514,78 @@
             class:expanded={expandedCard === metric.key}
             onclick={() => { ensurePlotly(); handleCardClick(metric.key); }}
           >
-            <div class="mc-category">{metric.categoryLabel}</div>
-            <div class="mc-label">{metric.label}</div>
-            <div class="mc-row">
-              <div class="mc-value">{formatValue(metric.latestValue)}</div>
-              {#if metric.qoqChange !== null}
-                {@const isPositive = metric.qoqChange > 0}
-                {@const isGood = metric.isNpa ? !isPositive : isPositive}
-                <div class="mc-change" class:good={isGood} class:bad={!isGood}>
-                  {isPositive ? '\u25B2' : '\u25BC'}
-                  {Math.abs(metric.qoqChange).toFixed(1)}%
+            <div class="mc-top">
+              <div class="mc-text">
+                <div class="mc-category">{metric.categoryLabel}</div>
+                <div class="mc-label">{metric.label}</div>
+                <div class="mc-row">
+                  <div class="mc-value">{formatValue(metric.latestValue)}</div>
+                  {#if metric.qoqChange !== null}
+                    {@const isPositive = metric.qoqChange > 0}
+                    {@const isGood = metric.isNpa ? !isPositive : isPositive}
+                    <div class="mc-change" class:good={isGood} class:bad={!isGood}>
+                      <span class="mc-arrow">{isPositive ? '\u25B2' : '\u25BC'}</span>
+                      {Math.abs(metric.qoqChange).toFixed(1)}%
+                    </div>
+                  {/if}
                 </div>
-              {/if}
+              </div>
             </div>
             <div class="mc-sparkline">
               {#if sparkPoints.length >= 2}
-                <svg width="80" height="30" viewBox="0 0 80 30">
-                  <polyline points={polyline} fill="none" stroke="#b8603e" stroke-width="1.5" />
+                {@const sparkW = 120}
+                {@const sparkH = 36}
+                {@const pad = 2}
+                {@const areaPoints = sparkPoints
+                  .map((p, i) => `${pad + (i / Math.max(sparkPoints.length - 1, 1)) * (sparkW - 2 * pad)},${pad + (sparkH - 2 * pad) - ((p.y - minVal) / range) * (sparkH - 2 * pad)}`)
+                  .join(' ')}
+                {@const lastPt = sparkPoints[sparkPoints.length - 1]}
+                {@const lastX = pad + ((sparkPoints.length - 1) / Math.max(sparkPoints.length - 1, 1)) * (sparkW - 2 * pad)}
+                {@const lastY = pad + (sparkH - 2 * pad) - ((lastPt.y - minVal) / range) * (sparkH - 2 * pad)}
+                {@const firstPt = sparkPoints[0]}
+                {@const isUp = lastPt.y >= firstPt.y}
+                <svg width={sparkW} height={sparkH} viewBox={`0 0 ${sparkW} ${sparkH}`}>
+                  <defs>
+                    <linearGradient id={`grad-${metric.key.replace(/[^a-zA-Z0-9]/g, '_')}`} x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color={isUp ? '#b8603e' : '#c44830'} stop-opacity="0.18" />
+                      <stop offset="100%" stop-color={isUp ? '#b8603e' : '#c44830'} stop-opacity="0.02" />
+                    </linearGradient>
+                  </defs>
+                  <polygon
+                    points={`${pad},${sparkH} ${areaPoints} ${lastX},${sparkH}`}
+                    fill={`url(#grad-${metric.key.replace(/[^a-zA-Z0-9]/g, '_')})`}
+                  />
+                  <polyline points={areaPoints} fill="none" stroke={isUp ? '#b8603e' : '#c44830'} stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" />
+                  <circle cx={lastX} cy={lastY} r="2.5" fill={isUp ? '#b8603e' : '#c44830'} />
                 </svg>
               {:else}
-                <span class="mc-no-spark">--</span>
+                <span class="mc-no-spark">—</span>
               {/if}
             </div>
+            <div class="mc-expand-hint">{expandedCard === metric.key ? 'Click to collapse' : 'Click to expand chart'}</div>
           </button>
         {/each}
       </div>
 
       <!-- Expanded chart area -->
       {#if expandedCard}
+        {@const ecMetric = filteredMetrics.find(m => m.key === expandedCard)}
         <div class="expanded-chart">
           <div class="ec-header">
-            <button class="ec-close" onclick={() => expandedCard = null}>Close</button>
+            {#if ecMetric}
+              <div class="ec-title-area">
+                <div class="ec-cat">{ecMetric.categoryLabel}</div>
+                <div class="ec-title">{ecMetric.label}</div>
+                {#if ecMetric.qoqChange !== null}
+                  {@const isPositive = ecMetric.qoqChange > 0}
+                  {@const isGood = ecMetric.isNpa ? !isPositive : isPositive}
+                  <span class="ec-badge" class:good={isGood} class:bad={!isGood}>
+                    {isPositive ? '▲' : '▼'} {Math.abs(ecMetric.qoqChange).toFixed(1)}% QoQ
+                  </span>
+                {/if}
+              </div>
+            {/if}
+            <button class="ec-close" onclick={() => expandedCard = null}>&times;</button>
           </div>
           <div bind:this={expandedChartEl} class="plotly-chart"></div>
         </div>
@@ -523,7 +604,7 @@
   }
   .error-msg { color: #c44830; }
 
-  .trend-tracker { display: flex; flex-direction: column; gap: 20px; }
+  .trend-tracker { display: flex; flex-direction: column; gap: 24px; }
 
   /* Controls row */
   .controls-row {
@@ -542,40 +623,50 @@
     color: var(--label);
   }
   .select {
-    padding: 8px 12px;
+    padding: 8px 14px;
     border: 1px solid var(--border);
-    border-radius: 5px;
+    border-radius: 6px;
     background: #faf9f7;
     font-family: var(--font-sans);
     font-size: 11px;
     color: var(--text);
     cursor: pointer;
     appearance: none;
-    min-width: 180px;
+    min-width: 190px;
+    transition: border-color 0.2s;
   }
-  .select:focus { border-color: var(--accent); outline: none; }
+  .select:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px rgba(184,96,62,0.08); }
 
   .loading-indicator {
     font-family: var(--font-sans);
     font-size: 10px;
     color: var(--accent);
     padding-bottom: 8px;
+    animation: pulse 1.2s ease-in-out infinite;
   }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
 
   /* District header */
   .district-header {
     background: #fff;
     border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
     border-radius: 8px;
-    padding: 20px 24px;
-    box-shadow: var(--card-shadow);
+    padding: 20px 28px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
   }
+  .dh-left { flex: 1; min-width: 0; }
   .dh-name {
     font-family: var(--font-serif);
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
     color: var(--text);
-    margin-bottom: 6px;
+    margin-bottom: 5px;
+    letter-spacing: -0.01em;
   }
   .dh-meta {
     font-family: var(--font-sans);
@@ -586,8 +677,30 @@
     align-items: center;
     flex-wrap: wrap;
   }
-  .dh-sep { color: var(--border-dark); }
+  .dh-sep { color: var(--label); font-size: 8px; }
   .dh-state { font-weight: 600; color: var(--accent); }
+  .dh-stats {
+    display: flex;
+    gap: 24px;
+    flex-shrink: 0;
+  }
+  .dh-stat { text-align: center; }
+  .dh-stat-num {
+    font-family: var(--font-mono);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.1;
+  }
+  .dh-stat-label {
+    font-family: var(--font-sans);
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--label);
+    margin-top: 3px;
+  }
 
   /* Category pills */
   .category-pills {
@@ -609,7 +722,7 @@
     transition: all 0.2s;
     white-space: nowrap;
   }
-  .cat-pill:hover { border-color: var(--accent); color: var(--text); }
+  .cat-pill:hover { border-color: var(--accent); color: var(--text); background: rgba(184,96,62,0.04); }
   .cat-pill.active {
     background: var(--text);
     color: #fff;
@@ -619,32 +732,59 @@
   /* Card grid */
   .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
   }
 
   .metric-card {
     background: #fff;
     border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px 16px;
-    box-shadow: var(--card-shadow);
+    border-radius: 10px;
+    padding: 16px 18px 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 0;
     font-family: inherit;
+    position: relative;
+    overflow: hidden;
+  }
+  .metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--border);
+    transition: background 0.25s;
+    border-radius: 10px 0 0 10px;
   }
   .metric-card:hover {
-    box-shadow: var(--card-shadow-hover);
-    border-color: var(--accent);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    transform: translateY(-2px);
+  }
+  .metric-card:hover::before {
+    background: var(--accent);
   }
   .metric-card.expanded {
     border-color: var(--accent);
-    border-width: 2px;
+    box-shadow: 0 4px 16px rgba(184,96,62,0.12);
   }
+  .metric-card.expanded::before {
+    background: var(--accent);
+  }
+
+  .mc-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .mc-text { flex: 1; min-width: 0; }
 
   .mc-category {
     font-family: var(--font-sans);
@@ -654,76 +794,134 @@
     text-transform: uppercase;
     color: var(--label);
     line-height: 1.3;
+    margin-bottom: 3px;
   }
   .mc-label {
     font-family: var(--font-sans);
-    font-size: 11px;
+    font-size: 11.5px;
     font-weight: 600;
     color: var(--text);
-    line-height: 1.3;
+    line-height: 1.35;
+    margin-bottom: 8px;
   }
   .mc-row {
     display: flex;
     align-items: baseline;
     gap: 10px;
-    margin-top: 2px;
   }
   .mc-value {
     font-family: var(--font-mono);
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
     color: var(--text);
-    line-height: 1.2;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
   .mc-change {
     font-family: var(--font-sans);
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 700;
     white-space: nowrap;
+    padding: 2px 7px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
   }
-  .mc-change.good { color: var(--olive); }
-  .mc-change.bad { color: #c44830; }
+  .mc-change.good { color: #2d7d46; background: rgba(45,125,70,0.08); }
+  .mc-change.bad { color: #c44830; background: rgba(196,72,48,0.08); }
+  .mc-arrow { font-size: 7px; }
 
   .mc-sparkline {
-    margin-top: 4px;
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-end;
   }
+  .mc-sparkline svg { display: block; width: 100%; height: auto; }
   .mc-no-spark {
     font-family: var(--font-mono);
     font-size: 10px;
     color: var(--label);
   }
 
+  .mc-expand-hint {
+    font-family: var(--font-sans);
+    font-size: 8px;
+    color: var(--label);
+    text-align: right;
+    margin-top: 6px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    letter-spacing: 0.02em;
+  }
+  .metric-card:hover .mc-expand-hint { opacity: 1; }
+
   /* Expanded chart */
   .expanded-chart {
     background: #fff;
     border: 1px solid var(--border);
-    border-radius: 8px;
-    box-shadow: var(--card-shadow);
-    padding: 16px;
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    padding: 24px 28px;
     margin-top: 4px;
   }
   .ec-header {
     display: flex;
-    justify-content: flex-end;
-    margin-bottom: 8px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
   }
-  .ec-close {
+  .ec-title-area {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .ec-cat {
     font-family: var(--font-sans);
     font-size: 9px;
     font-weight: 600;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
+    color: var(--label);
+  }
+  .ec-title {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .ec-badge {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    width: fit-content;
+    margin-top: 4px;
+  }
+  .ec-badge.good { color: #2d7d46; background: rgba(45,125,70,0.08); }
+  .ec-badge.bad { color: #c44830; background: rgba(196,72,48,0.08); }
+
+  .ec-close {
+    font-family: var(--font-sans);
+    font-size: 20px;
+    line-height: 1;
     color: var(--muted);
-    background: var(--btn-bg);
-    border: 1px solid var(--border-dark);
-    border-radius: 4px;
-    padding: 5px 14px;
+    background: none;
+    border: none;
     cursor: pointer;
     transition: all 0.2s;
+    padding: 0 4px;
+    flex-shrink: 0;
   }
-  .ec-close:hover { background: var(--text); color: #fff; border-color: var(--text); }
+  .ec-close:hover { color: var(--text); transform: scale(1.1); }
 
-  .plotly-chart { width: 100%; min-height: 400px; }
+  .plotly-chart { width: 100%; min-height: 380px; }
 
   .empty-state {
     font-family: var(--font-sans);
@@ -733,12 +931,15 @@
     padding: 60px 20px;
     background: #fff;
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 10px;
   }
 
   @media (max-width: 768px) {
     .controls-row { flex-direction: column; align-items: stretch; }
     .select { min-width: unset; width: 100%; }
-    .card-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+    .card-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+    .district-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .dh-stats { gap: 20px; }
+    .expanded-chart { padding: 16px; }
   }
 </style>
