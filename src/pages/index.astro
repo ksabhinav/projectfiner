@@ -15,7 +15,7 @@ const base = import.meta.env.BASE_URL;
     <div id="panel-head">
       <h1>Project <em>FINER</em></h1>
       <p class="panel-sub">Financial Inclusion in the North East Region</p>
-      <p class="panel-stats">236 Districts &middot; 12 States &middot; 7 Indicators</p>
+      <p class="panel-stats">269 Districts &middot; 13 States &middot; 7 Indicators</p>
     </div>
 
     <div id="panel-body">
@@ -112,6 +112,7 @@ const base = import.meta.env.BASE_URL;
             <option value="MIZORAM">Mizoram</option>
             <option value="TRIPURA">Tripura</option>
             <option value="NAGALAND">Nagaland</option>
+            <option value="CHHATTISGARH">Chhattisgarh</option>
             <option value="ODISHA">Odisha</option>
             <option value="SIKKIM">Sikkim</option>
             <option value="WEST BENGAL">West Bengal</option>
@@ -198,16 +199,16 @@ const base = import.meta.env.BASE_URL;
     var DIST_URL   = _B + 'data/district_boundaries.geojson';
 
     var INDIA_BOUNDS = L.latLngBounds(L.latLng(6.5,68.0), L.latLng(37.5,110.0));
-    var NE_BOUNDS    = L.latLngBounds(L.latLng(17.5, 81.5), L.latLng(29.5, 97.5));
-    var NE_CENTER    = [25.5, 90.0]; // Visual center of NE + Bihar + WB + Jharkhand region
-    var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK','BR','WB','JH','OR'];
-    var NE_STATES    = ['ASSAM','MEGHALAYA','MANIPUR','MIZORAM','NAGALAND','TRIPURA','ARUNACHAL PRADESH','SIKKIM','BIHAR','WEST BENGAL','JHARKHAND','ODISHA'];
+    var NE_BOUNDS    = L.latLngBounds(L.latLng(17.5, 79.5), L.latLng(29.5, 97.5));
+    var NE_CENTER    = [24.5, 88.0]; // Visual center of NE + Bihar + WB + JH + OR + CG
+    var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK','BR','WB','JH','OR','CT'];
+    var NE_STATES    = ['ASSAM','MEGHALAYA','MANIPUR','MIZORAM','NAGALAND','TRIPURA','ARUNACHAL PRADESH','SIKKIM','BIHAR','WEST BENGAL','JHARKHAND','ODISHA','CHHATTISGARH'];
     var STATE_SLUGS  = {
       'ASSAM': 'assam', 'MEGHALAYA': 'meghalaya', 'MANIPUR': 'manipur',
       'MIZORAM': 'mizoram', 'NAGALAND': 'nagaland', 'TRIPURA': 'tripura',
       'ARUNACHAL PRADESH': 'arunachal-pradesh', 'SIKKIM': 'sikkim',
       'BIHAR': 'bihar', 'WEST BENGAL': 'west-bengal', 'JHARKHAND': 'jharkhand',
-      'ODISHA': 'odisha',
+      'ODISHA': 'odisha', 'CHHATTISGARH': 'chhattisgarh',
     };
 
     // Map init — single map, center India at zoom 5
@@ -486,6 +487,13 @@ const base = import.meta.env.BASE_URL;
       'SARAIKELA-KHARSAWAN': 'SERAIKELA-KHARSAWAN',
       // Odisha — GeoJSON vs SLBC
       'ANUGUL': 'ANGUL',
+      // Chhattisgarh — GeoJSON vs SLBC
+      'DAKSHIN BASTAR DANTEWARA': 'DANTEWADA',
+      'UTTAR BASTAR KANKER': 'KANKER',
+      'KAWARDHA (KABIRDHAM)': 'KABIRDHAM',
+      'GARIYABAND': 'GARIABAND',
+      'JANJGIR - CHAMPA': 'JANJGIR-CHAMPA',
+      'KHAIRGARH-CHHUIKHADAN-GANDAI': 'KHAIRAGARH-CHHUIKHADAN-GANDAI',
       'JAJAPUR': 'JAJPUR',
       'KEONJHAR (KENDUJHAR)': 'KEONJHAR',
       'NABARANGAPUR': 'NABARANGPUR',

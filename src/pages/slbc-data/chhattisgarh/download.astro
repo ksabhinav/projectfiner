@@ -1,0 +1,31 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import StateDownload from '../../../components/StateDownload.svelte';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<PageLayout
+  title="Chhattisgarh SLBC Data Download | Project FINER"
+  pageTitle="Chhattisgarh — SLBC Financial Inclusion Data"
+  subtitle={`District-level indicators from SLBC Chhattisgarh quarterly data tables. All amounts in Rs. Crore.<br><a href="${base}slbc-data">&larr; All states</a> &nbsp;&middot;&nbsp; Source: <a href="http://slbcchhattisgarh.com/" target="_blank">slbcchhattisgarh.com</a>`}
+>
+  <div class="stat-bar">
+    <div class="stat-row">
+      <div class="stat-item"><div class="stat-num">12</div><div class="stat-lbl">Quarters</div></div>
+      <div class="stat-item"><div class="stat-num">33</div><div class="stat-lbl">Districts</div></div>
+      <div class="stat-item"><div class="stat-num">4</div><div class="stat-lbl">Indicators</div></div>
+      <div class="stat-item"><div class="stat-num">48</div><div class="stat-lbl">CSV Files</div></div>
+      <div class="stat-item"><div class="stat-num">Mar 2023</div><div class="stat-lbl">From</div></div>
+      <div class="stat-item"><div class="stat-num">Dec 2025</div><div class="stat-lbl">To</div></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <StateDownload client:load stateName="Chhattisgarh" stateSlug="chhattisgarh" />
+  </div>
+</PageLayout>
+
+<style>
+  .container { max-width: 960px; margin: 0 auto; padding: 32px 40px 60px; }
+</style>

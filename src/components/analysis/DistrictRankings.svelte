@@ -21,6 +21,7 @@
     { name: 'Bihar', slug: 'bihar' },
     { name: 'Jharkhand', slug: 'jharkhand' },
     { name: 'Odisha', slug: 'odisha' },
+    { name: 'Chhattisgarh', slug: 'chhattisgarh' },
     { name: 'West Bengal', slug: 'west-bengal' },
   ];
 

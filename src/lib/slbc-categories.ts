@@ -143,6 +143,8 @@ export const CATEGORY_INFO: Record<string, string> = {
   stand_up_india_p2:                   'Stand Up India (contd.)',
   suy:                                 'SUY scheme',
   town_hall_msme:                      'Town Hall MSME',
+  // Chhattisgarh specific categories
+  atm_network:                         'ATM network (district-wise)',
 };
 
 export const QUARTER_ORDER = [
