@@ -380,57 +380,57 @@ const base = import.meta.env.BASE_URL;
         title: 'Credit-Deposit Ratio',
         metrics: [
           { field: 'overall_cd_ratio', label: 'Overall CD Ratio (%)', unit: '%', fallbacks: ['cd_ratio', 'current_c_d_ratio', 'cdr', 'overall', 'cd_ratio_incl_pou'] },
-          { field: 'total_deposit', label: 'Total Deposits (₹ Lakh)', unit: '₹L', fallbacks: ['deposit', 'deposits_rural', 'september_2025_total_deposit'] },
-          { field: 'total_advance', label: 'Total Advances (₹ Lakh)', unit: '₹L', fallbacks: ['advance', 'advances', 'total_advance_utilized_in_the_state'] },
-          { field: 'total_branch', label: 'Total Branches', unit: '', fallbacks: ['total', 'no_of_brs'] },
+          { field: 'total_deposit', label: 'Total Deposits', unit: '₹', fallbacks: ['deposit', 'deposits_rural', 'september_2025_total_deposit', 'total_deposits'] },
+          { field: 'total_advance', label: 'Total Advances', unit: '₹', fallbacks: ['advance', 'advances', 'total_advance_utilized_in_the_state', 'total_advances'] },
+          { field: 'total_branch', label: 'Total Branches', unit: '', fallbacks: ['total', 'no_of_brs', 'total_branches'] },
         ],
       },
       pmjdy: {
         title: 'PM Jan Dhan Yojana',
         metrics: [
-          { field: 'total_pmjdy_no', label: 'Total PMJDY Accounts', unit: '', fallbacks: ['pmjdy_no', 'total_no', 'no_of_pmjdy_accounts', 'pmjdy', 'total', 'number_of_pmjdy_accounts_rural'] },
-          { field: 'no_of_zero_balance_a_c', label: 'Zero Balance Accounts', unit: '' },
-          { field: 'no_of_aadhaar_seeded', label: 'Aadhaar Seeded', unit: '' },
-          { field: 'no_of_rupay_card_issued', label: 'RuPay Cards Issued', unit: '' },
-          { field: 'female_no', label: 'Female Accounts', unit: '', fallbacks: ['no_of_women_pmjdy_accounts'] },
-          { field: 'rural_no', label: 'Rural Accounts', unit: '' },
+          { field: 'total_pmjdy_no', label: 'Total PMJDY Accounts', unit: '', fallbacks: ['total_no_pmjdy', 'pmjdy_no', 'total_no', 'no_of_pmjdy_accounts', 'pmjdy', 'total', 'number_of_pmjdy_accounts_rural', 'total_pmjdy_a_c', 'total_no_pmjdy_a_c', 'total_a_c', 'sum_of_total_a_c'] },
+          { field: 'no_of_zero_balance_a_c', label: 'Zero Balance Accounts', unit: '', fallbacks: ['zero_balance', 'zero_balance_a_c', 'zero_balance_account_2'] },
+          { field: 'no_of_aadhaar_seeded', label: 'Aadhaar Seeded', unit: '', fallbacks: ['aadhaar_seeded', 'aadhaar_seeding_pct', 'sum_of_aadhaar_seeded'] },
+          { field: 'no_of_rupay_card_issued', label: 'RuPay Cards Issued', unit: '', fallbacks: ['rupay_card_issued', 'rupaycard_account', 'rupay_card_account', 'ar_cu_psaycard_issued'] },
+          { field: 'female_no', label: 'Female Accounts', unit: '', fallbacks: ['no_of_women_pmjdy_accounts', 'female', 'female_a_c', 'sum_of_female_a_c'] },
+          { field: 'rural_no', label: 'Rural Accounts', unit: '', fallbacks: ['rural', 'rural_a_c', 'sum_of_rural_a_c'] },
         ],
       },
       branch_network: {
         title: 'Branch Network',
         metrics: [
-          { field: 'total_branch', label: 'Total Branches', unit: '', fallbacks: ['total', 'no_of_branches', 'total_no_of_br', 'total_branche_s'] },
-          { field: 'branch_rural', label: 'Rural Branches', unit: '', fallbacks: ['atm_rural'] },
+          { field: 'total_branch', label: 'Total Branches', unit: '', fallbacks: ['total', 'no_of_branches', 'total_no_of_br', 'total_branche_s', 'total_branches', 'total_branch_es'] },
+          { field: 'branch_rural', label: 'Rural Branches', unit: '', fallbacks: ['atm_rural', 'rural'] },
           { field: 'branch_semi_urban', label: 'Semi-Urban Branches', unit: '', fallbacks: ['semi_urban'] },
           { field: 'branch_urban', label: 'Urban Branches', unit: '', fallbacks: ['urban'] },
-          { field: 'total_atm', label: 'Total ATMs', unit: '', fallbacks: ['no_of_atm'] },
-          { field: 'total_csp', label: 'Total CSPs', unit: '', fallbacks: ['bc_total'] },
+          { field: 'total_atm', label: 'Total ATMs', unit: '', fallbacks: ['no_of_atm', 'total_atms', 'atm_total'] },
+          { field: 'total_csp', label: 'Total CSPs', unit: '', fallbacks: ['bc_total', 'total_bc'] },
         ],
       },
       kcc: {
         title: 'Kisan Credit Card',
         metrics: [
-          { field: 'total_no_of_kcc', label: 'Total KCC Issued', unit: '', fallbacks: ['no_of_kcc', 'kcc_no', 'total_kcc_no', 'total_no', 'o_s_position_no_of_cards_issued', 'cum_no_app_sanc', 'no_of_kcc_issued_during_quarter_including_renewal', 'rupay_card_issued_in_kcc', 'target_no', 'outstanding_at_the_end_of_reporting_quarter_no'] },
-          { field: 'outstanding_amt', label: 'Outstanding Amount (₹ Lakh)', unit: '₹L', fallbacks: ['total_outstanding', 'total_o_s_kcc_amt', 'kcc_outstanding', 'o_s_position_limit_sanctioned', 'kcc_limit_sanctioned_in_rs_lakhs', 'amount', 'outstanding_at_the_end_of_reporting_quarter_amt'] },
-          { field: 'no_of_rupay_card_issued', label: 'RuPay Cards Issued', unit: '', fallbacks: ['rupay_card_issued'] },
-          { field: 'kcc_card_activated', label: 'Cards Activated', unit: '', fallbacks: ['card_activated', 'kcc_card_activated_no'] },
+          { field: 'total_no_of_kcc', label: 'Total KCC Issued', unit: '', fallbacks: ['no_of_kcc', 'kcc_no', 'total_kcc_no', 'total_no', 'o_s_position_no_of_cards_issued', 'cum_no_app_sanc', 'no_of_kcc_issued_during_quarter_including_renewal', 'rupay_card_issued_in_kcc', 'target_no', 'outstanding_at_the_end_of_reporting_quarter_no', 'outstanding_at_the_end_of_reporting_quarter_number', 'kcc_card_activated_number', 'no_of_applications_sanctioned'] },
+          { field: 'outstanding_amt', label: 'Outstanding Amount', unit: '₹', fallbacks: ['total_outstanding', 'total_o_s_kcc_amt', 'kcc_outstanding', 'o_s_position_limit_sanctioned', 'kcc_limit_sanctioned_in_rs_lakhs', 'amount', 'outstanding_at_the_end_of_reporting_quarter_amt'] },
+          { field: 'no_of_rupay_card_issued', label: 'RuPay Cards Issued', unit: '', fallbacks: ['rupay_card_issued', 'out_of_total_kcc_issued,_no_of_rupay_cards_issued_number', 'out_of_total_kcc_issued,_no_of_rupay_cards_issued_no'] },
+          { field: 'kcc_card_activated', label: 'Cards Activated', unit: '', fallbacks: ['card_activated', 'kcc_card_activated_no', 'kcc_card_activated_number'] },
         ],
       },
       shg: {
         title: 'Self Help Groups',
         metrics: [
-          { field: 'savings_linked_no', label: 'Savings Linked SHGs', unit: '', fallbacks: ['savings_linked', 'credit_linked_no', 'credit_linked', 'current_fy_savings_linked_no', 'no_of_shgs', 'deposit_linkage_no_of_groups', 'total_sanction_no', 'total_sanctioned', 'total_shgs_repeat_renewals_enhancement_fy_2025_26'] },
+          { field: 'savings_linked_no', label: 'Savings Linked SHGs', unit: '', fallbacks: ['savings_linked', 'credit_linked_no', 'credit_linked', 'current_fy_savings_linked_no', 'no_of_shgs', 'deposit_linkage_no_of_groups', 'total_sanction_no', 'total_sanctioned', 'total_shgs_repeat_renewals_enhancement_fy_2025_26', 'disburdsement_target_no_of_shgs', 'no_of_shgs_credit_linked_as_on_31st_march_2023', 'cumulative_achievement_physical_7', 'target_physical_3'] },
           { field: 'credit_linked_no', label: 'Credit Linked SHGs', unit: '', fallbacks: ['credit_linked', 'current_fy_credit_linked_no', 'credit_linkage_loan_given_by_banks_no', 'total_disbursement_no'] },
-          { field: 'shg_o_s_amt', label: 'Outstanding Amount (₹ Lakh)', unit: '₹L', fallbacks: ['outstanding_amt', 'shg_o_s', 'outstanding_accounts', 'total_outsanding_no'] },
+          { field: 'shg_o_s_amt', label: 'Outstanding Amount', unit: '₹', fallbacks: ['outstanding_amt', 'shg_o_s', 'outstanding_accounts', 'total_outsanding_no', 'total_outstanding_amt_rs_in_lakh'] },
           { field: 'shg_npa_pct', label: 'SHG NPA %', unit: '%' },
         ],
       },
       digital_transactions: {
         title: 'Digital Transactions',
         metrics: [
+          { field: 'coverage_sb_pct', label: 'SB Digital Coverage %', unit: '%', fallbacks: ['coverage_pct', 'achievement', 'pct_coverage', 'pct_coverag_e_h', 'pct_coverage_9688'] },
+          { field: 'digital_coverage_sb_a_c', label: 'SB A/Cs Digitally Covered', unit: '', fallbacks: ['total_operative_sb_a_c', 'no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode', 'debit_rupay_cards_coverage_total_no_of_accounts_covered', 'debit_rupay_cards_coverage_total_no_of_accounts_covered_g', 'coverage_with_at_least_one_of_the_digital_modes_of_payment_debit_rupay_cards,_in'] },
           { field: 'bhim_upi_a_c', label: 'BHIM/UPI Transactions', unit: '', fallbacks: ['bhim_upi', 'bhim_aadhaar_a_c'] },
-          { field: 'coverage_sb_pct', label: 'SB Digital Coverage %', unit: '%', fallbacks: ['coverage_pct', 'achievement'] },
-          { field: 'digital_coverage_sb_a_c', label: 'SB A/Cs Digitally Covered', unit: '', fallbacks: ['total_operative_sb_a_c', 'no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode'] },
           { field: 'imps_a_c', label: 'IMPS Transactions', unit: '', fallbacks: ['imps'] },
           { field: 'cards_debit_credit_a_c', label: 'Card Transactions', unit: '', fallbacks: ['cards_debit_credit', 'cards_debit'] },
           { field: 'ussd_a_c', label: 'USSD Transactions', unit: '', fallbacks: ['ussd'] },
@@ -440,7 +440,7 @@ const base = import.meta.env.BASE_URL;
       aadhaar_authentication: {
         title: 'Aadhaar Authentication',
         metrics: [
-          { field: 'no_of_aadhaar_seeded_casa', label: 'Aadhaar Seeded CASA', unit: '', fallbacks: ['aadhaar_seeded_casa', 'number_of_aadhaar_seeded_casa'] },
+          { field: 'no_of_aadhaar_seeded_casa', label: 'Aadhaar Seeded CASA', unit: '', fallbacks: ['aadhaar_seeded_casa', 'number_of_aadhaar_seeded_casa', 'pct_casa_authentication'] },
           { field: 'no_of_operative_casa', label: 'Operative CASA', unit: '', fallbacks: ['operative_casa', 'number_of_operative_casa'] },
           { field: 'no_of_authenticated_casa', label: 'Authenticated CASA', unit: '', fallbacks: ['authenticated_casa', 'number_of_authenticated_casa'] },
         ],
@@ -514,15 +514,17 @@ const base = import.meta.env.BASE_URL;
       'SOUTH 24PARGANAS': 'SOUTH 24 PARGANAS',
     };
 
-    // Cross-category fallbacks
+    // Cross-category fallbacks — when a field isn't found under the primary category,
+    // try these alternative categories (different states store the same data under different names)
     var CROSS_CATEGORY_FALLBACKS = {
-      'branch_network': ['credit_deposit_ratio', 'kcc', 'fi_kcc', 'digital_transactions', 'branch_network_p2'],
-      'credit_deposit_ratio': ['key_indicators'],
-      'kcc': ['fi_kcc'],
-      'shg': ['shg_nrlm', 'nrlm', 'shg_p2'],
-      'digital_transactions': ['digital_payments', 'digital_coverage_savings', 'digital_coverage_business'],
+      'branch_network': ['credit_deposit_ratio', 'kcc', 'fi_kcc', 'digital_transactions', 'branch_network_p2', 'branch_network_p3', 'branch_network_p4'],
+      'credit_deposit_ratio': ['key_indicators', 'district_misc'],
+      'kcc': ['fi_kcc', 'kcc_animal_husbandry', 'kcc_fishery'],
+      'shg': ['shg_nrlm', 'nrlm', 'shg_p2', 'shg_p3'],
+      'digital_transactions': ['digital_payments', 'digital_coverage_savings', 'digital_coverage_savings_p2', 'digital_coverage_business', 'women_finance'],
       'social_security': ['social_security_schemes', 'social_security_claims'],
-      'pmjdy': ['pmjdy_p2', 'pmjdy_p3'],
+      'pmjdy': ['pmjdy_p2', 'pmjdy_p3', 'pmjdy_p4', 'social_security_schemes'],
+      'aadhaar_authentication': ['pmjdy'],
     };
 
     function normalizePeriod(p) {
@@ -558,25 +560,54 @@ const base = import.meta.env.BASE_URL;
         .replace(/[^A-Z\s]/g, '').replace(/\s+/g, ' ').trim();
     }
 
-    function getVal(record, cat, field, fallbacks) {
-      var key = cat + '__' + field;
-      var v = record[key];
+    // Date suffix pattern for prefix matching — only match date-like suffixes
+    // e.g. 'pct_coverage' matches 'pct_coverage_mar_24', 'pct_coverage_9688', etc.
+    var DATE_SUFFIX_RE = /_(jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec|fy|2\d{3}|\d{2,4})$/i;
+
+    function tryFieldWithPrefix(record, catField) {
+      // First try exact match
+      var v = record[catField];
       if (v != null && v !== '' && !isNaN(Number(v))) return Number(v);
-      if (fallbacks) {
-        for (var i = 0; i < fallbacks.length; i++) {
-          v = record[cat + '__' + fallbacks[i]];
-          if (v != null && v !== '' && !isNaN(Number(v))) return Number(v);
+      // Then try prefix match — but only if the suffix looks like a date/number
+      // This prevents 'total' from matching 'total_advance' while allowing
+      // 'pct_coverage' to match 'pct_coverage_mar_24'
+      var keys = Object.keys(record);
+      for (var k = 0; k < keys.length; k++) {
+        var key = keys[k];
+        if (key.length > catField.length + 1 && key.indexOf(catField + '_') === 0) {
+          var suffix = key.substring(catField.length);
+          if (DATE_SUFFIX_RE.test(suffix)) {
+            v = record[key];
+            if (v != null && v !== '' && !isNaN(Number(v))) return Number(v);
+          }
         }
       }
+      return null;
+    }
+
+    function getVal(record, cat, field, fallbacks) {
+      // 1. Try primary category + field (exact then prefix)
+      var v = tryFieldWithPrefix(record, cat + '__' + field);
+      if (v !== null) return v;
+
+      // 2. Try primary category + fallback fields
+      if (fallbacks) {
+        for (var i = 0; i < fallbacks.length; i++) {
+          v = tryFieldWithPrefix(record, cat + '__' + fallbacks[i]);
+          if (v !== null) return v;
+        }
+      }
+
+      // 3. Try cross-category fallbacks
       var crossCats = CROSS_CATEGORY_FALLBACKS[cat];
       if (crossCats) {
         for (var c = 0; c < crossCats.length; c++) {
-          v = record[crossCats[c] + '__' + field];
-          if (v != null && v !== '' && !isNaN(Number(v))) return Number(v);
+          v = tryFieldWithPrefix(record, crossCats[c] + '__' + field);
+          if (v !== null) return v;
           if (fallbacks) {
             for (var j = 0; j < fallbacks.length; j++) {
-              v = record[crossCats[c] + '__' + fallbacks[j]];
-              if (v != null && v !== '' && !isNaN(Number(v))) return Number(v);
+              v = tryFieldWithPrefix(record, crossCats[c] + '__' + fallbacks[j]);
+              if (v !== null) return v;
             }
           }
         }
