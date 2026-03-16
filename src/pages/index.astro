@@ -388,7 +388,7 @@ const base = import.meta.env.BASE_URL;
       pmjdy: {
         title: 'PM Jan Dhan Yojana',
         metrics: [
-          { field: 'total_pmjdy_no', label: 'Total PMJDY Accounts', unit: '', fallbacks: ['total_no_pmjdy', 'pmjdy_no', 'total_no', 'no_of_pmjdy_accounts', 'pmjdy', 'total', 'number_of_pmjdy_accounts_rural', 'total_pmjdy_a_c', 'total_no_pmjdy_a_c', 'total_a_c', 'sum_of_total_a_c'] },
+          { field: 'total_pmjdy_no', label: 'Total PMJDY Accounts', unit: '', fallbacks: ['total_no_pmjdy', 'pmjdy_no', 'total_no', 'no_of_pmjdy_accounts', 'pmjdy', 'total', 'number_of_pmjdy_accounts_rural', 'total_pmjdy_a_c', 'total_no_pmjdy_a_c', 'total_a_c', 'sum_of_total_a_c', 'pmjdy_total_accounts'] },
           { field: 'no_of_zero_balance_a_c', label: 'Zero Balance Accounts', unit: '', fallbacks: ['zero_balance', 'zero_balance_a_c', 'zero_balance_account_2'] },
           { field: 'no_of_aadhaar_seeded', label: 'Aadhaar Seeded', unit: '', fallbacks: ['aadhaar_seeded', 'aadhaar_seeding_pct', 'sum_of_aadhaar_seeded'] },
           { field: 'no_of_rupay_card_issued', label: 'RuPay Cards Issued', unit: '', fallbacks: ['rupay_card_issued', 'rupaycard_account', 'rupay_card_account', 'ar_cu_psaycard_issued'] },
@@ -399,10 +399,10 @@ const base = import.meta.env.BASE_URL;
       branch_network: {
         title: 'Branch Network',
         metrics: [
-          { field: 'total_branch', label: 'Total Branches', unit: '', fallbacks: ['total', 'no_of_branches', 'total_no_of_br', 'total_branche_s', 'total_branches', 'total_branch_es'] },
-          { field: 'branch_rural', label: 'Rural Branches', unit: '', fallbacks: ['atm_rural', 'rural'] },
-          { field: 'branch_semi_urban', label: 'Semi-Urban Branches', unit: '', fallbacks: ['semi_urban'] },
-          { field: 'branch_urban', label: 'Urban Branches', unit: '', fallbacks: ['urban'] },
+          { field: 'total_branch', label: 'Total Branches', unit: '', fallbacks: ['total', 'no_of_branches', 'total_no_of_br', 'total_branche_s', 'total_branches', 'total_branch_es', 'branches_total'] },
+          { field: 'branch_rural', label: 'Rural Branches', unit: '', fallbacks: ['atm_rural', 'rural', 'branches_rural'] },
+          { field: 'branch_semi_urban', label: 'Semi-Urban Branches', unit: '', fallbacks: ['semi_urban', 'branches_semi_urban'] },
+          { field: 'branch_urban', label: 'Urban Branches', unit: '', fallbacks: ['urban', 'branches_urban'] },
           { field: 'total_atm', label: 'Total ATMs', unit: '', fallbacks: ['no_of_atm', 'total_atms', 'atm_total'] },
           { field: 'total_csp', label: 'Total CSPs', unit: '', fallbacks: ['bc_total', 'total_bc'] },
         ],
@@ -410,8 +410,8 @@ const base = import.meta.env.BASE_URL;
       kcc: {
         title: 'Kisan Credit Card',
         metrics: [
-          { field: 'total_no_of_kcc', label: 'Total KCC Issued', unit: '', fallbacks: ['no_of_kcc', 'kcc_no', 'total_kcc_no', 'total_no', 'o_s_position_no_of_cards_issued', 'cum_no_app_sanc', 'no_of_kcc_issued_during_quarter_including_renewal', 'rupay_card_issued_in_kcc', 'target_no', 'outstanding_at_the_end_of_reporting_quarter_no', 'outstanding_at_the_end_of_reporting_quarter_number', 'kcc_card_activated_number', 'no_of_applications_sanctioned'] },
-          { field: 'outstanding_amt', label: 'Outstanding Amount', unit: '₹', fallbacks: ['total_outstanding', 'total_o_s_kcc_amt', 'kcc_outstanding', 'o_s_position_limit_sanctioned', 'kcc_limit_sanctioned_in_rs_lakhs', 'amount', 'outstanding_at_the_end_of_reporting_quarter_amt'] },
+          { field: 'total_no_of_kcc', label: 'Total KCC Issued', unit: '', fallbacks: ['no_of_kcc', 'kcc_no', 'total_kcc_no', 'total_no', 'o_s_position_no_of_cards_issued', 'cum_no_app_sanc', 'no_of_kcc_issued_during_quarter_including_renewal', 'rupay_card_issued_in_kcc', 'target_no', 'outstanding_at_the_end_of_reporting_quarter_no', 'outstanding_at_the_end_of_reporting_quarter_number', 'kcc_card_activated_number', 'no_of_applications_sanctioned', 'kcc_new_target_no', 'kcc_outstanding_as_on'] },
+          { field: 'outstanding_amt', label: 'Outstanding Amount', unit: '₹', fallbacks: ['total_outstanding', 'total_o_s_kcc_amt', 'kcc_outstanding', 'o_s_position_limit_sanctioned', 'kcc_limit_sanctioned_in_rs_lakhs', 'amount', 'outstanding_at_the_end_of_reporting_quarter_amt', 'amt'] },
           { field: 'no_of_rupay_card_issued', label: 'RuPay Cards Issued', unit: '', fallbacks: ['rupay_card_issued', 'out_of_total_kcc_issued,_no_of_rupay_cards_issued_number', 'out_of_total_kcc_issued,_no_of_rupay_cards_issued_no'] },
           { field: 'kcc_card_activated', label: 'Cards Activated', unit: '', fallbacks: ['card_activated', 'kcc_card_activated_no', 'kcc_card_activated_number'] },
         ],
@@ -419,7 +419,7 @@ const base = import.meta.env.BASE_URL;
       shg: {
         title: 'Self Help Groups',
         metrics: [
-          { field: 'savings_linked_no', label: 'Savings Linked SHGs', unit: '', fallbacks: ['savings_linked', 'credit_linked_no', 'credit_linked', 'current_fy_savings_linked_no', 'no_of_shgs', 'deposit_linkage_no_of_groups', 'total_sanction_no', 'total_sanctioned', 'total_shgs_repeat_renewals_enhancement_fy_2025_26', 'disburdsement_target_no_of_shgs', 'no_of_shgs_credit_linked_as_on_31st_march_2023', 'cumulative_achievement_physical_7', 'target_physical_3'] },
+          { field: 'savings_linked_no', label: 'Savings Linked SHGs', unit: '', fallbacks: ['savings_linked', 'credit_linked_no', 'credit_linked', 'current_fy_savings_linked_no', 'no_of_shgs', 'deposit_linkage_no_of_groups', 'total_sanction_no', 'total_sanctioned', 'total_shgs_repeat_renewals_enhancement_fy_2025_26', 'disburdsement_target_no_of_shgs', 'no_of_shgs_credit_linked_as_on_31st_march_2023', 'cumulative_achievement_physical_7', 'target_physical_3', 'disbursement_no', 'outstanding_no'] },
           { field: 'credit_linked_no', label: 'Credit Linked SHGs', unit: '', fallbacks: ['credit_linked', 'current_fy_credit_linked_no', 'credit_linkage_loan_given_by_banks_no', 'total_disbursement_no'] },
           { field: 'shg_o_s_amt', label: 'Outstanding Amount', unit: '₹', fallbacks: ['outstanding_amt', 'shg_o_s', 'outstanding_accounts', 'total_outsanding_no', 'total_outstanding_amt_rs_in_lakh'] },
           { field: 'shg_npa_pct', label: 'SHG NPA %', unit: '%' },
@@ -430,10 +430,10 @@ const base = import.meta.env.BASE_URL;
         metrics: [
           { field: 'coverage_sb_pct', label: 'SB Digital Coverage %', unit: '%', fallbacks: ['coverage_pct', 'achievement', 'pct_coverage', 'pct_coverag_e_h', 'pct_coverage_9688'] },
           { field: 'digital_coverage_sb_a_c', label: 'SB A/Cs Digitally Covered', unit: '', fallbacks: ['total_operative_sb_a_c', 'no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode', 'debit_rupay_cards_coverage_total_no_of_accounts_covered', 'debit_rupay_cards_coverage_total_no_of_accounts_covered_g', 'coverage_with_at_least_one_of_the_digital_modes_of_payment_debit_rupay_cards,_in'] },
-          { field: 'bhim_upi_a_c', label: 'BHIM/UPI Transactions', unit: '', fallbacks: ['bhim_upi', 'bhim_aadhaar_a_c'] },
-          { field: 'imps_a_c', label: 'IMPS Transactions', unit: '', fallbacks: ['imps'] },
-          { field: 'cards_debit_credit_a_c', label: 'Card Transactions', unit: '', fallbacks: ['cards_debit_credit', 'cards_debit'] },
-          { field: 'ussd_a_c', label: 'USSD Transactions', unit: '', fallbacks: ['ussd'] },
+          { field: 'bhim_upi_a_c', label: 'BHIM/UPI Transactions', unit: '', fallbacks: ['bhim_upi', 'bhim_aadhaar_a_c', 'digital_bhim_upi_no'] },
+          { field: 'imps_a_c', label: 'IMPS Transactions', unit: '', fallbacks: ['imps', 'digital_imps_no'] },
+          { field: 'cards_debit_credit_a_c', label: 'Card Transactions', unit: '', fallbacks: ['cards_debit_credit', 'cards_debit', 'digital_cards_no'] },
+          { field: 'ussd_a_c', label: 'USSD Transactions', unit: '', fallbacks: ['ussd', 'digital_ussd_no'] },
           { field: 'bharat_qr_code_a_c', label: 'Bharat QR Transactions', unit: '' },
         ],
       },
@@ -441,8 +441,8 @@ const base = import.meta.env.BASE_URL;
         title: 'Aadhaar Authentication',
         metrics: [
           { field: 'no_of_aadhaar_seeded_casa', label: 'Aadhaar Seeded CASA', unit: '', fallbacks: ['aadhaar_seeded_casa', 'number_of_aadhaar_seeded_casa', 'pct_casa_authentication'] },
-          { field: 'no_of_operative_casa', label: 'Operative CASA', unit: '', fallbacks: ['operative_casa', 'number_of_operative_casa'] },
-          { field: 'no_of_authenticated_casa', label: 'Authenticated CASA', unit: '', fallbacks: ['authenticated_casa', 'number_of_authenticated_casa'] },
+          { field: 'no_of_operative_casa', label: 'Operative CASA', unit: '', fallbacks: ['operative_casa', 'number_of_operative_casa', 'aadhaar_operative_casa'] },
+          { field: 'no_of_authenticated_casa', label: 'Authenticated CASA', unit: '', fallbacks: ['authenticated_casa', 'number_of_authenticated_casa', 'aadhaar_authenticated_casa'] },
         ],
       },
     };
@@ -517,13 +517,13 @@ const base = import.meta.env.BASE_URL;
     // Cross-category fallbacks — when a field isn't found under the primary category,
     // try these alternative categories (different states store the same data under different names)
     var CROSS_CATEGORY_FALLBACKS = {
-      'branch_network': ['credit_deposit_ratio', 'kcc', 'fi_kcc', 'digital_transactions', 'branch_network_p2', 'branch_network_p3', 'branch_network_p4'],
+      'branch_network': ['credit_deposit_ratio', 'kcc', 'fi_kcc', 'digital_transactions', 'branch_network_p2', 'branch_network_p3', 'branch_network_p4', 'atm_network', 'business_correspondents'],
       'credit_deposit_ratio': ['key_indicators', 'district_misc'],
-      'kcc': ['fi_kcc', 'kcc_animal_husbandry', 'kcc_fishery'],
-      'shg': ['shg_nrlm', 'nrlm', 'shg_p2', 'shg_p3'],
+      'kcc': ['fi_kcc', 'kcc_animal_husbandry', 'kcc_fishery', 'kcc_outstanding'],
+      'shg': ['shg_nrlm', 'nrlm', 'shg_p2', 'shg_p3', 'jlg'],
       'digital_transactions': ['digital_payments', 'digital_coverage_savings', 'digital_coverage_savings_p2', 'digital_coverage_business', 'women_finance'],
-      'social_security': ['social_security_schemes', 'social_security_claims'],
-      'pmjdy': ['pmjdy_p2', 'pmjdy_p3', 'pmjdy_p4', 'social_security_schemes'],
+      'social_security': ['social_security_schemes', 'social_security_claims', 'social_security_2'],
+      'pmjdy': ['pmjdy_p2', 'pmjdy_p3', 'pmjdy_p4', 'social_security_schemes', 'pmjdy_2', 'pmjdy_3'],
       'aadhaar_authentication': ['pmjdy'],
     };
 

@@ -1,12 +1,4 @@
-District,"Total PMJDY
-Accounts (No.)","PMJDY accounts opened
-in 2024 - 25 as on
-31.03.2025 (No.)","Zero Balance A/c
-(No.)","Deposits held in
-the A/c (Amt. In
-Crore)","Rupay Card
-Issued (No.)","Rupay Card
-Activated (No.)",Aadhaar Seeded (No.)
+district,pmjdy_total_accounts,pmjdy_opened_fy,pmjdy_zero_balance,pmjdy_deposits_held,pmjdy_rupay_cards_issued,pmjdy_rupay_cards_activated,pmjdy_aadhaar_seeded
 Araria,1950657,123454,130564,508.04,1380218,351880,1655701
 Arwal,410649,38312,34461,196.05,237597,113218,340536
 Aurangabad,1606382,86202,145223,710.44,1095565,489652,1337357
