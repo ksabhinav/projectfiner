@@ -87,7 +87,7 @@ projectfiner/
     ├── pincode_coords.json                 # Pincode → [lat, lng] lookup
     ├── slbc-data/
     │   ├── standardize_fields.py           # Cross-state field standardization script
-    │   └── {state}/                        # All 9 states (8 NE + Bihar)
+    │   └── {state}/                        # All 10 states (8 NE + Bihar + West Bengal)
     │       ├── {state}_complete.json       # Master JSON — all quarters, all indicators
     │       ├── {state}_fi_timeseries.json  # Timeseries JSON (nested: periods → districts)
     │       ├── {state}_fi_timeseries.csv   # Wide-format CSV: all districts × all quarters
@@ -154,13 +154,14 @@ u = website, st = state, loc = city/location, t = type, arn = ARN, c = city
 
 Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) quarterly PDF booklets.
 
-**Currently available**: 9 states — 8 NE states (Assam, Meghalaya, Manipur, Arunachal Pradesh, Mizoram, Tripura, Nagaland, Sikkim) + Bihar
+**Currently available**: 10 states — 8 NE states (Assam, Meghalaya, Manipur, Arunachal Pradesh, Mizoram, Tripura, Nagaland, Sikkim) + Bihar + West Bengal
 **NE Source**: [SLBC NE - Meghalaya Booklets](https://slbcne.nic.in/meghalaya/booklet.php)
 **Bihar Source**: [SLBC Bihar Agenda Papers](https://www.slbcbihar.com/SlBCHeldMeeting.aspx) (44th–95th meetings)
+**West Bengal Source**: SLBC WB Agenda Papers (130th–171st meetings), PDFs stored in `slbc-data/west-bengal/`
 
 **Coverage**:
-- Quarters range from March 2018 to September 2025 (varies by state — not all states have every quarter)
-- 48 indicator categories per quarter (for 2022 onwards; 2021 has fewer)
+- Quarters range from March 2018 to December 2025 (varies by state — not all states have every quarter)
+- 48 indicator categories per quarter for NE (for 2022 onwards; 2021 has fewer); 49 categories for WB
 - All monetary values in **Rs. Lakhs** (1 Lakh = ₹100,000)
 
 **State data availability** (latest quarter):
@@ -170,6 +171,7 @@ Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) q
 | Manipur | Sep 2025 | 39 |
 | Tripura | Sep 2025 | 32 |
 | Bihar | Sep 2025 | 25 |
+| West Bengal | Dec 2025 | 39 |
 | Mizoram | Sep 2025 | 22 |
 | Meghalaya | Sep 2025 | 15 |
 | Arunachal Pradesh | Mar 2025 | 18 |
@@ -222,7 +224,7 @@ Full-screen Leaflet choropleth map showing 7 key financial inclusion indicators 
 
 **7 Indicators**: Credit-Deposit Ratio, PM Jan Dhan Yojana, Branch Network, Kisan Credit Card, Self Help Groups, Digital Transactions, Aadhaar Authentication
 
-**159 districts across 9 states**: 121 NE districts + 38 Bihar districts
+**182 districts across 10 states**: 121 NE districts + 38 Bihar districts + 23 West Bengal districts
 
 **Key architecture decisions**:
 - Built as inline JS (`<script is:inline>`) in `index.astro` — NOT Svelte — because Leaflet is too imperative
@@ -248,10 +250,15 @@ Full-screen Leaflet choropleth map showing 7 key financial inclusion indicators 
 3. **Cross-category fallbacks**: Some states store fields under unexpected categories:
    - Assam: `total_branch` is under `credit_deposit_ratio`, not `branch_network`
    - AP: KCC data is under `fi_kcc`, not `kcc`
+   - WB: SHG data under `shg_nrlm`, social security under `social_security_schemes`
+   - WB: PMJDY district enrolment tables land in `pmjdy_2`, `pmjdy_3`
    ```js
    const CROSS_CATEGORY_FALLBACKS = {
-     'branch_network': ['credit_deposit_ratio', 'kcc', 'fi_kcc', 'digital_transactions'],
-     'kcc': ['fi_kcc'],
+     'branch_network': ['credit_deposit_ratio', 'kcc', 'fi_kcc', 'digital_transactions', 'branch_network_p2', ...],
+     'kcc': ['fi_kcc', 'kcc_animal_husbandry', 'kcc_fishery', 'kcc_outstanding'],
+     'shg': ['shg_nrlm', 'nrlm', 'shg_p2', 'shg_p3', 'jlg'],
+     'pmjdy': ['pmjdy_p2', 'pmjdy_p3', 'pmjdy_p4', 'social_security_schemes', 'pmjdy_2', 'pmjdy_3'],
+     'aadhaar_authentication': ['pmjdy'],
    };
    ```
 
@@ -337,11 +344,40 @@ Bihar SLBC data was extracted separately from the NE states:
 
 **Data coverage**: 25 quarters from March 2019 to September 2025, 38 districts
 
+## West Bengal Data Pipeline
+
+West Bengal SLBC data is extracted separately using a dedicated script.
+
+**Source PDFs**: 41 PDFs (130th–171st SLBC meetings) in `slbc-data/west-bengal/` (named `{N}th_agenda.pdf`)
+**Extraction script**: `slbc-data/west-bengal/extract_wb.py` (~750 lines)
+**23 districts**: Alipurduar, Bankura, Birbhum, Cooch Behar, Dakshin Dinajpur, Darjeeling, Hooghly, Howrah, Jalpaiguri, Jhargram, Kalimpong, Kolkata, Malda, Murshidabad, Nadia, North 24 Parganas, Paschim Bardhaman, Paschim Medinipur, Purba Bardhaman, Purba Medinipur, Purulia, South 24 Parganas, Uttar Dinajpur
+
+**Key differences from NE extraction**:
+- WB PDFs are **portrait-oriented** (no text reversal needed, unlike NE landscape PDFs)
+- Uses **pdfplumber** table extraction directly (not the NE `extract_everything_v2.py`)
+- Has its own **MEETING_TO_QUARTER** mapping (130th="March 2018" through 171st="December 2025")
+- **Category rules**: 30+ regex-based classification rules with priority scoring
+- Handles **sub-header detection** (multi-row headers common in WB PDFs)
+- **Duplicate category handling**: When same category appears multiple times in a PDF, checks field overlap — >50% overlap means multi-page continuation (merge), otherwise creates `category_2`, `category_3` etc.
+- **District name aliases**: Extensive mapping for WB-specific variations ("24 Paraganas North" → "North 24 Parganas", "Medinipur East" → "Purba Medinipur", etc.)
+- Important: `normalize_district()` checks aliases BEFORE stripping leading serial numbers, because "24 Paraganas North" starts with "24" which would be wrongly stripped as a serial number
+
+**Data coverage**: 39 quarters from March 2018 to December 2025, 49 categories, ~596 quarterly CSVs
+
+**Running extraction**:
+```bash
+cd slbc-data/west-bengal/
+python3 extract_wb.py
+# Outputs: west-bengal_complete.json, west-bengal_fi_timeseries.json, west-bengal_fi_timeseries.csv, quarterly/, raw-csv/
+# Then copy outputs to public/slbc-data/west-bengal/
+```
+
 ## SLBC PDF Extraction (for adding new states)
 
-The extraction script is at `/Users/abhinav/Downloads/extract_everything_v2.py` (outside the repo).
+The NE+Sikkim extraction script is at `/Users/abhinav/Downloads/extract_everything_v2.py` (outside the repo).
+Bihar and West Bengal have their own dedicated extraction scripts (see sections above).
 
-**Key technical details**:
+**Key technical details** (NE extraction):
 - Uses **pdfplumber** for table extraction from landscape-oriented PDF pages
 - PDF cells contain **reversed text** (due to rotation) — requires `str[::-1]` character reversal
 - **Category detection**: keyword matching on table titles with priority-based rules
@@ -413,18 +449,21 @@ Leaflet and MarkerCluster are loaded via CDN (unpkg) in inline scripts.
 11. **Period format mismatch**: Timeseries JSON stores periods as "June 2020", "September 2024" etc., but code normalizes to "2020-06" format. Always use `normalizePeriod()`.
 12. **State file naming**: Slug uses hyphens (`arunachal-pradesh`), NOT underscores. File path: `slbc-data/arunachal-pradesh/arunachal-pradesh_fi_timeseries.json`.
 13. **GeoJSON uses `STATE_UT`**: The state property in `district_boundaries.geojson` is `STATE_UT`, not `STATE`. District names are in `DISTRICT` property (uppercase).
-14. **States have different latest quarters**: AP/Nagaland/Sikkim latest is Mar 2025; others have Sep 2025. The FI indicators page handles this with quarter fallback.
-15. **Same indicator, different category names**: KCC data lives under `kcc` in some states and `fi_kcc` in others (e.g. Arunachal Pradesh). Must use cross-category fallbacks.
+14. **States have different latest quarters**: AP/Nagaland/Sikkim latest is Mar 2025; WB latest is Dec 2025; others have Sep 2025. The FI indicators page handles this with quarter fallback.
+15. **Same indicator, different category names**: KCC data lives under `kcc` in some states and `fi_kcc` in others (e.g. Arunachal Pradesh). WB uses `shg_nrlm` instead of `shg`. Must use cross-category fallbacks.
 16. **Same indicator, different field names**: e.g. KCC count is `total_no_of_kcc` in Meghalaya, `rupay_card_issued_in_kcc` in AP, `o_s_position_no_of_cards_issued` in Nagaland. Must use field fallback arrays.
-17. **Map height 0 bug**: If `body` has `min-height: 100vh` from `global.css`, the flex layout for full-screen maps breaks. Override with `min-height: unset` on map pages.
-18. **District name mismatches between GeoJSON and SLBC**: GeoJSON has "PAPUMPARE" but SLBC has "PAPUM PARE", GeoJSON has "DARANG" but SLBC has "DARRANG", Bihar has "PURBA CHAMPARAN" vs "PURBI CHAMPARAN", etc. Always use `DISTRICT_ALIASES` mapping.
-19. **Astro scoped CSS and dynamic class names**: Astro's CSS scoping uses `[data-astro-cid-xxx]` attribute selectors. Class names used inside `.map()` expressions or `class:list` may NOT be detected by Astro's static analysis and won't get scoped styles. **Fix**: Use descendant selectors (`.parent a` instead of `.child-class`) or write the elements directly in the template instead of generating them with `.map()`.
-20. **Astro dev server CSS caching**: After changing scoped CSS selectors in `.astro` files, the dev server may serve stale CSS. Clear cache with `rm -rf node_modules/.astro node_modules/.vite` and restart the server.
-21. **Leaflet SVG pixelation during flyTo/zoom**: Leaflet's SVG renderer CSS-scales elements during animated zooms, causing pixelation. Fixed with `preferCanvas: true` on map initialization. This renders vector layers to `<canvas>` which re-renders at native resolution each frame.
-22. **India outline GeoJSON simplification**: The `india-outline.geojson` uses Douglas-Peucker simplification via shapely (`simplify(tolerance=0.001, preserve_topology=True)`). Naive point-skipping (every Nth point) produces jagged edges. Source is datameet india-composite.geojson (10.7MB → ~1.2MB simplified).
-23. **HiDPI canvas tiles**: For retina displays, tile layers need `tileSize: 512, zoomOffset: -1` or custom `createTile()` with `window.devicePixelRatio` scaling to avoid blurriness on high-DPI screens.
-24. **DistrictRankings availableFields bug**: `availableFields` must derive from the SELECTED quarter's data only (`masterData.quarters[selectedQuarter].tables[selectedCategory].fields`), not from all quarters combined. Otherwise, the default field may not exist in the selected quarter, causing "No data available".
-25. **Default field selection in Rankings**: Prefer ratio/percentage fields as defaults (look for fields containing "ratio", "pct", "percentage") since they're more meaningful than raw counts.
+17. **WB district name "24 Paraganas" serial number bug**: The `normalize_district()` function strips leading digits as serial numbers (e.g. "1 Kolkata" → "Kolkata"). But "24 Paraganas North" starts with "24" which is part of the district name, not a serial number. Fix: always try matching against aliases BEFORE stripping the serial number prefix.
+18. **WB PMJDY sub-header concatenation**: If `normalize_district()` fails to recognize the first data row as a district, the sub-header detection logic treats it as a sub-header and concatenates its values into the field names (e.g. `rural_a_c_31_57_805` instead of `rural_a_c`). Root cause is always a missing district alias or the serial number stripping bug above.
+19. **WB extraction outputs go to slbc-data/west-bengal/, not public/**: After running `extract_wb.py`, must manually copy JSON/CSV outputs to `public/slbc-data/west-bengal/` for the frontend to use them.
+20. **Map height 0 bug**: If `body` has `min-height: 100vh` from `global.css`, the flex layout for full-screen maps breaks. Override with `min-height: unset` on map pages.
+21. **District name mismatches between GeoJSON and SLBC**: GeoJSON has "PAPUMPARE" but SLBC has "PAPUM PARE", GeoJSON has "DARANG" but SLBC has "DARRANG", Bihar has "PURBA CHAMPARAN" vs "PURBI CHAMPARAN", etc. Always use `DISTRICT_ALIASES` mapping.
+22. **Astro scoped CSS and dynamic class names**: Astro's CSS scoping uses `[data-astro-cid-xxx]` attribute selectors. Class names used inside `.map()` expressions or `class:list` may NOT be detected by Astro's static analysis and won't get scoped styles. **Fix**: Use descendant selectors (`.parent a` instead of `.child-class`) or write the elements directly in the template instead of generating them with `.map()`.
+23. **Astro dev server CSS caching**: After changing scoped CSS selectors in `.astro` files, the dev server may serve stale CSS. Clear cache with `rm -rf node_modules/.astro node_modules/.vite` and restart the server.
+24. **Leaflet SVG pixelation during flyTo/zoom**: Leaflet's SVG renderer CSS-scales elements during animated zooms, causing pixelation. Fixed with `preferCanvas: true` on map initialization. This renders vector layers to `<canvas>` which re-renders at native resolution each frame.
+25. **India outline GeoJSON simplification**: The `india-outline.geojson` uses Douglas-Peucker simplification via shapely (`simplify(tolerance=0.001, preserve_topology=True)`). Naive point-skipping (every Nth point) produces jagged edges. Source is datameet india-composite.geojson (10.7MB → ~1.2MB simplified).
+26. **HiDPI canvas tiles**: For retina displays, tile layers need `tileSize: 512, zoomOffset: -1` or custom `createTile()` with `window.devicePixelRatio` scaling to avoid blurriness on high-DPI screens.
+27. **DistrictRankings availableFields bug**: `availableFields` must derive from the SELECTED quarter's data only (`masterData.quarters[selectedQuarter].tables[selectedCategory].fields`), not from all quarters combined. Otherwise, the default field may not exist in the selected quarter, causing "No data available".
+28. **Default field selection in Rankings**: Prefer ratio/percentage fields as defaults (look for fields containing "ratio", "pct", "percentage") since they're more meaningful than raw counts.
 
 ## Data Quality Pipeline
 
@@ -442,7 +481,7 @@ SLBC data goes through multiple cleaning passes after PDF extraction:
    - Bihar-specific field name mapping (60+ rules in `BIHAR_SNAKE_FIXES`)
    - Abbreviation normalization (`term_loan` → `tl`, `tot` → `total`)
    - Typo fixes and singular/plural normalization
-   - Applied across timeseries CSV, timeseries JSON, complete JSON, and quarterly CSVs for all 9 states
+   - Applied across timeseries CSV, timeseries JSON, complete JSON, and quarterly CSVs for all 10 states
 
 ## FI Indicators — Field Mapping Reference
 
@@ -451,11 +490,11 @@ When adding new states or updating indicators, these are the known field name va
 | Indicator | Standard Field | Variations |
 |-----------|---------------|------------|
 | CD Ratio | `overall_cd_ratio` | `cd_ratio`, `current_c_d_ratio`, `cdr` |
-| PMJDY | `total_pmjdy_no` | `pmjdy_no`, `total_no`, `no_of_pmjdy_accounts` |
-| Branches | `total_branch` | `total`, `no_of_branches`, `no_of_brs` |
-| KCC | `total_no_of_kcc` | `no_of_kcc`, `total_kcc_no`, `total_no`, `rupay_card_issued_in_kcc`, `o_s_position_no_of_cards_issued` |
-| SHG | `savings_linked_no` | `savings_linked`, `credit_linked_no`, `current_fy_savings_linked_no`, `deposit_linkage_no_of_groups` |
-| Digital | `bhim_upi_a_c` | `bhim_upi`, `coverage_pct` |
-| Aadhaar | `no_of_aadhaar_seeded_casa` | `aadhaar_seeded_casa` |
+| PMJDY | `total_pmjdy_no` | `pmjdy_no`, `total_no`, `no_of_pmjdy_accounts`, `total_a_c`, `total_pmjdy_a_c`, `total_no_pmjdy_a_c` |
+| Branches | `total_branch` | `total`, `no_of_branches`, `no_of_brs`, `total_branches` |
+| KCC | `total_no_of_kcc` | `no_of_kcc`, `total_kcc_no`, `total_no`, `rupay_card_issued_in_kcc`, `o_s_position_no_of_cards_issued`, `target_no` |
+| SHG | `savings_linked_no` | `savings_linked`, `credit_linked_no`, `current_fy_savings_linked_no`, `deposit_linkage_no_of_groups`, `total_sanction_no` |
+| Digital | `coverage_sb_pct` | `coverage_pct`, `achievement`, `pct_coverage`, `of_such_accounts_out_of_total_operative_savings_accounts` (Sikkim) |
+| Aadhaar | `no_of_aadhaar_seeded_casa` | `aadhaar_seeded_casa`, `no_of_aadhaar_seeded` (WB — without `_casa` suffix) |
 
-**Category mismatches**: AP uses `fi_kcc` instead of `kcc`; Assam stores `total_branch` under `credit_deposit_ratio` instead of `branch_network`.
+**Category mismatches**: AP uses `fi_kcc` instead of `kcc`; Assam stores `total_branch` under `credit_deposit_ratio` instead of `branch_network`; WB uses `shg_nrlm` instead of `shg`; WB stores Aadhaar seeding data under `pmjdy` category.
