@@ -201,14 +201,15 @@ const base = import.meta.env.BASE_URL;
     var INDIA_BOUNDS = L.latLngBounds(L.latLng(6.5,68.0), L.latLng(37.5,110.0));
     var NE_BOUNDS    = L.latLngBounds(L.latLng(17.5, 79.5), L.latLng(29.5, 97.5));
     var NE_CENTER    = [24.5, 88.0]; // Visual center of NE + Bihar + WB + JH + OR + CG
-    var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK','BR','WB','JH','OR','CT'];
-    var NE_STATES    = ['ASSAM','MEGHALAYA','MANIPUR','MIZORAM','NAGALAND','TRIPURA','ARUNACHAL PRADESH','SIKKIM','BIHAR','WEST BENGAL','JHARKHAND','ODISHA','CHHATTISGARH'];
+    var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK','BR','WB','JH','OR','CT','KL','KA','TN'];
+    var NE_STATES    = ['ASSAM','MEGHALAYA','MANIPUR','MIZORAM','NAGALAND','TRIPURA','ARUNACHAL PRADESH','SIKKIM','BIHAR','WEST BENGAL','JHARKHAND','ODISHA','CHHATTISGARH','KERALA','KARNATAKA','TAMIL NADU'];
     var STATE_SLUGS  = {
       'ASSAM': 'assam', 'MEGHALAYA': 'meghalaya', 'MANIPUR': 'manipur',
       'MIZORAM': 'mizoram', 'NAGALAND': 'nagaland', 'TRIPURA': 'tripura',
       'ARUNACHAL PRADESH': 'arunachal-pradesh', 'SIKKIM': 'sikkim',
       'BIHAR': 'bihar', 'WEST BENGAL': 'west-bengal', 'JHARKHAND': 'jharkhand',
       'ODISHA': 'odisha', 'CHHATTISGARH': 'chhattisgarh',
+      'KERALA': 'kerala', 'KARNATAKA': 'karnataka', 'TAMIL NADU': 'tamil-nadu',
     };
 
     // Map init — single map, center India at zoom 5
