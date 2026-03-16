@@ -20,6 +20,26 @@ MONTH_NAMES = {
     "03": "March", "06": "June", "09": "September", "12": "December"
 }
 
+# Standardize long/messy field names to match the map's FI indicator field expectations.
+# Key: regex matching snake_case field name → replacement field name
+FIELD_STANDARDIZE = [
+    # KCC fisheries/animal husbandry — map to standard KCC fields
+    (r'no_of_kcc_for_(fishries|animal_husbandary)_issued.*', 'no_of_kcc_issued'),
+    (r'total_no_of_kcc_for_(fishries|animal_husbandary)_as_on.*', 'total_no_of_kcc'),
+    (r'amount_disbursed_during_quarter', 'amount_disbursed_quarter'),
+    (r'amount_disbursed_fin_year', 'amount_disbursed'),
+    # SHG fields
+    (r'no_of_shgs', 'no_of_shgs'),
+    (r'no_of_plf(_alf)?', 'no_of_plf'),
+    # Branch network
+    (r'name_of_district', 'district_name'),
+    (r'name_of_the_bank', 'bank_name'),
+    # Remove serial number fields
+    (r'^sr$', ''),
+    (r'^sr_no$', ''),
+    (r'^sl_no$', ''),
+]
+
 
 def to_snake_case(s):
     """Convert a field name to snake_case."""
@@ -100,6 +120,15 @@ def generate_timeseries(slug, complete_json_name, min_districts):
 
                     snake_field = to_snake_case(field_name)
                     if not snake_field or snake_field.startswith("col_"):
+                        continue
+
+                    # Apply field standardization
+                    for pattern, replacement in FIELD_STANDARDIZE:
+                        if re.match(pattern, snake_field):
+                            snake_field = replacement
+                            break
+
+                    if not snake_field:
                         continue
 
                     key = f"{cat_name}__{snake_field}"

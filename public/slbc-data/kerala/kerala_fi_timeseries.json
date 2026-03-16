@@ -4,7 +4,7 @@
   "description": "Financial inclusion timeseries data for Kerala",
   "num_periods": 23,
   "total_records": 320,
-  "total_fields": 48,
+  "total_fields": 45,
   "periods": [
     {
       "period": "March 2020",
@@ -424,7 +424,6 @@
         {
           "district": "Kollam",
           "period": "December 2020",
-          "uncategorized__sl_no": "2",
           "uncategorized__target_for_2020_21": "2240",
           "uncategorized__achievement_of_q3": "2294",
           "uncategorized__achievement": "102%",
@@ -443,7 +442,6 @@
         {
           "district": "Kottayam",
           "period": "December 2020",
-          "uncategorized__sl_no": "5",
           "uncategorized__target_for_2020_21": "2600",
           "uncategorized__achievement_of_q3": "955",
           "uncategorized__achievement": "37%",
@@ -462,7 +460,6 @@
         {
           "district": "Malappuram",
           "period": "December 2020",
-          "uncategorized__sl_no": "10",
           "uncategorized__target_for_2020_21": "2226",
           "uncategorized__achievement_of_q3": "1676",
           "uncategorized__achievement": "75%",
@@ -481,7 +478,6 @@
         {
           "district": "Pathanamthitta",
           "period": "December 2020",
-          "uncategorized__sl_no": "3",
           "uncategorized__target_for_2020_21": "1005",
           "uncategorized__achievement_of_q3": "729",
           "uncategorized__achievement": "73%",
@@ -500,7 +496,6 @@
         {
           "district": "Thrissur",
           "period": "December 2020",
-          "uncategorized__sl_no": "8",
           "uncategorized__target_for_2020_21": "4572",
           "uncategorized__achievement_of_q3": "3599",
           "uncategorized__achievement": "79%",
@@ -519,7 +514,6 @@
         {
           "district": "Wayanad",
           "period": "December 2020",
-          "uncategorized__sl_no": "12",
           "uncategorized__target_for_2020_21": "560",
           "uncategorized__achievement_of_q3": "426",
           "uncategorized__achievement": "76%",
@@ -538,7 +532,6 @@
         {
           "district": "Trivandrum",
           "period": "December 2020",
-          "uncategorized__sl_no": "1",
           "uncategorized__target_for_2020_21": "2180",
           "uncategorized__achievement_of_q3": "1569",
           "uncategorized__achievement": "72%",
@@ -557,7 +550,6 @@
         {
           "district": "Alappuzha",
           "period": "December 2020",
-          "uncategorized__sl_no": "4",
           "uncategorized__target_for_2020_21": "1370",
           "uncategorized__achievement_of_q3": "1439",
           "uncategorized__achievement": "105%",
@@ -576,7 +568,6 @@
         {
           "district": "Idukki",
           "period": "December 2020",
-          "uncategorized__sl_no": "6",
           "uncategorized__target_for_2020_21": "643",
           "uncategorized__achievement_of_q3": "699",
           "uncategorized__achievement": "109%",
@@ -595,7 +586,6 @@
         {
           "district": "Ernakulam",
           "period": "December 2020",
-          "uncategorized__sl_no": "7",
           "uncategorized__target_for_2020_21": "8228",
           "uncategorized__achievement_of_q3": "5982",
           "uncategorized__achievement": "73%",
@@ -614,7 +604,6 @@
         {
           "district": "Palakkad",
           "period": "December 2020",
-          "uncategorized__sl_no": "9",
           "uncategorized__target_for_2020_21": "3690",
           "uncategorized__achievement_of_q3": "976",
           "uncategorized__achievement": "26%",
@@ -633,7 +622,6 @@
         {
           "district": "Kozhikode",
           "period": "December 2020",
-          "uncategorized__sl_no": "11",
           "uncategorized__target_for_2020_21": "3085",
           "uncategorized__achievement_of_q3": "2276",
           "uncategorized__achievement": "74%",
@@ -652,7 +640,6 @@
         {
           "district": "Kannur",
           "period": "December 2020",
-          "uncategorized__sl_no": "13",
           "uncategorized__target_for_2020_21": "2104",
           "uncategorized__achievement_of_q3": "999",
           "uncategorized__achievement": "47%",
@@ -888,7 +875,6 @@
         {
           "district": "Thrissur",
           "period": "June 2021",
-          "uncategorized__sl_no": "8",
           "uncategorized__target_for_2021_22": "5201",
           "uncategorized__achievement_of_q1": "1620",
           "uncategorized__achievement": "31%",
@@ -907,7 +893,6 @@
         {
           "district": "Idukki",
           "period": "June 2021",
-          "uncategorized__sl_no": "6",
           "uncategorized__target_for_2021_22": "708",
           "uncategorized__achievement_of_q1": "122",
           "uncategorized__achievement": "17%",
@@ -927,7 +912,6 @@
         {
           "district": "Wayanad",
           "period": "June 2021",
-          "uncategorized__sl_no": "12",
           "uncategorized__target_for_2021_22": "600",
           "uncategorized__achievement_of_q1": "213",
           "uncategorized__achievement": "36%",
@@ -946,7 +930,6 @@
         {
           "district": "Trivandrum",
           "period": "June 2021",
-          "uncategorized__sl_no": "1",
           "uncategorized__target_for_2021_22": "2312",
           "uncategorized__achievement_of_q1": "1036",
           "uncategorized__achievement": "45%",
@@ -965,7 +948,6 @@
         {
           "district": "Kollam",
           "period": "June 2021",
-          "uncategorized__sl_no": "2",
           "uncategorized__target_for_2021_22": "3630",
           "uncategorized__achievement_of_q1": "717",
           "uncategorized__achievement": "20%",
@@ -985,7 +967,6 @@
         {
           "district": "Alappuzha",
           "period": "June 2021",
-          "uncategorized__sl_no": "4",
           "uncategorized__target_for_2021_22": "1692",
           "uncategorized__achievement_of_q1": "513",
           "uncategorized__achievement": "30%",
@@ -1005,7 +986,6 @@
         {
           "district": "Kottayam",
           "period": "June 2021",
-          "uncategorized__sl_no": "5",
           "uncategorized__target_for_2021_22": "2610",
           "uncategorized__achievement_of_q1": "595",
           "uncategorized__achievement": "23%",
@@ -1025,7 +1005,6 @@
         {
           "district": "Ernakulam",
           "period": "June 2021",
-          "uncategorized__sl_no": "7",
           "uncategorized__target_for_2021_22": "8539",
           "uncategorized__achievement_of_q1": "3076",
           "uncategorized__achievement": "36%",
@@ -1044,7 +1023,6 @@
         {
           "district": "Palakkad",
           "period": "June 2021",
-          "uncategorized__sl_no": "9",
           "uncategorized__target_for_2021_22": "4272",
           "uncategorized__achievement_of_q1": "186",
           "uncategorized__achievement": "4%",
@@ -1063,7 +1041,6 @@
         {
           "district": "Kozhikode",
           "period": "June 2021",
-          "uncategorized__sl_no": "11",
           "uncategorized__target_for_2021_22": "3095",
           "uncategorized__achievement_of_q1": "925",
           "uncategorized__achievement": "30%",
@@ -1082,7 +1059,6 @@
         {
           "district": "Kannur",
           "period": "June 2021",
-          "uncategorized__sl_no": "13",
           "uncategorized__target_for_2021_22": "2168",
           "uncategorized__achievement_of_q1": "359",
           "uncategorized__achievement": "17%",
@@ -1102,7 +1078,6 @@
         {
           "district": "Pathanamthitta",
           "period": "June 2021",
-          "uncategorized__sl_no": "3",
           "uncategorized__target_for_2021_22": "1105",
           "uncategorized__achievement_of_q1": "250",
           "uncategorized__achievement": "23%",
@@ -1122,7 +1097,6 @@
         {
           "district": "Malappuram",
           "period": "June 2021",
-          "uncategorized__sl_no": "10",
           "uncategorized__target_for_2021_22": "3011",
           "uncategorized__achievement_of_q1": "463",
           "uncategorized__achievement": "15%",
@@ -1772,11 +1746,9 @@
         {
           "district": "Idukki",
           "period": "June 2022",
-          "uncategorized__sl_no": "3",
           "uncategorized__target_for_2022_23": "849",
           "uncategorized__achievement_of_q1": "563",
           "uncategorized__achievement": "66%",
-          "cd_ratio__sl_no": "17",
           "cd_ratio__bank_name": "IDUKKI DISTRICT CO\nOPERATIVE BANK",
           "cd_ratio__processed_by_bank_branch": "15384494",
           "cd_ratio__forwarded_by_nodal_officer": "6826299",
@@ -1798,7 +1770,6 @@
         {
           "district": "Kozhikode",
           "period": "June 2022",
-          "uncategorized__sl_no": "8",
           "uncategorized__target_for_2022_23": "4778",
           "uncategorized__achievement_of_q1": "1572",
           "uncategorized__achievement": "33%",
@@ -1818,11 +1789,9 @@
         {
           "district": "Kollam",
           "period": "June 2022",
-          "uncategorized__sl_no": "6",
           "uncategorized__target_for_2022_23": "4101",
           "uncategorized__achievement_of_q1": "1845",
           "uncategorized__achievement": "45%",
-          "cd_ratio__sl_no": "27",
           "cd_ratio__bank_name": "KOLLAM DISTRICT CO\nOPERATIVE BANK",
           "cd_ratio__processed_by_bank_branch": "11744118",
           "cd_ratio__forwarded_by_nodal_officer": "10745988",
@@ -1844,11 +1813,9 @@
         {
           "district": "Alappuzha",
           "period": "June 2022",
-          "uncategorized__sl_no": "1",
           "uncategorized__target_for_2022_23": "1710",
           "uncategorized__achievement_of_q1": "1160",
           "uncategorized__achievement": "68%",
-          "cd_ratio__sl_no": "1",
           "cd_ratio__bank_name": "ALAPPUZHA DISTRICT CO\nOPERATIVE BANK LTD",
           "cd_ratio__processed_by_bank_branch": "5687139",
           "cd_ratio__forwarded_by_nodal_officer": "4898693",
@@ -1870,7 +1837,6 @@
         {
           "district": "Thrissur",
           "period": "June 2022",
-          "uncategorized__sl_no": "12",
           "uncategorized__target_for_2022_23": "6040",
           "uncategorized__achievement_of_q1": "1761",
           "uncategorized__achievement": "29%",
@@ -1890,7 +1856,6 @@
         {
           "district": "Wayanad",
           "period": "June 2022",
-          "uncategorized__sl_no": "14",
           "uncategorized__target_for_2022_23": "660",
           "uncategorized__achievement_of_q1": "280",
           "uncategorized__achievement": "42%",
@@ -1910,7 +1875,6 @@
         {
           "district": "Trivandrum",
           "period": "June 2022",
-          "uncategorized__sl_no": "13",
           "uncategorized__target_for_2022_23": "3250",
           "uncategorized__achievement_of_q1": "3215",
           "uncategorized__achievement": "99%",
@@ -1930,11 +1894,9 @@
         {
           "district": "Kottayam",
           "period": "June 2022",
-          "uncategorized__sl_no": "7",
           "uncategorized__target_for_2022_23": "3125",
           "uncategorized__achievement_of_q1": "1533",
           "uncategorized__achievement": "49%",
-          "cd_ratio__sl_no": "28",
           "cd_ratio__bank_name": "KOTTAYAM DISTRICT CO\nOPERATIVE BANK",
           "cd_ratio__processed_by_bank_branch": "0",
           "cd_ratio__forwarded_by_nodal_officer": "0",
@@ -1956,7 +1918,6 @@
         {
           "district": "Ernakulam",
           "period": "June 2022",
-          "uncategorized__sl_no": "2",
           "uncategorized__target_for_2022_23": "9452",
           "uncategorized__achievement_of_q1": "7992",
           "uncategorized__achievement": "85%",
@@ -1976,7 +1937,6 @@
         {
           "district": "Palakkad",
           "period": "June 2022",
-          "uncategorized__sl_no": "10",
           "uncategorized__target_for_2022_23": "4299",
           "uncategorized__achievement_of_q1": "906",
           "uncategorized__achievement": "21%",
@@ -1996,11 +1956,9 @@
         {
           "district": "Kannur",
           "period": "June 2022",
-          "uncategorized__sl_no": "4",
           "uncategorized__target_for_2022_23": "2383",
           "uncategorized__achievement_of_q1": "1124",
           "uncategorized__achievement": "47%",
-          "cd_ratio__sl_no": "20",
           "cd_ratio__bank_name": "KANNUR DISTRICT CO\nOPERATIVE BANK",
           "cd_ratio__processed_by_bank_branch": "337831",
           "cd_ratio__forwarded_by_nodal_officer": "239656",
@@ -2022,7 +1980,6 @@
         {
           "district": "Pathanamthitta",
           "period": "June 2022",
-          "uncategorized__sl_no": "11",
           "uncategorized__target_for_2022_23": "1229",
           "uncategorized__achievement_of_q1": "725",
           "uncategorized__achievement": "59%",
@@ -2042,11 +1999,9 @@
         {
           "district": "Malappuram",
           "period": "June 2022",
-          "uncategorized__sl_no": "9",
           "uncategorized__target_for_2022_23": "3037",
           "uncategorized__achievement_of_q1": "1089",
           "uncategorized__achievement": "36%",
-          "cd_ratio__sl_no": "29",
           "cd_ratio__bank_name": "MALAPPURAM DISTRICT CO\nOPERATIVE BANK",
           "cd_ratio__processed_by_bank_branch": "0",
           "cd_ratio__forwarded_by_nodal_officer": "0",
@@ -2068,11 +2023,9 @@
         {
           "district": "Kasargod",
           "period": "June 2022",
-          "uncategorized__sl_no": "5",
           "uncategorized__target_for_2022_23": "1037",
           "uncategorized__achievement_of_q1": "355",
           "uncategorized__achievement": "34%",
-          "cd_ratio__sl_no": "23",
           "cd_ratio__bank_name": "KASARGOD DISTRICT CO\nOPERATIVE BANK LTD",
           "cd_ratio__processed_by_bank_branch": "415314",
           "cd_ratio__forwarded_by_nodal_officer": "415314",
@@ -2308,7 +2261,6 @@
         {
           "district": "Palakkad",
           "period": "December 2022",
-          "uncategorized__sl_no": "10",
           "uncategorized__target_for_2022_23": "4299",
           "uncategorized__achievement_of_q3": "1843",
           "uncategorized__achievement": "43%",
@@ -2339,7 +2291,6 @@
         {
           "district": "Trivandrum",
           "period": "December 2022",
-          "uncategorized__sl_no": "13",
           "uncategorized__target_for_2022_23": "3250",
           "uncategorized__achievement_of_q3": "4649",
           "uncategorized__achievement": "143%",
@@ -2360,7 +2311,6 @@
         {
           "district": "Kollam",
           "period": "December 2022",
-          "uncategorized__sl_no": "6",
           "uncategorized__target_for_2022_23": "4101",
           "uncategorized__achievement_of_q3": "3439",
           "uncategorized__achievement": "84%",
@@ -2381,7 +2331,6 @@
         {
           "district": "Pathanamthitta",
           "period": "December 2022",
-          "uncategorized__sl_no": "11",
           "uncategorized__target_for_2022_23": "1229",
           "uncategorized__achievement_of_q3": "1221",
           "uncategorized__achievement": "99%",
@@ -2412,7 +2361,6 @@
         {
           "district": "Alappuzha",
           "period": "December 2022",
-          "uncategorized__sl_no": "1",
           "uncategorized__target_for_2022_23": "1710",
           "uncategorized__achievement_of_q3": "2371",
           "uncategorized__achievement": "139%",
@@ -2443,7 +2391,6 @@
         {
           "district": "Kottayam",
           "period": "December 2022",
-          "uncategorized__sl_no": "7",
           "uncategorized__target_for_2022_23": "3125",
           "uncategorized__achievement_of_q3": "2324",
           "uncategorized__achievement": "74%",
@@ -2474,7 +2421,6 @@
         {
           "district": "Ernakulam",
           "period": "December 2022",
-          "uncategorized__sl_no": "2",
           "uncategorized__target_for_2022_23": "9452",
           "uncategorized__achievement_of_q3": "15638",
           "uncategorized__achievement": "165%",
@@ -2505,7 +2451,6 @@
         {
           "district": "Idukki",
           "period": "December 2022",
-          "uncategorized__sl_no": "3",
           "uncategorized__target_for_2022_23": "849",
           "uncategorized__achievement_of_q3": "785",
           "uncategorized__achievement": "92%",
@@ -2536,7 +2481,6 @@
         {
           "district": "Thrissur",
           "period": "December 2022",
-          "uncategorized__sl_no": "12",
           "uncategorized__target_for_2022_23": "6040",
           "uncategorized__achievement_of_q3": "3123",
           "uncategorized__achievement": "52%",
@@ -2567,11 +2511,9 @@
         {
           "district": "Malappuram",
           "period": "December 2022",
-          "uncategorized__sl_no": "9",
           "uncategorized__target_for_2022_23": "3037",
           "uncategorized__achievement_of_q3": "1950",
           "uncategorized__achievement": "64%",
-          "education_loan__sl_no": "29",
           "education_loan__bank_name": "MALAPPURAM DCB",
           "education_loan__processed_by_bank_branch": "0",
           "education_loan__forwarded_by_nodal_officer": "0",
@@ -2593,7 +2535,6 @@
         {
           "district": "Kozhikode",
           "period": "December 2022",
-          "uncategorized__sl_no": "8",
           "uncategorized__target_for_2022_23": "4778",
           "uncategorized__achievement_of_q3": "2742",
           "uncategorized__achievement": "57%",
@@ -2624,7 +2565,6 @@
         {
           "district": "Kannur",
           "period": "December 2022",
-          "uncategorized__sl_no": "4",
           "uncategorized__target_for_2022_23": "2383",
           "uncategorized__achievement_of_q3": "1748",
           "uncategorized__achievement": "73%",
@@ -2655,7 +2595,6 @@
         {
           "district": "Wayanad",
           "period": "December 2022",
-          "uncategorized__sl_no": "14",
           "uncategorized__target_for_2022_23": "660",
           "uncategorized__achievement_of_q3": "549",
           "uncategorized__achievement": "83%",
@@ -2686,11 +2625,9 @@
         {
           "district": "Kasargod",
           "period": "December 2022",
-          "uncategorized__sl_no": "5",
           "uncategorized__target_for_2022_23": "1037",
           "uncategorized__achievement_of_q3": "582",
           "uncategorized__achievement": "56%",
-          "education_loan__sl_no": "23",
           "education_loan__bank_name": "KASARGOD DCB",
           "education_loan__processed_by_bank_branch": "415314",
           "education_loan__forwarded_by_nodal_officer": "415314",
