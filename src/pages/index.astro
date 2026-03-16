@@ -441,7 +441,7 @@ const base = import.meta.env.BASE_URL;
       aadhaar_authentication: {
         title: 'Aadhaar Authentication',
         metrics: [
-          { field: 'no_of_aadhaar_seeded_casa', label: 'Aadhaar Seeded CASA', unit: '', fallbacks: ['aadhaar_seeded_casa', 'number_of_aadhaar_seeded_casa', 'pct_casa_authentication', 'no_of_aadhaar_seeded'] },
+          { field: 'no_of_aadhaar_seeded_casa', label: 'Aadhaar Seeded CASA', unit: '', fallbacks: ['aadhaar_seeded_casa', 'number_of_aadhaar_seeded_casa', 'pct_casa_authentication', 'no_of_aadhaar_seeded', 'aadhaar_seeded'] },
           { field: 'no_of_operative_casa', label: 'Operative CASA', unit: '', fallbacks: ['operative_casa', 'number_of_operative_casa', 'aadhaar_operative_casa'] },
           { field: 'no_of_authenticated_casa', label: 'Authenticated CASA', unit: '', fallbacks: ['authenticated_casa', 'number_of_authenticated_casa', 'aadhaar_authenticated_casa'] },
         ],
@@ -514,14 +514,30 @@ const base = import.meta.env.BASE_URL;
       'PURBA BARDDHAMAN': 'PURBA BARDHAMAN',
       'PURULIYA': 'PURULIA',
       'SOUTH 24PARGANAS': 'SOUTH 24 PARGANAS',
+      // Karnataka — GeoJSON vs SLBC
+      'BAGALKOT': 'BAGALKOTE',
+      'BELAGAVI': 'BELGAUM',
+      'BENGALURU (RURAL)': 'BENGALURU RURAL',
+      'BENGALURU (URBAN)': 'BENGALURU URBAN',
+      'CHAMARAJANAGARA': 'CHAMARAJANAGAR',
+      'KOLARA': 'KOLAR',
+      // Kerala — GeoJSON vs SLBC
+      'KASARAGOD': 'KASARGOD',
+      'THIRUVANANTHAPURAM': 'TRIVANDRUM',
+      // Tamil Nadu — GeoJSON vs SLBC
+      'KANCHEEPURAM': 'KANCHIPURAM',
+      'THOOTHUKUDI': 'TOOTHUKUDI',
+      'TIRUPATHUR': 'TIRUPATTUR',
+      'TIRUVALLUR': 'THIRUVALLUR',
+      'VILUPPURAM': 'VILLUPURAM',
     };
 
     // Cross-category fallbacks — when a field isn't found under the primary category,
     // try these alternative categories (different states store the same data under different names)
     var CROSS_CATEGORY_FALLBACKS = {
       'branch_network': ['credit_deposit_ratio', 'kcc', 'fi_kcc', 'digital_transactions', 'branch_network_p2', 'branch_network_p3', 'branch_network_p4', 'atm_network', 'business_correspondents'],
-      'credit_deposit_ratio': ['key_indicators', 'district_misc'],
-      'kcc': ['fi_kcc', 'kcc_animal_husbandry', 'kcc_fishery', 'kcc_outstanding'],
+      'credit_deposit_ratio': ['key_indicators', 'district_misc', 'cd_ratio'],
+      'kcc': ['fi_kcc', 'kcc_animal_husbandry', 'kcc_fishery', 'kcc_outstanding', 'kcc_fisheries'],
       'shg': ['shg_nrlm', 'nrlm', 'shg_p2', 'shg_p3', 'jlg'],
       'digital_transactions': ['digital_payments', 'digital_coverage_savings', 'digital_coverage_savings_p2', 'digital_coverage_business', 'women_finance'],
       'social_security': ['social_security_schemes', 'social_security_claims', 'social_security_2'],
