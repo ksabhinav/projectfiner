@@ -17,6 +17,11 @@ const base = import.meta.env.BASE_URL;
       <h1>Project <em>FINER</em></h1>
       <p class="panel-sub">Financial Inclusion in the North East Region</p>
       <p class="panel-stats">361 Districts &middot; 16 States &middot; 7 Indicators</p>
+      <div class="mobile-nav" style="display:none">
+        <a href={`${base}capital-markets/data-download`}>Downloads</a>
+        <a href={`${base}analysis`}>Analysis</a>
+        <a href={`${base}ask`}>Ask</a>
+      </div>
     </div>
 
     <div id="panel-body">
@@ -202,7 +207,10 @@ const base = import.meta.env.BASE_URL;
     var MFDC_URL   = _B + 'MFDs/mfd_corporate.json';
     var DIST_URL   = _B + 'data/district_boundaries.geojson';
 
-    var INDIA_BOUNDS = L.latLngBounds(L.latLng(6.5,68.0), L.latLng(37.5,110.0));
+    var _isMobile = window.innerWidth <= 640;
+    var INDIA_BOUNDS = _isMobile
+      ? L.latLngBounds(L.latLng(0, 65.0), L.latLng(45, 112.0))  // Extended for mobile panning
+      : L.latLngBounds(L.latLng(6.5,68.0), L.latLng(37.5,110.0));
     var NE_BOUNDS    = L.latLngBounds(L.latLng(17.5, 79.5), L.latLng(29.5, 97.5));
     var NE_CENTER    = [24.5, 88.0]; // Visual center of NE + Bihar + WB + JH + OR + CG
     var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK','BR','WB','JH','OR','CT','KL','KA','TN'];
@@ -216,16 +224,33 @@ const base = import.meta.env.BASE_URL;
       'KERALA': 'kerala', 'KARNATAKA': 'karnataka', 'TAMIL NADU': 'tamil-nadu',
     };
 
-    // Map init — single map, center India at zoom 5
-    var map = L.map('map',{center:[22,82.5],zoom:4,minZoom:4,maxZoom:18,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false,preferCanvas:true});
+    // Map init
+    var _initCenter = _isMobile ? [24.5, 82.5] : [22, 82.5];
+    var _initZoom = 4;
+    var map = L.map('map',{center:_initCenter,zoom:_initZoom,minZoom:4,maxZoom:18,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false,preferCanvas:true});
     L.control.zoom({position:'topright'}).addTo(map);
 
     // Fly to NE with panel-aware centering (single smooth animation)
     function flyToNE(animate) {
-      var panelW = 306; // 290px panel + 16px margin
-      var tlW = 40;     // timeline slider width
+      var isMobile = window.innerWidth <= 640;
       var mapSize = map.getSize();
       var zoom = map.getBoundsZoom(NE_BOUNDS);
+
+      if (isMobile) {
+        // Mobile: center the map with slight upward shift to account for bottom sheet (90px)
+        var neProjPx = map.project(NE_CENTER, zoom);
+        var adjustedProjY = neProjPx.y + 45; // shift up slightly for bottom sheet
+        var adjustedCenter = map.unproject([neProjPx.x, adjustedProjY], zoom);
+        if (animate !== false) {
+          map.flyTo(adjustedCenter, zoom, { duration: 1.2 });
+        } else {
+          map.setView(adjustedCenter, zoom, { animate: false });
+        }
+        return;
+      }
+
+      var panelW = 306; // 290px panel + 16px margin
+      var tlW = 40;     // timeline slider width
       // Where the usable area center is in pixels
       var usableCenterX = (panelW + (mapSize.x - tlW)) / 2;
       var usableCenterY = mapSize.y / 2;
@@ -235,7 +260,6 @@ const base = import.meta.env.BASE_URL;
       // Use Leaflet's CRS projection to convert pixel offset to lat/lng
       var neProjPx = map.project(NE_CENTER, zoom);
       // Shift: we want NE_CENTER at usableCenterPixel, not at mapCenterPixel
-      // So the map center in projected coords needs to be offset
       var adjustedProjX = neProjPx.x + (mapCenterX - usableCenterX);
       var adjustedProjY = neProjPx.y + (mapCenterY - usableCenterY);
       var adjustedCenter = map.unproject([adjustedProjX, adjustedProjY], zoom);
@@ -1348,37 +1372,49 @@ const base = import.meta.env.BASE_URL;
   #btn-back{display:none;position:absolute;top:90px;right:16px;z-index:1000;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.5);padding:10px 16px;font-family:'Inter',sans-serif;font-size:10px;font-weight:500;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.04);color:#555048;border-radius:8px;transition:all 0.25s}
   #btn-back:hover{background:#fff;box-shadow:0 6px 20px rgba(0,0,0,0.08);color:#1a1410}
 
-  /* ── Bottom-sheet handle (hidden on desktop) ── */
+  /* ── Bottom-sheet handle + mobile nav (hidden on desktop) ── */
   #panel-handle{display:none}
+  .mobile-nav{display:none}
 
   /* ── Mobile responsive — bottom sheet ── */
   @media (max-width: 640px) {
     /* Bottom sheet positioning */
     #panel{
       position:fixed!important;top:auto!important;bottom:0;left:0!important;right:0;
-      width:100%!important;max-height:70vh;
+      width:100%!important;max-height:75vh;
       border-radius:16px 16px 0 0;border:none;border-top:1px solid rgba(224,221,216,0.5);
       box-shadow:0 -4px 24px rgba(0,0,0,0.1);
       transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);
       z-index:1100!important;
     }
-    #panel.collapsed{transform:translateY(calc(100% - 56px))}
-    #panel.collapsed #panel-body{pointer-events:none;opacity:0}
-    #panel.collapsed #panel-head{padding-bottom:8px}
+    #panel.collapsed{transform:translateY(calc(100% - 90px))}
+    #panel.collapsed #panel-body{pointer-events:none;opacity:0;height:0;overflow:hidden}
 
     /* Drag handle */
-    #panel-handle{display:flex;justify-content:center;padding:10px 0 2px;cursor:grab}
-    #panel-handle span{width:36px;height:4px;border-radius:2px;background:rgba(0,0,0,0.15)}
+    #panel-handle{display:flex;justify-content:center;padding:8px 0 0;cursor:grab}
+    #panel-handle span{width:32px;height:4px;border-radius:2px;background:rgba(0,0,0,0.12)}
 
-    /* Compact header */
-    #panel-head{padding:4px 20px 8px;border-bottom:none}
+    /* Compact header — shows brand + mobile nav row */
+    #panel-head{padding:6px 20px 10px;border-bottom:none}
     #panel-head h1{font-size:15px;margin-bottom:0}
     #panel-head::after{display:none}
     .panel-sub{display:none}
     .panel-stats{display:none}
 
+    /* Mobile quick-nav row inside panel head */
+    .mobile-nav{display:flex!important;gap:6px;margin-top:8px}
+    .mobile-nav a{
+      flex:1;padding:7px 0;text-align:center;
+      font-family:'Inter',sans-serif;font-size:9px;font-weight:600;
+      letter-spacing:0.05em;text-transform:uppercase;
+      color:#888078;text-decoration:none;
+      background:rgba(0,0,0,0.03);border-radius:8px;
+      transition:all 0.15s;
+    }
+    .mobile-nav a:active{background:rgba(0,0,0,0.06)}
+
     /* Body */
-    #panel-body{padding:4px 20px 24px;transition:opacity 0.2s;overflow-y:auto;max-height:calc(70vh - 70px)}
+    #panel-body{padding:8px 20px 24px;transition:opacity 0.2s;overflow-y:auto;max-height:calc(75vh - 90px)}
     .mode-row,.view-row{margin-bottom:8px}
     .view-btn{font-size:9px;padding:8px 0}
     .field{margin-bottom:8px}
@@ -1390,19 +1426,35 @@ const base = import.meta.env.BASE_URL;
     .grp-title{font-size:10px}
     #stats-capital,#stats-banking{margin-top:10px;padding-top:10px;font-size:11px;line-height:1.7}
 
-    /* Action buttons */
-    #dl-link{top:auto;bottom:auto;right:12px;top:12px;gap:6px}
-    #dl-link a{padding:8px 12px;font-size:9px;border-radius:8px;gap:4px}
+    /* Hide desktop action buttons — replaced by mobile-nav */
+    #dl-link{display:none!important}
 
-    /* Timeline */
-    #time-slider{right:8px}
-    #timeline-track{height:100px}
-    .tl-bound{font-size:8px}
+    /* Timeline — compact */
+    #time-slider{right:6px;top:50%;transform:translateY(-50%)}
+    #timeline-track{height:80px}
+    .tl-bound{font-size:7px}
+    #quarter-label{font-size:9px;right:14px}
+    #timeline-thumb{width:9px;margin-left:-4.5px}
 
-    /* Legends above bottom sheet */
-    #legend,.choro-legend{bottom:64px!important;left:12px;padding:10px 14px}
-    #choro-legend-capital,#choro-legend-banking{bottom:64px!important;left:12px;padding:10px 14px}
-    #btn-back{top:12px;left:12px;right:auto;font-size:9px;padding:8px 12px}
+    /* Legends — inline compact strip at top-left */
+    #legend{bottom:auto!important;top:8px;left:8px;right:auto;padding:6px 10px;border-radius:8px;font-size:9px}
+    #legend .lr{margin-bottom:3px;font-size:9px;gap:6px}
+    #legend .ldot{width:7px;height:7px}
+
+    #choro-legend-capital,#choro-legend-banking{
+      bottom:auto!important;top:8px;left:8px;right:auto;
+      padding:6px 10px;border-radius:8px;
+      max-width:180px;
+    }
+    /* Hide "No coverage/No data" row on mobile */
+    #choro-legend-capital > div:last-child,#choro-legend-banking > div:last-child{display:none!important}
+    /* Compact legend title on mobile */
+    #choro-legend-capital > div:first-child,#choro-legend-banking #legend-title{font-size:8px!important;margin-bottom:3px!important}
+    #choro-legend-capital .choro-swatch,#choro-legend-banking .choro-swatch{height:8px;min-width:16px}
+    #choro-legend-capital .choro-labels,#choro-legend-banking .choro-labels{font-size:7px;margin-top:2px}
+    #choro-legend-capital .choro-scale,#choro-legend-banking .choro-scale{margin-top:3px;gap:1px}
+
+    #btn-back{top:8px;left:8px;right:auto;font-size:9px;padding:6px 10px;border-radius:8px}
     #wm{display:none}
     .leaflet-control-zoom{display:none!important}
 
@@ -1412,5 +1464,8 @@ const base = import.meta.env.BASE_URL;
     .dtt-row{padding:3px 12px}
     .dtt-label{font-size:9px;max-width:110px}
     .dtt-val{font-size:10px}
+
+    /* Leaflet attribution compact */
+    .leaflet-control-attribution{font-size:7px!important;padding:2px 4px!important;max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   }
 </style>
