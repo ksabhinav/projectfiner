@@ -237,10 +237,15 @@ const base = import.meta.env.BASE_URL;
       var zoom = map.getBoundsZoom(NE_BOUNDS);
 
       if (isMobile) {
-        // Mobile: center the map with slight upward shift to account for bottom sheet (90px)
+        // Mobile: center NE region in the usable area between top (0) and bottom sheet (~90px)
+        // In Leaflet projected coords, higher Y = further south = lower on screen
+        // We shift the map center SOUTH so NE_CENTER appears HIGHER on screen
+        var sheetH = 90;
+        var usableCenterY = (mapSize.y - sheetH) / 2;  // center of usable area in screen px
+        var mapCenterY = mapSize.y / 2;                 // center of full viewport
+        var offsetPx = mapCenterY - usableCenterY;      // positive = shift content up
         var neProjPx = map.project(NE_CENTER, zoom);
-        var adjustedProjY = neProjPx.y + 45; // shift up slightly for bottom sheet
-        var adjustedCenter = map.unproject([neProjPx.x, adjustedProjY], zoom);
+        var adjustedCenter = map.unproject([neProjPx.x, neProjPx.y + offsetPx], zoom);
         if (animate !== false) {
           map.flyTo(adjustedCenter, zoom, { duration: 1.2 });
         } else {
@@ -1343,7 +1348,7 @@ const base = import.meta.env.BASE_URL;
   .leaflet-tooltip{padding:0!important;border:none!important;background:none!important;box-shadow:none!important}
   .dist-label{background:none!important;border:none!important;box-shadow:none!important;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:9px;font-weight:600;color:#555048;text-transform:uppercase;letter-spacing:0.05em;text-shadow:0 0 5px #fff,0 0 5px #fff,1px 0 4px #fff,-1px 0 4px #fff,0 1px 4px #fff,0 -1px 4px #fff;white-space:nowrap;pointer-events:none;padding:0!important;opacity:0.8}
 
-  #choro-legend-capital{display:block;position:absolute;bottom:24px;left:16px;z-index:1000;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.5);padding:14px 18px;box-shadow:0 4px 20px rgba(0,0,0,0.05);border-radius:10px}
+  #choro-legend-capital{display:none;position:absolute;bottom:24px;left:16px;z-index:1000;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.5);padding:14px 18px;box-shadow:0 4px 20px rgba(0,0,0,0.05);border-radius:10px}
   #choro-legend-banking{position:absolute;bottom:24px;left:16px;z-index:1000;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.5);padding:14px 18px;box-shadow:0 4px 20px rgba(0,0,0,0.05);border-radius:10px}
   .choro-scale{display:flex;gap:2px;margin-top:6px;align-items:center}
   .choro-swatch{height:14px;flex:1;border-radius:3px;min-width:28px}
