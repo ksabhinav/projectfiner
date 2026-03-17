@@ -39,6 +39,14 @@ def bm25_search(query, top_k=8):
     b = BM25["b"]
     n_docs = BM25["n_docs"]
 
+    # Detect if query is data-oriented (asking for numbers/stats)
+    data_keywords = {"how many", "how much", "number of", "total", "count", "district wise",
+                     "districtwise", "data", "statistics", "percentage", "ratio", "amount",
+                     "target", "achievement", "progress", "disbursement", "outstanding",
+                     "npa", "deposit", "credit", "branch", "what is the", "list"}
+    q_lower = query.lower()
+    is_data_query = any(kw in q_lower for kw in data_keywords)
+
     scores = []
     for i in range(n_docs):
         score = 0.0
@@ -54,6 +62,10 @@ def bm25_search(query, top_k=8):
             denominator = tf + k1 * (1 - b + b * dl / avg_dl)
             score += term_idf * numerator / denominator
 
+        # Boost table chunks for data-oriented queries
+        if score > 0 and is_data_query and CHUNKS[i]["type"] == "table":
+            score *= 1.5
+
         if score > 0:
             scores.append((i, score))
 
@@ -63,16 +75,17 @@ def bm25_search(query, top_k=8):
 
 # ── Claude Answering ─────────────────────────────────────────
 
-SYSTEM_PROMPT = """You are a knowledgeable assistant for Project FINER, a financial inclusion research platform focused on India's North East region. You answer questions based on SLBC (State Level Bankers' Committee) meeting documents — both agenda booklets and minutes of meetings.
+SYSTEM_PROMPT = """You are a knowledgeable assistant for Project FINER, a financial inclusion research platform focused on India. You answer questions based on SLBC (State Level Bankers' Committee) data — structured district-level tables, agenda booklets, and minutes of meetings.
 
 Guidelines:
 - Answer based ONLY on the provided context. If the context doesn't contain enough information, say so clearly.
-- Cite specific sources: mention the state, document type (booklet/minutes), and quarter when referencing information.
-- Use precise numbers and data when available in the context.
+- Cite specific sources: mention the state, document type (table/booklet/minutes), and quarter when referencing information.
+- Use precise numbers and data when available in the context. When table data is provided, cite the actual district-level numbers.
 - For financial figures, note they are typically in Rs. Lakhs (1 Lakh = Rs. 100,000).
 - Keep answers concise but thorough. Use bullet points for multi-part answers.
 - If the question is about a specific state, focus on that state's data.
-- The NE states covered are: Assam, Meghalaya, Manipur, Mizoram, Nagaland, and Arunachal Pradesh."""
+- When "table" type sources are provided, these contain structured district-level data extracted from SLBC booklets — prefer these for quantitative questions.
+- States covered: Assam, Meghalaya, Manipur, Mizoram, Nagaland, Arunachal Pradesh, Tripura, Sikkim, Bihar, West Bengal, Jharkhand, Odisha, Chhattisgarh, Karnataka, Kerala, Tamil Nadu."""
 
 
 def ask_claude(question, context_chunks):
@@ -134,6 +147,16 @@ STATE_NAMES = {
     "nagaland": "Nagaland",
     "arunachal pradesh": "Arunachal Pradesh",
     "arunachal": "Arunachal Pradesh",
+    "tripura": "Tripura",
+    "sikkim": "Sikkim",
+    "bihar": "Bihar",
+    "west bengal": "West Bengal",
+    "jharkhand": "Jharkhand",
+    "odisha": "Odisha",
+    "chhattisgarh": "Chhattisgarh",
+    "karnataka": "Karnataka",
+    "kerala": "Kerala",
+    "tamil nadu": "Tamil Nadu",
 }
 
 # Keywords that indicate a cross-state query (should NOT auto-filter)
@@ -196,12 +219,33 @@ class handler(BaseHTTPRequestHandler):
         context_chunks = []
         if state_filter:
             # Single state: take top results for that state
+            # Ensure type diversity (mix of tables + narrative)
+            # Skip very short chunks (headers without data)
+            tables = []
+            narrative = []
             for idx, score in results:
                 chunk = CHUNKS[idx]
                 if chunk["state"].lower() == state_filter.lower():
-                    context_chunks.append(chunk)
-                    if len(context_chunks) >= 6:
-                        break
+                    if len(chunk["text"]) < 400:
+                        continue  # Skip header-only fragments
+                    if chunk["type"] == "table":
+                        tables.append(chunk)
+                    else:
+                        narrative.append(chunk)
+            # Interleave: prefer tables for first slots, fill with narrative
+            for t in tables[:4]:
+                context_chunks.append(t)
+            for n in narrative[:4]:
+                context_chunks.append(n)
+            context_chunks = context_chunks[:6]
+            if not context_chunks:
+                # Fallback: just take whatever matches
+                for idx, score in results:
+                    chunk = CHUNKS[idx]
+                    if chunk["state"].lower() == state_filter.lower():
+                        context_chunks.append(chunk)
+                        if len(context_chunks) >= 6:
+                            break
         else:
             # No state filter: ensure diversity across states
             # First pass: take the best result from each state

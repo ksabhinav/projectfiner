@@ -43,7 +43,7 @@ def load_text_files():
         if not os.path.isdir(state_dir):
             continue
 
-        for doc_type in ["booklets", "minutes"]:
+        for doc_type in ["booklets", "minutes", "tables"]:
             type_dir = os.path.join(state_dir, doc_type)
             if not os.path.isdir(type_dir):
                 continue
@@ -88,6 +88,11 @@ def chunk_document(doc):
     content = doc["content"]
     chunks = []
 
+    # For table documents, use larger chunks to keep data together
+    is_table = doc["type"] == "table"
+    target = 8000 if is_table else CHUNK_TARGET_CHARS
+    overlap = 400 if is_table else CHUNK_OVERLAP_CHARS
+
     # Split by page markers
     pages = re.split(r'\[Page \d+\]', content)
     pages = [p.strip() for p in pages if p.strip()]
@@ -105,7 +110,7 @@ def chunk_document(doc):
             if not para:
                 continue
 
-            if len(current_chunk) + len(para) > CHUNK_TARGET_CHARS and current_chunk:
+            if len(current_chunk) + len(para) > target and current_chunk:
                 chunks.append({
                     "text": current_chunk.strip(),
                     "state": doc["state"],
@@ -118,8 +123,8 @@ def chunk_document(doc):
                 })
 
                 # Keep overlap
-                if len(current_chunk) > CHUNK_OVERLAP_CHARS:
-                    current_chunk = current_chunk[-CHUNK_OVERLAP_CHARS:]
+                if len(current_chunk) > overlap:
+                    current_chunk = current_chunk[-overlap:]
                 current_page_start = page_num
 
             current_chunk += "\n\n" + para if current_chunk else para
