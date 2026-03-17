@@ -12,6 +12,7 @@ const base = import.meta.env.BASE_URL;
   <div id="map"></div>
 
   <div id="panel">
+    <div id="panel-handle"><span></span></div>
     <div id="panel-head">
       <h1>Project <em>FINER</em></h1>
       <p class="panel-sub">Financial Inclusion in the North East Region</p>
@@ -1168,6 +1169,47 @@ const base = import.meta.env.BASE_URL;
     // Section 5 — URL parameter support
     // ══════════════════════════════════════════
     // (auto-switch is handled after capital data loads above)
+
+    // ══════════════════════════════════════════
+    // Section 6 — Mobile bottom sheet
+    // ══════════════════════════════════════════
+    if (window.innerWidth <= 640) {
+      const panel = document.getElementById('panel');
+      const handle = document.getElementById('panel-handle');
+      panel.classList.add('collapsed');
+
+      // Toggle on handle tap
+      handle.addEventListener('click', function() {
+        panel.classList.toggle('collapsed');
+      });
+
+      // Also collapse on panel-head tap
+      document.getElementById('panel-head').addEventListener('click', function() {
+        panel.classList.toggle('collapsed');
+      });
+
+      // Swipe gestures
+      let startY = 0, startTime = 0;
+      panel.addEventListener('touchstart', function(e) {
+        startY = e.touches[0].clientY;
+        startTime = Date.now();
+      }, { passive: true });
+      panel.addEventListener('touchend', function(e) {
+        const dy = e.changedTouches[0].clientY - startY;
+        const dt = Date.now() - startTime;
+        if (dt < 400) {
+          if (dy > 40) panel.classList.add('collapsed');     // swipe down → collapse
+          else if (dy < -40) panel.classList.remove('collapsed'); // swipe up → expand
+        }
+      }, { passive: true });
+
+      // Collapse sheet when map is tapped
+      document.getElementById('map').addEventListener('click', function() {
+        if (!panel.classList.contains('collapsed')) {
+          panel.classList.add('collapsed');
+        }
+      });
+    }
   </script>
 </BaseLayout>
 
@@ -1306,38 +1348,69 @@ const base = import.meta.env.BASE_URL;
   #btn-back{display:none;position:absolute;top:90px;right:16px;z-index:1000;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.5);padding:10px 16px;font-family:'Inter',sans-serif;font-size:10px;font-weight:500;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.04);color:#555048;border-radius:8px;transition:all 0.25s}
   #btn-back:hover{background:#fff;box-shadow:0 6px 20px rgba(0,0,0,0.08);color:#1a1410}
 
-  /* ── Mobile responsive ── */
+  /* ── Bottom-sheet handle (hidden on desktop) ── */
+  #panel-handle{display:none}
+
+  /* ── Mobile responsive — bottom sheet ── */
   @media (max-width: 640px) {
-    #panel{width:calc(100% - 24px);left:12px;top:8px;max-height:35vh;border-radius:10px}
-    #panel-head{padding:10px 16px 8px}
+    /* Bottom sheet positioning */
+    #panel{
+      position:fixed!important;top:auto!important;bottom:0;left:0!important;right:0;
+      width:100%!important;max-height:70vh;
+      border-radius:16px 16px 0 0;border:none;border-top:1px solid rgba(224,221,216,0.5);
+      box-shadow:0 -4px 24px rgba(0,0,0,0.1);
+      transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);
+      z-index:1100!important;
+    }
+    #panel.collapsed{transform:translateY(calc(100% - 56px))}
+    #panel.collapsed #panel-body{pointer-events:none;opacity:0}
+    #panel.collapsed #panel-head{padding-bottom:8px}
+
+    /* Drag handle */
+    #panel-handle{display:flex;justify-content:center;padding:10px 0 2px;cursor:grab}
+    #panel-handle span{width:36px;height:4px;border-radius:2px;background:rgba(0,0,0,0.15)}
+
+    /* Compact header */
+    #panel-head{padding:4px 20px 8px;border-bottom:none}
     #panel-head h1{font-size:15px;margin-bottom:0}
     #panel-head::after{display:none}
     .panel-sub{display:none}
     .panel-stats{display:none}
-    #panel-body{padding:8px 16px 10px}
+
+    /* Body */
+    #panel-body{padding:4px 20px 24px;transition:opacity 0.2s;overflow-y:auto;max-height:calc(70vh - 70px)}
     .mode-row,.view-row{margin-bottom:8px}
-    .view-btn{font-size:8px;padding:6px 0}
-    .field{margin-bottom:6px}
-    .flabel{font-size:8px;margin-bottom:2px}
-    .finput{font-size:11px;padding:4px 0}
-    #dl-link{top:auto;bottom:12px;right:12px;gap:6px}
-    #dl-link a{padding:7px 10px;font-size:8px;border-radius:6px;gap:4px}
+    .view-btn{font-size:9px;padding:8px 0}
+    .field{margin-bottom:8px}
+    .flabel{font-size:9px;margin-bottom:3px}
+    .finput{font-size:13px;padding:8px 0}
+    select.finput{padding:8px 0}
+    .grp{margin-bottom:8px}
+    .grp-master{padding:6px 0}
+    .grp-title{font-size:10px}
+    #stats-capital,#stats-banking{margin-top:10px;padding-top:10px;font-size:11px;line-height:1.7}
+
+    /* Action buttons */
+    #dl-link{top:auto;bottom:auto;right:12px;top:12px;gap:6px}
+    #dl-link a{padding:8px 12px;font-size:9px;border-radius:8px;gap:4px}
+
+    /* Timeline */
     #time-slider{right:8px}
     #timeline-track{height:100px}
     .tl-bound{font-size:8px}
-    #legend,.choro-legend{bottom:50px!important;left:12px;padding:10px 14px}
-    #choro-legend-capital,#choro-legend-banking{bottom:50px!important;left:12px;padding:10px 14px}
-    #btn-back{top:auto;bottom:50px;right:12px;font-size:9px;padding:8px 12px}
-    #wm{bottom:14px;right:auto;left:12px;font-size:8px}
+
+    /* Legends above bottom sheet */
+    #legend,.choro-legend{bottom:64px!important;left:12px;padding:10px 14px}
+    #choro-legend-capital,#choro-legend-banking{bottom:64px!important;left:12px;padding:10px 14px}
+    #btn-back{top:12px;left:12px;right:auto;font-size:9px;padding:8px 12px}
+    #wm{display:none}
     .leaflet-control-zoom{display:none!important}
+
+    /* Tooltips */
     .dist-tooltip{min-width:160px;max-width:220px}
     .dtt-name{font-size:13px}
-    .dtt-row{padding:2px 12px}
+    .dtt-row{padding:3px 12px}
     .dtt-label{font-size:9px;max-width:110px}
     .dtt-val{font-size:10px}
-    .grp{margin-bottom:8px}
-    .grp-master{padding:4px 0}
-    .grp-title{font-size:9.5px}
-    #stats-capital,#stats-banking{margin-top:10px;padding-top:10px;font-size:10px;line-height:1.7}
   }
 </style>

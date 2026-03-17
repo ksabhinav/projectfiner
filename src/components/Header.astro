@@ -16,6 +16,9 @@ const base = import.meta.env.BASE_URL;
     <a href={`${base}`} class="brand">
       Project <em>FINER</em>
     </a>
+    <button class="burger" aria-label="Menu" onclick="this.closest('.site-header').classList.toggle('menu-open')">
+      <span></span><span></span><span></span>
+    </button>
     <div class="nav-links">
       <a href={`${base}`}>Map</a>
       <a href={`${base}capital-markets/data-download`}>Downloads</a>
@@ -80,6 +83,25 @@ const base = import.meta.env.BASE_URL;
   }
   .brand:hover {
     color: var(--accent);
+  }
+
+  /* Burger button — hidden on desktop */
+  .burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .burger span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: var(--text, #1a1410);
+    border-radius: 1px;
+    transition: all 0.25s;
   }
 
   .nav-links {
@@ -194,19 +216,49 @@ const base = import.meta.env.BASE_URL;
   }
 
   /* ── Responsive ── */
-  @media (max-width: 768px) {
+  @media (max-width: 640px) {
     .top-bar {
-      flex-direction: column;
-      gap: 12px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
       padding: 12px 20px;
-    }
-    .nav-links {
-      gap: 16px;
       flex-wrap: wrap;
-      justify-content: center;
+    }
+    .burger {
+      display: flex;
+    }
+    /* Collapsed by default */
+    .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      gap: 0;
+      padding-top: 8px;
+      border-top: 1px solid rgba(224,221,216,0.4);
+      margin-top: 10px;
+    }
+    .nav-links a {
+      padding: 12px 0;
+      font-size: 12px;
+      border-bottom: 1px solid rgba(224,221,216,0.25);
+      color: var(--text, #1a1410);
+    }
+    .nav-links a:last-child { border-bottom: none; }
+    /* Open state */
+    :global(.site-header.menu-open) .nav-links {
+      display: flex;
+    }
+    :global(.site-header.menu-open) .burger span:nth-child(1) {
+      transform: rotate(45deg) translate(3px, 4px);
+    }
+    :global(.site-header.menu-open) .burger span:nth-child(2) {
+      opacity: 0;
+    }
+    :global(.site-header.menu-open) .burger span:nth-child(3) {
+      transform: rotate(-45deg) translate(3px, -4px);
     }
     .page-hero {
-      padding: 20px 20px 20px;
+      padding: 16px 20px 16px;
     }
     .page-hero.has-subnav {
       padding-bottom: 0;
@@ -226,5 +278,15 @@ const base = import.meta.env.BASE_URL;
       padding: 10px 12px;
       font-size: 9px;
     }
+  }
+  @media (min-width: 641px) and (max-width: 768px) {
+    .top-bar { padding: 12px 20px; }
+    .nav-links { gap: 20px; }
+    .page-hero { padding: 20px 20px 20px; }
+    .page-hero.has-subnav { padding-bottom: 0; }
+    .page-hero::before { left: 20px; }
+    .page-title { font-size: 18px; }
+    .sub-nav { width: 100%; }
+    .sub-nav a { flex: 1; text-align: center; padding: 10px 12px; font-size: 9px; }
   }
 </style>
