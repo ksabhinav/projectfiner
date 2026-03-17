@@ -29,7 +29,7 @@ def tokenize(text):
     return re.findall(r'[a-z0-9]+', text.lower())
 
 
-def bm25_search(query, top_k=8):
+def bm25_search(query, top_k=8, state_filter=None):
     query_tokens = tokenize(query)
     idf = BM25["idf"]
     doc_tfs = BM25["doc_tfs"]
@@ -49,6 +49,10 @@ def bm25_search(query, top_k=8):
 
     scores = []
     for i in range(n_docs):
+        # Pre-filter by state if specified — only score matching chunks
+        if state_filter and CHUNKS[i]["state"].lower() != state_filter.lower():
+            continue
+
         score = 0.0
         dl = doc_lengths[i]
         tf_dict = doc_tfs[i]
@@ -169,14 +173,15 @@ def detect_state_in_query(question):
     q_lower = question.lower()
 
     # If cross-state keywords present, don't filter
+    # Use word-boundary matching to avoid false positives (e.g. "especially" matching "all")
     for kw in CROSS_STATE_KEYWORDS:
-        if kw in q_lower:
+        if re.search(r'\b' + re.escape(kw) + r'\b', q_lower):
             return None
 
-    # Find which states are mentioned
+    # Find which states are mentioned (word-boundary match)
     found = set()
     for key, name in STATE_NAMES.items():
-        if key in q_lower:
+        if re.search(r'\b' + re.escape(key) + r'\b', q_lower):
             found.add(name)
 
     # Only auto-filter if exactly one state detected
@@ -212,26 +217,23 @@ class handler(BaseHTTPRequestHandler):
         if not state_filter:
             state_filter = detect_state_in_query(question)
 
-        # BM25 search — fetch more candidates for diversity
-        results = bm25_search(question, top_k=30)
+        # BM25 search — pre-filtered by state when applicable
+        results = bm25_search(question, top_k=30, state_filter=state_filter)
 
-        # Build context chunks with state diversity
+        # Build context chunks
         context_chunks = []
         if state_filter:
-            # Single state: take top results for that state
-            # Ensure type diversity (mix of tables + narrative)
-            # Skip very short chunks (headers without data)
+            # Single state: results already filtered, ensure type diversity
             tables = []
             narrative = []
             for idx, score in results:
                 chunk = CHUNKS[idx]
-                if chunk["state"].lower() == state_filter.lower():
-                    if len(chunk["text"]) < 400:
-                        continue  # Skip header-only fragments
-                    if chunk["type"] == "table":
-                        tables.append(chunk)
-                    else:
-                        narrative.append(chunk)
+                if len(chunk["text"]) < 400:
+                    continue  # Skip header-only fragments
+                if chunk["type"] == "table":
+                    tables.append(chunk)
+                else:
+                    narrative.append(chunk)
             # Interleave: prefer tables for first slots, fill with narrative
             for t in tables[:4]:
                 context_chunks.append(t)
@@ -239,16 +241,13 @@ class handler(BaseHTTPRequestHandler):
                 context_chunks.append(n)
             context_chunks = context_chunks[:6]
             if not context_chunks:
-                # Fallback: just take whatever matches
+                # Fallback: just take whatever matches (even short chunks)
                 for idx, score in results:
-                    chunk = CHUNKS[idx]
-                    if chunk["state"].lower() == state_filter.lower():
-                        context_chunks.append(chunk)
-                        if len(context_chunks) >= 6:
-                            break
+                    context_chunks.append(CHUNKS[idx])
+                    if len(context_chunks) >= 6:
+                        break
         else:
             # No state filter: ensure diversity across states
-            # First pass: take the best result from each state
             seen_states = set()
             remaining = []
             for idx, score in results:
@@ -260,7 +259,7 @@ class handler(BaseHTTPRequestHandler):
                     remaining.append(chunk)
                 if len(seen_states) >= 6:
                     break
-            # Second pass: fill remaining slots with best overall
+            # Fill remaining slots with best overall
             for chunk in remaining:
                 if len(context_chunks) >= 8:
                     break

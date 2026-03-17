@@ -24,23 +24,25 @@ const base = import.meta.env.BASE_URL;
     </div>
   </nav>
 
-  <!-- Page title section -->
-  <div class={`page-hero ${activeSubNav ? 'has-subnav' : ''}`}>
-    <div class="hero-inner">
-      <h1 class="page-title">{title}</h1>
-      {subtitle && <p class="page-subtitle" set:html={subtitle} />}
-      {backLink && <a href={backLink.href} class="back-link">&larr; {backLink.label}</a>}
-    </div>
+  <!-- Page title section (hidden when no title) -->
+  {(title || activeSubNav) && (
+    <div class={`page-hero ${activeSubNav ? 'has-subnav' : ''}`}>
+      <div class="hero-inner">
+        {title && <h1 class="page-title">{title}</h1>}
+        {subtitle && <p class="page-subtitle" set:html={subtitle} />}
+        {backLink && <a href={backLink.href} class="back-link">&larr; {backLink.label}</a>}
+      </div>
 
-    <!-- Sub-navigation for analysis pages -->
-    {activeSubNav && (
-      <nav class="sub-nav">
-        <a href={`${base}analysis/`} class={activeSubNav === 'rankings' ? 'active' : ''}>Rankings</a>
-        <a href={`${base}analysis/trends/`} class={activeSubNav === 'trends' ? 'active' : ''}>Trends</a>
-        <a href={`${base}analysis/insights/`} class={activeSubNav === 'insights' ? 'active' : ''}>Insights</a>
-      </nav>
-    )}
-  </div>
+      <!-- Sub-navigation for analysis pages -->
+      {activeSubNav && (
+        <nav class="sub-nav">
+          <a href={`${base}analysis/`} class={activeSubNav === 'rankings' ? 'active' : ''}>Rankings</a>
+          <a href={`${base}analysis/trends/`} class={activeSubNav === 'trends' ? 'active' : ''}>Trends</a>
+          <a href={`${base}analysis/insights/`} class={activeSubNav === 'insights' ? 'active' : ''}>Insights</a>
+        </nav>
+      )}
+    </div>
+  )}
 </header>
 
 <style>

@@ -7,8 +7,9 @@ const base = import.meta.env.BASE_URL;
 
 <PageLayout
   title="Ask | Project FINER"
-  pageTitle="Ask FINER"
-  subtitle="District-level financial inclusion data across 16 states — powered by AI."
+  pageTitle=""
+  subtitle=""
+  hideFooter
 >
   <div class="container">
     <AskChat client:load />
@@ -16,8 +17,8 @@ const base = import.meta.env.BASE_URL;
 </PageLayout>
 
 <style>
-  .container { max-width: 720px; margin: 0 auto; padding: 0 32px 20px; }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 32px 0; }
   @media (max-width: 640px) {
-    .container { padding: 0 16px 16px; }
+    .container { padding: 0 12px 0; }
   }
 </style>

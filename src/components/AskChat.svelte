@@ -37,6 +37,13 @@
     'PMJDY accounts in Assam?',
   ];
 
+  // On mobile, show only 2 pills to save space
+  let isMobile = $state(false);
+  onMount(() => {
+    isMobile = window.innerWidth <= 640;
+  });
+  let visibleSuggestions = $derived(isMobile ? SUGGESTIONS.slice(0, 2) : SUGGESTIONS);
+
   async function scrollToBottom() {
     await tick();
     if (messagesEl) {
@@ -106,7 +113,7 @@
         <p class="empty-title">Ask anything about SLBC data</p>
         <p class="empty-sub">District-level financial data across 16 states. Try:</p>
         <div class="pills">
-          {#each SUGGESTIONS as s}
+          {#each visibleSuggestions as s}
             <button class="pill" onclick={() => useSuggestion(s)}>{s}</button>
           {/each}
         </div>
@@ -177,14 +184,15 @@
   .chat {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 200px);
-    min-height: 480px;
-    max-height: 800px;
+    height: calc(100dvh - 100px);
+    min-height: 400px;
+    overflow: hidden;
   }
 
   /* ── Thread ── */
   .thread {
     flex: 1;
+    min-height: 0;
     overflow-y: auto;
     padding: 16px 0;
     display: flex;
@@ -203,7 +211,8 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 40px 20px;
+    padding: 20px 20px;
+    min-height: 0;
   }
   .empty-icon {
     color: var(--label, #aaa09a);
@@ -412,7 +421,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 12px 0 4px;
+    padding: 12px 0 16px;
     border-top: 1px solid var(--border, #e8e5e0);
     background: var(--bg, #f5f4f1);
   }
@@ -460,9 +469,18 @@
   }
 
   @media (max-width: 640px) {
-    .chat { height: calc(100vh - 180px); min-height: 400px; }
-    .bubble { max-width: 92%; font-size: 13px; }
+    .chat { height: calc(100dvh - 80px); min-height: 320px; }
+    .empty-state { padding: 12px 16px; gap: 6px; }
+    .empty-icon { margin-bottom: 0; }
+    .empty-icon svg { width: 24px; height: 24px; }
+    .empty-title { font-size: 15px; }
+    .empty-sub { font-size: 12px; margin-bottom: 8px; }
+    .pills { gap: 6px; }
     .pill { font-size: 11px; padding: 6px 12px; }
-    .composer input { padding: 10px 14px; font-size: 13px; }
+    .bubble { max-width: 92%; font-size: 13px; }
+    .composer { padding: 8px 0 12px; }
+    .composer input { padding: 10px 14px; font-size: 14px; }
+    .send-btn { width: 36px; height: 36px; }
+    .send-btn svg { width: 15px; height: 15px; }
   }
 </style>

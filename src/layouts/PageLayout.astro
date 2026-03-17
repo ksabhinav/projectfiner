@@ -9,13 +9,14 @@ interface Props {
   subtitle?: string;
   backLink?: { href: string; label: string };
   activeSubNav?: string;
+  hideFooter?: boolean;
 }
 
-const { title, pageTitle, subtitle, backLink, activeSubNav } = Astro.props;
+const { title, pageTitle, subtitle, backLink, activeSubNav, hideFooter } = Astro.props;
 ---
 
 <BaseLayout title={title}>
   <Header title={pageTitle} subtitle={subtitle} backLink={backLink} activeSubNav={activeSubNav} />
   <slot />
-  <Footer />
+  {!hideFooter && <Footer />}
 </BaseLayout>
