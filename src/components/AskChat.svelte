@@ -6,7 +6,7 @@
   let messages = $state([]);
   let inputEl;
 
-  const API_URL = '/api/ask';
+  const API_URL = 'https://projectfiner-api.vercel.app/api/ask';
 
   const SUGGESTIONS = [
     'What KCC targets were set for Assam in 2024?',

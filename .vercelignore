@@ -1,0 +1,12 @@
+data/
+slbc-data/
+scraped_data/
+scripts/
+*.pdf
+*.xlsx
+*.xls
+__pycache__/
+*.pyc
+audit_*.py
+scrape_*.py
+public/slbc-data/*/pdfs/
