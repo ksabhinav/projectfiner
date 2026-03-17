@@ -9,11 +9,8 @@ Response: { "answer": "...", "sources": [...] }
 import os
 import re
 import json
-import math
-from collections import Counter
+import urllib.request
 from http.server import BaseHTTPRequestHandler
-
-import anthropic
 
 # ── Load index at cold start ──────────────────────────────────
 
@@ -79,7 +76,9 @@ Guidelines:
 
 
 def ask_claude(question, context_chunks):
-    client = anthropic.Anthropic()  # Uses ANTHROPIC_API_KEY env var
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    if not api_key:
+        raise Exception("ANTHROPIC_API_KEY not set")
 
     # Build context from retrieved chunks
     context_parts = []
@@ -89,11 +88,11 @@ def ask_claude(question, context_chunks):
 
     context = "\n\n".join(context_parts)
 
-    message = client.messages.create(
-        model="claude-sonnet-4-20250514",
-        max_tokens=1024,
-        system=SYSTEM_PROMPT,
-        messages=[
+    payload = json.dumps({
+        "model": "claude-sonnet-4-20250514",
+        "max_tokens": 1024,
+        "system": SYSTEM_PROMPT,
+        "messages": [
             {
                 "role": "user",
                 "content": f"""Based on the following excerpts from SLBC NE meeting documents, answer this question:
@@ -106,9 +105,23 @@ Context:
 Answer the question based on the context above. Cite the source documents when referencing specific information."""
             }
         ]
+    }).encode("utf-8")
+
+    req = urllib.request.Request(
+        "https://api.anthropic.com/v1/messages",
+        data=payload,
+        headers={
+            "Content-Type": "application/json",
+            "x-api-key": api_key,
+            "anthropic-version": "2023-06-01",
+        },
+        method="POST",
     )
 
-    return message.content[0].text
+    with urllib.request.urlopen(req, timeout=25) as resp:
+        result = json.loads(resp.read().decode("utf-8"))
+
+    return result["content"][0]["text"]
 
 
 # ── Handler ──────────────────────────────────────────────────
