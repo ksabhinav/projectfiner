@@ -225,7 +225,8 @@ const base = import.meta.env.BASE_URL;
     };
 
     // Map init
-    var _initCenter = _isMobile ? [24.5, 82.5] : [22, 82.5];
+    // India visual center ~21.5°N. On mobile, shift slightly north (~1°) to account for bottom sheet
+    var _initCenter = _isMobile ? [22.5, 82.5] : [22, 82.5];
     var _initZoom = 4;
     var map = L.map('map',{center:_initCenter,zoom:_initZoom,minZoom:4,maxZoom:18,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false,preferCanvas:true});
     L.control.zoom({position:'topright'}).addTo(map);
@@ -237,19 +238,21 @@ const base = import.meta.env.BASE_URL;
       var zoom = map.getBoundsZoom(NE_BOUNDS);
 
       if (isMobile) {
-        // Mobile: center NE region in the usable area between top (0) and bottom sheet (~90px)
-        // In Leaflet projected coords, higher Y = further south = lower on screen
-        // We shift the map center SOUTH so NE_CENTER appears HIGHER on screen
-        var sheetH = 90;
-        var usableCenterY = (mapSize.y - sheetH) / 2;  // center of usable area in screen px
-        var mapCenterY = mapSize.y / 2;                 // center of full viewport
-        var offsetPx = mapCenterY - usableCenterY;      // positive = shift content up
-        var neProjPx = map.project(NE_CENTER, zoom);
-        var adjustedCenter = map.unproject([neProjPx.x, neProjPx.y + offsetPx], zoom);
+        // Mobile: use fitBounds with padding to account for bottom sheet (90px)
+        // paddingBottomRight adds extra space at bottom for the collapsed sheet
+        // paddingTopLeft adds space at top for the legend
         if (animate !== false) {
-          map.flyTo(adjustedCenter, zoom, { duration: 1.2 });
+          map.flyToBounds(NE_BOUNDS, {
+            paddingTopLeft: [10, 10],
+            paddingBottomRight: [10, 100],  // 100px bottom padding for bottom sheet
+            duration: 1.2
+          });
         } else {
-          map.setView(adjustedCenter, zoom, { animate: false });
+          map.fitBounds(NE_BOUNDS, {
+            paddingTopLeft: [10, 10],
+            paddingBottomRight: [10, 100],
+            animate: false
+          });
         }
         return;
       }
