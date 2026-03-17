@@ -23,58 +23,36 @@
     return 0;
   }
 
-  // Per-state: sorted latest-first, current index for flashcard
-  let stateData = $derived.by(() => {
-    const map = {};
-    for (const st of STATES) {
-      const items = allSummaries
-        .filter(s => s.state_slug === st.slug)
-        .sort((a, b) => quarterSortKey(b.quarter) - quarterSortKey(a.quarter));
-      if (items.length > 0) map[st.slug] = items;
-    }
-    return map;
+  let selectedState = $state('assam');
+  let selectedQuarter = $state('');
+
+  // Quarters available for the selected state, sorted latest-first
+  let stateQuarters = $derived.by(() => {
+    return allSummaries
+      .filter(s => s.state_slug === selectedState)
+      .sort((a, b) => quarterSortKey(b.quarter) - quarterSortKey(a.quarter))
+      .map(s => s.quarter);
   });
 
-  let cardIndex = $state({});
-  let flipped = $state({});
-  let touchStartX = $state({});
-
-  function getIdx(slug) { return cardIndex[slug] || 0; }
-  function isFlipped(slug) { return flipped[slug] || false; }
-
-  function prev(slug) {
-    const idx = getIdx(slug);
-    if (idx > 0) {
-      cardIndex = { ...cardIndex, [slug]: idx - 1 };
-      flipped = { ...flipped, [slug]: false };
+  // Auto-select latest quarter when state changes
+  $effect(() => {
+    if (stateQuarters.length > 0 && !stateQuarters.includes(selectedQuarter)) {
+      selectedQuarter = stateQuarters[0];
     }
-  }
-  function next(slug) {
-    const items = stateData[slug];
-    const idx = getIdx(slug);
-    if (items && idx < items.length - 1) {
-      cardIndex = { ...cardIndex, [slug]: idx + 1 };
-      flipped = { ...flipped, [slug]: false };
-    }
-  }
-  function flipCard(slug) {
-    flipped = { ...flipped, [slug]: !isFlipped(slug) };
-  }
+  });
 
-  function handleTouchStart(e, slug) {
-    touchStartX = { ...touchStartX, [slug]: e.touches[0].clientX };
-  }
-  function handleTouchEnd(e, slug) {
-    const startX = touchStartX[slug];
-    if (startX == null) return;
-    const endX = e.changedTouches[0].clientX;
-    const diff = startX - endX;
-    if (Math.abs(diff) > 50) {
-      if (diff > 0) next(slug);
-      else prev(slug);
-    }
-    touchStartX = { ...touchStartX, [slug]: null };
-  }
+  // The selected summary item
+  let item = $derived(
+    allSummaries.find(s => s.state_slug === selectedState && s.quarter === selectedQuarter)
+  );
+
+  let stateColor = $derived(
+    STATES.find(s => s.slug === selectedState)?.color || '#b8603e'
+  );
+
+  let stateCount = $derived(
+    allSummaries.filter(s => s.state_slug === selectedState).length
+  );
 
   onMount(async () => {
     try {
@@ -92,68 +70,78 @@
 </script>
 
 <div class="summaries-section">
-  <div class="section-label">SLBC NE Meeting Summaries</div>
-  <p class="section-desc">AI-generated summaries of {allSummaries.length} SLBC meeting minutes across 6 North East states. Tap a card to read the summary, swipe or use arrows to browse meetings.</p>
-
   {#if loading}
     <div class="loading">Loading summaries...</div>
+  {:else if allSummaries.length === 0}
+    <div class="loading">No summaries available yet.</div>
   {:else}
-    <div class="states-grid">
-      {#each STATES as st}
-        {#if stateData[st.slug]}
-          {@const items = stateData[st.slug]}
-          {@const idx = getIdx(st.slug)}
-          {@const item = items[idx]}
-          {@const flip = isFlipped(st.slug)}
-          <div class="state-capsule">
-            <div class="capsule-header" style="border-color: {st.color}">
-              <span class="capsule-name" style="color: {st.color}">{st.name}</span>
-              <span class="capsule-count">{items.length} meetings</span>
-            </div>
+    <!-- Controls row -->
+    <div class="controls">
+      <div class="control-group">
+        <label class="control-label" for="state-select">State</label>
+        <select id="state-select" class="dropdown" bind:value={selectedState}>
+          {#each STATES as st}
+            {@const count = allSummaries.filter(s => s.state_slug === st.slug).length}
+            <option value={st.slug}>{st.name} ({count})</option>
+          {/each}
+        </select>
+      </div>
 
-            <!-- svelte-ignore a11y_no_static_element_interactions -->
-            <div
-              class="flashcard-wrapper"
-              ontouchstart={(e) => handleTouchStart(e, st.slug)}
-              ontouchend={(e) => handleTouchEnd(e, st.slug)}
-            >
-              <div class="flashcard" class:flipped={flip} onclick={() => flipCard(st.slug)}>
-                <!-- Front: quarter + key stat -->
-                <div class="card-face card-front" style="border-top: 3px solid {st.color}">
-                  <div class="front-quarter">{item.quarter}</div>
-                  <div class="front-filename">{item.filename}</div>
-                  {#if item.pages > 0}
-                    <div class="front-pages">{item.pages} pages</div>
-                  {/if}
-                  <div class="front-preview">
-                    {item.summary.split('\n').filter(l => l.startsWith('- ') || l.startsWith('* ') || l.startsWith('\u2022 ')).slice(0, 3).map(l => l.replace(/^[-*\u2022]\s*/, '')).join(' \u00B7 ').slice(0, 150)}{item.summary.length > 150 ? '...' : ''}
-                  </div>
-                  <div class="tap-hint">tap to read summary</div>
-                </div>
+      <div class="control-group">
+        <label class="control-label" for="quarter-select">Quarter</label>
+        <select id="quarter-select" class="dropdown" bind:value={selectedQuarter}>
+          {#each stateQuarters as q}
+            <option value={q}>{q}</option>
+          {/each}
+        </select>
+      </div>
 
-                <!-- Back: full summary -->
-                <div class="card-face card-back" style="border-top: 3px solid {st.color}">
-                  <div class="back-quarter">{item.quarter}</div>
-                  <div class="back-summary">{@html item.summary.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>')}</div>
-                  <a class="pdf-link" href={item.pdf_url} target="_blank" rel="noopener" onclick={(e) => e.stopPropagation()}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                    View Minutes PDF
-                  </a>
-                  <div class="tap-hint">tap to flip back</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Navigation -->
-            <div class="card-nav">
-              <button class="nav-btn" onclick={() => prev(st.slug)} disabled={idx === 0}>&larr;</button>
-              <span class="nav-pos">{idx + 1} / {items.length}</span>
-              <button class="nav-btn" onclick={() => next(st.slug)} disabled={idx === items.length - 1}>&rarr;</button>
-            </div>
-          </div>
-        {/if}
-      {/each}
+      <div class="stat-badge">
+        <span class="stat-num">{stateCount}</span>
+        <span class="stat-text">meetings</span>
+      </div>
     </div>
+
+    <!-- Single large card -->
+    {#if item}
+      <div class="meeting-card" style="border-top: 4px solid {stateColor}">
+        <!-- Card header -->
+        <div class="card-header">
+          <div class="card-title-row">
+            <h2 class="card-quarter">{item.quarter}</h2>
+            <a class="download-btn" href={item.pdf_url} target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Minutes PDF
+            </a>
+          </div>
+          <div class="card-meta">
+            <span class="meta-filename">{item.filename}</span>
+            {#if item.pages > 0}
+              <span class="meta-sep">&middot;</span>
+              <span class="meta-pages">{item.pages} pages</span>
+            {/if}
+          </div>
+        </div>
+
+        <!-- Summary body -->
+        <div class="card-body">
+          {@html item.summary
+            .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\n/g, '<br>')}
+        </div>
+
+        <!-- Card footer with source link -->
+        <div class="card-footer">
+          <a class="source-link" href={item.pdf_url} target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            View original PDF on slbcne.nic.in
+          </a>
+          <span class="ai-note">Summary generated by AI</span>
+        </div>
+      </div>
+    {:else}
+      <div class="empty">No summary available for this selection.</div>
+    {/if}
   {/if}
 </div>
 
@@ -161,159 +149,170 @@
   .summaries-section {
     padding-top: 8px;
   }
-  .section-label {
-    font-family: var(--font-sans, Inter, sans-serif);
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--label, #aaa09a);
-    margin-bottom: 8px;
-  }
-  .section-desc {
-    font-family: var(--font-sans, Inter, sans-serif);
-    font-size: 11px;
-    color: var(--muted, #888078);
-    line-height: 1.7;
-    margin-bottom: 24px;
-    max-width: 640px;
-  }
-  .loading {
+  .loading, .empty {
     font-family: var(--font-sans, Inter, sans-serif);
     font-size: 12px;
     color: var(--muted, #888078);
     padding: 24px 0;
   }
 
-  /* State grid: 3 columns on desktop, 2 on medium, 1 on small */
-  .states-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  /* Controls */
+  .controls {
+    display: flex;
+    align-items: flex-end;
     gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
   }
-
-  .state-capsule {
+  .control-group {
     display: flex;
     flex-direction: column;
+    gap: 4px;
   }
-
-  .capsule-header {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    margin-bottom: 10px;
-    padding-bottom: 6px;
-    border-bottom: 2px solid;
-  }
-  .capsule-name {
-    font-family: Georgia, serif;
-    font-size: 15px;
-    font-weight: 700;
-  }
-  .capsule-count {
-    font-family: var(--font-sans, Inter, sans-serif);
-    font-size: 10px;
-    color: var(--muted, #888078);
-  }
-
-  /* Flashcard */
-  .flashcard-wrapper {
-    perspective: 800px;
-    height: 210px;
-    cursor: pointer;
-  }
-  .flashcard {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease;
-  }
-  .flashcard.flipped {
-    transform: rotateY(180deg);
-  }
-
-  .card-face {
-    position: absolute;
-    inset: 0;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    background: #fff;
-    border: 1px solid var(--border, #e8e5e0);
-    padding: 18px 20px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-  .card-back {
-    transform: rotateY(180deg);
-    overflow-y: auto;
-  }
-
-  /* Front face */
-  .front-quarter {
-    font-family: Georgia, serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--text, #1a1410);
-    margin-bottom: 4px;
-  }
-  .front-filename {
-    font-family: var(--font-sans, Inter, sans-serif);
-    font-size: 10px;
-    color: var(--label, #aaa09a);
-    margin-bottom: 2px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .front-pages {
-    font-family: var(--font-sans, Inter, sans-serif);
-    font-size: 10px;
-    color: var(--label, #aaa09a);
-    margin-bottom: 14px;
-  }
-  .front-preview {
-    font-family: Georgia, serif;
-    font-size: 12px;
-    line-height: 1.6;
-    color: var(--muted, #888078);
-    flex: 1;
-    overflow: hidden;
-  }
-
-  .tap-hint {
+  .control-label {
     font-family: var(--font-sans, Inter, sans-serif);
     font-size: 9px;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     color: var(--label, #aaa09a);
-    text-align: center;
-    margin-top: 8px;
+  }
+  .dropdown {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text, #1a1410);
+    background: #fff;
+    border: 1px solid var(--border, #e8e5e0);
+    border-radius: 8px;
+    padding: 8px 32px 8px 12px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23aaa09a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+    min-width: 180px;
+    transition: border-color 0.2s;
+  }
+  .dropdown:hover {
+    border-color: #d0cdc8;
+  }
+  .dropdown:focus {
+    outline: none;
+    border-color: var(--accent, #b8603e);
   }
 
-  /* Back face */
-  .back-quarter {
-    font-family: Georgia, serif;
-    font-size: 14px;
+  .stat-badge {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    padding: 8px 0;
+    margin-left: auto;
+  }
+  .stat-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 22px;
     font-weight: 700;
     color: var(--text, #1a1410);
-    margin-bottom: 10px;
+  }
+  .stat-text {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 10px;
+    color: var(--muted, #888078);
+  }
+
+  /* Meeting card */
+  .meeting-card {
+    background: #fff;
+    border: 1px solid var(--border, #e8e5e0);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .card-header {
+    padding: 24px 28px 16px;
+    border-bottom: 1px solid rgba(232, 229, 224, 0.5);
+  }
+  .card-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 6px;
+  }
+  .card-quarter {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text, #1a1410);
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--text, #1a1410);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    white-space: nowrap;
     flex-shrink: 0;
   }
-  .back-summary {
-    font-family: Georgia, serif;
-    font-size: 11px;
-    line-height: 1.65;
-    color: var(--text, #1a1410);
-    flex: 1;
-    overflow-y: auto;
+  .download-btn:hover {
+    background: var(--accent, #b8603e);
   }
-  .back-summary :global(strong) {
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .meta-filename {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 11px;
+    color: var(--label, #aaa09a);
+  }
+  .meta-sep {
+    color: var(--label, #aaa09a);
+    font-size: 10px;
+  }
+  .meta-pages {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 11px;
+    color: var(--label, #aaa09a);
+  }
+
+  /* Card body */
+  .card-body {
+    padding: 24px 28px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text, #1a1410);
+    min-height: 200px;
+  }
+  .card-body :global(strong) {
     font-weight: 700;
     color: var(--text, #1a1410);
   }
-  .pdf-link {
+
+  /* Card footer */
+  .card-footer {
+    padding: 14px 28px;
+    border-top: 1px solid rgba(232, 229, 224, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(245, 244, 241, 0.3);
+  }
+  .source-link {
     display: inline-flex;
     align-items: center;
     gap: 5px;
@@ -322,61 +321,26 @@
     font-weight: 600;
     color: var(--accent, #b8603e);
     text-decoration: none;
-    margin-top: 10px;
-    flex-shrink: 0;
-    padding: 4px 0;
   }
-  .pdf-link:hover {
-    color: var(--accent-dark, #8a4a2e);
+  .source-link:hover {
     text-decoration: underline;
+    color: var(--accent-dark, #8a4a2e);
+  }
+  .ai-note {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 9px;
+    color: var(--label, #aaa09a);
+    font-style: italic;
   }
 
-  /* Navigation arrows */
-  .card-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 8px;
-  }
-  .nav-btn {
-    font-family: var(--font-sans, Inter, sans-serif);
-    font-size: 14px;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    border: 1px solid var(--border, #e8e5e0);
-    background: #fff;
-    color: var(--text, #1a1410);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.15s;
-  }
-  .nav-btn:hover:not(:disabled) {
-    background: var(--text, #1a1410);
-    color: #fff;
-    border-color: var(--text, #1a1410);
-  }
-  .nav-btn:disabled {
-    opacity: 0.3;
-    cursor: default;
-  }
-  .nav-pos {
-    font-family: var(--font-sans, Inter, sans-serif);
-    font-size: 10px;
-    color: var(--muted, #888078);
-    min-width: 44px;
-    text-align: center;
-  }
-
-  @media (max-width: 960px) {
-    .states-grid { grid-template-columns: repeat(2, 1fr); }
-  }
   @media (max-width: 640px) {
-    .states-grid { grid-template-columns: 1fr; }
-    .flashcard-wrapper { height: 220px; }
-    .front-quarter { font-size: 18px; }
+    .controls { flex-direction: column; align-items: stretch; }
+    .dropdown { min-width: unset; width: 100%; }
+    .stat-badge { margin-left: 0; }
+    .card-header { padding: 18px 20px 12px; }
+    .card-title-row { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .card-body { padding: 18px 20px; font-size: 13px; }
+    .card-footer { padding: 12px 20px; flex-direction: column; gap: 8px; align-items: flex-start; }
+    .card-quarter { font-size: 20px; }
   }
 </style>
