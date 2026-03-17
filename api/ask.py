@@ -124,6 +124,44 @@ Answer the question based on the context above. Cite the source documents when r
     return result["content"][0]["text"]
 
 
+# ── State Detection ───────────────────────────────────────────
+
+STATE_NAMES = {
+    "assam": "Assam",
+    "meghalaya": "Meghalaya",
+    "manipur": "Manipur",
+    "mizoram": "Mizoram",
+    "nagaland": "Nagaland",
+    "arunachal pradesh": "Arunachal Pradesh",
+    "arunachal": "Arunachal Pradesh",
+}
+
+# Keywords that indicate a cross-state query (should NOT auto-filter)
+CROSS_STATE_KEYWORDS = {"all", "across", "compare", "comparison", "every", "each", "ne states", "ne region", "north east", "northeast"}
+
+
+def detect_state_in_query(question):
+    """Auto-detect a single state mentioned in the query.
+    Returns None if zero or multiple states found, or if cross-state keywords present."""
+    q_lower = question.lower()
+
+    # If cross-state keywords present, don't filter
+    for kw in CROSS_STATE_KEYWORDS:
+        if kw in q_lower:
+            return None
+
+    # Find which states are mentioned
+    found = set()
+    for key, name in STATE_NAMES.items():
+        if key in q_lower:
+            found.add(name)
+
+    # Only auto-filter if exactly one state detected
+    if len(found) == 1:
+        return found.pop()
+    return None
+
+
 # ── Handler ──────────────────────────────────────────────────
 
 class handler(BaseHTTPRequestHandler):
@@ -146,8 +184,10 @@ class handler(BaseHTTPRequestHandler):
             self._respond(400, {"error": "Question too long (max 500 chars)"})
             return
 
-        # Optional state filter
+        # Optional state filter — explicit or auto-detected from query
         state_filter = data.get("state", "").strip() or None
+        if not state_filter:
+            state_filter = detect_state_in_query(question)
 
         # BM25 search — fetch more candidates for diversity
         results = bm25_search(question, top_k=30)
