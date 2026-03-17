@@ -1,0 +1,15 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "astro",
+  "functions": {
+    "api/ask.py": {
+      "runtime": "@vercel/python@4.4.0",
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    { "source": "/api/ask", "destination": "/api/ask" }
+  ]
+}

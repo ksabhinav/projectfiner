@@ -1,0 +1,23 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import AskChat from '../../components/AskChat.svelte';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<PageLayout
+  title="Ask SLBC NE | Project FINER"
+  pageTitle="Ask about NE SLBC Meetings"
+  subtitle={`Search across 850+ SLBC meeting booklets and minutes from 6 North East states. Powered by BM25 retrieval + Claude.<br><a href="${base}slbc-data">&larr; All states</a>`}
+>
+  <div class="container">
+    <AskChat client:load />
+  </div>
+</PageLayout>
+
+<style>
+  .container { max-width: 800px; margin: 0 auto; padding: 24px 40px 60px; }
+  @media (max-width: 768px) {
+    .container { padding: 16px 20px 40px; }
+  }
+</style>
