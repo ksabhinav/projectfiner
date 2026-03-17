@@ -149,18 +149,38 @@ class handler(BaseHTTPRequestHandler):
         # Optional state filter
         state_filter = data.get("state", "").strip() or None
 
-        # BM25 search
-        results = bm25_search(question, top_k=12)
+        # BM25 search — fetch more candidates for diversity
+        results = bm25_search(question, top_k=30)
 
-        # Filter by state if requested
+        # Build context chunks with state diversity
         context_chunks = []
-        for idx, score in results:
-            chunk = CHUNKS[idx]
-            if state_filter and chunk["state"].lower() != state_filter.lower():
-                continue
-            context_chunks.append(chunk)
-            if len(context_chunks) >= 6:
-                break
+        if state_filter:
+            # Single state: take top results for that state
+            for idx, score in results:
+                chunk = CHUNKS[idx]
+                if chunk["state"].lower() == state_filter.lower():
+                    context_chunks.append(chunk)
+                    if len(context_chunks) >= 6:
+                        break
+        else:
+            # No state filter: ensure diversity across states
+            # First pass: take the best result from each state
+            seen_states = set()
+            remaining = []
+            for idx, score in results:
+                chunk = CHUNKS[idx]
+                if chunk["state"] not in seen_states:
+                    context_chunks.append(chunk)
+                    seen_states.add(chunk["state"])
+                else:
+                    remaining.append(chunk)
+                if len(seen_states) >= 6:
+                    break
+            # Second pass: fill remaining slots with best overall
+            for chunk in remaining:
+                if len(context_chunks) >= 8:
+                    break
+                context_chunks.append(chunk)
 
         if not context_chunks:
             self._respond(200, {

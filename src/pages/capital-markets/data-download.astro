@@ -1,6 +1,7 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import DownloadManager from '../../components/DownloadManager.svelte';
+import MeetingSummaries from '../../components/MeetingSummaries.svelte';
 
 const base = import.meta.env.BASE_URL;
 
@@ -63,6 +64,8 @@ const otherStates = [
         </div>
       </a>
     ))}
+
+    <MeetingSummaries client:load />
 
     <div class="section-label" style="margin-top: 48px;">Capital Markets Access</div>
     <p class="section-desc">DP service centres (CDSL, NSDL) and mutual fund distributor locations across India.</p>
