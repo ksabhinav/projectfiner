@@ -8,6 +8,38 @@
 
   const API_URL = 'https://projectfiner-api.vercel.app/api/ask';
 
+  function md(text) {
+    if (!text) return '';
+    return text
+      // Headers: ## → <h3>, ### → <h4> (skip h1/h2 to keep hierarchy)
+      .replace(/^### (.+)$/gm, '<h4>$1</h4>')
+      .replace(/^## (.+)$/gm, '<h3>$1</h3>')
+      .replace(/^# (.+)$/gm, '<h3>$1</h3>')
+      // Bold + italic
+      .replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
+      // Bold
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      // Italic
+      .replace(/\*(.+?)\*/g, '<em>$1</em>')
+      // Unordered list items (- or *)
+      .replace(/^[\-\*] (.+)$/gm, '<li>$1</li>')
+      // Numbered list items
+      .replace(/^\d+\. (.+)$/gm, '<li>$1</li>')
+      // Wrap consecutive <li> in <ul>
+      .replace(/((?:<li>.*<\/li>\n?)+)/g, '<ul>$1</ul>')
+      // Paragraphs: double newline
+      .replace(/\n{2,}/g, '</p><p>')
+      // Single newlines → <br>
+      .replace(/\n/g, '<br>')
+      // Wrap in <p> tags
+      .replace(/^/, '<p>')
+      .replace(/$/, '</p>')
+      // Clean up empty <p> around block elements
+      .replace(/<p><(h[34]|ul)/g, '<$1')
+      .replace(/<\/(h[34]|ul)><\/p>/g, '</$1>')
+      .replace(/<p><\/p>/g, '');
+  }
+
   const SUGGESTIONS = [
     'What KCC targets were set for Assam in 2024?',
     'How has the CD ratio changed in Meghalaya?',
@@ -82,7 +114,7 @@
           <div class="msg-text">{msg.text}</div>
         {:else if msg.role === 'assistant'}
           <div class="msg-label">FINER</div>
-          <div class="msg-text">{msg.text}</div>
+          <div class="msg-text prose">{@html md(msg.text)}</div>
           {#if msg.sources?.length}
             <div class="sources">
               <div class="sources-label">Sources</div>
@@ -205,6 +237,55 @@
     line-height: 1.7;
     color: var(--text, #1a1410);
     white-space: pre-wrap;
+  }
+  .msg-text.prose {
+    white-space: normal;
+  }
+  .msg-text.prose :global(h3) {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text, #1a1410);
+    margin: 18px 0 8px;
+  }
+  .msg-text.prose :global(h3:first-child) {
+    margin-top: 0;
+  }
+  .msg-text.prose :global(h4) {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text, #1a1410);
+    margin: 14px 0 6px;
+  }
+  .msg-text.prose :global(strong) {
+    font-weight: 700;
+  }
+  .msg-text.prose :global(em) {
+    font-style: italic;
+  }
+  .msg-text.prose :global(p) {
+    margin: 0 0 10px;
+  }
+  .msg-text.prose :global(p:last-child) {
+    margin-bottom: 0;
+  }
+  .msg-text.prose :global(ul) {
+    margin: 8px 0 12px;
+    padding-left: 20px;
+    list-style: none;
+  }
+  .msg-text.prose :global(li) {
+    position: relative;
+    padding-left: 4px;
+    margin-bottom: 4px;
+  }
+  .msg-text.prose :global(li::before) {
+    content: '–';
+    position: absolute;
+    left: -14px;
+    color: var(--accent, #b8603e);
+    font-weight: 600;
   }
   .error-text {
     color: #c44830;
