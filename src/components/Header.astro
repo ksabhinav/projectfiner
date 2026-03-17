@@ -50,7 +50,10 @@ const base = import.meta.env.BASE_URL;
 
 <style>
   .site-header {
-    background: #0a0a0a;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(224, 221, 216, 0.5);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -61,15 +64,15 @@ const base = import.meta.env.BASE_URL;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 40px;
-    border-bottom: none;
+    padding: 14px 40px;
+    border-bottom: 1px solid rgba(232, 229, 224, 0.4);
   }
 
   .brand {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text);
     letter-spacing: -0.01em;
     text-decoration: none;
     transition: color 0.2s;
@@ -77,10 +80,9 @@ const base = import.meta.env.BASE_URL;
   .brand em {
     font-style: italic;
     font-weight: 400;
-    color: rgba(255,255,255,0.5);
   }
   .brand:hover {
-    color: #d4845f;
+    color: var(--accent);
   }
 
   /* Burger button — hidden on desktop */
@@ -97,14 +99,14 @@ const base = import.meta.env.BASE_URL;
     display: block;
     width: 18px;
     height: 2px;
-    background: #ffffff;
+    background: var(--text, #1a1410);
     border-radius: 1px;
     transition: all 0.25s;
   }
 
   .nav-links {
     display: flex;
-    gap: 32px;
+    gap: 28px;
   }
   .nav-links a {
     font-family: var(--font-sans);
@@ -112,20 +114,19 @@ const base = import.meta.env.BASE_URL;
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.45);
+    color: var(--label);
     text-decoration: none;
     transition: color 0.2s;
     padding: 2px 0;
   }
   .nav-links a:hover {
-    color: #ffffff;
+    color: var(--text);
   }
 
   /* ── Page hero ── */
   .page-hero {
     padding: 24px 40px 24px;
     position: relative;
-    background: #0a0a0a;
   }
   .page-hero.has-subnav {
     padding-bottom: 0;
@@ -147,10 +148,10 @@ const base = import.meta.env.BASE_URL;
 
   .page-title {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 26px;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: -0.02em;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.01em;
     margin-bottom: 6px;
   }
 
@@ -158,7 +159,7 @@ const base = import.meta.env.BASE_URL;
     font-family: var(--font-sans);
     font-size: 11px;
     font-weight: 400;
-    color: rgba(255,255,255,0.45);
+    color: var(--muted);
     line-height: 1.7;
     max-width: 640px;
     margin-bottom: 0;
@@ -168,12 +169,12 @@ const base = import.meta.env.BASE_URL;
     font-family: var(--font-sans);
     font-size: 10px;
     font-weight: 500;
-    color: #d4845f;
+    color: var(--accent);
     text-decoration: none;
     letter-spacing: 0.02em;
   }
   .back-link:hover {
-    color: #e8a070;
+    color: var(--accent-dark);
   }
 
   /* ── Sub-navigation ── */
@@ -181,12 +182,12 @@ const base = import.meta.env.BASE_URL;
     display: flex;
     gap: 0;
     margin-top: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(224, 221, 216, 0.6);
     border-bottom: none;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
     width: fit-content;
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(250, 249, 247, 0.6);
   }
 
   .sub-nav a {
@@ -196,22 +197,22 @@ const base = import.meta.env.BASE_URL;
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.4);
+    color: var(--label);
     text-decoration: none;
-    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    border-right: 1px solid rgba(224, 221, 216, 0.4);
     transition: all 0.25s;
   }
   .sub-nav a:last-child {
     border-right: none;
   }
   .sub-nav a:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.06);
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.8);
   }
   .sub-nav a.active {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: inset 0 -2px 0 #b8603e;
+    color: var(--text);
+    background: #fff;
+    box-shadow: inset 0 -2px 0 var(--accent);
   }
 
   /* ── Responsive ── */
@@ -233,16 +234,15 @@ const base = import.meta.env.BASE_URL;
       flex-direction: column;
       gap: 0;
       padding-top: 8px;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid rgba(224,221,216,0.4);
       margin-top: 10px;
     }
     .nav-links a {
       padding: 12px 0;
       font-size: 12px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      color: rgba(255,255,255,0.7);
+      border-bottom: 1px solid rgba(224,221,216,0.25);
+      color: var(--text, #1a1410);
     }
-    .nav-links a:hover { color: #fff; }
     .nav-links a:last-child { border-bottom: none; }
     /* Open state */
     :global(.site-header.menu-open) .nav-links {
@@ -258,7 +258,7 @@ const base = import.meta.env.BASE_URL;
       transform: rotate(-45deg) translate(3px, -4px);
     }
     .page-hero {
-      padding: 14px 20px 14px;
+      padding: 16px 20px 16px;
     }
     .page-hero.has-subnav {
       padding-bottom: 0;
@@ -267,7 +267,7 @@ const base = import.meta.env.BASE_URL;
       left: 20px;
     }
     .page-title {
-      font-size: 20px;
+      font-size: 18px;
     }
     .sub-nav {
       width: 100%;
@@ -275,8 +275,8 @@ const base = import.meta.env.BASE_URL;
     .sub-nav a {
       flex: 1;
       text-align: center;
-      padding: 11px 12px;
-      font-size: 10px;
+      padding: 10px 12px;
+      font-size: 9px;
     }
   }
   @media (min-width: 641px) and (max-width: 768px) {
