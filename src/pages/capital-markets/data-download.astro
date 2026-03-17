@@ -1,8 +1,6 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import DownloadManager from '../../components/DownloadManager.svelte';
-import MeetingSummaries from '../../components/MeetingSummaries.svelte';
-
 const base = import.meta.env.BASE_URL;
 
 const neStates = [
@@ -65,7 +63,15 @@ const otherStates = [
       </a>
     ))}
 
-    <MeetingSummaries client:load />
+    <a class="minutes-link" href={`${base}slbc-data/meeting-minutes`}>
+      <div class="minutes-link-inner">
+        <div>
+          <div class="minutes-link-name">Minutes of the Meeting</div>
+          <div class="minutes-link-meta">AI-generated summaries of 141 SLBC meeting minutes across 6 NE states &middot; Links to source PDFs</div>
+        </div>
+        <div class="minutes-link-arrow">&rarr;</div>
+      </div>
+    </a>
 
     <div class="section-label" style="margin-top: 48px;">Capital Markets Access</div>
     <p class="section-desc">DP service centres (CDSL, NSDL) and mutual fund distributor locations across India.</p>
@@ -110,4 +116,23 @@ const otherStates = [
   .state-link-meta { font-family: var(--font-sans); font-size: 11px; color: var(--muted); margin-top: 3px; }
   .state-link-arrow { font-family: var(--font-sans); font-size: 18px; color: #ccc; transition: color 0.2s; }
   .state-link:hover .state-link-arrow { color: var(--accent); }
+
+  .minutes-link {
+    display: block;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s;
+    text-decoration: none;
+    color: inherit;
+    margin-top: 28px;
+    margin-bottom: 10px;
+  }
+  .minutes-link:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-1px); }
+  .minutes-link-inner { padding: 20px 24px; border-left: 3px solid #3d7a8e; display: flex; align-items: center; justify-content: space-between; }
+  .minutes-link-name { font-size: 15px; font-weight: 700; color: var(--text); }
+  .minutes-link-meta { font-family: var(--font-sans); font-size: 11px; color: var(--muted); margin-top: 3px; }
+  .minutes-link-arrow { font-family: var(--font-sans); font-size: 18px; color: #ccc; transition: color 0.2s; }
+  .minutes-link:hover .minutes-link-arrow { color: #3d7a8e; }
 </style>

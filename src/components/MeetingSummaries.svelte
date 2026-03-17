@@ -159,9 +159,7 @@
 
 <style>
   .summaries-section {
-    margin-top: 40px;
-    padding-top: 32px;
-    border-top: 1px solid var(--border, #e8e5e0);
+    padding-top: 8px;
   }
   .section-label {
     font-family: var(--font-sans, Inter, sans-serif);
@@ -187,13 +185,11 @@
     padding: 24px 0;
   }
 
-  /* State grid: 3 columns breaking out of container, 2 on medium, 1 on small */
+  /* State grid: 3 columns on desktop, 2 on medium, 1 on small */
   .states-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    margin-left: -80px;
-    margin-right: -80px;
   }
 
   .state-capsule {
@@ -376,10 +372,10 @@
   }
 
   @media (max-width: 960px) {
-    .states-grid { grid-template-columns: repeat(2, 1fr); margin-left: -40px; margin-right: -40px; }
+    .states-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 640px) {
-    .states-grid { grid-template-columns: 1fr; margin-left: 0; margin-right: 0; }
+    .states-grid { grid-template-columns: 1fr; }
     .flashcard-wrapper { height: 220px; }
     .front-quarter { font-size: 18px; }
   }

@@ -1,18 +1,18 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
-import DataExplorer from '../../components/analysis/DataExplorer.svelte';
+import DistrictRankings from '../../components/analysis/DistrictRankings.svelte';
 
 const base = import.meta.env.BASE_URL;
 ---
 
 <PageLayout
-  title="Analyze Data | Project FINER"
+  title="District Rankings | Project FINER"
   pageTitle="Data Analysis"
-  subtitle="Explore SLBC financial inclusion data interactively — pick indicators, compare districts, generate charts. Upload your own CSV to overlay custom data."
-  activeSubNav="explorer"
+  subtitle="Sortable leaderboard of districts ranked by any financial inclusion indicator, with traffic-light status badges."
+  activeSubNav="rankings"
 >
   <div class="container">
-    <DataExplorer client:load />
+    <DistrictRankings client:load baseUrl={base} />
   </div>
 </PageLayout>
 

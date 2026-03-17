@@ -1,0 +1,18 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import MeetingSummaries from '../../components/MeetingSummaries.svelte';
+---
+
+<PageLayout
+  title="SLBC Meeting Minutes | Project FINER"
+  pageTitle="SLBC NE Meeting Minutes"
+  subtitle="AI-generated summaries of SLBC meeting minutes across North East states. Browse by state, read key decisions, and access the original PDF documents."
+>
+  <div class="container">
+    <MeetingSummaries client:load />
+  </div>
+</PageLayout>
+
+<style>
+  .container { max-width: 1100px; margin: 0 auto; padding: 16px 40px 60px; }
+</style>

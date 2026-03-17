@@ -297,7 +297,7 @@ const base = import.meta.env.BASE_URL;
       if(!distGeoJSON||currentView!=='choro')return;
       var sf=capitalStateFilter;
       var filtered={type:distGeoJSON.type,features:distGeoJSON.features.filter(function(f){if(!sf)return true;if(sf==='_NE')return NE_CODES.some(function(code){return stateCodeMatch(f.properties.STATE_UT,code);});return stateCodeMatch(f.properties.STATE_UT,sf);})};
-      choroLayer=L.geoJSON(filtered,{style:choroStyle,onEachFeature:function(feature,layer){var p=feature.properties;var total=getFilteredTotal(p);layer.on({mouseover:function(e){e.target.setStyle({weight:2,color:'#6b4c2a',fillOpacity:0.9});e.target.bindTooltip('<div class="dist-tooltip"><strong>'+p.DISTRICT+'</strong> <span style="font-size:10px;color:#888078">'+p.STATE_UT+'</span><br>Total: <strong>'+total.toLocaleString()+'</strong><br><span style="color:#b8603e">CDSL '+(showCDSL?p.cdsl_cnt:'-')+'</span> · <span style="color:#3d7a8e">NSDL '+(showNSDL?p.nsdl_cnt:'-')+'</span> · <span style="color:#5a7a3a">MFD-I '+(showMFDI?p.mfdi_cnt:'-')+'</span> · <span style="color:#8b6914">MFD-C '+(showMFDC?p.mfdc_cnt:'-')+'</span></div>',{sticky:true,className:'',offset:[10,0]}).openTooltip();},mouseout:function(e){choroLayer.resetStyle(e.target);e.target.closeTooltip();},click:function(e){drillInto(feature,layer);}});}}).addTo(map);
+      choroLayer=L.geoJSON(filtered,{style:choroStyle,onEachFeature:function(feature,layer){var p=feature.properties;var total=getFilteredTotal(p);layer.on({mouseover:function(e){e.target.setStyle({weight:2,color:'#6b4c2a',fillOpacity:0.9});e.target.bindTooltip('<div class="dist-tooltip"><div class="dtt-head"><div class="dtt-name">'+p.DISTRICT+'</div><div class="dtt-state">'+p.STATE_UT+'</div></div><div class="dtt-metrics"><div class="dtt-row dtt-total"><span class="dtt-label">Total Access Points</span><span class="dtt-val">'+total.toLocaleString()+'</span></div>'+(showCDSL?'<div class="dtt-row"><span class="dtt-label"><span class="dtt-dot" style="background:#b8603e"></span>CDSL</span><span class="dtt-val">'+p.cdsl_cnt.toLocaleString()+'</span></div>':'')+(showNSDL?'<div class="dtt-row"><span class="dtt-label"><span class="dtt-dot" style="background:#3d7a8e"></span>NSDL</span><span class="dtt-val">'+p.nsdl_cnt.toLocaleString()+'</span></div>':'')+(showMFDI?'<div class="dtt-row"><span class="dtt-label"><span class="dtt-dot" style="background:#5a7a3a"></span>MFD Individual</span><span class="dtt-val">'+p.mfdi_cnt.toLocaleString()+'</span></div>':'')+(showMFDC?'<div class="dtt-row"><span class="dtt-label"><span class="dtt-dot" style="background:#8b6914"></span>MFD Corporate</span><span class="dtt-val">'+p.mfdc_cnt.toLocaleString()+'</span></div>':'')+'</div></div>',{sticky:true,className:'',offset:[10,0]}).openTooltip();},mouseout:function(e){choroLayer.resetStyle(e.target);e.target.closeTooltip();},click:function(e){drillInto(feature,layer);}});}}).addTo(map);
     }
 
     // Capital district labels
@@ -760,21 +760,28 @@ const base = import.meta.env.BASE_URL;
           layer.on({
             mouseover: function(e) {
               e.target.setStyle({ weight: 2.5, color: '#6b4c2a', fillOpacity: 0.92 });
-              var tip = '<div class="dist-tooltip"><strong>' + p.DISTRICT + '</strong> '
-                + '<span style="font-size:10px;color:#888078">' + p.STATE_UT + '</span>';
+              var tip = '<div class="dist-tooltip">'
+                + '<div class="dtt-head">'
+                + '<div class="dtt-name">' + p.DISTRICT + '</div>'
+                + '<div class="dtt-state">' + p.STATE_UT + '</div>'
+                + '</div>';
               if (data) {
                 if (data.fallbackQuarter) {
-                  tip += '<br><span style="font-size:9px;color:#b8603e;font-style:italic">Data from ' + fmtQuarter(data.fallbackQuarter) + '</span>';
+                  tip += '<div class="dtt-fallback">Data from ' + fmtQuarter(data.fallbackQuarter) + '</div>';
                 }
+                tip += '<div class="dtt-metrics">';
                 for (var label in data.metrics) {
                   var val = data.metrics[label];
                   var formatted = val !== null ? fmtNum(val) : '—';
                   var isCurrent = label === metric.label;
-                  tip += '<br><span style="' + (isCurrent ? 'font-weight:600;color:#1a1410' : 'color:#888078') + '">'
-                    + label + ': <strong>' + formatted + '</strong></span>';
+                  tip += '<div class="dtt-row' + (isCurrent ? ' dtt-active' : '') + '">'
+                    + '<span class="dtt-label">' + label + '</span>'
+                    + '<span class="dtt-val">' + formatted + '</span>'
+                    + '</div>';
                 }
+                tip += '</div>';
               } else {
-                tip += '<br><span style="color:#aaa09a">No data available</span>';
+                tip += '<div class="dtt-empty">No data available</div>';
               }
               tip += '</div>';
               e.target.bindTooltip(tip, { sticky: true, className: '', offset: [10, 0] }).openTooltip();
@@ -1250,8 +1257,24 @@ const base = import.meta.env.BASE_URL;
   .lr:last-child{margin-bottom:0}
   .ldot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
 
-  .dist-tooltip{font-family:'Inter',sans-serif;font-size:12px;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.5);padding:14px 16px;box-shadow:0 6px 24px rgba(0,0,0,0.1);line-height:1.8;border-radius:8px}
-  .dist-tooltip strong{font-family:'Playfair Display',Georgia,serif;font-size:14px;font-weight:600;color:#1a1410;display:block;margin-bottom:4px}
+  .dist-tooltip{font-family:'Inter',sans-serif;font-size:11px;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(224,221,216,0.6);padding:0;box-shadow:0 8px 32px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);border-radius:10px;min-width:200px;max-width:260px;overflow:hidden}
+  .dtt-head{padding:12px 16px 10px;border-bottom:1px solid rgba(224,221,216,0.5);background:rgba(245,244,241,0.5)}
+  .dtt-name{font-family:'Playfair Display',Georgia,serif;font-size:15px;font-weight:700;color:#1a1410;letter-spacing:-0.01em}
+  .dtt-state{font-size:10px;font-weight:500;color:#aaa09a;margin-top:1px;text-transform:uppercase;letter-spacing:0.04em}
+  .dtt-fallback{font-size:9px;color:#b8603e;font-style:italic;padding:5px 16px;background:rgba(184,96,62,0.05);border-bottom:1px solid rgba(224,221,216,0.3)}
+  .dtt-metrics{padding:8px 0}
+  .dtt-row{display:flex;justify-content:space-between;align-items:center;padding:3px 16px;gap:12px;transition:background 0.1s}
+  .dtt-row.dtt-active{background:rgba(184,96,62,0.06)}
+  .dtt-label{color:#888078;font-size:10px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:140px}
+  .dtt-row.dtt-active .dtt-label{color:#1a1410;font-weight:600}
+  .dtt-val{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;color:#1a1410;white-space:nowrap}
+  .dtt-row:not(.dtt-active) .dtt-val{color:#888078;font-weight:500}
+  .dtt-empty{padding:12px 16px;color:#aaa09a;font-size:11px;text-align:center}
+  .dtt-total{border-bottom:1px solid rgba(224,221,216,0.4);padding-bottom:6px;margin-bottom:2px}
+  .dtt-total .dtt-label{color:#1a1410;font-weight:600}
+  .dtt-total .dtt-val{font-weight:700;color:#1a1410}
+  .dtt-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;vertical-align:middle}
+  .leaflet-tooltip{padding:0!important;border:none!important;background:none!important;box-shadow:none!important}
   .dist-label{background:none!important;border:none!important;box-shadow:none!important;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:9px;font-weight:600;color:#555048;text-transform:uppercase;letter-spacing:0.05em;text-shadow:0 0 5px #fff,0 0 5px #fff,1px 0 4px #fff,-1px 0 4px #fff,0 1px 4px #fff,0 -1px 4px #fff;white-space:nowrap;pointer-events:none;padding:0!important;opacity:0.8}
 
   #choro-legend-capital{display:block;position:absolute;bottom:24px;left:16px;z-index:1000;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.5);padding:14px 18px;box-shadow:0 4px 20px rgba(0,0,0,0.05);border-radius:10px}
