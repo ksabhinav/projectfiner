@@ -1,0 +1,30 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import StateDownload from '../../../components/StateDownload.svelte';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<PageLayout
+  title="Karnataka SLBC Data Download | Project FINER"
+  pageTitle="Karnataka — SLBC Financial Inclusion Data"
+  subtitle={`District-level indicators from SLBC Karnataka quarterly agenda papers. All amounts in Rs. Lakhs.<br><a href="${base}slbc-data">&larr; All states</a>`}
+>
+  <div class="stat-bar">
+    <div class="stat-row">
+      <div class="stat-item"><div class="stat-num">10</div><div class="stat-lbl">Quarters</div></div>
+      <div class="stat-item"><div class="stat-num">31</div><div class="stat-lbl">Districts</div></div>
+      <div class="stat-item"><div class="stat-num">40</div><div class="stat-lbl">Indicators</div></div>
+      <div class="stat-item"><div class="stat-num">Dec 2023</div><div class="stat-lbl">From</div></div>
+      <div class="stat-item"><div class="stat-num">Jun 2025</div><div class="stat-lbl">To</div></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <StateDownload client:load stateName="Karnataka" stateSlug="karnataka" />
+  </div>
+</PageLayout>
+
+<style>
+  .container { max-width: 960px; margin: 0 auto; padding: 32px 40px 60px; }
+</style>

@@ -22,6 +22,9 @@
     { name: 'Odisha', slug: 'odisha' },
     { name: 'Chhattisgarh', slug: 'chhattisgarh' },
     { name: 'West Bengal', slug: 'west-bengal' },
+    { name: 'Karnataka', slug: 'karnataka' },
+    { name: 'Kerala', slug: 'kerala' },
+    { name: 'Tamil Nadu', slug: 'tamil-nadu' },
   ];
 
   // NPA-related categories where a decrease is good
