@@ -6,9 +6,9 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <PageLayout
-  title="Ask SLBC NE | Project FINER"
-  pageTitle="Ask about NE SLBC Meetings"
-  subtitle={`Search across 850+ SLBC meeting booklets and minutes from 6 North East states. Powered by BM25 retrieval + Claude.<br><a href="${base}slbc-data">&larr; All states</a>`}
+  title="Ask | Project FINER"
+  pageTitle="Ask FINER"
+  subtitle="District-level financial inclusion data across 16 states — powered by AI."
 >
   <div class="container">
     <AskChat client:load />
@@ -16,8 +16,8 @@ const base = import.meta.env.BASE_URL;
 </PageLayout>
 
 <style>
-  .container { max-width: 800px; margin: 0 auto; padding: 24px 40px 60px; }
-  @media (max-width: 768px) {
-    .container { padding: 16px 20px 40px; }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 32px 20px; }
+  @media (max-width: 640px) {
+    .container { padding: 0 16px 16px; }
   }
 </style>

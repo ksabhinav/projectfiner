@@ -1,51 +1,48 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, tick } from 'svelte';
 
   let question = $state('');
   let loading = $state(false);
   let messages = $state([]);
   let inputEl;
+  let messagesEl;
 
   const API_URL = 'https://projectfiner-api.vercel.app/api/ask';
 
   function md(text) {
     if (!text) return '';
     return text
-      // Headers: ## → <h3>, ### → <h4> (skip h1/h2 to keep hierarchy)
       .replace(/^### (.+)$/gm, '<h4>$1</h4>')
       .replace(/^## (.+)$/gm, '<h3>$1</h3>')
       .replace(/^# (.+)$/gm, '<h3>$1</h3>')
-      // Bold + italic
       .replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
-      // Bold
       .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-      // Italic
       .replace(/\*(.+?)\*/g, '<em>$1</em>')
-      // Unordered list items (- or *)
       .replace(/^[\-\*] (.+)$/gm, '<li>$1</li>')
-      // Numbered list items
       .replace(/^\d+\. (.+)$/gm, '<li>$1</li>')
-      // Wrap consecutive <li> in <ul>
       .replace(/((?:<li>.*<\/li>\n?)+)/g, '<ul>$1</ul>')
-      // Paragraphs: double newline
       .replace(/\n{2,}/g, '</p><p>')
-      // Single newlines → <br>
       .replace(/\n/g, '<br>')
-      // Wrap in <p> tags
       .replace(/^/, '<p>')
       .replace(/$/, '</p>')
-      // Clean up empty <p> around block elements
       .replace(/<p><(h[34]|ul)/g, '<$1')
       .replace(/<\/(h[34]|ul)><\/p>/g, '</$1>')
       .replace(/<p><\/p>/g, '');
   }
 
   const SUGGESTIONS = [
-    'What KCC targets were set for Assam in 2024?',
-    'How has the CD ratio changed in Meghalaya?',
-    'What digital transaction initiatives were discussed in Manipur?',
-    'What are the key financial inclusion challenges in Nagaland?',
+    'KCC cards in Meghalaya by district?',
+    'CD ratio of Bihar districts?',
+    'Branch network in Manipur rural areas?',
+    'PMJDY accounts in Assam?',
   ];
+
+  async function scrollToBottom() {
+    await tick();
+    if (messagesEl) {
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+  }
 
   async function submit() {
     const q = question.trim();
@@ -54,6 +51,7 @@
     messages = [...messages, { role: 'user', text: q }];
     question = '';
     loading = true;
+    scrollToBottom();
 
     try {
       const res = await fetch(API_URL, {
@@ -71,9 +69,10 @@
       const data = await res.json();
       messages = [...messages, { role: 'assistant', text: data.answer, sources: data.sources }];
     } catch (e) {
-      messages = [...messages, { role: 'error', text: 'Network error. Make sure the API is deployed.' }];
+      messages = [...messages, { role: 'error', text: 'Network error. Please try again.' }];
     } finally {
       loading = false;
+      scrollToBottom();
     }
   }
 
@@ -94,312 +93,376 @@
   });
 </script>
 
-<div class="chat-container">
-  {#if messages.length === 0}
-    <div class="welcome">
-      <p class="welcome-text">Ask any question about SLBC NE meeting documents — booklets, minutes, policy discussions, targets, and performance reviews across Assam, Meghalaya, Manipur, Mizoram, Nagaland, and Arunachal Pradesh.</p>
-      <div class="suggestions">
-        {#each SUGGESTIONS as s}
-          <button class="suggestion" onclick={() => useSuggestion(s)}>{s}</button>
-        {/each}
+<div class="chat">
+  <!-- Messages area -->
+  <div class="thread" bind:this={messagesEl}>
+    {#if messages.length === 0}
+      <div class="empty-state">
+        <div class="empty-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <p class="empty-title">Ask anything about SLBC data</p>
+        <p class="empty-sub">District-level financial data across 16 states. Try:</p>
+        <div class="pills">
+          {#each SUGGESTIONS as s}
+            <button class="pill" onclick={() => useSuggestion(s)}>{s}</button>
+          {/each}
+        </div>
       </div>
-    </div>
-  {/if}
-
-  <div class="messages">
-    {#each messages as msg}
-      <div class="message {msg.role}">
+    {:else}
+      {#each messages as msg}
         {#if msg.role === 'user'}
-          <div class="msg-label">You</div>
-          <div class="msg-text">{msg.text}</div>
+          <div class="bubble-row user-row">
+            <div class="bubble user-bubble">{msg.text}</div>
+          </div>
         {:else if msg.role === 'assistant'}
-          <div class="msg-label">FINER</div>
-          <div class="msg-text prose">{@html md(msg.text)}</div>
-          {#if msg.sources?.length}
-            <div class="sources">
-              <div class="sources-label">Sources</div>
-              <div class="source-chips">
-                {#each msg.sources as src}
-                  <span class="source-chip" title={src.snippet}>
-                    {src.state} &middot; {src.type} &middot; {src.quarter}
-                  </span>
-                {/each}
-              </div>
+          <div class="bubble-row ai-row">
+            <div class="avatar">F</div>
+            <div class="bubble ai-bubble">
+              <div class="ai-text prose">{@html md(msg.text)}</div>
+              {#if msg.sources?.length}
+                <div class="src-bar">
+                  {#each msg.sources as src}
+                    <span class="src-tag" title={src.snippet}>
+                      {src.state} · {src.type} · {src.quarter}
+                    </span>
+                  {/each}
+                </div>
+              {/if}
             </div>
-          {/if}
+          </div>
         {:else}
-          <div class="msg-label">Error</div>
-          <div class="msg-text error-text">{msg.text}</div>
+          <div class="bubble-row ai-row">
+            <div class="avatar err-avatar">!</div>
+            <div class="bubble err-bubble">{msg.text}</div>
+          </div>
         {/if}
-      </div>
-    {/each}
+      {/each}
 
-    {#if loading}
-      <div class="message assistant">
-        <div class="msg-label">FINER</div>
-        <div class="msg-text loading-dots">Searching documents<span class="dots"></span></div>
-      </div>
+      {#if loading}
+        <div class="bubble-row ai-row">
+          <div class="avatar">F</div>
+          <div class="bubble ai-bubble">
+            <div class="typing">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      {/if}
     {/if}
   </div>
 
-  <form class="input-area" onsubmit={(e) => { e.preventDefault(); submit(); }}>
+  <!-- Input bar -->
+  <form class="composer" onsubmit={(e) => { e.preventDefault(); submit(); }}>
     <input
       bind:this={inputEl}
       bind:value={question}
       onkeydown={handleKeydown}
-      placeholder="Ask about SLBC NE meetings..."
+      placeholder="Message..."
       disabled={loading}
       maxlength="500"
     />
-    <button type="submit" disabled={loading || !question.trim()}>
-      {loading ? '...' : 'Ask'}
+    <button type="submit" class="send-btn" disabled={loading || !question.trim()} aria-label="Send">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"/>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      </svg>
     </button>
   </form>
 </div>
 
 <style>
-  .chat-container {
+  .chat {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    height: calc(100vh - 200px);
+    min-height: 480px;
+    max-height: 800px;
   }
 
-  /* Welcome */
-  .welcome {
-    text-align: center;
-    padding: 32px 0 16px;
+  /* ── Thread ── */
+  .thread {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    scroll-behavior: smooth;
   }
-  .welcome-text {
-    font-family: Georgia, serif;
-    font-size: 14px;
+  .thread::-webkit-scrollbar { width: 4px; }
+  .thread::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
+
+  /* ── Empty state ── */
+  .empty-state {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 40px 20px;
+  }
+  .empty-icon {
+    color: var(--label, #aaa09a);
+    margin-bottom: 4px;
+  }
+  .empty-title {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text, #1a1410);
+    margin: 0;
+  }
+  .empty-sub {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 13px;
     color: var(--muted, #888078);
-    line-height: 1.7;
-    max-width: 560px;
-    margin: 0 auto 24px;
+    margin: 0 0 12px;
   }
-  .suggestions {
+  .pills {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
     justify-content: center;
+    max-width: 480px;
   }
-  .suggestion {
+  .pill {
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: 12px;
+    color: var(--text, #1a1410);
+    background: #fff;
+    border: 1px solid var(--border, #e8e5e0);
+    border-radius: 18px;
+    padding: 7px 14px;
+    cursor: pointer;
+    transition: all 0.15s;
+    line-height: 1.3;
+  }
+  .pill:hover {
+    background: var(--text, #1a1410);
+    color: #fff;
+    border-color: var(--text, #1a1410);
+  }
+
+  /* ── Bubbles ── */
+  .bubble-row {
+    display: flex;
+    gap: 8px;
+    padding: 4px 0;
+    max-width: 100%;
+  }
+  .user-row {
+    justify-content: flex-end;
+  }
+  .ai-row {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--text, #1a1410);
+    color: #fff;
     font-family: var(--font-sans, Inter, sans-serif);
     font-size: 11px;
-    color: var(--text, #1a1410);
-    background: #fff;
-    border: 1px solid var(--border, #e8e5e0);
-    border-radius: 20px;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .suggestion:hover {
-    border-color: var(--accent, #b8603e);
-    color: var(--accent, #b8603e);
-  }
-
-  /* Messages */
-  .messages {
+    font-weight: 700;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
   }
-  .message {
-    padding: 16px 20px;
-    border-radius: 10px;
-    border: 1px solid var(--border, #e8e5e0);
-    background: #fff;
-  }
-  .message.user {
-    background: rgba(245, 244, 241, 0.6);
-    border-left: 3px solid var(--muted, #888078);
-  }
-  .message.assistant {
-    border-left: 3px solid var(--accent, #b8603e);
-  }
-  .message.error {
-    border-left: 3px solid #c44830;
+  .err-avatar {
+    background: #c44830;
   }
 
-  .msg-label {
+  .bubble {
+    max-width: 85%;
+    padding: 10px 14px;
+    border-radius: 18px;
     font-family: var(--font-sans, Inter, sans-serif);
-    font-size: 9px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--label, #aaa09a);
-    margin-bottom: 8px;
-  }
-  .msg-text {
-    font-family: Georgia, serif;
     font-size: 14px;
-    line-height: 1.7;
-    color: var(--text, #1a1410);
-    white-space: pre-wrap;
+    line-height: 1.55;
+    word-wrap: break-word;
   }
-  .msg-text.prose {
+
+  .user-bubble {
+    background: var(--text, #1a1410);
+    color: #fff;
+    border-bottom-right-radius: 4px;
+  }
+
+  .ai-bubble {
+    background: #fff;
+    color: var(--text, #1a1410);
+    border: 1px solid var(--border, #e8e5e0);
+    border-bottom-left-radius: 4px;
+  }
+
+  .err-bubble {
+    background: #fef2f2;
+    color: #c44830;
+    border: 1px solid #fecaca;
+    border-bottom-left-radius: 4px;
+    font-size: 13px;
+  }
+
+  /* ── AI prose ── */
+  .ai-text.prose {
     white-space: normal;
   }
-  .msg-text.prose :global(h3) {
-    font-family: Georgia, serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--text, #1a1410);
-    margin: 18px 0 8px;
-  }
-  .msg-text.prose :global(h3:first-child) {
-    margin-top: 0;
-  }
-  .msg-text.prose :global(h4) {
-    font-family: Georgia, serif;
-    font-size: 14px;
+  .ai-text.prose :global(h3) {
+    font-size: 15px;
     font-weight: 700;
     color: var(--text, #1a1410);
     margin: 14px 0 6px;
   }
-  .msg-text.prose :global(strong) {
+  .ai-text.prose :global(h3:first-child) {
+    margin-top: 0;
+  }
+  .ai-text.prose :global(h4) {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 10px 0 4px;
+  }
+  .ai-text.prose :global(strong) {
     font-weight: 700;
   }
-  .msg-text.prose :global(em) {
+  .ai-text.prose :global(em) {
     font-style: italic;
+    color: var(--muted, #888078);
   }
-  .msg-text.prose :global(p) {
-    margin: 0 0 10px;
+  .ai-text.prose :global(p) {
+    margin: 0 0 8px;
   }
-  .msg-text.prose :global(p:last-child) {
+  .ai-text.prose :global(p:last-child) {
     margin-bottom: 0;
   }
-  .msg-text.prose :global(ul) {
-    margin: 8px 0 12px;
-    padding-left: 20px;
+  .ai-text.prose :global(ul) {
+    margin: 6px 0 10px;
+    padding-left: 18px;
     list-style: none;
   }
-  .msg-text.prose :global(li) {
+  .ai-text.prose :global(li) {
     position: relative;
-    padding-left: 4px;
-    margin-bottom: 4px;
+    padding-left: 2px;
+    margin-bottom: 3px;
   }
-  .msg-text.prose :global(li::before) {
-    content: '–';
+  .ai-text.prose :global(li::before) {
+    content: '';
     position: absolute;
-    left: -14px;
-    color: var(--accent, #b8603e);
-    font-weight: 600;
-  }
-  .error-text {
-    color: #c44830;
+    left: -12px;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent, #b8603e);
   }
 
-  /* Sources */
-  .sources {
-    margin-top: 14px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border, #e8e5e0);
-  }
-  .sources-label {
-    font-family: var(--font-sans, Inter, sans-serif);
-    font-size: 9px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--label, #aaa09a);
-    margin-bottom: 8px;
-  }
-  .source-chips {
+  /* ── Sources ── */
+  .src-bar {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(0,0,0,0.06);
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 4px;
   }
-  .source-chip {
+  .src-tag {
     font-family: var(--font-sans, Inter, sans-serif);
     font-size: 10px;
     color: var(--muted, #888078);
-    background: rgba(245, 244, 241, 0.8);
-    border: 1px solid var(--border, #e8e5e0);
-    border-radius: 4px;
-    padding: 4px 8px;
+    background: rgba(0,0,0,0.03);
+    border-radius: 10px;
+    padding: 3px 8px;
     cursor: default;
+    transition: color 0.15s;
   }
-  .source-chip:hover {
+  .src-tag:hover {
     color: var(--text, #1a1410);
-    border-color: var(--accent, #b8603e);
   }
 
-  /* Loading dots */
-  .loading-dots .dots::after {
-    content: '';
-    animation: dots 1.2s steps(4, end) infinite;
-  }
-  @keyframes dots {
-    0% { content: ''; }
-    25% { content: '.'; }
-    50% { content: '..'; }
-    75% { content: '...'; }
-  }
-
-  /* Input area */
-  .input-area {
+  /* ── Typing indicator ── */
+  .typing {
     display: flex;
-    gap: 8px;
-    position: sticky;
-    bottom: 20px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
-    padding: 12px;
-    border: 1px solid var(--border, #e8e5e0);
-    border-radius: 12px;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.04);
+    gap: 4px;
+    padding: 4px 0;
   }
-  .input-area input {
+  .typing span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--label, #aaa09a);
+    animation: bounce 1.4s infinite ease-in-out;
+  }
+  .typing span:nth-child(2) { animation-delay: 0.16s; }
+  .typing span:nth-child(3) { animation-delay: 0.32s; }
+  @keyframes bounce {
+    0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+    40% { transform: scale(1); opacity: 1; }
+  }
+
+  /* ── Composer ── */
+  .composer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 0 4px;
+    border-top: 1px solid var(--border, #e8e5e0);
+    background: var(--bg, #f5f4f1);
+  }
+  .composer input {
     flex: 1;
-    font-family: Georgia, serif;
+    font-family: var(--font-sans, Inter, sans-serif);
     font-size: 14px;
-    padding: 10px 14px;
+    padding: 12px 16px;
     border: 1px solid var(--border, #e8e5e0);
-    border-radius: 8px;
+    border-radius: 24px;
     background: #fff;
     color: var(--text, #1a1410);
     outline: none;
-    transition: border-color 0.2s;
+    transition: border-color 0.15s, box-shadow 0.15s;
   }
-  .input-area input:focus {
-    border-color: var(--accent, #b8603e);
+  .composer input:focus {
+    border-color: var(--text, #1a1410);
+    box-shadow: 0 0 0 3px rgba(26,20,16,0.06);
   }
-  .input-area input::placeholder {
+  .composer input::placeholder {
     color: var(--label, #aaa09a);
   }
-  .input-area button {
-    font-family: var(--font-sans, Inter, sans-serif);
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding: 10px 20px;
-    border: 1px solid var(--text, #1a1410);
-    border-radius: 8px;
+
+  .send-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
     background: var(--text, #1a1410);
     color: #fff;
     cursor: pointer;
-    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.15s;
   }
-  .input-area button:hover:not(:disabled) {
+  .send-btn:hover:not(:disabled) {
     background: var(--accent, #b8603e);
-    border-color: var(--accent, #b8603e);
+    transform: scale(1.05);
   }
-  .input-area button:disabled {
-    opacity: 0.4;
+  .send-btn:disabled {
+    opacity: 0.25;
     cursor: not-allowed;
   }
 
-  @media (max-width: 768px) {
-    .suggestion {
-      font-size: 10px;
-      padding: 6px 12px;
-    }
-    .input-area {
-      bottom: 10px;
-      padding: 8px;
-    }
+  @media (max-width: 640px) {
+    .chat { height: calc(100vh - 180px); min-height: 400px; }
+    .bubble { max-width: 92%; font-size: 13px; }
+    .pill { font-size: 11px; padding: 6px 12px; }
+    .composer input { padding: 10px 14px; font-size: 13px; }
   }
 </style>
