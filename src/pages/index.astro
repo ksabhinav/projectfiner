@@ -216,7 +216,7 @@ const base = import.meta.env.BASE_URL;
       : L.latLngBounds(L.latLng(6.5,68.0), L.latLng(37.5,110.0));
     var NE_BOUNDS    = L.latLngBounds(L.latLng(17.5, 79.5), L.latLng(29.5, 97.5));
     var ALL_STATES_BOUNDS = L.latLngBounds(L.latLng(8, 68), L.latLng(30, 97.5)); // All 19 states incl GJ/MH/RJ
-    var NE_CENTER    = [24.5, 88.0]; // Visual center of NE + Bihar + WB + JH + OR + CG
+    var NE_CENTER    = [20, 82.5]; // Visual center of all 19 states (lat 8-30, lng 68-97.5)
     var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK','BR','WB','JH','OR','CT','KL','KA','TN','RJ','GJ','MH'];
     var NE_STATES    = ['ASSAM','MEGHALAYA','MANIPUR','MIZORAM','NAGALAND','TRIPURA','ARUNACHAL PRADESH','SIKKIM','BIHAR','WEST BENGAL','JHARKHAND','ODISHA','CHHATTISGARH','KERALA','KARNATAKA','TAMIL NADU','RAJASTHAN','GUJARAT','MAHARASHTRA'];
     var STATE_SLUGS  = {
@@ -239,8 +239,6 @@ const base = import.meta.env.BASE_URL;
     // Fly to NE with panel-aware centering (single smooth animation)
     function flyToNE(animate) {
       var isMobile = window.innerWidth <= 640;
-      var mapSize = map.getSize();
-      var zoom = map.getBoundsZoom(NE_BOUNDS);
 
       if (isMobile) {
         // Mobile: use ALL_STATES_BOUNDS (covers KA/KL/TN at lat 8 through NE at lat 29.5)
@@ -261,24 +259,21 @@ const base = import.meta.env.BASE_URL;
         return;
       }
 
+      // Desktop: use fitBounds with asymmetric padding to account for left panel + timeline slider
       var panelW = 306; // 290px panel + 16px margin
-      var tlW = 40;     // timeline slider width
-      // Where the usable area center is in pixels
-      var usableCenterX = (panelW + (mapSize.x - tlW)) / 2;
-      var usableCenterY = mapSize.y / 2;
-      // Where the map center is in pixels
-      var mapCenterX = mapSize.x / 2;
-      var mapCenterY = mapSize.y / 2;
-      // Use Leaflet's CRS projection to convert pixel offset to lat/lng
-      var neProjPx = map.project(NE_CENTER, zoom);
-      // Shift: we want NE_CENTER at usableCenterPixel, not at mapCenterPixel
-      var adjustedProjX = neProjPx.x + (mapCenterX - usableCenterX);
-      var adjustedProjY = neProjPx.y + (mapCenterY - usableCenterY);
-      var adjustedCenter = map.unproject([adjustedProjX, adjustedProjY], zoom);
+      var tlW = 40;     // timeline slider width on right
       if (animate !== false) {
-        map.flyTo(adjustedCenter, zoom, { duration: 1.2 });
+        map.flyToBounds(ALL_STATES_BOUNDS, {
+          paddingTopLeft: [panelW, 10],
+          paddingBottomRight: [tlW, 10],
+          duration: 1.2
+        });
       } else {
-        map.setView(adjustedCenter, zoom, { animate: false });
+        map.fitBounds(ALL_STATES_BOUNDS, {
+          paddingTopLeft: [panelW, 10],
+          paddingBottomRight: [tlW, 10],
+          animate: false
+        });
       }
     }
 
