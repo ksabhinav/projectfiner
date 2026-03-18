@@ -1,0 +1,533 @@
+{
+  "source": "SLBC Rajasthan (State Level Bankers' Committee, Rajasthan)",
+  "state": "Rajasthan",
+  "amount_unit": "Rs. Lakhs",
+  "quarters": {
+    "2025-09": {
+      "period": "September 2025",
+      "as_on_date": "30-09-2025",
+      "fy": "2025-26",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "Total Deposit",
+            "Total Advances",
+            "Overall CD Ratio"
+          ],
+          "districts": {
+            "Ajmer": {
+              "District": "Ajmer",
+              "Total Deposit": "3843768",
+              "Total Advances": "2720055",
+              "Overall CD Ratio": "70.77"
+            },
+            "Alwar": {
+              "District": "Alwar",
+              "Total Deposit": "2040737",
+              "Total Advances": "1765218",
+              "Overall CD Ratio": "86.5"
+            },
+            "Balotra": {
+              "District": "Balotra",
+              "Total Deposit": "550952",
+              "Total Advances": "2077540",
+              "Overall CD Ratio": "377.08"
+            },
+            "Banswara": {
+              "District": "Banswara",
+              "Total Deposit": "841238",
+              "Total Advances": "718281",
+              "Overall CD Ratio": "85.38"
+            },
+            "Baran": {
+              "District": "Baran",
+              "Total Deposit": "674700",
+              "Total Advances": "704184",
+              "Overall CD Ratio": "104.37"
+            },
+            "Barmer": {
+              "District": "Barmer",
+              "Total Deposit": "739332",
+              "Total Advances": "913328",
+              "Overall CD Ratio": "123.53"
+            },
+            "Beawar": {
+              "District": "Beawar",
+              "Total Deposit": "802285",
+              "Total Advances": "744299",
+              "Overall CD Ratio": "92.77"
+            },
+            "Bharatpur": {
+              "District": "Bharatpur",
+              "Total Deposit": "1273070",
+              "Total Advances": "905181",
+              "Overall CD Ratio": "71.1"
+            },
+            "Bhilwara": {
+              "District": "Bhilwara",
+              "Total Deposit": "2093423",
+              "Total Advances": "3648067",
+              "Overall CD Ratio": "174.26"
+            },
+            "Bikaner": {
+              "District": "Bikaner",
+              "Total Deposit": "2545144",
+              "Total Advances": "2759734",
+              "Overall CD Ratio": "108.43"
+            },
+            "Bundi": {
+              "District": "Bundi",
+              "Total Deposit": "704060",
+              "Total Advances": "724565",
+              "Overall CD Ratio": "102.91"
+            },
+            "Chittorgarh": {
+              "District": "Chittorgarh",
+              "Total Deposit": "1395277",
+              "Total Advances": "1490325",
+              "Overall CD Ratio": "106.81"
+            },
+            "Churu": {
+              "District": "Churu",
+              "Total Deposit": "1315775",
+              "Total Advances": "1366294",
+              "Overall CD Ratio": "103.84"
+            },
+            "Dausa": {
+              "District": "Dausa",
+              "Total Deposit": "947227",
+              "Total Advances": "810348",
+              "Overall CD Ratio": "85.55"
+            },
+            "Deeg": {
+              "District": "Deeg",
+              "Total Deposit": "328210",
+              "Total Advances": "293239",
+              "Overall CD Ratio": "89.34"
+            },
+            "Dholpur": {
+              "District": "Dholpur",
+              "Total Deposit": "519237",
+              "Total Advances": "369175",
+              "Overall CD Ratio": "71.1"
+            },
+            "Didwana Kuchaman": {
+              "District": "Didwana Kuchaman",
+              "Total Deposit": "825375",
+              "Total Advances": "680072",
+              "Overall CD Ratio": "82.4"
+            },
+            "Dungarpur": {
+              "District": "Dungarpur",
+              "Total Deposit": "804021",
+              "Total Advances": "491712",
+              "Overall CD Ratio": "61.16"
+            },
+            "Ganganagar": {
+              "District": "Ganganagar",
+              "Total Deposit": "1864969",
+              "Total Advances": "2733062",
+              "Overall CD Ratio": "146.55"
+            },
+            "Hanumangarh": {
+              "District": "Hanumangarh",
+              "Total Deposit": "1095679",
+              "Total Advances": "2033997",
+              "Overall CD Ratio": "185.64"
+            },
+            "Jaipur": {
+              "District": "Jaipur",
+              "Total Deposit": "23404239",
+              "Total Advances": "23514364",
+              "Overall CD Ratio": "100.47"
+            },
+            "Jaisalmer": {
+              "District": "Jaisalmer",
+              "Total Deposit": "380582",
+              "Total Advances": "575611",
+              "Overall CD Ratio": "151.24"
+            },
+            "Jalore": {
+              "District": "Jalore",
+              "Total Deposit": "813516",
+              "Total Advances": "708110",
+              "Overall CD Ratio": "87.04"
+            },
+            "Jhalawar": {
+              "District": "Jhalawar",
+              "Total Deposit": "651547",
+              "Total Advances": "846374",
+              "Overall CD Ratio": "129.9"
+            },
+            "Jhunjhunu": {
+              "District": "Jhunjhunu",
+              "Total Deposit": "1985936",
+              "Total Advances": "1574985",
+              "Overall CD Ratio": "79.31"
+            },
+            "Jodhpur": {
+              "District": "Jodhpur",
+              "Total Deposit": "5918036",
+              "Total Advances": "5004067",
+              "Overall CD Ratio": "84.56"
+            },
+            "Karauli": {
+              "District": "Karauli",
+              "Total Deposit": "653915",
+              "Total Advances": "457021",
+              "Overall CD Ratio": "69.89"
+            },
+            "Khairthal-Tijara": {
+              "District": "Khairthal-Tijara",
+              "Total Deposit": "1258338",
+              "Total Advances": "1462811",
+              "Overall CD Ratio": "116.25"
+            },
+            "Kota": {
+              "District": "Kota",
+              "Total Deposit": "3634129",
+              "Total Advances": "2767611",
+              "Overall CD Ratio": "76.16"
+            },
+            "Kotputli-Behror": {
+              "District": "Kotputli-Behror",
+              "Total Deposit": "963457",
+              "Total Advances": "941853",
+              "Overall CD Ratio": "97.76"
+            },
+            "Nagaur": {
+              "District": "Nagaur",
+              "Total Deposit": "750688",
+              "Total Advances": "1004979",
+              "Overall CD Ratio": "133.87"
+            },
+            "Pali": {
+              "District": "Pali",
+              "Total Deposit": "1426181",
+              "Total Advances": "1034794",
+              "Overall CD Ratio": "72.56"
+            },
+            "Phalodi": {
+              "District": "Phalodi",
+              "Total Deposit": "254831",
+              "Total Advances": "428317",
+              "Overall CD Ratio": "168.08"
+            },
+            "Pratapgarh": {
+              "District": "Pratapgarh",
+              "Total Deposit": "297519",
+              "Total Advances": "390447",
+              "Overall CD Ratio": "131.23"
+            },
+            "Rajsamand": {
+              "District": "Rajsamand",
+              "Total Deposit": "919724",
+              "Total Advances": "644420",
+              "Overall CD Ratio": "70.07"
+            },
+            "Salumbar": {
+              "District": "Salumbar",
+              "Total Deposit": "169295",
+              "Total Advances": "246732",
+              "Overall CD Ratio": "145.74"
+            },
+            "Sawai Madhopur": {
+              "District": "Sawai Madhopur",
+              "Total Deposit": "911070",
+              "Total Advances": "746764",
+              "Overall CD Ratio": "81.97"
+            },
+            "Sikar": {
+              "District": "Sikar",
+              "Total Deposit": "2240096",
+              "Total Advances": "2365857",
+              "Overall CD Ratio": "105.61"
+            },
+            "Sirohi": {
+              "District": "Sirohi",
+              "Total Deposit": "924220",
+              "Total Advances": "496107",
+              "Overall CD Ratio": "53.68"
+            },
+            "Tonk": {
+              "District": "Tonk",
+              "Total Deposit": "936526",
+              "Total Advances": "1011003",
+              "Overall CD Ratio": "107.95"
+            },
+            "Udaipur": {
+              "District": "Udaipur",
+              "Total Deposit": "4966208",
+              "Total Advances": "3675560",
+              "Overall CD Ratio": "74.01"
+            }
+          }
+        }
+      }
+    },
+    "2025-12": {
+      "period": "December 2025",
+      "as_on_date": "31-12-2025",
+      "fy": "2025-26",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "Total Deposit",
+            "Total Advances",
+            "Overall CD Ratio"
+          ],
+          "districts": {
+            "Ajmer": {
+              "District": "Ajmer",
+              "Total Deposit": "3848770",
+              "Total Advances": "2871988",
+              "Overall CD Ratio": "74.62"
+            },
+            "Alwar": {
+              "District": "Alwar",
+              "Total Deposit": "2060285",
+              "Total Advances": "1772737",
+              "Overall CD Ratio": "86.04"
+            },
+            "Balotra": {
+              "District": "Balotra",
+              "Total Deposit": "590142",
+              "Total Advances": "626276",
+              "Overall CD Ratio": "106.12"
+            },
+            "Banswara": {
+              "District": "Banswara",
+              "Total Deposit": "857228",
+              "Total Advances": "740864",
+              "Overall CD Ratio": "86.43"
+            },
+            "Baran": {
+              "District": "Baran",
+              "Total Deposit": "675032",
+              "Total Advances": "726231",
+              "Overall CD Ratio": "107.58"
+            },
+            "Barmer": {
+              "District": "Barmer",
+              "Total Deposit": "768378",
+              "Total Advances": "2610745",
+              "Overall CD Ratio": "339.77"
+            },
+            "Beawar": {
+              "District": "Beawar",
+              "Total Deposit": "814998",
+              "Total Advances": "771378",
+              "Overall CD Ratio": "94.65"
+            },
+            "Bharatpur": {
+              "District": "Bharatpur",
+              "Total Deposit": "1300199",
+              "Total Advances": "924356",
+              "Overall CD Ratio": "71.09"
+            },
+            "Bhilwara": {
+              "District": "Bhilwara",
+              "Total Deposit": "2186021",
+              "Total Advances": "3372951",
+              "Overall CD Ratio": "154.3"
+            },
+            "Bikaner": {
+              "District": "Bikaner",
+              "Total Deposit": "2625540",
+              "Total Advances": "2867837",
+              "Overall CD Ratio": "109.23"
+            },
+            "Bundi": {
+              "District": "Bundi",
+              "Total Deposit": "719726",
+              "Total Advances": "772815",
+              "Overall CD Ratio": "107.38"
+            },
+            "Chittorgarh": {
+              "District": "Chittorgarh",
+              "Total Deposit": "1405458",
+              "Total Advances": "1488663",
+              "Overall CD Ratio": "105.92"
+            },
+            "Churu": {
+              "District": "Churu",
+              "Total Deposit": "1326690",
+              "Total Advances": "1432141",
+              "Overall CD Ratio": "107.95"
+            },
+            "Dausa": {
+              "District": "Dausa",
+              "Total Deposit": "977186",
+              "Total Advances": "822419",
+              "Overall CD Ratio": "84.16"
+            },
+            "Deeg": {
+              "District": "Deeg",
+              "Total Deposit": "334103",
+              "Total Advances": "300728",
+              "Overall CD Ratio": "90.01"
+            },
+            "Dholpur": {
+              "District": "Dholpur",
+              "Total Deposit": "489749",
+              "Total Advances": "459672",
+              "Overall CD Ratio": "93.86"
+            },
+            "Didwana Kuchaman": {
+              "District": "Didwana Kuchaman",
+              "Total Deposit": "845415",
+              "Total Advances": "709794",
+              "Overall CD Ratio": "83.96"
+            },
+            "Dungarpur": {
+              "District": "Dungarpur",
+              "Total Deposit": "819763",
+              "Total Advances": "508997",
+              "Overall CD Ratio": "62.09"
+            },
+            "Ganganagar": {
+              "District": "Ganganagar",
+              "Total Deposit": "1937983",
+              "Total Advances": "2796938",
+              "Overall CD Ratio": "144.32"
+            },
+            "Hanumangarh": {
+              "District": "Hanumangarh",
+              "Total Deposit": "1122949",
+              "Total Advances": "2090827",
+              "Overall CD Ratio": "186.19"
+            },
+            "Jaipur": {
+              "District": "Jaipur",
+              "Total Deposit": "23944819",
+              "Total Advances": "24316814",
+              "Overall CD Ratio": "101.55"
+            },
+            "Jaisalmer": {
+              "District": "Jaisalmer",
+              "Total Deposit": "407690",
+              "Total Advances": "593926",
+              "Overall CD Ratio": "145.68"
+            },
+            "Jalore": {
+              "District": "Jalore",
+              "Total Deposit": "837357",
+              "Total Advances": "735373",
+              "Overall CD Ratio": "87.82"
+            },
+            "Jhalawar": {
+              "District": "Jhalawar",
+              "Total Deposit": "672222",
+              "Total Advances": "874452",
+              "Overall CD Ratio": "130.08"
+            },
+            "Jhunjhunu": {
+              "District": "Jhunjhunu",
+              "Total Deposit": "2018717",
+              "Total Advances": "1651760",
+              "Overall CD Ratio": "81.82"
+            },
+            "Jodhpur": {
+              "District": "Jodhpur",
+              "Total Deposit": "6222146",
+              "Total Advances": "5287452",
+              "Overall CD Ratio": "84.98"
+            },
+            "Karauli": {
+              "District": "Karauli",
+              "Total Deposit": "658613",
+              "Total Advances": "771751",
+              "Overall CD Ratio": "117.18"
+            },
+            "Khairthal-Tijara": {
+              "District": "Khairthal-Tijara",
+              "Total Deposit": "1278934",
+              "Total Advances": "1557372",
+              "Overall CD Ratio": "121.77"
+            },
+            "Kota": {
+              "District": "Kota",
+              "Total Deposit": "3683675",
+              "Total Advances": "2854240",
+              "Overall CD Ratio": "77.48"
+            },
+            "Kotputli-Behror": {
+              "District": "Kotputli-Behror",
+              "Total Deposit": "988770",
+              "Total Advances": "1006980",
+              "Overall CD Ratio": "101.84"
+            },
+            "Nagaur": {
+              "District": "Nagaur",
+              "Total Deposit": "776829",
+              "Total Advances": "1054423",
+              "Overall CD Ratio": "135.73"
+            },
+            "Pali": {
+              "District": "Pali",
+              "Total Deposit": "1447794",
+              "Total Advances": "1076841",
+              "Overall CD Ratio": "74.38"
+            },
+            "Phalodi": {
+              "District": "Phalodi",
+              "Total Deposit": "264280",
+              "Total Advances": "445321",
+              "Overall CD Ratio": "168.5"
+            },
+            "Pratapgarh": {
+              "District": "Pratapgarh",
+              "Total Deposit": "302558",
+              "Total Advances": "440532",
+              "Overall CD Ratio": "145.6"
+            },
+            "Rajsamand": {
+              "District": "Rajsamand",
+              "Total Deposit": "942687",
+              "Total Advances": "669368",
+              "Overall CD Ratio": "71.01"
+            },
+            "Salumbar": {
+              "District": "Salumbar",
+              "Total Deposit": "174620",
+              "Total Advances": "124344",
+              "Overall CD Ratio": "71.21"
+            },
+            "Sawai Madhopur": {
+              "District": "Sawai Madhopur",
+              "Total Deposit": "927136",
+              "Total Advances": "763492",
+              "Overall CD Ratio": "82.35"
+            },
+            "Sikar": {
+              "District": "Sikar",
+              "Total Deposit": "2277101",
+              "Total Advances": "2484680",
+              "Overall CD Ratio": "109.12"
+            },
+            "Sirohi": {
+              "District": "Sirohi",
+              "Total Deposit": "940689",
+              "Total Advances": "521137",
+              "Overall CD Ratio": "55.4"
+            },
+            "Tonk": {
+              "District": "Tonk",
+              "Total Deposit": "954406",
+              "Total Advances": "1017447",
+              "Overall CD Ratio": "106.61"
+            },
+            "Udaipur": {
+              "District": "Udaipur",
+              "Total Deposit": "5092690",
+              "Total Advances": "4163217",
+              "Overall CD Ratio": "81.75"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,883 @@
+{
+  "periods": [
+    {
+      "period": "June 2025",
+      "districts": [
+        {
+          "district": "Ahmednagar",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "4836300.0",
+          "credit_deposit_ratio__total_advances": "4096900.0",
+          "credit_deposit_ratio__overall_cd_ratio": "84.71",
+          "credit_deposit_ratio__total_branch": "769"
+        },
+        {
+          "district": "Akola",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "1734700.0",
+          "credit_deposit_ratio__total_advances": "1235600.0",
+          "credit_deposit_ratio__overall_cd_ratio": "71.23",
+          "credit_deposit_ratio__total_branch": "248"
+        },
+        {
+          "district": "Amravati",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "2684100.0",
+          "credit_deposit_ratio__total_advances": "2072900.0",
+          "credit_deposit_ratio__overall_cd_ratio": "77.23",
+          "credit_deposit_ratio__total_branch": "396"
+        },
+        {
+          "district": "Chhatrapati Sambhajinagar",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "5576800.0",
+          "credit_deposit_ratio__total_advances": "4944100.0",
+          "credit_deposit_ratio__overall_cd_ratio": "88.65",
+          "credit_deposit_ratio__total_branch": "519"
+        },
+        {
+          "district": "Beed",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "1601700.0",
+          "credit_deposit_ratio__total_advances": "1333400.0",
+          "credit_deposit_ratio__overall_cd_ratio": "83.25",
+          "credit_deposit_ratio__total_branch": "231"
+        },
+        {
+          "district": "Bhandara",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "1076800.0",
+          "credit_deposit_ratio__total_advances": "478100.0",
+          "credit_deposit_ratio__overall_cd_ratio": "44.4",
+          "credit_deposit_ratio__total_branch": "175"
+        },
+        {
+          "district": "Buldhana",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "1732500.0",
+          "credit_deposit_ratio__total_advances": "1393000.0",
+          "credit_deposit_ratio__overall_cd_ratio": "80.4",
+          "credit_deposit_ratio__total_branch": "273"
+        },
+        {
+          "district": "Chandrapur",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "2687100.0",
+          "credit_deposit_ratio__total_advances": "1195000.0",
+          "credit_deposit_ratio__overall_cd_ratio": "44.47",
+          "credit_deposit_ratio__total_branch": "313"
+        },
+        {
+          "district": "Dhule",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "1440700.0",
+          "credit_deposit_ratio__total_advances": "1160900.0",
+          "credit_deposit_ratio__overall_cd_ratio": "80.58",
+          "credit_deposit_ratio__total_branch": "204"
+        },
+        {
+          "district": "Gadchiroli",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "885200.0",
+          "credit_deposit_ratio__total_advances": "325700.0",
+          "credit_deposit_ratio__overall_cd_ratio": "36.79",
+          "credit_deposit_ratio__total_branch": "137"
+        },
+        {
+          "district": "Gondia",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "938500.0",
+          "credit_deposit_ratio__total_advances": "585700.0",
+          "credit_deposit_ratio__overall_cd_ratio": "62.41",
+          "credit_deposit_ratio__total_branch": "160"
+        },
+        {
+          "district": "Hingoli",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "510900.0",
+          "credit_deposit_ratio__total_advances": "494000.0",
+          "credit_deposit_ratio__overall_cd_ratio": "96.7",
+          "credit_deposit_ratio__total_branch": "125"
+        },
+        {
+          "district": "Jalgaon",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "3479700.0",
+          "credit_deposit_ratio__total_advances": "2574700.0",
+          "credit_deposit_ratio__overall_cd_ratio": "73.99",
+          "credit_deposit_ratio__total_branch": "642"
+        },
+        {
+          "district": "Jalna",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "987600.0",
+          "credit_deposit_ratio__total_advances": "1211800.0",
+          "credit_deposit_ratio__overall_cd_ratio": "122.7",
+          "credit_deposit_ratio__total_branch": "205"
+        },
+        {
+          "district": "Kolhapur",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "5180900.0",
+          "credit_deposit_ratio__total_advances": "4545600.0",
+          "credit_deposit_ratio__overall_cd_ratio": "87.74",
+          "credit_deposit_ratio__total_branch": "664"
+        },
+        {
+          "district": "Latur",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "1959000.0",
+          "credit_deposit_ratio__total_advances": "1996700.0",
+          "credit_deposit_ratio__overall_cd_ratio": "101.92",
+          "credit_deposit_ratio__total_branch": "331"
+        },
+        {
+          "district": "Mumbai",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "189726300.0",
+          "credit_deposit_ratio__total_advances": "237915500.0",
+          "credit_deposit_ratio__overall_cd_ratio": "125.4",
+          "credit_deposit_ratio__total_branch": "981"
+        },
+        {
+          "district": "Mumbai Suburban",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "103872500.0",
+          "credit_deposit_ratio__total_advances": "61131000.0",
+          "credit_deposit_ratio__overall_cd_ratio": "58.85",
+          "credit_deposit_ratio__total_branch": "1450"
+        },
+        {
+          "district": "Nagpur",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "14148000.0",
+          "credit_deposit_ratio__total_advances": "8896100.0",
+          "credit_deposit_ratio__overall_cd_ratio": "62.88",
+          "credit_deposit_ratio__total_branch": "887"
+        },
+        {
+          "district": "Nanded",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "1956600.0",
+          "credit_deposit_ratio__total_advances": "1865600.0",
+          "credit_deposit_ratio__overall_cd_ratio": "95.35",
+          "credit_deposit_ratio__total_branch": "308"
+        },
+        {
+          "district": "Nandurbar",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "712200.0",
+          "credit_deposit_ratio__total_advances": "532900.0",
+          "credit_deposit_ratio__overall_cd_ratio": "74.83",
+          "credit_deposit_ratio__total_branch": "115"
+        },
+        {
+          "district": "Nashik",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "9434900.0",
+          "credit_deposit_ratio__total_advances": "7963700.0",
+          "credit_deposit_ratio__overall_cd_ratio": "84.41",
+          "credit_deposit_ratio__total_branch": "840"
+        },
+        {
+          "district": "Dharashiv",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "1123900.0",
+          "credit_deposit_ratio__total_advances": "917900.0",
+          "credit_deposit_ratio__overall_cd_ratio": "81.67",
+          "credit_deposit_ratio__total_branch": "206"
+        },
+        {
+          "district": "Palghar",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "4666600.0",
+          "credit_deposit_ratio__total_advances": "3223300.0",
+          "credit_deposit_ratio__overall_cd_ratio": "69.07",
+          "credit_deposit_ratio__total_branch": "383"
+        },
+        {
+          "district": "Parbhani",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "1005000.0",
+          "credit_deposit_ratio__total_advances": "1023300.0",
+          "credit_deposit_ratio__overall_cd_ratio": "101.82",
+          "credit_deposit_ratio__total_branch": "182"
+        },
+        {
+          "district": "Pune",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "57651100.0",
+          "credit_deposit_ratio__total_advances": "49110200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "85.19",
+          "credit_deposit_ratio__total_branch": "2170"
+        },
+        {
+          "district": "Raigad",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "7145200.0",
+          "credit_deposit_ratio__total_advances": "6244200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "87.39",
+          "credit_deposit_ratio__total_branch": "593"
+        },
+        {
+          "district": "Ratnagiri",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "1956200.0",
+          "credit_deposit_ratio__total_advances": "1154100.0",
+          "credit_deposit_ratio__overall_cd_ratio": "59.0",
+          "credit_deposit_ratio__total_branch": "338"
+        },
+        {
+          "district": "Sangli",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "3481100.0",
+          "credit_deposit_ratio__total_advances": "2897300.0",
+          "credit_deposit_ratio__overall_cd_ratio": "83.23",
+          "credit_deposit_ratio__total_branch": "546"
+        },
+        {
+          "district": "Satara",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "3881400.0",
+          "credit_deposit_ratio__total_advances": "2755500.0",
+          "credit_deposit_ratio__overall_cd_ratio": "70.99",
+          "credit_deposit_ratio__total_branch": "664"
+        },
+        {
+          "district": "Sindhudurg",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "1314600.0",
+          "credit_deposit_ratio__total_advances": "707700.0",
+          "credit_deposit_ratio__overall_cd_ratio": "53.83",
+          "credit_deposit_ratio__total_branch": "260"
+        },
+        {
+          "district": "Solapur",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "4007000.0",
+          "credit_deposit_ratio__total_advances": "3719600.0",
+          "credit_deposit_ratio__overall_cd_ratio": "92.83",
+          "credit_deposit_ratio__total_branch": "647"
+        },
+        {
+          "district": "Thane",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "33901100.0",
+          "credit_deposit_ratio__total_advances": "22703700.0",
+          "credit_deposit_ratio__overall_cd_ratio": "66.97",
+          "credit_deposit_ratio__total_branch": "1236"
+        },
+        {
+          "district": "Wardha",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "1311300.0",
+          "credit_deposit_ratio__total_advances": "1098000.0",
+          "credit_deposit_ratio__overall_cd_ratio": "83.73",
+          "credit_deposit_ratio__total_branch": "181"
+        },
+        {
+          "district": "Washim",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "620200.0",
+          "credit_deposit_ratio__total_advances": "638100.0",
+          "credit_deposit_ratio__overall_cd_ratio": "102.89",
+          "credit_deposit_ratio__total_branch": "148"
+        },
+        {
+          "district": "Yavatmal",
+          "period": "June 2025",
+          "credit_deposit_ratio__total_deposit": "2038800.0",
+          "credit_deposit_ratio__total_advances": "1556400.0",
+          "credit_deposit_ratio__overall_cd_ratio": "76.34",
+          "credit_deposit_ratio__total_branch": "319"
+        }
+      ]
+    },
+    {
+      "period": "September 2025",
+      "districts": [
+        {
+          "district": "Ahmednagar",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "4964300.0",
+          "credit_deposit_ratio__total_advances": "4264300.0",
+          "credit_deposit_ratio__overall_cd_ratio": "85.9",
+          "credit_deposit_ratio__total_branch": "770"
+        },
+        {
+          "district": "Akola",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "1741900.0",
+          "credit_deposit_ratio__total_advances": "1272200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "73.04",
+          "credit_deposit_ratio__total_branch": "248"
+        },
+        {
+          "district": "Amravati",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "2742700.0",
+          "credit_deposit_ratio__total_advances": "2166800.0",
+          "credit_deposit_ratio__overall_cd_ratio": "79.0",
+          "credit_deposit_ratio__total_branch": "397"
+        },
+        {
+          "district": "Beed",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "1633600.0",
+          "credit_deposit_ratio__total_advances": "1386900.0",
+          "credit_deposit_ratio__overall_cd_ratio": "84.9",
+          "credit_deposit_ratio__total_branch": "231"
+        },
+        {
+          "district": "Bhandara",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "1110800.0",
+          "credit_deposit_ratio__total_advances": "497700.0",
+          "credit_deposit_ratio__overall_cd_ratio": "44.8",
+          "credit_deposit_ratio__total_branch": "177"
+        },
+        {
+          "district": "Buldhana",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "1771000.0",
+          "credit_deposit_ratio__total_advances": "1501200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "84.77",
+          "credit_deposit_ratio__total_branch": "274"
+        },
+        {
+          "district": "Chandrapur",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "2727400.0",
+          "credit_deposit_ratio__total_advances": "1232200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "45.18",
+          "credit_deposit_ratio__total_branch": "312"
+        },
+        {
+          "district": "Chhatrapati Sambhajinagar",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "5649600.0",
+          "credit_deposit_ratio__total_advances": "5021300.0",
+          "credit_deposit_ratio__overall_cd_ratio": "88.88",
+          "credit_deposit_ratio__total_branch": "513"
+        },
+        {
+          "district": "Dharashiv",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "1142800.0",
+          "credit_deposit_ratio__total_advances": "951200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "83.24",
+          "credit_deposit_ratio__total_branch": "206"
+        },
+        {
+          "district": "Dhule",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "1463600.0",
+          "credit_deposit_ratio__total_advances": "1204700.0",
+          "credit_deposit_ratio__overall_cd_ratio": "82.31",
+          "credit_deposit_ratio__total_branch": "205"
+        },
+        {
+          "district": "Gadchiroli",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "923600.0",
+          "credit_deposit_ratio__total_advances": "338000.0",
+          "credit_deposit_ratio__overall_cd_ratio": "36.59",
+          "credit_deposit_ratio__total_branch": "138"
+        },
+        {
+          "district": "Gondia",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "981800.0",
+          "credit_deposit_ratio__total_advances": "599300.0",
+          "credit_deposit_ratio__overall_cd_ratio": "61.04",
+          "credit_deposit_ratio__total_branch": "160"
+        },
+        {
+          "district": "Hingoli",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "512800.0",
+          "credit_deposit_ratio__total_advances": "509900.0",
+          "credit_deposit_ratio__overall_cd_ratio": "99.45",
+          "credit_deposit_ratio__total_branch": "125"
+        },
+        {
+          "district": "Jalgaon",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "3541900.0",
+          "credit_deposit_ratio__total_advances": "2674500.0",
+          "credit_deposit_ratio__overall_cd_ratio": "75.51",
+          "credit_deposit_ratio__total_branch": "644"
+        },
+        {
+          "district": "Jalna",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "1022700.0",
+          "credit_deposit_ratio__total_advances": "1235600.0",
+          "credit_deposit_ratio__overall_cd_ratio": "120.82",
+          "credit_deposit_ratio__total_branch": "205"
+        },
+        {
+          "district": "Kolhapur",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "5232300.0",
+          "credit_deposit_ratio__total_advances": "4770900.0",
+          "credit_deposit_ratio__overall_cd_ratio": "91.18",
+          "credit_deposit_ratio__total_branch": "667"
+        },
+        {
+          "district": "Latur",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "1963100.0",
+          "credit_deposit_ratio__total_advances": "2037300.0",
+          "credit_deposit_ratio__overall_cd_ratio": "103.78",
+          "credit_deposit_ratio__total_branch": "331"
+        },
+        {
+          "district": "Mumbai",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "173114200.0",
+          "credit_deposit_ratio__total_advances": "247810700.0",
+          "credit_deposit_ratio__overall_cd_ratio": "143.15",
+          "credit_deposit_ratio__total_branch": "982"
+        },
+        {
+          "district": "Mumbai Suburban",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "103616800.0",
+          "credit_deposit_ratio__total_advances": "62366400.0",
+          "credit_deposit_ratio__overall_cd_ratio": "60.19",
+          "credit_deposit_ratio__total_branch": "1493"
+        },
+        {
+          "district": "Nagpur",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "14499300.0",
+          "credit_deposit_ratio__total_advances": "9072300.0",
+          "credit_deposit_ratio__overall_cd_ratio": "62.57",
+          "credit_deposit_ratio__total_branch": "891"
+        },
+        {
+          "district": "Nanded",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "1979800.0",
+          "credit_deposit_ratio__total_advances": "1924100.0",
+          "credit_deposit_ratio__overall_cd_ratio": "97.19",
+          "credit_deposit_ratio__total_branch": "308"
+        },
+        {
+          "district": "Nandurbar",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "711700.0",
+          "credit_deposit_ratio__total_advances": "545200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "76.61",
+          "credit_deposit_ratio__total_branch": "115"
+        },
+        {
+          "district": "Nashik",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "9870200.0",
+          "credit_deposit_ratio__total_advances": "8252200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "83.61",
+          "credit_deposit_ratio__total_branch": "842"
+        },
+        {
+          "district": "Palghar",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "4821400.0",
+          "credit_deposit_ratio__total_advances": "3338800.0",
+          "credit_deposit_ratio__overall_cd_ratio": "69.25",
+          "credit_deposit_ratio__total_branch": "386"
+        },
+        {
+          "district": "Parbhani",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "997900.0",
+          "credit_deposit_ratio__total_advances": "1062600.0",
+          "credit_deposit_ratio__overall_cd_ratio": "106.48",
+          "credit_deposit_ratio__total_branch": "186"
+        },
+        {
+          "district": "Pune",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "58269200.0",
+          "credit_deposit_ratio__total_advances": "51586000.0",
+          "credit_deposit_ratio__overall_cd_ratio": "88.53",
+          "credit_deposit_ratio__total_branch": "2196"
+        },
+        {
+          "district": "Raigad",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "7550900.0",
+          "credit_deposit_ratio__total_advances": "6468200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "85.66",
+          "credit_deposit_ratio__total_branch": "596"
+        },
+        {
+          "district": "Ratnagiri",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "2048900.0",
+          "credit_deposit_ratio__total_advances": "1201200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "58.63",
+          "credit_deposit_ratio__total_branch": "338"
+        },
+        {
+          "district": "Sangli",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "3500400.0",
+          "credit_deposit_ratio__total_advances": "2963200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "84.65",
+          "credit_deposit_ratio__total_branch": "548"
+        },
+        {
+          "district": "Satara",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "3969000.0",
+          "credit_deposit_ratio__total_advances": "2793500.0",
+          "credit_deposit_ratio__overall_cd_ratio": "70.38",
+          "credit_deposit_ratio__total_branch": "665"
+        },
+        {
+          "district": "Sindhudurg",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "1340000.0",
+          "credit_deposit_ratio__total_advances": "749800.0",
+          "credit_deposit_ratio__overall_cd_ratio": "55.96",
+          "credit_deposit_ratio__total_branch": "260"
+        },
+        {
+          "district": "Solapur",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "4091600.0",
+          "credit_deposit_ratio__total_advances": "3835000.0",
+          "credit_deposit_ratio__overall_cd_ratio": "93.73",
+          "credit_deposit_ratio__total_branch": "652"
+        },
+        {
+          "district": "Thane",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "34403900.0",
+          "credit_deposit_ratio__total_advances": "23543200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "68.43",
+          "credit_deposit_ratio__total_branch": "1244"
+        },
+        {
+          "district": "Wardha",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "1333800.0",
+          "credit_deposit_ratio__total_advances": "1073600.0",
+          "credit_deposit_ratio__overall_cd_ratio": "80.49",
+          "credit_deposit_ratio__total_branch": "181"
+        },
+        {
+          "district": "Washim",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "635200.0",
+          "credit_deposit_ratio__total_advances": "661200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "104.1",
+          "credit_deposit_ratio__total_branch": "148"
+        },
+        {
+          "district": "Yavatmal",
+          "period": "September 2025",
+          "credit_deposit_ratio__total_deposit": "2059900.0",
+          "credit_deposit_ratio__total_advances": "1599800.0",
+          "credit_deposit_ratio__overall_cd_ratio": "77.67",
+          "credit_deposit_ratio__total_branch": "321"
+        }
+      ]
+    },
+    {
+      "period": "December 2025",
+      "districts": [
+        {
+          "district": "Ahmednagar",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "5100600.0",
+          "credit_deposit_ratio__total_advances": "4470200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "87.64",
+          "credit_deposit_ratio__total_branch": "771"
+        },
+        {
+          "district": "Akola",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "1766800.0",
+          "credit_deposit_ratio__total_advances": "1330200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "75.29",
+          "credit_deposit_ratio__total_branch": "247"
+        },
+        {
+          "district": "Amravati",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "2793400.0",
+          "credit_deposit_ratio__total_advances": "2274400.0",
+          "credit_deposit_ratio__overall_cd_ratio": "81.42",
+          "credit_deposit_ratio__total_branch": "398"
+        },
+        {
+          "district": "Beed",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "1678400.0",
+          "credit_deposit_ratio__total_advances": "1466700.0",
+          "credit_deposit_ratio__overall_cd_ratio": "87.38",
+          "credit_deposit_ratio__total_branch": "231"
+        },
+        {
+          "district": "Bhandara",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "1102000.0",
+          "credit_deposit_ratio__total_advances": "520600.0",
+          "credit_deposit_ratio__overall_cd_ratio": "47.24",
+          "credit_deposit_ratio__total_branch": "178"
+        },
+        {
+          "district": "Buldhana",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "1776200.0",
+          "credit_deposit_ratio__total_advances": "1604100.0",
+          "credit_deposit_ratio__overall_cd_ratio": "90.31",
+          "credit_deposit_ratio__total_branch": "277"
+        },
+        {
+          "district": "Chandrapur",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "2711200.0",
+          "credit_deposit_ratio__total_advances": "1310000.0",
+          "credit_deposit_ratio__overall_cd_ratio": "48.32",
+          "credit_deposit_ratio__total_branch": "314"
+        },
+        {
+          "district": "Chhatrapati Sambhajinagar",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "5901200.0",
+          "credit_deposit_ratio__total_advances": "5326100.0",
+          "credit_deposit_ratio__overall_cd_ratio": "90.25",
+          "credit_deposit_ratio__total_branch": "521"
+        },
+        {
+          "district": "Dharashiv",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "1186600.0",
+          "credit_deposit_ratio__total_advances": "993600.0",
+          "credit_deposit_ratio__overall_cd_ratio": "83.73",
+          "credit_deposit_ratio__total_branch": "205"
+        },
+        {
+          "district": "Dhule",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "1462600.0",
+          "credit_deposit_ratio__total_advances": "1251800.0",
+          "credit_deposit_ratio__overall_cd_ratio": "85.59",
+          "credit_deposit_ratio__total_branch": "205"
+        },
+        {
+          "district": "Gadchiroli",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "909800.0",
+          "credit_deposit_ratio__total_advances": "338100.0",
+          "credit_deposit_ratio__overall_cd_ratio": "37.17",
+          "credit_deposit_ratio__total_branch": "141"
+        },
+        {
+          "district": "Gondia",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "948200.0",
+          "credit_deposit_ratio__total_advances": "629800.0",
+          "credit_deposit_ratio__overall_cd_ratio": "66.42",
+          "credit_deposit_ratio__total_branch": "161"
+        },
+        {
+          "district": "Hingoli",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "557600.0",
+          "credit_deposit_ratio__total_advances": "532900.0",
+          "credit_deposit_ratio__overall_cd_ratio": "95.57",
+          "credit_deposit_ratio__total_branch": "125"
+        },
+        {
+          "district": "Jalgaon",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "3572600.0",
+          "credit_deposit_ratio__total_advances": "2799800.0",
+          "credit_deposit_ratio__overall_cd_ratio": "78.37",
+          "credit_deposit_ratio__total_branch": "646"
+        },
+        {
+          "district": "Jalna",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "1012000.0",
+          "credit_deposit_ratio__total_advances": "1284800.0",
+          "credit_deposit_ratio__overall_cd_ratio": "126.96",
+          "credit_deposit_ratio__total_branch": "204"
+        },
+        {
+          "district": "Kolhapur",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "5419600.0",
+          "credit_deposit_ratio__total_advances": "4942700.0",
+          "credit_deposit_ratio__overall_cd_ratio": "91.2",
+          "credit_deposit_ratio__total_branch": "665"
+        },
+        {
+          "district": "Latur",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "2068900.0",
+          "credit_deposit_ratio__total_advances": "2203200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "106.49",
+          "credit_deposit_ratio__total_branch": "332"
+        },
+        {
+          "district": "Mumbai",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "179101300.0",
+          "credit_deposit_ratio__total_advances": "256848500.0",
+          "credit_deposit_ratio__overall_cd_ratio": "143.41",
+          "credit_deposit_ratio__total_branch": "991"
+        },
+        {
+          "district": "Mumbai Suburban",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "104246600.0",
+          "credit_deposit_ratio__total_advances": "65483600.0",
+          "credit_deposit_ratio__overall_cd_ratio": "62.82",
+          "credit_deposit_ratio__total_branch": "1450"
+        },
+        {
+          "district": "Nagpur",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "14772000.0",
+          "credit_deposit_ratio__total_advances": "9692400.0",
+          "credit_deposit_ratio__overall_cd_ratio": "65.61",
+          "credit_deposit_ratio__total_branch": "899"
+        },
+        {
+          "district": "Nanded",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "2010400.0",
+          "credit_deposit_ratio__total_advances": "2021800.0",
+          "credit_deposit_ratio__overall_cd_ratio": "100.57",
+          "credit_deposit_ratio__total_branch": "308"
+        },
+        {
+          "district": "Nandurbar",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "713200.0",
+          "credit_deposit_ratio__total_advances": "570100.0",
+          "credit_deposit_ratio__overall_cd_ratio": "79.93",
+          "credit_deposit_ratio__total_branch": "115"
+        },
+        {
+          "district": "Nashik",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "9836700.0",
+          "credit_deposit_ratio__total_advances": "8612400.0",
+          "credit_deposit_ratio__overall_cd_ratio": "87.55",
+          "credit_deposit_ratio__total_branch": "844"
+        },
+        {
+          "district": "Palghar",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "4975500.0",
+          "credit_deposit_ratio__total_advances": "3475100.0",
+          "credit_deposit_ratio__overall_cd_ratio": "69.84",
+          "credit_deposit_ratio__total_branch": "392"
+        },
+        {
+          "district": "Parbhani",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "979700.0",
+          "credit_deposit_ratio__total_advances": "1119000.0",
+          "credit_deposit_ratio__overall_cd_ratio": "114.21",
+          "credit_deposit_ratio__total_branch": "187"
+        },
+        {
+          "district": "Pune",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "61876800.0",
+          "credit_deposit_ratio__total_advances": "53949200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "87.19",
+          "credit_deposit_ratio__total_branch": "2212"
+        },
+        {
+          "district": "Raigad",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "7893200.0",
+          "credit_deposit_ratio__total_advances": "6921500.0",
+          "credit_deposit_ratio__overall_cd_ratio": "87.69",
+          "credit_deposit_ratio__total_branch": "597"
+        },
+        {
+          "district": "Ratnagiri",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "2138000.0",
+          "credit_deposit_ratio__total_advances": "1273600.0",
+          "credit_deposit_ratio__overall_cd_ratio": "59.57",
+          "credit_deposit_ratio__total_branch": "340"
+        },
+        {
+          "district": "Sangli",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "3581500.0",
+          "credit_deposit_ratio__total_advances": "3103600.0",
+          "credit_deposit_ratio__overall_cd_ratio": "86.66",
+          "credit_deposit_ratio__total_branch": "548"
+        },
+        {
+          "district": "Satara",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "3977400.0",
+          "credit_deposit_ratio__total_advances": "2918400.0",
+          "credit_deposit_ratio__overall_cd_ratio": "73.38",
+          "credit_deposit_ratio__total_branch": "665"
+        },
+        {
+          "district": "Sindhudurg",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "1371700.0",
+          "credit_deposit_ratio__total_advances": "792100.0",
+          "credit_deposit_ratio__overall_cd_ratio": "57.75",
+          "credit_deposit_ratio__total_branch": "261"
+        },
+        {
+          "district": "Solapur",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "4256000.0",
+          "credit_deposit_ratio__total_advances": "4002400.0",
+          "credit_deposit_ratio__overall_cd_ratio": "94.04",
+          "credit_deposit_ratio__total_branch": "652"
+        },
+        {
+          "district": "Thane",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "35114500.0",
+          "credit_deposit_ratio__total_advances": "24559000.0",
+          "credit_deposit_ratio__overall_cd_ratio": "69.94",
+          "credit_deposit_ratio__total_branch": "1246"
+        },
+        {
+          "district": "Wardha",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "1358100.0",
+          "credit_deposit_ratio__total_advances": "1098100.0",
+          "credit_deposit_ratio__overall_cd_ratio": "80.85",
+          "credit_deposit_ratio__total_branch": "181"
+        },
+        {
+          "district": "Washim",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "641400.0",
+          "credit_deposit_ratio__total_advances": "688200.0",
+          "credit_deposit_ratio__overall_cd_ratio": "107.3",
+          "credit_deposit_ratio__total_branch": "149"
+        },
+        {
+          "district": "Yavatmal",
+          "period": "December 2025",
+          "credit_deposit_ratio__total_deposit": "2115200.0",
+          "credit_deposit_ratio__total_advances": "1659100.0",
+          "credit_deposit_ratio__overall_cd_ratio": "78.43",
+          "credit_deposit_ratio__total_branch": "323"
+        }
+      ]
+    }
+  ]
+}
