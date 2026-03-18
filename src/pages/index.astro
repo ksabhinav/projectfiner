@@ -213,8 +213,8 @@ const base = import.meta.env.BASE_URL;
 
     var _isMobile = window.innerWidth <= 640;
     var INDIA_BOUNDS = _isMobile
-      ? L.latLngBounds(L.latLng(0, 65.0), L.latLng(45, 112.0))  // Extended for mobile panning
-      : L.latLngBounds(L.latLng(6.5,68.0), L.latLng(37.5,110.0));
+      ? L.latLngBounds(L.latLng(0, 60.0), L.latLng(45, 112.0))  // Extended for mobile panning
+      : L.latLngBounds(L.latLng(2, 62.0), L.latLng(40, 112.0)); // Wide bounds for panning + zoom on western states
     var NE_BOUNDS    = L.latLngBounds(L.latLng(17.5, 79.5), L.latLng(29.5, 97.5));
     var ALL_STATES_BOUNDS = L.latLngBounds(L.latLng(8, 68), L.latLng(31, 97.5)); // All 20 states incl HR
     var NE_CENTER    = [20, 82.5]; // Visual center of all 19 states (lat 8-30, lng 68-97.5)
