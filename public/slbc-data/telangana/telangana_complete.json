@@ -1,0 +1,183 @@
+{
+  "quarters": {
+    "december_2024": {
+      "period": "December 2024",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "total_deposit",
+            "total_advances",
+            "overall_cd_ratio"
+          ],
+          "districts": {
+            "Adilabad": {
+              "total_deposit": "460828.0",
+              "total_advances": "711743.0",
+              "overall_cd_ratio": "154.45"
+            },
+            "Bhadradri Kothagudem": {
+              "total_deposit": "743351.0",
+              "total_advances": "1113325.0",
+              "overall_cd_ratio": "149.77"
+            },
+            "Hanumakonda": {
+              "total_deposit": "1582089.0",
+              "total_advances": "2107014.0",
+              "overall_cd_ratio": "133.18"
+            },
+            "Hyderabad": {
+              "total_deposit": "42306910.0",
+              "total_advances": "49976324.0",
+              "overall_cd_ratio": "118.13"
+            },
+            "Jagitial": {
+              "total_deposit": "592056.0",
+              "total_advances": "832448.0",
+              "overall_cd_ratio": "140.6"
+            },
+            "Jangoan": {
+              "total_deposit": "199547.0",
+              "total_advances": "552336.0",
+              "overall_cd_ratio": "276.79"
+            },
+            "Jayashankar Bhupalapally": {
+              "total_deposit": "178204.0",
+              "total_advances": "266903.0",
+              "overall_cd_ratio": "149.77"
+            },
+            "Jogulamba Gadwal": {
+              "total_deposit": "189089.0",
+              "total_advances": "449615.0",
+              "overall_cd_ratio": "237.78"
+            },
+            "Kamareddy": {
+              "total_deposit": "402336.0",
+              "total_advances": "784597.0",
+              "overall_cd_ratio": "195.01"
+            },
+            "Karimnagar": {
+              "total_deposit": "1304227.0",
+              "total_advances": "1708171.0",
+              "overall_cd_ratio": "130.97"
+            },
+            "Khammam": {
+              "total_deposit": "1070436.0",
+              "total_advances": "2203802.0",
+              "overall_cd_ratio": "205.88"
+            },
+            "Kumuram Bheem Asifabad": {
+              "total_deposit": "214441.0",
+              "total_advances": "203748.0",
+              "overall_cd_ratio": "95.01"
+            },
+            "Mahabubabad": {
+              "total_deposit": "215871.0",
+              "total_advances": "594482.0",
+              "overall_cd_ratio": "275.39"
+            },
+            "Mahabubnagar": {
+              "total_deposit": "582052.0",
+              "total_advances": "1135774.0",
+              "overall_cd_ratio": "195.13"
+            },
+            "Mancherial": {
+              "total_deposit": "802455.0",
+              "total_advances": "811351.0",
+              "overall_cd_ratio": "101.11"
+            },
+            "Medak": {
+              "total_deposit": "275042.0",
+              "total_advances": "633692.0",
+              "overall_cd_ratio": "230.4"
+            },
+            "Medchal Malkajgiri": {
+              "total_deposit": "12408440.0",
+              "total_advances": "14706894.0",
+              "overall_cd_ratio": "118.52"
+            },
+            "Mulugu": {
+              "total_deposit": "114124.0",
+              "total_advances": "181572.0",
+              "overall_cd_ratio": "159.1"
+            },
+            "Nagarkurnool": {
+              "total_deposit": "291188.0",
+              "total_advances": "663476.0",
+              "overall_cd_ratio": "227.85"
+            },
+            "Nalgonda": {
+              "total_deposit": "965632.0",
+              "total_advances": "2221663.0",
+              "overall_cd_ratio": "230.07"
+            },
+            "Narayanpet": {
+              "total_deposit": "162742.0",
+              "total_advances": "318139.0",
+              "overall_cd_ratio": "195.49"
+            },
+            "Nirmal": {
+              "total_deposit": "335562.0",
+              "total_advances": "707182.0",
+              "overall_cd_ratio": "210.75"
+            },
+            "Nizamabad": {
+              "total_deposit": "1063936.0",
+              "total_advances": "1961362.0",
+              "overall_cd_ratio": "184.35"
+            },
+            "Peddapalli": {
+              "total_deposit": "738153.0",
+              "total_advances": "759283.0",
+              "overall_cd_ratio": "102.86"
+            },
+            "Rajanna Sircilla": {
+              "total_deposit": "394315.0",
+              "total_advances": "508550.0",
+              "overall_cd_ratio": "128.97"
+            },
+            "Ranga Reddy": {
+              "total_deposit": "9359164.0",
+              "total_advances": "10627461.0",
+              "overall_cd_ratio": "113.55"
+            },
+            "Sangareddy": {
+              "total_deposit": "1897676.0",
+              "total_advances": "3144125.0",
+              "overall_cd_ratio": "165.68"
+            },
+            "Siddipet": {
+              "total_deposit": "543014.0",
+              "total_advances": "1045176.0",
+              "overall_cd_ratio": "192.48"
+            },
+            "Suryapet": {
+              "total_deposit": "499493.0",
+              "total_advances": "1393116.0",
+              "overall_cd_ratio": "278.91"
+            },
+            "Vikarabad": {
+              "total_deposit": "332681.0",
+              "total_advances": "635046.0",
+              "overall_cd_ratio": "190.89"
+            },
+            "Wanaparthy": {
+              "total_deposit": "209894.0",
+              "total_advances": "442185.0",
+              "overall_cd_ratio": "210.67"
+            },
+            "Warangal": {
+              "total_deposit": "866540.0",
+              "total_advances": "1216707.0",
+              "overall_cd_ratio": "140.41"
+            },
+            "Yadadri Bhuvanagiri": {
+              "total_deposit": "385337.0",
+              "total_advances": "775100.0",
+              "overall_cd_ratio": "201.15"
+            }
+          }
+        }
+      }
+    }
+  }
+}
