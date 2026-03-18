@@ -1,0 +1,83 @@
+{
+  "quarters": {
+    "september_2021": {
+      "period": "September 2021",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "total_deposit",
+            "total_advances",
+            "overall_cd_ratio"
+          ],
+          "districts": {
+            "Dehradun": {
+              "total_deposit": "6620000.0",
+              "total_advances": "2231000.0",
+              "overall_cd_ratio": "34.0"
+            },
+            "Uttarkashi": {
+              "total_deposit": "242700.0",
+              "total_advances": "111800.0",
+              "overall_cd_ratio": "46.0"
+            },
+            "Hardwar": {
+              "total_deposit": "2329600.0",
+              "total_advances": "1594100.0",
+              "overall_cd_ratio": "68.0"
+            },
+            "Tehri": {
+              "total_deposit": "580700.0",
+              "total_advances": "177000.0",
+              "overall_cd_ratio": "30.0"
+            },
+            "Pauri": {
+              "total_deposit": "999500.0",
+              "total_advances": "235700.0",
+              "overall_cd_ratio": "24.0"
+            },
+            "Chamoli": {
+              "total_deposit": "395800.0",
+              "total_advances": "275700.0",
+              "overall_cd_ratio": "70.0"
+            },
+            "Rudra Prayag": {
+              "total_deposit": "228700.0",
+              "total_advances": "58800.0",
+              "overall_cd_ratio": "26.0"
+            },
+            "Almora": {
+              "total_deposit": "683300.0",
+              "total_advances": "160200.0",
+              "overall_cd_ratio": "23.0"
+            },
+            "Bageshwar": {
+              "total_deposit": "217700.0",
+              "total_advances": "52300.0",
+              "overall_cd_ratio": "24.0"
+            },
+            "Pithoragarh": {
+              "total_deposit": "516800.0",
+              "total_advances": "222200.0",
+              "overall_cd_ratio": "43.0"
+            },
+            "Champawat": {
+              "total_deposit": "257700.0",
+              "total_advances": "81100.0",
+              "overall_cd_ratio": "31.0"
+            },
+            "Nainital": {
+              "total_deposit": "1922500.0",
+              "total_advances": "726200.0",
+              "overall_cd_ratio": "38.0"
+            },
+            "Usnagar": {
+              "total_deposit": "1647800.0",
+              "total_advances": "1660700.0",
+              "overall_cd_ratio": "101.0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

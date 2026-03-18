@@ -130,6 +130,7 @@ const base = import.meta.env.BASE_URL;
             <option value="RAJASTHAN">Rajasthan</option>
             <option value="TAMIL NADU">Tamil Nadu</option>
             <option value="TELANGANA">Telangana</option>
+            <option value="UTTARAKHAND">Uttarakhand</option>
           </select>
         </div>
 
@@ -219,8 +220,8 @@ const base = import.meta.env.BASE_URL;
     var NE_BOUNDS    = L.latLngBounds(L.latLng(17.5, 79.5), L.latLng(29.5, 97.5));
     var ALL_STATES_BOUNDS = L.latLngBounds(L.latLng(8, 68), L.latLng(31, 97.5)); // All 20 states incl HR
     var NE_CENTER    = [20, 82.5]; // Visual center of all 19 states (lat 8-30, lng 68-97.5)
-    var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK','BR','WB','JH','OR','CT','KL','KA','TN','RJ','GJ','MH','HR','TS'];
-    var NE_STATES    = ['ASSAM','MEGHALAYA','MANIPUR','MIZORAM','NAGALAND','TRIPURA','ARUNACHAL PRADESH','SIKKIM','BIHAR','WEST BENGAL','JHARKHAND','ODISHA','CHHATTISGARH','KERALA','KARNATAKA','TAMIL NADU','RAJASTHAN','GUJARAT','MAHARASHTRA','HARYANA','TELANGANA'];
+    var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK','BR','WB','JH','OR','CT','KL','KA','TN','RJ','GJ','MH','HR','TS','UK'];
+    var NE_STATES    = ['ASSAM','MEGHALAYA','MANIPUR','MIZORAM','NAGALAND','TRIPURA','ARUNACHAL PRADESH','SIKKIM','BIHAR','WEST BENGAL','JHARKHAND','ODISHA','CHHATTISGARH','KERALA','KARNATAKA','TAMIL NADU','RAJASTHAN','GUJARAT','MAHARASHTRA','HARYANA','TELANGANA','UTTARAKHAND'];
     var STATE_SLUGS  = {
       'ASSAM': 'assam', 'MEGHALAYA': 'meghalaya', 'MANIPUR': 'manipur',
       'MIZORAM': 'mizoram', 'NAGALAND': 'nagaland', 'TRIPURA': 'tripura',
@@ -231,6 +232,7 @@ const base = import.meta.env.BASE_URL;
       'RAJASTHAN': 'rajasthan', 'GUJARAT': 'gujarat', 'MAHARASHTRA': 'maharashtra',
       'HARYANA': 'haryana',
       'TELANGANA': 'telangana',
+      'UTTARAKHAND': 'uttarakhand',
     };
 
     // Map init
@@ -569,6 +571,13 @@ const base = import.meta.env.BASE_URL;
       'TIRUPATHUR': 'TIRUPATTUR',
       'TIRUVALLUR': 'THIRUVALLUR',
       'VILUPPURAM': 'VILLUPURAM',
+      // Uttarakhand — GeoJSON vs SLBC
+      'DEHRADAN': 'DEHRADUN',
+      'HARIDWAR': 'HARDWAR',
+      'PAURI GARHWAL': 'PAURI',
+      'RUDRAPRAYAG': 'RUDRA PRAYAG',
+      'TEHRI GARHWAL': 'TEHRI',
+      'UDHAM SINGH NAGAR': 'USNAGAR',
       // Telangana — GeoJSON vs SLBC
       'JAGTIAL': 'JAGITIAL',
       'JANGAON': 'JANGOAN',
