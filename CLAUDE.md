@@ -2,7 +2,7 @@
 
 ## What This Project Is
 
-**Project FINER** (Financial Inclusion in the North East Region) is a static data platform focused on financial inclusion in India, with emphasis on the North East region and Bihar. It publishes interactive maps, charts, and downloadable datasets covering banking infrastructure, credit access, government schemes, and capital markets.
+**Project FINER** (Financial Inclusion in the North East Region) is a static data platform focused on financial inclusion across India, covering 22 states. It publishes interactive maps, charts, and downloadable datasets covering banking infrastructure, credit access, government schemes, and capital markets.
 
 - **Hosted on**: GitHub Pages with custom domain at `projectfiner.com`
 - **Repo**: `https://github.com/ksabhinav/projectfiner.git`
@@ -52,7 +52,7 @@ projectfiner/
 │   ├── pages/
 │   │   ├── index.astro                     # HOMEPAGE — Full-screen Leaflet map (capital markets + FI indicators)
 │   │   ├── slbc-data/
-│   │   │   ├── index.astro                 # State listing with all 9 states + download links
+│   │   │   ├── index.astro                 # State listing with all 22 states + download links
 │   │   │   └── {state}/download.astro      # Per-state SLBC download pages
 │   │   ├── capital-markets/
 │   │   │   ├── map.astro                   # Redirects to homepage
@@ -87,7 +87,7 @@ projectfiner/
     ├── pincode_coords.json                 # Pincode → [lat, lng] lookup
     ├── slbc-data/
     │   ├── standardize_fields.py           # Cross-state field standardization script
-    │   └── {state}/                        # All 10 states (8 NE + Bihar + West Bengal)
+    │   └── {state}/                        # All 22 states
     │       ├── {state}_complete.json       # Master JSON — all quarters, all indicators
     │       ├── {state}_fi_timeseries.json  # Timeseries JSON (nested: periods → districts)
     │       ├── {state}_fi_timeseries.csv   # Wide-format CSV: all districts × all quarters
@@ -154,10 +154,20 @@ u = website, st = state, loc = city/location, t = type, arn = ARN, c = city
 
 Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) quarterly PDF booklets.
 
-**Currently available**: 10 states — 8 NE states (Assam, Meghalaya, Manipur, Arunachal Pradesh, Mizoram, Tripura, Nagaland, Sikkim) + Bihar + West Bengal
+**Currently available**: 22 states — 8 NE states (Assam, Meghalaya, Manipur, Arunachal Pradesh, Mizoram, Tripura, Nagaland, Sikkim) + Bihar + West Bengal + Jharkhand + Odisha + Chhattisgarh + Kerala + Karnataka + Tamil Nadu + Rajasthan + Gujarat + Maharashtra + Haryana + Telangana + Uttarakhand
 **NE Source**: [SLBC NE - Meghalaya Booklets](https://slbcne.nic.in/meghalaya/booklet.php)
 **Bihar Source**: [SLBC Bihar Agenda Papers](https://www.slbcbihar.com/SlBCHeldMeeting.aspx) (44th–95th meetings)
 **West Bengal Source**: SLBC WB Agenda Papers (130th–171st meetings), PDFs stored in `slbc-data/west-bengal/`
+**Jharkhand/Odisha/Chhattisgarh Source**: NE-style extraction from respective SLBC booklets
+**Kerala Source**: [SLBC Kerala](https://slbckerala.com) — annexure PDFs from meeting pages
+**Karnataka Source**: [SLBC Karnataka](https://slbckarnataka.com) — annexure PDFs from meeting pages
+**Tamil Nadu Source**: [SLBC Tamil Nadu](https://slbctn.com) — annexure PDFs from meeting pages
+**Rajasthan Source**: [SLBC Rajasthan](https://slbcrajasthan.in) — Excel files
+**Gujarat Source**: [SLBC Gujarat](https://slbcgujarat.in) — ZIP archives
+**Maharashtra Source**: [Bank of Maharashtra SLBC](https://bankofmaharashtra.bank.in) — PDFs (values in Crores, converted to Lakhs)
+**Haryana Source**: [SLBC Haryana (PNB)](https://slbcharyana.pnb.bank.in) — Excel files (values in Crores, converted to Lakhs)
+**Telangana Source**: [SLBC Telangana](https://telanganaslbc.com) — PDFs
+**Uttarakhand Source**: [SLBC Uttarakhand](https://slbcuttarakhand.com) — PDFs
 
 **Coverage**:
 - Quarters range from March 2018 to December 2025 (varies by state — not all states have every quarter)
@@ -165,18 +175,30 @@ Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) q
 - All monetary values in **Rs. Lakhs** (1 Lakh = ₹100,000)
 
 **State data availability** (latest quarter):
-| State | Latest Quarter | Total Quarters |
-|-------|---------------|----------------|
-| Assam | Sep 2025 | 30 |
-| Manipur | Sep 2025 | 39 |
-| Tripura | Sep 2025 | 32 |
-| Bihar | Sep 2025 | 25 |
-| West Bengal | Dec 2025 | 39 |
-| Mizoram | Sep 2025 | 22 |
-| Meghalaya | Sep 2025 | 15 |
-| Arunachal Pradesh | Mar 2025 | 18 |
-| Nagaland | Mar 2025 | 7 |
-| Sikkim | Mar 2025 | 4 |
+| State | Latest Quarter | Total Quarters | Districts |
+|-------|---------------|----------------|-----------|
+| Assam | Sep 2025 | 30 | 35 |
+| Manipur | Sep 2025 | 39 | 16 |
+| Tripura | Sep 2025 | 32 | 8 |
+| Bihar | Sep 2025 | 25 | 38 |
+| West Bengal | Dec 2025 | 39 | 23 |
+| Mizoram | Sep 2025 | 22 | 11 |
+| Meghalaya | Sep 2025 | 15 | 12 |
+| Arunachal Pradesh | Mar 2025 | 18 | 26 |
+| Nagaland | Mar 2025 | 7 | 16 |
+| Sikkim | Mar 2025 | 4 | 6 |
+| Jharkhand | Sep 2025 | 10 | 24 |
+| Odisha | Dec 2025 | 8 | 30 |
+| Chhattisgarh | Dec 2025 | 12 | 33 |
+| Kerala | Dec 2025 | 23 | 14 |
+| Karnataka | Jun 2025 | 7 | 31 |
+| Tamil Nadu | Dec 2025 | 10 | 38 |
+| Rajasthan | Dec 2025 | 2 | 41 |
+| Gujarat | Dec 2025 | 10 | 33 |
+| Maharashtra | Dec 2025 | 3 | 36 |
+| Haryana | Dec 2025 | 13 | 23 |
+| Telangana | Dec 2024 | 1 | 33 |
+| Uttarakhand | Sep 2021 | 1 | 13 |
 
 **Timeseries JSON structure** (`{state}_fi_timeseries.json`):
 ```json
@@ -220,23 +242,25 @@ Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) q
 
 ### 3. FI Indicators Choropleth (homepage, Banking Access mode)
 
-Full-screen Leaflet choropleth map showing 7 key financial inclusion indicators across all 9 states (8 NE + Bihar) at the district level. Accessed via the homepage "Banking Access" mode toggle or `/?mode=banking`.
+Full-screen Leaflet choropleth map showing 7 key financial inclusion indicators across all 22 states at the district level. Accessed via the homepage "Banking Access" mode toggle or `/?mode=banking`.
 
 **7 Indicators**: Credit-Deposit Ratio, PM Jan Dhan Yojana, Branch Network, Kisan Credit Card, Self Help Groups, Digital Transactions, Aadhaar Authentication
 
-**182 districts across 10 states**: 121 NE districts + 38 Bihar districts + 23 West Bengal districts
+**540 districts across 22 states**
 
 **Key architecture decisions**:
 - Built as inline JS (`<script is:inline>`) in `index.astro` — NOT Svelte — because Leaflet is too imperative
-- Loads all 9 state timeseries JSONs in parallel via `Promise.all()`
+- Loads all 22 state timeseries JSONs in parallel via `Promise.all()`
 - Uses `flattenTimeseries()` to handle nested JSON structure
 - Uses `normalizePeriod()` to convert "June 2020" → "2020-06" for sorting
 - `preferCanvas: true` prevents SVG pixelation during `flyTo` animations
 - India outline GeoJSON simplified with Douglas-Peucker (`tolerance=0.001`, `preserve_topology=True`)
 
-**Map bounds** (expanded for Bihar):
-- `NE_BOUNDS`: `L.latLngBounds(L.latLng(21.5, 83.5), L.latLng(29.5, 97.5))`
-- `NE_CENTER`: `[25.5, 90.0]`
+**Map bounds** (expanded for all-India coverage):
+- `ALL_STATES_BOUNDS`: `L.latLngBounds(L.latLng(8, 68), L.latLng(31, 97.5))`
+- Desktop `maxBounds`: `L.latLngBounds(L.latLng(2, 62), L.latLng(40, 112))`
+- Mobile `maxBounds`: `L.latLngBounds(L.latLng(0, 60), L.latLng(45, 112))`
+- `flyToNE()` now uses `flyToBounds(ALL_STATES_BOUNDS)` on both mobile and desktop
 
 **Critical data matching patterns**:
 
@@ -302,7 +326,7 @@ Four analysis sub-pages with shared sub-nav tabs (Explorer, Rankings, Trends, In
   - CD Ratio: fixed thresholds (≥60% green, 40–60% yellow, <40% red)
   - All others: quartile-based (top 25% green, middle 50% yellow, bottom 25% red)
 - State/Category/Quarter/Field selectors
-- "All States" mode loads all 9 `_complete.json` files
+- "All States" mode loads all 22 `_complete.json` files
 - Stats summary: district count, max, min, median
 - **Important**: `availableFields` must be sourced from the selected quarter only (not all quarters), otherwise fields that don't exist in the selected quarter may be chosen as default
 
@@ -481,7 +505,7 @@ SLBC data goes through multiple cleaning passes after PDF extraction:
    - Bihar-specific field name mapping (60+ rules in `BIHAR_SNAKE_FIXES`)
    - Abbreviation normalization (`term_loan` → `tl`, `tot` → `total`)
    - Typo fixes and singular/plural normalization
-   - Applied across timeseries CSV, timeseries JSON, complete JSON, and quarterly CSVs for all 10 states
+   - Applied across timeseries CSV, timeseries JSON, complete JSON, and quarterly CSVs for all 22 states
 
 ## FI Indicators — Field Mapping Reference
 
