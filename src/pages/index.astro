@@ -85,6 +85,10 @@ const base = import.meta.env.BASE_URL;
 
       <!-- ═══ Banking controls ═══ -->
       <div id="controls-banking">
+        <div class="scope-row" style="margin-bottom:10px">
+          <button class="view-btn active" id="scope-india">All India</button>
+          <button class="view-btn" id="scope-ne">Focus NE</button>
+        </div>
         <div class="field">
           <span class="flabel">Indicator</span>
           <select class="finput banking-input" id="sel-indicator">
@@ -303,6 +307,15 @@ const base = import.meta.env.BASE_URL;
     var distCentroids = [];
     var currentMode = 'capital';
 
+    // Block-level (Focus NE) variables
+    var currentScope = 'india'; // 'india' or 'ne'
+    var blockGeoJSON = null;
+    var blockData = {};  // slug -> flat block records
+    var blockLoaded = false;
+    var BLOCK_ALIASES = {};
+    var NE_FOCUS_STATES = ['ASSAM','MANIPUR','MIZORAM','NAGALAND','TRIPURA','SIKKIM'];
+    var NE_FOCUS_BOUNDS = L.latLngBounds(L.latLng(21.5, 88), L.latLng(29.5, 97.5));
+
     // ══════════════════════════════════════════
     // Section 2 — Capital Markets mode
     // ══════════════════════════════════════════
@@ -375,6 +388,10 @@ const base = import.meta.env.BASE_URL;
       var params = new URLSearchParams(window.location.search);
       if (params.get('mode') !== 'capital') {
         switchMode('banking');
+        // Check for scope=ne URL param
+        if (params.get('scope') === 'ne') {
+          switchScope('ne');
+        }
       } else {
         switchMode('capital');
       }
@@ -780,6 +797,8 @@ const base = import.meta.env.BASE_URL;
     }
 
     function buildChoropleth_banking() {
+      // Delegate to block-level if in Focus NE scope
+      if (currentScope === 'ne' && blockLoaded) { buildChoropleth_block(); return; }
       if (choroLayer) { map.removeLayer(choroLayer); choroLayer = null; }
       if (!distGeoJSON || !currentQuarter) return;
 
@@ -1234,6 +1253,196 @@ const base = import.meta.env.BASE_URL;
     document.getElementById('mode-banking').addEventListener('click', function() { switchMode('banking'); });
 
     // ══════════════════════════════════════════
+    // Section 4b — Focus NE (block-level) scope toggle
+    // ══════════════════════════════════════════
+    function switchScope(scope) {
+      if (scope === currentScope) return;
+      currentScope = scope;
+      document.getElementById('scope-india').classList.toggle('active', scope === 'india');
+      document.getElementById('scope-ne').classList.toggle('active', scope === 'ne');
+
+      var selState = document.getElementById('sel-state');
+      if (scope === 'ne') {
+        // Restrict state dropdown to NE focus states
+        Array.from(selState.options).forEach(function(opt) {
+          if (opt.value === '') { opt.textContent = 'All NE States'; opt.style.display = ''; }
+          else { opt.style.display = NE_FOCUS_STATES.indexOf(opt.value) >= 0 ? '' : 'none'; }
+        });
+        // If current state isn't NE, reset to All
+        if (selState.value && NE_FOCUS_STATES.indexOf(selState.value) < 0) {
+          selState.value = '';
+        }
+        // Load block data if needed, then render
+        if (!blockLoaded) {
+          loadBlockData();
+        } else {
+          buildChoropleth_block();
+          map.flyToBounds(NE_FOCUS_BOUNDS, { duration: 1.0 });
+        }
+      } else {
+        // Restore state dropdown
+        Array.from(selState.options).forEach(function(opt) {
+          if (opt.value === '') opt.textContent = 'All States';
+          opt.style.display = '';
+        });
+        buildChoropleth_banking();
+        flyToNE();
+      }
+    }
+
+    function loadBlockData() {
+      var statsEl = document.getElementById('stats-banking');
+      if (statsEl) statsEl.textContent = 'Loading block-level data…';
+
+      var blockGeoURL = _B + 'data/ne_subdistrict_boundaries.geojson';
+      var blockStates = ['assam','manipur','mizoram','nagaland','tripura','sikkim'];
+      var fetches = [fetch(blockGeoURL).then(function(r){return r.json();})];
+      blockStates.forEach(function(s) {
+        var url = _B + 'slbc-data/' + s + '/' + s + '_block_timeseries.json';
+        fetches.push(
+          fetch(url).then(function(r){return r.ok ? r.json() : null;}).catch(function(){return null;})
+        );
+      });
+
+      Promise.all(fetches).then(function(results) {
+        blockGeoJSON = results[0];
+        // Merge block timeseries from all states
+        var allBlocks = {};
+        for (var i = 1; i < results.length; i++) {
+          if (!results[i]) continue;
+          var ts = results[i];
+          var slug = blockStates[i-1];
+          if (ts.periods) {
+            ts.periods.forEach(function(p) {
+              var qkey = normalizePeriod(p.period);
+              if (!allBlocks[qkey]) allBlocks[qkey] = [];
+              (p.blocks || []).forEach(function(b) {
+                b._period_normalized = qkey;
+                allBlocks[qkey].push(b);
+              });
+            });
+          }
+        }
+        blockData = allBlocks;
+        blockLoaded = true;
+        buildChoropleth_block();
+        map.flyToBounds(NE_FOCUS_BOUNDS, { duration: 1.0 });
+      }).catch(function(err) {
+        console.error('Block data load failed:', err);
+        if (statsEl) statsEl.textContent = 'Block data not available yet';
+      });
+    }
+
+    function buildChoropleth_block() {
+      if (!blockGeoJSON || !blockData) return;
+      if (choroLayer) { map.removeLayer(choroLayer); choroLayer = null; }
+      if (distLabelsLayer) { map.removeLayer(distLabelsLayer); distLabelsLayer = null; }
+
+      var indicator = document.getElementById('sel-indicator').value;
+      var metricSel = document.getElementById('sel-metric');
+      var metric = metricSel ? metricSel.value : '';
+      var stateFilter = document.getElementById('sel-state').value;
+
+      // Find the best available quarter in block data
+      var availableQ = Object.keys(blockData).sort().reverse();
+      var qkey = currentQuarter || availableQ[0] || '';
+      // Fallback to nearest available quarter
+      if (!blockData[qkey] && availableQ.length) {
+        for (var qi = 0; qi < availableQ.length; qi++) {
+          if (availableQ[qi] <= qkey) { qkey = availableQ[qi]; break; }
+        }
+        if (!blockData[qkey]) qkey = availableQ[0];
+      }
+
+      var blocks = blockData[qkey] || [];
+
+      // Build lookup: block_key → record
+      var lookup = {};
+      blocks.forEach(function(b) {
+        var key = (b.district || '').toUpperCase() + '__' + (b.block || '').toUpperCase();
+        lookup[key] = b;
+      });
+
+      // Collect values for color scale
+      var vals = [];
+      var features = blockGeoJSON.features || [];
+
+      features.forEach(function(f) {
+        var props = f.properties;
+        if (stateFilter && props.STATE_UT !== stateFilter) return;
+        var key = props.DISTRICT + '__' + props.SUB_DIST;
+        var rec = lookup[key];
+        if (!rec) return;
+        var v = getVal(rec, indicator, metric);
+        if (v !== null && v !== undefined && !isNaN(v)) vals.push(v);
+      });
+
+      if (vals.length === 0) {
+        var statsEl = document.getElementById('stats-banking');
+        if (statsEl) statsEl.innerHTML = '<em>No block-level data for this indicator/quarter</em>';
+        return;
+      }
+
+      vals.sort(function(a,b){return a-b;});
+      var breaks = computeBreaks(vals);
+      var ramp = getRamp(indicator);
+
+      choroLayer = L.geoJSON(blockGeoJSON, {
+        filter: function(feature) {
+          if (stateFilter && feature.properties.STATE_UT !== stateFilter) return false;
+          return NE_FOCUS_STATES.indexOf(feature.properties.STATE_UT) >= 0;
+        },
+        style: function(feature) {
+          var props = feature.properties;
+          var key = props.DISTRICT + '__' + props.SUB_DIST;
+          var rec = lookup[key];
+          var v = rec ? getVal(rec, indicator, metric) : null;
+          var color = (v !== null && v !== undefined && !isNaN(v)) ?
+            getColor(v, breaks, ramp) : '#e0ddd8';
+          return {
+            fillColor: color,
+            fillOpacity: 0.75,
+            color: '#fff',
+            weight: 0.5,
+            opacity: 0.8
+          };
+        },
+        onEachFeature: function(feature, layer) {
+          var props = feature.properties;
+          var key = props.DISTRICT + '__' + props.SUB_DIST;
+          var rec = lookup[key];
+          var v = rec ? getVal(rec, indicator, metric) : null;
+          var vStr = (v !== null && v !== undefined && !isNaN(v)) ?
+            (v >= 1000 ? Math.round(v).toLocaleString() : v.toFixed(2)) : 'N/A';
+          var metricLabel = metricSel ? metricSel.options[metricSel.selectedIndex].text : metric;
+          layer.bindTooltip(
+            '<strong>' + props.SUB_DIST + '</strong><br>' +
+            '<span style="font-size:9px;color:#888">' + props.DISTRICT + ', ' + props.STATE_UT + '</span><br>' +
+            '<span style="font-size:11px">' + metricLabel + ': <b>' + vStr + '</b></span>',
+            { sticky: true, className: 'choro-tip' }
+          );
+        }
+      }).addTo(map);
+
+      // Update stats
+      var avg = vals.reduce(function(a,b){return a+b;},0) / vals.length;
+      var statsEl = document.getElementById('stats-banking');
+      if (statsEl) {
+        statsEl.innerHTML = '<b>Focus NE — Block Level</b><br>' +
+          vals.length + ' blocks with data<br>' +
+          'Avg: ' + avg.toFixed(1) + ' · Min: ' + vals[0].toFixed(1) +
+          ' · Max: ' + vals[vals.length-1].toFixed(1);
+      }
+
+      // Update legend
+      var metricLabel = metricSel ? metricSel.options[metricSel.selectedIndex].text : metric;
+      updateLegend_banking(metricLabel, breaks, ramp);
+    }
+
+    document.getElementById('scope-india').addEventListener('click', function() { switchScope('india'); });
+    document.getElementById('scope-ne').addEventListener('click', function() { switchScope('ne'); });
+
+    // ══════════════════════════════════════════
     // Section 5 — URL parameter support
     // ══════════════════════════════════════════
     // (auto-switch is handled after capital data loads above)
@@ -1299,7 +1508,7 @@ const base = import.meta.env.BASE_URL;
 
   #panel-body{padding:16px 24px 18px}
 
-  .mode-row{display:flex;gap:0;margin-bottom:16px;border:1px solid #e0ddd8;border-radius:8px;overflow:hidden}
+  .mode-row,.scope-row{display:flex;gap:0;margin-bottom:16px;border:1px solid #e0ddd8;border-radius:8px;overflow:hidden}
   .view-row{display:flex;gap:0;margin-bottom:16px;border:1px solid #e0ddd8;border-radius:8px;overflow:hidden}
   .view-btn{flex:1;padding:9px 0;border:none;background:#faf9f7;font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#aaa09a;cursor:pointer;transition:all 0.25s;border-right:1px solid #e0ddd8}
   .view-btn:last-child{border-right:none}
