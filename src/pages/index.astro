@@ -802,8 +802,6 @@ const base = import.meta.env.BASE_URL;
     }
 
     function buildChoropleth_banking() {
-      // Delegate to block-level if in Focus NE scope
-      if (currentScope === 'ne' && blockLoaded) { buildChoropleth_block(); return; }
       if (choroLayer) { map.removeLayer(choroLayer); choroLayer = null; }
       if (!distGeoJSON || !currentQuarter) return;
 
@@ -812,11 +810,14 @@ const base = import.meta.env.BASE_URL;
       var ind = INDICATORS[currentIndicator];
       var metric = ind.metrics[currentMetricIdx];
 
+      // In Focus NE scope, filter to 8 NE states only
+      var NE_ALL = ['ASSAM','MEGHALAYA','MANIPUR','ARUNACHAL PRADESH','MIZORAM','TRIPURA','NAGALAND','SIKKIM'];
       var filtered = {
         type: distGeoJSON.type,
         features: distGeoJSON.features.filter(function(f) {
           var st = f.properties.STATE_UT?.toUpperCase()?.trim();
           if (!NE_STATES.includes(st)) return false;
+          if (currentScope === 'ne' && NE_ALL.indexOf(st) < 0) return false;
           if (bankingStateFilter && st !== bankingStateFilter) return false;
           return true;
         }),
@@ -1269,24 +1270,21 @@ const base = import.meta.env.BASE_URL;
 
       var selState = document.getElementById('sel-state');
       if (scope === 'ne') {
-        // Restrict state dropdown to NE focus states
+        // Restrict state dropdown to 8 NE states
+        var NE_ALL = ['ASSAM','MEGHALAYA','MANIPUR','ARUNACHAL PRADESH','MIZORAM','TRIPURA','NAGALAND','SIKKIM'];
         Array.from(selState.options).forEach(function(opt) {
           if (opt.value === '') { opt.textContent = 'All NE States'; opt.style.display = ''; }
-          else { opt.style.display = NE_FOCUS_STATES.indexOf(opt.value) >= 0 ? '' : 'none'; }
+          else { opt.style.display = NE_ALL.indexOf(opt.value) >= 0 ? '' : 'none'; }
         });
-        // If current state isn't NE, reset to All
-        if (selState.value && NE_FOCUS_STATES.indexOf(selState.value) < 0) {
+        if (selState.value && NE_ALL.indexOf(selState.value) < 0) {
           selState.value = '';
         }
-        // Load block data if needed, then render
-        if (!blockLoaded) {
-          loadBlockData();
-        } else {
-          buildChoropleth_block();
-          map.flyToBounds(NE_FOCUS_BOUNDS, { duration: 1.0 });
-        }
+        // Use district-level choropleth filtered to NE states + zoom to NE
+        bankingStateFilter = selState.value; // '' means all (but only NE visible in dropdown)
+        buildChoropleth_banking();
+        map.flyToBounds(NE_FOCUS_BOUNDS, { duration: 1.0, padding: [20, 20] });
       } else {
-        // Restore state dropdown
+        // Restore state dropdown to all 22 states
         Array.from(selState.options).forEach(function(opt) {
           if (opt.value === '') opt.textContent = 'All States';
           opt.style.display = '';
