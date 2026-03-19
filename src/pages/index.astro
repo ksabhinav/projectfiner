@@ -24,6 +24,15 @@ const base = import.meta.env.BASE_URL;
       </div>
     </div>
 
+    <div id="scope-toggle">
+      <span class="scope-label" id="scope-label-india">All India</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="scope-switch" />
+        <span class="toggle-slider"></span>
+      </label>
+      <span class="scope-label active" id="scope-label-ne">Focus NE</span>
+    </div>
+
     <div id="panel-body">
       <!-- Mode toggle -->
       <div class="mode-row" style="margin-bottom:10px">
@@ -85,10 +94,6 @@ const base = import.meta.env.BASE_URL;
 
       <!-- ═══ Banking controls ═══ -->
       <div id="controls-banking">
-        <div class="scope-row" style="margin-bottom:10px">
-          <button class="view-btn active" id="scope-india">All India</button>
-          <button class="view-btn" id="scope-ne">Focus NE</button>
-        </div>
         <div class="field">
           <span class="flabel">Indicator</span>
           <select class="finput banking-input" id="sel-indicator">
@@ -1258,8 +1263,9 @@ const base = import.meta.env.BASE_URL;
     function switchScope(scope) {
       if (scope === currentScope) return;
       currentScope = scope;
-      document.getElementById('scope-india').classList.toggle('active', scope === 'india');
-      document.getElementById('scope-ne').classList.toggle('active', scope === 'ne');
+      document.getElementById('scope-label-india').classList.toggle('active', scope === 'india');
+      document.getElementById('scope-label-ne').classList.toggle('active', scope === 'ne');
+      document.getElementById('scope-switch').checked = (scope === 'ne');
 
       var selState = document.getElementById('sel-state');
       if (scope === 'ne') {
@@ -1439,8 +1445,9 @@ const base = import.meta.env.BASE_URL;
       updateLegend_banking(metricLabel, breaks, ramp);
     }
 
-    document.getElementById('scope-india').addEventListener('click', function() { switchScope('india'); });
-    document.getElementById('scope-ne').addEventListener('click', function() { switchScope('ne'); });
+    document.getElementById('scope-switch').addEventListener('change', function() {
+      switchScope(this.checked ? 'ne' : 'india');
+    });
 
     // ══════════════════════════════════════════
     // Section 5 — URL parameter support
@@ -1508,7 +1515,16 @@ const base = import.meta.env.BASE_URL;
 
   #panel-body{padding:16px 24px 18px}
 
-  .mode-row,.scope-row{display:flex;gap:0;margin-bottom:16px;border:1px solid #e0ddd8;border-radius:8px;overflow:hidden}
+  .mode-row{display:flex;gap:0;margin-bottom:16px;border:1px solid #e0ddd8;border-radius:8px;overflow:hidden}
+  #scope-toggle{display:flex;align-items:center;justify-content:center;gap:10px;padding:8px 16px;border-bottom:1px solid #e8e5e0;background:rgba(245,244,241,0.6)}
+  .scope-label{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;color:#aaa09a;text-transform:uppercase;letter-spacing:0.5px;transition:color 0.2s}
+  .scope-label.active{color:#b8603e}
+  .toggle-switch{position:relative;width:40px;height:22px;flex-shrink:0}
+  .toggle-switch input{opacity:0;width:0;height:0}
+  .toggle-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background:#e0ddd8;border-radius:11px;transition:0.3s}
+  .toggle-slider:before{content:'';position:absolute;height:16px;width:16px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:0.3s;box-shadow:0 1px 3px rgba(0,0,0,0.2)}
+  .toggle-switch input:checked + .toggle-slider{background:#b8603e}
+  .toggle-switch input:checked + .toggle-slider:before{transform:translateX(18px)}
   .view-row{display:flex;gap:0;margin-bottom:16px;border:1px solid #e0ddd8;border-radius:8px;overflow:hidden}
   .view-btn{flex:1;padding:9px 0;border:none;background:#faf9f7;font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#aaa09a;cursor:pointer;transition:all 0.25s;border-right:1px solid #e0ddd8}
   .view-btn:last-child{border-right:none}
