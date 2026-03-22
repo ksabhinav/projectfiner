@@ -94,7 +94,7 @@ const base = import.meta.env.BASE_URL;
       <!-- ═══ Banking controls ═══ -->
       <div id="controls-banking">
         <div class="field">
-          <span class="flabel">Indicator</span>
+          <span class="flabel">Indicator <button class="info-btn" id="info-indicator" type="button">i</button></span>
           <select class="finput banking-input" id="sel-indicator">
             <option value="credit_deposit_ratio" selected>Credit-Deposit Ratio</option>
             <option value="pmjdy">PM Jan Dhan Yojana</option>
@@ -107,9 +107,10 @@ const base = import.meta.env.BASE_URL;
         </div>
 
         <div class="field">
-          <span class="flabel">Metric</span>
+          <span class="flabel">Metric <button class="info-btn" id="info-metric" type="button">i</button></span>
           <select class="finput banking-input" id="sel-metric"></select>
         </div>
+        <div class="info-popover" id="info-popover"></div>
 
         <div style="height:1px;background:#e8e5e0;margin:10px 0"></div>
 
@@ -460,71 +461,78 @@ const base = import.meta.env.BASE_URL;
     var INDICATORS = {
       credit_deposit_ratio: {
         title: 'Credit-Deposit Ratio',
+        desc: 'Ratio of bank credit (loans) to deposits in a district. A higher ratio means banks are lending more relative to what they collect. Below 40% signals credit-starved regions where deposits flow out to fund lending elsewhere.',
         metrics: [
-          { field: 'overall_cd_ratio', label: 'Overall CD Ratio (%)', unit: '%', fallbacks: ['cd_ratio', 'current_c_d_ratio', 'cdr', 'overall', 'cd_ratio_incl_pou'] },
-          { field: 'total_deposit', label: 'Total Deposits', unit: '₹', fallbacks: ['deposit', 'deposits_rural', 'september_2025_total_deposit', 'total_deposits'] },
-          { field: 'total_advance', label: 'Total Advances', unit: '₹', fallbacks: ['advance', 'advances', 'total_advance_utilized_in_the_state', 'total_advances'] },
-          { field: 'total_branch', label: 'Total Branches', unit: '', fallbacks: ['total', 'no_of_brs', 'total_branches'] },
+          { field: 'overall_cd_ratio', label: 'Overall CD Ratio (%)', unit: '%', desc: 'Total advances divided by total deposits, expressed as a percentage. The single most important measure of whether a district is a net borrower or net saver.', fallbacks: ['cd_ratio', 'current_c_d_ratio', 'cdr', 'overall', 'cd_ratio_incl_pou'] },
+          { field: 'total_deposit', label: 'Total Deposits', unit: '₹', desc: 'Aggregate deposits held in all bank branches in the district, in Rs. Lakhs. Includes savings, current, term, and recurring deposits.', fallbacks: ['deposit', 'deposits_rural', 'september_2025_total_deposit', 'total_deposits'] },
+          { field: 'total_advance', label: 'Total Advances', unit: '₹', desc: 'Total outstanding bank credit (loans disbursed) across all branches in the district, in Rs. Lakhs. Includes agriculture, MSME, personal, and housing loans.', fallbacks: ['advance', 'advances', 'total_advance_utilized_in_the_state', 'total_advances'] },
+          { field: 'total_branch', label: 'Total Branches', unit: '', desc: 'Number of bank branches operating in the district across all bank types (public, private, RRBs, cooperative).', fallbacks: ['total', 'no_of_brs', 'total_branches'] },
         ],
       },
       pmjdy: {
         title: 'PM Jan Dhan Yojana',
+        desc: 'India\'s flagship financial inclusion scheme launched in 2014 to provide universal bank account access. Every household gets a zero-balance account with a RuPay debit card, accident insurance, and overdraft facility.',
         metrics: [
-          { field: 'total_pmjdy_no', label: 'Total PMJDY Accounts', unit: '', fallbacks: ['total_no_pmjdy', 'pmjdy_no', 'total_no', 'no_of_pmjdy_accounts', 'pmjdy', 'total', 'number_of_pmjdy_accounts_rural', 'total_pmjdy_a_c', 'total_no_pmjdy_a_c', 'total_a_c', 'sum_of_total_a_c', 'pmjdy_total_accounts'] },
-          { field: 'no_of_zero_balance_a_c', label: 'Zero Balance Accounts', unit: '', fallbacks: ['zero_balance', 'zero_balance_a_c', 'zero_balance_account_2', 'zero_balance_account'] },
-          { field: 'no_of_aadhaar_seeded', label: 'Aadhaar Seeded', unit: '', fallbacks: ['aadhaar_seeded', 'aadhaar_seeding_pct', 'sum_of_aadhaar_seeded'] },
-          { field: 'no_of_rupay_card_issued', label: 'RuPay Cards Issued', unit: '', fallbacks: ['rupay_card_issued', 'rupaycard_account', 'rupay_card_account', 'ar_cu_psaycard_issued'] },
-          { field: 'female_no', label: 'Female Accounts', unit: '', fallbacks: ['no_of_women_pmjdy_accounts', 'female', 'female_a_c', 'sum_of_female_a_c'] },
-          { field: 'rural_no', label: 'Rural Accounts', unit: '', fallbacks: ['rural', 'rural_a_c', 'sum_of_rural_a_c'] },
+          { field: 'total_pmjdy_no', label: 'Total PMJDY Accounts', unit: '', desc: 'Total number of Jan Dhan accounts opened in the district. These are basic savings accounts (BSBD) with zero minimum balance, aimed at the unbanked population.', fallbacks: ['total_no_pmjdy', 'pmjdy_no', 'total_no', 'no_of_pmjdy_accounts', 'pmjdy', 'total', 'number_of_pmjdy_accounts_rural', 'total_pmjdy_a_c', 'total_no_pmjdy_a_c', 'total_a_c', 'sum_of_total_a_c', 'pmjdy_total_accounts'] },
+          { field: 'no_of_zero_balance_a_c', label: 'Zero Balance Accounts', unit: '', desc: 'PMJDY accounts with zero balance — no deposits ever made. A high count signals accounts opened but never used, indicating inclusion on paper but not in practice.', fallbacks: ['zero_balance', 'zero_balance_a_c', 'zero_balance_account_2', 'zero_balance_account'] },
+          { field: 'no_of_aadhaar_seeded', label: 'Aadhaar Seeded', unit: '', desc: 'PMJDY accounts where Aadhaar has been linked. Required for receiving Direct Benefit Transfer (DBT) payments and using Aadhaar-based services like AePS.', fallbacks: ['aadhaar_seeded', 'aadhaar_seeding_pct', 'sum_of_aadhaar_seeded'] },
+          { field: 'no_of_rupay_card_issued', label: 'RuPay Cards Issued', unit: '', desc: 'Number of RuPay debit cards issued to PMJDY account holders. Each card includes Rs. 2 lakh accidental insurance cover under PMSBY.', fallbacks: ['rupay_card_issued', 'rupaycard_account', 'rupay_card_account', 'ar_cu_psaycard_issued'] },
+          { field: 'female_no', label: 'Female Accounts', unit: '', desc: 'PMJDY accounts held by women. Over 55% of all Jan Dhan accounts nationally are held by women, making it the largest women\'s financial inclusion program.', fallbacks: ['no_of_women_pmjdy_accounts', 'female', 'female_a_c', 'sum_of_female_a_c'] },
+          { field: 'rural_no', label: 'Rural Accounts', unit: '', desc: 'PMJDY accounts opened in rural and semi-urban branches. About 67% of all Jan Dhan accounts are in rural areas nationally.', fallbacks: ['rural', 'rural_a_c', 'sum_of_rural_a_c'] },
         ],
       },
       branch_network: {
         title: 'Branch Network',
+        desc: 'Physical banking infrastructure — branches, ATMs, and Business Correspondents (BCs). Branch density per capita is a core measure of banking access, especially in rural areas.',
         metrics: [
-          { field: 'total_branch', label: 'Total Branches', unit: '', fallbacks: ['total', 'no_of_branches', 'total_no_of_br', 'total_branche_s', 'total_branches', 'total_branch_es', 'branches_total'] },
-          { field: 'branch_rural', label: 'Rural Branches', unit: '', fallbacks: ['atm_rural', 'rural', 'branches_rural'] },
-          { field: 'branch_semi_urban', label: 'Semi-Urban Branches', unit: '', fallbacks: ['semi_urban', 'branches_semi_urban'] },
-          { field: 'branch_urban', label: 'Urban Branches', unit: '', fallbacks: ['urban', 'branches_urban'] },
-          { field: 'total_atm', label: 'Total ATMs', unit: '', fallbacks: ['no_of_atm', 'total_atms', 'atm_total'] },
-          { field: 'total_csp', label: 'Total CSPs', unit: '', fallbacks: ['bc_total', 'total_bc'] },
+          { field: 'total_branch', label: 'Total Branches', unit: '', desc: 'Total bank branches across all types — public sector, private, RRBs, SFBs, and cooperative banks. RBI classifies centres as rural (<10K population), semi-urban (10K-1L), urban (1L-10L), or metro (>10L).', fallbacks: ['total', 'no_of_branches', 'total_no_of_br', 'total_branche_s', 'total_branches', 'total_branch_es', 'branches_total'] },
+          { field: 'branch_rural', label: 'Rural Branches', unit: '', desc: 'Branches in centres with population under 10,000. Critical for last-mile banking access in villages.', fallbacks: ['atm_rural', 'rural', 'branches_rural'] },
+          { field: 'branch_semi_urban', label: 'Semi-Urban Branches', unit: '', desc: 'Branches in centres with population between 10,000 and 1 lakh. Serve smaller towns and block headquarters.', fallbacks: ['semi_urban', 'branches_semi_urban'] },
+          { field: 'branch_urban', label: 'Urban Branches', unit: '', desc: 'Branches in centres with population between 1 lakh and 10 lakh.', fallbacks: ['urban', 'branches_urban'] },
+          { field: 'total_atm', label: 'Total ATMs', unit: '', desc: 'Total ATMs (on-site + off-site) across all banks. Includes Cash Recycler Machines (CRMs). ATM density is often lower in NE states compared to national average.', fallbacks: ['no_of_atm', 'total_atms', 'atm_total'] },
+          { field: 'total_csp', label: 'Total CSPs', unit: '', desc: 'Customer Service Points operated by Business Correspondents (BCs). These are agents — often shopkeepers — with a micro-ATM device who provide basic banking services in unbanked villages.', fallbacks: ['bc_total', 'total_bc'] },
         ],
       },
       kcc: {
         title: 'Kisan Credit Card',
+        desc: 'Revolving credit facility for farmers to meet crop production and allied activity expenses. Provides short-term credit at subsidized interest rates (currently 4% effective after subvention). Extended to animal husbandry and fisheries in 2019.',
         metrics: [
-          { field: 'total_no_of_kcc', label: 'Total KCC Issued', unit: '', fallbacks: ['no_of_kcc', 'kcc_no', 'total_kcc_no', 'total_no', 'o_s_position_no_of_cards_issued', 'cum_no_app_sanc', 'no_of_kcc_issued_during_quarter_including_renewal', 'rupay_card_issued_in_kcc', 'target_no', 'outstanding_at_the_end_of_reporting_quarter_no', 'outstanding_at_the_end_of_reporting_quarter_number', 'kcc_card_activated_number', 'no_of_applications_sanctioned', 'kcc_new_target_no', 'kcc_outstanding_as_on', 'no_of_kcc_issued'] },
-          { field: 'outstanding_amt', label: 'Outstanding Amount', unit: '₹', fallbacks: ['total_outstanding', 'total_o_s_kcc_amt', 'kcc_outstanding', 'o_s_position_limit_sanctioned', 'kcc_limit_sanctioned_in_rs_lakhs', 'amount', 'outstanding_at_the_end_of_reporting_quarter_amt', 'amt', 'amount_disbursed'] },
-          { field: 'no_of_rupay_card_issued', label: 'RuPay Cards Issued', unit: '', fallbacks: ['rupay_card_issued', 'out_of_total_kcc_issued,_no_of_rupay_cards_issued_number', 'out_of_total_kcc_issued,_no_of_rupay_cards_issued_no'] },
-          { field: 'kcc_card_activated', label: 'Cards Activated', unit: '', fallbacks: ['card_activated', 'kcc_card_activated_no', 'kcc_card_activated_number'] },
+          { field: 'total_no_of_kcc', label: 'Total KCC Issued', unit: '', desc: 'Total number of Kisan Credit Cards issued (including renewals). Each card provides a credit limit based on the farmer\'s landholding, crop pattern, and scale of finance.', fallbacks: ['no_of_kcc', 'kcc_no', 'total_kcc_no', 'total_no', 'o_s_position_no_of_cards_issued', 'cum_no_app_sanc', 'no_of_kcc_issued_during_quarter_including_renewal', 'rupay_card_issued_in_kcc', 'target_no', 'outstanding_at_the_end_of_reporting_quarter_no', 'outstanding_at_the_end_of_reporting_quarter_number', 'kcc_card_activated_number', 'no_of_applications_sanctioned', 'kcc_new_target_no', 'kcc_outstanding_as_on', 'no_of_kcc_issued'] },
+          { field: 'outstanding_amt', label: 'Outstanding Amount', unit: '₹', desc: 'Total credit outstanding under KCC in Rs. Lakhs. Represents the cumulative utilization of KCC credit limits by farmers in the district.', fallbacks: ['total_outstanding', 'total_o_s_kcc_amt', 'kcc_outstanding', 'o_s_position_limit_sanctioned', 'kcc_limit_sanctioned_in_rs_lakhs', 'amount', 'outstanding_at_the_end_of_reporting_quarter_amt', 'amt', 'amount_disbursed'] },
+          { field: 'no_of_rupay_card_issued', label: 'RuPay Cards Issued', unit: '', desc: 'KCC holders who received RuPay cards, enabling them to withdraw credit from ATMs and make purchases at PoS terminals.', fallbacks: ['rupay_card_issued', 'out_of_total_kcc_issued,_no_of_rupay_cards_issued_number', 'out_of_total_kcc_issued,_no_of_rupay_cards_issued_no'] },
+          { field: 'kcc_card_activated', label: 'Cards Activated', unit: '', desc: 'KCC cards that have been activated by the holder — meaning at least one transaction has been done. Gap between issued and activated indicates dormant cards.', fallbacks: ['card_activated', 'kcc_card_activated_no', 'kcc_card_activated_number'] },
         ],
       },
       shg: {
         title: 'Self Help Groups',
+        desc: 'Groups of 10-20 women who pool savings and take collective bank loans under NRLM/DAY-NRLM. The SHG-Bank Linkage Programme (SHG-BLP) is the world\'s largest microfinance program, covering 14+ crore households.',
         metrics: [
-          { field: 'savings_linked_no', label: 'Savings Linked SHGs', unit: '', fallbacks: ['savings_linked', 'credit_linked_no', 'credit_linked', 'current_fy_savings_linked_no', 'no_of_shgs', 'deposit_linkage_no_of_groups', 'total_sanction_no', 'total_sanctioned', 'total_shgs_repeat_renewals_enhancement_fy_2025_26', 'disburdsement_target_no_of_shgs', 'no_of_shgs_credit_linked_as_on_31st_march_2023', 'cumulative_achievement_physical_7', 'target_physical_3', 'disbursement_no', 'outstanding_no', 'sanctioned_upto_dec25_no', 'sanctioned_upto_sep25_no', 'sanctioned_upto_jun25_no', 'sanctioned_upto_mar25_no', 'target_fy_2025_26_no'] },
-          { field: 'credit_linked_no', label: 'Credit Linked SHGs', unit: '', fallbacks: ['credit_linked', 'current_fy_credit_linked_no', 'credit_linkage_loan_given_by_banks_no', 'total_disbursement_no'] },
-          { field: 'shg_o_s_amt', label: 'Outstanding Amount', unit: '₹', fallbacks: ['outstanding_amt', 'shg_o_s', 'outstanding_accounts', 'total_outsanding_no', 'total_outstanding_amt_rs_in_lakh'] },
-          { field: 'shg_npa_pct', label: 'SHG NPA %', unit: '%' },
+          { field: 'savings_linked_no', label: 'Savings Linked SHGs', unit: '', desc: 'SHGs that have opened a savings account with a bank. This is the first step in the SHG-Bank Linkage Programme — groups save collectively before becoming eligible for credit.', fallbacks: ['savings_linked', 'credit_linked_no', 'credit_linked', 'current_fy_savings_linked_no', 'no_of_shgs', 'deposit_linkage_no_of_groups', 'total_sanction_no', 'total_sanctioned', 'total_shgs_repeat_renewals_enhancement_fy_2025_26', 'disburdsement_target_no_of_shgs', 'no_of_shgs_credit_linked_as_on_31st_march_2023', 'cumulative_achievement_physical_7', 'target_physical_3', 'disbursement_no', 'outstanding_no', 'sanctioned_upto_dec25_no', 'sanctioned_upto_sep25_no', 'sanctioned_upto_jun25_no', 'sanctioned_upto_mar25_no', 'target_fy_2025_26_no'] },
+          { field: 'credit_linked_no', label: 'Credit Linked SHGs', unit: '', desc: 'SHGs that have received a bank loan. Typically after 6 months of regular saving, groups become eligible for credit up to 4x their savings. A subset of savings-linked SHGs.', fallbacks: ['credit_linked', 'current_fy_credit_linked_no', 'credit_linkage_loan_given_by_banks_no', 'total_disbursement_no'] },
+          { field: 'shg_o_s_amt', label: 'Outstanding Amount', unit: '₹', desc: 'Total bank loans outstanding to SHGs in the district, in Rs. Lakhs. Higher amounts with low NPA indicate healthy credit absorption by groups.', fallbacks: ['outstanding_amt', 'shg_o_s', 'outstanding_accounts', 'total_outsanding_no', 'total_outstanding_amt_rs_in_lakh'] },
+          { field: 'shg_npa_pct', label: 'SHG NPA %', unit: '%', desc: 'Non-Performing Asset percentage for SHG loans. Loans overdue for 90+ days. Lower is better. SHG NPAs are typically much lower than overall bank NPAs due to group peer pressure.' },
         ],
       },
       digital_transactions: {
         title: 'Digital Transactions',
+        desc: 'Coverage of digital payment modes across savings bank accounts. Tracks how many accounts have access to at least one digital channel — UPI, IMPS, debit cards, USSD, or internet banking.',
         metrics: [
-          { field: 'coverage_sb_pct', label: 'SB Digital Coverage %', unit: '%', fallbacks: ['coverage_pct', 'achievement', 'pct_coverage', 'pct_coverag_e_h', 'pct_coverage_9688', 'of_such_accounts_out_of_total_operative_savings_accounts'] },
-          { field: 'digital_coverage_sb_a_c', label: 'SB A/Cs Digitally Covered', unit: '', fallbacks: ['total_operative_sb_a_c', 'no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode', 'debit_rupay_cards_coverage_total_no_of_accounts_covered', 'debit_rupay_cards_coverage_total_no_of_accounts_covered_g', 'coverage_with_at_least_one_of_the_digital_modes_of_payment_debit_rupay_cards,_in'] },
-          { field: 'bhim_upi_a_c', label: 'BHIM/UPI Transactions', unit: '', fallbacks: ['bhim_upi', 'bhim_aadhaar_a_c', 'digital_bhim_upi_no'] },
-          { field: 'imps_a_c', label: 'IMPS Transactions', unit: '', fallbacks: ['imps', 'digital_imps_no'] },
-          { field: 'cards_debit_credit_a_c', label: 'Card Transactions', unit: '', fallbacks: ['cards_debit_credit', 'cards_debit', 'digital_cards_no'] },
-          { field: 'ussd_a_c', label: 'USSD Transactions', unit: '', fallbacks: ['ussd', 'digital_ussd_no'] },
-          { field: 'bharat_qr_code_a_c', label: 'Bharat QR Transactions', unit: '' },
+          { field: 'coverage_sb_pct', label: 'SB Digital Coverage %', unit: '%', desc: 'Percentage of operative savings bank accounts covered by at least one digital payment mode (RuPay card, UPI, IMPS, USSD, or internet banking). The headline digital inclusion metric.', fallbacks: ['coverage_pct', 'achievement', 'pct_coverage', 'pct_coverag_e_h', 'pct_coverage_9688', 'of_such_accounts_out_of_total_operative_savings_accounts'] },
+          { field: 'digital_coverage_sb_a_c', label: 'SB A/Cs Digitally Covered', unit: '', desc: 'Absolute number of savings bank accounts that have been enabled with at least one digital payment mode.', fallbacks: ['total_operative_sb_a_c', 'no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode', 'debit_rupay_cards_coverage_total_no_of_accounts_covered', 'debit_rupay_cards_coverage_total_no_of_accounts_covered_g', 'coverage_with_at_least_one_of_the_digital_modes_of_payment_debit_rupay_cards,_in'] },
+          { field: 'bhim_upi_a_c', label: 'BHIM/UPI Transactions', unit: '', desc: 'Accounts enabled for UPI payments via BHIM or other UPI apps. UPI is the fastest growing digital payment channel in India with 14+ billion monthly transactions.', fallbacks: ['bhim_upi', 'bhim_aadhaar_a_c', 'digital_bhim_upi_no'] },
+          { field: 'imps_a_c', label: 'IMPS Transactions', unit: '', desc: 'Accounts enabled for Immediate Payment Service — real-time interbank transfers via mobile/internet banking. Available 24x7 including holidays.', fallbacks: ['imps', 'digital_imps_no'] },
+          { field: 'cards_debit_credit_a_c', label: 'Card Transactions', unit: '', desc: 'Accounts with active debit or credit cards that can be used at ATMs and PoS terminals. Includes RuPay, Visa, and Mastercard.', fallbacks: ['cards_debit_credit', 'cards_debit', 'digital_cards_no'] },
+          { field: 'ussd_a_c', label: 'USSD Transactions', unit: '', desc: 'Accounts enabled for *99# USSD-based banking — works on basic feature phones without internet. Designed for rural areas with limited smartphone/internet penetration.', fallbacks: ['ussd', 'digital_ussd_no'] },
+          { field: 'bharat_qr_code_a_c', label: 'Bharat QR Transactions', unit: '', desc: 'Accounts enabled for Bharat QR code payments — an interoperable QR standard that works across RuPay, Visa, Mastercard, and UPI.' },
         ],
       },
       aadhaar_authentication: {
         title: 'Aadhaar Authentication',
+        desc: 'Tracks Aadhaar linkage and biometric authentication across bank accounts (CASA = Current Account + Savings Account). Critical infrastructure for DBT, AePS, and eKYC.',
         metrics: [
-          { field: 'no_of_aadhaar_seeded_casa', label: 'Aadhaar Seeded CASA', unit: '', fallbacks: ['aadhaar_seeded_casa', 'number_of_aadhaar_seeded_casa', 'pct_casa_authentication', 'no_of_aadhaar_seeded', 'aadhaar_seeded'] },
-          { field: 'no_of_operative_casa', label: 'Operative CASA', unit: '', fallbacks: ['operative_casa', 'number_of_operative_casa', 'aadhaar_operative_casa'] },
-          { field: 'no_of_authenticated_casa', label: 'Authenticated CASA', unit: '', fallbacks: ['authenticated_casa', 'number_of_authenticated_casa', 'aadhaar_authenticated_casa'] },
+          { field: 'no_of_aadhaar_seeded_casa', label: 'Aadhaar Seeded CASA', unit: '', desc: 'Accounts where the customer\'s Aadhaar number has been linked to the bank record. This is a prerequisite for DBT, AePS, and any Aadhaar-based service. Doesn\'t mean the account is active — just that the linkage exists.', fallbacks: ['aadhaar_seeded_casa', 'number_of_aadhaar_seeded_casa', 'pct_casa_authentication', 'no_of_aadhaar_seeded', 'aadhaar_seeded'] },
+          { field: 'no_of_operative_casa', label: 'Operative CASA', unit: '', desc: 'Accounts that are operationally active — at least one customer-initiated transaction (debit or credit) in the last 12 months (RBI standard). The broadest activity measure, regardless of Aadhaar status.', fallbacks: ['operative_casa', 'number_of_operative_casa', 'aadhaar_operative_casa'] },
+          { field: 'no_of_authenticated_casa', label: 'Authenticated CASA', unit: '', desc: 'Accounts where the customer has actually used Aadhaar-based biometric authentication (fingerprint/iris) at least once — typically at a Business Correspondent or bank branch. This is a subset of seeded accounts and reflects actual usage of the Aadhaar rails.', fallbacks: ['authenticated_casa', 'number_of_authenticated_casa', 'aadhaar_authenticated_casa'] },
         ],
       },
     };
@@ -1255,7 +1263,50 @@ const base = import.meta.env.BASE_URL;
     document.getElementById('sel-metric').addEventListener('change', function(e) {
       currentMetricIdx = parseInt(e.target.value);
       if (slbcLoaded) buildChoropleth_banking();
+      // Hide popover on change
+      document.getElementById('info-popover').classList.remove('visible');
     });
+
+    // Info tooltip popover
+    (function() {
+      var popover = document.getElementById('info-popover');
+      var activeBtn = null;
+
+      function showInfo(type) {
+        var ind = INDICATORS[currentIndicator];
+        var text = '';
+        if (type === 'indicator') {
+          text = ind.desc || '';
+        } else {
+          var metric = ind.metrics[currentMetricIdx];
+          text = metric ? (metric.desc || '') : '';
+        }
+        if (!text) { popover.classList.remove('visible'); return; }
+        popover.textContent = text;
+        popover.classList.add('visible');
+        activeBtn = type;
+      }
+
+      document.getElementById('info-indicator').addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (activeBtn === 'indicator' && popover.classList.contains('visible')) {
+          popover.classList.remove('visible'); activeBtn = null;
+        } else {
+          showInfo('indicator');
+        }
+      });
+      document.getElementById('info-metric').addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (activeBtn === 'metric' && popover.classList.contains('visible')) {
+          popover.classList.remove('visible'); activeBtn = null;
+        } else {
+          showInfo('metric');
+        }
+      });
+      document.addEventListener('click', function() {
+        popover.classList.remove('visible'); activeBtn = null;
+      });
+    })();
 
     // Timeline drag interaction
     (function() {
@@ -1771,6 +1822,13 @@ const base = import.meta.env.BASE_URL;
   #wm{position:absolute;bottom:20px;right:110px;z-index:1000;font-family:'Inter',sans-serif;font-size:9px;font-weight:500;color:rgba(0,0,0,0.15);letter-spacing:0.06em;pointer-events:none}
   #btn-back{display:none;position:absolute;top:90px;right:16px;z-index:1000;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.5);padding:10px 16px;font-family:'Inter',sans-serif;font-size:10px;font-weight:500;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.04);color:#555048;border-radius:8px;transition:all 0.25s}
   #btn-back:hover{background:#fff;box-shadow:0 6px 20px rgba(0,0,0,0.08);color:#1a1410}
+
+  /* ── Info tooltip ── */
+  .info-btn{display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border-radius:50%;border:1px solid #ccc8c0;background:transparent;color:#aaa09a;font-family:'Inter',sans-serif;font-size:8px;font-weight:700;font-style:italic;cursor:pointer;margin-left:4px;vertical-align:middle;padding:0;line-height:1;transition:all 0.15s}
+  .info-btn:hover{border-color:#b8603e;color:#b8603e;background:rgba(184,96,62,0.06)}
+  .info-popover{display:none;position:relative;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.6);border-radius:8px;padding:10px 12px;margin-top:-6px;margin-bottom:10px;box-shadow:0 4px 20px rgba(0,0,0,0.06);font-family:'Inter',sans-serif;font-size:10px;font-weight:400;color:#555048;line-height:1.6;animation:infoAppear 0.15s ease}
+  .info-popover.visible{display:block}
+  @keyframes infoAppear{0%{opacity:0;transform:translateY(-4px)}100%{opacity:1;transform:translateY(0)}}
 
   /* ── District Focus Mode ── */
   .district-focus{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:1200;background:rgba(245,244,241,0.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);align-items:center;justify-content:center}
