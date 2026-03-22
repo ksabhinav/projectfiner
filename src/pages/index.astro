@@ -6,7 +6,7 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Project FINER">
-  <Header title="" />
+  <Header title="" transparent />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
@@ -1634,10 +1634,6 @@ const base = import.meta.env.BASE_URL;
 
 <style is:global>
   body { height: 100vh; display: flex; flex-direction: column; overflow: hidden; margin: 0; padding: 0; min-height: unset; }
-  /* Header floats over the map on the homepage — fully transparent */
-  .site-header { position: fixed!important; top: 0; left: 0; right: 0; z-index: 1000; border-bottom: none!important; background: transparent!important; backdrop-filter: none!important; -webkit-backdrop-filter: none!important; }
-  .site-header .page-hero { display: none!important; }
-  .site-header .top-bar { border-bottom: none; background: transparent; }
   #map { flex: 1; width: 100%; min-height: 0; }
   .leaflet-marker-pane { transition: opacity 0.4s ease; }
   .clusters-hidden .leaflet-marker-pane { opacity: 0; pointer-events: none; }
@@ -1781,7 +1777,7 @@ const base = import.meta.env.BASE_URL;
   .district-focus.active{display:flex;animation:focusAppear 0.35s ease}
   body:has(.district-focus.active) #panel{z-index:1300!important}
   body:has(.district-focus.active) #time-slider{z-index:1300!important}
-  body:has(.district-focus.active) .site-header{z-index:1300!important}
+  body:has(.district-focus.active) .header-transparent{z-index:1300!important}
   @keyframes focusAppear{0%{opacity:0}0%{opacity:0}100%{opacity:1}}
   .focus-shape-wrap{position:relative;display:flex;align-items:center;justify-content:center}
   .focus-svg{width:380px;height:380px;filter:drop-shadow(4px 6px 12px rgba(0,0,0,0.15));overflow:visible}

@@ -4,13 +4,14 @@ interface Props {
   subtitle?: string;
   backLink?: { href: string; label: string };
   activeSubNav?: string; // 'rankings' | 'trends' | 'insights'
+  transparent?: boolean;
 }
 
-const { title, subtitle, backLink, activeSubNav } = Astro.props;
+const { title, subtitle, backLink, activeSubNav, transparent } = Astro.props;
 const base = import.meta.env.BASE_URL;
 ---
 
-<header class="site-header">
+<header class={`site-header ${transparent ? 'header-transparent' : ''}`}>
   <!-- Top navigation bar -->
   <nav class="top-bar">
     <a href={`${base}`} class="brand">
@@ -56,6 +57,24 @@ const base = import.meta.env.BASE_URL;
     position: sticky;
     top: 0;
     z-index: 100;
+  }
+
+  /* Transparent variant for map overlay pages */
+  .header-transparent {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: none;
+    z-index: 1000;
+  }
+  .header-transparent .top-bar {
+    border-bottom: none;
+  }
+  .header-transparent .page-hero {
+    display: none;
   }
 
   /* ── Top bar ── */
