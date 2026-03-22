@@ -58,7 +58,13 @@
       .replace(/\bAmt\b/g, 'Amount')
       .replace(/\bNo\b/g, 'No.')
       .replace(/\bDisb\b/g, 'Disbursement')
-      .replace(/\bCy\b/g, 'Current Year');
+      .replace(/\bCy\b/g, 'Current Year')
+      .replace(/\bCasa\b/g, 'CASA').replace(/\bKcc\b/g, 'KCC').replace(/\bNpa\b/g, 'NPA')
+      .replace(/\bPmjdy\b/g, 'PMJDY').replace(/\bShg\b/g, 'SHG').replace(/\bAtm\b/g, 'ATM')
+      .replace(/\bUpi\b/g, 'UPI').replace(/\bImps\b/g, 'IMPS').replace(/\bUssd\b/g, 'USSD')
+      .replace(/\bPmegp\b/g, 'PMEGP').replace(/\bNulm\b/g, 'NULM').replace(/\bNrlm\b/g, 'NRLM')
+      .replace(/\bSb\b/g, 'SB').replace(/\bCd\b/g, 'CD').replace(/\bCsp\b/g, 'CSP')
+      .replace(/\bAeps\b/g, 'AePS').replace(/\bDbt\b/g, 'DBT').replace(/\bPct\b/g, '%');
   }
 
   function formatValue(v: number): string {

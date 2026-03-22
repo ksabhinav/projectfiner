@@ -59,7 +59,13 @@
       return `${months[m] || m} ${y}`;
     }
     // snake_case like june_2020
-    return qkey.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    return qkey.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+      .replace(/\bCasa\b/g, 'CASA').replace(/\bKcc\b/g, 'KCC').replace(/\bNpa\b/g, 'NPA')
+      .replace(/\bPmjdy\b/g, 'PMJDY').replace(/\bShg\b/g, 'SHG').replace(/\bAtm\b/g, 'ATM')
+      .replace(/\bUpi\b/g, 'UPI').replace(/\bImps\b/g, 'IMPS').replace(/\bUssd\b/g, 'USSD')
+      .replace(/\bPmegp\b/g, 'PMEGP').replace(/\bNulm\b/g, 'NULM').replace(/\bNrlm\b/g, 'NRLM')
+      .replace(/\bSb\b/g, 'SB').replace(/\bCd\b/g, 'CD').replace(/\bCsp\b/g, 'CSP')
+      .replace(/\bAeps\b/g, 'AePS').replace(/\bDbt\b/g, 'DBT').replace(/\bPct\b/g, '%');
   }
 
   // Derived
