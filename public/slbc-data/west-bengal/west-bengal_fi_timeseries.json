@@ -20700,7 +20700,6 @@
           "shg_nrlm__amount": "239.9",
           "shg_nrlm__sanctioned_no": "3935.0",
           "shg_nrlm__disbursed_no": "8370.0",
-          "shg_nrlm__average_disbursement_amount": "1.01",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "59.36",
           "shg_nrlm__pending_no": "836.0",
           "shg_nrlm__outstanding_no": "17136.0",
@@ -20720,7 +20719,8 @@
           "financial_literacy__no_of_rural_branches_in_district": "51.0",
           "financial_literacy__no_of_special_camps_conducted_during_the_quarter": "0.0",
           "financial_literacy__no_of_participants": "0.0",
-          "financial_literacy__no_of_target_specific_camps_conducted_during_the_quarter": "0.0"
+          "financial_literacy__no_of_target_specific_camps_conducted_during_the_quarter": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.01"
         },
         {
           "district": "Bankura",
@@ -20767,7 +20767,6 @@
           "shg_nrlm__amount": "508.46",
           "shg_nrlm__sanctioned_no": "6774.0",
           "shg_nrlm__disbursed_no": "17904.0",
-          "shg_nrlm__average_disbursement_amount": "1.01",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "61.55",
           "shg_nrlm__pending_no": "2529.0",
           "shg_nrlm__outstanding_no": "42531.0",
@@ -20797,7 +20796,8 @@
           "rseti_2__wage_employed": "607.0",
           "rseti_2__total_settlement": "5111.0",
           "rseti_2__settlement": "72.97",
-          "rseti_2__credit_linkage": "53.51"
+          "rseti_2__credit_linkage": "53.51",
+          "shg_nrlm__average_disbursement_amt": "1.01"
         },
         {
           "district": "Birbhum",
@@ -20844,7 +20844,6 @@
           "shg_nrlm__amount": "813.81",
           "shg_nrlm__sanctioned_no": "6763.0",
           "shg_nrlm__disbursed_no": "18979.0",
-          "shg_nrlm__average_disbursement_amount": "1.55",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "37.24",
           "shg_nrlm__pending_no": "536.0",
           "shg_nrlm__outstanding_no": "52939.0",
@@ -20874,7 +20873,8 @@
           "rseti_2__wage_employed": "8.0",
           "rseti_2__total_settlement": "4507.0",
           "rseti_2__settlement": "68.36",
-          "rseti_2__credit_linkage": "74.22"
+          "rseti_2__credit_linkage": "74.22",
+          "shg_nrlm__average_disbursement_amt": "1.55"
         },
         {
           "district": "Cooch Behar",
@@ -20921,7 +20921,6 @@
           "shg_nrlm__amount": "659.56",
           "shg_nrlm__sanctioned_no": "8082.0",
           "shg_nrlm__disbursed_no": "19231.0",
-          "shg_nrlm__average_disbursement_amount": "0.98",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "81.97",
           "shg_nrlm__pending_no": "2427.0",
           "shg_nrlm__outstanding_no": "41471.0",
@@ -20950,7 +20949,8 @@
           "rseti_2__wage_employed": "34.0",
           "rseti_2__total_settlement": "2254.0",
           "rseti_2__settlement": "71.81",
-          "rseti_2__credit_linkage": "50.63"
+          "rseti_2__credit_linkage": "50.63",
+          "shg_nrlm__average_disbursement_amt": "0.98"
         },
         {
           "district": "Dakshin Dinajpur",
@@ -20997,7 +20997,6 @@
           "shg_nrlm__amount": "219.85",
           "shg_nrlm__sanctioned_no": "2471.0",
           "shg_nrlm__disbursed_no": "8191.0",
-          "shg_nrlm__average_disbursement_amount": "0.82",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "53.98",
           "shg_nrlm__pending_no": "2975.0",
           "shg_nrlm__outstanding_no": "18209.0",
@@ -21013,7 +21012,8 @@
           "sarfaesi__above_60_days_below_6_months": "2.0",
           "sarfaesi__6_months_to_1_year": "1.0",
           "sarfaesi__1_year_and_above": "70.0",
-          "sarfaesi__total_pending": "73.0"
+          "sarfaesi__total_pending": "73.0",
+          "shg_nrlm__average_disbursement_amt": "0.82"
         },
         {
           "district": "Darjeeling",
@@ -21054,7 +21054,6 @@
           "shg_nrlm__amount": "61.55",
           "shg_nrlm__sanctioned_no": "1123.0",
           "shg_nrlm__disbursed_no": "2489.0",
-          "shg_nrlm__average_disbursement_amount": "1.46",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "83.8",
           "shg_nrlm__pending_no": "47.0",
           "shg_nrlm__outstanding_no": "3758.0",
@@ -21085,7 +21084,8 @@
           "rseti_2__wage_employed": "42.0",
           "rseti_2__total_settlement": "2032.0",
           "rseti_2__settlement": "73.3",
-          "rseti_2__credit_linkage": "62.81"
+          "rseti_2__credit_linkage": "62.81",
+          "shg_nrlm__average_disbursement_amt": "1.46"
         },
         {
           "district": "Hooghly",
@@ -21126,7 +21126,6 @@
           "shg_nrlm__amount": "451.92",
           "shg_nrlm__sanctioned_no": "6583.0",
           "shg_nrlm__disbursed_no": "15457.0",
-          "shg_nrlm__average_disbursement_amount": "1.13",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "70.25",
           "shg_nrlm__pending_no": "2273.0",
           "shg_nrlm__outstanding_no": "30810.0",
@@ -21165,7 +21164,8 @@
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
           "rseti_3__settlement": "0.0",
-          "rseti_3__credit_linkage": "0.0"
+          "rseti_3__credit_linkage": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.13"
         },
         {
           "district": "Howrah",
@@ -21212,7 +21212,6 @@
           "shg_nrlm__amount": "494.17",
           "shg_nrlm__sanctioned_no": "7288.0",
           "shg_nrlm__disbursed_no": "10560.0",
-          "shg_nrlm__average_disbursement_amount": "1.55",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "47.15",
           "shg_nrlm__pending_no": "1148.0",
           "shg_nrlm__outstanding_no": "27710.0",
@@ -21250,7 +21249,8 @@
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
           "rseti_3__settlement": "0.0",
-          "rseti_3__credit_linkage": "0.0"
+          "rseti_3__credit_linkage": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.55"
         },
         {
           "district": "Jalpaiguri",
@@ -21297,7 +21297,6 @@
           "shg_nrlm__amount": "408.53",
           "shg_nrlm__sanctioned_no": "5203.0",
           "shg_nrlm__disbursed_no": "13705.0",
-          "shg_nrlm__average_disbursement_amount": "0.86",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "58.34",
           "shg_nrlm__pending_no": "1680.0",
           "shg_nrlm__outstanding_no": "28388.0",
@@ -21327,7 +21326,8 @@
           "rseti_2__wage_employed": "221.0",
           "rseti_2__total_settlement": "4359.0",
           "rseti_2__settlement": "82.07",
-          "rseti_2__credit_linkage": "77.72"
+          "rseti_2__credit_linkage": "77.72",
+          "shg_nrlm__average_disbursement_amt": "0.86"
         },
         {
           "district": "Jhargram",
@@ -21374,7 +21374,6 @@
           "shg_nrlm__amount": "130.31",
           "shg_nrlm__sanctioned_no": "2217.0",
           "shg_nrlm__disbursed_no": "6000.0",
-          "shg_nrlm__average_disbursement_amount": "0.63",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "69.28",
           "shg_nrlm__pending_no": "1230.0",
           "shg_nrlm__outstanding_no": "12584.0",
@@ -21394,7 +21393,8 @@
           "financial_literacy__no_of_rural_branches_in_district": "82.0",
           "financial_literacy__no_of_special_camps_conducted_during_the_quarter": "0.0",
           "financial_literacy__no_of_participants": "0.0",
-          "financial_literacy__no_of_target_specific_camps_conducted_during_the_quarter": "0.0"
+          "financial_literacy__no_of_target_specific_camps_conducted_during_the_quarter": "0.0",
+          "shg_nrlm__average_disbursement_amt": "0.63"
         },
         {
           "district": "Kalimpong",
@@ -21441,7 +21441,6 @@
           "shg_nrlm__amount": "33.61",
           "shg_nrlm__sanctioned_no": "495.0",
           "shg_nrlm__disbursed_no": "1157.0",
-          "shg_nrlm__average_disbursement_amount": "1.45",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "83.96",
           "shg_nrlm__pending_no": "10.0",
           "shg_nrlm__outstanding_no": "2186.0",
@@ -21462,7 +21461,8 @@
           "financial_literacy__no_of_special_camps_conducted_during_the_quarter": "1.0",
           "financial_literacy__no_of_participants": "31.0",
           "financial_literacy__no_of_target_specific_camps_conducted_during_the_quarter": "1.0",
-          "financial_literacy__target_group_addressed": "14.0"
+          "financial_literacy__target_group_addressed": "14.0",
+          "shg_nrlm__average_disbursement_amt": "1.45"
         },
         {
           "district": "Kolkata",
@@ -21567,7 +21567,6 @@
           "shg_nrlm__amount": "574.56",
           "shg_nrlm__sanctioned_no": "5904.0",
           "shg_nrlm__disbursed_no": "19990.0",
-          "shg_nrlm__average_disbursement_amount": "0.74",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "53.9",
           "shg_nrlm__pending_no": "6602.0",
           "shg_nrlm__outstanding_no": "42119.0",
@@ -21597,7 +21596,8 @@
           "rseti_2__wage_employed": "594.0",
           "rseti_2__total_settlement": "5009.0",
           "rseti_2__settlement": "76.1",
-          "rseti_2__credit_linkage": "54.52"
+          "rseti_2__credit_linkage": "54.52",
+          "shg_nrlm__average_disbursement_amt": "0.74"
         },
         {
           "district": "Murshidabad",
@@ -21644,7 +21644,6 @@
           "shg_nrlm__amount": "671.12",
           "shg_nrlm__sanctioned_no": "9893.0",
           "shg_nrlm__disbursed_no": "29206.0",
-          "shg_nrlm__average_disbursement_amount": "0.66",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "76.84",
           "shg_nrlm__pending_no": "3100.0",
           "shg_nrlm__outstanding_no": "61139.0",
@@ -21666,7 +21665,8 @@
           "financial_literacy__no_of_participants": "161.0",
           "financial_literacy__no_of_target_specific_camps_conducted_during_the_quarter": "12.0",
           "financial_literacy__target_group_addressed": "246.0",
-          "rseti__rseti_no": "1.0"
+          "rseti__rseti_no": "1.0",
+          "shg_nrlm__average_disbursement_amt": "0.66"
         },
         {
           "district": "Nadia",
@@ -21713,7 +21713,6 @@
           "shg_nrlm__amount": "444.13",
           "shg_nrlm__sanctioned_no": "3935.0",
           "shg_nrlm__disbursed_no": "19468.0",
-          "shg_nrlm__average_disbursement_amount": "0.64",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "80.53",
           "shg_nrlm__pending_no": "2940.0",
           "shg_nrlm__outstanding_no": "36943.0",
@@ -21742,7 +21741,8 @@
           "rseti_2__wage_employed": "73.0",
           "rseti_2__total_settlement": "3617.0",
           "rseti_2__settlement": "66.92",
-          "rseti_2__credit_linkage": "43.4"
+          "rseti_2__credit_linkage": "43.4",
+          "shg_nrlm__average_disbursement_amt": "0.64"
         },
         {
           "district": "Paschim Bardhaman",
@@ -21783,7 +21783,6 @@
           "shg_nrlm__amount": "103.98",
           "shg_nrlm__sanctioned_no": "2769.0",
           "shg_nrlm__disbursed_no": "3104.0",
-          "shg_nrlm__average_disbursement_amount": "1.39",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "42.29",
           "shg_nrlm__pending_no": "64.0",
           "shg_nrlm__outstanding_no": "7175.0",
@@ -21803,7 +21802,8 @@
           "financial_literacy__no_of_rural_branches_in_district": "106.0",
           "financial_literacy__no_of_special_camps_conducted_during_the_quarter": "0.0",
           "financial_literacy__no_of_participants": "0.0",
-          "financial_literacy__no_of_target_specific_camps_conducted_during_the_quarter": "0.0"
+          "financial_literacy__no_of_target_specific_camps_conducted_during_the_quarter": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.39"
         },
         {
           "district": "Paschim Medinipur",
@@ -21850,7 +21850,6 @@
           "shg_nrlm__amount": "608.96",
           "shg_nrlm__sanctioned_no": "12889.0",
           "shg_nrlm__disbursed_no": "23438.0",
-          "shg_nrlm__average_disbursement_amount": "0.78",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "71.3",
           "shg_nrlm__pending_no": "1126.0",
           "shg_nrlm__outstanding_no": "43765.0",
@@ -21871,7 +21870,8 @@
           "financial_literacy__no_of_special_camps_conducted_during_the_quarter": "2.0",
           "financial_literacy__no_of_participants": "32.0",
           "financial_literacy__no_of_target_specific_camps_conducted_during_the_quarter": "1.0",
-          "financial_literacy__target_group_addressed": "4.0"
+          "financial_literacy__target_group_addressed": "4.0",
+          "shg_nrlm__average_disbursement_amt": "0.78"
         },
         {
           "district": "Purba Bardhaman",
@@ -21911,7 +21911,6 @@
           "shg_nrlm__amount": "733.76",
           "shg_nrlm__sanctioned_no": "7891.0",
           "shg_nrlm__disbursed_no": "15122.0",
-          "shg_nrlm__average_disbursement_amount": "2.02",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "45.77",
           "shg_nrlm__pending_no": "723.0",
           "shg_nrlm__outstanding_no": "42573.0",
@@ -21950,7 +21949,8 @@
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
           "rseti_3__settlement": "0.0",
-          "rseti_3__credit_linkage": "0.0"
+          "rseti_3__credit_linkage": "0.0",
+          "shg_nrlm__average_disbursement_amt": "2.02"
         },
         {
           "district": "Purba Medinipur",
@@ -21997,7 +21997,6 @@
           "shg_nrlm__amount": "973.48",
           "shg_nrlm__sanctioned_no": "13551.0",
           "shg_nrlm__disbursed_no": "30855.0",
-          "shg_nrlm__average_disbursement_amount": "1.11",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "72.9",
           "shg_nrlm__pending_no": "2473.0",
           "shg_nrlm__outstanding_no": "55287.0",
@@ -22027,7 +22026,8 @@
           "rseti_2__wage_employed": "48.0",
           "rseti_2__total_settlement": "4685.0",
           "rseti_2__settlement": "72.17",
-          "rseti_2__credit_linkage": "52.15"
+          "rseti_2__credit_linkage": "52.15",
+          "shg_nrlm__average_disbursement_amt": "1.11"
         },
         {
           "district": "Purulia",
@@ -22068,7 +22068,6 @@
           "shg_nrlm__amount": "242.08",
           "shg_nrlm__sanctioned_no": "7789.0",
           "shg_nrlm__disbursed_no": "13202.0",
-          "shg_nrlm__average_disbursement_amount": "0.56",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "64.49",
           "shg_nrlm__pending_no": "8065.0",
           "shg_nrlm__outstanding_no": "27315.0",
@@ -22098,7 +22097,8 @@
           "rseti_2__wage_employed": "0.0",
           "rseti_2__total_settlement": "2423.0",
           "rseti_2__settlement": "52.64",
-          "rseti_2__credit_linkage": "64.96"
+          "rseti_2__credit_linkage": "64.96",
+          "shg_nrlm__average_disbursement_amt": "0.56"
         },
         {
           "district": "Uttar Dinajpur",
@@ -22145,7 +22145,6 @@
           "shg_nrlm__amount": "362.27",
           "shg_nrlm__sanctioned_no": "3146.0",
           "shg_nrlm__disbursed_no": "13655.0",
-          "shg_nrlm__average_disbursement_amount": "0.74",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "96.78",
           "shg_nrlm__pending_no": "2454.0",
           "shg_nrlm__outstanding_no": "27069.0",
@@ -22175,7 +22174,8 @@
           "rseti_2__wage_employed": "72.0",
           "rseti_2__total_settlement": "3687.0",
           "rseti_2__settlement": "70.69",
-          "rseti_2__credit_linkage": "52.86"
+          "rseti_2__credit_linkage": "52.86",
+          "shg_nrlm__average_disbursement_amt": "0.74"
         },
         {
           "district": "North 24 Parganas",
@@ -22214,7 +22214,6 @@
           "shg_nrlm__amount": "569.83",
           "shg_nrlm__sanctioned_no": "11310.0",
           "shg_nrlm__disbursed_no": "21617.0",
-          "shg_nrlm__average_disbursement_amount": "0.63",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "56.88",
           "shg_nrlm__pending_no": "1049.0",
           "shg_nrlm__outstanding_no": "49305.0",
@@ -22245,7 +22244,8 @@
           "rseti_2__wage_employed": "124.0",
           "rseti_2__total_settlement": "5368.0",
           "rseti_2__settlement": "80.11",
-          "rseti_2__credit_linkage": "57.19"
+          "rseti_2__credit_linkage": "57.19",
+          "shg_nrlm__average_disbursement_amt": "0.63"
         },
         {
           "district": "South 24 Parganas",
@@ -22284,7 +22284,6 @@
           "shg_nrlm__amount": "612.21",
           "shg_nrlm__sanctioned_no": "8403.0",
           "shg_nrlm__disbursed_no": "23232.0",
-          "shg_nrlm__average_disbursement_amount": "0.87",
           "shg_nrlm__of_disbursement_against_slbc_target_no": "54.53",
           "shg_nrlm__pending_no": "5364.0",
           "shg_nrlm__outstanding_no": "53439.0",
@@ -22314,7 +22313,8 @@
           "rseti_2__wage_employed": "117.0",
           "rseti_2__total_settlement": "5117.0",
           "rseti_2__settlement": "63.89",
-          "rseti_2__credit_linkage": "80.1"
+          "rseti_2__credit_linkage": "80.1",
+          "shg_nrlm__average_disbursement_amt": "0.87"
         }
       ]
     },
@@ -24227,7 +24227,6 @@
           "shg_nrlm__total_disbursed_no": "42873.0",
           "shg_nrlm__total_outstanding_no": "36841.0",
           "shg_nrlm__of_achievement_no": "194.86",
-          "shg_nrlm__average_disbursement": "1.41",
           "shg_nulm__no_of_active_shgs": "5033.0",
           "shg_nulm__target_fy_20_21_no": "25.0",
           "shg_nulm__amount": "0.03",
@@ -24272,7 +24271,8 @@
           "rseti__wage_employed": "0.0",
           "rseti__total_settlement": "0.0",
           "rseti__settlement": "0.0",
-          "rseti__credit_linkage": "0.0"
+          "rseti__credit_linkage": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.41"
         },
         {
           "district": "Murshidabad",
@@ -24305,7 +24305,6 @@
           "shg_nrlm__total_disbursed_no": "68402.0",
           "shg_nrlm__total_outstanding_no": "71424.0",
           "shg_nrlm__of_achievement_no": "179.97",
-          "shg_nrlm__average_disbursement": "0.86",
           "shg_nulm__no_of_active_shgs": "4775.0",
           "shg_nulm__target_fy_20_21_no": "74.0",
           "shg_nulm__amount": "0.08",
@@ -24346,7 +24345,8 @@
           "unknown_5__no_of_special_camps_conducted_during_the_quarter": "128.0",
           "unknown_5__no_of_participants": "0.0",
           "unknown_5__no_of_target_specific_camps_conducted_during_the_quarter": "0.0",
-          "unknown_5__target_group_addressed": "123456.0"
+          "unknown_5__target_group_addressed": "123456.0",
+          "shg_nrlm__average_disbursement_amt": "0.86"
         },
         {
           "district": "Paschim Medinipur",
@@ -24377,7 +24377,6 @@
           "shg_nrlm__total_disbursed_no": "60176.0",
           "shg_nrlm__total_outstanding_no": "53169.0",
           "shg_nrlm__of_achievement_no": "183.07",
-          "shg_nrlm__average_disbursement": "1.16",
           "shg_nulm__no_of_active_shgs": "3362.0",
           "shg_nulm__target_fy_20_21_no": "12.0",
           "shg_nulm__amount": "0.05",
@@ -24418,7 +24417,8 @@
           "unknown_5__no_of_special_camps_conducted_during_the_quarter": "3.0",
           "unknown_5__no_of_participants": "240.0",
           "unknown_5__no_of_target_specific_camps_conducted_during_the_quarter": "3.0",
-          "unknown_5__target_group_addressed": "124.0"
+          "unknown_5__target_group_addressed": "124.0",
+          "shg_nrlm__average_disbursement_amt": "1.16"
         },
         {
           "district": "Purba Medinipur",
@@ -24455,7 +24455,6 @@
           "shg_nrlm__total_disbursed_no": "79753.0",
           "shg_nrlm__total_outstanding_no": "68263.0",
           "shg_nrlm__of_achievement_no": "188.42",
-          "shg_nrlm__average_disbursement": "1.52",
           "shg_nulm__no_of_active_shgs": "3057.0",
           "shg_nulm__target_fy_20_21_no": "15.0",
           "shg_nulm__amount": "0.2",
@@ -24505,7 +24504,8 @@
           "rseti__wage_employed": "0.0",
           "rseti__total_settlement": "15.0",
           "rseti__settlement": "5.75",
-          "rseti__credit_linkage": "53.33"
+          "rseti__credit_linkage": "53.33",
+          "shg_nrlm__average_disbursement_amt": "1.52"
         },
         {
           "district": "North 24 Parganas",
@@ -24538,7 +24538,6 @@
           "shg_nrlm__total_disbursed_no": "61009.0",
           "shg_nrlm__total_outstanding_no": "56053.0",
           "shg_nrlm__of_achievement_no": "160.53",
-          "shg_nrlm__average_disbursement": "0.9",
           "shg_nulm__no_of_active_shgs": "14115.0",
           "shg_nulm__target_fy_20_21_no": "70.0",
           "shg_nulm__amount": "0.21",
@@ -24580,7 +24579,8 @@
           "rseti__wage_employed": "0.0",
           "rseti__total_settlement": "19.0",
           "rseti__settlement": "7.06",
-          "rseti__credit_linkage": "47.37"
+          "rseti__credit_linkage": "47.37",
+          "shg_nrlm__average_disbursement_amt": "0.9"
         },
         {
           "district": "South 24 Parganas",
@@ -24615,7 +24615,6 @@
           "shg_nrlm__total_disbursed_no": "62017.0",
           "shg_nrlm__total_outstanding_no": "60701.0",
           "shg_nrlm__of_achievement_no": "145.57",
-          "shg_nrlm__average_disbursement": "1.19",
           "shg_nulm__no_of_active_shgs": "2945.0",
           "shg_nulm__target_fy_20_21_no": "22.0",
           "shg_nulm__amount": "0.01",
@@ -24657,7 +24656,8 @@
           "rseti__wage_employed": "0.0",
           "rseti__total_settlement": "0.0",
           "rseti__settlement": "0.0",
-          "rseti__credit_linkage": "0.0"
+          "rseti__credit_linkage": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.19"
         },
         {
           "district": "Howrah",
@@ -24690,7 +24690,6 @@
           "shg_nrlm__total_disbursed_no": "34935.0",
           "shg_nrlm__total_outstanding_no": "31980.0",
           "shg_nrlm__of_achievement_no": "155.99",
-          "shg_nrlm__average_disbursement": "1.81",
           "shg_nulm__no_of_active_shgs": "1397.0",
           "shg_nulm__target_fy_20_21_no": "3.0",
           "shg_nulm__amount": "0.0",
@@ -24740,7 +24739,8 @@
           "rseti__wage_employed": "4.0",
           "rseti__total_settlement": "77.0",
           "rseti__settlement": "10.61",
-          "rseti__credit_linkage": "28.77"
+          "rseti__credit_linkage": "28.77",
+          "shg_nrlm__average_disbursement_amt": "1.81"
         },
         {
           "district": "Nadia",
@@ -24773,7 +24773,6 @@
           "shg_nrlm__total_disbursed_no": "40868.0",
           "shg_nrlm__total_outstanding_no": "42543.0",
           "shg_nrlm__of_achievement_no": "169.06",
-          "shg_nrlm__average_disbursement": "0.87",
           "shg_nulm__no_of_active_shgs": "5470.0",
           "shg_nulm__target_fy_20_21_no": "20.0",
           "shg_nulm__amount": "0.03",
@@ -24823,7 +24822,8 @@
           "rseti__wage_employed": "0.0",
           "rseti__total_settlement": "0.0",
           "rseti__settlement": "0.0",
-          "rseti__credit_linkage": "0.0"
+          "rseti__credit_linkage": "0.0",
+          "shg_nrlm__average_disbursement_amt": "0.87"
         },
         {
           "district": "Jhargram",
@@ -24854,7 +24854,6 @@
           "shg_nrlm__total_disbursed_no": "15538.0",
           "shg_nrlm__total_outstanding_no": "14450.0",
           "shg_nrlm__of_achievement_no": "179.4",
-          "shg_nrlm__average_disbursement": "0.92",
           "shg_nulm__no_of_active_shgs": "417.0",
           "shg_nulm__target_fy_20_21_no": "1.0",
           "shg_nulm__amount": "0.0",
@@ -24895,7 +24894,8 @@
           "unknown_5__no_of_special_camps_conducted_during_the_quarter": "3.0",
           "unknown_5__no_of_participants": "76.0",
           "unknown_5__no_of_target_specific_camps_conducted_during_the_quarter": "3.0",
-          "unknown_5__target_group_addressed": "4.0"
+          "unknown_5__target_group_addressed": "4.0",
+          "shg_nrlm__average_disbursement_amt": "0.92"
         },
         {
           "district": "Purba Bardhaman",
@@ -24928,7 +24928,6 @@
           "shg_nrlm__total_disbursed_no": "41633.0",
           "shg_nrlm__total_outstanding_no": "46226.0",
           "shg_nrlm__of_achievement_no": "126.02",
-          "shg_nrlm__average_disbursement": "2.05",
           "shg_nulm__no_of_active_shgs": "2717.0",
           "shg_nulm__target_fy_20_21_no": "23.0",
           "shg_nulm__amount": "0.06",
@@ -24968,7 +24967,8 @@
           "rseti__wage_employed": "0.0",
           "rseti__total_settlement": "0.0",
           "rseti__settlement": "0.0",
-          "rseti__credit_linkage": "0.0"
+          "rseti__credit_linkage": "0.0",
+          "shg_nrlm__average_disbursement_amt": "2.05"
         },
         {
           "district": "Malda",
@@ -25001,7 +25001,6 @@
           "shg_nrlm__total_disbursed_no": "49660.0",
           "shg_nrlm__total_outstanding_no": "49014.0",
           "shg_nrlm__of_achievement_no": "133.91",
-          "shg_nrlm__average_disbursement": "1.07",
           "shg_nulm__no_of_active_shgs": "869.0",
           "shg_nulm__target_fy_20_21_no": "17.0",
           "shg_nulm__amount": "0.0",
@@ -25052,7 +25051,8 @@
           "rseti__wage_employed": "0.0",
           "rseti__total_settlement": "36.0",
           "rseti__settlement": "13.38",
-          "rseti__credit_linkage": "25.0"
+          "rseti__credit_linkage": "25.0",
+          "shg_nrlm__average_disbursement_amt": "1.07"
         },
         {
           "district": "Alipurduar",
@@ -25081,7 +25081,6 @@
           "shg_nrlm__total_disbursed_no": "15591.0",
           "shg_nrlm__total_outstanding_no": "18406.0",
           "shg_nrlm__of_achievement_no": "110.57",
-          "shg_nrlm__average_disbursement": "1.33",
           "shg_nulm__no_of_active_shgs": "539.0",
           "shg_nulm__target_fy_20_21_no": "8.0",
           "shg_nulm__amount": "0.0",
@@ -25121,7 +25120,8 @@
           "unknown_5__no_of_rural_branches_in_district": "51.0",
           "unknown_5__no_of_special_camps_conducted_during_the_quarter": "0.0",
           "unknown_5__no_of_participants": "0.0",
-          "unknown_5__no_of_target_specific_camps_conducted_during_the_quarter": "0.0"
+          "unknown_5__no_of_target_specific_camps_conducted_during_the_quarter": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.33"
         },
         {
           "district": "Bankura",
@@ -25152,7 +25152,6 @@
           "shg_nrlm__total_disbursed_no": "42737.0",
           "shg_nrlm__total_outstanding_no": "45996.0",
           "shg_nrlm__of_achievement_no": "146.92",
-          "shg_nrlm__average_disbursement": "1.36",
           "shg_nulm__no_of_active_shgs": "2110.0",
           "shg_nulm__target_fy_20_21_no": "6.0",
           "shg_nulm__amount": "0.0",
@@ -25203,7 +25202,8 @@
           "rseti__wage_employed": "0.0",
           "rseti__total_settlement": "0.0",
           "rseti__settlement": "0.0",
-          "rseti__credit_linkage": "0.0"
+          "rseti__credit_linkage": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.36"
         },
         {
           "district": "Birbhum",
@@ -25234,7 +25234,6 @@
           "shg_nrlm__total_disbursed_no": "54531.0",
           "shg_nrlm__total_outstanding_no": "55924.0",
           "shg_nrlm__of_achievement_no": "107.01",
-          "shg_nrlm__average_disbursement": "1.97",
           "shg_nulm__no_of_active_shgs": "3378.0",
           "shg_nulm__target_fy_20_21_no": "17.0",
           "shg_nulm__amount": "0.04",
@@ -25285,7 +25284,8 @@
           "rseti__wage_employed": "0.0",
           "rseti__total_settlement": "0.0",
           "rseti__settlement": "0.0",
-          "rseti__credit_linkage": "0.0"
+          "rseti__credit_linkage": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.97"
         },
         {
           "district": "Cooch Behar",
@@ -25316,7 +25316,6 @@
           "shg_nrlm__total_disbursed_no": "38471.0",
           "shg_nrlm__total_outstanding_no": "44489.0",
           "shg_nrlm__of_achievement_no": "163.97",
-          "shg_nrlm__average_disbursement": "1.24",
           "shg_nulm__no_of_active_shgs": "1514.0",
           "shg_nulm__target_fy_20_21_no": "20.0",
           "shg_nulm__amount": "0.0",
@@ -25366,7 +25365,8 @@
           "rseti__wage_employed": "0.0",
           "rseti__total_settlement": "52.0",
           "rseti__settlement": "24.41",
-          "rseti__credit_linkage": "61.54"
+          "rseti__credit_linkage": "61.54",
+          "shg_nrlm__average_disbursement_amt": "1.24"
         },
         {
           "district": "Dakshin Dinajpur",
@@ -25395,7 +25395,6 @@
           "shg_nrlm__total_disbursed_no": "20153.0",
           "shg_nrlm__total_outstanding_no": "20614.0",
           "shg_nrlm__of_achievement_no": "132.8",
-          "shg_nrlm__average_disbursement": "1.03",
           "shg_nulm__no_of_active_shgs": "1560.0",
           "shg_nulm__target_fy_20_21_no": "12.0",
           "shg_nulm__amount": "0.0",
@@ -25431,7 +25430,8 @@
           "sarfaesi__above_60_days_below_6_months": "2.0",
           "sarfaesi__6_months_to_1_year": "5.0",
           "sarfaesi__1_year_and_above": "44.0",
-          "sarfaesi__total_pending": "51.0"
+          "sarfaesi__total_pending": "51.0",
+          "shg_nrlm__average_disbursement_amt": "1.03"
         },
         {
           "district": "Darjeeling",
@@ -25462,7 +25462,6 @@
           "shg_nrlm__total_disbursed_no": "4016.0",
           "shg_nrlm__total_outstanding_no": "4466.0",
           "shg_nrlm__of_achievement_no": "135.22",
-          "shg_nrlm__average_disbursement": "1.87",
           "shg_nulm__no_of_active_shgs": "1830.0",
           "shg_nulm__target_fy_20_21_no": "8.0",
           "shg_nulm__amount": "0.03",
@@ -25506,7 +25505,8 @@
           "rseti__wage_employed": "0.0",
           "rseti__total_settlement": "0.0",
           "rseti__settlement": "0.0",
-          "rseti__credit_linkage": "0.0"
+          "rseti__credit_linkage": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.87"
         },
         {
           "district": "Jalpaiguri",
@@ -25537,7 +25537,6 @@
           "shg_nrlm__total_disbursed_no": "28469.0",
           "shg_nrlm__total_outstanding_no": "31020.0",
           "shg_nrlm__of_achievement_no": "121.18",
-          "shg_nrlm__average_disbursement": "1.24",
           "shg_nulm__no_of_active_shgs": "1214.0",
           "shg_nulm__target_fy_20_21_no": "9.0",
           "shg_nulm__amount": "0.35",
@@ -25587,7 +25586,8 @@
           "rseti__wage_employed": "0.0",
           "rseti__total_settlement": "0.0",
           "rseti__settlement": "0.0",
-          "rseti__credit_linkage": "0.0"
+          "rseti__credit_linkage": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.24"
         },
         {
           "district": "Kalimpong",
@@ -25616,7 +25616,6 @@
           "shg_nrlm__total_disbursed_no": "2101.0",
           "shg_nrlm__total_outstanding_no": "2435.0",
           "shg_nrlm__of_achievement_no": "152.47",
-          "shg_nrlm__average_disbursement": "1.97",
           "shg_nulm__no_of_active_shgs": "71.0",
           "shg_nulm__target_fy_20_21_no": "1.0",
           "shg_nulm__amount": "0.0",
@@ -25657,7 +25656,8 @@
           "unknown_5__no_of_special_camps_conducted_during_the_quarter": "4.0",
           "unknown_5__no_of_participants": "0.0",
           "unknown_5__no_of_target_specific_camps_conducted_during_the_quarter": "0.0",
-          "unknown_5__target_group_addressed": "1234.0"
+          "unknown_5__target_group_addressed": "1234.0",
+          "shg_nrlm__average_disbursement_amt": "1.97"
         },
         {
           "district": "Kolkata",
@@ -25747,7 +25747,6 @@
           "shg_nrlm__total_disbursed_no": "8593.0",
           "shg_nrlm__total_outstanding_no": "8040.0",
           "shg_nrlm__of_achievement_no": "117.09",
-          "shg_nrlm__average_disbursement": "1.75",
           "shg_nulm__no_of_active_shgs": "2426.0",
           "shg_nulm__target_fy_20_21_no": "2.0",
           "shg_nulm__amount": "0.0",
@@ -25782,7 +25781,8 @@
           "unknown_5__no_of_special_camps_conducted_during_the_quarter": "10.0",
           "unknown_5__no_of_participants": "425.0",
           "unknown_5__no_of_target_specific_camps_conducted_during_the_quarter": "10.0",
-          "unknown_5__target_group_addressed": "245.0"
+          "unknown_5__target_group_addressed": "245.0",
+          "shg_nrlm__average_disbursement_amt": "1.75"
         },
         {
           "district": "Purulia",
@@ -25813,7 +25813,6 @@
           "shg_nrlm__total_disbursed_no": "29318.0",
           "shg_nrlm__total_outstanding_no": "28564.0",
           "shg_nrlm__of_achievement_no": "143.21",
-          "shg_nrlm__average_disbursement": "0.78",
           "shg_nulm__no_of_active_shgs": "1156.0",
           "shg_nulm__target_fy_20_21_no": "2.0",
           "shg_nulm__amount": "0.04",
@@ -25857,7 +25856,8 @@
           "rseti__wage_employed": "0.0",
           "rseti__total_settlement": "0.0",
           "rseti__settlement": "0.0",
-          "rseti__credit_linkage": "0.0"
+          "rseti__credit_linkage": "0.0",
+          "shg_nrlm__average_disbursement_amt": "0.78"
         },
         {
           "district": "Uttar Dinajpur",
@@ -25888,7 +25888,6 @@
           "shg_nrlm__total_disbursed_no": "29882.0",
           "shg_nrlm__total_outstanding_no": "31960.0",
           "shg_nrlm__of_achievement_no": "211.78",
-          "shg_nrlm__average_disbursement": "1.09",
           "shg_nulm__no_of_active_shgs": "1741.0",
           "shg_nulm__target_fy_20_21_no": "29.0",
           "shg_nulm__amount": "0.0",
@@ -25938,7 +25937,8 @@
           "rseti__wage_employed": "0.0",
           "rseti__total_settlement": "19.0",
           "rseti__settlement": "11.11",
-          "rseti__credit_linkage": "78.95"
+          "rseti__credit_linkage": "78.95",
+          "shg_nrlm__average_disbursement_amt": "1.09"
         }
       ]
     },
@@ -25977,7 +25977,6 @@
           "shg_nrlm__total_disbursement": "7175.0",
           "shg_nrlm__total_outstanding": "36913.0",
           "shg_nrlm__of_achievement": "36.35",
-          "shg_nrlm__average_disbursement": "0.012",
           "shg_nulm__no_of_active_shgs": "5696.0",
           "shg_nulm__target_fy_21_22_no": "30.0",
           "shg_nulm__amount": "0.01",
@@ -26010,7 +26009,8 @@
           "rseti_2__wage_employed": "0.0",
           "rseti_2__total_settlement": "4869.0",
           "rseti_2__settlement": "70.49",
-          "rseti_2__credit_linkage": "86.38"
+          "rseti_2__credit_linkage": "86.38",
+          "shg_nrlm__average_disbursement_amt": "0.012"
         },
         {
           "district": "Murshidabad",
@@ -26040,7 +26040,6 @@
           "shg_nrlm__total_disbursement": "7208.0",
           "shg_nrlm__total_outstanding": "74242.0",
           "shg_nrlm__of_achievement": "22.61",
-          "shg_nrlm__average_disbursement": "0.009",
           "shg_nulm__no_of_active_shgs": "5285.0",
           "shg_nulm__target_fy_21_22_no": "28.0",
           "shg_nulm__amount": "0.0",
@@ -26071,7 +26070,8 @@
           "unknown_5__no_of_participants": "502.0",
           "unknown_5__no_of_target_specific_camps_conducted_during_the_quarter": "190.0",
           "unknown_5__target_group_addressed": "2346.0",
-          "rseti__rseti_no": "1.0"
+          "rseti__rseti_no": "1.0",
+          "shg_nrlm__average_disbursement_amt": "0.009"
         },
         {
           "district": "Paschim Medinipur",
@@ -26099,7 +26099,6 @@
           "shg_nrlm__total_disbursement": "3758.0",
           "shg_nrlm__total_outstanding": "55717.0",
           "shg_nrlm__of_achievement": "12.63",
-          "shg_nrlm__average_disbursement": "0.017",
           "shg_nulm__no_of_active_shgs": "3775.0",
           "shg_nulm__target_fy_21_22_no": "18.0",
           "shg_nulm__amount": "0.0",
@@ -26128,7 +26127,8 @@
           "unknown_5__no_of_rural_branches_in_district": "248.0",
           "unknown_5__no_of_special_camps_conducted_during_the_quarter": "0.0",
           "unknown_5__no_of_participants": "0.0",
-          "unknown_5__no_of_target_specific_camps_conducted_during_the_quarter": "0.0"
+          "unknown_5__no_of_target_specific_camps_conducted_during_the_quarter": "0.0",
+          "shg_nrlm__average_disbursement_amt": "0.017"
         },
         {
           "district": "Purba Medinipur",
@@ -26162,7 +26162,6 @@
           "shg_nrlm__total_disbursement": "5886.0",
           "shg_nrlm__total_outstanding": "70593.0",
           "shg_nrlm__of_achievement": "13.58",
-          "shg_nrlm__average_disbursement": "0.019",
           "shg_nulm__no_of_active_shgs": "3344.0",
           "shg_nulm__target_fy_21_22_no": "14.0",
           "shg_nulm__amount": "0.0",
@@ -26200,7 +26199,8 @@
           "rseti_2__wage_employed": "49.0",
           "rseti_2__total_settlement": "4743.0",
           "rseti_2__settlement": "69.02",
-          "rseti_2__credit_linkage": "52.79"
+          "rseti_2__credit_linkage": "52.79",
+          "shg_nrlm__average_disbursement_amt": "0.019"
         },
         {
           "district": "North 24 Parganas",
@@ -26232,7 +26232,6 @@
           "shg_nrlm__total_disbursement": "8665.0",
           "shg_nrlm__total_outstanding": "56786.0",
           "shg_nrlm__of_achievement": "22.79",
-          "shg_nrlm__average_disbursement": "0.007",
           "shg_nulm__no_of_active_shgs": "15576.0",
           "shg_nulm__target_fy_21_22_no": "63.0",
           "shg_nulm__amount": "0.0",
@@ -26279,7 +26278,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "0.007"
         },
         {
           "district": "South 24 Parganas",
@@ -26311,7 +26311,6 @@
           "shg_nrlm__total_disbursement": "10744.0",
           "shg_nrlm__total_outstanding": "65174.0",
           "shg_nrlm__of_achievement": "33.69",
-          "shg_nrlm__average_disbursement": "0.009",
           "shg_nulm__no_of_active_shgs": "3489.0",
           "shg_nulm__target_fy_21_22_no": "14.0",
           "shg_nulm__amount": "0.0",
@@ -26349,7 +26348,8 @@
           "rseti_2__wage_employed": "121.0",
           "rseti_2__total_settlement": "5228.0",
           "rseti_2__settlement": "63.34",
-          "rseti_2__credit_linkage": "77.75"
+          "rseti_2__credit_linkage": "77.75",
+          "shg_nrlm__average_disbursement_amt": "0.009"
         },
         {
           "district": "Howrah",
@@ -26381,7 +26381,6 @@
           "shg_nrlm__total_disbursement": "5267.0",
           "shg_nrlm__total_outstanding": "31717.0",
           "shg_nrlm__of_achievement": "22.07",
-          "shg_nrlm__average_disbursement": "0.011",
           "shg_nulm__no_of_active_shgs": "1668.0",
           "shg_nulm__target_fy_21_22_no": "9.0",
           "shg_nulm__amount": "0.0",
@@ -26427,7 +26426,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "0.011"
         },
         {
           "district": "Nadia",
@@ -26459,7 +26459,6 @@
           "shg_nrlm__total_disbursement": "5004.0",
           "shg_nrlm__total_outstanding": "44604.0",
           "shg_nrlm__of_achievement": "20.69",
-          "shg_nrlm__average_disbursement": "0.009",
           "shg_nulm__no_of_active_shgs": "5754.0",
           "shg_nulm__target_fy_21_22_no": "18.0",
           "shg_nulm__amount": "0.02",
@@ -26506,7 +26505,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "0.009"
         },
         {
           "district": "Jhargram",
@@ -26536,7 +26536,6 @@
           "shg_nrlm__total_disbursement": "1079.0",
           "shg_nrlm__total_outstanding": "15643.0",
           "shg_nrlm__of_achievement": "11.48",
-          "shg_nrlm__average_disbursement": "0.014",
           "shg_nulm__no_of_active_shgs": "454.0",
           "shg_nulm__target_fy_21_22_no": "2.0",
           "shg_nulm__amount": "0.0",
@@ -26565,7 +26564,8 @@
           "unknown_5__no_of_rural_branches_in_district": "82.0",
           "unknown_5__no_of_special_camps_conducted_during_the_quarter": "0.0",
           "unknown_5__no_of_participants": "0.0",
-          "unknown_5__no_of_target_specific_camps_conducted_during_the_quarter": "0.0"
+          "unknown_5__no_of_target_specific_camps_conducted_during_the_quarter": "0.0",
+          "shg_nrlm__average_disbursement_amt": "0.014"
         },
         {
           "district": "Purba Bardhaman",
@@ -26597,7 +26597,6 @@
           "shg_nrlm__total_disbursement": "4357.0",
           "shg_nrlm__total_outstanding": "46545.0",
           "shg_nrlm__of_achievement": "11.52",
-          "shg_nrlm__average_disbursement": "0.018",
           "shg_nulm__no_of_active_shgs": "3252.0",
           "shg_nulm__target_fy_21_22_no": "16.0",
           "shg_nulm__amount": "0.01",
@@ -26637,7 +26636,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "0.018"
         },
         {
           "district": "Malda",
@@ -26669,7 +26669,6 @@
           "shg_nrlm__total_disbursement": "8235.0",
           "shg_nrlm__total_outstanding": "51698.0",
           "shg_nrlm__of_achievement": "29.36",
-          "shg_nrlm__average_disbursement": "0.009",
           "shg_nulm__no_of_active_shgs": "964.0",
           "shg_nulm__target_fy_21_22_no": "5.0",
           "shg_nulm__amount": "0.0",
@@ -26717,7 +26716,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "0.009"
         },
         {
           "district": "Alipurduar",
@@ -26745,7 +26745,6 @@
           "shg_nrlm__total_disbursement": "4200.0",
           "shg_nrlm__total_outstanding": "18881.0",
           "shg_nrlm__of_achievement": "34.33",
-          "shg_nrlm__average_disbursement": "0.009",
           "shg_nulm__no_of_active_shgs": "578.0",
           "shg_nulm__target_fy_21_22_no": "2.0",
           "shg_nulm__amount": "0.0",
@@ -26774,7 +26773,8 @@
           "unknown_5__no_of_rural_branches_in_district": "51.0",
           "unknown_5__no_of_special_camps_conducted_during_the_quarter": "0.0",
           "unknown_5__no_of_participants": "0.0",
-          "unknown_5__no_of_target_specific_camps_conducted_during_the_quarter": "0.0"
+          "unknown_5__no_of_target_specific_camps_conducted_during_the_quarter": "0.0",
+          "shg_nrlm__average_disbursement_amt": "0.009"
         },
         {
           "district": "Bankura",
@@ -26804,7 +26804,6 @@
           "shg_nrlm__total_disbursement": "5661.0",
           "shg_nrlm__total_outstanding": "47609.0",
           "shg_nrlm__of_achievement": "19.45",
-          "shg_nrlm__average_disbursement": "0.013",
           "shg_nulm__no_of_active_shgs": "2323.0",
           "shg_nulm__target_fy_21_22_no": "5.0",
           "shg_nulm__amount": "0.0",
@@ -26842,7 +26841,8 @@
           "rseti_2__wage_employed": "607.0",
           "rseti_2__total_settlement": "4693.0",
           "rseti_2__settlement": "63.18",
-          "rseti_2__credit_linkage": "53.82"
+          "rseti_2__credit_linkage": "53.82",
+          "shg_nrlm__average_disbursement_amt": "0.013"
         },
         {
           "district": "Birbhum",
@@ -26872,7 +26872,6 @@
           "shg_nrlm__total_disbursement": "4352.0",
           "shg_nrlm__total_outstanding": "56659.0",
           "shg_nrlm__of_achievement": "8.54",
-          "shg_nrlm__average_disbursement": "0.022",
           "shg_nulm__no_of_active_shgs": "3515.0",
           "shg_nulm__target_fy_21_22_no": "14.0",
           "shg_nulm__amount": "0.09",
@@ -26919,7 +26918,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "0.022"
         },
         {
           "district": "Cooch Behar",
@@ -26949,7 +26949,6 @@
           "shg_nrlm__total_disbursement": "10879.0",
           "shg_nrlm__total_outstanding": "45331.0",
           "shg_nrlm__of_achievement": "37.76",
-          "shg_nrlm__average_disbursement": "0.008",
           "shg_nulm__no_of_active_shgs": "1656.0",
           "shg_nulm__target_fy_21_22_no": "10.0",
           "shg_nulm__amount": "0.0",
@@ -26996,7 +26995,8 @@
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "4.0",
           "rseti_3__settlement": "13.33",
-          "rseti_3__credit_linkage": "100.0"
+          "rseti_3__credit_linkage": "100.0",
+          "shg_nrlm__average_disbursement_amt": "0.008"
         },
         {
           "district": "Dakshin Dinajpur",
@@ -27024,7 +27024,6 @@
           "shg_nrlm__total_disbursement": "4250.0",
           "shg_nrlm__total_outstanding": "21216.0",
           "shg_nrlm__of_achievement": "29.11",
-          "shg_nrlm__average_disbursement": "0.006",
           "shg_nulm__no_of_active_shgs": "1732.0",
           "shg_nulm__target_fy_21_22_no": "7.0",
           "shg_nulm__amount": "0.0",
@@ -27042,7 +27041,8 @@
           "sarfaesi__above_60_day_below_6_months": "2.0",
           "sarfaesi__6_months_to_1_year": "11.0",
           "sarfaesi__1_year_and_above": "46.0",
-          "sarfaesi__total_pending": "59.0"
+          "sarfaesi__total_pending": "59.0",
+          "shg_nrlm__average_disbursement_amt": "0.006"
         },
         {
           "district": "Darjeeling",
@@ -27072,7 +27072,6 @@
           "shg_nrlm__total_disbursement": "1353.0",
           "shg_nrlm__total_outstanding": "4586.0",
           "shg_nrlm__of_achievement": "34.45",
-          "shg_nrlm__average_disbursement": "0.01",
           "shg_nulm__no_of_active_shgs": "2138.0",
           "shg_nulm__target_fy_21_22_no": "6.0",
           "shg_nulm__amount": "0.0",
@@ -27113,7 +27112,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "0.01"
         },
         {
           "district": "Jalpaiguri",
@@ -27143,7 +27143,6 @@
           "shg_nrlm__total_disbursement": "5518.0",
           "shg_nrlm__total_outstanding": "32253.0",
           "shg_nrlm__of_achievement": "36.81",
-          "shg_nrlm__average_disbursement": "0.01",
           "shg_nulm__no_of_active_shgs": "1456.0",
           "shg_nulm__target_fy_21_22_no": "11.0",
           "shg_nulm__amount": "0.0",
@@ -27181,7 +27180,8 @@
           "rseti_2__wage_employed": "264.0",
           "rseti_2__total_settlement": "4269.0",
           "rseti_2__settlement": "77.73",
-          "rseti_2__credit_linkage": "77.4"
+          "rseti_2__credit_linkage": "77.4",
+          "shg_nrlm__average_disbursement_amt": "0.01"
         },
         {
           "district": "Kalimpong",
@@ -27209,7 +27209,6 @@
           "shg_nrlm__total_disbursement": "760.0",
           "shg_nrlm__total_outstanding": "2486.0",
           "shg_nrlm__of_achievement": "40.43",
-          "shg_nrlm__average_disbursement": "0.011",
           "shg_nulm__no_of_active_shgs": "124.0",
           "shg_nulm__target_fy_21_22_no": "4.0",
           "shg_nulm__amount": "0.0",
@@ -27238,7 +27237,8 @@
           "unknown_5__no_of_rural_branches_in_district": "14.0",
           "unknown_5__no_of_special_camps_conducted_during_the_quarter": "0.0",
           "unknown_5__no_of_participants": "0.0",
-          "unknown_5__no_of_target_specific_camps_conducted_during_the_quarter": "0.0"
+          "unknown_5__no_of_target_specific_camps_conducted_during_the_quarter": "0.0",
+          "shg_nrlm__average_disbursement_amt": "0.011"
         },
         {
           "district": "Kolkata",
@@ -27316,7 +27316,6 @@
           "shg_nrlm__total_disbursement": "650.0",
           "shg_nrlm__total_outstanding": "8156.0",
           "shg_nrlm__of_achievement": "7.87",
-          "shg_nrlm__average_disbursement": "0.017",
           "shg_nulm__no_of_active_shgs": "2745.0",
           "shg_nulm__target_fy_21_22_no": "10.0",
           "shg_nulm__amount": "0.0",
@@ -27340,7 +27339,8 @@
           "unknown_5__no_of_special_camps_conducted_during_the_quarter": "10.0",
           "unknown_5__no_of_participants": "425.0",
           "unknown_5__no_of_target_specific_camps_conducted_during_the_quarter": "10.0",
-          "unknown_5__target_group_addressed": "2456.0"
+          "unknown_5__target_group_addressed": "2456.0",
+          "shg_nrlm__average_disbursement_amt": "0.017"
         },
         {
           "district": "Purulia",
@@ -27370,7 +27370,6 @@
           "shg_nrlm__total_disbursement": "3117.0",
           "shg_nrlm__total_outstanding": "33457.0",
           "shg_nrlm__of_achievement": "15.23",
-          "shg_nrlm__average_disbursement": "0.007",
           "shg_nulm__no_of_active_shgs": "1230.0",
           "shg_nulm__target_fy_21_22_no": "8.0",
           "shg_nulm__amount": "0.0",
@@ -27402,7 +27401,8 @@
           "rseti_2__wage_employed": "0.0",
           "rseti_2__total_settlement": "2514.0",
           "rseti_2__settlement": "52.24",
-          "rseti_2__credit_linkage": "64.6"
+          "rseti_2__credit_linkage": "64.6",
+          "shg_nrlm__average_disbursement_amt": "0.007"
         },
         {
           "district": "Uttar Dinajpur",
@@ -27432,7 +27432,6 @@
           "shg_nrlm__total_disbursement": "5171.0",
           "shg_nrlm__total_outstanding": "32218.0",
           "shg_nrlm__of_achievement": "37.13",
-          "shg_nrlm__average_disbursement": "0.007",
           "shg_nulm__no_of_active_shgs": "2068.0",
           "shg_nulm__target_fy_21_22_no": "11.0",
           "shg_nulm__amount": "0.0",
@@ -27480,7 +27479,8 @@
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "21.0",
           "rseti_3__settlement": "87.5",
-          "rseti_3__credit_linkage": "33.33"
+          "rseti_3__credit_linkage": "33.33",
+          "shg_nrlm__average_disbursement_amt": "0.007"
         }
       ]
     },
@@ -27518,7 +27518,6 @@
           "shg_nrlm__total_disbursement": "9667.0",
           "shg_nrlm__total_outstanding": "18686.0",
           "shg_nrlm__of_achievement": "79.01",
-          "shg_nrlm__average_disbursement": "1.31",
           "shg_nulm__no_of_active_shgs": "578.0",
           "shg_nulm__target_fy_21_22_no": "2.0",
           "shg_nulm__amount": "0.0",
@@ -27550,7 +27549,8 @@
           "financial_literacy__no_of_participants": "250.0",
           "financial_literacy__no_of_target_specific_camps_conducted_during_the_quarter": "1.0",
           "financial_literacy__camp_conducted_by_rural_branches_during_the_quarter": "46.0",
-          "financial_literacy__total_camps_conducted_during_the_quarter": "48.0"
+          "financial_literacy__total_camps_conducted_during_the_quarter": "48.0",
+          "shg_nrlm__average_disbursement_amt": "1.31"
         },
         {
           "district": "Bankura",
@@ -27585,7 +27585,6 @@
           "shg_nrlm__total_disbursement": "16430.0",
           "shg_nrlm__total_outstanding": "45983.0",
           "shg_nrlm__of_achievement": "56.44",
-          "shg_nrlm__average_disbursement": "1.54",
           "shg_nulm__no_of_active_shgs": "2323.0",
           "shg_nulm__target_fy_21_22_no": "5.0",
           "shg_nulm__amount": "0.01",
@@ -27634,7 +27633,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.54"
         },
         {
           "district": "Birbhum",
@@ -27669,7 +27669,6 @@
           "shg_nrlm__total_disbursement": "20412.0",
           "shg_nrlm__total_outstanding": "56254.0",
           "shg_nrlm__of_achievement": "40.03",
-          "shg_nrlm__average_disbursement": "2.35",
           "shg_nulm__no_of_active_shgs": "3515.0",
           "shg_nulm__target_fy_21_22_no": "14.0",
           "shg_nulm__amount": "0.23",
@@ -27719,7 +27718,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "2.35"
         },
         {
           "district": "Cooch Behar",
@@ -27754,7 +27754,6 @@
           "shg_nrlm__total_disbursement": "27405.0",
           "shg_nrlm__total_outstanding": "45227.0",
           "shg_nrlm__of_achievement": "95.12",
-          "shg_nrlm__average_disbursement": "1.17",
           "shg_nulm__no_of_active_shgs": "1656.0",
           "shg_nulm__target_fy_21_22_no": "10.0",
           "shg_nulm__amount": "0.09",
@@ -27804,7 +27803,8 @@
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "9.0",
           "rseti_3__settlement": "14.52",
-          "rseti_3__credit_linkage": "100.0"
+          "rseti_3__credit_linkage": "100.0",
+          "shg_nrlm__average_disbursement_amt": "1.17"
         },
         {
           "district": "Dakshin Dinajpur",
@@ -27837,7 +27837,6 @@
           "shg_nrlm__total_disbursement": "8781.0",
           "shg_nrlm__total_outstanding": "19883.0",
           "shg_nrlm__of_achievement": "60.15",
-          "shg_nrlm__average_disbursement": "0.86",
           "shg_nulm__no_of_active_shgs": "1732.0",
           "shg_nulm__target_fy_21_22_no": "7.0",
           "shg_nulm__amount": "0.0",
@@ -27864,7 +27863,8 @@
           "sarfaesi__above_60_day_below_6_months": "2.0",
           "sarfaesi__6_months_to_1_year": "6.0",
           "sarfaesi__1_year_and_above": "46.0",
-          "sarfaesi__total_pending": "54.0"
+          "sarfaesi__total_pending": "54.0",
+          "shg_nrlm__average_disbursement_amt": "0.86"
         },
         {
           "district": "Darjeeling",
@@ -27899,7 +27899,6 @@
           "shg_nrlm__total_disbursement": "3235.0",
           "shg_nrlm__total_outstanding": "5032.0",
           "shg_nrlm__of_achievement": "82.36",
-          "shg_nrlm__average_disbursement": "1.59",
           "shg_nulm__no_of_active_shgs": "2138.0",
           "shg_nulm__target_fy_21_22_no": "6.0",
           "shg_nulm__amount": "0.05",
@@ -27943,7 +27942,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.59"
         },
         {
           "district": "Hooghly",
@@ -27978,7 +27978,6 @@
           "shg_nrlm__total_disbursement": "19543.0",
           "shg_nrlm__total_outstanding": "37202.0",
           "shg_nrlm__of_achievement": "99.01",
-          "shg_nrlm__average_disbursement": "1.65",
           "shg_nulm__no_of_active_shgs": "5696.0",
           "shg_nulm__target_fy_21_22_no": "30.0",
           "shg_nulm__amount": "0.02",
@@ -28022,7 +28021,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.65"
         },
         {
           "district": "Howrah",
@@ -28055,7 +28055,6 @@
           "shg_nrlm__total_disbursement": "14146.0",
           "shg_nrlm__total_outstanding": "31397.0",
           "shg_nrlm__of_achievement": "59.28",
-          "shg_nrlm__average_disbursement": "1.93",
           "shg_nulm__no_of_active_shgs": "1668.0",
           "shg_nulm__target_fy_21_22_no": "9.0",
           "shg_nulm__amount": "0.02",
@@ -28104,7 +28103,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.93"
         },
         {
           "district": "Jalpaiguri",
@@ -28139,7 +28139,6 @@
           "shg_nrlm__total_disbursement": "14460.0",
           "shg_nrlm__total_outstanding": "31361.0",
           "shg_nrlm__of_achievement": "96.47",
-          "shg_nrlm__average_disbursement": "1.33",
           "shg_nulm__no_of_active_shgs": "1456.0",
           "shg_nulm__target_fy_21_22_no": "11.0",
           "shg_nulm__amount": "0.03",
@@ -28188,7 +28187,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.33"
         },
         {
           "district": "Jhargram",
@@ -28221,7 +28221,6 @@
           "shg_nrlm__total_disbursement": "5592.0",
           "shg_nrlm__total_outstanding": "14714.0",
           "shg_nrlm__of_achievement": "59.49",
-          "shg_nrlm__average_disbursement": "1.34",
           "shg_nulm__no_of_active_shgs": "454.0",
           "shg_nulm__target_fy_21_22_no": "2.0",
           "shg_nulm__amount": "0.0",
@@ -28253,7 +28252,8 @@
           "financial_literacy__no_of_participants": "213.0",
           "financial_literacy__no_of_target_specific_camps_conducted_during_the_quarter": "9.0",
           "financial_literacy__camp_conducted_by_rural_branches_during_the_quarter": "154.0",
-          "financial_literacy__total_camps_conducted_during_the_quarter": "172.0"
+          "financial_literacy__total_camps_conducted_during_the_quarter": "172.0",
+          "shg_nrlm__average_disbursement_amt": "1.34"
         },
         {
           "district": "Kalimpong",
@@ -28286,7 +28286,6 @@
           "shg_nrlm__total_disbursement": "1439.0",
           "shg_nrlm__total_outstanding": "2537.0",
           "shg_nrlm__of_achievement": "76.54",
-          "shg_nrlm__average_disbursement": "1.62",
           "shg_nulm__no_of_active_shgs": "124.0",
           "shg_nulm__target_fy_21_22_no": "4.0",
           "shg_nulm__amount": "0.0",
@@ -28318,7 +28317,8 @@
           "financial_literacy__no_of_participants": "0.0",
           "financial_literacy__no_of_target_specific_camps_conducted_during_the_quarter": "0.0",
           "financial_literacy__camp_conducted_by_rural_branches_during_the_quarter": "3.0",
-          "financial_literacy__total_camps_conducted_during_the_quarter": "3.0"
+          "financial_literacy__total_camps_conducted_during_the_quarter": "3.0",
+          "shg_nrlm__average_disbursement_amt": "1.62"
         },
         {
           "district": "Kolkata",
@@ -28411,7 +28411,6 @@
           "shg_nrlm__total_disbursement": "19129.0",
           "shg_nrlm__total_outstanding": "48546.0",
           "shg_nrlm__of_achievement": "68.19",
-          "shg_nrlm__average_disbursement": "1.02",
           "shg_nulm__no_of_active_shgs": "964.0",
           "shg_nulm__target_fy_21_22_no": "5.0",
           "shg_nulm__amount": "0.04",
@@ -28462,7 +28461,8 @@
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "1.0",
           "rseti_3__settlement": "1.2",
-          "rseti_3__credit_linkage": "0.0"
+          "rseti_3__credit_linkage": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.02"
         },
         {
           "district": "Murshidabad",
@@ -28495,7 +28495,6 @@
           "shg_nrlm__total_disbursement": "22400.0",
           "shg_nrlm__total_outstanding": "70369.0",
           "shg_nrlm__of_achievement": "70.26",
-          "shg_nrlm__average_disbursement": "1.11",
           "shg_nulm__no_of_active_shgs": "5285.0",
           "shg_nulm__target_fy_21_22_no": "28.0",
           "shg_nulm__amount": "0.03",
@@ -28528,7 +28527,8 @@
           "financial_literacy__no_of_target_specific_camps_conducted_during_the_quarter": "4.0",
           "financial_literacy__camp_conducted_by_rural_branches_during_the_quarter": "0.0",
           "financial_literacy__total_camps_conducted_during_the_quarter": "6.0",
-          "rseti__rseti_no": "1.0"
+          "rseti__rseti_no": "1.0",
+          "shg_nrlm__average_disbursement_amt": "1.11"
         },
         {
           "district": "Nadia",
@@ -28563,7 +28563,6 @@
           "shg_nrlm__total_disbursement": "14098.0",
           "shg_nrlm__total_outstanding": "42628.0",
           "shg_nrlm__of_achievement": "58.28",
-          "shg_nrlm__average_disbursement": "1.12",
           "shg_nulm__no_of_active_shgs": "5754.0",
           "shg_nulm__target_fy_21_22_no": "18.0",
           "shg_nulm__amount": "0.02",
@@ -28612,7 +28611,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.12"
         },
         {
           "district": "Paschim Bardhaman",
@@ -28645,7 +28645,6 @@
           "shg_nrlm__total_disbursement": "3452.0",
           "shg_nrlm__total_outstanding": "8432.0",
           "shg_nrlm__of_achievement": "41.81",
-          "shg_nrlm__average_disbursement": "2.15",
           "shg_nulm__no_of_active_shgs": "2745.0",
           "shg_nulm__target_fy_21_22_no": "10.0",
           "shg_nulm__amount": "0.0",
@@ -28671,7 +28670,8 @@
           "financial_literacy__no_of_participants": "379.0",
           "financial_literacy__no_of_target_specific_camps_conducted_during_the_quarter": "8.0",
           "financial_literacy__camp_conducted_by_rural_branches_during_the_quarter": "35.0",
-          "financial_literacy__total_camps_conducted_during_the_quarter": "44.0"
+          "financial_literacy__total_camps_conducted_during_the_quarter": "44.0",
+          "shg_nrlm__average_disbursement_amt": "2.15"
         },
         {
           "district": "Purba Bardhaman",
@@ -28706,7 +28706,6 @@
           "shg_nrlm__total_disbursement": "18164.0",
           "shg_nrlm__total_outstanding": "47243.0",
           "shg_nrlm__of_achievement": "48.05",
-          "shg_nrlm__average_disbursement": "2.52",
           "shg_nulm__no_of_active_shgs": "3252.0",
           "shg_nulm__target_fy_21_22_no": "16.0",
           "shg_nulm__amount": "0.04",
@@ -28746,7 +28745,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "2.52"
         },
         {
           "district": "Purba Medinipur",
@@ -28781,7 +28781,6 @@
           "shg_nrlm__total_disbursement": "27948.0",
           "shg_nrlm__total_outstanding": "67391.0",
           "shg_nrlm__of_achievement": "64.5",
-          "shg_nrlm__average_disbursement": "1.81",
           "shg_nulm__no_of_active_shgs": "3344.0",
           "shg_nulm__target_fy_21_22_no": "14.0",
           "shg_nulm__amount": "0.07",
@@ -28830,7 +28829,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.81"
         },
         {
           "district": "Purulia",
@@ -28865,7 +28865,6 @@
           "shg_nrlm__total_disbursement": "9169.0",
           "shg_nrlm__total_outstanding": "30860.0",
           "shg_nrlm__of_achievement": "44.79",
-          "shg_nrlm__average_disbursement": "0.99",
           "shg_nulm__no_of_active_shgs": "1230.0",
           "shg_nulm__target_fy_21_22_no": "8.0",
           "shg_nulm__amount": "0.06",
@@ -28908,7 +28907,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "0.99"
         },
         {
           "district": "Uttar Dinajpur",
@@ -28943,7 +28943,6 @@
           "shg_nrlm__total_disbursement": "12634.0",
           "shg_nrlm__total_outstanding": "32105.0",
           "shg_nrlm__of_achievement": "90.71",
-          "shg_nrlm__average_disbursement": "0.9",
           "shg_nulm__no_of_active_shgs": "2068.0",
           "shg_nulm__target_fy_21_22_no": "11.0",
           "shg_nulm__amount": "0.0",
@@ -28993,7 +28992,8 @@
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "21.0",
           "rseti_3__settlement": "16.94",
-          "rseti_3__credit_linkage": "38.1"
+          "rseti_3__credit_linkage": "38.1",
+          "shg_nrlm__average_disbursement_amt": "0.9"
         },
         {
           "district": "North 24 Parganas",
@@ -29026,7 +29026,6 @@
           "shg_nrlm__total_disbursement": "23226.0",
           "shg_nrlm__total_outstanding": "54551.0",
           "shg_nrlm__of_achievement": "61.09",
-          "shg_nrlm__average_disbursement": "1.05",
           "shg_nulm__no_of_active_shgs": "15576.0",
           "shg_nulm__target_fy_21_22_no": "63.0",
           "shg_nulm__amount": "0.02",
@@ -29076,7 +29075,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.05"
         },
         {
           "district": "South 24 Parganas",
@@ -29109,7 +29109,6 @@
           "shg_nrlm__total_disbursement": "27732.0",
           "shg_nrlm__total_outstanding": "64720.0",
           "shg_nrlm__of_achievement": "86.95",
-          "shg_nrlm__average_disbursement": "1.38",
           "shg_nulm__no_of_active_shgs": "3489.0",
           "shg_nulm__target_fy_21_22_no": "14.0",
           "shg_nulm__amount": "0.0",
@@ -29158,7 +29157,8 @@
           "rseti_3__total": "0.0",
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "0.0",
-          "rseti_3__settlement": "0.0"
+          "rseti_3__settlement": "0.0",
+          "shg_nrlm__average_disbursement_amt": "1.38"
         },
         {
           "district": "Paschim Medinipur",
@@ -29187,7 +29187,6 @@
           "shg_nrlm__total_disbursement": "20952.0",
           "shg_nrlm__total_outstanding": "52654.0",
           "shg_nrlm__of_achievement": "70.4",
-          "shg_nrlm__average_disbursement": "1.55",
           "shg_nulm__no_of_active_shgs": "3775.0",
           "shg_nulm__target_fy_21_22_no": "18.0",
           "shg_nulm__amount": "0.0",
@@ -29219,7 +29218,8 @@
           "financial_literacy__no_of_participants": "47.0",
           "financial_literacy__no_of_target_specific_camps_conducted_during_the_quarter": "3.0",
           "financial_literacy__camp_conducted_by_rural_branches_during_the_quarter": "169.0",
-          "financial_literacy__total_camps_conducted_during_the_quarter": "175.0"
+          "financial_literacy__total_camps_conducted_during_the_quarter": "175.0",
+          "shg_nrlm__average_disbursement_amt": "1.55"
         }
       ]
     },
@@ -31218,7 +31218,6 @@
           "shg_nrlm__amount": "81.33",
           "shg_nrlm__sanctioned_no": "14195.0",
           "shg_nrlm__disbursement_no": "14566.0",
-          "shg_nrlm__outstanding_amount": "360.06",
           "shg_nrlm__of_achievement_no": "119.05",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.82",
           "shg_nulm__no_of_active_shgs": "578.0",
@@ -31252,7 +31251,8 @@
           "pmjdy_2__total_no_of_pmsby": "254468.0",
           "pmjdy_2__total_no_of_apy": "40149.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "386952.0",
-          "pmjdy_2__of_enrolment": "165.15"
+          "pmjdy_2__of_enrolment": "165.15",
+          "shg_nrlm__outstanding_amt": "360.06"
         },
         {
           "district": "Bankura",
@@ -31298,7 +31298,6 @@
           "shg_nrlm__amount": "86.87",
           "shg_nrlm__sanctioned_no": "29048.0",
           "shg_nrlm__disbursement_no": "32729.0",
-          "shg_nrlm__outstanding_amount": "744.73",
           "shg_nrlm__of_achievement_no": "112.43",
           "shg_nrlm__average_disbursement_amount_in_lakh": "2.03",
           "shg_nulm__no_of_active_shgs": "2323.0",
@@ -31350,7 +31349,8 @@
           "pmjdy_2__total_no_of_pmsby": "724578.0",
           "pmjdy_2__total_no_of_apy": "90775.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "999445.0",
-          "pmjdy_2__of_enrolment": "49.14"
+          "pmjdy_2__of_enrolment": "49.14",
+          "shg_nrlm__outstanding_amt": "744.73"
         },
         {
           "district": "Birbhum",
@@ -31396,7 +31396,6 @@
           "shg_nrlm__amount": "93.96",
           "shg_nrlm__sanctioned_no": "51039.0",
           "shg_nrlm__disbursement_no": "48236.0",
-          "shg_nrlm__outstanding_amount": "1030.52",
           "shg_nrlm__of_achievement_no": "94.6",
           "shg_nrlm__average_disbursement_amount_in_lakh": "2.56",
           "shg_nulm__no_of_active_shgs": "3515.0",
@@ -31449,7 +31448,8 @@
           "pmjdy_2__total_no_of_pmsby": "786765.0",
           "pmjdy_2__total_no_of_apy": "144188.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "1255841.0",
-          "pmjdy_2__of_enrolment": "59.63"
+          "pmjdy_2__of_enrolment": "59.63",
+          "shg_nrlm__outstanding_amt": "1030.52"
         },
         {
           "district": "Cooch Behar",
@@ -31495,7 +31495,6 @@
           "shg_nrlm__amount": "81.76",
           "shg_nrlm__sanctioned_no": "27015.0",
           "shg_nrlm__disbursement_no": "38990.0",
-          "shg_nrlm__outstanding_amount": "1012.75",
           "shg_nrlm__of_achievement_no": "135.33",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.74",
           "shg_nulm__no_of_active_shgs": "1656.0",
@@ -31547,7 +31546,8 @@
           "pmjdy_2__total_no_of_pmsby": "553391.0",
           "pmjdy_2__total_no_of_apy": "119415.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "864962.0",
-          "pmjdy_2__of_enrolment": "60.03"
+          "pmjdy_2__of_enrolment": "60.03",
+          "shg_nrlm__outstanding_amt": "1012.75"
         },
         {
           "district": "Dakshin Dinajpur",
@@ -31593,7 +31593,6 @@
           "shg_nrlm__amount": "54.47",
           "shg_nrlm__sanctioned_no": "15115.0",
           "shg_nrlm__disbursement_no": "15772.0",
-          "shg_nrlm__outstanding_amount": "302.4",
           "shg_nrlm__of_achievement_no": "108.04",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.42",
           "shg_nulm__no_of_active_shgs": "1732.0",
@@ -31631,7 +31630,8 @@
           "pmjdy_2__total_no_of_pmsby": "367446.0",
           "pmjdy_2__total_no_of_apy": "56908.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "534068.0",
-          "pmjdy_2__of_enrolment": "49.94"
+          "pmjdy_2__of_enrolment": "49.94",
+          "shg_nrlm__outstanding_amt": "302.4"
         },
         {
           "district": "Darjeeling",
@@ -31671,7 +31671,6 @@
           "shg_nrlm__amount": "163.36",
           "shg_nrlm__sanctioned_no": "4587.0",
           "shg_nrlm__disbursement_no": "12521.0",
-          "shg_nrlm__outstanding_amount": "327.48",
           "shg_nrlm__of_achievement_no": "318.76",
           "shg_nrlm__average_disbursement_amount_in_lakh": "2.03",
           "shg_nulm__no_of_active_shgs": "2138.0",
@@ -31709,7 +31708,8 @@
           "rseti_3__wage_employed": "0.0",
           "rseti_3__total_settlement": "91.0",
           "rseti_3__settlement": "29.74",
-          "rseti_3__credit_linkage": "64.84"
+          "rseti_3__credit_linkage": "64.84",
+          "shg_nrlm__outstanding_amt": "327.48"
         },
         {
           "district": "Hooghly",
@@ -31749,7 +31749,6 @@
           "shg_nrlm__amount": "112.8",
           "shg_nrlm__sanctioned_no": "25794.0",
           "shg_nrlm__disbursement_no": "32416.0",
-          "shg_nrlm__outstanding_amount": "658.44",
           "shg_nrlm__of_achievement_no": "164.22",
           "shg_nrlm__average_disbursement_amount_in_lakh": "2.23",
           "shg_nulm__no_of_active_shgs": "5696.0",
@@ -31802,7 +31801,8 @@
           "pmjdy_2__total_no_of_pmsby": "970377.0",
           "pmjdy_2__total_no_of_apy": "176041.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "1465227.0",
-          "pmjdy_2__of_enrolment": "68.26"
+          "pmjdy_2__of_enrolment": "68.26",
+          "shg_nrlm__outstanding_amt": "658.44"
         },
         {
           "district": "Howrah",
@@ -31848,7 +31848,6 @@
           "shg_nrlm__amount": "116.18",
           "shg_nrlm__sanctioned_no": "24840.0",
           "shg_nrlm__disbursement_no": "27599.0",
-          "shg_nrlm__outstanding_amount": "627.54",
           "shg_nrlm__of_achievement_no": "115.66",
           "shg_nrlm__average_disbursement_amount_in_lakh": "2.58",
           "shg_nulm__no_of_active_shgs": "1668.0",
@@ -31900,7 +31899,8 @@
           "pmjdy_2__total_no_of_pmsby": "752008.0",
           "pmjdy_2__total_no_of_apy": "143667.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "1162329.0",
-          "pmjdy_2__of_enrolment": "63.25"
+          "pmjdy_2__of_enrolment": "63.25",
+          "shg_nrlm__outstanding_amt": "627.54"
         },
         {
           "district": "Jalpaiguri",
@@ -31946,7 +31946,6 @@
           "shg_nrlm__amount": "104.08",
           "shg_nrlm__sanctioned_no": "17191.0",
           "shg_nrlm__disbursement_no": "23649.0",
-          "shg_nrlm__outstanding_amount": "621.46",
           "shg_nrlm__of_achievement_no": "157.78",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.97",
           "shg_nulm__no_of_active_shgs": "1456.0",
@@ -31998,7 +31997,8 @@
           "pmjdy_2__total_no_of_pmsby": "539529.0",
           "pmjdy_2__total_no_of_apy": "113528.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "868309.0",
-          "pmjdy_2__of_enrolment": "52.58"
+          "pmjdy_2__of_enrolment": "52.58",
+          "shg_nrlm__outstanding_amt": "621.46"
         },
         {
           "district": "Jhargram",
@@ -32044,7 +32044,6 @@
           "shg_nrlm__amount": "76.83",
           "shg_nrlm__sanctioned_no": "10980.0",
           "shg_nrlm__disbursement_no": "10634.0",
-          "shg_nrlm__outstanding_amount": "220.82",
           "shg_nrlm__of_achievement_no": "113.13",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.73",
           "shg_nulm__no_of_active_shgs": "454.0",
@@ -32063,7 +32062,8 @@
           "financial_literacy__no_of_participants": "162.0",
           "financial_literacy__no_of_target_specific_camps_conducted_by_flcs_during_the_quarter": "6.0",
           "financial_literacy__camp_conducted_by_rural_branches_during_the_quarter": "82.0",
-          "financial_literacy__total_camps_conducted_during_the_quarter": "6.0"
+          "financial_literacy__total_camps_conducted_during_the_quarter": "6.0",
+          "shg_nrlm__outstanding_amt": "220.82"
         },
         {
           "district": "Kalimpong",
@@ -32109,7 +32109,6 @@
           "shg_nrlm__amount": "77.31",
           "shg_nrlm__sanctioned_no": "2138.0",
           "shg_nrlm__disbursement_no": "2309.0",
-          "shg_nrlm__outstanding_amount": "62.15",
           "shg_nrlm__of_achievement_no": "122.82",
           "shg_nrlm__average_disbursement_amount_in_lakh": "2.66",
           "shg_nulm__no_of_active_shgs": "124.0",
@@ -32128,7 +32127,8 @@
           "financial_literacy__no_of_participants": "0.0",
           "financial_literacy__no_of_target_specific_camps_conducted_by_flcs_during_the_quarter": "0.0",
           "financial_literacy__camp_conducted_by_rural_branches_during_the_quarter": "14.0",
-          "financial_literacy__total_camps_conducted_during_the_quarter": "0.0"
+          "financial_literacy__total_camps_conducted_during_the_quarter": "0.0",
+          "shg_nrlm__outstanding_amt": "62.15"
         },
         {
           "district": "Kolkata",
@@ -32173,7 +32173,6 @@
           "shg_nrlm__amount": "100.0",
           "shg_nrlm__sanctioned_no": "0.0",
           "shg_nrlm__disbursement_no": "648.0",
-          "shg_nrlm__outstanding_amount": "8.51",
           "shg_nrlm__of_achievement_no": "100.0",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.03",
           "shg_nulm__no_of_active_shgs": "1457.0",
@@ -32207,7 +32206,8 @@
           "pmjdy_2__total_no_of_pmsby": "1244283.0",
           "pmjdy_2__total_no_of_apy": "136176.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "1740815.0",
-          "pmjdy_2__of_enrolment": "224.97"
+          "pmjdy_2__of_enrolment": "224.97",
+          "shg_nrlm__outstanding_amt": "8.51"
         },
         {
           "district": "Malda",
@@ -32253,7 +32253,6 @@
           "shg_nrlm__amount": "80.87",
           "shg_nrlm__sanctioned_no": "27577.0",
           "shg_nrlm__disbursement_no": "35403.0",
-          "shg_nrlm__outstanding_amount": "793.2",
           "shg_nrlm__of_achievement_no": "126.21",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.63",
           "shg_nulm__no_of_active_shgs": "964.0",
@@ -32306,7 +32305,8 @@
           "pmjdy_2__total_no_of_pmsby": "871168.0",
           "pmjdy_2__total_no_of_apy": "174857.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "1312762.0",
-          "pmjdy_2__of_enrolment": "45.35"
+          "pmjdy_2__of_enrolment": "45.35",
+          "shg_nrlm__outstanding_amt": "793.2"
         },
         {
           "district": "Murshidabad",
@@ -32352,7 +32352,6 @@
           "shg_nrlm__amount": "93.32",
           "shg_nrlm__sanctioned_no": "33762.0",
           "shg_nrlm__disbursement_no": "48466.0",
-          "shg_nrlm__outstanding_amount": "932.81",
           "shg_nrlm__of_achievement_no": "152.01",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.52",
           "shg_nulm__no_of_active_shgs": "5285.0",
@@ -32387,7 +32386,8 @@
           "pmjdy_2__total_no_of_pmsby": "1526296.0",
           "pmjdy_2__total_no_of_apy": "284148.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "2198382.0",
-          "pmjdy_2__of_enrolment": "55.73"
+          "pmjdy_2__of_enrolment": "55.73",
+          "shg_nrlm__outstanding_amt": "932.81"
         },
         {
           "district": "Nadia",
@@ -32433,7 +32433,6 @@
           "shg_nrlm__amount": "61.71",
           "shg_nrlm__sanctioned_no": "23004.0",
           "shg_nrlm__disbursement_no": "28020.0",
-          "shg_nrlm__outstanding_amount": "592.22",
           "shg_nrlm__of_achievement_no": "115.83",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.6",
           "shg_nulm__no_of_active_shgs": "5754.0",
@@ -32485,7 +32484,8 @@
           "pmjdy_2__total_no_of_pmsby": "1035967.0",
           "pmjdy_2__total_no_of_apy": "177673.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "1467422.0",
-          "pmjdy_2__of_enrolment": "53.02"
+          "pmjdy_2__of_enrolment": "53.02",
+          "shg_nrlm__outstanding_amt": "592.22"
         },
         {
           "district": "Paschim Bardhaman",
@@ -32525,7 +32525,6 @@
           "shg_nrlm__amount": "109.0",
           "shg_nrlm__sanctioned_no": "7721.0",
           "shg_nrlm__disbursement_no": "7472.0",
-          "shg_nrlm__outstanding_amount": "138.9",
           "shg_nrlm__of_achievement_no": "90.49",
           "shg_nrlm__average_disbursement_amount_in_lakh": "2.48",
           "shg_nulm__no_of_active_shgs": "2745.0",
@@ -32544,7 +32543,8 @@
           "financial_literacy__no_of_participants": "0.0",
           "financial_literacy__no_of_target_specific_camps_conducted_by_flcs_during_the_quarter": "0.0",
           "financial_literacy__camp_conducted_by_rural_branches_during_the_quarter": "91.0",
-          "financial_literacy__total_camps_conducted_during_the_quarter": "51.0"
+          "financial_literacy__total_camps_conducted_during_the_quarter": "51.0",
+          "shg_nrlm__outstanding_amt": "138.9"
         },
         {
           "district": "Paschim Medinipur",
@@ -32590,7 +32590,6 @@
           "shg_nrlm__amount": "97.25",
           "shg_nrlm__sanctioned_no": "31748.0",
           "shg_nrlm__disbursement_no": "38767.0",
-          "shg_nrlm__outstanding_amount": "952.12",
           "shg_nrlm__of_achievement_no": "130.26",
           "shg_nrlm__average_disbursement_amount_in_lakh": "2.19",
           "shg_nulm__no_of_active_shgs": "3775.0",
@@ -32624,7 +32623,8 @@
           "pmjdy_2__total_no_of_pmsby": "1121653.0",
           "pmjdy_2__total_no_of_apy": "187585.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "1613475.0",
-          "pmjdy_2__of_enrolment": "58.74"
+          "pmjdy_2__of_enrolment": "58.74",
+          "shg_nrlm__outstanding_amt": "952.12"
         },
         {
           "district": "Purba Bardhaman",
@@ -32661,7 +32661,6 @@
           "shg_nrlm__amount": "103.3",
           "shg_nrlm__sanctioned_no": "39624.0",
           "shg_nrlm__disbursement_no": "37165.0",
-          "shg_nrlm__outstanding_amount": "906.1",
           "shg_nrlm__of_achievement_no": "98.31",
           "shg_nrlm__average_disbursement_amount_in_lakh": "2.89",
           "shg_nulm__no_of_active_shgs": "3252.0",
@@ -32713,7 +32712,8 @@
           "pmjdy_2__total_no_of_pmsby": "1296008.0",
           "pmjdy_2__total_no_of_apy": "209877.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "1956350.0",
-          "pmjdy_2__of_enrolment": "59.14"
+          "pmjdy_2__of_enrolment": "59.14",
+          "shg_nrlm__outstanding_amt": "906.1"
         },
         {
           "district": "Purba Medinipur",
@@ -32759,7 +32759,6 @@
           "shg_nrlm__amount": "110.66",
           "shg_nrlm__sanctioned_no": "41866.0",
           "shg_nrlm__disbursement_no": "50598.0",
-          "shg_nrlm__outstanding_amount": "1535.15",
           "shg_nrlm__of_achievement_no": "116.78",
           "shg_nrlm__average_disbursement_amount_in_lakh": "2.89",
           "shg_nulm__no_of_active_shgs": "3344.0",
@@ -32811,7 +32810,8 @@
           "pmjdy_2__total_no_of_pmsby": "931000.0",
           "pmjdy_2__total_no_of_apy": "215230.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "1389823.0",
-          "pmjdy_2__of_enrolment": "57.18"
+          "pmjdy_2__of_enrolment": "57.18",
+          "shg_nrlm__outstanding_amt": "1535.15"
         },
         {
           "district": "Purulia",
@@ -32851,7 +32851,6 @@
           "shg_nrlm__amount": "55.79",
           "shg_nrlm__sanctioned_no": "15689.0",
           "shg_nrlm__disbursement_no": "17682.0",
-          "shg_nrlm__outstanding_amount": "354.14",
           "shg_nrlm__of_achievement_no": "86.37",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.47",
           "shg_nulm__no_of_active_shgs": "1230.0",
@@ -32903,7 +32902,8 @@
           "pmjdy_2__total_no_of_pmsby": "440114.0",
           "pmjdy_2__total_no_of_apy": "68998.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "653771.0",
-          "pmjdy_2__of_enrolment": "36.36"
+          "pmjdy_2__of_enrolment": "36.36",
+          "shg_nrlm__outstanding_amt": "354.14"
         },
         {
           "district": "Uttar Dinajpur",
@@ -32949,7 +32949,6 @@
           "shg_nrlm__amount": "0.49",
           "shg_nrlm__sanctioned_no": "12597.0",
           "shg_nrlm__disbursement_no": "108.0",
-          "shg_nrlm__outstanding_amount": "1.06",
           "shg_nrlm__of_achievement_no": "0.78",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.68",
           "shg_nulm__no_of_active_shgs": "2068.0",
@@ -33001,7 +33000,8 @@
           "pmjdy_2__total_no_of_pmsby": "530374.0",
           "pmjdy_2__total_no_of_apy": "102335.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "795142.0",
-          "pmjdy_2__of_enrolment": "33.44"
+          "pmjdy_2__of_enrolment": "33.44",
+          "shg_nrlm__outstanding_amt": "1.06"
         },
         {
           "district": "North 24 Parganas",
@@ -33047,7 +33047,6 @@
           "shg_nrlm__amount": "75.96",
           "shg_nrlm__sanctioned_no": "36636.0",
           "shg_nrlm__disbursement_no": "42590.0",
-          "shg_nrlm__outstanding_amount": "833.39",
           "shg_nrlm__of_achievement_no": "112.03",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.62",
           "shg_nulm__no_of_active_shgs": "15576.0",
@@ -33100,7 +33099,8 @@
           "pmjdy_2__total_no_of_pmsby": "1730623.0",
           "pmjdy_2__total_no_of_apy": "276179.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "2498921.0",
-          "pmjdy_2__of_enrolment": "63.9"
+          "pmjdy_2__of_enrolment": "63.9",
+          "shg_nrlm__outstanding_amt": "833.39"
         },
         {
           "district": "South 24 Parganas",
@@ -33146,7 +33146,6 @@
           "shg_nrlm__amount": "38.69",
           "shg_nrlm__sanctioned_no": "32856.0",
           "shg_nrlm__disbursement_no": "23612.0",
-          "shg_nrlm__outstanding_amount": "498.47",
           "shg_nrlm__of_achievement_no": "74.04",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.45",
           "shg_nulm__no_of_active_shgs": "3489.0",
@@ -33198,7 +33197,8 @@
           "pmjdy_2__total_no_of_pmsby": "1166588.0",
           "pmjdy_2__total_no_of_apy": "203582.0",
           "pmjdy_2__total_enrolment_uner_social_security_schemes": "1714746.0",
-          "pmjdy_2__of_enrolment": "37.96"
+          "pmjdy_2__of_enrolment": "37.96",
+          "shg_nrlm__outstanding_amt": "498.47"
         }
       ]
     },
@@ -33248,7 +33248,6 @@
           "shg_nrlm__amount": "28.75",
           "shg_nrlm__sanctioned_no": "3583.0",
           "shg_nrlm__disbursement_no": "8159.0",
-          "shg_nrlm__outstanding_amount": "379.28",
           "shg_nrlm__of_achievement_no": "65.21",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.18",
           "shg_nulm__no_of_active_shgs": "552.0",
@@ -33281,7 +33280,8 @@
           "pmjdy_2__total_deposit": "73.65",
           "pmjdy_2__zero_balance_a_c_s": "25169.0",
           "pmjdy_2__rupaycard_issued": "186497.0",
-          "pmjdy_2__aadhaar_seeded": "204676.0"
+          "pmjdy_2__aadhaar_seeded": "204676.0",
+          "shg_nrlm__outstanding_amt": "379.28"
         },
         {
           "district": "Bankura",
@@ -33324,7 +33324,6 @@
           "shg_nrlm__amount": "9.79",
           "shg_nrlm__sanctioned_no": "3520.0",
           "shg_nrlm__disbursement_no": "5384.0",
-          "shg_nrlm__outstanding_amount": "727.21",
           "shg_nrlm__of_achievement_no": "17.06",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.58",
           "shg_nulm__no_of_active_shgs": "2425.0",
@@ -33369,7 +33368,8 @@
           "rseti_2__credit_linkage": "54.26",
           "rseti_3__aap_target_for_fy_2022_23_no_of_programs": "26.0",
           "rseti_3__total_trained": "7.18",
-          "rseti_3__achievement_no_of_programs": "7.69"
+          "rseti_3__achievement_no_of_programs": "7.69",
+          "shg_nrlm__outstanding_amt": "727.21"
         },
         {
           "district": "Birbhum",
@@ -33412,7 +33412,6 @@
           "shg_nrlm__amount": "14.82",
           "shg_nrlm__sanctioned_no": "8010.0",
           "shg_nrlm__disbursement_no": "9574.0",
-          "shg_nrlm__outstanding_amount": "1032.3",
           "shg_nrlm__of_achievement_no": "18.59",
           "shg_nrlm__average_disbursement_amount_in_lakh": "2.12",
           "shg_nulm__no_of_active_shgs": "3612.0",
@@ -33458,7 +33457,8 @@
           "rseti_2__credit_linkage": "72.69",
           "rseti_3__aap_target_for_fy_2022_23_no_of_programs": "18.0",
           "rseti_3__total_trained": "15.87",
-          "rseti_3__achievement_no_of_programs": "16.67"
+          "rseti_3__achievement_no_of_programs": "16.67",
+          "shg_nrlm__outstanding_amt": "1032.3"
         },
         {
           "district": "Cooch Behar",
@@ -33501,7 +33501,6 @@
           "shg_nrlm__amount": "30.21",
           "shg_nrlm__sanctioned_no": "3390.0",
           "shg_nrlm__disbursement_no": "23181.0",
-          "shg_nrlm__outstanding_amount": "1056.75",
           "shg_nrlm__of_achievement_no": "82.9",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.04",
           "shg_nulm__no_of_active_shgs": "1641.0",
@@ -33546,7 +33545,8 @@
           "rseti_2__credit_linkage": "53.06",
           "rseti_3__aap_target_for_fy_2022_23_no_of_programs": "16.0",
           "rseti_3__total_trained": "28.5",
-          "rseti_3__achievement_no_of_programs": "31.25"
+          "rseti_3__achievement_no_of_programs": "31.25",
+          "shg_nrlm__outstanding_amt": "1056.75"
         },
         {
           "district": "Dakshin Dinajpur",
@@ -33589,7 +33589,6 @@
           "shg_nrlm__amount": "8.88",
           "shg_nrlm__sanctioned_no": "1774.0",
           "shg_nrlm__disbursement_no": "3085.0",
-          "shg_nrlm__outstanding_amount": "317.96",
           "shg_nrlm__of_achievement_no": "20.32",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.19",
           "shg_nulm__no_of_active_shgs": "1832.0",
@@ -33626,7 +33625,8 @@
           "rseti_2__wage_employed": "206.0",
           "rseti_2__total_settlement": "4770.0",
           "rseti_2__settlement": "73.91",
-          "rseti_2__credit_linkage": "64.59"
+          "rseti_2__credit_linkage": "64.59",
+          "shg_nrlm__outstanding_amt": "317.96"
         },
         {
           "district": "Darjeeling",
@@ -33665,7 +33665,6 @@
           "shg_nrlm__amount": "37.28",
           "shg_nrlm__sanctioned_no": "723.0",
           "shg_nrlm__disbursement_no": "2851.0",
-          "shg_nrlm__outstanding_amount": "129.34",
           "shg_nrlm__of_achievement_no": "60.49",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.61",
           "shg_nulm__no_of_active_shgs": "2306.0",
@@ -33697,7 +33696,8 @@
           "rseti_2__credit_linkage": "65.8",
           "rseti_3__aap_target_for_fy_2022_23_no_of_programs": "14.0",
           "rseti_3__total_trained": "19.71",
-          "rseti_3__achievement_no_of_programs": "14.29"
+          "rseti_3__achievement_no_of_programs": "14.29",
+          "shg_nrlm__outstanding_amt": "129.34"
         },
         {
           "district": "Hooghly",
@@ -33740,7 +33740,6 @@
           "shg_nrlm__amount": "22.75",
           "shg_nrlm__sanctioned_no": "3506.0",
           "shg_nrlm__disbursement_no": "12975.0",
-          "shg_nrlm__outstanding_amount": "688.23",
           "shg_nrlm__of_achievement_no": "42.37",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.34",
           "shg_nulm__no_of_active_shgs": "6041.0",
@@ -33786,7 +33785,8 @@
           "rseti_2__credit_linkage": "86.83",
           "rseti_3__aap_target_for_fy_2022_23_no_of_programs": "24.0",
           "rseti_3__total_trained": "22.08",
-          "rseti_3__achievement_no_of_programs": "29.17"
+          "rseti_3__achievement_no_of_programs": "29.17",
+          "shg_nrlm__outstanding_amt": "688.23"
         },
         {
           "district": "Howrah",
@@ -33829,7 +33829,6 @@
           "shg_nrlm__amount": "19.47",
           "shg_nrlm__sanctioned_no": "2927.0",
           "shg_nrlm__disbursement_no": "9601.0",
-          "shg_nrlm__outstanding_amount": "632.97",
           "shg_nrlm__of_achievement_no": "38.13",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.45",
           "shg_nulm__no_of_active_shgs": "1449.0",
@@ -33874,7 +33873,8 @@
           "rseti_2__credit_linkage": "26.55",
           "rseti_3__aap_target_for_fy_2022_23_no_of_programs": "29.0",
           "rseti_3__total_trained": "10.37",
-          "rseti_3__achievement_no_of_programs": "10.34"
+          "rseti_3__achievement_no_of_programs": "10.34",
+          "shg_nrlm__outstanding_amt": "632.97"
         },
         {
           "district": "Jalpaiguri",
@@ -33917,7 +33917,6 @@
           "shg_nrlm__amount": "33.86",
           "shg_nrlm__sanctioned_no": "4231.0",
           "shg_nrlm__disbursement_no": "12984.0",
-          "shg_nrlm__outstanding_amount": "661.3",
           "shg_nrlm__of_achievement_no": "68.55",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.4",
           "shg_nulm__no_of_active_shgs": "1575.0",
@@ -33962,7 +33961,8 @@
           "rseti_2__credit_linkage": "76.41",
           "rseti_3__aap_target_for_fy_2022_23_no_of_programs": "18.0",
           "rseti_3__total_trained": "7.75",
-          "rseti_3__achievement_no_of_programs": "5.56"
+          "rseti_3__achievement_no_of_programs": "5.56",
+          "shg_nrlm__outstanding_amt": "661.3"
         },
         {
           "district": "Jhargram",
@@ -34005,7 +34005,6 @@
           "shg_nrlm__amount": "20.8",
           "shg_nrlm__sanctioned_no": "2007.0",
           "shg_nrlm__disbursement_no": "4565.0",
-          "shg_nrlm__outstanding_amount": "236.88",
           "shg_nrlm__of_achievement_no": "37.95",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.51",
           "shg_nulm__no_of_active_shgs": "486.0",
@@ -34024,7 +34023,8 @@
           "financial_literacy__no_of_participants": "111.0",
           "financial_literacy__target_specific_camps_conducted_by_flcs_during_the_quarter_no_of_camps": "6.0",
           "financial_literacy__camp_conducted_by_rural_branches_during_the_quarter_no_of_branches": "82.0",
-          "financial_literacy__no_of_camps": "6.0"
+          "financial_literacy__no_of_camps": "6.0",
+          "shg_nrlm__outstanding_amt": "236.88"
         },
         {
           "district": "Kalimpong",
@@ -34067,7 +34067,6 @@
           "shg_nrlm__amount": "38.0",
           "shg_nrlm__sanctioned_no": "382.0",
           "shg_nrlm__disbursement_no": "1442.0",
-          "shg_nrlm__outstanding_amount": "70.17",
           "shg_nrlm__of_achievement_no": "55.5",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.82",
           "shg_nulm__no_of_active_shgs": "178.0",
@@ -34086,7 +34085,8 @@
           "financial_literacy__no_of_participants": "0.0",
           "financial_literacy__target_specific_camps_conducted_by_flcs_during_the_quarter_no_of_camps": "0.0",
           "financial_literacy__camp_conducted_by_rural_branches_during_the_quarter_no_of_branches": "14.0",
-          "financial_literacy__no_of_camps": "0.0"
+          "financial_literacy__no_of_camps": "0.0",
+          "shg_nrlm__outstanding_amt": "70.17"
         },
         {
           "district": "Kolkata",
@@ -34130,7 +34130,6 @@
           "shg_nrlm__amount": "100.0",
           "shg_nrlm__sanctioned_no": "0.0",
           "shg_nrlm__disbursement_no": "184.0",
-          "shg_nrlm__outstanding_amount": "0.0",
           "shg_nrlm__of_achievement_no": "100.0",
           "shg_nrlm__average_disbursement_amount_in_lakh": "0.37",
           "shg_nulm__no_of_active_shgs": "968.0",
@@ -34163,7 +34162,8 @@
           "pmjdy_2__total_deposit": "303.96",
           "pmjdy_2__zero_balance_a_c_s": "73863.0",
           "pmjdy_2__rupaycard_issued": "576910.0",
-          "pmjdy_2__aadhaar_seeded": "623930.0"
+          "pmjdy_2__aadhaar_seeded": "623930.0",
+          "shg_nrlm__outstanding_amt": "0.0"
         },
         {
           "district": "Malda",
@@ -34206,7 +34206,6 @@
           "shg_nrlm__amount": "11.32",
           "shg_nrlm__sanctioned_no": "3254.0",
           "shg_nrlm__disbursement_no": "8619.0",
-          "shg_nrlm__outstanding_amount": "807.46",
           "shg_nrlm__of_achievement_no": "28.56",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.08",
           "shg_nulm__no_of_active_shgs": "818.0",
@@ -34252,7 +34251,8 @@
           "rseti_2__credit_linkage": "56.62",
           "rseti_3__aap_target_for_fy_2022_23_no_of_programs": "24.0",
           "rseti_3__total_trained": "24.4",
-          "rseti_3__achievement_no_of_programs": "25.0"
+          "rseti_3__achievement_no_of_programs": "25.0",
+          "shg_nrlm__outstanding_amt": "807.46"
         },
         {
           "district": "Murshidabad",
@@ -34297,7 +34297,6 @@
           "shg_nrlm__amount": "10.3",
           "shg_nrlm__sanctioned_no": "6068.0",
           "shg_nrlm__disbursement_no": "8828.0",
-          "shg_nrlm__outstanding_amount": "926.46",
           "shg_nrlm__of_achievement_no": "23.39",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.07",
           "shg_nulm__no_of_active_shgs": "5547.0",
@@ -34331,7 +34330,8 @@
           "pmjdy_2__zero_balance_a_c_s": "249035.0",
           "pmjdy_2__rupaycard_issued": "2664517.0",
           "pmjdy_2__aadhaar_seeded": "3352211.0",
-          "rseti__rseti_no": "1.0"
+          "rseti__rseti_no": "1.0",
+          "shg_nrlm__outstanding_amt": "926.46"
         },
         {
           "district": "Nadia",
@@ -34376,7 +34376,6 @@
           "shg_nrlm__amount": "7.31",
           "shg_nrlm__sanctioned_no": "2390.0",
           "shg_nrlm__disbursement_no": "5287.0",
-          "shg_nrlm__outstanding_amount": "605.07",
           "shg_nrlm__of_achievement_no": "19.61",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.07",
           "shg_nulm__no_of_active_shgs": "5842.0",
@@ -34421,7 +34420,8 @@
           "rseti_2__credit_linkage": "46.82",
           "rseti_3__aap_target_for_fy_2022_23_no_of_programs": "25.0",
           "rseti_3__total_trained": "29.0",
-          "rseti_3__achievement_no_of_programs": "24.0"
+          "rseti_3__achievement_no_of_programs": "24.0",
+          "shg_nrlm__outstanding_amt": "605.07"
         },
         {
           "district": "Paschim Bardhaman",
@@ -34460,7 +34460,6 @@
           "shg_nrlm__amount": "14.88",
           "shg_nrlm__sanctioned_no": "1131.0",
           "shg_nrlm__disbursement_no": "1818.0",
-          "shg_nrlm__outstanding_amount": "141.82",
           "shg_nrlm__of_achievement_no": "16.99",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.82",
           "shg_nulm__no_of_active_shgs": "2720.0",
@@ -34479,7 +34478,8 @@
           "financial_literacy__no_of_participants": "248.0",
           "financial_literacy__target_specific_camps_conducted_by_flcs_during_the_quarter_no_of_camps": "8.0",
           "financial_literacy__camp_conducted_by_rural_branches_during_the_quarter_no_of_branches": "91.0",
-          "financial_literacy__no_of_camps": "82.0"
+          "financial_literacy__no_of_camps": "82.0",
+          "shg_nrlm__outstanding_amt": "141.82"
         },
         {
           "district": "Paschim Medinipur",
@@ -34524,7 +34524,6 @@
           "shg_nrlm__amount": "21.32",
           "shg_nrlm__sanctioned_no": "6387.0",
           "shg_nrlm__disbursement_no": "13605.0",
-          "shg_nrlm__outstanding_amount": "967.96",
           "shg_nrlm__of_achievement_no": "37.09",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.57",
           "shg_nulm__no_of_active_shgs": "3988.0",
@@ -34557,7 +34556,8 @@
           "pmjdy_2__total_deposit": "1233.2",
           "pmjdy_2__zero_balance_a_c_s": "129107.0",
           "pmjdy_2__rupaycard_issued": "1590858.0",
-          "pmjdy_2__aadhaar_seeded": "2336142.0"
+          "pmjdy_2__aadhaar_seeded": "2336142.0",
+          "shg_nrlm__outstanding_amt": "967.96"
         },
         {
           "district": "Purba Bardhaman",
@@ -34602,7 +34602,6 @@
           "shg_nrlm__amount": "12.41",
           "shg_nrlm__sanctioned_no": "7079.0",
           "shg_nrlm__disbursement_no": "9517.0",
-          "shg_nrlm__outstanding_amount": "946.21",
           "shg_nrlm__of_achievement_no": "22.14",
           "shg_nrlm__average_disbursement_amount_in_lakh": "2.18",
           "shg_nulm__no_of_active_shgs": "3487.0",
@@ -34647,7 +34646,8 @@
           "rseti_2__credit_linkage": "61.62",
           "rseti_3__aap_target_for_fy_2022_23_no_of_programs": "26.0",
           "rseti_3__total_trained": "25.41",
-          "rseti_3__achievement_no_of_programs": "26.92"
+          "rseti_3__achievement_no_of_programs": "26.92",
+          "shg_nrlm__outstanding_amt": "946.21"
         },
         {
           "district": "Purba Medinipur",
@@ -34692,7 +34692,6 @@
           "shg_nrlm__amount": "25.14",
           "shg_nrlm__sanctioned_no": "7820.0",
           "shg_nrlm__disbursement_no": "16883.0",
-          "shg_nrlm__outstanding_amount": "1624.07",
           "shg_nrlm__of_achievement_no": "37.37",
           "shg_nrlm__average_disbursement_amount_in_lakh": "2.12",
           "shg_nulm__no_of_active_shgs": "3468.0",
@@ -34737,7 +34736,8 @@
           "rseti_2__credit_linkage": "56.01",
           "rseti_3__aap_target_for_fy_2022_23_no_of_programs": "25.0",
           "rseti_3__total_trained": "26.18",
-          "rseti_3__achievement_no_of_programs": "32.0"
+          "rseti_3__achievement_no_of_programs": "32.0",
+          "shg_nrlm__outstanding_amt": "1624.07"
         },
         {
           "district": "Purulia",
@@ -34776,7 +34776,6 @@
           "shg_nrlm__amount": "7.65",
           "shg_nrlm__sanctioned_no": "2280.0",
           "shg_nrlm__disbursement_no": "3801.0",
-          "shg_nrlm__outstanding_amount": "354.0",
           "shg_nrlm__of_achievement_no": "16.66",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.09",
           "shg_nulm__no_of_active_shgs": "1154.0",
@@ -34821,7 +34820,8 @@
           "rseti_2__credit_linkage": "64.31",
           "rseti_3__aap_target_for_fy_2022_23_no_of_programs": "21.0",
           "rseti_3__total_trained": "11.31",
-          "rseti_3__achievement_no_of_programs": "9.52"
+          "rseti_3__achievement_no_of_programs": "9.52",
+          "shg_nrlm__outstanding_amt": "354.0"
         },
         {
           "district": "Uttar Dinajpur",
@@ -34866,7 +34866,6 @@
           "shg_nrlm__amount": "13.22",
           "shg_nrlm__sanctioned_no": "2455.0",
           "shg_nrlm__disbursement_no": "4622.0",
-          "shg_nrlm__outstanding_amount": "517.3",
           "shg_nrlm__of_achievement_no": "37.84",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.16",
           "shg_nulm__no_of_active_shgs": "2125.0",
@@ -34911,7 +34910,8 @@
           "rseti_2__credit_linkage": "54.19",
           "rseti_3__aap_target_for_fy_2022_23_no_of_programs": "27.0",
           "rseti_3__total_trained": "19.35",
-          "rseti_3__achievement_no_of_programs": "14.81"
+          "rseti_3__achievement_no_of_programs": "14.81",
+          "shg_nrlm__outstanding_amt": "517.3"
         },
         {
           "district": "North 24 Parganas",
@@ -34956,7 +34956,6 @@
           "shg_nrlm__amount": "13.52",
           "shg_nrlm__sanctioned_no": "5552.0",
           "shg_nrlm__disbursement_no": "13032.0",
-          "shg_nrlm__outstanding_amount": "877.71",
           "shg_nrlm__of_achievement_no": "33.49",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.05",
           "shg_nulm__no_of_active_shgs": "15663.0",
@@ -35002,7 +35001,8 @@
           "rseti_2__credit_linkage": "63.04",
           "rseti_3__aap_target_for_fy_2022_23_no_of_programs": "28.0",
           "rseti_3__total_trained": "65.5",
-          "rseti_3__achievement_no_of_programs": "42.86"
+          "rseti_3__achievement_no_of_programs": "42.86",
+          "shg_nrlm__outstanding_amt": "877.71"
         },
         {
           "district": "South 24 Parganas",
@@ -35047,7 +35047,6 @@
           "shg_nrlm__amount": "19.08",
           "shg_nrlm__sanctioned_no": "5095.0",
           "shg_nrlm__disbursement_no": "15200.0",
-          "shg_nrlm__outstanding_amount": "1038.53",
           "shg_nrlm__of_achievement_no": "37.87",
           "shg_nrlm__average_disbursement_amount_in_lakh": "1.29",
           "shg_nulm__no_of_active_shgs": "3582.0",
@@ -35092,7 +35091,8 @@
           "rseti_2__credit_linkage": "76.02",
           "rseti_3__aap_target_for_fy_2022_23_no_of_programs": "25.0",
           "rseti_3__total_trained": "21.76",
-          "rseti_3__achievement_no_of_programs": "24.0"
+          "rseti_3__achievement_no_of_programs": "24.0",
+          "shg_nrlm__outstanding_amt": "1038.53"
         }
       ]
     },

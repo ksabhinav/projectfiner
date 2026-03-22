@@ -6703,7 +6703,6 @@
           "pmegp__pmegp_mm_claimed_amt": "1538.91",
           "pmegp__pmegp_mm_disbursed_no": "56",
           "pmegp__pmegp_mm_disbursed_amt": "493.45",
-          "pmegp__pmegp_returned": "38",
           "pmegp__pmegp_pending_no": "37",
           "pmegp__pmegp_pending_amt": "254.02",
           "ambedkar_scheme__ambedkar_targets": "30",
@@ -6748,7 +6747,8 @@
           "rseti__rseti_bank_finance": "364",
           "rseti__rseti_self_finance": "212",
           "rseti__rseti_settled_pct": "85.0",
-          "rseti__rseti_credit_linkage_pct": "63.0"
+          "rseti__rseti_credit_linkage_pct": "63.0",
+          "pmegp__pmegp_returned_amt": "38"
         },
         {
           "district": "Alwar",
@@ -6872,7 +6872,6 @@
           "pmegp__pmegp_mm_claimed_amt": "312.65",
           "pmegp__pmegp_mm_disbursed_no": "30",
           "pmegp__pmegp_mm_disbursed_amt": "221.31",
-          "pmegp__pmegp_returned": "35",
           "pmegp__pmegp_pending_no": "27",
           "pmegp__pmegp_pending_amt": "119.82",
           "ambedkar_scheme__ambedkar_targets": "67",
@@ -6917,7 +6916,8 @@
           "rseti__rseti_bank_finance": "162",
           "rseti__rseti_self_finance": "302",
           "rseti__rseti_settled_pct": "61.0",
-          "rseti__rseti_credit_linkage_pct": "34.0"
+          "rseti__rseti_credit_linkage_pct": "34.0",
+          "pmegp__pmegp_returned_amt": "35"
         },
         {
           "district": "Balotra",
@@ -7028,7 +7028,6 @@
           "pmegp__pmegp_mm_claimed_amt": "0",
           "pmegp__pmegp_mm_disbursed_no": "0",
           "pmegp__pmegp_mm_disbursed_amt": "0",
-          "pmegp__pmegp_returned": "1",
           "pmegp__pmegp_pending_no": "9",
           "pmegp__pmegp_pending_amt": "57.89",
           "ambedkar_scheme__ambedkar_targets": "24",
@@ -7062,7 +7061,8 @@
           "vishwakarma__vishwakarma_avg_forward_pct": "38.0",
           "vishwakarma__vishwakarma_pending_fi": "3",
           "vishwakarma__vishwakarma_sanctioned": "0",
-          "vishwakarma__vishwakarma_disbursed": "0"
+          "vishwakarma__vishwakarma_disbursed": "0",
+          "pmegp__pmegp_returned_amt": "1"
         },
         {
           "district": "Banswara",
@@ -7186,7 +7186,6 @@
           "pmegp__pmegp_mm_claimed_amt": "369.06",
           "pmegp__pmegp_mm_disbursed_no": "16",
           "pmegp__pmegp_mm_disbursed_amt": "79.3",
-          "pmegp__pmegp_returned": "10",
           "pmegp__pmegp_pending_no": "22",
           "pmegp__pmegp_pending_amt": "84.66",
           "ambedkar_scheme__ambedkar_targets": "131",
@@ -7231,7 +7230,8 @@
           "rseti__rseti_bank_finance": "223",
           "rseti__rseti_self_finance": "255",
           "rseti__rseti_settled_pct": "73.0",
-          "rseti__rseti_credit_linkage_pct": "47.0"
+          "rseti__rseti_credit_linkage_pct": "47.0",
+          "pmegp__pmegp_returned_amt": "10"
         },
         {
           "district": "Baran",
@@ -7355,7 +7355,6 @@
           "pmegp__pmegp_mm_claimed_amt": "68.2",
           "pmegp__pmegp_mm_disbursed_no": "9",
           "pmegp__pmegp_mm_disbursed_amt": "40.31",
-          "pmegp__pmegp_returned": "36",
           "pmegp__pmegp_pending_no": "16",
           "pmegp__pmegp_pending_amt": "49.97",
           "ambedkar_scheme__ambedkar_targets": "46",
@@ -7400,7 +7399,8 @@
           "rseti__rseti_bank_finance": "332",
           "rseti__rseti_self_finance": "294",
           "rseti__rseti_settled_pct": "81.0",
-          "rseti__rseti_credit_linkage_pct": "53.0"
+          "rseti__rseti_credit_linkage_pct": "53.0",
+          "pmegp__pmegp_returned_amt": "36"
         },
         {
           "district": "Barmer",
@@ -7524,7 +7524,6 @@
           "pmegp__pmegp_mm_claimed_amt": "95.61",
           "pmegp__pmegp_mm_disbursed_no": "14",
           "pmegp__pmegp_mm_disbursed_amt": "107.19",
-          "pmegp__pmegp_returned": "14",
           "pmegp__pmegp_pending_no": "16",
           "pmegp__pmegp_pending_amt": "108.05",
           "ambedkar_scheme__ambedkar_targets": "34",
@@ -7569,7 +7568,8 @@
           "rseti__rseti_bank_finance": "350",
           "rseti__rseti_self_finance": "224",
           "rseti__rseti_settled_pct": "83.0",
-          "rseti__rseti_credit_linkage_pct": "61.0"
+          "rseti__rseti_credit_linkage_pct": "61.0",
+          "pmegp__pmegp_returned_amt": "14"
         },
         {
           "district": "Beawar",
@@ -7680,7 +7680,6 @@
           "pmegp__pmegp_mm_claimed_amt": "0",
           "pmegp__pmegp_mm_disbursed_no": "0",
           "pmegp__pmegp_mm_disbursed_amt": "0",
-          "pmegp__pmegp_returned": "1",
           "pmegp__pmegp_pending_no": "2",
           "pmegp__pmegp_pending_amt": "13.65",
           "ambedkar_scheme__ambedkar_targets": "22",
@@ -7714,7 +7713,8 @@
           "vishwakarma__vishwakarma_avg_forward_pct": "14.0",
           "vishwakarma__vishwakarma_pending_fi": "1",
           "vishwakarma__vishwakarma_sanctioned": "0",
-          "vishwakarma__vishwakarma_disbursed": "0"
+          "vishwakarma__vishwakarma_disbursed": "0",
+          "pmegp__pmegp_returned_amt": "1"
         },
         {
           "district": "Bharatpur",
@@ -7838,7 +7838,6 @@
           "pmegp__pmegp_mm_claimed_amt": "832.97",
           "pmegp__pmegp_mm_disbursed_no": "144",
           "pmegp__pmegp_mm_disbursed_amt": "632.96",
-          "pmegp__pmegp_returned": "100",
           "pmegp__pmegp_pending_no": "52",
           "pmegp__pmegp_pending_amt": "294.6",
           "ambedkar_scheme__ambedkar_targets": "35",
@@ -7883,7 +7882,8 @@
           "rseti__rseti_bank_finance": "323",
           "rseti__rseti_self_finance": "252",
           "rseti__rseti_settled_pct": "70.0",
-          "rseti__rseti_credit_linkage_pct": "55.0"
+          "rseti__rseti_credit_linkage_pct": "55.0",
+          "pmegp__pmegp_returned_amt": "100"
         },
         {
           "district": "Bhilwara",
@@ -8007,7 +8007,6 @@
           "pmegp__pmegp_mm_claimed_amt": "577.03",
           "pmegp__pmegp_mm_disbursed_no": "40",
           "pmegp__pmegp_mm_disbursed_amt": "564.59",
-          "pmegp__pmegp_returned": "9",
           "pmegp__pmegp_pending_no": "13",
           "pmegp__pmegp_pending_amt": "158.19",
           "ambedkar_scheme__ambedkar_targets": "52",
@@ -8052,7 +8051,8 @@
           "rseti__rseti_bank_finance": "351",
           "rseti__rseti_self_finance": "221",
           "rseti__rseti_settled_pct": "82.0",
-          "rseti__rseti_credit_linkage_pct": "58.0"
+          "rseti__rseti_credit_linkage_pct": "58.0",
+          "pmegp__pmegp_returned_amt": "9"
         },
         {
           "district": "Bikaner",
@@ -8176,7 +8176,6 @@
           "pmegp__pmegp_mm_claimed_amt": "699.36",
           "pmegp__pmegp_mm_disbursed_no": "45",
           "pmegp__pmegp_mm_disbursed_amt": "388.51",
-          "pmegp__pmegp_returned": "49",
           "pmegp__pmegp_pending_no": "47",
           "pmegp__pmegp_pending_amt": "415.85",
           "ambedkar_scheme__ambedkar_targets": "48",
@@ -8221,7 +8220,8 @@
           "rseti__rseti_bank_finance": "320",
           "rseti__rseti_self_finance": "293",
           "rseti__rseti_settled_pct": "70.0",
-          "rseti__rseti_credit_linkage_pct": "52.0"
+          "rseti__rseti_credit_linkage_pct": "52.0",
+          "pmegp__pmegp_returned_amt": "49"
         },
         {
           "district": "Bundi",
@@ -8345,7 +8345,6 @@
           "pmegp__pmegp_mm_claimed_amt": "136.44",
           "pmegp__pmegp_mm_disbursed_no": "20",
           "pmegp__pmegp_mm_disbursed_amt": "81.52",
-          "pmegp__pmegp_returned": "17",
           "pmegp__pmegp_pending_no": "30",
           "pmegp__pmegp_pending_amt": "108.15",
           "ambedkar_scheme__ambedkar_targets": "41",
@@ -8390,7 +8389,8 @@
           "rseti__rseti_bank_finance": "395",
           "rseti__rseti_self_finance": "78",
           "rseti__rseti_settled_pct": "70.0",
-          "rseti__rseti_credit_linkage_pct": "84.0"
+          "rseti__rseti_credit_linkage_pct": "84.0",
+          "pmegp__pmegp_returned_amt": "17"
         },
         {
           "district": "Chittorgarh",
@@ -8514,7 +8514,6 @@
           "pmegp__pmegp_mm_claimed_amt": "358.95",
           "pmegp__pmegp_mm_disbursed_no": "25",
           "pmegp__pmegp_mm_disbursed_amt": "183.84",
-          "pmegp__pmegp_returned": "24",
           "pmegp__pmegp_pending_no": "29",
           "pmegp__pmegp_pending_amt": "215.48",
           "ambedkar_scheme__ambedkar_targets": "42",
@@ -8559,7 +8558,8 @@
           "rseti__rseti_bank_finance": "344",
           "rseti__rseti_self_finance": "292",
           "rseti__rseti_settled_pct": "99.0",
-          "rseti__rseti_credit_linkage_pct": "52.0"
+          "rseti__rseti_credit_linkage_pct": "52.0",
+          "pmegp__pmegp_returned_amt": "24"
         },
         {
           "district": "Churu",
@@ -8683,7 +8683,6 @@
           "pmegp__pmegp_mm_claimed_amt": "226.99",
           "pmegp__pmegp_mm_disbursed_no": "27",
           "pmegp__pmegp_mm_disbursed_amt": "162.23",
-          "pmegp__pmegp_returned": "20",
           "pmegp__pmegp_pending_no": "9",
           "pmegp__pmegp_pending_amt": "42.66",
           "ambedkar_scheme__ambedkar_targets": "43",
@@ -8728,7 +8727,8 @@
           "rseti__rseti_bank_finance": "313",
           "rseti__rseti_self_finance": "151",
           "rseti__rseti_settled_pct": "69.0",
-          "rseti__rseti_credit_linkage_pct": "63.0"
+          "rseti__rseti_credit_linkage_pct": "63.0",
+          "pmegp__pmegp_returned_amt": "20"
         },
         {
           "district": "Dausa",
@@ -8852,7 +8852,6 @@
           "pmegp__pmegp_mm_claimed_amt": "311.94",
           "pmegp__pmegp_mm_disbursed_no": "58",
           "pmegp__pmegp_mm_disbursed_amt": "205.19",
-          "pmegp__pmegp_returned": "49",
           "pmegp__pmegp_pending_no": "30",
           "pmegp__pmegp_pending_amt": "138.18",
           "ambedkar_scheme__ambedkar_targets": "74",
@@ -8897,7 +8896,8 @@
           "rseti__rseti_bank_finance": "111",
           "rseti__rseti_self_finance": "176",
           "rseti__rseti_settled_pct": "57.0",
-          "rseti__rseti_credit_linkage_pct": "39.0"
+          "rseti__rseti_credit_linkage_pct": "39.0",
+          "pmegp__pmegp_returned_amt": "49"
         },
         {
           "district": "Deeg",
@@ -9008,7 +9008,6 @@
           "pmegp__pmegp_mm_claimed_amt": "0",
           "pmegp__pmegp_mm_disbursed_no": "0",
           "pmegp__pmegp_mm_disbursed_amt": "0",
-          "pmegp__pmegp_returned": "16",
           "pmegp__pmegp_pending_no": "8",
           "pmegp__pmegp_pending_amt": "28",
           "ambedkar_scheme__ambedkar_targets": "23",
@@ -9042,7 +9041,8 @@
           "vishwakarma__vishwakarma_avg_forward_pct": "11.0",
           "vishwakarma__vishwakarma_pending_fi": "1",
           "vishwakarma__vishwakarma_sanctioned": "0",
-          "vishwakarma__vishwakarma_disbursed": "0"
+          "vishwakarma__vishwakarma_disbursed": "0",
+          "pmegp__pmegp_returned_amt": "16"
         },
         {
           "district": "Dholpur",
@@ -9166,7 +9166,6 @@
           "pmegp__pmegp_mm_claimed_amt": "215.77",
           "pmegp__pmegp_mm_disbursed_no": "39",
           "pmegp__pmegp_mm_disbursed_amt": "144.28",
-          "pmegp__pmegp_returned": "51",
           "pmegp__pmegp_pending_no": "21",
           "pmegp__pmegp_pending_amt": "104.72",
           "ambedkar_scheme__ambedkar_targets": "29",
@@ -9211,7 +9210,8 @@
           "rseti__rseti_bank_finance": "70",
           "rseti__rseti_self_finance": "219",
           "rseti__rseti_settled_pct": "38.0",
-          "rseti__rseti_credit_linkage_pct": "24.0"
+          "rseti__rseti_credit_linkage_pct": "24.0",
+          "pmegp__pmegp_returned_amt": "51"
         },
         {
           "district": "Didwana-Kuchaman",
@@ -9322,7 +9322,6 @@
           "pmegp__pmegp_mm_claimed_amt": "6.96",
           "pmegp__pmegp_mm_disbursed_no": "0",
           "pmegp__pmegp_mm_disbursed_amt": "0",
-          "pmegp__pmegp_returned": "4",
           "pmegp__pmegp_pending_no": "26",
           "pmegp__pmegp_pending_amt": "207.69",
           "ambedkar_scheme__ambedkar_targets": "34",
@@ -9356,7 +9355,8 @@
           "vishwakarma__vishwakarma_avg_forward_pct": "63.0",
           "vishwakarma__vishwakarma_pending_fi": "18",
           "vishwakarma__vishwakarma_sanctioned": "1",
-          "vishwakarma__vishwakarma_disbursed": "0"
+          "vishwakarma__vishwakarma_disbursed": "0",
+          "pmegp__pmegp_returned_amt": "4"
         },
         {
           "district": "Dungarpur",
@@ -9480,7 +9480,6 @@
           "pmegp__pmegp_mm_claimed_amt": "94.3",
           "pmegp__pmegp_mm_disbursed_no": "6",
           "pmegp__pmegp_mm_disbursed_amt": "19.99",
-          "pmegp__pmegp_returned": "10",
           "pmegp__pmegp_pending_no": "33",
           "pmegp__pmegp_pending_amt": "191.73",
           "ambedkar_scheme__ambedkar_targets": "93",
@@ -9525,7 +9524,8 @@
           "rseti__rseti_bank_finance": "473",
           "rseti__rseti_self_finance": "219",
           "rseti__rseti_settled_pct": "111.0",
-          "rseti__rseti_credit_linkage_pct": "68.0"
+          "rseti__rseti_credit_linkage_pct": "68.0",
+          "pmegp__pmegp_returned_amt": "10"
         },
         {
           "district": "Ganganagar",
@@ -9649,7 +9649,6 @@
           "pmegp__pmegp_mm_claimed_amt": "731.97",
           "pmegp__pmegp_mm_disbursed_no": "65",
           "pmegp__pmegp_mm_disbursed_amt": "509.45",
-          "pmegp__pmegp_returned": "7",
           "pmegp__pmegp_pending_no": "10",
           "pmegp__pmegp_pending_amt": "77",
           "ambedkar_scheme__ambedkar_targets": "68",
@@ -9694,7 +9693,8 @@
           "rseti__rseti_bank_finance": "179",
           "rseti__rseti_self_finance": "139",
           "rseti__rseti_settled_pct": "81.0",
-          "rseti__rseti_credit_linkage_pct": "56.0"
+          "rseti__rseti_credit_linkage_pct": "56.0",
+          "pmegp__pmegp_returned_amt": "7"
         },
         {
           "district": "Hanumangarh",
@@ -9818,7 +9818,6 @@
           "pmegp__pmegp_mm_claimed_amt": "473.74",
           "pmegp__pmegp_mm_disbursed_no": "27",
           "pmegp__pmegp_mm_disbursed_amt": "163.36",
-          "pmegp__pmegp_returned": "44",
           "pmegp__pmegp_pending_no": "40",
           "pmegp__pmegp_pending_amt": "286.87",
           "ambedkar_scheme__ambedkar_targets": "48",
@@ -9863,7 +9862,8 @@
           "rseti__rseti_bank_finance": "386",
           "rseti__rseti_self_finance": "254",
           "rseti__rseti_settled_pct": "72.0",
-          "rseti__rseti_credit_linkage_pct": "60.0"
+          "rseti__rseti_credit_linkage_pct": "60.0",
+          "pmegp__pmegp_returned_amt": "44"
         },
         {
           "district": "Jaipur",
@@ -9987,7 +9987,6 @@
           "pmegp__pmegp_mm_claimed_amt": "0",
           "pmegp__pmegp_mm_disbursed_no": "0",
           "pmegp__pmegp_mm_disbursed_amt": "0",
-          "pmegp__pmegp_returned": "0",
           "pmegp__pmegp_pending_no": "0",
           "pmegp__pmegp_pending_amt": "0",
           "ambedkar_scheme__ambedkar_targets": "138",
@@ -10032,7 +10031,8 @@
           "rseti__rseti_bank_finance": "353",
           "rseti__rseti_self_finance": "232",
           "rseti__rseti_settled_pct": "75.0",
-          "rseti__rseti_credit_linkage_pct": "60.0"
+          "rseti__rseti_credit_linkage_pct": "60.0",
+          "pmegp__pmegp_returned_amt": "0"
         },
         {
           "district": "Jaisalmer",
@@ -10156,7 +10156,6 @@
           "pmegp__pmegp_mm_claimed_amt": "132.9",
           "pmegp__pmegp_mm_disbursed_no": "9",
           "pmegp__pmegp_mm_disbursed_amt": "80.36",
-          "pmegp__pmegp_returned": "9",
           "pmegp__pmegp_pending_no": "49",
           "pmegp__pmegp_pending_amt": "123.33",
           "ambedkar_scheme__ambedkar_targets": "12",
@@ -10201,7 +10200,8 @@
           "rseti__rseti_bank_finance": "264",
           "rseti__rseti_self_finance": "116",
           "rseti__rseti_settled_pct": "70.0",
-          "rseti__rseti_credit_linkage_pct": "69.0"
+          "rseti__rseti_credit_linkage_pct": "69.0",
+          "pmegp__pmegp_returned_amt": "9"
         },
         {
           "district": "Jalore",
@@ -10325,7 +10325,6 @@
           "pmegp__pmegp_mm_claimed_amt": "237.66",
           "pmegp__pmegp_mm_disbursed_no": "24",
           "pmegp__pmegp_mm_disbursed_amt": "192.56",
-          "pmegp__pmegp_returned": "19",
           "pmegp__pmegp_pending_no": "4",
           "pmegp__pmegp_pending_amt": "13.71",
           "ambedkar_scheme__ambedkar_targets": "51",
@@ -10370,7 +10369,8 @@
           "rseti__rseti_bank_finance": "329",
           "rseti__rseti_self_finance": "281",
           "rseti__rseti_settled_pct": "73.0",
-          "rseti__rseti_credit_linkage_pct": "54.0"
+          "rseti__rseti_credit_linkage_pct": "54.0",
+          "pmegp__pmegp_returned_amt": "19"
         },
         {
           "district": "Jhalawar",
@@ -10494,7 +10494,6 @@
           "pmegp__pmegp_mm_claimed_amt": "280.51",
           "pmegp__pmegp_mm_disbursed_no": "32",
           "pmegp__pmegp_mm_disbursed_amt": "161.46",
-          "pmegp__pmegp_returned": "73",
           "pmegp__pmegp_pending_no": "47",
           "pmegp__pmegp_pending_amt": "166.49",
           "ambedkar_scheme__ambedkar_targets": "40",
@@ -10539,7 +10538,8 @@
           "rseti__rseti_bank_finance": "401",
           "rseti__rseti_self_finance": "298",
           "rseti__rseti_settled_pct": "92.0",
-          "rseti__rseti_credit_linkage_pct": "57.0"
+          "rseti__rseti_credit_linkage_pct": "57.0",
+          "pmegp__pmegp_returned_amt": "73"
         },
         {
           "district": "Jhunjhunu",
@@ -10663,7 +10663,6 @@
           "pmegp__pmegp_mm_claimed_amt": "527.53",
           "pmegp__pmegp_mm_disbursed_no": "50",
           "pmegp__pmegp_mm_disbursed_amt": "229.58",
-          "pmegp__pmegp_returned": "40",
           "pmegp__pmegp_pending_no": "58",
           "pmegp__pmegp_pending_amt": "210.2",
           "ambedkar_scheme__ambedkar_targets": "37",
@@ -10708,7 +10707,8 @@
           "rseti__rseti_bank_finance": "209",
           "rseti__rseti_self_finance": "228",
           "rseti__rseti_settled_pct": "72.0",
-          "rseti__rseti_credit_linkage_pct": "48.0"
+          "rseti__rseti_credit_linkage_pct": "48.0",
+          "pmegp__pmegp_returned_amt": "40"
         },
         {
           "district": "Jodhpur",
@@ -10832,7 +10832,6 @@
           "pmegp__pmegp_mm_claimed_amt": "0",
           "pmegp__pmegp_mm_disbursed_no": "0",
           "pmegp__pmegp_mm_disbursed_amt": "0",
-          "pmegp__pmegp_returned": "0",
           "pmegp__pmegp_pending_no": "0",
           "pmegp__pmegp_pending_amt": "0",
           "ambedkar_scheme__ambedkar_targets": "54",
@@ -10877,7 +10876,8 @@
           "rseti__rseti_bank_finance": "189",
           "rseti__rseti_self_finance": "180",
           "rseti__rseti_settled_pct": "55.0",
-          "rseti__rseti_credit_linkage_pct": "49.0"
+          "rseti__rseti_credit_linkage_pct": "49.0",
+          "pmegp__pmegp_returned_amt": "0"
         },
         {
           "district": "Karauli",
@@ -11001,7 +11001,6 @@
           "pmegp__pmegp_mm_claimed_amt": "254.65",
           "pmegp__pmegp_mm_disbursed_no": "41",
           "pmegp__pmegp_mm_disbursed_amt": "136.82",
-          "pmegp__pmegp_returned": "36",
           "pmegp__pmegp_pending_no": "30",
           "pmegp__pmegp_pending_amt": "139.23",
           "ambedkar_scheme__ambedkar_targets": "63",
@@ -11046,7 +11045,8 @@
           "rseti__rseti_bank_finance": "205",
           "rseti__rseti_self_finance": "196",
           "rseti__rseti_settled_pct": "82.0",
-          "rseti__rseti_credit_linkage_pct": "51.0"
+          "rseti__rseti_credit_linkage_pct": "51.0",
+          "pmegp__pmegp_returned_amt": "36"
         },
         {
           "district": "Khairthal-Tijara",
@@ -11157,7 +11157,6 @@
           "pmegp__pmegp_mm_claimed_amt": "0",
           "pmegp__pmegp_mm_disbursed_no": "0",
           "pmegp__pmegp_mm_disbursed_amt": "0",
-          "pmegp__pmegp_returned": "2",
           "pmegp__pmegp_pending_no": "5",
           "pmegp__pmegp_pending_amt": "16.25",
           "ambedkar_scheme__ambedkar_targets": "24",
@@ -11191,7 +11190,8 @@
           "vishwakarma__vishwakarma_avg_forward_pct": "25.0",
           "vishwakarma__vishwakarma_pending_fi": "1",
           "vishwakarma__vishwakarma_sanctioned": "0",
-          "vishwakarma__vishwakarma_disbursed": "0"
+          "vishwakarma__vishwakarma_disbursed": "0",
+          "pmegp__pmegp_returned_amt": "2"
         },
         {
           "district": "Kota",
@@ -11315,7 +11315,6 @@
           "pmegp__pmegp_mm_claimed_amt": "656.84",
           "pmegp__pmegp_mm_disbursed_no": "35",
           "pmegp__pmegp_mm_disbursed_amt": "411.64",
-          "pmegp__pmegp_returned": "54",
           "pmegp__pmegp_pending_no": "58",
           "pmegp__pmegp_pending_amt": "313.29",
           "ambedkar_scheme__ambedkar_targets": "56",
@@ -11360,7 +11359,8 @@
           "rseti__rseti_bank_finance": "191",
           "rseti__rseti_self_finance": "185",
           "rseti__rseti_settled_pct": "95.0",
-          "rseti__rseti_credit_linkage_pct": "51.0"
+          "rseti__rseti_credit_linkage_pct": "51.0",
+          "pmegp__pmegp_returned_amt": "54"
         },
         {
           "district": "Kotputli-Behror",
@@ -11471,7 +11471,6 @@
           "pmegp__pmegp_mm_claimed_amt": "0",
           "pmegp__pmegp_mm_disbursed_no": "0",
           "pmegp__pmegp_mm_disbursed_amt": "0",
-          "pmegp__pmegp_returned": "2",
           "pmegp__pmegp_pending_no": "10",
           "pmegp__pmegp_pending_amt": "66.5",
           "ambedkar_scheme__ambedkar_targets": "32",
@@ -11505,7 +11504,8 @@
           "vishwakarma__vishwakarma_avg_forward_pct": "0.0",
           "vishwakarma__vishwakarma_pending_fi": "0",
           "vishwakarma__vishwakarma_sanctioned": "0",
-          "vishwakarma__vishwakarma_disbursed": "0"
+          "vishwakarma__vishwakarma_disbursed": "0",
+          "pmegp__pmegp_returned_amt": "2"
         },
         {
           "district": "Nagaur",
@@ -11629,7 +11629,6 @@
           "pmegp__pmegp_mm_claimed_amt": "1440.11",
           "pmegp__pmegp_mm_disbursed_no": "63",
           "pmegp__pmegp_mm_disbursed_amt": "527.59",
-          "pmegp__pmegp_returned": "19",
           "pmegp__pmegp_pending_no": "45",
           "pmegp__pmegp_pending_amt": "283.74",
           "ambedkar_scheme__ambedkar_targets": "35",
@@ -11674,7 +11673,8 @@
           "rseti__rseti_bank_finance": "195",
           "rseti__rseti_self_finance": "384",
           "rseti__rseti_settled_pct": "94.0",
-          "rseti__rseti_credit_linkage_pct": "34.0"
+          "rseti__rseti_credit_linkage_pct": "34.0",
+          "pmegp__pmegp_returned_amt": "19"
         },
         {
           "district": "Pali",
@@ -11798,7 +11798,6 @@
           "pmegp__pmegp_mm_claimed_amt": "412.93",
           "pmegp__pmegp_mm_disbursed_no": "20",
           "pmegp__pmegp_mm_disbursed_amt": "202.14",
-          "pmegp__pmegp_returned": "19",
           "pmegp__pmegp_pending_no": "24",
           "pmegp__pmegp_pending_amt": "215.45",
           "ambedkar_scheme__ambedkar_targets": "35",
@@ -11843,7 +11842,8 @@
           "rseti__rseti_bank_finance": "404",
           "rseti__rseti_self_finance": "206",
           "rseti__rseti_settled_pct": "85.0",
-          "rseti__rseti_credit_linkage_pct": "66.0"
+          "rseti__rseti_credit_linkage_pct": "66.0",
+          "pmegp__pmegp_returned_amt": "19"
         },
         {
           "district": "Phalodi",
@@ -11954,7 +11954,6 @@
           "pmegp__pmegp_mm_claimed_amt": "0",
           "pmegp__pmegp_mm_disbursed_no": "0",
           "pmegp__pmegp_mm_disbursed_amt": "0",
-          "pmegp__pmegp_returned": "2",
           "pmegp__pmegp_pending_no": "8",
           "pmegp__pmegp_pending_amt": "87.4",
           "ambedkar_scheme__ambedkar_targets": "14",
@@ -11988,7 +11987,8 @@
           "vishwakarma__vishwakarma_avg_forward_pct": "55.0",
           "vishwakarma__vishwakarma_pending_fi": "12",
           "vishwakarma__vishwakarma_sanctioned": "0",
-          "vishwakarma__vishwakarma_disbursed": "0"
+          "vishwakarma__vishwakarma_disbursed": "0",
+          "pmegp__pmegp_returned_amt": "2"
         },
         {
           "district": "Pratapgarh",
@@ -12112,7 +12112,6 @@
           "pmegp__pmegp_mm_claimed_amt": "254.97",
           "pmegp__pmegp_mm_disbursed_no": "28",
           "pmegp__pmegp_mm_disbursed_amt": "159.65",
-          "pmegp__pmegp_returned": "19",
           "pmegp__pmegp_pending_no": "19",
           "pmegp__pmegp_pending_amt": "90",
           "ambedkar_scheme__ambedkar_targets": "55",
@@ -12157,7 +12156,8 @@
           "rseti__rseti_bank_finance": "276",
           "rseti__rseti_self_finance": "316",
           "rseti__rseti_settled_pct": "100.0",
-          "rseti__rseti_credit_linkage_pct": "46.0"
+          "rseti__rseti_credit_linkage_pct": "46.0",
+          "pmegp__pmegp_returned_amt": "19"
         },
         {
           "district": "Rajsamand",
@@ -12281,7 +12281,6 @@
           "pmegp__pmegp_mm_claimed_amt": "793.01",
           "pmegp__pmegp_mm_disbursed_no": "52",
           "pmegp__pmegp_mm_disbursed_amt": "633.09",
-          "pmegp__pmegp_returned": "5",
           "pmegp__pmegp_pending_no": "21",
           "pmegp__pmegp_pending_amt": "278.26",
           "ambedkar_scheme__ambedkar_targets": "28",
@@ -12326,7 +12325,8 @@
           "rseti__rseti_bank_finance": "376",
           "rseti__rseti_self_finance": "134",
           "rseti__rseti_settled_pct": "72.0",
-          "rseti__rseti_credit_linkage_pct": "74.0"
+          "rseti__rseti_credit_linkage_pct": "74.0",
+          "pmegp__pmegp_returned_amt": "5"
         },
         {
           "district": "Salumbar",
@@ -12437,7 +12437,6 @@
           "pmegp__pmegp_mm_claimed_amt": "0",
           "pmegp__pmegp_mm_disbursed_no": "0",
           "pmegp__pmegp_mm_disbursed_amt": "0",
-          "pmegp__pmegp_returned": "2",
           "pmegp__pmegp_pending_no": "0",
           "pmegp__pmegp_pending_amt": "0",
           "ambedkar_scheme__ambedkar_targets": "35",
@@ -12471,7 +12470,8 @@
           "vishwakarma__vishwakarma_avg_forward_pct": "0.0",
           "vishwakarma__vishwakarma_pending_fi": "0",
           "vishwakarma__vishwakarma_sanctioned": "0",
-          "vishwakarma__vishwakarma_disbursed": "0"
+          "vishwakarma__vishwakarma_disbursed": "0",
+          "pmegp__pmegp_returned_amt": "2"
         },
         {
           "district": "Sawai Madhopur",
@@ -12595,7 +12595,6 @@
           "pmegp__pmegp_mm_claimed_amt": "363.87",
           "pmegp__pmegp_mm_disbursed_no": "77",
           "pmegp__pmegp_mm_disbursed_amt": "309.93",
-          "pmegp__pmegp_returned": "77",
           "pmegp__pmegp_pending_no": "65",
           "pmegp__pmegp_pending_amt": "255",
           "ambedkar_scheme__ambedkar_targets": "52",
@@ -12640,7 +12639,8 @@
           "rseti__rseti_bank_finance": "171",
           "rseti__rseti_self_finance": "340",
           "rseti__rseti_settled_pct": "103.0",
-          "rseti__rseti_credit_linkage_pct": "33.0"
+          "rseti__rseti_credit_linkage_pct": "33.0",
+          "pmegp__pmegp_returned_amt": "77"
         },
         {
           "district": "Sikar",
@@ -12764,7 +12764,6 @@
           "pmegp__pmegp_mm_claimed_amt": "740.68",
           "pmegp__pmegp_mm_disbursed_no": "28",
           "pmegp__pmegp_mm_disbursed_amt": "182.1",
-          "pmegp__pmegp_returned": "15",
           "pmegp__pmegp_pending_no": "26",
           "pmegp__pmegp_pending_amt": "186.37",
           "ambedkar_scheme__ambedkar_targets": "47",
@@ -12809,7 +12808,8 @@
           "rseti__rseti_bank_finance": "243",
           "rseti__rseti_self_finance": "235",
           "rseti__rseti_settled_pct": "86.0",
-          "rseti__rseti_credit_linkage_pct": "49.0"
+          "rseti__rseti_credit_linkage_pct": "49.0",
+          "pmegp__pmegp_returned_amt": "15"
         },
         {
           "district": "Sirohi",
@@ -12933,7 +12933,6 @@
           "pmegp__pmegp_mm_claimed_amt": "595.35",
           "pmegp__pmegp_mm_disbursed_no": "17",
           "pmegp__pmegp_mm_disbursed_amt": "161.14",
-          "pmegp__pmegp_returned": "11",
           "pmegp__pmegp_pending_no": "10",
           "pmegp__pmegp_pending_amt": "104.84",
           "ambedkar_scheme__ambedkar_targets": "46",
@@ -12978,7 +12977,8 @@
           "rseti__rseti_bank_finance": "255",
           "rseti__rseti_self_finance": "245",
           "rseti__rseti_settled_pct": "67.0",
-          "rseti__rseti_credit_linkage_pct": "51.0"
+          "rseti__rseti_credit_linkage_pct": "51.0",
+          "pmegp__pmegp_returned_amt": "11"
         },
         {
           "district": "Tonk",
@@ -13102,7 +13102,6 @@
           "pmegp__pmegp_mm_claimed_amt": "283.43",
           "pmegp__pmegp_mm_disbursed_no": "40",
           "pmegp__pmegp_mm_disbursed_amt": "294.36",
-          "pmegp__pmegp_returned": "50",
           "pmegp__pmegp_pending_no": "46",
           "pmegp__pmegp_pending_amt": "190.32",
           "ambedkar_scheme__ambedkar_targets": "45",
@@ -13147,7 +13146,8 @@
           "rseti__rseti_bank_finance": "223",
           "rseti__rseti_self_finance": "95",
           "rseti__rseti_settled_pct": "49.0",
-          "rseti__rseti_credit_linkage_pct": "70.0"
+          "rseti__rseti_credit_linkage_pct": "70.0",
+          "pmegp__pmegp_returned_amt": "50"
         },
         {
           "district": "Udaipur",
@@ -13271,7 +13271,6 @@
           "pmegp__pmegp_mm_claimed_amt": "630.32",
           "pmegp__pmegp_mm_disbursed_no": "46",
           "pmegp__pmegp_mm_disbursed_amt": "251.15",
-          "pmegp__pmegp_returned": "48",
           "pmegp__pmegp_pending_no": "43",
           "pmegp__pmegp_pending_amt": "241.19",
           "ambedkar_scheme__ambedkar_targets": "117",
@@ -13316,7 +13315,8 @@
           "rseti__rseti_bank_finance": "259",
           "rseti__rseti_self_finance": "126",
           "rseti__rseti_settled_pct": "54.0",
-          "rseti__rseti_credit_linkage_pct": "62.0"
+          "rseti__rseti_credit_linkage_pct": "62.0",
+          "pmegp__pmegp_returned_amt": "48"
         }
       ]
     }

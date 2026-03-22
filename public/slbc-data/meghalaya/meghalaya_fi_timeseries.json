@@ -17,9 +17,6 @@
           "aadhaar_authentication__no_of_aadhaar_seeded_casa": "1309",
           "aadhaar_authentication__no_of_authenticated_casa": "1962",
           "acp_disbursement_agri__district": "East Garo Hills",
-          "acp_disbursement_agri__crop_loan": "120",
-          "acp_disbursement_agri__forestry_and_wasteland_dev": "0",
-          "acp_disbursement_agri__plantation_horticulture": "0",
           "acp_disbursement_msme__district": "East Garo Hills",
           "acp_disbursement_msme__total_amt": "181.32",
           "acp_disbursement_msme__total_no": "85",
@@ -43,7 +40,6 @@
           "acp_disbursement_msme__micro_tl_a_c": "65",
           "acp_disbursement_other_ps__district": "East Garo Hills",
           "acp_disbursement_other_ps__total_ps_others": "6.35",
-          "acp_disbursement_other_ps__loans_to_weaker": "0.29",
           "acp_disbursement_other_ps__renewable_energy": "0",
           "acp_disbursement_other_ps__social_infrastructure": "0",
           "acp_disbursement_other_ps__housing_ps": "4.9",
@@ -125,9 +121,6 @@
           "pmjdy__rupay_card_activated": "9463",
           "pmjdy__no_of_aadhaar_seeded": "210",
           "pmmy_mudra_disbursement__district": "East Garo Hills",
-          "pmmy_mudra_disbursement__sishu": "1",
-          "pmmy_mudra_disbursement__kishore": "30",
-          "pmmy_mudra_disbursement__tarun": "4",
           "rseti__district": "East Garo Hills",
           "rseti__email": "rabindra.nath2@sbi.co.in",
           "rseti__no_s_contact": "8638793772",
@@ -248,7 +241,14 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "40",
-          "minority_disbursement__total_amt": "17.46"
+          "minority_disbursement__total_amt": "17.46",
+          "acp_disbursement_agri__crop_loan_amt": "120",
+          "acp_disbursement_agri__forestry_and_wasteland_dev_amt": "0",
+          "acp_disbursement_agri__plantation_horticulture_amt": "0",
+          "acp_disbursement_other_ps__loans_to_weaker_amt": "0.29",
+          "pmmy_mudra_disbursement__kishore_amt": "30",
+          "pmmy_mudra_disbursement__sishu_amt": "1",
+          "pmmy_mudra_disbursement__tarun_amt": "4"
         },
         {
           "district": "East Jaintia Hills",
@@ -258,9 +258,6 @@
           "aadhaar_authentication__no_of_aadhaar_seeded_casa": "2192",
           "aadhaar_authentication__no_of_authenticated_casa": "2525",
           "acp_disbursement_agri__district": "East Jaintia Hills",
-          "acp_disbursement_agri__crop_loan": "6",
-          "acp_disbursement_agri__forestry_and_wasteland_dev": "0",
-          "acp_disbursement_agri__plantation_horticulture": "6",
           "acp_disbursement_msme__district": "East Jaintia Hills",
           "acp_disbursement_msme__total_amt": "439",
           "acp_disbursement_msme__total_no": "137",
@@ -284,7 +281,6 @@
           "acp_disbursement_msme__micro_tl_a_c": "46",
           "acp_disbursement_other_ps__district": "East Jaintia Hills",
           "acp_disbursement_other_ps__total_ps_others": "1",
-          "acp_disbursement_other_ps__loans_to_weaker": "0",
           "acp_disbursement_other_ps__renewable_energy": "0",
           "acp_disbursement_other_ps__social_infrastructure": "0",
           "acp_disbursement_other_ps__housing_ps": "1",
@@ -341,9 +337,6 @@
           "pmjdy__rupay_card_activated": "6157",
           "pmjdy__no_of_aadhaar_seeded": "311",
           "pmmy_mudra_disbursement__district": "East Jaintia Hills",
-          "pmmy_mudra_disbursement__sishu": "10",
-          "pmmy_mudra_disbursement__kishore": "18",
-          "pmmy_mudra_disbursement__tarun": "7",
           "rseti__district": "East Jaintia Hills",
           "rseti__email": "khrawpyrkhat.kharbuli@sbi.co.in",
           "rseti__no_s_contact": "9560377008",
@@ -470,7 +463,14 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "69",
-          "minority_disbursement__total_amt": "155.32"
+          "minority_disbursement__total_amt": "155.32",
+          "acp_disbursement_agri__crop_loan_amt": "6",
+          "acp_disbursement_agri__forestry_and_wasteland_dev_amt": "0",
+          "acp_disbursement_agri__plantation_horticulture_amt": "6",
+          "acp_disbursement_other_ps__loans_to_weaker_amt": "0",
+          "pmmy_mudra_disbursement__kishore_amt": "18",
+          "pmmy_mudra_disbursement__sishu_amt": "10",
+          "pmmy_mudra_disbursement__tarun_amt": "7"
         },
         {
           "district": "East Khasi Hills",
@@ -480,9 +480,6 @@
           "aadhaar_authentication__no_of_aadhaar_seeded_casa": "94838",
           "aadhaar_authentication__no_of_authenticated_casa": "123031",
           "acp_disbursement_agri__district": "East Khasi Hills",
-          "acp_disbursement_agri__crop_loan": "1284",
-          "acp_disbursement_agri__forestry_and_wasteland_dev": "0",
-          "acp_disbursement_agri__plantation_horticulture": "2",
           "acp_disbursement_msme__district": "East Khasi Hills",
           "acp_disbursement_msme__total_amt": "15719.58",
           "acp_disbursement_msme__total_no": "3401",
@@ -506,7 +503,6 @@
           "acp_disbursement_msme__micro_tl_a_c": "1715",
           "acp_disbursement_other_ps__district": "East Khasi Hills",
           "acp_disbursement_other_ps__total_ps_others": "1950.31",
-          "acp_disbursement_other_ps__loans_to_weaker": "1408.95",
           "acp_disbursement_other_ps__renewable_energy": "4.25",
           "acp_disbursement_other_ps__social_infrastructure": "0",
           "acp_disbursement_other_ps__housing_ps": "497.02",
@@ -585,9 +581,6 @@
           "pmjdy__rupay_card_activated": "33490",
           "pmjdy__no_of_aadhaar_seeded": "13859",
           "pmmy_mudra_disbursement__district": "East Khasi Hills",
-          "pmmy_mudra_disbursement__sishu": "177",
-          "pmmy_mudra_disbursement__kishore": "258",
-          "pmmy_mudra_disbursement__tarun": "102",
           "rseti__district": "East Khasi Hills",
           "rseti__email": "ldm.ekhmegh@sbi.co.in",
           "rseti__no_s_contact": "8731028248",
@@ -708,7 +701,14 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "5474",
-          "minority_disbursement__total_amt": "15989.72"
+          "minority_disbursement__total_amt": "15989.72",
+          "acp_disbursement_agri__crop_loan_amt": "1284",
+          "acp_disbursement_agri__forestry_and_wasteland_dev_amt": "0",
+          "acp_disbursement_agri__plantation_horticulture_amt": "2",
+          "acp_disbursement_other_ps__loans_to_weaker_amt": "1408.95",
+          "pmmy_mudra_disbursement__kishore_amt": "258",
+          "pmmy_mudra_disbursement__sishu_amt": "177",
+          "pmmy_mudra_disbursement__tarun_amt": "102"
         },
         {
           "district": "North Garo Hills",
@@ -718,9 +718,6 @@
           "aadhaar_authentication__no_of_aadhaar_seeded_casa": "210",
           "aadhaar_authentication__no_of_authenticated_casa": "501",
           "acp_disbursement_agri__district": "North Garo Hills",
-          "acp_disbursement_agri__crop_loan": "62",
-          "acp_disbursement_agri__forestry_and_wasteland_dev": "0",
-          "acp_disbursement_agri__plantation_horticulture": "0",
           "acp_disbursement_msme__district": "North Garo Hills",
           "acp_disbursement_msme__total_amt": "62.63",
           "acp_disbursement_msme__total_no": "45",
@@ -744,7 +741,6 @@
           "acp_disbursement_msme__micro_tl_a_c": "29",
           "acp_disbursement_other_ps__district": "North Garo Hills",
           "acp_disbursement_other_ps__total_ps_others": "8.95",
-          "acp_disbursement_other_ps__loans_to_weaker": "6.04",
           "acp_disbursement_other_ps__renewable_energy": "0",
           "acp_disbursement_other_ps__social_infrastructure": "0",
           "acp_disbursement_other_ps__housing_ps": "2.91",
@@ -823,9 +819,6 @@
           "pmjdy__rupay_card_activated": "28224",
           "pmjdy__no_of_aadhaar_seeded": "95",
           "pmmy_mudra_disbursement__district": "North Garo Hills",
-          "pmmy_mudra_disbursement__sishu": "0",
-          "pmmy_mudra_disbursement__kishore": "17",
-          "pmmy_mudra_disbursement__tarun": "7",
           "rseti__district": "North Garo Hills",
           "rseti__email": "rabindra.nath2@sbi.co.in",
           "rseti__no_s_contact": "8638793773",
@@ -945,7 +938,14 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "4",
-          "minority_disbursement__total_amt": "6.25"
+          "minority_disbursement__total_amt": "6.25",
+          "acp_disbursement_agri__crop_loan_amt": "62",
+          "acp_disbursement_agri__forestry_and_wasteland_dev_amt": "0",
+          "acp_disbursement_agri__plantation_horticulture_amt": "0",
+          "acp_disbursement_other_ps__loans_to_weaker_amt": "6.04",
+          "pmmy_mudra_disbursement__kishore_amt": "17",
+          "pmmy_mudra_disbursement__sishu_amt": "0",
+          "pmmy_mudra_disbursement__tarun_amt": "7"
         },
         {
           "district": "Ri Bhoi",
@@ -955,9 +955,6 @@
           "aadhaar_authentication__no_of_aadhaar_seeded_casa": "10162",
           "aadhaar_authentication__no_of_authenticated_casa": "15192",
           "acp_disbursement_agri__district": "Ri Bhoi",
-          "acp_disbursement_agri__crop_loan": "576",
-          "acp_disbursement_agri__forestry_and_wasteland_dev": "0",
-          "acp_disbursement_agri__plantation_horticulture": "0",
           "acp_disbursement_msme__district": "Ri Bhoi",
           "acp_disbursement_msme__total_amt": "6762.35",
           "acp_disbursement_msme__total_no": "542",
@@ -981,7 +978,6 @@
           "acp_disbursement_msme__micro_tl_a_c": "222",
           "acp_disbursement_other_ps__district": "Ri Bhoi",
           "acp_disbursement_other_ps__total_ps_others": "81.25",
-          "acp_disbursement_other_ps__loans_to_weaker": "31.75",
           "acp_disbursement_other_ps__renewable_energy": "0",
           "acp_disbursement_other_ps__social_infrastructure": "0",
           "acp_disbursement_other_ps__housing_ps": "39.45",
@@ -1049,9 +1045,6 @@
           "pmjdy__rupay_card_activated": "10850",
           "pmjdy__no_of_aadhaar_seeded": "5804",
           "pmmy_mudra_disbursement__district": "Ri Bhoi",
-          "pmmy_mudra_disbursement__sishu": "36",
-          "pmmy_mudra_disbursement__kishore": "128",
-          "pmmy_mudra_disbursement__tarun": "29",
           "rseti__district": "Ri Bhoi",
           "rseti__email": "tunglut.suan@sbi.co.in",
           "rseti__no_s_contact": "9485435335",
@@ -1177,7 +1170,14 @@
           "minority_disbursement__jains_no": "0",
           "minority_disbursement__jains_amt": "0.00",
           "minority_disbursement__total_no": "1205",
-          "minority_disbursement__total_amt": "4064.28"
+          "minority_disbursement__total_amt": "4064.28",
+          "acp_disbursement_agri__crop_loan_amt": "576",
+          "acp_disbursement_agri__forestry_and_wasteland_dev_amt": "0",
+          "acp_disbursement_agri__plantation_horticulture_amt": "0",
+          "acp_disbursement_other_ps__loans_to_weaker_amt": "31.75",
+          "pmmy_mudra_disbursement__kishore_amt": "128",
+          "pmmy_mudra_disbursement__sishu_amt": "36",
+          "pmmy_mudra_disbursement__tarun_amt": "29"
         },
         {
           "district": "South Garo Hills",
@@ -1187,9 +1187,6 @@
           "aadhaar_authentication__no_of_aadhaar_seeded_casa": "987",
           "aadhaar_authentication__no_of_authenticated_casa": "737",
           "acp_disbursement_agri__district": "South Garo Hills",
-          "acp_disbursement_agri__crop_loan": "2",
-          "acp_disbursement_agri__forestry_and_wasteland_dev": "0",
-          "acp_disbursement_agri__plantation_horticulture": "0",
           "acp_disbursement_msme__district": "South Garo Hills",
           "acp_disbursement_msme__total_amt": "83.9",
           "acp_disbursement_msme__total_no": "184",
@@ -1213,7 +1210,6 @@
           "acp_disbursement_msme__micro_tl_a_c": "31",
           "acp_disbursement_other_ps__district": "South Garo Hills",
           "acp_disbursement_other_ps__total_ps_others": "19.45",
-          "acp_disbursement_other_ps__loans_to_weaker": "17.83",
           "acp_disbursement_other_ps__renewable_energy": "0",
           "acp_disbursement_other_ps__social_infrastructure": "0",
           "acp_disbursement_other_ps__housing_ps": "0.43",
@@ -1295,9 +1291,6 @@
           "pmjdy__rupay_card_activated": "6836",
           "pmjdy__no_of_aadhaar_seeded": "22",
           "pmmy_mudra_disbursement__district": "South Garo Hills",
-          "pmmy_mudra_disbursement__sishu": "4",
-          "pmmy_mudra_disbursement__kishore": "18",
-          "pmmy_mudra_disbursement__tarun": "3",
           "rseti__district": "South Garo Hills",
           "rseti__email": "mannan.khan@sbi.co.in",
           "rseti__no_s_contact": "98641-96630",
@@ -1418,7 +1411,14 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "237",
-          "minority_disbursement__total_amt": "251.54"
+          "minority_disbursement__total_amt": "251.54",
+          "acp_disbursement_agri__crop_loan_amt": "2",
+          "acp_disbursement_agri__forestry_and_wasteland_dev_amt": "0",
+          "acp_disbursement_agri__plantation_horticulture_amt": "0",
+          "acp_disbursement_other_ps__loans_to_weaker_amt": "17.83",
+          "pmmy_mudra_disbursement__kishore_amt": "18",
+          "pmmy_mudra_disbursement__sishu_amt": "4",
+          "pmmy_mudra_disbursement__tarun_amt": "3"
         },
         {
           "district": "South West Garo Hills",
@@ -1428,9 +1428,6 @@
           "aadhaar_authentication__no_of_aadhaar_seeded_casa": "1668",
           "aadhaar_authentication__no_of_authenticated_casa": "1981",
           "acp_disbursement_agri__district": "South West Garo Hills",
-          "acp_disbursement_agri__crop_loan": "245",
-          "acp_disbursement_agri__forestry_and_wasteland_dev": "0",
-          "acp_disbursement_agri__plantation_horticulture": "0",
           "acp_disbursement_msme__district": "South West Garo Hills",
           "acp_disbursement_msme__total_amt": "133.65",
           "acp_disbursement_msme__total_no": "118",
@@ -1454,7 +1451,6 @@
           "acp_disbursement_msme__micro_tl_a_c": "84",
           "acp_disbursement_other_ps__district": "South West Garo Hills",
           "acp_disbursement_other_ps__total_ps_others": "7.14",
-          "acp_disbursement_other_ps__loans_to_weaker": "4.26",
           "acp_disbursement_other_ps__renewable_energy": "0",
           "acp_disbursement_other_ps__social_infrastructure": "0",
           "acp_disbursement_other_ps__housing_ps": "1.44",
@@ -1497,9 +1493,6 @@
           "pmjdy__rupay_card_activated": "20594",
           "pmjdy__no_of_aadhaar_seeded": "575",
           "pmmy_mudra_disbursement__district": "South West Garo Hills",
-          "pmmy_mudra_disbursement__sishu": "3",
-          "pmmy_mudra_disbursement__kishore": "53",
-          "pmmy_mudra_disbursement__tarun": "10",
           "rseti__district": "South West Garo Hills",
           "rseti__email": "mannan.khan@sbi.co.in",
           "rseti__no_s_contact": "98641-96630",
@@ -1642,7 +1635,14 @@
           "minority_disbursement__jains_no": "0",
           "minority_disbursement__jains_amt": "0.00",
           "minority_disbursement__total_no": "1",
-          "minority_disbursement__total_amt": "1.38"
+          "minority_disbursement__total_amt": "1.38",
+          "acp_disbursement_agri__crop_loan_amt": "245",
+          "acp_disbursement_agri__forestry_and_wasteland_dev_amt": "0",
+          "acp_disbursement_agri__plantation_horticulture_amt": "0",
+          "acp_disbursement_other_ps__loans_to_weaker_amt": "4.26",
+          "pmmy_mudra_disbursement__kishore_amt": "53",
+          "pmmy_mudra_disbursement__sishu_amt": "3",
+          "pmmy_mudra_disbursement__tarun_amt": "10"
         },
         {
           "district": "South West Khasi Hills",
@@ -1652,9 +1652,6 @@
           "aadhaar_authentication__no_of_aadhaar_seeded_casa": "1810",
           "aadhaar_authentication__no_of_authenticated_casa": "2012",
           "acp_disbursement_agri__district": "South West Khasi Hills",
-          "acp_disbursement_agri__crop_loan": "72",
-          "acp_disbursement_agri__forestry_and_wasteland_dev": "0",
-          "acp_disbursement_agri__plantation_horticulture": "0",
           "acp_disbursement_msme__district": "South West Khasi Hills",
           "acp_disbursement_msme__total_amt": "38.11",
           "acp_disbursement_msme__total_no": "105",
@@ -1678,7 +1675,6 @@
           "acp_disbursement_msme__micro_tl_a_c": "10",
           "acp_disbursement_other_ps__district": "South West Khasi Hills",
           "acp_disbursement_other_ps__total_ps_others": "12.53",
-          "acp_disbursement_other_ps__loans_to_weaker": "12.53",
           "acp_disbursement_other_ps__renewable_energy": "0",
           "acp_disbursement_other_ps__social_infrastructure": "0",
           "acp_disbursement_other_ps__housing_ps": "0",
@@ -1757,9 +1753,6 @@
           "pmjdy__rupay_card_activated": "11639",
           "pmjdy__no_of_aadhaar_seeded": "1550",
           "pmmy_mudra_disbursement__district": "South West Khasi Hills",
-          "pmmy_mudra_disbursement__sishu": "0",
-          "pmmy_mudra_disbursement__kishore": "9",
-          "pmmy_mudra_disbursement__tarun": "3",
           "rseti__district": "South West Khasi Hills",
           "rseti__email": "k.leivang@sbi.co.in",
           "rseti__no_s_contact": "6001489198",
@@ -1879,7 +1872,14 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "68",
-          "minority_disbursement__total_amt": "68.29"
+          "minority_disbursement__total_amt": "68.29",
+          "acp_disbursement_agri__crop_loan_amt": "72",
+          "acp_disbursement_agri__forestry_and_wasteland_dev_amt": "0",
+          "acp_disbursement_agri__plantation_horticulture_amt": "0",
+          "acp_disbursement_other_ps__loans_to_weaker_amt": "12.53",
+          "pmmy_mudra_disbursement__kishore_amt": "9",
+          "pmmy_mudra_disbursement__sishu_amt": "0",
+          "pmmy_mudra_disbursement__tarun_amt": "3"
         },
         {
           "district": "West Garo Hills",
@@ -1889,9 +1889,6 @@
           "aadhaar_authentication__no_of_aadhaar_seeded_casa": "7159",
           "aadhaar_authentication__no_of_authenticated_casa": "6948",
           "acp_disbursement_agri__district": "West Garo Hills",
-          "acp_disbursement_agri__crop_loan": "175",
-          "acp_disbursement_agri__forestry_and_wasteland_dev": "2",
-          "acp_disbursement_agri__plantation_horticulture": "0",
           "acp_disbursement_msme__district": "West Garo Hills",
           "acp_disbursement_msme__total_amt": "1235.42",
           "acp_disbursement_msme__total_no": "506",
@@ -1915,7 +1912,6 @@
           "acp_disbursement_msme__micro_tl_a_c": "298",
           "acp_disbursement_other_ps__district": "West Garo Hills",
           "acp_disbursement_other_ps__total_ps_others": "101.55",
-          "acp_disbursement_other_ps__loans_to_weaker": "23.83",
           "acp_disbursement_other_ps__renewable_energy": "0",
           "acp_disbursement_other_ps__social_infrastructure": "0.3",
           "acp_disbursement_other_ps__housing_ps": "68.13",
@@ -1984,9 +1980,6 @@
           "pmjdy__rupay_card_activated": "87866",
           "pmjdy__no_of_aadhaar_seeded": "2976",
           "pmmy_mudra_disbursement__district": "West Garo Hills",
-          "pmmy_mudra_disbursement__sishu": "78",
-          "pmmy_mudra_disbursement__kishore": "161",
-          "pmmy_mudra_disbursement__tarun": "55",
           "rseti__district": "West Garo Hills",
           "rseti__email": "mannan.khan@sbi.co.in",
           "rseti__no_s_contact": "98641-96630",
@@ -2107,7 +2100,14 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "154",
-          "minority_disbursement__total_amt": "190.59"
+          "minority_disbursement__total_amt": "190.59",
+          "acp_disbursement_agri__crop_loan_amt": "175",
+          "acp_disbursement_agri__forestry_and_wasteland_dev_amt": "2",
+          "acp_disbursement_agri__plantation_horticulture_amt": "0",
+          "acp_disbursement_other_ps__loans_to_weaker_amt": "23.83",
+          "pmmy_mudra_disbursement__kishore_amt": "161",
+          "pmmy_mudra_disbursement__sishu_amt": "78",
+          "pmmy_mudra_disbursement__tarun_amt": "55"
         },
         {
           "district": "West Jaintia Hills",
@@ -2117,9 +2117,6 @@
           "aadhaar_authentication__no_of_aadhaar_seeded_casa": "3429",
           "aadhaar_authentication__no_of_authenticated_casa": "9649",
           "acp_disbursement_agri__district": "West Jaintia Hills",
-          "acp_disbursement_agri__crop_loan": "126",
-          "acp_disbursement_agri__forestry_and_wasteland_dev": "0",
-          "acp_disbursement_agri__plantation_horticulture": "0",
           "acp_disbursement_msme__district": "West Jaintia Hills",
           "acp_disbursement_msme__total_amt": "1181.25",
           "acp_disbursement_msme__total_no": "489",
@@ -2143,7 +2140,6 @@
           "acp_disbursement_msme__micro_tl_a_c": "177",
           "acp_disbursement_other_ps__district": "West Jaintia Hills",
           "acp_disbursement_other_ps__total_ps_others": "182.22",
-          "acp_disbursement_other_ps__loans_to_weaker": "152.48",
           "acp_disbursement_other_ps__renewable_energy": "0",
           "acp_disbursement_other_ps__social_infrastructure": "0",
           "acp_disbursement_other_ps__housing_ps": "27.09",
@@ -2200,9 +2196,6 @@
           "pmjdy__rupay_card_activated": "13709",
           "pmjdy__no_of_aadhaar_seeded": "1600",
           "pmmy_mudra_disbursement__district": "West Jaintia Hills",
-          "pmmy_mudra_disbursement__sishu": "31",
-          "pmmy_mudra_disbursement__kishore": "99",
-          "pmmy_mudra_disbursement__tarun": "29",
           "rseti__district": "West Jaintia Hills",
           "rseti__email": "khrawpyrkhat.kharbuli@sbi.co.in",
           "rseti__no_s_contact": "9560377008",
@@ -2330,7 +2323,14 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "784",
-          "minority_disbursement__total_amt": "1759.68"
+          "minority_disbursement__total_amt": "1759.68",
+          "acp_disbursement_agri__crop_loan_amt": "126",
+          "acp_disbursement_agri__forestry_and_wasteland_dev_amt": "0",
+          "acp_disbursement_agri__plantation_horticulture_amt": "0",
+          "acp_disbursement_other_ps__loans_to_weaker_amt": "152.48",
+          "pmmy_mudra_disbursement__kishore_amt": "99",
+          "pmmy_mudra_disbursement__sishu_amt": "31",
+          "pmmy_mudra_disbursement__tarun_amt": "29"
         },
         {
           "district": "West Khasi Hills",
@@ -2340,9 +2340,6 @@
           "aadhaar_authentication__no_of_aadhaar_seeded_casa": "5448",
           "aadhaar_authentication__no_of_authenticated_casa": "2303",
           "acp_disbursement_agri__district": "West Khasi Hills",
-          "acp_disbursement_agri__crop_loan": "225",
-          "acp_disbursement_agri__forestry_and_wasteland_dev": "0",
-          "acp_disbursement_agri__plantation_horticulture": "0",
           "acp_disbursement_msme__district": "West Khasi Hills",
           "acp_disbursement_msme__total_amt": "340.29",
           "acp_disbursement_msme__total_no": "193",
@@ -2366,7 +2363,6 @@
           "acp_disbursement_msme__micro_tl_a_c": "103",
           "acp_disbursement_other_ps__district": "West Khasi Hills",
           "acp_disbursement_other_ps__total_ps_others": "224.43",
-          "acp_disbursement_other_ps__loans_to_weaker": "7.83",
           "acp_disbursement_other_ps__renewable_energy": "0",
           "acp_disbursement_other_ps__social_infrastructure": "0.02",
           "acp_disbursement_other_ps__housing_ps": "213.1",
@@ -2448,9 +2444,6 @@
           "pmjdy__rupay_card_activated": "4967",
           "pmjdy__no_of_aadhaar_seeded": "1115",
           "pmmy_mudra_disbursement__district": "West Khasi Hills",
-          "pmmy_mudra_disbursement__sishu": "6",
-          "pmmy_mudra_disbursement__kishore": "36",
-          "pmmy_mudra_disbursement__tarun": "10",
           "rseti__district": "West Khasi Hills",
           "rseti__email": "k.leivang@sbi.co.in",
           "rseti__no_s_contact": "6001489198",
@@ -2571,7 +2564,14 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "295",
-          "minority_disbursement__total_amt": "434.35"
+          "minority_disbursement__total_amt": "434.35",
+          "acp_disbursement_agri__crop_loan_amt": "225",
+          "acp_disbursement_agri__forestry_and_wasteland_dev_amt": "0",
+          "acp_disbursement_agri__plantation_horticulture_amt": "0",
+          "acp_disbursement_other_ps__loans_to_weaker_amt": "7.83",
+          "pmmy_mudra_disbursement__kishore_amt": "36",
+          "pmmy_mudra_disbursement__sishu_amt": "6",
+          "pmmy_mudra_disbursement__tarun_amt": "10"
         }
       ]
     },
@@ -2740,7 +2740,6 @@
           "kcc__kcc_no": "422",
           "kcc__disbursed_amt": "269.11",
           "kcc__total_kcc_no": "4692",
-          "kcc__outstanding_amount": "2065.54",
           "kcc__rupay_card_no": "1811",
           "kcc__card_activated": "1324",
           "kcc__ah_kcc_no": "0",
@@ -2917,7 +2916,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "61",
-          "minority_disbursement__total_amt": "44.57"
+          "minority_disbursement__total_amt": "44.57",
+          "kcc__outstanding_amt": "2065.54"
         },
         {
           "district": "East Jaintia Hills",
@@ -3081,7 +3081,6 @@
           "kcc__kcc_no": "35",
           "kcc__disbursed_amt": "11.08",
           "kcc__total_kcc_no": "231",
-          "kcc__outstanding_amount": "121.42",
           "kcc__rupay_card_no": "78",
           "kcc__card_activated": "66",
           "kcc__ah_kcc_no": "4",
@@ -3257,7 +3256,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "388",
-          "minority_disbursement__total_amt": "472.50"
+          "minority_disbursement__total_amt": "472.50",
+          "kcc__outstanding_amt": "121.42"
         },
         {
           "district": "East Khasi Hills",
@@ -3418,7 +3418,6 @@
           "kcc__kcc_no": "2348",
           "kcc__disbursed_amt": "1477.36",
           "kcc__total_kcc_no": "23531",
-          "kcc__outstanding_amount": "13051.3",
           "kcc__rupay_card_no": "9194",
           "kcc__card_activated": "7105",
           "kcc__ah_kcc_no": "78",
@@ -3595,7 +3594,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "6979",
-          "minority_disbursement__total_amt": "9108.64"
+          "minority_disbursement__total_amt": "9108.64",
+          "kcc__outstanding_amt": "13051.3"
         },
         {
           "district": "North Garo Hills",
@@ -3756,7 +3756,6 @@
           "kcc__kcc_no": "184",
           "kcc__disbursed_amt": "132.19",
           "kcc__total_kcc_no": "7377",
-          "kcc__outstanding_amount": "2657.3",
           "kcc__rupay_card_no": "2598",
           "kcc__card_activated": "1736",
           "kcc__ah_kcc_no": "0",
@@ -3932,7 +3931,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "38",
-          "minority_disbursement__total_amt": "36.55"
+          "minority_disbursement__total_amt": "36.55",
+          "kcc__outstanding_amt": "2657.3"
         },
         {
           "district": "Ri Bhoi",
@@ -4391,7 +4391,6 @@
           "kcc__kcc_no": "23",
           "kcc__disbursed_amt": "14.48",
           "kcc__total_kcc_no": "1280",
-          "kcc__outstanding_amount": "324.28",
           "kcc__rupay_card_no": "147",
           "kcc__card_activated": "81",
           "kcc__ah_kcc_no": "1",
@@ -4568,7 +4567,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "113",
-          "minority_disbursement__total_amt": "50.58"
+          "minority_disbursement__total_amt": "50.58",
+          "kcc__outstanding_amt": "324.28"
         },
         {
           "district": "South West Garo Hills",
@@ -4729,7 +4729,6 @@
           "kcc__kcc_no": "544",
           "kcc__disbursed_amt": "296.69",
           "kcc__total_kcc_no": "5560",
-          "kcc__outstanding_amount": "2407.18",
           "kcc__rupay_card_no": "1688",
           "kcc__card_activated": "1008",
           "kcc__ah_kcc_no": "0",
@@ -4905,7 +4904,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "591",
-          "minority_disbursement__total_amt": "542.67"
+          "minority_disbursement__total_amt": "542.67",
+          "kcc__outstanding_amt": "2407.18"
         },
         {
           "district": "South West Khasi Hills",
@@ -5066,7 +5066,6 @@
           "kcc__kcc_no": "121",
           "kcc__disbursed_amt": "93.08",
           "kcc__total_kcc_no": "1935",
-          "kcc__outstanding_amount": "974.87",
           "kcc__rupay_card_no": "187",
           "kcc__card_activated": "145",
           "kcc__ah_kcc_no": "0",
@@ -5242,7 +5241,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "303",
-          "minority_disbursement__total_amt": "262.25"
+          "minority_disbursement__total_amt": "262.25",
+          "kcc__outstanding_amt": "974.87"
         },
         {
           "district": "West Garo Hills",
@@ -5406,7 +5406,6 @@
           "kcc__kcc_no": "715",
           "kcc__disbursed_amt": "388.44",
           "kcc__total_kcc_no": "8994",
-          "kcc__outstanding_amount": "4156.03",
           "kcc__rupay_card_no": "2043",
           "kcc__card_activated": "1561",
           "kcc__ah_kcc_no": "5",
@@ -5583,7 +5582,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "3589",
-          "minority_disbursement__total_amt": "2132.57"
+          "minority_disbursement__total_amt": "2132.57",
+          "kcc__outstanding_amt": "4156.03"
         },
         {
           "district": "West Jaintia Hills",
@@ -5747,7 +5747,6 @@
           "kcc__kcc_no": "501",
           "kcc__disbursed_amt": "335.71",
           "kcc__total_kcc_no": "5510",
-          "kcc__outstanding_amount": "2851.48",
           "kcc__rupay_card_no": "1800",
           "kcc__card_activated": "1459",
           "kcc__ah_kcc_no": "19",
@@ -5924,7 +5923,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "2417",
-          "minority_disbursement__total_amt": "5558.75"
+          "minority_disbursement__total_amt": "5558.75",
+          "kcc__outstanding_amt": "2851.48"
         },
         {
           "district": "West Khasi Hills",
@@ -6088,7 +6088,6 @@
           "kcc__kcc_no": "568",
           "kcc__disbursed_amt": "275.44",
           "kcc__total_kcc_no": "12524",
-          "kcc__outstanding_amount": "6861.4",
           "kcc__rupay_card_no": "7015",
           "kcc__card_activated": "5868",
           "kcc__ah_kcc_no": "51",
@@ -6265,7 +6264,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "1623",
-          "minority_disbursement__total_amt": "1425.20"
+          "minority_disbursement__total_amt": "1425.20",
+          "kcc__outstanding_amt": "6861.4"
         }
       ]
     },
@@ -6436,7 +6436,6 @@
           "kcc__kcc_no": "592",
           "kcc__disbursed_amt": "401.81",
           "kcc__total_kcc_no": "4235",
-          "kcc__outstanding_amount": "2001.15",
           "kcc__rupay_card_no": "1001",
           "kcc__card_activated": "736",
           "kcc__ah_kcc_no": "0",
@@ -6628,7 +6627,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "80",
-          "minority_disbursement__total_amt": "81.11"
+          "minority_disbursement__total_amt": "81.11",
+          "kcc__outstanding_amt": "2001.15"
         },
         {
           "district": "East Jaintia Hills",
@@ -6794,7 +6794,6 @@
           "kcc__kcc_no": "58",
           "kcc__disbursed_amt": "32.66",
           "kcc__total_kcc_no": "799",
-          "kcc__outstanding_amount": "513.00",
           "kcc__rupay_card_no": "80",
           "kcc__card_activated": "69",
           "kcc__ah_kcc_no": "0",
@@ -6985,7 +6984,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "664",
-          "minority_disbursement__total_amt": "1053.62"
+          "minority_disbursement__total_amt": "1053.62",
+          "kcc__outstanding_amt": "513.00"
         },
         {
           "district": "East Khasi Hills",
@@ -7148,7 +7148,6 @@
           "kcc__kcc_no": "2817",
           "kcc__disbursed_amt": "1746.03",
           "kcc__total_kcc_no": "21398",
-          "kcc__outstanding_amount": "11752.64",
           "kcc__rupay_card_no": "7539",
           "kcc__card_activated": "5323",
           "kcc__ah_kcc_no": "23",
@@ -7340,7 +7339,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "14355",
-          "minority_disbursement__total_amt": "18268.77"
+          "minority_disbursement__total_amt": "18268.77",
+          "kcc__outstanding_amt": "11752.64"
         },
         {
           "district": "North Garo Hills",
@@ -7503,7 +7503,6 @@
           "kcc__kcc_no": "201",
           "kcc__disbursed_amt": "169.08",
           "kcc__total_kcc_no": "6639",
-          "kcc__outstanding_amount": "2523.85",
           "kcc__rupay_card_no": "1598",
           "kcc__card_activated": "1071",
           "kcc__ah_kcc_no": "0",
@@ -7694,7 +7693,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "81",
-          "minority_disbursement__total_amt": "107.71"
+          "minority_disbursement__total_amt": "107.71",
+          "kcc__outstanding_amt": "2523.85"
         },
         {
           "district": "Ri Bhoi",
@@ -7848,7 +7848,6 @@
           "kcc__kcc_no": "3577",
           "kcc__disbursed_amt": "2264.95",
           "kcc__total_kcc_no": "22271",
-          "kcc__outstanding_amount": "12872.88",
           "kcc__rupay_card_no": "9493",
           "kcc__card_activated": "7513",
           "kcc__ah_kcc_no": "3",
@@ -8024,7 +8023,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "4735",
-          "minority_disbursement__total_amt": "4928.39"
+          "minority_disbursement__total_amt": "4928.39",
+          "kcc__outstanding_amt": "12872.88"
         },
         {
           "district": "South Garo Hills",
@@ -8190,7 +8190,6 @@
           "kcc__kcc_no": "71",
           "kcc__disbursed_amt": "31.04",
           "kcc__total_kcc_no": "1215",
-          "kcc__outstanding_amount": "431.29",
           "kcc__rupay_card_no": "120",
           "kcc__card_activated": "73",
           "kcc__ah_kcc_no": "0",
@@ -8382,7 +8381,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "145",
-          "minority_disbursement__total_amt": "93.89"
+          "minority_disbursement__total_amt": "93.89",
+          "kcc__outstanding_amt": "431.29"
         },
         {
           "district": "South West Garo Hills",
@@ -8545,7 +8545,6 @@
           "kcc__kcc_no": "940",
           "kcc__disbursed_amt": "545.88",
           "kcc__total_kcc_no": "5058",
-          "kcc__outstanding_amount": "2427.16",
           "kcc__rupay_card_no": "1055",
           "kcc__card_activated": "637",
           "kcc__ah_kcc_no": "0",
@@ -8736,7 +8735,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "733",
-          "minority_disbursement__total_amt": "849.47"
+          "minority_disbursement__total_amt": "849.47",
+          "kcc__outstanding_amt": "2427.16"
         },
         {
           "district": "South West Khasi Hills",
@@ -8899,7 +8899,6 @@
           "kcc__kcc_no": "126",
           "kcc__disbursed_amt": "86.13",
           "kcc__total_kcc_no": "2351",
-          "kcc__outstanding_amount": "1283.94",
           "kcc__rupay_card_no": "198",
           "kcc__card_activated": "160",
           "kcc__ah_kcc_no": "0",
@@ -9090,7 +9089,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "445",
-          "minority_disbursement__total_amt": "481.91"
+          "minority_disbursement__total_amt": "481.91",
+          "kcc__outstanding_amt": "1283.94"
         },
         {
           "district": "West Garo Hills",
@@ -9256,7 +9256,6 @@
           "kcc__kcc_no": "1303",
           "kcc__disbursed_amt": "657.59",
           "kcc__total_kcc_no": "7778",
-          "kcc__outstanding_amount": "3925.09",
           "kcc__rupay_card_no": "1261",
           "kcc__card_activated": "939",
           "kcc__ah_kcc_no": "0",
@@ -9448,7 +9447,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "3920",
-          "minority_disbursement__total_amt": "3603.74"
+          "minority_disbursement__total_amt": "3603.74",
+          "kcc__outstanding_amt": "3925.09"
         },
         {
           "district": "West Jaintia Hills",
@@ -9614,7 +9614,6 @@
           "kcc__kcc_no": "674",
           "kcc__disbursed_amt": "410.4",
           "kcc__total_kcc_no": "8284",
-          "kcc__outstanding_amount": "4379.53",
           "kcc__rupay_card_no": "871",
           "kcc__card_activated": "678",
           "kcc__ah_kcc_no": "5",
@@ -9806,7 +9805,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "2329",
-          "minority_disbursement__total_amt": "3073.41"
+          "minority_disbursement__total_amt": "3073.41",
+          "kcc__outstanding_amt": "4379.53"
         },
         {
           "district": "West Khasi Hills",
@@ -9972,7 +9972,6 @@
           "kcc__kcc_no": "596",
           "kcc__disbursed_amt": "337.05",
           "kcc__total_kcc_no": "9802",
-          "kcc__outstanding_amount": "5808.67",
           "kcc__rupay_card_no": "4695",
           "kcc__card_activated": "3566",
           "kcc__ah_kcc_no": "1",
@@ -10164,7 +10163,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "2512",
-          "minority_disbursement__total_amt": "2569.12"
+          "minority_disbursement__total_amt": "2569.12",
+          "kcc__outstanding_amt": "5808.67"
         }
       ]
     },
@@ -17246,7 +17246,6 @@
           "kcc__total_fishery_kcc_no": "38",
           "kcc__kcc_fishery_disbursed_amt": "3.47",
           "kcc__kcc_fishery_issued_no_incl_renewal": "18",
-          "kcc__ah_outstanding_amount": "9.3",
           "kcc__total_ah_kcc_no": "15",
           "kcc__kcc_card_activated": "6185",
           "kcc__rupay_card_issued_no": "9209",
@@ -17521,7 +17520,8 @@
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__jains_amt": "0.00",
           "minority_disbursement__total_no": "6887",
-          "minority_disbursement__total_amt": "10973.86"
+          "minority_disbursement__total_amt": "10973.86",
+          "kcc__ah_outstanding_amt": "9.3"
         },
         {
           "district": "South Garo Hills",
@@ -21922,7 +21922,6 @@
           "kcc__total_fishery_kcc_no": "37",
           "kcc__kcc_fishery_disbursed_amt": "1.16",
           "kcc__kcc_fishery_issued_no_incl_renewal": "6",
-          "kcc__ah_outstanding_amount": "12.08",
           "kcc__total_ah_kcc_no": "17",
           "kcc__kcc_animal_husbandry_disbursed_amt": "4.82",
           "kcc__kcc_animal_husbandry_issued_no_incl_renewal": "6",
@@ -22194,7 +22193,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "2074",
-          "minority_disbursement__total_amt": "3703.34"
+          "minority_disbursement__total_amt": "3703.34",
+          "kcc__ah_outstanding_amt": "12.08"
         },
         {
           "district": "South Garo Hills",
@@ -26613,7 +26613,6 @@
           "kcc__total_fishery_kcc_no": "39",
           "kcc__kcc_fishery_disbursed_amt": "3.96",
           "kcc__kcc_fishery_issued_no_incl_renewal": "9",
-          "kcc__ah_outstanding_amount": "27.27",
           "kcc__total_ah_kcc_no": "29",
           "kcc__kcc_animal_husbandry_disbursed_amt": "15.23",
           "kcc__kcc_animal_husbandry_issued_no_incl_renewal": "17",
@@ -26910,7 +26909,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "2789",
-          "minority_disbursement__total_amt": "6481.70"
+          "minority_disbursement__total_amt": "6481.70",
+          "kcc__ah_outstanding_amt": "27.27"
         },
         {
           "district": "South Garo Hills",
@@ -31280,7 +31280,6 @@
           "kcc__total_fishery_kcc_no": "46",
           "kcc__kcc_fishery_disbursed_amt": "7.95",
           "kcc__kcc_fishery_issued_no_incl_renewal": "21",
-          "kcc__ah_outstanding_amount": "18.77",
           "kcc__total_ah_kcc_no": "23",
           "kcc__kcc_animal_husbandry_disbursed_amt": "12.16",
           "kcc__kcc_animal_husbandry_issued_no_incl_renewal": "16",
@@ -31573,7 +31572,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "4028",
-          "minority_disbursement__total_amt": "9522.92"
+          "minority_disbursement__total_amt": "9522.92",
+          "kcc__ah_outstanding_amt": "18.77"
         },
         {
           "district": "South Garo Hills",
@@ -35960,7 +35960,6 @@
           "kcc__kcc_fishery_issued_no_incl_renewal": "22",
           "kcc__ah_card_activated": "1",
           "kcc__ah_rupay_card_issued_no": "2",
-          "kcc__ah_outstanding_amount": "21.01",
           "kcc__total_ah_kcc_no": "27",
           "kcc__kcc_animal_husbandry_disbursed_amt": "15.13",
           "kcc__kcc_animal_husbandry_issued_no_incl_renewal": "19",
@@ -36257,7 +36256,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "5917",
-          "minority_disbursement__total_amt": "12173.63"
+          "minority_disbursement__total_amt": "12173.63",
+          "kcc__ah_outstanding_amt": "21.01"
         },
         {
           "district": "South Garo Hills",
@@ -42126,7 +42126,6 @@
           "kcc__kcc_fishery_issued_no_incl_renewal": "6",
           "kcc__ah_card_activated": "15",
           "kcc__ah_rupay_card_issued_no": "15",
-          "kcc__ah_outstanding_amount": "46.13",
           "kcc__total_ah_kcc_no": "53",
           "kcc__kcc_animal_husbandry_disbursed_amt": "17.1",
           "kcc__kcc_animal_husbandry_issued_no_incl_renewal": "22",
@@ -42435,7 +42434,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "1981",
-          "minority_disbursement__total_amt": "6134.37"
+          "minority_disbursement__total_amt": "6134.37",
+          "kcc__ah_outstanding_amt": "46.13"
         },
         {
           "district": "South Garo Hills",
@@ -46842,7 +46842,6 @@
           "kcc__kcc_fishery_issued_no_incl_renewal": "11",
           "kcc__ah_card_activated": "5",
           "kcc__ah_rupay_card_issued_no": "5",
-          "kcc__ah_outstanding_amount": "40.77",
           "kcc__total_ah_kcc_no": "53",
           "kcc__kcc_animal_husbandry_disbursed_amt": "25.38",
           "kcc__kcc_animal_husbandry_issued_no_incl_renewal": "31",
@@ -47144,7 +47143,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "3482",
-          "minority_disbursement__total_amt": "9711.36"
+          "minority_disbursement__total_amt": "9711.36",
+          "kcc__ah_outstanding_amt": "40.77"
         },
         {
           "district": "South Garo Hills",
@@ -53005,7 +53005,6 @@
           "kcc__kcc_fishery_issued_no_incl_renewal": "4",
           "kcc__ah_card_activated": "5",
           "kcc__ah_rupay_card_issued_no": "5",
-          "kcc__ah_outstanding_amount": "77.66",
           "kcc__total_ah_kcc_no": "92",
           "kcc__kcc_animal_husbandry_disbursed_amt": "24.56",
           "kcc__kcc_animal_husbandry_issued_no_incl_renewal": "27",
@@ -53298,7 +53297,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "1665",
-          "minority_disbursement__total_amt": "7529.25"
+          "minority_disbursement__total_amt": "7529.25",
+          "kcc__ah_outstanding_amt": "77.66"
         },
         {
           "district": "South Garo Hills",
@@ -57725,7 +57725,6 @@
           "kcc__kcc_fishery_issued_no_incl_renewal": "1",
           "kcc__ah_card_activated": "5",
           "kcc__ah_rupay_card_issued_no": "5",
-          "kcc__ah_outstanding_amount": "79.03",
           "kcc__total_ah_kcc_no": "104",
           "kcc__kcc_animal_husbandry_disbursed_amt": "20.29",
           "kcc__kcc_animal_husbandry_issued_no_incl_renewal": "22",
@@ -58018,7 +58017,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "3399",
-          "minority_disbursement__total_amt": "12374.15"
+          "minority_disbursement__total_amt": "12374.15",
+          "kcc__ah_outstanding_amt": "79.03"
         },
         {
           "district": "South Garo Hills",
@@ -62473,7 +62473,6 @@
           "kcc__kcc_fishery_issued_no_incl_renewal": "1",
           "kcc__ah_card_activated": "4",
           "kcc__ah_rupay_card_issued_no": "6",
-          "kcc__ah_outstanding_amount": "88.16",
           "kcc__total_ah_kcc_no": "104",
           "kcc__kcc_animal_husbandry_disbursed_amt": "14.44",
           "kcc__kcc_animal_husbandry_new_issued_no": "20",
@@ -62782,7 +62781,8 @@
           "minority_disbursement__zorastrians_no": "0",
           "minority_disbursement__zorastrians_amt": "0.00",
           "minority_disbursement__total_no": "5338",
-          "minority_disbursement__total_amt": "18579.81"
+          "minority_disbursement__total_amt": "18579.81",
+          "kcc__ah_outstanding_amt": "88.16"
         },
         {
           "district": "South Garo Hills",

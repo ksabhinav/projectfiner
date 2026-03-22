@@ -5127,14 +5127,10 @@
           "aabcs__loan": "1908.83",
           "tahdco__district": "Chennai",
           "tahdco__applications_forwarded_to_bank": "460",
-          "tahdco__appli_forwaerd_amount": "62923081",
           "tahdco__rejected_by_bank": "220",
           "tahdco__sanction_received": "240",
-          "tahdco__sanction_amount": "32955986",
           "tahdco__disbursed": "0",
-          "tahdco__disbursed_subsidy_amount": "0",
           "tahdco__uc_pending": "0",
-          "tahdco__uc_pending_amount": "0",
           "pmfme__s_no": "1",
           "pmfme__districts": "Chennai",
           "pmfme__target": "373",
@@ -5144,7 +5140,11 @@
           "pmfme__sanctioned": "811",
           "pmfme__disbursed": "770",
           "pmfme__total_subsidy_cr": "7.83",
-          "pmfme__achievement": "217%"
+          "pmfme__achievement": "217%",
+          "tahdco__appli_forwaerd_amt": "62923081",
+          "tahdco__disbursed_subsidy_amt": "0",
+          "tahdco__sanction_amt": "32955986",
+          "tahdco__uc_pending_amt": "0"
         },
         {
           "district": "Coimbatore",
@@ -5217,14 +5217,10 @@
           "aabcs__loan": "1358.74",
           "tahdco__district": "Coimbatore",
           "tahdco__applications_forwarded_to_bank": "240",
-          "tahdco__appli_forwaerd_amount": "37555967",
           "tahdco__rejected_by_bank": "60",
           "tahdco__sanction_received": "143",
-          "tahdco__sanction_amount": "21254257",
           "tahdco__disbursed": "367",
-          "tahdco__disbursed_subsidy_amount": "82040400",
           "tahdco__uc_pending": "367",
-          "tahdco__uc_pending_amount": "82040400",
           "pmfme__s_no": "23",
           "pmfme__districts": "Coimbatore",
           "pmfme__target": "224",
@@ -5254,7 +5250,11 @@
           "rseti__total_settled": "731",
           "rseti__self_emplyd": "706",
           "rseti__wage_emplyd": "25",
-          "rseti__bank_finance": "534"
+          "rseti__bank_finance": "534",
+          "tahdco__appli_forwaerd_amt": "37555967",
+          "tahdco__disbursed_subsidy_amt": "82040400",
+          "tahdco__sanction_amt": "21254257",
+          "tahdco__uc_pending_amt": "82040400"
         },
         {
           "district": "Tiruppur",
@@ -5292,14 +5292,10 @@
           "kcc_animal_husbandry__amount_disbursed": "189.88",
           "tahdco__district": "Tiruppur",
           "tahdco__applications_forwarded_to_bank": "531",
-          "tahdco__appli_forwaerd_amount": "48984026",
           "tahdco__rejected_by_bank": "72",
           "tahdco__sanction_received": "321",
-          "tahdco__sanction_amount": "26946329",
           "tahdco__disbursed": "1890",
-          "tahdco__disbursed_subsidy_amount": "195488671",
           "tahdco__uc_pending": "1890",
-          "tahdco__uc_pending_amount": "195488671",
           "pmfme__s_no": "15",
           "pmfme__districts": "Tiruppur",
           "pmfme__target": "243",
@@ -5329,7 +5325,11 @@
           "rseti__total_settled": "1257",
           "rseti__self_emplyd": "1144",
           "rseti__wage_emplyd": "113",
-          "rseti__bank_finance": "906"
+          "rseti__bank_finance": "906",
+          "tahdco__appli_forwaerd_amt": "48984026",
+          "tahdco__disbursed_subsidy_amt": "195488671",
+          "tahdco__sanction_amt": "26946329",
+          "tahdco__uc_pending_amt": "195488671"
         },
         {
           "district": "Madurai",
@@ -5402,14 +5402,10 @@
           "aabcs__loan": "105.80",
           "tahdco__district": "Madurai",
           "tahdco__applications_forwarded_to_bank": "1060",
-          "tahdco__appli_forwaerd_amount": "106648261",
           "tahdco__rejected_by_bank": "321",
           "tahdco__sanction_received": "644",
-          "tahdco__sanction_amount": "67730321",
           "tahdco__disbursed": "133",
-          "tahdco__disbursed_subsidy_amount": "19222775",
           "tahdco__uc_pending": "133",
-          "tahdco__uc_pending_amount": "19222775",
           "pmfme__s_no": "3",
           "pmfme__districts": "Madurai",
           "pmfme__target": "243",
@@ -5439,7 +5435,11 @@
           "rseti__total_settled": "730",
           "rseti__self_emplyd": "682",
           "rseti__wage_emplyd": "48",
-          "rseti__bank_finance": "530"
+          "rseti__bank_finance": "530",
+          "tahdco__appli_forwaerd_amt": "106648261",
+          "tahdco__disbursed_subsidy_amt": "19222775",
+          "tahdco__sanction_amt": "67730321",
+          "tahdco__uc_pending_amt": "19222775"
         },
         {
           "district": "Salem",
@@ -5512,14 +5512,10 @@
           "aabcs__loan": "1047.32",
           "tahdco__district": "Salem",
           "tahdco__applications_forwarded_to_bank": "882",
-          "tahdco__appli_forwaerd_amount": "142258792",
           "tahdco__rejected_by_bank": "113",
           "tahdco__sanction_received": "323",
-          "tahdco__sanction_amount": "54807212",
           "tahdco__disbursed": "0",
-          "tahdco__disbursed_subsidy_amount": "0",
           "tahdco__uc_pending": "0",
-          "tahdco__uc_pending_amount": "0",
           "pmfme__s_no": "8",
           "pmfme__districts": "Salem",
           "pmfme__target": "373",
@@ -5549,7 +5545,11 @@
           "rseti__total_settled": "728",
           "rseti__self_emplyd": "689",
           "rseti__wage_emplyd": "39",
-          "rseti__bank_finance": "383"
+          "rseti__bank_finance": "383",
+          "tahdco__appli_forwaerd_amt": "142258792",
+          "tahdco__disbursed_subsidy_amt": "0",
+          "tahdco__sanction_amt": "54807212",
+          "tahdco__uc_pending_amt": "0"
         },
         {
           "district": "Ranipet",
@@ -5617,14 +5617,10 @@
           "aabcs__loan": "469.11",
           "tahdco__district": "Ranipet",
           "tahdco__applications_forwarded_to_bank": "331",
-          "tahdco__appli_forwaerd_amount": "57682517",
           "tahdco__rejected_by_bank": "105",
           "tahdco__sanction_received": "149",
-          "tahdco__sanction_amount": "26678274",
           "tahdco__disbursed": "0",
-          "tahdco__disbursed_subsidy_amount": "0",
           "tahdco__uc_pending": "0",
-          "tahdco__uc_pending_amount": "0",
           "pmfme__s_no": "33",
           "pmfme__districts": "Ranipet",
           "pmfme__target": "131",
@@ -5654,7 +5650,11 @@
           "rseti__total_settled": "708",
           "rseti__self_emplyd": "702",
           "rseti__wage_emplyd": "6",
-          "rseti__bank_finance": "432"
+          "rseti__bank_finance": "432",
+          "tahdco__appli_forwaerd_amt": "57682517",
+          "tahdco__disbursed_subsidy_amt": "0",
+          "tahdco__sanction_amt": "26678274",
+          "tahdco__uc_pending_amt": "0"
         },
         {
           "district": "Perambalur",
@@ -5722,14 +5722,10 @@
           "aabcs__loan": "289.58",
           "tahdco__district": "Perambalur",
           "tahdco__applications_forwarded_to_bank": "676",
-          "tahdco__appli_forwaerd_amount": "99261876",
           "tahdco__rejected_by_bank": "249",
           "tahdco__sanction_received": "427",
-          "tahdco__sanction_amount": "64936184",
           "tahdco__disbursed": "3",
-          "tahdco__disbursed_subsidy_amount": "325800",
           "tahdco__uc_pending": "3",
-          "tahdco__uc_pending_amount": "325800",
           "pmfme__s_no": "38",
           "pmfme__districts": "Perambalur",
           "pmfme__target": "75",
@@ -5757,7 +5753,11 @@
           "rseti__total_settled": "672",
           "rseti__self_emplyd": "648",
           "rseti__wage_emplyd": "24",
-          "rseti__bank_finance": "385"
+          "rseti__bank_finance": "385",
+          "tahdco__appli_forwaerd_amt": "99261876",
+          "tahdco__disbursed_subsidy_amt": "325800",
+          "tahdco__sanction_amt": "64936184",
+          "tahdco__uc_pending_amt": "325800"
         },
         {
           "district": "Ariyalur",
@@ -5825,14 +5825,10 @@
           "aabcs__loan": "267.24",
           "tahdco__district": "Ariyalur",
           "tahdco__applications_forwarded_to_bank": "415",
-          "tahdco__appli_forwaerd_amount": "42263929",
           "tahdco__rejected_by_bank": "171",
           "tahdco__sanction_received": "167",
-          "tahdco__sanction_amount": "19006888",
           "tahdco__disbursed": "1",
-          "tahdco__disbursed_subsidy_amount": "24000",
           "tahdco__uc_pending": "1",
-          "tahdco__uc_pending_amount": "24000",
           "pmfme__s_no": "37",
           "pmfme__districts": "Ariyalur",
           "pmfme__target": "112",
@@ -5860,7 +5856,11 @@
           "rseti__total_settled": "857",
           "rseti__self_emplyd": "851",
           "rseti__wage_emplyd": "6",
-          "rseti__bank_finance": "607"
+          "rseti__bank_finance": "607",
+          "tahdco__appli_forwaerd_amt": "42263929",
+          "tahdco__disbursed_subsidy_amt": "24000",
+          "tahdco__sanction_amt": "19006888",
+          "tahdco__uc_pending_amt": "24000"
         },
         {
           "district": "Villupuram",
@@ -5921,14 +5921,10 @@
           "aabcs__loan": "1239.25",
           "tahdco__district": "Villupuram",
           "tahdco__applications_forwarded_to_bank": "726",
-          "tahdco__appli_forwaerd_amount": "107372854",
           "tahdco__rejected_by_bank": "282",
           "tahdco__sanction_received": "224",
-          "tahdco__sanction_amount": "32037343",
           "tahdco__disbursed": "0",
-          "tahdco__disbursed_subsidy_amount": "0",
           "tahdco__uc_pending": "0",
-          "tahdco__uc_pending_amount": "0",
           "pmfme__s_no": "9",
           "pmfme__districts": "Villupuram",
           "pmfme__target": "243",
@@ -5958,7 +5954,11 @@
           "rseti__total_settled": "842",
           "rseti__self_emplyd": "797",
           "rseti__wage_emplyd": "45",
-          "rseti__bank_finance": "548"
+          "rseti__bank_finance": "548",
+          "tahdco__appli_forwaerd_amt": "107372854",
+          "tahdco__disbursed_subsidy_amt": "0",
+          "tahdco__sanction_amt": "32037343",
+          "tahdco__uc_pending_amt": "0"
         },
         {
           "district": "Karur",
@@ -6031,14 +6031,10 @@
           "aabcs__loan": "272.81",
           "tahdco__district": "Karur",
           "tahdco__applications_forwarded_to_bank": "558",
-          "tahdco__appli_forwaerd_amount": "57316768",
           "tahdco__rejected_by_bank": "259",
           "tahdco__sanction_received": "299",
-          "tahdco__sanction_amount": "27170481",
           "tahdco__disbursed": "1309",
-          "tahdco__disbursed_subsidy_amount": "143289113",
           "tahdco__uc_pending": "1309",
-          "tahdco__uc_pending_amount": "143289113",
           "pmfme__15": "16",
           "pmfme__tamil_nadu_grama_bank": "KARUR VYSYA BANK",
           "pmfme__525": "192",
@@ -6067,7 +6063,11 @@
           "rseti__total_settled": "768",
           "rseti__self_emplyd": "674",
           "rseti__wage_emplyd": "94",
-          "rseti__bank_finance": "474"
+          "rseti__bank_finance": "474",
+          "tahdco__appli_forwaerd_amt": "57316768",
+          "tahdco__disbursed_subsidy_amt": "143289113",
+          "tahdco__sanction_amt": "27170481",
+          "tahdco__uc_pending_amt": "143289113"
         },
         {
           "district": "Thiruvallur",
@@ -6205,14 +6205,10 @@
           "kcc_animal_husbandry__amount_disbursed": "470.7",
           "tahdco__district": "Tiruchirappalli",
           "tahdco__applications_forwarded_to_bank": "528",
-          "tahdco__appli_forwaerd_amount": "99644750",
           "tahdco__rejected_by_bank": "202",
           "tahdco__sanction_received": "326",
-          "tahdco__sanction_amount": "63090316",
           "tahdco__disbursed": "141",
-          "tahdco__disbursed_subsidy_amount": "31287180",
           "tahdco__uc_pending": "141",
-          "tahdco__uc_pending_amount": "31287180",
           "pmfme__s_no": "29",
           "pmfme__districts": "Tiruchirappalli",
           "pmfme__target": "261",
@@ -6240,7 +6236,11 @@
           "rseti__total_settled": "799",
           "rseti__self_emplyd": "788",
           "rseti__wage_emplyd": "11",
-          "rseti__bank_finance": "493"
+          "rseti__bank_finance": "493",
+          "tahdco__appli_forwaerd_amt": "99644750",
+          "tahdco__disbursed_subsidy_amt": "31287180",
+          "tahdco__sanction_amt": "63090316",
+          "tahdco__uc_pending_amt": "31287180"
         },
         {
           "district": "Tiruvannamalai",
@@ -6308,14 +6308,10 @@
           "aabcs__loan": "3310.98",
           "tahdco__district": "Tiruvannamalai",
           "tahdco__applications_forwarded_to_bank": "2496",
-          "tahdco__appli_forwaerd_amount": "244787200",
           "tahdco__rejected_by_bank": "774",
           "tahdco__sanction_received": "1388",
-          "tahdco__sanction_amount": "133977534",
           "tahdco__disbursed": "1126",
-          "tahdco__disbursed_subsidy_amount": "250014057",
           "tahdco__uc_pending": "1126",
-          "tahdco__uc_pending_amount": "250014057",
           "pmfme__s_no": "19",
           "pmfme__districts": "Tiruvannamalai",
           "pmfme__target": "336",
@@ -6343,7 +6339,11 @@
           "rseti__total_settled": "526",
           "rseti__self_emplyd": "526",
           "rseti__wage_emplyd": "0",
-          "rseti__bank_finance": "266"
+          "rseti__bank_finance": "266",
+          "tahdco__appli_forwaerd_amt": "244787200",
+          "tahdco__disbursed_subsidy_amt": "250014057",
+          "tahdco__sanction_amt": "133977534",
+          "tahdco__uc_pending_amt": "250014057"
         },
         {
           "district": "Kanniyakumari",
@@ -6411,14 +6411,10 @@
           "aabcs__loan": "216.45",
           "tahdco__district": "Kanniyakumari",
           "tahdco__applications_forwarded_to_bank": "152",
-          "tahdco__appli_forwaerd_amount": "15469398",
           "tahdco__rejected_by_bank": "68",
           "tahdco__sanction_received": "72",
-          "tahdco__sanction_amount": "7807861",
           "tahdco__disbursed": "0",
-          "tahdco__disbursed_subsidy_amount": "0",
           "tahdco__uc_pending": "0",
-          "tahdco__uc_pending_amount": "0",
           "pmfme__s_no": "6",
           "pmfme__districts": "Kanniyakumari",
           "pmfme__target": "168",
@@ -6446,7 +6442,11 @@
           "rseti__total_settled": "620",
           "rseti__self_emplyd": "620",
           "rseti__wage_emplyd": "0",
-          "rseti__bank_finance": "487"
+          "rseti__bank_finance": "487",
+          "tahdco__appli_forwaerd_amt": "15469398",
+          "tahdco__disbursed_subsidy_amt": "0",
+          "tahdco__sanction_amt": "7807861",
+          "tahdco__uc_pending_amt": "0"
         },
         {
           "district": "Kallakurichi",
@@ -6589,14 +6589,10 @@
           "aabcs__loan": "1850.76",
           "tahdco__district": "Mayiladuthurai",
           "tahdco__applications_forwarded_to_bank": "504",
-          "tahdco__appli_forwaerd_amount": "65004370",
           "tahdco__rejected_by_bank": "153",
           "tahdco__sanction_received": "127",
-          "tahdco__sanction_amount": "16501303",
           "tahdco__disbursed": "14",
-          "tahdco__disbursed_subsidy_amount": "2401005",
           "tahdco__uc_pending": "14",
-          "tahdco__uc_pending_amount": "2401005",
           "pmfme__s_no": "24",
           "pmfme__districts": "Mayiladuthurai",
           "pmfme__target": "93",
@@ -6606,7 +6602,11 @@
           "pmfme__sanctioned": "217",
           "pmfme__disbursed": "129",
           "pmfme__total_subsidy_cr": "1.95",
-          "pmfme__achievement": "232%"
+          "pmfme__achievement": "232%",
+          "tahdco__appli_forwaerd_amt": "65004370",
+          "tahdco__disbursed_subsidy_amt": "2401005",
+          "tahdco__sanction_amt": "16501303",
+          "tahdco__uc_pending_amt": "2401005"
         },
         {
           "district": "Chengalpattu",
@@ -6639,14 +6639,10 @@
           "kcc_animal_husbandry__amount_disbursed": "140.57",
           "tahdco__district": "Chengalpattu",
           "tahdco__applications_forwarded_to_bank": "782",
-          "tahdco__appli_forwaerd_amount": "146635070",
           "tahdco__rejected_by_bank": "424",
           "tahdco__sanction_received": "358",
-          "tahdco__sanction_amount": "72191957",
           "tahdco__disbursed": "4",
-          "tahdco__disbursed_subsidy_amount": "536582",
           "tahdco__uc_pending": "4",
-          "tahdco__uc_pending_amount": "536582",
           "pmfme__s_no": "25",
           "pmfme__districts": "Chengalpattu",
           "pmfme__target": "149",
@@ -6676,7 +6672,11 @@
           "rseti__total_settled": "322",
           "rseti__self_emplyd": "322",
           "rseti__wage_emplyd": "0",
-          "rseti__bank_finance": "192"
+          "rseti__bank_finance": "192",
+          "tahdco__appli_forwaerd_amt": "146635070",
+          "tahdco__disbursed_subsidy_amt": "536582",
+          "tahdco__sanction_amt": "72191957",
+          "tahdco__uc_pending_amt": "536582"
         },
         {
           "district": "Cuddalore",
@@ -6749,14 +6749,10 @@
           "aabcs__loan": "300.77",
           "tahdco__district": "Cuddalore",
           "tahdco__applications_forwarded_to_bank": "1105",
-          "tahdco__appli_forwaerd_amount": "162658992",
           "tahdco__rejected_by_bank": "359",
           "tahdco__sanction_received": "550",
-          "tahdco__sanction_amount": "81327215",
           "tahdco__disbursed": "0",
-          "tahdco__disbursed_subsidy_amount": "0",
           "tahdco__uc_pending": "0",
-          "tahdco__uc_pending_amount": "0",
           "pmfme__s_no": "4",
           "pmfme__districts": "Cuddalore",
           "pmfme__target": "261",
@@ -6768,7 +6764,11 @@
           "pmfme__total_subsidy_cr": "7.26",
           "pmfme__achievement": "155%",
           "vazhndhu_kattuvom__p": "97.75%",
-          "vazhndhu_kattuvom__f": "81.73%"
+          "vazhndhu_kattuvom__f": "81.73%",
+          "tahdco__appli_forwaerd_amt": "162658992",
+          "tahdco__disbursed_subsidy_amt": "0",
+          "tahdco__sanction_amt": "81327215",
+          "tahdco__uc_pending_amt": "0"
         },
         {
           "district": "Dharmapuri",
@@ -6836,14 +6836,10 @@
           "aabcs__loan": "580.51",
           "tahdco__district": "Dharmapuri",
           "tahdco__applications_forwarded_to_bank": "660",
-          "tahdco__appli_forwaerd_amount": "115368001",
           "tahdco__rejected_by_bank": "306",
           "tahdco__sanction_received": "318",
-          "tahdco__sanction_amount": "65313600",
           "tahdco__disbursed": "116",
-          "tahdco__disbursed_subsidy_amount": "14691685",
           "tahdco__uc_pending": "116",
-          "tahdco__uc_pending_amount": "14691685",
           "pmfme__s_no": "14",
           "pmfme__districts": "Dharmapuri",
           "pmfme__target": "149",
@@ -6871,7 +6867,11 @@
           "rseti__total_settled": "825",
           "rseti__self_emplyd": "803",
           "rseti__wage_emplyd": "22",
-          "rseti__bank_finance": "483"
+          "rseti__bank_finance": "483",
+          "tahdco__appli_forwaerd_amt": "115368001",
+          "tahdco__disbursed_subsidy_amt": "14691685",
+          "tahdco__sanction_amt": "65313600",
+          "tahdco__uc_pending_amt": "14691685"
         },
         {
           "district": "Dindigul",
@@ -6944,14 +6944,10 @@
           "aabcs__loan": "252.78",
           "tahdco__district": "Dindigul",
           "tahdco__applications_forwarded_to_bank": "792",
-          "tahdco__appli_forwaerd_amount": "112183428",
           "tahdco__rejected_by_bank": "276",
           "tahdco__sanction_received": "196",
-          "tahdco__sanction_amount": "30475753",
           "tahdco__disbursed": "165",
-          "tahdco__disbursed_subsidy_amount": "19682375",
           "tahdco__uc_pending": "165",
-          "tahdco__uc_pending_amount": "19682375",
           "pmfme__s_no": "17",
           "pmfme__districts": "Dindigul",
           "pmfme__target": "261",
@@ -6981,7 +6977,11 @@
           "rseti__total_settled": "775",
           "rseti__self_emplyd": "775",
           "rseti__wage_emplyd": "0",
-          "rseti__bank_finance": "544"
+          "rseti__bank_finance": "544",
+          "tahdco__appli_forwaerd_amt": "112183428",
+          "tahdco__disbursed_subsidy_amt": "19682375",
+          "tahdco__sanction_amt": "30475753",
+          "tahdco__uc_pending_amt": "19682375"
         },
         {
           "district": "Erode",
@@ -7054,14 +7054,10 @@
           "aabcs__loan": "782.76",
           "tahdco__district": "Erode",
           "tahdco__applications_forwarded_to_bank": "236",
-          "tahdco__appli_forwaerd_amount": "33975585",
           "tahdco__rejected_by_bank": "96",
           "tahdco__sanction_received": "117",
-          "tahdco__sanction_amount": "17645169",
           "tahdco__disbursed": "1",
-          "tahdco__disbursed_subsidy_amount": "75000",
           "tahdco__uc_pending": "1",
-          "tahdco__uc_pending_amount": "75000",
           "pmfme__s_no": "16",
           "pmfme__districts": "Erode",
           "pmfme__target": "261",
@@ -7091,7 +7087,11 @@
           "rseti__total_settled": "748",
           "rseti__self_emplyd": "702",
           "rseti__wage_emplyd": "46",
-          "rseti__bank_finance": "541"
+          "rseti__bank_finance": "541",
+          "tahdco__appli_forwaerd_amt": "33975585",
+          "tahdco__disbursed_subsidy_amt": "75000",
+          "tahdco__sanction_amt": "17645169",
+          "tahdco__uc_pending_amt": "75000"
         },
         {
           "district": "Kanchipuram",
@@ -7152,14 +7152,10 @@
           "aabcs__loan": "1229.39",
           "tahdco__district": "Kanchipuram",
           "tahdco__applications_forwarded_to_bank": "531",
-          "tahdco__appli_forwaerd_amount": "99308269",
           "tahdco__rejected_by_bank": "240",
           "tahdco__sanction_received": "291",
-          "tahdco__sanction_amount": "57465216",
           "tahdco__disbursed": "0",
-          "tahdco__disbursed_subsidy_amount": "0",
           "tahdco__uc_pending": "0",
-          "tahdco__uc_pending_amount": "0",
           "pmfme__s_no": "26",
           "pmfme__districts": "Kanchipuram",
           "pmfme__target": "93",
@@ -7187,7 +7183,11 @@
           "rseti__total_settled": "900",
           "rseti__self_emplyd": "893",
           "rseti__wage_emplyd": "7",
-          "rseti__bank_finance": "655"
+          "rseti__bank_finance": "655",
+          "tahdco__appli_forwaerd_amt": "99308269",
+          "tahdco__disbursed_subsidy_amt": "0",
+          "tahdco__sanction_amt": "57465216",
+          "tahdco__uc_pending_amt": "0"
         },
         {
           "district": "Krishnagiri",
@@ -7255,14 +7255,10 @@
           "aabcs__loan": "434.05",
           "tahdco__district": "Krishnagiri",
           "tahdco__applications_forwarded_to_bank": "177",
-          "tahdco__appli_forwaerd_amount": "29545040",
           "tahdco__rejected_by_bank": "46",
           "tahdco__sanction_received": "82",
-          "tahdco__sanction_amount": "12679795",
           "tahdco__disbursed": "0",
-          "tahdco__disbursed_subsidy_amount": "0",
           "tahdco__uc_pending": "0",
-          "tahdco__uc_pending_amount": "0",
           "pmfme__s_no": "27",
           "pmfme__districts": "Krishnagiri",
           "pmfme__target": "187",
@@ -7292,7 +7288,11 @@
           "rseti__total_settled": "51",
           "rseti__self_emplyd": "51",
           "rseti__wage_emplyd": "0",
-          "rseti__bank_finance": "26"
+          "rseti__bank_finance": "26",
+          "tahdco__appli_forwaerd_amt": "29545040",
+          "tahdco__disbursed_subsidy_amt": "0",
+          "tahdco__sanction_amt": "12679795",
+          "tahdco__uc_pending_amt": "0"
         },
         {
           "district": "Nagapattinam",
@@ -7360,14 +7360,10 @@
           "aabcs__loan": "170.28",
           "tahdco__district": "Nagapattinam",
           "tahdco__applications_forwarded_to_bank": "619",
-          "tahdco__appli_forwaerd_amount": "82988572",
           "tahdco__rejected_by_bank": "155",
           "tahdco__sanction_received": "278",
-          "tahdco__sanction_amount": "42330596",
           "tahdco__disbursed": "4",
-          "tahdco__disbursed_subsidy_amount": "590000",
           "tahdco__uc_pending": "4",
-          "tahdco__uc_pending_amount": "590000",
           "pmfme__s_no": "31",
           "pmfme__districts": "Nagapattinam",
           "pmfme__target": "112",
@@ -7379,7 +7375,11 @@
           "pmfme__total_subsidy_cr": "1.90",
           "pmfme__achievement": "103%",
           "vazhndhu_kattuvom__p": "93.94%",
-          "vazhndhu_kattuvom__f": "69.90%"
+          "vazhndhu_kattuvom__f": "69.90%",
+          "tahdco__appli_forwaerd_amt": "82988572",
+          "tahdco__disbursed_subsidy_amt": "590000",
+          "tahdco__sanction_amt": "42330596",
+          "tahdco__uc_pending_amt": "590000"
         },
         {
           "district": "Namakkal",
@@ -7447,14 +7447,10 @@
           "aabcs__loan": "781.48",
           "tahdco__district": "Namakkal",
           "tahdco__applications_forwarded_to_bank": "203",
-          "tahdco__appli_forwaerd_amount": "38019616",
           "tahdco__rejected_by_bank": "30",
           "tahdco__sanction_received": "109",
-          "tahdco__sanction_amount": "21055124",
           "tahdco__disbursed": "31",
-          "tahdco__disbursed_subsidy_amount": "4644536",
           "tahdco__uc_pending": "31",
-          "tahdco__uc_pending_amount": "4644536",
           "pmfme__s_no": "21",
           "pmfme__districts": "Namakkal",
           "pmfme__target": "280",
@@ -7484,7 +7480,11 @@
           "rseti__total_settled": "619",
           "rseti__self_emplyd": "592",
           "rseti__wage_emplyd": "27",
-          "rseti__bank_finance": "292"
+          "rseti__bank_finance": "292",
+          "tahdco__appli_forwaerd_amt": "38019616",
+          "tahdco__disbursed_subsidy_amt": "4644536",
+          "tahdco__sanction_amt": "21055124",
+          "tahdco__uc_pending_amt": "4644536"
         },
         {
           "district": "Pudukkottai",
@@ -7517,14 +7517,10 @@
           "kcc_animal_husbandry__amount_disbursed": "207.91",
           "tahdco__district": "Pudukkottai",
           "tahdco__applications_forwarded_to_bank": "329",
-          "tahdco__appli_forwaerd_amount": "43392288",
           "tahdco__rejected_by_bank": "84",
           "tahdco__sanction_received": "127",
-          "tahdco__sanction_amount": "18786042",
           "tahdco__disbursed": "0",
-          "tahdco__disbursed_subsidy_amount": "0",
           "tahdco__uc_pending": "0",
-          "tahdco__uc_pending_amount": "0",
           "pmfme__s_no": "20",
           "pmfme__districts": "Pudukkottai",
           "pmfme__target": "243",
@@ -7536,7 +7532,11 @@
           "pmfme__total_subsidy_cr": "2.23",
           "pmfme__achievement": "63%",
           "vazhndhu_kattuvom__p": "72.97%",
-          "vazhndhu_kattuvom__f": "68.97%"
+          "vazhndhu_kattuvom__f": "68.97%",
+          "tahdco__appli_forwaerd_amt": "43392288",
+          "tahdco__disbursed_subsidy_amt": "0",
+          "tahdco__sanction_amt": "18786042",
+          "tahdco__uc_pending_amt": "0"
         },
         {
           "district": "Ramanathapuram",
@@ -7569,14 +7569,10 @@
           "kcc_animal_husbandry__amount_disbursed": "233.9",
           "tahdco__district": "Ramanathapuram",
           "tahdco__applications_forwarded_to_bank": "434",
-          "tahdco__appli_forwaerd_amount": "81066687",
           "tahdco__rejected_by_bank": "201",
           "tahdco__sanction_received": "233",
-          "tahdco__sanction_amount": "44661276",
           "tahdco__disbursed": "0",
-          "tahdco__disbursed_subsidy_amount": "0",
           "tahdco__uc_pending": "0",
-          "tahdco__uc_pending_amount": "0",
           "pmfme__s_no": "13",
           "pmfme__districts": "Ramanathapuram",
           "pmfme__target": "205",
@@ -7604,7 +7600,11 @@
           "rseti__total_settled": "658",
           "rseti__self_emplyd": "657",
           "rseti__wage_emplyd": "1",
-          "rseti__bank_finance": "338"
+          "rseti__bank_finance": "338",
+          "tahdco__appli_forwaerd_amt": "81066687",
+          "tahdco__disbursed_subsidy_amt": "0",
+          "tahdco__sanction_amt": "44661276",
+          "tahdco__uc_pending_amt": "0"
         },
         {
           "district": "Sivaganga",
@@ -7672,14 +7672,10 @@
           "aabcs__loan": "413.88",
           "tahdco__district": "Sivagangai",
           "tahdco__applications_forwarded_to_bank": "398",
-          "tahdco__appli_forwaerd_amount": "55451642",
           "tahdco__rejected_by_bank": "126",
           "tahdco__sanction_received": "127",
-          "tahdco__sanction_amount": "24515509",
           "tahdco__disbursed": "99",
-          "tahdco__disbursed_subsidy_amount": "10800100",
           "tahdco__uc_pending": "99",
-          "tahdco__uc_pending_amount": "10800100",
           "pmfme__s_no": "32",
           "pmfme__districts": "Sivaganga",
           "pmfme__target": "224",
@@ -7709,7 +7705,11 @@
           "rseti__total_settled": "500",
           "rseti__self_emplyd": "454",
           "rseti__wage_emplyd": "46",
-          "rseti__bank_finance": "255"
+          "rseti__bank_finance": "255",
+          "tahdco__appli_forwaerd_amt": "55451642",
+          "tahdco__disbursed_subsidy_amt": "10800100",
+          "tahdco__sanction_amt": "24515509",
+          "tahdco__uc_pending_amt": "10800100"
         },
         {
           "district": "Tenkasi",
@@ -7777,14 +7777,10 @@
           "aabcs__loan": "513.31",
           "tahdco__district": "Tenkasi",
           "tahdco__applications_forwarded_to_bank": "684",
-          "tahdco__appli_forwaerd_amount": "98127757",
           "tahdco__rejected_by_bank": "239",
           "tahdco__sanction_received": "391",
-          "tahdco__sanction_amount": "55922182",
           "tahdco__disbursed": "5",
-          "tahdco__disbursed_subsidy_amount": "1099980",
           "tahdco__uc_pending": "5",
-          "tahdco__uc_pending_amount": "1099980",
           "pmfme__s_no": "5",
           "pmfme__districts": "Tenkasi",
           "pmfme__target": "187",
@@ -7814,7 +7810,11 @@
           "rseti__total_settled": "0",
           "rseti__self_emplyd": "0",
           "rseti__wage_emplyd": "0",
-          "rseti__bank_finance": "0"
+          "rseti__bank_finance": "0",
+          "tahdco__appli_forwaerd_amt": "98127757",
+          "tahdco__disbursed_subsidy_amt": "1099980",
+          "tahdco__sanction_amt": "55922182",
+          "tahdco__uc_pending_amt": "1099980"
         },
         {
           "district": "Thanjavur",
@@ -7882,14 +7882,10 @@
           "aabcs__loan": "1180.52",
           "tahdco__district": "Thanjavur",
           "tahdco__applications_forwarded_to_bank": "1957",
-          "tahdco__appli_forwaerd_amount": "94901285",
           "tahdco__rejected_by_bank": "1045",
           "tahdco__sanction_received": "459",
-          "tahdco__sanction_amount": "27348577",
           "tahdco__disbursed": "1",
-          "tahdco__disbursed_subsidy_amount": "45000",
           "tahdco__uc_pending": "1",
-          "tahdco__uc_pending_amount": "45000",
           "pmfme__s_no": "11",
           "pmfme__districts": "Thanjavur",
           "pmfme__target": "261",
@@ -7917,7 +7913,11 @@
           "rseti__total_settled": "664",
           "rseti__self_emplyd": "639",
           "rseti__wage_emplyd": "25",
-          "rseti__bank_finance": "353"
+          "rseti__bank_finance": "353",
+          "tahdco__appli_forwaerd_amt": "94901285",
+          "tahdco__disbursed_subsidy_amt": "45000",
+          "tahdco__sanction_amt": "27348577",
+          "tahdco__uc_pending_amt": "45000"
         },
         {
           "district": "The Nilgiris",
@@ -7985,14 +7985,10 @@
           "aabcs__loan": "340.79",
           "tahdco__district": "The Nilgiris",
           "tahdco__applications_forwarded_to_bank": "294",
-          "tahdco__appli_forwaerd_amount": "37728169",
           "tahdco__rejected_by_bank": "106",
           "tahdco__sanction_received": "142",
-          "tahdco__sanction_amount": "17629738",
           "tahdco__disbursed": "0",
-          "tahdco__disbursed_subsidy_amount": "0",
           "tahdco__uc_pending": "0",
-          "tahdco__uc_pending_amount": "0",
           "pmfme__s_no": "36",
           "pmfme__districts": "The Nilgiris",
           "pmfme__target": "75",
@@ -8022,7 +8018,11 @@
           "rseti__total_settled": "789",
           "rseti__self_emplyd": "714",
           "rseti__wage_emplyd": "75",
-          "rseti__bank_finance": "510"
+          "rseti__bank_finance": "510",
+          "tahdco__appli_forwaerd_amt": "37728169",
+          "tahdco__disbursed_subsidy_amt": "0",
+          "tahdco__sanction_amt": "17629738",
+          "tahdco__uc_pending_amt": "0"
         },
         {
           "district": "Theni",
@@ -8090,14 +8090,10 @@
           "aabcs__loan": "446.71",
           "tahdco__district": "Theni",
           "tahdco__applications_forwarded_to_bank": "1056",
-          "tahdco__appli_forwaerd_amount": "129314409",
           "tahdco__rejected_by_bank": "560",
           "tahdco__sanction_received": "496",
-          "tahdco__sanction_amount": "69241232",
           "tahdco__disbursed": "1",
-          "tahdco__disbursed_subsidy_amount": "159000",
           "tahdco__uc_pending": "1",
-          "tahdco__uc_pending_amount": "159000",
           "pmfme__s_no": "30",
           "pmfme__districts": "Theni",
           "pmfme__target": "149",
@@ -8109,7 +8105,11 @@
           "pmfme__total_subsidy_cr": "3.61",
           "pmfme__achievement": "86%",
           "vazhndhu_kattuvom__p": "109.38%",
-          "vazhndhu_kattuvom__f": "65.44%"
+          "vazhndhu_kattuvom__f": "65.44%",
+          "tahdco__appli_forwaerd_amt": "129314409",
+          "tahdco__disbursed_subsidy_amt": "159000",
+          "tahdco__sanction_amt": "69241232",
+          "tahdco__uc_pending_amt": "159000"
         },
         {
           "district": "Thiruvarur",
@@ -8270,14 +8270,10 @@
           "aabcs__loan": "134.01",
           "tahdco__district": "Tirunelveli",
           "tahdco__applications_forwarded_to_bank": "436",
-          "tahdco__appli_forwaerd_amount": "54692260",
           "tahdco__rejected_by_bank": "158",
           "tahdco__sanction_received": "278",
-          "tahdco__sanction_amount": "34277582",
           "tahdco__disbursed": "16",
-          "tahdco__disbursed_subsidy_amount": "1533082",
           "tahdco__uc_pending": "16",
-          "tahdco__uc_pending_amount": "1533082",
           "pmfme__s_no": "10",
           "pmfme__districts": "Tirunelveli",
           "pmfme__target": "168",
@@ -8289,7 +8285,11 @@
           "pmfme__total_subsidy_cr": "3.23",
           "pmfme__achievement": "146%",
           "vazhndhu_kattuvom__p": "88.48%",
-          "vazhndhu_kattuvom__f": "47.30%"
+          "vazhndhu_kattuvom__f": "47.30%",
+          "tahdco__appli_forwaerd_amt": "54692260",
+          "tahdco__disbursed_subsidy_amt": "1533082",
+          "tahdco__sanction_amt": "34277582",
+          "tahdco__uc_pending_amt": "1533082"
         },
         {
           "district": "Tirupattur",
@@ -8420,14 +8420,10 @@
           "aabcs__loan": "361.62",
           "tahdco__district": "Vellore",
           "tahdco__applications_forwarded_to_bank": "352",
-          "tahdco__appli_forwaerd_amount": "56890195",
           "tahdco__rejected_by_bank": "35",
           "tahdco__sanction_received": "179",
-          "tahdco__sanction_amount": "32729005",
           "tahdco__disbursed": "3",
-          "tahdco__disbursed_subsidy_amount": "135000",
           "tahdco__uc_pending": "3",
-          "tahdco__uc_pending_amount": "135000",
           "pmfme__s_no": "35",
           "pmfme__districts": "Vellore",
           "pmfme__target": "131",
@@ -8457,7 +8453,11 @@
           "rseti__total_settled": "638",
           "rseti__self_emplyd": "608",
           "rseti__wage_emplyd": "30",
-          "rseti__bank_finance": "390"
+          "rseti__bank_finance": "390",
+          "tahdco__appli_forwaerd_amt": "56890195",
+          "tahdco__disbursed_subsidy_amt": "135000",
+          "tahdco__sanction_amt": "32729005",
+          "tahdco__uc_pending_amt": "135000"
         },
         {
           "district": "Virudhunagar",
@@ -8530,14 +8530,10 @@
           "aabcs__loan": "544.83",
           "tahdco__district": "Virudhunagar",
           "tahdco__applications_forwarded_to_bank": "989",
-          "tahdco__appli_forwaerd_amount": "98285279",
           "tahdco__rejected_by_bank": "558",
           "tahdco__sanction_received": "347",
-          "tahdco__sanction_amount": "42874102",
           "tahdco__disbursed": "123",
-          "tahdco__disbursed_subsidy_amount": "11302507",
           "tahdco__uc_pending": "123",
-          "tahdco__uc_pending_amount": "11302507",
           "pmfme__s_no": "12",
           "pmfme__districts": "Virudhunagar",
           "pmfme__target": "205",
@@ -8549,7 +8545,11 @@
           "pmfme__total_subsidy_cr": "3.45",
           "pmfme__achievement": "94%",
           "vazhndhu_kattuvom__p": "84.98%",
-          "vazhndhu_kattuvom__f": "69.50%"
+          "vazhndhu_kattuvom__f": "69.50%",
+          "tahdco__appli_forwaerd_amt": "98285279",
+          "tahdco__disbursed_subsidy_amt": "11302507",
+          "tahdco__sanction_amt": "42874102",
+          "tahdco__uc_pending_amt": "11302507"
         }
       ]
     },
@@ -21961,10 +21961,10 @@
           "pmegp__in_lakh": "0.00",
           "pmegp__prj": "29",
           "pmmy_mudra__accoun": "34920",
-          "pmmy_mudra__t_amount": "598.82",
           "pmfme__nos": "5",
           "pmfme__subsidy": "32.20",
-          "pmfme__loan": "85.25"
+          "pmfme__loan": "85.25",
+          "pmmy_mudra__t_amt": "598.82"
         },
         {
           "district": "Coimbatore",
@@ -22338,7 +22338,6 @@
           "pmegp__in_lakh": "1.42",
           "pmegp__prj": "73",
           "pmmy_mudra__accoun": "3651",
-          "pmmy_mudra__t_amount": "63.92",
           "pmfme__nos": "2",
           "pmfme__subsidy": "7.25",
           "pmfme__loan": "18.65",
@@ -22347,7 +22346,8 @@
           "rseti__mal_e": "0",
           "rseti__femal_e": "3",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "3"
+          "rseti__total": "3",
+          "pmmy_mudra__t_amt": "63.92"
         },
         {
           "district": "Ariyalur",
@@ -22406,14 +22406,14 @@
           "pmegp__in_lakh": "0.00",
           "pmegp__prj": "42",
           "pmmy_mudra__accoun": "1275",
-          "pmmy_mudra__t_amount": "28.40",
           "pmfme__nos": "0",
           "pmfme__subsidy": "0.00",
           "pmfme__loan": "0.00",
           "rseti__mal_e": "2",
           "rseti__femal_e": "139",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "141"
+          "rseti__total": "141",
+          "pmmy_mudra__t_amt": "28.40"
         },
         {
           "district": "Dharmapuri",
@@ -22472,14 +22472,14 @@
           "pmegp__in_lakh": "0.00",
           "pmegp__prj": "37",
           "pmmy_mudra__accoun": "4116",
-          "pmmy_mudra__t_amount": "80.36",
           "pmfme__nos": "8",
           "pmfme__subsidy": "22.49",
           "pmfme__loan": "55.37",
           "rseti__mal_e": "0",
           "rseti__femal_e": "17",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "17"
+          "rseti__total": "17",
+          "pmmy_mudra__t_amt": "80.36"
         },
         {
           "district": "Theni",
@@ -22538,7 +22538,6 @@
           "pmegp__in_lakh": "0.00",
           "pmegp__prj": "58",
           "pmmy_mudra__accoun": "7896",
-          "pmmy_mudra__t_amount": "101.99",
           "pmfme__nos": "2",
           "pmfme__subsidy": "4.58",
           "pmfme__loan": "11.70",
@@ -22547,7 +22546,8 @@
           "rseti__mal_e": "0",
           "rseti__femal_e": "47",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "47"
+          "rseti__total": "47",
+          "pmmy_mudra__t_amt": "101.99"
         },
         {
           "district": "Perambalur",
@@ -22606,14 +22606,14 @@
           "pmegp__in_lakh": "0.00",
           "pmegp__prj": "49",
           "pmmy_mudra__accoun": "1581",
-          "pmmy_mudra__t_amount": "30.21",
           "pmfme__nos": "0",
           "pmfme__subsidy": "0.00",
           "pmfme__loan": "0.00",
           "rseti__mal_e": "0",
           "rseti__femal_e": "74",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "74"
+          "rseti__total": "74",
+          "pmmy_mudra__t_amt": "30.21"
         },
         {
           "district": "Chengalpattu",
@@ -22666,7 +22666,6 @@
           "kcc_animal_husbandry__no_of_kcc_issued": "592",
           "kcc_animal_husbandry__amount_disbursed": "9.94",
           "pmmy_mudra__accoun": "10995",
-          "pmmy_mudra__t_amount": "218.12",
           "pmfme__nos": "8",
           "pmfme__subsidy": "41.39",
           "pmfme__loan": "85.74",
@@ -22675,7 +22674,8 @@
           "rseti__mal_e": "11",
           "rseti__femal_e": "36",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "47"
+          "rseti__total": "47",
+          "pmmy_mudra__t_amt": "218.12"
         },
         {
           "district": "Cuddalore",
@@ -22968,14 +22968,14 @@
           "tahdco__1_75": "10.71",
           "tahdco__0": "0",
           "pmmy_mudra__accoun": "9884",
-          "pmmy_mudra__t_amount": "139.81",
           "pmfme__nos": "12",
           "pmfme__subsidy": "22.51",
           "pmfme__loan": "57.88",
           "rseti__mal_e": "0",
           "rseti__femal_e": "140",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "140"
+          "rseti__total": "140",
+          "pmmy_mudra__t_amt": "139.81"
         },
         {
           "district": "Kanniyakumari",
@@ -23034,14 +23034,14 @@
           "pmegp__in_lakh": "0.00",
           "pmegp__prj": "68",
           "pmmy_mudra__accoun": "11590",
-          "pmmy_mudra__t_amount": "211.68",
           "pmfme__nos": "11",
           "pmfme__subsidy": "27.38",
           "pmfme__loan": "62.75",
           "rseti__mal_e": "0",
           "rseti__femal_e": "50",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "50"
+          "rseti__total": "50",
+          "pmmy_mudra__t_amt": "211.68"
         },
         {
           "district": "Karur",
@@ -23183,7 +23183,6 @@
           "pmegp__in_lakh": "0.00",
           "pmegp__prj": "28",
           "pmmy_mudra__accoun": "4517",
-          "pmmy_mudra__t_amount": "106.30",
           "pmfme__nos": "2",
           "pmfme__subsidy": "7.61",
           "pmfme__loan": "19.48",
@@ -23192,7 +23191,8 @@
           "rseti__mal_e": "0",
           "rseti__femal_e": "5",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "5"
+          "rseti__total": "5",
+          "pmmy_mudra__t_amt": "106.30"
         },
         {
           "district": "Mayiladuthurai",
@@ -23250,14 +23250,14 @@
           "pmegp__in_lakh": "0.00",
           "pmegp__prj": "35",
           "pmmy_mudra__accoun": "7546",
-          "pmmy_mudra__t_amount": "93.33",
           "pmfme__nos": "5",
           "pmfme__subsidy": "7.65",
           "pmfme__loan": "19.68",
           "rseti__mal_e": "0",
           "rseti__femal_e": "5",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "5"
+          "rseti__total": "5",
+          "pmmy_mudra__t_amt": "93.33"
         },
         {
           "district": "Nagapattinam",
@@ -23316,7 +23316,6 @@
           "pmegp__in_lakh": "0.00",
           "pmegp__prj": "45",
           "pmmy_mudra__accoun": "5232",
-          "pmmy_mudra__t_amount": "80.48",
           "pmfme__nos": "11",
           "pmfme__subsidy": "26.15",
           "pmfme__loan": "65.04",
@@ -23325,7 +23324,8 @@
           "rseti__mal_e": "9",
           "rseti__femal_e": "69",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "78"
+          "rseti__total": "78",
+          "pmmy_mudra__t_amt": "80.48"
         },
         {
           "district": "Namakkal",
@@ -23384,7 +23384,6 @@
           "pmegp__in_lakh": "5.00",
           "pmegp__prj": "92",
           "pmmy_mudra__accoun": "12444",
-          "pmmy_mudra__t_amount": "182.75",
           "pmfme__nos": "8",
           "pmfme__subsidy": "27.12",
           "pmfme__loan": "68.51",
@@ -23393,7 +23392,8 @@
           "rseti__mal_e": "0",
           "rseti__femal_e": "128",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "128"
+          "rseti__total": "128",
+          "pmmy_mudra__t_amt": "182.75"
         },
         {
           "district": "Pudukkottai",
@@ -23451,7 +23451,6 @@
           "tahdco__1_75": "-",
           "tahdco__0": "0",
           "pmmy_mudra__accoun": "6139",
-          "pmmy_mudra__t_amount": "95.55",
           "pmfme__nos": "3",
           "pmfme__subsidy": "16.27",
           "pmfme__loan": "41.82",
@@ -23460,7 +23459,8 @@
           "rseti__mal_e": "9",
           "rseti__femal_e": "120",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "129"
+          "rseti__total": "129",
+          "pmmy_mudra__t_amt": "95.55"
         },
         {
           "district": "Ramanathapuram",
@@ -23557,7 +23557,6 @@
           "pmegp__in_lakh": "7.37",
           "pmegp__prj": "33",
           "pmmy_mudra__accoun": "5858",
-          "pmmy_mudra__t_amount": "62.59",
           "pmfme__nos": "4",
           "pmfme__subsidy": "7.08",
           "pmfme__loan": "18.20",
@@ -23566,7 +23565,8 @@
           "rseti__mal_e": "0",
           "rseti__femal_e": "15",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "15"
+          "rseti__total": "15",
+          "pmmy_mudra__t_amt": "62.59"
         },
         {
           "district": "Sivaganga",
@@ -23625,7 +23625,6 @@
           "pmegp__in_lakh": "0.00",
           "pmegp__prj": "19",
           "pmmy_mudra__accoun": "3635",
-          "pmmy_mudra__t_amount": "70.74",
           "pmfme__nos": "2",
           "pmfme__subsidy": "4.78",
           "pmfme__loan": "12.25",
@@ -23634,7 +23633,8 @@
           "rseti__mal_e": "0",
           "rseti__femal_e": "73",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "73"
+          "rseti__total": "73",
+          "pmmy_mudra__t_amt": "70.74"
         },
         {
           "district": "Tenkasi",
@@ -23692,7 +23692,6 @@
           "pmegp__in_lakh": "0.00",
           "pmegp__prj": "55",
           "pmmy_mudra__accoun": "6680",
-          "pmmy_mudra__t_amount": "89.96",
           "pmfme__nos": "10",
           "pmfme__subsidy": "18.11",
           "pmfme__loan": "44.95",
@@ -23701,7 +23700,8 @@
           "rseti__mal_e": "4",
           "rseti__femal_e": "51",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "55"
+          "rseti__total": "55",
+          "pmmy_mudra__t_amt": "89.96"
         },
         {
           "district": "Thanjavur",
@@ -23765,14 +23765,14 @@
           "tahdco__1_75": "2.86",
           "tahdco__0": "0",
           "pmmy_mudra__accoun": "19922",
-          "pmmy_mudra__t_amount": "203.61",
           "pmfme__nos": "3",
           "pmfme__subsidy": "10.66",
           "pmfme__loan": "29.69",
           "rseti__mal_e": "0",
           "rseti__femal_e": "64",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "64"
+          "rseti__total": "64",
+          "pmmy_mudra__t_amt": "203.61"
         },
         {
           "district": "The Nilgiris",
@@ -23831,14 +23831,14 @@
           "pmegp__in_lakh": "0.00",
           "pmegp__prj": "16",
           "pmmy_mudra__accoun": "4756",
-          "pmmy_mudra__t_amount": "54.31",
           "pmfme__nos": "0",
           "pmfme__subsidy": "0.00",
           "pmfme__loan": "0.00",
           "rseti__mal_e": "0",
           "rseti__femal_e": "88",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "88"
+          "rseti__total": "88",
+          "pmmy_mudra__t_amt": "54.31"
         },
         {
           "district": "Thiruvallur",
@@ -23853,7 +23853,6 @@
           "uncategorized__total_no_of_eligible_cases_under_pmsby": "3331577",
           "uncategorized__total_no_of_renewals_under_pmsby": "480798",
           "uncategorized__total_no_of_enrolment_under_apy": "158706",
-          "uncategorized__total": "7374925",
           "kcc_fisheries__district_name": "THIRUVALLUR",
           "kcc_fisheries__no_of_kcc_issued": "1466",
           "kcc_fisheries__amount_disbursed": "19.42",
@@ -23914,7 +23913,8 @@
           "rseti__mal_e": "24",
           "rseti__femal_e": "0",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "24"
+          "rseti__total": "24",
+          "uncategorized__total_amt": "7374925"
         },
         {
           "district": "Thiruvarur",
@@ -23970,7 +23970,6 @@
           "pmegp__in_lakh": "0.00",
           "pmegp__prj": "36",
           "pmmy_mudra__accoun": "8455",
-          "pmmy_mudra__t_amount": "79.70",
           "pmfme__nos": "2",
           "pmfme__subsidy": "4.26",
           "pmfme__loan": "10.73",
@@ -23979,7 +23978,8 @@
           "rseti__mal_e": "0",
           "rseti__femal_e": "63",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "63"
+          "rseti__total": "63",
+          "pmmy_mudra__t_amt": "79.70"
         },
         {
           "district": "Tiruchirappalli",
@@ -24183,7 +24183,7 @@
           "pmegp__in_lakh": "0.00",
           "pmegp__prj": "25",
           "pmmy_mudra__accoun": "6315",
-          "pmmy_mudra__t_amount": "67.83"
+          "pmmy_mudra__t_amt": "67.83"
         },
         {
           "district": "Tiruvannamalai",
@@ -24247,7 +24247,6 @@
           "tahdco__1_75": "3.50",
           "tahdco__0": "0",
           "pmmy_mudra__accoun": "8031",
-          "pmmy_mudra__t_amount": "104.91",
           "pmfme__nos": "12",
           "pmfme__subsidy": "46.79",
           "pmfme__loan": "116.01",
@@ -24256,7 +24255,8 @@
           "rseti__mal_e": "12",
           "rseti__femal_e": "13",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "25"
+          "rseti__total": "25",
+          "pmmy_mudra__t_amt": "104.91"
         },
         {
           "district": "Toothukudi",
@@ -24305,9 +24305,9 @@
           "pmegp__in_lakh": "3.50",
           "pmegp__prj": "96",
           "pmmy_mudra__accoun": "10277",
-          "pmmy_mudra__t_amount": "177.01",
           "vazhndhu_kattuvom__phy": "98.27",
-          "vazhndhu_kattuvom__fin": "78.79"
+          "vazhndhu_kattuvom__fin": "78.79",
+          "pmmy_mudra__t_amt": "177.01"
         },
         {
           "district": "Vellore",
@@ -24444,7 +24444,6 @@
           "tahdco__1_75": "7.43",
           "tahdco__0": "0",
           "pmmy_mudra__accoun": "7503",
-          "pmmy_mudra__t_amount": "106.57",
           "pmfme__nos": "2",
           "pmfme__subsidy": "4.12",
           "pmfme__loan": "10.47",
@@ -24453,7 +24452,8 @@
           "rseti__mal_e": "8",
           "rseti__femal_e": "49",
           "rseti__tran_sgen_der": "0",
-          "rseti__total": "57"
+          "rseti__total": "57",
+          "pmmy_mudra__t_amt": "106.57"
         },
         {
           "district": "Virudhunagar",
