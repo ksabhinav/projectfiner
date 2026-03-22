@@ -50,7 +50,9 @@
   }
 
   function prettyFieldName(field: string): string {
-    return field
+    const isAmt = /_amt$|_amount$|^amt$|^amount$/.test(field) || /deposit|advance|outstanding|disburs|sanction|credit(?!_card)|loan(?!_a_c|_no)/.test(field) && !/_no$|_a_c$|_pct$|_number$/.test(field);
+    const isPct = /_pct$|_percentage$|^pct_|cd_ratio$|npa_pct$/.test(field);
+    let name = field
       .replace(/_/g, ' ')
       .replace(/\b\w/g, c => c.toUpperCase())
       .replace(/\bA C\b/g, 'A/C')
@@ -65,6 +67,9 @@
       .replace(/\bPmegp\b/g, 'PMEGP').replace(/\bNulm\b/g, 'NULM').replace(/\bNrlm\b/g, 'NRLM')
       .replace(/\bSb\b/g, 'SB').replace(/\bCd\b/g, 'CD').replace(/\bCsp\b/g, 'CSP')
       .replace(/\bAeps\b/g, 'AePS').replace(/\bDbt\b/g, 'DBT').replace(/\bPct\b/g, '%');
+    if (isAmt) name += ' (₹ Lakhs)';
+    else if (isPct) name += ' (%)';
+    return name;
   }
 
   function formatValue(v: number): string {

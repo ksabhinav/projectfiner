@@ -699,6 +699,14 @@ const base = import.meta.env.BASE_URL;
       return n.toLocaleString('en-IN');
     }
 
+    function fmtWithUnit(n, unit) {
+      var v = fmtNum(n);
+      if (v === '—') return v;
+      if (unit === '₹') return '₹' + v + ' L';
+      if (unit === '%') return v + '%';
+      return v;
+    }
+
     function normDist(d) {
       return (d || '').trim().replace(/\r?\n/g, '').toUpperCase()
         .replace(/[^A-Z\s]/g, '').replace(/\s+/g, ' ').trim();
@@ -801,11 +809,13 @@ const base = import.meta.env.BASE_URL;
 
           var val = getVal(rec, currentIndicator, metric.field, metric.fallbacks);
           var allVals = {};
+          var allUnits = {};
           for (var mi = 0; mi < ind.metrics.length; mi++) {
             var m = ind.metrics[mi];
             allVals[m.label] = getVal(rec, currentIndicator, m.field, m.fallbacks);
+            allUnits[m.label] = m.unit || '';
           }
-          var entry = { value: val, metrics: allVals, district: rec.district };
+          var entry = { value: val, metrics: allVals, units: allUnits, district: rec.district };
           if (useQuarter !== currentQuarter) {
             entry.fallbackQuarter = useQuarter;
           }
@@ -863,7 +873,8 @@ const base = import.meta.env.BASE_URL;
       });
       var breaks = computeBreaks(allVals);
 
-      updateLegend_banking(metric.label, breaks, ramp);
+      var legendLabel = metric.label + (metric.unit === '₹' ? ' (₹ Lakhs)' : metric.unit === '%' ? ' (%)' : '');
+      updateLegend_banking(legendLabel, breaks, ramp);
 
       choroLayer = L.geoJSON(filtered, {
         style: function(feature) {
@@ -898,7 +909,8 @@ const base = import.meta.env.BASE_URL;
                 tip += '<div class="dtt-metrics">';
                 for (var label in data.metrics) {
                   var val = data.metrics[label];
-                  var formatted = val !== null ? fmtNum(val) : '—';
+                  var u = data.units ? data.units[label] : '';
+                  var formatted = val !== null ? fmtWithUnit(val, u) : '—';
                   var isCurrent = label === metric.label;
                   tip += '<div class="dtt-row' + (isCurrent ? ' dtt-active' : '') + '">'
                     + '<span class="dtt-label">' + label + '</span>'
@@ -948,12 +960,14 @@ const base = import.meta.env.BASE_URL;
       var ind = INDICATORS[currentIndicator];
       var metric = ind.metrics[currentMetricIdx];
 
+      var u = metric.unit || '';
+      var unitLabel = u === '₹' ? ' (₹ Lakhs)' : u === '%' ? ' (%)' : '';
       document.getElementById('stats-banking').innerHTML =
         '<strong>' + ind.title + '</strong><br>'
-        + '<span style="font-size:9px;color:#888078">' + fmtQuarter(currentQuarter) + '</span><br>'
+        + '<span style="font-size:9px;color:#888078">' + fmtQuarter(currentQuarter) + unitLabel + '</span><br>'
         + '<span style="color:#3d7a8e">' + withData + '</span> districts with data<br>'
-        + 'Avg: <strong>' + fmtNum(avg) + '</strong><br>'
-        + 'Min: ' + fmtNum(min) + ' · Max: ' + fmtNum(max);
+        + 'Avg: <strong>' + fmtWithUnit(avg, u) + '</strong><br>'
+        + 'Min: ' + fmtWithUnit(min, u) + ' · Max: ' + fmtWithUnit(max, u);
 
       document.getElementById('btn-reset-banking').style.display = bankingStateFilter ? 'block' : 'none';
     }
@@ -1046,7 +1060,7 @@ const base = import.meta.env.BASE_URL;
       }).join(' ');
       document.getElementById('focus-state').textContent = focusedState || '';
       document.getElementById('focus-metric-label').textContent = metric.label;
-      document.getElementById('focus-value').textContent = val !== null ? fmtNum(val) : 'No data';
+      document.getElementById('focus-value').textContent = val !== null ? fmtWithUnit(val, metric.unit) : 'No data';
       document.getElementById('focus-quarter').textContent = fmtQuarter(currentQuarter);
 
       // Update stroke color to match indicator ramp
@@ -1818,7 +1832,7 @@ const base = import.meta.env.BASE_URL;
   .pmeta{font-size:10px;color:#aaa09a}
   .pmeta a{color:#b8603e;text-decoration:none}
   .leaflet-attribution-flag{display:none!important}
-  .leaflet-control-zoom{border-radius:10px!important;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.04)!important;border:1px solid rgba(224,221,216,0.5)!important}
+  .leaflet-control-zoom{border-radius:10px!important;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.04)!important;border:1px solid rgba(224,221,216,0.5)!important;margin-top:60px!important}
   .leaflet-control-zoom a{font-family:'Inter',sans-serif!important;font-weight:500!important;color:#555048!important;border-color:rgba(232,229,224,0.5)!important;background:rgba(255,255,255,0.94)!important;width:34px!important;height:34px!important;line-height:34px!important}
   .leaflet-control-zoom a:hover{background:#fff!important;color:#1a1410!important}
 
