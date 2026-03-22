@@ -147,6 +147,81 @@ export const CATEGORY_INFO: Record<string, string> = {
   atm_network:                         'ATM network (district-wise)',
 };
 
+// Category tiers for grouping in UI (most important first)
+export const CATEGORY_TIERS: Record<string, string[]> = {
+  'Core Financial Inclusion': [
+    'credit_deposit_ratio', 'key_indicators',
+    'branch_network', 'branch_network_p2', 'branch_network_p3', 'branch_network_p4',
+    'business_correspondents', 'atm_network',
+    'pmjdy', 'pmjdy_p2', 'pmjdy_p3', 'pmjdy_p4',
+    'digital_transactions', 'digital_payments', 'digital_coverage_savings',
+    'digital_coverage_savings_p2', 'digital_coverage_savings_p3', 'digital_coverage_savings_p4',
+    'digital_coverage_business',
+    'aadhaar_authentication',
+    'fi_village_banking',
+  ],
+  'Agriculture & Rural Credit': [
+    'kcc', 'kcc_crop', 'fi_kcc',
+    'kcc_animal_husbandry', 'kcc_fishery', 'kcc_fisheries',
+    'shg', 'shg_nrlm', 'shg_p2', 'shg_p3',
+    'jlg', 'nrlm',
+    'crop_insurance',
+    'acp_disbursement_agri', 'acp_disbursement_agri_p2',
+    'investment_credit_agri_disbursement', 'investment_credit_agri_outstanding',
+    'agri_outstanding', 'agri_npa', 'agri_npa_p2',
+    'farm_sector',
+  ],
+  'Government Schemes': [
+    'social_security', 'social_security_schemes', 'social_security_claims', 'social_security_2',
+    'pmegp', 'sui', 'stand_up_india', 'stand_up_india_p2',
+    'pmmy_mudra_disbursement', 'pmmy_mudra_os_npa', 'mudra',
+    'housing_pmay', 'housing_loan',
+    'nulm', 'shg_nulm',
+    'rseti', 'rseti_p2', 'rseti_p3', 'rseti_p4', 'rseti_p5', 'rseti_p6',
+    'pm_svanidhi', 'pm_svanidhi_p2', 'pm_vishwakarma', 'pm_surya_ghar',
+    'pmfme', 'aif',
+  ],
+  'MSME & Priority Sector': [
+    'acp_disbursement_msme',
+    'msme_outstanding', 'msme_npa', 'msme',
+    'acp_disbursement_other_ps', 'acp_disbursement_other_ps_p2', 'acp_disbursement_other_ps_p3',
+    'acp_disbursement_non_ps', 'acp_disbursement_non_ps_p2',
+    'acp_priority_sector_os_npa', 'acp_priority_sector', 'acp_target_achievement',
+    'acp_npa_outstanding',
+    'other_ps_outstanding', 'other_ps_npa',
+    'non_ps_outstanding', 'non_ps_npa',
+    'priority_sector_analysis', 'priority_sector_npa', 'priority_sector_outstanding',
+    'education_loan',
+    'minority', 'minority_disbursement', 'minority_outstanding',
+    'sc_st_finance', 'sc_st_finance_p2',
+    'weaker_section_os', 'weaker_section',
+    'women_finance', 'women_finance_p2',
+    'non_farm_sector',
+    'cgtmse', 'cgtmse_p2',
+  ],
+  'Other': [
+    'dcc_meetings', 'ldm_details', 'flc_report', 'financial_literacy',
+    'uncategorized', 'govt_sponsored_npa',
+    'recovery_bakijai', 'npa_recovery', 'npa_recovery_p2', 'npa', 'sarfaesi',
+    'recovery_certificate', 'recovery_drt',
+    'segregation_advances', 'tea_garden_labourers',
+    'ads_progress', 'bharatnet', 'bharatnet_p2', 'bharatnet_p3', 'bharatnet_p4',
+    'district_misc', 'guruji_credit_card', 'nlm', 'svskp', 'suy',
+    'cm_srim', 'town_hall_msme', 'investment_utilization',
+    'doubling_farmers_income', 'doubling_farmers_income_p2', 'doubling_farmers_income_p3',
+    'apy', 'acp_district_agri', 'acp_district_agri_allied', 'acp_district_ancillary',
+    'acp_district_msme', 'acp_district_total',
+  ],
+};
+
+// Get tier for a category
+export function getCategoryTier(cat: string): string {
+  for (const [tier, cats] of Object.entries(CATEGORY_TIERS)) {
+    if (cats.includes(cat)) return tier;
+  }
+  return 'Other';
+}
+
 export const QUARTER_ORDER = [
   'june_2020','sept_2020','dec_2020',
   'june_2021','sept_2021','dec_2021',

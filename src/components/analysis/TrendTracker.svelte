@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { CATEGORY_INFO, prettyCategoryName } from '../../lib/slbc-categories';
+  import { CATEGORY_INFO, prettyCategoryName, CATEGORY_TIERS, getCategoryTier } from '../../lib/slbc-categories';
 
   interface Props {
     baseUrl?: string;
@@ -66,7 +66,12 @@
       .replace(/\bUpi\b/g, 'UPI').replace(/\bImps\b/g, 'IMPS').replace(/\bUssd\b/g, 'USSD')
       .replace(/\bPmegp\b/g, 'PMEGP').replace(/\bNulm\b/g, 'NULM').replace(/\bNrlm\b/g, 'NRLM')
       .replace(/\bSb\b/g, 'SB').replace(/\bCd\b/g, 'CD').replace(/\bCsp\b/g, 'CSP')
-      .replace(/\bAeps\b/g, 'AePS').replace(/\bDbt\b/g, 'DBT').replace(/\bPct\b/g, '%');
+      .replace(/\bAeps\b/g, 'AePS').replace(/\bDbt\b/g, 'DBT').replace(/\bPct\b/g, '%')
+      .replace(/\bApy\b/g, 'APY').replace(/\bPmjjby\b/g, 'PMJJBY').replace(/\bPmsby\b/g, 'PMSBY')
+      .replace(/\bPmmy\b/g, 'PMMY').replace(/\bPmfby\b/g, 'PMFBY').replace(/\bPmay\b/g, 'PMAY')
+      .replace(/\bTl\b/g, 'TL').replace(/\bWc\b/g, 'WC').replace(/\bKvic\b/g, 'KVIC')
+      .replace(/\bDcc\b/g, 'DCC').replace(/\bDlrc\b/g, 'DLRC').replace(/\bLdm\b/g, 'LDM')
+      .replace(/\bRseti\b/g, 'RSETI').replace(/\bFlc\b/g, 'FLC').replace(/\bMsme\b/g, 'MSME');
     if (isAmt) name += ' (₹ Lakhs)';
     else if (isPct) name += ' (%)';
     return name;
@@ -221,6 +226,25 @@
     const cats = new Set<string>();
     for (const m of allMetrics) cats.add(m.category);
     return [...cats].sort();
+  });
+
+  // Group available categories by tier
+  let groupedCategories: { tier: string; cats: string[] }[] = $derived.by(() => {
+    const tierOrder = Object.keys(CATEGORY_TIERS);
+    const groups: { tier: string; cats: string[] }[] = [];
+    for (const tier of tierOrder) {
+      const tierCats = availableCategories.filter(c => getCategoryTier(c) === tier);
+      if (tierCats.length > 0) groups.push({ tier, cats: tierCats });
+    }
+    // Any uncategorized
+    const allTierCats = new Set(Object.values(CATEGORY_TIERS).flat());
+    const orphans = availableCategories.filter(c => !allTierCats.has(c));
+    if (orphans.length > 0) {
+      const otherGroup = groups.find(g => g.tier === 'Other');
+      if (otherGroup) otherGroup.cats.push(...orphans);
+      else groups.push({ tier: 'Other', cats: orphans });
+    }
+    return groups;
   });
 
   // Derived: filtered metrics based on category filter
@@ -488,7 +512,7 @@
       </div>
     {/if}
 
-    <!-- Category filter pills -->
+    <!-- Category filter pills grouped by tier -->
     {#if availableCategories.length > 0}
       <div class="category-pills">
         <button
@@ -498,15 +522,22 @@
         >
           All ({allMetrics.length})
         </button>
-        {#each availableCategories as cat}
-          {@const count = allMetrics.filter(m => m.category === cat).length}
-          <button
-            class="cat-pill"
-            class:active={selectedCategoryFilter === cat}
-            onclick={() => selectedCategoryFilter = cat}
-          >
-            {CATEGORY_INFO[cat] || prettyCategoryName(cat)} ({count})
-          </button>
+        {#each groupedCategories as group}
+          <div class="tier-group">
+            <div class="tier-label">{group.tier}</div>
+            <div class="tier-pills">
+              {#each group.cats as cat}
+                {@const count = allMetrics.filter(m => m.category === cat).length}
+                <button
+                  class="cat-pill"
+                  class:active={selectedCategoryFilter === cat}
+                  onclick={() => selectedCategoryFilter = cat}
+                >
+                  {CATEGORY_INFO[cat] || prettyCategoryName(cat)} ({count})
+                </button>
+              {/each}
+            </div>
+          </div>
         {/each}
       </div>
     {/if}
@@ -738,6 +769,25 @@
 
   /* Category pills */
   .category-pills {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .tier-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .tier-label {
+    font-family: var(--font-sans);
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    padding-left: 2px;
+  }
+  .tier-pills {
     display: flex;
     gap: 6px;
     flex-wrap: wrap;

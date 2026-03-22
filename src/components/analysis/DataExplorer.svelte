@@ -65,7 +65,12 @@
       .replace(/\bUpi\b/g, 'UPI').replace(/\bImps\b/g, 'IMPS').replace(/\bUssd\b/g, 'USSD')
       .replace(/\bPmegp\b/g, 'PMEGP').replace(/\bNulm\b/g, 'NULM').replace(/\bNrlm\b/g, 'NRLM')
       .replace(/\bSb\b/g, 'SB').replace(/\bCd\b/g, 'CD').replace(/\bCsp\b/g, 'CSP')
-      .replace(/\bAeps\b/g, 'AePS').replace(/\bDbt\b/g, 'DBT').replace(/\bPct\b/g, '%');
+      .replace(/\bAeps\b/g, 'AePS').replace(/\bDbt\b/g, 'DBT').replace(/\bPct\b/g, '%')
+      .replace(/\bApy\b/g, 'APY').replace(/\bPmjjby\b/g, 'PMJJBY').replace(/\bPmsby\b/g, 'PMSBY')
+      .replace(/\bPmmy\b/g, 'PMMY').replace(/\bPmfby\b/g, 'PMFBY').replace(/\bPmay\b/g, 'PMAY')
+      .replace(/\bTl\b/g, 'TL').replace(/\bWc\b/g, 'WC').replace(/\bKvic\b/g, 'KVIC')
+      .replace(/\bDcc\b/g, 'DCC').replace(/\bDlrc\b/g, 'DLRC').replace(/\bLdm\b/g, 'LDM')
+      .replace(/\bRseti\b/g, 'RSETI').replace(/\bFlc\b/g, 'FLC').replace(/\bMsme\b/g, 'MSME');
   }
 
   // Derived
