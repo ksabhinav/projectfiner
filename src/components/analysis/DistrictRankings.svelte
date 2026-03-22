@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { CATEGORY_INFO, prettyCategoryName } from '../../lib/slbc-categories';
+  import { CATEGORY_INFO, prettyCategoryName, CATEGORY_DESCRIPTIONS } from '../../lib/slbc-categories';
 
   interface Props {
     baseUrl: string;
@@ -361,6 +361,9 @@
             <option value={cat}>{prettyCategoryName(cat)}</option>
           {/each}
         </select>
+        {#if CATEGORY_DESCRIPTIONS[selectedCategory]}
+          <div class="cat-desc">{CATEGORY_DESCRIPTIONS[selectedCategory]}</div>
+        {/if}
       </div>
 
       <div class="control-section">
@@ -520,6 +523,18 @@
     text-transform: uppercase;
     color: var(--label);
     margin-bottom: 6px;
+  }
+  .cat-desc {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-top: 6px;
+    padding: 6px 8px;
+    background: rgba(245, 244, 241, 0.6);
+    border-radius: 4px;
+    border-left: 2px solid var(--accent);
   }
   .select {
     width: 100%;
