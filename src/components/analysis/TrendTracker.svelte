@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { CATEGORY_INFO, prettyCategoryName, CATEGORY_TIERS, getCategoryTier } from '../../lib/slbc-categories';
+  import { CATEGORY_INFO, prettyCategoryName, CATEGORY_TIERS, getCategoryTier, CATEGORY_DESCRIPTIONS } from '../../lib/slbc-categories';
 
   interface Props {
     baseUrl?: string;
@@ -519,6 +519,7 @@
             class="cat-pill"
             class:active={selectedCategoryFilter === cat}
             onclick={() => selectedCategoryFilter = cat}
+            title={CATEGORY_DESCRIPTIONS[cat] || ''}
           >
             {CATEGORY_INFO[cat] || prettyCategoryName(cat)} ({count})
           </button>

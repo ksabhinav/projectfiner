@@ -147,6 +147,52 @@ export const CATEGORY_INFO: Record<string, string> = {
   atm_network:                         'ATM network (district-wise)',
 };
 
+// Category descriptions for tooltips
+export const CATEGORY_DESCRIPTIONS: Record<string, string> = {
+  credit_deposit_ratio: 'Ratio of bank credit to deposits. Below 40% means the district is credit-starved — deposits flow out to fund lending elsewhere.',
+  key_indicators: 'Summary of deposits, advances, and CD ratio across all bank branches in the district.',
+  branch_network: 'Physical banking infrastructure — bank branches (rural/semi-urban/urban), ATMs, and Business Correspondent outlets.',
+  pmjdy: 'PM Jan Dhan Yojana — zero-balance bank accounts for the unbanked. Tracks accounts, Aadhaar seeding, RuPay cards, and zero-balance dormancy.',
+  digital_transactions: 'Coverage of digital payment modes (UPI, IMPS, cards, USSD) across savings bank accounts. Measures digital readiness, not transaction volume.',
+  aadhaar_authentication: 'Aadhaar linkage and biometric authentication across bank accounts (CASA). Required for DBT, AePS, and eKYC.',
+  fi_village_banking: 'Banking outlet coverage at the village level — how many villages have a bank branch, BC, or ATM within 5 km.',
+  kcc: 'Kisan Credit Card — revolving credit for farmers at 4% effective interest. Covers crop production, animal husbandry, and fisheries.',
+  kcc_crop: 'KCC breakdowns by crop type — new issuances, renewals, NPA, and active cards for crops, animal husbandry, and fisheries.',
+  fi_kcc: 'FI-focused KCC progress — issuance targets, achievement, and Aadhaar authentication of KCC holders.',
+  shg: 'Self Help Groups — savings-linked and credit-linked SHGs under the SHG-Bank Linkage Programme. Tracks outstanding loans and NPA.',
+  shg_nrlm: 'SHG credit linkage under National Rural Livelihoods Mission (NRLM/DAY-NRLM).',
+  jlg: 'Joint Liability Groups — small farmer groups (4-10 members) who guarantee each other\'s loans. Common for tenant farmers without land titles.',
+  nrlm: 'National Rural Livelihoods Mission — SHG formation, bank linkage, and livelihood support for rural poor.',
+  crop_insurance: 'PM Fasal Bima Yojana (PMFBY) — crop insurance enrollment, coverage, and claims by district.',
+  social_security: 'PM Suraksha Bima (PMSBY), PM Jeevan Jyoti Bima (PMJJBY), and Atal Pension Yojana (APY) enrollment.',
+  pmegp: 'PM Employment Generation Programme — micro-enterprise loans with 25-35% subsidy for setting up new units.',
+  sui: 'Stand Up India — loans of ₹10L-1Cr to SC/ST and women entrepreneurs for greenfield enterprises.',
+  pmmy_mudra_disbursement: 'PM Mudra Yojana — micro-enterprise loans in 3 tiers: Shishu (up to ₹50K), Kishore (₹50K-5L), Tarun (₹5L-10L).',
+  pmmy_mudra_os_npa: 'Mudra loan outstanding and NPA position — tracks repayment health of micro-enterprise loans.',
+  housing_pmay: 'PM Awas Yojana (PMAY) — housing loans and subsidies for economically weaker sections.',
+  education_loan: 'Education loans and other priority/non-priority sector lending breakdowns.',
+  acp_disbursement_agri: 'Annual Credit Plan — agriculture sector disbursement targets and achievement.',
+  acp_disbursement_msme: 'Annual Credit Plan — MSME sector disbursement by enterprise size (Micro/Small/Medium) and loan type (Term Loan/Working Capital).',
+  acp_disbursement_other_ps: 'Annual Credit Plan — other priority sector disbursement (education, housing, renewable energy, social infrastructure).',
+  acp_disbursement_non_ps: 'Annual Credit Plan — non-priority sector lending (personal loans, housing above threshold, etc.).',
+  acp_target_achievement: 'Annual Credit Plan targets vs actual achievement across priority sector categories.',
+  minority_disbursement: 'Lending to minority communities — disbursement during current year.',
+  minority_outstanding: 'Lending to minority communities — outstanding loans and NPA.',
+  sc_st_finance: 'Lending to Scheduled Caste and Scheduled Tribe borrowers.',
+  weaker_section_os: 'Lending to weaker sections — small/marginal farmers, artisans, SHGs, SC/ST, minorities.',
+  women_finance: 'Lending to women borrowers and women-headed enterprises.',
+  rseti: 'Rural Self Employment Training Institutes — training programs and settlement rates for rural youth.',
+  nulm: 'National Urban Livelihoods Mission — SHG formation, skill training, and self-employment support in urban areas.',
+  dcc_meetings: 'District Consultative Committee / District Level Review Committee meeting details.',
+  agri_outstanding: 'Agriculture sector — outstanding loans position.',
+  agri_npa: 'Agriculture sector — Non-Performing Assets (loans overdue 90+ days).',
+  msme_outstanding: 'MSME sector — outstanding loans position.',
+  msme_npa: 'MSME sector — Non-Performing Assets.',
+  acp_priority_sector_os_npa: 'Priority sector outstanding loans and NPA across agriculture, MSME, and other PS categories.',
+  investment_credit_agri_disbursement: 'Investment credit for agriculture — term loans for farm mechanization, irrigation, land development.',
+  investment_credit_agri_outstanding: 'Investment credit for agriculture — outstanding position.',
+};
+
 // Category tiers for grouping in UI (most important first)
 export const CATEGORY_TIERS: Record<string, string[]> = {
   'Core Financial Inclusion': [
