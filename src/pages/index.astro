@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
 
 const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Project FINER">
+  <Header title="" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
@@ -17,12 +19,6 @@ const base = import.meta.env.BASE_URL;
       <h1>Project <em>FINER</em></h1>
       <p class="panel-sub">Financial Inclusion in the North East Region</p>
       <p class="panel-stats">361 Districts &middot; 16 States &middot; 7 Indicators</p>
-      <div class="mobile-nav" style="display:none">
-        <a href={`${base}capital-markets/data-download`}>Downloads</a>
-        <a href={`${base}analysis`}>Analysis</a>
-        <a href={`${base}ask`}>Ask</a>
-        <a href={`${base}about`}>About</a>
-      </div>
 
     </div>
 
@@ -201,12 +197,6 @@ const base = import.meta.env.BASE_URL;
   </div>
 
   <div id="wm">Project FINER</div>
-  <div id="dl-link">
-    <a href={`${base}capital-markets/data-download`}>Downloads</a>
-    <a href={`${base}analysis`}>Analysis</a>
-    <a href={`${base}ask`}>Ask</a>
-    <a href={`${base}about`}>About</a>
-  </div>
 
   <!-- District Focus Mode overlay -->
   <div id="district-focus" class="district-focus">
@@ -1643,6 +1633,10 @@ const base = import.meta.env.BASE_URL;
 
 <style is:global>
   body { height: 100vh; display: flex; flex-direction: column; overflow: hidden; margin: 0; padding: 0; min-height: unset; }
+  /* Header floats over the map on the homepage */
+  .site-header { position: fixed!important; top: 0; left: 0; right: 0; z-index: 1000; border-bottom: none!important; }
+  .site-header .page-hero { display: none!important; }
+  .site-header .top-bar { border-bottom: none; }
   #map { flex: 1; width: 100%; min-height: 0; }
   .leaflet-marker-pane { transition: opacity 0.4s ease; }
   .clusters-hidden .leaflet-marker-pane { opacity: 0; pointer-events: none; }
@@ -1777,9 +1771,6 @@ const base = import.meta.env.BASE_URL;
   .leaflet-control-zoom a:hover{background:#fff!important;color:#1a1410!important}
 
   #wm{position:absolute;bottom:20px;right:110px;z-index:1000;font-family:'Inter',sans-serif;font-size:9px;font-weight:500;color:rgba(0,0,0,0.15);letter-spacing:0.06em;pointer-events:none}
-  #dl-link{position:absolute;top:16px;right:60px;z-index:1000;display:flex;gap:8px}
-  #dl-link a{color:#555048;text-decoration:none;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);padding:10px 18px;border:1px solid rgba(224,221,216,0.5);box-shadow:0 4px 16px rgba(0,0,0,0.04);font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;line-height:1;box-sizing:border-box;border-radius:8px;display:inline-flex;align-items:center;gap:6px;transition:all 0.25s}
-  #dl-link a:hover{color:#1a1410;background:rgba(255,255,255,1);box-shadow:0 6px 20px rgba(0,0,0,0.08);transform:translateY(-1px)}
   #btn-back{display:none;position:absolute;top:90px;right:16px;z-index:1000;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.5);padding:10px 16px;font-family:'Inter',sans-serif;font-size:10px;font-weight:500;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.04);color:#555048;border-radius:8px;transition:all 0.25s}
   #btn-back:hover{background:#fff;box-shadow:0 6px 20px rgba(0,0,0,0.08);color:#1a1410}
 
@@ -1788,6 +1779,7 @@ const base = import.meta.env.BASE_URL;
   .district-focus.active{display:flex;animation:focusAppear 0.35s ease}
   body:has(.district-focus.active) #panel{z-index:1300!important}
   body:has(.district-focus.active) #time-slider{z-index:1300!important}
+  body:has(.district-focus.active) .site-header{z-index:1300!important}
   @keyframes focusAppear{0%{opacity:0}0%{opacity:0}100%{opacity:1}}
   .focus-shape-wrap{position:relative;display:flex;align-items:center;justify-content:center}
   .focus-svg{width:380px;height:380px;filter:drop-shadow(4px 6px 12px rgba(0,0,0,0.15));overflow:visible}
@@ -1803,7 +1795,6 @@ const base = import.meta.env.BASE_URL;
 
   /* ── Bottom-sheet handle + mobile nav (hidden on desktop) ── */
   #panel-handle{display:none}
-  .mobile-nav{display:none}
 
   /* ── Mobile responsive — bottom sheet ── */
   @media (max-width: 640px) {
@@ -1831,16 +1822,6 @@ const base = import.meta.env.BASE_URL;
     .panel-stats{display:none}
 
     /* Mobile quick-nav row inside panel head */
-    .mobile-nav{display:flex!important;gap:6px;margin-top:8px}
-    .mobile-nav a{
-      flex:1;padding:7px 0;text-align:center;
-      font-family:'Inter',sans-serif;font-size:9px;font-weight:600;
-      letter-spacing:0.05em;text-transform:uppercase;
-      color:#888078;text-decoration:none;
-      background:rgba(0,0,0,0.03);border-radius:8px;
-      transition:all 0.15s;
-    }
-    .mobile-nav a:active{background:rgba(0,0,0,0.06)}
 
     /* Body */
     #panel-body{padding:8px 20px 24px;transition:opacity 0.2s;overflow-y:auto;max-height:calc(75vh - 90px)}
@@ -1855,8 +1836,6 @@ const base = import.meta.env.BASE_URL;
     .grp-title{font-size:10px}
     #stats-capital,#stats-banking{margin-top:10px;padding-top:10px;font-size:11px;line-height:1.7}
 
-    /* Hide desktop action buttons — replaced by mobile-nav */
-    #dl-link{display:none!important}
 
     /* Timeline — compact */
     #time-slider{right:6px;top:50%;transform:translateY(-50%)}
