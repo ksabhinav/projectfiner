@@ -143,28 +143,6 @@ const base = import.meta.env.BASE_URL;
       </div>
     </section>
 
-    <!-- ── How It's Built ── -->
-    <section class="about-section">
-      <div class="section-label">How It's Built</div>
-      <div class="prose">
-        <p>
-          SLBC booklets arrive as landscape-oriented PDFs with rotated text, inconsistent table structures, and OCR artifacts. We use <strong>pdfplumber</strong> for extraction, with custom pipelines for each state's formatting quirks — text reversal, multi-page table merging, fuzzy district matching, and field normalization across 22 different naming conventions.
-        </p>
-        <p>
-          The frontend is a static site built with <strong>Astro</strong> and <strong>Svelte</strong>, with <strong>Leaflet</strong> for mapping and <strong>Plotly</strong> for charts. All data lives as static JSON and CSV files — no backend, no database, no API keys. The entire platform is hosted on GitHub Pages.
-        </p>
-      </div>
-      <div class="tech-pills">
-        <span class="pill">Astro</span>
-        <span class="pill">Svelte 5</span>
-        <span class="pill">Leaflet</span>
-        <span class="pill">Plotly.js</span>
-        <span class="pill">pdfplumber</span>
-        <span class="pill">D3.js</span>
-        <span class="pill">GitHub Pages</span>
-      </div>
-    </section>
-
     <!-- ── Open Source ── -->
     <section class="about-section">
       <div class="section-label">Open Source</div>
@@ -337,24 +315,6 @@ const base = import.meta.env.BASE_URL;
     font-size: 11px;
     color: var(--muted);
     line-height: 1.5;
-  }
-
-  /* ── Tech pills ── */
-  .tech-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 16px;
-  }
-  .pill {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    padding: 5px 12px;
-    background: var(--btn-bg);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    color: var(--muted);
-    letter-spacing: 0.01em;
   }
 
   /* ── Responsive ── */
