@@ -511,6 +511,12 @@ Leaflet and MarkerCluster are loaded via CDN (unpkg) in inline scripts.
 31. **Double-click zoom disabled on map**: `doubleClickZoom: false` in Leaflet map init to prevent conflict with district focus mode activation.
 32. **Map initial position uses fitBounds, not setView**: Map initializes with `fitBounds(ALL_STATES_BOUNDS, { paddingTopLeft: [306, 10] })` to account for the left panel from the first frame. This prevents the visible layout shift that occurred when using a fixed center/zoom followed by `flyToNE()`.
 33. **Contact email**: mail@projectfiner.com (configured via GoDaddy email + Cloudflare DNS MX/SPF records).
+34. **Unit labels**: Monetary fields show "₹ Lakhs", percentages show "%". On the map: `fmtWithUnit(val, unit)` handles formatting. In analysis pages: `prettyFieldName()` auto-detects from field suffix (`_amt` → ₹ Lakhs, `_pct` → %). All SLBC monetary values are in **Rs. Lakhs** (1 Lakh = ₹100,000).
+35. **Acronym preservation in analysis pages**: `prettyFieldName()` in TrendTracker, DistrictRankings, DataExplorer converts snake_case to Title Case then fixes 17 acronyms (CASA, KCC, NPA, PMJDY, SHG, ATM, UPI, IMPS, USSD, PMEGP, NULM, NRLM, SB, CD, CSP, AePS, DBT). Add new acronyms to all 3 files when needed.
+36. **Bare→_amt field normalization**: Fields like `crop_loan` and `crop_loan_amt` that represent the same metric across different quarters were normalized to the `_amt` form. Script at `/tmp/normalize_amt_fields.py`. Only merged when a `_no` version exists (confirming bare = amount not count) or values have similar magnitude. 7,470 renames across 11 states.
+37. **Info tooltip descriptions**: Each of the 7 indicators and 30+ metrics has a `desc` property in the INDICATORS object. Shown via `(i)` button next to dropdowns. Hover shows a `position:fixed` popover. Touch devices: tap to show, tap elsewhere to hide.
+38. **Zoom control position**: `margin-top: 60px!important` on `.leaflet-control-zoom` to avoid overlap with the transparent Header nav capsules on the homepage.
+39. **Aadhaar cross-category fallbacks**: Only `pmjdy`, `pmjdy_2`, `pmjdy_3` — NOT `digital_transactions`, `fi_kcc`, `women_finance` (those contain different metrics like BHIM transaction counts and digital coverage, not CASA seeding/authentication).
 
 ## Data Quality Pipeline
 
@@ -521,7 +527,8 @@ SLBC data goes through multiple cleaning passes after PDF extraction:
 4. **Date-embedded field redistribution** — Fields like "CD Ratio March 2024" split into correct quarters
 5. **Fuzzy deduplication** — Merge near-duplicate field names (OCR artifacts)
 6. **Final comprehensive fix** — Comma number parsing, NPA disambiguation, garbled name fixes, long name shortening
-7. **Cross-state field standardization** — Run via `public/slbc-data/standardize_fields.py`. Handles:
+7. **Bare→_amt normalization** — Merge complementary field pairs where `foo` (1 quarter) and `foo_amt` (14 quarters) represent the same amount metric with different names. Safety: only when `_no` version exists confirming bare = amount, or values have similar magnitude. Applied across all 22 states.
+8. **Cross-state field standardization** — Run via `public/slbc-data/standardize_fields.py`. Handles:
    - Manipur OCR spacing fixes (`total_bran ch` → `total_branch`)
    - Meghalaya reversed word order (`rural_branch` → `branch_rural`)
    - Bihar category renames (`cd_ratio` → `credit_deposit_ratio`, `kcc_progress` → `kcc`)
@@ -542,6 +549,14 @@ When adding new states or updating indicators, these are the known field name va
 | KCC | `total_no_of_kcc` | `no_of_kcc`, `total_kcc_no`, `total_no`, `rupay_card_issued_in_kcc`, `o_s_position_no_of_cards_issued`, `target_no` |
 | SHG | `savings_linked_no` | `savings_linked`, `credit_linked_no`, `current_fy_savings_linked_no`, `deposit_linkage_no_of_groups`, `total_sanction_no` |
 | Digital | `coverage_sb_pct` | `coverage_pct`, `achievement`, `pct_coverage`, `of_such_accounts_out_of_total_operative_savings_accounts` (Sikkim) |
-| Aadhaar | `no_of_aadhaar_seeded_casa` | `aadhaar_seeded_casa`, `no_of_aadhaar_seeded` (WB — without `_casa` suffix) |
+| Aadhaar Seeded | `no_of_aadhaar_seeded_casa` | `aadhaar_seeded_casa`, `number_of_aadhaar_seeded_casa`, `no_of_aadhaar_seeded`, `aadhaar_seeded`, `pct_aadhaar_seeding` |
+| Aadhaar Operative | `no_of_operative_casa` | `operative_casa`, `number_of_operative_casa`, `aadhaar_operative_casa`, `operative_sb` |
+| Aadhaar Auth | `no_of_authenticated_casa` | `authenticated_casa`, `number_of_authenticated_casa`, `aadhaar_authenticated_casa`, `number_of_authenticated` |
 
-**Category mismatches**: AP uses `fi_kcc` instead of `kcc`; Assam stores `total_branch` under `credit_deposit_ratio` instead of `branch_network`; WB uses `shg_nrlm` instead of `shg`; WB stores Aadhaar seeding data under `pmjdy` category.
+**Category mismatches**: AP uses `fi_kcc` instead of `kcc`; Assam stores `total_branch` under `credit_deposit_ratio` instead of `branch_network`; WB uses `shg_nrlm` instead of `shg`; WB stores Aadhaar seeding data under `pmjdy` category. Aadhaar authentication falls back to `pmjdy`, `pmjdy_2`, `pmjdy_3` categories only (NOT `digital_transactions` or `fi_kcc` — those contain different metrics).
+
+**Known data quality issues**:
+- Meghalaya June 2021: deposits appear in Crores instead of Lakhs (40x jump) — unit conversion error in source PDF
+- SHG `savings_linked_no`: alternates between cumulative and current-quarter counts across many states/quarters
+- Several quarters (June 2021, Sept 2021, March 2021, June 2023, March 2024) extracted from Excel ZIPs have only 117 fields vs 430+ normal — limited table availability in source files
+- Assam Baksa PMJDY June 2020 = 3.6M — obvious data entry error in source PDF
