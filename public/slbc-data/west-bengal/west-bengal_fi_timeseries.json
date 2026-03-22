@@ -1967,7 +1967,6 @@
           "pmjdy__male_a_c": "865105.0",
           "pmjdy__female_a_c": "688943.0",
           "pmjdy__sum_of_total_a_c": "1554048.0",
-          "pmjdy__total_deposit_rs_in_crore": "604.73",
           "pmjdy__zero_balance_account": "265320.0",
           "pmjdy__rupaycard_issued": "1059789.0",
           "pmjdy__aadhaar_card_seeded": "794806.0",
@@ -1999,7 +1998,8 @@
           "rseti__self_employed_bank": "1367.0",
           "rseti__own": "1289.0",
           "rseti__in_process": "1067.0",
-          "rseti__of_settelment": "71.0"
+          "rseti__of_settelment": "71.0",
+          "pmjdy__total_deposit_in_rs_crore": "604.73"
         },
         {
           "district": "Bankura",
@@ -2012,7 +2012,6 @@
           "pmjdy__male_a_c": "601813.0",
           "pmjdy__female_a_c": "593190.0",
           "pmjdy__sum_of_total_a_c": "1195003.0",
-          "pmjdy__total_deposit_rs_in_crore": "363.56",
           "pmjdy__zero_balance_account": "256931.0",
           "pmjdy__rupaycard_issued": "724968.0",
           "pmjdy__aadhaar_card_seeded": "543302.0",
@@ -2045,7 +2044,8 @@
           "rseti__own": "987.0",
           "rseti__wage_employed": "517.0",
           "rseti__in_process": "1797.0",
-          "rseti__of_settelment": "56.0"
+          "rseti__of_settelment": "56.0",
+          "pmjdy__total_deposit_in_rs_crore": "363.56"
         },
         {
           "district": "Birbhum",
@@ -2058,7 +2058,6 @@
           "pmjdy__male_a_c": "682149.0",
           "pmjdy__female_a_c": "513887.0",
           "pmjdy__sum_of_total_a_c": "1196036.0",
-          "pmjdy__total_deposit_rs_in_crore": "285.78",
           "pmjdy__zero_balance_account": "247464.0",
           "pmjdy__rupaycard_issued": "771891.0",
           "pmjdy__aadhaar_card_seeded": "595649.0",
@@ -2087,7 +2086,8 @@
           "rseti__own": "1422.0",
           "rseti__wage_employed": "6.0",
           "rseti__in_process": "3551.0",
-          "rseti__of_settelment": "59.0"
+          "rseti__of_settelment": "59.0",
+          "pmjdy__total_deposit_in_rs_crore": "285.78"
         },
         {
           "district": "Cooch Behar",
@@ -2100,7 +2100,6 @@
           "pmjdy__male_a_c": "384532.0",
           "pmjdy__female_a_c": "441440.0",
           "pmjdy__sum_of_total_a_c": "825972.0",
-          "pmjdy__total_deposit_rs_in_crore": "162.0",
           "pmjdy__zero_balance_account": "118322.0",
           "pmjdy__rupaycard_issued": "578101.0",
           "pmjdy__aadhaar_card_seeded": "443190.0",
@@ -2132,7 +2131,8 @@
           "rseti__self_employed_bank": "609.0",
           "rseti__own": "652.0",
           "rseti__in_process": "468.0",
-          "rseti__of_settelment": "73.0"
+          "rseti__of_settelment": "73.0",
+          "pmjdy__total_deposit_in_rs_crore": "162.0"
         },
         {
           "district": "Darjeeling",
@@ -2145,7 +2145,6 @@
           "pmjdy__male_a_c": "245931.0",
           "pmjdy__female_a_c": "276794.0",
           "pmjdy__sum_of_total_a_c": "522725.0",
-          "pmjdy__total_deposit_rs_in_crore": "221.54",
           "pmjdy__zero_balance_account": "97162.0",
           "pmjdy__rupaycard_issued": "458643.0",
           "pmjdy__aadhaar_card_seeded": "293837.0",
@@ -2177,7 +2176,8 @@
           "rseti__self_employed_bank": "487.0",
           "rseti__own": "196.0",
           "rseti__in_process": "354.0",
-          "rseti__of_settelment": "66.0"
+          "rseti__of_settelment": "66.0",
+          "pmjdy__total_deposit_in_rs_crore": "221.54"
         },
         {
           "district": "Malda",
@@ -2190,7 +2190,6 @@
           "pmjdy__male_a_c": "710568.0",
           "pmjdy__female_a_c": "773306.0",
           "pmjdy__sum_of_total_a_c": "1483874.0",
-          "pmjdy__total_deposit_rs_in_crore": "444.04",
           "pmjdy__zero_balance_account": "296235.0",
           "pmjdy__rupaycard_issued": "885333.0",
           "pmjdy__aadhaar_card_seeded": "545180.0",
@@ -2223,7 +2222,8 @@
           "rseti__own": "809.0",
           "rseti__wage_employed": "200.0",
           "rseti__in_process": "1639.0",
-          "rseti__of_settelment": "59.0"
+          "rseti__of_settelment": "59.0",
+          "pmjdy__total_deposit_in_rs_crore": "444.04"
         },
         {
           "district": "Uttar Dinajpur",
@@ -2236,7 +2236,6 @@
           "pmjdy__male_a_c": "658508.0",
           "pmjdy__female_a_c": "700961.0",
           "pmjdy__sum_of_total_a_c": "1359469.0",
-          "pmjdy__total_deposit_rs_in_crore": "217.95",
           "pmjdy__zero_balance_account": "373149.0",
           "pmjdy__rupaycard_issued": "850314.0",
           "pmjdy__aadhaar_card_seeded": "496680.0",
@@ -2269,7 +2268,8 @@
           "rseti__own": "542.0",
           "rseti__wage_employed": "7.0",
           "rseti__in_process": "1058.0",
-          "rseti__of_settelment": "65.0"
+          "rseti__of_settelment": "65.0",
+          "pmjdy__total_deposit_in_rs_crore": "217.95"
         },
         {
           "district": "Dakshin Dinajpur",
@@ -2282,7 +2282,6 @@
           "pmjdy__male_a_c": "304463.0",
           "pmjdy__female_a_c": "313575.0",
           "pmjdy__sum_of_total_a_c": "618038.0",
-          "pmjdy__total_deposit_rs_in_crore": "128.11",
           "pmjdy__zero_balance_account": "166070.0",
           "pmjdy__rupaycard_issued": "429223.0",
           "pmjdy__aadhaar_card_seeded": "289737.0",
@@ -2307,7 +2306,8 @@
           "jlg__no_of_jlgs_credit_linked_during_f_y_2016_17_april_to_september": "106.0",
           "jlg__loan_disbursed_under_jlg_during_f_y_2016_17_april_to_september": "105.22",
           "jlg__cumulative_no_of_jlgs_credit_linked_as_on_30_09_2016": "740.0",
-          "jlg__cumulative_amount_of_loan_disbursed_under_jlg_as_on_30_09_2016": "342.74"
+          "jlg__cumulative_amount_of_loan_disbursed_under_jlg_as_on_30_09_2016": "342.74",
+          "pmjdy__total_deposit_in_rs_crore": "128.11"
         },
         {
           "district": "Howrah",
@@ -2320,7 +2320,6 @@
           "pmjdy__male_a_c": "494600.0",
           "pmjdy__female_a_c": "407439.0",
           "pmjdy__sum_of_total_a_c": "902039.0",
-          "pmjdy__total_deposit_rs_in_crore": "414.65",
           "pmjdy__zero_balance_account": "116388.0",
           "pmjdy__rupaycard_issued": "721612.0",
           "pmjdy__aadhaar_card_seeded": "614238.0",
@@ -2353,7 +2352,8 @@
           "rseti__own": "6861.0",
           "rseti__wage_employed": "524.0",
           "rseti__in_process": "2169.0",
-          "rseti__of_settelment": "78.0"
+          "rseti__of_settelment": "78.0",
+          "pmjdy__total_deposit_in_rs_crore": "414.65"
         },
         {
           "district": "Hooghly",
@@ -2366,7 +2366,6 @@
           "pmjdy__male_a_c": "622005.0",
           "pmjdy__female_a_c": "513186.0",
           "pmjdy__sum_of_total_a_c": "1135191.0",
-          "pmjdy__total_deposit_rs_in_crore": "470.36",
           "pmjdy__zero_balance_account": "193069.0",
           "pmjdy__rupaycard_issued": "815533.0",
           "pmjdy__aadhaar_card_seeded": "803379.0",
@@ -2398,7 +2397,8 @@
           "rseti__self_employed_bank": "2472.0",
           "rseti__own": "443.0",
           "rseti__in_process": "661.0",
-          "rseti__of_settelment": "71.0"
+          "rseti__of_settelment": "71.0",
+          "pmjdy__total_deposit_in_rs_crore": "470.36"
         },
         {
           "district": "Jalpaiguri",
@@ -2411,7 +2411,6 @@
           "pmjdy__male_a_c": "486583.0",
           "pmjdy__female_a_c": "563277.0",
           "pmjdy__sum_of_total_a_c": "1049860.0",
-          "pmjdy__total_deposit_rs_in_crore": "314.89",
           "pmjdy__zero_balance_account": "262707.0",
           "pmjdy__rupaycard_issued": "762889.0",
           "pmjdy__aadhaar_card_seeded": "579297.0",
@@ -2444,7 +2443,8 @@
           "rseti__own": "168.0",
           "rseti__wage_employed": "9.0",
           "rseti__in_process": "777.0",
-          "rseti__of_settelment": "78.0"
+          "rseti__of_settelment": "78.0",
+          "pmjdy__total_deposit_in_rs_crore": "314.89"
         },
         {
           "district": "Alipurduar",
@@ -2457,7 +2457,6 @@
           "pmjdy__male_a_c": "28587.0",
           "pmjdy__female_a_c": "33430.0",
           "pmjdy__sum_of_total_a_c": "62017.0",
-          "pmjdy__total_deposit_rs_in_crore": "25.9",
           "pmjdy__zero_balance_account": "9181.0",
           "pmjdy__rupaycard_issued": "61137.0",
           "pmjdy__aadhaar_card_seeded": "31783.0",
@@ -2472,7 +2471,8 @@
           "unknown_2__achievement_as_on_sept_2016_no": "1643.0",
           "unknown_2__of_achievement_no": "75.57",
           "unknown_2__amt": "88.9",
-          "unknown_2__average_rs_lac": "1.64"
+          "unknown_2__average_rs_lac": "1.64",
+          "pmjdy__total_deposit_in_rs_crore": "25.9"
         },
         {
           "district": "Purba Medinipur",
@@ -2485,7 +2485,6 @@
           "pmjdy__male_a_c": "670863.0",
           "pmjdy__female_a_c": "648660.0",
           "pmjdy__sum_of_total_a_c": "1319523.0",
-          "pmjdy__total_deposit_rs_in_crore": "489.07",
           "pmjdy__zero_balance_account": "153902.0",
           "pmjdy__rupaycard_issued": "948189.0",
           "pmjdy__aadhaar_card_seeded": "517696.0",
@@ -2513,7 +2512,8 @@
           "rseti__own": "1438.0",
           "rseti__wage_employed": "26.0",
           "rseti__in_process": "926.0",
-          "rseti__of_settelment": "75.0"
+          "rseti__of_settelment": "75.0",
+          "pmjdy__total_deposit_in_rs_crore": "489.07"
         },
         {
           "district": "Paschim Medinipur",
@@ -2526,7 +2526,6 @@
           "pmjdy__male_a_c": "743251.0",
           "pmjdy__female_a_c": "705432.0",
           "pmjdy__sum_of_total_a_c": "1448683.0",
-          "pmjdy__total_deposit_rs_in_crore": "559.18",
           "pmjdy__zero_balance_account": "140927.0",
           "pmjdy__rupaycard_issued": "843377.0",
           "pmjdy__aadhaar_card_seeded": "428030.0",
@@ -2549,7 +2548,8 @@
           "rseti__own": "645.0",
           "rseti__wage_employed": "121.0",
           "rseti__in_process": "1152.0",
-          "rseti__of_settelment": "71.0"
+          "rseti__of_settelment": "71.0",
+          "pmjdy__total_deposit_in_rs_crore": "559.18"
         },
         {
           "district": "Murshidabad",
@@ -2562,7 +2562,6 @@
           "pmjdy__male_a_c": "1040488.0",
           "pmjdy__female_a_c": "1082315.0",
           "pmjdy__sum_of_total_a_c": "2122803.0",
-          "pmjdy__total_deposit_rs_in_crore": "660.34",
           "pmjdy__zero_balance_account": "362185.0",
           "pmjdy__rupaycard_issued": "1169867.0",
           "pmjdy__aadhaar_card_seeded": "926168.0",
@@ -2594,7 +2593,8 @@
           "rseti__self_employed_bank": "2013.0",
           "rseti__own": "1790.0",
           "rseti__in_process": "1942.0",
-          "rseti__of_settelment": "66.0"
+          "rseti__of_settelment": "66.0",
+          "pmjdy__total_deposit_in_rs_crore": "660.34"
         },
         {
           "district": "Nadia",
@@ -2607,7 +2607,6 @@
           "pmjdy__male_a_c": "802249.0",
           "pmjdy__female_a_c": "809173.0",
           "pmjdy__sum_of_total_a_c": "1611422.0",
-          "pmjdy__total_deposit_rs_in_crore": "561.65",
           "pmjdy__zero_balance_account": "303261.0",
           "pmjdy__rupaycard_issued": "1100560.0",
           "pmjdy__aadhaar_card_seeded": "624496.0",
@@ -2639,7 +2638,8 @@
           "rseti__self_employed_bank": "694.0",
           "rseti__own": "1219.0",
           "rseti__in_process": "1096.0",
-          "rseti__of_settelment": "64.0"
+          "rseti__of_settelment": "64.0",
+          "pmjdy__total_deposit_in_rs_crore": "561.65"
         },
         {
           "district": "Purulia",
@@ -2684,10 +2684,10 @@
           "pmjdy__male_a_c": "429605.0",
           "pmjdy__female_a_c": "339553.0",
           "pmjdy__sum_of_total_a_c": "769158.0",
-          "pmjdy__total_deposit_rs_in_crore": "779.24",
           "pmjdy__zero_balance_account": "121898.0",
           "pmjdy__rupaycard_issued": "696219.0",
-          "pmjdy__aadhaar_card_seeded": "388309.0"
+          "pmjdy__aadhaar_card_seeded": "388309.0",
+          "pmjdy__total_deposit_in_rs_crore": "779.24"
         },
         {
           "district": "South 24 Parganas",
@@ -15399,7 +15399,6 @@
           "pmegp__mm_disbursed_no": "10.0",
           "pmegp__rejected_no": "232.0",
           "pmegp__pending_no": "143.0",
-          "pmegp__pending_mm_disb_no": "0.0",
           "svskp__no_of_cases_sponsored": "641.0",
           "svskp__sanctioned": "291.0",
           "svskp__sanctioned_caes_project_cost_involved": "1020.06",
@@ -15431,7 +15430,8 @@
           "unknown_5__1km_3km": "2.0",
           "unknown_5__3km_5km": "2.0",
           "unknown_5__5000": "10.0",
-          "unknown_5__total": "10.0"
+          "unknown_5__total": "10.0",
+          "pmegp__mm_disb_pending_no": "0.0"
         },
         {
           "district": "Bankura",
@@ -15465,7 +15465,6 @@
           "pmegp__mm_disbursed_no": "28.0",
           "pmegp__rejected_no": "7.0",
           "pmegp__pending_no": "61.0",
-          "pmegp__pending_mm_disb_no": "0.0",
           "svskp__no_of_cases_sponsored": "1872.0",
           "svskp__sanctioned": "729.0",
           "svskp__sanctioned_caes_project_cost_involved": "1906.75",
@@ -15521,7 +15520,8 @@
           "unknown_5__7_5_km_10_km_2000": "4.0",
           "unknown_5__10_km_to_20_km_2000": "4.0",
           "unknown_5__total_of_gp_hqs_above_5_km_2000": "10.0",
-          "unknown_5__total": "29.0"
+          "unknown_5__total": "29.0",
+          "pmegp__mm_disb_pending_no": "0.0"
         },
         {
           "district": "Birbhum",
@@ -15555,7 +15555,6 @@
           "pmegp__mm_disbursed_no": "17.0",
           "pmegp__rejected_no": "21.0",
           "pmegp__pending_no": "84.0",
-          "pmegp__pending_mm_disb_no": "0.0",
           "svskp__no_of_cases_sponsored": "992.0",
           "svskp__sanctioned": "590.0",
           "svskp__sanctioned_caes_project_cost_involved": "1143.34",
@@ -15608,7 +15607,8 @@
           "unknown_5__5_km_7_5_km_2000": "5.0",
           "unknown_5__7_5_km_10_km_2000": "2.0",
           "unknown_5__total_of_gp_hqs_above_5_km_2000": "7.0",
-          "unknown_5__total": "7.0"
+          "unknown_5__total": "7.0",
+          "pmegp__mm_disb_pending_no": "0.0"
         },
         {
           "district": "Cooch Behar",
@@ -15641,7 +15641,6 @@
           "pmegp__mm_disbursed_no": "31.0",
           "pmegp__rejected_no": "187.0",
           "pmegp__pending_no": "287.0",
-          "pmegp__pending_mm_disb_no": "1.0",
           "svskp__no_of_cases_sponsored": "1120.0",
           "svskp__sanctioned": "638.0",
           "svskp__sanctioned_caes_project_cost_involved": "1369.31",
@@ -15691,7 +15690,8 @@
           "unknown_5__1km_3km": "13.0",
           "unknown_5__3km_5km": "8.0",
           "unknown_5__5000": "4.0",
-          "unknown_5__total": "4.0"
+          "unknown_5__total": "4.0",
+          "pmegp__mm_disb_pending_no": "1.0"
         },
         {
           "district": "Dakshin Dinajpur",
@@ -15724,7 +15724,6 @@
           "pmegp__mm_disbursed_no": "24.0",
           "pmegp__rejected_no": "16.0",
           "pmegp__pending_no": "61.0",
-          "pmegp__pending_mm_disb_no": "0.0",
           "svskp__no_of_cases_sponsored": "75.0",
           "svskp__sanctioned": "208.0",
           "svskp__sanctioned_caes_project_cost_involved": "444.48",
@@ -15755,7 +15754,8 @@
           "unknown_5__1km_3km": "1.0",
           "unknown_5__3km_5km": "5.0",
           "unknown_5__5000": "2.0",
-          "unknown_5__total": "2.0"
+          "unknown_5__total": "2.0",
+          "pmegp__mm_disb_pending_no": "0.0"
         },
         {
           "district": "Hooghly",
@@ -15782,7 +15782,6 @@
           "pmegp__mm_disbursed_no": "20.0",
           "pmegp__rejected_no": "29.0",
           "pmegp__pending_no": "14.0",
-          "pmegp__pending_mm_disb_no": "1.0",
           "svskp__no_of_cases_sponsored": "1902.0",
           "svskp__sanctioned": "572.0",
           "svskp__sanctioned_caes_project_cost_involved": "1908.15",
@@ -15836,7 +15835,8 @@
           "unknown_5__2000_5000": "7.0",
           "unknown_5__5000": "4.0",
           "unknown_5__total_of_gp_hqs_above_5_km_2000": "1.0",
-          "unknown_5__total": "12.0"
+          "unknown_5__total": "12.0",
+          "pmegp__mm_disb_pending_no": "1.0"
         },
         {
           "district": "Howrah",
@@ -15870,7 +15870,6 @@
           "pmegp__mm_disbursed_no": "28.0",
           "pmegp__rejected_no": "22.0",
           "pmegp__pending_no": "117.0",
-          "pmegp__pending_mm_disb_no": "0.0",
           "svskp__no_of_cases_sponsored": "1099.0",
           "svskp__sanctioned": "446.0",
           "svskp__sanctioned_caes_project_cost_involved": "928.87",
@@ -15920,7 +15919,8 @@
           "unknown_5__1km_3km": "18.0",
           "unknown_5__3km_5km": "9.0",
           "unknown_5__5000": "1.0",
-          "unknown_5__total": "1.0"
+          "unknown_5__total": "1.0",
+          "pmegp__mm_disb_pending_no": "0.0"
         },
         {
           "district": "Jhargram",
@@ -15987,7 +15987,6 @@
           "pmegp__mm_disbursed_no": "8.0",
           "pmegp__rejected_no": "0.0",
           "pmegp__pending_no": "2.0",
-          "pmegp__pending_mm_disb_no": "0.0",
           "svskp__no_of_cases_sponsored": "80.0",
           "svskp__sanctioned": "32.0",
           "svskp__sanctioned_caes_project_cost_involved": "161.65",
@@ -16016,7 +16015,8 @@
           "sarfaesi__total_pending_as_on_31_06_2019": "0.0",
           "unknown_5__total_gp": "1.0",
           "unknown_5__5000": "1.0",
-          "unknown_5__total": "1.0"
+          "unknown_5__total": "1.0",
+          "pmegp__mm_disb_pending_no": "0.0"
         },
         {
           "district": "Kolkata",
@@ -16044,7 +16044,6 @@
           "pmegp__mm_disbursed_no": "5.0",
           "pmegp__rejected_no": "57.0",
           "pmegp__pending_no": "62.0",
-          "pmegp__pending_mm_disb_no": "1.0",
           "svskp__no_of_cases_sponsored": "260.0",
           "svskp__sanctioned": "230.0",
           "svskp__sanctioned_caes_project_cost_involved": "988.69",
@@ -16063,7 +16062,8 @@
           "sarfaesi__above_60_days_below_6_months": "46.0",
           "sarfaesi__6_months_to_1_year": "33.0",
           "sarfaesi__1_year_and_above": "178.0",
-          "sarfaesi__total_pending_as_on_31_06_2019": "275.0"
+          "sarfaesi__total_pending_as_on_31_06_2019": "275.0",
+          "pmegp__mm_disb_pending_no": "1.0"
         },
         {
           "district": "Malda",
@@ -16096,7 +16096,6 @@
           "pmegp__mm_disbursed_no": "9.0",
           "pmegp__rejected_no": "38.0",
           "pmegp__pending_no": "66.0",
-          "pmegp__pending_mm_disb_no": "0.0",
           "svskp__no_of_cases_sponsored": "567.0",
           "svskp__sanctioned": "0.0",
           "svskp__sanctioned_caes_project_cost_involved": "0.0",
@@ -16147,7 +16146,8 @@
           "unknown_5__1km_3km": "5.0",
           "unknown_5__3km_5km": "6.0",
           "unknown_5__5000": "9.0",
-          "unknown_5__total": "9.0"
+          "unknown_5__total": "9.0",
+          "pmegp__mm_disb_pending_no": "0.0"
         },
         {
           "district": "Nadia",
@@ -16181,7 +16181,6 @@
           "pmegp__mm_disbursed_no": "48.0",
           "pmegp__rejected_no": "51.0",
           "pmegp__pending_no": "53.0",
-          "pmegp__pending_mm_disb_no": "0.0",
           "svskp__no_of_cases_sponsored": "3402.0",
           "svskp__sanctioned": "905.0",
           "svskp__sanctioned_caes_project_cost_involved": "2276.3",
@@ -16231,7 +16230,8 @@
           "unknown_5__1km_3km": "18.0",
           "unknown_5__3km_5km": "9.0",
           "unknown_5__5000": "5.0",
-          "unknown_5__total": "5.0"
+          "unknown_5__total": "5.0",
+          "pmegp__mm_disb_pending_no": "0.0"
         },
         {
           "district": "Paschim Medinipur",
@@ -16264,7 +16264,6 @@
           "pmegp__mm_disbursed_no": "23.0",
           "pmegp__rejected_no": "45.0",
           "pmegp__pending_no": "198.0",
-          "pmegp__pending_mm_disb_no": "1.0",
           "svskp__no_of_cases_sponsored": "0.0",
           "svskp__sanctioned": "0.0",
           "svskp__sanctioned_caes_project_cost_involved": "0.0",
@@ -16293,7 +16292,8 @@
           "sarfaesi__total_pending_as_on_31_06_2019": "66.0",
           "unknown_5__total_gp": "40.0",
           "unknown_5__1km_3km": "19.0",
-          "unknown_5__3km_5km": "21.0"
+          "unknown_5__3km_5km": "21.0",
+          "pmegp__mm_disb_pending_no": "1.0"
         },
         {
           "district": "Purulia",
@@ -16319,7 +16319,6 @@
           "pmegp__mm_disbursed_no": "14.0",
           "pmegp__rejected_no": "2.0",
           "pmegp__pending_no": "143.0",
-          "pmegp__pending_mm_disb_no": "0.0",
           "svskp__no_of_cases_sponsored": "23.0",
           "svskp__sanctioned": "90.0",
           "svskp__sanctioned_caes_project_cost_involved": "219.86",
@@ -16367,7 +16366,8 @@
           "unknown_5__1km_3km": "19.0",
           "unknown_5__3km_5km": "16.0",
           "unknown_5__5000": "44.0",
-          "unknown_5__total": "44.0"
+          "unknown_5__total": "44.0",
+          "pmegp__mm_disb_pending_no": "0.0"
         },
         {
           "district": "North 24 Parganas",
@@ -16524,7 +16524,6 @@
           "pmegp__mm_disbursed_no": "26.0",
           "pmegp__rejected_no": "7.0",
           "pmegp__pending_no": "62.0",
-          "pmegp__pending_mm_disb_no": "0.0",
           "svskp__no_of_cases_sponsored": "543.0",
           "svskp__sanctioned": "117.0",
           "svskp__sanctioned_caes_project_cost_involved": "464.34",
@@ -16568,7 +16567,8 @@
           "unknown_5__3km_5km": "8.0",
           "unknown_5__2000_5000": "8.0",
           "unknown_5__5000": "12.0",
-          "unknown_5__total": "20.0"
+          "unknown_5__total": "20.0",
+          "pmegp__mm_disb_pending_no": "0.0"
         },
         {
           "district": "Jalpaiguri",
@@ -16601,7 +16601,6 @@
           "pmegp__mm_disbursed_no": "4.0",
           "pmegp__rejected_no": "19.0",
           "pmegp__pending_no": "39.0",
-          "pmegp__pending_mm_disb_no": "0.0",
           "svskp__no_of_cases_sponsored": "815.0",
           "svskp__sanctioned": "432.0",
           "svskp__sanctioned_caes_project_cost_involved": "1079.53",
@@ -16654,7 +16653,8 @@
           "unknown_5__2000_5000": "1.0",
           "unknown_5__5000": "1.0",
           "unknown_5__total_of_gp_hqs_above_5_km_2000": "1.0",
-          "unknown_5__total": "3.0"
+          "unknown_5__total": "3.0",
+          "pmegp__mm_disb_pending_no": "0.0"
         },
         {
           "district": "Murshidabad",
@@ -16688,7 +16688,6 @@
           "pmegp__mm_disbursed_no": "74.0",
           "pmegp__rejected_no": "171.0",
           "pmegp__pending_no": "632.0",
-          "pmegp__pending_mm_disb_no": "1.0",
           "svskp__no_of_cases_sponsored": "3585.0",
           "svskp__sanctioned": "1358.0",
           "svskp__sanctioned_caes_project_cost_involved": "3655.01",
@@ -16720,7 +16719,8 @@
           "unknown_5__1km_3km": "4.0",
           "unknown_5__3km_5km": "17.0",
           "unknown_5__5000": "6.0",
-          "unknown_5__total": "6.0"
+          "unknown_5__total": "6.0",
+          "pmegp__mm_disb_pending_no": "1.0"
         },
         {
           "district": "Paschim Bardhaman",
@@ -16746,7 +16746,6 @@
           "pmegp__mm_disbursed_no": "2.0",
           "pmegp__rejected_no": "21.0",
           "pmegp__pending_no": "36.0",
-          "pmegp__pending_mm_disb_no": "0.0",
           "svskp__no_of_cases_sponsored": "694.0",
           "svskp__sanctioned": "98.0",
           "svskp__sanctioned_caes_project_cost_involved": "280.74",
@@ -16768,7 +16767,8 @@
           "sarfaesi__total_pending_as_on_31_06_2019": "133.0",
           "unknown_5__total_gp": "10.0",
           "unknown_5__1km_3km": "8.0",
-          "unknown_5__3km_5km": "2.0"
+          "unknown_5__3km_5km": "2.0",
+          "pmegp__mm_disb_pending_no": "0.0"
         },
         {
           "district": "Purba Bardhaman",
@@ -16873,7 +16873,6 @@
           "pmegp__mm_disbursed_no": "239.0",
           "pmegp__rejected_no": "161.0",
           "pmegp__pending_no": "1243.0",
-          "pmegp__pending_mm_disb_no": "1.0",
           "svskp__no_of_cases_sponsored": "1251.0",
           "svskp__sanctioned": "844.0",
           "svskp__sanctioned_caes_project_cost_involved": "3363.58",
@@ -16928,7 +16927,8 @@
           "unknown_5__5000": "3.0",
           "unknown_5__7_5_km_10_km_2000": "3.0",
           "unknown_5__total_of_gp_hqs_above_5_km_2000": "5.0",
-          "unknown_5__total": "11.0"
+          "unknown_5__total": "11.0",
+          "pmegp__mm_disb_pending_no": "1.0"
         },
         {
           "district": "Uttar Dinajpur",
@@ -16961,7 +16961,6 @@
           "pmegp__mm_disbursed_no": "1.0",
           "pmegp__rejected_no": "8.0",
           "pmegp__pending_no": "13.0",
-          "pmegp__pending_mm_disb_no": "0.0",
           "svskp__no_of_cases_sponsored": "588.0",
           "svskp__sanctioned": "224.0",
           "svskp__sanctioned_caes_project_cost_involved": "607.18",
@@ -17010,7 +17009,8 @@
           "unknown_5__1km_3km": "4.0",
           "unknown_5__3km_5km": "8.0",
           "unknown_5__5000": "20.0",
-          "unknown_5__total": "20.0"
+          "unknown_5__total": "20.0",
+          "pmegp__mm_disb_pending_no": "0.0"
         }
       ]
     },
