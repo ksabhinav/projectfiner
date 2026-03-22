@@ -1,0 +1,407 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<PageLayout
+  title="About | Project FINER"
+  pageTitle="About Project FINER"
+  subtitle="An open data platform mapping financial inclusion across India — district by district."
+>
+  <div class="about">
+
+    <!-- ── What is FINER ── -->
+    <section class="about-section">
+      <div class="section-label">What is Project FINER</div>
+      <div class="prose">
+        <p>
+          Project FINER (<strong>Financial Inclusion in the North East Region</strong>) started as an effort to make sense of the dense quarterly PDF booklets published by State Level Bankers' Committees (SLBCs) — the only source of district-level banking data in India.
+        </p>
+        <p>
+          What began with 8 North Eastern states has grown into a platform covering <strong>22 states</strong> and <strong>540+ districts</strong>, with interactive maps, time-series analysis, and downloadable machine-readable datasets that didn't exist before in any usable format.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── The Problem ── -->
+    <section class="about-section">
+      <div class="section-label">The Problem</div>
+      <div class="prose">
+        <p>
+          India's financial inclusion data is scattered across dozens of agencies — RBI, NABARD, NPCI, UIDAI, individual state SLBCs — each publishing in different formats, at different granularities, on different schedules. Most of it is locked in PDFs.
+        </p>
+        <p>
+          Researchers, policymakers, and journalists who need district-level answers — <em>which districts have the lowest credit-deposit ratios? where is KCC penetration weakest? how has Jan Dhan enrollment changed over time?</em> — face weeks of manual data extraction before analysis can even begin.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── What We Do ── -->
+    <section class="about-section">
+      <div class="section-label">What We Do</div>
+      <div class="grid-3">
+        <div class="card about-card">
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3>Extract</h3>
+          <p>We parse hundreds of SLBC PDF booklets — handling OCR artifacts, reversed text, inconsistent formatting — and convert them into clean, structured datasets.</p>
+        </div>
+        <div class="card about-card">
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Map</h3>
+          <p>Every data point is placed on an interactive map — from district-level CD ratios and branch counts to 260,000+ capital market access points across India.</p>
+        </div>
+        <div class="card about-card">
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+          <h3>Open</h3>
+          <p>All data is freely downloadable as CSV and Excel. No paywalls, no registration. Built for researchers, journalists, policymakers, and anyone who cares about financial inclusion.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Coverage ── -->
+    <section class="about-section">
+      <div class="section-label">Coverage</div>
+      <div class="stats-row">
+        <div class="stat-block">
+          <div class="stat-number">22</div>
+          <div class="stat-desc">States covered</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-number">540+</div>
+          <div class="stat-desc">Districts mapped</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-number">48+</div>
+          <div class="stat-desc">Indicator categories</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-number">260K+</div>
+          <div class="stat-desc">Capital market access points</div>
+        </div>
+      </div>
+
+      <div class="state-list-wrapper">
+        <div class="sub-label">North East Region</div>
+        <p class="state-names">Assam, Meghalaya, Manipur, Arunachal Pradesh, Mizoram, Tripura, Nagaland, Sikkim</p>
+
+        <div class="sub-label">East & Central India</div>
+        <p class="state-names">Bihar, West Bengal, Jharkhand, Odisha, Chhattisgarh</p>
+
+        <div class="sub-label">South India</div>
+        <p class="state-names">Kerala, Karnataka, Tamil Nadu, Telangana</p>
+
+        <div class="sub-label">West & North India</div>
+        <p class="state-names">Rajasthan, Gujarat, Maharashtra, Haryana, Uttarakhand</p>
+      </div>
+    </section>
+
+    <!-- ── Data Sources ── -->
+    <section class="about-section">
+      <div class="section-label">Data Sources</div>
+      <div class="prose">
+        <p>Our primary dataset is extracted from <strong>SLBC quarterly booklets</strong> — the PDF reports published by State Level Bankers' Committees after each quarterly meeting. These contain district-level data on banking infrastructure, credit, deposits, government schemes, and more.</p>
+      </div>
+      <div class="source-grid">
+        <div class="source-item">
+          <div class="source-name">SLBC Booklets</div>
+          <div class="source-detail">District-level banking indicators, 48+ categories per quarter</div>
+        </div>
+        <div class="source-item">
+          <div class="source-name">CDSL &amp; NSDL</div>
+          <div class="source-detail">Depository participant service centres across India</div>
+        </div>
+        <div class="source-item">
+          <div class="source-name">AMFI</div>
+          <div class="source-detail">Mutual fund distributor locations (individual &amp; corporate)</div>
+        </div>
+        <div class="source-item">
+          <div class="source-name">RBI DBIE</div>
+          <div class="source-detail">Basic Statistical Returns — district-level credit &amp; deposits</div>
+        </div>
+        <div class="source-item">
+          <div class="source-name">NPCI</div>
+          <div class="source-detail">NFS district-wise ATM transaction volumes, UPI state statistics</div>
+        </div>
+        <div class="source-item">
+          <div class="source-name">NFHS-5</div>
+          <div class="source-detail">District-level health insurance coverage &amp; empowerment indicators</div>
+        </div>
+        <div class="source-item">
+          <div class="source-name">UIDAI</div>
+          <div class="source-detail">Aadhaar enrollment and saturation data by district</div>
+        </div>
+        <div class="source-item">
+          <div class="source-name">PhonePe Pulse</div>
+          <div class="source-detail">UPI transaction data by state (FY22&ndash;FY24)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── How It's Built ── -->
+    <section class="about-section">
+      <div class="section-label">How It's Built</div>
+      <div class="prose">
+        <p>
+          SLBC booklets arrive as landscape-oriented PDFs with rotated text, inconsistent table structures, and OCR artifacts. We use <strong>pdfplumber</strong> for extraction, with custom pipelines for each state's formatting quirks — text reversal, multi-page table merging, fuzzy district matching, and field normalization across 22 different naming conventions.
+        </p>
+        <p>
+          The frontend is a static site built with <strong>Astro</strong> and <strong>Svelte</strong>, with <strong>Leaflet</strong> for mapping and <strong>Plotly</strong> for charts. All data lives as static JSON and CSV files — no backend, no database, no API keys. The entire platform is hosted on GitHub Pages.
+        </p>
+      </div>
+      <div class="tech-pills">
+        <span class="pill">Astro</span>
+        <span class="pill">Svelte 5</span>
+        <span class="pill">Leaflet</span>
+        <span class="pill">Plotly.js</span>
+        <span class="pill">pdfplumber</span>
+        <span class="pill">D3.js</span>
+        <span class="pill">GitHub Pages</span>
+      </div>
+    </section>
+
+    <!-- ── Open Source ── -->
+    <section class="about-section">
+      <div class="section-label">Open Source</div>
+      <div class="prose">
+        <p>
+          Project FINER is open source. The code, extraction scripts, and all processed datasets are available on GitHub.
+        </p>
+      </div>
+      <a href="https://github.com/ksabhinav/projectfiner" target="_blank" rel="noopener" class="btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        View on GitHub
+      </a>
+    </section>
+
+    <!-- ── Contact ── -->
+    <section class="about-section last">
+      <div class="section-label">Get in Touch</div>
+      <div class="prose">
+        <p>
+          Have questions, corrections, or want to collaborate? Open an issue on <a href="https://github.com/ksabhinav/projectfiner/issues" target="_blank" rel="noopener">GitHub</a> or reach out directly.
+        </p>
+      </div>
+    </section>
+
+  </div>
+</PageLayout>
+
+<style>
+  .about {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 8px 40px 64px;
+  }
+
+  .about-section {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .about-section.last {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .prose p {
+    font-family: var(--font-serif);
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 14px;
+  }
+  .prose p:last-child {
+    margin-bottom: 0;
+  }
+  .prose strong {
+    font-weight: 600;
+  }
+  .prose em {
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  /* ── 3-column cards ── */
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 4px;
+  }
+
+  .about-card {
+    padding: 24px 20px;
+    border-left: 3px solid var(--accent);
+  }
+  .card-icon {
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .about-card h3 {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .about-card p {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+
+  /* ── Stats row ── */
+  .stats-row {
+    display: flex;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+  .stat-block {
+    flex: 1;
+    padding: 24px 16px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+  }
+  .stat-block:last-child {
+    border-right: none;
+  }
+  .stat-number {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+  }
+  .stat-desc {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--label);
+  }
+
+  /* ── State listing ── */
+  .state-list-wrapper {
+    margin-top: 4px;
+  }
+  .sub-label {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-top: 20px;
+    margin-bottom: 6px;
+  }
+  .state-names {
+    font-family: var(--font-serif);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  /* ── Source grid ── */
+  .source-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .source-item {
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--card);
+  }
+  .source-name {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 3px;
+  }
+  .source-detail {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ── Tech pills ── */
+  .tech-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .pill {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    padding: 5px 12px;
+    background: var(--btn-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    color: var(--muted);
+    letter-spacing: 0.01em;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .about {
+      padding: 4px 20px 48px;
+    }
+    .about-section {
+      padding: 24px 0;
+    }
+    .prose p {
+      font-size: 14px;
+    }
+    .grid-3 {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .stats-row {
+      flex-wrap: wrap;
+    }
+    .stat-block {
+      flex: 1 1 45%;
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-block:nth-child(2) {
+      border-right: none;
+    }
+    .stat-block:nth-child(3),
+    .stat-block:nth-child(4) {
+      border-bottom: none;
+    }
+    .source-grid {
+      grid-template-columns: 1fr;
+    }
+    .stat-number {
+      font-size: 24px;
+    }
+  }
+  @media (min-width: 641px) and (max-width: 768px) {
+    .about {
+      padding: 4px 20px 48px;
+    }
+    .grid-3 {
+      grid-template-columns: 1fr;
+    }
+    .source-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
