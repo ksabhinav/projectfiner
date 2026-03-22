@@ -3534,8 +3534,6 @@
           "education_loan__agri_no": "1",
           "education_loan__amt": "91752.89",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "2176",
-          "education_loan__personal_loan_no": "5763",
           "education_loan__others_no": "12670",
           "education_loan__total_no": "20610",
           "fi_village_banking__district": "Aizawl",
@@ -3675,7 +3673,9 @@
           "sc_st_finance__st_disbursement_no": "7569",
           "sc_st_finance__st_disbursement_amt": "25646.11",
           "sc_st_finance__st_outstanding_no": "47108",
-          "sc_st_finance__st_outstanding_amt": "174000.22"
+          "sc_st_finance__st_outstanding_amt": "174000.22",
+          "acp_disbursement_non_ps__personal_loan_no": "5763",
+          "acp_disbursement_other_ps__housing_no": "2176"
         },
         {
           "district": "Champhai",
@@ -3689,8 +3689,6 @@
           "education_loan__agri_no": "0",
           "education_loan__amt": "4256.97",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "127",
-          "education_loan__personal_loan_no": "313",
           "education_loan__others_no": "576",
           "education_loan__total_no": "1016",
           "fi_village_banking__district": "Champhai",
@@ -3829,7 +3827,9 @@
           "sc_st_finance__st_disbursement_no": "948",
           "sc_st_finance__st_disbursement_amt": "2908.23",
           "sc_st_finance__st_outstanding_no": "4924",
-          "sc_st_finance__st_outstanding_amt": "12760.19"
+          "sc_st_finance__st_outstanding_amt": "12760.19",
+          "acp_disbursement_non_ps__personal_loan_no": "313",
+          "acp_disbursement_other_ps__housing_no": "127"
         },
         {
           "district": "Hnahthial",
@@ -3843,8 +3843,6 @@
           "education_loan__agri_no": "0",
           "education_loan__amt": "1703.43",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "51",
-          "education_loan__personal_loan_no": "220",
           "education_loan__others_no": "20",
           "education_loan__total_no": "291",
           "pmjdy__district": "Hnahthial",
@@ -3977,7 +3975,9 @@
           "sc_st_finance__st_disbursement_no": "267",
           "sc_st_finance__st_disbursement_amt": "788.15",
           "sc_st_finance__st_outstanding_no": "1240",
-          "sc_st_finance__st_outstanding_amt": "3540.64"
+          "sc_st_finance__st_outstanding_amt": "3540.64",
+          "acp_disbursement_non_ps__personal_loan_no": "220",
+          "acp_disbursement_other_ps__housing_no": "51"
         },
         {
           "district": "Khawzawl",
@@ -3991,8 +3991,6 @@
           "education_loan__agri_no": "0",
           "education_loan__amt": "1210.96",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "34",
-          "education_loan__personal_loan_no": "180",
           "education_loan__others_no": "35",
           "education_loan__total_no": "249",
           "pmjdy__district": "Khawzawl",
@@ -4125,7 +4123,9 @@
           "sc_st_finance__st_disbursement_no": "435",
           "sc_st_finance__st_disbursement_amt": "1171.66",
           "sc_st_finance__st_outstanding_no": "3017",
-          "sc_st_finance__st_outstanding_amt": "5377.81"
+          "sc_st_finance__st_outstanding_amt": "5377.81",
+          "acp_disbursement_non_ps__personal_loan_no": "180",
+          "acp_disbursement_other_ps__housing_no": "34"
         },
         {
           "district": "Kolasib",
@@ -4139,8 +4139,6 @@
           "education_loan__agri_no": "0",
           "education_loan__amt": "5057.19",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "99",
-          "education_loan__personal_loan_no": "779",
           "education_loan__others_no": "315",
           "education_loan__total_no": "1193",
           "fi_village_banking__district": "Kolasib",
@@ -4279,7 +4277,9 @@
           "sc_st_finance__st_disbursement_no": "2372",
           "sc_st_finance__st_disbursement_amt": "3955.24",
           "sc_st_finance__st_outstanding_no": "8457",
-          "sc_st_finance__st_outstanding_amt": "16541.82"
+          "sc_st_finance__st_outstanding_amt": "16541.82",
+          "acp_disbursement_non_ps__personal_loan_no": "779",
+          "acp_disbursement_other_ps__housing_no": "99"
         },
         {
           "district": "Lawngtlai",
@@ -4293,8 +4293,6 @@
           "education_loan__agri_no": "0",
           "education_loan__amt": "6278.01",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "121",
-          "education_loan__personal_loan_no": "1222",
           "education_loan__others_no": "674",
           "education_loan__total_no": "2017",
           "fi_village_banking__district": "Lawngtlai",
@@ -4433,7 +4431,9 @@
           "sc_st_finance__st_disbursement_no": "1385",
           "sc_st_finance__st_disbursement_amt": "6263.97",
           "sc_st_finance__st_outstanding_no": "7500",
-          "sc_st_finance__st_outstanding_amt": "27231.76"
+          "sc_st_finance__st_outstanding_amt": "27231.76",
+          "acp_disbursement_non_ps__personal_loan_no": "1222",
+          "acp_disbursement_other_ps__housing_no": "121"
         },
         {
           "district": "Lunglei",
@@ -4447,8 +4447,6 @@
           "education_loan__agri_no": "0",
           "education_loan__amt": "11966.05",
           "education_loan__education_no": "1",
-          "education_loan__housing_no": "268",
-          "education_loan__personal_loan_no": "1568",
           "education_loan__others_no": "803",
           "education_loan__total_no": "2640",
           "fi_village_banking__district": "Lunglei",
@@ -4587,7 +4585,9 @@
           "sc_st_finance__st_disbursement_no": "1658",
           "sc_st_finance__st_disbursement_amt": "6298.60",
           "sc_st_finance__st_outstanding_no": "9584",
-          "sc_st_finance__st_outstanding_amt": "30503.88"
+          "sc_st_finance__st_outstanding_amt": "30503.88",
+          "acp_disbursement_non_ps__personal_loan_no": "1568",
+          "acp_disbursement_other_ps__housing_no": "268"
         },
         {
           "district": "Mamit",
@@ -4601,8 +4601,6 @@
           "education_loan__agri_no": "1",
           "education_loan__amt": "3200.16",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "66",
-          "education_loan__personal_loan_no": "370",
           "education_loan__others_no": "256",
           "education_loan__total_no": "693",
           "fi_village_banking__district": "Mamit",
@@ -4741,7 +4739,9 @@
           "sc_st_finance__st_disbursement_no": "887",
           "sc_st_finance__st_disbursement_amt": "2375.80",
           "sc_st_finance__st_outstanding_no": "5026",
-          "sc_st_finance__st_outstanding_amt": "10132.81"
+          "sc_st_finance__st_outstanding_amt": "10132.81",
+          "acp_disbursement_non_ps__personal_loan_no": "370",
+          "acp_disbursement_other_ps__housing_no": "66"
         },
         {
           "district": "Saiha",
@@ -4755,8 +4755,6 @@
           "education_loan__agri_no": "2",
           "education_loan__amt": "4970.37",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "132",
-          "education_loan__personal_loan_no": "637",
           "education_loan__others_no": "548",
           "education_loan__total_no": "1319",
           "fi_village_banking__district": "Saiha",
@@ -4895,7 +4893,9 @@
           "sc_st_finance__st_disbursement_no": "664",
           "sc_st_finance__st_disbursement_amt": "2370.93",
           "sc_st_finance__st_outstanding_no": "5086",
-          "sc_st_finance__st_outstanding_amt": "17291.26"
+          "sc_st_finance__st_outstanding_amt": "17291.26",
+          "acp_disbursement_non_ps__personal_loan_no": "637",
+          "acp_disbursement_other_ps__housing_no": "132"
         },
         {
           "district": "Saitual",
@@ -4909,8 +4909,6 @@
           "education_loan__agri_no": "0",
           "education_loan__amt": "1052.49",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "6",
-          "education_loan__personal_loan_no": "168",
           "education_loan__others_no": "48",
           "education_loan__total_no": "222",
           "pmjdy__district": "Saitual",
@@ -5043,7 +5041,9 @@
           "sc_st_finance__st_disbursement_no": "482",
           "sc_st_finance__st_disbursement_amt": "1016.42",
           "sc_st_finance__st_outstanding_no": "3294",
-          "sc_st_finance__st_outstanding_amt": "5625.05"
+          "sc_st_finance__st_outstanding_amt": "5625.05",
+          "acp_disbursement_non_ps__personal_loan_no": "168",
+          "acp_disbursement_other_ps__housing_no": "6"
         },
         {
           "district": "Serchhip",
@@ -5057,8 +5057,6 @@
           "education_loan__agri_no": "0",
           "education_loan__amt": "3528.15",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "73",
-          "education_loan__personal_loan_no": "509",
           "education_loan__others_no": "101",
           "education_loan__total_no": "683",
           "fi_village_banking__district": "Serchhip",
@@ -5197,7 +5195,9 @@
           "sc_st_finance__st_disbursement_no": "993",
           "sc_st_finance__st_disbursement_amt": "2963.65",
           "sc_st_finance__st_outstanding_no": "6329",
-          "sc_st_finance__st_outstanding_amt": "15475.87"
+          "sc_st_finance__st_outstanding_amt": "15475.87",
+          "acp_disbursement_non_ps__personal_loan_no": "509",
+          "acp_disbursement_other_ps__housing_no": "73"
         }
       ]
     },
@@ -8665,8 +8665,6 @@
           "education_loan__msme_no": "0",
           "education_loan__export_cr_no": "0",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "199",
-          "education_loan__personal_loan_no": "290",
           "education_loan__other_nps_no": "3263",
           "education_loan__total_no": "3752",
           "fi_village_banking__district": "Aizawl",
@@ -8874,7 +8872,9 @@
           "sc_st_finance__st_disbursement_no": "1261",
           "sc_st_finance__st_disbursement_amt": "8721.27",
           "sc_st_finance__st_outstanding_no": "46904",
-          "sc_st_finance__st_outstanding_amt": "200485.37"
+          "sc_st_finance__st_outstanding_amt": "200485.37",
+          "acp_disbursement_non_ps__personal_loan_no": "290",
+          "acp_disbursement_other_ps__housing_no": "199"
         },
         {
           "district": "Champhai",
@@ -8935,8 +8935,6 @@
           "education_loan__msme_no": "0",
           "education_loan__export_cr_no": "0",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "0",
-          "education_loan__personal_loan_no": "6",
           "education_loan__other_nps_no": "0",
           "education_loan__total_no": "6",
           "fi_village_banking__district": "Champhai",
@@ -9143,7 +9141,9 @@
           "sc_st_finance__st_disbursement_no": "759",
           "sc_st_finance__st_disbursement_amt": "2199.94",
           "sc_st_finance__st_outstanding_no": "5060",
-          "sc_st_finance__st_outstanding_amt": "14513.47"
+          "sc_st_finance__st_outstanding_amt": "14513.47",
+          "acp_disbursement_non_ps__personal_loan_no": "6",
+          "acp_disbursement_other_ps__housing_no": "0"
         },
         {
           "district": "Hnahthial",
@@ -9204,8 +9204,6 @@
           "education_loan__msme_no": "0",
           "education_loan__export_cr_no": "0",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "11",
-          "education_loan__personal_loan_no": "10",
           "education_loan__other_nps_no": "7",
           "education_loan__total_no": "28",
           "housing_pmay__district": "Hnahthial",
@@ -9400,7 +9398,9 @@
           "sc_st_finance__st_disbursement_no": "60",
           "sc_st_finance__st_disbursement_amt": "310.64",
           "sc_st_finance__st_outstanding_no": "1368",
-          "sc_st_finance__st_outstanding_amt": "4140.70"
+          "sc_st_finance__st_outstanding_amt": "4140.70",
+          "acp_disbursement_non_ps__personal_loan_no": "10",
+          "acp_disbursement_other_ps__housing_no": "11"
         },
         {
           "district": "Khawzawl",
@@ -9461,8 +9461,6 @@
           "education_loan__msme_no": "0",
           "education_loan__export_cr_no": "0",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "3",
-          "education_loan__personal_loan_no": "14",
           "education_loan__other_nps_no": "8",
           "education_loan__total_no": "25",
           "housing_pmay__district": "Khawzawl",
@@ -9663,7 +9661,9 @@
           "sc_st_finance__st_disbursement_no": "172",
           "sc_st_finance__st_disbursement_amt": "441.06",
           "sc_st_finance__st_outstanding_no": "3094",
-          "sc_st_finance__st_outstanding_amt": "5824.08"
+          "sc_st_finance__st_outstanding_amt": "5824.08",
+          "acp_disbursement_non_ps__personal_loan_no": "14",
+          "acp_disbursement_other_ps__housing_no": "3"
         },
         {
           "district": "Kolasib",
@@ -9724,8 +9724,6 @@
           "education_loan__msme_no": "0",
           "education_loan__export_cr_no": "0",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "10",
-          "education_loan__personal_loan_no": "14",
           "education_loan__other_nps_no": "5",
           "education_loan__total_no": "29",
           "fi_village_banking__district": "Kolasib",
@@ -9932,7 +9930,9 @@
           "sc_st_finance__st_disbursement_no": "344",
           "sc_st_finance__st_disbursement_amt": "1022.87",
           "sc_st_finance__st_outstanding_no": "9316",
-          "sc_st_finance__st_outstanding_amt": "17588.03"
+          "sc_st_finance__st_outstanding_amt": "17588.03",
+          "acp_disbursement_non_ps__personal_loan_no": "14",
+          "acp_disbursement_other_ps__housing_no": "10"
         },
         {
           "district": "Lawngtlai",
@@ -9993,8 +9993,6 @@
           "education_loan__msme_no": "0",
           "education_loan__export_cr_no": "0",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "4",
-          "education_loan__personal_loan_no": "8",
           "education_loan__other_nps_no": "10",
           "education_loan__total_no": "22",
           "fi_village_banking__district": "Lawngtlai",
@@ -10201,7 +10199,9 @@
           "sc_st_finance__st_disbursement_no": "360",
           "sc_st_finance__st_disbursement_amt": "1583.00",
           "sc_st_finance__st_outstanding_no": "7390",
-          "sc_st_finance__st_outstanding_amt": "28348.20"
+          "sc_st_finance__st_outstanding_amt": "28348.20",
+          "acp_disbursement_non_ps__personal_loan_no": "8",
+          "acp_disbursement_other_ps__housing_no": "4"
         },
         {
           "district": "Lunglei",
@@ -10262,8 +10262,6 @@
           "education_loan__msme_no": "0",
           "education_loan__export_cr_no": "0",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "0",
-          "education_loan__personal_loan_no": "2",
           "education_loan__other_nps_no": "0",
           "education_loan__total_no": "2",
           "fi_village_banking__district": "Lunglei",
@@ -10470,7 +10468,9 @@
           "sc_st_finance__st_disbursement_no": "455",
           "sc_st_finance__st_disbursement_amt": "2060.09",
           "sc_st_finance__st_outstanding_no": "9085",
-          "sc_st_finance__st_outstanding_amt": "30984.15"
+          "sc_st_finance__st_outstanding_amt": "30984.15",
+          "acp_disbursement_non_ps__personal_loan_no": "2",
+          "acp_disbursement_other_ps__housing_no": "0"
         },
         {
           "district": "Mamit",
@@ -10531,8 +10531,6 @@
           "education_loan__msme_no": "0",
           "education_loan__export_cr_no": "0",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "6",
-          "education_loan__personal_loan_no": "12",
           "education_loan__other_nps_no": "11",
           "education_loan__total_no": "29",
           "fi_village_banking__district": "Mamit",
@@ -10739,7 +10737,9 @@
           "sc_st_finance__st_disbursement_no": "340",
           "sc_st_finance__st_disbursement_amt": "978.56",
           "sc_st_finance__st_outstanding_no": "5292",
-          "sc_st_finance__st_outstanding_amt": "11492.59"
+          "sc_st_finance__st_outstanding_amt": "11492.59",
+          "acp_disbursement_non_ps__personal_loan_no": "12",
+          "acp_disbursement_other_ps__housing_no": "6"
         },
         {
           "district": "Saiha",
@@ -10800,8 +10800,6 @@
           "education_loan__msme_no": "0",
           "education_loan__export_cr_no": "0",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "2",
-          "education_loan__personal_loan_no": "7",
           "education_loan__other_nps_no": "0",
           "education_loan__total_no": "9",
           "fi_village_banking__district": "Saiha",
@@ -11008,7 +11006,9 @@
           "sc_st_finance__st_disbursement_no": "163",
           "sc_st_finance__st_disbursement_amt": "781.47",
           "sc_st_finance__st_outstanding_no": "4915",
-          "sc_st_finance__st_outstanding_amt": "17883.14"
+          "sc_st_finance__st_outstanding_amt": "17883.14",
+          "acp_disbursement_non_ps__personal_loan_no": "7",
+          "acp_disbursement_other_ps__housing_no": "2"
         },
         {
           "district": "Saitual",
@@ -11069,8 +11069,6 @@
           "education_loan__msme_no": "0",
           "education_loan__export_cr_no": "0",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "0",
-          "education_loan__personal_loan_no": "7",
           "education_loan__other_nps_no": "4",
           "education_loan__total_no": "11",
           "housing_pmay__district": "Saitual",
@@ -11271,7 +11269,9 @@
           "sc_st_finance__st_disbursement_no": "205",
           "sc_st_finance__st_disbursement_amt": "514.19",
           "sc_st_finance__st_outstanding_no": "3464",
-          "sc_st_finance__st_outstanding_amt": "6345.10"
+          "sc_st_finance__st_outstanding_amt": "6345.10",
+          "acp_disbursement_non_ps__personal_loan_no": "7",
+          "acp_disbursement_other_ps__housing_no": "0"
         },
         {
           "district": "Serchhip",
@@ -11332,8 +11332,6 @@
           "education_loan__msme_no": "0",
           "education_loan__export_cr_no": "0",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "9",
-          "education_loan__personal_loan_no": "28",
           "education_loan__other_nps_no": "15",
           "education_loan__total_no": "52",
           "fi_village_banking__district": "Serchhip",
@@ -11540,7 +11538,9 @@
           "sc_st_finance__st_disbursement_no": "345",
           "sc_st_finance__st_disbursement_amt": "1355.62",
           "sc_st_finance__st_outstanding_no": "6448",
-          "sc_st_finance__st_outstanding_amt": "17381.85"
+          "sc_st_finance__st_outstanding_amt": "17381.85",
+          "acp_disbursement_non_ps__personal_loan_no": "28",
+          "acp_disbursement_other_ps__housing_no": "9"
         }
       ]
     },
@@ -12940,11 +12940,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1539.60",
           "education_loan__education_no": "30",
-          "education_loan__housing_no": "158",
-          "education_loan__social_infra_no": "1",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "403",
-          "education_loan__total_other_ps_no": "592",
           "fi_village_banking__district": "Aizawl",
           "fi_village_banking__name_of_schedule_commercial_bank_selected_for_allotment": "AXIS",
           "fi_village_banking__no_ofallotedvillages": "10",
@@ -13161,7 +13157,11 @@
           "sc_st_finance__st_disbursement_no": "7635",
           "sc_st_finance__st_disbursement_amt": "41117.13",
           "sc_st_finance__st_outstanding_no": "45727",
-          "sc_st_finance__st_outstanding_amt": "216150.33"
+          "sc_st_finance__st_outstanding_amt": "216150.33",
+          "acp_disbursement_other_ps__total_other_ps_no": "592",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "158",
+          "acp_disbursement_other_ps__social_infra_no": "1"
         },
         {
           "district": "Champhai",
@@ -13230,11 +13230,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "161.04",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "26",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_no": "26",
           "fi_village_banking__district": "Champhai",
           "fi_village_banking__name_of_schedule_commercial_bank_selected_for_allotment": "HDFC",
           "fi_village_banking__no_ofallotedvillages": "7",
@@ -13451,7 +13447,11 @@
           "sc_st_finance__st_disbursement_no": "2397",
           "sc_st_finance__st_disbursement_amt": "7747.63",
           "sc_st_finance__st_outstanding_no": "6356",
-          "sc_st_finance__st_outstanding_amt": "19010.94"
+          "sc_st_finance__st_outstanding_amt": "19010.94",
+          "acp_disbursement_other_ps__total_other_ps_no": "26",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "26",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Hnahthial",
@@ -13520,11 +13520,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "16.32",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "3",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_no": "3",
           "housing_pmay__district": "Hnahthial",
           "housing_pmay__total_branch": "5",
           "housing_pmay__export_no": "0",
@@ -13735,7 +13731,11 @@
           "sc_st_finance__st_disbursement_no": "326",
           "sc_st_finance__st_disbursement_amt": "2053.48",
           "sc_st_finance__st_outstanding_no": "1369",
-          "sc_st_finance__st_outstanding_amt": "4973.11"
+          "sc_st_finance__st_outstanding_amt": "4973.11",
+          "acp_disbursement_other_ps__total_other_ps_no": "3",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "3",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Khawzawl",
@@ -13804,11 +13804,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "38.59",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "5",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_no": "5",
           "housing_pmay__district": "Khawzawl",
           "housing_pmay__total_branch": "7",
           "housing_pmay__export_no": "0",
@@ -14019,7 +14015,11 @@
           "sc_st_finance__st_disbursement_no": "639",
           "sc_st_finance__st_disbursement_amt": "1709.91",
           "sc_st_finance__st_outstanding_no": "3159",
-          "sc_st_finance__st_outstanding_amt": "6149.13"
+          "sc_st_finance__st_outstanding_amt": "6149.13",
+          "acp_disbursement_other_ps__total_other_ps_no": "5",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "5",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Kolasib",
@@ -14088,11 +14088,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "203.06",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "23",
-          "education_loan__social_infra_no": "1",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "126",
-          "education_loan__total_other_ps_no": "150",
           "fi_village_banking__district": "Kolasib",
           "fi_village_banking__name_of_schedule_commercial_bank_selected_for_allotment": "",
           "fi_village_banking__no_ofallotedvillages": "7",
@@ -14309,7 +14305,11 @@
           "sc_st_finance__st_disbursement_no": "1652",
           "sc_st_finance__st_disbursement_amt": "6317.49",
           "sc_st_finance__st_outstanding_no": "8085",
-          "sc_st_finance__st_outstanding_amt": "20660.23"
+          "sc_st_finance__st_outstanding_amt": "20660.23",
+          "acp_disbursement_other_ps__total_other_ps_no": "150",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "23",
+          "acp_disbursement_other_ps__social_infra_no": "1"
         },
         {
           "district": "Lawngtlai",
@@ -14378,11 +14378,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "432.60",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "115",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "3",
-          "education_loan__total_other_ps_no": "118",
           "fi_village_banking__district": "Lawngtlai",
           "fi_village_banking__name_of_schedule_commercial_bank_selected_for_allotment": "",
           "fi_village_banking__no_ofallotedvillages": "32",
@@ -14599,7 +14595,11 @@
           "sc_st_finance__st_disbursement_no": "1577",
           "sc_st_finance__st_disbursement_amt": "8126.44",
           "sc_st_finance__st_outstanding_no": "7685",
-          "sc_st_finance__st_outstanding_amt": "31520.76"
+          "sc_st_finance__st_outstanding_amt": "31520.76",
+          "acp_disbursement_other_ps__total_other_ps_no": "118",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "115",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Lunglei",
@@ -14668,11 +14668,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "383.53",
           "education_loan__education_no": "1",
-          "education_loan__housing_no": "49",
-          "education_loan__social_infra_no": "1",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_no": "51",
           "fi_village_banking__district": "Lunglei",
           "fi_village_banking__name_of_schedule_commercial_bank_selected_for_allotment": "",
           "fi_village_banking__no_ofallotedvillages": "11",
@@ -14889,7 +14885,11 @@
           "sc_st_finance__st_disbursement_no": "2105",
           "sc_st_finance__st_disbursement_amt": "9721.42",
           "sc_st_finance__st_outstanding_no": "10029",
-          "sc_st_finance__st_outstanding_amt": "37400.44"
+          "sc_st_finance__st_outstanding_amt": "37400.44",
+          "acp_disbursement_other_ps__total_other_ps_no": "51",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "49",
+          "acp_disbursement_other_ps__social_infra_no": "1"
         },
         {
           "district": "Mamit",
@@ -14958,11 +14958,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "178.69",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "26",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_no": "26",
           "fi_village_banking__district": "Mamit",
           "fi_village_banking__name_of_schedule_commercial_bank_selected_for_allotment": "MCAB",
           "fi_village_banking__no_ofallotedvillages": "12",
@@ -15179,7 +15175,11 @@
           "sc_st_finance__st_disbursement_no": "1566",
           "sc_st_finance__st_disbursement_amt": "4716.15",
           "sc_st_finance__st_outstanding_no": "5664",
-          "sc_st_finance__st_outstanding_amt": "13436.22"
+          "sc_st_finance__st_outstanding_amt": "13436.22",
+          "acp_disbursement_other_ps__total_other_ps_no": "26",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "26",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saiha",
@@ -15248,11 +15248,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1229.05",
           "education_loan__education_no": "2",
-          "education_loan__housing_no": "184",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_no": "186",
           "fi_village_banking__district": "Saiha",
           "fi_village_banking__name_of_schedule_commercial_bank_selected_for_allotment": "",
           "fi_village_banking__no_ofallotedvillages": "10",
@@ -15469,7 +15465,11 @@
           "sc_st_finance__st_disbursement_no": "846",
           "sc_st_finance__st_disbursement_amt": "3985.14",
           "sc_st_finance__st_outstanding_no": "5194",
-          "sc_st_finance__st_outstanding_amt": "19312.00"
+          "sc_st_finance__st_outstanding_amt": "19312.00",
+          "acp_disbursement_other_ps__total_other_ps_no": "186",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "184",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saitual",
@@ -15538,11 +15538,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "14.43",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "4",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_no": "4",
           "housing_pmay__district": "Saitual",
           "housing_pmay__total_branch": "10",
           "housing_pmay__export_no": "0",
@@ -15753,7 +15749,11 @@
           "sc_st_finance__st_disbursement_no": "1036",
           "sc_st_finance__st_disbursement_amt": "2969.82",
           "sc_st_finance__st_outstanding_no": "3826",
-          "sc_st_finance__st_outstanding_amt": "7600.53"
+          "sc_st_finance__st_outstanding_amt": "7600.53",
+          "acp_disbursement_other_ps__total_other_ps_no": "4",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "4",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Serchhip",
@@ -15822,11 +15822,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "192.29",
           "education_loan__education_no": "1",
-          "education_loan__housing_no": "25",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_no": "26",
           "fi_village_banking__district": "Serchhip",
           "fi_village_banking__name_of_schedule_commercial_bank_selected_for_allotment": "",
           "fi_village_banking__no_ofallotedvillages": "25",
@@ -16043,7 +16039,11 @@
           "sc_st_finance__st_disbursement_no": "1501",
           "sc_st_finance__st_disbursement_amt": "6157.96",
           "sc_st_finance__st_outstanding_no": "6873",
-          "sc_st_finance__st_outstanding_amt": "20274.45"
+          "sc_st_finance__st_outstanding_amt": "20274.45",
+          "acp_disbursement_other_ps__total_other_ps_no": "26",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "25",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         }
       ]
     },
@@ -16087,11 +16087,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "57596.20",
           "education_loan__education_no": "213",
-          "education_loan__housing_no": "6231",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "6363",
-          "education_loan__total_other_ps_o_s_no": "12807",
           "housing_pmay__district": "Aizawl",
           "housing_pmay__total_branch": "105",
           "housing_pmay__housing_loan_o_s": "13194",
@@ -16245,7 +16241,11 @@
           "sc_st_finance__st_disbursement_no": "11403",
           "sc_st_finance__st_disbursement_amt": "59971.64",
           "sc_st_finance__st_outstanding_no": "45667",
-          "sc_st_finance__st_outstanding_amt": "226967.25"
+          "sc_st_finance__st_outstanding_amt": "226967.25",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "12807",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "6231",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Champhai",
@@ -16284,11 +16284,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "4746.62",
           "education_loan__education_no": "8",
-          "education_loan__housing_no": "654",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "205",
-          "education_loan__total_other_ps_o_s_no": "867",
           "housing_pmay__district": "Champhai",
           "housing_pmay__total_branch": "18",
           "housing_pmay__housing_loan_o_s": "13664",
@@ -16442,7 +16438,11 @@
           "sc_st_finance__st_disbursement_no": "2819",
           "sc_st_finance__st_disbursement_amt": "9655.06",
           "sc_st_finance__st_outstanding_no": "6571",
-          "sc_st_finance__st_outstanding_amt": "20130.55"
+          "sc_st_finance__st_outstanding_amt": "20130.55",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "867",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "654",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Hnahthial",
@@ -16481,11 +16481,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1242.43",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "149",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "149",
           "housing_pmay__district": "Hnahthial",
           "housing_pmay__total_branch": "5",
           "housing_pmay__housing_loan_o_s": "2550",
@@ -16639,7 +16635,11 @@
           "sc_st_finance__st_disbursement_no": "398",
           "sc_st_finance__st_disbursement_amt": "2609.22",
           "sc_st_finance__st_outstanding_no": "1417",
-          "sc_st_finance__st_outstanding_amt": "5311.23"
+          "sc_st_finance__st_outstanding_amt": "5311.23",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "149",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "149",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Khawzawl",
@@ -16678,11 +16678,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "2119.28",
           "education_loan__education_no": "3",
-          "education_loan__housing_no": "246",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "249",
           "housing_pmay__district": "Khawzawl",
           "housing_pmay__total_branch": "7",
           "housing_pmay__housing_loan_o_s": "2639",
@@ -16836,7 +16832,11 @@
           "sc_st_finance__st_disbursement_no": "887",
           "sc_st_finance__st_disbursement_amt": "2621.74",
           "sc_st_finance__st_outstanding_no": "3138",
-          "sc_st_finance__st_outstanding_amt": "6554.04"
+          "sc_st_finance__st_outstanding_amt": "6554.04",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "249",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "246",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Kolasib",
@@ -16875,11 +16875,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "6995.26",
           "education_loan__education_no": "9",
-          "education_loan__housing_no": "795",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "195",
-          "education_loan__total_other_ps_o_s_no": "999",
           "housing_pmay__district": "Kolasib",
           "housing_pmay__total_branch": "20",
           "housing_pmay__housing_loan_o_s": "13800",
@@ -17033,7 +17029,11 @@
           "sc_st_finance__st_disbursement_no": "3054",
           "sc_st_finance__st_disbursement_amt": "9719.36",
           "sc_st_finance__st_outstanding_no": "9568",
-          "sc_st_finance__st_outstanding_amt": "23006.34"
+          "sc_st_finance__st_outstanding_amt": "23006.34",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "999",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "795",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Lawngtlai",
@@ -17072,11 +17072,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "15483.12",
           "education_loan__education_no": "14",
-          "education_loan__housing_no": "2144",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "2159",
           "housing_pmay__district": "Lawngtlai",
           "housing_pmay__total_branch": "12",
           "housing_pmay__housing_loan_o_s": "6906",
@@ -17230,7 +17226,11 @@
           "sc_st_finance__st_disbursement_no": "2146",
           "sc_st_finance__st_disbursement_amt": "11827.08",
           "sc_st_finance__st_outstanding_no": "7579",
-          "sc_st_finance__st_outstanding_amt": "32865.61"
+          "sc_st_finance__st_outstanding_amt": "32865.61",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "2159",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "2144",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Lunglei",
@@ -17269,11 +17269,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "16335.35",
           "education_loan__education_no": "14",
-          "education_loan__housing_no": "2120",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "254",
-          "education_loan__total_other_ps_o_s_no": "2388",
           "housing_pmay__district": "Lunglei",
           "housing_pmay__total_branch": "21",
           "housing_pmay__housing_loan_o_s": "6800",
@@ -17427,7 +17423,11 @@
           "sc_st_finance__st_disbursement_no": "2819",
           "sc_st_finance__st_disbursement_amt": "13467.22",
           "sc_st_finance__st_outstanding_no": "10295",
-          "sc_st_finance__st_outstanding_amt": "39022.85"
+          "sc_st_finance__st_outstanding_amt": "39022.85",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "2388",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "2120",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Mamit",
@@ -17466,11 +17466,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "3661.46",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "461",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "462",
           "housing_pmay__district": "Mamit",
           "housing_pmay__total_branch": "13",
           "housing_pmay__housing_loan_o_s": "2865",
@@ -17624,7 +17620,11 @@
           "sc_st_finance__st_disbursement_no": "1903",
           "sc_st_finance__st_disbursement_amt": "5989.52",
           "sc_st_finance__st_outstanding_no": "5607",
-          "sc_st_finance__st_outstanding_amt": "13795.98"
+          "sc_st_finance__st_outstanding_amt": "13795.98",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "462",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "461",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saiha",
@@ -17663,11 +17663,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "11933.59",
           "education_loan__education_no": "6",
-          "education_loan__housing_no": "1618",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "1624",
           "housing_pmay__district": "Saiha",
           "housing_pmay__total_branch": "7",
           "housing_pmay__housing_loan_o_s": "4010",
@@ -17821,7 +17817,11 @@
           "sc_st_finance__st_disbursement_no": "1192",
           "sc_st_finance__st_disbursement_amt": "6143.52",
           "sc_st_finance__st_outstanding_no": "5188",
-          "sc_st_finance__st_outstanding_amt": "19849.16"
+          "sc_st_finance__st_outstanding_amt": "19849.16",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1624",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1618",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saitual",
@@ -17860,11 +17860,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1304.66",
           "education_loan__education_no": "1",
-          "education_loan__housing_no": "201",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "202",
           "housing_pmay__district": "Saitual",
           "housing_pmay__total_branch": "10",
           "housing_pmay__housing_loan_o_s": "2595",
@@ -18018,7 +18014,11 @@
           "sc_st_finance__st_disbursement_no": "1336",
           "sc_st_finance__st_disbursement_amt": "3981.63",
           "sc_st_finance__st_outstanding_no": "3962",
-          "sc_st_finance__st_outstanding_amt": "8145.27"
+          "sc_st_finance__st_outstanding_amt": "8145.27",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "202",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "201",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Serchhip",
@@ -18057,11 +18057,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "6448.72",
           "education_loan__education_no": "6",
-          "education_loan__housing_no": "791",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "798",
           "housing_pmay__district": "Serchhip",
           "housing_pmay__total_branch": "16",
           "housing_pmay__housing_loan_o_s": "7307",
@@ -18215,7 +18211,11 @@
           "sc_st_finance__st_disbursement_no": "2031",
           "sc_st_finance__st_disbursement_amt": "8468.83",
           "sc_st_finance__st_outstanding_no": "7078",
-          "sc_st_finance__st_outstanding_amt": "21641.76"
+          "sc_st_finance__st_outstanding_amt": "21641.76",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "798",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "791",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         }
       ]
     },
@@ -18269,11 +18269,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "54289.31",
           "education_loan__education_no": "203",
-          "education_loan__housing_no": "5891",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "6705",
-          "education_loan__total_other_ps_o_s_no": "12799",
           "housing_pmay__district": "Aizawl",
           "housing_pmay__total_branch": "108",
           "housing_pmay__agri": "2",
@@ -18451,7 +18447,11 @@
           "sc_st_finance__st_disbursement_no": "3691",
           "sc_st_finance__st_disbursement_amt": "19712.44",
           "sc_st_finance__st_outstanding_no": "45195",
-          "sc_st_finance__st_outstanding_amt": "233556.44"
+          "sc_st_finance__st_outstanding_amt": "233556.44",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "12799",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "5891",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Champhai",
@@ -18500,11 +18500,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "4813.32",
           "education_loan__education_no": "7",
-          "education_loan__housing_no": "664",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "478",
-          "education_loan__total_other_ps_o_s_no": "1149",
           "housing_pmay__district": "Champhai",
           "housing_pmay__total_branch": "17",
           "housing_pmay__agri": "0",
@@ -18682,7 +18678,11 @@
           "sc_st_finance__st_disbursement_no": "310",
           "sc_st_finance__st_disbursement_amt": "1367.66",
           "sc_st_finance__st_outstanding_no": "6532",
-          "sc_st_finance__st_outstanding_amt": "19882.95"
+          "sc_st_finance__st_outstanding_amt": "19882.95",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1149",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "664",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Hnahthial",
@@ -18731,11 +18731,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1312.15",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "154",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "154",
           "housing_pmay__district": "Hnahthial",
           "housing_pmay__total_branch": "5",
           "housing_pmay__agri": "0",
@@ -18913,7 +18909,11 @@
           "sc_st_finance__st_disbursement_no": "143",
           "sc_st_finance__st_disbursement_amt": "870.02",
           "sc_st_finance__st_outstanding_no": "1490",
-          "sc_st_finance__st_outstanding_amt": "5872.85"
+          "sc_st_finance__st_outstanding_amt": "5872.85",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "154",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "154",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Khawzawl",
@@ -18962,11 +18962,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "2143.57",
           "education_loan__education_no": "3",
-          "education_loan__housing_no": "259",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "262",
           "housing_pmay__district": "Khawzawl",
           "housing_pmay__total_branch": "8",
           "housing_pmay__agri": "0",
@@ -19144,7 +19140,11 @@
           "sc_st_finance__st_disbursement_no": "321",
           "sc_st_finance__st_disbursement_amt": "730.65",
           "sc_st_finance__st_outstanding_no": "3236",
-          "sc_st_finance__st_outstanding_amt": "6630.83"
+          "sc_st_finance__st_outstanding_amt": "6630.83",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "262",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "259",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Kolasib",
@@ -19193,11 +19193,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "8044.73",
           "education_loan__education_no": "9",
-          "education_loan__housing_no": "795",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "2957",
-          "education_loan__total_other_ps_o_s_no": "3761",
           "housing_pmay__district": "Kolasib",
           "housing_pmay__total_branch": "20",
           "housing_pmay__agri": "0",
@@ -19375,7 +19371,11 @@
           "sc_st_finance__st_disbursement_no": "659",
           "sc_st_finance__st_disbursement_amt": "1875.40",
           "sc_st_finance__st_outstanding_no": "9307",
-          "sc_st_finance__st_outstanding_amt": "24529.96"
+          "sc_st_finance__st_outstanding_amt": "24529.96",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "3761",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "795",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Lawngtlai",
@@ -19424,11 +19424,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "15981.20",
           "education_loan__education_no": "15",
-          "education_loan__housing_no": "2165",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "2180",
           "housing_pmay__district": "Lawngtlai",
           "housing_pmay__total_branch": "12",
           "housing_pmay__agri": "0",
@@ -19606,7 +19602,11 @@
           "sc_st_finance__st_disbursement_no": "673",
           "sc_st_finance__st_disbursement_amt": "3787.49",
           "sc_st_finance__st_outstanding_no": "7501",
-          "sc_st_finance__st_outstanding_amt": "33583.50"
+          "sc_st_finance__st_outstanding_amt": "33583.50",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "2180",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "2165",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Lunglei",
@@ -19655,11 +19655,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "15338.01",
           "education_loan__education_no": "13",
-          "education_loan__housing_no": "2008",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "501",
-          "education_loan__total_other_ps_o_s_no": "2522",
           "housing_pmay__district": "Lunglei",
           "housing_pmay__total_branch": "21",
           "housing_pmay__agri": "0",
@@ -19837,7 +19833,11 @@
           "sc_st_finance__st_disbursement_no": "1018",
           "sc_st_finance__st_disbursement_amt": "3978.11",
           "sc_st_finance__st_outstanding_no": "10578",
-          "sc_st_finance__st_outstanding_amt": "40340.75"
+          "sc_st_finance__st_outstanding_amt": "40340.75",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "2522",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "2008",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Mamit",
@@ -19886,11 +19886,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "3816.03",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "480",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "481",
           "housing_pmay__district": "Mamit",
           "housing_pmay__total_branch": "13",
           "housing_pmay__agri": "0",
@@ -20068,7 +20064,11 @@
           "sc_st_finance__st_disbursement_no": "601",
           "sc_st_finance__st_disbursement_amt": "1537.43",
           "sc_st_finance__st_outstanding_no": "5815",
-          "sc_st_finance__st_outstanding_amt": "14366.24"
+          "sc_st_finance__st_outstanding_amt": "14366.24",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "481",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "480",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saiha",
@@ -20117,11 +20117,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "12122.66",
           "education_loan__education_no": "6",
-          "education_loan__housing_no": "1655",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "1661",
           "housing_pmay__district": "Saiha",
           "housing_pmay__total_branch": "7",
           "housing_pmay__agri": "0",
@@ -20299,7 +20295,11 @@
           "sc_st_finance__st_disbursement_no": "339",
           "sc_st_finance__st_disbursement_amt": "1340.87",
           "sc_st_finance__st_outstanding_no": "5194",
-          "sc_st_finance__st_outstanding_amt": "19975.54"
+          "sc_st_finance__st_outstanding_amt": "19975.54",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1661",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1655",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saitual",
@@ -20348,11 +20348,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1249.62",
           "education_loan__education_no": "1",
-          "education_loan__housing_no": "192",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "193",
           "housing_pmay__district": "Saitual",
           "housing_pmay__total_branch": "10",
           "housing_pmay__agri": "0",
@@ -20530,7 +20526,11 @@
           "sc_st_finance__st_disbursement_no": "401",
           "sc_st_finance__st_disbursement_amt": "984.47",
           "sc_st_finance__st_outstanding_no": "4034",
-          "sc_st_finance__st_outstanding_amt": "8372.02"
+          "sc_st_finance__st_outstanding_amt": "8372.02",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "193",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "192",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Serchhip",
@@ -20579,11 +20579,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "6440.43",
           "education_loan__education_no": "6",
-          "education_loan__housing_no": "787",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "794",
           "housing_pmay__district": "Serchhip",
           "housing_pmay__total_branch": "15",
           "housing_pmay__agri": "0",
@@ -20761,7 +20757,11 @@
           "sc_st_finance__st_disbursement_no": "592",
           "sc_st_finance__st_disbursement_amt": "2144.06",
           "sc_st_finance__st_outstanding_no": "7165",
-          "sc_st_finance__st_outstanding_amt": "21850.16"
+          "sc_st_finance__st_outstanding_amt": "21850.16",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "794",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "787",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         }
       ]
     },
@@ -20829,11 +20829,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "52587.39",
           "education_loan__education_no": "207",
-          "education_loan__housing_no": "5723",
-          "education_loan__social_infra_no": "1",
-          "education_loan__renewable_no": "1",
           "education_loan__others_no": "5631",
-          "education_loan__total_other_ps_o_s_no": "11563",
           "flc_report__district": "Aizawl",
           "flc_report__no_of_financial_literacy_centres_flcs": "1",
           "housing_pmay__district": "Aizawl",
@@ -21058,7 +21054,11 @@
           "sc_st_finance__st_disbursement_no": "6770",
           "sc_st_finance__st_disbursement_amt": "41405.51",
           "sc_st_finance__st_outstanding_no": "46938",
-          "sc_st_finance__st_outstanding_amt": "244742.64"
+          "sc_st_finance__st_outstanding_amt": "244742.64",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "11563",
+          "acp_disbursement_other_ps__renewable_no": "1",
+          "acp_disbursement_other_ps__housing_no": "5723",
+          "acp_disbursement_other_ps__social_infra_no": "1"
         },
         {
           "district": "Champhai",
@@ -21121,11 +21121,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "4654.76",
           "education_loan__education_no": "6",
-          "education_loan__housing_no": "652",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "2",
-          "education_loan__total_other_ps_o_s_no": "660",
           "flc_report__district": "Champhai",
           "flc_report__no_of_financial_literacy_centres_flcs": "1",
           "housing_pmay__district": "Champhai",
@@ -21350,7 +21346,11 @@
           "sc_st_finance__st_disbursement_no": "572",
           "sc_st_finance__st_disbursement_amt": "2921.41",
           "sc_st_finance__st_outstanding_no": "7140",
-          "sc_st_finance__st_outstanding_amt": "20126.63"
+          "sc_st_finance__st_outstanding_amt": "20126.63",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "660",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "652",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Hnahthial",
@@ -21413,11 +21413,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1405.56",
           "education_loan__education_no": "1",
-          "education_loan__housing_no": "155",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "156",
           "flc_report__district": "Hnahthial",
           "flc_report__no_of_financial_literacy_centres_flcs": "1",
           "housing_pmay__district": "Hnahthial",
@@ -21642,7 +21638,11 @@
           "sc_st_finance__st_disbursement_no": "330",
           "sc_st_finance__st_disbursement_amt": "2033.44",
           "sc_st_finance__st_outstanding_no": "1542",
-          "sc_st_finance__st_outstanding_amt": "6531.66"
+          "sc_st_finance__st_outstanding_amt": "6531.66",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "156",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "155",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Khawzawl",
@@ -21705,11 +21705,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "2226.49",
           "education_loan__education_no": "3",
-          "education_loan__housing_no": "262",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "265",
           "flc_report__district": "Khawzawl",
           "flc_report__no_of_financial_literacy_centres_flcs": "1",
           "housing_pmay__district": "Khawzawl",
@@ -21934,7 +21930,11 @@
           "sc_st_finance__st_disbursement_no": "589",
           "sc_st_finance__st_disbursement_amt": "1602.77",
           "sc_st_finance__st_outstanding_no": "3259",
-          "sc_st_finance__st_outstanding_amt": "6964.73"
+          "sc_st_finance__st_outstanding_amt": "6964.73",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "265",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "262",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Kolasib",
@@ -21997,11 +21997,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "7667.9",
           "education_loan__education_no": "11",
-          "education_loan__housing_no": "787",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "2455",
-          "education_loan__total_other_ps_o_s_no": "3253",
           "flc_report__district": "Kolasib",
           "flc_report__no_of_financial_literacy_centres_flcs": "1",
           "housing_pmay__district": "Kolasib",
@@ -22226,7 +22222,11 @@
           "sc_st_finance__st_disbursement_no": "1270",
           "sc_st_finance__st_disbursement_amt": "4390.91",
           "sc_st_finance__st_outstanding_no": "9983",
-          "sc_st_finance__st_outstanding_amt": "23621.36"
+          "sc_st_finance__st_outstanding_amt": "23621.36",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "3253",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "787",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Lawngtlai",
@@ -22289,11 +22289,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "16347.74",
           "education_loan__education_no": "14",
-          "education_loan__housing_no": "2114",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "2128",
           "flc_report__district": "Lawngtlai",
           "flc_report__no_of_financial_literacy_centres_flcs": "1",
           "housing_pmay__district": "Lawngtlai",
@@ -22518,7 +22514,11 @@
           "sc_st_finance__st_disbursement_no": "1284",
           "sc_st_finance__st_disbursement_amt": "8678.23",
           "sc_st_finance__st_outstanding_no": "7460",
-          "sc_st_finance__st_outstanding_amt": "35645.45"
+          "sc_st_finance__st_outstanding_amt": "35645.45",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "2128",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "2114",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Lunglei",
@@ -22581,11 +22581,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "15436.2",
           "education_loan__education_no": "19",
-          "education_loan__housing_no": "1985",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "15",
-          "education_loan__total_other_ps_o_s_no": "2019",
           "flc_report__district": "Lunglei",
           "flc_report__no_of_financial_literacy_centres_flcs": "1",
           "housing_pmay__district": "Lunglei",
@@ -22810,7 +22806,11 @@
           "sc_st_finance__st_disbursement_no": "1850",
           "sc_st_finance__st_disbursement_amt": "8408.98",
           "sc_st_finance__st_outstanding_no": "11412",
-          "sc_st_finance__st_outstanding_amt": "42425.54"
+          "sc_st_finance__st_outstanding_amt": "42425.54",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "2019",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1985",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Mamit",
@@ -22873,11 +22873,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "3817.8",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "472",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "473",
           "flc_report__district": "Mamit",
           "flc_report__no_of_financial_literacy_centres_flcs": "1",
           "housing_pmay__district": "Mamit",
@@ -23102,7 +23098,11 @@
           "sc_st_finance__st_disbursement_no": "1038",
           "sc_st_finance__st_disbursement_amt": "2769.19",
           "sc_st_finance__st_outstanding_no": "5828",
-          "sc_st_finance__st_outstanding_amt": "14713.70"
+          "sc_st_finance__st_outstanding_amt": "14713.70",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "473",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "472",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saiha",
@@ -23165,11 +23165,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "11836.03",
           "education_loan__education_no": "7",
-          "education_loan__housing_no": "1591",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "1598",
           "flc_report__district": "Saiha",
           "flc_report__no_of_financial_literacy_centres_flcs": "1",
           "housing_pmay__district": "Saiha",
@@ -23394,7 +23390,11 @@
           "sc_st_finance__st_disbursement_no": "649",
           "sc_st_finance__st_disbursement_amt": "2870.95",
           "sc_st_finance__st_outstanding_no": "5104",
-          "sc_st_finance__st_outstanding_amt": "20196.06"
+          "sc_st_finance__st_outstanding_amt": "20196.06",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1598",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1591",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saitual",
@@ -23457,11 +23457,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1280.48",
           "education_loan__education_no": "2",
-          "education_loan__housing_no": "183",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "185",
           "flc_report__district": "Saitual",
           "flc_report__no_of_financial_literacy_centres_flcs": "1",
           "housing_pmay__district": "Saitual",
@@ -23686,7 +23682,11 @@
           "sc_st_finance__st_disbursement_no": "786",
           "sc_st_finance__st_disbursement_amt": "2161.51",
           "sc_st_finance__st_outstanding_no": "4083",
-          "sc_st_finance__st_outstanding_amt": "8762.59"
+          "sc_st_finance__st_outstanding_amt": "8762.59",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "185",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "183",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Serchhip",
@@ -23749,11 +23749,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "6598.01",
           "education_loan__education_no": "8",
-          "education_loan__housing_no": "793",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "802",
           "flc_report__district": "Serchhip",
           "flc_report__no_of_financial_literacy_centres_flcs": "1",
           "housing_pmay__district": "Serchhip",
@@ -23978,7 +23974,11 @@
           "sc_st_finance__st_disbursement_no": "1218",
           "sc_st_finance__st_disbursement_amt": "4634.26",
           "sc_st_finance__st_outstanding_no": "7112",
-          "sc_st_finance__st_outstanding_amt": "22231.46"
+          "sc_st_finance__st_outstanding_amt": "22231.46",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "802",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "793",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         }
       ]
     },
@@ -24013,11 +24013,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "56719.47",
           "education_loan__education_no": "217",
-          "education_loan__housing_no": "5733",
-          "education_loan__social_infra_no": "1",
-          "education_loan__renewable_no": "1",
           "education_loan__others_no": "8153",
-          "education_loan__total_other_ps_o_s_no": "14105",
           "housing_pmay__district": "Aizawl",
           "housing_pmay__total_branch": "110",
           "housing_pmay__agri": "1",
@@ -24180,7 +24176,11 @@
           "sc_st_finance__st_disbursement_no": "10285",
           "sc_st_finance__st_disbursement_amt": "54145.64",
           "sc_st_finance__st_outstanding_no": "46457",
-          "sc_st_finance__st_outstanding_amt": "247243.48"
+          "sc_st_finance__st_outstanding_amt": "247243.48",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "14105",
+          "acp_disbursement_other_ps__renewable_no": "1",
+          "acp_disbursement_other_ps__housing_no": "5733",
+          "acp_disbursement_other_ps__social_infra_no": "1"
         },
         {
           "district": "Champhai",
@@ -24210,11 +24210,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "4632.53",
           "education_loan__education_no": "6",
-          "education_loan__housing_no": "643",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "650",
           "housing_pmay__district": "Champhai",
           "housing_pmay__total_branch": "17",
           "housing_pmay__agri": "0",
@@ -24376,7 +24372,11 @@
           "sc_st_finance__st_disbursement_no": "825",
           "sc_st_finance__st_disbursement_amt": "3929.91",
           "sc_st_finance__st_outstanding_no": "7650",
-          "sc_st_finance__st_outstanding_amt": "21216.45"
+          "sc_st_finance__st_outstanding_amt": "21216.45",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "650",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "643",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Hnahthial",
@@ -24406,11 +24406,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1535.83",
           "education_loan__education_no": "1",
-          "education_loan__housing_no": "160",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "161",
           "housing_pmay__district": "Hnahthial",
           "housing_pmay__total_branch": "5",
           "housing_pmay__agri": "0",
@@ -24572,7 +24568,11 @@
           "sc_st_finance__st_disbursement_no": "498",
           "sc_st_finance__st_disbursement_amt": "2778.95",
           "sc_st_finance__st_outstanding_no": "1616",
-          "sc_st_finance__st_outstanding_amt": "7119.17"
+          "sc_st_finance__st_outstanding_amt": "7119.17",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "161",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "160",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Khawzawl",
@@ -24602,11 +24602,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "2238.47",
           "education_loan__education_no": "3",
-          "education_loan__housing_no": "257",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "260",
           "housing_pmay__district": "Khawzawl",
           "housing_pmay__total_branch": "8",
           "housing_pmay__agri": "0",
@@ -24768,7 +24764,11 @@
           "sc_st_finance__st_disbursement_no": "705",
           "sc_st_finance__st_disbursement_amt": "1687.80",
           "sc_st_finance__st_outstanding_no": "3151",
-          "sc_st_finance__st_outstanding_amt": "6960.98"
+          "sc_st_finance__st_outstanding_amt": "6960.98",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "260",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "257",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Kolasib",
@@ -24798,11 +24798,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "7758.93",
           "education_loan__education_no": "11",
-          "education_loan__housing_no": "802",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "3003",
-          "education_loan__total_other_ps_o_s_no": "3816",
           "housing_pmay__district": "Kolasib",
           "housing_pmay__total_branch": "20",
           "housing_pmay__agri": "0",
@@ -24964,7 +24960,11 @@
           "sc_st_finance__st_disbursement_no": "2047",
           "sc_st_finance__st_disbursement_amt": "6194.38",
           "sc_st_finance__st_outstanding_no": "9834",
-          "sc_st_finance__st_outstanding_amt": "24331.68"
+          "sc_st_finance__st_outstanding_amt": "24331.68",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "3816",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "802",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Lawngtlai",
@@ -24994,11 +24994,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "16509.05",
           "education_loan__education_no": "13",
-          "education_loan__housing_no": "2083",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "2",
-          "education_loan__total_other_ps_o_s_no": "2098",
           "housing_pmay__district": "Lawngtlai",
           "housing_pmay__total_branch": "12",
           "housing_pmay__agri": "0",
@@ -25160,7 +25156,11 @@
           "sc_st_finance__st_disbursement_no": "1959",
           "sc_st_finance__st_disbursement_amt": "11618.50",
           "sc_st_finance__st_outstanding_no": "7568",
-          "sc_st_finance__st_outstanding_amt": "37749.67"
+          "sc_st_finance__st_outstanding_amt": "37749.67",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "2098",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "2083",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Lunglei",
@@ -25190,11 +25190,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "15674.54",
           "education_loan__education_no": "17",
-          "education_loan__housing_no": "1996",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "22",
-          "education_loan__total_other_ps_o_s_no": "2035",
           "housing_pmay__district": "Lunglei",
           "housing_pmay__total_branch": "22",
           "housing_pmay__agri": "0",
@@ -25356,7 +25352,11 @@
           "sc_st_finance__st_disbursement_no": "2627",
           "sc_st_finance__st_disbursement_amt": "10946.70",
           "sc_st_finance__st_outstanding_no": "11867",
-          "sc_st_finance__st_outstanding_amt": "44295.07"
+          "sc_st_finance__st_outstanding_amt": "44295.07",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "2035",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1996",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Mamit",
@@ -25386,11 +25386,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "3775.79",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "458",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "459",
           "housing_pmay__district": "Mamit",
           "housing_pmay__total_branch": "13",
           "housing_pmay__agri": "0",
@@ -25552,7 +25548,11 @@
           "sc_st_finance__st_disbursement_no": "1579",
           "sc_st_finance__st_disbursement_amt": "4256.79",
           "sc_st_finance__st_outstanding_no": "5756",
-          "sc_st_finance__st_outstanding_amt": "14586.91"
+          "sc_st_finance__st_outstanding_amt": "14586.91",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "459",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "458",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saiha",
@@ -25582,11 +25582,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "11430.54",
           "education_loan__education_no": "6",
-          "education_loan__housing_no": "1508",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "1514",
           "housing_pmay__district": "Saiha",
           "housing_pmay__total_branch": "7",
           "housing_pmay__agri": "0",
@@ -25748,7 +25744,11 @@
           "sc_st_finance__st_disbursement_no": "889",
           "sc_st_finance__st_disbursement_amt": "3779.72",
           "sc_st_finance__st_outstanding_no": "5102",
-          "sc_st_finance__st_outstanding_amt": "21330.98"
+          "sc_st_finance__st_outstanding_amt": "21330.98",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1514",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1508",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saitual",
@@ -25778,11 +25778,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1311.66",
           "education_loan__education_no": "3",
-          "education_loan__housing_no": "183",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "186",
           "housing_pmay__district": "Saitual",
           "housing_pmay__total_branch": "10",
           "housing_pmay__agri": "0",
@@ -25944,7 +25940,11 @@
           "sc_st_finance__st_disbursement_no": "1153",
           "sc_st_finance__st_disbursement_amt": "3114.33",
           "sc_st_finance__st_outstanding_no": "4149",
-          "sc_st_finance__st_outstanding_amt": "9220.71"
+          "sc_st_finance__st_outstanding_amt": "9220.71",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "186",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "183",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Serchhip",
@@ -25974,11 +25974,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "6767.15",
           "education_loan__education_no": "10",
-          "education_loan__housing_no": "798",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "809",
           "housing_pmay__district": "Serchhip",
           "housing_pmay__total_branch": "15",
           "housing_pmay__agri": "0",
@@ -26140,7 +26136,11 @@
           "sc_st_finance__st_disbursement_no": "1996",
           "sc_st_finance__st_disbursement_amt": "7395.62",
           "sc_st_finance__st_outstanding_no": "7289",
-          "sc_st_finance__st_outstanding_amt": "23882.61"
+          "sc_st_finance__st_outstanding_amt": "23882.61",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "809",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "798",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         }
       ]
     },
@@ -26175,11 +26175,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "55049.98",
           "education_loan__education_no": "204",
-          "education_loan__housing_no": "5525",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "1",
           "education_loan__others_no": "7984",
-          "education_loan__total_other_ps_o_s_no": "13714",
           "housing_pmay__district": "Aizawl",
           "housing_pmay__total_branch": "110",
           "housing_pmay__agri": "13",
@@ -26341,7 +26337,11 @@
           "sc_st_finance__st_disbursement_no": "13309",
           "sc_st_finance__st_disbursement_amt": "67605.60",
           "sc_st_finance__st_outstanding_no": "46364",
-          "sc_st_finance__st_outstanding_amt": "252625.93"
+          "sc_st_finance__st_outstanding_amt": "252625.93",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "13714",
+          "acp_disbursement_other_ps__renewable_no": "1",
+          "acp_disbursement_other_ps__housing_no": "5525",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Champhai",
@@ -26371,11 +26371,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "4613.86",
           "education_loan__education_no": "6",
-          "education_loan__housing_no": "632",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "9",
-          "education_loan__total_other_ps_o_s_no": "647",
           "housing_pmay__district": "Champhai",
           "housing_pmay__total_branch": "17",
           "housing_pmay__agri": "1",
@@ -26537,7 +26533,11 @@
           "sc_st_finance__st_disbursement_no": "947",
           "sc_st_finance__st_disbursement_amt": "4426.44",
           "sc_st_finance__st_outstanding_no": "7737",
-          "sc_st_finance__st_outstanding_amt": "20703.09"
+          "sc_st_finance__st_outstanding_amt": "20703.09",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "647",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "632",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Hnahthial",
@@ -26567,11 +26567,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1622.72",
           "education_loan__education_no": "2",
-          "education_loan__housing_no": "163",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "165",
           "housing_pmay__district": "Hnahthial",
           "housing_pmay__total_branch": "5",
           "housing_pmay__agri": "7",
@@ -26733,7 +26729,11 @@
           "sc_st_finance__st_disbursement_no": "566",
           "sc_st_finance__st_disbursement_amt": "3019.89",
           "sc_st_finance__st_outstanding_no": "1622",
-          "sc_st_finance__st_outstanding_amt": "7512.91"
+          "sc_st_finance__st_outstanding_amt": "7512.91",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "165",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "163",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Khawzawl",
@@ -26763,11 +26763,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "2227.17",
           "education_loan__education_no": "3",
-          "education_loan__housing_no": "254",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "257",
           "housing_pmay__district": "Khawzawl",
           "housing_pmay__total_branch": "8",
           "housing_pmay__agri": "0",
@@ -26929,7 +26925,11 @@
           "sc_st_finance__st_disbursement_no": "769",
           "sc_st_finance__st_disbursement_amt": "1885.94",
           "sc_st_finance__st_outstanding_no": "2994",
-          "sc_st_finance__st_outstanding_amt": "6843.62"
+          "sc_st_finance__st_outstanding_amt": "6843.62",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "257",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "254",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Kolasib",
@@ -26959,11 +26959,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "7876.27",
           "education_loan__education_no": "11",
-          "education_loan__housing_no": "775",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "2279",
-          "education_loan__total_other_ps_o_s_no": "3065",
           "housing_pmay__district": "Kolasib",
           "housing_pmay__total_branch": "20",
           "housing_pmay__agri": "0",
@@ -27125,7 +27121,11 @@
           "sc_st_finance__st_disbursement_no": "2801",
           "sc_st_finance__st_disbursement_amt": "8074.80",
           "sc_st_finance__st_outstanding_no": "9812",
-          "sc_st_finance__st_outstanding_amt": "25003.30"
+          "sc_st_finance__st_outstanding_amt": "25003.30",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "3065",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "775",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Lawngtlai",
@@ -27155,11 +27155,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "16878.84",
           "education_loan__education_no": "13",
-          "education_loan__housing_no": "2061",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "2",
-          "education_loan__total_other_ps_o_s_no": "2076",
           "housing_pmay__district": "Lawngtlai",
           "housing_pmay__total_branch": "12",
           "housing_pmay__agri": "7",
@@ -27321,7 +27317,11 @@
           "sc_st_finance__st_disbursement_no": "2260",
           "sc_st_finance__st_disbursement_amt": "12989.32",
           "sc_st_finance__st_outstanding_no": "7529",
-          "sc_st_finance__st_outstanding_amt": "39243.85"
+          "sc_st_finance__st_outstanding_amt": "39243.85",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "2076",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "2061",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Lunglei",
@@ -27351,11 +27351,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "15556.22",
           "education_loan__education_no": "16",
-          "education_loan__housing_no": "1923",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "20",
-          "education_loan__total_other_ps_o_s_no": "1959",
           "housing_pmay__district": "Lunglei",
           "housing_pmay__total_branch": "22",
           "housing_pmay__agri": "4",
@@ -27517,7 +27513,11 @@
           "sc_st_finance__st_disbursement_no": "3244",
           "sc_st_finance__st_disbursement_amt": "13174.29",
           "sc_st_finance__st_outstanding_no": "11860",
-          "sc_st_finance__st_outstanding_amt": "45205.30"
+          "sc_st_finance__st_outstanding_amt": "45205.30",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1959",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1923",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Mamit",
@@ -27547,11 +27547,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "3751.07",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "457",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "458",
           "housing_pmay__district": "Mamit",
           "housing_pmay__total_branch": "13",
           "housing_pmay__agri": "0",
@@ -27713,7 +27709,11 @@
           "sc_st_finance__st_disbursement_no": "1795",
           "sc_st_finance__st_disbursement_amt": "5247.89",
           "sc_st_finance__st_outstanding_no": "5596",
-          "sc_st_finance__st_outstanding_amt": "14702.94"
+          "sc_st_finance__st_outstanding_amt": "14702.94",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "458",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "457",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saiha",
@@ -27743,11 +27743,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "11041.29",
           "education_loan__education_no": "6",
-          "education_loan__housing_no": "1455",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "1461",
           "housing_pmay__district": "Saiha",
           "housing_pmay__total_branch": "7",
           "housing_pmay__agri": "5",
@@ -27909,7 +27905,11 @@
           "sc_st_finance__st_disbursement_no": "978",
           "sc_st_finance__st_disbursement_amt": "3920.45",
           "sc_st_finance__st_outstanding_no": "4860",
-          "sc_st_finance__st_outstanding_amt": "20761.64"
+          "sc_st_finance__st_outstanding_amt": "20761.64",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1461",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1455",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saitual",
@@ -27939,11 +27939,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1341.66",
           "education_loan__education_no": "4",
-          "education_loan__housing_no": "183",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "187",
           "housing_pmay__district": "Saitual",
           "housing_pmay__total_branch": "10",
           "housing_pmay__agri": "3",
@@ -28105,7 +28101,11 @@
           "sc_st_finance__st_disbursement_no": "1340",
           "sc_st_finance__st_disbursement_amt": "3675.32",
           "sc_st_finance__st_outstanding_no": "4061",
-          "sc_st_finance__st_outstanding_amt": "9399.73"
+          "sc_st_finance__st_outstanding_amt": "9399.73",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "187",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "183",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Serchhip",
@@ -28135,11 +28135,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "6839.75",
           "education_loan__education_no": "10",
-          "education_loan__housing_no": "805",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "816",
           "housing_pmay__district": "Serchhip",
           "housing_pmay__total_branch": "15",
           "housing_pmay__agri": "0",
@@ -28301,7 +28297,11 @@
           "sc_st_finance__st_disbursement_no": "2384",
           "sc_st_finance__st_disbursement_amt": "8560.07",
           "sc_st_finance__st_outstanding_no": "7242",
-          "sc_st_finance__st_outstanding_amt": "24455.60"
+          "sc_st_finance__st_outstanding_amt": "24455.60",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "816",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "805",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         }
       ]
     },
@@ -29661,11 +29661,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "37370.47",
           "education_loan__education_no": "159",
-          "education_loan__housing_no": "3619",
-          "education_loan__social_infra_no": "1",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "3351",
-          "education_loan__total_other_ps_o_s_no": "7130",
           "housing_pmay__district": "Aizawl",
           "housing_pmay__total_branch": "110",
           "housing_pmay__agri": "1",
@@ -29827,7 +29823,11 @@
           "sc_st_finance__st_disbursement_no": "4949",
           "sc_st_finance__st_disbursement_amt": "32224.20",
           "sc_st_finance__st_outstanding_no": "47084",
-          "sc_st_finance__st_outstanding_amt": "210564.13"
+          "sc_st_finance__st_outstanding_amt": "210564.13",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "7130",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "3619",
+          "acp_disbursement_other_ps__social_infra_no": "1"
         },
         {
           "district": "Champhai",
@@ -29857,11 +29857,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "2925.11",
           "education_loan__education_no": "1",
-          "education_loan__housing_no": "404",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "14",
-          "education_loan__total_other_ps_o_s_no": "419",
           "housing_pmay__district": "Champhai",
           "housing_pmay__total_branch": "17",
           "housing_pmay__agri": "0",
@@ -30023,7 +30019,11 @@
           "sc_st_finance__st_disbursement_no": "374",
           "sc_st_finance__st_disbursement_amt": "1679.00",
           "sc_st_finance__st_outstanding_no": "7611",
-          "sc_st_finance__st_outstanding_amt": "21284.09"
+          "sc_st_finance__st_outstanding_amt": "21284.09",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "419",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "404",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Hnahthial",
@@ -30053,11 +30053,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1456.36",
           "education_loan__education_no": "2",
-          "education_loan__housing_no": "140",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "142",
           "housing_pmay__district": "Hnahthial",
           "housing_pmay__total_branch": "5",
           "housing_pmay__agri": "0",
@@ -30219,7 +30215,11 @@
           "sc_st_finance__st_disbursement_no": "183",
           "sc_st_finance__st_disbursement_amt": "805.55",
           "sc_st_finance__st_outstanding_no": "1638",
-          "sc_st_finance__st_outstanding_amt": "7836.78"
+          "sc_st_finance__st_outstanding_amt": "7836.78",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "142",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "140",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Khawzawl",
@@ -30249,11 +30249,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1375.37",
           "education_loan__education_no": "1",
-          "education_loan__housing_no": "154",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "155",
           "housing_pmay__district": "Khawzawl",
           "housing_pmay__total_branch": "8",
           "housing_pmay__agri": "0",
@@ -30416,7 +30412,11 @@
           "sc_st_finance__st_disbursement_no": "164",
           "sc_st_finance__st_disbursement_amt": "696.09",
           "sc_st_finance__st_outstanding_no": "2832",
-          "sc_st_finance__st_outstanding_amt": "6787.01"
+          "sc_st_finance__st_outstanding_amt": "6787.01",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "155",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "154",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Kolasib",
@@ -30446,11 +30446,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "6343.25",
           "education_loan__education_no": "15",
-          "education_loan__housing_no": "647",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "2062",
-          "education_loan__total_other_ps_o_s_no": "2724",
           "housing_pmay__district": "Kolasib",
           "housing_pmay__total_branch": "20",
           "housing_pmay__agri": "0",
@@ -30612,7 +30608,11 @@
           "sc_st_finance__st_disbursement_no": "1030",
           "sc_st_finance__st_disbursement_amt": "2605.12",
           "sc_st_finance__st_outstanding_no": "9798",
-          "sc_st_finance__st_outstanding_amt": "24991.90"
+          "sc_st_finance__st_outstanding_amt": "24991.90",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "2724",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "647",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Lawngtlai",
@@ -30642,11 +30642,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "15397.87",
           "education_loan__education_no": "5",
-          "education_loan__housing_no": "1796",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "2",
-          "education_loan__total_other_ps_o_s_no": "1803",
           "housing_pmay__district": "Lawngtlai",
           "housing_pmay__total_branch": "12",
           "housing_pmay__agri": "0",
@@ -30808,7 +30804,11 @@
           "sc_st_finance__st_disbursement_no": "632",
           "sc_st_finance__st_disbursement_amt": "4160.99",
           "sc_st_finance__st_outstanding_no": "7638",
-          "sc_st_finance__st_outstanding_amt": "41258.75"
+          "sc_st_finance__st_outstanding_amt": "41258.75",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1803",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1796",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Lunglei",
@@ -30838,11 +30838,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "13536.86",
           "education_loan__education_no": "15",
-          "education_loan__housing_no": "1656",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "11",
-          "education_loan__total_other_ps_o_s_no": "1682",
           "housing_pmay__district": "Lunglei",
           "housing_pmay__total_branch": "22",
           "housing_pmay__agri": "0",
@@ -31004,7 +31000,11 @@
           "sc_st_finance__st_disbursement_no": "909",
           "sc_st_finance__st_disbursement_amt": "5531.72",
           "sc_st_finance__st_outstanding_no": "11777",
-          "sc_st_finance__st_outstanding_amt": "46588.72"
+          "sc_st_finance__st_outstanding_amt": "46588.72",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1682",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1656",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Mamit",
@@ -31034,11 +31034,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "2784.71",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "335",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "336",
           "housing_pmay__district": "Mamit",
           "housing_pmay__total_branch": "13",
           "housing_pmay__agri": "0",
@@ -31200,7 +31196,11 @@
           "sc_st_finance__st_disbursement_no": "420",
           "sc_st_finance__st_disbursement_amt": "1427.67",
           "sc_st_finance__st_outstanding_no": "5606",
-          "sc_st_finance__st_outstanding_amt": "14566.78"
+          "sc_st_finance__st_outstanding_amt": "14566.78",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "336",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "335",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saiha",
@@ -31230,11 +31230,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "9428",
           "education_loan__education_no": "2",
-          "education_loan__housing_no": "1193",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "1195",
           "housing_pmay__district": "Saiha",
           "housing_pmay__total_branch": "7",
           "housing_pmay__agri": "0",
@@ -31396,7 +31392,11 @@
           "sc_st_finance__st_disbursement_no": "273",
           "sc_st_finance__st_disbursement_amt": "1440.47",
           "sc_st_finance__st_outstanding_no": "4674",
-          "sc_st_finance__st_outstanding_amt": "20332.13"
+          "sc_st_finance__st_outstanding_amt": "20332.13",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1195",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1193",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saitual",
@@ -31426,11 +31426,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1099.18",
           "education_loan__education_no": "4",
-          "education_loan__housing_no": "130",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "135",
           "housing_pmay__district": "Saitual",
           "housing_pmay__total_branch": "10",
           "housing_pmay__agri": "0",
@@ -31592,7 +31588,11 @@
           "sc_st_finance__st_disbursement_no": "304",
           "sc_st_finance__st_disbursement_amt": "1091.59",
           "sc_st_finance__st_outstanding_no": "3987",
-          "sc_st_finance__st_outstanding_amt": "9549.67"
+          "sc_st_finance__st_outstanding_amt": "9549.67",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "135",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "130",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Serchhip",
@@ -31622,11 +31622,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "5689.48",
           "education_loan__education_no": "10",
-          "education_loan__housing_no": "682",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "3",
-          "education_loan__total_other_ps_o_s_no": "695",
           "housing_pmay__district": "Serchhip",
           "housing_pmay__total_branch": "15",
           "housing_pmay__agri": "0",
@@ -31788,7 +31784,11 @@
           "sc_st_finance__st_disbursement_no": "591",
           "sc_st_finance__st_disbursement_amt": "2744.64",
           "sc_st_finance__st_outstanding_no": "7014",
-          "sc_st_finance__st_outstanding_amt": "24691.82"
+          "sc_st_finance__st_outstanding_amt": "24691.82",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "695",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "682",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         }
       ]
     },
@@ -31823,11 +31823,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "46448.12",
           "education_loan__education_no": "189",
-          "education_loan__housing_no": "4678",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "1",
           "education_loan__others_no": "5077",
-          "education_loan__total_other_ps_o_s_no": "9945",
           "housing_pmay__district": "Aizawl",
           "housing_pmay__total_branch": "116",
           "housing_pmay__agri": "1",
@@ -31994,7 +31990,11 @@
           "sc_st_finance__st_disbursement_no": "5444",
           "sc_st_finance__st_disbursement_amt": "31420.10",
           "sc_st_finance__st_outstanding_no": "43377",
-          "sc_st_finance__st_outstanding_amt": "276097.79"
+          "sc_st_finance__st_outstanding_amt": "276097.79",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "9945",
+          "acp_disbursement_other_ps__renewable_no": "1",
+          "acp_disbursement_other_ps__housing_no": "4678",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Champhai",
@@ -32024,11 +32024,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "3395.68",
           "education_loan__education_no": "4",
-          "education_loan__housing_no": "459",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "13",
-          "education_loan__total_other_ps_o_s_no": "476",
           "housing_pmay__district": "Champhai",
           "housing_pmay__total_branch": "17",
           "housing_pmay__agri": "0",
@@ -32195,7 +32191,11 @@
           "sc_st_finance__st_disbursement_no": "774",
           "sc_st_finance__st_disbursement_amt": "2558.77",
           "sc_st_finance__st_outstanding_no": "7590",
-          "sc_st_finance__st_outstanding_amt": "21926.81"
+          "sc_st_finance__st_outstanding_amt": "21926.81",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "476",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "459",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Hnahthial",
@@ -32225,11 +32225,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1580.28",
           "education_loan__education_no": "2",
-          "education_loan__housing_no": "161",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "163",
           "housing_pmay__district": "Hnahthial",
           "housing_pmay__total_branch": "5",
           "housing_pmay__agri": "0",
@@ -32391,7 +32387,11 @@
           "sc_st_finance__st_disbursement_no": "212",
           "sc_st_finance__st_disbursement_amt": "1116.69",
           "sc_st_finance__st_outstanding_no": "1722",
-          "sc_st_finance__st_outstanding_amt": "8139.66"
+          "sc_st_finance__st_outstanding_amt": "8139.66",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "163",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "161",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Khawzawl",
@@ -32421,11 +32421,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1960.76",
           "education_loan__education_no": "4",
-          "education_loan__housing_no": "220",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "224",
           "housing_pmay__district": "Khawzawl",
           "housing_pmay__total_branch": "9",
           "housing_pmay__agri": "0",
@@ -32593,7 +32589,11 @@
           "sc_st_finance__st_disbursement_no": "400",
           "sc_st_finance__st_disbursement_amt": "1446.63",
           "sc_st_finance__st_outstanding_no": "2929",
-          "sc_st_finance__st_outstanding_amt": "7431.67"
+          "sc_st_finance__st_outstanding_amt": "7431.67",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "224",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "220",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Kolasib",
@@ -32623,11 +32623,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "6180",
           "education_loan__education_no": "18",
-          "education_loan__housing_no": "621",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1876",
-          "education_loan__total_other_ps_o_s_no": "2515",
           "housing_pmay__district": "Kolasib",
           "housing_pmay__total_branch": "21",
           "housing_pmay__agri": "0",
@@ -32794,7 +32790,11 @@
           "sc_st_finance__st_disbursement_no": "1307",
           "sc_st_finance__st_disbursement_amt": "3868.48",
           "sc_st_finance__st_outstanding_no": "8729",
-          "sc_st_finance__st_outstanding_amt": "25699.98"
+          "sc_st_finance__st_outstanding_amt": "25699.98",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "2515",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "621",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Lawngtlai",
@@ -32824,11 +32824,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "12070.22",
           "education_loan__education_no": "13",
-          "education_loan__housing_no": "1469",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "20",
-          "education_loan__total_other_ps_o_s_no": "1502",
           "housing_pmay__district": "Lawngtlai",
           "housing_pmay__total_branch": "12",
           "housing_pmay__agri": "0",
@@ -32995,7 +32991,11 @@
           "sc_st_finance__st_disbursement_no": "1078",
           "sc_st_finance__st_disbursement_amt": "5927.52",
           "sc_st_finance__st_outstanding_no": "8098",
-          "sc_st_finance__st_outstanding_amt": "42819.47"
+          "sc_st_finance__st_outstanding_amt": "42819.47",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1502",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1469",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Lunglei",
@@ -33025,11 +33025,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "16353.25",
           "education_loan__education_no": "19",
-          "education_loan__housing_no": "1887",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "25",
-          "education_loan__total_other_ps_o_s_no": "1931",
           "housing_pmay__district": "Lunglei",
           "housing_pmay__total_branch": "23",
           "housing_pmay__agri": "0",
@@ -33196,7 +33192,11 @@
           "sc_st_finance__st_disbursement_no": "1375",
           "sc_st_finance__st_disbursement_amt": "7289.92",
           "sc_st_finance__st_outstanding_no": "11882",
-          "sc_st_finance__st_outstanding_amt": "48437.77"
+          "sc_st_finance__st_outstanding_amt": "48437.77",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1931",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1887",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Mamit",
@@ -33226,11 +33226,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "2816.48",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "330",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "331",
           "housing_pmay__district": "Mamit",
           "housing_pmay__total_branch": "13",
           "housing_pmay__agri": "0",
@@ -33397,7 +33393,11 @@
           "sc_st_finance__st_disbursement_no": "742",
           "sc_st_finance__st_disbursement_amt": "2392.60",
           "sc_st_finance__st_outstanding_no": "6020",
-          "sc_st_finance__st_outstanding_amt": "15488.19"
+          "sc_st_finance__st_outstanding_amt": "15488.19",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "331",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "330",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saiha",
@@ -33427,11 +33427,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "6378.73",
           "education_loan__education_no": "6",
-          "education_loan__housing_no": "835",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "8",
-          "education_loan__total_other_ps_o_s_no": "849",
           "housing_pmay__district": "Saiha",
           "housing_pmay__total_branch": "7",
           "housing_pmay__agri": "0",
@@ -33598,7 +33594,11 @@
           "sc_st_finance__st_disbursement_no": "454",
           "sc_st_finance__st_disbursement_amt": "2591.79",
           "sc_st_finance__st_outstanding_no": "4748",
-          "sc_st_finance__st_outstanding_amt": "20742.20"
+          "sc_st_finance__st_outstanding_amt": "20742.20",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "849",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "835",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saitual",
@@ -33628,11 +33628,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1479.52",
           "education_loan__education_no": "5",
-          "education_loan__housing_no": "167",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "7",
-          "education_loan__total_other_ps_o_s_no": "179",
           "housing_pmay__district": "Saitual",
           "housing_pmay__total_branch": "10",
           "housing_pmay__agri": "0",
@@ -33799,7 +33795,11 @@
           "sc_st_finance__st_disbursement_no": "505",
           "sc_st_finance__st_disbursement_amt": "1978.85",
           "sc_st_finance__st_outstanding_no": "4174",
-          "sc_st_finance__st_outstanding_amt": "10373.73"
+          "sc_st_finance__st_outstanding_amt": "10373.73",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "179",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "167",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Serchhip",
@@ -33829,11 +33829,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "6206.12",
           "education_loan__education_no": "10",
-          "education_loan__housing_no": "734",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "3",
-          "education_loan__total_other_ps_o_s_no": "747",
           "housing_pmay__district": "Serchhip",
           "housing_pmay__total_branch": "16",
           "housing_pmay__agri": "0",
@@ -34000,7 +33996,11 @@
           "sc_st_finance__st_disbursement_no": "842",
           "sc_st_finance__st_disbursement_amt": "4045.37",
           "sc_st_finance__st_outstanding_no": "7297",
-          "sc_st_finance__st_outstanding_amt": "25821.71"
+          "sc_st_finance__st_outstanding_amt": "25821.71",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "747",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "734",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         }
       ]
     },
@@ -36686,11 +36686,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "60345.01",
           "education_loan__education_no": "192",
-          "education_loan__housing_no": "5075",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "1",
           "education_loan__others_no": "4409",
-          "education_loan__total_other_ps_o_s_no": "9677",
           "housing_pmay__district": "Aizawl",
           "housing_pmay__total_branch": "128",
           "housing_pmay__agri": "3",
@@ -36852,7 +36848,11 @@
           "sc_st_finance__st_disbursement_no": "9867",
           "sc_st_finance__st_disbursement_amt": "117314.53",
           "sc_st_finance__st_outstanding_no": "41870",
-          "sc_st_finance__st_outstanding_amt": "236399.42"
+          "sc_st_finance__st_outstanding_amt": "236399.42",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "9677",
+          "acp_disbursement_other_ps__renewable_no": "1",
+          "acp_disbursement_other_ps__housing_no": "5075",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Champhai",
@@ -36882,11 +36882,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "4982.77",
           "education_loan__education_no": "5",
-          "education_loan__housing_no": "529",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "47",
-          "education_loan__total_other_ps_o_s_no": "581",
           "housing_pmay__district": "Champhai",
           "housing_pmay__total_branch": "18",
           "housing_pmay__agri": "2",
@@ -37048,7 +37044,11 @@
           "sc_st_finance__st_disbursement_no": "1560",
           "sc_st_finance__st_disbursement_amt": "8128.44",
           "sc_st_finance__st_outstanding_no": "5519",
-          "sc_st_finance__st_outstanding_amt": "17435.44"
+          "sc_st_finance__st_outstanding_amt": "17435.44",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "581",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "529",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Hnahthial",
@@ -37078,11 +37078,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "2053.78",
           "education_loan__education_no": "3",
-          "education_loan__housing_no": "169",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "13",
-          "education_loan__total_other_ps_o_s_no": "185",
           "housing_pmay__district": "Hnahthial",
           "housing_pmay__total_branch": "5",
           "housing_pmay__agri": "0",
@@ -37244,7 +37240,11 @@
           "sc_st_finance__st_disbursement_no": "517",
           "sc_st_finance__st_disbursement_amt": "2609.49",
           "sc_st_finance__st_outstanding_no": "1607",
-          "sc_st_finance__st_outstanding_amt": "7928.70"
+          "sc_st_finance__st_outstanding_amt": "7928.70",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "185",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "169",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Khawzawl",
@@ -37274,11 +37274,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "2426.02",
           "education_loan__education_no": "3",
-          "education_loan__housing_no": "242",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "19",
-          "education_loan__total_other_ps_o_s_no": "264",
           "housing_pmay__district": "Khawzawl",
           "housing_pmay__total_branch": "8",
           "housing_pmay__agri": "0",
@@ -37440,7 +37436,11 @@
           "sc_st_finance__st_disbursement_no": "909",
           "sc_st_finance__st_disbursement_amt": "3492.41",
           "sc_st_finance__st_outstanding_no": "2864",
-          "sc_st_finance__st_outstanding_amt": "8153.70"
+          "sc_st_finance__st_outstanding_amt": "8153.70",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "264",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "242",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Kolasib",
@@ -37470,11 +37470,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "6740.16",
           "education_loan__education_no": "24",
-          "education_loan__housing_no": "719",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1663",
-          "education_loan__total_other_ps_o_s_no": "2406",
           "housing_pmay__district": "Kolasib",
           "housing_pmay__total_branch": "25",
           "housing_pmay__agri": "0",
@@ -37636,7 +37632,11 @@
           "sc_st_finance__st_disbursement_no": "1870",
           "sc_st_finance__st_disbursement_amt": "8980.90",
           "sc_st_finance__st_outstanding_no": "8276",
-          "sc_st_finance__st_outstanding_amt": "25525.32"
+          "sc_st_finance__st_outstanding_amt": "25525.32",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "2406",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "719",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Lawngtlai",
@@ -37666,11 +37666,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "15894.7",
           "education_loan__education_no": "12",
-          "education_loan__housing_no": "1830",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "31",
-          "education_loan__total_other_ps_o_s_no": "1873",
           "housing_pmay__district": "Lawngtlai",
           "housing_pmay__total_branch": "12",
           "housing_pmay__agri": "1",
@@ -37832,7 +37828,11 @@
           "sc_st_finance__st_disbursement_no": "2211",
           "sc_st_finance__st_disbursement_amt": "11304.90",
           "sc_st_finance__st_outstanding_no": "7150",
-          "sc_st_finance__st_outstanding_amt": "37211.15"
+          "sc_st_finance__st_outstanding_amt": "37211.15",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1873",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1830",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Lunglei",
@@ -37862,11 +37862,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "17082.79",
           "education_loan__education_no": "19",
-          "education_loan__housing_no": "1735",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "76",
-          "education_loan__total_other_ps_o_s_no": "1830",
           "housing_pmay__district": "Lunglei",
           "housing_pmay__total_branch": "23",
           "housing_pmay__agri": "46",
@@ -38029,7 +38025,11 @@
           "sc_st_finance__st_disbursement_no": "3090",
           "sc_st_finance__st_disbursement_amt": "17040.26",
           "sc_st_finance__st_outstanding_no": "10831",
-          "sc_st_finance__st_outstanding_amt": "43754.61"
+          "sc_st_finance__st_outstanding_amt": "43754.61",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1830",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1735",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Mamit",
@@ -38059,11 +38059,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "3841.76",
           "education_loan__education_no": "1",
-          "education_loan__housing_no": "429",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "7",
-          "education_loan__total_other_ps_o_s_no": "437",
           "housing_pmay__district": "Mamit",
           "housing_pmay__total_branch": "13",
           "housing_pmay__agri": "0",
@@ -38225,7 +38221,11 @@
           "sc_st_finance__st_disbursement_no": "1375",
           "sc_st_finance__st_disbursement_amt": "5214.71",
           "sc_st_finance__st_outstanding_no": "6011",
-          "sc_st_finance__st_outstanding_amt": "15399.03"
+          "sc_st_finance__st_outstanding_amt": "15399.03",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "437",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "429",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saiha",
@@ -38255,11 +38255,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "9757.38",
           "education_loan__education_no": "5",
-          "education_loan__housing_no": "1207",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "37",
-          "education_loan__total_other_ps_o_s_no": "1249",
           "housing_pmay__district": "Saiha",
           "housing_pmay__total_branch": "7",
           "housing_pmay__agri": "3",
@@ -38421,7 +38417,11 @@
           "sc_st_finance__st_disbursement_no": "1759",
           "sc_st_finance__st_disbursement_amt": "10666.78",
           "sc_st_finance__st_outstanding_no": "3231",
-          "sc_st_finance__st_outstanding_amt": "14933.64"
+          "sc_st_finance__st_outstanding_amt": "14933.64",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1249",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1207",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Saitual",
@@ -38451,11 +38451,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1770.46",
           "education_loan__education_no": "6",
-          "education_loan__housing_no": "167",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "13",
-          "education_loan__total_other_ps_o_s_no": "186",
           "housing_pmay__district": "Saitual",
           "housing_pmay__total_branch": "10",
           "housing_pmay__agri": "0",
@@ -38617,7 +38613,11 @@
           "sc_st_finance__st_disbursement_no": "918",
           "sc_st_finance__st_disbursement_amt": "3342.19",
           "sc_st_finance__st_outstanding_no": "4345",
-          "sc_st_finance__st_outstanding_amt": "10850.19"
+          "sc_st_finance__st_outstanding_amt": "10850.19",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "186",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "167",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         },
         {
           "district": "Serchhip",
@@ -38647,11 +38647,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "7207.69",
           "education_loan__education_no": "10",
-          "education_loan__housing_no": "768",
-          "education_loan__social_infra_no": "0",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "28",
-          "education_loan__total_other_ps_o_s_no": "806",
           "housing_pmay__district": "Serchhip",
           "housing_pmay__total_branch": "17",
           "housing_pmay__agri": "0",
@@ -38813,7 +38809,11 @@
           "sc_st_finance__st_disbursement_no": "1648",
           "sc_st_finance__st_disbursement_amt": "7255.23",
           "sc_st_finance__st_outstanding_no": "7543",
-          "sc_st_finance__st_outstanding_amt": "26191.44"
+          "sc_st_finance__st_outstanding_amt": "26191.44",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "806",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "768",
+          "acp_disbursement_other_ps__social_infra_no": "0"
         }
       ]
     },
@@ -38848,11 +38848,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "58799.58",
           "education_loan__education_no": "177",
-          "education_loan__housing_no": "5117",
-          "education_loan__social_infra_no": "176",
-          "education_loan__renewable_no": "1",
           "education_loan__others_no": "3577",
-          "education_loan__total_other_ps_o_s_no": "9048",
           "housing_pmay__district": "Aizawl",
           "housing_pmay__total_branch": "120",
           "housing_pmay__agri": "2",
@@ -39018,7 +39014,11 @@
           "sc_st_finance__st_disbursement_no": "11058",
           "sc_st_finance__st_disbursement_amt": "81503.49",
           "sc_st_finance__st_outstanding_no": "47002",
-          "sc_st_finance__st_outstanding_amt": "323609.93"
+          "sc_st_finance__st_outstanding_amt": "323609.93",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "9048",
+          "acp_disbursement_other_ps__renewable_no": "1",
+          "acp_disbursement_other_ps__housing_no": "5117",
+          "acp_disbursement_other_ps__social_infra_no": "176"
         },
         {
           "district": "Champhai",
@@ -39048,11 +39048,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "4846.22",
           "education_loan__education_no": "4",
-          "education_loan__housing_no": "537",
-          "education_loan__social_infra_no": "32",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "42",
-          "education_loan__total_other_ps_o_s_no": "615",
           "housing_pmay__district": "Champhai",
           "housing_pmay__total_branch": "17",
           "housing_pmay__agri": "2",
@@ -39218,7 +39214,11 @@
           "sc_st_finance__st_disbursement_no": "1109",
           "sc_st_finance__st_disbursement_amt": "5070.31",
           "sc_st_finance__st_outstanding_no": "6083",
-          "sc_st_finance__st_outstanding_amt": "21778.43"
+          "sc_st_finance__st_outstanding_amt": "21778.43",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "615",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "537",
+          "acp_disbursement_other_ps__social_infra_no": "32"
         },
         {
           "district": "Hnahthial",
@@ -39248,11 +39248,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1956.57",
           "education_loan__education_no": "2",
-          "education_loan__housing_no": "169",
-          "education_loan__social_infra_no": "9",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "181",
           "housing_pmay__district": "Hnahthial",
           "housing_pmay__total_branch": "5",
           "housing_pmay__agri": "0",
@@ -39414,7 +39410,11 @@
           "sc_st_finance__st_disbursement_no": "440",
           "sc_st_finance__st_disbursement_amt": "2202.41",
           "sc_st_finance__st_outstanding_no": "1893",
-          "sc_st_finance__st_outstanding_amt": "9068.95"
+          "sc_st_finance__st_outstanding_amt": "9068.95",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "181",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "169",
+          "acp_disbursement_other_ps__social_infra_no": "9"
         },
         {
           "district": "Khawzawl",
@@ -39444,11 +39444,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "2413.04",
           "education_loan__education_no": "3",
-          "education_loan__housing_no": "241",
-          "education_loan__social_infra_no": "17",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "261",
           "housing_pmay__district": "Khawzawl",
           "housing_pmay__total_branch": "9",
           "housing_pmay__agri": "0",
@@ -39614,7 +39610,11 @@
           "sc_st_finance__st_disbursement_no": "772",
           "sc_st_finance__st_disbursement_amt": "2708.81",
           "sc_st_finance__st_outstanding_no": "3263",
-          "sc_st_finance__st_outstanding_amt": "9657.28"
+          "sc_st_finance__st_outstanding_amt": "9657.28",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "261",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "241",
+          "acp_disbursement_other_ps__social_infra_no": "17"
         },
         {
           "district": "Kolasib",
@@ -39644,11 +39644,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "7560",
           "education_loan__education_no": "20",
-          "education_loan__housing_no": "718",
-          "education_loan__social_infra_no": "19",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1308",
-          "education_loan__total_other_ps_o_s_no": "2065",
           "housing_pmay__district": "Kolasib",
           "housing_pmay__total_branch": "21",
           "housing_pmay__agri": "0",
@@ -39814,7 +39810,11 @@
           "sc_st_finance__st_disbursement_no": "1804",
           "sc_st_finance__st_disbursement_amt": "8788.22",
           "sc_st_finance__st_outstanding_no": "8161",
-          "sc_st_finance__st_outstanding_amt": "28926.56"
+          "sc_st_finance__st_outstanding_amt": "28926.56",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "2065",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "718",
+          "acp_disbursement_other_ps__social_infra_no": "19"
         },
         {
           "district": "Lawngtlai",
@@ -39844,11 +39844,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "16185.07",
           "education_loan__education_no": "12",
-          "education_loan__housing_no": "1868",
-          "education_loan__social_infra_no": "23",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "3",
-          "education_loan__total_other_ps_o_s_no": "1906",
           "housing_pmay__district": "Lawngtlai",
           "housing_pmay__total_branch": "12",
           "housing_pmay__agri": "0",
@@ -40014,7 +40010,11 @@
           "sc_st_finance__st_disbursement_no": "1883",
           "sc_st_finance__st_disbursement_amt": "8736.78",
           "sc_st_finance__st_outstanding_no": "8422",
-          "sc_st_finance__st_outstanding_amt": "44366.41"
+          "sc_st_finance__st_outstanding_amt": "44366.41",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1906",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1868",
+          "acp_disbursement_other_ps__social_infra_no": "23"
         },
         {
           "district": "Lunglei",
@@ -40044,11 +40044,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "17319.71",
           "education_loan__education_no": "17",
-          "education_loan__housing_no": "1785",
-          "education_loan__social_infra_no": "48",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "25",
-          "education_loan__total_other_ps_o_s_no": "1875",
           "housing_pmay__district": "Lunglei",
           "housing_pmay__total_branch": "23",
           "housing_pmay__agri": "30",
@@ -40215,7 +40211,11 @@
           "sc_st_finance__st_disbursement_no": "2787",
           "sc_st_finance__st_disbursement_amt": "13059.13",
           "sc_st_finance__st_outstanding_no": "12169",
-          "sc_st_finance__st_outstanding_amt": "52986.97"
+          "sc_st_finance__st_outstanding_amt": "52986.97",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1875",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1785",
+          "acp_disbursement_other_ps__social_infra_no": "48"
         },
         {
           "district": "Mamit",
@@ -40245,11 +40245,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "3826.37",
           "education_loan__education_no": "0",
-          "education_loan__housing_no": "428",
-          "education_loan__social_infra_no": "5",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "434",
           "housing_pmay__district": "Mamit",
           "housing_pmay__total_branch": "13",
           "housing_pmay__agri": "0",
@@ -40415,7 +40411,11 @@
           "sc_st_finance__st_disbursement_no": "1597",
           "sc_st_finance__st_disbursement_amt": "5831.56",
           "sc_st_finance__st_outstanding_no": "6530",
-          "sc_st_finance__st_outstanding_amt": "17791.82"
+          "sc_st_finance__st_outstanding_amt": "17791.82",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "434",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "428",
+          "acp_disbursement_other_ps__social_infra_no": "5"
         },
         {
           "district": "Saiha",
@@ -40445,11 +40445,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "9928.14",
           "education_loan__education_no": "4",
-          "education_loan__housing_no": "1244",
-          "education_loan__social_infra_no": "20",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "11",
-          "education_loan__total_other_ps_o_s_no": "1279",
           "housing_pmay__district": "Saiha",
           "housing_pmay__total_branch": "7",
           "housing_pmay__agri": "2",
@@ -40615,7 +40611,11 @@
           "sc_st_finance__st_disbursement_no": "596",
           "sc_st_finance__st_disbursement_amt": "5092.91",
           "sc_st_finance__st_outstanding_no": "4433",
-          "sc_st_finance__st_outstanding_amt": "22126.34"
+          "sc_st_finance__st_outstanding_amt": "22126.34",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1279",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1244",
+          "acp_disbursement_other_ps__social_infra_no": "20"
         },
         {
           "district": "Saitual",
@@ -40645,11 +40645,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1566.24",
           "education_loan__education_no": "5",
-          "education_loan__housing_no": "168",
-          "education_loan__social_infra_no": "8",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "3",
-          "education_loan__total_other_ps_o_s_no": "184",
           "housing_pmay__district": "Saitual",
           "housing_pmay__total_branch": "10",
           "housing_pmay__agri": "0",
@@ -40815,7 +40811,11 @@
           "sc_st_finance__st_disbursement_no": "1176",
           "sc_st_finance__st_disbursement_amt": "4370.23",
           "sc_st_finance__st_outstanding_no": "4638",
-          "sc_st_finance__st_outstanding_amt": "12298.21"
+          "sc_st_finance__st_outstanding_amt": "12298.21",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "184",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "168",
+          "acp_disbursement_other_ps__social_infra_no": "8"
         },
         {
           "district": "Serchhip",
@@ -40845,11 +40845,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "7054.86",
           "education_loan__education_no": "10",
-          "education_loan__housing_no": "770",
-          "education_loan__social_infra_no": "11",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "6",
-          "education_loan__total_other_ps_o_s_no": "797",
           "housing_pmay__district": "Serchhip",
           "housing_pmay__total_branch": "16",
           "housing_pmay__agri": "0",
@@ -41015,7 +41011,11 @@
           "sc_st_finance__st_disbursement_no": "2045",
           "sc_st_finance__st_disbursement_amt": "8736.11",
           "sc_st_finance__st_outstanding_no": "8250",
-          "sc_st_finance__st_outstanding_amt": "29425.44"
+          "sc_st_finance__st_outstanding_amt": "29425.44",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "797",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "770",
+          "acp_disbursement_other_ps__social_infra_no": "11"
         }
       ]
     },
@@ -41050,11 +41050,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "48146.39",
           "education_loan__education_no": "175",
-          "education_loan__housing_no": "3416",
-          "education_loan__social_infra_no": "258",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "2653",
-          "education_loan__total_other_ps_o_s_no": "6502",
           "msme_outstanding__district": "Aizawl",
           "msme_outstanding__total_branch": "129",
           "msme_outstanding__micro": "14700",
@@ -41208,7 +41204,11 @@
           "sc_st_finance__st_disbursement_no": "14224",
           "sc_st_finance__st_disbursement_amt": "114441.01",
           "sc_st_finance__st_outstanding_no": "46187",
-          "sc_st_finance__st_outstanding_amt": "333103.13"
+          "sc_st_finance__st_outstanding_amt": "333103.13",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "6502",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "3416",
+          "acp_disbursement_other_ps__social_infra_no": "258"
         },
         {
           "district": "Champhai",
@@ -41238,11 +41238,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "3764.35",
           "education_loan__education_no": "2",
-          "education_loan__housing_no": "308",
-          "education_loan__social_infra_no": "43",
-          "education_loan__renewable_no": "1",
           "education_loan__others_no": "10",
-          "education_loan__total_other_ps_o_s_no": "364",
           "msme_outstanding__district": "Champhai",
           "msme_outstanding__total_branch": "18",
           "msme_outstanding__micro": "1619",
@@ -41396,7 +41392,11 @@
           "sc_st_finance__st_disbursement_no": "1404",
           "sc_st_finance__st_disbursement_amt": "6922.21",
           "sc_st_finance__st_outstanding_no": "5850",
-          "sc_st_finance__st_outstanding_amt": "22676.98"
+          "sc_st_finance__st_outstanding_amt": "22676.98",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "364",
+          "acp_disbursement_other_ps__renewable_no": "1",
+          "acp_disbursement_other_ps__housing_no": "308",
+          "acp_disbursement_other_ps__social_infra_no": "43"
         },
         {
           "district": "Hnahthial",
@@ -41426,11 +41426,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "2004.73",
           "education_loan__education_no": "4",
-          "education_loan__housing_no": "147",
-          "education_loan__social_infra_no": "16",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "3",
-          "education_loan__total_other_ps_o_s_no": "170",
           "msme_outstanding__district": "Hnahthial",
           "msme_outstanding__total_branch": "5",
           "msme_outstanding__micro": "398",
@@ -41584,7 +41580,11 @@
           "sc_st_finance__st_disbursement_no": "598",
           "sc_st_finance__st_disbursement_amt": "3318.16",
           "sc_st_finance__st_outstanding_no": "1917",
-          "sc_st_finance__st_outstanding_amt": "9333.41"
+          "sc_st_finance__st_outstanding_amt": "9333.41",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "170",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "147",
+          "acp_disbursement_other_ps__social_infra_no": "16"
         },
         {
           "district": "Khawzawl",
@@ -41614,11 +41614,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1669.55",
           "education_loan__education_no": "2",
-          "education_loan__housing_no": "154",
-          "education_loan__social_infra_no": "22",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "178",
           "msme_outstanding__district": "Khawzawl",
           "msme_outstanding__total_branch": "8",
           "msme_outstanding__micro": "523",
@@ -41772,7 +41768,11 @@
           "sc_st_finance__st_disbursement_no": "931",
           "sc_st_finance__st_disbursement_amt": "3400.24",
           "sc_st_finance__st_outstanding_no": "3227",
-          "sc_st_finance__st_outstanding_amt": "10057.71"
+          "sc_st_finance__st_outstanding_amt": "10057.71",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "178",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "154",
+          "acp_disbursement_other_ps__social_infra_no": "22"
         },
         {
           "district": "Kolasib",
@@ -41802,11 +41802,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "6500.89",
           "education_loan__education_no": "23",
-          "education_loan__housing_no": "584",
-          "education_loan__social_infra_no": "27",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "906",
-          "education_loan__total_other_ps_o_s_no": "1540",
           "msme_outstanding__district": "Kolasib",
           "msme_outstanding__total_branch": "25",
           "msme_outstanding__micro": "1837",
@@ -41960,7 +41956,11 @@
           "sc_st_finance__st_disbursement_no": "2738",
           "sc_st_finance__st_disbursement_amt": "12399.71",
           "sc_st_finance__st_outstanding_no": "8347",
-          "sc_st_finance__st_outstanding_amt": "29712.26"
+          "sc_st_finance__st_outstanding_amt": "29712.26",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1540",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "584",
+          "acp_disbursement_other_ps__social_infra_no": "27"
         },
         {
           "district": "Lawngtlai",
@@ -41990,11 +41990,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "13770.56",
           "education_loan__education_no": "7",
-          "education_loan__housing_no": "1521",
-          "education_loan__social_infra_no": "29",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "3",
-          "education_loan__total_other_ps_o_s_no": "1560",
           "msme_outstanding__district": "Lawngtlai",
           "msme_outstanding__total_branch": "12",
           "msme_outstanding__micro": "1090",
@@ -42148,7 +42144,11 @@
           "sc_st_finance__st_disbursement_no": "2671",
           "sc_st_finance__st_disbursement_amt": "13079.20",
           "sc_st_finance__st_outstanding_no": "8324",
-          "sc_st_finance__st_outstanding_amt": "45274.07"
+          "sc_st_finance__st_outstanding_amt": "45274.07",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1560",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1521",
+          "acp_disbursement_other_ps__social_infra_no": "29"
         },
         {
           "district": "Lunglei",
@@ -42178,11 +42178,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "14623.91",
           "education_loan__education_no": "18",
-          "education_loan__housing_no": "1470",
-          "education_loan__social_infra_no": "59",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "25",
-          "education_loan__total_other_ps_o_s_no": "1572",
           "msme_outstanding__district": "Lunglei",
           "msme_outstanding__total_branch": "23",
           "msme_outstanding__micro": "2853",
@@ -42337,7 +42333,11 @@
           "sc_st_finance__st_disbursement_no": "3746",
           "sc_st_finance__st_disbursement_amt": "18833.32",
           "sc_st_finance__st_outstanding_no": "11836",
-          "sc_st_finance__st_outstanding_amt": "53920.63"
+          "sc_st_finance__st_outstanding_amt": "53920.63",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1572",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1470",
+          "acp_disbursement_other_ps__social_infra_no": "59"
         },
         {
           "district": "Mamit",
@@ -42367,11 +42367,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "3011.86",
           "education_loan__education_no": "1",
-          "education_loan__housing_no": "325",
-          "education_loan__social_infra_no": "8",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "335",
           "msme_outstanding__district": "Mamit",
           "msme_outstanding__total_branch": "12",
           "msme_outstanding__micro": "942",
@@ -42525,7 +42521,11 @@
           "sc_st_finance__st_disbursement_no": "2215",
           "sc_st_finance__st_disbursement_amt": "7832.76",
           "sc_st_finance__st_outstanding_no": "6548",
-          "sc_st_finance__st_outstanding_amt": "18353.88"
+          "sc_st_finance__st_outstanding_amt": "18353.88",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "335",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "325",
+          "acp_disbursement_other_ps__social_infra_no": "8"
         },
         {
           "district": "Saiha",
@@ -42555,11 +42555,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "8387.53",
           "education_loan__education_no": "3",
-          "education_loan__housing_no": "993",
-          "education_loan__social_infra_no": "32",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "18",
-          "education_loan__total_other_ps_o_s_no": "1046",
           "msme_outstanding__district": "Saiha",
           "msme_outstanding__total_branch": "8",
           "msme_outstanding__micro": "544",
@@ -42713,7 +42709,11 @@
           "sc_st_finance__st_disbursement_no": "916",
           "sc_st_finance__st_disbursement_amt": "7020.72",
           "sc_st_finance__st_outstanding_no": "4250",
-          "sc_st_finance__st_outstanding_amt": "22758.71"
+          "sc_st_finance__st_outstanding_amt": "22758.71",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1046",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "993",
+          "acp_disbursement_other_ps__social_infra_no": "32"
         },
         {
           "district": "Saitual",
@@ -42743,11 +42743,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "1420.98",
           "education_loan__education_no": "7",
-          "education_loan__housing_no": "130",
-          "education_loan__social_infra_no": "12",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "2",
-          "education_loan__total_other_ps_o_s_no": "151",
           "msme_outstanding__district": "Saitual",
           "msme_outstanding__total_branch": "10",
           "msme_outstanding__micro": "803",
@@ -42901,7 +42897,11 @@
           "sc_st_finance__st_disbursement_no": "1659",
           "sc_st_finance__st_disbursement_amt": "5949.22",
           "sc_st_finance__st_outstanding_no": "4654",
-          "sc_st_finance__st_outstanding_amt": "12875.41"
+          "sc_st_finance__st_outstanding_amt": "12875.41",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "151",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "130",
+          "acp_disbursement_other_ps__social_infra_no": "12"
         },
         {
           "district": "Serchhip",
@@ -42931,11 +42931,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "6787.51",
           "education_loan__education_no": "9",
-          "education_loan__housing_no": "681",
-          "education_loan__social_infra_no": "34",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "8",
-          "education_loan__total_other_ps_o_s_no": "732",
           "msme_outstanding__district": "Serchhip",
           "msme_outstanding__total_branch": "18",
           "msme_outstanding__micro": "1704",
@@ -43089,7 +43085,11 @@
           "sc_st_finance__st_disbursement_no": "2971",
           "sc_st_finance__st_disbursement_amt": "12495.46",
           "sc_st_finance__st_outstanding_no": "8263",
-          "sc_st_finance__st_outstanding_amt": "30139.32"
+          "sc_st_finance__st_outstanding_amt": "30139.32",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "732",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "681",
+          "acp_disbursement_other_ps__social_infra_no": "34"
         }
       ]
     },
@@ -43124,11 +43124,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "84034.9",
           "education_loan__education_no": "219",
-          "education_loan__housing_no": "5620",
-          "education_loan__social_infra_no": "300",
-          "education_loan__renewable_no": "1",
           "education_loan__others_no": "2343",
-          "education_loan__total_other_ps_o_s_no": "8483",
           "housing_pmay__district": "Aizawl",
           "housing_pmay__total_branch": "129",
           "housing_pmay__agri": "2",
@@ -43291,7 +43287,11 @@
           "sc_st_finance__st_disbursement_no": "3547",
           "sc_st_finance__st_disbursement_amt": "28693.25",
           "sc_st_finance__st_outstanding_no": "45197",
-          "sc_st_finance__st_outstanding_amt": "337831.72"
+          "sc_st_finance__st_outstanding_amt": "337831.72",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "8483",
+          "acp_disbursement_other_ps__renewable_no": "1",
+          "acp_disbursement_other_ps__housing_no": "5620",
+          "acp_disbursement_other_ps__social_infra_no": "300"
         },
         {
           "district": "Champhai",
@@ -43321,11 +43321,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "6219.91",
           "education_loan__education_no": "6",
-          "education_loan__housing_no": "504",
-          "education_loan__social_infra_no": "47",
-          "education_loan__renewable_no": "1",
           "education_loan__others_no": "12",
-          "education_loan__total_other_ps_o_s_no": "570",
           "housing_pmay__district": "Champhai",
           "housing_pmay__total_branch": "18",
           "housing_pmay__agri": "3",
@@ -43489,7 +43485,11 @@
           "sc_st_finance__st_disbursement_no": "374",
           "sc_st_finance__st_disbursement_amt": "1893.48",
           "sc_st_finance__st_outstanding_no": "5071",
-          "sc_st_finance__st_outstanding_amt": "22571.45"
+          "sc_st_finance__st_outstanding_amt": "22571.45",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "570",
+          "acp_disbursement_other_ps__renewable_no": "1",
+          "acp_disbursement_other_ps__housing_no": "504",
+          "acp_disbursement_other_ps__social_infra_no": "47"
         },
         {
           "district": "Hnahthial",
@@ -43519,11 +43519,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "3452.7",
           "education_loan__education_no": "4",
-          "education_loan__housing_no": "217",
-          "education_loan__social_infra_no": "19",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "3",
-          "education_loan__total_other_ps_o_s_no": "243",
           "housing_pmay__district": "Hnahthial",
           "housing_pmay__total_branch": "5",
           "housing_pmay__agri": "0",
@@ -43686,7 +43682,11 @@
           "sc_st_finance__st_disbursement_no": "147",
           "sc_st_finance__st_disbursement_amt": "661.40",
           "sc_st_finance__st_outstanding_no": "1914",
-          "sc_st_finance__st_outstanding_amt": "9506.09"
+          "sc_st_finance__st_outstanding_amt": "9506.09",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "243",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "217",
+          "acp_disbursement_other_ps__social_infra_no": "19"
         },
         {
           "district": "Khawzawl",
@@ -43716,11 +43716,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "2691.96",
           "education_loan__education_no": "5",
-          "education_loan__housing_no": "232",
-          "education_loan__social_infra_no": "25",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "262",
           "housing_pmay__district": "Khawzawl",
           "housing_pmay__total_branch": "8",
           "housing_pmay__agri": "0",
@@ -43884,7 +43880,11 @@
           "sc_st_finance__st_disbursement_no": "296",
           "sc_st_finance__st_disbursement_amt": "1225.35",
           "sc_st_finance__st_outstanding_no": "3279",
-          "sc_st_finance__st_outstanding_amt": "10322.60"
+          "sc_st_finance__st_outstanding_amt": "10322.60",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "262",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "232",
+          "acp_disbursement_other_ps__social_infra_no": "25"
         },
         {
           "district": "Kolasib",
@@ -43914,11 +43914,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "9578.77",
           "education_loan__education_no": "25",
-          "education_loan__housing_no": "751",
-          "education_loan__social_infra_no": "28",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "848",
-          "education_loan__total_other_ps_o_s_no": "1652",
           "housing_pmay__district": "Kolasib",
           "housing_pmay__total_branch": "25",
           "housing_pmay__agri": "0",
@@ -44082,7 +44078,11 @@
           "sc_st_finance__st_disbursement_no": "670",
           "sc_st_finance__st_disbursement_amt": "2286.70",
           "sc_st_finance__st_outstanding_no": "7582",
-          "sc_st_finance__st_outstanding_amt": "29499.59"
+          "sc_st_finance__st_outstanding_amt": "29499.59",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1652",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "751",
+          "acp_disbursement_other_ps__social_infra_no": "28"
         },
         {
           "district": "Lawngtlai",
@@ -44112,11 +44112,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "19971.82",
           "education_loan__education_no": "12",
-          "education_loan__housing_no": "1818",
-          "education_loan__social_infra_no": "31",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "4",
-          "education_loan__total_other_ps_o_s_no": "1865",
           "housing_pmay__district": "Lawngtlai",
           "housing_pmay__total_branch": "12",
           "housing_pmay__agri": "2",
@@ -44280,7 +44276,11 @@
           "sc_st_finance__st_disbursement_no": "724",
           "sc_st_finance__st_disbursement_amt": "3121.25",
           "sc_st_finance__st_outstanding_no": "8275",
-          "sc_st_finance__st_outstanding_amt": "38184.32"
+          "sc_st_finance__st_outstanding_amt": "38184.32",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1865",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1818",
+          "acp_disbursement_other_ps__social_infra_no": "31"
         },
         {
           "district": "Lunglei",
@@ -44310,11 +44310,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "20589.91",
           "education_loan__education_no": "22",
-          "education_loan__housing_no": "1736",
-          "education_loan__social_infra_no": "75",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "47",
-          "education_loan__total_other_ps_o_s_no": "1880",
           "housing_pmay__district": "Lunglei",
           "housing_pmay__total_branch": "23",
           "housing_pmay__agri": "71",
@@ -44478,7 +44474,11 @@
           "sc_st_finance__st_disbursement_no": "830",
           "sc_st_finance__st_disbursement_amt": "4201.36",
           "sc_st_finance__st_outstanding_no": "11232",
-          "sc_st_finance__st_outstanding_amt": "53207.07"
+          "sc_st_finance__st_outstanding_amt": "53207.07",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1880",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1736",
+          "acp_disbursement_other_ps__social_infra_no": "75"
         },
         {
           "district": "Mamit",
@@ -44508,11 +44508,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "4857.96",
           "education_loan__education_no": "2",
-          "education_loan__housing_no": "439",
-          "education_loan__social_infra_no": "9",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "451",
           "housing_pmay__district": "Mamit",
           "housing_pmay__total_branch": "12",
           "housing_pmay__agri": "0",
@@ -44675,7 +44671,11 @@
           "sc_st_finance__st_disbursement_no": "508",
           "sc_st_finance__st_disbursement_amt": "1540.32",
           "sc_st_finance__st_outstanding_no": "6467",
-          "sc_st_finance__st_outstanding_amt": "18123.82"
+          "sc_st_finance__st_outstanding_amt": "18123.82",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "451",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "439",
+          "acp_disbursement_other_ps__social_infra_no": "9"
         },
         {
           "district": "Saiha",
@@ -44705,11 +44705,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "11333.41",
           "education_loan__education_no": "6",
-          "education_loan__housing_no": "1152",
-          "education_loan__social_infra_no": "35",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "21",
-          "education_loan__total_other_ps_o_s_no": "1214",
           "housing_pmay__district": "Saiha",
           "housing_pmay__total_branch": "8",
           "housing_pmay__agri": "3",
@@ -44873,7 +44869,11 @@
           "sc_st_finance__st_disbursement_no": "259",
           "sc_st_finance__st_disbursement_amt": "2056.03",
           "sc_st_finance__st_outstanding_no": "4228",
-          "sc_st_finance__st_outstanding_amt": "23261.78"
+          "sc_st_finance__st_outstanding_amt": "23261.78",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1214",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1152",
+          "acp_disbursement_other_ps__social_infra_no": "35"
         },
         {
           "district": "Saitual",
@@ -44903,11 +44903,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "2232.85",
           "education_loan__education_no": "9",
-          "education_loan__housing_no": "179",
-          "education_loan__social_infra_no": "15",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "2",
-          "education_loan__total_other_ps_o_s_no": "205",
           "housing_pmay__district": "Saitual",
           "housing_pmay__total_branch": "10",
           "housing_pmay__agri": "0",
@@ -45071,7 +45067,11 @@
           "sc_st_finance__st_disbursement_no": "390",
           "sc_st_finance__st_disbursement_amt": "1372.59",
           "sc_st_finance__st_outstanding_no": "4691",
-          "sc_st_finance__st_outstanding_amt": "12950.02"
+          "sc_st_finance__st_outstanding_amt": "12950.02",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "205",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "179",
+          "acp_disbursement_other_ps__social_infra_no": "15"
         },
         {
           "district": "Serchhip",
@@ -45101,11 +45101,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "9865.38",
           "education_loan__education_no": "10",
-          "education_loan__housing_no": "819",
-          "education_loan__social_infra_no": "39",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "9",
-          "education_loan__total_other_ps_o_s_no": "877",
           "housing_pmay__district": "Serchhip",
           "housing_pmay__total_branch": "18",
           "housing_pmay__agri": "0",
@@ -45269,7 +45265,11 @@
           "sc_st_finance__st_disbursement_no": "635",
           "sc_st_finance__st_disbursement_amt": "2424.73",
           "sc_st_finance__st_outstanding_no": "8353",
-          "sc_st_finance__st_outstanding_amt": "30123.71"
+          "sc_st_finance__st_outstanding_amt": "30123.71",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "877",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "819",
+          "acp_disbursement_other_ps__social_infra_no": "39"
         }
       ]
     },
@@ -45304,11 +45304,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "102027.33",
           "education_loan__education_no": "261",
-          "education_loan__housing_no": "5892",
-          "education_loan__social_infra_no": "658",
-          "education_loan__renewable_no": "4",
           "education_loan__others_no": "2393",
-          "education_loan__total_other_ps_o_s_no": "9208",
           "housing_pmay__district": "Aizawl",
           "housing_pmay__total_branch": "132",
           "housing_pmay__agri": "2",
@@ -45471,7 +45467,11 @@
           "sc_st_finance__st_disbursement_no": "6734",
           "sc_st_finance__st_disbursement_amt": "53613.30",
           "sc_st_finance__st_outstanding_no": "50433",
-          "sc_st_finance__st_outstanding_amt": "438345.56"
+          "sc_st_finance__st_outstanding_amt": "438345.56",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "9208",
+          "acp_disbursement_other_ps__renewable_no": "4",
+          "acp_disbursement_other_ps__housing_no": "5892",
+          "acp_disbursement_other_ps__social_infra_no": "658"
         },
         {
           "district": "Champhai",
@@ -45501,11 +45501,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "8023.41",
           "education_loan__education_no": "11",
-          "education_loan__housing_no": "586",
-          "education_loan__social_infra_no": "102",
-          "education_loan__renewable_no": "1",
           "education_loan__others_no": "28",
-          "education_loan__total_other_ps_o_s_no": "728",
           "housing_pmay__district": "Champhai",
           "housing_pmay__total_branch": "20",
           "housing_pmay__agri": "3",
@@ -45668,7 +45664,11 @@
           "sc_st_finance__st_disbursement_no": "683",
           "sc_st_finance__st_disbursement_amt": "3393.48",
           "sc_st_finance__st_outstanding_no": "5884",
-          "sc_st_finance__st_outstanding_amt": "28156.83"
+          "sc_st_finance__st_outstanding_amt": "28156.83",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "728",
+          "acp_disbursement_other_ps__renewable_no": "1",
+          "acp_disbursement_other_ps__housing_no": "586",
+          "acp_disbursement_other_ps__social_infra_no": "102"
         },
         {
           "district": "Hnahthial",
@@ -45698,11 +45698,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "4098.77",
           "education_loan__education_no": "5",
-          "education_loan__housing_no": "225",
-          "education_loan__social_infra_no": "40",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "6",
-          "education_loan__total_other_ps_o_s_no": "276",
           "housing_pmay__district": "Hnahthial",
           "housing_pmay__total_branch": "5",
           "housing_pmay__agri": "0",
@@ -45864,7 +45860,11 @@
           "sc_st_finance__st_disbursement_no": "302",
           "sc_st_finance__st_disbursement_amt": "1197.00",
           "sc_st_finance__st_outstanding_no": "2194",
-          "sc_st_finance__st_outstanding_amt": "10756.84"
+          "sc_st_finance__st_outstanding_amt": "10756.84",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "276",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "225",
+          "acp_disbursement_other_ps__social_infra_no": "40"
         },
         {
           "district": "Khawzawl",
@@ -45894,11 +45894,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "3530.14",
           "education_loan__education_no": "8",
-          "education_loan__housing_no": "253",
-          "education_loan__social_infra_no": "60",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "0",
-          "education_loan__total_other_ps_o_s_no": "321",
           "housing_pmay__district": "Khawzawl",
           "housing_pmay__total_branch": "8",
           "housing_pmay__agri": "0",
@@ -46061,7 +46057,11 @@
           "sc_st_finance__st_disbursement_no": "546",
           "sc_st_finance__st_disbursement_amt": "2299.02",
           "sc_st_finance__st_outstanding_no": "3649",
-          "sc_st_finance__st_outstanding_amt": "285942.55"
+          "sc_st_finance__st_outstanding_amt": "285942.55",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "321",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "253",
+          "acp_disbursement_other_ps__social_infra_no": "60"
         },
         {
           "district": "Kolasib",
@@ -46091,11 +46091,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "11018.92",
           "education_loan__education_no": "30",
-          "education_loan__housing_no": "824",
-          "education_loan__social_infra_no": "58",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "880",
-          "education_loan__total_other_ps_o_s_no": "1792",
           "housing_pmay__district": "Kolasib",
           "housing_pmay__total_branch": "26",
           "housing_pmay__agri": "0",
@@ -46258,7 +46254,11 @@
           "sc_st_finance__st_disbursement_no": "1131",
           "sc_st_finance__st_disbursement_amt": "4973.90",
           "sc_st_finance__st_outstanding_no": "8243",
-          "sc_st_finance__st_outstanding_amt": "33805.33"
+          "sc_st_finance__st_outstanding_amt": "33805.33",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1792",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "824",
+          "acp_disbursement_other_ps__social_infra_no": "58"
         },
         {
           "district": "Lawngtlai",
@@ -46288,11 +46288,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "23207.16",
           "education_loan__education_no": "13",
-          "education_loan__housing_no": "2145",
-          "education_loan__social_infra_no": "66",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "10",
-          "education_loan__total_other_ps_o_s_no": "2234",
           "housing_pmay__district": "Lawngtlai",
           "housing_pmay__total_branch": "13",
           "housing_pmay__agri": "1",
@@ -46455,7 +46451,11 @@
           "sc_st_finance__st_disbursement_no": "1422",
           "sc_st_finance__st_disbursement_amt": "8104.89",
           "sc_st_finance__st_outstanding_no": "9511",
-          "sc_st_finance__st_outstanding_amt": "52900.57"
+          "sc_st_finance__st_outstanding_amt": "52900.57",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "2234",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "2145",
+          "acp_disbursement_other_ps__social_infra_no": "66"
         },
         {
           "district": "Lunglei",
@@ -46485,11 +46485,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "25260.35",
           "education_loan__education_no": "26",
-          "education_loan__housing_no": "1954",
-          "education_loan__social_infra_no": "152",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "82",
-          "education_loan__total_other_ps_o_s_no": "2214",
           "housing_pmay__district": "Lunglei",
           "housing_pmay__total_branch": "25",
           "housing_pmay__agri": "42",
@@ -46653,7 +46649,11 @@
           "sc_st_finance__st_disbursement_no": "1721",
           "sc_st_finance__st_disbursement_amt": "8357.95",
           "sc_st_finance__st_outstanding_no": "12636",
-          "sc_st_finance__st_outstanding_amt": "64523.14"
+          "sc_st_finance__st_outstanding_amt": "64523.14",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "2214",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1954",
+          "acp_disbursement_other_ps__social_infra_no": "152"
         },
         {
           "district": "Mamit",
@@ -46683,11 +46683,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "5598.77",
           "education_loan__education_no": "5",
-          "education_loan__housing_no": "514",
-          "education_loan__social_infra_no": "26",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "1",
-          "education_loan__total_other_ps_o_s_no": "546",
           "housing_pmay__district": "Mamit",
           "housing_pmay__total_branch": "12",
           "housing_pmay__agri": "0",
@@ -46849,7 +46845,11 @@
           "sc_st_finance__st_disbursement_no": "1058",
           "sc_st_finance__st_disbursement_amt": "4195.11",
           "sc_st_finance__st_outstanding_no": "7148",
-          "sc_st_finance__st_outstanding_amt": "21245.02"
+          "sc_st_finance__st_outstanding_amt": "21245.02",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "546",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "514",
+          "acp_disbursement_other_ps__social_infra_no": "26"
         },
         {
           "district": "Saiha",
@@ -46879,11 +46879,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "15324.65",
           "education_loan__education_no": "7",
-          "education_loan__housing_no": "1518",
-          "education_loan__social_infra_no": "80",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "56",
-          "education_loan__total_other_ps_o_s_no": "1661",
           "housing_pmay__district": "Saiha",
           "housing_pmay__total_branch": "8",
           "housing_pmay__agri": "3",
@@ -47046,7 +47042,11 @@
           "sc_st_finance__st_disbursement_no": "626",
           "sc_st_finance__st_disbursement_amt": "4725.03",
           "sc_st_finance__st_outstanding_no": "5562",
-          "sc_st_finance__st_outstanding_amt": "32451.99"
+          "sc_st_finance__st_outstanding_amt": "32451.99",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "1661",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "1518",
+          "acp_disbursement_other_ps__social_infra_no": "80"
         },
         {
           "district": "Saitual",
@@ -47076,11 +47076,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "2597.85",
           "education_loan__education_no": "16",
-          "education_loan__housing_no": "180",
-          "education_loan__social_infra_no": "36",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "6",
-          "education_loan__total_other_ps_o_s_no": "238",
           "housing_pmay__district": "Saitual",
           "housing_pmay__total_branch": "10",
           "housing_pmay__agri": "0",
@@ -47243,7 +47239,11 @@
           "sc_st_finance__st_disbursement_no": "826",
           "sc_st_finance__st_disbursement_amt": "3149.02",
           "sc_st_finance__st_outstanding_no": "5023",
-          "sc_st_finance__st_outstanding_amt": "14855.66"
+          "sc_st_finance__st_outstanding_amt": "14855.66",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "238",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "180",
+          "acp_disbursement_other_ps__social_infra_no": "36"
         },
         {
           "district": "Serchhip",
@@ -47273,11 +47273,7 @@
           "education_loan__export_no": "0",
           "education_loan__amt": "11602.02",
           "education_loan__education_no": "18",
-          "education_loan__housing_no": "827",
-          "education_loan__social_infra_no": "88",
-          "education_loan__renewable_no": "0",
           "education_loan__others_no": "23",
-          "education_loan__total_other_ps_o_s_no": "956",
           "housing_pmay__district": "Serchhip",
           "housing_pmay__total_branch": "19",
           "housing_pmay__agri": "0",
@@ -47440,7 +47436,11 @@
           "sc_st_finance__st_disbursement_no": "1351",
           "sc_st_finance__st_disbursement_amt": "5582.39",
           "sc_st_finance__st_outstanding_no": "9065",
-          "sc_st_finance__st_outstanding_amt": "34546.83"
+          "sc_st_finance__st_outstanding_amt": "34546.83",
+          "acp_disbursement_other_ps__total_other_ps_o_s_no": "956",
+          "acp_disbursement_other_ps__renewable_no": "0",
+          "acp_disbursement_other_ps__housing_no": "827",
+          "acp_disbursement_other_ps__social_infra_no": "88"
         }
       ]
     },
