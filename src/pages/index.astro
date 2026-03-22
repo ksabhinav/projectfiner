@@ -265,11 +265,17 @@ const base = import.meta.env.BASE_URL;
       'UTTARAKHAND': 'uttarakhand',
     };
 
-    // Map init
-    // India visual center ~21.5°N. On mobile, shift slightly north (~1°) to account for bottom sheet
-    var _initCenter = _isMobile ? [22.5, 82.5] : [22, 82.5];
-    var _initZoom = 4;
-    var map = L.map('map',{center:_initCenter,zoom:_initZoom,minZoom:4,maxZoom:18,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false,preferCanvas:true});
+    // Map init — use fitBounds immediately to avoid layout shift when data loads
+    var map = L.map('map',{center:[22,82.5],zoom:4,minZoom:4,maxZoom:18,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false,preferCanvas:true});
+    // Immediately position with panel-aware bounds (no animation) so there's no shift later
+    (function() {
+      var isMobile = window.innerWidth <= 640;
+      if (isMobile) {
+        map.fitBounds(ALL_STATES_BOUNDS, { paddingTopLeft: [10, 10], paddingBottomRight: [10, 100], animate: false });
+      } else {
+        map.fitBounds(ALL_STATES_BOUNDS, { paddingTopLeft: [306, 10], paddingBottomRight: [40, 10], animate: false });
+      }
+    })();
     L.control.zoom({position:'topright'}).addTo(map);
 
     // Fly to NE with panel-aware centering (single smooth animation)
@@ -1217,7 +1223,7 @@ const base = import.meta.env.BASE_URL;
         buildDistrictLabels_banking();
         buildChoropleth_banking();
         updateLabelVisibility_banking();
-        flyToNE();
+        flyToNE(false);
       }).catch(function(err) {
         document.getElementById('stats-banking').textContent = 'Error: ' + err.message;
       });
