@@ -51,8 +51,10 @@ projectfiner/
 │   │
 │   ├── pages/
 │   │   ├── index.astro                     # HOMEPAGE — Full-screen Leaflet map (capital markets + FI indicators)
+│   │   ├── about/index.astro               # About page (what FINER is, coverage, data sources, contact)
+│   │   ├── ask/index.astro                 # AI chat interface
 │   │   ├── slbc-data/
-│   │   │   ├── index.astro                 # State listing with all 22 states + download links
+│   │   │   ├── index.astro                 # Redirects to data-download
 │   │   │   └── {state}/download.astro      # Per-state SLBC download pages
 │   │   ├── capital-markets/
 │   │   │   ├── map.astro                   # Redirects to homepage
@@ -60,8 +62,7 @@ projectfiner/
 │   │   └── analysis/
 │   │       ├── index.astro                 # Data Explorer (activeSubNav="explorer")
 │   │       ├── rankings/index.astro        # District Rankings (activeSubNav="rankings")
-│   │       ├── trends/index.astro          # Trend Tracker (activeSubNav="trends")
-│   │       └── insights/index.astro        # Pre-built Insights (activeSubNav="insights")
+│   │       └── trends/index.astro          # Trend Tracker (activeSubNav="trends")
 │   │
 │   ├── lib/
 │   │   ├── constants.ts                    # COLORS, CAPITAL_MARKETS_SOURCES, FILE_ICON_SVG
@@ -89,7 +90,8 @@ projectfiner/
     │   ├── standardize_fields.py           # Cross-state field standardization script
     │   └── {state}/                        # All 22 states
     │       ├── {state}_complete.json       # Master JSON — all quarters, all indicators
-    │       ├── {state}_fi_timeseries.json  # Timeseries JSON (nested: periods → districts)
+    │       ├── {state}_fi_timeseries.json  # Timeseries JSON (nested: periods → districts) — used by analysis pages
+    │       ├── {state}_fi_slim.json        # Slim timeseries (7 indicator categories only) — used by homepage map (75% smaller)
     │       ├── {state}_fi_timeseries.csv   # Wide-format CSV: all districts × all quarters
     │       ├── quarterly/                  # Folders (YYYY-MM format), CSVs per category
     │       └── raw-csv/                    # Flat CSVs by category
@@ -106,11 +108,15 @@ projectfiner/
 - `define:vars={{ base }}` passes Astro variables to inline scripts via `window.__FINER_BASE`
 
 ### Navigation Architecture
-- **Header.astro** provides a shared frosted glass navigation bar across all non-map pages
-- Accepts `activeSubNav` prop (`'explorer' | 'rankings' | 'trends' | 'insights'`) to render analysis sub-nav tabs
+- **Header.astro** provides a shared navigation bar across ALL pages (including homepage)
+- Nav links render as frosted glass capsule buttons (white bg, backdrop-blur, rounded corners, hover lift)
+- Accepts `activeSubNav` prop (`'rankings' | 'trends'`) to render analysis sub-nav tabs (Rankings, Trends)
+- Accepts `transparent` prop (boolean) — used on homepage to make the header float over the map with no background
 - **PageLayout.astro** passes `activeSubNav` through to Header
 - Sub-nav is only rendered on analysis pages; other pages get the header without tabs
-- Sub-nav was previously duplicated inside each Svelte component — now centralized in Header
+- Homepage uses `<Header title="" transparent />` with `position: fixed` to float over the full-screen map
+- Nav links: Downloads, Analysis, Ask, About (no Map button — clicking "Project FINER" brand goes home)
+- **Important**: Capsule styles must be identical between Header.astro and any page-specific nav. Use the same `font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600; padding: 10px 18px; line-height: 1; box-sizing: border-box` to prevent size differences across pages
 
 ### Data Fetching
 - All data in `public/` is fetched at runtime via `import.meta.env.BASE_URL` + relative path
@@ -309,9 +315,21 @@ Full-screen Leaflet choropleth map showing 7 key financial inclusion indicators 
 
 **GeoJSON property**: District state is stored as `STATE_UT` (not `STATE`) in `district_boundaries.geojson`. District name is `DISTRICT`.
 
+**District Focus Mode**: Double-clicking a district on the Banking Access choropleth opens a full-viewport overlay:
+- District shape rendered as SVG (GeoJSON → SVG path via `geoToSVGPath()`)
+- Shows district name, state, metric label, formatted value, and current quarter
+- Shape filled with the district's choropleth color; text uses white text-shadow for readability
+- Timeline slider and indicator panel remain interactive above the overlay (`z-index: 1300`)
+- Exit via ESC key, X button, or clicking the backdrop
+- `focusDistrict(name, state)` activates, `updateFocusPanel()` refreshes on timeline/indicator change, `exitFocus()` closes
+- `doubleClickZoom: false` on the Leaflet map prevents zoom conflict with focus activation
+- Panel shows hint: "Double-click a district to focus"
+
+**Slim Timeseries** (`_fi_slim.json`): The homepage loads `_fi_slim.json` instead of `_fi_timeseries.json` for 75% smaller payloads (19 MB vs 76 MB total). Generated by stripping all fields except the 7 indicator categories. Regenerate with `/tmp/slim_timeseries_v2.py` after adding new SLBC data. Analysis pages still use the full `_fi_timeseries.json`.
+
 ### 4. Analysis Pages (`/analysis/*`)
 
-Four analysis sub-pages with shared sub-nav tabs (Explorer, Rankings, Trends, Insights):
+Three analysis sub-pages with shared sub-nav tabs (Rankings, Trends):
 
 #### Data Explorer (`/analysis/`)
 - Built with Svelte + Plotly.js
@@ -488,6 +506,11 @@ Leaflet and MarkerCluster are loaded via CDN (unpkg) in inline scripts.
 26. **HiDPI canvas tiles**: For retina displays, tile layers need `tileSize: 512, zoomOffset: -1` or custom `createTile()` with `window.devicePixelRatio` scaling to avoid blurriness on high-DPI screens.
 27. **DistrictRankings availableFields bug**: `availableFields` must derive from the SELECTED quarter's data only (`masterData.quarters[selectedQuarter].tables[selectedCategory].fields`), not from all quarters combined. Otherwise, the default field may not exist in the selected quarter, causing "No data available".
 28. **Default field selection in Rankings**: Prefer ratio/percentage fields as defaults (look for fields containing "ratio", "pct", "percentage") since they're more meaningful than raw counts.
+29. **Homepage uses Header with `transparent` prop**: The homepage imports Header.astro with `transparent` prop which applies `header-transparent` class (position: fixed, transparent bg). Don't use page-level `!important` overrides for Header styles — Astro's scoped CSS has higher specificity in production builds. Always modify Header.astro's scoped styles instead.
+30. **Slim JSON must be regenerated after adding SLBC data**: After extracting new state data or updating existing states, regenerate `_fi_slim.json` files. The slim files only contain fields matching the 7 indicator category prefixes (credit_deposit_ratio, pmjdy, branch_network, kcc, shg, digital_transactions, aadhaar_authentication) plus numbered variants (_2, _3, _p2, etc.).
+31. **Double-click zoom disabled on map**: `doubleClickZoom: false` in Leaflet map init to prevent conflict with district focus mode activation.
+32. **Map initial position uses fitBounds, not setView**: Map initializes with `fitBounds(ALL_STATES_BOUNDS, { paddingTopLeft: [306, 10] })` to account for the left panel from the first frame. This prevents the visible layout shift that occurred when using a fixed center/zoom followed by `flyToNE()`.
+33. **Contact email**: mail@projectfiner.com (configured via GoDaddy email + Cloudflare DNS MX/SPF records).
 
 ## Data Quality Pipeline
 
