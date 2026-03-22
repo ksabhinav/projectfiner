@@ -14,6 +14,7 @@ const base = import.meta.env.BASE_URL;
   <div id="map"></div>
 
   <div id="panel">
+    <div class="info-popover" id="info-popover"></div>
     <div id="panel-handle"><span></span></div>
     <div id="panel-head">
       <h1>Project <em>FINER</em></h1>
@@ -116,7 +117,6 @@ const base = import.meta.env.BASE_URL;
             <button class="info-btn" id="info-metric" type="button">i</button>
           </div>
         </div>
-        <div class="info-popover" id="info-popover"></div>
 
         <div style="height:1px;background:#e8e5e0;margin:10px 0"></div>
 
@@ -1269,16 +1269,13 @@ const base = import.meta.env.BASE_URL;
     document.getElementById('sel-metric').addEventListener('change', function(e) {
       currentMetricIdx = parseInt(e.target.value);
       if (slbcLoaded) buildChoropleth_banking();
-      // Hide popover on change
-      document.getElementById('info-popover').classList.remove('visible');
     });
 
-    // Info tooltip popover
+    // Info tooltip popover — hover based
     (function() {
       var popover = document.getElementById('info-popover');
-      var activeBtn = null;
 
-      function showInfo(type) {
+      function showInfo(btn, type) {
         var ind = INDICATORS[currentIndicator];
         var text = '';
         if (type === 'indicator') {
@@ -1289,28 +1286,29 @@ const base = import.meta.env.BASE_URL;
         }
         if (!text) { popover.classList.remove('visible'); return; }
         popover.textContent = text;
+        // Position at top-right of the (i) button
+        var rect = btn.getBoundingClientRect();
+        var panelRect = document.getElementById('panel').getBoundingClientRect();
+        popover.style.left = (rect.right - panelRect.left + 6) + 'px';
+        popover.style.top = (rect.top - panelRect.top - 8) + 'px';
         popover.classList.add('visible');
-        activeBtn = type;
       }
 
-      document.getElementById('info-indicator').addEventListener('click', function(e) {
-        e.stopPropagation();
-        if (activeBtn === 'indicator' && popover.classList.contains('visible')) {
-          popover.classList.remove('visible'); activeBtn = null;
-        } else {
-          showInfo('indicator');
-        }
-      });
-      document.getElementById('info-metric').addEventListener('click', function(e) {
-        e.stopPropagation();
-        if (activeBtn === 'metric' && popover.classList.contains('visible')) {
-          popover.classList.remove('visible'); activeBtn = null;
-        } else {
-          showInfo('metric');
-        }
-      });
-      document.addEventListener('click', function() {
-        popover.classList.remove('visible'); activeBtn = null;
+      function hideInfo() {
+        popover.classList.remove('visible');
+      }
+
+      var btnInd = document.getElementById('info-indicator');
+      var btnMet = document.getElementById('info-metric');
+      btnInd.addEventListener('mouseenter', function() { showInfo(this, 'indicator'); });
+      btnInd.addEventListener('mouseleave', hideInfo);
+      btnMet.addEventListener('mouseenter', function() { showInfo(this, 'metric'); });
+      btnMet.addEventListener('mouseleave', hideInfo);
+      // Touch support — toggle on tap
+      btnInd.addEventListener('touchstart', function(e) { e.preventDefault(); showInfo(this, 'indicator'); });
+      btnMet.addEventListener('touchstart', function(e) { e.preventDefault(); showInfo(this, 'metric'); });
+      document.addEventListener('touchstart', function(e) {
+        if (!e.target.closest('.info-btn')) hideInfo();
       });
     })();
 
@@ -1832,9 +1830,9 @@ const base = import.meta.env.BASE_URL;
   /* ── Info tooltip ── */
   .select-with-info{display:flex;align-items:center;gap:8px}
   .select-with-info .finput{flex:1}
-  .info-btn{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;border:1px solid #ccc8c0;background:transparent;color:#aaa09a;font-family:'Inter',sans-serif;font-size:9px;font-weight:700;font-style:italic;cursor:pointer;padding:0;line-height:1;transition:all 0.15s;flex-shrink:0}
+  .info-btn{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;border:1px solid #ccc8c0;background:transparent;color:#aaa09a;font-family:'Inter',sans-serif;font-size:9px;font-weight:700;font-style:italic;cursor:help;padding:0;line-height:1;transition:all 0.15s;flex-shrink:0;position:relative}
   .info-btn:hover{border-color:#b8603e;color:#b8603e;background:rgba(184,96,62,0.06)}
-  .info-popover{display:none;position:relative;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.6);border-radius:8px;padding:10px 12px;margin-top:-6px;margin-bottom:10px;box-shadow:0 4px 20px rgba(0,0,0,0.06);font-family:'Inter',sans-serif;font-size:10px;font-weight:400;color:#555048;line-height:1.6;animation:infoAppear 0.15s ease}
+  .info-popover{display:none;position:absolute;z-index:2000;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.6);border-radius:8px;padding:10px 12px;box-shadow:0 4px 20px rgba(0,0,0,0.08);font-family:'Inter',sans-serif;font-size:10px;font-weight:400;color:#555048;line-height:1.6;width:220px;pointer-events:none;animation:infoAppear 0.15s ease}
   .info-popover.visible{display:block}
   @keyframes infoAppear{0%{opacity:0;transform:translateY(-4px)}100%{opacity:1;transform:translateY(0)}}
 
