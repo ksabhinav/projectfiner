@@ -539,7 +539,7 @@
             class="cat-pill"
             class:active={selectedCategoryFilter === cat}
             onclick={() => selectedCategoryFilter = cat}
-            title={CATEGORY_DESCRIPTIONS[cat] || ''}
+            data-tip={CATEGORY_DESCRIPTIONS[cat] || ''}
           >
             {CATEGORY_INFO[cat] || prettyCategoryName(cat)} ({count})
           </button>
@@ -793,6 +793,28 @@
     white-space: nowrap;
   }
   .cat-pill:hover { border-color: var(--accent); color: var(--text); background: rgba(184,96,62,0.04); }
+  .cat-pill[data-tip]:not([data-tip=""]) { position: relative; }
+  .cat-pill[data-tip]:not([data-tip=""]):hover::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(26, 20, 16, 0.92);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 8px 12px;
+    border-radius: 6px;
+    width: max-content;
+    max-width: 260px;
+    white-space: normal;
+    z-index: 100;
+    pointer-events: none;
+    animation: tipFade 0.15s ease;
+  }
+  @keyframes tipFade { 0% { opacity: 0; transform: translateX(-50%) translateY(4px); } 100% { opacity: 1; transform: translateX(-50%) translateY(0); } }
   .cat-pill.active {
     background: var(--text);
     color: #fff;
