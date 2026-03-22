@@ -3068,7 +3068,6 @@
           "bc_coverage__union_bank_of_india": "0",
           "bc_coverage__total": "144",
           "credit_deposit_ratio__district": "Dhalai",
-          "credit_deposit_ratio__total_branch": "46",
           "credit_deposit_ratio__total_deposit": "112674.64",
           "credit_deposit_ratio__total_advance": "107612.77",
           "credit_deposit_ratio__overall_cd_ratio": "96",
@@ -3084,7 +3083,8 @@
           "shg__avg_ticket_size_loan_outstanding": "0.92",
           "social_security__district": "Dhalai",
           "social_security__enrolment_of_apy_male": "4125",
-          "social_security__female": "3523"
+          "social_security__female": "3523",
+          "branch_network__total_branch": "46"
         },
         {
           "district": "Gomati",
@@ -3099,7 +3099,6 @@
           "bc_coverage__union_bank_of_india": "0",
           "bc_coverage__total": "190",
           "credit_deposit_ratio__district": "Gomati",
-          "credit_deposit_ratio__total_branch": "64",
           "credit_deposit_ratio__total_deposit": "195072.86",
           "credit_deposit_ratio__total_advance": "123899.10",
           "credit_deposit_ratio__overall_cd_ratio": "64",
@@ -3115,7 +3114,8 @@
           "shg__avg_ticket_size_loan_outstanding": "0.88",
           "social_security__district": "Gomati",
           "social_security__enrolment_of_apy_male": "9255",
-          "social_security__female": "9605"
+          "social_security__female": "9605",
+          "branch_network__total_branch": "64"
         },
         {
           "district": "Khowai",
@@ -3130,7 +3130,6 @@
           "bc_coverage__union_bank_of_india": "0",
           "bc_coverage__total": "161",
           "credit_deposit_ratio__district": "Khowai",
-          "credit_deposit_ratio__total_branch": "38",
           "credit_deposit_ratio__total_deposit": "131668.52",
           "credit_deposit_ratio__total_advance": "86181.11",
           "credit_deposit_ratio__overall_cd_ratio": "65",
@@ -3146,7 +3145,8 @@
           "shg__avg_ticket_size_loan_outstanding": "0.99",
           "social_security__district": "Khowai",
           "social_security__enrolment_of_apy_male": "5514",
-          "social_security__female": "5061"
+          "social_security__female": "5061",
+          "branch_network__total_branch": "38"
         },
         {
           "district": "North Tripura",
@@ -3161,7 +3161,6 @@
           "bc_coverage__union_bank_of_india": "1",
           "bc_coverage__total": "138",
           "credit_deposit_ratio__district": "North Tripura",
-          "credit_deposit_ratio__total_branch": "48",
           "credit_deposit_ratio__total_deposit": "152704.70",
           "credit_deposit_ratio__total_advance": "79302.75",
           "credit_deposit_ratio__overall_cd_ratio": "52",
@@ -3177,7 +3176,8 @@
           "shg__avg_ticket_size_loan_outstanding": "1.08",
           "social_security__district": "North Tripura",
           "social_security__enrolment_of_apy_male": "6797",
-          "social_security__female": "6064"
+          "social_security__female": "6064",
+          "branch_network__total_branch": "48"
         },
         {
           "district": "Sepahijala",
@@ -3192,7 +3192,6 @@
           "bc_coverage__union_bank_of_india": "0",
           "bc_coverage__total": "198",
           "credit_deposit_ratio__district": "Sepahijala",
-          "credit_deposit_ratio__total_branch": "60",
           "credit_deposit_ratio__total_deposit": "168306.02",
           "credit_deposit_ratio__total_advance": "120918.89",
           "credit_deposit_ratio__overall_cd_ratio": "72",
@@ -3208,7 +3207,8 @@
           "shg__avg_ticket_size_loan_outstanding": "0.93",
           "social_security__district": "Sepahijala",
           "social_security__enrolment_of_apy_male": "5973",
-          "social_security__female": "5431"
+          "social_security__female": "5431",
+          "branch_network__total_branch": "60"
         },
         {
           "district": "South Tripura",
@@ -3223,7 +3223,6 @@
           "bc_coverage__union_bank_of_india": "2",
           "bc_coverage__total": "212",
           "credit_deposit_ratio__district": "South Tripura",
-          "credit_deposit_ratio__total_branch": "59",
           "credit_deposit_ratio__total_deposit": "201017.04",
           "credit_deposit_ratio__total_advance": "115262.36",
           "credit_deposit_ratio__overall_cd_ratio": "57",
@@ -3239,13 +3238,13 @@
           "shg__avg_ticket_size_loan_outstanding": "0.99",
           "social_security__district": "South Tripura",
           "social_security__enrolment_of_apy_male": "12056",
-          "social_security__female": "10882"
+          "social_security__female": "10882",
+          "branch_network__total_branch": "59"
         },
         {
           "district": "Unakoti",
           "period": "September 2022",
           "credit_deposit_ratio__district": "Unakoti",
-          "credit_deposit_ratio__total_branch": "33",
           "credit_deposit_ratio__total_deposit": "100336.76",
           "credit_deposit_ratio__total_advance": "74820.49",
           "credit_deposit_ratio__overall_cd_ratio": "75",
@@ -3261,7 +3260,8 @@
           "shg__avg_ticket_size_loan_outstanding": "0.91",
           "social_security__district": "Unakoti",
           "social_security__enrolment_of_apy_male": "3856",
-          "social_security__female": "3500"
+          "social_security__female": "3500",
+          "branch_network__total_branch": "33"
         },
         {
           "district": "West Tripura",
@@ -3276,7 +3276,6 @@
           "bc_coverage__union_bank_of_india": "0",
           "bc_coverage__total": "195",
           "credit_deposit_ratio__district": "West Tripura",
-          "credit_deposit_ratio__total_branch": "194",
           "credit_deposit_ratio__total_deposit": "1798117.04",
           "credit_deposit_ratio__total_advance": "914010.02",
           "credit_deposit_ratio__overall_cd_ratio": "51",
@@ -3292,7 +3291,8 @@
           "shg__avg_ticket_size_loan_outstanding": "0.82",
           "social_security__district": "West Tripura",
           "social_security__enrolment_of_apy_male": "18225",
-          "social_security__female": "16618"
+          "social_security__female": "16618",
+          "branch_network__total_branch": "194"
         }
       ]
     },
@@ -3477,7 +3477,6 @@
           "branch_network__total_atm": "39",
           "branch_network__atm_per_lakh_population": "10",
           "credit_deposit_ratio__district": "Dhalai",
-          "credit_deposit_ratio__total_branch": "49",
           "credit_deposit_ratio__total_deposit": "138560.51",
           "credit_deposit_ratio__total_advance": "132851.46",
           "credit_deposit_ratio__overall_cd_ratio": "96",
@@ -3503,7 +3502,8 @@
           "women_finance__coverage_pct_for_women_accounts": "4.93",
           "digital_transactions__district": "Dhalai",
           "digital_transactions__coverage_savings_a_c_digital": "95.61",
-          "digital_transactions__coverage_current_a_c_digital": "81.65"
+          "digital_transactions__coverage_current_a_c_digital": "81.65",
+          "branch_network__total_branch": "49"
         },
         {
           "district": "Gomati",
@@ -3513,7 +3513,6 @@
           "branch_network__total_atm": "55",
           "branch_network__atm_per_lakh_population": "11",
           "credit_deposit_ratio__district": "Gomati",
-          "credit_deposit_ratio__total_branch": "65",
           "credit_deposit_ratio__total_deposit": "244829.26",
           "credit_deposit_ratio__total_advance": "157289.17",
           "credit_deposit_ratio__overall_cd_ratio": "64",
@@ -3539,7 +3538,8 @@
           "women_finance__coverage_pct_for_women_accounts": "7.66",
           "digital_transactions__district": "Gomati",
           "digital_transactions__coverage_savings_a_c_digital": "97.27",
-          "digital_transactions__coverage_current_a_c_digital": "88.47"
+          "digital_transactions__coverage_current_a_c_digital": "88.47",
+          "branch_network__total_branch": "65"
         },
         {
           "district": "Khowai",
@@ -3549,7 +3549,6 @@
           "branch_network__total_atm": "28",
           "branch_network__atm_per_lakh_population": "8",
           "credit_deposit_ratio__district": "Khowai",
-          "credit_deposit_ratio__total_branch": "41",
           "credit_deposit_ratio__total_deposit": "165546.66",
           "credit_deposit_ratio__total_advance": "104405.53",
           "credit_deposit_ratio__overall_cd_ratio": "63",
@@ -3575,7 +3574,8 @@
           "women_finance__coverage_pct_for_women_accounts": "7.29",
           "digital_transactions__district": "Khowai",
           "digital_transactions__coverage_savings_a_c_digital": "94.26",
-          "digital_transactions__coverage_current_a_c_digital": "84.39"
+          "digital_transactions__coverage_current_a_c_digital": "84.39",
+          "branch_network__total_branch": "41"
         },
         {
           "district": "North Tripura",
@@ -3585,7 +3585,6 @@
           "branch_network__total_atm": "57",
           "branch_network__atm_per_lakh_population": "13",
           "credit_deposit_ratio__district": "North Tripura",
-          "credit_deposit_ratio__total_branch": "49",
           "credit_deposit_ratio__total_deposit": "209119.09",
           "credit_deposit_ratio__total_advance": "123971.22",
           "credit_deposit_ratio__overall_cd_ratio": "59",
@@ -3605,7 +3604,8 @@
           "social_security__out_of_total_eligible_pmjdy_enrolment_of_pmsby_male": "51476",
           "digital_transactions__district": "North Tripura",
           "digital_transactions__coverage_savings_a_c_digital": "95.72",
-          "digital_transactions__coverage_current_a_c_digital": "83.73"
+          "digital_transactions__coverage_current_a_c_digital": "83.73",
+          "branch_network__total_branch": "49"
         },
         {
           "district": "Sepahijala",
@@ -3615,7 +3615,6 @@
           "branch_network__total_atm": "47",
           "branch_network__atm_per_lakh_population": "8",
           "credit_deposit_ratio__district": "Sepahijala",
-          "credit_deposit_ratio__total_branch": "59",
           "credit_deposit_ratio__total_deposit": "217579.99",
           "credit_deposit_ratio__total_advance": "146332.67",
           "credit_deposit_ratio__overall_cd_ratio": "67",
@@ -3641,7 +3640,8 @@
           "women_finance__coverage_pct_for_women_accounts": "7.22",
           "digital_transactions__district": "Sepahijala",
           "digital_transactions__coverage_savings_a_c_digital": "94.79",
-          "digital_transactions__coverage_current_a_c_digital": "85.74"
+          "digital_transactions__coverage_current_a_c_digital": "85.74",
+          "branch_network__total_branch": "59"
         },
         {
           "district": "South Tripura",
@@ -3651,7 +3651,6 @@
           "branch_network__total_atm": "45",
           "branch_network__atm_per_lakh_population": "11",
           "credit_deposit_ratio__district": "South Tripura",
-          "credit_deposit_ratio__total_branch": "63",
           "credit_deposit_ratio__total_deposit": "241663.75",
           "credit_deposit_ratio__total_advance": "152828.71",
           "credit_deposit_ratio__overall_cd_ratio": "63",
@@ -3671,7 +3670,8 @@
           "social_security__out_of_total_eligible_pmjdy_enrolment_of_pmsby_male": "75942",
           "digital_transactions__district": "South Tripura",
           "digital_transactions__coverage_savings_a_c_digital": "95.63",
-          "digital_transactions__coverage_current_a_c_digital": "79.24"
+          "digital_transactions__coverage_current_a_c_digital": "79.24",
+          "branch_network__total_branch": "63"
         },
         {
           "district": "Unakoti",
@@ -3681,7 +3681,6 @@
           "branch_network__total_atm": "22",
           "branch_network__atm_per_lakh_population": "8",
           "credit_deposit_ratio__district": "Unakoti",
-          "credit_deposit_ratio__total_branch": "35",
           "credit_deposit_ratio__total_deposit": "131624.03",
           "credit_deposit_ratio__total_advance": "87508.25",
           "credit_deposit_ratio__overall_cd_ratio": "66",
@@ -3698,7 +3697,8 @@
           "social_security__district": "Unakoti",
           "social_security__eligible_pmjdy_a_c_for_pmsby_male": "36918",
           "social_security__female": "32095",
-          "social_security__out_of_total_eligible_pmjdy_enrolment_of_pmsby_male": "48571"
+          "social_security__out_of_total_eligible_pmjdy_enrolment_of_pmsby_male": "48571",
+          "branch_network__total_branch": "35"
         },
         {
           "district": "West Tripura",
@@ -3708,7 +3708,6 @@
           "branch_network__total_atm": "271",
           "branch_network__atm_per_lakh_population": "38",
           "credit_deposit_ratio__district": "West Tripura",
-          "credit_deposit_ratio__total_branch": "210",
           "credit_deposit_ratio__total_deposit": "2335054.72",
           "credit_deposit_ratio__total_advance": "1094473.84",
           "credit_deposit_ratio__overall_cd_ratio": "47",
@@ -3728,7 +3727,8 @@
           "social_security__out_of_total_eligible_pmjdy_enrolment_of_pmsby_male": "203441",
           "digital_transactions__district": "West Tripura",
           "digital_transactions__coverage_savings_a_c_digital": "100.00",
-          "digital_transactions__coverage_current_a_c_digital": "100.00"
+          "digital_transactions__coverage_current_a_c_digital": "100.00",
+          "branch_network__total_branch": "210"
         }
       ]
     },
@@ -4029,7 +4029,6 @@
           "branch_network__total_branch": "50",
           "branch_network__branch_per_lakh_population": "12",
           "credit_deposit_ratio__district": "Dhalai",
-          "credit_deposit_ratio__total_branch": "49",
           "credit_deposit_ratio__total_deposit": "138560.51",
           "credit_deposit_ratio__total_advance": "132851.46",
           "credit_deposit_ratio__overall_cd_ratio": "96",
@@ -4085,7 +4084,6 @@
           "branch_network__total_branch": "66",
           "branch_network__branch_per_lakh_population": "14",
           "credit_deposit_ratio__district": "Gomati",
-          "credit_deposit_ratio__total_branch": "65",
           "credit_deposit_ratio__total_deposit": "244829.26",
           "credit_deposit_ratio__total_advance": "157289.17",
           "credit_deposit_ratio__overall_cd_ratio": "64",
@@ -4130,7 +4128,6 @@
           "branch_network__total_branch": "45",
           "branch_network__branch_per_lakh_population": "13",
           "credit_deposit_ratio__district": "Khowai",
-          "credit_deposit_ratio__total_branch": "41",
           "credit_deposit_ratio__total_deposit": "165546.66",
           "credit_deposit_ratio__total_advance": "104405.53",
           "credit_deposit_ratio__overall_cd_ratio": "63",
@@ -4186,7 +4183,6 @@
           "branch_network__total_branch": "52",
           "branch_network__branch_per_lakh_population": "11",
           "credit_deposit_ratio__district": "North Tripura",
-          "credit_deposit_ratio__total_branch": "49",
           "credit_deposit_ratio__total_deposit": "209119.09",
           "credit_deposit_ratio__total_advance": "123971.22",
           "credit_deposit_ratio__overall_cd_ratio": "59",
@@ -4240,7 +4236,6 @@
           "branch_network__total_branch": "63",
           "branch_network__branch_per_lakh_population": "11",
           "credit_deposit_ratio__district": "Sepahijala",
-          "credit_deposit_ratio__total_branch": "59",
           "credit_deposit_ratio__total_deposit": "217579.99",
           "credit_deposit_ratio__total_advance": "146332.67",
           "credit_deposit_ratio__overall_cd_ratio": "67",
@@ -4289,7 +4284,6 @@
           "branch_network__total_branch": "65",
           "branch_network__branch_per_lakh_population": "15",
           "credit_deposit_ratio__district": "South Tripura",
-          "credit_deposit_ratio__total_branch": "63",
           "credit_deposit_ratio__total_deposit": "241663.75",
           "credit_deposit_ratio__total_advance": "152828.71",
           "credit_deposit_ratio__overall_cd_ratio": "63",
@@ -4343,7 +4337,6 @@
           "branch_network__total_branch": "36",
           "branch_network__branch_per_lakh_population": "14",
           "credit_deposit_ratio__district": "Unakoti",
-          "credit_deposit_ratio__total_branch": "35",
           "credit_deposit_ratio__total_deposit": "131624.03",
           "credit_deposit_ratio__total_advance": "87508.25",
           "credit_deposit_ratio__overall_cd_ratio": "66",
@@ -4387,7 +4380,6 @@
           "branch_network__total_branch": "219",
           "branch_network__branch_per_lakh_population": "31",
           "credit_deposit_ratio__district": "West Tripura",
-          "credit_deposit_ratio__total_branch": "210",
           "credit_deposit_ratio__total_deposit": "2335054.72",
           "credit_deposit_ratio__total_advance": "1094473.84",
           "credit_deposit_ratio__overall_cd_ratio": "47",

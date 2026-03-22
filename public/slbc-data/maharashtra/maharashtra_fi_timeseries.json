@@ -9,7 +9,6 @@
           "credit_deposit_ratio__total_deposit": "4836300.0",
           "credit_deposit_ratio__total_advances": "4096900.0",
           "credit_deposit_ratio__overall_cd_ratio": "84.71",
-          "credit_deposit_ratio__total_branch": "769",
           "pmjdy__pmjdy_total_accounts": "1701000",
           "pmjdy__pmjdy_total_deposit": "90300.0",
           "pmjdy__pmjdy_rupay_card_issued": "1264000",
@@ -83,7 +82,8 @@
           "sc_st_loans__sc_disb_amt": "7900.0",
           "sc_st_loans__sc_os_amt": "41600.0",
           "sc_st_loans__st_disb_amt": "10600.0",
-          "sc_st_loans__st_os_amt": "30100.0"
+          "sc_st_loans__st_os_amt": "30100.0",
+          "branch_network__total_branch": "769"
         },
         {
           "district": "Akola",
@@ -91,7 +91,6 @@
           "credit_deposit_ratio__total_deposit": "1734700.0",
           "credit_deposit_ratio__total_advances": "1235600.0",
           "credit_deposit_ratio__overall_cd_ratio": "71.23",
-          "credit_deposit_ratio__total_branch": "248",
           "pmjdy__pmjdy_total_accounts": "644000",
           "pmjdy__pmjdy_total_deposit": "22000.0",
           "pmjdy__pmjdy_rupay_card_issued": "427000",
@@ -165,7 +164,8 @@
           "sc_st_loans__sc_disb_amt": "5400.0",
           "sc_st_loans__sc_os_amt": "41400.0",
           "sc_st_loans__st_disb_amt": "900.0",
-          "sc_st_loans__st_os_amt": "8200.0"
+          "sc_st_loans__st_os_amt": "8200.0",
+          "branch_network__total_branch": "248"
         },
         {
           "district": "Amravati",
@@ -173,7 +173,6 @@
           "credit_deposit_ratio__total_deposit": "2684100.0",
           "credit_deposit_ratio__total_advances": "2072900.0",
           "credit_deposit_ratio__overall_cd_ratio": "77.23",
-          "credit_deposit_ratio__total_branch": "396",
           "pmjdy__pmjdy_total_accounts": "939000",
           "pmjdy__pmjdy_total_deposit": "36700.0",
           "pmjdy__pmjdy_rupay_card_issued": "656000",
@@ -247,7 +246,8 @@
           "sc_st_loans__sc_disb_amt": "9400.0",
           "sc_st_loans__sc_os_amt": "61300.0",
           "sc_st_loans__st_disb_amt": "3600.0",
-          "sc_st_loans__st_os_amt": "23500.0"
+          "sc_st_loans__st_os_amt": "23500.0",
+          "branch_network__total_branch": "396"
         },
         {
           "district": "Beed",
@@ -255,7 +255,6 @@
           "credit_deposit_ratio__total_deposit": "1601700.0",
           "credit_deposit_ratio__total_advances": "1333400.0",
           "credit_deposit_ratio__overall_cd_ratio": "83.25",
-          "credit_deposit_ratio__total_branch": "231",
           "pmjdy__pmjdy_total_accounts": "1265000",
           "pmjdy__pmjdy_total_deposit": "76700.0",
           "pmjdy__pmjdy_rupay_card_issued": "826000",
@@ -312,7 +311,8 @@
           "sc_st_loans__sc_disb_amt": "10800.0",
           "sc_st_loans__sc_os_amt": "49400.0",
           "sc_st_loans__st_disb_amt": "3200.0",
-          "sc_st_loans__st_os_amt": "11800.0"
+          "sc_st_loans__st_os_amt": "11800.0",
+          "branch_network__total_branch": "231"
         },
         {
           "district": "Bhandara",
@@ -320,7 +320,6 @@
           "credit_deposit_ratio__total_deposit": "1076800.0",
           "credit_deposit_ratio__total_advances": "478100.0",
           "credit_deposit_ratio__overall_cd_ratio": "44.4",
-          "credit_deposit_ratio__total_branch": "175",
           "pmjdy__pmjdy_total_accounts": "511000",
           "pmjdy__pmjdy_total_deposit": "33100.0",
           "pmjdy__pmjdy_rupay_card_issued": "388000",
@@ -394,7 +393,8 @@
           "sc_st_loans__sc_disb_amt": "5200.0",
           "sc_st_loans__sc_os_amt": "26200.0",
           "sc_st_loans__st_disb_amt": "1200.0",
-          "sc_st_loans__st_os_amt": "6500.0"
+          "sc_st_loans__st_os_amt": "6500.0",
+          "branch_network__total_branch": "175"
         },
         {
           "district": "Buldhana",
@@ -402,7 +402,6 @@
           "credit_deposit_ratio__total_deposit": "1732500.0",
           "credit_deposit_ratio__total_advances": "1393000.0",
           "credit_deposit_ratio__overall_cd_ratio": "80.4",
-          "credit_deposit_ratio__total_branch": "273",
           "pmjdy__pmjdy_total_accounts": "936000",
           "pmjdy__pmjdy_total_deposit": "29700.0",
           "pmjdy__pmjdy_rupay_card_issued": "702000",
@@ -476,7 +475,8 @@
           "sc_st_loans__sc_disb_amt": "4600.0",
           "sc_st_loans__sc_os_amt": "38700.0",
           "sc_st_loans__st_disb_amt": "1200.0",
-          "sc_st_loans__st_os_amt": "10400.0"
+          "sc_st_loans__st_os_amt": "10400.0",
+          "branch_network__total_branch": "273"
         },
         {
           "district": "Chandrapur",
@@ -484,7 +484,6 @@
           "credit_deposit_ratio__total_deposit": "2687100.0",
           "credit_deposit_ratio__total_advances": "1195000.0",
           "credit_deposit_ratio__overall_cd_ratio": "44.47",
-          "credit_deposit_ratio__total_branch": "313",
           "pmjdy__pmjdy_total_accounts": "695000",
           "pmjdy__pmjdy_total_deposit": "41300.0",
           "pmjdy__pmjdy_rupay_card_issued": "497000",
@@ -558,7 +557,8 @@
           "sc_st_loans__sc_disb_amt": "7500.0",
           "sc_st_loans__sc_os_amt": "44100.0",
           "sc_st_loans__st_disb_amt": "3100.0",
-          "sc_st_loans__st_os_amt": "20500.0"
+          "sc_st_loans__st_os_amt": "20500.0",
+          "branch_network__total_branch": "313"
         },
         {
           "district": "Chhatrapati Sambhajinagar",
@@ -566,7 +566,6 @@
           "credit_deposit_ratio__total_deposit": "5576800.0",
           "credit_deposit_ratio__total_advances": "4944100.0",
           "credit_deposit_ratio__overall_cd_ratio": "88.65",
-          "credit_deposit_ratio__total_branch": "519",
           "bca__bca_male": "7724",
           "bca__bca_female": "759",
           "bca__bca_total": "8483",
@@ -630,7 +629,8 @@
           "sc_st_loans__sc_disb_amt": "47300.0",
           "sc_st_loans__sc_os_amt": "178300.0",
           "sc_st_loans__st_disb_amt": "7600.0",
-          "sc_st_loans__st_os_amt": "41600.0"
+          "sc_st_loans__st_os_amt": "41600.0",
+          "branch_network__total_branch": "519"
         },
         {
           "district": "Dharashiv",
@@ -638,7 +638,6 @@
           "credit_deposit_ratio__total_deposit": "1123900.0",
           "credit_deposit_ratio__total_advances": "917900.0",
           "credit_deposit_ratio__overall_cd_ratio": "81.67",
-          "credit_deposit_ratio__total_branch": "206",
           "bca__bca_male": "5569",
           "bca__bca_female": "488",
           "bca__bca_total": "6057",
@@ -707,7 +706,8 @@
           "sc_st_loans__sc_disb_amt": "5700.0",
           "sc_st_loans__sc_os_amt": "24200.0",
           "sc_st_loans__st_disb_amt": "1600.0",
-          "sc_st_loans__st_os_amt": "6000.0"
+          "sc_st_loans__st_os_amt": "6000.0",
+          "branch_network__total_branch": "206"
         },
         {
           "district": "Dhule",
@@ -715,7 +715,6 @@
           "credit_deposit_ratio__total_deposit": "1440700.0",
           "credit_deposit_ratio__total_advances": "1160900.0",
           "credit_deposit_ratio__overall_cd_ratio": "80.58",
-          "credit_deposit_ratio__total_branch": "204",
           "pmjdy__pmjdy_total_accounts": "877000",
           "pmjdy__pmjdy_total_deposit": "29900.0",
           "pmjdy__pmjdy_rupay_card_issued": "610000",
@@ -789,7 +788,8 @@
           "sc_st_loans__sc_disb_amt": "2800.0",
           "sc_st_loans__sc_os_amt": "19700.0",
           "sc_st_loans__st_disb_amt": "3500.0",
-          "sc_st_loans__st_os_amt": "32200.0"
+          "sc_st_loans__st_os_amt": "32200.0",
+          "branch_network__total_branch": "204"
         },
         {
           "district": "Gadchiroli",
@@ -797,7 +797,6 @@
           "credit_deposit_ratio__total_deposit": "885200.0",
           "credit_deposit_ratio__total_advances": "325700.0",
           "credit_deposit_ratio__overall_cd_ratio": "36.79",
-          "credit_deposit_ratio__total_branch": "137",
           "pmjdy__pmjdy_total_accounts": "339000",
           "pmjdy__pmjdy_total_deposit": "22400.0",
           "pmjdy__pmjdy_rupay_card_issued": "245000",
@@ -871,7 +870,8 @@
           "sc_st_loans__sc_disb_amt": "5900.0",
           "sc_st_loans__sc_os_amt": "19600.0",
           "sc_st_loans__st_disb_amt": "4900.0",
-          "sc_st_loans__st_os_amt": "25200.0"
+          "sc_st_loans__st_os_amt": "25200.0",
+          "branch_network__total_branch": "137"
         },
         {
           "district": "Gondia",
@@ -879,7 +879,6 @@
           "credit_deposit_ratio__total_deposit": "938500.0",
           "credit_deposit_ratio__total_advances": "585700.0",
           "credit_deposit_ratio__overall_cd_ratio": "62.41",
-          "credit_deposit_ratio__total_branch": "160",
           "pmjdy__pmjdy_total_accounts": "673000",
           "pmjdy__pmjdy_total_deposit": "39400.0",
           "pmjdy__pmjdy_rupay_card_issued": "455000",
@@ -953,7 +952,8 @@
           "sc_st_loans__sc_disb_amt": "4400.0",
           "sc_st_loans__sc_os_amt": "24700.0",
           "sc_st_loans__st_disb_amt": "2400.0",
-          "sc_st_loans__st_os_amt": "11200.0"
+          "sc_st_loans__st_os_amt": "11200.0",
+          "branch_network__total_branch": "160"
         },
         {
           "district": "Hingoli",
@@ -961,7 +961,6 @@
           "credit_deposit_ratio__total_deposit": "510900.0",
           "credit_deposit_ratio__total_advances": "494000.0",
           "credit_deposit_ratio__overall_cd_ratio": "96.7",
-          "credit_deposit_ratio__total_branch": "125",
           "pmjdy__pmjdy_total_accounts": "652000",
           "pmjdy__pmjdy_total_deposit": "23800.0",
           "pmjdy__pmjdy_rupay_card_issued": "409000",
@@ -1030,7 +1029,8 @@
           "sc_st_loans__sc_disb_amt": "3500.0",
           "sc_st_loans__sc_os_amt": "17800.0",
           "sc_st_loans__st_disb_amt": "1100.0",
-          "sc_st_loans__st_os_amt": "5600.0"
+          "sc_st_loans__st_os_amt": "5600.0",
+          "branch_network__total_branch": "125"
         },
         {
           "district": "Jalgaon",
@@ -1038,7 +1038,6 @@
           "credit_deposit_ratio__total_deposit": "3479700.0",
           "credit_deposit_ratio__total_advances": "2574700.0",
           "credit_deposit_ratio__overall_cd_ratio": "73.99",
-          "credit_deposit_ratio__total_branch": "642",
           "pmjdy__pmjdy_total_accounts": "1606000",
           "pmjdy__pmjdy_total_deposit": "62400.0",
           "pmjdy__pmjdy_rupay_card_issued": "1144000",
@@ -1107,7 +1106,8 @@
           "sc_st_loans__sc_disb_amt": "6100.0",
           "sc_st_loans__sc_os_amt": "43800.0",
           "sc_st_loans__st_disb_amt": "2400.0",
-          "sc_st_loans__st_os_amt": "18700.0"
+          "sc_st_loans__st_os_amt": "18700.0",
+          "branch_network__total_branch": "642"
         },
         {
           "district": "Jalna",
@@ -1115,7 +1115,6 @@
           "credit_deposit_ratio__total_deposit": "987600.0",
           "credit_deposit_ratio__total_advances": "1211800.0",
           "credit_deposit_ratio__overall_cd_ratio": "122.7",
-          "credit_deposit_ratio__total_branch": "205",
           "pmjdy__pmjdy_total_accounts": "846000",
           "pmjdy__pmjdy_total_deposit": "32900.0",
           "pmjdy__pmjdy_rupay_card_issued": "498000",
@@ -1181,7 +1180,8 @@
           "sc_st_loans__sc_disb_amt": "3500.0",
           "sc_st_loans__sc_os_amt": "26600.0",
           "sc_st_loans__st_disb_amt": "800.0",
-          "sc_st_loans__st_os_amt": "9500.0"
+          "sc_st_loans__st_os_amt": "9500.0",
+          "branch_network__total_branch": "205"
         },
         {
           "district": "Kolhapur",
@@ -1189,7 +1189,6 @@
           "credit_deposit_ratio__total_deposit": "5180900.0",
           "credit_deposit_ratio__total_advances": "4545600.0",
           "credit_deposit_ratio__overall_cd_ratio": "87.74",
-          "credit_deposit_ratio__total_branch": "664",
           "pmjdy__pmjdy_total_accounts": "1458000",
           "pmjdy__pmjdy_total_deposit": "62000.0",
           "pmjdy__pmjdy_rupay_card_issued": "1064000",
@@ -1260,7 +1259,8 @@
           "sc_st_loans__sc_disb_amt": "10600.0",
           "sc_st_loans__sc_os_amt": "60100.0",
           "sc_st_loans__st_disb_amt": "1100.0",
-          "sc_st_loans__st_os_amt": "9200.0"
+          "sc_st_loans__st_os_amt": "9200.0",
+          "branch_network__total_branch": "664"
         },
         {
           "district": "Latur",
@@ -1268,7 +1268,6 @@
           "credit_deposit_ratio__total_deposit": "1959000.0",
           "credit_deposit_ratio__total_advances": "1996700.0",
           "credit_deposit_ratio__overall_cd_ratio": "101.92",
-          "credit_deposit_ratio__total_branch": "331",
           "pmjdy__pmjdy_total_accounts": "945000",
           "pmjdy__pmjdy_total_deposit": "41100.0",
           "pmjdy__pmjdy_rupay_card_issued": "665000",
@@ -1337,7 +1336,8 @@
           "sc_st_loans__sc_disb_amt": "9600.0",
           "sc_st_loans__sc_os_amt": "39600.0",
           "sc_st_loans__st_disb_amt": "3300.0",
-          "sc_st_loans__st_os_amt": "11300.0"
+          "sc_st_loans__st_os_amt": "11300.0",
+          "branch_network__total_branch": "331"
         },
         {
           "district": "Mumbai",
@@ -1345,7 +1345,6 @@
           "credit_deposit_ratio__total_deposit": "189726300.0",
           "credit_deposit_ratio__total_advances": "237915500.0",
           "credit_deposit_ratio__overall_cd_ratio": "125.4",
-          "credit_deposit_ratio__total_branch": "981",
           "pmjdy__pmjdy_total_accounts": "1048000",
           "pmjdy__pmjdy_total_deposit": "54200.0",
           "pmjdy__pmjdy_rupay_card_issued": "859000",
@@ -1415,7 +1414,8 @@
           "sc_st_loans__sc_disb_amt": "8900.0",
           "sc_st_loans__sc_os_amt": "83800.0",
           "sc_st_loans__st_disb_amt": "2000.0",
-          "sc_st_loans__st_os_amt": "50700.0"
+          "sc_st_loans__st_os_amt": "50700.0",
+          "branch_network__total_branch": "981"
         },
         {
           "district": "Mumbai Suburban",
@@ -1423,7 +1423,6 @@
           "credit_deposit_ratio__total_deposit": "103872500.0",
           "credit_deposit_ratio__total_advances": "61131000.0",
           "credit_deposit_ratio__overall_cd_ratio": "58.85",
-          "credit_deposit_ratio__total_branch": "1450",
           "apy__apy_branches": "1485",
           "apy__apy_annual_target": "117290",
           "apy__apy_opened_fy": "11352",
@@ -1475,7 +1474,8 @@
           "sc_st_loans__sc_disb_amt": "11900.0",
           "sc_st_loans__sc_os_amt": "117800.0",
           "sc_st_loans__st_disb_amt": "1900.0",
-          "sc_st_loans__st_os_amt": "24500.0"
+          "sc_st_loans__st_os_amt": "24500.0",
+          "branch_network__total_branch": "1450"
         },
         {
           "district": "Nagpur",
@@ -1483,7 +1483,6 @@
           "credit_deposit_ratio__total_deposit": "14148000.0",
           "credit_deposit_ratio__total_advances": "8896100.0",
           "credit_deposit_ratio__overall_cd_ratio": "62.88",
-          "credit_deposit_ratio__total_branch": "887",
           "pmjdy__pmjdy_total_accounts": "1431000",
           "pmjdy__pmjdy_total_deposit": "85700.0",
           "pmjdy__pmjdy_rupay_card_issued": "1133000",
@@ -1557,7 +1556,8 @@
           "sc_st_loans__sc_disb_amt": "32900.0",
           "sc_st_loans__sc_os_amt": "266600.0",
           "sc_st_loans__st_disb_amt": "11100.0",
-          "sc_st_loans__st_os_amt": "81600.0"
+          "sc_st_loans__st_os_amt": "81600.0",
+          "branch_network__total_branch": "887"
         },
         {
           "district": "Nanded",
@@ -1565,7 +1565,6 @@
           "credit_deposit_ratio__total_deposit": "1956600.0",
           "credit_deposit_ratio__total_advances": "1865600.0",
           "credit_deposit_ratio__overall_cd_ratio": "95.35",
-          "credit_deposit_ratio__total_branch": "308",
           "pmjdy__pmjdy_total_accounts": "1511000",
           "pmjdy__pmjdy_total_deposit": "57000.0",
           "pmjdy__pmjdy_rupay_card_issued": "1026000",
@@ -1639,7 +1638,8 @@
           "sc_st_loans__sc_disb_amt": "13100.0",
           "sc_st_loans__sc_os_amt": "62200.0",
           "sc_st_loans__st_disb_amt": "4800.0",
-          "sc_st_loans__st_os_amt": "21100.0"
+          "sc_st_loans__st_os_amt": "21100.0",
+          "branch_network__total_branch": "308"
         },
         {
           "district": "Nandurbar",
@@ -1647,7 +1647,6 @@
           "credit_deposit_ratio__total_deposit": "712200.0",
           "credit_deposit_ratio__total_advances": "532900.0",
           "credit_deposit_ratio__overall_cd_ratio": "74.83",
-          "credit_deposit_ratio__total_branch": "115",
           "pmjdy__pmjdy_total_accounts": "796000",
           "pmjdy__pmjdy_total_deposit": "25000.0",
           "pmjdy__pmjdy_rupay_card_issued": "587000",
@@ -1720,7 +1719,8 @@
           "sc_st_loans__sc_disb_amt": "1900.0",
           "sc_st_loans__sc_os_amt": "15200.0",
           "sc_st_loans__st_disb_amt": "7200.0",
-          "sc_st_loans__st_os_amt": "72600.0"
+          "sc_st_loans__st_os_amt": "72600.0",
+          "branch_network__total_branch": "115"
         },
         {
           "district": "Nashik",
@@ -1728,7 +1728,6 @@
           "credit_deposit_ratio__total_deposit": "9434900.0",
           "credit_deposit_ratio__total_advances": "7963700.0",
           "credit_deposit_ratio__overall_cd_ratio": "84.41",
-          "credit_deposit_ratio__total_branch": "840",
           "pmjdy__pmjdy_total_accounts": "2375000",
           "pmjdy__pmjdy_total_deposit": "130400.0",
           "pmjdy__pmjdy_rupay_card_issued": "1558000",
@@ -1802,7 +1801,8 @@
           "sc_st_loans__sc_disb_amt": "14600.0",
           "sc_st_loans__sc_os_amt": "106600.0",
           "sc_st_loans__st_disb_amt": "9500.0",
-          "sc_st_loans__st_os_amt": "83700.0"
+          "sc_st_loans__st_os_amt": "83700.0",
+          "branch_network__total_branch": "840"
         },
         {
           "district": "Palghar",
@@ -1810,7 +1810,6 @@
           "credit_deposit_ratio__total_deposit": "4666600.0",
           "credit_deposit_ratio__total_advances": "3223300.0",
           "credit_deposit_ratio__overall_cd_ratio": "69.07",
-          "credit_deposit_ratio__total_branch": "383",
           "pmjdy__pmjdy_total_accounts": "971000",
           "pmjdy__pmjdy_total_deposit": "48600.0",
           "pmjdy__pmjdy_rupay_card_issued": "657000",
@@ -1879,7 +1878,8 @@
           "sc_st_loans__sc_disb_amt": "2500.0",
           "sc_st_loans__sc_os_amt": "26000.0",
           "sc_st_loans__st_disb_amt": "2300.0",
-          "sc_st_loans__st_os_amt": "27600.0"
+          "sc_st_loans__st_os_amt": "27600.0",
+          "branch_network__total_branch": "383"
         },
         {
           "district": "Parbhani",
@@ -1887,7 +1887,6 @@
           "credit_deposit_ratio__total_deposit": "1005000.0",
           "credit_deposit_ratio__total_advances": "1023300.0",
           "credit_deposit_ratio__overall_cd_ratio": "101.82",
-          "credit_deposit_ratio__total_branch": "182",
           "pmjdy__pmjdy_total_accounts": "904000",
           "pmjdy__pmjdy_total_deposit": "34700.0",
           "pmjdy__pmjdy_rupay_card_issued": "548000",
@@ -1961,7 +1960,8 @@
           "sc_st_loans__sc_disb_amt": "5900.0",
           "sc_st_loans__sc_os_amt": "33900.0",
           "sc_st_loans__st_disb_amt": "1700.0",
-          "sc_st_loans__st_os_amt": "9100.0"
+          "sc_st_loans__st_os_amt": "9100.0",
+          "branch_network__total_branch": "182"
         },
         {
           "district": "Pune",
@@ -1969,7 +1969,6 @@
           "credit_deposit_ratio__total_deposit": "57651100.0",
           "credit_deposit_ratio__total_advances": "49110200.0",
           "credit_deposit_ratio__overall_cd_ratio": "85.19",
-          "credit_deposit_ratio__total_branch": "472",
           "pmjdy__pmjdy_total_accounts": "2052000",
           "pmjdy__pmjdy_total_deposit": "139200.0",
           "pmjdy__pmjdy_rupay_card_issued": "1435000",
@@ -2043,7 +2042,8 @@
           "sc_st_loans__sc_disb_amt": "30000.0",
           "sc_st_loans__sc_os_amt": "274900.0",
           "sc_st_loans__st_disb_amt": "7400.0",
-          "sc_st_loans__st_os_amt": "75100.0"
+          "sc_st_loans__st_os_amt": "75100.0",
+          "branch_network__total_branch": "472"
         },
         {
           "district": "Raigad",
@@ -2051,7 +2051,6 @@
           "credit_deposit_ratio__total_deposit": "7145200.0",
           "credit_deposit_ratio__total_advances": "6244200.0",
           "credit_deposit_ratio__overall_cd_ratio": "87.39",
-          "credit_deposit_ratio__total_branch": "593",
           "pmjdy__pmjdy_total_accounts": "666000",
           "pmjdy__pmjdy_total_deposit": "39600.0",
           "pmjdy__pmjdy_rupay_card_issued": "455000",
@@ -2120,7 +2119,8 @@
           "sc_st_loans__sc_disb_amt": "5800.0",
           "sc_st_loans__sc_os_amt": "60200.0",
           "sc_st_loans__st_disb_amt": "1500.0",
-          "sc_st_loans__st_os_amt": "16000.0"
+          "sc_st_loans__st_os_amt": "16000.0",
+          "branch_network__total_branch": "593"
         },
         {
           "district": "Ratnagiri",
@@ -2128,7 +2128,6 @@
           "credit_deposit_ratio__total_deposit": "1956200.0",
           "credit_deposit_ratio__total_advances": "1154100.0",
           "credit_deposit_ratio__overall_cd_ratio": "59.0",
-          "credit_deposit_ratio__total_branch": "338",
           "pmjdy__pmjdy_total_accounts": "398000",
           "pmjdy__pmjdy_total_deposit": "25600.0",
           "pmjdy__pmjdy_rupay_card_issued": "249000",
@@ -2202,7 +2201,8 @@
           "sc_st_loans__sc_disb_amt": "2600.0",
           "sc_st_loans__sc_os_amt": "17900.0",
           "sc_st_loans__st_disb_amt": "1200.0",
-          "sc_st_loans__st_os_amt": "5200.0"
+          "sc_st_loans__st_os_amt": "5200.0",
+          "branch_network__total_branch": "338"
         },
         {
           "district": "Sangli",
@@ -2210,7 +2210,6 @@
           "credit_deposit_ratio__total_deposit": "3481100.0",
           "credit_deposit_ratio__total_advances": "2897300.0",
           "credit_deposit_ratio__overall_cd_ratio": "83.23",
-          "credit_deposit_ratio__total_branch": "546",
           "pmjdy__pmjdy_total_accounts": "950000",
           "pmjdy__pmjdy_total_deposit": "36400.0",
           "pmjdy__pmjdy_rupay_card_issued": "680000",
@@ -2284,7 +2283,8 @@
           "sc_st_loans__sc_disb_amt": "42400.0",
           "sc_st_loans__sc_os_amt": "133100.0",
           "sc_st_loans__st_disb_amt": "1200.0",
-          "sc_st_loans__st_os_amt": "6700.0"
+          "sc_st_loans__st_os_amt": "6700.0",
+          "branch_network__total_branch": "546"
         },
         {
           "district": "Satara",
@@ -2292,7 +2292,6 @@
           "credit_deposit_ratio__total_deposit": "3881400.0",
           "credit_deposit_ratio__total_advances": "2755500.0",
           "credit_deposit_ratio__overall_cd_ratio": "70.99",
-          "credit_deposit_ratio__total_branch": "664",
           "pmjdy__pmjdy_total_accounts": "876000",
           "pmjdy__pmjdy_total_deposit": "38200.0",
           "pmjdy__pmjdy_rupay_card_issued": "600000",
@@ -2361,7 +2360,8 @@
           "sc_st_loans__sc_disb_amt": "15600.0",
           "sc_st_loans__sc_os_amt": "45500.0",
           "sc_st_loans__st_disb_amt": "4600.0",
-          "sc_st_loans__st_os_amt": "13300.0"
+          "sc_st_loans__st_os_amt": "13300.0",
+          "branch_network__total_branch": "664"
         },
         {
           "district": "Sindhudurg",
@@ -2369,7 +2369,6 @@
           "credit_deposit_ratio__total_deposit": "1314600.0",
           "credit_deposit_ratio__total_advances": "707700.0",
           "credit_deposit_ratio__overall_cd_ratio": "53.83",
-          "credit_deposit_ratio__total_branch": "260",
           "pmjdy__pmjdy_total_accounts": "199000",
           "pmjdy__pmjdy_total_deposit": "14100.0",
           "pmjdy__pmjdy_rupay_card_issued": "138000",
@@ -2438,7 +2437,8 @@
           "sc_st_loans__sc_disb_amt": "1200.0",
           "sc_st_loans__sc_os_amt": "7800.0",
           "sc_st_loans__st_disb_amt": "300.0",
-          "sc_st_loans__st_os_amt": "1200.0"
+          "sc_st_loans__st_os_amt": "1200.0",
+          "branch_network__total_branch": "260"
         },
         {
           "district": "Solapur",
@@ -2446,7 +2446,6 @@
           "credit_deposit_ratio__total_deposit": "4007000.0",
           "credit_deposit_ratio__total_advances": "3719600.0",
           "credit_deposit_ratio__overall_cd_ratio": "92.83",
-          "credit_deposit_ratio__total_branch": "647",
           "pmjdy__pmjdy_total_accounts": "1737000",
           "pmjdy__pmjdy_total_deposit": "83800.0",
           "pmjdy__pmjdy_rupay_card_issued": "1337000",
@@ -2520,7 +2519,8 @@
           "sc_st_loans__sc_disb_amt": "12500.0",
           "sc_st_loans__sc_os_amt": "81400.0",
           "sc_st_loans__st_disb_amt": "2700.0",
-          "sc_st_loans__st_os_amt": "24400.0"
+          "sc_st_loans__st_os_amt": "24400.0",
+          "branch_network__total_branch": "647"
         },
         {
           "district": "Thane",
@@ -2528,7 +2528,6 @@
           "credit_deposit_ratio__total_deposit": "33901100.0",
           "credit_deposit_ratio__total_advances": "22703700.0",
           "credit_deposit_ratio__overall_cd_ratio": "66.97",
-          "credit_deposit_ratio__total_branch": "1077",
           "pmjdy__pmjdy_total_accounts": "1594000",
           "pmjdy__pmjdy_total_deposit": "77100.0",
           "pmjdy__pmjdy_rupay_card_issued": "1214000",
@@ -2602,7 +2601,8 @@
           "sc_st_loans__sc_disb_amt": "13400.0",
           "sc_st_loans__sc_os_amt": "179600.0",
           "sc_st_loans__st_disb_amt": "3600.0",
-          "sc_st_loans__st_os_amt": "42500.0"
+          "sc_st_loans__st_os_amt": "42500.0",
+          "branch_network__total_branch": "1077"
         },
         {
           "district": "Wardha",
@@ -2610,7 +2610,6 @@
           "credit_deposit_ratio__total_deposit": "1311300.0",
           "credit_deposit_ratio__total_advances": "1098000.0",
           "credit_deposit_ratio__overall_cd_ratio": "83.73",
-          "credit_deposit_ratio__total_branch": "181",
           "pmjdy__pmjdy_total_accounts": "375000",
           "pmjdy__pmjdy_total_deposit": "21700.0",
           "pmjdy__pmjdy_rupay_card_issued": "286000",
@@ -2684,7 +2683,8 @@
           "sc_st_loans__sc_disb_amt": "10200.0",
           "sc_st_loans__sc_os_amt": "69600.0",
           "sc_st_loans__st_disb_amt": "6500.0",
-          "sc_st_loans__st_os_amt": "42600.0"
+          "sc_st_loans__st_os_amt": "42600.0",
+          "branch_network__total_branch": "181"
         },
         {
           "district": "Washim",
@@ -2692,7 +2692,6 @@
           "credit_deposit_ratio__total_deposit": "620200.0",
           "credit_deposit_ratio__total_advances": "638100.0",
           "credit_deposit_ratio__overall_cd_ratio": "102.89",
-          "credit_deposit_ratio__total_branch": "148",
           "pmjdy__pmjdy_total_accounts": "434000",
           "pmjdy__pmjdy_total_deposit": "13000.0",
           "pmjdy__pmjdy_rupay_card_issued": "315000",
@@ -2766,7 +2765,8 @@
           "sc_st_loans__sc_disb_amt": "2100.0",
           "sc_st_loans__sc_os_amt": "15700.0",
           "sc_st_loans__st_disb_amt": "400.0",
-          "sc_st_loans__st_os_amt": "3200.0"
+          "sc_st_loans__st_os_amt": "3200.0",
+          "branch_network__total_branch": "148"
         },
         {
           "district": "Yavatmal",
@@ -2774,7 +2774,6 @@
           "credit_deposit_ratio__total_deposit": "2038800.0",
           "credit_deposit_ratio__total_advances": "1556400.0",
           "credit_deposit_ratio__overall_cd_ratio": "76.34",
-          "credit_deposit_ratio__total_branch": "319",
           "pmjdy__pmjdy_total_accounts": "1225000",
           "pmjdy__pmjdy_total_deposit": "36200.0",
           "pmjdy__pmjdy_rupay_card_issued": "861000",
@@ -2848,7 +2847,8 @@
           "sc_st_loans__sc_disb_amt": "4200.0",
           "sc_st_loans__sc_os_amt": "33500.0",
           "sc_st_loans__st_disb_amt": "3200.0",
-          "sc_st_loans__st_os_amt": "27600.0"
+          "sc_st_loans__st_os_amt": "27600.0",
+          "branch_network__total_branch": "319"
         }
       ]
     },
@@ -2861,7 +2861,6 @@
           "credit_deposit_ratio__total_deposit": "4964300.0",
           "credit_deposit_ratio__total_advances": "4264300.0",
           "credit_deposit_ratio__overall_cd_ratio": "85.9",
-          "credit_deposit_ratio__total_branch": "770",
           "cd_ratio_detailed__total_branch": "770",
           "cd_ratio_detailed__deposit_rural": "1384100.0",
           "cd_ratio_detailed__deposit_semi_urban": "2066700.0",
@@ -2944,7 +2943,8 @@
           "sc_st_loans__sc_disb_amt": "10800.0",
           "sc_st_loans__sc_os_amt": "45600.0",
           "sc_st_loans__st_disb_amt": "4500.0",
-          "sc_st_loans__st_os_amt": "30300.0"
+          "sc_st_loans__st_os_amt": "30300.0",
+          "branch_network__total_branch": "770"
         },
         {
           "district": "Akola",
@@ -2952,7 +2952,6 @@
           "credit_deposit_ratio__total_deposit": "1741900.0",
           "credit_deposit_ratio__total_advances": "1272200.0",
           "credit_deposit_ratio__overall_cd_ratio": "73.04",
-          "credit_deposit_ratio__total_branch": "248",
           "cd_ratio_detailed__total_branch": "248",
           "cd_ratio_detailed__deposit_rural": "191800.0",
           "cd_ratio_detailed__deposit_semi_urban": "363100.0",
@@ -3035,7 +3034,8 @@
           "sc_st_loans__sc_disb_amt": "9900.0",
           "sc_st_loans__sc_os_amt": "46300.0",
           "sc_st_loans__st_disb_amt": "1900.0",
-          "sc_st_loans__st_os_amt": "8800.0"
+          "sc_st_loans__st_os_amt": "8800.0",
+          "branch_network__total_branch": "248"
         },
         {
           "district": "Amravati",
@@ -3043,7 +3043,6 @@
           "credit_deposit_ratio__total_deposit": "2742700.0",
           "credit_deposit_ratio__total_advances": "2166800.0",
           "credit_deposit_ratio__overall_cd_ratio": "79.0",
-          "credit_deposit_ratio__total_branch": "397",
           "cd_ratio_detailed__total_branch": "397",
           "cd_ratio_detailed__deposit_rural": "394900.0",
           "cd_ratio_detailed__deposit_semi_urban": "614000.0",
@@ -3126,7 +3125,8 @@
           "sc_st_loans__sc_disb_amt": "14500.0",
           "sc_st_loans__sc_os_amt": "67500.0",
           "sc_st_loans__st_disb_amt": "4800.0",
-          "sc_st_loans__st_os_amt": "25800.0"
+          "sc_st_loans__st_os_amt": "25800.0",
+          "branch_network__total_branch": "397"
         },
         {
           "district": "Beed",
@@ -3134,7 +3134,6 @@
           "credit_deposit_ratio__total_deposit": "1633600.0",
           "credit_deposit_ratio__total_advances": "1386900.0",
           "credit_deposit_ratio__overall_cd_ratio": "84.9",
-          "credit_deposit_ratio__total_branch": "231",
           "cd_ratio_detailed__total_branch": "231",
           "cd_ratio_detailed__deposit_rural": "394700.0",
           "cd_ratio_detailed__deposit_semi_urban": "710400.0",
@@ -3211,7 +3210,8 @@
           "sc_st_loans__sc_disb_amt": "6500.0",
           "sc_st_loans__sc_os_amt": "29200.0",
           "sc_st_loans__st_disb_amt": "1500.0",
-          "sc_st_loans__st_os_amt": "6800.0"
+          "sc_st_loans__st_os_amt": "6800.0",
+          "branch_network__total_branch": "231"
         },
         {
           "district": "Bhandara",
@@ -3219,7 +3219,6 @@
           "credit_deposit_ratio__total_deposit": "1110800.0",
           "credit_deposit_ratio__total_advances": "497700.0",
           "credit_deposit_ratio__overall_cd_ratio": "44.8",
-          "credit_deposit_ratio__total_branch": "177",
           "cd_ratio_detailed__total_branch": "177",
           "cd_ratio_detailed__deposit_rural": "381800.0",
           "cd_ratio_detailed__deposit_semi_urban": "727900.0",
@@ -3302,7 +3301,8 @@
           "sc_st_loans__sc_disb_amt": "8600.0",
           "sc_st_loans__sc_os_amt": "45600.0",
           "sc_st_loans__st_disb_amt": "1900.0",
-          "sc_st_loans__st_os_amt": "11700.0"
+          "sc_st_loans__st_os_amt": "11700.0",
+          "branch_network__total_branch": "177"
         },
         {
           "district": "Buldhana",
@@ -3310,7 +3310,6 @@
           "credit_deposit_ratio__total_deposit": "1771000.0",
           "credit_deposit_ratio__total_advances": "1501200.0",
           "credit_deposit_ratio__overall_cd_ratio": "84.77",
-          "credit_deposit_ratio__total_branch": "274",
           "cd_ratio_detailed__total_branch": "274",
           "cd_ratio_detailed__deposit_rural": "250000.0",
           "cd_ratio_detailed__deposit_semi_urban": "1453200.0",
@@ -3393,7 +3392,8 @@
           "sc_st_loans__sc_disb_amt": "11300.0",
           "sc_st_loans__sc_os_amt": "48500.0",
           "sc_st_loans__st_disb_amt": "4200.0",
-          "sc_st_loans__st_os_amt": "20600.0"
+          "sc_st_loans__st_os_amt": "20600.0",
+          "branch_network__total_branch": "274"
         },
         {
           "district": "Chandrapur",
@@ -3401,7 +3401,6 @@
           "credit_deposit_ratio__total_deposit": "2727400.0",
           "credit_deposit_ratio__total_advances": "1232200.0",
           "credit_deposit_ratio__overall_cd_ratio": "45.18",
-          "credit_deposit_ratio__total_branch": "312",
           "cd_ratio_detailed__total_branch": "312",
           "cd_ratio_detailed__deposit_rural": "561300.0",
           "cd_ratio_detailed__deposit_semi_urban": "954600.0",
@@ -3484,7 +3483,8 @@
           "sc_st_loans__sc_disb_amt": "22600.0",
           "sc_st_loans__sc_os_amt": "114900.0",
           "sc_st_loans__st_disb_amt": "8900.0",
-          "sc_st_loans__st_os_amt": "41200.0"
+          "sc_st_loans__st_os_amt": "41200.0",
+          "branch_network__total_branch": "312"
         },
         {
           "district": "Chhatrapati Sambhajinagar",
@@ -3492,7 +3492,6 @@
           "credit_deposit_ratio__total_deposit": "5649600.0",
           "credit_deposit_ratio__total_advances": "5021300.0",
           "credit_deposit_ratio__overall_cd_ratio": "88.88",
-          "credit_deposit_ratio__total_branch": "513",
           "cd_ratio_detailed__total_branch": "513",
           "cd_ratio_detailed__deposit_rural": "667000.0",
           "cd_ratio_detailed__deposit_semi_urban": "679500.0",
@@ -3570,7 +3569,8 @@
           "sc_st_loans__sc_disb_amt": "14600.0",
           "sc_st_loans__sc_os_amt": "50900.0",
           "sc_st_loans__st_disb_amt": "4300.0",
-          "sc_st_loans__st_os_amt": "12300.0"
+          "sc_st_loans__st_os_amt": "12300.0",
+          "branch_network__total_branch": "513"
         },
         {
           "district": "Dharashiv",
@@ -3578,7 +3578,6 @@
           "credit_deposit_ratio__total_deposit": "1142800.0",
           "credit_deposit_ratio__total_advances": "951200.0",
           "credit_deposit_ratio__overall_cd_ratio": "83.24",
-          "credit_deposit_ratio__total_branch": "206",
           "cd_ratio_detailed__total_branch": "206",
           "cd_ratio_detailed__deposit_rural": "275400.0",
           "cd_ratio_detailed__deposit_semi_urban": "498200.0",
@@ -3653,7 +3652,8 @@
           "sc_st_loans__sc_disb_amt": "17400.0",
           "sc_st_loans__sc_os_amt": "108300.0",
           "sc_st_loans__st_disb_amt": "12800.0",
-          "sc_st_loans__st_os_amt": "86800.0"
+          "sc_st_loans__st_os_amt": "86800.0",
+          "branch_network__total_branch": "206"
         },
         {
           "district": "Dhule",
@@ -3661,7 +3661,6 @@
           "credit_deposit_ratio__total_deposit": "1463600.0",
           "credit_deposit_ratio__total_advances": "1204700.0",
           "credit_deposit_ratio__overall_cd_ratio": "82.31",
-          "credit_deposit_ratio__total_branch": "205",
           "cd_ratio_detailed__total_branch": "205",
           "cd_ratio_detailed__deposit_rural": "221600.0",
           "cd_ratio_detailed__deposit_semi_urban": "405700.0",
@@ -3744,7 +3743,8 @@
           "sc_st_loans__sc_disb_amt": "8400.0",
           "sc_st_loans__sc_os_amt": "25400.0",
           "sc_st_loans__st_disb_amt": "2100.0",
-          "sc_st_loans__st_os_amt": "6000.0"
+          "sc_st_loans__st_os_amt": "6000.0",
+          "branch_network__total_branch": "205"
         },
         {
           "district": "Gadchiroli",
@@ -3752,7 +3752,6 @@
           "credit_deposit_ratio__total_deposit": "923600.0",
           "credit_deposit_ratio__total_advances": "338000.0",
           "credit_deposit_ratio__overall_cd_ratio": "36.59",
-          "credit_deposit_ratio__total_branch": "138",
           "cd_ratio_detailed__total_branch": "138",
           "cd_ratio_detailed__deposit_rural": "326700.0",
           "cd_ratio_detailed__deposit_semi_urban": "508000.0",
@@ -3835,7 +3834,8 @@
           "sc_st_loans__sc_disb_amt": "3500.0",
           "sc_st_loans__sc_os_amt": "20500.0",
           "sc_st_loans__st_disb_amt": "5000.0",
-          "sc_st_loans__st_os_amt": "33700.0"
+          "sc_st_loans__st_os_amt": "33700.0",
+          "branch_network__total_branch": "138"
         },
         {
           "district": "Gondia",
@@ -3843,7 +3843,6 @@
           "credit_deposit_ratio__total_deposit": "981800.0",
           "credit_deposit_ratio__total_advances": "599300.0",
           "credit_deposit_ratio__overall_cd_ratio": "61.04",
-          "credit_deposit_ratio__total_branch": "160",
           "cd_ratio_detailed__total_branch": "160",
           "cd_ratio_detailed__deposit_rural": "282600.0",
           "cd_ratio_detailed__deposit_semi_urban": "168600.0",
@@ -3926,7 +3925,8 @@
           "sc_st_loans__sc_disb_amt": "7000.0",
           "sc_st_loans__sc_os_amt": "20800.0",
           "sc_st_loans__st_disb_amt": "5700.0",
-          "sc_st_loans__st_os_amt": "24200.0"
+          "sc_st_loans__st_os_amt": "24200.0",
+          "branch_network__total_branch": "160"
         },
         {
           "district": "Hingoli",
@@ -3934,7 +3934,6 @@
           "credit_deposit_ratio__total_deposit": "512800.0",
           "credit_deposit_ratio__total_advances": "509900.0",
           "credit_deposit_ratio__overall_cd_ratio": "99.45",
-          "credit_deposit_ratio__total_branch": "125",
           "cd_ratio_detailed__total_branch": "125",
           "cd_ratio_detailed__deposit_rural": "135600.0",
           "cd_ratio_detailed__deposit_semi_urban": "376600.0",
@@ -4017,7 +4016,8 @@
           "sc_st_loans__sc_disb_amt": "6900.0",
           "sc_st_loans__sc_os_amt": "28700.0",
           "sc_st_loans__st_disb_amt": "3100.0",
-          "sc_st_loans__st_os_amt": "11300.0"
+          "sc_st_loans__st_os_amt": "11300.0",
+          "branch_network__total_branch": "125"
         },
         {
           "district": "Jalgaon",
@@ -4025,7 +4025,6 @@
           "credit_deposit_ratio__total_deposit": "3541900.0",
           "credit_deposit_ratio__total_advances": "2674500.0",
           "credit_deposit_ratio__overall_cd_ratio": "75.51",
-          "credit_deposit_ratio__total_branch": "644",
           "cd_ratio_detailed__total_branch": "644",
           "cd_ratio_detailed__deposit_rural": "653300.0",
           "cd_ratio_detailed__deposit_semi_urban": "1263300.0",
@@ -4108,7 +4107,8 @@
           "sc_st_loans__sc_disb_amt": "5500.0",
           "sc_st_loans__sc_os_amt": "18800.0",
           "sc_st_loans__st_disb_amt": "1700.0",
-          "sc_st_loans__st_os_amt": "5800.0"
+          "sc_st_loans__st_os_amt": "5800.0",
+          "branch_network__total_branch": "644"
         },
         {
           "district": "Jalna",
@@ -4116,7 +4116,6 @@
           "credit_deposit_ratio__total_deposit": "1022700.0",
           "credit_deposit_ratio__total_advances": "1235600.0",
           "credit_deposit_ratio__overall_cd_ratio": "120.82",
-          "credit_deposit_ratio__total_branch": "205",
           "cd_ratio_detailed__total_branch": "205",
           "cd_ratio_detailed__deposit_rural": "167900.0",
           "cd_ratio_detailed__deposit_semi_urban": "252400.0",
@@ -4193,7 +4192,8 @@
           "sc_st_loans__sc_disb_amt": "11300.0",
           "sc_st_loans__sc_os_amt": "45900.0",
           "sc_st_loans__st_disb_amt": "4100.0",
-          "sc_st_loans__st_os_amt": "20000.0"
+          "sc_st_loans__st_os_amt": "20000.0",
+          "branch_network__total_branch": "205"
         },
         {
           "district": "Kolhapur",
@@ -4201,7 +4201,6 @@
           "credit_deposit_ratio__total_deposit": "5232300.0",
           "credit_deposit_ratio__total_advances": "4770900.0",
           "credit_deposit_ratio__overall_cd_ratio": "91.18",
-          "credit_deposit_ratio__total_branch": "667",
           "cd_ratio_detailed__total_branch": "667",
           "cd_ratio_detailed__deposit_rural": "1069600.0",
           "cd_ratio_detailed__deposit_semi_urban": "1053400.0",
@@ -4278,7 +4277,8 @@
           "sc_st_loans__sc_disb_amt": "5400.0",
           "sc_st_loans__sc_os_amt": "27000.0",
           "sc_st_loans__st_disb_amt": "1200.0",
-          "sc_st_loans__st_os_amt": "9500.0"
+          "sc_st_loans__st_os_amt": "9500.0",
+          "branch_network__total_branch": "667"
         },
         {
           "district": "Latur",
@@ -4286,7 +4286,6 @@
           "credit_deposit_ratio__total_deposit": "1963100.0",
           "credit_deposit_ratio__total_advances": "2037300.0",
           "credit_deposit_ratio__overall_cd_ratio": "103.78",
-          "credit_deposit_ratio__total_branch": "331",
           "cd_ratio_detailed__total_branch": "331",
           "cd_ratio_detailed__deposit_rural": "371400.0",
           "cd_ratio_detailed__deposit_semi_urban": "357000.0",
@@ -4369,7 +4368,8 @@
           "sc_st_loans__sc_disb_amt": "13500.0",
           "sc_st_loans__sc_os_amt": "64000.0",
           "sc_st_loans__st_disb_amt": "1300.0",
-          "sc_st_loans__st_os_amt": "8600.0"
+          "sc_st_loans__st_os_amt": "8600.0",
+          "branch_network__total_branch": "331"
         },
         {
           "district": "Mumbai",
@@ -4377,7 +4377,6 @@
           "credit_deposit_ratio__total_deposit": "173114200.0",
           "credit_deposit_ratio__total_advances": "247810700.0",
           "credit_deposit_ratio__overall_cd_ratio": "143.15",
-          "credit_deposit_ratio__total_branch": "982",
           "cd_ratio_detailed__total_branch": "982",
           "cd_ratio_detailed__deposit_rural": "100.0",
           "cd_ratio_detailed__deposit_semi_urban": "",
@@ -4458,7 +4457,8 @@
           "sc_st_loans__sc_disb_amt": "14400.0",
           "sc_st_loans__sc_os_amt": "41000.0",
           "sc_st_loans__st_disb_amt": "4500.0",
-          "sc_st_loans__st_os_amt": "11300.0"
+          "sc_st_loans__st_os_amt": "11300.0",
+          "branch_network__total_branch": "982"
         },
         {
           "district": "Mumbai Suburban",
@@ -4466,7 +4466,6 @@
           "credit_deposit_ratio__total_deposit": "103616800.0",
           "credit_deposit_ratio__total_advances": "62366400.0",
           "credit_deposit_ratio__overall_cd_ratio": "60.19",
-          "credit_deposit_ratio__total_branch": "1493",
           "cd_ratio_detailed__total_branch": "1493",
           "cd_ratio_detailed__deposit_rural": "9200.0",
           "cd_ratio_detailed__deposit_semi_urban": "",
@@ -4518,7 +4517,8 @@
           "sc_st_loans__sc_disb_amt": "14100.0",
           "sc_st_loans__sc_os_amt": "88800.0",
           "sc_st_loans__st_disb_amt": "3500.0",
-          "sc_st_loans__st_os_amt": "51800.0"
+          "sc_st_loans__st_os_amt": "51800.0",
+          "branch_network__total_branch": "1493"
         },
         {
           "district": "Nagpur",
@@ -4526,7 +4526,6 @@
           "credit_deposit_ratio__total_deposit": "14499300.0",
           "credit_deposit_ratio__total_advances": "9072300.0",
           "credit_deposit_ratio__overall_cd_ratio": "62.57",
-          "credit_deposit_ratio__total_branch": "891",
           "cd_ratio_detailed__total_branch": "891",
           "cd_ratio_detailed__deposit_rural": "1031400.0",
           "cd_ratio_detailed__deposit_semi_urban": "1190300.0",
@@ -4606,7 +4605,8 @@
           "sc_st_loans__sc_disb_amt": "19100.0",
           "sc_st_loans__sc_os_amt": "121300.0",
           "sc_st_loans__st_disb_amt": "6300.0",
-          "sc_st_loans__st_os_amt": "29200.0"
+          "sc_st_loans__st_os_amt": "29200.0",
+          "branch_network__total_branch": "891"
         },
         {
           "district": "Nanded",
@@ -4614,7 +4614,6 @@
           "credit_deposit_ratio__total_deposit": "1979800.0",
           "credit_deposit_ratio__total_advances": "1924100.0",
           "credit_deposit_ratio__overall_cd_ratio": "97.19",
-          "credit_deposit_ratio__total_branch": "308",
           "cd_ratio_detailed__total_branch": "308",
           "cd_ratio_detailed__deposit_rural": "322500.0",
           "cd_ratio_detailed__deposit_semi_urban": "495200.0",
@@ -4697,7 +4696,8 @@
           "sc_st_loans__sc_disb_amt": "41400.0",
           "sc_st_loans__sc_os_amt": "277800.0",
           "sc_st_loans__st_disb_amt": "12600.0",
-          "sc_st_loans__st_os_amt": "82400.0"
+          "sc_st_loans__st_os_amt": "82400.0",
+          "branch_network__total_branch": "308"
         },
         {
           "district": "Nandurbar",
@@ -4705,7 +4705,6 @@
           "credit_deposit_ratio__total_deposit": "711700.0",
           "credit_deposit_ratio__total_advances": "545200.0",
           "credit_deposit_ratio__overall_cd_ratio": "76.61",
-          "credit_deposit_ratio__total_branch": "115",
           "cd_ratio_detailed__total_branch": "115",
           "cd_ratio_detailed__deposit_rural": "126400.0",
           "cd_ratio_detailed__deposit_semi_urban": "267700.0",
@@ -4785,7 +4784,8 @@
           "sc_st_loans__sc_disb_amt": "19200.0",
           "sc_st_loans__sc_os_amt": "67100.0",
           "sc_st_loans__st_disb_amt": "7200.0",
-          "sc_st_loans__st_os_amt": "22600.0"
+          "sc_st_loans__st_os_amt": "22600.0",
+          "branch_network__total_branch": "115"
         },
         {
           "district": "Nashik",
@@ -4793,7 +4793,6 @@
           "credit_deposit_ratio__total_deposit": "9870200.0",
           "credit_deposit_ratio__total_advances": "8252200.0",
           "credit_deposit_ratio__overall_cd_ratio": "83.61",
-          "credit_deposit_ratio__total_branch": "842",
           "cd_ratio_detailed__total_branch": "842",
           "cd_ratio_detailed__deposit_rural": "1018000.0",
           "cd_ratio_detailed__deposit_semi_urban": "1939300.0",
@@ -4876,7 +4875,8 @@
           "sc_st_loans__sc_disb_amt": "2700.0",
           "sc_st_loans__sc_os_amt": "15800.0",
           "sc_st_loans__st_disb_amt": "9300.0",
-          "sc_st_loans__st_os_amt": "75200.0"
+          "sc_st_loans__st_os_amt": "75200.0",
+          "branch_network__total_branch": "842"
         },
         {
           "district": "Palghar",
@@ -4884,7 +4884,6 @@
           "credit_deposit_ratio__total_deposit": "4821400.0",
           "credit_deposit_ratio__total_advances": "3338800.0",
           "credit_deposit_ratio__overall_cd_ratio": "69.25",
-          "credit_deposit_ratio__total_branch": "386",
           "cd_ratio_detailed__total_branch": "386",
           "cd_ratio_detailed__deposit_rural": "526000.0",
           "cd_ratio_detailed__deposit_semi_urban": "1299500.0",
@@ -4967,7 +4966,8 @@
           "sc_st_loans__sc_disb_amt": "3600.0",
           "sc_st_loans__sc_os_amt": "27100.0",
           "sc_st_loans__st_disb_amt": "4000.0",
-          "sc_st_loans__st_os_amt": "28500.0"
+          "sc_st_loans__st_os_amt": "28500.0",
+          "branch_network__total_branch": "386"
         },
         {
           "district": "Parbhani",
@@ -4975,7 +4975,6 @@
           "credit_deposit_ratio__total_deposit": "997900.0",
           "credit_deposit_ratio__total_advances": "1062600.0",
           "credit_deposit_ratio__overall_cd_ratio": "106.48",
-          "credit_deposit_ratio__total_branch": "186",
           "cd_ratio_detailed__total_branch": "186",
           "cd_ratio_detailed__deposit_rural": "151300.0",
           "cd_ratio_detailed__deposit_semi_urban": "318900.0",
@@ -5058,7 +5057,8 @@
           "sc_st_loans__sc_disb_amt": "9700.0",
           "sc_st_loans__sc_os_amt": "34700.0",
           "sc_st_loans__st_disb_amt": "2700.0",
-          "sc_st_loans__st_os_amt": "9200.0"
+          "sc_st_loans__st_os_amt": "9200.0",
+          "branch_network__total_branch": "186"
         },
         {
           "district": "Pune",
@@ -5066,7 +5066,6 @@
           "credit_deposit_ratio__total_deposit": "58269200.0",
           "credit_deposit_ratio__total_advances": "51586000.0",
           "credit_deposit_ratio__overall_cd_ratio": "88.53",
-          "credit_deposit_ratio__total_branch": "472",
           "cd_ratio_detailed__total_branch": "2196",
           "cd_ratio_detailed__deposit_rural": "2743300.0",
           "cd_ratio_detailed__deposit_semi_urban": "5150100.0",
@@ -5149,7 +5148,8 @@
           "sc_st_loans__sc_disb_amt": "47400.0",
           "sc_st_loans__sc_os_amt": "291300.0",
           "sc_st_loans__st_disb_amt": "10500.0",
-          "sc_st_loans__st_os_amt": "74400.0"
+          "sc_st_loans__st_os_amt": "74400.0",
+          "branch_network__total_branch": "472"
         },
         {
           "district": "Raigad",
@@ -5157,7 +5157,6 @@
           "credit_deposit_ratio__total_deposit": "7550900.0",
           "credit_deposit_ratio__total_advances": "6468200.0",
           "credit_deposit_ratio__overall_cd_ratio": "85.66",
-          "credit_deposit_ratio__total_branch": "596",
           "cd_ratio_detailed__total_branch": "596",
           "cd_ratio_detailed__deposit_rural": "1686300.0",
           "cd_ratio_detailed__deposit_semi_urban": "2201400.0",
@@ -5240,7 +5239,8 @@
           "sc_st_loans__sc_disb_amt": "9500.0",
           "sc_st_loans__sc_os_amt": "62800.0",
           "sc_st_loans__st_disb_amt": "3900.0",
-          "sc_st_loans__st_os_amt": "16500.0"
+          "sc_st_loans__st_os_amt": "16500.0",
+          "branch_network__total_branch": "596"
         },
         {
           "district": "Ratnagiri",
@@ -5248,7 +5248,6 @@
           "credit_deposit_ratio__total_deposit": "2048900.0",
           "credit_deposit_ratio__total_advances": "1201200.0",
           "credit_deposit_ratio__overall_cd_ratio": "58.63",
-          "credit_deposit_ratio__total_branch": "338",
           "cd_ratio_detailed__total_branch": "338",
           "cd_ratio_detailed__deposit_rural": "709700.0",
           "cd_ratio_detailed__deposit_semi_urban": "1339200.0",
@@ -5331,7 +5330,8 @@
           "sc_st_loans__sc_disb_amt": "3900.0",
           "sc_st_loans__sc_os_amt": "21200.0",
           "sc_st_loans__st_disb_amt": "1800.0",
-          "sc_st_loans__st_os_amt": "6000.0"
+          "sc_st_loans__st_os_amt": "6000.0",
+          "branch_network__total_branch": "338"
         },
         {
           "district": "Sangli",
@@ -5339,7 +5339,6 @@
           "credit_deposit_ratio__total_deposit": "3500400.0",
           "credit_deposit_ratio__total_advances": "2963200.0",
           "credit_deposit_ratio__overall_cd_ratio": "84.65",
-          "credit_deposit_ratio__total_branch": "548",
           "cd_ratio_detailed__total_branch": "548",
           "cd_ratio_detailed__deposit_rural": "906300.0",
           "cd_ratio_detailed__deposit_semi_urban": "958700.0",
@@ -5422,7 +5421,8 @@
           "sc_st_loans__sc_disb_amt": "13600.0",
           "sc_st_loans__sc_os_amt": "138400.0",
           "sc_st_loans__st_disb_amt": "1600.0",
-          "sc_st_loans__st_os_amt": "7100.0"
+          "sc_st_loans__st_os_amt": "7100.0",
+          "branch_network__total_branch": "548"
         },
         {
           "district": "Satara",
@@ -5430,7 +5430,6 @@
           "credit_deposit_ratio__total_deposit": "3969000.0",
           "credit_deposit_ratio__total_advances": "2793500.0",
           "credit_deposit_ratio__overall_cd_ratio": "70.38",
-          "credit_deposit_ratio__total_branch": "665",
           "cd_ratio_detailed__total_branch": "665",
           "cd_ratio_detailed__deposit_rural": "1297400.0",
           "cd_ratio_detailed__deposit_semi_urban": "1589500.0",
@@ -5513,7 +5512,8 @@
           "sc_st_loans__sc_disb_amt": "17600.0",
           "sc_st_loans__sc_os_amt": "44500.0",
           "sc_st_loans__st_disb_amt": "5200.0",
-          "sc_st_loans__st_os_amt": "12900.0"
+          "sc_st_loans__st_os_amt": "12900.0",
+          "branch_network__total_branch": "665"
         },
         {
           "district": "Sindhudurg",
@@ -5521,7 +5521,6 @@
           "credit_deposit_ratio__total_deposit": "1340000.0",
           "credit_deposit_ratio__total_advances": "749800.0",
           "credit_deposit_ratio__overall_cd_ratio": "55.96",
-          "credit_deposit_ratio__total_branch": "260",
           "cd_ratio_detailed__total_branch": "260",
           "cd_ratio_detailed__deposit_rural": "707400.0",
           "cd_ratio_detailed__deposit_semi_urban": "632600.0",
@@ -5604,7 +5603,8 @@
           "sc_st_loans__sc_disb_amt": "2400.0",
           "sc_st_loans__sc_os_amt": "9700.0",
           "sc_st_loans__st_disb_amt": "700.0",
-          "sc_st_loans__st_os_amt": "1800.0"
+          "sc_st_loans__st_os_amt": "1800.0",
+          "branch_network__total_branch": "260"
         },
         {
           "district": "Solapur",
@@ -5612,7 +5612,6 @@
           "credit_deposit_ratio__total_deposit": "4091600.0",
           "credit_deposit_ratio__total_advances": "3835000.0",
           "credit_deposit_ratio__overall_cd_ratio": "93.73",
-          "credit_deposit_ratio__total_branch": "652",
           "cd_ratio_detailed__total_branch": "652",
           "cd_ratio_detailed__deposit_rural": "599900.0",
           "cd_ratio_detailed__deposit_semi_urban": "1426300.0",
@@ -5695,7 +5694,8 @@
           "sc_st_loans__sc_disb_amt": "16000.0",
           "sc_st_loans__sc_os_amt": "84700.0",
           "sc_st_loans__st_disb_amt": "3100.0",
-          "sc_st_loans__st_os_amt": "22200.0"
+          "sc_st_loans__st_os_amt": "22200.0",
+          "branch_network__total_branch": "652"
         },
         {
           "district": "Thane",
@@ -5703,7 +5703,6 @@
           "credit_deposit_ratio__total_deposit": "34403900.0",
           "credit_deposit_ratio__total_advances": "23543200.0",
           "credit_deposit_ratio__overall_cd_ratio": "68.43",
-          "credit_deposit_ratio__total_branch": "1085",
           "cd_ratio_detailed__total_branch": "1244",
           "cd_ratio_detailed__deposit_rural": "525900.0",
           "cd_ratio_detailed__deposit_semi_urban": "526000.0",
@@ -5786,7 +5785,8 @@
           "sc_st_loans__sc_disb_amt": "21300.0",
           "sc_st_loans__sc_os_amt": "186500.0",
           "sc_st_loans__st_disb_amt": "5300.0",
-          "sc_st_loans__st_os_amt": "43700.0"
+          "sc_st_loans__st_os_amt": "43700.0",
+          "branch_network__total_branch": "1085"
         },
         {
           "district": "Wardha",
@@ -5794,7 +5794,6 @@
           "credit_deposit_ratio__total_deposit": "1333800.0",
           "credit_deposit_ratio__total_advances": "1073600.0",
           "credit_deposit_ratio__overall_cd_ratio": "80.49",
-          "credit_deposit_ratio__total_branch": "181",
           "cd_ratio_detailed__total_branch": "181",
           "cd_ratio_detailed__deposit_rural": "254900.0",
           "cd_ratio_detailed__deposit_semi_urban": "333500.0",
@@ -5878,7 +5877,8 @@
           "sc_st_loans__sc_disb_amt": "6900.0",
           "sc_st_loans__sc_os_amt": "65800.0",
           "sc_st_loans__st_disb_amt": "2300.0",
-          "sc_st_loans__st_os_amt": "37900.0"
+          "sc_st_loans__st_os_amt": "37900.0",
+          "branch_network__total_branch": "181"
         },
         {
           "district": "Washim",
@@ -5886,7 +5886,6 @@
           "credit_deposit_ratio__total_deposit": "635200.0",
           "credit_deposit_ratio__total_advances": "661200.0",
           "credit_deposit_ratio__overall_cd_ratio": "104.1",
-          "credit_deposit_ratio__total_branch": "148",
           "cd_ratio_detailed__total_branch": "148",
           "cd_ratio_detailed__deposit_rural": "139300.0",
           "cd_ratio_detailed__deposit_semi_urban": "457900.0",
@@ -5969,7 +5968,8 @@
           "sc_st_loans__sc_disb_amt": "4300.0",
           "sc_st_loans__sc_os_amt": "19500.0",
           "sc_st_loans__st_disb_amt": "1000.0",
-          "sc_st_loans__st_os_amt": "4100.0"
+          "sc_st_loans__st_os_amt": "4100.0",
+          "branch_network__total_branch": "148"
         },
         {
           "district": "Yavatmal",
@@ -5977,7 +5977,6 @@
           "credit_deposit_ratio__total_deposit": "2059900.0",
           "credit_deposit_ratio__total_advances": "1599800.0",
           "credit_deposit_ratio__overall_cd_ratio": "77.67",
-          "credit_deposit_ratio__total_branch": "321",
           "cd_ratio_detailed__total_branch": "321",
           "cd_ratio_detailed__deposit_rural": "396900.0",
           "cd_ratio_detailed__deposit_semi_urban": "898300.0",
@@ -6060,7 +6059,8 @@
           "sc_st_loans__sc_disb_amt": "9300.0",
           "sc_st_loans__sc_os_amt": "39500.0",
           "sc_st_loans__st_disb_amt": "4900.0",
-          "sc_st_loans__st_os_amt": "28500.0"
+          "sc_st_loans__st_os_amt": "28500.0",
+          "branch_network__total_branch": "321"
         }
       ]
     },
@@ -6073,7 +6073,6 @@
           "credit_deposit_ratio__total_deposit": "5100600.0",
           "credit_deposit_ratio__total_advances": "4470200.0",
           "credit_deposit_ratio__overall_cd_ratio": "87.64",
-          "credit_deposit_ratio__total_branch": "771",
           "cd_ratio_detailed__total_branch": "771",
           "cd_ratio_detailed__deposit_rural": "1423200.0",
           "cd_ratio_detailed__deposit_semi_urban": "2106100.0",
@@ -6165,7 +6164,8 @@
           "sc_st_loans__sc_disb_amt": "15200.0",
           "sc_st_loans__sc_os_amt": "47600.0",
           "sc_st_loans__st_disb_amt": "5100.0",
-          "sc_st_loans__st_os_amt": "30500.0"
+          "sc_st_loans__st_os_amt": "30500.0",
+          "branch_network__total_branch": "771"
         },
         {
           "district": "Akola",
@@ -6173,7 +6173,6 @@
           "credit_deposit_ratio__total_deposit": "1766800.0",
           "credit_deposit_ratio__total_advances": "1330200.0",
           "credit_deposit_ratio__overall_cd_ratio": "75.29",
-          "credit_deposit_ratio__total_branch": "247",
           "cd_ratio_detailed__total_branch": "247",
           "cd_ratio_detailed__deposit_rural": "197200.0",
           "cd_ratio_detailed__deposit_semi_urban": "369900.0",
@@ -6265,7 +6264,8 @@
           "sc_st_loans__sc_disb_amt": "14800.0",
           "sc_st_loans__sc_os_amt": "49200.0",
           "sc_st_loans__st_disb_amt": "2500.0",
-          "sc_st_loans__st_os_amt": "9000.0"
+          "sc_st_loans__st_os_amt": "9000.0",
+          "branch_network__total_branch": "247"
         },
         {
           "district": "Amravati",
@@ -6273,7 +6273,6 @@
           "credit_deposit_ratio__total_deposit": "2793400.0",
           "credit_deposit_ratio__total_advances": "2274400.0",
           "credit_deposit_ratio__overall_cd_ratio": "81.42",
-          "credit_deposit_ratio__total_branch": "398",
           "cd_ratio_detailed__total_branch": "398",
           "cd_ratio_detailed__deposit_rural": "410700.0",
           "cd_ratio_detailed__deposit_semi_urban": "636400.0",
@@ -6365,7 +6364,8 @@
           "sc_st_loans__sc_disb_amt": "20000.0",
           "sc_st_loans__sc_os_amt": "72200.0",
           "sc_st_loans__st_disb_amt": "7000.0",
-          "sc_st_loans__st_os_amt": "27300.0"
+          "sc_st_loans__st_os_amt": "27300.0",
+          "branch_network__total_branch": "398"
         },
         {
           "district": "Beed",
@@ -6373,7 +6373,6 @@
           "credit_deposit_ratio__total_deposit": "1678400.0",
           "credit_deposit_ratio__total_advances": "1466700.0",
           "credit_deposit_ratio__overall_cd_ratio": "87.38",
-          "credit_deposit_ratio__total_branch": "231",
           "cd_ratio_detailed__total_branch": "231",
           "cd_ratio_detailed__deposit_rural": "410900.0",
           "cd_ratio_detailed__deposit_semi_urban": "726200.0",
@@ -6444,7 +6443,8 @@
           "sc_st_loans__sc_disb_amt": "15500.0",
           "sc_st_loans__sc_os_amt": "52800.0",
           "sc_st_loans__st_disb_amt": "4400.0",
-          "sc_st_loans__st_os_amt": "12400.0"
+          "sc_st_loans__st_os_amt": "12400.0",
+          "branch_network__total_branch": "231"
         },
         {
           "district": "Bhandara",
@@ -6452,7 +6452,6 @@
           "credit_deposit_ratio__total_deposit": "1102000.0",
           "credit_deposit_ratio__total_advances": "520600.0",
           "credit_deposit_ratio__overall_cd_ratio": "47.24",
-          "credit_deposit_ratio__total_branch": "178",
           "cd_ratio_detailed__total_branch": "178",
           "cd_ratio_detailed__deposit_rural": "365300.0",
           "cd_ratio_detailed__deposit_semi_urban": "735600.0",
@@ -6544,7 +6543,8 @@
           "sc_st_loans__sc_disb_amt": "8800.0",
           "sc_st_loans__sc_os_amt": "31200.0",
           "sc_st_loans__st_disb_amt": "2200.0",
-          "sc_st_loans__st_os_amt": "7300.0"
+          "sc_st_loans__st_os_amt": "7300.0",
+          "branch_network__total_branch": "178"
         },
         {
           "district": "Buldhana",
@@ -6552,7 +6552,6 @@
           "credit_deposit_ratio__total_deposit": "1776200.0",
           "credit_deposit_ratio__total_advances": "1604100.0",
           "credit_deposit_ratio__overall_cd_ratio": "90.31",
-          "credit_deposit_ratio__total_branch": "277",
           "cd_ratio_detailed__total_branch": "277",
           "cd_ratio_detailed__deposit_rural": "260300.0",
           "cd_ratio_detailed__deposit_semi_urban": "1445700.0",
@@ -6644,7 +6643,8 @@
           "sc_st_loans__sc_disb_amt": "13000.0",
           "sc_st_loans__sc_os_amt": "68600.0",
           "sc_st_loans__st_disb_amt": "2900.0",
-          "sc_st_loans__st_os_amt": "14800.0"
+          "sc_st_loans__st_os_amt": "14800.0",
+          "branch_network__total_branch": "277"
         },
         {
           "district": "Chandrapur",
@@ -6652,7 +6652,6 @@
           "credit_deposit_ratio__total_deposit": "2711200.0",
           "credit_deposit_ratio__total_advances": "1310000.0",
           "credit_deposit_ratio__overall_cd_ratio": "48.32",
-          "credit_deposit_ratio__total_branch": "314",
           "cd_ratio_detailed__total_branch": "314",
           "cd_ratio_detailed__deposit_rural": "558500.0",
           "cd_ratio_detailed__deposit_semi_urban": "940800.0",
@@ -6744,7 +6743,8 @@
           "sc_st_loans__sc_disb_amt": "14600.0",
           "sc_st_loans__sc_os_amt": "50700.0",
           "sc_st_loans__st_disb_amt": "5000.0",
-          "sc_st_loans__st_os_amt": "21600.0"
+          "sc_st_loans__st_os_amt": "21600.0",
+          "branch_network__total_branch": "314"
         },
         {
           "district": "Chhatrapati Sambhajinagar",
@@ -6752,7 +6752,6 @@
           "credit_deposit_ratio__total_deposit": "5901200.0",
           "credit_deposit_ratio__total_advances": "5326100.0",
           "credit_deposit_ratio__overall_cd_ratio": "90.25",
-          "credit_deposit_ratio__total_branch": "521",
           "cd_ratio_detailed__total_branch": "521",
           "cd_ratio_detailed__deposit_rural": "619900.0",
           "cd_ratio_detailed__deposit_semi_urban": "696800.0",
@@ -6822,7 +6821,8 @@
           "mudra__mudra_kishore_amt": "72700.0",
           "mudra__mudra_shishu_amt": "14100.0",
           "mudra__mudra_tarun_amt": "40000.0",
-          "pm_kisan_kcc__kcc_amt": "422218.0"
+          "pm_kisan_kcc__kcc_amt": "422218.0",
+          "branch_network__total_branch": "521"
         },
         {
           "district": "Dharashiv",
@@ -6830,7 +6830,6 @@
           "credit_deposit_ratio__total_deposit": "1186600.0",
           "credit_deposit_ratio__total_advances": "993600.0",
           "credit_deposit_ratio__overall_cd_ratio": "83.73",
-          "credit_deposit_ratio__total_branch": "205",
           "cd_ratio_detailed__total_branch": "205",
           "cd_ratio_detailed__deposit_rural": "290300.0",
           "cd_ratio_detailed__deposit_semi_urban": "515600.0",
@@ -6917,7 +6916,8 @@
           "sc_st_loans__sc_disb_amt": "11600.0",
           "sc_st_loans__sc_os_amt": "26700.0",
           "sc_st_loans__st_disb_amt": "3000.0",
-          "sc_st_loans__st_os_amt": "6500.0"
+          "sc_st_loans__st_os_amt": "6500.0",
+          "branch_network__total_branch": "205"
         },
         {
           "district": "Dhule",
@@ -6925,7 +6925,6 @@
           "credit_deposit_ratio__total_deposit": "1462600.0",
           "credit_deposit_ratio__total_advances": "1251800.0",
           "credit_deposit_ratio__overall_cd_ratio": "85.59",
-          "credit_deposit_ratio__total_branch": "205",
           "cd_ratio_detailed__total_branch": "205",
           "cd_ratio_detailed__deposit_rural": "221900.0",
           "cd_ratio_detailed__deposit_semi_urban": "410100.0",
@@ -7017,7 +7016,8 @@
           "sc_st_loans__sc_disb_amt": "5800.0",
           "sc_st_loans__sc_os_amt": "21300.0",
           "sc_st_loans__st_disb_amt": "6800.0",
-          "sc_st_loans__st_os_amt": "35300.0"
+          "sc_st_loans__st_os_amt": "35300.0",
+          "branch_network__total_branch": "205"
         },
         {
           "district": "Gadchiroli",
@@ -7025,7 +7025,6 @@
           "credit_deposit_ratio__total_deposit": "909800.0",
           "credit_deposit_ratio__total_advances": "338100.0",
           "credit_deposit_ratio__overall_cd_ratio": "37.17",
-          "credit_deposit_ratio__total_branch": "141",
           "cd_ratio_detailed__total_branch": "141",
           "cd_ratio_detailed__deposit_rural": "314600.0",
           "cd_ratio_detailed__deposit_semi_urban": "511300.0",
@@ -7117,7 +7116,8 @@
           "sc_st_loans__sc_disb_amt": "8400.0",
           "sc_st_loans__sc_os_amt": "21500.0",
           "sc_st_loans__st_disb_amt": "6800.0",
-          "sc_st_loans__st_os_amt": "24900.0"
+          "sc_st_loans__st_os_amt": "24900.0",
+          "branch_network__total_branch": "141"
         },
         {
           "district": "Gondia",
@@ -7125,7 +7125,6 @@
           "credit_deposit_ratio__total_deposit": "948200.0",
           "credit_deposit_ratio__total_advances": "629800.0",
           "credit_deposit_ratio__overall_cd_ratio": "66.42",
-          "credit_deposit_ratio__total_branch": "161",
           "cd_ratio_detailed__total_branch": "161",
           "cd_ratio_detailed__deposit_rural": "269700.0",
           "cd_ratio_detailed__deposit_semi_urban": "166500.0",
@@ -7217,7 +7216,8 @@
           "sc_st_loans__sc_disb_amt": "8100.0",
           "sc_st_loans__sc_os_amt": "28300.0",
           "sc_st_loans__st_disb_amt": "2500.0",
-          "sc_st_loans__st_os_amt": "11500.0"
+          "sc_st_loans__st_os_amt": "11500.0",
+          "branch_network__total_branch": "161"
         },
         {
           "district": "Hingoli",
@@ -7225,7 +7225,6 @@
           "credit_deposit_ratio__total_deposit": "557600.0",
           "credit_deposit_ratio__total_advances": "532900.0",
           "credit_deposit_ratio__overall_cd_ratio": "95.57",
-          "credit_deposit_ratio__total_branch": "125",
           "cd_ratio_detailed__total_branch": "125",
           "cd_ratio_detailed__deposit_rural": "170400.0",
           "cd_ratio_detailed__deposit_semi_urban": "386600.0",
@@ -7317,7 +7316,8 @@
           "sc_st_loans__sc_disb_amt": "6900.0",
           "sc_st_loans__sc_os_amt": "19700.0",
           "sc_st_loans__st_disb_amt": "2100.0",
-          "sc_st_loans__st_os_amt": "6000.0"
+          "sc_st_loans__st_os_amt": "6000.0",
+          "branch_network__total_branch": "125"
         },
         {
           "district": "Jalgaon",
@@ -7325,7 +7325,6 @@
           "credit_deposit_ratio__total_deposit": "3572600.0",
           "credit_deposit_ratio__total_advances": "2799800.0",
           "credit_deposit_ratio__overall_cd_ratio": "78.37",
-          "credit_deposit_ratio__total_branch": "646",
           "cd_ratio_detailed__total_branch": "646",
           "cd_ratio_detailed__deposit_rural": "659700.0",
           "cd_ratio_detailed__deposit_semi_urban": "1272200.0",
@@ -7417,7 +7416,8 @@
           "sc_st_loans__sc_disb_amt": "15400.0",
           "sc_st_loans__sc_os_amt": "48300.0",
           "sc_st_loans__st_disb_amt": "6100.0",
-          "sc_st_loans__st_os_amt": "21100.0"
+          "sc_st_loans__st_os_amt": "21100.0",
+          "branch_network__total_branch": "646"
         },
         {
           "district": "Jalna",
@@ -7425,7 +7425,6 @@
           "credit_deposit_ratio__total_deposit": "1012000.0",
           "credit_deposit_ratio__total_advances": "1284800.0",
           "credit_deposit_ratio__overall_cd_ratio": "126.96",
-          "credit_deposit_ratio__total_branch": "204",
           "cd_ratio_detailed__total_branch": "204",
           "cd_ratio_detailed__deposit_rural": "172900.0",
           "cd_ratio_detailed__deposit_semi_urban": "261100.0",
@@ -7505,7 +7504,8 @@
           "sc_st_loans__sc_disb_amt": "6900.0",
           "sc_st_loans__sc_os_amt": "27500.0",
           "sc_st_loans__st_disb_amt": "1600.0",
-          "sc_st_loans__st_os_amt": "9300.0"
+          "sc_st_loans__st_os_amt": "9300.0",
+          "branch_network__total_branch": "204"
         },
         {
           "district": "Kolhapur",
@@ -7513,7 +7513,6 @@
           "credit_deposit_ratio__total_deposit": "5419600.0",
           "credit_deposit_ratio__total_advances": "4942700.0",
           "credit_deposit_ratio__overall_cd_ratio": "91.2",
-          "credit_deposit_ratio__total_branch": "665",
           "cd_ratio_detailed__total_branch": "665",
           "cd_ratio_detailed__deposit_rural": "1058000.0",
           "cd_ratio_detailed__deposit_semi_urban": "1136900.0",
@@ -7605,7 +7604,8 @@
           "sc_st_loans__sc_disb_amt": "19400.0",
           "sc_st_loans__sc_os_amt": "65400.0",
           "sc_st_loans__st_disb_amt": "2000.0",
-          "sc_st_loans__st_os_amt": "8700.0"
+          "sc_st_loans__st_os_amt": "8700.0",
+          "branch_network__total_branch": "665"
         },
         {
           "district": "Latur",
@@ -7613,7 +7613,6 @@
           "credit_deposit_ratio__total_deposit": "2068900.0",
           "credit_deposit_ratio__total_advances": "2203200.0",
           "credit_deposit_ratio__overall_cd_ratio": "106.49",
-          "credit_deposit_ratio__total_branch": "332",
           "cd_ratio_detailed__total_branch": "332",
           "cd_ratio_detailed__deposit_rural": "402500.0",
           "cd_ratio_detailed__deposit_semi_urban": "376200.0",
@@ -7701,7 +7700,8 @@
           "sc_st_loans__sc_disb_amt": "16200.0",
           "sc_st_loans__sc_os_amt": "42900.0",
           "sc_st_loans__st_disb_amt": "3900.0",
-          "sc_st_loans__st_os_amt": "11700.0"
+          "sc_st_loans__st_os_amt": "11700.0",
+          "branch_network__total_branch": "332"
         },
         {
           "district": "Mumbai",
@@ -7709,7 +7709,6 @@
           "credit_deposit_ratio__total_deposit": "179101300.0",
           "credit_deposit_ratio__total_advances": "256848500.0",
           "credit_deposit_ratio__overall_cd_ratio": "143.41",
-          "credit_deposit_ratio__total_branch": "991",
           "cd_ratio_detailed__total_branch": "991",
           "cd_ratio_detailed__deposit_rural": "200.0",
           "cd_ratio_detailed__deposit_semi_urban": "",
@@ -7798,7 +7797,8 @@
           "sc_st_loans__sc_disb_amt": "17300.0",
           "sc_st_loans__sc_os_amt": "92400.0",
           "sc_st_loans__st_disb_amt": "4800.0",
-          "sc_st_loans__st_os_amt": "52200.0"
+          "sc_st_loans__st_os_amt": "52200.0",
+          "branch_network__total_branch": "991"
         },
         {
           "district": "Mumbai Suburban",
@@ -7806,7 +7806,6 @@
           "credit_deposit_ratio__total_deposit": "104246600.0",
           "credit_deposit_ratio__total_advances": "65483600.0",
           "credit_deposit_ratio__overall_cd_ratio": "62.82",
-          "credit_deposit_ratio__total_branch": "1450",
           "cd_ratio_detailed__total_branch": "1450",
           "cd_ratio_detailed__deposit_rural": "9000.0",
           "cd_ratio_detailed__deposit_semi_urban": "",
@@ -7869,7 +7868,8 @@
           "sc_st_loans__sc_disb_amt": "27400.0",
           "sc_st_loans__sc_os_amt": "127300.0",
           "sc_st_loans__st_disb_amt": "6100.0",
-          "sc_st_loans__st_os_amt": "29800.0"
+          "sc_st_loans__st_os_amt": "29800.0",
+          "branch_network__total_branch": "1450"
         },
         {
           "district": "Nagpur",
@@ -7877,7 +7877,6 @@
           "credit_deposit_ratio__total_deposit": "14772000.0",
           "credit_deposit_ratio__total_advances": "9692400.0",
           "credit_deposit_ratio__overall_cd_ratio": "65.61",
-          "credit_deposit_ratio__total_branch": "899",
           "cd_ratio_detailed__total_branch": "899",
           "cd_ratio_detailed__deposit_rural": "1055900.0",
           "cd_ratio_detailed__deposit_semi_urban": "1214800.0",
@@ -7969,7 +7968,8 @@
           "sc_st_loans__sc_disb_amt": "56600.0",
           "sc_st_loans__sc_os_amt": "286800.0",
           "sc_st_loans__st_disb_amt": "16000.0",
-          "sc_st_loans__st_os_amt": "82800.0"
+          "sc_st_loans__st_os_amt": "82800.0",
+          "branch_network__total_branch": "899"
         },
         {
           "district": "Nanded",
@@ -7977,7 +7977,6 @@
           "credit_deposit_ratio__total_deposit": "2010400.0",
           "credit_deposit_ratio__total_advances": "2021800.0",
           "credit_deposit_ratio__overall_cd_ratio": "100.57",
-          "credit_deposit_ratio__total_branch": "308",
           "cd_ratio_detailed__total_branch": "308",
           "cd_ratio_detailed__deposit_rural": "329700.0",
           "cd_ratio_detailed__deposit_semi_urban": "505000.0",
@@ -8069,7 +8068,8 @@
           "sc_st_loans__sc_disb_amt": "20900.0",
           "sc_st_loans__sc_os_amt": "69500.0",
           "sc_st_loans__st_disb_amt": "7700.0",
-          "sc_st_loans__st_os_amt": "23600.0"
+          "sc_st_loans__st_os_amt": "23600.0",
+          "branch_network__total_branch": "308"
         },
         {
           "district": "Nandurbar",
@@ -8077,7 +8077,6 @@
           "credit_deposit_ratio__total_deposit": "713200.0",
           "credit_deposit_ratio__total_advances": "570100.0",
           "credit_deposit_ratio__overall_cd_ratio": "79.93",
-          "credit_deposit_ratio__total_branch": "115",
           "cd_ratio_detailed__total_branch": "115",
           "cd_ratio_detailed__deposit_rural": "128400.0",
           "cd_ratio_detailed__deposit_semi_urban": "267600.0",
@@ -8169,7 +8168,8 @@
           "sc_st_loans__sc_disb_amt": "4200.0",
           "sc_st_loans__sc_os_amt": "16600.0",
           "sc_st_loans__st_disb_amt": "14200.0",
-          "sc_st_loans__st_os_amt": "77400.0"
+          "sc_st_loans__st_os_amt": "77400.0",
+          "branch_network__total_branch": "115"
         },
         {
           "district": "Nashik",
@@ -8177,7 +8177,6 @@
           "credit_deposit_ratio__total_deposit": "9836700.0",
           "credit_deposit_ratio__total_advances": "8612400.0",
           "credit_deposit_ratio__overall_cd_ratio": "87.55",
-          "credit_deposit_ratio__total_branch": "844",
           "cd_ratio_detailed__total_branch": "844",
           "cd_ratio_detailed__deposit_rural": "1017000.0",
           "cd_ratio_detailed__deposit_semi_urban": "1929800.0",
@@ -8269,7 +8268,8 @@
           "sc_st_loans__sc_disb_amt": "26000.0",
           "sc_st_loans__sc_os_amt": "111100.0",
           "sc_st_loans__st_disb_amt": "20700.0",
-          "sc_st_loans__st_os_amt": "93300.0"
+          "sc_st_loans__st_os_amt": "93300.0",
+          "branch_network__total_branch": "844"
         },
         {
           "district": "Palghar",
@@ -8277,7 +8277,6 @@
           "credit_deposit_ratio__total_deposit": "4975500.0",
           "credit_deposit_ratio__total_advances": "3475100.0",
           "credit_deposit_ratio__overall_cd_ratio": "69.84",
-          "credit_deposit_ratio__total_branch": "392",
           "cd_ratio_detailed__total_branch": "392",
           "cd_ratio_detailed__deposit_rural": "536900.0",
           "cd_ratio_detailed__deposit_semi_urban": "1314200.0",
@@ -8369,7 +8368,8 @@
           "sc_st_loans__sc_disb_amt": "5100.0",
           "sc_st_loans__sc_os_amt": "28000.0",
           "sc_st_loans__st_disb_amt": "6400.0",
-          "sc_st_loans__st_os_amt": "29700.0"
+          "sc_st_loans__st_os_amt": "29700.0",
+          "branch_network__total_branch": "392"
         },
         {
           "district": "Parbhani",
@@ -8377,7 +8377,6 @@
           "credit_deposit_ratio__total_deposit": "979700.0",
           "credit_deposit_ratio__total_advances": "1119000.0",
           "credit_deposit_ratio__overall_cd_ratio": "114.21",
-          "credit_deposit_ratio__total_branch": "187",
           "cd_ratio_detailed__total_branch": "187",
           "cd_ratio_detailed__deposit_rural": "155600.0",
           "cd_ratio_detailed__deposit_semi_urban": "311400.0",
@@ -8469,7 +8468,8 @@
           "sc_st_loans__sc_disb_amt": "12600.0",
           "sc_st_loans__sc_os_amt": "35400.0",
           "sc_st_loans__st_disb_amt": "3400.0",
-          "sc_st_loans__st_os_amt": "9300.0"
+          "sc_st_loans__st_os_amt": "9300.0",
+          "branch_network__total_branch": "187"
         },
         {
           "district": "Pune",
@@ -8477,7 +8477,6 @@
           "credit_deposit_ratio__total_deposit": "61876800.0",
           "credit_deposit_ratio__total_advances": "53949200.0",
           "credit_deposit_ratio__overall_cd_ratio": "87.19",
-          "credit_deposit_ratio__total_branch": "469",
           "cd_ratio_detailed__total_branch": "2212",
           "cd_ratio_detailed__deposit_rural": "2730000.0",
           "cd_ratio_detailed__deposit_semi_urban": "5256500.0",
@@ -8569,7 +8568,8 @@
           "sc_st_loans__sc_disb_amt": "67500.0",
           "sc_st_loans__sc_os_amt": "304200.0",
           "sc_st_loans__st_disb_amt": "15400.0",
-          "sc_st_loans__st_os_amt": "77300.0"
+          "sc_st_loans__st_os_amt": "77300.0",
+          "branch_network__total_branch": "469"
         },
         {
           "district": "Raigad",
@@ -8577,7 +8577,6 @@
           "credit_deposit_ratio__total_deposit": "7893200.0",
           "credit_deposit_ratio__total_advances": "6921500.0",
           "credit_deposit_ratio__overall_cd_ratio": "87.69",
-          "credit_deposit_ratio__total_branch": "597",
           "cd_ratio_detailed__total_branch": "597",
           "cd_ratio_detailed__deposit_rural": "1872900.0",
           "cd_ratio_detailed__deposit_semi_urban": "2251100.0",
@@ -8665,7 +8664,8 @@
           "sc_st_loans__sc_disb_amt": "13900.0",
           "sc_st_loans__sc_os_amt": "66000.0",
           "sc_st_loans__st_disb_amt": "5300.0",
-          "sc_st_loans__st_os_amt": "17400.0"
+          "sc_st_loans__st_os_amt": "17400.0",
+          "branch_network__total_branch": "597"
         },
         {
           "district": "Ratnagiri",
@@ -8673,7 +8673,6 @@
           "credit_deposit_ratio__total_deposit": "2138000.0",
           "credit_deposit_ratio__total_advances": "1273600.0",
           "credit_deposit_ratio__overall_cd_ratio": "59.57",
-          "credit_deposit_ratio__total_branch": "340",
           "cd_ratio_detailed__total_branch": "340",
           "cd_ratio_detailed__deposit_rural": "709600.0",
           "cd_ratio_detailed__deposit_semi_urban": "1428300.0",
@@ -8765,7 +8764,8 @@
           "sc_st_loans__sc_disb_amt": "5200.0",
           "sc_st_loans__sc_os_amt": "21900.0",
           "sc_st_loans__st_disb_amt": "1200.0",
-          "sc_st_loans__st_os_amt": "6600.0"
+          "sc_st_loans__st_os_amt": "6600.0",
+          "branch_network__total_branch": "340"
         },
         {
           "district": "Sangli",
@@ -8773,7 +8773,6 @@
           "credit_deposit_ratio__total_deposit": "3581500.0",
           "credit_deposit_ratio__total_advances": "3103600.0",
           "credit_deposit_ratio__overall_cd_ratio": "86.66",
-          "credit_deposit_ratio__total_branch": "548",
           "cd_ratio_detailed__total_branch": "548",
           "cd_ratio_detailed__deposit_rural": "944800.0",
           "cd_ratio_detailed__deposit_semi_urban": "972500.0",
@@ -8865,7 +8864,8 @@
           "sc_st_loans__sc_disb_amt": "11200.0",
           "sc_st_loans__sc_os_amt": "142300.0",
           "sc_st_loans__st_disb_amt": "1700.0",
-          "sc_st_loans__st_os_amt": "6800.0"
+          "sc_st_loans__st_os_amt": "6800.0",
+          "branch_network__total_branch": "548"
         },
         {
           "district": "Satara",
@@ -8873,7 +8873,6 @@
           "credit_deposit_ratio__total_deposit": "3977400.0",
           "credit_deposit_ratio__total_advances": "2918400.0",
           "credit_deposit_ratio__overall_cd_ratio": "73.38",
-          "credit_deposit_ratio__total_branch": "665",
           "cd_ratio_detailed__total_branch": "665",
           "cd_ratio_detailed__deposit_rural": "1301900.0",
           "cd_ratio_detailed__deposit_semi_urban": "1646600.0",
@@ -8965,7 +8964,8 @@
           "sc_st_loans__sc_disb_amt": "21500.0",
           "sc_st_loans__sc_os_amt": "46400.0",
           "sc_st_loans__st_disb_amt": "5800.0",
-          "sc_st_loans__st_os_amt": "13000.0"
+          "sc_st_loans__st_os_amt": "13000.0",
+          "branch_network__total_branch": "665"
         },
         {
           "district": "Sindhudurg",
@@ -8973,7 +8973,6 @@
           "credit_deposit_ratio__total_deposit": "1371700.0",
           "credit_deposit_ratio__total_advances": "792100.0",
           "credit_deposit_ratio__overall_cd_ratio": "57.75",
-          "credit_deposit_ratio__total_branch": "261",
           "cd_ratio_detailed__total_branch": "261",
           "cd_ratio_detailed__deposit_rural": "719500.0",
           "cd_ratio_detailed__deposit_semi_urban": "652300.0",
@@ -9065,7 +9064,8 @@
           "sc_st_loans__sc_disb_amt": "3400.0",
           "sc_st_loans__sc_os_amt": "10100.0",
           "sc_st_loans__st_disb_amt": "900.0",
-          "sc_st_loans__st_os_amt": "2000.0"
+          "sc_st_loans__st_os_amt": "2000.0",
+          "branch_network__total_branch": "261"
         },
         {
           "district": "Solapur",
@@ -9073,7 +9073,6 @@
           "credit_deposit_ratio__total_deposit": "4256000.0",
           "credit_deposit_ratio__total_advances": "4002400.0",
           "credit_deposit_ratio__overall_cd_ratio": "94.04",
-          "credit_deposit_ratio__total_branch": "652",
           "cd_ratio_detailed__total_branch": "652",
           "cd_ratio_detailed__deposit_rural": "636400.0",
           "cd_ratio_detailed__deposit_semi_urban": "1498000.0",
@@ -9165,7 +9164,8 @@
           "sc_st_loans__sc_disb_amt": "20900.0",
           "sc_st_loans__sc_os_amt": "82500.0",
           "sc_st_loans__st_disb_amt": "4400.0",
-          "sc_st_loans__st_os_amt": "20900.0"
+          "sc_st_loans__st_os_amt": "20900.0",
+          "branch_network__total_branch": "652"
         },
         {
           "district": "Thane",
@@ -9173,7 +9173,6 @@
           "credit_deposit_ratio__total_deposit": "35114500.0",
           "credit_deposit_ratio__total_advances": "24559000.0",
           "credit_deposit_ratio__overall_cd_ratio": "69.94",
-          "credit_deposit_ratio__total_branch": "1086",
           "cd_ratio_detailed__total_branch": "1246",
           "cd_ratio_detailed__deposit_rural": "534600.0",
           "cd_ratio_detailed__deposit_semi_urban": "544500.0",
@@ -9265,7 +9264,8 @@
           "sc_st_loans__sc_disb_amt": "27500.0",
           "sc_st_loans__sc_os_amt": "193000.0",
           "sc_st_loans__st_disb_amt": "6900.0",
-          "sc_st_loans__st_os_amt": "44800.0"
+          "sc_st_loans__st_os_amt": "44800.0",
+          "branch_network__total_branch": "1086"
         },
         {
           "district": "Wardha",
@@ -9273,7 +9273,6 @@
           "credit_deposit_ratio__total_deposit": "1358100.0",
           "credit_deposit_ratio__total_advances": "1098100.0",
           "credit_deposit_ratio__overall_cd_ratio": "80.85",
-          "credit_deposit_ratio__total_branch": "181",
           "cd_ratio_detailed__total_branch": "181",
           "cd_ratio_detailed__deposit_rural": "267100.0",
           "cd_ratio_detailed__deposit_semi_urban": "336500.0",
@@ -9365,7 +9364,8 @@
           "sc_st_loans__sc_disb_amt": "9600.0",
           "sc_st_loans__sc_os_amt": "61000.0",
           "sc_st_loans__st_disb_amt": "2700.0",
-          "sc_st_loans__st_os_amt": "32700.0"
+          "sc_st_loans__st_os_amt": "32700.0",
+          "branch_network__total_branch": "181"
         },
         {
           "district": "Washim",
@@ -9373,7 +9373,6 @@
           "credit_deposit_ratio__total_deposit": "641400.0",
           "credit_deposit_ratio__total_advances": "688200.0",
           "credit_deposit_ratio__overall_cd_ratio": "107.3",
-          "credit_deposit_ratio__total_branch": "149",
           "cd_ratio_detailed__total_branch": "149",
           "cd_ratio_detailed__deposit_rural": "143000.0",
           "cd_ratio_detailed__deposit_semi_urban": "461800.0",
@@ -9465,7 +9464,8 @@
           "sc_st_loans__sc_disb_amt": "5700.0",
           "sc_st_loans__sc_os_amt": "20200.0",
           "sc_st_loans__st_disb_amt": "1300.0",
-          "sc_st_loans__st_os_amt": "4200.0"
+          "sc_st_loans__st_os_amt": "4200.0",
+          "branch_network__total_branch": "149"
         },
         {
           "district": "Yavatmal",
@@ -9473,7 +9473,6 @@
           "credit_deposit_ratio__total_deposit": "2115200.0",
           "credit_deposit_ratio__total_advances": "1659100.0",
           "credit_deposit_ratio__overall_cd_ratio": "78.43",
-          "credit_deposit_ratio__total_branch": "323",
           "cd_ratio_detailed__total_branch": "323",
           "cd_ratio_detailed__deposit_rural": "413400.0",
           "cd_ratio_detailed__deposit_semi_urban": "921100.0",
@@ -9565,7 +9564,8 @@
           "sc_st_loans__sc_disb_amt": "12400.0",
           "sc_st_loans__sc_os_amt": "40800.0",
           "sc_st_loans__st_disb_amt": "6600.0",
-          "sc_st_loans__st_os_amt": "29300.0"
+          "sc_st_loans__st_os_amt": "29300.0",
+          "branch_network__total_branch": "323"
         }
       ]
     }
