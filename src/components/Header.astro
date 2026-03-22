@@ -107,21 +107,33 @@ const base = import.meta.env.BASE_URL;
 
   .nav-links {
     display: flex;
-    gap: 28px;
+    gap: 8px;
   }
   .nav-links a {
     font-family: var(--font-sans);
     font-size: 10px;
     font-weight: 600;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--label);
+    color: #555048;
     text-decoration: none;
-    transition: color 0.2s;
-    padding: 2px 0;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 8px 16px;
+    border: 1px solid rgba(224, 221, 216, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    transition: all 0.25s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
   }
   .nav-links a:hover {
     color: var(--text);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
   }
 
   /* ── Page hero ── */
@@ -232,19 +244,32 @@ const base = import.meta.env.BASE_URL;
     .nav-links {
       display: none;
       width: 100%;
-      flex-direction: column;
-      gap: 0;
-      padding-top: 8px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding-top: 10px;
       border-top: 1px solid rgba(224,221,216,0.4);
       margin-top: 10px;
     }
     .nav-links a {
-      padding: 12px 0;
-      font-size: 12px;
-      border-bottom: 1px solid rgba(224,221,216,0.25);
-      color: var(--text, #1a1410);
+      flex: 1 1 auto;
+      text-align: center;
+      padding: 9px 12px;
+      font-size: 9px;
+      color: #888078;
+      background: rgba(0, 0, 0, 0.03);
+      border: none;
+      border-radius: 8px;
+      box-shadow: none;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
     }
-    .nav-links a:last-child { border-bottom: none; }
+    .nav-links a:hover,
+    .nav-links a:active {
+      background: rgba(0, 0, 0, 0.06);
+      transform: none;
+      box-shadow: none;
+    }
     /* Open state */
     :global(.site-header.menu-open) .nav-links {
       display: flex;
