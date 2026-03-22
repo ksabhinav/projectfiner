@@ -266,7 +266,7 @@ const base = import.meta.env.BASE_URL;
     };
 
     // Map init — use fitBounds immediately to avoid layout shift when data loads
-    var map = L.map('map',{center:[22,82.5],zoom:4,minZoom:4,maxZoom:18,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false,preferCanvas:true});
+    var map = L.map('map',{center:[22,82.5],zoom:4,minZoom:4,maxZoom:18,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false,preferCanvas:true,doubleClickZoom:false});
     // Immediately position with panel-aware bounds (no animation) so there's no shift later
     (function() {
       var isMobile = window.innerWidth <= 640;
@@ -911,8 +911,9 @@ const base = import.meta.env.BASE_URL;
               choroLayer.resetStyle(e.target);
               e.target.closeTooltip();
             },
-            click: function(e) {
+            dblclick: function(e) {
               L.DomEvent.stopPropagation(e);
+              L.DomEvent.preventDefault(e);
               focusDistrict(normDist(p.DISTRICT), p.STATE_UT);
             },
           });
@@ -1785,6 +1786,8 @@ const base = import.meta.env.BASE_URL;
   /* ── District Focus Mode ── */
   .district-focus{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:1200;background:rgba(245,244,241,0.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);align-items:center;justify-content:center}
   .district-focus.active{display:flex;animation:focusAppear 0.35s ease}
+  body:has(.district-focus.active) #panel{z-index:1300!important}
+  body:has(.district-focus.active) #time-slider{z-index:1300!important}
   @keyframes focusAppear{0%{opacity:0}0%{opacity:0}100%{opacity:1}}
   .focus-shape-wrap{position:relative;display:flex;align-items:center;justify-content:center}
   .focus-svg{width:380px;height:380px;filter:drop-shadow(4px 6px 12px rgba(0,0,0,0.15));overflow:visible}
