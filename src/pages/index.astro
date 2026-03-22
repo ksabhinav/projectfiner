@@ -536,9 +536,9 @@ const base = import.meta.env.BASE_URL;
         title: 'Aadhaar Authentication',
         desc: 'Tracks Aadhaar linkage and biometric authentication across bank accounts (CASA = Current Account + Savings Account). Critical infrastructure for DBT, AePS, and eKYC.',
         metrics: [
-          { field: 'no_of_aadhaar_seeded_casa', label: 'Aadhaar Seeded CASA', unit: '', desc: 'Accounts where the customer\'s Aadhaar number has been linked to the bank record. This is a prerequisite for DBT, AePS, and any Aadhaar-based service. Doesn\'t mean the account is active — just that the linkage exists.', fallbacks: ['aadhaar_seeded_casa', 'number_of_aadhaar_seeded_casa', 'pct_casa_authentication', 'no_of_aadhaar_seeded', 'aadhaar_seeded', 'pmjdy_aadhaar_seeded', 'aadhaar_card_seeded', 'sum_of_aadhaar_seeded', 'pct_aadhaar_seeding', 'pct_of_casa_aadhaar_seeding'] },
-          { field: 'no_of_operative_casa', label: 'Operative CASA', unit: '', desc: 'Accounts that are operationally active — at least one customer-initiated transaction (debit or credit) in the last 12 months (RBI standard). The broadest activity measure, regardless of Aadhaar status.', fallbacks: ['operative_casa', 'number_of_operative_casa', 'aadhaar_operative_casa', 'operative_sb', 'total_no_of_operative_sb_accounts', 'no_of_eligible_operative_sb_a_c', 'total_no_of_eligible_operative_current_business_accounts'] },
-          { field: 'no_of_authenticated_casa', label: 'Authenticated CASA', unit: '', desc: 'Accounts where the customer has actually used Aadhaar-based biometric authentication (fingerprint/iris) at least once — typically at a Business Correspondent or bank branch. This is a subset of seeded accounts and reflects actual usage of the Aadhaar rails.', fallbacks: ['authenticated_casa', 'number_of_authenticated_casa', 'aadhaar_authenticated_casa', 'number_of_authenticated', 'aadhaar_authenticated_sb_accounts', 'pct_authentication'] },
+          { field: 'no_of_aadhaar_seeded_casa', label: 'Aadhaar Seeded CASA', unit: '', desc: 'Accounts where the customer\'s Aadhaar number has been linked to the bank record. This is a prerequisite for DBT, AePS, and any Aadhaar-based service. Doesn\'t mean the account is active — just that the linkage exists.', fallbacks: ['aadhaar_seeded_casa', 'number_of_aadhaar_seeded_casa', 'no_of_aadhaar_seeded', 'aadhaar_seeded', 'pct_aadhaar_seeding', 'pct_of_casa_aadhaar_seeding'] },
+          { field: 'no_of_operative_casa', label: 'Operative CASA', unit: '', desc: 'Accounts that are operationally active — at least one customer-initiated transaction (debit or credit) in the last 12 months (RBI standard). The broadest activity measure, regardless of Aadhaar status.', fallbacks: ['operative_casa', 'number_of_operative_casa', 'aadhaar_operative_casa', 'operative_sb'] },
+          { field: 'no_of_authenticated_casa', label: 'Authenticated CASA', unit: '', desc: 'Accounts where the customer has actually used Aadhaar-based biometric authentication (fingerprint/iris) at least once — typically at a Business Correspondent or bank branch. This is a subset of seeded accounts and reflects actual usage of the Aadhaar rails.', fallbacks: ['authenticated_casa', 'number_of_authenticated_casa', 'aadhaar_authenticated_casa', 'number_of_authenticated'] },
         ],
       },
     };
@@ -668,7 +668,7 @@ const base = import.meta.env.BASE_URL;
       'digital_transactions': ['digital_payments', 'digital_coverage_savings', 'digital_coverage_savings_p2', 'digital_coverage_business', 'women_finance'],
       'social_security': ['social_security_schemes', 'social_security_claims', 'social_security_2'],
       'pmjdy': ['pmjdy_p2', 'pmjdy_p3', 'pmjdy_p4', 'social_security_schemes', 'pmjdy_2', 'pmjdy_3'],
-      'aadhaar_authentication': ['pmjdy', 'pmjdy_2', 'pmjdy_3', 'digital_transactions', 'fi_kcc', 'digital_coverage_savings', 'women_finance'],
+      'aadhaar_authentication': ['pmjdy', 'pmjdy_2', 'pmjdy_3'],
     };
 
     function normalizePeriod(p) {
