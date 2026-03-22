@@ -13,8 +13,8 @@ const base = import.meta.env.BASE_URL;
 
   <div id="map"></div>
 
+  <div class="info-popover" id="info-popover"></div>
   <div id="panel">
-    <div class="info-popover" id="info-popover"></div>
     <div id="panel-handle"><span></span></div>
     <div id="panel-head">
       <h1>Project <em>FINER</em></h1>
@@ -536,9 +536,9 @@ const base = import.meta.env.BASE_URL;
         title: 'Aadhaar Authentication',
         desc: 'Tracks Aadhaar linkage and biometric authentication across bank accounts (CASA = Current Account + Savings Account). Critical infrastructure for DBT, AePS, and eKYC.',
         metrics: [
-          { field: 'no_of_aadhaar_seeded_casa', label: 'Aadhaar Seeded CASA', unit: '', desc: 'Accounts where the customer\'s Aadhaar number has been linked to the bank record. This is a prerequisite for DBT, AePS, and any Aadhaar-based service. Doesn\'t mean the account is active — just that the linkage exists.', fallbacks: ['aadhaar_seeded_casa', 'number_of_aadhaar_seeded_casa', 'pct_casa_authentication', 'no_of_aadhaar_seeded', 'aadhaar_seeded'] },
-          { field: 'no_of_operative_casa', label: 'Operative CASA', unit: '', desc: 'Accounts that are operationally active — at least one customer-initiated transaction (debit or credit) in the last 12 months (RBI standard). The broadest activity measure, regardless of Aadhaar status.', fallbacks: ['operative_casa', 'number_of_operative_casa', 'aadhaar_operative_casa'] },
-          { field: 'no_of_authenticated_casa', label: 'Authenticated CASA', unit: '', desc: 'Accounts where the customer has actually used Aadhaar-based biometric authentication (fingerprint/iris) at least once — typically at a Business Correspondent or bank branch. This is a subset of seeded accounts and reflects actual usage of the Aadhaar rails.', fallbacks: ['authenticated_casa', 'number_of_authenticated_casa', 'aadhaar_authenticated_casa'] },
+          { field: 'no_of_aadhaar_seeded_casa', label: 'Aadhaar Seeded CASA', unit: '', desc: 'Accounts where the customer\'s Aadhaar number has been linked to the bank record. This is a prerequisite for DBT, AePS, and any Aadhaar-based service. Doesn\'t mean the account is active — just that the linkage exists.', fallbacks: ['aadhaar_seeded_casa', 'number_of_aadhaar_seeded_casa', 'pct_casa_authentication', 'no_of_aadhaar_seeded', 'aadhaar_seeded', 'pmjdy_aadhaar_seeded', 'aadhaar_card_seeded', 'sum_of_aadhaar_seeded', 'pct_aadhaar_seeding', 'pct_of_casa_aadhaar_seeding'] },
+          { field: 'no_of_operative_casa', label: 'Operative CASA', unit: '', desc: 'Accounts that are operationally active — at least one customer-initiated transaction (debit or credit) in the last 12 months (RBI standard). The broadest activity measure, regardless of Aadhaar status.', fallbacks: ['operative_casa', 'number_of_operative_casa', 'aadhaar_operative_casa', 'operative_sb', 'total_no_of_operative_sb_accounts', 'no_of_eligible_operative_sb_a_c', 'total_no_of_eligible_operative_current_business_accounts'] },
+          { field: 'no_of_authenticated_casa', label: 'Authenticated CASA', unit: '', desc: 'Accounts where the customer has actually used Aadhaar-based biometric authentication (fingerprint/iris) at least once — typically at a Business Correspondent or bank branch. This is a subset of seeded accounts and reflects actual usage of the Aadhaar rails.', fallbacks: ['authenticated_casa', 'number_of_authenticated_casa', 'aadhaar_authenticated_casa', 'number_of_authenticated', 'aadhaar_authenticated_sb_accounts', 'pct_authentication'] },
         ],
       },
     };
@@ -668,7 +668,7 @@ const base = import.meta.env.BASE_URL;
       'digital_transactions': ['digital_payments', 'digital_coverage_savings', 'digital_coverage_savings_p2', 'digital_coverage_business', 'women_finance'],
       'social_security': ['social_security_schemes', 'social_security_claims', 'social_security_2'],
       'pmjdy': ['pmjdy_p2', 'pmjdy_p3', 'pmjdy_p4', 'social_security_schemes', 'pmjdy_2', 'pmjdy_3'],
-      'aadhaar_authentication': ['pmjdy'],
+      'aadhaar_authentication': ['pmjdy', 'pmjdy_2', 'pmjdy_3', 'digital_transactions', 'fi_kcc', 'digital_coverage_savings', 'women_finance'],
     };
 
     function normalizePeriod(p) {
@@ -1286,11 +1286,10 @@ const base = import.meta.env.BASE_URL;
         }
         if (!text) { popover.classList.remove('visible'); return; }
         popover.textContent = text;
-        // Position at top-right of the (i) button
+        // Position at top-right of the (i) button (fixed positioning, viewport coords)
         var rect = btn.getBoundingClientRect();
-        var panelRect = document.getElementById('panel').getBoundingClientRect();
-        popover.style.left = (rect.right - panelRect.left + 6) + 'px';
-        popover.style.top = (rect.top - panelRect.top - 8) + 'px';
+        popover.style.left = (rect.right + 8) + 'px';
+        popover.style.top = (rect.top - 8) + 'px';
         popover.classList.add('visible');
       }
 
@@ -1832,7 +1831,7 @@ const base = import.meta.env.BASE_URL;
   .select-with-info .finput{flex:1}
   .info-btn{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;border:1px solid #ccc8c0;background:transparent;color:#aaa09a;font-family:'Inter',sans-serif;font-size:9px;font-weight:700;font-style:italic;cursor:help;padding:0;line-height:1;transition:all 0.15s;flex-shrink:0;position:relative}
   .info-btn:hover{border-color:#b8603e;color:#b8603e;background:rgba(184,96,62,0.06)}
-  .info-popover{display:none;position:absolute;z-index:2000;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.6);border-radius:8px;padding:10px 12px;box-shadow:0 4px 20px rgba(0,0,0,0.08);font-family:'Inter',sans-serif;font-size:10px;font-weight:400;color:#555048;line-height:1.6;width:220px;pointer-events:none;animation:infoAppear 0.15s ease}
+  .info-popover{display:none;position:fixed;z-index:2000;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.6);border-radius:8px;padding:10px 12px;box-shadow:0 4px 20px rgba(0,0,0,0.08);font-family:'Inter',sans-serif;font-size:10px;font-weight:400;color:#555048;line-height:1.6;width:220px;pointer-events:none;animation:infoAppear 0.15s ease}
   .info-popover.visible{display:block}
   @keyframes infoAppear{0%{opacity:0;transform:translateY(-4px)}100%{opacity:1;transform:translateY(0)}}
 
