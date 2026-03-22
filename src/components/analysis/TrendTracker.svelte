@@ -148,6 +148,12 @@
     isNpa: boolean;
   }
 
+  // Categories to exclude — administrative data, not financial indicators
+  const EXCLUDED_CATEGORIES = new Set([
+    'ldm_details', 'dcc_meetings', 'flc_report', 'financial_literacy',
+    'ads_progress', 'district_misc',
+  ]);
+
   let allMetrics: MetricInfo[] = $derived.by(() => {
     if (districtRecords.length === 0) return [];
 
@@ -156,6 +162,8 @@
     for (const r of districtRecords) {
       for (const key of Object.keys(r)) {
         if (key.includes('__') && key !== 'as_on_date') {
+          const cat = key.split('__')[0];
+          if (EXCLUDED_CATEGORIES.has(cat)) continue;
           fieldSet.add(key);
         }
       }
