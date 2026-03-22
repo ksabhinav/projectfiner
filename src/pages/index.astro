@@ -19,6 +19,7 @@ const base = import.meta.env.BASE_URL;
       <h1>Project <em>FINER</em></h1>
       <p class="panel-sub">Financial Inclusion in the North East Region</p>
       <p class="panel-stats">361 Districts &middot; 16 States &middot; 7 Indicators</p>
+      <p class="panel-hint">Double-click a district to focus</p>
 
     </div>
 
@@ -1649,6 +1650,7 @@ const base = import.meta.env.BASE_URL;
   #panel-head h1 em{font-style:italic;font-weight:400}
   .panel-sub{font-family:'Inter',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;color:#aaa09a;line-height:1.5}
   .panel-stats{font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.06em;color:#b8603e;margin-top:8px;opacity:0.7}
+  .panel-hint{font-family:'Inter',sans-serif;font-size:9px;font-weight:400;color:#bbb5ad;margin-top:4px;font-style:italic}
 
 
   #panel-body{padding:16px 24px 18px}
@@ -1820,6 +1822,7 @@ const base = import.meta.env.BASE_URL;
     #panel-head::after{display:none}
     .panel-sub{display:none}
     .panel-stats{display:none}
+    .panel-hint{display:none}
 
     /* Mobile quick-nav row inside panel head */
 
