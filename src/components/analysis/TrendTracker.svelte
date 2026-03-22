@@ -225,26 +225,17 @@
   let availableCategories: string[] = $derived.by(() => {
     const cats = new Set<string>();
     for (const m of allMetrics) cats.add(m.category);
-    return [...cats].sort();
-  });
-
-  // Group available categories by tier
-  let groupedCategories: { tier: string; cats: string[] }[] = $derived.by(() => {
+    // Sort by tier order: core FI first, then agri, govt schemes, MSME, other
     const tierOrder = Object.keys(CATEGORY_TIERS);
-    const groups: { tier: string; cats: string[] }[] = [];
-    for (const tier of tierOrder) {
-      const tierCats = availableCategories.filter(c => getCategoryTier(c) === tier);
-      if (tierCats.length > 0) groups.push({ tier, cats: tierCats });
-    }
-    // Any uncategorized
-    const allTierCats = new Set(Object.values(CATEGORY_TIERS).flat());
-    const orphans = availableCategories.filter(c => !allTierCats.has(c));
-    if (orphans.length > 0) {
-      const otherGroup = groups.find(g => g.tier === 'Other');
-      if (otherGroup) otherGroup.cats.push(...orphans);
-      else groups.push({ tier: 'Other', cats: orphans });
-    }
-    return groups;
+    const allOrdered = tierOrder.flatMap(t => CATEGORY_TIERS[t]);
+    return [...cats].sort((a, b) => {
+      const ai = allOrdered.indexOf(a);
+      const bi = allOrdered.indexOf(b);
+      if (ai === -1 && bi === -1) return a.localeCompare(b);
+      if (ai === -1) return 1;
+      if (bi === -1) return -1;
+      return ai - bi;
+    });
   });
 
   // Derived: filtered metrics based on category filter
@@ -512,7 +503,7 @@
       </div>
     {/if}
 
-    <!-- Category filter pills grouped by tier -->
+    <!-- Category filter pills (ordered: core FI first) -->
     {#if availableCategories.length > 0}
       <div class="category-pills">
         <button
@@ -522,22 +513,15 @@
         >
           All ({allMetrics.length})
         </button>
-        {#each groupedCategories as group}
-          <div class="tier-group">
-            <div class="tier-label">{group.tier}</div>
-            <div class="tier-pills">
-              {#each group.cats as cat}
-                {@const count = allMetrics.filter(m => m.category === cat).length}
-                <button
-                  class="cat-pill"
-                  class:active={selectedCategoryFilter === cat}
-                  onclick={() => selectedCategoryFilter = cat}
-                >
-                  {CATEGORY_INFO[cat] || prettyCategoryName(cat)} ({count})
-                </button>
-              {/each}
-            </div>
-          </div>
+        {#each availableCategories as cat}
+          {@const count = allMetrics.filter(m => m.category === cat).length}
+          <button
+            class="cat-pill"
+            class:active={selectedCategoryFilter === cat}
+            onclick={() => selectedCategoryFilter = cat}
+          >
+            {CATEGORY_INFO[cat] || prettyCategoryName(cat)} ({count})
+          </button>
         {/each}
       </div>
     {/if}
@@ -769,25 +753,6 @@
 
   /* Category pills */
   .category-pills {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .tier-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .tier-label {
-    font-family: var(--font-sans);
-    font-size: 9px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--accent);
-    padding-left: 2px;
-  }
-  .tier-pills {
     display: flex;
     gap: 6px;
     flex-wrap: wrap;
