@@ -19,7 +19,7 @@ const base = import.meta.env.BASE_URL;
     <div id="panel-head">
       <h1>Project <em>FINER</em></h1>
       <p class="panel-sub">Financial Inclusion Across India</p>
-      <p class="panel-stats">540+ Districts &middot; 22 States &middot; 15 Indicators</p>
+      <p class="panel-stats">800+ Districts &middot; 36 States &middot; 15 Indicators</p>
       <p class="panel-hint">Double-click a district to focus</p>
 
     </div>
@@ -257,7 +257,7 @@ const base = import.meta.env.BASE_URL;
     var ALL_STATES_BOUNDS = L.latLngBounds(L.latLng(8, 68), L.latLng(31, 97.5)); // All 20 states incl HR
     var NE_CENTER    = [20, 82.5]; // Visual center of all 19 states (lat 8-30, lng 68-97.5)
     var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK','BR','WB','JH','OR','CT','KL','KA','TN','RJ','GJ','MH','HR','TS','UK'];
-    var NE_STATES    = ['ASSAM','MEGHALAYA','MANIPUR','MIZORAM','NAGALAND','TRIPURA','ARUNACHAL PRADESH','SIKKIM','BIHAR','WEST BENGAL','JHARKHAND','ODISHA','CHHATTISGARH','KERALA','KARNATAKA','TAMIL NADU','RAJASTHAN','GUJARAT','MAHARASHTRA','HARYANA','TELANGANA','UTTARAKHAND'];
+    var NE_STATES    = ['ASSAM','MEGHALAYA','MANIPUR','MIZORAM','NAGALAND','TRIPURA','ARUNACHAL PRADESH','SIKKIM','BIHAR','WEST BENGAL','JHARKHAND','ODISHA','CHHATTISGARH','KERALA','KARNATAKA','TAMIL NADU','RAJASTHAN','GUJARAT','MAHARASHTRA','HARYANA','TELANGANA','UTTARAKHAND','ANDHRA PRADESH','MADHYA PRADESH','UTTAR PRADESH','PUNJAB','HIMACHAL PRADESH','JAMMU AND KASHMIR','GOA','DELHI','CHANDIGARH','PUDUCHERRY','ANDAMAN AND NICOBAR ISLANDS','DADRA & NAGAR HAVELI & DAMAN & DIU','LADAKH','LAKSHADWEEP'];
     var STATE_SLUGS  = {
       'ASSAM': 'assam', 'MEGHALAYA': 'meghalaya', 'MANIPUR': 'manipur',
       'MIZORAM': 'mizoram', 'NAGALAND': 'nagaland', 'TRIPURA': 'tripura',
@@ -266,9 +266,14 @@ const base = import.meta.env.BASE_URL;
       'ODISHA': 'odisha', 'CHHATTISGARH': 'chhattisgarh',
       'KERALA': 'kerala', 'KARNATAKA': 'karnataka', 'TAMIL NADU': 'tamil-nadu',
       'RAJASTHAN': 'rajasthan', 'GUJARAT': 'gujarat', 'MAHARASHTRA': 'maharashtra',
-      'HARYANA': 'haryana',
-      'TELANGANA': 'telangana',
-      'UTTARAKHAND': 'uttarakhand',
+      'HARYANA': 'haryana', 'TELANGANA': 'telangana', 'UTTARAKHAND': 'uttarakhand',
+      'ANDHRA PRADESH': 'andhra-pradesh', 'MADHYA PRADESH': 'madhya-pradesh',
+      'UTTAR PRADESH': 'uttar-pradesh', 'PUNJAB': 'punjab',
+      'HIMACHAL PRADESH': 'himachal-pradesh', 'JAMMU AND KASHMIR': 'jammu-kashmir',
+      'GOA': 'goa', 'DELHI': 'delhi', 'CHANDIGARH': 'chandigarh',
+      'PUDUCHERRY': 'puducherry', 'ANDAMAN AND NICOBAR ISLANDS': 'andaman-nicobar',
+      'DADRA & NAGAR HAVELI & DAMAN & DIU': 'dadra-nagar-haveli',
+      'LADAKH': 'ladakh', 'LAKSHADWEEP': 'lakshadweep',
     };
 
     // Map init — use fitBounds immediately to avoid layout shift when data loads
