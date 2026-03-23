@@ -25,6 +25,12 @@
     { name: 'Karnataka', slug: 'karnataka' },
     { name: 'Kerala', slug: 'kerala' },
     { name: 'Tamil Nadu', slug: 'tamil-nadu' },
+    { name: 'Gujarat', slug: 'gujarat' },
+    { name: 'Rajasthan', slug: 'rajasthan' },
+    { name: 'Maharashtra', slug: 'maharashtra' },
+    { name: 'Haryana', slug: 'haryana' },
+    { name: 'Telangana', slug: 'telangana' },
+    { name: 'Uttarakhand', slug: 'uttarakhand' },
   ];
 
   // NPA-related categories where a decrease is good
