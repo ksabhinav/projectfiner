@@ -161,7 +161,11 @@ u = website, st = state, loc = city/location, t = type, arn = ARN, c = city
 Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) quarterly PDF booklets.
 
 **Currently available**: 22 states — 8 NE states (Assam, Meghalaya, Manipur, Arunachal Pradesh, Mizoram, Tripura, Nagaland, Sikkim) + Bihar + West Bengal + Jharkhand + Odisha + Chhattisgarh + Kerala + Karnataka + Tamil Nadu + Rajasthan + Gujarat + Maharashtra + Haryana + Telangana + Uttarakhand
-**NE Source**: [SLBC NE - Meghalaya Booklets](https://slbcne.nic.in/meghalaya/booklet.php)
+**NE Data Hierarchy (CRITICAL)**:
+1. **`onlineslbcne.nic.in`** (online portal) = **PRIMARY/GOLD STANDARD** for all 8 NE states. This structured data must NEVER be overwritten by PDF extraction. It has cleaner, more reliable data.
+2. **`slbcne.nic.in`** (PDF booklets) = **FALLBACK** — only used to fill gaps for data/categories not available on the online portal.
+**NE Portal Source**: [onlineslbcne.nic.in](https://onlineslbcne.nic.in) — structured data for all 8 NE states
+**NE PDF Source**: [SLBC NE - Meghalaya Booklets](https://slbcne.nic.in/meghalaya/booklet.php) — quarterly PDF booklets (fallback)
 **Bihar Source**: [SLBC Bihar Agenda Papers](https://www.slbcbihar.com/SlBCHeldMeeting.aspx) (44th–95th meetings)
 **West Bengal Source**: SLBC WB Agenda Papers (130th–171st meetings), PDFs stored in `slbc-data/west-bengal/`
 **Jharkhand/Odisha/Chhattisgarh Source**: NE-style extraction from respective SLBC booklets

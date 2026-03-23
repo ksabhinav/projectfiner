@@ -568,7 +568,12 @@
           {@const validVals = metric.values.filter(v => !isNaN(v))}
           {@const minVal = Math.min(...validVals)}
           {@const maxVal = Math.max(...validVals)}
-          {@const range = maxVal - minVal || 1}
+          {@const meanVal = validVals.reduce((a, b) => a + b, 0) / validVals.length}
+          {@const naturalRange = maxVal - minVal || 1}
+          {@const minRange = meanVal * 0.3 || 1}
+          {@const range = Math.max(naturalRange, minRange)}
+          {@const adjustedMin = meanVal - range / 2}
+          {@const adjustedMax = meanVal + range / 2}
           {@const sparkPoints = metric.values
             .map((v, i) => {
               if (isNaN(v)) return null;
@@ -576,7 +581,7 @@
             })
             .filter(Boolean) as { x: number; y: number }[]}
           {@const polyline = sparkPoints
-            .map((p, i) => `${(i / Math.max(sparkPoints.length - 1, 1)) * 80},${30 - ((p.y - minVal) / range) * 28}`)
+            .map((p, i) => `${(i / Math.max(sparkPoints.length - 1, 1)) * 80},${30 - ((p.y - adjustedMin) / range) * 28}`)
             .join(' ')}
 
           <button
