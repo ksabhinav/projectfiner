@@ -98,12 +98,12 @@ const base = import.meta.env.BASE_URL;
           <span class="flabel">Indicator</span>
           <div class="select-with-info">
             <select class="finput banking-input" id="sel-indicator">
-              <option value="credit_deposit_ratio" selected>Credit-Deposit Ratio</option>
+              <option value="digital_transactions" selected>Digital Transactions</option>
+              <option value="credit_deposit_ratio">Credit-Deposit Ratio</option>
               <option value="pmjdy">PM Jan Dhan Yojana</option>
               <option value="branch_network">Branch Network</option>
               <option value="kcc">Kisan Credit Card</option>
               <option value="shg">Self Help Groups</option>
-              <option value="digital_transactions">Digital Transactions</option>
               <option value="aadhaar_authentication">Aadhaar Authentication</option>
               <option value="social_security">Social Security (PMSBY/PMJJBY/APY)</option>
               <option value="pmegp">PM Employment Generation</option>
@@ -113,7 +113,6 @@ const base = import.meta.env.BASE_URL;
               <option value="women_finance">Women's Credit</option>
               <option value="education_loan">Education Loans</option>
               <option value="pmmy_mudra_disbursement">MUDRA / PMMY</option>
-              <option value="phonepe_upi">UPI Transactions (PhonePe)</option>
             </select>
             <button class="info-btn" id="info-indicator" type="button">i</button>
           </div>
@@ -520,15 +519,16 @@ const base = import.meta.env.BASE_URL;
       },
       digital_transactions: {
         title: 'Digital Transactions',
-        desc: 'Coverage of digital payment modes across savings bank accounts. Tracks how many accounts have access to at least one digital channel — UPI, IMPS, debit cards, USSD, or internet banking.',
+        desc: 'Digital payment adoption across districts — UPI transaction data from PhonePe Pulse (covers ~48% of India\'s UPI volume) plus SLBC digital coverage metrics for savings bank accounts.',
         metrics: [
-          { field: 'coverage_sb_pct', label: 'SB Digital Coverage %', unit: '%', desc: 'Percentage of operative savings bank accounts covered by at least one digital payment mode (RuPay card, UPI, IMPS, USSD, or internet banking). The headline digital inclusion metric.', fallbacks: ['coverage_pct', 'achievement', 'pct_coverage', 'pct_coverag_e_h', 'pct_coverage_9688', 'of_such_accounts_out_of_total_operative_savings_accounts'] },
+          { field: 'transaction_count', label: 'UPI Transaction Count (PhonePe)', unit: '', desc: 'Total UPI transactions processed through PhonePe in the district during the quarter. PhonePe handles ~48% of all UPI transactions in India, making this a strong proxy for district-level digital payment adoption. Covers P2P transfers, merchant payments, and bill payments.' },
+          { field: 'transaction_amount', label: 'UPI Transaction Amount (PhonePe)', unit: '₹', desc: 'Total value of UPI transactions in Rs. Lakhs via PhonePe. A proxy for digital economic activity and cashless adoption in the district.' },
+          { field: 'coverage_sb_pct', label: 'SB Digital Coverage %', unit: '%', desc: 'Percentage of operative savings bank accounts covered by at least one digital payment mode (RuPay card, UPI, IMPS, USSD, or internet banking). The headline digital inclusion metric from SLBC data.', fallbacks: ['coverage_pct', 'achievement', 'pct_coverage', 'pct_coverag_e_h', 'pct_coverage_9688', 'of_such_accounts_out_of_total_operative_savings_accounts'] },
           { field: 'digital_coverage_sb_a_c', label: 'SB A/Cs Digitally Covered', unit: '', desc: 'Absolute number of savings bank accounts that have been enabled with at least one digital payment mode.', fallbacks: ['total_operative_sb_a_c', 'no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode', 'debit_rupay_cards_coverage_total_no_of_accounts_covered', 'debit_rupay_cards_coverage_total_no_of_accounts_covered_g', 'coverage_with_at_least_one_of_the_digital_modes_of_payment_debit_rupay_cards,_in'] },
-          { field: 'bhim_upi_a_c', label: 'BHIM/UPI Transactions', unit: '', desc: 'Accounts enabled for UPI payments via BHIM or other UPI apps. UPI is the fastest growing digital payment channel in India with 14+ billion monthly transactions.', fallbacks: ['bhim_upi', 'bhim_aadhaar_a_c', 'digital_bhim_upi_no'] },
-          { field: 'imps_a_c', label: 'IMPS Transactions', unit: '', desc: 'Accounts enabled for Immediate Payment Service — real-time interbank transfers via mobile/internet banking. Available 24x7 including holidays.', fallbacks: ['imps', 'digital_imps_no'] },
-          { field: 'cards_debit_credit_a_c', label: 'Card Transactions', unit: '', desc: 'Accounts with active debit or credit cards that can be used at ATMs and PoS terminals. Includes RuPay, Visa, and Mastercard.', fallbacks: ['cards_debit_credit', 'cards_debit', 'digital_cards_no'] },
-          { field: 'ussd_a_c', label: 'USSD Transactions', unit: '', desc: 'Accounts enabled for *99# USSD-based banking — works on basic feature phones without internet. Designed for rural areas with limited smartphone/internet penetration.', fallbacks: ['ussd', 'digital_ussd_no'] },
-          { field: 'bharat_qr_code_a_c', label: 'Bharat QR Transactions', unit: '', desc: 'Accounts enabled for Bharat QR code payments — an interoperable QR standard that works across RuPay, Visa, Mastercard, and UPI.' },
+          { field: 'bhim_upi_a_c', label: 'BHIM/UPI A/Cs (SLBC)', unit: '', desc: 'Accounts enabled for UPI payments via BHIM or other UPI apps, as reported in SLBC booklets.', fallbacks: ['bhim_upi', 'bhim_aadhaar_a_c', 'digital_bhim_upi_no'] },
+          { field: 'imps_a_c', label: 'IMPS Transactions', unit: '', desc: 'Accounts enabled for Immediate Payment Service — real-time interbank transfers via mobile/internet banking.', fallbacks: ['imps', 'digital_imps_no'] },
+          { field: 'cards_debit_credit_a_c', label: 'Card Transactions', unit: '', desc: 'Accounts with active debit or credit cards that can be used at ATMs and PoS terminals.', fallbacks: ['cards_debit_credit', 'cards_debit', 'digital_cards_no'] },
+          { field: 'ussd_a_c', label: 'USSD Transactions', unit: '', desc: 'Accounts enabled for *99# USSD-based banking — works on basic feature phones without internet.', fallbacks: ['ussd', 'digital_ussd_no'] },
         ],
       },
       aadhaar_authentication: {
@@ -615,14 +615,6 @@ const base = import.meta.env.BASE_URL;
           { field: 'of_which_girl_student_disb_amt', label: 'Girl Student Amount', unit: '₹', desc: 'Loan amount disbursed to girl students in Rs. Lakhs.', fallbacks: ['of_which_girl_student_sanctioned_amt', 'of_which_girl_student_o_s_amt'] },
         ],
       },
-      phonepe_upi: {
-        title: 'UPI Transactions (PhonePe)',
-        desc: 'District-level UPI transaction data from PhonePe Pulse. PhonePe processes ~48% of all UPI transactions in India. Data covers transaction count and value for all districts, FY2020-FY2025.',
-        metrics: [
-          { field: 'transaction_count', label: 'Transaction Count', unit: '', desc: 'Total number of UPI transactions processed through PhonePe in the district during the quarter. Includes P2P transfers, merchant payments, and bill payments.' },
-          { field: 'transaction_amount', label: 'Transaction Amount', unit: '₹', desc: 'Total value of UPI transactions in Rs. Lakhs. A proxy for digital payment adoption and economic activity in the district.' },
-        ],
-      },
       pmmy_mudra_disbursement: {
         title: 'MUDRA / PMMY',
         desc: 'Pradhan Mantri MUDRA Yojana provides loans up to ₹20 lakh to non-farm micro/small enterprises. Three categories: Shishu (up to ₹50K), Kishore (₹50K-5L), Tarun (₹5L-20L). No collateral, no guarantor, no processing fee.',
@@ -651,7 +643,7 @@ const base = import.meta.env.BASE_URL;
 
     // Banking state
     var slbcData = {};
-    var currentIndicator = 'credit_deposit_ratio';
+    var currentIndicator = 'digital_transactions';
     var currentMetricIdx = 0;
     var currentQuarter = '';
     var bankingStateFilter = '';
@@ -761,7 +753,7 @@ const base = import.meta.env.BASE_URL;
       'credit_deposit_ratio': ['key_indicators', 'district_misc', 'cd_ratio'],
       'kcc': ['fi_kcc', 'kcc_animal_husbandry', 'kcc_fishery', 'kcc_outstanding', 'kcc_fisheries'],
       'shg': ['shg_nrlm', 'nrlm', 'shg_p2', 'shg_p3', 'jlg'],
-      'digital_transactions': ['digital_payments', 'digital_coverage_savings', 'digital_coverage_savings_p2', 'digital_coverage_business', 'women_finance'],
+      'digital_transactions': ['phonepe_upi', 'digital_payments', 'digital_coverage_savings', 'digital_coverage_savings_p2', 'digital_coverage_business', 'women_finance'],
       'social_security': ['social_security_schemes', 'social_security_claims', 'social_security_2', 'apy'],
       'pmjdy': ['pmjdy_p2', 'pmjdy_p3', 'pmjdy_p4', 'social_security_schemes', 'pmjdy_2', 'pmjdy_3'],
       'aadhaar_authentication': ['pmjdy', 'pmjdy_2', 'pmjdy_3'],
@@ -772,7 +764,6 @@ const base = import.meta.env.BASE_URL;
       'women_finance': ['women_finance_2'],
       'education_loan': ['education_loan_2'],
       'pmmy_mudra_disbursement': ['pmmy_mudra_os_npa', 'mudra', 'mudra_2'],
-      'phonepe_upi': [],
     };
 
     function normalizePeriod(p) {
