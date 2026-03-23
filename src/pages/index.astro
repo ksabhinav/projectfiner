@@ -531,6 +531,95 @@ const base = import.meta.env.BASE_URL;
           { field: 'no_of_authenticated_casa', label: 'Authenticated CASA', unit: '', desc: 'Accounts where the customer has actually used Aadhaar-based biometric authentication (fingerprint/iris) at least once — typically at a Business Correspondent or bank branch. This is a subset of seeded accounts and reflects actual usage of the Aadhaar rails.', fallbacks: ['authenticated_casa', 'number_of_authenticated_casa', 'aadhaar_authenticated_casa', 'number_of_authenticated'] },
         ],
       },
+      social_security: {
+        title: 'Social Security Schemes',
+        desc: 'Enrollment in government insurance and pension schemes — PMSBY (accident insurance, ₹20/yr), PMJJBY (life insurance, ₹436/yr), and APY (pension for unorganized sector). Together they form the social protection pillar of financial inclusion.',
+        metrics: [
+          { field: 'enrolment_under_pmsby', label: 'PMSBY Enrollment', unit: '', desc: 'Pradhan Mantri Suraksha Bima Yojana — accidental death & disability insurance at ₹20/year premium. Covers ₹2 lakh for accidental death, ₹1 lakh for partial disability. Auto-debited from bank accounts annually.', fallbacks: ['pmsby_cumml_no', 'pmsby_no', 'eligible_cases_under_pmsby', 'renewals_under_pmsby'] },
+          { field: 'enrolment_under_pmjjby', label: 'PMJJBY Enrollment', unit: '', desc: 'Pradhan Mantri Jeevan Jyoti Bima Yojana — life insurance at ₹436/year premium. Covers ₹2 lakh on death from any cause. Available to bank account holders aged 18-50.', fallbacks: ['pmjjby_cumml_no', 'pmjjby_no', 'eligible_cases_under_pmjjby', 'renewals_under_pmjjby'] },
+          { field: 'enrolment_under_apy', label: 'APY Enrollment', unit: '', desc: 'Atal Pension Yojana — guaranteed minimum pension of ₹1,000-5,000/month after age 60 for unorganized sector workers. Government co-contributes 50% for 5 years for eligible accounts opened before Dec 2015.', fallbacks: ['apy_cumml_no', 'apy_no', 'cumulative_apy_accounts_opened_since_inception', 'apy_accounts_opened_in_current_fy'] },
+          { field: 'total_enrolment_no', label: 'Total Social Security Enrollment', unit: '', desc: 'Combined enrollment across PMSBY, PMJJBY, and APY. A comprehensive measure of social protection coverage in the district.' },
+        ],
+      },
+      pmegp: {
+        title: 'PM Employment Generation',
+        desc: 'PMEGP provides credit-linked subsidy for setting up micro-enterprises in rural and urban areas. Margin money subsidy of 15-35% on projects up to ₹50 lakh (manufacturing) or ₹20 lakh (service). Administered by KVIC/KVIB/DIC.',
+        metrics: [
+          { field: 'cy_disbursed_no', label: 'Disbursed (Current Year)', unit: '', desc: 'Number of PMEGP projects where bank loans have been disbursed in the current financial year.', fallbacks: ['disbursed', 'cy_disbursed_a_c_no', 'disbursement_no', 'mm_disbursed_no_of_prj'] },
+          { field: 'cy_disbursed_amt', label: 'Disbursed Amount (CY)', unit: '₹', desc: 'Total bank loan amount disbursed for PMEGP projects in the current financial year, in Rs. Lakhs.', fallbacks: ['disbursement_amt'] },
+          { field: 'os_no', label: 'Outstanding Projects', unit: '', desc: 'Total PMEGP projects with outstanding bank loans.', fallbacks: ['pmegp_o_s_no'] },
+          { field: 'os_amt', label: 'Outstanding Amount', unit: '₹', desc: 'Total bank credit outstanding under PMEGP in the district, in Rs. Lakhs.', fallbacks: ['pmegp_o_s_amt'] },
+          { field: 'npa_pct', label: 'NPA %', unit: '%', desc: 'Non-performing asset percentage for PMEGP loans. Lower is better.', fallbacks: ['pmegp_npa_pct'] },
+        ],
+      },
+      housing_pmay: {
+        title: 'Housing / PMAY',
+        desc: 'Housing credit access including Pradhan Mantri Awas Yojana (PMAY). PMAY provides interest subsidy of 3-6.5% on home loans for economically weaker sections, lower income groups, and middle income groups.',
+        metrics: [
+          { field: 'rural_housing_loan_o_s_no', label: 'Rural Housing Loans (O/S)', unit: '', desc: 'Number of outstanding housing loans in rural areas.', fallbacks: ['rural_number', 'rural_no'] },
+          { field: 'rural_housing_loan_o_s_amt', label: 'Rural Housing Amount (O/S)', unit: '₹', desc: 'Outstanding rural housing loan amount in Rs. Lakhs.', fallbacks: ['rural_amt'] },
+          { field: 'pmay_o_s_no', label: 'PMAY Loans (O/S)', unit: '', desc: 'Number of outstanding loans under Pradhan Mantri Awas Yojana.', fallbacks: ['current_year_disbursed_under_pmay_no'] },
+          { field: 'pmay_o_s_amt', label: 'PMAY Amount (O/S)', unit: '₹', desc: 'Outstanding loan amount under PMAY in Rs. Lakhs.', fallbacks: ['current_year_disbursed_under_pmay_amt'] },
+          { field: 'housing_loan_ps_o_s_no', label: 'Housing Priority Sector (O/S)', unit: '', desc: 'Outstanding housing loans classified under priority sector lending.', fallbacks: ['total_number'] },
+          { field: 'housing_loan_ps_o_s_amt', label: 'Housing PS Amount (O/S)', unit: '₹', desc: 'Outstanding priority sector housing loan amount in Rs. Lakhs.', fallbacks: ['total_amt'] },
+        ],
+      },
+      sui: {
+        title: 'Stand Up India',
+        desc: 'Facilitates bank loans between ₹10 lakh and ₹1 crore to at least one SC/ST and one woman borrower per bank branch for greenfield enterprises in manufacturing, services, or trading.',
+        metrics: [
+          { field: 'no_of_female_account', label: 'Women Borrowers', unit: '', desc: 'Number of women entrepreneurs who have received Stand Up India loans in the district.', fallbacks: ['current_year_no_of_female_account', 'female_account_no'] },
+          { field: 'sui_o_s_no', label: 'Outstanding Loans', unit: '', desc: 'Total outstanding Stand Up India loan accounts.', fallbacks: ['total_current_year_sui_disb_no'] },
+          { field: 'sui_o_s_amt', label: 'Outstanding Amount', unit: '₹', desc: 'Total outstanding Stand Up India loan amount in Rs. Lakhs.', fallbacks: ['total_current_year_sui_disb_amt'] },
+          { field: 'sui_npa_pct', label: 'NPA %', unit: '%', desc: 'Non-performing asset percentage for Stand Up India loans. Lower is better.' },
+        ],
+      },
+      sc_st_finance: {
+        title: 'SC/ST Lending',
+        desc: 'Bank credit flow to Scheduled Castes and Scheduled Tribes — a key equity dimension of financial inclusion. RBI mandates priority sector lending targets for weaker sections including SC/ST.',
+        metrics: [
+          { field: 'sc_disbursement_no', label: 'SC Disbursement (No.)', unit: '', desc: 'Number of loans disbursed to Scheduled Caste borrowers in the current year.', fallbacks: ['sc_disb_no', 'scheduled_castes_no'] },
+          { field: 'sc_disbursement_amt', label: 'SC Disbursement (₹ Lakhs)', unit: '₹', desc: 'Loan amount disbursed to SC borrowers in Rs. Lakhs.', fallbacks: ['sc_disb_amt', 'scheduled_castes_amt'] },
+          { field: 'st_disbursement_no', label: 'ST Disbursement (No.)', unit: '', desc: 'Number of loans disbursed to Scheduled Tribe borrowers in the current year.', fallbacks: ['st_disb_no', 'scheduled_tribes_no'] },
+          { field: 'st_disbursement_amt', label: 'ST Disbursement (₹ Lakhs)', unit: '₹', desc: 'Loan amount disbursed to ST borrowers in Rs. Lakhs.', fallbacks: ['st_disb_amt', 'scheduled_tribes_amt'] },
+          { field: 'sc_outstanding_no', label: 'SC Outstanding (No.)', unit: '', desc: 'Total outstanding loan accounts for SC borrowers.', fallbacks: ['sc_o_s_no'] },
+          { field: 'st_outstanding_no', label: 'ST Outstanding (No.)', unit: '', desc: 'Total outstanding loan accounts for ST borrowers.', fallbacks: ['st_o_s_no'] },
+        ],
+      },
+      women_finance: {
+        title: 'Women\'s Credit',
+        desc: 'Bank lending to women borrowers across all categories. A gender equity indicator — tracks how much of the formal credit system reaches women, who historically have had lower access to institutional finance.',
+        metrics: [
+          { field: 'o_s_no', label: 'Outstanding Loans (No.)', unit: '', desc: 'Number of outstanding bank loan accounts held by women borrowers.', fallbacks: ['cy_disb_no'] },
+          { field: 'o_s_amt', label: 'Outstanding Amount', unit: '₹', desc: 'Total outstanding bank credit to women borrowers in Rs. Lakhs.', fallbacks: ['cy_disb_amt'] },
+          { field: 'cy_disb_no', label: 'Disbursed (Current Year)', unit: '', desc: 'Number of loans disbursed to women in the current financial year.' },
+          { field: 'cy_disb_amt', label: 'Disbursed Amount (CY)', unit: '₹', desc: 'Loan amount disbursed to women in the current year, in Rs. Lakhs.' },
+        ],
+      },
+      education_loan: {
+        title: 'Education Loans',
+        desc: 'Bank loans for higher education in India and abroad. No collateral required up to ₹7.5 lakh. Interest subsidy available for economically weaker sections under the Central Scheme. Girl students tracked separately.',
+        metrics: [
+          { field: 'sanctioned_no', label: 'Sanctioned (No.)', unit: '', desc: 'Number of education loans sanctioned in the current period.', fallbacks: ['disb_no', 'o_s_no'] },
+          { field: 'sanctioned_amt', label: 'Sanctioned Amount', unit: '₹', desc: 'Total education loan amount sanctioned in Rs. Lakhs.', fallbacks: ['disb_amt', 'o_s_amt', 'amt'] },
+          { field: 'of_which_girl_student_disb_no', label: 'Girl Student Loans', unit: '', desc: 'Education loans disbursed to girl students — tracks gender equity in education credit.', fallbacks: ['of_which_girl_student_sanctioned_no', 'of_which_girl_student_o_s_no'] },
+          { field: 'of_which_girl_student_disb_amt', label: 'Girl Student Amount', unit: '₹', desc: 'Loan amount disbursed to girl students in Rs. Lakhs.', fallbacks: ['of_which_girl_student_sanctioned_amt', 'of_which_girl_student_o_s_amt'] },
+        ],
+      },
+      pmmy_mudra_disbursement: {
+        title: 'MUDRA / PMMY',
+        desc: 'Pradhan Mantri MUDRA Yojana provides loans up to ₹20 lakh to non-farm micro/small enterprises. Three categories: Shishu (up to ₹50K), Kishore (₹50K-5L), Tarun (₹5L-20L). No collateral, no guarantor, no processing fee.',
+        metrics: [
+          { field: 'sishu_no', label: 'Shishu Loans (No.)', unit: '', desc: 'MUDRA loans up to ₹50,000 — for businesses at startup stage. Lowest ticket size, highest volume.', fallbacks: ['shishu_no'] },
+          { field: 'sishu_amt', label: 'Shishu Amount', unit: '₹', desc: 'Total Shishu loan amount disbursed in Rs. Lakhs.', fallbacks: ['shishu_amt'] },
+          { field: 'kishore_no', label: 'Kishore Loans (No.)', unit: '', desc: 'MUDRA loans ₹50,000-5 lakh — for businesses seeking to expand.', fallbacks: ['kishor_no'] },
+          { field: 'kishore_amt', label: 'Kishore Amount', unit: '₹', desc: 'Total Kishore loan amount disbursed in Rs. Lakhs.', fallbacks: ['kishor_amt'] },
+          { field: 'tarun_no', label: 'Tarun Loans (No.)', unit: '', desc: 'MUDRA loans ₹5-20 lakh — for well-established businesses seeking growth capital.' },
+          { field: 'tarun_amt', label: 'Tarun Amount', unit: '₹', desc: 'Total Tarun loan amount disbursed in Rs. Lakhs.' },
+          { field: 'total_mudra_disb_no', label: 'Total MUDRA Disbursed', unit: '', desc: 'Total MUDRA loans disbursed across all three categories.', fallbacks: ['total_mudra_o_s_no'] },
+          { field: 'total_mudra_disb_amt', label: 'Total MUDRA Amount', unit: '₹', desc: 'Total MUDRA loan amount disbursed in Rs. Lakhs.', fallbacks: ['total_mudra_o_s_amt'] },
+        ],
+      },
     };
 
     // Color ramps
@@ -656,9 +745,16 @@ const base = import.meta.env.BASE_URL;
       'kcc': ['fi_kcc', 'kcc_animal_husbandry', 'kcc_fishery', 'kcc_outstanding', 'kcc_fisheries'],
       'shg': ['shg_nrlm', 'nrlm', 'shg_p2', 'shg_p3', 'jlg'],
       'digital_transactions': ['digital_payments', 'digital_coverage_savings', 'digital_coverage_savings_p2', 'digital_coverage_business', 'women_finance'],
-      'social_security': ['social_security_schemes', 'social_security_claims', 'social_security_2'],
+      'social_security': ['social_security_schemes', 'social_security_claims', 'social_security_2', 'apy'],
       'pmjdy': ['pmjdy_p2', 'pmjdy_p3', 'pmjdy_p4', 'social_security_schemes', 'pmjdy_2', 'pmjdy_3'],
       'aadhaar_authentication': ['pmjdy', 'pmjdy_2', 'pmjdy_3'],
+      'pmegp': ['pmegp_2'],
+      'housing_pmay': ['housing_pmay_p2'],
+      'sui': ['stand_up_india'],
+      'sc_st_finance': ['sc_st_lending', 'weaker_section_os'],
+      'women_finance': ['women_finance_2'],
+      'education_loan': ['education_loan_2'],
+      'pmmy_mudra_disbursement': ['pmmy_mudra_os_npa', 'mudra', 'mudra_2'],
     };
 
     function normalizePeriod(p) {
