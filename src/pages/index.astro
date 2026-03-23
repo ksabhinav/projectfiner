@@ -265,55 +265,45 @@ const base = import.meta.env.BASE_URL;
 
     // Map init — use fitBounds immediately to avoid layout shift when data loads
     var map = L.map('map',{center:[22,82.5],zoom:4,minZoom:4,maxZoom:18,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false,preferCanvas:true,doubleClickZoom:false});
-    // Immediately position with panel-aware bounds (no animation) so there's no shift later
-    (function() {
+
+    // Compute panel-aware padding dynamically from actual DOM
+    function getPanelPadding() {
       var isMobile = window.innerWidth <= 640;
-      if (isMobile) {
-        map.fitBounds(ALL_STATES_BOUNDS, { paddingTopLeft: [10, 10], paddingBottomRight: [10, 100], animate: false });
-      } else {
-        map.fitBounds(ALL_STATES_BOUNDS, { paddingTopLeft: [306, 10], paddingBottomRight: [40, 10], animate: false });
-      }
-    })();
+      if (isMobile) return { paddingTopLeft: [10, 10], paddingBottomRight: [10, 100] };
+      var panel = document.getElementById('panel');
+      var panelW = panel ? (panel.offsetWidth + panel.offsetLeft + 16) : 306;
+      var sliderW = 56; // timeline slider width + margin
+      return { paddingTopLeft: [panelW, 10], paddingBottomRight: [sliderW, 10] };
+    }
+
+    // Position map after layout is complete (requestAnimationFrame ensures DOM is rendered)
+    requestAnimationFrame(function() {
+      map.invalidateSize({ animate: false });
+      var pad = getPanelPadding();
+      map.fitBounds(ALL_STATES_BOUNDS, Object.assign({}, pad, { animate: false }));
+    });
+
+    // Refit on window resize (debounced)
+    var resizeTimer;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        map.invalidateSize({ animate: false });
+        var pad = getPanelPadding();
+        map.fitBounds(ALL_STATES_BOUNDS, Object.assign({}, pad, { animate: false }));
+      }, 200);
+    });
+
     L.control.zoom({position:'topright'}).addTo(map);
 
     // Fly to NE with panel-aware centering (single smooth animation)
     function flyToNE(animate) {
-      var isMobile = window.innerWidth <= 640;
-
-      if (isMobile) {
-        // Mobile: use ALL_STATES_BOUNDS (covers KA/KL/TN at lat 8 through NE at lat 29.5)
-        // paddingBottomRight adds extra space at bottom for the collapsed bottom sheet
-        if (animate !== false) {
-          map.flyToBounds(ALL_STATES_BOUNDS, {
-            paddingTopLeft: [10, 10],
-            paddingBottomRight: [10, 100],  // 100px bottom padding for bottom sheet
-            duration: 1.2
-          });
-        } else {
-          map.fitBounds(ALL_STATES_BOUNDS, {
-            paddingTopLeft: [10, 10],
-            paddingBottomRight: [10, 100],
-            animate: false
-          });
-        }
-        return;
-      }
-
-      // Desktop: use fitBounds with asymmetric padding to account for left panel + timeline slider
-      var panelW = 306; // 290px panel + 16px margin
-      var tlW = 40;     // timeline slider width on right
+      map.invalidateSize({ animate: false });
+      var pad = getPanelPadding();
       if (animate !== false) {
-        map.flyToBounds(ALL_STATES_BOUNDS, {
-          paddingTopLeft: [panelW, 10],
-          paddingBottomRight: [tlW, 10],
-          duration: 1.2
-        });
+        map.flyToBounds(ALL_STATES_BOUNDS, Object.assign({}, pad, { duration: 1.2 }));
       } else {
-        map.fitBounds(ALL_STATES_BOUNDS, {
-          paddingTopLeft: [panelW, 10],
-          paddingBottomRight: [tlW, 10],
-          animate: false
-        });
+        map.fitBounds(ALL_STATES_BOUNDS, Object.assign({}, pad, { animate: false }));
       }
     }
 
