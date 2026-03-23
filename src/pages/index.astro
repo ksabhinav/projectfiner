@@ -606,6 +606,14 @@ const base = import.meta.env.BASE_URL;
           { field: 'of_which_girl_student_disb_amt', label: 'Girl Student Amount', unit: '₹', desc: 'Loan amount disbursed to girl students in Rs. Lakhs.', fallbacks: ['of_which_girl_student_sanctioned_amt', 'of_which_girl_student_o_s_amt'] },
         ],
       },
+      phonepe_upi: {
+        title: 'UPI Transactions (PhonePe)',
+        desc: 'District-level UPI transaction data from PhonePe Pulse. PhonePe processes ~48% of all UPI transactions in India. Data covers transaction count and value for all districts, FY2020-FY2025.',
+        metrics: [
+          { field: 'transaction_count', label: 'Transaction Count', unit: '', desc: 'Total number of UPI transactions processed through PhonePe in the district during the quarter. Includes P2P transfers, merchant payments, and bill payments.' },
+          { field: 'transaction_amount', label: 'Transaction Amount', unit: '₹', desc: 'Total value of UPI transactions in Rs. Lakhs. A proxy for digital payment adoption and economic activity in the district.' },
+        ],
+      },
       pmmy_mudra_disbursement: {
         title: 'MUDRA / PMMY',
         desc: 'Pradhan Mantri MUDRA Yojana provides loans up to ₹20 lakh to non-farm micro/small enterprises. Three categories: Shishu (up to ₹50K), Kishore (₹50K-5L), Tarun (₹5L-20L). No collateral, no guarantor, no processing fee.',
@@ -755,6 +763,7 @@ const base = import.meta.env.BASE_URL;
       'women_finance': ['women_finance_2'],
       'education_loan': ['education_loan_2'],
       'pmmy_mudra_disbursement': ['pmmy_mudra_os_npa', 'mudra', 'mudra_2'],
+      'phonepe_upi': [],
     };
 
     function normalizePeriod(p) {
@@ -1305,14 +1314,24 @@ const base = import.meta.env.BASE_URL;
       return records;
     }
 
+    var phonePeData = []; // flat array of {district, period, phonepe_upi__*}
+
     function loadBankingData() {
       var slugs = Object.values(STATE_SLUGS);
-      Promise.all(slugs.map(function(slug) {
+      var slbcPromise = Promise.all(slugs.map(function(slug) {
         return fetch(_B + 'slbc-data/' + slug + '/' + slug + '_fi_slim.json')
           .then(function(r) { return r.ok ? r.json() : null; })
           .then(function(json) { return { slug: slug, data: json }; })
           .catch(function() { return { slug: slug, data: null }; });
-      })).then(function(results) {
+      }));
+      var ppPromise = fetch(_B + 'digital-payments/phonepe_district_timeseries.json')
+        .then(function(r) { return r.ok ? r.json() : null; })
+        .catch(function() { return null; });
+
+      Promise.all([slbcPromise, ppPromise]).then(function(both) {
+        var results = both[0];
+        var ppData = both[1];
+
         for (var i = 0; i < results.length; i++) {
           var r = results[i];
           if (!r.data) { slbcData[r.slug] = []; continue; }
@@ -1322,6 +1341,34 @@ const base = import.meta.env.BASE_URL;
           }
           slbcData[r.slug] = flat;
         }
+
+        // Merge PhonePe data into slbcData by matching state+district+period
+        if (ppData && ppData.periods) {
+          var ppFlat = flattenTimeseries(ppData);
+          for (var pi = 0; pi < ppFlat.length; pi++) {
+            var ppRec = ppFlat[pi];
+            ppRec.period = normalizePeriod(ppRec.period || '');
+            var ppState = ppRec['phonepe_upi__state'] || '';
+            if (!ppState || !slbcData[ppState]) continue;
+            // Find matching SLBC record for this district+period
+            var matched = false;
+            for (var si = 0; si < slbcData[ppState].length; si++) {
+              var sr = slbcData[ppState][si];
+              if (sr.period === ppRec.period && sr.district && ppRec.district &&
+                  sr.district.toUpperCase().replace(/[^A-Z]/g,'') === ppRec.district.toUpperCase().replace(/[^A-Z]/g,'')) {
+                sr['phonepe_upi__transaction_count'] = ppRec['phonepe_upi__transaction_count'];
+                sr['phonepe_upi__transaction_amount'] = ppRec['phonepe_upi__transaction_amount'];
+                matched = true;
+                break;
+              }
+            }
+            // If no SLBC record exists, add PhonePe data as standalone
+            if (!matched) {
+              slbcData[ppState].push(ppRec);
+            }
+          }
+        }
+
         slbcLoaded = true;
         populateMetrics();
         populateSlider();
