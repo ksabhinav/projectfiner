@@ -1,0 +1,3013 @@
+{
+  "canonical_fields": {
+    "credit_deposit_ratio__overall_cd_ratio": {
+      "canonical": "credit_deposit_ratio__overall_cd_ratio",
+      "category": "credit_deposit_ratio",
+      "category_title": "Credit-Deposit Ratio",
+      "field": "overall_cd_ratio",
+      "display_name": "Overall CD Ratio (%)",
+      "unit": "percent",
+      "description": "Credit-deposit ratio",
+      "fallback_fields": [
+        "cd_ratio",
+        "current_c_d_ratio",
+        "cdr",
+        "overall",
+        "cd_ratio_incl_pou"
+      ],
+      "state_variants": {
+        "assam": "credit_deposit_ratio__overall_cd_ratio",
+        "meghalaya": "credit_deposit_ratio__overall_cd_ratio",
+        "manipur": "credit_deposit_ratio__overall_cd_ratio",
+        "arunachal-pradesh": "credit_deposit_ratio__overall_cd_ratio",
+        "mizoram": "credit_deposit_ratio__overall_cd_ratio",
+        "tripura": "credit_deposit_ratio__overall_cd_ratio",
+        "nagaland": "credit_deposit_ratio__overall_cd_ratio",
+        "bihar": "credit_deposit_ratio__cd_ratio",
+        "west-bengal": "credit_deposit_ratio__cd_ratio",
+        "jharkhand": "credit_deposit_ratio__cd_ratio",
+        "odisha": "credit_deposit_ratio__cd_ratio",
+        "chhattisgarh": "credit_deposit_ratio__overall_cd_ratio",
+        "karnataka": "credit_deposit_ratio__cd_ratio",
+        "tamil-nadu": "credit_deposit_ratio__cd_ratio",
+        "rajasthan": "credit_deposit_ratio__overall_cd_ratio",
+        "gujarat": "credit_deposit_ratio__overall_cd_ratio",
+        "maharashtra": "credit_deposit_ratio__overall_cd_ratio",
+        "haryana": "credit_deposit_ratio__cd_ratio",
+        "telangana": "credit_deposit_ratio__overall_cd_ratio",
+        "uttarakhand": "credit_deposit_ratio__overall_cd_ratio"
+      }
+    },
+    "credit_deposit_ratio__total_deposit": {
+      "canonical": "credit_deposit_ratio__total_deposit",
+      "category": "credit_deposit_ratio",
+      "category_title": "Credit-Deposit Ratio",
+      "field": "total_deposit",
+      "display_name": "Total Deposits",
+      "unit": "rupees_lakhs",
+      "description": "Aggregate deposits held in all bank branches",
+      "fallback_fields": [
+        "deposit",
+        "deposits_rural",
+        "september_2025_total_deposit",
+        "total_deposits"
+      ],
+      "state_variants": {
+        "assam": "credit_deposit_ratio__total_deposit",
+        "meghalaya": "credit_deposit_ratio__total_deposit",
+        "manipur": "credit_deposit_ratio__total_deposit",
+        "arunachal-pradesh": "credit_deposit_ratio__total_deposit",
+        "mizoram": "credit_deposit_ratio__total_deposit",
+        "tripura": "credit_deposit_ratio__total_deposit",
+        "nagaland": "credit_deposit_ratio__total_deposit",
+        "bihar": "credit_deposit_ratio__deposit",
+        "west-bengal": "credit_deposit_ratio__total_deposit",
+        "jharkhand": "credit_deposit_ratio__total_deposit",
+        "odisha": "credit_deposit_ratio__total_deposit",
+        "chhattisgarh": "credit_deposit_ratio__total_deposit",
+        "karnataka": "cd_ratio__deposit",
+        "tamil-nadu": "cd_ratio__deposit",
+        "rajasthan": "credit_deposit_ratio__total_deposit",
+        "gujarat": "credit_deposit_ratio__total_deposit",
+        "maharashtra": "credit_deposit_ratio__total_deposit",
+        "telangana": "credit_deposit_ratio__total_deposit",
+        "uttarakhand": "credit_deposit_ratio__total_deposit"
+      }
+    },
+    "credit_deposit_ratio__total_advance": {
+      "canonical": "credit_deposit_ratio__total_advance",
+      "category": "credit_deposit_ratio",
+      "category_title": "Credit-Deposit Ratio",
+      "field": "total_advance",
+      "display_name": "Total Advances",
+      "unit": "rupees_lakhs",
+      "description": "Total outstanding bank credit",
+      "fallback_fields": [
+        "advance",
+        "advances",
+        "total_advance_utilized_in_the_state",
+        "total_advances"
+      ],
+      "state_variants": {
+        "assam": "credit_deposit_ratio__total_advance",
+        "meghalaya": "credit_deposit_ratio__total_advance",
+        "manipur": "credit_deposit_ratio__total_advance",
+        "arunachal-pradesh": "credit_deposit_ratio__total_advance",
+        "mizoram": "credit_deposit_ratio__total_advance",
+        "tripura": "credit_deposit_ratio__total_advance",
+        "nagaland": "credit_deposit_ratio__total_advance",
+        "bihar": "credit_deposit_ratio__advance",
+        "west-bengal": "credit_deposit_ratio__advance",
+        "jharkhand": "credit_deposit_ratio__advances",
+        "odisha": "key_indicators__total_advance_utilized_in_the_state",
+        "chhattisgarh": "credit_deposit_ratio__total_advance",
+        "karnataka": "cd_ratio__advances",
+        "tamil-nadu": "cd_ratio__advance",
+        "rajasthan": "credit_deposit_ratio__total_advances",
+        "gujarat": "credit_deposit_ratio__total_advances",
+        "maharashtra": "credit_deposit_ratio__total_advances",
+        "haryana": "credit_deposit_ratio__advances",
+        "telangana": "credit_deposit_ratio__total_advances",
+        "uttarakhand": "credit_deposit_ratio__total_advances"
+      }
+    },
+    "credit_deposit_ratio__total_branch": {
+      "canonical": "credit_deposit_ratio__total_branch",
+      "category": "credit_deposit_ratio",
+      "category_title": "Credit-Deposit Ratio",
+      "field": "total_branch",
+      "display_name": "Total Branches",
+      "unit": "count",
+      "description": "Number of bank branches in district",
+      "fallback_fields": [
+        "total",
+        "no_of_brs",
+        "total_branches"
+      ],
+      "state_variants": {
+        "manipur": "credit_deposit_ratio__total",
+        "mizoram": "credit_deposit_ratio__total",
+        "karnataka": "cd_ratio__total",
+        "gujarat": "credit_deposit_ratio__total_branch"
+      }
+    },
+    "pmjdy__total_pmjdy_no": {
+      "canonical": "pmjdy__total_pmjdy_no",
+      "category": "pmjdy",
+      "category_title": "PM Jan Dhan Yojana",
+      "field": "total_pmjdy_no",
+      "display_name": "Total PMJDY Accounts",
+      "unit": "count",
+      "description": "Total Jan Dhan accounts opened",
+      "fallback_fields": [
+        "total_no_pmjdy",
+        "pmjdy_no",
+        "total_no",
+        "no_of_pmjdy_accounts",
+        "pmjdy",
+        "total",
+        "number_of_pmjdy_accounts_rural",
+        "total_pmjdy_a_c",
+        "total_no_pmjdy_a_c",
+        "total_a_c",
+        "sum_of_total_a_c",
+        "pmjdy_total_accounts"
+      ],
+      "state_variants": {
+        "assam": "pmjdy__total_pmjdy_no",
+        "meghalaya": "pmjdy__total_pmjdy_no",
+        "manipur": "pmjdy__total_pmjdy_no",
+        "arunachal-pradesh": "pmjdy__total_pmjdy_no",
+        "mizoram": "pmjdy__total_pmjdy_no",
+        "tripura": "pmjdy__no_of_pmjdy_accounts",
+        "nagaland": "pmjdy__total_pmjdy_no",
+        "bihar": "pmjdy__pmjdy_total_accounts",
+        "west-bengal": "pmjdy__total_no_pmjdy_a_c",
+        "jharkhand": "pmjdy__total",
+        "odisha": "pmjdy_p2__total",
+        "tamil-nadu": "pmjdy__total",
+        "maharashtra": "pmjdy__pmjdy_total_accounts",
+        "haryana": "pmjdy__total"
+      }
+    },
+    "pmjdy__no_of_zero_balance_a_c": {
+      "canonical": "pmjdy__no_of_zero_balance_a_c",
+      "category": "pmjdy",
+      "category_title": "PM Jan Dhan Yojana",
+      "field": "no_of_zero_balance_a_c",
+      "display_name": "Zero Balance Accounts",
+      "unit": "count",
+      "description": "PMJDY accounts with zero balance",
+      "fallback_fields": [
+        "zero_balance",
+        "zero_balance_a_c",
+        "zero_balance_account_2",
+        "zero_balance_account"
+      ],
+      "state_variants": {
+        "assam": "pmjdy__no_of_zero_balance_a_c",
+        "meghalaya": "pmjdy__no_of_zero_balance_a_c",
+        "manipur": "pmjdy__no_of_zero_balance_a_c",
+        "arunachal-pradesh": "pmjdy__no_of_zero_balance_a_c",
+        "mizoram": "pmjdy__no_of_zero_balance_a_c",
+        "nagaland": "pmjdy__no_of_zero_balance_a_c",
+        "bihar": "pmjdy__zero_balance_a_c",
+        "west-bengal": "pmjdy__zero_balance_account",
+        "jharkhand": "pmjdy__zero_balance_a_c",
+        "tamil-nadu": "pmjdy__zero_balance_a_c"
+      }
+    },
+    "pmjdy__no_of_aadhaar_seeded": {
+      "canonical": "pmjdy__no_of_aadhaar_seeded",
+      "category": "pmjdy",
+      "category_title": "PM Jan Dhan Yojana",
+      "field": "no_of_aadhaar_seeded",
+      "display_name": "Aadhaar Seeded",
+      "unit": "count",
+      "description": "PMJDY accounts with Aadhaar linked",
+      "fallback_fields": [
+        "aadhaar_seeded",
+        "aadhaar_seeding_pct",
+        "sum_of_aadhaar_seeded"
+      ],
+      "state_variants": {
+        "assam": "pmjdy__no_of_aadhaar_seeded",
+        "meghalaya": "pmjdy__no_of_aadhaar_seeded",
+        "manipur": "pmjdy__no_of_aadhaar_seeded",
+        "arunachal-pradesh": "pmjdy__no_of_aadhaar_seeded",
+        "mizoram": "pmjdy__no_of_aadhaar_seeded",
+        "nagaland": "pmjdy__no_of_aadhaar_seeded",
+        "bihar": "pmjdy__aadhaar_seeded",
+        "west-bengal": "pmjdy__aadhaar_seeded",
+        "jharkhand": "pmjdy__aadhaar_seeded",
+        "tamil-nadu": "pmjdy__aadhaar_seeded",
+        "haryana": "pmjdy__aadhaar_seeded"
+      }
+    },
+    "pmjdy__no_of_rupay_card_issued": {
+      "canonical": "pmjdy__no_of_rupay_card_issued",
+      "category": "pmjdy",
+      "category_title": "PM Jan Dhan Yojana",
+      "field": "no_of_rupay_card_issued",
+      "display_name": "RuPay Cards Issued",
+      "unit": "count",
+      "description": "RuPay debit cards issued to PMJDY holders",
+      "fallback_fields": [
+        "rupay_card_issued",
+        "rupaycard_account",
+        "rupay_card_account",
+        "ar_cu_psaycard_issued"
+      ],
+      "state_variants": {
+        "assam": "pmjdy__no_of_rupay_card_issued",
+        "meghalaya": "pmjdy__no_of_rupay_card_issued",
+        "manipur": "pmjdy__no_of_rupay_card_issued",
+        "arunachal-pradesh": "pmjdy__no_of_rupay_card_issued",
+        "mizoram": "pmjdy__no_of_rupay_card_issued",
+        "nagaland": "pmjdy__no_of_rupay_card_issued",
+        "bihar": "pmjdy__rupay_card_issued",
+        "west-bengal": "pmjdy__rupay_card_issued",
+        "jharkhand": "pmjdy__rupay_card_issued",
+        "tamil-nadu": "pmjdy__rupay_card_issued"
+      }
+    },
+    "pmjdy__female_no": {
+      "canonical": "pmjdy__female_no",
+      "category": "pmjdy",
+      "category_title": "PM Jan Dhan Yojana",
+      "field": "female_no",
+      "display_name": "Female Accounts",
+      "unit": "count",
+      "description": "PMJDY accounts held by women",
+      "fallback_fields": [
+        "no_of_women_pmjdy_accounts",
+        "female",
+        "female_a_c",
+        "sum_of_female_a_c"
+      ],
+      "state_variants": {
+        "assam": "pmjdy__female_no",
+        "meghalaya": "pmjdy__female_no",
+        "manipur": "pmjdy__female_no",
+        "arunachal-pradesh": "pmjdy__female_no",
+        "mizoram": "pmjdy__female_no",
+        "tripura": "pmjdy__no_of_women_pmjdy_accounts",
+        "nagaland": "pmjdy__female_no",
+        "west-bengal": "pmjdy__female_a_c",
+        "jharkhand": "pmjdy__female",
+        "tamil-nadu": "pmjdy__female",
+        "haryana": "pmjdy__female"
+      }
+    },
+    "pmjdy__rural_no": {
+      "canonical": "pmjdy__rural_no",
+      "category": "pmjdy",
+      "category_title": "PM Jan Dhan Yojana",
+      "field": "rural_no",
+      "display_name": "Rural Accounts",
+      "unit": "count",
+      "description": "PMJDY accounts in rural/semi-urban branches",
+      "fallback_fields": [
+        "rural",
+        "rural_a_c",
+        "sum_of_rural_a_c"
+      ],
+      "state_variants": {
+        "assam": "pmjdy__rural_no",
+        "meghalaya": "pmjdy__rural_no",
+        "manipur": "pmjdy__rural_no",
+        "arunachal-pradesh": "pmjdy__rural_no",
+        "mizoram": "pmjdy__rural_no",
+        "nagaland": "pmjdy__rural_no",
+        "west-bengal": "pmjdy__rural_a_c",
+        "tamil-nadu": "pmjdy__rural",
+        "haryana": "pmjdy__rural"
+      }
+    },
+    "branch_network__total_branch": {
+      "canonical": "branch_network__total_branch",
+      "category": "branch_network",
+      "category_title": "Branch Network",
+      "field": "total_branch",
+      "display_name": "Total Branches",
+      "unit": "count",
+      "description": "Total bank branches across all types",
+      "fallback_fields": [
+        "total",
+        "no_of_branches",
+        "total_no_of_br",
+        "total_branche_s",
+        "total_branches",
+        "total_branch_es",
+        "branches_total"
+      ],
+      "state_variants": {
+        "assam": "branch_network__total_branch",
+        "meghalaya": "branch_network__total_branch",
+        "manipur": "branch_network__total_branch",
+        "arunachal-pradesh": "branch_network__total_branch",
+        "mizoram": "branch_network__total_branch",
+        "tripura": "branch_network__total_branch",
+        "nagaland": "branch_network__total_branch",
+        "sikkim": "branch_network__total_branch",
+        "bihar": "branch_network__no_of_branches",
+        "jharkhand": "branch_network__total",
+        "odisha": "branch_network__total_branche_s",
+        "chhattisgarh": "branch_network__total_branch",
+        "karnataka": "branch_network__total",
+        "tamil-nadu": "branch_network__total",
+        "gujarat": "branch_network__total_branch",
+        "maharashtra": "branch_network__total_branch"
+      }
+    },
+    "branch_network__branch_rural": {
+      "canonical": "branch_network__branch_rural",
+      "category": "branch_network",
+      "category_title": "Branch Network",
+      "field": "branch_rural",
+      "display_name": "Rural Branches",
+      "unit": "count",
+      "description": "Branches in centres with population under 10,000",
+      "fallback_fields": [
+        "atm_rural",
+        "rural",
+        "branches_rural"
+      ],
+      "state_variants": {
+        "assam": "branch_network__branch_rural",
+        "meghalaya": "branch_network__branch_rural",
+        "manipur": "branch_network__branch_rural",
+        "arunachal-pradesh": "branch_network__branch_rural",
+        "mizoram": "branch_network__branch_rural",
+        "nagaland": "branch_network__branch_rural",
+        "bihar": "atm_network__atm_rural",
+        "odisha": "branch_network__branches_rural",
+        "chhattisgarh": "branch_network__branch_rural",
+        "karnataka": "branch_network__rural",
+        "tamil-nadu": "branch_network__rural",
+        "gujarat": "branch_network__branch_rural"
+      }
+    },
+    "branch_network__branch_semi_urban": {
+      "canonical": "branch_network__branch_semi_urban",
+      "category": "branch_network",
+      "category_title": "Branch Network",
+      "field": "branch_semi_urban",
+      "display_name": "Semi-Urban Branches",
+      "unit": "count",
+      "description": "Branches in centres with 10K-1L population",
+      "fallback_fields": [
+        "semi_urban",
+        "branches_semi_urban"
+      ],
+      "state_variants": {
+        "assam": "branch_network__branch_semi_urban",
+        "meghalaya": "branch_network__branch_semi_urban",
+        "manipur": "branch_network__branch_semi_urban",
+        "arunachal-pradesh": "branch_network__branch_semi_urban",
+        "mizoram": "branch_network__branch_semi_urban",
+        "nagaland": "branch_network__branch_semi_urban",
+        "bihar": "branch_network__branches_semi_urban",
+        "jharkhand": "branch_network__semi_urban",
+        "odisha": "branch_network__semi_urban",
+        "chhattisgarh": "branch_network__branch_semi_urban",
+        "karnataka": "branch_network__semi_urban",
+        "tamil-nadu": "branch_network__semi_urban",
+        "gujarat": "branch_network__branch_semi_urban"
+      }
+    },
+    "branch_network__branch_urban": {
+      "canonical": "branch_network__branch_urban",
+      "category": "branch_network",
+      "category_title": "Branch Network",
+      "field": "branch_urban",
+      "display_name": "Urban Branches",
+      "unit": "count",
+      "description": "Branches in centres with 1L-10L population",
+      "fallback_fields": [
+        "urban",
+        "branches_urban"
+      ],
+      "state_variants": {
+        "assam": "branch_network__branch_urban",
+        "meghalaya": "branch_network__branch_urban",
+        "manipur": "branch_network__branch_urban",
+        "arunachal-pradesh": "branch_network__branch_urban",
+        "mizoram": "branch_network__branch_urban",
+        "nagaland": "branch_network__branch_urban",
+        "bihar": "branch_network__branches_urban",
+        "jharkhand": "branch_network__urban",
+        "odisha": "branch_network__urban",
+        "chhattisgarh": "branch_network__branch_urban",
+        "karnataka": "branch_network__urban",
+        "tamil-nadu": "branch_network__urban",
+        "gujarat": "branch_network__branch_urban"
+      }
+    },
+    "branch_network__total_atm": {
+      "canonical": "branch_network__total_atm",
+      "category": "branch_network",
+      "category_title": "Branch Network",
+      "field": "total_atm",
+      "display_name": "Total ATMs",
+      "unit": "count",
+      "description": "Total ATMs across all banks",
+      "fallback_fields": [
+        "no_of_atm",
+        "total_atms",
+        "atm_total"
+      ],
+      "state_variants": {
+        "assam": "branch_network__total_atm",
+        "meghalaya": "branch_network__total_atm",
+        "manipur": "branch_network__total_atm",
+        "arunachal-pradesh": "branch_network__total_atm",
+        "mizoram": "branch_network__total_atm",
+        "tripura": "branch_network__total_atm",
+        "nagaland": "branch_network__total_atm",
+        "bihar": "atm_network__atm_total",
+        "odisha": "branch_network__total_atms",
+        "chhattisgarh": "branch_network__total_atm"
+      }
+    },
+    "branch_network__total_csp": {
+      "canonical": "branch_network__total_csp",
+      "category": "branch_network",
+      "category_title": "Branch Network",
+      "field": "total_csp",
+      "display_name": "Total CSPs",
+      "unit": "count",
+      "description": "Customer Service Points (Business Correspondents)",
+      "fallback_fields": [
+        "bc_total",
+        "total_bc"
+      ],
+      "state_variants": {
+        "assam": "branch_network__bc_total",
+        "meghalaya": "branch_network__total_csp",
+        "manipur": "branch_network__total_csp",
+        "arunachal-pradesh": "branch_network__total_csp",
+        "mizoram": "branch_network__bc_total",
+        "nagaland": "branch_network__total_csp",
+        "bihar": "business_correspondents__bc_total",
+        "jharkhand": "business_correspondents__total_bc",
+        "odisha": "branch_network__total_bc"
+      }
+    },
+    "kcc__total_no_of_kcc": {
+      "canonical": "kcc__total_no_of_kcc",
+      "category": "kcc",
+      "category_title": "Kisan Credit Card",
+      "field": "total_no_of_kcc",
+      "display_name": "Total KCC Issued",
+      "unit": "count",
+      "description": "Total Kisan Credit Cards issued",
+      "fallback_fields": [
+        "no_of_kcc",
+        "kcc_no",
+        "total_kcc_no",
+        "total_no",
+        "o_s_position_no_of_cards_issued",
+        "cum_no_app_sanc",
+        "no_of_kcc_issued_during_quarter_including_renewal",
+        "rupay_card_issued_in_kcc",
+        "target_no",
+        "outstanding_at_the_end_of_reporting_quarter_no",
+        "outstanding_at_the_end_of_reporting_quarter_number",
+        "kcc_card_activated_number",
+        "no_of_applications_sanctioned",
+        "kcc_new_target_no",
+        "kcc_outstanding_as_on",
+        "no_of_kcc_issued"
+      ],
+      "state_variants": {
+        "assam": "kcc__total_no_of_kcc",
+        "meghalaya": "kcc__kcc_no",
+        "manipur": "kcc__no_of_kcc_issued_during_quarter_including_renewal",
+        "arunachal-pradesh": "kcc__no_of_kcc_issued_during_quarter_including_renewal",
+        "mizoram": "kcc__total_no",
+        "tripura": "kcc__cum_no_app_sanc",
+        "nagaland": "fi_kcc__rupay_card_issued_in_kcc",
+        "bihar": "kcc_outstanding__no_of_kcc_issued_during_quarter_including_renewal",
+        "west-bengal": "kcc__target_no",
+        "jharkhand": "kcc__outstanding_at_the_end_of_reporting_quarter_no",
+        "odisha": "kcc__no_of_applications_sanctioned",
+        "tamil-nadu": "kcc_animal_husbandry__total_no_of_kcc"
+      }
+    },
+    "kcc__outstanding_amt": {
+      "canonical": "kcc__outstanding_amt",
+      "category": "kcc",
+      "category_title": "Kisan Credit Card",
+      "field": "outstanding_amt",
+      "display_name": "Outstanding Amount",
+      "unit": "rupees_lakhs",
+      "description": "Total credit outstanding under KCC",
+      "fallback_fields": [
+        "total_outstanding",
+        "total_o_s_kcc_amt",
+        "kcc_outstanding",
+        "o_s_position_limit_sanctioned",
+        "kcc_limit_sanctioned_in_rs_lakhs",
+        "amount",
+        "outstanding_at_the_end_of_reporting_quarter_amt",
+        "amt",
+        "amount_disbursed"
+      ],
+      "state_variants": {
+        "assam": "kcc__outstanding_amt",
+        "meghalaya": "kcc__outstanding_amt",
+        "manipur": "kcc__outstanding_amt",
+        "arunachal-pradesh": "kcc__total_outstanding",
+        "mizoram": "kcc__total_outstanding",
+        "tripura": "kcc__kcc_limit_sanctioned_in_rs_lakhs",
+        "nagaland": "kcc__o_s_position_limit_sanctioned",
+        "bihar": "kcc__amt",
+        "west-bengal": "kcc__amount",
+        "jharkhand": "kcc__amount",
+        "tamil-nadu": "kcc_animal_husbandry__amount_disbursed"
+      }
+    },
+    "kcc__no_of_rupay_card_issued": {
+      "canonical": "kcc__no_of_rupay_card_issued",
+      "category": "kcc",
+      "category_title": "Kisan Credit Card",
+      "field": "no_of_rupay_card_issued",
+      "display_name": "RuPay Cards Issued (KCC)",
+      "unit": "count",
+      "description": "KCC holders with RuPay cards",
+      "fallback_fields": [
+        "rupay_card_issued",
+        "out_of_total_kcc_issued,_no_of_rupay_cards_issued_number",
+        "out_of_total_kcc_issued,_no_of_rupay_cards_issued_no"
+      ],
+      "state_variants": {
+        "arunachal-pradesh": "kcc__no_of_rupay_card_issued",
+        "mizoram": "kcc__no_of_rupay_card_issued",
+        "bihar": "kcc_fishery__rupay_card_issued",
+        "jharkhand": "kcc__out_of_total_kcc_issued,_no_of_rupay_cards_issued_number"
+      }
+    },
+    "kcc__kcc_card_activated": {
+      "canonical": "kcc__kcc_card_activated",
+      "category": "kcc",
+      "category_title": "Kisan Credit Card",
+      "field": "kcc_card_activated",
+      "display_name": "Cards Activated",
+      "unit": "count",
+      "description": "KCC cards that have been activated",
+      "fallback_fields": [
+        "card_activated",
+        "kcc_card_activated_no",
+        "kcc_card_activated_number"
+      ],
+      "state_variants": {
+        "assam": "kcc__kcc_card_activated",
+        "meghalaya": "kcc__kcc_card_activated",
+        "manipur": "kcc__kcc_card_activated",
+        "arunachal-pradesh": "kcc__kcc_card_activated",
+        "mizoram": "kcc__kcc_card_activated",
+        "bihar": "kcc_outstanding__kcc_card_activated",
+        "jharkhand": "kcc__kcc_card_activated_no",
+        "tamil-nadu": "kcc_animal_husbandry__kcc_card_activated"
+      }
+    },
+    "shg__savings_linked_no": {
+      "canonical": "shg__savings_linked_no",
+      "category": "shg",
+      "category_title": "Self Help Groups",
+      "field": "savings_linked_no",
+      "display_name": "Savings Linked SHGs",
+      "unit": "count",
+      "description": "SHGs with savings bank accounts",
+      "fallback_fields": [
+        "savings_linked",
+        "credit_linked_no",
+        "credit_linked",
+        "current_fy_savings_linked_no",
+        "no_of_shgs",
+        "deposit_linkage_no_of_groups",
+        "total_sanction_no",
+        "total_sanctioned",
+        "total_shgs_repeat_renewals_enhancement_fy_2025_26",
+        "disburdsement_target_no_of_shgs",
+        "no_of_shgs_credit_linked_as_on_31st_march_2023",
+        "cumulative_achievement_physical_7",
+        "target_physical_3",
+        "disbursement_no",
+        "outstanding_no",
+        "sanctioned_upto_dec25_no",
+        "sanctioned_upto_sep25_no",
+        "sanctioned_upto_jun25_no",
+        "sanctioned_upto_mar25_no",
+        "target_fy_2025_26_no"
+      ],
+      "state_variants": {
+        "assam": "shg__savings_linked_no",
+        "meghalaya": "shg__savings_linked_no",
+        "manipur": "shg__savings_linked_no",
+        "arunachal-pradesh": "shg__savings_linked_no",
+        "mizoram": "shg__savings_linked_no",
+        "tripura": "shg__credit_linked_no",
+        "nagaland": "shg__savings_linked_no",
+        "bihar": "jlg__disbursement_no",
+        "west-bengal": "shg_nrlm__total_sanction_no",
+        "jharkhand": "shg_p2__credit_linked_no",
+        "odisha": "shg__cumulative_achievement_physical_7",
+        "tamil-nadu": "shg__no_of_shgs",
+        "haryana": "shg__savings_linked_no"
+      }
+    },
+    "shg__credit_linked_no": {
+      "canonical": "shg__credit_linked_no",
+      "category": "shg",
+      "category_title": "Self Help Groups",
+      "field": "credit_linked_no",
+      "display_name": "Credit Linked SHGs",
+      "unit": "count",
+      "description": "SHGs that received bank loans",
+      "fallback_fields": [
+        "credit_linked",
+        "current_fy_credit_linked_no",
+        "credit_linkage_loan_given_by_banks_no",
+        "total_disbursement_no"
+      ],
+      "state_variants": {
+        "assam": "shg__credit_linked_no",
+        "meghalaya": "shg__credit_linked_no",
+        "manipur": "shg__credit_linked_no",
+        "arunachal-pradesh": "shg__credit_linked_no",
+        "mizoram": "shg__credit_linked_no",
+        "tripura": "shg__credit_linked_no",
+        "nagaland": "shg__credit_linked_no",
+        "jharkhand": "shg_p2__credit_linked_no",
+        "haryana": "shg__credit_linked_no"
+      }
+    },
+    "shg__shg_o_s_amt": {
+      "canonical": "shg__shg_o_s_amt",
+      "category": "shg",
+      "category_title": "Self Help Groups",
+      "field": "shg_o_s_amt",
+      "display_name": "Outstanding Amount",
+      "unit": "rupees_lakhs",
+      "description": "Total bank loans outstanding to SHGs",
+      "fallback_fields": [
+        "outstanding_amt",
+        "shg_o_s",
+        "outstanding_accounts",
+        "total_outsanding_no",
+        "total_outstanding_amt_rs_in_lakh"
+      ],
+      "state_variants": {
+        "assam": "shg__shg_o_s_amt",
+        "meghalaya": "shg__shg_o_s_amt",
+        "manipur": "shg__shg_o_s_amt",
+        "arunachal-pradesh": "jlg__outstanding_amt",
+        "tripura": "shg__outstanding_amt",
+        "nagaland": "shg__shg_o_s_amt",
+        "west-bengal": "shg_nrlm__outstanding_amt",
+        "jharkhand": "shg__total_outstanding_amt_rs_in_lakh"
+      }
+    },
+    "shg__shg_npa_pct": {
+      "canonical": "shg__shg_npa_pct",
+      "category": "shg",
+      "category_title": "Self Help Groups",
+      "field": "shg_npa_pct",
+      "display_name": "SHG NPA %",
+      "unit": "percent",
+      "description": "Non-Performing Asset percentage for SHG loans",
+      "fallback_fields": [],
+      "state_variants": {
+        "assam": "shg__shg_npa_pct",
+        "manipur": "shg__shg_npa_pct",
+        "arunachal-pradesh": "shg__shg_npa_pct",
+        "nagaland": "shg__shg_npa_pct"
+      }
+    },
+    "digital_transactions__transaction_count": {
+      "canonical": "digital_transactions__transaction_count",
+      "category": "digital_transactions",
+      "category_title": "Digital Transactions",
+      "field": "transaction_count",
+      "display_name": "UPI Transaction Count (PhonePe)",
+      "unit": "count",
+      "description": "UPI transactions via PhonePe",
+      "fallback_fields": [],
+      "state_variants": {}
+    },
+    "digital_transactions__transaction_amount": {
+      "canonical": "digital_transactions__transaction_amount",
+      "category": "digital_transactions",
+      "category_title": "Digital Transactions",
+      "field": "transaction_amount",
+      "display_name": "UPI Transaction Amount (PhonePe)",
+      "unit": "rupees_lakhs",
+      "description": "Value of UPI transactions via PhonePe",
+      "fallback_fields": [],
+      "state_variants": {}
+    },
+    "digital_transactions__coverage_sb_pct": {
+      "canonical": "digital_transactions__coverage_sb_pct",
+      "category": "digital_transactions",
+      "category_title": "Digital Transactions",
+      "field": "coverage_sb_pct",
+      "display_name": "SB Digital Coverage %",
+      "unit": "percent",
+      "description": "Percentage of SB accounts with digital payment mode",
+      "fallback_fields": [
+        "coverage_pct",
+        "achievement",
+        "pct_coverage",
+        "pct_coverag_e_h",
+        "pct_coverage_9688",
+        "of_such_accounts_out_of_total_operative_savings_accounts"
+      ],
+      "state_variants": {
+        "tripura": "digital_transactions__coverage_pct",
+        "sikkim": "digital_transactions__of_such_accounts_out_of_total_operative_savings_accounts",
+        "west-bengal": "digital_transactions__achievement",
+        "odisha": "digital_coverage_savings__pct_coverage"
+      }
+    },
+    "digital_transactions__digital_coverage_sb_a_c": {
+      "canonical": "digital_transactions__digital_coverage_sb_a_c",
+      "category": "digital_transactions",
+      "category_title": "Digital Transactions",
+      "field": "digital_coverage_sb_a_c",
+      "display_name": "SB A/Cs Digitally Covered",
+      "unit": "count",
+      "description": "SB accounts enabled with digital payment mode",
+      "fallback_fields": [
+        "total_operative_sb_a_c",
+        "no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode",
+        "debit_rupay_cards_coverage_total_no_of_accounts_covered",
+        "debit_rupay_cards_coverage_total_no_of_accounts_covered_g",
+        "coverage_with_at_least_one_of_the_digital_modes_of_payment_debit_rupay_cards,_in"
+      ],
+      "state_variants": {
+        "sikkim": "digital_transactions__digital_coverage_sb_a_c",
+        "west-bengal": "digital_transactions__no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode",
+        "jharkhand": "women_finance__coverage_with_at_least_one_of_the_digital_modes_of_payment_debit_rupay_cards,_in",
+        "odisha": "digital_coverage_savings__debit_rupay_cards_coverage_total_no_of_accounts_covered"
+      }
+    },
+    "digital_transactions__bhim_upi_a_c": {
+      "canonical": "digital_transactions__bhim_upi_a_c",
+      "category": "digital_transactions",
+      "category_title": "Digital Transactions",
+      "field": "bhim_upi_a_c",
+      "display_name": "BHIM/UPI A/Cs (SLBC)",
+      "unit": "count",
+      "description": "Accounts enabled for UPI payments",
+      "fallback_fields": [
+        "bhim_upi",
+        "bhim_aadhaar_a_c",
+        "digital_bhim_upi_no"
+      ],
+      "state_variants": {
+        "assam": "digital_transactions__bhim_upi_a_c",
+        "meghalaya": "digital_transactions__bhim_upi_a_c",
+        "manipur": "digital_transactions__bhim_upi_a_c",
+        "arunachal-pradesh": "digital_transactions__bhim_upi_a_c",
+        "mizoram": "digital_transactions__bhim_upi_a_c",
+        "nagaland": "digital_transactions__bhim_upi_a_c",
+        "bihar": "digital_transactions__digital_bhim_upi_no"
+      }
+    },
+    "digital_transactions__imps_a_c": {
+      "canonical": "digital_transactions__imps_a_c",
+      "category": "digital_transactions",
+      "category_title": "Digital Transactions",
+      "field": "imps_a_c",
+      "display_name": "IMPS Transactions",
+      "unit": "count",
+      "description": "Accounts enabled for IMPS",
+      "fallback_fields": [
+        "imps",
+        "digital_imps_no"
+      ],
+      "state_variants": {
+        "assam": "digital_transactions__imps_a_c",
+        "meghalaya": "digital_transactions__imps_a_c",
+        "manipur": "digital_transactions__imps_a_c",
+        "arunachal-pradesh": "digital_transactions__imps_a_c",
+        "mizoram": "digital_transactions__imps_a_c",
+        "nagaland": "digital_transactions__imps_a_c",
+        "bihar": "digital_transactions__digital_imps_no"
+      }
+    },
+    "digital_transactions__cards_debit_credit_a_c": {
+      "canonical": "digital_transactions__cards_debit_credit_a_c",
+      "category": "digital_transactions",
+      "category_title": "Digital Transactions",
+      "field": "cards_debit_credit_a_c",
+      "display_name": "Card Transactions",
+      "unit": "count",
+      "description": "Accounts with active debit/credit cards",
+      "fallback_fields": [
+        "cards_debit_credit",
+        "cards_debit",
+        "digital_cards_no"
+      ],
+      "state_variants": {
+        "arunachal-pradesh": "digital_transactions__cards_debit_credit",
+        "mizoram": "digital_transactions__cards_debit_credit",
+        "bihar": "digital_transactions__digital_cards_no"
+      }
+    },
+    "digital_transactions__ussd_a_c": {
+      "canonical": "digital_transactions__ussd_a_c",
+      "category": "digital_transactions",
+      "category_title": "Digital Transactions",
+      "field": "ussd_a_c",
+      "display_name": "USSD Transactions",
+      "unit": "count",
+      "description": "Accounts enabled for USSD banking",
+      "fallback_fields": [
+        "ussd",
+        "digital_ussd_no"
+      ],
+      "state_variants": {
+        "assam": "digital_transactions__ussd_a_c",
+        "meghalaya": "digital_transactions__ussd_a_c",
+        "manipur": "digital_transactions__ussd_a_c",
+        "arunachal-pradesh": "digital_transactions__ussd_a_c",
+        "mizoram": "digital_transactions__ussd_a_c",
+        "nagaland": "digital_transactions__ussd_a_c",
+        "bihar": "digital_transactions__digital_ussd_no"
+      }
+    },
+    "aadhaar_authentication__no_of_aadhaar_seeded_casa": {
+      "canonical": "aadhaar_authentication__no_of_aadhaar_seeded_casa",
+      "category": "aadhaar_authentication",
+      "category_title": "Aadhaar Authentication",
+      "field": "no_of_aadhaar_seeded_casa",
+      "display_name": "Aadhaar Seeded CASA",
+      "unit": "count",
+      "description": "Accounts with Aadhaar linked",
+      "fallback_fields": [
+        "aadhaar_seeded_casa",
+        "number_of_aadhaar_seeded_casa",
+        "no_of_aadhaar_seeded",
+        "aadhaar_seeded",
+        "pct_aadhaar_seeding",
+        "pct_of_casa_aadhaar_seeding"
+      ],
+      "state_variants": {
+        "assam": "aadhaar_authentication__no_of_aadhaar_seeded_casa",
+        "meghalaya": "aadhaar_authentication__no_of_aadhaar_seeded_casa",
+        "manipur": "aadhaar_authentication__no_of_aadhaar_seeded_casa",
+        "arunachal-pradesh": "aadhaar_authentication__no_of_aadhaar_seeded_casa",
+        "mizoram": "aadhaar_authentication__no_of_aadhaar_seeded_casa",
+        "nagaland": "aadhaar_authentication__no_of_aadhaar_seeded_casa",
+        "bihar": "aadhaar_authentication__aadhaar_seeded_casa",
+        "west-bengal": "pmjdy__aadhaar_seeded",
+        "jharkhand": "aadhaar_authentication__number_of_aadhaar_seeded_casa",
+        "tamil-nadu": "pmjdy__aadhaar_seeded",
+        "gujarat": "aadhaar_authentication__aadhaar_seeded_casa",
+        "haryana": "aadhaar_authentication__aadhaar_seeded"
+      }
+    },
+    "aadhaar_authentication__no_of_operative_casa": {
+      "canonical": "aadhaar_authentication__no_of_operative_casa",
+      "category": "aadhaar_authentication",
+      "category_title": "Aadhaar Authentication",
+      "field": "no_of_operative_casa",
+      "display_name": "Operative CASA",
+      "unit": "count",
+      "description": "Operationally active accounts",
+      "fallback_fields": [
+        "operative_casa",
+        "number_of_operative_casa",
+        "aadhaar_operative_casa",
+        "operative_sb"
+      ],
+      "state_variants": {
+        "assam": "aadhaar_authentication__no_of_operative_casa",
+        "meghalaya": "aadhaar_authentication__no_of_operative_casa",
+        "manipur": "aadhaar_authentication__no_of_operative_casa",
+        "arunachal-pradesh": "aadhaar_authentication__no_of_operative_casa",
+        "mizoram": "aadhaar_authentication__no_of_operative_casa",
+        "nagaland": "aadhaar_authentication__no_of_operative_casa",
+        "bihar": "aadhaar_authentication__aadhaar_operative_casa",
+        "jharkhand": "aadhaar_authentication__number_of_operative_casa",
+        "gujarat": "aadhaar_authentication__operative_casa",
+        "haryana": "aadhaar_authentication__operative_casa"
+      }
+    },
+    "aadhaar_authentication__no_of_authenticated_casa": {
+      "canonical": "aadhaar_authentication__no_of_authenticated_casa",
+      "category": "aadhaar_authentication",
+      "category_title": "Aadhaar Authentication",
+      "field": "no_of_authenticated_casa",
+      "display_name": "Authenticated CASA",
+      "unit": "count",
+      "description": "Accounts with Aadhaar biometric authentication",
+      "fallback_fields": [
+        "authenticated_casa",
+        "number_of_authenticated_casa",
+        "aadhaar_authenticated_casa",
+        "number_of_authenticated"
+      ],
+      "state_variants": {
+        "assam": "aadhaar_authentication__no_of_authenticated_casa",
+        "meghalaya": "aadhaar_authentication__no_of_authenticated_casa",
+        "manipur": "aadhaar_authentication__no_of_authenticated_casa",
+        "arunachal-pradesh": "aadhaar_authentication__no_of_authenticated_casa",
+        "mizoram": "aadhaar_authentication__no_of_authenticated_casa",
+        "nagaland": "aadhaar_authentication__no_of_authenticated_casa",
+        "bihar": "aadhaar_authentication__aadhaar_authenticated_casa",
+        "jharkhand": "aadhaar_authentication__number_of_authenticated_casa",
+        "gujarat": "aadhaar_authentication__authenticated_casa"
+      }
+    },
+    "social_security__enrolment_under_pmsby": {
+      "canonical": "social_security__enrolment_under_pmsby",
+      "category": "social_security",
+      "category_title": "Social Security Schemes",
+      "field": "enrolment_under_pmsby",
+      "display_name": "PMSBY Enrollment",
+      "unit": "count",
+      "description": "Accidental insurance enrollment",
+      "fallback_fields": [
+        "pmsby_cumml_no",
+        "pmsby_no",
+        "eligible_cases_under_pmsby",
+        "renewals_under_pmsby"
+      ],
+      "state_variants": {
+        "assam": "social_security__enrolment_under_pmsby",
+        "manipur": "social_security__enrolment_under_pmsby",
+        "arunachal-pradesh": "social_security__enrolment_under_pmsby",
+        "nagaland": "social_security__enrolment_under_pmsby"
+      }
+    },
+    "social_security__enrolment_under_pmjjby": {
+      "canonical": "social_security__enrolment_under_pmjjby",
+      "category": "social_security",
+      "category_title": "Social Security Schemes",
+      "field": "enrolment_under_pmjjby",
+      "display_name": "PMJJBY Enrollment",
+      "unit": "count",
+      "description": "Life insurance enrollment",
+      "fallback_fields": [
+        "pmjjby_cumml_no",
+        "pmjjby_no",
+        "eligible_cases_under_pmjjby",
+        "renewals_under_pmjjby"
+      ],
+      "state_variants": {
+        "assam": "social_security__enrolment_under_pmjjby",
+        "manipur": "social_security__enrolment_under_pmjjby",
+        "arunachal-pradesh": "social_security__enrolment_under_pmjjby",
+        "nagaland": "social_security__enrolment_under_pmjjby"
+      }
+    },
+    "social_security__enrolment_under_apy": {
+      "canonical": "social_security__enrolment_under_apy",
+      "category": "social_security",
+      "category_title": "Social Security Schemes",
+      "field": "enrolment_under_apy",
+      "display_name": "APY Enrollment",
+      "unit": "count",
+      "description": "Pension scheme enrollment",
+      "fallback_fields": [
+        "apy_cumml_no",
+        "apy_no",
+        "cumulative_apy_accounts_opened_since_inception",
+        "apy_accounts_opened_in_current_fy"
+      ],
+      "state_variants": {
+        "assam": "social_security__enrolment_under_apy",
+        "manipur": "social_security__enrolment_under_apy",
+        "arunachal-pradesh": "social_security__enrolment_under_apy",
+        "mizoram": "social_security__enrolment_under_apy",
+        "nagaland": "social_security__enrolment_under_apy",
+        "west-bengal": "apy__cumulative_apy_accounts_opened_since_inception",
+        "karnataka": "apy__cumulative_apy_accounts_opened_since_inception",
+        "tamil-nadu": "apy__cumulative_apy_accounts_opened_since_inception"
+      }
+    },
+    "social_security__total_enrolment_no": {
+      "canonical": "social_security__total_enrolment_no",
+      "category": "social_security",
+      "category_title": "Social Security Schemes",
+      "field": "total_enrolment_no",
+      "display_name": "Total Social Security Enrollment",
+      "unit": "count",
+      "description": "Combined enrollment across schemes",
+      "fallback_fields": [],
+      "state_variants": {
+        "assam": "social_security__total_enrolment_no",
+        "manipur": "social_security__total_enrolment_no",
+        "arunachal-pradesh": "social_security__total_enrolment_no",
+        "nagaland": "social_security__total_enrolment_no"
+      }
+    },
+    "pmegp__cy_disbursed_no": {
+      "canonical": "pmegp__cy_disbursed_no",
+      "category": "pmegp",
+      "category_title": "PM Employment Generation",
+      "field": "cy_disbursed_no",
+      "display_name": "Disbursed (Current Year)",
+      "unit": "count",
+      "description": "PMEGP projects disbursed in CY",
+      "fallback_fields": [
+        "disbursed",
+        "cy_disbursed_a_c_no",
+        "disbursement_no",
+        "mm_disbursed_no_of_prj"
+      ],
+      "state_variants": {
+        "assam": "pmegp__cy_disbursed_no",
+        "meghalaya": "pmegp__cy_disbursed_no",
+        "manipur": "pmegp__cy_disbursed_no",
+        "arunachal-pradesh": "pmegp__cy_disbursed_no",
+        "mizoram": "pmegp__cy_disbursed_no",
+        "nagaland": "pmegp__cy_disbursed_no",
+        "bihar": "pmegp_2__disbursement_no",
+        "west-bengal": "pmegp__disbursement_no",
+        "jharkhand": "pmegp__mm_disbursed_no_of_prj",
+        "odisha": "pmegp__mm_disbursed_no_of_prj"
+      }
+    },
+    "pmegp__cy_disbursed_amt": {
+      "canonical": "pmegp__cy_disbursed_amt",
+      "category": "pmegp",
+      "category_title": "PM Employment Generation",
+      "field": "cy_disbursed_amt",
+      "display_name": "Disbursed Amount (CY)",
+      "unit": "rupees_lakhs",
+      "description": "PMEGP loan amount disbursed in CY",
+      "fallback_fields": [
+        "disbursement_amt"
+      ],
+      "state_variants": {
+        "assam": "pmegp__cy_disbursed_amt",
+        "meghalaya": "pmegp__cy_disbursed_amt",
+        "manipur": "pmegp__cy_disbursed_amt",
+        "arunachal-pradesh": "pmegp__cy_disbursed_amt",
+        "mizoram": "pmegp__cy_disbursed_amt",
+        "nagaland": "pmegp__cy_disbursed_amt"
+      }
+    },
+    "pmegp__os_no": {
+      "canonical": "pmegp__os_no",
+      "category": "pmegp",
+      "category_title": "PM Employment Generation",
+      "field": "os_no",
+      "display_name": "Outstanding Projects",
+      "unit": "count",
+      "description": "PMEGP projects with outstanding loans",
+      "fallback_fields": [
+        "pmegp_o_s_no"
+      ],
+      "state_variants": {
+        "assam": "pmegp__os_no",
+        "meghalaya": "pmegp__os_no",
+        "manipur": "pmegp__os_no",
+        "arunachal-pradesh": "pmegp__os_no",
+        "mizoram": "pmegp__os_no",
+        "nagaland": "pmegp__os_no"
+      }
+    },
+    "pmegp__os_amt": {
+      "canonical": "pmegp__os_amt",
+      "category": "pmegp",
+      "category_title": "PM Employment Generation",
+      "field": "os_amt",
+      "display_name": "Outstanding Amount",
+      "unit": "rupees_lakhs",
+      "description": "PMEGP credit outstanding",
+      "fallback_fields": [
+        "pmegp_o_s_amt"
+      ],
+      "state_variants": {
+        "assam": "pmegp__os_amt",
+        "meghalaya": "pmegp__os_amt",
+        "manipur": "pmegp__os_amt",
+        "arunachal-pradesh": "pmegp__os_amt",
+        "mizoram": "pmegp__os_amt",
+        "nagaland": "pmegp__os_amt"
+      }
+    },
+    "pmegp__npa_pct": {
+      "canonical": "pmegp__npa_pct",
+      "category": "pmegp",
+      "category_title": "PM Employment Generation",
+      "field": "npa_pct",
+      "display_name": "NPA %",
+      "unit": "percent",
+      "description": "NPA percentage for PMEGP loans",
+      "fallback_fields": [
+        "pmegp_npa_pct"
+      ],
+      "state_variants": {
+        "assam": "pmegp__npa_pct",
+        "meghalaya": "pmegp__npa_pct",
+        "manipur": "pmegp__npa_pct",
+        "arunachal-pradesh": "pmegp__npa_pct",
+        "mizoram": "pmegp__npa_pct",
+        "nagaland": "pmegp__npa_pct"
+      }
+    },
+    "housing_pmay__rural_housing_loan_o_s_no": {
+      "canonical": "housing_pmay__rural_housing_loan_o_s_no",
+      "category": "housing_pmay",
+      "category_title": "Housing / PMAY",
+      "field": "rural_housing_loan_o_s_no",
+      "display_name": "Rural Housing Loans (O/S)",
+      "unit": "count",
+      "description": "Outstanding rural housing loans",
+      "fallback_fields": [
+        "rural_number",
+        "rural_no"
+      ],
+      "state_variants": {
+        "assam": "housing_pmay__rural_housing_loan_o_s_no",
+        "meghalaya": "housing_pmay__rural_housing_loan_o_s_no",
+        "manipur": "housing_pmay__rural_housing_loan_o_s_no",
+        "mizoram": "housing_pmay__rural_housing_loan_o_s_no",
+        "nagaland": "housing_pmay__rural_housing_loan_o_s_no"
+      }
+    },
+    "housing_pmay__rural_housing_loan_o_s_amt": {
+      "canonical": "housing_pmay__rural_housing_loan_o_s_amt",
+      "category": "housing_pmay",
+      "category_title": "Housing / PMAY",
+      "field": "rural_housing_loan_o_s_amt",
+      "display_name": "Rural Housing Amount (O/S)",
+      "unit": "rupees_lakhs",
+      "description": "Outstanding rural housing loan amount",
+      "fallback_fields": [
+        "rural_amt"
+      ],
+      "state_variants": {
+        "assam": "housing_pmay__rural_housing_loan_o_s_amt",
+        "meghalaya": "housing_pmay__rural_housing_loan_o_s_amt",
+        "manipur": "housing_pmay__rural_housing_loan_o_s_amt",
+        "nagaland": "housing_pmay__rural_housing_loan_o_s_amt"
+      }
+    },
+    "housing_pmay__pmay_o_s_no": {
+      "canonical": "housing_pmay__pmay_o_s_no",
+      "category": "housing_pmay",
+      "category_title": "Housing / PMAY",
+      "field": "pmay_o_s_no",
+      "display_name": "PMAY Loans (O/S)",
+      "unit": "count",
+      "description": "Outstanding PMAY loans",
+      "fallback_fields": [
+        "current_year_disbursed_under_pmay_no"
+      ],
+      "state_variants": {
+        "assam": "housing_pmay__pmay_o_s_no",
+        "meghalaya": "housing_pmay__pmay_o_s_no",
+        "manipur": "housing_pmay__pmay_o_s_no",
+        "mizoram": "housing_pmay__pmay_o_s_no",
+        "nagaland": "housing_pmay__pmay_o_s_no"
+      }
+    },
+    "housing_pmay__pmay_o_s_amt": {
+      "canonical": "housing_pmay__pmay_o_s_amt",
+      "category": "housing_pmay",
+      "category_title": "Housing / PMAY",
+      "field": "pmay_o_s_amt",
+      "display_name": "PMAY Amount (O/S)",
+      "unit": "rupees_lakhs",
+      "description": "Outstanding PMAY loan amount",
+      "fallback_fields": [
+        "current_year_disbursed_under_pmay_amt"
+      ],
+      "state_variants": {
+        "assam": "housing_pmay__pmay_o_s_amt",
+        "meghalaya": "housing_pmay__pmay_o_s_amt",
+        "manipur": "housing_pmay__pmay_o_s_amt",
+        "nagaland": "housing_pmay__pmay_o_s_amt"
+      }
+    },
+    "housing_pmay__housing_loan_ps_o_s_no": {
+      "canonical": "housing_pmay__housing_loan_ps_o_s_no",
+      "category": "housing_pmay",
+      "category_title": "Housing / PMAY",
+      "field": "housing_loan_ps_o_s_no",
+      "display_name": "Housing Priority Sector (O/S)",
+      "unit": "count",
+      "description": "Outstanding priority sector housing loans",
+      "fallback_fields": [
+        "total_number"
+      ],
+      "state_variants": {
+        "assam": "housing_pmay__housing_loan_ps_o_s_no",
+        "manipur": "housing_pmay__housing_loan_ps_o_s_no",
+        "mizoram": "housing_pmay__housing_loan_ps_o_s_no",
+        "nagaland": "housing_pmay__housing_loan_ps_o_s_no"
+      }
+    },
+    "housing_pmay__housing_loan_ps_o_s_amt": {
+      "canonical": "housing_pmay__housing_loan_ps_o_s_amt",
+      "category": "housing_pmay",
+      "category_title": "Housing / PMAY",
+      "field": "housing_loan_ps_o_s_amt",
+      "display_name": "Housing PS Amount (O/S)",
+      "unit": "rupees_lakhs",
+      "description": "Outstanding PS housing loan amount",
+      "fallback_fields": [
+        "total_amt"
+      ],
+      "state_variants": {
+        "assam": "housing_pmay__housing_loan_ps_o_s_amt",
+        "manipur": "housing_pmay__housing_loan_ps_o_s_amt",
+        "nagaland": "housing_pmay__housing_loan_ps_o_s_amt"
+      }
+    },
+    "sui__no_of_female_account": {
+      "canonical": "sui__no_of_female_account",
+      "category": "sui",
+      "category_title": "Stand Up India",
+      "field": "no_of_female_account",
+      "display_name": "Women Borrowers",
+      "unit": "count",
+      "description": "Women entrepreneurs with SUI loans",
+      "fallback_fields": [
+        "current_year_no_of_female_account",
+        "female_account_no"
+      ],
+      "state_variants": {
+        "assam": "sui__no_of_female_account",
+        "meghalaya": "sui__female_account_no",
+        "manipur": "sui__no_of_female_account",
+        "arunachal-pradesh": "sui__no_of_female_account",
+        "mizoram": "sui__no_of_female_account",
+        "nagaland": "sui__current_year_no_of_female_account"
+      }
+    },
+    "sui__sui_o_s_no": {
+      "canonical": "sui__sui_o_s_no",
+      "category": "sui",
+      "category_title": "Stand Up India",
+      "field": "sui_o_s_no",
+      "display_name": "Outstanding Loans",
+      "unit": "count",
+      "description": "Outstanding SUI loan accounts",
+      "fallback_fields": [
+        "total_current_year_sui_disb_no"
+      ],
+      "state_variants": {
+        "assam": "sui__sui_o_s_no",
+        "meghalaya": "sui__sui_o_s_no",
+        "manipur": "sui__sui_o_s_no",
+        "nagaland": "sui__sui_o_s_no"
+      }
+    },
+    "sui__sui_o_s_amt": {
+      "canonical": "sui__sui_o_s_amt",
+      "category": "sui",
+      "category_title": "Stand Up India",
+      "field": "sui_o_s_amt",
+      "display_name": "Outstanding Amount",
+      "unit": "rupees_lakhs",
+      "description": "Outstanding SUI loan amount",
+      "fallback_fields": [
+        "total_current_year_sui_disb_amt"
+      ],
+      "state_variants": {
+        "assam": "sui__sui_o_s_amt",
+        "meghalaya": "sui__sui_o_s_amt",
+        "manipur": "sui__sui_o_s_amt",
+        "nagaland": "sui__sui_o_s_amt"
+      }
+    },
+    "sui__sui_npa_pct": {
+      "canonical": "sui__sui_npa_pct",
+      "category": "sui",
+      "category_title": "Stand Up India",
+      "field": "sui_npa_pct",
+      "display_name": "NPA %",
+      "unit": "percent",
+      "description": "NPA percentage for SUI loans",
+      "fallback_fields": [],
+      "state_variants": {
+        "assam": "sui__sui_npa_pct",
+        "manipur": "sui__sui_npa_pct",
+        "nagaland": "sui__sui_npa_pct"
+      }
+    },
+    "sc_st_finance__sc_disbursement_no": {
+      "canonical": "sc_st_finance__sc_disbursement_no",
+      "category": "sc_st_finance",
+      "category_title": "SC/ST Lending",
+      "field": "sc_disbursement_no",
+      "display_name": "SC Disbursement (No.)",
+      "unit": "count",
+      "description": "Loans disbursed to SC borrowers",
+      "fallback_fields": [
+        "sc_disb_no",
+        "scheduled_castes_no"
+      ],
+      "state_variants": {
+        "assam": "sc_st_finance__sc_disbursement_no",
+        "meghalaya": "sc_st_finance__sc_disbursement_no",
+        "manipur": "sc_st_finance__sc_disbursement_no",
+        "arunachal-pradesh": "sc_st_finance__sc_disbursement_no",
+        "mizoram": "sc_st_finance__sc_disbursement_no",
+        "nagaland": "sc_st_finance__sc_disbursement_no",
+        "bihar": "sc_st_finance__sc_disbursement_no"
+      }
+    },
+    "sc_st_finance__sc_disbursement_amt": {
+      "canonical": "sc_st_finance__sc_disbursement_amt",
+      "category": "sc_st_finance",
+      "category_title": "SC/ST Lending",
+      "field": "sc_disbursement_amt",
+      "display_name": "SC Disbursement (Rs Lakhs)",
+      "unit": "rupees_lakhs",
+      "description": "Loan amount to SC borrowers",
+      "fallback_fields": [
+        "sc_disb_amt",
+        "scheduled_castes_amt"
+      ],
+      "state_variants": {
+        "assam": "sc_st_finance__sc_disbursement_amt",
+        "meghalaya": "sc_st_finance__sc_disbursement_amt",
+        "manipur": "sc_st_finance__sc_disbursement_amt",
+        "arunachal-pradesh": "sc_st_finance__sc_disbursement_amt",
+        "mizoram": "sc_st_finance__sc_disbursement_amt",
+        "nagaland": "sc_st_finance__sc_disbursement_amt"
+      }
+    },
+    "sc_st_finance__st_disbursement_no": {
+      "canonical": "sc_st_finance__st_disbursement_no",
+      "category": "sc_st_finance",
+      "category_title": "SC/ST Lending",
+      "field": "st_disbursement_no",
+      "display_name": "ST Disbursement (No.)",
+      "unit": "count",
+      "description": "Loans disbursed to ST borrowers",
+      "fallback_fields": [
+        "st_disb_no",
+        "scheduled_tribes_no"
+      ],
+      "state_variants": {
+        "assam": "sc_st_finance__st_disbursement_no",
+        "meghalaya": "sc_st_finance__st_disbursement_no",
+        "manipur": "sc_st_finance__st_disbursement_no",
+        "arunachal-pradesh": "sc_st_finance__st_disbursement_no",
+        "mizoram": "sc_st_finance__st_disbursement_no",
+        "nagaland": "sc_st_finance__st_disbursement_no",
+        "bihar": "sc_st_finance__st_disbursement_no",
+        "jharkhand": "sc_st_finance__scheduled_tribes_no"
+      }
+    },
+    "sc_st_finance__st_disbursement_amt": {
+      "canonical": "sc_st_finance__st_disbursement_amt",
+      "category": "sc_st_finance",
+      "category_title": "SC/ST Lending",
+      "field": "st_disbursement_amt",
+      "display_name": "ST Disbursement (Rs Lakhs)",
+      "unit": "rupees_lakhs",
+      "description": "Loan amount to ST borrowers",
+      "fallback_fields": [
+        "st_disb_amt",
+        "scheduled_tribes_amt"
+      ],
+      "state_variants": {
+        "assam": "sc_st_finance__st_disbursement_amt",
+        "meghalaya": "sc_st_finance__st_disbursement_amt",
+        "manipur": "sc_st_finance__st_disbursement_amt",
+        "arunachal-pradesh": "sc_st_finance__st_disbursement_amt",
+        "mizoram": "sc_st_finance__st_disbursement_amt",
+        "nagaland": "sc_st_finance__st_disbursement_amt"
+      }
+    },
+    "sc_st_finance__sc_outstanding_no": {
+      "canonical": "sc_st_finance__sc_outstanding_no",
+      "category": "sc_st_finance",
+      "category_title": "SC/ST Lending",
+      "field": "sc_outstanding_no",
+      "display_name": "SC Outstanding (No.)",
+      "unit": "count",
+      "description": "Outstanding SC loan accounts",
+      "fallback_fields": [
+        "sc_o_s_no"
+      ],
+      "state_variants": {
+        "assam": "sc_st_finance__sc_outstanding_no",
+        "meghalaya": "sc_st_finance__sc_outstanding_no",
+        "manipur": "sc_st_finance__sc_outstanding_no",
+        "arunachal-pradesh": "sc_st_finance__sc_outstanding_no",
+        "mizoram": "sc_st_finance__sc_outstanding_no",
+        "nagaland": "sc_st_finance__sc_outstanding_no"
+      }
+    },
+    "sc_st_finance__st_outstanding_no": {
+      "canonical": "sc_st_finance__st_outstanding_no",
+      "category": "sc_st_finance",
+      "category_title": "SC/ST Lending",
+      "field": "st_outstanding_no",
+      "display_name": "ST Outstanding (No.)",
+      "unit": "count",
+      "description": "Outstanding ST loan accounts",
+      "fallback_fields": [
+        "st_o_s_no"
+      ],
+      "state_variants": {
+        "assam": "sc_st_finance__st_outstanding_no",
+        "meghalaya": "sc_st_finance__st_outstanding_no",
+        "manipur": "sc_st_finance__st_outstanding_no",
+        "arunachal-pradesh": "sc_st_finance__st_outstanding_no",
+        "mizoram": "sc_st_finance__st_outstanding_no",
+        "nagaland": "sc_st_finance__st_outstanding_no"
+      }
+    },
+    "women_finance__o_s_no": {
+      "canonical": "women_finance__o_s_no",
+      "category": "women_finance",
+      "category_title": "Women's Credit",
+      "field": "o_s_no",
+      "display_name": "Outstanding Loans (No.)",
+      "unit": "count",
+      "description": "Outstanding loan accounts held by women",
+      "fallback_fields": [
+        "cy_disb_no"
+      ],
+      "state_variants": {
+        "assam": "women_finance__o_s_no",
+        "meghalaya": "women_finance__cy_disb_no",
+        "manipur": "women_finance__o_s_no",
+        "arunachal-pradesh": "women_finance__o_s_no",
+        "mizoram": "women_finance__o_s_no"
+      }
+    },
+    "women_finance__o_s_amt": {
+      "canonical": "women_finance__o_s_amt",
+      "category": "women_finance",
+      "category_title": "Women's Credit",
+      "field": "o_s_amt",
+      "display_name": "Outstanding Amount",
+      "unit": "rupees_lakhs",
+      "description": "Outstanding credit to women",
+      "fallback_fields": [
+        "cy_disb_amt"
+      ],
+      "state_variants": {
+        "assam": "women_finance__o_s_amt",
+        "meghalaya": "women_finance__cy_disb_amt",
+        "manipur": "women_finance__o_s_amt",
+        "arunachal-pradesh": "women_finance__o_s_amt",
+        "mizoram": "women_finance__o_s_amt"
+      }
+    },
+    "women_finance__cy_disb_no": {
+      "canonical": "women_finance__cy_disb_no",
+      "category": "women_finance",
+      "category_title": "Women's Credit",
+      "field": "cy_disb_no",
+      "display_name": "Disbursed (Current Year)",
+      "unit": "count",
+      "description": "Loans disbursed to women in CY",
+      "fallback_fields": [],
+      "state_variants": {
+        "assam": "women_finance__cy_disb_no",
+        "meghalaya": "women_finance__cy_disb_no",
+        "manipur": "women_finance__cy_disb_no",
+        "arunachal-pradesh": "women_finance__cy_disb_no"
+      }
+    },
+    "women_finance__cy_disb_amt": {
+      "canonical": "women_finance__cy_disb_amt",
+      "category": "women_finance",
+      "category_title": "Women's Credit",
+      "field": "cy_disb_amt",
+      "display_name": "Disbursed Amount (CY)",
+      "unit": "rupees_lakhs",
+      "description": "Loan amount to women in CY",
+      "fallback_fields": [],
+      "state_variants": {
+        "assam": "women_finance__cy_disb_amt",
+        "meghalaya": "women_finance__cy_disb_amt",
+        "manipur": "women_finance__cy_disb_amt",
+        "arunachal-pradesh": "women_finance__cy_disb_amt"
+      }
+    },
+    "education_loan__sanctioned_no": {
+      "canonical": "education_loan__sanctioned_no",
+      "category": "education_loan",
+      "category_title": "Education Loans",
+      "field": "sanctioned_no",
+      "display_name": "Sanctioned (No.)",
+      "unit": "count",
+      "description": "Education loans sanctioned",
+      "fallback_fields": [
+        "disb_no",
+        "o_s_no"
+      ],
+      "state_variants": {
+        "assam": "education_loan__sanctioned_no",
+        "meghalaya": "education_loan__sanctioned_no",
+        "manipur": "education_loan__sanctioned_no",
+        "arunachal-pradesh": "education_loan__sanctioned_no"
+      }
+    },
+    "education_loan__sanctioned_amt": {
+      "canonical": "education_loan__sanctioned_amt",
+      "category": "education_loan",
+      "category_title": "Education Loans",
+      "field": "sanctioned_amt",
+      "display_name": "Sanctioned Amount",
+      "unit": "rupees_lakhs",
+      "description": "Education loan amount sanctioned",
+      "fallback_fields": [
+        "disb_amt",
+        "o_s_amt",
+        "amt"
+      ],
+      "state_variants": {
+        "assam": "education_loan__sanctioned_amt",
+        "meghalaya": "education_loan__sanctioned_amt",
+        "manipur": "education_loan__sanctioned_amt",
+        "arunachal-pradesh": "education_loan__sanctioned_amt",
+        "mizoram": "education_loan__amt",
+        "bihar": "education_loan__amt",
+        "jharkhand": "education_loan__amt",
+        "tamil-nadu": "education_loan__amt"
+      }
+    },
+    "education_loan__of_which_girl_student_disb_no": {
+      "canonical": "education_loan__of_which_girl_student_disb_no",
+      "category": "education_loan",
+      "category_title": "Education Loans",
+      "field": "of_which_girl_student_disb_no",
+      "display_name": "Girl Student Loans",
+      "unit": "count",
+      "description": "Education loans to girl students",
+      "fallback_fields": [
+        "of_which_girl_student_sanctioned_no",
+        "of_which_girl_student_o_s_no"
+      ],
+      "state_variants": {
+        "assam": "education_loan__of_which_girl_student_disb_no",
+        "manipur": "education_loan__of_which_girl_student_disb_no",
+        "arunachal-pradesh": "education_loan__of_which_girl_student_disb_no"
+      }
+    },
+    "education_loan__of_which_girl_student_disb_amt": {
+      "canonical": "education_loan__of_which_girl_student_disb_amt",
+      "category": "education_loan",
+      "category_title": "Education Loans",
+      "field": "of_which_girl_student_disb_amt",
+      "display_name": "Girl Student Amount",
+      "unit": "rupees_lakhs",
+      "description": "Loan amount to girl students",
+      "fallback_fields": [
+        "of_which_girl_student_sanctioned_amt",
+        "of_which_girl_student_o_s_amt"
+      ],
+      "state_variants": {
+        "assam": "education_loan__of_which_girl_student_disb_amt",
+        "manipur": "education_loan__of_which_girl_student_disb_amt",
+        "arunachal-pradesh": "education_loan__of_which_girl_student_disb_amt"
+      }
+    },
+    "pmmy_mudra_disbursement__sishu_no": {
+      "canonical": "pmmy_mudra_disbursement__sishu_no",
+      "category": "pmmy_mudra_disbursement",
+      "category_title": "MUDRA / PMMY",
+      "field": "sishu_no",
+      "display_name": "Shishu Loans (No.)",
+      "unit": "count",
+      "description": "MUDRA loans up to Rs 50,000",
+      "fallback_fields": [
+        "shishu_no"
+      ],
+      "state_variants": {
+        "assam": "pmmy_mudra_disbursement__sishu_no",
+        "meghalaya": "pmmy_mudra_disbursement__sishu_no",
+        "manipur": "pmmy_mudra_disbursement__sishu_no",
+        "arunachal-pradesh": "pmmy_mudra_disbursement__sishu_no",
+        "nagaland": "pmmy_mudra_disbursement__sishu_no",
+        "west-bengal": "mudra__shishu_no"
+      }
+    },
+    "pmmy_mudra_disbursement__sishu_amt": {
+      "canonical": "pmmy_mudra_disbursement__sishu_amt",
+      "category": "pmmy_mudra_disbursement",
+      "category_title": "MUDRA / PMMY",
+      "field": "sishu_amt",
+      "display_name": "Shishu Amount",
+      "unit": "rupees_lakhs",
+      "description": "Shishu loan amount",
+      "fallback_fields": [
+        "shishu_amt"
+      ],
+      "state_variants": {
+        "assam": "pmmy_mudra_disbursement__sishu_amt",
+        "meghalaya": "pmmy_mudra_disbursement__sishu_amt",
+        "arunachal-pradesh": "pmmy_mudra_disbursement__sishu_amt",
+        "nagaland": "pmmy_mudra_disbursement__sishu_amt"
+      }
+    },
+    "pmmy_mudra_disbursement__kishore_no": {
+      "canonical": "pmmy_mudra_disbursement__kishore_no",
+      "category": "pmmy_mudra_disbursement",
+      "category_title": "MUDRA / PMMY",
+      "field": "kishore_no",
+      "display_name": "Kishore Loans (No.)",
+      "unit": "count",
+      "description": "MUDRA loans Rs 50K-5L",
+      "fallback_fields": [
+        "kishor_no"
+      ],
+      "state_variants": {
+        "assam": "pmmy_mudra_disbursement__kishore_no",
+        "meghalaya": "pmmy_mudra_disbursement__kishore_no",
+        "arunachal-pradesh": "pmmy_mudra_disbursement__kishore_no",
+        "nagaland": "pmmy_mudra_disbursement__kishore_no",
+        "west-bengal": "mudra__kishore_no"
+      }
+    },
+    "pmmy_mudra_disbursement__kishore_amt": {
+      "canonical": "pmmy_mudra_disbursement__kishore_amt",
+      "category": "pmmy_mudra_disbursement",
+      "category_title": "MUDRA / PMMY",
+      "field": "kishore_amt",
+      "display_name": "Kishore Amount",
+      "unit": "rupees_lakhs",
+      "description": "Kishore loan amount",
+      "fallback_fields": [
+        "kishor_amt"
+      ],
+      "state_variants": {
+        "assam": "pmmy_mudra_disbursement__kishore_amt",
+        "meghalaya": "pmmy_mudra_disbursement__kishore_amt",
+        "manipur": "pmmy_mudra_disbursement__kishore_amt",
+        "arunachal-pradesh": "pmmy_mudra_disbursement__kishore_amt",
+        "nagaland": "pmmy_mudra_disbursement__kishore_amt"
+      }
+    },
+    "pmmy_mudra_disbursement__tarun_no": {
+      "canonical": "pmmy_mudra_disbursement__tarun_no",
+      "category": "pmmy_mudra_disbursement",
+      "category_title": "MUDRA / PMMY",
+      "field": "tarun_no",
+      "display_name": "Tarun Loans (No.)",
+      "unit": "count",
+      "description": "MUDRA loans Rs 5-20L",
+      "fallback_fields": [],
+      "state_variants": {
+        "assam": "pmmy_mudra_disbursement__tarun_no",
+        "meghalaya": "pmmy_mudra_disbursement__tarun_no",
+        "manipur": "pmmy_mudra_disbursement__tarun_no",
+        "arunachal-pradesh": "pmmy_mudra_disbursement__tarun_no",
+        "nagaland": "pmmy_mudra_disbursement__tarun_no",
+        "west-bengal": "mudra__tarun_no"
+      }
+    },
+    "pmmy_mudra_disbursement__tarun_amt": {
+      "canonical": "pmmy_mudra_disbursement__tarun_amt",
+      "category": "pmmy_mudra_disbursement",
+      "category_title": "MUDRA / PMMY",
+      "field": "tarun_amt",
+      "display_name": "Tarun Amount",
+      "unit": "rupees_lakhs",
+      "description": "Tarun loan amount",
+      "fallback_fields": [],
+      "state_variants": {
+        "assam": "pmmy_mudra_disbursement__tarun_amt",
+        "meghalaya": "pmmy_mudra_disbursement__tarun_amt",
+        "manipur": "pmmy_mudra_disbursement__tarun_amt",
+        "arunachal-pradesh": "pmmy_mudra_disbursement__tarun_amt",
+        "nagaland": "pmmy_mudra_disbursement__tarun_amt"
+      }
+    },
+    "pmmy_mudra_disbursement__total_mudra_disb_no": {
+      "canonical": "pmmy_mudra_disbursement__total_mudra_disb_no",
+      "category": "pmmy_mudra_disbursement",
+      "category_title": "MUDRA / PMMY",
+      "field": "total_mudra_disb_no",
+      "display_name": "Total MUDRA Disbursed",
+      "unit": "count",
+      "description": "Total MUDRA loans disbursed",
+      "fallback_fields": [
+        "total_mudra_o_s_no"
+      ],
+      "state_variants": {
+        "assam": "pmmy_mudra_disbursement__total_mudra_disb_no",
+        "meghalaya": "pmmy_mudra_os_npa__total_mudra_o_s_no",
+        "manipur": "pmmy_mudra_disbursement__total_mudra_disb_no",
+        "nagaland": "pmmy_mudra_disbursement__total_mudra_disb_no"
+      }
+    },
+    "pmmy_mudra_disbursement__total_mudra_disb_amt": {
+      "canonical": "pmmy_mudra_disbursement__total_mudra_disb_amt",
+      "category": "pmmy_mudra_disbursement",
+      "category_title": "MUDRA / PMMY",
+      "field": "total_mudra_disb_amt",
+      "display_name": "Total MUDRA Amount",
+      "unit": "rupees_lakhs",
+      "description": "Total MUDRA loan amount",
+      "fallback_fields": [
+        "total_mudra_o_s_amt"
+      ],
+      "state_variants": {
+        "assam": "pmmy_mudra_disbursement__total_mudra_disb_amt",
+        "meghalaya": "pmmy_mudra_os_npa__total_mudra_o_s_amt",
+        "manipur": "pmmy_mudra_disbursement__total_mudra_disb_amt",
+        "nagaland": "pmmy_mudra_disbursement__total_mudra_disb_amt"
+      }
+    },
+    "rbi_outlets__total": {
+      "canonical": "rbi_outlets__total",
+      "category": "rbi_banking_outlets",
+      "category_title": "Banking Infrastructure (RBI)",
+      "field": "rbi_outlets__total",
+      "display_name": "Total Banking Outlets",
+      "unit": "count",
+      "description": "Total banking access points from RBI DBIE",
+      "fallback_fields": [],
+      "state_variants": {}
+    },
+    "rbi_outlets__branch": {
+      "canonical": "rbi_outlets__branch",
+      "category": "rbi_banking_outlets",
+      "category_title": "Banking Infrastructure (RBI)",
+      "field": "rbi_outlets__branch",
+      "display_name": "Bank Branches",
+      "unit": "count",
+      "description": "Licensed bank branches",
+      "fallback_fields": [],
+      "state_variants": {}
+    },
+    "rbi_outlets__bc": {
+      "canonical": "rbi_outlets__bc",
+      "category": "rbi_banking_outlets",
+      "category_title": "Banking Infrastructure (RBI)",
+      "field": "rbi_outlets__bc",
+      "display_name": "Business Correspondents",
+      "unit": "count",
+      "description": "Banking agents with micro-ATM",
+      "fallback_fields": [],
+      "state_variants": {}
+    },
+    "rbi_outlets__csp": {
+      "canonical": "rbi_outlets__csp",
+      "category": "rbi_banking_outlets",
+      "category_title": "Banking Infrastructure (RBI)",
+      "field": "rbi_outlets__csp",
+      "display_name": "Customer Service Points",
+      "unit": "count",
+      "description": "Fixed-location service points",
+      "fallback_fields": [],
+      "state_variants": {}
+    },
+    "rbi_outlets__rural": {
+      "canonical": "rbi_outlets__rural",
+      "category": "rbi_banking_outlets",
+      "category_title": "Banking Infrastructure (RBI)",
+      "field": "rbi_outlets__rural",
+      "display_name": "Rural Outlets",
+      "unit": "count",
+      "description": "Outlets in centres under 10K population",
+      "fallback_fields": [],
+      "state_variants": {}
+    },
+    "rbi_outlets__semi_urban": {
+      "canonical": "rbi_outlets__semi_urban",
+      "category": "rbi_banking_outlets",
+      "category_title": "Banking Infrastructure (RBI)",
+      "field": "rbi_outlets__semi_urban",
+      "display_name": "Semi-Urban Outlets",
+      "unit": "count",
+      "description": "Outlets in 10K-1L population centres",
+      "fallback_fields": [],
+      "state_variants": {}
+    },
+    "rbi_outlets__urban": {
+      "canonical": "rbi_outlets__urban",
+      "category": "rbi_banking_outlets",
+      "category_title": "Banking Infrastructure (RBI)",
+      "field": "rbi_outlets__urban",
+      "display_name": "Urban Outlets",
+      "unit": "count",
+      "description": "Outlets in 1L-10L population centres",
+      "fallback_fields": [],
+      "state_variants": {}
+    },
+    "rbi_outlets__metro": {
+      "canonical": "rbi_outlets__metro",
+      "category": "rbi_banking_outlets",
+      "category_title": "Banking Infrastructure (RBI)",
+      "field": "rbi_outlets__metro",
+      "display_name": "Metropolitan Outlets",
+      "unit": "count",
+      "description": "Outlets in 10L+ population centres",
+      "fallback_fields": [],
+      "state_variants": {}
+    }
+  },
+  "_metadata": {
+    "generated_by": "field_mapping_builder",
+    "description": "Maps every state-specific field name to a canonical field name for 16 indicator categories across 22 Indian states",
+    "states": [
+      "assam",
+      "meghalaya",
+      "manipur",
+      "arunachal-pradesh",
+      "mizoram",
+      "tripura",
+      "nagaland",
+      "sikkim",
+      "bihar",
+      "west-bengal",
+      "jharkhand",
+      "odisha",
+      "chhattisgarh",
+      "kerala",
+      "karnataka",
+      "tamil-nadu",
+      "rajasthan",
+      "gujarat",
+      "maharashtra",
+      "haryana",
+      "telangana",
+      "uttarakhand"
+    ],
+    "indicator_categories": [
+      "credit_deposit_ratio",
+      "pmjdy",
+      "branch_network",
+      "kcc",
+      "shg",
+      "digital_transactions",
+      "aadhaar_authentication",
+      "social_security",
+      "pmegp",
+      "housing_pmay",
+      "sui",
+      "sc_st_finance",
+      "women_finance",
+      "education_loan",
+      "pmmy_mudra_disbursement",
+      "rbi_banking_outlets"
+    ],
+    "cross_category_fallbacks": {
+      "branch_network": [
+        "credit_deposit_ratio",
+        "kcc",
+        "fi_kcc",
+        "digital_transactions",
+        "branch_network_p2",
+        "branch_network_p3",
+        "branch_network_p4",
+        "atm_network",
+        "business_correspondents"
+      ],
+      "credit_deposit_ratio": [
+        "key_indicators",
+        "district_misc",
+        "cd_ratio"
+      ],
+      "kcc": [
+        "fi_kcc",
+        "kcc_animal_husbandry",
+        "kcc_fishery",
+        "kcc_outstanding",
+        "kcc_fisheries"
+      ],
+      "shg": [
+        "shg_nrlm",
+        "nrlm",
+        "shg_p2",
+        "shg_p3",
+        "jlg"
+      ],
+      "digital_transactions": [
+        "phonepe_upi",
+        "digital_payments",
+        "digital_coverage_savings",
+        "digital_coverage_savings_p2",
+        "digital_coverage_business",
+        "women_finance"
+      ],
+      "social_security": [
+        "social_security_schemes",
+        "social_security_claims",
+        "social_security_2",
+        "apy"
+      ],
+      "pmjdy": [
+        "pmjdy_p2",
+        "pmjdy_p3",
+        "pmjdy_p4",
+        "social_security_schemes",
+        "pmjdy_2",
+        "pmjdy_3"
+      ],
+      "aadhaar_authentication": [
+        "pmjdy",
+        "pmjdy_2",
+        "pmjdy_3"
+      ],
+      "pmegp": [
+        "pmegp_2"
+      ],
+      "housing_pmay": [
+        "housing_pmay_p2"
+      ],
+      "sui": [
+        "stand_up_india"
+      ],
+      "sc_st_finance": [
+        "sc_st_lending",
+        "weaker_section_os"
+      ],
+      "women_finance": [
+        "women_finance_2"
+      ],
+      "education_loan": [
+        "education_loan_2"
+      ],
+      "pmmy_mudra_disbursement": [
+        "pmmy_mudra_os_npa",
+        "mudra",
+        "mudra_2"
+      ]
+    },
+    "total_canonical_fields": 84,
+    "total_state_variant_mappings": 543,
+    "state_coverage": {
+      "assam": 69,
+      "meghalaya": 59,
+      "manipur": 68,
+      "arunachal-pradesh": 60,
+      "mizoram": 48,
+      "tripura": 13,
+      "nagaland": 60,
+      "sikkim": 3,
+      "bihar": 29,
+      "west-bengal": 21,
+      "jharkhand": 26,
+      "odisha": 15,
+      "chhattisgarh": 8,
+      "kerala": 0,
+      "karnataka": 9,
+      "tamil-nadu": 20,
+      "rajasthan": 3,
+      "gujarat": 11,
+      "maharashtra": 5,
+      "haryana": 10,
+      "telangana": 3,
+      "uttarakhand": 3
+    },
+    "total_reverse_entries": 189
+  },
+  "reverse_lookup": {
+    "credit_deposit_ratio__overall_cd_ratio": {
+      "assam": "credit_deposit_ratio__overall_cd_ratio",
+      "meghalaya": "credit_deposit_ratio__overall_cd_ratio",
+      "manipur": "credit_deposit_ratio__overall_cd_ratio",
+      "arunachal-pradesh": "credit_deposit_ratio__overall_cd_ratio",
+      "mizoram": "credit_deposit_ratio__overall_cd_ratio",
+      "tripura": "credit_deposit_ratio__overall_cd_ratio",
+      "nagaland": "credit_deposit_ratio__overall_cd_ratio",
+      "chhattisgarh": "credit_deposit_ratio__overall_cd_ratio",
+      "rajasthan": "credit_deposit_ratio__overall_cd_ratio",
+      "gujarat": "credit_deposit_ratio__overall_cd_ratio",
+      "maharashtra": "credit_deposit_ratio__overall_cd_ratio",
+      "telangana": "credit_deposit_ratio__overall_cd_ratio",
+      "uttarakhand": "credit_deposit_ratio__overall_cd_ratio",
+      "_canonical": "credit_deposit_ratio__overall_cd_ratio"
+    },
+    "credit_deposit_ratio__cd_ratio": {
+      "bihar": "credit_deposit_ratio__overall_cd_ratio",
+      "west-bengal": "credit_deposit_ratio__overall_cd_ratio",
+      "jharkhand": "credit_deposit_ratio__overall_cd_ratio",
+      "odisha": "credit_deposit_ratio__overall_cd_ratio",
+      "karnataka": "credit_deposit_ratio__overall_cd_ratio",
+      "tamil-nadu": "credit_deposit_ratio__overall_cd_ratio",
+      "haryana": "credit_deposit_ratio__overall_cd_ratio"
+    },
+    "credit_deposit_ratio__total_deposit": {
+      "assam": "credit_deposit_ratio__total_deposit",
+      "meghalaya": "credit_deposit_ratio__total_deposit",
+      "manipur": "credit_deposit_ratio__total_deposit",
+      "arunachal-pradesh": "credit_deposit_ratio__total_deposit",
+      "mizoram": "credit_deposit_ratio__total_deposit",
+      "tripura": "credit_deposit_ratio__total_deposit",
+      "nagaland": "credit_deposit_ratio__total_deposit",
+      "west-bengal": "credit_deposit_ratio__total_deposit",
+      "jharkhand": "credit_deposit_ratio__total_deposit",
+      "odisha": "credit_deposit_ratio__total_deposit",
+      "chhattisgarh": "credit_deposit_ratio__total_deposit",
+      "rajasthan": "credit_deposit_ratio__total_deposit",
+      "gujarat": "credit_deposit_ratio__total_deposit",
+      "maharashtra": "credit_deposit_ratio__total_deposit",
+      "telangana": "credit_deposit_ratio__total_deposit",
+      "uttarakhand": "credit_deposit_ratio__total_deposit",
+      "_canonical": "credit_deposit_ratio__total_deposit"
+    },
+    "credit_deposit_ratio__deposit": {
+      "bihar": "credit_deposit_ratio__total_deposit"
+    },
+    "cd_ratio__deposit": {
+      "karnataka": "credit_deposit_ratio__total_deposit",
+      "tamil-nadu": "credit_deposit_ratio__total_deposit"
+    },
+    "credit_deposit_ratio__total_advance": {
+      "assam": "credit_deposit_ratio__total_advance",
+      "meghalaya": "credit_deposit_ratio__total_advance",
+      "manipur": "credit_deposit_ratio__total_advance",
+      "arunachal-pradesh": "credit_deposit_ratio__total_advance",
+      "mizoram": "credit_deposit_ratio__total_advance",
+      "tripura": "credit_deposit_ratio__total_advance",
+      "nagaland": "credit_deposit_ratio__total_advance",
+      "chhattisgarh": "credit_deposit_ratio__total_advance",
+      "_canonical": "credit_deposit_ratio__total_advance"
+    },
+    "credit_deposit_ratio__advance": {
+      "bihar": "credit_deposit_ratio__total_advance",
+      "west-bengal": "credit_deposit_ratio__total_advance"
+    },
+    "credit_deposit_ratio__advances": {
+      "jharkhand": "credit_deposit_ratio__total_advance",
+      "haryana": "credit_deposit_ratio__total_advance"
+    },
+    "key_indicators__total_advance_utilized_in_the_state": {
+      "odisha": "credit_deposit_ratio__total_advance"
+    },
+    "cd_ratio__advances": {
+      "karnataka": "credit_deposit_ratio__total_advance"
+    },
+    "cd_ratio__advance": {
+      "tamil-nadu": "credit_deposit_ratio__total_advance"
+    },
+    "credit_deposit_ratio__total_advances": {
+      "rajasthan": "credit_deposit_ratio__total_advance",
+      "gujarat": "credit_deposit_ratio__total_advance",
+      "maharashtra": "credit_deposit_ratio__total_advance",
+      "telangana": "credit_deposit_ratio__total_advance",
+      "uttarakhand": "credit_deposit_ratio__total_advance"
+    },
+    "credit_deposit_ratio__total": {
+      "manipur": "credit_deposit_ratio__total_branch",
+      "mizoram": "credit_deposit_ratio__total_branch"
+    },
+    "cd_ratio__total": {
+      "karnataka": "credit_deposit_ratio__total_branch"
+    },
+    "credit_deposit_ratio__total_branch": {
+      "gujarat": "credit_deposit_ratio__total_branch",
+      "_canonical": "credit_deposit_ratio__total_branch"
+    },
+    "pmjdy__total_pmjdy_no": {
+      "assam": "pmjdy__total_pmjdy_no",
+      "meghalaya": "pmjdy__total_pmjdy_no",
+      "manipur": "pmjdy__total_pmjdy_no",
+      "arunachal-pradesh": "pmjdy__total_pmjdy_no",
+      "mizoram": "pmjdy__total_pmjdy_no",
+      "nagaland": "pmjdy__total_pmjdy_no",
+      "_canonical": "pmjdy__total_pmjdy_no"
+    },
+    "pmjdy__no_of_pmjdy_accounts": {
+      "tripura": "pmjdy__total_pmjdy_no"
+    },
+    "pmjdy__pmjdy_total_accounts": {
+      "bihar": "pmjdy__total_pmjdy_no",
+      "maharashtra": "pmjdy__total_pmjdy_no"
+    },
+    "pmjdy__total_no_pmjdy_a_c": {
+      "west-bengal": "pmjdy__total_pmjdy_no"
+    },
+    "pmjdy__total": {
+      "jharkhand": "pmjdy__total_pmjdy_no",
+      "tamil-nadu": "pmjdy__total_pmjdy_no",
+      "haryana": "pmjdy__total_pmjdy_no"
+    },
+    "pmjdy_p2__total": {
+      "odisha": "pmjdy__total_pmjdy_no"
+    },
+    "pmjdy__no_of_zero_balance_a_c": {
+      "assam": "pmjdy__no_of_zero_balance_a_c",
+      "meghalaya": "pmjdy__no_of_zero_balance_a_c",
+      "manipur": "pmjdy__no_of_zero_balance_a_c",
+      "arunachal-pradesh": "pmjdy__no_of_zero_balance_a_c",
+      "mizoram": "pmjdy__no_of_zero_balance_a_c",
+      "nagaland": "pmjdy__no_of_zero_balance_a_c",
+      "_canonical": "pmjdy__no_of_zero_balance_a_c"
+    },
+    "pmjdy__zero_balance_a_c": {
+      "bihar": "pmjdy__no_of_zero_balance_a_c",
+      "jharkhand": "pmjdy__no_of_zero_balance_a_c",
+      "tamil-nadu": "pmjdy__no_of_zero_balance_a_c"
+    },
+    "pmjdy__zero_balance_account": {
+      "west-bengal": "pmjdy__no_of_zero_balance_a_c"
+    },
+    "pmjdy__no_of_aadhaar_seeded": {
+      "assam": "pmjdy__no_of_aadhaar_seeded",
+      "meghalaya": "pmjdy__no_of_aadhaar_seeded",
+      "manipur": "pmjdy__no_of_aadhaar_seeded",
+      "arunachal-pradesh": "pmjdy__no_of_aadhaar_seeded",
+      "mizoram": "pmjdy__no_of_aadhaar_seeded",
+      "nagaland": "pmjdy__no_of_aadhaar_seeded",
+      "_canonical": "pmjdy__no_of_aadhaar_seeded"
+    },
+    "pmjdy__aadhaar_seeded": {
+      "bihar": "pmjdy__no_of_aadhaar_seeded",
+      "west-bengal": "aadhaar_authentication__no_of_aadhaar_seeded_casa",
+      "jharkhand": "pmjdy__no_of_aadhaar_seeded",
+      "tamil-nadu": "aadhaar_authentication__no_of_aadhaar_seeded_casa",
+      "haryana": "pmjdy__no_of_aadhaar_seeded"
+    },
+    "pmjdy__no_of_rupay_card_issued": {
+      "assam": "pmjdy__no_of_rupay_card_issued",
+      "meghalaya": "pmjdy__no_of_rupay_card_issued",
+      "manipur": "pmjdy__no_of_rupay_card_issued",
+      "arunachal-pradesh": "pmjdy__no_of_rupay_card_issued",
+      "mizoram": "pmjdy__no_of_rupay_card_issued",
+      "nagaland": "pmjdy__no_of_rupay_card_issued",
+      "_canonical": "pmjdy__no_of_rupay_card_issued"
+    },
+    "pmjdy__rupay_card_issued": {
+      "bihar": "pmjdy__no_of_rupay_card_issued",
+      "west-bengal": "pmjdy__no_of_rupay_card_issued",
+      "jharkhand": "pmjdy__no_of_rupay_card_issued",
+      "tamil-nadu": "pmjdy__no_of_rupay_card_issued"
+    },
+    "pmjdy__female_no": {
+      "assam": "pmjdy__female_no",
+      "meghalaya": "pmjdy__female_no",
+      "manipur": "pmjdy__female_no",
+      "arunachal-pradesh": "pmjdy__female_no",
+      "mizoram": "pmjdy__female_no",
+      "nagaland": "pmjdy__female_no",
+      "_canonical": "pmjdy__female_no"
+    },
+    "pmjdy__no_of_women_pmjdy_accounts": {
+      "tripura": "pmjdy__female_no"
+    },
+    "pmjdy__female_a_c": {
+      "west-bengal": "pmjdy__female_no"
+    },
+    "pmjdy__female": {
+      "jharkhand": "pmjdy__female_no",
+      "tamil-nadu": "pmjdy__female_no",
+      "haryana": "pmjdy__female_no"
+    },
+    "pmjdy__rural_no": {
+      "assam": "pmjdy__rural_no",
+      "meghalaya": "pmjdy__rural_no",
+      "manipur": "pmjdy__rural_no",
+      "arunachal-pradesh": "pmjdy__rural_no",
+      "mizoram": "pmjdy__rural_no",
+      "nagaland": "pmjdy__rural_no",
+      "_canonical": "pmjdy__rural_no"
+    },
+    "pmjdy__rural_a_c": {
+      "west-bengal": "pmjdy__rural_no"
+    },
+    "pmjdy__rural": {
+      "tamil-nadu": "pmjdy__rural_no",
+      "haryana": "pmjdy__rural_no"
+    },
+    "branch_network__total_branch": {
+      "assam": "branch_network__total_branch",
+      "meghalaya": "branch_network__total_branch",
+      "manipur": "branch_network__total_branch",
+      "arunachal-pradesh": "branch_network__total_branch",
+      "mizoram": "branch_network__total_branch",
+      "tripura": "branch_network__total_branch",
+      "nagaland": "branch_network__total_branch",
+      "sikkim": "branch_network__total_branch",
+      "chhattisgarh": "branch_network__total_branch",
+      "gujarat": "branch_network__total_branch",
+      "maharashtra": "branch_network__total_branch",
+      "_canonical": "branch_network__total_branch"
+    },
+    "branch_network__no_of_branches": {
+      "bihar": "branch_network__total_branch"
+    },
+    "branch_network__total": {
+      "jharkhand": "branch_network__total_branch",
+      "karnataka": "branch_network__total_branch",
+      "tamil-nadu": "branch_network__total_branch"
+    },
+    "branch_network__total_branche_s": {
+      "odisha": "branch_network__total_branch"
+    },
+    "branch_network__branch_rural": {
+      "assam": "branch_network__branch_rural",
+      "meghalaya": "branch_network__branch_rural",
+      "manipur": "branch_network__branch_rural",
+      "arunachal-pradesh": "branch_network__branch_rural",
+      "mizoram": "branch_network__branch_rural",
+      "nagaland": "branch_network__branch_rural",
+      "chhattisgarh": "branch_network__branch_rural",
+      "gujarat": "branch_network__branch_rural",
+      "_canonical": "branch_network__branch_rural"
+    },
+    "atm_network__atm_rural": {
+      "bihar": "branch_network__branch_rural"
+    },
+    "branch_network__branches_rural": {
+      "odisha": "branch_network__branch_rural"
+    },
+    "branch_network__rural": {
+      "karnataka": "branch_network__branch_rural",
+      "tamil-nadu": "branch_network__branch_rural"
+    },
+    "branch_network__branch_semi_urban": {
+      "assam": "branch_network__branch_semi_urban",
+      "meghalaya": "branch_network__branch_semi_urban",
+      "manipur": "branch_network__branch_semi_urban",
+      "arunachal-pradesh": "branch_network__branch_semi_urban",
+      "mizoram": "branch_network__branch_semi_urban",
+      "nagaland": "branch_network__branch_semi_urban",
+      "chhattisgarh": "branch_network__branch_semi_urban",
+      "gujarat": "branch_network__branch_semi_urban",
+      "_canonical": "branch_network__branch_semi_urban"
+    },
+    "branch_network__branches_semi_urban": {
+      "bihar": "branch_network__branch_semi_urban"
+    },
+    "branch_network__semi_urban": {
+      "jharkhand": "branch_network__branch_semi_urban",
+      "odisha": "branch_network__branch_semi_urban",
+      "karnataka": "branch_network__branch_semi_urban",
+      "tamil-nadu": "branch_network__branch_semi_urban"
+    },
+    "branch_network__branch_urban": {
+      "assam": "branch_network__branch_urban",
+      "meghalaya": "branch_network__branch_urban",
+      "manipur": "branch_network__branch_urban",
+      "arunachal-pradesh": "branch_network__branch_urban",
+      "mizoram": "branch_network__branch_urban",
+      "nagaland": "branch_network__branch_urban",
+      "chhattisgarh": "branch_network__branch_urban",
+      "gujarat": "branch_network__branch_urban",
+      "_canonical": "branch_network__branch_urban"
+    },
+    "branch_network__branches_urban": {
+      "bihar": "branch_network__branch_urban"
+    },
+    "branch_network__urban": {
+      "jharkhand": "branch_network__branch_urban",
+      "odisha": "branch_network__branch_urban",
+      "karnataka": "branch_network__branch_urban",
+      "tamil-nadu": "branch_network__branch_urban"
+    },
+    "branch_network__total_atm": {
+      "assam": "branch_network__total_atm",
+      "meghalaya": "branch_network__total_atm",
+      "manipur": "branch_network__total_atm",
+      "arunachal-pradesh": "branch_network__total_atm",
+      "mizoram": "branch_network__total_atm",
+      "tripura": "branch_network__total_atm",
+      "nagaland": "branch_network__total_atm",
+      "chhattisgarh": "branch_network__total_atm",
+      "_canonical": "branch_network__total_atm"
+    },
+    "atm_network__atm_total": {
+      "bihar": "branch_network__total_atm"
+    },
+    "branch_network__total_atms": {
+      "odisha": "branch_network__total_atm"
+    },
+    "branch_network__bc_total": {
+      "assam": "branch_network__total_csp",
+      "mizoram": "branch_network__total_csp"
+    },
+    "branch_network__total_csp": {
+      "meghalaya": "branch_network__total_csp",
+      "manipur": "branch_network__total_csp",
+      "arunachal-pradesh": "branch_network__total_csp",
+      "nagaland": "branch_network__total_csp",
+      "_canonical": "branch_network__total_csp"
+    },
+    "business_correspondents__bc_total": {
+      "bihar": "branch_network__total_csp"
+    },
+    "business_correspondents__total_bc": {
+      "jharkhand": "branch_network__total_csp"
+    },
+    "branch_network__total_bc": {
+      "odisha": "branch_network__total_csp"
+    },
+    "kcc__total_no_of_kcc": {
+      "assam": "kcc__total_no_of_kcc",
+      "_canonical": "kcc__total_no_of_kcc"
+    },
+    "kcc__kcc_no": {
+      "meghalaya": "kcc__total_no_of_kcc"
+    },
+    "kcc__no_of_kcc_issued_during_quarter_including_renewal": {
+      "manipur": "kcc__total_no_of_kcc",
+      "arunachal-pradesh": "kcc__total_no_of_kcc"
+    },
+    "kcc__total_no": {
+      "mizoram": "kcc__total_no_of_kcc"
+    },
+    "kcc__cum_no_app_sanc": {
+      "tripura": "kcc__total_no_of_kcc"
+    },
+    "fi_kcc__rupay_card_issued_in_kcc": {
+      "nagaland": "kcc__total_no_of_kcc"
+    },
+    "kcc_outstanding__no_of_kcc_issued_during_quarter_including_renewal": {
+      "bihar": "kcc__total_no_of_kcc"
+    },
+    "kcc__target_no": {
+      "west-bengal": "kcc__total_no_of_kcc"
+    },
+    "kcc__outstanding_at_the_end_of_reporting_quarter_no": {
+      "jharkhand": "kcc__total_no_of_kcc"
+    },
+    "kcc__no_of_applications_sanctioned": {
+      "odisha": "kcc__total_no_of_kcc"
+    },
+    "kcc_animal_husbandry__total_no_of_kcc": {
+      "tamil-nadu": "kcc__total_no_of_kcc"
+    },
+    "kcc__outstanding_amt": {
+      "assam": "kcc__outstanding_amt",
+      "meghalaya": "kcc__outstanding_amt",
+      "manipur": "kcc__outstanding_amt",
+      "_canonical": "kcc__outstanding_amt"
+    },
+    "kcc__total_outstanding": {
+      "arunachal-pradesh": "kcc__outstanding_amt",
+      "mizoram": "kcc__outstanding_amt"
+    },
+    "kcc__kcc_limit_sanctioned_in_rs_lakhs": {
+      "tripura": "kcc__outstanding_amt"
+    },
+    "kcc__o_s_position_limit_sanctioned": {
+      "nagaland": "kcc__outstanding_amt"
+    },
+    "kcc__amt": {
+      "bihar": "kcc__outstanding_amt"
+    },
+    "kcc__amount": {
+      "west-bengal": "kcc__outstanding_amt",
+      "jharkhand": "kcc__outstanding_amt"
+    },
+    "kcc_animal_husbandry__amount_disbursed": {
+      "tamil-nadu": "kcc__outstanding_amt"
+    },
+    "kcc__no_of_rupay_card_issued": {
+      "arunachal-pradesh": "kcc__no_of_rupay_card_issued",
+      "mizoram": "kcc__no_of_rupay_card_issued",
+      "_canonical": "kcc__no_of_rupay_card_issued"
+    },
+    "kcc_fishery__rupay_card_issued": {
+      "bihar": "kcc__no_of_rupay_card_issued"
+    },
+    "kcc__out_of_total_kcc_issued,_no_of_rupay_cards_issued_number": {
+      "jharkhand": "kcc__no_of_rupay_card_issued"
+    },
+    "kcc__kcc_card_activated": {
+      "assam": "kcc__kcc_card_activated",
+      "meghalaya": "kcc__kcc_card_activated",
+      "manipur": "kcc__kcc_card_activated",
+      "arunachal-pradesh": "kcc__kcc_card_activated",
+      "mizoram": "kcc__kcc_card_activated",
+      "_canonical": "kcc__kcc_card_activated"
+    },
+    "kcc_outstanding__kcc_card_activated": {
+      "bihar": "kcc__kcc_card_activated"
+    },
+    "kcc__kcc_card_activated_no": {
+      "jharkhand": "kcc__kcc_card_activated"
+    },
+    "kcc_animal_husbandry__kcc_card_activated": {
+      "tamil-nadu": "kcc__kcc_card_activated"
+    },
+    "shg__savings_linked_no": {
+      "assam": "shg__savings_linked_no",
+      "meghalaya": "shg__savings_linked_no",
+      "manipur": "shg__savings_linked_no",
+      "arunachal-pradesh": "shg__savings_linked_no",
+      "mizoram": "shg__savings_linked_no",
+      "nagaland": "shg__savings_linked_no",
+      "haryana": "shg__savings_linked_no",
+      "_canonical": "shg__savings_linked_no"
+    },
+    "shg__credit_linked_no": {
+      "tripura": "shg__credit_linked_no",
+      "assam": "shg__credit_linked_no",
+      "meghalaya": "shg__credit_linked_no",
+      "manipur": "shg__credit_linked_no",
+      "arunachal-pradesh": "shg__credit_linked_no",
+      "mizoram": "shg__credit_linked_no",
+      "nagaland": "shg__credit_linked_no",
+      "haryana": "shg__credit_linked_no",
+      "_canonical": "shg__credit_linked_no"
+    },
+    "jlg__disbursement_no": {
+      "bihar": "shg__savings_linked_no"
+    },
+    "shg_nrlm__total_sanction_no": {
+      "west-bengal": "shg__savings_linked_no"
+    },
+    "shg_p2__credit_linked_no": {
+      "jharkhand": "shg__credit_linked_no"
+    },
+    "shg__cumulative_achievement_physical_7": {
+      "odisha": "shg__savings_linked_no"
+    },
+    "shg__no_of_shgs": {
+      "tamil-nadu": "shg__savings_linked_no"
+    },
+    "shg__shg_o_s_amt": {
+      "assam": "shg__shg_o_s_amt",
+      "meghalaya": "shg__shg_o_s_amt",
+      "manipur": "shg__shg_o_s_amt",
+      "nagaland": "shg__shg_o_s_amt",
+      "_canonical": "shg__shg_o_s_amt"
+    },
+    "jlg__outstanding_amt": {
+      "arunachal-pradesh": "shg__shg_o_s_amt"
+    },
+    "shg__outstanding_amt": {
+      "tripura": "shg__shg_o_s_amt"
+    },
+    "shg_nrlm__outstanding_amt": {
+      "west-bengal": "shg__shg_o_s_amt"
+    },
+    "shg__total_outstanding_amt_rs_in_lakh": {
+      "jharkhand": "shg__shg_o_s_amt"
+    },
+    "shg__shg_npa_pct": {
+      "assam": "shg__shg_npa_pct",
+      "manipur": "shg__shg_npa_pct",
+      "arunachal-pradesh": "shg__shg_npa_pct",
+      "nagaland": "shg__shg_npa_pct",
+      "_canonical": "shg__shg_npa_pct"
+    },
+    "digital_transactions__coverage_pct": {
+      "tripura": "digital_transactions__coverage_sb_pct"
+    },
+    "digital_transactions__of_such_accounts_out_of_total_operative_savings_accounts": {
+      "sikkim": "digital_transactions__coverage_sb_pct"
+    },
+    "digital_transactions__achievement": {
+      "west-bengal": "digital_transactions__coverage_sb_pct"
+    },
+    "digital_coverage_savings__pct_coverage": {
+      "odisha": "digital_transactions__coverage_sb_pct"
+    },
+    "digital_transactions__digital_coverage_sb_a_c": {
+      "sikkim": "digital_transactions__digital_coverage_sb_a_c",
+      "_canonical": "digital_transactions__digital_coverage_sb_a_c"
+    },
+    "digital_transactions__no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode": {
+      "west-bengal": "digital_transactions__digital_coverage_sb_a_c"
+    },
+    "women_finance__coverage_with_at_least_one_of_the_digital_modes_of_payment_debit_rupay_cards,_in": {
+      "jharkhand": "digital_transactions__digital_coverage_sb_a_c"
+    },
+    "digital_coverage_savings__debit_rupay_cards_coverage_total_no_of_accounts_covered": {
+      "odisha": "digital_transactions__digital_coverage_sb_a_c"
+    },
+    "digital_transactions__bhim_upi_a_c": {
+      "assam": "digital_transactions__bhim_upi_a_c",
+      "meghalaya": "digital_transactions__bhim_upi_a_c",
+      "manipur": "digital_transactions__bhim_upi_a_c",
+      "arunachal-pradesh": "digital_transactions__bhim_upi_a_c",
+      "mizoram": "digital_transactions__bhim_upi_a_c",
+      "nagaland": "digital_transactions__bhim_upi_a_c",
+      "_canonical": "digital_transactions__bhim_upi_a_c"
+    },
+    "digital_transactions__digital_bhim_upi_no": {
+      "bihar": "digital_transactions__bhim_upi_a_c"
+    },
+    "digital_transactions__imps_a_c": {
+      "assam": "digital_transactions__imps_a_c",
+      "meghalaya": "digital_transactions__imps_a_c",
+      "manipur": "digital_transactions__imps_a_c",
+      "arunachal-pradesh": "digital_transactions__imps_a_c",
+      "mizoram": "digital_transactions__imps_a_c",
+      "nagaland": "digital_transactions__imps_a_c",
+      "_canonical": "digital_transactions__imps_a_c"
+    },
+    "digital_transactions__digital_imps_no": {
+      "bihar": "digital_transactions__imps_a_c"
+    },
+    "digital_transactions__cards_debit_credit": {
+      "arunachal-pradesh": "digital_transactions__cards_debit_credit_a_c",
+      "mizoram": "digital_transactions__cards_debit_credit_a_c"
+    },
+    "digital_transactions__digital_cards_no": {
+      "bihar": "digital_transactions__cards_debit_credit_a_c"
+    },
+    "digital_transactions__ussd_a_c": {
+      "assam": "digital_transactions__ussd_a_c",
+      "meghalaya": "digital_transactions__ussd_a_c",
+      "manipur": "digital_transactions__ussd_a_c",
+      "arunachal-pradesh": "digital_transactions__ussd_a_c",
+      "mizoram": "digital_transactions__ussd_a_c",
+      "nagaland": "digital_transactions__ussd_a_c",
+      "_canonical": "digital_transactions__ussd_a_c"
+    },
+    "digital_transactions__digital_ussd_no": {
+      "bihar": "digital_transactions__ussd_a_c"
+    },
+    "aadhaar_authentication__no_of_aadhaar_seeded_casa": {
+      "assam": "aadhaar_authentication__no_of_aadhaar_seeded_casa",
+      "meghalaya": "aadhaar_authentication__no_of_aadhaar_seeded_casa",
+      "manipur": "aadhaar_authentication__no_of_aadhaar_seeded_casa",
+      "arunachal-pradesh": "aadhaar_authentication__no_of_aadhaar_seeded_casa",
+      "mizoram": "aadhaar_authentication__no_of_aadhaar_seeded_casa",
+      "nagaland": "aadhaar_authentication__no_of_aadhaar_seeded_casa",
+      "_canonical": "aadhaar_authentication__no_of_aadhaar_seeded_casa"
+    },
+    "aadhaar_authentication__aadhaar_seeded_casa": {
+      "bihar": "aadhaar_authentication__no_of_aadhaar_seeded_casa",
+      "gujarat": "aadhaar_authentication__no_of_aadhaar_seeded_casa"
+    },
+    "aadhaar_authentication__number_of_aadhaar_seeded_casa": {
+      "jharkhand": "aadhaar_authentication__no_of_aadhaar_seeded_casa"
+    },
+    "aadhaar_authentication__aadhaar_seeded": {
+      "haryana": "aadhaar_authentication__no_of_aadhaar_seeded_casa"
+    },
+    "aadhaar_authentication__no_of_operative_casa": {
+      "assam": "aadhaar_authentication__no_of_operative_casa",
+      "meghalaya": "aadhaar_authentication__no_of_operative_casa",
+      "manipur": "aadhaar_authentication__no_of_operative_casa",
+      "arunachal-pradesh": "aadhaar_authentication__no_of_operative_casa",
+      "mizoram": "aadhaar_authentication__no_of_operative_casa",
+      "nagaland": "aadhaar_authentication__no_of_operative_casa",
+      "_canonical": "aadhaar_authentication__no_of_operative_casa"
+    },
+    "aadhaar_authentication__aadhaar_operative_casa": {
+      "bihar": "aadhaar_authentication__no_of_operative_casa"
+    },
+    "aadhaar_authentication__number_of_operative_casa": {
+      "jharkhand": "aadhaar_authentication__no_of_operative_casa"
+    },
+    "aadhaar_authentication__operative_casa": {
+      "gujarat": "aadhaar_authentication__no_of_operative_casa",
+      "haryana": "aadhaar_authentication__no_of_operative_casa"
+    },
+    "aadhaar_authentication__no_of_authenticated_casa": {
+      "assam": "aadhaar_authentication__no_of_authenticated_casa",
+      "meghalaya": "aadhaar_authentication__no_of_authenticated_casa",
+      "manipur": "aadhaar_authentication__no_of_authenticated_casa",
+      "arunachal-pradesh": "aadhaar_authentication__no_of_authenticated_casa",
+      "mizoram": "aadhaar_authentication__no_of_authenticated_casa",
+      "nagaland": "aadhaar_authentication__no_of_authenticated_casa",
+      "_canonical": "aadhaar_authentication__no_of_authenticated_casa"
+    },
+    "aadhaar_authentication__aadhaar_authenticated_casa": {
+      "bihar": "aadhaar_authentication__no_of_authenticated_casa"
+    },
+    "aadhaar_authentication__number_of_authenticated_casa": {
+      "jharkhand": "aadhaar_authentication__no_of_authenticated_casa"
+    },
+    "aadhaar_authentication__authenticated_casa": {
+      "gujarat": "aadhaar_authentication__no_of_authenticated_casa"
+    },
+    "social_security__enrolment_under_pmsby": {
+      "assam": "social_security__enrolment_under_pmsby",
+      "manipur": "social_security__enrolment_under_pmsby",
+      "arunachal-pradesh": "social_security__enrolment_under_pmsby",
+      "nagaland": "social_security__enrolment_under_pmsby",
+      "_canonical": "social_security__enrolment_under_pmsby"
+    },
+    "social_security__enrolment_under_pmjjby": {
+      "assam": "social_security__enrolment_under_pmjjby",
+      "manipur": "social_security__enrolment_under_pmjjby",
+      "arunachal-pradesh": "social_security__enrolment_under_pmjjby",
+      "nagaland": "social_security__enrolment_under_pmjjby",
+      "_canonical": "social_security__enrolment_under_pmjjby"
+    },
+    "social_security__enrolment_under_apy": {
+      "assam": "social_security__enrolment_under_apy",
+      "manipur": "social_security__enrolment_under_apy",
+      "arunachal-pradesh": "social_security__enrolment_under_apy",
+      "mizoram": "social_security__enrolment_under_apy",
+      "nagaland": "social_security__enrolment_under_apy",
+      "_canonical": "social_security__enrolment_under_apy"
+    },
+    "apy__cumulative_apy_accounts_opened_since_inception": {
+      "west-bengal": "social_security__enrolment_under_apy",
+      "karnataka": "social_security__enrolment_under_apy",
+      "tamil-nadu": "social_security__enrolment_under_apy"
+    },
+    "social_security__total_enrolment_no": {
+      "assam": "social_security__total_enrolment_no",
+      "manipur": "social_security__total_enrolment_no",
+      "arunachal-pradesh": "social_security__total_enrolment_no",
+      "nagaland": "social_security__total_enrolment_no",
+      "_canonical": "social_security__total_enrolment_no"
+    },
+    "pmegp__cy_disbursed_no": {
+      "assam": "pmegp__cy_disbursed_no",
+      "meghalaya": "pmegp__cy_disbursed_no",
+      "manipur": "pmegp__cy_disbursed_no",
+      "arunachal-pradesh": "pmegp__cy_disbursed_no",
+      "mizoram": "pmegp__cy_disbursed_no",
+      "nagaland": "pmegp__cy_disbursed_no",
+      "_canonical": "pmegp__cy_disbursed_no"
+    },
+    "pmegp_2__disbursement_no": {
+      "bihar": "pmegp__cy_disbursed_no"
+    },
+    "pmegp__disbursement_no": {
+      "west-bengal": "pmegp__cy_disbursed_no"
+    },
+    "pmegp__mm_disbursed_no_of_prj": {
+      "jharkhand": "pmegp__cy_disbursed_no",
+      "odisha": "pmegp__cy_disbursed_no"
+    },
+    "pmegp__cy_disbursed_amt": {
+      "assam": "pmegp__cy_disbursed_amt",
+      "meghalaya": "pmegp__cy_disbursed_amt",
+      "manipur": "pmegp__cy_disbursed_amt",
+      "arunachal-pradesh": "pmegp__cy_disbursed_amt",
+      "mizoram": "pmegp__cy_disbursed_amt",
+      "nagaland": "pmegp__cy_disbursed_amt",
+      "_canonical": "pmegp__cy_disbursed_amt"
+    },
+    "pmegp__os_no": {
+      "assam": "pmegp__os_no",
+      "meghalaya": "pmegp__os_no",
+      "manipur": "pmegp__os_no",
+      "arunachal-pradesh": "pmegp__os_no",
+      "mizoram": "pmegp__os_no",
+      "nagaland": "pmegp__os_no",
+      "_canonical": "pmegp__os_no"
+    },
+    "pmegp__os_amt": {
+      "assam": "pmegp__os_amt",
+      "meghalaya": "pmegp__os_amt",
+      "manipur": "pmegp__os_amt",
+      "arunachal-pradesh": "pmegp__os_amt",
+      "mizoram": "pmegp__os_amt",
+      "nagaland": "pmegp__os_amt",
+      "_canonical": "pmegp__os_amt"
+    },
+    "pmegp__npa_pct": {
+      "assam": "pmegp__npa_pct",
+      "meghalaya": "pmegp__npa_pct",
+      "manipur": "pmegp__npa_pct",
+      "arunachal-pradesh": "pmegp__npa_pct",
+      "mizoram": "pmegp__npa_pct",
+      "nagaland": "pmegp__npa_pct",
+      "_canonical": "pmegp__npa_pct"
+    },
+    "housing_pmay__rural_housing_loan_o_s_no": {
+      "assam": "housing_pmay__rural_housing_loan_o_s_no",
+      "meghalaya": "housing_pmay__rural_housing_loan_o_s_no",
+      "manipur": "housing_pmay__rural_housing_loan_o_s_no",
+      "mizoram": "housing_pmay__rural_housing_loan_o_s_no",
+      "nagaland": "housing_pmay__rural_housing_loan_o_s_no",
+      "_canonical": "housing_pmay__rural_housing_loan_o_s_no"
+    },
+    "housing_pmay__rural_housing_loan_o_s_amt": {
+      "assam": "housing_pmay__rural_housing_loan_o_s_amt",
+      "meghalaya": "housing_pmay__rural_housing_loan_o_s_amt",
+      "manipur": "housing_pmay__rural_housing_loan_o_s_amt",
+      "nagaland": "housing_pmay__rural_housing_loan_o_s_amt",
+      "_canonical": "housing_pmay__rural_housing_loan_o_s_amt"
+    },
+    "housing_pmay__pmay_o_s_no": {
+      "assam": "housing_pmay__pmay_o_s_no",
+      "meghalaya": "housing_pmay__pmay_o_s_no",
+      "manipur": "housing_pmay__pmay_o_s_no",
+      "mizoram": "housing_pmay__pmay_o_s_no",
+      "nagaland": "housing_pmay__pmay_o_s_no",
+      "_canonical": "housing_pmay__pmay_o_s_no"
+    },
+    "housing_pmay__pmay_o_s_amt": {
+      "assam": "housing_pmay__pmay_o_s_amt",
+      "meghalaya": "housing_pmay__pmay_o_s_amt",
+      "manipur": "housing_pmay__pmay_o_s_amt",
+      "nagaland": "housing_pmay__pmay_o_s_amt",
+      "_canonical": "housing_pmay__pmay_o_s_amt"
+    },
+    "housing_pmay__housing_loan_ps_o_s_no": {
+      "assam": "housing_pmay__housing_loan_ps_o_s_no",
+      "manipur": "housing_pmay__housing_loan_ps_o_s_no",
+      "mizoram": "housing_pmay__housing_loan_ps_o_s_no",
+      "nagaland": "housing_pmay__housing_loan_ps_o_s_no",
+      "_canonical": "housing_pmay__housing_loan_ps_o_s_no"
+    },
+    "housing_pmay__housing_loan_ps_o_s_amt": {
+      "assam": "housing_pmay__housing_loan_ps_o_s_amt",
+      "manipur": "housing_pmay__housing_loan_ps_o_s_amt",
+      "nagaland": "housing_pmay__housing_loan_ps_o_s_amt",
+      "_canonical": "housing_pmay__housing_loan_ps_o_s_amt"
+    },
+    "sui__no_of_female_account": {
+      "assam": "sui__no_of_female_account",
+      "manipur": "sui__no_of_female_account",
+      "arunachal-pradesh": "sui__no_of_female_account",
+      "mizoram": "sui__no_of_female_account",
+      "_canonical": "sui__no_of_female_account"
+    },
+    "sui__female_account_no": {
+      "meghalaya": "sui__no_of_female_account"
+    },
+    "sui__current_year_no_of_female_account": {
+      "nagaland": "sui__no_of_female_account"
+    },
+    "sui__sui_o_s_no": {
+      "assam": "sui__sui_o_s_no",
+      "meghalaya": "sui__sui_o_s_no",
+      "manipur": "sui__sui_o_s_no",
+      "nagaland": "sui__sui_o_s_no",
+      "_canonical": "sui__sui_o_s_no"
+    },
+    "sui__sui_o_s_amt": {
+      "assam": "sui__sui_o_s_amt",
+      "meghalaya": "sui__sui_o_s_amt",
+      "manipur": "sui__sui_o_s_amt",
+      "nagaland": "sui__sui_o_s_amt",
+      "_canonical": "sui__sui_o_s_amt"
+    },
+    "sui__sui_npa_pct": {
+      "assam": "sui__sui_npa_pct",
+      "manipur": "sui__sui_npa_pct",
+      "nagaland": "sui__sui_npa_pct",
+      "_canonical": "sui__sui_npa_pct"
+    },
+    "sc_st_finance__sc_disbursement_no": {
+      "assam": "sc_st_finance__sc_disbursement_no",
+      "meghalaya": "sc_st_finance__sc_disbursement_no",
+      "manipur": "sc_st_finance__sc_disbursement_no",
+      "arunachal-pradesh": "sc_st_finance__sc_disbursement_no",
+      "mizoram": "sc_st_finance__sc_disbursement_no",
+      "nagaland": "sc_st_finance__sc_disbursement_no",
+      "bihar": "sc_st_finance__sc_disbursement_no",
+      "_canonical": "sc_st_finance__sc_disbursement_no"
+    },
+    "sc_st_finance__sc_disbursement_amt": {
+      "assam": "sc_st_finance__sc_disbursement_amt",
+      "meghalaya": "sc_st_finance__sc_disbursement_amt",
+      "manipur": "sc_st_finance__sc_disbursement_amt",
+      "arunachal-pradesh": "sc_st_finance__sc_disbursement_amt",
+      "mizoram": "sc_st_finance__sc_disbursement_amt",
+      "nagaland": "sc_st_finance__sc_disbursement_amt",
+      "_canonical": "sc_st_finance__sc_disbursement_amt"
+    },
+    "sc_st_finance__st_disbursement_no": {
+      "assam": "sc_st_finance__st_disbursement_no",
+      "meghalaya": "sc_st_finance__st_disbursement_no",
+      "manipur": "sc_st_finance__st_disbursement_no",
+      "arunachal-pradesh": "sc_st_finance__st_disbursement_no",
+      "mizoram": "sc_st_finance__st_disbursement_no",
+      "nagaland": "sc_st_finance__st_disbursement_no",
+      "bihar": "sc_st_finance__st_disbursement_no",
+      "_canonical": "sc_st_finance__st_disbursement_no"
+    },
+    "sc_st_finance__scheduled_tribes_no": {
+      "jharkhand": "sc_st_finance__st_disbursement_no"
+    },
+    "sc_st_finance__st_disbursement_amt": {
+      "assam": "sc_st_finance__st_disbursement_amt",
+      "meghalaya": "sc_st_finance__st_disbursement_amt",
+      "manipur": "sc_st_finance__st_disbursement_amt",
+      "arunachal-pradesh": "sc_st_finance__st_disbursement_amt",
+      "mizoram": "sc_st_finance__st_disbursement_amt",
+      "nagaland": "sc_st_finance__st_disbursement_amt",
+      "_canonical": "sc_st_finance__st_disbursement_amt"
+    },
+    "sc_st_finance__sc_outstanding_no": {
+      "assam": "sc_st_finance__sc_outstanding_no",
+      "meghalaya": "sc_st_finance__sc_outstanding_no",
+      "manipur": "sc_st_finance__sc_outstanding_no",
+      "arunachal-pradesh": "sc_st_finance__sc_outstanding_no",
+      "mizoram": "sc_st_finance__sc_outstanding_no",
+      "nagaland": "sc_st_finance__sc_outstanding_no",
+      "_canonical": "sc_st_finance__sc_outstanding_no"
+    },
+    "sc_st_finance__st_outstanding_no": {
+      "assam": "sc_st_finance__st_outstanding_no",
+      "meghalaya": "sc_st_finance__st_outstanding_no",
+      "manipur": "sc_st_finance__st_outstanding_no",
+      "arunachal-pradesh": "sc_st_finance__st_outstanding_no",
+      "mizoram": "sc_st_finance__st_outstanding_no",
+      "nagaland": "sc_st_finance__st_outstanding_no",
+      "_canonical": "sc_st_finance__st_outstanding_no"
+    },
+    "women_finance__o_s_no": {
+      "assam": "women_finance__o_s_no",
+      "manipur": "women_finance__o_s_no",
+      "arunachal-pradesh": "women_finance__o_s_no",
+      "mizoram": "women_finance__o_s_no",
+      "_canonical": "women_finance__o_s_no"
+    },
+    "women_finance__cy_disb_no": {
+      "meghalaya": "women_finance__cy_disb_no",
+      "assam": "women_finance__cy_disb_no",
+      "manipur": "women_finance__cy_disb_no",
+      "arunachal-pradesh": "women_finance__cy_disb_no",
+      "_canonical": "women_finance__cy_disb_no"
+    },
+    "women_finance__o_s_amt": {
+      "assam": "women_finance__o_s_amt",
+      "manipur": "women_finance__o_s_amt",
+      "arunachal-pradesh": "women_finance__o_s_amt",
+      "mizoram": "women_finance__o_s_amt",
+      "_canonical": "women_finance__o_s_amt"
+    },
+    "women_finance__cy_disb_amt": {
+      "meghalaya": "women_finance__cy_disb_amt",
+      "assam": "women_finance__cy_disb_amt",
+      "manipur": "women_finance__cy_disb_amt",
+      "arunachal-pradesh": "women_finance__cy_disb_amt",
+      "_canonical": "women_finance__cy_disb_amt"
+    },
+    "education_loan__sanctioned_no": {
+      "assam": "education_loan__sanctioned_no",
+      "meghalaya": "education_loan__sanctioned_no",
+      "manipur": "education_loan__sanctioned_no",
+      "arunachal-pradesh": "education_loan__sanctioned_no",
+      "_canonical": "education_loan__sanctioned_no"
+    },
+    "education_loan__sanctioned_amt": {
+      "assam": "education_loan__sanctioned_amt",
+      "meghalaya": "education_loan__sanctioned_amt",
+      "manipur": "education_loan__sanctioned_amt",
+      "arunachal-pradesh": "education_loan__sanctioned_amt",
+      "_canonical": "education_loan__sanctioned_amt"
+    },
+    "education_loan__amt": {
+      "mizoram": "education_loan__sanctioned_amt",
+      "bihar": "education_loan__sanctioned_amt",
+      "jharkhand": "education_loan__sanctioned_amt",
+      "tamil-nadu": "education_loan__sanctioned_amt"
+    },
+    "education_loan__of_which_girl_student_disb_no": {
+      "assam": "education_loan__of_which_girl_student_disb_no",
+      "manipur": "education_loan__of_which_girl_student_disb_no",
+      "arunachal-pradesh": "education_loan__of_which_girl_student_disb_no",
+      "_canonical": "education_loan__of_which_girl_student_disb_no"
+    },
+    "education_loan__of_which_girl_student_disb_amt": {
+      "assam": "education_loan__of_which_girl_student_disb_amt",
+      "manipur": "education_loan__of_which_girl_student_disb_amt",
+      "arunachal-pradesh": "education_loan__of_which_girl_student_disb_amt",
+      "_canonical": "education_loan__of_which_girl_student_disb_amt"
+    },
+    "pmmy_mudra_disbursement__sishu_no": {
+      "assam": "pmmy_mudra_disbursement__sishu_no",
+      "meghalaya": "pmmy_mudra_disbursement__sishu_no",
+      "manipur": "pmmy_mudra_disbursement__sishu_no",
+      "arunachal-pradesh": "pmmy_mudra_disbursement__sishu_no",
+      "nagaland": "pmmy_mudra_disbursement__sishu_no",
+      "_canonical": "pmmy_mudra_disbursement__sishu_no"
+    },
+    "mudra__shishu_no": {
+      "west-bengal": "pmmy_mudra_disbursement__sishu_no"
+    },
+    "pmmy_mudra_disbursement__sishu_amt": {
+      "assam": "pmmy_mudra_disbursement__sishu_amt",
+      "meghalaya": "pmmy_mudra_disbursement__sishu_amt",
+      "arunachal-pradesh": "pmmy_mudra_disbursement__sishu_amt",
+      "nagaland": "pmmy_mudra_disbursement__sishu_amt",
+      "_canonical": "pmmy_mudra_disbursement__sishu_amt"
+    },
+    "pmmy_mudra_disbursement__kishore_no": {
+      "assam": "pmmy_mudra_disbursement__kishore_no",
+      "meghalaya": "pmmy_mudra_disbursement__kishore_no",
+      "arunachal-pradesh": "pmmy_mudra_disbursement__kishore_no",
+      "nagaland": "pmmy_mudra_disbursement__kishore_no",
+      "_canonical": "pmmy_mudra_disbursement__kishore_no"
+    },
+    "mudra__kishore_no": {
+      "west-bengal": "pmmy_mudra_disbursement__kishore_no"
+    },
+    "pmmy_mudra_disbursement__kishore_amt": {
+      "assam": "pmmy_mudra_disbursement__kishore_amt",
+      "meghalaya": "pmmy_mudra_disbursement__kishore_amt",
+      "manipur": "pmmy_mudra_disbursement__kishore_amt",
+      "arunachal-pradesh": "pmmy_mudra_disbursement__kishore_amt",
+      "nagaland": "pmmy_mudra_disbursement__kishore_amt",
+      "_canonical": "pmmy_mudra_disbursement__kishore_amt"
+    },
+    "pmmy_mudra_disbursement__tarun_no": {
+      "assam": "pmmy_mudra_disbursement__tarun_no",
+      "meghalaya": "pmmy_mudra_disbursement__tarun_no",
+      "manipur": "pmmy_mudra_disbursement__tarun_no",
+      "arunachal-pradesh": "pmmy_mudra_disbursement__tarun_no",
+      "nagaland": "pmmy_mudra_disbursement__tarun_no",
+      "_canonical": "pmmy_mudra_disbursement__tarun_no"
+    },
+    "mudra__tarun_no": {
+      "west-bengal": "pmmy_mudra_disbursement__tarun_no"
+    },
+    "pmmy_mudra_disbursement__tarun_amt": {
+      "assam": "pmmy_mudra_disbursement__tarun_amt",
+      "meghalaya": "pmmy_mudra_disbursement__tarun_amt",
+      "manipur": "pmmy_mudra_disbursement__tarun_amt",
+      "arunachal-pradesh": "pmmy_mudra_disbursement__tarun_amt",
+      "nagaland": "pmmy_mudra_disbursement__tarun_amt",
+      "_canonical": "pmmy_mudra_disbursement__tarun_amt"
+    },
+    "pmmy_mudra_disbursement__total_mudra_disb_no": {
+      "assam": "pmmy_mudra_disbursement__total_mudra_disb_no",
+      "manipur": "pmmy_mudra_disbursement__total_mudra_disb_no",
+      "nagaland": "pmmy_mudra_disbursement__total_mudra_disb_no",
+      "_canonical": "pmmy_mudra_disbursement__total_mudra_disb_no"
+    },
+    "pmmy_mudra_os_npa__total_mudra_o_s_no": {
+      "meghalaya": "pmmy_mudra_disbursement__total_mudra_disb_no"
+    },
+    "pmmy_mudra_disbursement__total_mudra_disb_amt": {
+      "assam": "pmmy_mudra_disbursement__total_mudra_disb_amt",
+      "manipur": "pmmy_mudra_disbursement__total_mudra_disb_amt",
+      "nagaland": "pmmy_mudra_disbursement__total_mudra_disb_amt",
+      "_canonical": "pmmy_mudra_disbursement__total_mudra_disb_amt"
+    },
+    "pmmy_mudra_os_npa__total_mudra_o_s_amt": {
+      "meghalaya": "pmmy_mudra_disbursement__total_mudra_disb_amt"
+    },
+    "digital_transactions__transaction_count": {
+      "_canonical": "digital_transactions__transaction_count"
+    },
+    "digital_transactions__transaction_amount": {
+      "_canonical": "digital_transactions__transaction_amount"
+    },
+    "digital_transactions__coverage_sb_pct": {
+      "_canonical": "digital_transactions__coverage_sb_pct"
+    },
+    "digital_transactions__cards_debit_credit_a_c": {
+      "_canonical": "digital_transactions__cards_debit_credit_a_c"
+    },
+    "rbi_outlets__total": {
+      "_canonical": "rbi_outlets__total"
+    },
+    "rbi_outlets__branch": {
+      "_canonical": "rbi_outlets__branch"
+    },
+    "rbi_outlets__bc": {
+      "_canonical": "rbi_outlets__bc"
+    },
+    "rbi_outlets__csp": {
+      "_canonical": "rbi_outlets__csp"
+    },
+    "rbi_outlets__rural": {
+      "_canonical": "rbi_outlets__rural"
+    },
+    "rbi_outlets__semi_urban": {
+      "_canonical": "rbi_outlets__semi_urban"
+    },
+    "rbi_outlets__urban": {
+      "_canonical": "rbi_outlets__urban"
+    },
+    "rbi_outlets__metro": {
+      "_canonical": "rbi_outlets__metro"
+    }
+  },
+  "haryana_field_map": {
+    "cd_ratio_deposits": "credit_deposit_ratio__total_deposit",
+    "cd_ratio_advances": "credit_deposit_ratio__total_advance",
+    "cd_ratio_cd_ratio": "credit_deposit_ratio__overall_cd_ratio",
+    "pmjdy_total": "pmjdy__total_pmjdy_no",
+    "pmjdy_rural": "pmjdy__rural_no",
+    "pmjdy_urban": "pmjdy__urban_no",
+    "pmjdy_male": "pmjdy__male_no",
+    "pmjdy_female": "pmjdy__female_no",
+    "pmjdy_rupay_card": "pmjdy__no_of_rupay_card_issued",
+    "pmjdy_aadhaar_seeded": "pmjdy__no_of_aadhaar_seeded",
+    "pmjdy_target": "pmjdy__target",
+    "kcc_total_kcc_accounts": "kcc__total_no_of_kcc",
+    "kcc_ah_applications_received": "kcc__ah_applications_received",
+    "kcc_ah_applications_accepted": "kcc__ah_applications_accepted",
+    "kcc_ah_applications_sanctioned": "kcc__ah_applications_sanctioned",
+    "kcc_insured": "kcc__insured",
+    "kcc_pending": "kcc__pending",
+    "shg_savings_linked_no": "shg__savings_linked_no",
+    "shg_savings_linked_amt": "shg__savings_linked_amt",
+    "shg_credit_linked_no": "shg__credit_linked_no",
+    "shg_credit_linked_amt": "shg__credit_linked_amt",
+    "aadhaar_aadhaar_seeded": "aadhaar_authentication__no_of_aadhaar_seeded_casa",
+    "aadhaar_operative_casa": "aadhaar_authentication__no_of_operative_casa",
+    "aadhaar_authenticated": "aadhaar_authentication__no_of_authenticated_casa"
+  }
+}
