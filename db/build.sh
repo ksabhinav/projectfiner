@@ -55,4 +55,14 @@ db.close()
 "
 
 echo ""
+echo "=== 7. Exporting static JSON ==="
+if [ "$1" = "--export" ] || [ "$2" = "--export" ]; then
+    python3 export_timeseries.py
+    python3 export_phonepe.py
+    echo "Export complete."
+else
+    echo "Skipped (use --export to generate JSON files)"
+fi
+
+echo ""
 echo "=== Done! ==="
