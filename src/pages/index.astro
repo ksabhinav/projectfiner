@@ -70,20 +70,6 @@ const base = import.meta.env.BASE_URL;
           </div>
         </div>
 
-        <div class="grp open rbi-active" id="grp-rbi">
-          <div class="grp-master" id="grp-rbi-master">
-            <div class="master-dot" style="background:#2d7d46"></div>
-            <span class="grp-title">Banking Outlets (RBI)</span>
-            <span class="grp-arrow">&#9662;</span>
-          </div>
-          <div class="grp-subs">
-            <button class="sub-btn on-branch" id="tog-branch"><span class="sub-dot" style="background:#2563eb"></span>Branches</button>
-            <button class="sub-btn on-bc" id="tog-bc"><span class="sub-dot" style="background:#16a34a"></span>BCs</button>
-            <button class="sub-btn on-csp" id="tog-csp"><span class="sub-dot" style="background:#ea580c"></span>CSPs</button>
-          </div>
-          <div class="rbi-hint" id="rbi-hint" style="font-size:9px;color:#888078;padding:4px 8px 0;font-family:var(--font-sans)">Drill into a state to see 2.47M outlets</div>
-        </div>
-
         <div style="height:1px;background:#e8e5e0;margin:10px 0"></div>
 
         <div class="field">
@@ -169,6 +155,22 @@ const base = import.meta.env.BASE_URL;
             <option value="TELANGANA">Telangana</option>
             <option value="UTTARAKHAND">Uttarakhand</option>
           </select>
+        </div>
+
+        <div style="height:1px;background:#e8e5e0;margin:10px 0"></div>
+
+        <div class="grp open rbi-active" id="grp-rbi">
+          <div class="grp-master" id="grp-rbi-master">
+            <div class="master-dot" style="background:#2d7d46"></div>
+            <span class="grp-title">Banking Outlets (RBI)</span>
+            <span class="grp-arrow">&#9662;</span>
+          </div>
+          <div class="grp-subs">
+            <button class="sub-btn on-branch" id="tog-branch"><span class="sub-dot" style="background:#2563eb"></span>Branches</button>
+            <button class="sub-btn on-bc" id="tog-bc"><span class="sub-dot" style="background:#16a34a"></span>BCs</button>
+            <button class="sub-btn on-csp" id="tog-csp"><span class="sub-dot" style="background:#ea580c"></span>CSPs</button>
+          </div>
+          <div class="rbi-hint" id="rbi-hint" style="font-size:9px;color:#888078;padding:4px 8px 0;font-family:var(--font-sans)">Select a state to see outlet points</div>
         </div>
 
         <div id="stats-banking">Select Banking Access to view FI data</div>
@@ -424,7 +426,7 @@ const base = import.meta.env.BASE_URL;
       rbiLoadedState = stateSlug;
       document.getElementById('rbi-hint').textContent = 'Loading ' + stateSlug + '…';
 
-      fetch(R2_BASE + 'banking-outlets/' + stateSlug + '.json')
+      fetch(R2_BASE + 'banking-outlets/' + stateSlug + '.json', { mode: 'cors' })
         .then(function(r) {
           if (!r.ok) throw new Error('HTTP ' + r.status + ' for ' + stateSlug);
           return r.json();
@@ -516,10 +518,6 @@ const base = import.meta.env.BASE_URL;
     function updateLabelVisibility_capital(){if(currentMode!=='capital')return;if(distLabelsLayer){map.removeLayer(distLabelsLayer);distLabelsLayer=null;}var z=map.getZoom();if(z<8||(currentView!=='choro'&&!drilldownActive))return;var viewBounds=map.getBounds();distLabelsLayer=L.layerGroup();var placed=[];capitalCentroids.forEach(function(d){if(!viewBounds.intersects(d.bounds))return;var px=map.latLngToContainerPoint(d.center);var tooClose=placed.some(function(p){return Math.abs(px.x-p.x)<120&&Math.abs(px.y-p.y)<30;});if(tooClose)return;placed.push(px);distLabelsLayer.addLayer(L.marker(d.center,{icon:L.divIcon({className:'dist-label',html:d.name,iconSize:[0,0],iconAnchor:[0,0]}),interactive:false}));});distLabelsLayer.addTo(map);}
 
     function drillInto(feature,layer){var p=feature.properties;drilldownActive=true;document.getElementById('btn-back').style.display='block';document.getElementById('legend').style.display='block';var stateCode=STATE_NAME_CODE[p.STATE_UT?.toUpperCase()];if(stateCode){capitalStateFilter=stateCode;document.getElementById('state-select').value=stateCode;}map.getContainer().classList.add('clusters-hidden');map.getContainer().classList.remove('clusters-visible');[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(!c._map)c.addTo(map);});renderMarkers();var total=getFilteredTotal(p);document.getElementById('stats-capital').innerHTML='<strong>'+p.DISTRICT+'</strong><br><span style="font-size:9px;color:#888078">'+p.STATE_UT+'</span><br>'+total.toLocaleString()+' access points';
-      // Load RBI banking outlets for this state
-      var rbiSlug = (p.STATE_UT || '').toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
-      if (rbiSlug === 'nct-of-delhi') rbiSlug = 'delhi';
-      loadRbiOutlets(rbiSlug);
       map.flyToBounds(layer.getBounds(),{padding:[40,40],maxZoom:12,duration:1.0});map.once('moveend',function(){map.getContainer().classList.remove('clusters-hidden');map.getContainer().classList.add('clusters-visible');});}
 
     function exitDrilldown(){drilldownActive=false;document.getElementById('btn-back').style.display='none';map.getContainer().classList.remove('clusters-visible');map.getContainer().classList.add('clusters-hidden');clearRbiOutlets();setTimeout(function(){if(currentView==='choro'){[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(c._map)map.removeLayer(c);});document.getElementById('legend').style.display='none';}map.getContainer().classList.remove('clusters-hidden');capitalStateFilter='';document.getElementById('state-select').value='';map.flyToBounds(INDIA_BOUNDS,{padding:[20,20],duration:1.0});renderMarkers();},400);}
@@ -1816,8 +1814,22 @@ const base = import.meta.env.BASE_URL;
           var group = L.geoJSON({ type: 'FeatureCollection', features: stateFts });
           map.flyToBounds(group.getBounds(), { padding: [40, 40], maxZoom: 9, duration: 1.0 });
         }
+        // Load RBI banking outlets for this state
+        var rbiSlug = bankingStateFilter.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+        if (rbiSlug === 'nct-of-delhi') rbiSlug = 'delhi';
+        loadRbiOutlets(rbiSlug);
+        // Show street tiles behind choropleth for outlet context
+        if (!streetTile._map) streetTile.addTo(map);
+        streetTile.bringToBack();
+        if (whiteCanvasTile._map) map.removeLayer(whiteCanvasTile);
       } else {
         flyToNE();
+        clearRbiOutlets();
+        // Restore white canvas
+        if (streetTile._map) map.removeLayer(streetTile);
+        if (!whiteCanvasTile._map) whiteCanvasTile.addTo(map);
+        whiteCanvasTile.bringToBack();
+        if (indiaOutlineLayer && !indiaOutlineLayer._map) indiaOutlineLayer.addTo(map);
       }
     });
 
@@ -1825,6 +1837,12 @@ const base = import.meta.env.BASE_URL;
       bankingStateFilter = '';
       document.getElementById('sel-state').value = '';
       flyToNE();
+      clearRbiOutlets();
+      // Restore white canvas
+      if (streetTile._map) map.removeLayer(streetTile);
+      if (!whiteCanvasTile._map) whiteCanvasTile.addTo(map);
+      whiteCanvasTile.bringToBack();
+      if (indiaOutlineLayer && !indiaOutlineLayer._map) indiaOutlineLayer.addTo(map);
       if (slbcLoaded) {
         buildChoropleth_banking();
         updateLabelVisibility_banking();
@@ -1854,6 +1872,9 @@ const base = import.meta.env.BASE_URL;
       if (distLabelsLayer) { map.removeLayer(distLabelsLayer); distLabelsLayer = null; }
 
       if (mode === 'capital') {
+        // Clear banking outlet points
+        clearRbiOutlets();
+
         // Switch to street map tiles
         if (whiteCanvasTile._map) map.removeLayer(whiteCanvasTile);
         if (indiaOutlineLayer && indiaOutlineLayer._map) map.removeLayer(indiaOutlineLayer);
