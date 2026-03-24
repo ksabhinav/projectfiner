@@ -2,14 +2,17 @@
 
 ## What This Project Is
 
-**Project FINER** (Financial Inclusion in the North East Region) is a static data platform focused on financial inclusion across India, covering 22 states. It publishes interactive maps, charts, and downloadable datasets covering banking infrastructure, credit access, government schemes, and capital markets.
+**Project FINER** (Financial Inclusion in the North East Region) is a data platform mapping financial inclusion across India — 36 states/UTs, 800+ districts, 16 indicators. It publishes interactive maps, charts, and downloadable datasets covering banking infrastructure, credit access, government schemes, digital payments, and capital markets.
 
 - **Hosted on**: GitHub Pages with custom domain at `projectfiner.com`
+- **Large data**: Cloudflare R2 at `data.projectfiner.com` (banking outlet point data, 1.4 GB)
 - **Repo**: `https://github.com/ksabhinav/projectfiner.git`
 - **Branch**: `main`
 - **Framework**: Astro 6 + Svelte 5 (static site generation)
 - **Deployment**: GitHub Actions (`.github/workflows/deploy.yml`) — builds with `npm run build`, deploys to GitHub Pages
 - **Base URL**: `/` (set in `astro.config.mjs`, site: `https://projectfiner.com`)
+- **Data backbone**: SQLite database (`db/finer.db`, gitignored) for extraction, cleaning, joining. Build with `bash db/build.sh`
+- **Contact**: mail@projectfiner.com
 
 ## Dev Server
 
@@ -95,7 +98,35 @@ projectfiner/
     │       ├── {state}_fi_timeseries.csv   # Wide-format CSV: all districts × all quarters
     │       ├── quarterly/                  # Folders (YYYY-MM format), CSVs per category
     │       └── raw-csv/                    # Flat CSVs by category
-    └── digital-payments/                   # PhonePe Pulse UPI data (FY22–FY24)
+    ├── digital-payments/                   # PhonePe Pulse UPI data (36 states, FY20–FY25)
+    │   ├── phonepe_district_timeseries.json  # Consolidated: 14,734 district records, 20 quarters
+    │   └── phonepe-pulse/{state}/          # Raw per-state quarterly JSON files (720 files)
+    ├── banking-outlets/                    # RBI DBIE Banking Outlet data
+    │   ├── district_counts.json            # Aggregated: 774 districts, counts by type (128 KB, in Git)
+    │   └── state_counts.json               # State-level summary (3 KB, in Git)
+    │   # Per-state outlet JSON files (1.4 GB total) hosted on Cloudflare R2:
+    │   # https://data.projectfiner.com/banking-outlets/{state}.json
+    ├── district_lgd_codes.json             # 765 districts with LGD codes + 109 aliases
+    └── data/
+        └── district_boundaries.geojson     # District boundaries with capital markets counts
+│
+├── db/                                     # SQLite backbone (data pipeline)
+│   ├── finer.db                            # SQLite database (gitignored, ~200 MB, rebuilt via build.sh)
+│   ├── build.sh                            # Run full pipeline: init → import → export
+│   ├── init_schema.py                      # Create 11 tables
+│   ├── import_reference.py                 # States, districts, aliases, periods
+│   ├── import_slbc.py                      # 22 states → slbc_data (1.19M rows)
+│   ├── import_phonepe.py                   # PhonePe → phonepe_data (14.7K rows)
+│   ├── import_nfhs.py                      # NFHS-5 → nfhs_data (73.6K rows)
+│   ├── import_aadhaar.py                   # Aadhaar → aadhaar_enrollment (1M rows)
+│   ├── match_districts.py                  # Shared district name → LGD code resolver
+│   ├── export_timeseries.py               # SQLite → {state}_fi_timeseries.json
+│   ├── export_phonepe.py                  # SQLite → phonepe_district_timeseries.json
+│   └── aggregate_banking_outlets.py       # Raw outlets → district_counts.json
+│
+├── validate_data.py                        # Automated data quality checks (7 validators)
+├── DATA_COMPLETENESS.md                    # Coverage matrix: 9 indicators × 22 states
+└── DATA_VALIDATION_REPORT.md              # Latest validation findings
 ```
 
 ## Architecture Notes
@@ -254,9 +285,9 @@ Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) q
 
 Full-screen Leaflet choropleth map showing 7 key financial inclusion indicators across all 22 states at the district level. Accessed via the homepage "Banking Access" mode toggle or `/?mode=banking`.
 
-**7 Indicators**: Credit-Deposit Ratio, PM Jan Dhan Yojana, Branch Network, Kisan Credit Card, Self Help Groups, Digital Transactions, Aadhaar Authentication
+**16 Indicators**: Credit-Deposit Ratio, PM Jan Dhan Yojana, Branch Network, Kisan Credit Card, Self Help Groups, Digital Transactions (incl. PhonePe UPI), Aadhaar Authentication, Banking Infrastructure (RBI), Social Security, PMEGP, Housing/PMAY, Stand Up India, SC/ST Lending, Women's Credit, Education Loans, MUDRA/PMMY
 
-**540 districts across 22 states**
+**800+ districts across 36 states/UTs**
 
 **Key architecture decisions**:
 - Built as inline JS (`<script is:inline>`) in `index.astro` — NOT Svelte — because Leaflet is too imperative
@@ -479,6 +510,81 @@ Bihar and West Bengal have their own dedicated extraction scripts (see sections 
 | xlsx | ^0.18.5 | Client-side Excel generation |
 
 Leaflet and MarkerCluster are loaded via CDN (unpkg) in inline scripts.
+
+## Cloudflare R2 (data.projectfiner.com)
+
+Large data files (>100 MB) are hosted on Cloudflare R2, not GitHub Pages.
+
+- **Bucket**: `projectfiner-data`
+- **Custom domain**: `data.projectfiner.com`
+- **CORS**: Allows `https://projectfiner.com`, `https://www.projectfiner.com`, `localhost:8090`, `localhost:4321`
+- **Upload**: `npx wrangler r2 object put "projectfiner-data/path/file.json" --file=local.json --content-type="application/json" --remote`
+- **Currently hosted**: 35 state banking outlet JSON files (2.47M records, 1.4 GB total)
+- **Frontend accesses via**: `var R2_BASE = 'https://data.projectfiner.com/';`
+
+**Important**: When adding new CORS origins, use `npx wrangler r2 bucket cors set projectfiner-data --file cors.json --force`. The JSON format requires nested `allowed.origins`, `allowed.methods`, `allowed.headers` — NOT the S3-style flat format.
+
+## SQLite Backbone (db/)
+
+The SQLite database is the canonical data store for all FINER data. It's used at build time for cleaning, joining, and exporting — NOT at runtime (GitHub Pages is static).
+
+**Build**: `cd db && bash build.sh --clean` (rebuilds from scratch in ~30s)
+
+**Schema**: 11 tables
+- `states` (36), `districts` (765), `district_aliases` (109), `periods` (48)
+- `slbc_fields` (8,513), `slbc_data` (1.19M) — EAV model for SLBC indicators
+- `phonepe_data` (14.7K), `nfhs_data` (73.6K), `aadhaar_enrollment` (1M)
+- `import_log` — provenance tracking
+
+**District matching**: `match_districts.py` resolves names → LGD codes. Tries: exact name → alias → normalized → cross-state fallback. Unmatched names logged for manual review.
+
+**Export**: `export_timeseries.py` and `export_slim.py` generate JSON files identical to what the frontend expects.
+
+## RBI Banking Outlet Data
+
+**2,472,495 banking outlets** across 35 states with exact GPS coordinates, downloaded from RBI DBIE Banking Outlet & ATM Locator API.
+
+**API endpoint**: `https://data.rbi.org.in/CIMS_Gateway_DBIE/GATEWAY/SERVICES/dbie_getBankGetData`
+- Session token: `security_generateSessionToken` (no auth, just POST `{"body":{}}`)
+- Pagination: `offsetValue` + `limitValue` (up to 5000 per page)
+- **Critical**: `statusType` must be `""` (empty string), NOT `"Live"` — "Live" returns 0 results
+- Download script: `/tmp/download_rbi_outlets.py`
+
+**Per-record fields**: bank, branch, type (BRANCH/BC/CSP/OFFICE/DBU), lat, lng, district, state, ifsc, populationGroup, address, openDate
+
+**Counts**: 167,960 branches + 2.1M BCs + 147K CSPs = 2.47M total
+- Largest: UP (443K), Bihar (260K), Maharashtra (214K)
+
+**On map**: Available as "Banking Infrastructure (RBI)" indicator in Banking Access mode (choropleth from `district_counts.json`). Individual outlet markers loaded on-demand from R2 when drilling into a state.
+
+## PhonePe Pulse UPI Data
+
+**District-level UPI transaction data** for all 36 Indian states/UTs, 20 quarters (FY20-FY25).
+
+**Source**: PhonePe Pulse GitHub repo (`github.com/PhonePe/pulse`)
+- Downloaded via `curl` from `raw.githubusercontent.com/PhonePe/pulse/master/data/map/transaction/hover/country/india/state/{state}/{year}/{q}.json`
+- 440 files (22 states × 5 years × 4 quarters), plus 280 more for additional 14 states
+
+**Consolidated file**: `public/digital-payments/phonepe_district_timeseries.json` (2.3 MB)
+- 14,734 district records, 20 quarters, 2 metrics per record (transaction_count, transaction_amount in Rs. Lakhs)
+- Merged into `slbcData` on the frontend by matching state + district + period
+
+**On map**: Part of "Digital Transactions" indicator group. Default metric when selecting Digital Transactions.
+
+## Data Validation Pipeline
+
+`validate_data.py` — automated quality checks, runs in 0.8s for all 22 states.
+
+**7 validators**:
+1. 10x jumps between consecutive quarters
+2. Column shifts (field value swaps within category)
+3. Count/amount confusion (count fields with amount-like values)
+4. Missing districts (disappear then reappear)
+5. Duplicate fields (>90% identical values)
+6. Outlier values (>3σ from district's own mean)
+7. Period coverage gaps
+
+**Run**: `python3 validate_data.py` (all states) or `python3 validate_data.py --state assam`
 
 ## Common Gotchas
 
