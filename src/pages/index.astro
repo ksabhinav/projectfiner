@@ -159,18 +159,20 @@ const base = import.meta.env.BASE_URL;
 
         <div style="height:1px;background:#e8e5e0;margin:10px 0"></div>
 
-        <div class="grp open rbi-active" id="grp-rbi">
-          <div class="grp-master" id="grp-rbi-master">
-            <div class="master-dot" style="background:#2d7d46"></div>
-            <span class="grp-title">Banking Outlets (RBI)</span>
-            <span class="grp-arrow">&#9662;</span>
-          </div>
-          <div class="grp-subs">
+        <div class="outlet-toggle-row">
+          <label class="outlet-toggle-label">
+            <input type="checkbox" id="tog-outlets" />
+            <span class="outlet-toggle-slider"></span>
+          </label>
+          <span class="outlet-toggle-text">Show Banking Outlets</span>
+        </div>
+        <div id="rbi-outlet-controls" style="display:none">
+          <div class="grp-subs" style="margin-top:6px">
             <button class="sub-btn on-branch" id="tog-branch"><span class="sub-dot" style="background:#2563eb"></span>Branches</button>
             <button class="sub-btn on-bc" id="tog-bc"><span class="sub-dot" style="background:#16a34a"></span>BCs</button>
             <button class="sub-btn on-csp" id="tog-csp"><span class="sub-dot" style="background:#ea580c"></span>CSPs</button>
           </div>
-          <div class="rbi-hint" id="rbi-hint" style="font-size:9px;color:#888078;padding:4px 8px 0;font-family:var(--font-sans)">Select a state to see outlet points</div>
+          <div id="rbi-hint" style="font-size:9px;color:#888078;padding:4px 0 0;font-family:var(--font-sans)">Zoom in to see outlet points</div>
         </div>
 
         <div id="stats-banking">Select Banking Access to view FI data</div>
@@ -456,7 +458,7 @@ const base = import.meta.env.BASE_URL;
 
           renderRbiMarkers();
           document.getElementById('rbi-hint').textContent =
-            data.length.toLocaleString() + ' outlets loaded';
+            data.length.toLocaleString() + ' outlets loaded (as of Mar 2025)';
           rbiLoading = false;
         })
         .catch(function(err) {
@@ -580,18 +582,27 @@ const base = import.meta.env.BASE_URL;
     document.getElementById('grp-mfd-master').addEventListener('click',function(){var el=document.getElementById('grp-mfd');var isOpen=el.classList.contains('open');el.classList.toggle('open',!isOpen);showMFDI=showMFDC=!isOpen;el.classList.toggle('mfd-active',!isOpen);document.getElementById('tog-mfdi').className='sub-btn '+(!isOpen?'on-mfdi':'off');document.getElementById('tog-mfdc').className='sub-btn '+(!isOpen?'on-mfdc':'off');renderMarkers();});
     ['cdsl','nsdl','mfdi','mfdc'].forEach(function(layer){document.getElementById('tog-'+layer).addEventListener('click',function(e){e.stopPropagation();if(layer==='cdsl')showCDSL=!showCDSL;if(layer==='nsdl')showNSDL=!showNSDL;if(layer==='mfdi')showMFDI=!showMFDI;if(layer==='mfdc')showMFDC=!showMFDC;var isOn=layer==='cdsl'?showCDSL:layer==='nsdl'?showNSDL:layer==='mfdc'?showMFDC:showMFDI;document.getElementById('tog-'+layer).className='sub-btn '+(isOn?'on-'+layer:'off');renderMarkers();});});
 
-    // RBI outlets toggle
-    document.getElementById('grp-rbi-master').addEventListener('click', function() {
-      var el = document.getElementById('grp-rbi');
-      var isOpen = el.classList.contains('open');
-      el.classList.toggle('open', !isOpen);
-      showBranch = showBC = showCSP = !isOpen;
-      el.classList.toggle('rbi-active', !isOpen);
-      ['branch','bc','csp'].forEach(function(l) {
-        document.getElementById('tog-' + l).className = 'sub-btn ' + (!isOpen ? 'on-' + l : 'off');
-      });
-      renderRbiMarkers();
+    // RBI outlets toggle switch
+    var outletsEnabled = false;
+    var OUTLET_MIN_ZOOM = 8;
+
+    document.getElementById('tog-outlets').addEventListener('change', function() {
+      outletsEnabled = this.checked;
+      document.getElementById('rbi-outlet-controls').style.display = outletsEnabled ? 'block' : 'none';
+      if (outletsEnabled) {
+        checkAndLoadOutlets();
+      } else {
+        clearRbiOutlets();
+        // Restore white canvas if in banking mode
+        if (currentMode === 'banking') {
+          if (streetTile._map) map.removeLayer(streetTile);
+          if (!whiteCanvasTile._map) whiteCanvasTile.addTo(map);
+          whiteCanvasTile.bringToBack();
+          if (indiaOutlineLayer && !indiaOutlineLayer._map) indiaOutlineLayer.addTo(map);
+        }
+      }
     });
+
     ['branch','bc','csp'].forEach(function(layer) {
       document.getElementById('tog-' + layer).addEventListener('click', function(e) {
         e.stopPropagation();
@@ -604,6 +615,52 @@ const base = import.meta.env.BASE_URL;
       });
     });
 
+    // Detect which state is visible at map center and auto-load outlets
+    function getVisibleStateSlug() {
+      if (!distGeoJSON) return null;
+      var center = map.getCenter();
+      // Find which state the center point is in
+      for (var i = 0; i < distGeoJSON.features.length; i++) {
+        var f = distGeoJSON.features[i];
+        try {
+          var layer = L.geoJSON(f);
+          if (layer.getBounds().contains(center)) {
+            var state = (f.properties.STATE_UT || '').toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+            if (state === 'nct-of-delhi') state = 'delhi';
+            return state;
+          }
+        } catch(e) {}
+      }
+      return null;
+    }
+
+    function checkAndLoadOutlets() {
+      if (!outletsEnabled || currentMode !== 'banking') return;
+      var zoom = map.getZoom();
+      if (zoom < OUTLET_MIN_ZOOM) {
+        // Too zoomed out — clear points but keep toggle on
+        if (rbiLoadedState) {
+          clearRbiOutlets();
+          if (streetTile._map) map.removeLayer(streetTile);
+          if (!whiteCanvasTile._map) whiteCanvasTile.addTo(map);
+          whiteCanvasTile.bringToBack();
+        }
+        document.getElementById('rbi-hint').textContent = 'Zoom in to see outlet points (zoom ' + zoom + '/' + OUTLET_MIN_ZOOM + ')';
+        return;
+      }
+      // Zoomed in enough — find the state at center
+      var slug = getVisibleStateSlug();
+      if (slug && slug !== rbiLoadedState) {
+        // Show street tiles
+        if (!streetTile._map) streetTile.addTo(map);
+        streetTile.bringToBack();
+        if (whiteCanvasTile._map) map.removeLayer(whiteCanvasTile);
+        loadRbiOutlets(slug);
+      } else if (!slug) {
+        document.getElementById('rbi-hint').textContent = 'Move map over India to see outlets';
+      }
+    }
+
     // Location search
     var locTimer=null;var locInput=document.getElementById('search-loc');var locSugg=document.getElementById('loc-sugg');
     locInput.addEventListener('input',function(e){var v=e.target.value;clearTimeout(locTimer);if(v.length<2){locSugg.style.display='none';return;}locTimer=setTimeout(function(){fetch('https://photon.komoot.io/api/?q='+encodeURIComponent(v+' India')+'&limit=6&lang=en').then(function(r){return r.json();}).then(function(data){var fs=(data.features||[]).filter(function(f){var coords=f.geometry.coordinates;return coords[0]>=68&&coords[0]<=97&&coords[1]>=6&&coords[1]<=38;}).slice(0,5);if(!fs.length){locSugg.style.display='none';return;}locSugg.innerHTML=fs.map(function(f){var p=f.properties,name=p.name||p.city||p.state||'';var sub=[p.city,p.state].filter(Boolean).join(', ');var coords=f.geometry.coordinates;return'<div class="sugg-item" data-lat="'+coords[1]+'" data-lon="'+coords[0]+'" data-name="'+name.replace(/"/g,'&quot;')+'"><span>'+name+'</span><small>'+sub+'</small></div>';}).join('');locSugg.style.display='block';}).catch(function(){locSugg.style.display='none';});},350);});
@@ -612,8 +669,8 @@ const base = import.meta.env.BASE_URL;
     document.addEventListener('click',function(e){if(!e.target.closest('#panel'))locSugg.style.display='none';});
 
     // Map zoom/move events for capital labels
-    map.on('zoomend',function(){if(currentMode==='capital')updateLabelVisibility_capital();if(currentMode==='banking')updateLabelVisibility_banking();if(drilldownActive&&map.getZoom()<=8)exitDrilldown();});
-    map.on('moveend',function(){if(currentMode==='capital')updateLabelVisibility_capital();if(currentMode==='banking')updateLabelVisibility_banking();});
+    map.on('zoomend',function(){if(currentMode==='capital')updateLabelVisibility_capital();if(currentMode==='banking'){updateLabelVisibility_banking();checkAndLoadOutlets();}if(drilldownActive&&map.getZoom()<=8)exitDrilldown();});
+    map.on('moveend',function(){if(currentMode==='capital')updateLabelVisibility_capital();if(currentMode==='banking'){updateLabelVisibility_banking();checkAndLoadOutlets();}});
 
     function setCapitalStatus(msg){document.getElementById('stats-capital').textContent=msg;}
 
@@ -1814,35 +1871,16 @@ const base = import.meta.env.BASE_URL;
           var group = L.geoJSON({ type: 'FeatureCollection', features: stateFts });
           map.flyToBounds(group.getBounds(), { padding: [40, 40], maxZoom: 9, duration: 1.0 });
         }
-        // Load RBI banking outlets for this state
-        var rbiSlug = bankingStateFilter.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
-        if (rbiSlug === 'nct-of-delhi') rbiSlug = 'delhi';
-        loadRbiOutlets(rbiSlug);
-        // Show street tiles behind choropleth for outlet context
-        if (!streetTile._map) streetTile.addTo(map);
-        streetTile.bringToBack();
-        if (whiteCanvasTile._map) map.removeLayer(whiteCanvasTile);
       } else {
         flyToNE();
-        clearRbiOutlets();
-        // Restore white canvas
-        if (streetTile._map) map.removeLayer(streetTile);
-        if (!whiteCanvasTile._map) whiteCanvasTile.addTo(map);
-        whiteCanvasTile.bringToBack();
-        if (indiaOutlineLayer && !indiaOutlineLayer._map) indiaOutlineLayer.addTo(map);
       }
+      // Outlet layer will auto-update via zoomend/moveend if toggle is on
     });
 
     document.getElementById('btn-reset-banking').addEventListener('click', function() {
       bankingStateFilter = '';
       document.getElementById('sel-state').value = '';
       flyToNE();
-      clearRbiOutlets();
-      // Restore white canvas
-      if (streetTile._map) map.removeLayer(streetTile);
-      if (!whiteCanvasTile._map) whiteCanvasTile.addTo(map);
-      whiteCanvasTile.bringToBack();
-      if (indiaOutlineLayer && !indiaOutlineLayer._map) indiaOutlineLayer.addTo(map);
       if (slbcLoaded) {
         buildChoropleth_banking();
         updateLabelVisibility_banking();
@@ -1872,8 +1910,11 @@ const base = import.meta.env.BASE_URL;
       if (distLabelsLayer) { map.removeLayer(distLabelsLayer); distLabelsLayer = null; }
 
       if (mode === 'capital') {
-        // Clear banking outlet points
+        // Clear banking outlet points and reset toggle
         clearRbiOutlets();
+        outletsEnabled = false;
+        document.getElementById('tog-outlets').checked = false;
+        document.getElementById('rbi-outlet-controls').style.display = 'none';
 
         // Switch to street map tiles
         if (whiteCanvasTile._map) map.removeLayer(whiteCanvasTile);
@@ -2208,6 +2249,14 @@ const base = import.meta.env.BASE_URL;
   .sub-btn.on-nsdl{border-color:#3d7a8e;color:#3d7a8e;background:rgba(61,122,142,0.06)}.sub-btn.on-nsdl .sub-dot{background:#3d7a8e}
   .sub-btn.on-mfdi{border-color:#5a7a3a;color:#5a7a3a;background:rgba(90,122,58,0.06)}.sub-btn.on-mfdi .sub-dot{background:#5a7a3a}
   .sub-btn.on-mfdc{border-color:#8b6914;color:#8b6914;background:rgba(139,105,20,0.06)}.sub-btn.on-mfdc .sub-dot{background:#8b6914}
+  .outlet-toggle-row{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+  .outlet-toggle-label{position:relative;width:32px;height:18px;flex-shrink:0}
+  .outlet-toggle-label input{opacity:0;width:0;height:0}
+  .outlet-toggle-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background:#e0ddd8;border-radius:9px;transition:0.3s}
+  .outlet-toggle-slider::before{content:'';position:absolute;height:14px;width:14px;left:2px;bottom:2px;background:#fff;border-radius:50%;transition:0.3s}
+  .outlet-toggle-label input:checked+.outlet-toggle-slider{background:#2d7d46}
+  .outlet-toggle-label input:checked+.outlet-toggle-slider::before{transform:translateX(14px)}
+  .outlet-toggle-text{font-family:var(--font-sans);font-size:10px;font-weight:600;color:#555048;letter-spacing:0.02em}
   .sub-btn.on-branch{border-color:#2563eb;color:#2563eb;background:rgba(37,99,235,0.06)}.sub-btn.on-branch .sub-dot{background:#2563eb}
   .sub-btn.on-bc{border-color:#16a34a;color:#16a34a;background:rgba(22,163,74,0.06)}.sub-btn.on-bc .sub-dot{background:#16a34a}
   .sub-btn.on-csp{border-color:#ea580c;color:#ea580c;background:rgba(234,88,12,0.06)}.sub-btn.on-csp .sub-dot{background:#ea580c}
