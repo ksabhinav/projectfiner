@@ -70,6 +70,20 @@ const base = import.meta.env.BASE_URL;
           </div>
         </div>
 
+        <div class="grp open rbi-active" id="grp-rbi">
+          <div class="grp-master" id="grp-rbi-master">
+            <div class="master-dot" style="background:#2d7d46"></div>
+            <span class="grp-title">Banking Outlets (RBI)</span>
+            <span class="grp-arrow">&#9662;</span>
+          </div>
+          <div class="grp-subs">
+            <button class="sub-btn on-branch" id="tog-branch"><span class="sub-dot" style="background:#2563eb"></span>Branches</button>
+            <button class="sub-btn on-bc" id="tog-bc"><span class="sub-dot" style="background:#16a34a"></span>BCs</button>
+            <button class="sub-btn on-csp" id="tog-csp"><span class="sub-dot" style="background:#ea580c"></span>CSPs</button>
+          </div>
+          <div class="rbi-hint" id="rbi-hint" style="font-size:9px;color:#888078;padding:4px 8px 0;font-family:var(--font-sans)">Drill into a state to see 2.47M outlets</div>
+        </div>
+
         <div style="height:1px;background:#e8e5e0;margin:10px 0"></div>
 
         <div class="field">
@@ -372,6 +386,102 @@ const base = import.meta.env.BASE_URL;
     var clusterMFDI = makeCluster('#5a7a3a','#fff');
     var clusterMFDC = makeCluster('#8b6914','#fff');
 
+    // RBI Banking Outlets clusters (on-demand per state)
+    var clusterBranch = makeCluster('#2563eb','#fff');
+    var clusterBC = makeCluster('#16a34a','#fff');
+    var clusterCSP = makeCluster('#ea580c','#fff');
+    [clusterBranch, clusterBC, clusterCSP].forEach(function(c) { map.removeLayer(c); });
+    var showBranch = true, showBC = true, showCSP = true;
+    var rbiMarkerCache = { branch: [], bc: [], csp: [] };
+    var rbiLoadedState = '';  // Which state's data is currently loaded
+    var rbiLoading = false;
+
+    function makeRbiIcon(color) {
+      return L.divIcon({
+        html: '<div style="width:6px;height:6px;border-radius:50%;background:' + color + ';border:1.5px solid rgba(255,255,255,0.9)"></div>',
+        className: '', iconSize: [6, 6], iconAnchor: [3, 3]
+      });
+    }
+    var iconBranch = makeRbiIcon('#2563eb');
+    var iconBC = makeRbiIcon('#16a34a');
+    var iconCSP = makeRbiIcon('#ea580c');
+
+    function buildRbiPopup(r) {
+      return '<div class="pname">' + (r.branch || r.bank || '') + '</div>' +
+        '<span class="pbadge" style="background:#2d7d46;color:#fff">' + (r.type || '') + '</span>' +
+        (r.subType ? '<div style="font-size:9px;color:#888078;font-style:italic;margin-bottom:4px">' + r.subType + '</div>' : '') +
+        '<div class="paddr">' + (r.address || '').slice(0, 160) + '</div>' +
+        '<div class="pmeta">' + (r.bank || '') +
+        (r.ifsc ? '<br>IFSC: ' + r.ifsc : '') +
+        '<br>' + (r.populationGroup || '') + ' · ' + (r.district || '') + '</div>';
+    }
+
+    function loadRbiOutlets(stateSlug) {
+      if (rbiLoadedState === stateSlug || rbiLoading) return;
+      rbiLoading = true;
+      rbiLoadedState = stateSlug;
+      document.getElementById('rbi-hint').textContent = 'Loading ' + stateSlug + '…';
+
+      fetch(_B + 'banking-outlets/' + stateSlug + '.json')
+        .then(function(r) { return r.ok ? r.json() : []; })
+        .then(function(data) {
+          rbiMarkerCache = { branch: [], bc: [], csp: [] };
+          data.forEach(function(r) {
+            if (!r.lat || !r.lng || r.lat === '0' || r.lng === '0') return;
+            var lat = parseFloat(r.lat), lng = parseFloat(r.lng);
+            if (isNaN(lat) || isNaN(lng) || lat === 0 || lng === 0) return;
+
+            var type = (r.type || '').toUpperCase();
+            var icon, bucket;
+            if (type === 'BRANCH') { icon = iconBranch; bucket = 'branch'; }
+            else if (type === 'BC') { icon = iconBC; bucket = 'bc'; }
+            else if (type === 'CSP') { icon = iconCSP; bucket = 'csp'; }
+            else { icon = iconBC; bucket = 'bc'; } // OFFICE/DBU → BC cluster
+
+            var m = L.marker([lat, lng], { icon: icon });
+            m.on('click', function() {
+              if (!this._pb) { this.bindPopup(buildRbiPopup(r), { maxWidth: 280 }).openPopup(); this._pb = true; }
+            });
+            m._rbiData = r;
+            rbiMarkerCache[bucket].push(m);
+          });
+
+          renderRbiMarkers();
+          document.getElementById('rbi-hint').textContent =
+            data.length.toLocaleString() + ' outlets loaded';
+          rbiLoading = false;
+        })
+        .catch(function(err) {
+          document.getElementById('rbi-hint').textContent = 'Error loading outlets';
+          rbiLoading = false;
+        });
+    }
+
+    function renderRbiMarkers() {
+      clusterBranch.clearLayers();
+      clusterBC.clearLayers();
+      clusterCSP.clearLayers();
+      if (showBranch && rbiMarkerCache.branch.length) {
+        clusterBranch.addLayers(rbiMarkerCache.branch);
+        if (!clusterBranch._map) clusterBranch.addTo(map);
+      } else if (clusterBranch._map) map.removeLayer(clusterBranch);
+      if (showBC && rbiMarkerCache.bc.length) {
+        clusterBC.addLayers(rbiMarkerCache.bc);
+        if (!clusterBC._map) clusterBC.addTo(map);
+      } else if (clusterBC._map) map.removeLayer(clusterBC);
+      if (showCSP && rbiMarkerCache.csp.length) {
+        clusterCSP.addLayers(rbiMarkerCache.csp);
+        if (!clusterCSP._map) clusterCSP.addTo(map);
+      } else if (clusterCSP._map) map.removeLayer(clusterCSP);
+    }
+
+    function clearRbiOutlets() {
+      [clusterBranch, clusterBC, clusterCSP].forEach(function(c) { if (c._map) map.removeLayer(c); });
+      rbiMarkerCache = { branch: [], bc: [], csp: [] };
+      rbiLoadedState = '';
+      document.getElementById('rbi-hint').textContent = 'Drill into a state to see 2.47M outlets';
+    }
+
     function makeIcon(color){return L.divIcon({html:'<div style="width:7px;height:7px;border-radius:50%;background:'+color+';border:1.5px solid rgba(255,255,255,0.9)"></div>',className:'',iconSize:[7,7],iconAnchor:[3,3]});}
     var iconCDSL=makeIcon('#b8603e'), iconNSDL=makeIcon('#3d7a8e'), iconMFDI=makeIcon('#5a7a3a'), iconMFDC=makeIcon('#8b6914');
 
@@ -398,9 +508,14 @@ const base = import.meta.env.BASE_URL;
     function buildDistrictLabels_capital(){if(!distGeoJSON)return;capitalCentroids=[];distGeoJSON.features.forEach(function(f){try{var tmp=L.geoJSON(f);var b=tmp.getBounds();capitalCentroids.push({center:b.getCenter(),name:f.properties.DISTRICT,bounds:b});}catch(e){}});}
     function updateLabelVisibility_capital(){if(currentMode!=='capital')return;if(distLabelsLayer){map.removeLayer(distLabelsLayer);distLabelsLayer=null;}var z=map.getZoom();if(z<8||(currentView!=='choro'&&!drilldownActive))return;var viewBounds=map.getBounds();distLabelsLayer=L.layerGroup();var placed=[];capitalCentroids.forEach(function(d){if(!viewBounds.intersects(d.bounds))return;var px=map.latLngToContainerPoint(d.center);var tooClose=placed.some(function(p){return Math.abs(px.x-p.x)<120&&Math.abs(px.y-p.y)<30;});if(tooClose)return;placed.push(px);distLabelsLayer.addLayer(L.marker(d.center,{icon:L.divIcon({className:'dist-label',html:d.name,iconSize:[0,0],iconAnchor:[0,0]}),interactive:false}));});distLabelsLayer.addTo(map);}
 
-    function drillInto(feature,layer){var p=feature.properties;drilldownActive=true;document.getElementById('btn-back').style.display='block';document.getElementById('legend').style.display='block';var stateCode=STATE_NAME_CODE[p.STATE_UT?.toUpperCase()];if(stateCode){capitalStateFilter=stateCode;document.getElementById('state-select').value=stateCode;}map.getContainer().classList.add('clusters-hidden');map.getContainer().classList.remove('clusters-visible');[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(!c._map)c.addTo(map);});renderMarkers();var total=getFilteredTotal(p);document.getElementById('stats-capital').innerHTML='<strong>'+p.DISTRICT+'</strong><br><span style="font-size:9px;color:#888078">'+p.STATE_UT+'</span><br>'+total.toLocaleString()+' access points';map.flyToBounds(layer.getBounds(),{padding:[40,40],maxZoom:12,duration:1.0});map.once('moveend',function(){map.getContainer().classList.remove('clusters-hidden');map.getContainer().classList.add('clusters-visible');});}
+    function drillInto(feature,layer){var p=feature.properties;drilldownActive=true;document.getElementById('btn-back').style.display='block';document.getElementById('legend').style.display='block';var stateCode=STATE_NAME_CODE[p.STATE_UT?.toUpperCase()];if(stateCode){capitalStateFilter=stateCode;document.getElementById('state-select').value=stateCode;}map.getContainer().classList.add('clusters-hidden');map.getContainer().classList.remove('clusters-visible');[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(!c._map)c.addTo(map);});renderMarkers();var total=getFilteredTotal(p);document.getElementById('stats-capital').innerHTML='<strong>'+p.DISTRICT+'</strong><br><span style="font-size:9px;color:#888078">'+p.STATE_UT+'</span><br>'+total.toLocaleString()+' access points';
+      // Load RBI banking outlets for this state
+      var rbiSlug = (p.STATE_UT || '').toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+      if (rbiSlug === 'nct-of-delhi') rbiSlug = 'delhi';
+      loadRbiOutlets(rbiSlug);
+      map.flyToBounds(layer.getBounds(),{padding:[40,40],maxZoom:12,duration:1.0});map.once('moveend',function(){map.getContainer().classList.remove('clusters-hidden');map.getContainer().classList.add('clusters-visible');});}
 
-    function exitDrilldown(){drilldownActive=false;document.getElementById('btn-back').style.display='none';map.getContainer().classList.remove('clusters-visible');map.getContainer().classList.add('clusters-hidden');setTimeout(function(){if(currentView==='choro'){[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(c._map)map.removeLayer(c);});document.getElementById('legend').style.display='none';}map.getContainer().classList.remove('clusters-hidden');capitalStateFilter='';document.getElementById('state-select').value='';map.flyToBounds(INDIA_BOUNDS,{padding:[20,20],duration:1.0});renderMarkers();},400);}
+    function exitDrilldown(){drilldownActive=false;document.getElementById('btn-back').style.display='none';map.getContainer().classList.remove('clusters-visible');map.getContainer().classList.add('clusters-hidden');clearRbiOutlets();setTimeout(function(){if(currentView==='choro'){[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(c._map)map.removeLayer(c);});document.getElementById('legend').style.display='none';}map.getContainer().classList.remove('clusters-hidden');capitalStateFilter='';document.getElementById('state-select').value='';map.flyToBounds(INDIA_BOUNDS,{padding:[20,20],duration:1.0});renderMarkers();},400);}
 
     function setView(mode){currentView=mode;document.getElementById('vbtn-choro').className='view-btn'+(mode==='choro'?' active':'');document.getElementById('vbtn-dots').className='view-btn'+(mode==='dots'?' active':'');document.getElementById('legend').style.display=mode==='dots'?'block':'none';document.getElementById('choro-legend-capital').style.display=mode==='choro'?'block':'none';if(mode==='choro'){[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(c._map)map.removeLayer(c);});buildChoropleth_capital();}else{if(choroLayer){map.removeLayer(choroLayer);choroLayer=null;}[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(!c._map)c.addTo(map);});renderMarkers();}}
 
@@ -459,6 +574,30 @@ const base = import.meta.env.BASE_URL;
     document.getElementById('grp-dpsc-master').addEventListener('click',function(){var el=document.getElementById('grp-dpsc');var isOpen=el.classList.contains('open');el.classList.toggle('open',!isOpen);showCDSL=showNSDL=!isOpen;el.classList.toggle('dpsc-active',!isOpen);['cdsl','nsdl'].forEach(function(l){document.getElementById('tog-'+l).className='sub-btn '+(!isOpen?'on-'+l:'off');});renderMarkers();});
     document.getElementById('grp-mfd-master').addEventListener('click',function(){var el=document.getElementById('grp-mfd');var isOpen=el.classList.contains('open');el.classList.toggle('open',!isOpen);showMFDI=showMFDC=!isOpen;el.classList.toggle('mfd-active',!isOpen);document.getElementById('tog-mfdi').className='sub-btn '+(!isOpen?'on-mfdi':'off');document.getElementById('tog-mfdc').className='sub-btn '+(!isOpen?'on-mfdc':'off');renderMarkers();});
     ['cdsl','nsdl','mfdi','mfdc'].forEach(function(layer){document.getElementById('tog-'+layer).addEventListener('click',function(e){e.stopPropagation();if(layer==='cdsl')showCDSL=!showCDSL;if(layer==='nsdl')showNSDL=!showNSDL;if(layer==='mfdi')showMFDI=!showMFDI;if(layer==='mfdc')showMFDC=!showMFDC;var isOn=layer==='cdsl'?showCDSL:layer==='nsdl'?showNSDL:layer==='mfdc'?showMFDC:showMFDI;document.getElementById('tog-'+layer).className='sub-btn '+(isOn?'on-'+layer:'off');renderMarkers();});});
+
+    // RBI outlets toggle
+    document.getElementById('grp-rbi-master').addEventListener('click', function() {
+      var el = document.getElementById('grp-rbi');
+      var isOpen = el.classList.contains('open');
+      el.classList.toggle('open', !isOpen);
+      showBranch = showBC = showCSP = !isOpen;
+      el.classList.toggle('rbi-active', !isOpen);
+      ['branch','bc','csp'].forEach(function(l) {
+        document.getElementById('tog-' + l).className = 'sub-btn ' + (!isOpen ? 'on-' + l : 'off');
+      });
+      renderRbiMarkers();
+    });
+    ['branch','bc','csp'].forEach(function(layer) {
+      document.getElementById('tog-' + layer).addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (layer === 'branch') showBranch = !showBranch;
+        if (layer === 'bc') showBC = !showBC;
+        if (layer === 'csp') showCSP = !showCSP;
+        var isOn = layer === 'branch' ? showBranch : layer === 'bc' ? showBC : showCSP;
+        this.className = 'sub-btn ' + (isOn ? 'on-' + layer : 'off');
+        renderRbiMarkers();
+      });
+    });
 
     // Location search
     var locTimer=null;var locInput=document.getElementById('search-loc');var locSugg=document.getElementById('loc-sugg');
@@ -1730,6 +1869,7 @@ const base = import.meta.env.BASE_URL;
 
         // Hide capital layers
         [clusterCDSL, clusterNSDL, clusterMFDI, clusterMFDC].forEach(function(c) { if (c._map) map.removeLayer(c); });
+        clearRbiOutlets();
         document.getElementById('legend').style.display = 'none';
         document.getElementById('choro-legend-capital').style.display = 'none';
         document.getElementById('btn-back').style.display = 'none';
@@ -2040,7 +2180,11 @@ const base = import.meta.env.BASE_URL;
   .sub-btn.on-nsdl{border-color:#3d7a8e;color:#3d7a8e;background:rgba(61,122,142,0.06)}.sub-btn.on-nsdl .sub-dot{background:#3d7a8e}
   .sub-btn.on-mfdi{border-color:#5a7a3a;color:#5a7a3a;background:rgba(90,122,58,0.06)}.sub-btn.on-mfdi .sub-dot{background:#5a7a3a}
   .sub-btn.on-mfdc{border-color:#8b6914;color:#8b6914;background:rgba(139,105,20,0.06)}.sub-btn.on-mfdc .sub-dot{background:#8b6914}
+  .sub-btn.on-branch{border-color:#2563eb;color:#2563eb;background:rgba(37,99,235,0.06)}.sub-btn.on-branch .sub-dot{background:#2563eb}
+  .sub-btn.on-bc{border-color:#16a34a;color:#16a34a;background:rgba(22,163,74,0.06)}.sub-btn.on-bc .sub-dot{background:#16a34a}
+  .sub-btn.on-csp{border-color:#ea580c;color:#ea580c;background:rgba(234,88,12,0.06)}.sub-btn.on-csp .sub-dot{background:#ea580c}
   .sub-btn.off{border-color:#e8e5e0;color:#ccc8c0}.sub-btn.off .sub-dot{background:#ccc8c0}
+  .grp.rbi-active .master-dot{background:#2d7d46}
   .grp.dpsc-active .master-dot{background:#b8603e}
   .grp.mfd-active .master-dot{background:#5a7a3a}
 
