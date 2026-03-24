@@ -643,6 +643,20 @@ const base = import.meta.env.BASE_URL;
           { field: 'total_mudra_disb_amt', label: 'Total MUDRA Amount', unit: '₹', desc: 'Total MUDRA loan amount disbursed in Rs. Lakhs.', fallbacks: ['total_mudra_o_s_amt'] },
         ],
       },
+      rbi_banking_outlets: {
+        title: 'Banking Infrastructure (RBI)',
+        desc: 'Comprehensive banking outlet data from RBI\'s DBIE portal covering 2.47 million outlets across India — every bank branch, Business Correspondent, CSP, ATM, and Digital Banking Unit with exact GPS coordinates.',
+        metrics: [
+          { field: 'rbi_outlets__total', label: 'Total Banking Outlets', unit: '', desc: 'Total number of banking access points in the district including branches, BCs, CSPs, ATMs, offices, and DBUs. Source: RBI DBIE Banking Outlet Locator.' },
+          { field: 'rbi_outlets__branch', label: 'Bank Branches', unit: '', desc: 'Number of licensed bank branches (all bank types — PSBs, private, RRBs, SFBs, cooperative). Each branch has a unique Part-1 code and IFSC.' },
+          { field: 'rbi_outlets__bc', label: 'Business Correspondents', unit: '', desc: 'Banking agents with micro-ATM devices providing basic services (deposits, withdrawals, remittances) in unbanked areas. Typically shopkeepers or individual agents.' },
+          { field: 'rbi_outlets__csp', label: 'Customer Service Points', unit: '', desc: 'Fixed-location service points similar to BCs but with more permanent infrastructure. Part of the Common Service Centre (CSC) network.' },
+          { field: 'rbi_outlets__rural', label: 'Rural Outlets', unit: '', desc: 'Banking outlets in centres with population under 10,000. Critical for last-mile financial access in villages.' },
+          { field: 'rbi_outlets__semi_urban', label: 'Semi-Urban Outlets', unit: '', desc: 'Banking outlets in centres with population between 10,000 and 1 lakh.' },
+          { field: 'rbi_outlets__urban', label: 'Urban Outlets', unit: '', desc: 'Banking outlets in centres with population between 1 lakh and 10 lakh.' },
+          { field: 'rbi_outlets__metro', label: 'Metropolitan Outlets', unit: '', desc: 'Banking outlets in centres with population over 10 lakh.' },
+        ],
+      },
     };
 
     // Color ramps
@@ -1391,11 +1405,15 @@ const base = import.meta.env.BASE_URL;
       var lgdPromise = fetch(_B + 'district_lgd_codes.json')
         .then(function(r) { return r.ok ? r.json() : null; })
         .catch(function() { return null; });
+      var rbiPromise = fetch(_B + 'banking-outlets/district_counts.json')
+        .then(function(r) { return r.ok ? r.json() : null; })
+        .catch(function() { return null; });
 
-      Promise.all([slbcPromise, ppPromise, lgdPromise]).then(function(both) {
+      Promise.all([slbcPromise, ppPromise, lgdPromise, rbiPromise]).then(function(both) {
         var results = both[0];
         var ppData = both[1];
         var lgdData = both[2];
+        var rbiData = both[3];
 
         // Build LGD resolver maps
         if (lgdData && lgdData.districts) {
@@ -1447,6 +1465,52 @@ const base = import.meta.env.BASE_URL;
               slbcData[ppState].push(ppRec);
             }
           }
+        }
+
+        // Merge RBI banking outlet counts into slbcData
+        if (rbiData && rbiData.districts) {
+          // Build a state name → slug map (RBI uses uppercase state names with \xa0)
+          var rbiStateToSlug = {};
+          Object.keys(STATE_SLUGS).forEach(function(sname) { rbiStateToSlug[sname] = STATE_SLUGS[sname]; });
+
+          rbiData.districts.forEach(function(rd) {
+            var stateName = (rd.state || '').replace(/\u00a0/g, ' ').trim().toUpperCase();
+            var distName = (rd.district || '').replace(/\u00a0/g, ' ').trim();
+            var slug = rbiStateToSlug[stateName];
+            if (!slug || !distName) return;
+            if (!slbcData[slug]) slbcData[slug] = [];
+
+            // Find the latest period available for this state, or use a fixed label
+            var rbiPeriod = 'March 2025';  // RBI data is current snapshot, assign to latest quarter
+
+            // Try to match existing record
+            var matched = false;
+            for (var ri = 0; ri < slbcData[slug].length; ri++) {
+              var sr = slbcData[slug][ri];
+              if (sr.district && normDist(sr.district) === normDist(distName)) {
+                // Add RBI fields to ALL periods for this district (counts are current snapshot)
+                sr['rbi_outlets__total'] = rd.total;
+                sr['rbi_outlets__branch'] = rd.branch;
+                sr['rbi_outlets__bc'] = rd.bc;
+                sr['rbi_outlets__csp'] = rd.csp;
+                sr['rbi_outlets__rural'] = rd.rural;
+                sr['rbi_outlets__semi_urban'] = rd.semi_urban;
+                sr['rbi_outlets__urban'] = rd.urban;
+                sr['rbi_outlets__metro'] = rd.metro;
+                matched = true;
+                // Don't break — add to all periods for this district
+              }
+            }
+            if (!matched) {
+              slbcData[slug].push({
+                district: distName, period: normalizePeriod(rbiPeriod),
+                'rbi_outlets__total': rd.total, 'rbi_outlets__branch': rd.branch,
+                'rbi_outlets__bc': rd.bc, 'rbi_outlets__csp': rd.csp,
+                'rbi_outlets__rural': rd.rural, 'rbi_outlets__semi_urban': rd.semi_urban,
+                'rbi_outlets__urban': rd.urban, 'rbi_outlets__metro': rd.metro,
+              });
+            }
+          });
         }
 
         slbcLoaded = true;
