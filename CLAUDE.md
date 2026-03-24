@@ -555,7 +555,11 @@ The SQLite database is the canonical data store for all FINER data. It's used at
 **Counts**: 167,960 branches + 2.1M BCs + 147K CSPs = 2.47M total
 - Largest: UP (443K), Bihar (260K), Maharashtra (214K)
 
-**On map**: Available as "Banking Infrastructure (RBI)" indicator in Banking Access mode (choropleth from `district_counts.json`). Individual outlet markers loaded on-demand from R2 when drilling into a state.
+**On map**: Two forms in Banking Access mode:
+1. **Choropleth**: "Banking Infrastructure (RBI)" indicator shows district-level counts from `district_counts.json` (128 KB, in Git)
+2. **Access points**: When a state is selected, individual outlet markers load on-demand from R2 (`data.projectfiner.com/banking-outlets/{state}.json`). Color-coded: blue (branches), green (BCs), orange (CSPs). Street tiles appear behind the choropleth for geographic context. Points clear when state is deselected.
+
+**NOT in Capital Markets mode** — banking outlets are banking infrastructure, not capital market intermediaries. Capital Markets only shows CDSL, NSDL, MFD points.
 
 ## PhonePe Pulse UPI Data
 
