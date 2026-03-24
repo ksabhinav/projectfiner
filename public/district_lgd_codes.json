@@ -1,0 +1,6256 @@
+{
+  "metadata": {
+    "description": "LGD (Local Government Directory) district codes for all Indian districts",
+    "sources": [
+      "India Data Portal (ckandev.indiadataportal.com) - Primary: LGD district codes, state codes, Census 2011 district codes",
+      "DISTRICT_BOUNDARY.geojson - GeoJSON DISTRICT names (NOTE: DIST_LGD field = Census 2011 codes, not LGD codes)",
+      "NFHS-5 India.csv - District name variants from National Family Health Survey",
+      "PhonePe Pulse - District name variants from UPI/digital payments data"
+    ],
+    "total_districts": 765,
+    "total_states_uts": 36,
+    "notes": {
+      "census_2011_code": "Absolute Census 2011 district code (not state-relative). Empty for districts created after 2011.",
+      "lgd_code": "Official LGD district code from lgdirectory.gov.in.",
+      "aliases": "Known name variants from GeoJSON, NFHS-5, and PhonePe. Add SLBC variants as needed.",
+      "geojson_mapping": "To join with GeoJSON features, use census_2011_code (matches GeoJSON DIST_LGD field)."
+    },
+    "generated": "2026-03-24"
+  },
+  "districts": [
+    {
+      "lgd_code": 603,
+      "district": "Nicobars",
+      "state": "Andaman and Nicobar Islands",
+      "state_lgd_code": 35,
+      "census_2011_code": "638",
+      "aliases": []
+    },
+    {
+      "lgd_code": 632,
+      "district": "North and Middle Andaman",
+      "state": "Andaman and Nicobar Islands",
+      "state_lgd_code": 35,
+      "census_2011_code": "639",
+      "aliases": [
+        "North & Middle Andaman",
+        "North And Middle Andaman"
+      ]
+    },
+    {
+      "lgd_code": 602,
+      "district": "South Andamans",
+      "state": "Andaman and Nicobar Islands",
+      "state_lgd_code": 35,
+      "census_2011_code": "640",
+      "aliases": []
+    },
+    {
+      "lgd_code": 745,
+      "district": "Alluri Sitharama Raju",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 744,
+      "district": "Anakapalli",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 502,
+      "district": "Anantapur",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "553",
+      "aliases": [
+        "Ananthapuramu"
+      ]
+    },
+    {
+      "lgd_code": 753,
+      "district": "Annamayya",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 750,
+      "district": "Bapatla",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 503,
+      "district": "Chittoor",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "554",
+      "aliases": []
+    },
+    {
+      "lgd_code": 505,
+      "district": "East Godavari",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "545",
+      "aliases": []
+    },
+    {
+      "lgd_code": 748,
+      "district": "Eluru",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 506,
+      "district": "Guntur",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "548",
+      "aliases": []
+    },
+    {
+      "lgd_code": 746,
+      "district": "Kakinada",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 747,
+      "district": "Konaseema",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 510,
+      "district": "Krishna",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "547",
+      "aliases": []
+    },
+    {
+      "lgd_code": 511,
+      "district": "Kurnool",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "552",
+      "aliases": []
+    },
+    {
+      "lgd_code": 755,
+      "district": "Nandyal",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 749,
+      "district": "Ntr",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 751,
+      "district": "Palnadu",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 743,
+      "district": "Parvathipuram Manyam",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 517,
+      "district": "Prakasam",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "549",
+      "aliases": []
+    },
+    {
+      "lgd_code": 515,
+      "district": "Spsr Nellore",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "550",
+      "aliases": [
+        "Sri Potti Sriramulu Nellore"
+      ]
+    },
+    {
+      "lgd_code": 754,
+      "district": "Sri Sathya Sai",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 519,
+      "district": "Srikakulam",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "542",
+      "aliases": []
+    },
+    {
+      "lgd_code": 752,
+      "district": "Tirupati",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 520,
+      "district": "Visakhapatanam",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "544",
+      "aliases": [
+        "Visakhapatnam"
+      ]
+    },
+    {
+      "lgd_code": 521,
+      "district": "Vizianagaram",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "543",
+      "aliases": []
+    },
+    {
+      "lgd_code": 523,
+      "district": "West Godavari",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "546",
+      "aliases": []
+    },
+    {
+      "lgd_code": 504,
+      "district": "Y.s.r.",
+      "state": "Andhra Pradesh",
+      "state_lgd_code": 28,
+      "census_2011_code": "551",
+      "aliases": [
+        "Y.S.R."
+      ]
+    },
+    {
+      "lgd_code": 628,
+      "district": "Anjaw",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "260",
+      "aliases": []
+    },
+    {
+      "lgd_code": 229,
+      "district": "Changlang",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "253",
+      "aliases": []
+    },
+    {
+      "lgd_code": 230,
+      "district": "Dibang Valley",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "257",
+      "aliases": []
+    },
+    {
+      "lgd_code": 231,
+      "district": "East Kameng",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "247",
+      "aliases": []
+    },
+    {
+      "lgd_code": 232,
+      "district": "East Siang",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "251",
+      "aliases": []
+    },
+    {
+      "lgd_code": 718,
+      "district": "Kamle",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 677,
+      "district": "Kra Daadi",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 233,
+      "district": "Kurung Kumey",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "256",
+      "aliases": []
+    },
+    {
+      "lgd_code": 724,
+      "district": "Leparada",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 234,
+      "district": "Lohit",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "259",
+      "aliases": []
+    },
+    {
+      "lgd_code": 666,
+      "district": "Longding",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 235,
+      "district": "Lower Dibang Valley",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "258",
+      "aliases": []
+    },
+    {
+      "lgd_code": 719,
+      "district": "Lower Siang",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 236,
+      "district": "Lower Subansiri",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "255",
+      "aliases": []
+    },
+    {
+      "lgd_code": 678,
+      "district": "Namsai",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 723,
+      "district": "Pakke Kessang",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "",
+      "aliases": [
+        "Pakke-Kessang"
+      ]
+    },
+    {
+      "lgd_code": 237,
+      "district": "Papum Pare",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "248",
+      "aliases": [
+        "Papumpare"
+      ]
+    },
+    {
+      "lgd_code": 725,
+      "district": "Shi Yomi",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 679,
+      "district": "Siang",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 238,
+      "district": "Tawang",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "245",
+      "aliases": []
+    },
+    {
+      "lgd_code": 239,
+      "district": "Tirap",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "254",
+      "aliases": []
+    },
+    {
+      "lgd_code": 240,
+      "district": "Upper Siang",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "252",
+      "aliases": []
+    },
+    {
+      "lgd_code": 241,
+      "district": "Upper Subansiri",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "249",
+      "aliases": []
+    },
+    {
+      "lgd_code": 242,
+      "district": "West Kameng",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "246",
+      "aliases": []
+    },
+    {
+      "lgd_code": 243,
+      "district": "West Siang",
+      "state": "Arunachal Pradesh",
+      "state_lgd_code": 12,
+      "census_2011_code": "250",
+      "aliases": []
+    },
+    {
+      "lgd_code": 739,
+      "district": "Bajali",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 616,
+      "district": "Baksa",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "324",
+      "aliases": []
+    },
+    {
+      "lgd_code": 280,
+      "district": "Barpeta",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "303",
+      "aliases": []
+    },
+    {
+      "lgd_code": 705,
+      "district": "Biswanath",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 281,
+      "district": "Bongaigaon",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "319",
+      "aliases": []
+    },
+    {
+      "lgd_code": 282,
+      "district": "Cachar",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "316",
+      "aliases": []
+    },
+    {
+      "lgd_code": 708,
+      "district": "Charaideo",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 612,
+      "district": "Chirang",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "320",
+      "aliases": []
+    },
+    {
+      "lgd_code": 283,
+      "district": "Darrang",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "325",
+      "aliases": [
+        "Darang"
+      ]
+    },
+    {
+      "lgd_code": 284,
+      "district": "Dhemaji",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "308",
+      "aliases": []
+    },
+    {
+      "lgd_code": 285,
+      "district": "Dhubri",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "301",
+      "aliases": []
+    },
+    {
+      "lgd_code": 286,
+      "district": "Dibrugarh",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "310",
+      "aliases": []
+    },
+    {
+      "lgd_code": 299,
+      "district": "Dima Hasao",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "315",
+      "aliases": []
+    },
+    {
+      "lgd_code": 287,
+      "district": "Goalpara",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "302",
+      "aliases": []
+    },
+    {
+      "lgd_code": 288,
+      "district": "Golaghat",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "313",
+      "aliases": []
+    },
+    {
+      "lgd_code": 289,
+      "district": "Hailakandi",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "318",
+      "aliases": []
+    },
+    {
+      "lgd_code": 709,
+      "district": "Hojai",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 290,
+      "district": "Jorhat",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "312",
+      "aliases": []
+    },
+    {
+      "lgd_code": 291,
+      "district": "Kamrup",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "321",
+      "aliases": [
+        "Kamrup Rural"
+      ]
+    },
+    {
+      "lgd_code": 618,
+      "district": "Kamrup Metro",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "322",
+      "aliases": []
+    },
+    {
+      "lgd_code": 292,
+      "district": "Karbi Anglong",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "314",
+      "aliases": []
+    },
+    {
+      "lgd_code": 293,
+      "district": "Karimganj",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "317",
+      "aliases": [
+        "Sribhumi"
+      ]
+    },
+    {
+      "lgd_code": 294,
+      "district": "Kokrajhar",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "300",
+      "aliases": []
+    },
+    {
+      "lgd_code": 295,
+      "district": "Lakhimpur",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "307",
+      "aliases": []
+    },
+    {
+      "lgd_code": 706,
+      "district": "Majuli",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 296,
+      "district": "Marigaon",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "304",
+      "aliases": []
+    },
+    {
+      "lgd_code": 297,
+      "district": "Nagaon",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "305",
+      "aliases": []
+    },
+    {
+      "lgd_code": 298,
+      "district": "Nalbari",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "323",
+      "aliases": []
+    },
+    {
+      "lgd_code": 300,
+      "district": "Sivasagar",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "311",
+      "aliases": [
+        "Sibsagar"
+      ]
+    },
+    {
+      "lgd_code": 301,
+      "district": "Sonitpur",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "306",
+      "aliases": []
+    },
+    {
+      "lgd_code": 707,
+      "district": "South Salmara Mancachar",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 756,
+      "district": "Tamulpur",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 302,
+      "district": "Tinsukia",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "309",
+      "aliases": []
+    },
+    {
+      "lgd_code": 617,
+      "district": "Udalguri",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "326",
+      "aliases": []
+    },
+    {
+      "lgd_code": 710,
+      "district": "West Karbi Anglong",
+      "state": "Assam",
+      "state_lgd_code": 18,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 188,
+      "district": "Araria",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "209",
+      "aliases": []
+    },
+    {
+      "lgd_code": 611,
+      "district": "Arwal",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "240",
+      "aliases": []
+    },
+    {
+      "lgd_code": 189,
+      "district": "Aurangabad",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "235",
+      "aliases": []
+    },
+    {
+      "lgd_code": 190,
+      "district": "Banka",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "225",
+      "aliases": []
+    },
+    {
+      "lgd_code": 191,
+      "district": "Begusarai",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "222",
+      "aliases": []
+    },
+    {
+      "lgd_code": 192,
+      "district": "Bhagalpur",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "224",
+      "aliases": []
+    },
+    {
+      "lgd_code": 193,
+      "district": "Bhojpur",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "231",
+      "aliases": []
+    },
+    {
+      "lgd_code": 194,
+      "district": "Buxar",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "232",
+      "aliases": []
+    },
+    {
+      "lgd_code": 195,
+      "district": "Darbhanga",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "215",
+      "aliases": []
+    },
+    {
+      "lgd_code": 196,
+      "district": "Gaya",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "236",
+      "aliases": []
+    },
+    {
+      "lgd_code": 197,
+      "district": "Gopalganj",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "217",
+      "aliases": []
+    },
+    {
+      "lgd_code": 198,
+      "district": "Jamui",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "238",
+      "aliases": []
+    },
+    {
+      "lgd_code": 199,
+      "district": "Jehanabad",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "239",
+      "aliases": []
+    },
+    {
+      "lgd_code": 200,
+      "district": "Kaimur (bhabua)",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "233",
+      "aliases": [
+        "Kaimur (Bhabua)"
+      ]
+    },
+    {
+      "lgd_code": 201,
+      "district": "Katihar",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "212",
+      "aliases": []
+    },
+    {
+      "lgd_code": 202,
+      "district": "Khagaria",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "223",
+      "aliases": []
+    },
+    {
+      "lgd_code": 203,
+      "district": "Kishanganj",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "210",
+      "aliases": []
+    },
+    {
+      "lgd_code": 204,
+      "district": "Lakhisarai",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "227",
+      "aliases": []
+    },
+    {
+      "lgd_code": 205,
+      "district": "Madhepura",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "213",
+      "aliases": []
+    },
+    {
+      "lgd_code": 206,
+      "district": "Madhubani",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "207",
+      "aliases": []
+    },
+    {
+      "lgd_code": 207,
+      "district": "Munger",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "226",
+      "aliases": []
+    },
+    {
+      "lgd_code": 208,
+      "district": "Muzaffarpur",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "216",
+      "aliases": []
+    },
+    {
+      "lgd_code": 209,
+      "district": "Nalanda",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "229",
+      "aliases": []
+    },
+    {
+      "lgd_code": 210,
+      "district": "Nawada",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "237",
+      "aliases": []
+    },
+    {
+      "lgd_code": 211,
+      "district": "Pashchim Champaran",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "203",
+      "aliases": []
+    },
+    {
+      "lgd_code": 212,
+      "district": "Patna",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "230",
+      "aliases": []
+    },
+    {
+      "lgd_code": 213,
+      "district": "Purbi Champaran",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "204",
+      "aliases": [
+        "Purba Champaran"
+      ]
+    },
+    {
+      "lgd_code": 214,
+      "district": "Purnia",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "211",
+      "aliases": []
+    },
+    {
+      "lgd_code": 215,
+      "district": "Rohtas",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "234",
+      "aliases": []
+    },
+    {
+      "lgd_code": 216,
+      "district": "Saharsa",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "214",
+      "aliases": []
+    },
+    {
+      "lgd_code": 217,
+      "district": "Samastipur",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "221",
+      "aliases": []
+    },
+    {
+      "lgd_code": 218,
+      "district": "Saran",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "219",
+      "aliases": []
+    },
+    {
+      "lgd_code": 219,
+      "district": "Sheikhpura",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "228",
+      "aliases": []
+    },
+    {
+      "lgd_code": 220,
+      "district": "Sheohar",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "205",
+      "aliases": []
+    },
+    {
+      "lgd_code": 221,
+      "district": "Sitamarhi",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "206",
+      "aliases": []
+    },
+    {
+      "lgd_code": 222,
+      "district": "Siwan",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "218",
+      "aliases": []
+    },
+    {
+      "lgd_code": 223,
+      "district": "Supaul",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "208",
+      "aliases": []
+    },
+    {
+      "lgd_code": 224,
+      "district": "Vaishali",
+      "state": "Bihar",
+      "state_lgd_code": 10,
+      "census_2011_code": "220",
+      "aliases": []
+    },
+    {
+      "lgd_code": 44,
+      "district": "Chandigarh",
+      "state": "Chandigarh",
+      "state_lgd_code": 4,
+      "census_2011_code": "55",
+      "aliases": []
+    },
+    {
+      "lgd_code": 646,
+      "district": "Balod",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 644,
+      "district": "Baloda Bazar",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 649,
+      "district": "Balrampur",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 374,
+      "district": "Bastar",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "414",
+      "aliases": []
+    },
+    {
+      "lgd_code": 650,
+      "district": "Bemetara",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 636,
+      "district": "Bijapur",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "417",
+      "aliases": []
+    },
+    {
+      "lgd_code": 375,
+      "district": "Bilaspur",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "406",
+      "aliases": []
+    },
+    {
+      "lgd_code": 376,
+      "district": "Dantewada",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "416",
+      "aliases": [
+        "Dakshin Bastar Dantewara"
+      ]
+    },
+    {
+      "lgd_code": 377,
+      "district": "Dhamtari",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "412",
+      "aliases": []
+    },
+    {
+      "lgd_code": 378,
+      "district": "Durg",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "409",
+      "aliases": []
+    },
+    {
+      "lgd_code": 645,
+      "district": "Gariyaband",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 734,
+      "district": "Gaurella Pendra Marwahi",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 379,
+      "district": "Janjgir-champa",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "405",
+      "aliases": [
+        "Janjgir - Champa",
+        "Janjgir Champa"
+      ]
+    },
+    {
+      "lgd_code": 380,
+      "district": "Jashpur",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "402",
+      "aliases": []
+    },
+    {
+      "lgd_code": 382,
+      "district": "Kabirdham",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "407",
+      "aliases": [
+        "Kawardha (Kabirdham)"
+      ]
+    },
+    {
+      "lgd_code": 381,
+      "district": "Kanker",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "413",
+      "aliases": [
+        "Uttar Bastar Kanker"
+      ]
+    },
+    {
+      "lgd_code": 759,
+      "district": "Khairgarh Chhuikhadan Gandai",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 643,
+      "district": "Kondagaon",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 383,
+      "district": "Korba",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "404",
+      "aliases": []
+    },
+    {
+      "lgd_code": 384,
+      "district": "Korea",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "400",
+      "aliases": []
+    },
+    {
+      "lgd_code": 385,
+      "district": "Mahasamund",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "411",
+      "aliases": []
+    },
+    {
+      "lgd_code": 760,
+      "district": "Manendragarh Chirimiri Bharatpur",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 761,
+      "district": "Mohla Manpur Ambagarh Chouki",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 647,
+      "district": "Mungeli",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 637,
+      "district": "Narayanpur",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "415",
+      "aliases": []
+    },
+    {
+      "lgd_code": 386,
+      "district": "Raigarh",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "403",
+      "aliases": []
+    },
+    {
+      "lgd_code": 387,
+      "district": "Raipur",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "410",
+      "aliases": []
+    },
+    {
+      "lgd_code": 388,
+      "district": "Rajnandgaon",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "408",
+      "aliases": []
+    },
+    {
+      "lgd_code": 762,
+      "district": "Sakti",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 763,
+      "district": "Sarangarh Bilaigarh",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 642,
+      "district": "Sukma",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 648,
+      "district": "Surajpur",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 389,
+      "district": "Surguja",
+      "state": "Chhattisgarh",
+      "state_lgd_code": 22,
+      "census_2011_code": "401",
+      "aliases": []
+    },
+    {
+      "lgd_code": 77,
+      "district": "Central",
+      "state": "Delhi",
+      "state_lgd_code": 7,
+      "census_2011_code": "95",
+      "aliases": []
+    },
+    {
+      "lgd_code": 78,
+      "district": "East",
+      "state": "Delhi",
+      "state_lgd_code": 7,
+      "census_2011_code": "93",
+      "aliases": []
+    },
+    {
+      "lgd_code": 79,
+      "district": "New Delhi",
+      "state": "Delhi",
+      "state_lgd_code": 7,
+      "census_2011_code": "94",
+      "aliases": []
+    },
+    {
+      "lgd_code": 80,
+      "district": "North",
+      "state": "Delhi",
+      "state_lgd_code": 7,
+      "census_2011_code": "91",
+      "aliases": []
+    },
+    {
+      "lgd_code": 81,
+      "district": "North East",
+      "state": "Delhi",
+      "state_lgd_code": 7,
+      "census_2011_code": "92",
+      "aliases": []
+    },
+    {
+      "lgd_code": 82,
+      "district": "North West",
+      "state": "Delhi",
+      "state_lgd_code": 7,
+      "census_2011_code": "90",
+      "aliases": []
+    },
+    {
+      "lgd_code": 671,
+      "district": "Shahdara",
+      "state": "Delhi",
+      "state_lgd_code": 7,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 83,
+      "district": "South",
+      "state": "Delhi",
+      "state_lgd_code": 7,
+      "census_2011_code": "98",
+      "aliases": []
+    },
+    {
+      "lgd_code": 670,
+      "district": "South East",
+      "state": "Delhi",
+      "state_lgd_code": 7,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 84,
+      "district": "South West",
+      "state": "Delhi",
+      "state_lgd_code": 7,
+      "census_2011_code": "97",
+      "aliases": []
+    },
+    {
+      "lgd_code": 85,
+      "district": "West",
+      "state": "Delhi",
+      "state_lgd_code": 7,
+      "census_2011_code": "96",
+      "aliases": []
+    },
+    {
+      "lgd_code": 551,
+      "district": "North Goa",
+      "state": "Goa",
+      "state_lgd_code": 30,
+      "census_2011_code": "585",
+      "aliases": []
+    },
+    {
+      "lgd_code": 552,
+      "district": "South Goa",
+      "state": "Goa",
+      "state_lgd_code": 30,
+      "census_2011_code": "586",
+      "aliases": []
+    },
+    {
+      "lgd_code": 438,
+      "district": "Ahmadabad",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "474",
+      "aliases": []
+    },
+    {
+      "lgd_code": 439,
+      "district": "Amreli",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "480",
+      "aliases": []
+    },
+    {
+      "lgd_code": 440,
+      "district": "Anand",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "482",
+      "aliases": []
+    },
+    {
+      "lgd_code": 672,
+      "district": "Arvalli",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 441,
+      "district": "Banas Kantha",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "469",
+      "aliases": []
+    },
+    {
+      "lgd_code": 442,
+      "district": "Bharuch",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "488",
+      "aliases": []
+    },
+    {
+      "lgd_code": 443,
+      "district": "Bhavnagar",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "481",
+      "aliases": []
+    },
+    {
+      "lgd_code": 676,
+      "district": "Botad",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 668,
+      "district": "Chhotaudepur",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 444,
+      "district": "Dang",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "489",
+      "aliases": [
+        "Dangs"
+      ]
+    },
+    {
+      "lgd_code": 674,
+      "district": "Devbhumi Dwarka",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 445,
+      "district": "Dohad",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "485",
+      "aliases": [
+        "Dahod"
+      ]
+    },
+    {
+      "lgd_code": 446,
+      "district": "Gandhinagar",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "473",
+      "aliases": []
+    },
+    {
+      "lgd_code": 675,
+      "district": "Gir Somnath",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 447,
+      "district": "Jamnagar",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "477",
+      "aliases": []
+    },
+    {
+      "lgd_code": 448,
+      "district": "Junagadh",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "479",
+      "aliases": []
+    },
+    {
+      "lgd_code": 449,
+      "district": "Kachchh",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "468",
+      "aliases": []
+    },
+    {
+      "lgd_code": 450,
+      "district": "Kheda",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "483",
+      "aliases": []
+    },
+    {
+      "lgd_code": 451,
+      "district": "Mahesana",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "471",
+      "aliases": []
+    },
+    {
+      "lgd_code": 669,
+      "district": "Mahisagar",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 673,
+      "district": "Morbi",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 452,
+      "district": "Narmada",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "487",
+      "aliases": []
+    },
+    {
+      "lgd_code": 453,
+      "district": "Navsari",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "490",
+      "aliases": []
+    },
+    {
+      "lgd_code": 454,
+      "district": "Panch Mahals",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "484",
+      "aliases": []
+    },
+    {
+      "lgd_code": 455,
+      "district": "Patan",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "470",
+      "aliases": []
+    },
+    {
+      "lgd_code": 456,
+      "district": "Porbandar",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "478",
+      "aliases": []
+    },
+    {
+      "lgd_code": 457,
+      "district": "Rajkot",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "476",
+      "aliases": []
+    },
+    {
+      "lgd_code": 458,
+      "district": "Sabar Kantha",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "472",
+      "aliases": []
+    },
+    {
+      "lgd_code": 459,
+      "district": "Surat",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "492",
+      "aliases": []
+    },
+    {
+      "lgd_code": 460,
+      "district": "Surendranagar",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "475",
+      "aliases": []
+    },
+    {
+      "lgd_code": 641,
+      "district": "Tapi",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "493",
+      "aliases": []
+    },
+    {
+      "lgd_code": 461,
+      "district": "Vadodara",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "486",
+      "aliases": []
+    },
+    {
+      "lgd_code": 462,
+      "district": "Valsad",
+      "state": "Gujarat",
+      "state_lgd_code": 24,
+      "census_2011_code": "491",
+      "aliases": []
+    },
+    {
+      "lgd_code": 58,
+      "district": "Ambala",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "70",
+      "aliases": []
+    },
+    {
+      "lgd_code": 59,
+      "district": "Bhiwani",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "81",
+      "aliases": []
+    },
+    {
+      "lgd_code": 701,
+      "district": "Charki Dadri",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 60,
+      "district": "Faridabad",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "88",
+      "aliases": []
+    },
+    {
+      "lgd_code": 61,
+      "district": "Fatehabad",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "78",
+      "aliases": []
+    },
+    {
+      "lgd_code": 62,
+      "district": "Gurugram",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "86",
+      "aliases": []
+    },
+    {
+      "lgd_code": 63,
+      "district": "Hisar",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "80",
+      "aliases": []
+    },
+    {
+      "lgd_code": 64,
+      "district": "Jhajjar",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "83",
+      "aliases": []
+    },
+    {
+      "lgd_code": 65,
+      "district": "Jind",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "77",
+      "aliases": []
+    },
+    {
+      "lgd_code": 66,
+      "district": "Kaithal",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "73",
+      "aliases": []
+    },
+    {
+      "lgd_code": 67,
+      "district": "Karnal",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "74",
+      "aliases": []
+    },
+    {
+      "lgd_code": 68,
+      "district": "Kurukshetra",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "72",
+      "aliases": []
+    },
+    {
+      "lgd_code": 69,
+      "district": "Mahendragarh",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "84",
+      "aliases": []
+    },
+    {
+      "lgd_code": 604,
+      "district": "Nuh",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "87",
+      "aliases": []
+    },
+    {
+      "lgd_code": 619,
+      "district": "Palwal",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "89",
+      "aliases": []
+    },
+    {
+      "lgd_code": 70,
+      "district": "Panchkula",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "69",
+      "aliases": []
+    },
+    {
+      "lgd_code": 71,
+      "district": "Panipat",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "75",
+      "aliases": []
+    },
+    {
+      "lgd_code": 72,
+      "district": "Rewari",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "85",
+      "aliases": []
+    },
+    {
+      "lgd_code": 73,
+      "district": "Rohtak",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "82",
+      "aliases": []
+    },
+    {
+      "lgd_code": 74,
+      "district": "Sirsa",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "79",
+      "aliases": []
+    },
+    {
+      "lgd_code": 75,
+      "district": "Sonipat",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "76",
+      "aliases": []
+    },
+    {
+      "lgd_code": 76,
+      "district": "Yamunanagar",
+      "state": "Haryana",
+      "state_lgd_code": 6,
+      "census_2011_code": "71",
+      "aliases": []
+    },
+    {
+      "lgd_code": 15,
+      "district": "Bilaspur",
+      "state": "Himachal Pradesh",
+      "state_lgd_code": 2,
+      "census_2011_code": "30",
+      "aliases": []
+    },
+    {
+      "lgd_code": 16,
+      "district": "Chamba",
+      "state": "Himachal Pradesh",
+      "state_lgd_code": 2,
+      "census_2011_code": "23",
+      "aliases": []
+    },
+    {
+      "lgd_code": 17,
+      "district": "Hamirpur",
+      "state": "Himachal Pradesh",
+      "state_lgd_code": 2,
+      "census_2011_code": "28",
+      "aliases": []
+    },
+    {
+      "lgd_code": 18,
+      "district": "Kangra",
+      "state": "Himachal Pradesh",
+      "state_lgd_code": 2,
+      "census_2011_code": "24",
+      "aliases": []
+    },
+    {
+      "lgd_code": 19,
+      "district": "Kinnaur",
+      "state": "Himachal Pradesh",
+      "state_lgd_code": 2,
+      "census_2011_code": "34",
+      "aliases": []
+    },
+    {
+      "lgd_code": 20,
+      "district": "Kullu",
+      "state": "Himachal Pradesh",
+      "state_lgd_code": 2,
+      "census_2011_code": "26",
+      "aliases": []
+    },
+    {
+      "lgd_code": 21,
+      "district": "Lahul and Spiti",
+      "state": "Himachal Pradesh",
+      "state_lgd_code": 2,
+      "census_2011_code": "25",
+      "aliases": []
+    },
+    {
+      "lgd_code": 22,
+      "district": "Mandi",
+      "state": "Himachal Pradesh",
+      "state_lgd_code": 2,
+      "census_2011_code": "27",
+      "aliases": []
+    },
+    {
+      "lgd_code": 23,
+      "district": "Shimla",
+      "state": "Himachal Pradesh",
+      "state_lgd_code": 2,
+      "census_2011_code": "33",
+      "aliases": []
+    },
+    {
+      "lgd_code": 24,
+      "district": "Sirmaur",
+      "state": "Himachal Pradesh",
+      "state_lgd_code": 2,
+      "census_2011_code": "32",
+      "aliases": []
+    },
+    {
+      "lgd_code": 25,
+      "district": "Solan",
+      "state": "Himachal Pradesh",
+      "state_lgd_code": 2,
+      "census_2011_code": "31",
+      "aliases": []
+    },
+    {
+      "lgd_code": 26,
+      "district": "Una",
+      "state": "Himachal Pradesh",
+      "state_lgd_code": 2,
+      "census_2011_code": "29",
+      "aliases": []
+    },
+    {
+      "lgd_code": 1,
+      "district": "Anantnag",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "14",
+      "aliases": []
+    },
+    {
+      "lgd_code": 623,
+      "district": "Bandipora",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "9",
+      "aliases": []
+    },
+    {
+      "lgd_code": 3,
+      "district": "Baramulla",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "8",
+      "aliases": []
+    },
+    {
+      "lgd_code": 2,
+      "district": "Budgam",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "2",
+      "aliases": []
+    },
+    {
+      "lgd_code": 4,
+      "district": "Doda",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "16",
+      "aliases": []
+    },
+    {
+      "lgd_code": 626,
+      "district": "Ganderbal",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "11",
+      "aliases": []
+    },
+    {
+      "lgd_code": 5,
+      "district": "Jammu",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "21",
+      "aliases": []
+    },
+    {
+      "lgd_code": 7,
+      "district": "Kathua",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "7",
+      "aliases": []
+    },
+    {
+      "lgd_code": 620,
+      "district": "Kishtwar",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "18",
+      "aliases": []
+    },
+    {
+      "lgd_code": 622,
+      "district": "Kulgam",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "15",
+      "aliases": []
+    },
+    {
+      "lgd_code": 8,
+      "district": "Kupwara",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "1",
+      "aliases": []
+    },
+    {
+      "lgd_code": 10,
+      "district": "Poonch",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "5",
+      "aliases": []
+    },
+    {
+      "lgd_code": 11,
+      "district": "Pulwama",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "12",
+      "aliases": []
+    },
+    {
+      "lgd_code": 12,
+      "district": "Rajouri",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "6",
+      "aliases": []
+    },
+    {
+      "lgd_code": 621,
+      "district": "Ramban",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "17",
+      "aliases": []
+    },
+    {
+      "lgd_code": 627,
+      "district": "Reasi",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "20",
+      "aliases": []
+    },
+    {
+      "lgd_code": 624,
+      "district": "Samba",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "22",
+      "aliases": []
+    },
+    {
+      "lgd_code": 625,
+      "district": "Shopian",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "13",
+      "aliases": []
+    },
+    {
+      "lgd_code": 13,
+      "district": "Srinagar",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "10",
+      "aliases": []
+    },
+    {
+      "lgd_code": 14,
+      "district": "Udhampur",
+      "state": "Jammu and Kashmir",
+      "state_lgd_code": 1,
+      "census_2011_code": "19",
+      "aliases": []
+    },
+    {
+      "lgd_code": 322,
+      "district": "Bokaro",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "355",
+      "aliases": []
+    },
+    {
+      "lgd_code": 323,
+      "district": "Chatra",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "347",
+      "aliases": []
+    },
+    {
+      "lgd_code": 324,
+      "district": "Deoghar",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "350",
+      "aliases": []
+    },
+    {
+      "lgd_code": 325,
+      "district": "Dhanbad",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "354",
+      "aliases": []
+    },
+    {
+      "lgd_code": 326,
+      "district": "Dumka",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "362",
+      "aliases": []
+    },
+    {
+      "lgd_code": 327,
+      "district": "East Singhbum",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "357",
+      "aliases": [
+        "East Singhbhum"
+      ]
+    },
+    {
+      "lgd_code": 328,
+      "district": "Garhwa",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "346",
+      "aliases": []
+    },
+    {
+      "lgd_code": 329,
+      "district": "Giridih",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "349",
+      "aliases": []
+    },
+    {
+      "lgd_code": 330,
+      "district": "Godda",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "351",
+      "aliases": []
+    },
+    {
+      "lgd_code": 331,
+      "district": "Gumla",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "366",
+      "aliases": []
+    },
+    {
+      "lgd_code": 332,
+      "district": "Hazaribagh",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "360",
+      "aliases": []
+    },
+    {
+      "lgd_code": 333,
+      "district": "Jamtara",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "363",
+      "aliases": []
+    },
+    {
+      "lgd_code": 606,
+      "district": "Khunti",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "365",
+      "aliases": []
+    },
+    {
+      "lgd_code": 334,
+      "district": "Koderma",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "348",
+      "aliases": []
+    },
+    {
+      "lgd_code": 335,
+      "district": "Latehar",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "359",
+      "aliases": []
+    },
+    {
+      "lgd_code": 336,
+      "district": "Lohardaga",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "356",
+      "aliases": []
+    },
+    {
+      "lgd_code": 337,
+      "district": "Pakur",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "353",
+      "aliases": []
+    },
+    {
+      "lgd_code": 338,
+      "district": "Palamu",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "358",
+      "aliases": []
+    },
+    {
+      "lgd_code": 607,
+      "district": "Ramgarh",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "361",
+      "aliases": []
+    },
+    {
+      "lgd_code": 339,
+      "district": "Ranchi",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "364",
+      "aliases": []
+    },
+    {
+      "lgd_code": 340,
+      "district": "Sahebganj",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "352",
+      "aliases": [
+        "Sahibganj"
+      ]
+    },
+    {
+      "lgd_code": 341,
+      "district": "Saraikela Kharsawan",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "369",
+      "aliases": []
+    },
+    {
+      "lgd_code": 342,
+      "district": "Simdega",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "367",
+      "aliases": []
+    },
+    {
+      "lgd_code": 343,
+      "district": "West Singhbhum",
+      "state": "Jharkhand",
+      "state_lgd_code": 20,
+      "census_2011_code": "368",
+      "aliases": []
+    },
+    {
+      "lgd_code": 524,
+      "district": "Bagalkote",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "556",
+      "aliases": []
+    },
+    {
+      "lgd_code": 528,
+      "district": "Ballari",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "565",
+      "aliases": []
+    },
+    {
+      "lgd_code": 527,
+      "district": "Belagavi",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "555",
+      "aliases": []
+    },
+    {
+      "lgd_code": 526,
+      "district": "Bengaluru Rural",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "583",
+      "aliases": []
+    },
+    {
+      "lgd_code": 525,
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "572",
+      "aliases": []
+    },
+    {
+      "lgd_code": 529,
+      "district": "Bidar",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "558",
+      "aliases": [
+        "B\\dar"
+      ]
+    },
+    {
+      "lgd_code": 531,
+      "district": "Chamarajanagara",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "578",
+      "aliases": []
+    },
+    {
+      "lgd_code": 630,
+      "district": "Chikkaballapura",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "582",
+      "aliases": []
+    },
+    {
+      "lgd_code": 532,
+      "district": "Chikkamagaluru",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "570",
+      "aliases": []
+    },
+    {
+      "lgd_code": 533,
+      "district": "Chitradurga",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "566",
+      "aliases": []
+    },
+    {
+      "lgd_code": 534,
+      "district": "Dakshina Kannada",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "575",
+      "aliases": []
+    },
+    {
+      "lgd_code": 535,
+      "district": "Davangere",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "567",
+      "aliases": []
+    },
+    {
+      "lgd_code": 536,
+      "district": "Dharwad",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "562",
+      "aliases": []
+    },
+    {
+      "lgd_code": 537,
+      "district": "Gadag",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "561",
+      "aliases": []
+    },
+    {
+      "lgd_code": 539,
+      "district": "Hassan",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "574",
+      "aliases": []
+    },
+    {
+      "lgd_code": 540,
+      "district": "Haveri",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "564",
+      "aliases": []
+    },
+    {
+      "lgd_code": 538,
+      "district": "Kalaburagi",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "579",
+      "aliases": []
+    },
+    {
+      "lgd_code": 541,
+      "district": "Kodagu",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "576",
+      "aliases": []
+    },
+    {
+      "lgd_code": 542,
+      "district": "Kolar",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "581",
+      "aliases": []
+    },
+    {
+      "lgd_code": 543,
+      "district": "Koppal",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "560",
+      "aliases": []
+    },
+    {
+      "lgd_code": 544,
+      "district": "Mandya",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "573",
+      "aliases": []
+    },
+    {
+      "lgd_code": 545,
+      "district": "Mysuru",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "577",
+      "aliases": []
+    },
+    {
+      "lgd_code": 546,
+      "district": "Raichur",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "559",
+      "aliases": []
+    },
+    {
+      "lgd_code": 631,
+      "district": "Ramanagara",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "584",
+      "aliases": []
+    },
+    {
+      "lgd_code": 547,
+      "district": "Shivamogga",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "568",
+      "aliases": []
+    },
+    {
+      "lgd_code": 548,
+      "district": "Tumakuru",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "571",
+      "aliases": []
+    },
+    {
+      "lgd_code": 549,
+      "district": "Udupi",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "569",
+      "aliases": []
+    },
+    {
+      "lgd_code": 550,
+      "district": "Uttara Kannada",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "563",
+      "aliases": []
+    },
+    {
+      "lgd_code": 738,
+      "district": "Vijayanagar",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 530,
+      "district": "Vijayapura",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "557",
+      "aliases": []
+    },
+    {
+      "lgd_code": 635,
+      "district": "Yadgir",
+      "state": "Karnataka",
+      "state_lgd_code": 29,
+      "census_2011_code": "580",
+      "aliases": []
+    },
+    {
+      "lgd_code": 554,
+      "district": "Alappuzha",
+      "state": "Kerala",
+      "state_lgd_code": 32,
+      "census_2011_code": "598",
+      "aliases": []
+    },
+    {
+      "lgd_code": 555,
+      "district": "Ernakulam",
+      "state": "Kerala",
+      "state_lgd_code": 32,
+      "census_2011_code": "595",
+      "aliases": []
+    },
+    {
+      "lgd_code": 556,
+      "district": "Idukki",
+      "state": "Kerala",
+      "state_lgd_code": 32,
+      "census_2011_code": "596",
+      "aliases": []
+    },
+    {
+      "lgd_code": 557,
+      "district": "Kannur",
+      "state": "Kerala",
+      "state_lgd_code": 32,
+      "census_2011_code": "589",
+      "aliases": []
+    },
+    {
+      "lgd_code": 558,
+      "district": "Kasaragod",
+      "state": "Kerala",
+      "state_lgd_code": 32,
+      "census_2011_code": "588",
+      "aliases": []
+    },
+    {
+      "lgd_code": 559,
+      "district": "Kollam",
+      "state": "Kerala",
+      "state_lgd_code": 32,
+      "census_2011_code": "600",
+      "aliases": []
+    },
+    {
+      "lgd_code": 560,
+      "district": "Kottayam",
+      "state": "Kerala",
+      "state_lgd_code": 32,
+      "census_2011_code": "597",
+      "aliases": []
+    },
+    {
+      "lgd_code": 561,
+      "district": "Kozhikode",
+      "state": "Kerala",
+      "state_lgd_code": 32,
+      "census_2011_code": "591",
+      "aliases": []
+    },
+    {
+      "lgd_code": 562,
+      "district": "Malappuram",
+      "state": "Kerala",
+      "state_lgd_code": 32,
+      "census_2011_code": "592",
+      "aliases": []
+    },
+    {
+      "lgd_code": 563,
+      "district": "Palakkad",
+      "state": "Kerala",
+      "state_lgd_code": 32,
+      "census_2011_code": "593",
+      "aliases": []
+    },
+    {
+      "lgd_code": 564,
+      "district": "Pathanamthitta",
+      "state": "Kerala",
+      "state_lgd_code": 32,
+      "census_2011_code": "599",
+      "aliases": []
+    },
+    {
+      "lgd_code": 565,
+      "district": "Thiruvananthapuram",
+      "state": "Kerala",
+      "state_lgd_code": 32,
+      "census_2011_code": "601",
+      "aliases": []
+    },
+    {
+      "lgd_code": 566,
+      "district": "Thrissur",
+      "state": "Kerala",
+      "state_lgd_code": 32,
+      "census_2011_code": "594",
+      "aliases": []
+    },
+    {
+      "lgd_code": 567,
+      "district": "Wayanad",
+      "state": "Kerala",
+      "state_lgd_code": 32,
+      "census_2011_code": "590",
+      "aliases": []
+    },
+    {
+      "lgd_code": 6,
+      "district": "Kargil",
+      "state": "Ladakh",
+      "state_lgd_code": 37,
+      "census_2011_code": "4",
+      "aliases": []
+    },
+    {
+      "lgd_code": 9,
+      "district": "Leh Ladakh",
+      "state": "Ladakh",
+      "state_lgd_code": 37,
+      "census_2011_code": "3",
+      "aliases": []
+    },
+    {
+      "lgd_code": 553,
+      "district": "Lakshadweep District",
+      "state": "Lakshadweep",
+      "state_lgd_code": 31,
+      "census_2011_code": "587",
+      "aliases": [
+        "Lakshadweep"
+      ]
+    },
+    {
+      "lgd_code": 667,
+      "district": "Agar Malwa",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 639,
+      "district": "Alirajpur",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "465",
+      "aliases": []
+    },
+    {
+      "lgd_code": 390,
+      "district": "Anuppur",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "461",
+      "aliases": []
+    },
+    {
+      "lgd_code": 391,
+      "district": "Ashoknagar",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "459",
+      "aliases": []
+    },
+    {
+      "lgd_code": 392,
+      "district": "Balaghat",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "457",
+      "aliases": []
+    },
+    {
+      "lgd_code": 393,
+      "district": "Barwani",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "441",
+      "aliases": []
+    },
+    {
+      "lgd_code": 394,
+      "district": "Betul",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "447",
+      "aliases": []
+    },
+    {
+      "lgd_code": 395,
+      "district": "Bhind",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "420",
+      "aliases": []
+    },
+    {
+      "lgd_code": 396,
+      "district": "Bhopal",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "444",
+      "aliases": []
+    },
+    {
+      "lgd_code": 397,
+      "district": "Burhanpur",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "467",
+      "aliases": []
+    },
+    {
+      "lgd_code": 398,
+      "district": "Chhatarpur",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "425",
+      "aliases": []
+    },
+    {
+      "lgd_code": 399,
+      "district": "Chhindwara",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "455",
+      "aliases": []
+    },
+    {
+      "lgd_code": 400,
+      "district": "Damoh",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "428",
+      "aliases": []
+    },
+    {
+      "lgd_code": 401,
+      "district": "Datia",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "422",
+      "aliases": []
+    },
+    {
+      "lgd_code": 402,
+      "district": "Dewas",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "437",
+      "aliases": []
+    },
+    {
+      "lgd_code": 403,
+      "district": "Dhar",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "438",
+      "aliases": []
+    },
+    {
+      "lgd_code": 404,
+      "district": "Dindori",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "453",
+      "aliases": []
+    },
+    {
+      "lgd_code": 405,
+      "district": "East Nimar",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "466",
+      "aliases": [
+        "Khandwa"
+      ]
+    },
+    {
+      "lgd_code": 406,
+      "district": "Guna",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "458",
+      "aliases": []
+    },
+    {
+      "lgd_code": 407,
+      "district": "Gwalior",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "421",
+      "aliases": []
+    },
+    {
+      "lgd_code": 408,
+      "district": "Harda",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "448",
+      "aliases": []
+    },
+    {
+      "lgd_code": 410,
+      "district": "Indore",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "439",
+      "aliases": []
+    },
+    {
+      "lgd_code": 411,
+      "district": "Jabalpur",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "451",
+      "aliases": []
+    },
+    {
+      "lgd_code": 412,
+      "district": "Jhabua",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "464",
+      "aliases": []
+    },
+    {
+      "lgd_code": 413,
+      "district": "Katni",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "450",
+      "aliases": []
+    },
+    {
+      "lgd_code": 414,
+      "district": "Khargone",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "440",
+      "aliases": []
+    },
+    {
+      "lgd_code": 415,
+      "district": "Mandla",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "454",
+      "aliases": []
+    },
+    {
+      "lgd_code": 416,
+      "district": "Mandsaur",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "433",
+      "aliases": []
+    },
+    {
+      "lgd_code": 417,
+      "district": "Morena",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "419",
+      "aliases": []
+    },
+    {
+      "lgd_code": 409,
+      "district": "Narmadapuram",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "449",
+      "aliases": []
+    },
+    {
+      "lgd_code": 418,
+      "district": "Narsinghpur",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "452",
+      "aliases": [
+        "Narsimhapur"
+      ]
+    },
+    {
+      "lgd_code": 419,
+      "district": "Neemuch",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "432",
+      "aliases": []
+    },
+    {
+      "lgd_code": 722,
+      "district": "Niwari",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 420,
+      "district": "Panna",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "426",
+      "aliases": []
+    },
+    {
+      "lgd_code": 421,
+      "district": "Raisen",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "446",
+      "aliases": []
+    },
+    {
+      "lgd_code": 422,
+      "district": "Rajgarh",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "442",
+      "aliases": []
+    },
+    {
+      "lgd_code": 423,
+      "district": "Ratlam",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "434",
+      "aliases": []
+    },
+    {
+      "lgd_code": 424,
+      "district": "Rewa",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "430",
+      "aliases": []
+    },
+    {
+      "lgd_code": 425,
+      "district": "Sagar",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "427",
+      "aliases": []
+    },
+    {
+      "lgd_code": 426,
+      "district": "Satna",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "429",
+      "aliases": []
+    },
+    {
+      "lgd_code": 427,
+      "district": "Sehore",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "445",
+      "aliases": []
+    },
+    {
+      "lgd_code": 428,
+      "district": "Seoni",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "456",
+      "aliases": []
+    },
+    {
+      "lgd_code": 429,
+      "district": "Shahdol",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "460",
+      "aliases": []
+    },
+    {
+      "lgd_code": 430,
+      "district": "Shajapur",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "436",
+      "aliases": []
+    },
+    {
+      "lgd_code": 431,
+      "district": "Sheopur",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "418",
+      "aliases": []
+    },
+    {
+      "lgd_code": 432,
+      "district": "Shivpuri",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "423",
+      "aliases": []
+    },
+    {
+      "lgd_code": 433,
+      "district": "Sidhi",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "462",
+      "aliases": []
+    },
+    {
+      "lgd_code": 638,
+      "district": "Singrauli",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "463",
+      "aliases": []
+    },
+    {
+      "lgd_code": 434,
+      "district": "Tikamgarh",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "424",
+      "aliases": []
+    },
+    {
+      "lgd_code": 435,
+      "district": "Ujjain",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "435",
+      "aliases": []
+    },
+    {
+      "lgd_code": 436,
+      "district": "Umaria",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "431",
+      "aliases": []
+    },
+    {
+      "lgd_code": 437,
+      "district": "Vidisha",
+      "state": "Madhya Pradesh",
+      "state_lgd_code": 23,
+      "census_2011_code": "443",
+      "aliases": []
+    },
+    {
+      "lgd_code": 466,
+      "district": "Ahmednagar",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "522",
+      "aliases": [
+        "Ahilyanagar"
+      ]
+    },
+    {
+      "lgd_code": 467,
+      "district": "Akola",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "501",
+      "aliases": []
+    },
+    {
+      "lgd_code": 468,
+      "district": "Amravati",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "503",
+      "aliases": []
+    },
+    {
+      "lgd_code": 469,
+      "district": "Aurangabad",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "515",
+      "aliases": [
+        "Chhatrapati Sambhaji Nagar"
+      ]
+    },
+    {
+      "lgd_code": 470,
+      "district": "Beed",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "523",
+      "aliases": []
+    },
+    {
+      "lgd_code": 471,
+      "district": "Bhandara",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "506",
+      "aliases": []
+    },
+    {
+      "lgd_code": 472,
+      "district": "Buldhana",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "500",
+      "aliases": []
+    },
+    {
+      "lgd_code": 473,
+      "district": "Chandrapur",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "509",
+      "aliases": []
+    },
+    {
+      "lgd_code": 474,
+      "district": "Dhule",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "498",
+      "aliases": []
+    },
+    {
+      "lgd_code": 475,
+      "district": "Gadchiroli",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "508",
+      "aliases": []
+    },
+    {
+      "lgd_code": 476,
+      "district": "Gondia",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "507",
+      "aliases": []
+    },
+    {
+      "lgd_code": 477,
+      "district": "Hingoli",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "512",
+      "aliases": []
+    },
+    {
+      "lgd_code": 478,
+      "district": "Jalgaon",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "499",
+      "aliases": []
+    },
+    {
+      "lgd_code": 479,
+      "district": "Jalna",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "514",
+      "aliases": []
+    },
+    {
+      "lgd_code": 480,
+      "district": "Kolhapur",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "530",
+      "aliases": []
+    },
+    {
+      "lgd_code": 481,
+      "district": "Latur",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "524",
+      "aliases": []
+    },
+    {
+      "lgd_code": 482,
+      "district": "Mumbai",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "519",
+      "aliases": []
+    },
+    {
+      "lgd_code": 483,
+      "district": "Mumbai Suburban",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "518",
+      "aliases": []
+    },
+    {
+      "lgd_code": 484,
+      "district": "Nagpur",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "505",
+      "aliases": []
+    },
+    {
+      "lgd_code": 485,
+      "district": "Nanded",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "511",
+      "aliases": []
+    },
+    {
+      "lgd_code": 486,
+      "district": "Nandurbar",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "497",
+      "aliases": []
+    },
+    {
+      "lgd_code": 487,
+      "district": "Nashik",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "516",
+      "aliases": []
+    },
+    {
+      "lgd_code": 488,
+      "district": "Osmanabad",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "525",
+      "aliases": [
+        "Dharashiv"
+      ]
+    },
+    {
+      "lgd_code": 665,
+      "district": "Palghar",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 489,
+      "district": "Parbhani",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "513",
+      "aliases": []
+    },
+    {
+      "lgd_code": 490,
+      "district": "Pune",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "521",
+      "aliases": []
+    },
+    {
+      "lgd_code": 491,
+      "district": "Raigad",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "520",
+      "aliases": []
+    },
+    {
+      "lgd_code": 492,
+      "district": "Ratnagiri",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "528",
+      "aliases": []
+    },
+    {
+      "lgd_code": 493,
+      "district": "Sangli",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "531",
+      "aliases": []
+    },
+    {
+      "lgd_code": 494,
+      "district": "Satara",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "527",
+      "aliases": []
+    },
+    {
+      "lgd_code": 495,
+      "district": "Sindhudurg",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "529",
+      "aliases": []
+    },
+    {
+      "lgd_code": 496,
+      "district": "Solapur",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "526",
+      "aliases": []
+    },
+    {
+      "lgd_code": 497,
+      "district": "Thane",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "517",
+      "aliases": []
+    },
+    {
+      "lgd_code": 498,
+      "district": "Wardha",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "504",
+      "aliases": []
+    },
+    {
+      "lgd_code": 499,
+      "district": "Washim",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "502",
+      "aliases": []
+    },
+    {
+      "lgd_code": 500,
+      "district": "Yavatmal",
+      "state": "Maharashtra",
+      "state_lgd_code": 27,
+      "census_2011_code": "510",
+      "aliases": []
+    },
+    {
+      "lgd_code": 252,
+      "district": "Bishnupur",
+      "state": "Manipur",
+      "state_lgd_code": 14,
+      "census_2011_code": "275",
+      "aliases": []
+    },
+    {
+      "lgd_code": 253,
+      "district": "Chandel",
+      "state": "Manipur",
+      "state_lgd_code": 14,
+      "census_2011_code": "280",
+      "aliases": []
+    },
+    {
+      "lgd_code": 254,
+      "district": "Churachandpur",
+      "state": "Manipur",
+      "state_lgd_code": 14,
+      "census_2011_code": "274",
+      "aliases": []
+    },
+    {
+      "lgd_code": 255,
+      "district": "Imphal East",
+      "state": "Manipur",
+      "state_lgd_code": 14,
+      "census_2011_code": "278",
+      "aliases": []
+    },
+    {
+      "lgd_code": 256,
+      "district": "Imphal West",
+      "state": "Manipur",
+      "state_lgd_code": 14,
+      "census_2011_code": "277",
+      "aliases": []
+    },
+    {
+      "lgd_code": 713,
+      "district": "Jiribam",
+      "state": "Manipur",
+      "state_lgd_code": 14,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 711,
+      "district": "Kakching",
+      "state": "Manipur",
+      "state_lgd_code": 14,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 717,
+      "district": "Kamjong",
+      "state": "Manipur",
+      "state_lgd_code": 14,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 712,
+      "district": "Kangpokpi",
+      "state": "Manipur",
+      "state_lgd_code": 14,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 714,
+      "district": "Noney",
+      "state": "Manipur",
+      "state_lgd_code": 14,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 715,
+      "district": "Pherzawl",
+      "state": "Manipur",
+      "state_lgd_code": 14,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 257,
+      "district": "Senapati",
+      "state": "Manipur",
+      "state_lgd_code": 14,
+      "census_2011_code": "272",
+      "aliases": []
+    },
+    {
+      "lgd_code": 258,
+      "district": "Tamenglong",
+      "state": "Manipur",
+      "state_lgd_code": 14,
+      "census_2011_code": "273",
+      "aliases": []
+    },
+    {
+      "lgd_code": 716,
+      "district": "Tengnoupal",
+      "state": "Manipur",
+      "state_lgd_code": 14,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 259,
+      "district": "Thoubal",
+      "state": "Manipur",
+      "state_lgd_code": 14,
+      "census_2011_code": "276",
+      "aliases": []
+    },
+    {
+      "lgd_code": 260,
+      "district": "Ukhrul",
+      "state": "Manipur",
+      "state_lgd_code": 14,
+      "census_2011_code": "279",
+      "aliases": []
+    },
+    {
+      "lgd_code": 273,
+      "district": "East Garo Hills",
+      "state": "Meghalaya",
+      "state_lgd_code": 17,
+      "census_2011_code": "294",
+      "aliases": []
+    },
+    {
+      "lgd_code": 657,
+      "district": "East Jaintia Hills",
+      "state": "Meghalaya",
+      "state_lgd_code": 17,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 274,
+      "district": "East Khasi Hills",
+      "state": "Meghalaya",
+      "state_lgd_code": 17,
+      "census_2011_code": "298",
+      "aliases": []
+    },
+    {
+      "lgd_code": 740,
+      "district": "Eastern West Khasi Hills",
+      "state": "Meghalaya",
+      "state_lgd_code": 17,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 656,
+      "district": "North Garo Hills",
+      "state": "Meghalaya",
+      "state_lgd_code": 17,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 276,
+      "district": "Ri Bhoi",
+      "state": "Meghalaya",
+      "state_lgd_code": 17,
+      "census_2011_code": "297",
+      "aliases": []
+    },
+    {
+      "lgd_code": 277,
+      "district": "South Garo Hills",
+      "state": "Meghalaya",
+      "state_lgd_code": 17,
+      "census_2011_code": "295",
+      "aliases": []
+    },
+    {
+      "lgd_code": 663,
+      "district": "South West Garo Hills",
+      "state": "Meghalaya",
+      "state_lgd_code": 17,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 658,
+      "district": "South West Khasi Hills",
+      "state": "Meghalaya",
+      "state_lgd_code": 17,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 278,
+      "district": "West Garo Hills",
+      "state": "Meghalaya",
+      "state_lgd_code": 17,
+      "census_2011_code": "293",
+      "aliases": []
+    },
+    {
+      "lgd_code": 275,
+      "district": "West Jaintia Hills",
+      "state": "Meghalaya",
+      "state_lgd_code": 17,
+      "census_2011_code": "299",
+      "aliases": []
+    },
+    {
+      "lgd_code": 279,
+      "district": "West Khasi Hills",
+      "state": "Meghalaya",
+      "state_lgd_code": 17,
+      "census_2011_code": "296",
+      "aliases": []
+    },
+    {
+      "lgd_code": 261,
+      "district": "Aizawl",
+      "state": "Mizoram",
+      "state_lgd_code": 15,
+      "census_2011_code": "283",
+      "aliases": []
+    },
+    {
+      "lgd_code": 262,
+      "district": "Champhai",
+      "state": "Mizoram",
+      "state_lgd_code": 15,
+      "census_2011_code": "284",
+      "aliases": []
+    },
+    {
+      "lgd_code": 726,
+      "district": "Hnahthial",
+      "state": "Mizoram",
+      "state_lgd_code": 15,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 728,
+      "district": "Khawzawl",
+      "state": "Mizoram",
+      "state_lgd_code": 15,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 263,
+      "district": "Kolasib",
+      "state": "Mizoram",
+      "state_lgd_code": 15,
+      "census_2011_code": "282",
+      "aliases": []
+    },
+    {
+      "lgd_code": 264,
+      "district": "Lawngtlai",
+      "state": "Mizoram",
+      "state_lgd_code": 15,
+      "census_2011_code": "287",
+      "aliases": []
+    },
+    {
+      "lgd_code": 265,
+      "district": "Lunglei",
+      "state": "Mizoram",
+      "state_lgd_code": 15,
+      "census_2011_code": "286",
+      "aliases": []
+    },
+    {
+      "lgd_code": 266,
+      "district": "Mamit",
+      "state": "Mizoram",
+      "state_lgd_code": 15,
+      "census_2011_code": "281",
+      "aliases": []
+    },
+    {
+      "lgd_code": 267,
+      "district": "Saiha",
+      "state": "Mizoram",
+      "state_lgd_code": 15,
+      "census_2011_code": "288",
+      "aliases": []
+    },
+    {
+      "lgd_code": 727,
+      "district": "Saitual",
+      "state": "Mizoram",
+      "state_lgd_code": 15,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 268,
+      "district": "Serchhip",
+      "state": "Mizoram",
+      "state_lgd_code": 15,
+      "census_2011_code": "285",
+      "aliases": []
+    },
+    {
+      "lgd_code": 758,
+      "district": "Chumoukedima",
+      "state": "Nagaland",
+      "state_lgd_code": 13,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 244,
+      "district": "Dimapur",
+      "state": "Nagaland",
+      "state_lgd_code": 13,
+      "census_2011_code": "265",
+      "aliases": []
+    },
+    {
+      "lgd_code": 614,
+      "district": "Kiphire",
+      "state": "Nagaland",
+      "state_lgd_code": 13,
+      "census_2011_code": "269",
+      "aliases": []
+    },
+    {
+      "lgd_code": 245,
+      "district": "Kohima",
+      "state": "Nagaland",
+      "state_lgd_code": 13,
+      "census_2011_code": "270",
+      "aliases": []
+    },
+    {
+      "lgd_code": 615,
+      "district": "Longleng",
+      "state": "Nagaland",
+      "state_lgd_code": 13,
+      "census_2011_code": "268",
+      "aliases": []
+    },
+    {
+      "lgd_code": 246,
+      "district": "Mokokchung",
+      "state": "Nagaland",
+      "state_lgd_code": 13,
+      "census_2011_code": "262",
+      "aliases": []
+    },
+    {
+      "lgd_code": 247,
+      "district": "Mon",
+      "state": "Nagaland",
+      "state_lgd_code": 13,
+      "census_2011_code": "261",
+      "aliases": []
+    },
+    {
+      "lgd_code": 764,
+      "district": "Niuland",
+      "state": "Nagaland",
+      "state_lgd_code": 13,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 736,
+      "district": "Noklak",
+      "state": "Nagaland",
+      "state_lgd_code": 13,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 613,
+      "district": "Peren",
+      "state": "Nagaland",
+      "state_lgd_code": 13,
+      "census_2011_code": "271",
+      "aliases": []
+    },
+    {
+      "lgd_code": 248,
+      "district": "Phek",
+      "state": "Nagaland",
+      "state_lgd_code": 13,
+      "census_2011_code": "266",
+      "aliases": []
+    },
+    {
+      "lgd_code": 765,
+      "district": "Shamator",
+      "state": "Nagaland",
+      "state_lgd_code": 13,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 757,
+      "district": "Tseminyu",
+      "state": "Nagaland",
+      "state_lgd_code": 13,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 249,
+      "district": "Tuensang",
+      "state": "Nagaland",
+      "state_lgd_code": 13,
+      "census_2011_code": "267",
+      "aliases": []
+    },
+    {
+      "lgd_code": 250,
+      "district": "Wokha",
+      "state": "Nagaland",
+      "state_lgd_code": 13,
+      "census_2011_code": "264",
+      "aliases": []
+    },
+    {
+      "lgd_code": 251,
+      "district": "Zunheboto",
+      "state": "Nagaland",
+      "state_lgd_code": 13,
+      "census_2011_code": "263",
+      "aliases": []
+    },
+    {
+      "lgd_code": 344,
+      "district": "Anugul",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "384",
+      "aliases": []
+    },
+    {
+      "lgd_code": 345,
+      "district": "Balangir",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "393",
+      "aliases": []
+    },
+    {
+      "lgd_code": 346,
+      "district": "Baleshwar",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "377",
+      "aliases": [
+        "Balasore"
+      ]
+    },
+    {
+      "lgd_code": 347,
+      "district": "Bargarh",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "370",
+      "aliases": []
+    },
+    {
+      "lgd_code": 348,
+      "district": "Bhadrak",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "378",
+      "aliases": []
+    },
+    {
+      "lgd_code": 349,
+      "district": "Boudh",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "391",
+      "aliases": []
+    },
+    {
+      "lgd_code": 350,
+      "district": "Cuttack",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "381",
+      "aliases": []
+    },
+    {
+      "lgd_code": 351,
+      "district": "Deogarh",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "373",
+      "aliases": []
+    },
+    {
+      "lgd_code": 352,
+      "district": "Dhenkanal",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "383",
+      "aliases": []
+    },
+    {
+      "lgd_code": 353,
+      "district": "Gajapati",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "389",
+      "aliases": []
+    },
+    {
+      "lgd_code": 354,
+      "district": "Ganjam",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "388",
+      "aliases": []
+    },
+    {
+      "lgd_code": 355,
+      "district": "Jagatsinghapur",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "380",
+      "aliases": [
+        "Jagatsinghpur"
+      ]
+    },
+    {
+      "lgd_code": 356,
+      "district": "Jajapur",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "382",
+      "aliases": []
+    },
+    {
+      "lgd_code": 357,
+      "district": "Jharsuguda",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "371",
+      "aliases": []
+    },
+    {
+      "lgd_code": 358,
+      "district": "Kalahandi",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "395",
+      "aliases": []
+    },
+    {
+      "lgd_code": 359,
+      "district": "Kandhamal",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "390",
+      "aliases": []
+    },
+    {
+      "lgd_code": 360,
+      "district": "Kendrapara",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "379",
+      "aliases": []
+    },
+    {
+      "lgd_code": 361,
+      "district": "Kendujhar",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "375",
+      "aliases": [
+        "Keonjhar (Kendujhar)"
+      ]
+    },
+    {
+      "lgd_code": 362,
+      "district": "Khordha",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "386",
+      "aliases": []
+    },
+    {
+      "lgd_code": 363,
+      "district": "Koraput",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "398",
+      "aliases": []
+    },
+    {
+      "lgd_code": 364,
+      "district": "Malkangiri",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "399",
+      "aliases": []
+    },
+    {
+      "lgd_code": 365,
+      "district": "Mayurbhanj",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "376",
+      "aliases": []
+    },
+    {
+      "lgd_code": 366,
+      "district": "Nabarangpur",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "397",
+      "aliases": [
+        "Nabarangapur"
+      ]
+    },
+    {
+      "lgd_code": 367,
+      "district": "Nayagarh",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "385",
+      "aliases": []
+    },
+    {
+      "lgd_code": 368,
+      "district": "Nuapada",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "394",
+      "aliases": [
+        "Nuaparha"
+      ]
+    },
+    {
+      "lgd_code": 369,
+      "district": "Puri",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "387",
+      "aliases": []
+    },
+    {
+      "lgd_code": 370,
+      "district": "Rayagada",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "396",
+      "aliases": [
+        "Rayagarha"
+      ]
+    },
+    {
+      "lgd_code": 371,
+      "district": "Sambalpur",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "372",
+      "aliases": []
+    },
+    {
+      "lgd_code": 372,
+      "district": "Sonepur",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "392",
+      "aliases": [
+        "Subarnapur"
+      ]
+    },
+    {
+      "lgd_code": 373,
+      "district": "Sundargarh",
+      "state": "Odisha",
+      "state_lgd_code": 21,
+      "census_2011_code": "374",
+      "aliases": []
+    },
+    {
+      "lgd_code": 598,
+      "district": "Karaikal",
+      "state": "Puducherry",
+      "state_lgd_code": 34,
+      "census_2011_code": "637",
+      "aliases": []
+    },
+    {
+      "lgd_code": 599,
+      "district": "Mahe",
+      "state": "Puducherry",
+      "state_lgd_code": 34,
+      "census_2011_code": "636",
+      "aliases": []
+    },
+    {
+      "lgd_code": 600,
+      "district": "Pondicherry",
+      "state": "Puducherry",
+      "state_lgd_code": 34,
+      "census_2011_code": "635",
+      "aliases": [
+        "Puducherry"
+      ]
+    },
+    {
+      "lgd_code": 601,
+      "district": "Yanam",
+      "state": "Puducherry",
+      "state_lgd_code": 34,
+      "census_2011_code": "634",
+      "aliases": []
+    },
+    {
+      "lgd_code": 27,
+      "district": "Amritsar",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "49",
+      "aliases": []
+    },
+    {
+      "lgd_code": 605,
+      "district": "Barnala",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "54",
+      "aliases": []
+    },
+    {
+      "lgd_code": 28,
+      "district": "Bathinda",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "46",
+      "aliases": []
+    },
+    {
+      "lgd_code": 29,
+      "district": "Faridkot",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "45",
+      "aliases": []
+    },
+    {
+      "lgd_code": 30,
+      "district": "Fatehgarh Sahib",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "40",
+      "aliases": []
+    },
+    {
+      "lgd_code": 651,
+      "district": "Fazilka",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 31,
+      "district": "Ferozepur",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "43",
+      "aliases": []
+    },
+    {
+      "lgd_code": 32,
+      "district": "Gurdaspur",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "35",
+      "aliases": []
+    },
+    {
+      "lgd_code": 33,
+      "district": "Hoshiarpur",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "38",
+      "aliases": []
+    },
+    {
+      "lgd_code": 34,
+      "district": "Jalandhar",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "37",
+      "aliases": []
+    },
+    {
+      "lgd_code": 35,
+      "district": "Kapurthala",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "36",
+      "aliases": []
+    },
+    {
+      "lgd_code": 36,
+      "district": "Ludhiana",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "41",
+      "aliases": []
+    },
+    {
+      "lgd_code": 737,
+      "district": "Malerkotla",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 37,
+      "district": "Mansa",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "47",
+      "aliases": []
+    },
+    {
+      "lgd_code": 38,
+      "district": "Moga",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "42",
+      "aliases": []
+    },
+    {
+      "lgd_code": 662,
+      "district": "Pathankot",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 41,
+      "district": "Patiala",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "48",
+      "aliases": []
+    },
+    {
+      "lgd_code": 42,
+      "district": "Rupnagar",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "51",
+      "aliases": []
+    },
+    {
+      "lgd_code": 608,
+      "district": "S.a.s Nagar",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "52",
+      "aliases": []
+    },
+    {
+      "lgd_code": 43,
+      "district": "Sangrur",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "53",
+      "aliases": []
+    },
+    {
+      "lgd_code": 40,
+      "district": "Shahid Bhagat Singh Nagar",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "39",
+      "aliases": []
+    },
+    {
+      "lgd_code": 39,
+      "district": "Sri Muktsar Sahib",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "44",
+      "aliases": []
+    },
+    {
+      "lgd_code": 609,
+      "district": "Tarn Taran",
+      "state": "Punjab",
+      "state_lgd_code": 3,
+      "census_2011_code": "50",
+      "aliases": []
+    },
+    {
+      "lgd_code": 86,
+      "district": "Ajmer",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "119",
+      "aliases": []
+    },
+    {
+      "lgd_code": 87,
+      "district": "Alwar",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "104",
+      "aliases": []
+    },
+    {
+      "lgd_code": 88,
+      "district": "Banswara",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "125",
+      "aliases": []
+    },
+    {
+      "lgd_code": 89,
+      "district": "Baran",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "128",
+      "aliases": []
+    },
+    {
+      "lgd_code": 90,
+      "district": "Barmer",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "115",
+      "aliases": []
+    },
+    {
+      "lgd_code": 91,
+      "district": "Bharatpur",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "105",
+      "aliases": []
+    },
+    {
+      "lgd_code": 92,
+      "district": "Bhilwara",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "122",
+      "aliases": []
+    },
+    {
+      "lgd_code": 93,
+      "district": "Bikaner",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "101",
+      "aliases": []
+    },
+    {
+      "lgd_code": 94,
+      "district": "Bundi",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "121",
+      "aliases": []
+    },
+    {
+      "lgd_code": 95,
+      "district": "Chittorgarh",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "126",
+      "aliases": [
+        "Chittaurgarh"
+      ]
+    },
+    {
+      "lgd_code": 96,
+      "district": "Churu",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "102",
+      "aliases": []
+    },
+    {
+      "lgd_code": 97,
+      "district": "Dausa",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "109",
+      "aliases": []
+    },
+    {
+      "lgd_code": 98,
+      "district": "Dholpur",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "106",
+      "aliases": [
+        "Dhaulpur"
+      ]
+    },
+    {
+      "lgd_code": 99,
+      "district": "Dungarpur",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "124",
+      "aliases": []
+    },
+    {
+      "lgd_code": 100,
+      "district": "Ganganagar",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "99",
+      "aliases": []
+    },
+    {
+      "lgd_code": 101,
+      "district": "Hanumangarh",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "100",
+      "aliases": []
+    },
+    {
+      "lgd_code": 102,
+      "district": "Jaipur",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "110",
+      "aliases": []
+    },
+    {
+      "lgd_code": 103,
+      "district": "Jaisalmer",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "114",
+      "aliases": []
+    },
+    {
+      "lgd_code": 104,
+      "district": "Jalore",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "116",
+      "aliases": [
+        "Jalor"
+      ]
+    },
+    {
+      "lgd_code": 105,
+      "district": "Jhalawar",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "129",
+      "aliases": []
+    },
+    {
+      "lgd_code": 106,
+      "district": "Jhunjhunu",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "103",
+      "aliases": [
+        "Jhunjhunun"
+      ]
+    },
+    {
+      "lgd_code": 107,
+      "district": "Jodhpur",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "113",
+      "aliases": []
+    },
+    {
+      "lgd_code": 108,
+      "district": "Karauli",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "107",
+      "aliases": []
+    },
+    {
+      "lgd_code": 109,
+      "district": "Kota",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "127",
+      "aliases": []
+    },
+    {
+      "lgd_code": 110,
+      "district": "Nagaur",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "112",
+      "aliases": []
+    },
+    {
+      "lgd_code": 111,
+      "district": "Pali",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "118",
+      "aliases": []
+    },
+    {
+      "lgd_code": 629,
+      "district": "Pratapgarh",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "131",
+      "aliases": []
+    },
+    {
+      "lgd_code": 112,
+      "district": "Rajsamand",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "123",
+      "aliases": []
+    },
+    {
+      "lgd_code": 113,
+      "district": "Sawai Madhopur",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "108",
+      "aliases": []
+    },
+    {
+      "lgd_code": 114,
+      "district": "Sikar",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "111",
+      "aliases": []
+    },
+    {
+      "lgd_code": 115,
+      "district": "Sirohi",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "117",
+      "aliases": []
+    },
+    {
+      "lgd_code": 116,
+      "district": "Tonk",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "120",
+      "aliases": []
+    },
+    {
+      "lgd_code": 117,
+      "district": "Udaipur",
+      "state": "Rajasthan",
+      "state_lgd_code": 8,
+      "census_2011_code": "130",
+      "aliases": []
+    },
+    {
+      "lgd_code": 225,
+      "district": "Gangtok",
+      "state": "Sikkim",
+      "state_lgd_code": 11,
+      "census_2011_code": "244",
+      "aliases": []
+    },
+    {
+      "lgd_code": 228,
+      "district": "Gyalshing",
+      "state": "Sikkim",
+      "state_lgd_code": 11,
+      "census_2011_code": "242",
+      "aliases": []
+    },
+    {
+      "lgd_code": 226,
+      "district": "Mangan",
+      "state": "Sikkim",
+      "state_lgd_code": 11,
+      "census_2011_code": "241",
+      "aliases": []
+    },
+    {
+      "lgd_code": 227,
+      "district": "Namchi",
+      "state": "Sikkim",
+      "state_lgd_code": 11,
+      "census_2011_code": "243",
+      "aliases": []
+    },
+    {
+      "lgd_code": 741,
+      "district": "Pakyong",
+      "state": "Sikkim",
+      "state_lgd_code": 11,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 742,
+      "district": "Soreng",
+      "state": "Sikkim",
+      "state_lgd_code": 11,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 610,
+      "district": "Ariyalur",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "616",
+      "aliases": []
+    },
+    {
+      "lgd_code": 730,
+      "district": "Chengalpattu",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 568,
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "603",
+      "aliases": []
+    },
+    {
+      "lgd_code": 569,
+      "district": "Coimbatore",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "632",
+      "aliases": []
+    },
+    {
+      "lgd_code": 570,
+      "district": "Cuddalore",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "617",
+      "aliases": []
+    },
+    {
+      "lgd_code": 571,
+      "district": "Dharmapuri",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "630",
+      "aliases": []
+    },
+    {
+      "lgd_code": 572,
+      "district": "Dindigul",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "612",
+      "aliases": []
+    },
+    {
+      "lgd_code": 573,
+      "district": "Erode",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "610",
+      "aliases": []
+    },
+    {
+      "lgd_code": 729,
+      "district": "Kallakurichi",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 574,
+      "district": "Kanchipuram",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "604",
+      "aliases": [
+        "Kancheepuram"
+      ]
+    },
+    {
+      "lgd_code": 575,
+      "district": "Kanniyakumari",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "629",
+      "aliases": []
+    },
+    {
+      "lgd_code": 576,
+      "district": "Karur",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "613",
+      "aliases": []
+    },
+    {
+      "lgd_code": 577,
+      "district": "Krishnagiri",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "631",
+      "aliases": []
+    },
+    {
+      "lgd_code": 578,
+      "district": "Madurai",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "623",
+      "aliases": []
+    },
+    {
+      "lgd_code": 735,
+      "district": "Mayiladuthurai",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 579,
+      "district": "Nagapattinam",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "618",
+      "aliases": []
+    },
+    {
+      "lgd_code": 580,
+      "district": "Namakkal",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "609",
+      "aliases": []
+    },
+    {
+      "lgd_code": 581,
+      "district": "Perambalur",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "615",
+      "aliases": []
+    },
+    {
+      "lgd_code": 582,
+      "district": "Pudukkottai",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "621",
+      "aliases": []
+    },
+    {
+      "lgd_code": 583,
+      "district": "Ramanathapuram",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "626",
+      "aliases": []
+    },
+    {
+      "lgd_code": 731,
+      "district": "Ranipet",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 584,
+      "district": "Salem",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "608",
+      "aliases": []
+    },
+    {
+      "lgd_code": 585,
+      "district": "Sivaganga",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "622",
+      "aliases": []
+    },
+    {
+      "lgd_code": 733,
+      "district": "Tenkasi",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 586,
+      "district": "Thanjavur",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "620",
+      "aliases": []
+    },
+    {
+      "lgd_code": 587,
+      "district": "The Nilgiris",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "611",
+      "aliases": []
+    },
+    {
+      "lgd_code": 588,
+      "district": "Theni",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "624",
+      "aliases": []
+    },
+    {
+      "lgd_code": 589,
+      "district": "Thiruvallur",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "602",
+      "aliases": [
+        "Tiruvallur"
+      ]
+    },
+    {
+      "lgd_code": 590,
+      "district": "Thiruvarur",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "619",
+      "aliases": []
+    },
+    {
+      "lgd_code": 591,
+      "district": "Tiruchirappalli",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "614",
+      "aliases": []
+    },
+    {
+      "lgd_code": 592,
+      "district": "Tirunelveli",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "628",
+      "aliases": []
+    },
+    {
+      "lgd_code": 732,
+      "district": "Tirupathur",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 634,
+      "district": "Tiruppur",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "633",
+      "aliases": []
+    },
+    {
+      "lgd_code": 593,
+      "district": "Tiruvannamalai",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "606",
+      "aliases": []
+    },
+    {
+      "lgd_code": 594,
+      "district": "Tuticorin",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "627",
+      "aliases": [
+        "Thoothukudi"
+      ]
+    },
+    {
+      "lgd_code": 595,
+      "district": "Vellore",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "605",
+      "aliases": []
+    },
+    {
+      "lgd_code": 596,
+      "district": "Villupuram",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "607",
+      "aliases": [
+        "Viluppuram"
+      ]
+    },
+    {
+      "lgd_code": 597,
+      "district": "Virudhunagar",
+      "state": "Tamil Nadu",
+      "state_lgd_code": 33,
+      "census_2011_code": "625",
+      "aliases": []
+    },
+    {
+      "lgd_code": 501,
+      "district": "Adilabad",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "532",
+      "aliases": []
+    },
+    {
+      "lgd_code": 690,
+      "district": "Bhadradri Kothagudem",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 686,
+      "district": "Hanumakonda",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 507,
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "536",
+      "aliases": []
+    },
+    {
+      "lgd_code": 681,
+      "district": "Jagitial",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 689,
+      "district": "Jangoan",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 687,
+      "district": "Jayashankar Bhupalapally",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 695,
+      "district": "Jogulamba Gadwal",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 685,
+      "district": "Kamareddy",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 508,
+      "district": "Karimnagar",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "534",
+      "aliases": []
+    },
+    {
+      "lgd_code": 509,
+      "district": "Khammam",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "541",
+      "aliases": []
+    },
+    {
+      "lgd_code": 699,
+      "district": "Kumuram Bheem Asifabad",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 688,
+      "district": "Mahabubabad",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 512,
+      "district": "Mahabubnagar",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "538",
+      "aliases": [
+        "Mahbubnagar"
+      ]
+    },
+    {
+      "lgd_code": 684,
+      "district": "Mancherial",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 513,
+      "district": "Medak",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "535",
+      "aliases": []
+    },
+    {
+      "lgd_code": 700,
+      "district": "Medchal Malkajgiri",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 720,
+      "district": "Mulugu",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 694,
+      "district": "Nagarkurnool",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 514,
+      "district": "Nalgonda",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "539",
+      "aliases": []
+    },
+    {
+      "lgd_code": 721,
+      "district": "Narayanpet",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 680,
+      "district": "Nirmal",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 516,
+      "district": "Nizamabad",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "533",
+      "aliases": []
+    },
+    {
+      "lgd_code": 682,
+      "district": "Peddapalli",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 683,
+      "district": "Rajanna Sircilla",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 518,
+      "district": "Ranga Reddy",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "537",
+      "aliases": []
+    },
+    {
+      "lgd_code": 691,
+      "district": "Sangareddy",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 692,
+      "district": "Siddipet",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 696,
+      "district": "Suryapet",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 698,
+      "district": "Vikarabad",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 693,
+      "district": "Wanaparthy",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 522,
+      "district": "Warangal",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "540",
+      "aliases": []
+    },
+    {
+      "lgd_code": 697,
+      "district": "Yadadri Bhuvanagiri",
+      "state": "Telangana",
+      "state_lgd_code": 36,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 465,
+      "district": "Dadra and Nagar Haveli",
+      "state": "The Dadra and Nagar Haveli and Daman and Diu",
+      "state_lgd_code": 38,
+      "census_2011_code": "496",
+      "aliases": [
+        "Dadra & Nagar Haveli"
+      ]
+    },
+    {
+      "lgd_code": 463,
+      "district": "Daman",
+      "state": "The Dadra and Nagar Haveli and Daman and Diu",
+      "state_lgd_code": 38,
+      "census_2011_code": "495",
+      "aliases": []
+    },
+    {
+      "lgd_code": 464,
+      "district": "Diu",
+      "state": "The Dadra and Nagar Haveli and Daman and Diu",
+      "state_lgd_code": 38,
+      "census_2011_code": "494",
+      "aliases": []
+    },
+    {
+      "lgd_code": 269,
+      "district": "Dhalai",
+      "state": "Tripura",
+      "state_lgd_code": 16,
+      "census_2011_code": "291",
+      "aliases": []
+    },
+    {
+      "lgd_code": 654,
+      "district": "Gomati",
+      "state": "Tripura",
+      "state_lgd_code": 16,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 652,
+      "district": "Khowai",
+      "state": "Tripura",
+      "state_lgd_code": 16,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 270,
+      "district": "North Tripura",
+      "state": "Tripura",
+      "state_lgd_code": 16,
+      "census_2011_code": "292",
+      "aliases": []
+    },
+    {
+      "lgd_code": 653,
+      "district": "Sepahijala",
+      "state": "Tripura",
+      "state_lgd_code": 16,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 271,
+      "district": "South Tripura",
+      "state": "Tripura",
+      "state_lgd_code": 16,
+      "census_2011_code": "290",
+      "aliases": []
+    },
+    {
+      "lgd_code": 655,
+      "district": "Unakoti",
+      "state": "Tripura",
+      "state_lgd_code": 16,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 272,
+      "district": "West Tripura",
+      "state": "Tripura",
+      "state_lgd_code": 16,
+      "census_2011_code": "289",
+      "aliases": []
+    },
+    {
+      "lgd_code": 118,
+      "district": "Agra",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "146",
+      "aliases": []
+    },
+    {
+      "lgd_code": 119,
+      "district": "Aligarh",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "143",
+      "aliases": []
+    },
+    {
+      "lgd_code": 121,
+      "district": "Ambedkar Nagar",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "178",
+      "aliases": []
+    },
+    {
+      "lgd_code": 640,
+      "district": "Amethi",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 154,
+      "district": "Amroha",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "137",
+      "aliases": []
+    },
+    {
+      "lgd_code": 122,
+      "district": "Auraiya",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "162",
+      "aliases": []
+    },
+    {
+      "lgd_code": 140,
+      "district": "Ayodhya",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "177",
+      "aliases": []
+    },
+    {
+      "lgd_code": 123,
+      "district": "Azamgarh",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "191",
+      "aliases": []
+    },
+    {
+      "lgd_code": 124,
+      "district": "Baghpat",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "139",
+      "aliases": []
+    },
+    {
+      "lgd_code": 125,
+      "district": "Bahraich",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "180",
+      "aliases": []
+    },
+    {
+      "lgd_code": 126,
+      "district": "Ballia",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "193",
+      "aliases": []
+    },
+    {
+      "lgd_code": 127,
+      "district": "Balrampur",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "182",
+      "aliases": []
+    },
+    {
+      "lgd_code": 128,
+      "district": "Banda",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "170",
+      "aliases": []
+    },
+    {
+      "lgd_code": 129,
+      "district": "Barabanki",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "176",
+      "aliases": [
+        "Bara Banki"
+      ]
+    },
+    {
+      "lgd_code": 130,
+      "district": "Bareilly",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "150",
+      "aliases": []
+    },
+    {
+      "lgd_code": 131,
+      "district": "Basti",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "185",
+      "aliases": []
+    },
+    {
+      "lgd_code": 179,
+      "district": "Bhadohi",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "198",
+      "aliases": []
+    },
+    {
+      "lgd_code": 132,
+      "district": "Bijnor",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "134",
+      "aliases": []
+    },
+    {
+      "lgd_code": 133,
+      "district": "Budaun",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "149",
+      "aliases": []
+    },
+    {
+      "lgd_code": 134,
+      "district": "Bulandshahr",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "142",
+      "aliases": []
+    },
+    {
+      "lgd_code": 135,
+      "district": "Chandauli",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "196",
+      "aliases": []
+    },
+    {
+      "lgd_code": 136,
+      "district": "Chitrakoot",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "171",
+      "aliases": []
+    },
+    {
+      "lgd_code": 137,
+      "district": "Deoria",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "190",
+      "aliases": []
+    },
+    {
+      "lgd_code": 138,
+      "district": "Etah",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "201",
+      "aliases": []
+    },
+    {
+      "lgd_code": 139,
+      "district": "Etawah",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "161",
+      "aliases": []
+    },
+    {
+      "lgd_code": 141,
+      "district": "Farrukhabad",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "159",
+      "aliases": []
+    },
+    {
+      "lgd_code": 142,
+      "district": "Fatehpur",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "172",
+      "aliases": []
+    },
+    {
+      "lgd_code": 143,
+      "district": "Firozabad",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "147",
+      "aliases": []
+    },
+    {
+      "lgd_code": 144,
+      "district": "Gautam Buddha Nagar",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "141",
+      "aliases": []
+    },
+    {
+      "lgd_code": 145,
+      "district": "Ghaziabad",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "140",
+      "aliases": []
+    },
+    {
+      "lgd_code": 146,
+      "district": "Ghazipur",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "195",
+      "aliases": []
+    },
+    {
+      "lgd_code": 147,
+      "district": "Gonda",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "183",
+      "aliases": []
+    },
+    {
+      "lgd_code": 148,
+      "district": "Gorakhpur",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "188",
+      "aliases": []
+    },
+    {
+      "lgd_code": 149,
+      "district": "Hamirpur",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "168",
+      "aliases": []
+    },
+    {
+      "lgd_code": 661,
+      "district": "Hapur",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 150,
+      "district": "Hardoi",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "155",
+      "aliases": []
+    },
+    {
+      "lgd_code": 163,
+      "district": "Hathras",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "144",
+      "aliases": []
+    },
+    {
+      "lgd_code": 151,
+      "district": "Jalaun",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "165",
+      "aliases": []
+    },
+    {
+      "lgd_code": 152,
+      "district": "Jaunpur",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "194",
+      "aliases": []
+    },
+    {
+      "lgd_code": 153,
+      "district": "Jhansi",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "166",
+      "aliases": []
+    },
+    {
+      "lgd_code": 155,
+      "district": "Kannauj",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "160",
+      "aliases": []
+    },
+    {
+      "lgd_code": 156,
+      "district": "Kanpur Dehat",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "163",
+      "aliases": []
+    },
+    {
+      "lgd_code": 157,
+      "district": "Kanpur Nagar",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "164",
+      "aliases": []
+    },
+    {
+      "lgd_code": 633,
+      "district": "Kasganj",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "202",
+      "aliases": []
+    },
+    {
+      "lgd_code": 158,
+      "district": "Kaushambi",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "174",
+      "aliases": []
+    },
+    {
+      "lgd_code": 159,
+      "district": "Kheri",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "153",
+      "aliases": []
+    },
+    {
+      "lgd_code": 160,
+      "district": "Kushi Nagar",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "189",
+      "aliases": [
+        "Kushinagar"
+      ]
+    },
+    {
+      "lgd_code": 161,
+      "district": "Lalitpur",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "167",
+      "aliases": []
+    },
+    {
+      "lgd_code": 162,
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "157",
+      "aliases": []
+    },
+    {
+      "lgd_code": 164,
+      "district": "Maharajganj",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "187",
+      "aliases": [
+        "Mahrajganj"
+      ]
+    },
+    {
+      "lgd_code": 165,
+      "district": "Mahoba",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "169",
+      "aliases": []
+    },
+    {
+      "lgd_code": 166,
+      "district": "Mainpuri",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "148",
+      "aliases": []
+    },
+    {
+      "lgd_code": 167,
+      "district": "Mathura",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "145",
+      "aliases": []
+    },
+    {
+      "lgd_code": 168,
+      "district": "Mau",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "192",
+      "aliases": []
+    },
+    {
+      "lgd_code": 169,
+      "district": "Meerut",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "138",
+      "aliases": []
+    },
+    {
+      "lgd_code": 170,
+      "district": "Mirzapur",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "199",
+      "aliases": []
+    },
+    {
+      "lgd_code": 171,
+      "district": "Moradabad",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "135",
+      "aliases": []
+    },
+    {
+      "lgd_code": 172,
+      "district": "Muzaffarnagar",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "133",
+      "aliases": []
+    },
+    {
+      "lgd_code": 173,
+      "district": "Pilibhit",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "151",
+      "aliases": []
+    },
+    {
+      "lgd_code": 174,
+      "district": "Pratapgarh",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "173",
+      "aliases": []
+    },
+    {
+      "lgd_code": 120,
+      "district": "Prayagraj",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "175",
+      "aliases": []
+    },
+    {
+      "lgd_code": 175,
+      "district": "Rae Bareli",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "158",
+      "aliases": []
+    },
+    {
+      "lgd_code": 176,
+      "district": "Rampur",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "136",
+      "aliases": []
+    },
+    {
+      "lgd_code": 177,
+      "district": "Saharanpur",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "132",
+      "aliases": []
+    },
+    {
+      "lgd_code": 659,
+      "district": "Sambhal",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 178,
+      "district": "Sant Kabeer Nagar",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "186",
+      "aliases": [
+        "Sant Kabir Nagar"
+      ]
+    },
+    {
+      "lgd_code": 180,
+      "district": "Shahjahanpur",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "152",
+      "aliases": []
+    },
+    {
+      "lgd_code": 660,
+      "district": "Shamli",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 181,
+      "district": "Shravasti",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "181",
+      "aliases": [
+        "Shrawasti"
+      ]
+    },
+    {
+      "lgd_code": 182,
+      "district": "Siddharth Nagar",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "184",
+      "aliases": [
+        "Siddharthnagar"
+      ]
+    },
+    {
+      "lgd_code": 183,
+      "district": "Sitapur",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "154",
+      "aliases": []
+    },
+    {
+      "lgd_code": 184,
+      "district": "Sonbhadra",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "200",
+      "aliases": []
+    },
+    {
+      "lgd_code": 185,
+      "district": "Sultanpur",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "179",
+      "aliases": []
+    },
+    {
+      "lgd_code": 186,
+      "district": "Unnao",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "156",
+      "aliases": []
+    },
+    {
+      "lgd_code": 187,
+      "district": "Varanasi",
+      "state": "Uttar Pradesh",
+      "state_lgd_code": 9,
+      "census_2011_code": "197",
+      "aliases": []
+    },
+    {
+      "lgd_code": 45,
+      "district": "Almora",
+      "state": "Uttarakhand",
+      "state_lgd_code": 5,
+      "census_2011_code": "64",
+      "aliases": []
+    },
+    {
+      "lgd_code": 46,
+      "district": "Bageshwar",
+      "state": "Uttarakhand",
+      "state_lgd_code": 5,
+      "census_2011_code": "63",
+      "aliases": []
+    },
+    {
+      "lgd_code": 47,
+      "district": "Chamoli",
+      "state": "Uttarakhand",
+      "state_lgd_code": 5,
+      "census_2011_code": "57",
+      "aliases": []
+    },
+    {
+      "lgd_code": 48,
+      "district": "Champawat",
+      "state": "Uttarakhand",
+      "state_lgd_code": 5,
+      "census_2011_code": "65",
+      "aliases": []
+    },
+    {
+      "lgd_code": 49,
+      "district": "Dehradun",
+      "state": "Uttarakhand",
+      "state_lgd_code": 5,
+      "census_2011_code": "60",
+      "aliases": []
+    },
+    {
+      "lgd_code": 50,
+      "district": "Haridwar",
+      "state": "Uttarakhand",
+      "state_lgd_code": 5,
+      "census_2011_code": "68",
+      "aliases": []
+    },
+    {
+      "lgd_code": 51,
+      "district": "Nainital",
+      "state": "Uttarakhand",
+      "state_lgd_code": 5,
+      "census_2011_code": "66",
+      "aliases": []
+    },
+    {
+      "lgd_code": 52,
+      "district": "Pauri Garhwal",
+      "state": "Uttarakhand",
+      "state_lgd_code": 5,
+      "census_2011_code": "61",
+      "aliases": []
+    },
+    {
+      "lgd_code": 53,
+      "district": "Pithoragarh",
+      "state": "Uttarakhand",
+      "state_lgd_code": 5,
+      "census_2011_code": "62",
+      "aliases": []
+    },
+    {
+      "lgd_code": 54,
+      "district": "Rudra Prayag",
+      "state": "Uttarakhand",
+      "state_lgd_code": 5,
+      "census_2011_code": "58",
+      "aliases": []
+    },
+    {
+      "lgd_code": 55,
+      "district": "Tehri Garhwal",
+      "state": "Uttarakhand",
+      "state_lgd_code": 5,
+      "census_2011_code": "59",
+      "aliases": []
+    },
+    {
+      "lgd_code": 56,
+      "district": "Udam Singh Nagar",
+      "state": "Uttarakhand",
+      "state_lgd_code": 5,
+      "census_2011_code": "67",
+      "aliases": []
+    },
+    {
+      "lgd_code": 57,
+      "district": "Uttar Kashi",
+      "state": "Uttarakhand",
+      "state_lgd_code": 5,
+      "census_2011_code": "56",
+      "aliases": []
+    },
+    {
+      "lgd_code": 303,
+      "district": "24 Paraganas North",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "337",
+      "aliases": [
+        "North Twenty-Four Parganas"
+      ]
+    },
+    {
+      "lgd_code": 304,
+      "district": "24 Paraganas South",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "343",
+      "aliases": [
+        "South 24Parganas"
+      ]
+    },
+    {
+      "lgd_code": 664,
+      "district": "Alipurduar",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 305,
+      "district": "Bankura",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "339",
+      "aliases": []
+    },
+    {
+      "lgd_code": 307,
+      "district": "Birbhum",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "334",
+      "aliases": []
+    },
+    {
+      "lgd_code": 308,
+      "district": "Coochbehar",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "329",
+      "aliases": []
+    },
+    {
+      "lgd_code": 309,
+      "district": "Darjeeling",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "327",
+      "aliases": []
+    },
+    {
+      "lgd_code": 310,
+      "district": "Dinajpur Dakshin",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "331",
+      "aliases": []
+    },
+    {
+      "lgd_code": 311,
+      "district": "Dinajpur Uttar",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "330",
+      "aliases": []
+    },
+    {
+      "lgd_code": 312,
+      "district": "Hooghly",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "338",
+      "aliases": [
+        "Hugli"
+      ]
+    },
+    {
+      "lgd_code": 313,
+      "district": "Howrah",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "341",
+      "aliases": []
+    },
+    {
+      "lgd_code": 314,
+      "district": "Jalpaiguri",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "328",
+      "aliases": []
+    },
+    {
+      "lgd_code": 703,
+      "district": "Jhargram",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 702,
+      "district": "Kalimpong",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 315,
+      "district": "Kolkata",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "342",
+      "aliases": []
+    },
+    {
+      "lgd_code": 316,
+      "district": "Maldah",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "332",
+      "aliases": []
+    },
+    {
+      "lgd_code": 317,
+      "district": "Medinipur East",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "345",
+      "aliases": []
+    },
+    {
+      "lgd_code": 318,
+      "district": "Medinipur West",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "344",
+      "aliases": []
+    },
+    {
+      "lgd_code": 319,
+      "district": "Murshidabad",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "333",
+      "aliases": []
+    },
+    {
+      "lgd_code": 320,
+      "district": "Nadia",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "336",
+      "aliases": []
+    },
+    {
+      "lgd_code": 704,
+      "district": "Paschim Bardhaman",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "",
+      "aliases": []
+    },
+    {
+      "lgd_code": 306,
+      "district": "Purba Bardhaman",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "335",
+      "aliases": []
+    },
+    {
+      "lgd_code": 321,
+      "district": "Purulia",
+      "state": "West Bengal",
+      "state_lgd_code": 19,
+      "census_2011_code": "340",
+      "aliases": [
+        "Puruliya"
+      ]
+    }
+  ]
+}
