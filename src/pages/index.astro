@@ -320,13 +320,22 @@ const base = import.meta.env.BASE_URL;
       }
     }
 
-    // White canvas tile (HiDPI aware)
-    (new (L.GridLayer.extend({createTile:function(){var t=document.createElement('canvas');var r=window.devicePixelRatio||1;t.width=t.height=256*r;t.style.width=t.style.height='256px';var c=t.getContext('2d');c.scale(r,r);c.fillStyle='#fff';c.fillRect(0,0,256,256);return t;}}))).addTo(map);
+    // White canvas tile for Banking Access mode (HiDPI aware)
+    var whiteCanvasTile = new (L.GridLayer.extend({createTile:function(){var t=document.createElement('canvas');var r=window.devicePixelRatio||1;t.width=t.height=256*r;t.style.width=t.style.height='256px';var c=t.getContext('2d');c.scale(r,r);c.fillStyle='#fff';c.fillRect(0,0,256,256);return t;}}));
+    whiteCanvasTile.addTo(map);
 
-    // India outline (simplified from datameet composite — includes coastline + correct Kashmir boundary)
+    // Street map tile for Capital Markets mode (hidden by default)
+    var streetTile = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      subdomains: 'abcd',
+      maxZoom: 19,
+    });
+
+    // India outline layer (simplified from datameet composite — includes coastline + correct Kashmir boundary)
+    var indiaOutlineLayer = null;
     fetch(_B + 'Maps/india-outline.geojson')
       .then(function(r){return r.json();}).then(function(geo){
-        L.geoJSON(geo,{style:{fillColor:'#faf9f7',fillOpacity:1,color:'#ccc8c0',weight:1.2,opacity:0.6},interactive:false}).addTo(map);
+        indiaOutlineLayer = L.geoJSON(geo,{style:{fillColor:'#faf9f7',fillOpacity:1,color:'#ccc8c0',weight:1.2,opacity:0.6},interactive:false}).addTo(map);
       }).catch(function(){});
 
     // State name → code mapping
@@ -1635,12 +1644,26 @@ const base = import.meta.env.BASE_URL;
       if (distLabelsLayer) { map.removeLayer(distLabelsLayer); distLabelsLayer = null; }
 
       if (mode === 'capital') {
+        // Switch to street map tiles
+        if (whiteCanvasTile._map) map.removeLayer(whiteCanvasTile);
+        if (indiaOutlineLayer && indiaOutlineLayer._map) map.removeLayer(indiaOutlineLayer);
+        if (!streetTile._map) streetTile.addTo(map);
+        streetTile.bringToBack();
+
         // Hide banking legend, show appropriate capital legend
         document.getElementById('choro-legend-banking').style.display = 'none';
         // Restore capital mode
         setView(currentView);
         map.flyToBounds(INDIA_BOUNDS, { padding: [20, 20], duration: 1.0 });
       } else {
+        // Switch back to clean white canvas
+        if (streetTile._map) map.removeLayer(streetTile);
+        if (!whiteCanvasTile._map) whiteCanvasTile.addTo(map);
+        whiteCanvasTile.bringToBack();
+        if (indiaOutlineLayer && !indiaOutlineLayer._map) indiaOutlineLayer.addTo(map);
+        if (indiaOutlineLayer) indiaOutlineLayer.bringToBack();
+        if (whiteCanvasTile._map) whiteCanvasTile.bringToBack();
+
         // Hide capital layers
         [clusterCDSL, clusterNSDL, clusterMFDI, clusterMFDC].forEach(function(c) { if (c._map) map.removeLayer(c); });
         document.getElementById('legend').style.display = 'none';
