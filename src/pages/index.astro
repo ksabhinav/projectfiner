@@ -416,15 +416,37 @@ const base = import.meta.env.BASE_URL;
         '<br>' + (r.populationGroup || '') + ' · ' + (r.district || '') + '</div>';
     }
 
+    var BIG_STATES = ['uttar-pradesh','bihar','maharashtra','madhya-pradesh','west-bengal'];
+
     function loadRbiOutlets(stateSlug) {
       if (rbiLoadedState === stateSlug || rbiLoading) return;
       rbiLoading = true;
       rbiLoadedState = stateSlug;
       document.getElementById('rbi-hint').textContent = 'Loading ' + stateSlug + '…';
 
-      fetch(_B + 'banking-outlets/' + stateSlug + '.json')
-        .then(function(r) { return r.ok ? r.json() : []; })
-        .then(function(data) {
+      // Big states are split into chunks
+      var isBig = BIG_STATES.indexOf(stateSlug) >= 0;
+      var dataPromise;
+      if (isBig) {
+        // Load manifest first, then all chunks
+        dataPromise = fetch(_B + 'banking-outlets/' + stateSlug + '_manifest.json')
+          .then(function(r) { return r.ok ? r.json() : null; })
+          .then(function(manifest) {
+            if (!manifest) return [];
+            return Promise.all(manifest.chunk_files.map(function(cf) {
+              return fetch(_B + 'banking-outlets/' + cf).then(function(r) { return r.ok ? r.json() : []; });
+            })).then(function(chunks) {
+              var all = [];
+              chunks.forEach(function(c) { all = all.concat(c); });
+              return all;
+            });
+          });
+      } else {
+        dataPromise = fetch(_B + 'banking-outlets/' + stateSlug + '.json')
+          .then(function(r) { return r.ok ? r.json() : []; });
+      }
+
+      dataPromise.then(function(data) {
           rbiMarkerCache = { branch: [], bc: [], csp: [] };
           data.forEach(function(r) {
             if (!r.lat || !r.lng || r.lat === '0' || r.lng === '0') return;
