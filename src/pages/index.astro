@@ -827,6 +827,29 @@ const base = import.meta.env.BASE_URL;
         .replace(/[^A-Z\s]/g, '').replace(/\s+/g, ' ').trim();
     }
 
+    // Resolve a GeoJSON feature to a lookup entry using LGD census codes first, then name matching
+    function resolveLookup(feature, lookup) {
+      var props = feature.properties;
+      // 1. Try LGD census code (DIST_LGD in GeoJSON = census 2011 code)
+      var code = String(props.DIST_LGD || '').trim();
+      if (code && code !== 'NOT AVAILABLE' && lgdCensusToNames[code]) {
+        var names = lgdCensusToNames[code];
+        for (var i = 0; i < names.length; i++) {
+          var entry = lookup.get(names[i]);
+          if (entry) return entry;
+        }
+      }
+      // 2. Try LGD name→canonical resolver
+      var dn = normDist(props.DISTRICT);
+      var canonical = lgdNameToCanonical[dn];
+      if (canonical && canonical !== dn) {
+        var entry = lookup.get(canonical);
+        if (entry) return entry;
+      }
+      // 3. Fall back to direct name match + DISTRICT_ALIASES
+      return lookup.get(dn) || lookup.get(DISTRICT_ALIASES[dn]) || null;
+    }
+
     // Date suffix pattern for prefix matching — only match date-like suffixes
     // e.g. 'pct_coverage' matches 'pct_coverage_mar_24', 'pct_coverage_9688', etc.
     var DATE_SUFFIX_RE = /_(jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec|fy|2\d{3}|\d{2,4})$/i;
@@ -982,8 +1005,7 @@ const base = import.meta.env.BASE_URL;
 
       var allVals = [];
       filtered.features.forEach(function(f) {
-        var dn = normDist(f.properties.DISTRICT);
-        var data = lookup.get(dn) || lookup.get(DISTRICT_ALIASES[dn]);
+        var data = resolveLookup(f, lookup);
         if (data && data.value !== null) allVals.push(data.value);
       });
       var breaks = computeBreaks(allVals);
@@ -993,8 +1015,7 @@ const base = import.meta.env.BASE_URL;
 
       choroLayer = L.geoJSON(filtered, {
         style: function(feature) {
-          var dn = normDist(feature.properties.DISTRICT);
-          var data = lookup.get(dn) || lookup.get(DISTRICT_ALIASES[dn]);
+          var data = resolveLookup(feature, lookup);
           var val = data ? data.value : null;
           return {
             fillColor: getColor(val, breaks, ramp),
@@ -1006,8 +1027,7 @@ const base = import.meta.env.BASE_URL;
         },
         onEachFeature: function(feature, layer) {
           var p = feature.properties;
-          var dn = normDist(p.DISTRICT);
-          var data = lookup.get(dn) || lookup.get(DISTRICT_ALIASES[dn]);
+          var data = resolveLookup(feature, lookup);
 
           layer.on({
             mouseover: function(e) {
@@ -1141,7 +1161,15 @@ const base = import.meta.env.BASE_URL;
     function focusDistrict(districtName, stateName) {
       if (!distGeoJSON) return;
       var feature = distGeoJSON.features.find(function(f) {
-        return normDist(f.properties.DISTRICT) === districtName;
+        var dn = normDist(f.properties.DISTRICT);
+        if (dn === districtName) return true;
+        // Try LGD alias resolution
+        var canonical = lgdNameToCanonical[dn];
+        if (canonical === districtName) return true;
+        canonical = lgdNameToCanonical[districtName];
+        if (canonical && canonical === dn) return true;
+        // Try DISTRICT_ALIASES
+        return DISTRICT_ALIASES[dn] === districtName;
       });
       if (!feature) return;
 
@@ -1336,6 +1364,10 @@ const base = import.meta.env.BASE_URL;
 
     var phonePeData = []; // flat array of {district, period, phonepe_upi__*}
 
+    // LGD code-based district resolver
+    var lgdCensusToNames = {};  // census_code → [canonical, ...aliases] (normalized)
+    var lgdNameToCanonical = {}; // normDist(anyName) → normDist(canonical)
+
     function loadBankingData() {
       var slugs = Object.values(STATE_SLUGS);
       var slbcPromise = Promise.all(slugs.map(function(slug) {
@@ -1347,10 +1379,29 @@ const base = import.meta.env.BASE_URL;
       var ppPromise = fetch(_B + 'digital-payments/phonepe_district_timeseries.json')
         .then(function(r) { return r.ok ? r.json() : null; })
         .catch(function() { return null; });
+      var lgdPromise = fetch(_B + 'district_lgd_codes.json')
+        .then(function(r) { return r.ok ? r.json() : null; })
+        .catch(function() { return null; });
 
-      Promise.all([slbcPromise, ppPromise]).then(function(both) {
+      Promise.all([slbcPromise, ppPromise, lgdPromise]).then(function(both) {
         var results = both[0];
         var ppData = both[1];
+        var lgdData = both[2];
+
+        // Build LGD resolver maps
+        if (lgdData && lgdData.districts) {
+          lgdData.districts.forEach(function(d) {
+            var canon = normDist(d.district);
+            var allNames = [canon];
+            (d.aliases || []).forEach(function(a) { allNames.push(normDist(a)); });
+            // Map census code → all known names
+            if (d.census_2011_code) {
+              lgdCensusToNames[String(d.census_2011_code)] = allNames;
+            }
+            // Map every name/alias → canonical
+            allNames.forEach(function(n) { lgdNameToCanonical[n] = canon; });
+          });
+        }
 
         for (var i = 0; i < results.length; i++) {
           var r = results[i];
