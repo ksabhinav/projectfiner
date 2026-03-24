@@ -425,8 +425,12 @@ const base = import.meta.env.BASE_URL;
       document.getElementById('rbi-hint').textContent = 'Loading ' + stateSlug + '…';
 
       fetch(R2_BASE + 'banking-outlets/' + stateSlug + '.json')
-        .then(function(r) { return r.ok ? r.json() : []; })
+        .then(function(r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status + ' for ' + stateSlug);
+          return r.json();
+        })
         .then(function(data) {
+          if (!Array.isArray(data)) throw new Error('Not an array: ' + typeof data);
           rbiMarkerCache = { branch: [], bc: [], csp: [] };
           data.forEach(function(r) {
             if (!r.lat || !r.lng || r.lat === '0' || r.lng === '0') return;
@@ -454,7 +458,8 @@ const base = import.meta.env.BASE_URL;
           rbiLoading = false;
         })
         .catch(function(err) {
-          document.getElementById('rbi-hint').textContent = 'Error loading outlets';
+          document.getElementById('rbi-hint').textContent = 'Error: ' + (err.message || err);
+          console.error('RBI outlet load error:', err);
           rbiLoading = false;
         });
     }
