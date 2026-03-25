@@ -871,7 +871,10 @@ const base = import.meta.env.BASE_URL;
     }
 
     // Banking state
-    var slbcData = {};
+    var slbcData = {};           // Legacy — kept for backward compat but unused in progressive mode
+    var indicatorCache = {};     // Progressive: cache[indicator][quarter] = {districts: [...]}
+    var manifestData = null;     // {indicators: [...], quarters: [...], latest_quarter: '...'}
+    var currentIndicatorData = null; // Currently loaded indicator file
     var currentIndicator = 'digital_transactions';
     var currentMetricIdx = 0;
     var currentQuarter = '';
@@ -1134,55 +1137,58 @@ const base = import.meta.env.BASE_URL;
       var metric = ind.metrics[currentMetricIdx];
       var lookup = new Map();
 
-      for (var slug of Object.keys(slbcData)) {
-        var records = slbcData[slug];
-        if (!records || !records.length) continue;
+      if (!currentIndicatorData || !currentIndicatorData.districts) return lookup;
 
-        var stateQuarters = [];
-        var seen = {};
-        records.forEach(function(r) {
-          if (r.period && r.period <= currentQuarter && !seen[r.period]) {
-            seen[r.period] = true;
-            stateQuarters.push(r.period);
-          }
-        });
-        stateQuarters.sort();
-        if (!stateQuarters.length) continue;
+      var districts = currentIndicatorData.districts;
+      for (var i = 0; i < districts.length; i++) {
+        var rec = districts[i];
+        var dn = normDist(rec.district);
+        if (!dn) continue;
 
-        var useQuarter = null;
-        for (var qi = stateQuarters.length - 1; qi >= 0; qi--) {
-          var q = stateQuarters[qi];
-          var qRecords = records.filter(function(r) { return r.period === q; });
-          var hasIndicatorData = qRecords.some(function(r) {
-            return getVal(r, currentIndicator, metric.field, metric.fallbacks) !== null;
-          });
-          if (hasIndicatorData) {
-            useQuarter = q;
-            break;
+        // If state filter is active, skip non-matching states
+        if (bankingStateFilter) {
+          var recState = (rec.state || '').toUpperCase().replace(/-/g, ' ');
+          if (recState !== bankingStateFilter && STATE_SLUGS[bankingStateFilter] !== rec.state) continue;
+        }
+
+        // Get the primary metric value
+        var val = null;
+        // Try primary field, then fallbacks
+        var tryFields = [metric.field].concat(metric.fallbacks || []);
+        for (var fi = 0; fi < tryFields.length; fi++) {
+          var fv = rec[tryFields[fi]];
+          if (fv !== undefined && fv !== null && fv !== '') {
+            val = parseFloat(String(fv).replace(/,/g, ''));
+            if (!isNaN(val)) break;
+            val = null;
           }
         }
-        if (!useQuarter) continue;
 
-        for (var ri = 0; ri < records.length; ri++) {
-          var rec = records[ri];
-          if (rec.period !== useQuarter) continue;
-          var dn = normDist(rec.district);
-          if (!dn) continue;
-
-          var val = getVal(rec, currentIndicator, metric.field, metric.fallbacks);
-          var allVals = {};
-          var allUnits = {};
-          for (var mi = 0; mi < ind.metrics.length; mi++) {
-            var m = ind.metrics[mi];
-            allVals[m.label] = getVal(rec, currentIndicator, m.field, m.fallbacks);
-            allUnits[m.label] = m.unit || '';
+        // Build all metric values for tooltip
+        var allVals = {};
+        var allUnits = {};
+        for (var mi = 0; mi < ind.metrics.length; mi++) {
+          var m = ind.metrics[mi];
+          var mval = null;
+          var mFields = [m.field].concat(m.fallbacks || []);
+          for (var mfi = 0; mfi < mFields.length; mfi++) {
+            var mv = rec[mFields[mfi]];
+            if (mv !== undefined && mv !== null && mv !== '') {
+              mval = parseFloat(String(mv).replace(/,/g, ''));
+              if (!isNaN(mval)) break;
+              mval = null;
+            }
           }
-          var entry = { value: val, metrics: allVals, units: allUnits, district: rec.district };
-          if (useQuarter !== currentQuarter) {
-            entry.fallbackQuarter = useQuarter;
-          }
-          lookup.set(dn, entry);
+          allVals[m.label] = mval;
+          allUnits[m.label] = m.unit || '';
         }
+
+        var entry = { value: val, metrics: allVals, units: allUnits, district: rec.district };
+        // Check if data is from a fallback quarter
+        if (currentIndicatorData.quarter && currentIndicatorData.quarter !== currentQuarter) {
+          entry.fallbackQuarter = currentIndicatorData.quarter;
+        }
+        lookup.set(dn, entry);
       }
       return lookup;
     }
@@ -1529,14 +1535,19 @@ const base = import.meta.env.BASE_URL;
     }
 
     function populateSlider() {
-      var qSet = new Set();
-      for (var slug of Object.keys(slbcData)) {
-        for (var ri = 0; ri < slbcData[slug].length; ri++) {
-          var rec = slbcData[slug][ri];
-          if (rec.period) qSet.add(rec.period);
+      // Use manifest quarters if available (progressive loading), otherwise scan slbcData (legacy)
+      if (manifestData && manifestData.quarters && manifestData.quarters.length > 0) {
+        sortedQuarters = manifestData.quarters.slice(); // already sorted latest-first
+      } else {
+        var qSet = new Set();
+        for (var slug of Object.keys(slbcData)) {
+          for (var ri = 0; ri < slbcData[slug].length; ri++) {
+            var rec = slbcData[slug][ri];
+            if (rec.period) qSet.add(rec.period);
+          }
         }
+        sortedQuarters = Array.from(qSet).sort().reverse();
       }
-      sortedQuarters = Array.from(qSet).sort().reverse();
       currentQIdx = 0;
       currentQuarter = sortedQuarters[currentQIdx];
       document.getElementById('quarter-label').textContent = fmtQuarter(currentQuarter);
@@ -1565,7 +1576,11 @@ const base = import.meta.env.BASE_URL;
           var idx = parseInt(this.dataset.idx);
           setTimelinePosition(idx);
           clearTimeout(sliderTimer);
-          sliderTimer = setTimeout(function() { buildChoropleth_banking(); }, 120);
+          sliderTimer = setTimeout(function() {
+            loadIndicatorData(currentIndicator, currentQuarter).then(function() {
+              buildChoropleth_banking();
+            });
+          }, 120);
         });
         dotsEl.appendChild(dot);
       }
@@ -1592,29 +1607,18 @@ const base = import.meta.env.BASE_URL;
     var lgdCensusToNames = {};  // census_code → [canonical, ...aliases] (normalized)
     var lgdNameToCanonical = {}; // normDist(anyName) → normDist(canonical)
 
+    // Progressive loading: fetch manifest + LGD on init, then load indicator files on demand
     function loadBankingData() {
-      var slugs = Object.values(STATE_SLUGS);
-      var slbcPromise = Promise.all(slugs.map(function(slug) {
-        return fetch(_B + 'slbc-data/' + slug + '/' + slug + '_fi_slim.json')
-          .then(function(r) { return r.ok ? r.json() : null; })
-          .then(function(json) { return { slug: slug, data: json }; })
-          .catch(function() { return { slug: slug, data: null }; });
-      }));
-      var ppPromise = fetch(_B + 'digital-payments/phonepe_district_timeseries.json')
-        .then(function(r) { return r.ok ? r.json() : null; })
-        .catch(function() { return null; });
       var lgdPromise = fetch(_B + 'district_lgd_codes.json')
         .then(function(r) { return r.ok ? r.json() : null; })
         .catch(function() { return null; });
-      var rbiPromise = fetch(_B + 'banking-outlets/district_counts.json')
+      var manifestPromise = fetch(_B + 'indicators/manifest.json')
         .then(function(r) { return r.ok ? r.json() : null; })
         .catch(function() { return null; });
 
-      Promise.all([slbcPromise, ppPromise, lgdPromise, rbiPromise]).then(function(both) {
-        var results = both[0];
-        var ppData = both[1];
-        var lgdData = both[2];
-        var rbiData = both[3];
+      Promise.all([lgdPromise, manifestPromise]).then(function(results) {
+        var lgdData = results[0];
+        manifestData = results[1];
 
         // Build LGD resolver maps
         if (lgdData && lgdData.districts) {
@@ -1622,109 +1626,61 @@ const base = import.meta.env.BASE_URL;
             var canon = normDist(d.district);
             var allNames = [canon];
             (d.aliases || []).forEach(function(a) { allNames.push(normDist(a)); });
-            // Map census code → all known names
             if (d.census_2011_code) {
               lgdCensusToNames[String(d.census_2011_code)] = allNames;
             }
-            // Map every name/alias → canonical
             allNames.forEach(function(n) { lgdNameToCanonical[n] = canon; });
           });
         }
 
-        for (var i = 0; i < results.length; i++) {
-          var r = results[i];
-          if (!r.data) { slbcData[r.slug] = []; continue; }
-          var flat = flattenTimeseries(r.data);
-          for (var fi = 0; fi < flat.length; fi++) {
-            if (flat[fi].period) flat[fi].period = normalizePeriod(flat[fi].period);
-          }
-          slbcData[r.slug] = flat;
-        }
-
-        // Merge PhonePe data into slbcData by matching state+district+period
-        if (ppData && ppData.periods) {
-          var ppFlat = flattenTimeseries(ppData);
-          for (var pi = 0; pi < ppFlat.length; pi++) {
-            var ppRec = ppFlat[pi];
-            ppRec.period = normalizePeriod(ppRec.period || '');
-            var ppState = ppRec['phonepe_upi__state'] || '';
-            if (!ppState || !slbcData[ppState]) continue;
-            // Find matching SLBC record for this district+period
-            var matched = false;
-            for (var si = 0; si < slbcData[ppState].length; si++) {
-              var sr = slbcData[ppState][si];
-              if (sr.period === ppRec.period && sr.district && ppRec.district &&
-                  sr.district.toUpperCase().replace(/[^A-Z]/g,'') === ppRec.district.toUpperCase().replace(/[^A-Z]/g,'')) {
-                sr['phonepe_upi__transaction_count'] = ppRec['phonepe_upi__transaction_count'];
-                sr['phonepe_upi__transaction_amount'] = ppRec['phonepe_upi__transaction_amount'];
-                matched = true;
-                break;
-              }
-            }
-            // If no SLBC record exists, add PhonePe data as standalone
-            if (!matched) {
-              slbcData[ppState].push(ppRec);
-            }
-          }
-        }
-
-        // Merge RBI banking outlet counts into slbcData
-        if (rbiData && rbiData.districts) {
-          // Build a state name → slug map (RBI uses uppercase state names with \xa0)
-          var rbiStateToSlug = {};
-          Object.keys(STATE_SLUGS).forEach(function(sname) { rbiStateToSlug[sname] = STATE_SLUGS[sname]; });
-
-          rbiData.districts.forEach(function(rd) {
-            var stateName = (rd.state || '').replace(/\u00a0/g, ' ').trim().toUpperCase();
-            var distName = (rd.district || '').replace(/\u00a0/g, ' ').trim();
-            var slug = rbiStateToSlug[stateName];
-            if (!slug || !distName) return;
-            if (!slbcData[slug]) slbcData[slug] = [];
-
-            // Find the latest period available for this state, or use a fixed label
-            var rbiPeriod = 'March 2025';  // RBI data is current snapshot, assign to latest quarter
-
-            // Try to match existing record
-            var matched = false;
-            for (var ri = 0; ri < slbcData[slug].length; ri++) {
-              var sr = slbcData[slug][ri];
-              if (sr.district && normDist(sr.district) === normDist(distName)) {
-                // Add RBI fields to ALL periods for this district (counts are current snapshot)
-                sr['rbi_outlets__total'] = rd.total;
-                sr['rbi_outlets__branch'] = rd.branch;
-                sr['rbi_outlets__bc'] = rd.bc;
-                sr['rbi_outlets__csp'] = rd.csp;
-                sr['rbi_outlets__rural'] = rd.rural;
-                sr['rbi_outlets__semi_urban'] = rd.semi_urban;
-                sr['rbi_outlets__urban'] = rd.urban;
-                sr['rbi_outlets__metro'] = rd.metro;
-                matched = true;
-                // Don't break — add to all periods for this district
-              }
-            }
-            if (!matched) {
-              slbcData[slug].push({
-                district: distName, period: normalizePeriod(rbiPeriod),
-                'rbi_outlets__total': rd.total, 'rbi_outlets__branch': rd.branch,
-                'rbi_outlets__bc': rd.bc, 'rbi_outlets__csp': rd.csp,
-                'rbi_outlets__rural': rd.rural, 'rbi_outlets__semi_urban': rd.semi_urban,
-                'rbi_outlets__urban': rd.urban, 'rbi_outlets__metro': rd.metro,
-              });
-            }
-          });
+        // Use manifest quarters for the timeline slider
+        if (manifestData && manifestData.quarters) {
+          sortedQuarters = manifestData.quarters.map(function(q) { return q; });
+          // sortedQuarters is already sorted latest-first in manifest
+          currentQuarter = sortedQuarters[0] || '';
         }
 
         slbcLoaded = true;
         populateMetrics();
         populateSlider();
         updateTimelineColor();
-        buildDistrictLabels_banking();
-        buildChoropleth_banking();
-        updateLabelVisibility_banking();
-        flyToNE(false);
+
+        // Load the initial indicator data
+        loadIndicatorData(currentIndicator, currentQuarter).then(function() {
+          buildDistrictLabels_banking();
+          buildChoropleth_banking();
+          updateLabelVisibility_banking();
+          flyToNE(false);
+        });
       }).catch(function(err) {
         document.getElementById('stats-banking').textContent = 'Error: ' + err.message;
       });
+    }
+
+    // Load a single indicator file (~50-100 KB) for the given indicator+quarter
+    function loadIndicatorData(indicator, quarter) {
+      // RBI outlets has a special 'static' file (no quarterly data)
+      var filename = indicator === 'rbi_banking_outlets' ? 'static' : quarter;
+      var cacheKey = indicator + '/' + filename;
+
+      if (indicatorCache[cacheKey]) {
+        currentIndicatorData = indicatorCache[cacheKey];
+        return Promise.resolve();
+      }
+
+      var url = _B + 'indicators/' + indicator + '/' + filename + '.json';
+      return fetch(url)
+        .then(function(r) { return r.ok ? r.json() : null; })
+        .then(function(data) {
+          if (data) {
+            indicatorCache[cacheKey] = data;
+            currentIndicatorData = data;
+          } else {
+            // Try falling back to nearest quarter
+            currentIndicatorData = null;
+          }
+        })
+        .catch(function() { currentIndicatorData = null; });
     }
 
     // Banking event listeners
@@ -1755,12 +1711,16 @@ const base = import.meta.env.BASE_URL;
       currentMetricIdx = 0;
       populateMetrics();
       updateTimelineColor();
-      if (slbcLoaded) buildChoropleth_banking();
+      if (slbcLoaded) {
+        loadIndicatorData(currentIndicator, currentQuarter).then(function() {
+          buildChoropleth_banking();
+        });
+      }
     });
 
     document.getElementById('sel-metric').addEventListener('change', function(e) {
       currentMetricIdx = parseInt(e.target.value);
-      if (slbcLoaded) buildChoropleth_banking();
+      if (slbcLoaded) buildChoropleth_banking();  // No reload needed — same indicator file has all metrics
     });
 
     // Info tooltip popover — hover based
@@ -1821,7 +1781,7 @@ const base = import.meta.env.BASE_URL;
         var idx = posToIdx(e.clientY);
         setTimelinePosition(idx);
         clearTimeout(sliderTimer);
-        sliderTimer = setTimeout(function() { buildChoropleth_banking(); }, 120);
+        sliderTimer = setTimeout(function() { loadIndicatorData(currentIndicator, currentQuarter).then(function() { buildChoropleth_banking(); }); }, 120);
       });
       document.addEventListener('mousemove', function(e) {
         if (!dragging || sortedQuarters.length === 0) return;
@@ -1830,7 +1790,7 @@ const base = import.meta.env.BASE_URL;
         if (idx !== currentQIdx) {
           setTimelinePosition(idx);
           clearTimeout(sliderTimer);
-          sliderTimer = setTimeout(function() { buildChoropleth_banking(); }, 120);
+          sliderTimer = setTimeout(function() { loadIndicatorData(currentIndicator, currentQuarter).then(function() { buildChoropleth_banking(); }); }, 120);
         }
       });
       document.addEventListener('selectstart', function(e) { if (dragging) e.preventDefault(); });
@@ -1843,7 +1803,7 @@ const base = import.meta.env.BASE_URL;
         var idx = posToIdx(e.touches[0].clientY);
         setTimelinePosition(idx);
         clearTimeout(sliderTimer);
-        sliderTimer = setTimeout(function() { buildChoropleth_banking(); }, 120);
+        sliderTimer = setTimeout(function() { loadIndicatorData(currentIndicator, currentQuarter).then(function() { buildChoropleth_banking(); }); }, 120);
       }, {passive:false});
       document.addEventListener('touchmove', function(e) {
         if (!dragging || sortedQuarters.length === 0) return;
@@ -1851,7 +1811,7 @@ const base = import.meta.env.BASE_URL;
         if (idx !== currentQIdx) {
           setTimelinePosition(idx);
           clearTimeout(sliderTimer);
-          sliderTimer = setTimeout(function() { buildChoropleth_banking(); }, 120);
+          sliderTimer = setTimeout(function() { loadIndicatorData(currentIndicator, currentQuarter).then(function() { buildChoropleth_banking(); }); }, 120);
         }
       });
       document.addEventListener('touchend', function() { dragging = false; });
