@@ -1,6 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
+import MapPanel from '../components/map/MapPanel.svelte';
+import MapLegend from '../components/map/MapLegend.svelte';
+import InfoTooltip from '../components/map/InfoTooltip.svelte';
+import TimelineSlider from '../components/map/TimelineSlider.svelte';
+import FocusOverlay from '../components/map/FocusOverlay.svelte';
 
 const base = import.meta.env.BASE_URL;
 ---
@@ -13,244 +18,40 @@ const base = import.meta.env.BASE_URL;
 
   <div id="map"></div>
 
-  <div class="info-popover" id="info-popover"></div>
-  <div id="panel">
-    <div id="panel-handle"><span></span></div>
-    <div id="panel-head">
-      <h1>Project <em>FINER</em></h1>
-      <p class="panel-sub">Financial Inclusion Across India</p>
-      <p class="panel-stats">800+ Districts &middot; 36 States &middot; 15 Indicators</p>
-      <p class="panel-hint">Double-click a district to focus</p>
+  <InfoTooltip client:load />
+  <MapPanel client:load />
+  <MapLegend client:load />
 
-    </div>
-
-    <div id="scope-toggle">
-      <span class="scope-label" id="scope-label-india">All India</span>
-      <label class="toggle-switch">
-        <input type="checkbox" id="scope-switch" />
-        <span class="toggle-slider"></span>
-      </label>
-      <span class="scope-label active" id="scope-label-ne">Focus NE</span>
-    </div>
-
-    <div id="panel-body">
-      <!-- Mode toggle -->
-      <div class="mode-row" style="margin-bottom:10px">
-        <button class="view-btn active" id="mode-banking">Banking Access</button>
-        <button class="view-btn" id="mode-capital">Capital Market Access</button>
-      </div>
-
-      <!-- ═══ Capital controls ═══ -->
-      <div id="controls-capital" style="display:none">
-        <div class="view-row" style="margin-bottom:10px">
-          <button class="view-btn active" id="vbtn-choro">Access Map</button>
-          <button class="view-btn" id="vbtn-dots">Points</button>
-        </div>
-
-        <div class="grp open dpsc-active" id="grp-dpsc">
-          <div class="grp-master" id="grp-dpsc-master">
-            <div class="master-dot"></div>
-            <span class="grp-title">DP Service Centres</span>
-            <span class="grp-arrow">&#9662;</span>
-          </div>
-          <div class="grp-subs">
-            <button class="sub-btn on-cdsl" id="tog-cdsl"><span class="sub-dot"></span>CDSL</button>
-            <button class="sub-btn on-nsdl" id="tog-nsdl"><span class="sub-dot"></span>NSDL</button>
-          </div>
-        </div>
-        <div class="grp open mfd-active" id="grp-mfd">
-          <div class="grp-master" id="grp-mfd-master">
-            <div class="master-dot"></div>
-            <span class="grp-title">MF Distributors</span>
-            <span class="grp-arrow">&#9662;</span>
-          </div>
-          <div class="grp-subs">
-            <button class="sub-btn on-mfdi" id="tog-mfdi"><span class="sub-dot"></span>Individual</button>
-            <button class="sub-btn on-mfdc" id="tog-mfdc"><span class="sub-dot"></span>Corporate</button>
-          </div>
-        </div>
-
-        <div style="height:1px;background:#e8e5e0;margin:10px 0"></div>
-
-        <div class="field">
-          <span class="flabel">Search</span>
-          <input class="finput" type="text" id="search-dp" placeholder="Search by name…" />
-        </div>
-        <div class="field" style="position:relative">
-          <span class="flabel">Go to city</span>
-          <input class="finput" type="text" id="search-loc" placeholder="e.g. Shillong, Tura…" autocomplete="off" />
-          <div id="loc-sugg"></div>
-        </div>
-        <div class="field">
-          <span class="flabel">State</span>
-          <select class="finput" id="state-select">
-            <option value="">All India</option>
-          </select>
-        </div>
-
-        <div id="stats-capital">Loading…</div>
-        <button id="btn-reset-capital">&#8634; Reset</button>
-      </div>
-
-      <!-- ═══ Banking controls ═══ -->
-      <div id="controls-banking">
-        <div class="field">
-          <span class="flabel">Indicator</span>
-          <div class="select-with-info">
-            <select class="finput banking-input" id="sel-indicator">
-              <option value="digital_transactions" selected>Digital Transactions</option>
-              <option value="credit_deposit_ratio">Credit-Deposit Ratio</option>
-              <option value="pmjdy">PM Jan Dhan Yojana</option>
-              <option value="branch_network">Branch Network</option>
-              <option value="kcc">Kisan Credit Card</option>
-              <option value="shg">Self Help Groups</option>
-              <option value="aadhaar_authentication">Aadhaar Authentication</option>
-              <option value="social_security">Social Security (PMSBY/PMJJBY/APY)</option>
-              <option value="pmegp">PM Employment Generation</option>
-              <option value="housing_pmay">Housing / PMAY</option>
-              <option value="sui">Stand Up India</option>
-              <option value="sc_st_finance">SC/ST Lending</option>
-              <option value="women_finance">Women's Credit</option>
-              <option value="education_loan">Education Loans</option>
-              <option value="pmmy_mudra_disbursement">MUDRA / PMMY</option>
-            </select>
-            <button class="info-btn" id="info-indicator" type="button">i</button>
-          </div>
-        </div>
-
-        <div class="field">
-          <span class="flabel">Metric</span>
-          <div class="select-with-info">
-            <select class="finput banking-input" id="sel-metric"></select>
-            <button class="info-btn" id="info-metric" type="button">i</button>
-          </div>
-        </div>
-
-        <div style="height:1px;background:#e8e5e0;margin:10px 0"></div>
-
-        <div class="field">
-          <span class="flabel">State</span>
-          <select class="finput banking-input" id="sel-state">
-            <option value="">All States</option>
-            <option value="ASSAM">Assam</option>
-            <option value="BIHAR">Bihar</option>
-            <option value="JHARKHAND">Jharkhand</option>
-            <option value="MEGHALAYA">Meghalaya</option>
-            <option value="MANIPUR">Manipur</option>
-            <option value="ARUNACHAL PRADESH">Arunachal Pradesh</option>
-            <option value="MIZORAM">Mizoram</option>
-            <option value="TRIPURA">Tripura</option>
-            <option value="NAGALAND">Nagaland</option>
-            <option value="CHHATTISGARH">Chhattisgarh</option>
-            <option value="ODISHA">Odisha</option>
-            <option value="SIKKIM">Sikkim</option>
-            <option value="WEST BENGAL">West Bengal</option>
-            <option value="GUJARAT">Gujarat</option>
-            <option value="HARYANA">Haryana</option>
-            <option value="KARNATAKA">Karnataka</option>
-            <option value="KERALA">Kerala</option>
-            <option value="MAHARASHTRA">Maharashtra</option>
-            <option value="RAJASTHAN">Rajasthan</option>
-            <option value="TAMIL NADU">Tamil Nadu</option>
-            <option value="TELANGANA">Telangana</option>
-            <option value="UTTARAKHAND">Uttarakhand</option>
-          </select>
-        </div>
-
-        <div style="height:1px;background:#e8e5e0;margin:10px 0"></div>
-
-        <div class="outlet-toggle-row">
-          <label class="outlet-toggle-label">
-            <input type="checkbox" id="tog-outlets" />
-            <span class="outlet-toggle-slider"></span>
-          </label>
-          <span class="outlet-toggle-text">Show Banking Outlets</span>
-        </div>
-        <div id="rbi-outlet-controls" style="display:none">
-          <div class="grp-subs" style="margin-top:6px">
-            <button class="sub-btn on-branch" id="tog-branch"><span class="sub-dot" style="background:#2563eb"></span>Branches</button>
-            <button class="sub-btn on-bc" id="tog-bc"><span class="sub-dot" style="background:#16a34a"></span>BCs</button>
-            <button class="sub-btn on-csp" id="tog-csp"><span class="sub-dot" style="background:#ea580c"></span>CSPs</button>
-          </div>
-          <div id="rbi-hint" style="font-size:9px;color:#888078;padding:4px 0 0;font-family:var(--font-sans)">Zoom in to see outlet points</div>
-        </div>
-
-        <div id="stats-banking">Select Banking Access to view FI data</div>
-        <button id="btn-reset-banking">&#8634; Reset</button>
-      </div>
-    </div>
-  </div>
-
-  <button id="btn-back">&larr; Back to map</button>
-
-  <!-- Dot legend (capital points view) -->
-  <div id="legend">
-    <div class="lr"><div class="ldot" style="background:#b8603e"></div>CDSL service centre</div>
-    <div class="lr"><div class="ldot" style="background:#3d7a8e"></div>NSDL service centre</div>
-    <div class="lr"><div class="ldot" style="background:#5a7a3a"></div>MFD individual</div>
-    <div class="lr"><div class="ldot" style="background:#8b6914"></div>MFD corporate</div>
-  </div>
-
-  <!-- Capital choropleth legend -->
-  <div id="choro-legend-capital">
-    <div style="font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#888078;margin-bottom:6px">Total access points per district</div>
-    <div class="choro-scale">
-      <div class="choro-swatch" style="background:#f7f4ef"></div>
-      <div class="choro-swatch" style="background:#e8d5b7"></div>
-      <div class="choro-swatch" style="background:#d4a96a"></div>
-      <div class="choro-swatch" style="background:#b8603e"></div>
-      <div class="choro-swatch" style="background:#7a2010"></div>
-    </div>
-    <div class="choro-labels"><span>0</span><span>10</span><span>100</span><span>1k</span><span>10k+</span></div>
-    <div style="display:flex;align-items:center;gap:5px;margin-top:6px;padding-top:5px;border-top:1px solid #e8e5e0">
-      <div style="width:12px;height:12px;background:#e8e4dc;border:1px solid #ccc8c0;flex-shrink:0"></div>
-      <span style="font-family:'Inter',sans-serif;font-size:9px;color:#aaa09a;letter-spacing:0.03em">No coverage</span>
-    </div>
-  </div>
-
-  <!-- Banking choropleth legend (dynamic) -->
-  <div id="choro-legend-banking" style="display:none">
-    <div id="legend-title" style="font-family:'Inter',sans-serif;font-size:9px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#888078;margin-bottom:6px">Overall CD Ratio</div>
-    <div class="choro-scale" id="legend-scale"></div>
-    <div class="choro-labels" id="legend-labels"></div>
-    <div style="display:flex;align-items:center;gap:5px;margin-top:6px;padding-top:5px;border-top:1px solid #e8e5e0">
-      <div style="width:12px;height:12px;background:#e8e4dc;border:1px solid #ccc8c0;flex-shrink:0"></div>
-      <span style="font-family:'Inter',sans-serif;font-size:9px;color:#aaa09a;letter-spacing:0.03em">No data</span>
-    </div>
-  </div>
-
-  <!-- Vertical timeline (right side, banking mode only) -->
-  <div id="time-slider">
-    <div id="tl-start-label" class="tl-bound"></div>
-    <div id="timeline-track">
-      <div id="timeline-fill"></div>
-      <div id="timeline-dots"></div>
-      <div id="timeline-thumb"><div id="quarter-label"></div></div>
-    </div>
-    <div id="tl-end-label" class="tl-bound"></div>
-  </div>
+  <!-- Vertical timeline (Svelte component) -->
+  <TimelineSlider client:load />
 
   <div id="wm">Project FINER</div>
 
-  <!-- District Focus Mode overlay -->
-  <div id="district-focus" class="district-focus">
-    <div class="focus-shape-wrap">
-      <svg class="focus-svg" id="focus-svg" viewBox="0 0 400 400">
-        <path class="focus-path" id="focus-path" d=""></path>
-      </svg>
-      <div class="focus-info">
-        <div class="focus-name" id="focus-name"></div>
-        <div class="focus-state" id="focus-state"></div>
-        <div class="focus-metric-label" id="focus-metric-label"></div>
-        <div class="focus-value" id="focus-value"></div>
-        <div class="focus-quarter" id="focus-quarter"></div>
-      </div>
-      <button class="focus-close" id="focus-close">&times;</button>
-    </div>
-  </div>
+  <!-- District Focus Mode overlay (Svelte component) -->
+  <FocusOverlay client:load />
 
   <script is:inline define:vars={{ base }}>
     window.__FINER_BASE = base;
+    // Initialize shared state for Svelte components (they read from this in onMount)
+    window.__FINER = {
+      mode: 'banking',
+      scope: 'ne',
+      indicator: 'digital_transactions',
+      metricIdx: 0,
+      quarter: '',
+      stateFilter: '',
+      sortedQuarters: [],
+      stats: {},
+      capitalStats: {},
+      legendData: { title: '', breaks: [], ramp: [], unit: '' },
+      focus: { active: false },
+      showCDSL: true, showNSDL: true, showMFDI: true, showMFDC: true,
+      outletsEnabled: false, showBranch: true, showBC: true, showCSP: true,
+      capitalView: 'choro',
+      drilldownActive: false,
+      indicators: {},
+      manifest: null,
+    };
   </script>
 
   <script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -426,7 +227,7 @@ const base = import.meta.env.BASE_URL;
       if (rbiLoadedState === stateSlug || rbiLoading) return;
       rbiLoading = true;
       rbiLoadedState = stateSlug;
-      document.getElementById('rbi-hint').textContent = 'Loading ' + stateSlug + '…';
+      var _rh=document.getElementById('rbi-hint');if(_rh)_rh.textContent = 'Loading ' + stateSlug + '…';
 
       fetch(R2_BASE + 'banking-outlets/' + stateSlug + '.json', { mode: 'cors' })
         .then(function(r) {
@@ -457,12 +258,12 @@ const base = import.meta.env.BASE_URL;
           });
 
           renderRbiMarkers();
-          document.getElementById('rbi-hint').textContent =
+          var _rh=document.getElementById('rbi-hint');if(_rh)_rh.textContent =
             data.length.toLocaleString() + ' outlets loaded (as of Mar 2025)';
           rbiLoading = false;
         })
         .catch(function(err) {
-          document.getElementById('rbi-hint').textContent = 'Error: ' + (err.message || err);
+          var _rh=document.getElementById('rbi-hint');if(_rh)_rh.textContent = 'Error: ' + (err.message || err);
           console.error('RBI outlet load error:', err);
           rbiLoading = false;
         });
@@ -490,7 +291,7 @@ const base = import.meta.env.BASE_URL;
       [clusterBranch, clusterBC, clusterCSP].forEach(function(c) { if (c._map) map.removeLayer(c); });
       rbiMarkerCache = { branch: [], bc: [], csp: [] };
       rbiLoadedState = '';
-      document.getElementById('rbi-hint').textContent = 'Drill into a state to see 2.47M outlets';
+      var _rh=document.getElementById('rbi-hint');if(_rh)_rh.textContent = 'Drill into a state to see 2.47M outlets';
     }
 
     function makeIcon(color){return L.divIcon({html:'<div style="width:7px;height:7px;border-radius:50%;background:'+color+';border:1.5px solid rgba(255,255,255,0.9)"></div>',className:'',iconSize:[7,7],iconAnchor:[3,3]});}
@@ -519,12 +320,12 @@ const base = import.meta.env.BASE_URL;
     function buildDistrictLabels_capital(){if(!distGeoJSON)return;capitalCentroids=[];distGeoJSON.features.forEach(function(f){try{var tmp=L.geoJSON(f);var b=tmp.getBounds();capitalCentroids.push({center:b.getCenter(),name:f.properties.DISTRICT,bounds:b});}catch(e){}});}
     function updateLabelVisibility_capital(){if(currentMode!=='capital')return;if(distLabelsLayer){map.removeLayer(distLabelsLayer);distLabelsLayer=null;}var z=map.getZoom();if(z<8||(currentView!=='choro'&&!drilldownActive))return;var viewBounds=map.getBounds();distLabelsLayer=L.layerGroup();var placed=[];capitalCentroids.forEach(function(d){if(!viewBounds.intersects(d.bounds))return;var px=map.latLngToContainerPoint(d.center);var tooClose=placed.some(function(p){return Math.abs(px.x-p.x)<120&&Math.abs(px.y-p.y)<30;});if(tooClose)return;placed.push(px);distLabelsLayer.addLayer(L.marker(d.center,{icon:L.divIcon({className:'dist-label',html:d.name,iconSize:[0,0],iconAnchor:[0,0]}),interactive:false}));});distLabelsLayer.addTo(map);}
 
-    function drillInto(feature,layer){var p=feature.properties;drilldownActive=true;document.getElementById('btn-back').style.display='block';document.getElementById('legend').style.display='block';var stateCode=STATE_NAME_CODE[p.STATE_UT?.toUpperCase()];if(stateCode){capitalStateFilter=stateCode;document.getElementById('state-select').value=stateCode;}map.getContainer().classList.add('clusters-hidden');map.getContainer().classList.remove('clusters-visible');[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(!c._map)c.addTo(map);});renderMarkers();var total=getFilteredTotal(p);document.getElementById('stats-capital').innerHTML='<strong>'+p.DISTRICT+'</strong><br><span style="font-size:9px;color:#888078">'+p.STATE_UT+'</span><br>'+total.toLocaleString()+' access points';
+    function drillInto(feature,layer){var p=feature.properties;drilldownActive=true;var stateCode=STATE_NAME_CODE[p.STATE_UT?.toUpperCase()];if(stateCode)capitalStateFilter=stateCode;map.getContainer().classList.add('clusters-hidden');map.getContainer().classList.remove('clusters-visible');[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(!c._map)c.addTo(map);});renderMarkers();var total=getFilteredTotal(p);var html='<strong>'+p.DISTRICT+'</strong><br><span style="font-size:9px;color:#888078">'+p.STATE_UT+'</span><br>'+total.toLocaleString()+' access points';var el=document.getElementById('stats-capital');if(el)el.innerHTML=html;window.dispatchEvent(new CustomEvent('finer:capitalStatsUpdate',{detail:{html:html}}));window.dispatchEvent(new CustomEvent('finer:drilldown',{detail:{active:true}}));
       map.flyToBounds(layer.getBounds(),{padding:[40,40],maxZoom:12,duration:1.0});map.once('moveend',function(){map.getContainer().classList.remove('clusters-hidden');map.getContainer().classList.add('clusters-visible');});}
 
-    function exitDrilldown(){drilldownActive=false;document.getElementById('btn-back').style.display='none';map.getContainer().classList.remove('clusters-visible');map.getContainer().classList.add('clusters-hidden');clearRbiOutlets();setTimeout(function(){if(currentView==='choro'){[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(c._map)map.removeLayer(c);});document.getElementById('legend').style.display='none';}map.getContainer().classList.remove('clusters-hidden');capitalStateFilter='';document.getElementById('state-select').value='';map.flyToBounds(INDIA_BOUNDS,{padding:[20,20],duration:1.0});renderMarkers();},400);}
+    function exitDrilldown(){drilldownActive=false;window.dispatchEvent(new CustomEvent('finer:drilldown',{detail:{active:false}}));map.getContainer().classList.remove('clusters-visible');map.getContainer().classList.add('clusters-hidden');clearRbiOutlets();setTimeout(function(){if(currentView==='choro'){[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(c._map)map.removeLayer(c);});}map.getContainer().classList.remove('clusters-hidden');capitalStateFilter='';map.flyToBounds(INDIA_BOUNDS,{padding:[20,20],duration:1.0});renderMarkers();window.__FINER.drilldownActive=false;window.dispatchEvent(new CustomEvent('finer:stateUpdate'));},400);}
 
-    function setView(mode){currentView=mode;document.getElementById('vbtn-choro').className='view-btn'+(mode==='choro'?' active':'');document.getElementById('vbtn-dots').className='view-btn'+(mode==='dots'?' active':'');document.getElementById('legend').style.display=mode==='dots'?'block':'none';document.getElementById('choro-legend-capital').style.display=mode==='choro'?'block':'none';if(mode==='choro'){[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(c._map)map.removeLayer(c);});buildChoropleth_capital();}else{if(choroLayer){map.removeLayer(choroLayer);choroLayer=null;}[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(!c._map)c.addTo(map);});renderMarkers();}}
+    function setView(mode){currentView=mode;window.__FINER.capitalView=mode;window.dispatchEvent(new CustomEvent('finer:stateUpdate'));if(mode==='choro'){[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(c._map)map.removeLayer(c);});buildChoropleth_capital();}else{if(choroLayer){map.removeLayer(choroLayer);choroLayer=null;}[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(!c._map)c.addTo(map);});renderMarkers();}}
 
     function buildMarkersOnce(data,icon,popupFn){return data.map(function(c){var ll=coordsMap[c.p];if(!ll)return null;var m=L.marker([ll[0]+(Math.random()-0.5)*0.002,ll[1]+(Math.random()-0.5)*0.002],{icon:icon});m.on('click',function(){if(!this._pb){this.bindPopup(popupFn(c),{maxWidth:260}).openPopup();this._pb=true;}});m._data=c;return m;}).filter(Boolean);}
 
@@ -565,35 +366,66 @@ const base = import.meta.env.BASE_URL;
     function renderMarkers(){clearTimeout(renderTimer);renderTimer=setTimeout(_doRender,80);}
     function _doRender(){if(currentView==='choro'&&!drilldownActive){buildChoropleth_capital();updateStats_capital();return;}if(currentView==='choro'&&drilldownActive){buildChoropleth_capital();}var dq=dpQuery,sf=capitalStateFilter;function passes(c){if(dq&&!c.n.toLowerCase().includes(dq))return false;if(sf==='_NE')return NE_CODES.includes(c.st);if(sf&&sf!=='_SEP')return c.st===sf;return true;}[{cache:markerCache.cdsl,cluster:clusterCDSL,show:showCDSL},{cache:markerCache.nsdl,cluster:clusterNSDL,show:showNSDL},{cache:markerCache.mfdi,cluster:clusterMFDI,show:showMFDI},{cache:markerCache.mfdc,cluster:clusterMFDC,show:showMFDC}].forEach(function(o){o.cluster.clearLayers();if(!o.show)return;o.cluster.addLayers(o.cache.filter(function(m){return passes(m._data);}));});updateStats_capital();}
 
-    function updateStats_capital(){var dq=dpQuery,sf=capitalStateFilter;function passes(c){if(dq&&!c.n.toLowerCase().includes(dq))return false;if(sf==='_NE')return NE_CODES.includes(c.st);if(sf&&sf!=='_SEP')return c.st===sf;return true;}if(drilldownActive)return;var pC=showCDSL?markerCache.cdsl.filter(function(m){return passes(m._data);}).length:0;var pN=showNSDL?markerCache.nsdl.filter(function(m){return passes(m._data);}).length:0;var pM=showMFDI?markerCache.mfdi.filter(function(m){return passes(m._data);}).length:0;var pMC=showMFDC?markerCache.mfdc.filter(function(m){return passes(m._data);}).length:0;document.getElementById('stats-capital').innerHTML='Showing <strong>'+(pC+pN+pM+pMC).toLocaleString()+'</strong> total<br><span style="color:#b8603e">CDSL '+pC.toLocaleString()+'</span> · <span style="color:#3d7a8e">NSDL '+pN.toLocaleString()+'</span><br><span style="color:#5a7a3a">MFD-I '+pM.toLocaleString()+'</span> · <span style="color:#8b6914">MFD-C '+pMC.toLocaleString()+'</span>';var any=dpQuery||capitalStateFilter||document.getElementById('search-loc').value.trim();document.getElementById('btn-reset-capital').style.display=any?'block':'none';}
+    function updateStats_capital(){var dq=dpQuery,sf=capitalStateFilter;function passes(c){if(dq&&!c.n.toLowerCase().includes(dq))return false;if(sf==='_NE')return NE_CODES.includes(c.st);if(sf&&sf!=='_SEP')return c.st===sf;return true;}if(drilldownActive)return;var pC=showCDSL?markerCache.cdsl.filter(function(m){return passes(m._data);}).length:0;var pN=showNSDL?markerCache.nsdl.filter(function(m){return passes(m._data);}).length:0;var pM=showMFDI?markerCache.mfdi.filter(function(m){return passes(m._data);}).length:0;var pMC=showMFDC?markerCache.mfdc.filter(function(m){return passes(m._data);}).length:0;var html='Showing <strong>'+(pC+pN+pM+pMC).toLocaleString()+'</strong> total<br><span style="color:#b8603e">CDSL '+pC.toLocaleString()+'</span> · <span style="color:#3d7a8e">NSDL '+pN.toLocaleString()+'</span><br><span style="color:#5a7a3a">MFD-I '+pM.toLocaleString()+'</span> · <span style="color:#8b6914">MFD-C '+pMC.toLocaleString()+'</span>';var el=document.getElementById('stats-capital');if(el)el.innerHTML=html;window.dispatchEvent(new CustomEvent('finer:capitalStatsUpdate',{detail:{html:html}}));var any=dpQuery||capitalStateFilter;var resetEl=document.getElementById('btn-reset-capital');if(resetEl)resetEl.style.display=any?'block':'none';}
 
-    function buildStateDropdown(all){var NAMES={AS:'Assam',ML:'Meghalaya',MN:'Manipur',MZ:'Mizoram',NL:'Nagaland',TR:'Tripura',AR:'Arunachal Pradesh',SK:'Sikkim',DL:'Delhi',MH:'Maharashtra',GJ:'Gujarat',KA:'Karnataka',TN:'Tamil Nadu',KL:'Kerala',AP:'Andhra Pradesh',TS:'Telangana',WB:'West Bengal',UP:'Uttar Pradesh',RJ:'Rajasthan',MP:'Madhya Pradesh',HR:'Haryana',PB:'Punjab',BR:'Bihar',JH:'Jharkhand',OR:'Odisha',HP:'Himachal Pradesh',UK:'Uttarakhand',GA:'Goa',CH:'Chandigarh',CT:'Chhattisgarh',JK:'J&K / Ladakh'};var counts={};all.forEach(function(c){if(c.st)counts[c.st]=(counts[c.st]||0)+1;});var sel=document.getElementById('state-select');var neOpt=document.createElement('option');neOpt.value='_NE';neOpt.textContent='── North East India';sel.appendChild(neOpt);NE_CODES.forEach(function(code){if(!counts[code])return;var o=document.createElement('option');o.value=code;o.textContent=(NAMES[code]||code)+' ('+counts[code].toLocaleString()+')';sel.appendChild(o);});var sep=document.createElement('option');sep.value='_SEP';sep.textContent='──────────────';sel.appendChild(sep);Object.entries(counts).filter(function(e){return !NE_CODES.includes(e[0]);}).sort(function(a,b){return b[1]-a[1];}).forEach(function(e){var o=document.createElement('option');o.value=e[0];o.textContent=(NAMES[e[0]]||e[0])+' ('+e[1].toLocaleString()+')';sel.appendChild(o);});}
+    function buildStateDropdown(all){var NAMES={AS:'Assam',ML:'Meghalaya',MN:'Manipur',MZ:'Mizoram',NL:'Nagaland',TR:'Tripura',AR:'Arunachal Pradesh',SK:'Sikkim',DL:'Delhi',MH:'Maharashtra',GJ:'Gujarat',KA:'Karnataka',TN:'Tamil Nadu',KL:'Kerala',AP:'Andhra Pradesh',TS:'Telangana',WB:'West Bengal',UP:'Uttar Pradesh',RJ:'Rajasthan',MP:'Madhya Pradesh',HR:'Haryana',PB:'Punjab',BR:'Bihar',JH:'Jharkhand',OR:'Odisha',HP:'Himachal Pradesh',UK:'Uttarakhand',GA:'Goa',CH:'Chandigarh',CT:'Chhattisgarh',JK:'J&K / Ladakh'};var counts={};all.forEach(function(c){if(c.st)counts[c.st]=(counts[c.st]||0)+1;});var sel=document.getElementById('state-select');if(!sel)return;var neOpt=document.createElement('option');neOpt.value='_NE';neOpt.textContent='── North East India';sel.appendChild(neOpt);NE_CODES.forEach(function(code){if(!counts[code])return;var o=document.createElement('option');o.value=code;o.textContent=(NAMES[code]||code)+' ('+counts[code].toLocaleString()+')';sel.appendChild(o);});var sep=document.createElement('option');sep.value='_SEP';sep.textContent='──────────────';sel.appendChild(sep);Object.entries(counts).filter(function(e){return !NE_CODES.includes(e[0]);}).sort(function(a,b){return b[1]-a[1];}).forEach(function(e){var o=document.createElement('option');o.value=e[0];o.textContent=(NAMES[e[0]]||e[0])+' ('+e[1].toLocaleString()+')';sel.appendChild(o);});}
 
-    // Capital event listeners
-    document.getElementById('vbtn-choro').addEventListener('click',function(){setView('choro');});
-    document.getElementById('vbtn-dots').addEventListener('click',function(){setView('dots');});
-    document.getElementById('search-dp').addEventListener('input',function(e){dpQuery=e.target.value.trim().toLowerCase();renderMarkers();});
-    document.getElementById('state-select').addEventListener('change',function(e){var val=e.target.value;if(val==='_SEP'){e.target.value=capitalStateFilter;return;}capitalStateFilter=val;renderMarkers();if(!val){map.flyToBounds(INDIA_BOUNDS,{padding:[20,20],duration:1.2});return;}var lats=[],lons=[];[].concat(showCDSL?markerCache.cdsl:[],showNSDL?markerCache.nsdl:[],showMFDI?markerCache.mfdi:[],showMFDC?markerCache.mfdc:[]).forEach(function(m){var c=m._data;var match=val==='_NE'?NE_CODES.includes(c.st):c.st===val;if(!match)return;var ll=coordsMap[c.p];if(ll){lats.push(ll[0]);lons.push(ll[1]);}});if(!lats.length)return;map.flyToBounds([[Math.min.apply(null,lats)-0.3,Math.min.apply(null,lons)-0.3],[Math.max.apply(null,lats)+0.3,Math.max.apply(null,lons)+0.3]],{padding:[40,40],maxZoom:10,duration:1.2});});
-    document.getElementById('btn-reset-capital').addEventListener('click',function(){dpQuery='';capitalStateFilter='';drilldownActive=false;document.getElementById('search-dp').value='';document.getElementById('search-loc').value='';document.getElementById('state-select').value='';document.getElementById('btn-back').style.display='none';document.getElementById('loc-sugg').style.display='none';showCDSL=showNSDL=showMFDI=showMFDC=true;['cdsl','nsdl'].forEach(function(l){document.getElementById('tog-'+l).className='sub-btn on-'+l;});document.getElementById('tog-mfdi').className='sub-btn on-mfdi';document.getElementById('tog-mfdc').className='sub-btn on-mfdc';document.getElementById('grp-dpsc').className='grp open dpsc-active';document.getElementById('grp-mfd').className='grp open mfd-active';map.flyToBounds(INDIA_BOUNDS,{padding:[20,20],duration:1.2});setView('choro');});
-    document.getElementById('btn-back').addEventListener('click',exitDrilldown);
+    // ═══ Svelte event listeners (replace DOM-based capital/banking event listeners) ═══
+    window.addEventListener('finer:capitalViewChange', function(e) { setView(e.detail.view); });
+    window.addEventListener('finer:search', function(e) { dpQuery = e.detail.query; renderMarkers(); });
+    window.addEventListener('finer:stateFilterChange', function(e) {
+      if (currentMode === 'capital') {
+        var val = e.detail.state;
+        capitalStateFilter = val ? STATE_NAME_CODE[val?.toUpperCase()] || val : '';
+        renderMarkers();
+        if (!val) { map.flyToBounds(INDIA_BOUNDS, {padding:[20,20], duration:1.2}); return; }
+        var lats=[], lons=[];
+        [].concat(showCDSL?markerCache.cdsl:[],showNSDL?markerCache.nsdl:[],showMFDI?markerCache.mfdi:[],showMFDC?markerCache.mfdc:[]).forEach(function(m){
+          var c=m._data; var match = capitalStateFilter==='_NE' ? NE_CODES.includes(c.st) : c.st===capitalStateFilter;
+          if(!match) return; var ll=coordsMap[c.p]; if(ll){lats.push(ll[0]);lons.push(ll[1]);}
+        });
+        if(lats.length) map.flyToBounds([[Math.min.apply(null,lats)-0.3,Math.min.apply(null,lons)-0.3],[Math.max.apply(null,lats)+0.3,Math.max.apply(null,lons)+0.3]],{padding:[40,40],maxZoom:10,duration:1.2});
+      } else {
+        bankingStateFilter = e.detail.state;
+        if (slbcLoaded) { buildChoropleth_banking(); updateLabelVisibility_banking(); }
+        if (bankingStateFilter) {
+          var stateFts = distGeoJSON ? distGeoJSON.features.filter(function(f) {
+            return f.properties.STATE_UT?.toUpperCase()?.trim() === bankingStateFilter;
+          }) : [];
+          if (stateFts.length) {
+            var group = L.geoJSON({ type: 'FeatureCollection', features: stateFts });
+            map.flyToBounds(group.getBounds(), { padding: [40, 40], maxZoom: 9, duration: 1.0 });
+          }
+        } else { flyToNE(); }
+      }
+    });
+    window.addEventListener('finer:layerToggle', function(e) {
+      var l = e.detail.layer;
+      if (l === 'cdsl') showCDSL = e.detail.visible;
+      else if (l === 'nsdl') showNSDL = e.detail.visible;
+      else if (l === 'mfdi') showMFDI = e.detail.visible;
+      else if (l === 'mfdc') showMFDC = e.detail.visible;
+      renderMarkers();
+    });
+    window.addEventListener('finer:resetCapital', function() {
+      dpQuery=''; capitalStateFilter=''; drilldownActive=false;
+      showCDSL=showNSDL=showMFDI=showMFDC=true;
+      map.flyToBounds(INDIA_BOUNDS,{padding:[20,20],duration:1.2});
+      setView('choro');
+    });
+    window.addEventListener('finer:exitDrilldown', function() { exitDrilldown(); });
+    window.addEventListener('finer:flyTo', function(e) { map.flyTo([e.detail.lat, e.detail.lng], 12, {duration: 1.2}); });
 
-    // Layer toggles
-    document.getElementById('grp-dpsc-master').addEventListener('click',function(){var el=document.getElementById('grp-dpsc');var isOpen=el.classList.contains('open');el.classList.toggle('open',!isOpen);showCDSL=showNSDL=!isOpen;el.classList.toggle('dpsc-active',!isOpen);['cdsl','nsdl'].forEach(function(l){document.getElementById('tog-'+l).className='sub-btn '+(!isOpen?'on-'+l:'off');});renderMarkers();});
-    document.getElementById('grp-mfd-master').addEventListener('click',function(){var el=document.getElementById('grp-mfd');var isOpen=el.classList.contains('open');el.classList.toggle('open',!isOpen);showMFDI=showMFDC=!isOpen;el.classList.toggle('mfd-active',!isOpen);document.getElementById('tog-mfdi').className='sub-btn '+(!isOpen?'on-mfdi':'off');document.getElementById('tog-mfdc').className='sub-btn '+(!isOpen?'on-mfdc':'off');renderMarkers();});
-    ['cdsl','nsdl','mfdi','mfdc'].forEach(function(layer){document.getElementById('tog-'+layer).addEventListener('click',function(e){e.stopPropagation();if(layer==='cdsl')showCDSL=!showCDSL;if(layer==='nsdl')showNSDL=!showNSDL;if(layer==='mfdi')showMFDI=!showMFDI;if(layer==='mfdc')showMFDC=!showMFDC;var isOn=layer==='cdsl'?showCDSL:layer==='nsdl'?showNSDL:layer==='mfdc'?showMFDC:showMFDI;document.getElementById('tog-'+layer).className='sub-btn '+(isOn?'on-'+layer:'off');renderMarkers();});});
-
-    // RBI outlets toggle switch
+    // RBI outlets toggle — listen for Svelte events
     var outletsEnabled = false;
     var OUTLET_MIN_ZOOM = 8;
 
-    document.getElementById('tog-outlets').addEventListener('change', function() {
-      outletsEnabled = this.checked;
-      document.getElementById('rbi-outlet-controls').style.display = outletsEnabled ? 'block' : 'none';
+    window.addEventListener('finer:outletToggle', function(e) {
+      outletsEnabled = e.detail.enabled;
       if (outletsEnabled) {
         checkAndLoadOutlets();
       } else {
         clearRbiOutlets();
-        // Restore white canvas if in banking mode
         if (currentMode === 'banking') {
           if (streetTile._map) map.removeLayer(streetTile);
           if (!whiteCanvasTile._map) whiteCanvasTile.addTo(map);
@@ -602,17 +434,12 @@ const base = import.meta.env.BASE_URL;
         }
       }
     });
-
-    ['branch','bc','csp'].forEach(function(layer) {
-      document.getElementById('tog-' + layer).addEventListener('click', function(e) {
-        e.stopPropagation();
-        if (layer === 'branch') showBranch = !showBranch;
-        if (layer === 'bc') showBC = !showBC;
-        if (layer === 'csp') showCSP = !showCSP;
-        var isOn = layer === 'branch' ? showBranch : layer === 'bc' ? showBC : showCSP;
-        this.className = 'sub-btn ' + (isOn ? 'on-' + layer : 'off');
-        renderRbiMarkers();
-      });
+    window.addEventListener('finer:outletLayerToggle', function(e) {
+      var l = e.detail.layer;
+      if (l === 'branch') showBranch = e.detail.visible;
+      else if (l === 'bc') showBC = e.detail.visible;
+      else if (l === 'csp') showCSP = e.detail.visible;
+      renderRbiMarkers();
     });
 
     // Detect which state is visible at map center and auto-load outlets
@@ -645,7 +472,7 @@ const base = import.meta.env.BASE_URL;
           if (!whiteCanvasTile._map) whiteCanvasTile.addTo(map);
           whiteCanvasTile.bringToBack();
         }
-        document.getElementById('rbi-hint').textContent = 'Zoom in to see outlet points (zoom ' + zoom + '/' + OUTLET_MIN_ZOOM + ')';
+        var _rh=document.getElementById('rbi-hint');if(_rh)_rh.textContent = 'Zoom in to see outlet points (zoom ' + zoom + '/' + OUTLET_MIN_ZOOM + ')';
         return;
       }
       // Zoomed in enough — find the state at center
@@ -657,22 +484,21 @@ const base = import.meta.env.BASE_URL;
         if (whiteCanvasTile._map) map.removeLayer(whiteCanvasTile);
         loadRbiOutlets(slug);
       } else if (!slug) {
-        document.getElementById('rbi-hint').textContent = 'Move map over India to see outlets';
+        var _rh=document.getElementById('rbi-hint');if(_rh)_rh.textContent = 'Move map over India to see outlets';
       }
     }
 
-    // Location search
-    var locTimer=null;var locInput=document.getElementById('search-loc');var locSugg=document.getElementById('loc-sugg');
-    locInput.addEventListener('input',function(e){var v=e.target.value;clearTimeout(locTimer);if(v.length<2){locSugg.style.display='none';return;}locTimer=setTimeout(function(){fetch('https://photon.komoot.io/api/?q='+encodeURIComponent(v+' India')+'&limit=6&lang=en').then(function(r){return r.json();}).then(function(data){var fs=(data.features||[]).filter(function(f){var coords=f.geometry.coordinates;return coords[0]>=68&&coords[0]<=97&&coords[1]>=6&&coords[1]<=38;}).slice(0,5);if(!fs.length){locSugg.style.display='none';return;}locSugg.innerHTML=fs.map(function(f){var p=f.properties,name=p.name||p.city||p.state||'';var sub=[p.city,p.state].filter(Boolean).join(', ');var coords=f.geometry.coordinates;return'<div class="sugg-item" data-lat="'+coords[1]+'" data-lon="'+coords[0]+'" data-name="'+name.replace(/"/g,'&quot;')+'"><span>'+name+'</span><small>'+sub+'</small></div>';}).join('');locSugg.style.display='block';}).catch(function(){locSugg.style.display='none';});},350);});
-    locSugg.addEventListener('click',function(e){var item=e.target.closest('.sugg-item');if(!item)return;var lat=parseFloat(item.dataset.lat),lon=parseFloat(item.dataset.lon);map.flyTo([lat,lon],12,{duration:1.2});locSugg.style.display='none';locInput.value=item.dataset.name;document.getElementById('btn-reset-capital').style.display='block';});
-    locInput.addEventListener('keydown',function(e){if(e.key==='Enter'){var f=locSugg.querySelector('.sugg-item');if(f)f.click();}if(e.key==='Escape')locSugg.style.display='none';});
-    document.addEventListener('click',function(e){if(!e.target.closest('#panel'))locSugg.style.display='none';});
+    // Location search — now handled by MapPanel.svelte (geocoder + suggestions)
 
     // Map zoom/move events for capital labels
     map.on('zoomend',function(){if(currentMode==='capital')updateLabelVisibility_capital();if(currentMode==='banking'){updateLabelVisibility_banking();checkAndLoadOutlets();}if(drilldownActive&&map.getZoom()<=8)exitDrilldown();});
     map.on('moveend',function(){if(currentMode==='capital')updateLabelVisibility_capital();if(currentMode==='banking'){updateLabelVisibility_banking();checkAndLoadOutlets();}});
 
-    function setCapitalStatus(msg){document.getElementById('stats-capital').textContent=msg;}
+    function setCapitalStatus(msg){
+      var el = document.getElementById('stats-capital');
+      if (el) el.textContent = msg;
+      window.dispatchEvent(new CustomEvent('finer:capitalStatsUpdate', { detail: { html: msg } }));
+    }
 
     // ══════════════════════════════════════════
     // Section 3 — Banking mode
@@ -1307,13 +1133,12 @@ const base = import.meta.env.BASE_URL;
     }
 
     function updateLegend_banking(metricLabel, breaks, ramp) {
-      document.getElementById('legend-title').textContent = metricLabel;
-      var scale = document.getElementById('legend-scale');
-      var labels = document.getElementById('legend-labels');
-      scale.innerHTML = ramp.map(function(c) { return '<div class="choro-swatch" style="background:' + c + '"></div>'; }).join('');
-      var lbls = ['0'];
-      breaks.forEach(function(b) { lbls.push(fmtNum(b)); });
-      labels.innerHTML = lbls.map(function(l) { return '<span>' + l + '</span>'; }).join('');
+      // Dispatch to MapLegend.svelte
+      var unit = '';
+      if (metricLabel.indexOf('(₹') >= 0) unit = '₹';
+      else if (metricLabel.indexOf('(%)') >= 0) unit = '%';
+      window.__FINER.legendData = { title: metricLabel, breaks: breaks, ramp: ramp, unit: unit };
+      window.dispatchEvent(new CustomEvent('finer:legendUpdate', { detail: { title: metricLabel, breaks: breaks, ramp: ramp, unit: unit } }));
     }
 
     function updateStats_banking(lookup, allVals) {
@@ -1327,14 +1152,15 @@ const base = import.meta.env.BASE_URL;
 
       var u = metric.unit || '';
       var unitLabel = u === '₹' ? ' (₹ Lakhs)' : u === '%' ? ' (%)' : '';
-      document.getElementById('stats-banking').innerHTML =
-        '<strong>' + ind.title + '</strong><br>'
+      var html = '<strong>' + ind.title + '</strong><br>'
         + '<span style="font-size:9px;color:#888078">' + fmtQuarter(currentQuarter) + unitLabel + '</span><br>'
         + '<span style="color:#3d7a8e">' + withData + '</span> districts with data<br>'
         + 'Avg: <strong>' + fmtWithUnit(avg, u) + '</strong><br>'
         + 'Min: ' + fmtWithUnit(min, u) + ' · Max: ' + fmtWithUnit(max, u);
 
-      document.getElementById('btn-reset-banking').style.display = bankingStateFilter ? 'block' : 'none';
+      var el = document.getElementById('stats-banking');
+      if (el) el.innerHTML = html;
+      window.dispatchEvent(new CustomEvent('finer:bankingStatsUpdate', { detail: { html: html, showReset: !!bankingStateFilter } }));
     }
 
     // ── District Focus Mode ──
@@ -1393,12 +1219,10 @@ const base = import.meta.env.BASE_URL;
       var feature = distGeoJSON.features.find(function(f) {
         var dn = normDist(f.properties.DISTRICT);
         if (dn === districtName) return true;
-        // Try LGD alias resolution
         var canonical = lgdNameToCanonical[dn];
         if (canonical === districtName) return true;
         canonical = lgdNameToCanonical[districtName];
         if (canonical && canonical === dn) return true;
-        // Try DISTRICT_ALIASES
         return DISTRICT_ALIASES[dn] === districtName;
       });
       if (!feature) return;
@@ -1407,13 +1231,10 @@ const base = import.meta.env.BASE_URL;
       focusedState = stateName || feature.properties.STATE_UT;
 
       var svgPath = geoToSVGPath(feature.geometry, 400, 400);
-      document.getElementById('focus-path').setAttribute('d', svgPath);
-
-      updateFocusPanel();
-      document.getElementById('district-focus').classList.add('active');
+      updateFocusPanel(svgPath);
     }
 
-    function updateFocusPanel() {
+    function updateFocusPanel(svgPathOverride) {
       if (!focusedDistrict) return;
       var lookup = buildDistrictLookup();
       var ind = INDICATORS[currentIndicator];
@@ -1427,36 +1248,35 @@ const base = import.meta.env.BASE_URL;
       breaks = computeBreaks(breaks);
       var color = getColor(val, breaks, ramp);
 
-      document.getElementById('focus-path').style.fill = color;
-      document.getElementById('focus-name').textContent = focusedDistrict.split(' ').map(function(w) {
+      var titleCased = focusedDistrict.split(' ').map(function(w) {
         return w.charAt(0) + w.slice(1).toLowerCase();
       }).join(' ');
-      document.getElementById('focus-state').textContent = focusedState || '';
-      document.getElementById('focus-metric-label').textContent = metric.label;
-      document.getElementById('focus-value').textContent = val !== null ? fmtWithUnit(val, metric.unit) : 'No data';
-      document.getElementById('focus-quarter').textContent = fmtQuarter(currentQuarter);
 
-      // Update stroke color to match indicator ramp
-      document.getElementById('focus-path').style.stroke = ramp[4] || '#b8603e';
+      var focusDetail = {
+        active: true,
+        district: titleCased,
+        state: focusedState || '',
+        svgPath: svgPathOverride || '',
+        svgViewBox: '0 0 400 400',
+        fillColor: color,
+        strokeColor: ramp[4] || '#b8603e',
+        metricLabel: metric.label,
+        value: val !== null ? fmtWithUnit(val, metric.unit) : 'No data',
+        quarter: fmtQuarter(currentQuarter),
+      };
+      window.__FINER.focus = focusDetail;
+      window.dispatchEvent(new CustomEvent('finer:focusUpdate', { detail: focusDetail }));
     }
 
     function exitFocus() {
       focusedDistrict = null;
       focusedState = null;
-      document.getElementById('district-focus').classList.remove('active');
+      window.__FINER.focus = { active: false };
+      window.dispatchEvent(new CustomEvent('finer:focusUpdate', { detail: { active: false, district: '', state: '', svgPath: '', svgViewBox: '0 0 400 400', fillColor: '', strokeColor: '', metricLabel: '', value: '', quarter: '' } }));
     }
 
-    // Focus mode event listeners
-    document.getElementById('focus-close').addEventListener('click', function(e) {
-      e.stopPropagation();
-      exitFocus();
-    });
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && focusedDistrict) exitFocus();
-    });
-    document.getElementById('district-focus').addEventListener('click', function(e) {
-      if (e.target === this) exitFocus(); // Click on backdrop
-    });
+    // Focus mode — FocusOverlay.svelte handles its own event listeners (close, ESC, backdrop)
+    window.addEventListener('finer:exitFocus', function() { exitFocus(); });
 
     // Banking district labels
     function buildDistrictLabels_banking() {
@@ -1502,36 +1322,25 @@ const base = import.meta.env.BASE_URL;
     }
 
     function populateMetrics() {
-      var sel = document.getElementById('sel-metric');
+      // Metrics dropdown is now handled by MapPanel.svelte
       var ind = INDICATORS[currentIndicator];
-      sel.innerHTML = '';
-      ind.metrics.forEach(function(m, i) {
-        var o = document.createElement('option');
-        o.value = i;
-        o.textContent = m.label;
-        sel.appendChild(o);
-      });
-      sel.value = currentMetricIdx < ind.metrics.length ? currentMetricIdx : 0;
-      currentMetricIdx = parseInt(sel.value);
+      if (!ind) return;
+      if (currentMetricIdx >= ind.metrics.length) currentMetricIdx = 0;
+      // Update __FINER so Svelte can read it
+      window.__FINER.indicators = INDICATORS;
+      window.__FINER.indicator = currentIndicator;
+      window.__FINER.metricIdx = currentMetricIdx;
+      window.dispatchEvent(new CustomEvent('finer:indicatorsReady', { detail: { indicators: INDICATORS } }));
     }
 
     var currentQIdx = 0;
 
+    // setTimelinePosition — now handled by TimelineSlider.svelte
     function setTimelinePosition(idx) {
+      // Keep internal state in sync
       if (idx < 0 || idx >= sortedQuarters.length) return;
       currentQIdx = idx;
       currentQuarter = sortedQuarters[idx];
-      document.getElementById('quarter-label').textContent = fmtQuarter(currentQuarter);
-      var pct = sortedQuarters.length > 1 ? (idx / (sortedQuarters.length - 1)) * 100 : 0;
-      document.getElementById('timeline-fill').style.height = pct + '%';
-      document.getElementById('timeline-thumb').style.top = pct + '%';
-      var dots = document.querySelectorAll('.tl-dot');
-      dots.forEach(function(d, i) { d.classList.toggle('active', i === idx); });
-      // Hide endpoint label when thumb is near it
-      var startEl = document.getElementById('tl-start-label');
-      var endEl = document.getElementById('tl-end-label');
-      if (startEl) startEl.style.opacity = pct < 15 ? '0' : '1';
-      if (endEl) endEl.style.opacity = pct > 85 ? '0' : '1';
     }
 
     function populateSlider() {
@@ -1550,41 +1359,11 @@ const base = import.meta.env.BASE_URL;
       }
       currentQIdx = 0;
       currentQuarter = sortedQuarters[currentQIdx];
-      document.getElementById('quarter-label').textContent = fmtQuarter(currentQuarter);
 
-      // Set endpoint labels (top=latest, bottom=earliest — time flows up)
-      if (sortedQuarters.length > 0) {
-        document.getElementById('tl-start-label').textContent = sortedQuarters[0].substring(0, 4);
-        document.getElementById('tl-end-label').textContent = sortedQuarters[sortedQuarters.length - 1].substring(0, 4);
-      }
-
-      // Build tick marks (subtle year markers, no labels on dots)
-      var dotsEl = document.getElementById('timeline-dots');
-      dotsEl.innerHTML = '';
-      var prevYear = '';
-      for (var i = 0; i < sortedQuarters.length; i++) {
-        var q = sortedQuarters[i];
-        var pct = sortedQuarters.length > 1 ? (i / (sortedQuarters.length - 1)) * 100 : 0;
-        var yr = q.substring(0, 4);
-        var isNewYear = yr !== prevYear;
-        prevYear = yr;
-        var dot = document.createElement('div');
-        dot.className = 'tl-dot' + (isNewYear ? ' year-dot' : '') + (i === currentQIdx ? ' active' : '');
-        dot.style.top = pct + '%';
-        dot.dataset.idx = i;
-        dot.addEventListener('click', function(e) {
-          var idx = parseInt(this.dataset.idx);
-          setTimelinePosition(idx);
-          clearTimeout(sliderTimer);
-          sliderTimer = setTimeout(function() {
-            loadIndicatorData(currentIndicator, currentQuarter).then(function() {
-              buildChoropleth_banking();
-            });
-          }, 120);
-        });
-        dotsEl.appendChild(dot);
-      }
-      setTimelinePosition(currentQIdx);
+      // Update __FINER and notify TimelineSlider.svelte
+      window.__FINER.sortedQuarters = sortedQuarters;
+      window.__FINER.quarter = currentQuarter;
+      window.dispatchEvent(new CustomEvent('finer:quartersReady', { detail: { quarters: sortedQuarters } }));
     }
 
     function flattenTimeseries(json) {
@@ -1653,7 +1432,7 @@ const base = import.meta.env.BASE_URL;
           flyToNE(false);
         });
       }).catch(function(err) {
-        document.getElementById('stats-banking').textContent = 'Error: ' + err.message;
+        var _sb=document.getElementById('stats-banking');if(_sb)_sb.textContent='Error: '+err.message;
       });
     }
 
@@ -1731,32 +1510,17 @@ const base = import.meta.env.BASE_URL;
     }
 
     // Banking event listeners
-    // Dynamic timeline color — matches choropleth ramp
+    // Dynamic timeline color — dispatches to TimelineSlider.svelte
     function updateTimelineColor() {
       var ramp = getRamp(currentIndicator);
       var accent = ramp[4]; // e.g. #b8603e, #3a8a2a, #2a6a8e
-      // Parse hex to RGB for rgba usage
-      var r = parseInt(accent.slice(1,3),16), g = parseInt(accent.slice(3,5),16), b = parseInt(accent.slice(5,7),16);
-      var fill = document.getElementById('timeline-fill');
-      var thumb = document.getElementById('timeline-thumb');
-      var label = document.getElementById('quarter-label');
-      if (fill) fill.style.background = 'rgba('+r+','+g+','+b+',0.35)';
-      if (thumb) thumb.style.background = accent;
-      if (label) label.style.color = accent;
-      // Update CSS custom properties for hover/active states via a style tag
-      var styleEl = document.getElementById('tl-dynamic-style');
-      if (!styleEl) { styleEl = document.createElement('style'); styleEl.id = 'tl-dynamic-style'; document.head.appendChild(styleEl); }
-      styleEl.textContent =
-        '.tl-dot:hover{background:rgba('+r+','+g+','+b+',0.3)!important}' +
-        '.tl-dot.year-dot.active{background:rgba('+r+','+g+','+b+',0.4)!important}' +
-        '#timeline-thumb:hover{box-shadow:0 0 8px rgba('+r+','+g+','+b+',0.3)!important}' +
-        '#timeline-thumb:active{box-shadow:0 0 10px rgba('+r+','+g+','+b+',0.4)!important}';
+      window.dispatchEvent(new CustomEvent('finer:timelineColor', { detail: { color: accent } }));
     }
 
-    document.getElementById('sel-indicator').addEventListener('change', function(e) {
-      currentIndicator = e.target.value;
-      currentMetricIdx = 0;
-      populateMetrics();
+    // Banking event listeners — listen for Svelte events
+    window.addEventListener('finer:indicatorChange', function(e) {
+      currentIndicator = e.detail.indicator;
+      currentMetricIdx = e.detail.metricIdx;
       updateTimelineColor();
       if (slbcLoaded) {
         loadIndicatorData(currentIndicator, currentQuarter).then(function() {
@@ -1765,128 +1529,26 @@ const base = import.meta.env.BASE_URL;
       }
     });
 
-    document.getElementById('sel-metric').addEventListener('change', function(e) {
-      currentMetricIdx = parseInt(e.target.value);
-      if (slbcLoaded) buildChoropleth_banking();  // No reload needed — same indicator file has all metrics
+    window.addEventListener('finer:metricChange', function(e) {
+      currentMetricIdx = e.detail.metricIdx;
+      if (slbcLoaded) buildChoropleth_banking();
     });
 
-    // Info tooltip popover — hover based
-    (function() {
-      var popover = document.getElementById('info-popover');
+    // Info tooltip — now dispatched from MapPanel.svelte to InfoTooltip.svelte directly
 
-      function showInfo(btn, type) {
-        var ind = INDICATORS[currentIndicator];
-        var text = '';
-        if (type === 'indicator') {
-          text = ind.desc || '';
-        } else {
-          var metric = ind.metrics[currentMetricIdx];
-          text = metric ? (metric.desc || '') : '';
-        }
-        if (!text) { popover.classList.remove('visible'); return; }
-        popover.textContent = text;
-        // Position at top-right of the (i) button (fixed positioning, viewport coords)
-        var rect = btn.getBoundingClientRect();
-        popover.style.left = (rect.right + 8) + 'px';
-        popover.style.top = (rect.top - 8) + 'px';
-        popover.classList.add('visible');
-      }
-
-      function hideInfo() {
-        popover.classList.remove('visible');
-      }
-
-      var btnInd = document.getElementById('info-indicator');
-      var btnMet = document.getElementById('info-metric');
-      btnInd.addEventListener('mouseenter', function() { showInfo(this, 'indicator'); });
-      btnInd.addEventListener('mouseleave', hideInfo);
-      btnMet.addEventListener('mouseenter', function() { showInfo(this, 'metric'); });
-      btnMet.addEventListener('mouseleave', hideInfo);
-      // Touch support — toggle on tap
-      btnInd.addEventListener('touchstart', function(e) { e.preventDefault(); showInfo(this, 'indicator'); });
-      btnMet.addEventListener('touchstart', function(e) { e.preventDefault(); showInfo(this, 'metric'); });
-      document.addEventListener('touchstart', function(e) {
-        if (!e.target.closest('.info-btn')) hideInfo();
-      });
-    })();
-
-    // Timeline drag interaction
-    (function() {
-      var track = document.getElementById('timeline-track');
-      var thumb = document.getElementById('timeline-thumb');
-      var dragging = false;
-
-      function posToIdx(clientY) {
-        var rect = track.getBoundingClientRect();
-        var pct = Math.max(0, Math.min(1, (clientY - rect.top) / rect.height));
-        return Math.round(pct * (sortedQuarters.length - 1));
-      }
-
-      thumb.addEventListener('mousedown', function(e) { dragging = true; e.preventDefault(); });
-      track.addEventListener('mousedown', function(e) {
-        dragging = true;
-        var idx = posToIdx(e.clientY);
-        setTimelinePosition(idx);
-        clearTimeout(sliderTimer);
-        sliderTimer = setTimeout(function() { loadIndicatorData(currentIndicator, currentQuarter).then(function() { buildChoropleth_banking(); }); }, 120);
-      });
-      document.addEventListener('mousemove', function(e) {
-        if (!dragging || sortedQuarters.length === 0) return;
-        e.preventDefault();
-        var idx = posToIdx(e.clientY);
-        if (idx !== currentQIdx) {
-          setTimelinePosition(idx);
-          clearTimeout(sliderTimer);
-          sliderTimer = setTimeout(function() { loadIndicatorData(currentIndicator, currentQuarter).then(function() { buildChoropleth_banking(); }); }, 120);
-        }
-      });
-      document.addEventListener('selectstart', function(e) { if (dragging) e.preventDefault(); });
-      document.addEventListener('mouseup', function() { dragging = false; });
-
-      // Touch support
-      thumb.addEventListener('touchstart', function(e) { dragging = true; e.preventDefault(); }, {passive:false});
-      track.addEventListener('touchstart', function(e) {
-        dragging = true;
-        var idx = posToIdx(e.touches[0].clientY);
-        setTimelinePosition(idx);
-        clearTimeout(sliderTimer);
-        sliderTimer = setTimeout(function() { loadIndicatorData(currentIndicator, currentQuarter).then(function() { buildChoropleth_banking(); }); }, 120);
-      }, {passive:false});
-      document.addEventListener('touchmove', function(e) {
-        if (!dragging || sortedQuarters.length === 0) return;
-        var idx = posToIdx(e.touches[0].clientY);
-        if (idx !== currentQIdx) {
-          setTimelinePosition(idx);
-          clearTimeout(sliderTimer);
-          sliderTimer = setTimeout(function() { loadIndicatorData(currentIndicator, currentQuarter).then(function() { buildChoropleth_banking(); }); }, 120);
-        }
-      });
-      document.addEventListener('touchend', function() { dragging = false; });
-    })();
-
-    document.getElementById('sel-state').addEventListener('change', function(e) {
-      bankingStateFilter = e.target.value;
-      if (slbcLoaded) {
+    // Timeline drag — now handled by TimelineSlider.svelte
+    window.addEventListener('finer:quarterChange', function(e) {
+      currentQuarter = e.detail.quarter;
+      currentQIdx = e.detail.idx;
+      loadIndicatorData(currentIndicator, currentQuarter).then(function() {
         buildChoropleth_banking();
-        updateLabelVisibility_banking();
-      }
-      if (bankingStateFilter) {
-        var stateFts = distGeoJSON ? distGeoJSON.features.filter(function(f) {
-          return f.properties.STATE_UT?.toUpperCase()?.trim() === bankingStateFilter;
-        }) : [];
-        if (stateFts.length) {
-          var group = L.geoJSON({ type: 'FeatureCollection', features: stateFts });
-          map.flyToBounds(group.getBounds(), { padding: [40, 40], maxZoom: 9, duration: 1.0 });
-        }
-      } else {
-        flyToNE();
-      }
-      // Outlet layer will auto-update via zoomend/moveend if toggle is on
+      });
     });
 
-    document.getElementById('btn-reset-banking').addEventListener('click', function() {
+    // Banking state change and reset — now handled by finer:stateFilterChange above
+
+    window.addEventListener('finer:resetBanking', function() {
       bankingStateFilter = '';
-      document.getElementById('sel-state').value = '';
       flyToNE();
       if (slbcLoaded) {
         buildChoropleth_banking();
@@ -1901,17 +1563,6 @@ const base = import.meta.env.BASE_URL;
       if (mode === currentMode) return;
       currentMode = mode;
 
-      // Update toggle buttons
-      document.getElementById('mode-capital').className = 'view-btn' + (mode === 'capital' ? ' active' : '');
-      document.getElementById('mode-banking').className = 'view-btn' + (mode === 'banking' ? ' active' : '');
-
-      // Show/hide control sections
-      document.getElementById('controls-capital').style.display = mode === 'capital' ? 'block' : 'none';
-      document.getElementById('controls-banking').style.display = mode === 'banking' ? 'block' : 'none';
-
-      // Show/hide time slider
-      document.getElementById('time-slider').style.display = mode === 'banking' ? 'flex' : 'none';
-
       // Clean up outgoing mode layers
       if (choroLayer) { map.removeLayer(choroLayer); choroLayer = null; }
       if (distLabelsLayer) { map.removeLayer(distLabelsLayer); distLabelsLayer = null; }
@@ -1920,8 +1571,6 @@ const base = import.meta.env.BASE_URL;
         // Clear banking outlet points and reset toggle
         clearRbiOutlets();
         outletsEnabled = false;
-        document.getElementById('tog-outlets').checked = false;
-        document.getElementById('rbi-outlet-controls').style.display = 'none';
 
         // Switch to street map tiles
         if (whiteCanvasTile._map) map.removeLayer(whiteCanvasTile);
@@ -1929,8 +1578,6 @@ const base = import.meta.env.BASE_URL;
         if (!streetTile._map) streetTile.addTo(map);
         streetTile.bringToBack();
 
-        // Hide banking legend, show appropriate capital legend
-        document.getElementById('choro-legend-banking').style.display = 'none';
         // Restore capital mode
         setView(currentView);
         map.flyToBounds(INDIA_BOUNDS, { padding: [20, 20], duration: 1.0 });
@@ -1946,29 +1593,25 @@ const base = import.meta.env.BASE_URL;
         // Hide capital layers
         [clusterCDSL, clusterNSDL, clusterMFDI, clusterMFDC].forEach(function(c) { if (c._map) map.removeLayer(c); });
         clearRbiOutlets();
-        document.getElementById('legend').style.display = 'none';
-        document.getElementById('choro-legend-capital').style.display = 'none';
-        document.getElementById('btn-back').style.display = 'none';
         drilldownActive = false;
 
-        // Show banking legend
-        document.getElementById('choro-legend-banking').style.display = 'block';
-
         if (!slbcLoaded) {
-          document.getElementById('stats-banking').textContent = 'Loading FI data…';
           loadBankingData();
-          // flyToNE will be called after data loads in loadBankingData callback
         } else {
           buildChoropleth_banking();
           updateLabelVisibility_banking();
           flyToNE();
         }
       }
+
+      // Notify Svelte components of mode change
+      window.__FINER.mode = mode;
+      window.__FINER.drilldownActive = drilldownActive;
+      window.dispatchEvent(new CustomEvent('finer:stateUpdate'));
     }
 
-    // Mode toggle event listeners
-    document.getElementById('mode-capital').addEventListener('click', function() { switchMode('capital'); });
-    document.getElementById('mode-banking').addEventListener('click', function() { switchMode('banking'); });
+    // Mode toggle — listen for Svelte event
+    window.addEventListener('finer:modeChange', function(e) { switchMode(e.detail.mode); });
 
     // ══════════════════════════════════════════
     // Section 4b — Focus NE (block-level) scope toggle
@@ -1976,34 +1619,22 @@ const base = import.meta.env.BASE_URL;
     function switchScope(scope) {
       if (scope === currentScope) return;
       currentScope = scope;
-      document.getElementById('scope-label-india').classList.toggle('active', scope === 'india');
-      document.getElementById('scope-label-ne').classList.toggle('active', scope === 'ne');
-      document.getElementById('scope-switch').checked = (scope === 'ne');
 
-      var selState = document.getElementById('sel-state');
+      // Scope change: dropdown filtering is now handled by MapPanel.svelte
       if (scope === 'ne') {
-        // Restrict state dropdown to 8 NE states
         var NE_ALL = ['ASSAM','MEGHALAYA','MANIPUR','ARUNACHAL PRADESH','MIZORAM','TRIPURA','NAGALAND','SIKKIM'];
-        Array.from(selState.options).forEach(function(opt) {
-          if (opt.value === '') { opt.textContent = 'All NE States'; opt.style.display = ''; }
-          else { opt.style.display = NE_ALL.indexOf(opt.value) >= 0 ? '' : 'none'; }
-        });
-        if (selState.value && NE_ALL.indexOf(selState.value) < 0) {
-          selState.value = '';
+        if (bankingStateFilter && NE_ALL.indexOf(bankingStateFilter) < 0) {
+          bankingStateFilter = '';
         }
-        // Use district-level choropleth filtered to NE states + zoom to NE
-        bankingStateFilter = selState.value; // '' means all (but only NE visible in dropdown)
         buildChoropleth_banking();
         map.flyToBounds(NE_FOCUS_BOUNDS, { duration: 1.0, padding: [20, 20] });
       } else {
-        // Restore state dropdown to all 22 states
-        Array.from(selState.options).forEach(function(opt) {
-          if (opt.value === '') opt.textContent = 'All States';
-          opt.style.display = '';
-        });
         buildChoropleth_banking();
         flyToNE();
       }
+
+      window.__FINER.scope = scope;
+      window.dispatchEvent(new CustomEvent('finer:stateUpdate'));
     }
 
     function loadBlockData() {
@@ -2054,10 +1685,9 @@ const base = import.meta.env.BASE_URL;
       if (choroLayer) { map.removeLayer(choroLayer); choroLayer = null; }
       if (distLabelsLayer) { map.removeLayer(distLabelsLayer); distLabelsLayer = null; }
 
-      var indicator = document.getElementById('sel-indicator').value;
-      var metricSel = document.getElementById('sel-metric');
-      var metric = metricSel ? metricSel.value : '';
-      var stateFilter = document.getElementById('sel-state').value;
+      var indicator = currentIndicator;
+      var metric = currentMetricIdx;
+      var stateFilter = bankingStateFilter;
 
       // Find the best available quarter in block data
       var availableQ = Object.keys(blockData).sort().reverse();
@@ -2155,9 +1785,8 @@ const base = import.meta.env.BASE_URL;
       updateLegend_banking(metricLabel, breaks, ramp);
     }
 
-    document.getElementById('scope-switch').addEventListener('change', function() {
-      switchScope(this.checked ? 'ne' : 'india');
-    });
+    // Scope toggle — listen for Svelte event
+    window.addEventListener('finer:scopeChange', function(e) { switchScope(e.detail.scope); });
 
     // ══════════════════════════════════════════
     // Section 5 — URL parameter support
@@ -2165,45 +1794,7 @@ const base = import.meta.env.BASE_URL;
     // (auto-switch is handled after capital data loads above)
 
     // ══════════════════════════════════════════
-    // Section 6 — Mobile bottom sheet
-    // ══════════════════════════════════════════
-    if (window.innerWidth <= 640) {
-      const panel = document.getElementById('panel');
-      const handle = document.getElementById('panel-handle');
-      panel.classList.add('collapsed');
-
-      // Toggle on handle tap
-      handle.addEventListener('click', function() {
-        panel.classList.toggle('collapsed');
-      });
-
-      // Also collapse on panel-head tap
-      document.getElementById('panel-head').addEventListener('click', function() {
-        panel.classList.toggle('collapsed');
-      });
-
-      // Swipe gestures
-      let startY = 0, startTime = 0;
-      panel.addEventListener('touchstart', function(e) {
-        startY = e.touches[0].clientY;
-        startTime = Date.now();
-      }, { passive: true });
-      panel.addEventListener('touchend', function(e) {
-        const dy = e.changedTouches[0].clientY - startY;
-        const dt = Date.now() - startTime;
-        if (dt < 400) {
-          if (dy > 40) panel.classList.add('collapsed');     // swipe down → collapse
-          else if (dy < -40) panel.classList.remove('collapsed'); // swipe up → expand
-        }
-      }, { passive: true });
-
-      // Collapse sheet when map is tapped
-      document.getElementById('map').addEventListener('click', function() {
-        if (!panel.classList.contains('collapsed')) {
-          panel.classList.add('collapsed');
-        }
-      });
-    }
+    // Section 6 — Mobile bottom sheet — now handled by MapPanel.svelte
   </script>
 </BaseLayout>
 
