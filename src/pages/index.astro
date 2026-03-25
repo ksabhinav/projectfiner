@@ -1686,7 +1686,7 @@ const base = import.meta.env.BASE_URL;
       return fetch(url)
         .then(function(r) { return r.ok ? r.json() : null; })
         .then(function(data) {
-          if (data && data.districts && data.districts.length >= 50) {
+          if (data && data.districts && data.districts.length >= 300) {
             // Good data — use it
             indicatorCache[cacheKey] = data;
             currentIndicatorData = data;
@@ -1709,7 +1709,7 @@ const base = import.meta.env.BASE_URL;
               return fetch(_B + 'indicators/' + indicator + '/' + fallbackQ + '.json')
                 .then(function(r) { return r.ok ? r.json() : null; })
                 .then(function(fbData) {
-                  if (fbData && fbData.districts && fbData.districts.length >= 50) {
+                  if (fbData && fbData.districts && fbData.districts.length >= 300) {
                     indicatorCache[fbKey] = fbData;
                     return fbData;
                   }
