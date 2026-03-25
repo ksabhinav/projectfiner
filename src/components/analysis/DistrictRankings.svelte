@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { CATEGORY_INFO, prettyCategoryName, CATEGORY_DESCRIPTIONS } from '../../lib/slbc-categories';
+  import { prettyFieldName as sharedPrettyField } from '../../lib/format-utils';
 
   interface Props {
     baseUrl: string;
@@ -197,25 +198,9 @@
     return v.toLocaleString('en-IN', { maximumFractionDigits: 2 });
   }
 
-  // Pretty field name
+  // Pretty field name — delegates to shared module
   function prettyField(f: string): string {
-    const isAmt = /_amt$|_amount$/.test(f) || /deposit|advance|outstanding|disburs|sanction/.test(f) && !/_no$|_a_c$|_pct$/.test(f);
-    const isPct = /_pct$|_percentage$|cd_ratio$|npa_pct$/.test(f);
-    let name = f.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
-      .replace(/\bCasa\b/g, 'CASA').replace(/\bKcc\b/g, 'KCC').replace(/\bNpa\b/g, 'NPA')
-      .replace(/\bPmjdy\b/g, 'PMJDY').replace(/\bShg\b/g, 'SHG').replace(/\bAtm\b/g, 'ATM')
-      .replace(/\bUpi\b/g, 'UPI').replace(/\bImps\b/g, 'IMPS').replace(/\bUssd\b/g, 'USSD')
-      .replace(/\bPmegp\b/g, 'PMEGP').replace(/\bNulm\b/g, 'NULM').replace(/\bNrlm\b/g, 'NRLM')
-      .replace(/\bSb\b/g, 'SB').replace(/\bCd\b/g, 'CD').replace(/\bCsp\b/g, 'CSP')
-      .replace(/\bAeps\b/g, 'AePS').replace(/\bDbt\b/g, 'DBT').replace(/\bPct\b/g, '%')
-      .replace(/\bApy\b/g, 'APY').replace(/\bPmjjby\b/g, 'PMJJBY').replace(/\bPmsby\b/g, 'PMSBY')
-      .replace(/\bPmmy\b/g, 'PMMY').replace(/\bPmfby\b/g, 'PMFBY').replace(/\bPmay\b/g, 'PMAY')
-      .replace(/\bTl\b/g, 'TL').replace(/\bWc\b/g, 'WC').replace(/\bKvic\b/g, 'KVIC')
-      .replace(/\bDcc\b/g, 'DCC').replace(/\bDlrc\b/g, 'DLRC').replace(/\bLdm\b/g, 'LDM')
-      .replace(/\bRseti\b/g, 'RSETI').replace(/\bFlc\b/g, 'FLC').replace(/\bMsme\b/g, 'MSME');
-    if (isAmt) name += ' (₹ Lakhs)';
-    else if (isPct) name += ' (%)';
-    return name;
+    return sharedPrettyField(f);
   }
 
   // Column sort handler

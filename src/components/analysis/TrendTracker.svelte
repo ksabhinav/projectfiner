@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { CATEGORY_INFO, prettyCategoryName, CATEGORY_TIERS, getCategoryTier, CATEGORY_DESCRIPTIONS } from '../../lib/slbc-categories';
+  import { prettyFieldName as sharedPrettyField } from '../../lib/format-utils';
 
   interface Props {
     baseUrl?: string;
@@ -55,44 +56,9 @@
     return p;
   }
 
+  // Pretty field name — delegates to shared module
   function prettyFieldName(field: string): string {
-    const isAmt = /_amt$|_amount$|^amt$|^amount$/.test(field) || /deposit|advance|outstanding|disburs|sanction|credit(?!_card)|loan(?!_a_c|_no)/.test(field) && !/_no$|_a_c$|_pct$|_number$/.test(field);
-    const isPct = /_pct$|_percentage$|^pct_|cd_ratio$|npa_pct$/.test(field);
-    let name = field
-      .replace(/_/g, ' ')
-      .replace(/\b\w/g, c => c.toUpperCase())
-      .replace(/\bA C\b/g, 'A/C')
-      .replace(/\bO S\b/g, 'O/S')
-      .replace(/\bAmt\b/g, 'Amount')
-      .replace(/\bNo\b/g, 'No.')
-      .replace(/\bAdv\b/g, 'Advances')
-      .replace(/\bDep\b/g, 'Deposits')
-      .replace(/\bBr\b/g, 'Branches')
-      .replace(/\bBrs\b/g, 'Branches')
-      .replace(/\bDisb\b/g, 'Disbursement')
-      .replace(/\bCy\b/g, 'Current Year')
-      .replace(/\bFy\b/g, 'FY')
-      .replace(/\bPs\b/g, 'Priority Sector')
-      .replace(/\bNps\b/g, 'Non-Priority Sector')
-      .replace(/\bOs\b/g, 'Outstanding')
-      .replace(/\bAch\b/g, 'Achievement')
-      .replace(/\bCum\b/g, 'Cumulative')
-      .replace(/\bSanc\b/g, 'Sanctioned')
-      .replace(/\bApp\b/g, 'Applications')
-      .replace(/\bCasa\b/g, 'CASA').replace(/\bKcc\b/g, 'KCC').replace(/\bNpa\b/g, 'NPA')
-      .replace(/\bPmjdy\b/g, 'PMJDY').replace(/\bShg\b/g, 'SHG').replace(/\bAtm\b/g, 'ATM')
-      .replace(/\bUpi\b/g, 'UPI').replace(/\bImps\b/g, 'IMPS').replace(/\bUssd\b/g, 'USSD')
-      .replace(/\bPmegp\b/g, 'PMEGP').replace(/\bNulm\b/g, 'NULM').replace(/\bNrlm\b/g, 'NRLM')
-      .replace(/\bSb\b/g, 'SB').replace(/\bCd\b/g, 'CD').replace(/\bCsp\b/g, 'CSP')
-      .replace(/\bAeps\b/g, 'AePS').replace(/\bDbt\b/g, 'DBT').replace(/\bPct\b/g, '%')
-      .replace(/\bApy\b/g, 'APY').replace(/\bPmjjby\b/g, 'PMJJBY').replace(/\bPmsby\b/g, 'PMSBY')
-      .replace(/\bPmmy\b/g, 'PMMY').replace(/\bPmfby\b/g, 'PMFBY').replace(/\bPmay\b/g, 'PMAY')
-      .replace(/\bTl\b/g, 'TL').replace(/\bWc\b/g, 'WC').replace(/\bKvic\b/g, 'KVIC')
-      .replace(/\bDcc\b/g, 'DCC').replace(/\bDlrc\b/g, 'DLRC').replace(/\bLdm\b/g, 'LDM')
-      .replace(/\bRseti\b/g, 'RSETI').replace(/\bFlc\b/g, 'FLC').replace(/\bMsme\b/g, 'MSME');
-    if (isAmt) name += ' (₹ Lakhs)';
-    else if (isPct) name += ' (%)';
-    return name;
+    return sharedPrettyField(field);
   }
 
   function formatValue(v: number): string {
