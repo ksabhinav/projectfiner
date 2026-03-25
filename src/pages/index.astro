@@ -1658,27 +1658,74 @@ const base = import.meta.env.BASE_URL;
     }
 
     // Load a single indicator file (~50-100 KB) for the given indicator+quarter
+    // Falls back to nearest earlier quarter if requested quarter has very sparse data
     function loadIndicatorData(indicator, quarter) {
       // RBI outlets has a special 'static' file (no quarterly data)
-      var filename = indicator === 'rbi_banking_outlets' ? 'static' : quarter;
-      var cacheKey = indicator + '/' + filename;
+      if (indicator === 'rbi_banking_outlets') {
+        var cacheKey = indicator + '/static';
+        if (indicatorCache[cacheKey]) {
+          currentIndicatorData = indicatorCache[cacheKey];
+          return Promise.resolve();
+        }
+        return fetch(_B + 'indicators/' + indicator + '/static.json')
+          .then(function(r) { return r.ok ? r.json() : null; })
+          .then(function(data) {
+            if (data) { indicatorCache[cacheKey] = data; currentIndicatorData = data; }
+            else { currentIndicatorData = null; }
+          })
+          .catch(function() { currentIndicatorData = null; });
+      }
 
+      var cacheKey = indicator + '/' + quarter;
       if (indicatorCache[cacheKey]) {
         currentIndicatorData = indicatorCache[cacheKey];
         return Promise.resolve();
       }
 
-      var url = _B + 'indicators/' + indicator + '/' + filename + '.json';
+      var url = _B + 'indicators/' + indicator + '/' + quarter + '.json';
       return fetch(url)
         .then(function(r) { return r.ok ? r.json() : null; })
         .then(function(data) {
-          if (data) {
+          if (data && data.districts && data.districts.length >= 50) {
+            // Good data — use it
             indicatorCache[cacheKey] = data;
             currentIndicatorData = data;
-          } else {
-            // Try falling back to nearest quarter
-            currentIndicatorData = null;
+            return;
           }
+          // Sparse or missing — try falling back through earlier quarters
+          if (!manifestData || !manifestData.quarters) {
+            currentIndicatorData = data || null;
+            return;
+          }
+          var qIdx = manifestData.quarters.indexOf(quarter);
+          if (qIdx < 0) qIdx = 0;
+          var tryQuarters = manifestData.quarters.slice(qIdx + 1, qIdx + 6); // Try up to 5 earlier quarters
+
+          return tryQuarters.reduce(function(chain, fallbackQ) {
+            return chain.then(function(found) {
+              if (found) return found;
+              var fbKey = indicator + '/' + fallbackQ;
+              if (indicatorCache[fbKey]) return indicatorCache[fbKey];
+              return fetch(_B + 'indicators/' + indicator + '/' + fallbackQ + '.json')
+                .then(function(r) { return r.ok ? r.json() : null; })
+                .then(function(fbData) {
+                  if (fbData && fbData.districts && fbData.districts.length >= 50) {
+                    indicatorCache[fbKey] = fbData;
+                    return fbData;
+                  }
+                  return null;
+                })
+                .catch(function() { return null; });
+            });
+          }, Promise.resolve(null)).then(function(best) {
+            if (best) {
+              currentIndicatorData = best;
+            } else {
+              // Use whatever we got for the original quarter (even if sparse)
+              if (data) indicatorCache[cacheKey] = data;
+              currentIndicatorData = data || null;
+            }
+          });
         })
         .catch(function() { currentIndicatorData = null; });
     }
