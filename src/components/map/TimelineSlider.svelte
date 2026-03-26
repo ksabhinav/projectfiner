@@ -211,27 +211,28 @@
   }
   .tl-bound {
     font-family: 'Inter', sans-serif;
-    font-size: 9px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    color: #bbb5ad;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #9a938b;
     text-align: center;
     transition: opacity 0.2s;
   }
   .timeline-track {
     position: relative;
-    width: 3px;
-    height: 160px;
-    background: rgba(200, 192, 184, 0.5);
-    border-radius: 2px;
+    width: 6px;
+    height: 200px;
+    background: rgba(200, 192, 184, 0.35);
+    border-radius: 3px;
     cursor: pointer;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
   }
   .timeline-fill {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    border-radius: 2px;
+    border-radius: 3px;
     transition: height 0.15s ease;
   }
   .timeline-dots {
@@ -244,63 +245,71 @@
   .tl-dot {
     position: absolute;
     left: 50%;
-    width: 7px;
-    height: 3px;
-    margin-left: -3.5px;
-    margin-top: -1.5px;
+    width: 14px;
+    height: 6px;
+    margin-left: -7px;
+    margin-top: -3px;
     background: transparent;
     cursor: pointer;
     transition: all 0.15s;
-    border-radius: 0;
+    border-radius: 1px;
   }
   .tl-dot:hover {
-    background: rgba(184, 96, 62, 0.3);
+    background: rgba(184, 96, 62, 0.25);
+    border-radius: 3px;
   }
   .tl-dot.active {
     background: transparent;
   }
   .tl-dot.year-dot {
-    width: 9px;
-    height: 1px;
-    margin-left: -4.5px;
-    margin-top: -0.5px;
-    background: rgba(170, 160, 154, 0.4);
+    width: 16px;
+    height: 2px;
+    margin-left: -8px;
+    margin-top: -1px;
+    background: rgba(170, 160, 154, 0.5);
+    border-radius: 1px;
+  }
+  .tl-dot.year-dot:hover {
+    background: rgba(184, 96, 62, 0.4);
   }
   .tl-dot.year-dot.active {
-    background: rgba(184, 96, 62, 0.4);
+    background: rgba(184, 96, 62, 0.5);
   }
   .timeline-thumb {
     position: absolute;
     left: 50%;
-    width: 11px;
-    height: 3px;
-    margin-left: -5.5px;
-    margin-top: -1.5px;
+    width: 20px;
+    height: 6px;
+    margin-left: -10px;
+    margin-top: -3px;
     background: #b8603e;
-    border-radius: 1px;
+    border-radius: 3px;
     cursor: grab;
     transition: top 0.15s ease;
     z-index: 2;
+    box-shadow: 0 1px 4px rgba(184, 96, 62, 0.3);
   }
   .timeline-thumb:hover {
-    height: 4px;
-    margin-top: -2px;
-    box-shadow: 0 0 8px rgba(184, 96, 62, 0.3);
+    height: 8px;
+    margin-top: -4px;
+    width: 22px;
+    margin-left: -11px;
+    box-shadow: 0 2px 10px rgba(184, 96, 62, 0.4);
   }
   .timeline-thumb:active {
     cursor: grabbing;
-    box-shadow: 0 0 10px rgba(184, 96, 62, 0.4);
+    box-shadow: 0 2px 12px rgba(184, 96, 62, 0.5);
   }
   .quarter-label {
     position: absolute;
-    right: 18px;
+    right: 24px;
     top: 50%;
     transform: translateY(-50%);
     font-family: 'Inter', sans-serif;
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 11px;
+    font-weight: 700;
     color: #b8603e;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
     white-space: nowrap;
     pointer-events: none;
     text-transform: uppercase;
@@ -312,10 +321,10 @@
   }
 
   @media (max-width: 640px) {
-    .time-slider { right: 6px; }
-    .timeline-track { height: 80px; }
-    .tl-bound { font-size: 7px; }
-    .quarter-label { font-size: 9px; right: 14px; }
-    .timeline-thumb { width: 9px; margin-left: -4.5px; }
+    .time-slider { right: 8px; }
+    .timeline-track { height: 120px; width: 5px; }
+    .tl-bound { font-size: 8px; }
+    .quarter-label { font-size: 10px; right: 20px; }
+    .timeline-thumb { width: 16px; margin-left: -8px; height: 5px; }
   }
 </style>
