@@ -101,19 +101,27 @@ const base = import.meta.env.BASE_URL;
     // Compute panel-aware padding dynamically from actual DOM
     function getPanelPadding() {
       var isMobile = window.innerWidth <= 640;
-      if (isMobile) return { paddingTopLeft: [10, 10], paddingBottomRight: [10, 100] };
+      if (isMobile) return { paddingTopLeft: [10, 60], paddingBottomRight: [10, 100] };
       var panel = document.getElementById('panel');
-      var panelW = panel ? (panel.offsetWidth + panel.offsetLeft + 16) : 306;
-      var sliderW = 56; // timeline slider width + margin
-      return { paddingTopLeft: [panelW, 10], paddingBottomRight: [sliderW, 10] };
+      var panelW = panel ? (panel.offsetWidth + panel.offsetLeft + 20) : 320;
+      var sliderW = 70; // timeline slider width + margin
+      return { paddingTopLeft: [panelW, 60], paddingBottomRight: [sliderW, 40] };
     }
 
-    // Position map after layout is complete (requestAnimationFrame ensures DOM is rendered)
-    requestAnimationFrame(function() {
-      map.invalidateSize({ animate: false });
-      var pad = getPanelPadding();
-      map.fitBounds(ALL_STATES_BOUNDS, Object.assign({}, pad, { animate: false }));
-    });
+    // Position map after panel Svelte component has rendered
+    // Use a polling check since client:load hydration timing is unpredictable
+    function fitMapWhenReady() {
+      var panel = document.getElementById('panel');
+      if (panel && panel.offsetWidth > 50) {
+        map.invalidateSize({ animate: false });
+        var pad = getPanelPadding();
+        map.fitBounds(ALL_STATES_BOUNDS, Object.assign({}, pad, { animate: false }));
+      } else {
+        // Panel not rendered yet — retry
+        setTimeout(fitMapWhenReady, 50);
+      }
+    }
+    fitMapWhenReady();
 
     // Refit on window resize (debounced)
     var resizeTimer;
