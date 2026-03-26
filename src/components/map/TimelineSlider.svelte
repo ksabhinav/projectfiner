@@ -246,54 +246,51 @@
     position: absolute;
     left: 50%;
     width: 14px;
-    height: 6px;
+    height: 8px;
     margin-left: -7px;
-    margin-top: -3px;
+    margin-top: -4px;
     background: transparent;
     cursor: pointer;
     transition: all 0.15s;
-    border-radius: 1px;
+    border-radius: 4px;
   }
   .tl-dot:hover {
-    background: rgba(184, 96, 62, 0.25);
-    border-radius: 3px;
+    background: rgba(184, 96, 62, 0.2);
   }
   .tl-dot.active {
     background: transparent;
   }
   .tl-dot.year-dot {
-    width: 16px;
-    height: 2px;
-    margin-left: -8px;
-    margin-top: -1px;
-    background: rgba(170, 160, 154, 0.5);
-    border-radius: 1px;
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    margin-top: -3px;
+    background: rgba(170, 160, 154, 0.45);
+    border-radius: 50%;
   }
   .tl-dot.year-dot:hover {
-    background: rgba(184, 96, 62, 0.4);
+    background: rgba(184, 96, 62, 0.5);
+    transform: scale(1.3);
   }
   .tl-dot.year-dot.active {
-    background: rgba(184, 96, 62, 0.5);
+    background: rgba(184, 96, 62, 0.6);
   }
   .timeline-thumb {
     position: absolute;
     left: 50%;
-    width: 20px;
-    height: 6px;
-    margin-left: -10px;
-    margin-top: -3px;
+    width: 18px;
+    height: 8px;
+    margin-left: -9px;
+    margin-top: -4px;
     background: #b8603e;
-    border-radius: 3px;
+    border-radius: 4px;
     cursor: grab;
-    transition: top 0.15s ease;
+    transition: top 0.15s ease, transform 0.15s ease;
     z-index: 2;
     box-shadow: 0 1px 4px rgba(184, 96, 62, 0.3);
   }
   .timeline-thumb:hover {
-    height: 8px;
-    margin-top: -4px;
-    width: 22px;
-    margin-left: -11px;
+    transform: scale(1.2);
     box-shadow: 0 2px 10px rgba(184, 96, 62, 0.4);
   }
   .timeline-thumb:active {
