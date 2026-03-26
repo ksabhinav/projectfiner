@@ -109,7 +109,6 @@ const base = import.meta.env.BASE_URL;
     }
 
     // Position map after panel Svelte component has rendered
-    // Use a polling check since client:load hydration timing is unpredictable
     function fitMapWhenReady() {
       var panel = document.getElementById('panel');
       if (panel && panel.offsetWidth > 50) {
@@ -117,7 +116,6 @@ const base = import.meta.env.BASE_URL;
         var pad = getPanelPadding();
         map.fitBounds(ALL_STATES_BOUNDS, Object.assign({}, pad, { animate: false }));
       } else {
-        // Panel not rendered yet — retry
         setTimeout(fitMapWhenReady, 50);
       }
     }
