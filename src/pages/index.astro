@@ -101,11 +101,11 @@ const base = import.meta.env.BASE_URL;
     // Compute panel-aware padding dynamically from actual DOM
     function getPanelPadding() {
       var isMobile = window.innerWidth <= 640;
-      if (isMobile) return { paddingTopLeft: [10, 60], paddingBottomRight: [10, 100] };
+      if (isMobile) return { paddingTopLeft: [10, 10], paddingBottomRight: [10, 80] };
       var panel = document.getElementById('panel');
-      var panelW = panel ? (panel.offsetWidth + panel.offsetLeft + 20) : 320;
-      var sliderW = 70; // timeline slider width + margin
-      return { paddingTopLeft: [panelW, 60], paddingBottomRight: [sliderW, 40] };
+      var panelW = panel ? (panel.offsetWidth + panel.offsetLeft + 30) : 330;
+      var sliderW = 90; // timeline slider + zoom controls + margin
+      return { paddingTopLeft: [panelW, 10], paddingBottomRight: [sliderW, 10] };
     }
 
     // Position map after panel Svelte component has rendered
