@@ -12,15 +12,16 @@ import json
 import urllib.request
 from http.server import BaseHTTPRequestHandler
 
-# ── Load index at cold start ──────────────────────────────────
+# ── Load index at cold start (from Cloudflare R2) ────────────
 
-INDEX_DIR = os.path.join(os.path.dirname(__file__), "index_data")
+R2_BASE = "https://data.projectfiner.com/rag"
 
-with open(os.path.join(INDEX_DIR, "chunks.json"), "r") as f:
-    CHUNKS = json.load(f)
+def _fetch_json(url):
+    with urllib.request.urlopen(url, timeout=30) as resp:
+        return json.loads(resp.read().decode("utf-8"))
 
-with open(os.path.join(INDEX_DIR, "bm25_params.json"), "r") as f:
-    BM25 = json.load(f)
+CHUNKS = _fetch_json(f"{R2_BASE}/chunks.json")
+BM25   = _fetch_json(f"{R2_BASE}/bm25_params.json")
 
 
 # ── BM25 Search ──────────────────────────────────────────────
