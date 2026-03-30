@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f4f1"/>
+      <stop offset="100%" stop-color="#ebe8e3"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b8603e"/>
+      <stop offset="100%" stop-color="#d4845f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="4" fill="url(#accent)"/>
+  <text x="80" y="200" font-family="Georgia, serif" font-size="72" font-weight="700" fill="#1a1410">
+    Project <tspan font-style="italic" font-weight="400">FINER</tspan>
+  </text>
+  <text x="80" y="260" font-family="Inter, sans-serif" font-size="24" font-weight="400" fill="#888078" letter-spacing="0.08em">
+    FINANCIAL INCLUSION ACROSS INDIA
+  </text>
+  <rect x="80" y="290" width="48" height="3" rx="1.5" fill="#b8603e"/>
+  <text x="80" y="350" font-family="Georgia, serif" font-size="28" fill="#1a1410" line-height="1.6">
+    Mapping banking access, credit, and digital payments
+  </text>
+  <text x="80" y="390" font-family="Georgia, serif" font-size="28" fill="#1a1410">
+    across 800+ districts in 36 states.
+  </text>
+  <text x="80" y="470" font-family="Inter, sans-serif" font-size="18" fill="#b8603e" font-weight="600" letter-spacing="0.05em">
+    36 STATES  ·  800+ DISTRICTS  ·  16 INDICATORS  ·  2.47M BANKING OUTLETS
+  </text>
+  <text x="80" y="560" font-family="Inter, sans-serif" font-size="16" fill="#aaa09a">
+    projectfiner.com
+  </text>
+</svg>
