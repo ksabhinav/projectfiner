@@ -1,0 +1,26 @@
+{
+  "datasets": [
+    {
+      "key": "health_insurance",
+      "label": "Health Insurance Coverage",
+      "level": "district",
+      "districts": 637,
+      "file": "health_insurance_district.json"
+    },
+    {
+      "key": "bank_accounts",
+      "label": "Women with Bank/Savings Account",
+      "level": "state",
+      "states": 36,
+      "file": "bank_accounts_state.json"
+    },
+    {
+      "key": "mobile_phones",
+      "label": "Women with Mobile Phone",
+      "level": "state",
+      "states": 36,
+      "file": "mobile_phones_state.json"
+    }
+  ],
+  "generated_at": "2026-03-30T08:07:05Z"
+}

@@ -313,6 +313,15 @@ INDICATORS = {
             {'field': 'rbi_outlets__metro', 'label': 'Metropolitan Outlets', 'unit': ''},
         ],
     },
+    'nfhs_health_insurance': {
+        'title': 'Health Insurance Coverage (NFHS-5)',
+        'category': None,  # Static data from NFHS-5 district factsheets
+        'source': 'nfhs_district',
+        'metrics': [
+            {'field': 'nfhs5_pct', 'label': 'NFHS-5 Coverage (%)', 'unit': '%'},
+            {'field': 'nfhs4_pct', 'label': 'NFHS-4 Coverage (%)', 'unit': '%'},
+        ],
+    },
 }
 
 # Cross-category fallbacks: when the primary category doesn't have a field,
@@ -570,6 +579,57 @@ def export_rbi_outlets(rbi_data):
     return 1
 
 
+def export_nfhs_health_insurance(db):
+    """
+    Export NFHS-5 health insurance district data as a single 'static' file.
+    Source: nfhs_data table, indicator 'Households with any usual member covered
+    under a health insurance/financing scheme (%)'
+    """
+    out_dir = os.path.join(OUTPUT_DIR, 'nfhs_health_insurance')
+    os.makedirs(out_dir, exist_ok=True)
+
+    rows = db.execute("""
+        SELECT
+            d.name AS district_name,
+            s.slug AS state_slug,
+            nd.nfhs5_numeric,
+            nd.nfhs4_numeric
+        FROM nfhs_data nd
+        JOIN nfhs_indicators ni ON nd.indicator_id = ni.id
+        LEFT JOIN districts d ON nd.district_lgd = d.lgd_code
+        LEFT JOIN states s ON d.state_lgd_code = s.lgd_code
+        WHERE ni.name LIKE '%health insurance%'
+        AND nd.district_lgd IS NOT NULL
+        ORDER BY s.slug, d.name
+    """).fetchall()
+
+    districts = []
+    for district_name, state_slug, nfhs5, nfhs4 in rows:
+        entry = {
+            'district': district_name,
+            'state': state_slug,
+        }
+        if nfhs5 is not None:
+            entry['nfhs5_pct'] = nfhs5
+        if nfhs4 is not None:
+            entry['nfhs4_pct'] = nfhs4
+        districts.append(entry)
+
+    out = {
+        'indicator': 'nfhs_health_insurance',
+        'quarter': 'static',
+        'label': 'NFHS-5 (2019-21)',
+        'description': 'Households with any usual member covered under a health insurance/financing scheme (%)',
+        'districts': districts,
+    }
+
+    path = os.path.join(out_dir, 'static.json')
+    with open(path, 'w') as f:
+        json.dump(out, f, separators=(',', ':'), ensure_ascii=False)
+
+    return 1
+
+
 def export_manifest(slbc_quarters, phonepe_quarters):
     """Generate the manifest.json with available indicators and quarters."""
     # Combine all quarters that have any data
@@ -616,6 +676,14 @@ def main():
         if indicator_def.get('source') == 'rbi_outlets':
             # Static RBI outlet data
             n = export_rbi_outlets(rbi_data)
+            total_files += n
+            fpath = os.path.join(OUTPUT_DIR, indicator_key, 'static.json')
+            sz = os.path.getsize(fpath) if os.path.exists(fpath) else 0
+            total_size += sz
+            print(f'  {indicator_key}: 1 file ({sz / 1024:.1f} KB)')
+        elif indicator_def.get('source') == 'nfhs_district':
+            # Static NFHS district data
+            n = export_nfhs_health_insurance(db)
             total_files += n
             fpath = os.path.join(OUTPUT_DIR, indicator_key, 'static.json')
             sz = os.path.getsize(fpath) if os.path.exists(fpath) else 0

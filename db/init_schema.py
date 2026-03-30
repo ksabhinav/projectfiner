@@ -113,6 +113,24 @@ CREATE INDEX IF NOT EXISTS idx_nfhs_district ON nfhs_data(district_lgd);
 CREATE INDEX IF NOT EXISTS idx_nfhs_indicator ON nfhs_data(indicator_id);
 
 -- ============================================================
+-- NFHS STATE-LEVEL DATA (indicators only at state level, e.g. bank accounts, mobile phones)
+-- ============================================================
+
+CREATE TABLE IF NOT EXISTS nfhs_state_data (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    state_lgd       INTEGER REFERENCES states(lgd_code),
+    state_raw       TEXT NOT NULL,
+    indicator_id    INTEGER NOT NULL REFERENCES nfhs_indicators(id),
+    nfhs5_urban     REAL,
+    nfhs5_rural     REAL,
+    nfhs5_total     REAL,
+    nfhs4_total     REAL
+);
+
+CREATE INDEX IF NOT EXISTS idx_nfhs_state_lgd ON nfhs_state_data(state_lgd);
+CREATE INDEX IF NOT EXISTS idx_nfhs_state_ind ON nfhs_state_data(indicator_id);
+
+-- ============================================================
 -- AADHAAR ENROLLMENT DATA
 -- ============================================================
 
