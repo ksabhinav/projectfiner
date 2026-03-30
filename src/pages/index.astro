@@ -13,8 +13,6 @@ const base = import.meta.env.BASE_URL;
 <BaseLayout title="Project FINER">
   <Header title="" transparent />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 
   <div id="map"></div>
 
@@ -42,31 +40,19 @@ const base = import.meta.env.BASE_URL;
       stateFilter: '',
       sortedQuarters: [],
       stats: {},
-      capitalStats: {},
       legendData: { title: '', breaks: [], ramp: [], unit: '' },
       focus: { active: false },
-      showCDSL: true, showNSDL: true, showMFDI: true, showMFDC: true,
-      outletsEnabled: false, showBranch: true, showBC: true, showCSP: true,
-      capitalView: 'choro',
-      drilldownActive: false,
       indicators: {},
       manifest: null,
     };
   </script>
 
   <script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script is:inline src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script is:inline>
     // ══════════════════════════════════════════
     // Section 1 — Shared
     // ══════════════════════════════════════════
     var _B = window.__FINER_BASE;
-    var CDSL_URL   = _B + 'DPSCs/cdsl_dp_centres.json';
-    var NSDL_URL   = _B + 'DPSCs/nsdl_dp_centres.json';
-    var COORDS_URL = _B + 'pincode_coords.json';
-    var MFDI_URL   = _B + 'MFDs/mfd_individual.json';
-    var MFDC_URL   = _B + 'MFDs/mfd_corporate.json';
-    var DIST_URL   = _B + 'data/district_boundaries.geojson';
 
     var _isMobile = window.innerWidth <= 640;
     var INDIA_BOUNDS = _isMobile
@@ -151,13 +137,6 @@ const base = import.meta.env.BASE_URL;
     var whiteCanvasTile = new (L.GridLayer.extend({createTile:function(){var t=document.createElement('canvas');var r=window.devicePixelRatio||1;t.width=t.height=256*r;t.style.width=t.style.height='256px';var c=t.getContext('2d');c.scale(r,r);c.fillStyle='#fff';c.fillRect(0,0,256,256);return t;}}));
     whiteCanvasTile.addTo(map);
 
-    // Street map tile for Capital Markets mode (hidden by default)
-    var streetTile = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      subdomains: 'abcd',
-      maxZoom: 19,
-    });
-
     // India outline layer (simplified from datameet composite — includes coastline + correct Kashmir boundary)
     var indiaOutlineLayer = null;
     fetch(_B + 'Maps/india-outline.geojson')
@@ -174,7 +153,7 @@ const base = import.meta.env.BASE_URL;
     var choroLayer = null;
     var distLabelsLayer = null;
     var distCentroids = [];
-    var currentMode = 'capital';
+    var currentMode = 'banking';
 
     // Block-level (Focus NE) variables
     var currentScope = 'india'; // 'india' or 'ne'
@@ -185,328 +164,23 @@ const base = import.meta.env.BASE_URL;
     var NE_FOCUS_STATES = ['ASSAM','MANIPUR','MIZORAM','NAGALAND','TRIPURA','SIKKIM'];
     var NE_FOCUS_BOUNDS = L.latLngBounds(L.latLng(21.5, 88), L.latLng(29.5, 97.5));
 
-    // ══════════════════════════════════════════
-    // Section 2 — Capital Markets mode
-    // ══════════════════════════════════════════
-    function makeCluster(fill,text){
-      return L.markerClusterGroup({chunkedLoading:true,maxClusterRadius:45,showCoverageOnHover:false,
-        iconCreateFunction:function(c){var n=c.getChildCount(),s=n>1000?46:n>100?36:28;
-          return L.divIcon({html:'<div style="background:'+fill+';width:'+s+'px;height:'+s+'px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:'+text+';font-weight:700;font-size:'+(s>36?11:9)+'px;font-family:Georgia,serif;border:2px solid rgba(255,255,255,0.85)">'+( n>999?'1k+':n)+'</div>',className:'',iconSize:[s,s]});}
-      }).addTo(map);
-    }
-    var clusterCDSL = makeCluster('#b8603e','#fff');
-    var clusterNSDL = makeCluster('#3d7a8e','#fff');
-    var clusterMFDI = makeCluster('#5a7a3a','#fff');
-    var clusterMFDC = makeCluster('#8b6914','#fff');
-
-    // RBI Banking Outlets clusters (on-demand per state)
-    var clusterBranch = makeCluster('#2563eb','#fff');
-    var clusterBC = makeCluster('#16a34a','#fff');
-    var clusterCSP = makeCluster('#ea580c','#fff');
-    [clusterBranch, clusterBC, clusterCSP].forEach(function(c) { map.removeLayer(c); });
-    var showBranch = true, showBC = true, showCSP = true;
-    var rbiMarkerCache = { branch: [], bc: [], csp: [] };
-    var rbiLoadedState = '';  // Which state's data is currently loaded
-    var rbiLoading = false;
-
-    function makeRbiIcon(color) {
-      return L.divIcon({
-        html: '<div style="width:6px;height:6px;border-radius:50%;background:' + color + ';border:1.5px solid rgba(255,255,255,0.9)"></div>',
-        className: '', iconSize: [6, 6], iconAnchor: [3, 3]
-      });
-    }
-    var iconBranch = makeRbiIcon('#2563eb');
-    var iconBC = makeRbiIcon('#16a34a');
-    var iconCSP = makeRbiIcon('#ea580c');
-
-    function buildRbiPopup(r) {
-      return '<div class="pname">' + (r.branch || r.bank || '') + '</div>' +
-        '<span class="pbadge" style="background:#2d7d46;color:#fff">' + (r.type || '') + '</span>' +
-        (r.subType ? '<div style="font-size:9px;color:#888078;font-style:italic;margin-bottom:4px">' + r.subType + '</div>' : '') +
-        '<div class="paddr">' + (r.address || '').slice(0, 160) + '</div>' +
-        '<div class="pmeta">' + (r.bank || '') +
-        (r.ifsc ? '<br>IFSC: ' + r.ifsc : '') +
-        '<br>' + (r.populationGroup || '') + ' · ' + (r.district || '') + '</div>';
-    }
-
-    var R2_BASE = 'https://data.projectfiner.com/';
-
-    function loadRbiOutlets(stateSlug) {
-      if (rbiLoadedState === stateSlug || rbiLoading) return;
-      rbiLoading = true;
-      rbiLoadedState = stateSlug;
-      var _rh=document.getElementById('rbi-hint');if(_rh)_rh.textContent = 'Loading ' + stateSlug + '…';
-
-      fetch(R2_BASE + 'banking-outlets/' + stateSlug + '.json', { mode: 'cors' })
-        .then(function(r) {
-          if (!r.ok) throw new Error('HTTP ' + r.status + ' for ' + stateSlug);
-          return r.json();
-        })
-        .then(function(data) {
-          if (!Array.isArray(data)) throw new Error('Not an array: ' + typeof data);
-          rbiMarkerCache = { branch: [], bc: [], csp: [] };
-          data.forEach(function(r) {
-            if (!r.lat || !r.lng || r.lat === '0' || r.lng === '0') return;
-            var lat = parseFloat(r.lat), lng = parseFloat(r.lng);
-            if (isNaN(lat) || isNaN(lng) || lat === 0 || lng === 0) return;
-
-            var type = (r.type || '').toUpperCase();
-            var icon, bucket;
-            if (type === 'BRANCH') { icon = iconBranch; bucket = 'branch'; }
-            else if (type === 'BC') { icon = iconBC; bucket = 'bc'; }
-            else if (type === 'CSP') { icon = iconCSP; bucket = 'csp'; }
-            else { icon = iconBC; bucket = 'bc'; } // OFFICE/DBU → BC cluster
-
-            var m = L.marker([lat, lng], { icon: icon });
-            m.on('click', function() {
-              if (!this._pb) { this.bindPopup(buildRbiPopup(r), { maxWidth: 280 }).openPopup(); this._pb = true; }
-            });
-            m._rbiData = r;
-            rbiMarkerCache[bucket].push(m);
-          });
-
-          renderRbiMarkers();
-          var _rh=document.getElementById('rbi-hint');if(_rh)_rh.textContent =
-            data.length.toLocaleString() + ' outlets loaded (as of Mar 2025)';
-          rbiLoading = false;
-        })
-        .catch(function(err) {
-          var _rh=document.getElementById('rbi-hint');if(_rh)_rh.textContent = 'Error: ' + (err.message || err);
-          console.error('RBI outlet load error:', err);
-          rbiLoading = false;
-        });
-    }
-
-    function renderRbiMarkers() {
-      clusterBranch.clearLayers();
-      clusterBC.clearLayers();
-      clusterCSP.clearLayers();
-      if (showBranch && rbiMarkerCache.branch.length) {
-        clusterBranch.addLayers(rbiMarkerCache.branch);
-        if (!clusterBranch._map) clusterBranch.addTo(map);
-      } else if (clusterBranch._map) map.removeLayer(clusterBranch);
-      if (showBC && rbiMarkerCache.bc.length) {
-        clusterBC.addLayers(rbiMarkerCache.bc);
-        if (!clusterBC._map) clusterBC.addTo(map);
-      } else if (clusterBC._map) map.removeLayer(clusterBC);
-      if (showCSP && rbiMarkerCache.csp.length) {
-        clusterCSP.addLayers(rbiMarkerCache.csp);
-        if (!clusterCSP._map) clusterCSP.addTo(map);
-      } else if (clusterCSP._map) map.removeLayer(clusterCSP);
-    }
-
-    function clearRbiOutlets() {
-      [clusterBranch, clusterBC, clusterCSP].forEach(function(c) { if (c._map) map.removeLayer(c); });
-      rbiMarkerCache = { branch: [], bc: [], csp: [] };
-      rbiLoadedState = '';
-      var _rh=document.getElementById('rbi-hint');if(_rh)_rh.textContent = 'Drill into a state to see 2.47M outlets';
-    }
-
-    function makeIcon(color){return L.divIcon({html:'<div style="width:7px;height:7px;border-radius:50%;background:'+color+';border:1.5px solid rgba(255,255,255,0.9)"></div>',className:'',iconSize:[7,7],iconAnchor:[3,3]});}
-    var iconCDSL=makeIcon('#b8603e'), iconNSDL=makeIcon('#3d7a8e'), iconMFDI=makeIcon('#5a7a3a'), iconMFDC=makeIcon('#8b6914');
-
-    var cdslData=[],nsdlData=[],mfdiData=[],mfdcData=[],coordsMap={};
-    var showCDSL=true,showNSDL=true,showMFDI=true,showMFDC=true,dpQuery='',capitalStateFilter='';
-    var currentView='choro';
-    var drilldownActive=false;
-    var markerCache={cdsl:[],nsdl:[],mfdi:[],mfdc:[]};
-
-    function choroColor(total){if(total===0)return'#e8e4dc';if(total<5)return'#f0e6d2';if(total<20)return'#e8d5b7';if(total<100)return'#d4a96a';if(total<500)return'#b8603e';return'#7a2010';}
-    function getFilteredTotal(props){var t=0;if(showCDSL)t+=props.cdsl_cnt||0;if(showNSDL)t+=props.nsdl_cnt||0;if(showMFDI)t+=props.mfdi_cnt||0;if(showMFDC)t+=props.mfdc_cnt||0;return t;}
-    function choroStyle(feature){var total=getFilteredTotal(feature.properties);return{fillColor:choroColor(total),fillOpacity:total===0?0.6:0.78,color:'#c8bfb0',weight:0.5,opacity:0.7};}
-
-    function buildChoropleth_capital(){
-      if(choroLayer){map.removeLayer(choroLayer);choroLayer=null;}
-      if(!distGeoJSON||currentView!=='choro')return;
-      var sf=capitalStateFilter;
-      var filtered={type:distGeoJSON.type,features:distGeoJSON.features.filter(function(f){if(!sf)return true;if(sf==='_NE')return NE_CODES.some(function(code){return stateCodeMatch(f.properties.STATE_UT,code);});return stateCodeMatch(f.properties.STATE_UT,sf);})};
-      choroLayer=L.geoJSON(filtered,{style:choroStyle,onEachFeature:function(feature,layer){var p=feature.properties;var total=getFilteredTotal(p);layer.on({mouseover:function(e){e.target.setStyle({weight:2,color:'#6b4c2a',fillOpacity:0.9});e.target.bindTooltip('<div class="dist-tooltip"><div class="dtt-head"><div class="dtt-name">'+p.DISTRICT+'</div><div class="dtt-state">'+p.STATE_UT+'</div></div><div class="dtt-metrics"><div class="dtt-row dtt-total"><span class="dtt-label">Total Access Points</span><span class="dtt-val">'+total.toLocaleString()+'</span></div>'+(showCDSL?'<div class="dtt-row"><span class="dtt-label"><span class="dtt-dot" style="background:#b8603e"></span>CDSL</span><span class="dtt-val">'+p.cdsl_cnt.toLocaleString()+'</span></div>':'')+(showNSDL?'<div class="dtt-row"><span class="dtt-label"><span class="dtt-dot" style="background:#3d7a8e"></span>NSDL</span><span class="dtt-val">'+p.nsdl_cnt.toLocaleString()+'</span></div>':'')+(showMFDI?'<div class="dtt-row"><span class="dtt-label"><span class="dtt-dot" style="background:#5a7a3a"></span>MFD Individual</span><span class="dtt-val">'+p.mfdi_cnt.toLocaleString()+'</span></div>':'')+(showMFDC?'<div class="dtt-row"><span class="dtt-label"><span class="dtt-dot" style="background:#8b6914"></span>MFD Corporate</span><span class="dtt-val">'+p.mfdc_cnt.toLocaleString()+'</span></div>':'')+'</div></div>',{sticky:true,className:'',offset:[10,0]}).openTooltip();},mouseout:function(e){choroLayer.resetStyle(e.target);e.target.closeTooltip();},click:function(e){drillInto(feature,layer);}});}}).addTo(map);
-    }
-
-    // Capital district labels
-    var capitalCentroids=[];
-    function buildDistrictLabels_capital(){if(!distGeoJSON)return;capitalCentroids=[];distGeoJSON.features.forEach(function(f){try{var tmp=L.geoJSON(f);var b=tmp.getBounds();capitalCentroids.push({center:b.getCenter(),name:f.properties.DISTRICT,bounds:b});}catch(e){}});}
-    function updateLabelVisibility_capital(){if(currentMode!=='capital')return;if(distLabelsLayer){map.removeLayer(distLabelsLayer);distLabelsLayer=null;}var z=map.getZoom();if(z<8||(currentView!=='choro'&&!drilldownActive))return;var viewBounds=map.getBounds();distLabelsLayer=L.layerGroup();var placed=[];capitalCentroids.forEach(function(d){if(!viewBounds.intersects(d.bounds))return;var px=map.latLngToContainerPoint(d.center);var tooClose=placed.some(function(p){return Math.abs(px.x-p.x)<120&&Math.abs(px.y-p.y)<30;});if(tooClose)return;placed.push(px);distLabelsLayer.addLayer(L.marker(d.center,{icon:L.divIcon({className:'dist-label',html:d.name,iconSize:[0,0],iconAnchor:[0,0]}),interactive:false}));});distLabelsLayer.addTo(map);}
-
-    function drillInto(feature,layer){var p=feature.properties;drilldownActive=true;var stateCode=STATE_NAME_CODE[p.STATE_UT?.toUpperCase()];if(stateCode)capitalStateFilter=stateCode;map.getContainer().classList.add('clusters-hidden');map.getContainer().classList.remove('clusters-visible');[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(!c._map)c.addTo(map);});renderMarkers();var total=getFilteredTotal(p);var html='<strong>'+p.DISTRICT+'</strong><br><span style="font-size:9px;color:#888078">'+p.STATE_UT+'</span><br>'+total.toLocaleString()+' access points';var el=document.getElementById('stats-capital');if(el)el.innerHTML=html;window.dispatchEvent(new CustomEvent('finer:capitalStatsUpdate',{detail:{html:html}}));window.dispatchEvent(new CustomEvent('finer:drilldown',{detail:{active:true}}));
-      map.flyToBounds(layer.getBounds(),{padding:[40,40],maxZoom:12,duration:1.0});map.once('moveend',function(){map.getContainer().classList.remove('clusters-hidden');map.getContainer().classList.add('clusters-visible');});}
-
-    function exitDrilldown(){drilldownActive=false;window.dispatchEvent(new CustomEvent('finer:drilldown',{detail:{active:false}}));map.getContainer().classList.remove('clusters-visible');map.getContainer().classList.add('clusters-hidden');clearRbiOutlets();setTimeout(function(){if(currentView==='choro'){[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(c._map)map.removeLayer(c);});}map.getContainer().classList.remove('clusters-hidden');capitalStateFilter='';map.flyToBounds(INDIA_BOUNDS,{padding:[20,20],duration:1.0});renderMarkers();window.__FINER.drilldownActive=false;window.dispatchEvent(new CustomEvent('finer:stateUpdate'));},400);}
-
-    function setView(mode){currentView=mode;window.__FINER.capitalView=mode;window.dispatchEvent(new CustomEvent('finer:stateUpdate'));if(mode==='choro'){[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(c._map)map.removeLayer(c);});buildChoropleth_capital();}else{if(choroLayer){map.removeLayer(choroLayer);choroLayer=null;}[clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){if(!c._map)c.addTo(map);});renderMarkers();}}
-
-    function buildMarkersOnce(data,icon,popupFn){return data.map(function(c){var ll=coordsMap[c.p];if(!ll)return null;var m=L.marker([ll[0]+(Math.random()-0.5)*0.002,ll[1]+(Math.random()-0.5)*0.002],{icon:icon});m.on('click',function(){if(!this._pb){this.bindPopup(popupFn(c),{maxWidth:260}).openPopup();this._pb=true;}});m._data=c;return m;}).filter(Boolean);}
-
-    function buildPopup(c,dep){var email=c.e?'<a href="mailto:'+c.e+'">'+c.e+'</a>':'—';var type=c.t?'<div style="font-size:9px;color:#888078;font-style:italic;margin-bottom:4px">'+c.t+'</div>':'';return'<div class="pname">'+c.n+'</div><span class="pbadge '+dep+'">'+dep.toUpperCase()+'</span>'+type+'<div class="paddr">'+c.a.slice(0,140)+'</div><div class="pmeta">✉ '+email+'<br>Pin '+c.p+'</div>';}
-    function buildMFDPopup(c,type){var cls=type==='Corporate'?'mfdc':'mfdi';return'<div class="pname">'+c.n+'</div><span class="pbadge '+cls+'">MFD '+type+'</span><div style="font-size:9px;color:#888078;margin-bottom:4px">'+(c.c||'')+'</div><div class="pmeta">ARN: '+c.arn+'<br>Pin: '+c.p+'</div>';}
-
-    // Load capital markets data
-    setCapitalStatus('Fetching data…');
-    Promise.all([fetch(CDSL_URL).then(function(r){return r.json();}),fetch(NSDL_URL).then(function(r){return r.json();}),fetch(COORDS_URL).then(function(r){return r.json();}),fetch(MFDI_URL).then(function(r){return r.json();}),fetch(MFDC_URL).then(function(r){return r.json();}),fetch(DIST_URL).then(function(r){return r.json();})]).then(function(results){
-      cdslData=results[0];nsdlData=results[1];coordsMap=results[2];mfdiData=results[3];mfdcData=results[4];distGeoJSON=results[5];
-      setCapitalStatus('Building markers…');
-      markerCache.cdsl=buildMarkersOnce(cdslData,iconCDSL,function(c){return buildPopup(c,'cdsl');});
-      markerCache.nsdl=buildMarkersOnce(nsdlData,iconNSDL,function(c){return buildPopup(c,'nsdl');});
-      markerCache.mfdi=buildMarkersOnce(mfdiData,iconMFDI,function(c){return buildMFDPopup(c,'Individual');});
-      markerCache.mfdc=buildMarkersOnce(mfdcData,iconMFDC,function(c){return buildMFDPopup(c,'Corporate');});
-      clusterCDSL.addLayers(markerCache.cdsl);clusterNSDL.addLayers(markerCache.nsdl);clusterMFDI.addLayers(markerCache.mfdi);clusterMFDC.addLayers(markerCache.mfdc);
-      [clusterCDSL,clusterNSDL,clusterMFDI,clusterMFDC].forEach(function(c){map.removeLayer(c);});
-      buildStateDropdown([].concat(cdslData,nsdlData,mfdiData,mfdcData));
-      buildChoropleth_capital();
-      buildDistrictLabels_capital();
-      updateLabelVisibility_capital();
-      updateStats_capital();
-
-      // Default to banking mode unless ?mode=capital
-      var params = new URLSearchParams(window.location.search);
-      if (params.get('mode') !== 'capital') {
-        switchMode('banking');
-        // Check for scope=ne URL param
-        if (params.get('scope') === 'ne') {
-          switchScope('ne');
-        }
-      } else {
-        switchMode('capital');
-      }
-    }).catch(function(err){setCapitalStatus('Error: '+err.message);});
-
-    var renderTimer=null;
-    function renderMarkers(){clearTimeout(renderTimer);renderTimer=setTimeout(_doRender,80);}
-    function _doRender(){if(currentView==='choro'&&!drilldownActive){buildChoropleth_capital();updateStats_capital();return;}if(currentView==='choro'&&drilldownActive){buildChoropleth_capital();}var dq=dpQuery,sf=capitalStateFilter;function passes(c){if(dq&&!c.n.toLowerCase().includes(dq))return false;if(sf==='_NE')return NE_CODES.includes(c.st);if(sf&&sf!=='_SEP')return c.st===sf;return true;}[{cache:markerCache.cdsl,cluster:clusterCDSL,show:showCDSL},{cache:markerCache.nsdl,cluster:clusterNSDL,show:showNSDL},{cache:markerCache.mfdi,cluster:clusterMFDI,show:showMFDI},{cache:markerCache.mfdc,cluster:clusterMFDC,show:showMFDC}].forEach(function(o){o.cluster.clearLayers();if(!o.show)return;o.cluster.addLayers(o.cache.filter(function(m){return passes(m._data);}));});updateStats_capital();}
-
-    function updateStats_capital(){var dq=dpQuery,sf=capitalStateFilter;function passes(c){if(dq&&!c.n.toLowerCase().includes(dq))return false;if(sf==='_NE')return NE_CODES.includes(c.st);if(sf&&sf!=='_SEP')return c.st===sf;return true;}if(drilldownActive)return;var pC=showCDSL?markerCache.cdsl.filter(function(m){return passes(m._data);}).length:0;var pN=showNSDL?markerCache.nsdl.filter(function(m){return passes(m._data);}).length:0;var pM=showMFDI?markerCache.mfdi.filter(function(m){return passes(m._data);}).length:0;var pMC=showMFDC?markerCache.mfdc.filter(function(m){return passes(m._data);}).length:0;var html='Showing <strong>'+(pC+pN+pM+pMC).toLocaleString()+'</strong> total<br><span style="color:#b8603e">CDSL '+pC.toLocaleString()+'</span> · <span style="color:#3d7a8e">NSDL '+pN.toLocaleString()+'</span><br><span style="color:#5a7a3a">MFD-I '+pM.toLocaleString()+'</span> · <span style="color:#8b6914">MFD-C '+pMC.toLocaleString()+'</span>';var el=document.getElementById('stats-capital');if(el)el.innerHTML=html;window.dispatchEvent(new CustomEvent('finer:capitalStatsUpdate',{detail:{html:html}}));var any=dpQuery||capitalStateFilter;var resetEl=document.getElementById('btn-reset-capital');if(resetEl)resetEl.style.display=any?'block':'none';}
-
-    function buildStateDropdown(all){var NAMES={AS:'Assam',ML:'Meghalaya',MN:'Manipur',MZ:'Mizoram',NL:'Nagaland',TR:'Tripura',AR:'Arunachal Pradesh',SK:'Sikkim',DL:'Delhi',MH:'Maharashtra',GJ:'Gujarat',KA:'Karnataka',TN:'Tamil Nadu',KL:'Kerala',AP:'Andhra Pradesh',TS:'Telangana',WB:'West Bengal',UP:'Uttar Pradesh',RJ:'Rajasthan',MP:'Madhya Pradesh',HR:'Haryana',PB:'Punjab',BR:'Bihar',JH:'Jharkhand',OR:'Odisha',HP:'Himachal Pradesh',UK:'Uttarakhand',GA:'Goa',CH:'Chandigarh',CT:'Chhattisgarh',JK:'J&K / Ladakh'};var counts={};all.forEach(function(c){if(c.st)counts[c.st]=(counts[c.st]||0)+1;});var sel=document.getElementById('state-select');if(!sel)return;var neOpt=document.createElement('option');neOpt.value='_NE';neOpt.textContent='── North East India';sel.appendChild(neOpt);NE_CODES.forEach(function(code){if(!counts[code])return;var o=document.createElement('option');o.value=code;o.textContent=(NAMES[code]||code)+' ('+counts[code].toLocaleString()+')';sel.appendChild(o);});var sep=document.createElement('option');sep.value='_SEP';sep.textContent='──────────────';sel.appendChild(sep);Object.entries(counts).filter(function(e){return !NE_CODES.includes(e[0]);}).sort(function(a,b){return b[1]-a[1];}).forEach(function(e){var o=document.createElement('option');o.value=e[0];o.textContent=(NAMES[e[0]]||e[0])+' ('+e[1].toLocaleString()+')';sel.appendChild(o);});}
-
-    // ═══ Svelte event listeners (replace DOM-based capital/banking event listeners) ═══
-    window.addEventListener('finer:capitalViewChange', function(e) { setView(e.detail.view); });
-    window.addEventListener('finer:search', function(e) { dpQuery = e.detail.query; renderMarkers(); });
     window.addEventListener('finer:stateFilterChange', function(e) {
-      if (currentMode === 'capital') {
-        var val = e.detail.state;
-        capitalStateFilter = val ? STATE_NAME_CODE[val?.toUpperCase()] || val : '';
-        renderMarkers();
-        if (!val) { map.flyToBounds(INDIA_BOUNDS, {padding:[20,20], duration:1.2}); return; }
-        var lats=[], lons=[];
-        [].concat(showCDSL?markerCache.cdsl:[],showNSDL?markerCache.nsdl:[],showMFDI?markerCache.mfdi:[],showMFDC?markerCache.mfdc:[]).forEach(function(m){
-          var c=m._data; var match = capitalStateFilter==='_NE' ? NE_CODES.includes(c.st) : c.st===capitalStateFilter;
-          if(!match) return; var ll=coordsMap[c.p]; if(ll){lats.push(ll[0]);lons.push(ll[1]);}
-        });
-        if(lats.length) map.flyToBounds([[Math.min.apply(null,lats)-0.3,Math.min.apply(null,lons)-0.3],[Math.max.apply(null,lats)+0.3,Math.max.apply(null,lons)+0.3]],{padding:[40,40],maxZoom:10,duration:1.2});
-      } else {
-        bankingStateFilter = e.detail.state;
-        if (slbcLoaded) { buildChoropleth_banking(); updateLabelVisibility_banking(); }
-        if (bankingStateFilter) {
-          var stateFts = distGeoJSON ? distGeoJSON.features.filter(function(f) {
-            return f.properties.STATE_UT?.toUpperCase()?.trim() === bankingStateFilter;
-          }) : [];
-          if (stateFts.length) {
-            var group = L.geoJSON({ type: 'FeatureCollection', features: stateFts });
-            map.flyToBounds(group.getBounds(), { padding: [40, 40], maxZoom: 9, duration: 1.0 });
-          }
-        } else { flyToNE(); }
-      }
-    });
-    window.addEventListener('finer:layerToggle', function(e) {
-      var l = e.detail.layer;
-      if (l === 'cdsl') showCDSL = e.detail.visible;
-      else if (l === 'nsdl') showNSDL = e.detail.visible;
-      else if (l === 'mfdi') showMFDI = e.detail.visible;
-      else if (l === 'mfdc') showMFDC = e.detail.visible;
-      renderMarkers();
-    });
-    window.addEventListener('finer:resetCapital', function() {
-      dpQuery=''; capitalStateFilter=''; drilldownActive=false;
-      showCDSL=showNSDL=showMFDI=showMFDC=true;
-      map.flyToBounds(INDIA_BOUNDS,{padding:[20,20],duration:1.2});
-      setView('choro');
-    });
-    window.addEventListener('finer:exitDrilldown', function() { exitDrilldown(); });
-    window.addEventListener('finer:flyTo', function(e) { map.flyTo([e.detail.lat, e.detail.lng], 12, {duration: 1.2}); });
-
-    // RBI outlets toggle — listen for Svelte events
-    var outletsEnabled = false;
-    var OUTLET_MIN_ZOOM = 8;
-
-    window.addEventListener('finer:outletToggle', function(e) {
-      outletsEnabled = e.detail.enabled;
-      if (outletsEnabled) {
-        checkAndLoadOutlets();
-      } else {
-        clearRbiOutlets();
-        if (currentMode === 'banking') {
-          if (streetTile._map) map.removeLayer(streetTile);
-          if (!whiteCanvasTile._map) whiteCanvasTile.addTo(map);
-          whiteCanvasTile.bringToBack();
-          if (indiaOutlineLayer && !indiaOutlineLayer._map) indiaOutlineLayer.addTo(map);
+      bankingStateFilter = e.detail.state;
+      if (slbcLoaded) { buildChoropleth_banking(); updateLabelVisibility_banking(); }
+      if (bankingStateFilter) {
+        var stateFts = distGeoJSON ? distGeoJSON.features.filter(function(f) {
+          return f.properties.STATE_UT?.toUpperCase()?.trim() === bankingStateFilter;
+        }) : [];
+        if (stateFts.length) {
+          var group = L.geoJSON({ type: 'FeatureCollection', features: stateFts });
+          map.flyToBounds(group.getBounds(), { padding: [40, 40], maxZoom: 9, duration: 1.0 });
         }
-      }
-    });
-    window.addEventListener('finer:outletLayerToggle', function(e) {
-      var l = e.detail.layer;
-      if (l === 'branch') showBranch = e.detail.visible;
-      else if (l === 'bc') showBC = e.detail.visible;
-      else if (l === 'csp') showCSP = e.detail.visible;
-      renderRbiMarkers();
+      } else { flyToNE(); }
     });
 
-    // Detect which state is visible at map center and auto-load outlets
-    function getVisibleStateSlug() {
-      if (!distGeoJSON) return null;
-      var center = map.getCenter();
-      // Find which state the center point is in
-      for (var i = 0; i < distGeoJSON.features.length; i++) {
-        var f = distGeoJSON.features[i];
-        try {
-          var layer = L.geoJSON(f);
-          if (layer.getBounds().contains(center)) {
-            var state = (f.properties.STATE_UT || '').toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
-            if (state === 'nct-of-delhi') state = 'delhi';
-            return state;
-          }
-        } catch(e) {}
-      }
-      return null;
-    }
-
-    function checkAndLoadOutlets() {
-      if (!outletsEnabled || currentMode !== 'banking') return;
-      var zoom = map.getZoom();
-      if (zoom < OUTLET_MIN_ZOOM) {
-        // Too zoomed out — clear points but keep toggle on
-        if (rbiLoadedState) {
-          clearRbiOutlets();
-          if (streetTile._map) map.removeLayer(streetTile);
-          if (!whiteCanvasTile._map) whiteCanvasTile.addTo(map);
-          whiteCanvasTile.bringToBack();
-        }
-        var _rh=document.getElementById('rbi-hint');if(_rh)_rh.textContent = 'Zoom in to see outlet points (zoom ' + zoom + '/' + OUTLET_MIN_ZOOM + ')';
-        return;
-      }
-      // Zoomed in enough — find the state at center
-      var slug = getVisibleStateSlug();
-      if (slug && slug !== rbiLoadedState) {
-        // Show street tiles
-        if (!streetTile._map) streetTile.addTo(map);
-        streetTile.bringToBack();
-        if (whiteCanvasTile._map) map.removeLayer(whiteCanvasTile);
-        loadRbiOutlets(slug);
-      } else if (!slug) {
-        var _rh=document.getElementById('rbi-hint');if(_rh)_rh.textContent = 'Move map over India to see outlets';
-      }
-    }
-
-    // Location search — now handled by MapPanel.svelte (geocoder + suggestions)
-
-    // Map zoom/move events for capital labels
-    map.on('zoomend',function(){if(currentMode==='capital')updateLabelVisibility_capital();if(currentMode==='banking'){updateLabelVisibility_banking();checkAndLoadOutlets();}if(drilldownActive&&map.getZoom()<=8)exitDrilldown();});
-    map.on('moveend',function(){if(currentMode==='capital')updateLabelVisibility_capital();if(currentMode==='banking'){updateLabelVisibility_banking();checkAndLoadOutlets();}});
-
-    function setCapitalStatus(msg){
-      var el = document.getElementById('stats-capital');
-      if (el) el.textContent = msg;
-      window.dispatchEvent(new CustomEvent('finer:capitalStatsUpdate', { detail: { html: msg } }));
-    }
+    // Map zoom/move events for banking labels
+    map.on('zoomend', function() { if (currentMode === 'banking') updateLabelVisibility_banking(); });
+    map.on('moveend', function() { if (currentMode === 'banking') updateLabelVisibility_banking(); });
 
     // ══════════════════════════════════════════
     // Section 3 — Banking mode
@@ -721,6 +395,17 @@ const base = import.meta.env.BASE_URL;
           { field: 'rbi_outlets__semi_urban', label: 'Semi-Urban Outlets', unit: '', desc: 'Banking outlets in centres with population between 10,000 and 1 lakh.' },
           { field: 'rbi_outlets__urban', label: 'Urban Outlets', unit: '', desc: 'Banking outlets in centres with population between 1 lakh and 10 lakh.' },
           { field: 'rbi_outlets__metro', label: 'Metropolitan Outlets', unit: '', desc: 'Banking outlets in centres with population over 10 lakh.' },
+        ],
+      },
+      capital_markets_access: {
+        title: 'Capital Markets Access',
+        desc: 'Number of capital market intermediaries per district. Covers CDSL Depository Participant service centres, NSDL DP service centres, and AMFI Mutual Fund Distributors (individual and corporate). Data from CDSL, NSDL, and AMFI. Static snapshot.',
+        metrics: [
+          { field: 'cap_total', label: 'Total Access Points', unit: '', desc: 'Total capital market access points: CDSL + NSDL DP service centres + MFD individual + MFD corporate.' },
+          { field: 'cap_cdsl', label: 'CDSL Service Centres', unit: '', desc: 'CDSL Depository Participant service centres.' },
+          { field: 'cap_nsdl', label: 'NSDL Service Centres', unit: '', desc: 'NSDL Depository Participant service centres.' },
+          { field: 'cap_mfdi', label: 'MFD Individual', unit: '', desc: 'Individual Mutual Fund Distributors registered with AMFI.' },
+          { field: 'cap_mfdc', label: 'MFD Corporate', unit: '', desc: 'Corporate Mutual Fund Distributors registered with AMFI.' },
         ],
       },
     };
@@ -1457,7 +1142,7 @@ const base = import.meta.env.BASE_URL;
     var lgdCensusToNames = {};  // census_code → [canonical, ...aliases] (normalized)
     var lgdNameToCanonical = {}; // normDist(anyName) → normDist(canonical)
 
-    // Progressive loading: fetch manifest + LGD on init, then load indicator files on demand
+    // Progressive loading: fetch manifest + LGD + district boundaries on init, then load indicator files on demand
     function loadBankingData() {
       var lgdPromise = fetch(_B + 'district_lgd_codes.json')
         .then(function(r) { return r.ok ? r.json() : null; })
@@ -1465,10 +1150,14 @@ const base = import.meta.env.BASE_URL;
       var manifestPromise = fetch(_B + 'indicators/manifest.json')
         .then(function(r) { return r.ok ? r.json() : null; })
         .catch(function() { return null; });
+      var distPromise = fetch(_B + 'data/district_boundaries.geojson')
+        .then(function(r) { return r.ok ? r.json() : null; })
+        .catch(function() { return null; });
 
-      Promise.all([lgdPromise, manifestPromise]).then(function(results) {
+      Promise.all([lgdPromise, manifestPromise, distPromise]).then(function(results) {
         var lgdData = results[0];
         manifestData = results[1];
+        if (results[2]) distGeoJSON = results[2];
 
         // Build LGD resolver maps
         if (lgdData && lgdData.districts) {
@@ -1512,7 +1201,8 @@ const base = import.meta.env.BASE_URL;
     function loadIndicatorData(indicator, quarter) {
       // Static-file indicators (no quarterly data)
       if (indicator === 'rbi_banking_outlets' ||
-          indicator === 'nrlm_shg' || indicator === 'rbi_bsr_credit') {
+          indicator === 'nrlm_shg' || indicator === 'rbi_bsr_credit' ||
+          indicator === 'capital_markets_access') {
         var cacheKey = indicator + '/static';
         if (indicatorCache[cacheKey]) {
           currentIndicatorData = indicatorCache[cacheKey];
@@ -1648,61 +1338,10 @@ const base = import.meta.env.BASE_URL;
     });
 
     // ══════════════════════════════════════════
-    // Section 4 — Mode switching
+    // Section 4 — Banking mode initialization
     // ══════════════════════════════════════════
-    function switchMode(mode) {
-      if (mode === currentMode) return;
-      currentMode = mode;
-
-      // Clean up outgoing mode layers
-      if (choroLayer) { map.removeLayer(choroLayer); choroLayer = null; }
-      if (distLabelsLayer) { map.removeLayer(distLabelsLayer); distLabelsLayer = null; }
-
-      if (mode === 'capital') {
-        // Clear banking outlet points and reset toggle
-        clearRbiOutlets();
-        outletsEnabled = false;
-
-        // Switch to street map tiles
-        if (whiteCanvasTile._map) map.removeLayer(whiteCanvasTile);
-        if (indiaOutlineLayer && indiaOutlineLayer._map) map.removeLayer(indiaOutlineLayer);
-        if (!streetTile._map) streetTile.addTo(map);
-        streetTile.bringToBack();
-
-        // Restore capital mode
-        setView(currentView);
-        map.flyToBounds(INDIA_BOUNDS, { padding: [20, 20], duration: 1.0 });
-      } else {
-        // Switch back to clean white canvas
-        if (streetTile._map) map.removeLayer(streetTile);
-        if (!whiteCanvasTile._map) whiteCanvasTile.addTo(map);
-        whiteCanvasTile.bringToBack();
-        if (indiaOutlineLayer && !indiaOutlineLayer._map) indiaOutlineLayer.addTo(map);
-        if (indiaOutlineLayer) indiaOutlineLayer.bringToBack();
-        if (whiteCanvasTile._map) whiteCanvasTile.bringToBack();
-
-        // Hide capital layers
-        [clusterCDSL, clusterNSDL, clusterMFDI, clusterMFDC].forEach(function(c) { if (c._map) map.removeLayer(c); });
-        clearRbiOutlets();
-        drilldownActive = false;
-
-        if (!slbcLoaded) {
-          loadBankingData();
-        } else {
-          buildChoropleth_banking();
-          updateLabelVisibility_banking();
-          flyToNE();
-        }
-      }
-
-      // Notify Svelte components of mode change
-      window.__FINER.mode = mode;
-      window.__FINER.drilldownActive = drilldownActive;
-      window.dispatchEvent(new CustomEvent('finer:stateUpdate'));
-    }
-
-    // Mode toggle — listen for Svelte event
-    window.addEventListener('finer:modeChange', function(e) { switchMode(e.detail.mode); });
+    // Always start in banking mode — load data on startup
+    loadBankingData();
 
     // ══════════════════════════════════════════
     // Section 4b — Focus NE (block-level) scope toggle
@@ -1882,7 +1521,13 @@ const base = import.meta.env.BASE_URL;
     // ══════════════════════════════════════════
     // Section 5 — URL parameter support
     // ══════════════════════════════════════════
-    // (auto-switch is handled after capital data loads above)
+    // Check for scope=ne URL param
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('scope') === 'ne') {
+        switchScope('ne');
+      }
+    })();
 
     // ══════════════════════════════════════════
     // Section 6 — Mobile bottom sheet — now handled by MapPanel.svelte
