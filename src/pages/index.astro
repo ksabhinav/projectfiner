@@ -700,11 +700,11 @@ const base = import.meta.env.BASE_URL;
         ],
       },
       nfhs_health_insurance: {
-        title: 'Health Insurance Coverage (NFHS-5)',
-        desc: 'Percentage of households with any usual member covered under a health insurance or financing scheme. Source: National Family Health Survey (NFHS-5), 2019–21. Covers 637 districts across India.',
+        title: 'Health Insurance Coverage (NFHS)',
+        desc: 'Percentage of households with any usual member covered under a health insurance or financing scheme. Source: National Family Health Survey (NFHS). Use the timeline slider to compare NFHS-5 (2019–21) vs NFHS-4 (2015–16). Covers 637 districts across India.',
+        timePoints: ['2021-03', '2016-03'],
         metrics: [
-          { field: 'nfhs5_pct', label: 'Health Insurance Coverage (NFHS-5, 2019–21)', unit: '%', desc: 'Households with any member covered under health insurance/financing scheme. NFHS-5 (2019–21). Source: IIPS/MoHFW.' },
-          { field: 'nfhs4_pct', label: 'Health Insurance Coverage (NFHS-4, 2015–16)', unit: '%', desc: 'Households with any member covered under health insurance/financing scheme. NFHS-4 (2015–16). Source: IIPS/MoHFW.' },
+          { field: 'pct', label: 'Health Insurance Coverage', unit: '%', desc: 'Households with any member covered under health insurance or a health financing scheme. NFHS-5 (2019–21) shown at Mar 2021; NFHS-4 (2015–16) shown at Mar 2016. Source: IIPS/MoHFW.' },
         ],
       },
       rbi_banking_outlets: {
@@ -737,6 +737,7 @@ const base = import.meta.env.BASE_URL;
     var slbcData = {};           // Legacy — kept for backward compat but unused in progressive mode
     var indicatorCache = {};     // Progressive: cache[indicator][quarter] = {districts: [...]}
     var manifestData = null;     // {indicators: [...], quarters: [...], latest_quarter: '...'}
+    var manifestQuarters = [];   // Saved global quarters — restored when leaving per-indicator time points
     var currentIndicatorData = null; // Currently loaded indicator file
     var currentIndicator = 'digital_transactions';
     var currentMetricIdx = 0;
@@ -1392,6 +1393,7 @@ const base = import.meta.env.BASE_URL;
       // Use manifest quarters if available (progressive loading), otherwise scan slbcData (legacy)
       if (manifestData && manifestData.quarters && manifestData.quarters.length > 0) {
         sortedQuarters = manifestData.quarters.slice(); // already sorted latest-first
+        manifestQuarters = sortedQuarters.slice();      // save for restoring after per-indicator time points
       } else {
         var qSet = new Set();
         for (var slug of Object.keys(slbcData)) {
@@ -1401,11 +1403,33 @@ const base = import.meta.env.BASE_URL;
           }
         }
         sortedQuarters = Array.from(qSet).sort().reverse();
+        manifestQuarters = sortedQuarters.slice();
       }
       currentQIdx = 0;
       currentQuarter = sortedQuarters[currentQIdx];
 
       // Update __FINER and notify TimelineSlider.svelte
+      window.__FINER.sortedQuarters = sortedQuarters;
+      window.__FINER.quarter = currentQuarter;
+      window.dispatchEvent(new CustomEvent('finer:quartersReady', { detail: { quarters: sortedQuarters } }));
+    }
+
+    // Switch timeline slider to a per-indicator set of time points (e.g. NFHS-5 vs NFHS-4)
+    function switchSliderToTimePoints(pts) {
+      sortedQuarters = pts.slice();
+      currentQIdx = 0;
+      currentQuarter = sortedQuarters[0];
+      window.__FINER.sortedQuarters = sortedQuarters;
+      window.__FINER.quarter = currentQuarter;
+      window.dispatchEvent(new CustomEvent('finer:quartersReady', { detail: { quarters: sortedQuarters } }));
+    }
+
+    // Restore timeline slider to global manifest quarters
+    function restoreSliderToManifest() {
+      if (!manifestQuarters.length) return;
+      sortedQuarters = manifestQuarters.slice();
+      currentQIdx = 0;
+      currentQuarter = sortedQuarters[0];
       window.__FINER.sortedQuarters = sortedQuarters;
       window.__FINER.quarter = currentQuarter;
       window.dispatchEvent(new CustomEvent('finer:quartersReady', { detail: { quarters: sortedQuarters } }));
@@ -1485,7 +1509,7 @@ const base = import.meta.env.BASE_URL;
     // Falls back to nearest earlier quarter if requested quarter has very sparse data
     function loadIndicatorData(indicator, quarter) {
       // Static-file indicators (no quarterly data)
-      if (indicator === 'rbi_banking_outlets' || indicator === 'nfhs_health_insurance' ||
+      if (indicator === 'rbi_banking_outlets' ||
           indicator === 'nrlm_shg' || indicator === 'rbi_bsr_credit') {
         var cacheKey = indicator + '/static';
         if (indicatorCache[cacheKey]) {
@@ -1572,9 +1596,21 @@ const base = import.meta.env.BASE_URL;
 
     // Banking event listeners — listen for Svelte events
     window.addEventListener('finer:indicatorChange', function(e) {
+      var prevIndicator = currentIndicator;
       currentIndicator = e.detail.indicator;
       currentMetricIdx = e.detail.metricIdx;
       updateTimelineColor();
+
+      var ind = INDICATORS[currentIndicator];
+      var prevInd = INDICATORS[prevIndicator];
+      if (ind && ind.timePoints) {
+        // Indicator has its own time points — swap slider to those
+        switchSliderToTimePoints(ind.timePoints);
+      } else if (prevInd && prevInd.timePoints) {
+        // Coming from a per-indicator time points indicator — restore global quarters
+        restoreSliderToManifest();
+      }
+
       if (slbcLoaded) {
         loadIndicatorData(currentIndicator, currentQuarter).then(function() {
           buildChoropleth_banking();
