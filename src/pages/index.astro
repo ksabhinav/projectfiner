@@ -676,6 +676,14 @@ const base = import.meta.env.BASE_URL;
           { field: 'total_mudra_disb_amt', label: 'Total MUDRA Amount', unit: '₹', desc: 'Total MUDRA loan amount disbursed in Rs. Lakhs.', fallbacks: ['total_mudra_o_s_amt'] },
         ],
       },
+      nfhs_health_insurance: {
+        title: 'Health Insurance Coverage (NFHS-5)',
+        desc: 'Percentage of households with any usual member covered under a health insurance or financing scheme. Source: National Family Health Survey (NFHS-5), 2019–21. Covers 637 districts across India.',
+        metrics: [
+          { field: 'nfhs5_pct', label: 'Health Insurance Coverage (NFHS-5, 2019–21)', unit: '%', desc: 'Households with any member covered under health insurance/financing scheme. NFHS-5 (2019–21). Source: IIPS/MoHFW.' },
+          { field: 'nfhs4_pct', label: 'Health Insurance Coverage (NFHS-4, 2015–16)', unit: '%', desc: 'Households with any member covered under health insurance/financing scheme. NFHS-4 (2015–16). Source: IIPS/MoHFW.' },
+        ],
+      },
       rbi_banking_outlets: {
         title: 'Banking Infrastructure (RBI)',
         desc: 'Comprehensive banking outlet data from RBI\'s DBIE portal covering 2.47 million outlets across India — every bank branch, Business Correspondent, CSP, ATM, and Digital Banking Unit with exact GPS coordinates.',
@@ -1445,8 +1453,8 @@ const base = import.meta.env.BASE_URL;
     // Load a single indicator file (~50-100 KB) for the given indicator+quarter
     // Falls back to nearest earlier quarter if requested quarter has very sparse data
     function loadIndicatorData(indicator, quarter) {
-      // RBI outlets has a special 'static' file (no quarterly data)
-      if (indicator === 'rbi_banking_outlets') {
+      // Static-file indicators (no quarterly data)
+      if (indicator === 'rbi_banking_outlets' || indicator === 'nfhs_health_insurance') {
         var cacheKey = indicator + '/static';
         if (indicatorCache[cacheKey]) {
           currentIndicatorData = indicatorCache[cacheKey];
