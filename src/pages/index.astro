@@ -70,10 +70,10 @@ const base = import.meta.env.BASE_URL;
 
     var _isMobile = window.innerWidth <= 640;
     var INDIA_BOUNDS = _isMobile
-      ? L.latLngBounds(L.latLng(0, 60.0), L.latLng(45, 112.0))  // Extended for mobile panning
-      : L.latLngBounds(L.latLng(2, 62.0), L.latLng(40, 112.0)); // Wide bounds for panning + zoom on western states
+      ? L.latLngBounds(L.latLng(0, 48.0), L.latLng(45, 115.0))  // Wide west so fitBounds padding isn't clamped
+      : L.latLngBounds(L.latLng(2, 50.0), L.latLng(40, 115.0)); // Wide west so fitBounds padding isn't clamped
     var NE_BOUNDS    = L.latLngBounds(L.latLng(17.5, 79.5), L.latLng(29.5, 97.5));
-    var ALL_STATES_BOUNDS = L.latLngBounds(L.latLng(8, 68), L.latLng(31, 97.5)); // All 20 states incl HR
+    var ALL_STATES_BOUNDS = L.latLngBounds(L.latLng(7.5, 67.5), L.latLng(35.5, 98)); // Full India incl J&K, Kutch, A&N
     var NE_CENTER    = [20, 82.5]; // Visual center of all 19 states (lat 8-30, lng 68-97.5)
     var NE_CODES     = ['AS','ML','MN','MZ','NL','TR','AR','SK','BR','WB','JH','OR','CT','KL','KA','TN','RJ','GJ','MH','HR','TS','UK'];
     var NE_STATES    = ['ASSAM','MEGHALAYA','MANIPUR','MIZORAM','NAGALAND','TRIPURA','ARUNACHAL PRADESH','SIKKIM','BIHAR','WEST BENGAL','JHARKHAND','ODISHA','CHHATTISGARH','KERALA','KARNATAKA','TAMIL NADU','RAJASTHAN','GUJARAT','MAHARASHTRA','HARYANA','TELANGANA','UTTARAKHAND','ANDHRA PRADESH','MADHYA PRADESH','UTTAR PRADESH','PUNJAB','HIMACHAL PRADESH','JAMMU AND KASHMIR','GOA','DELHI','CHANDIGARH','PUDUCHERRY','ANDAMAN AND NICOBAR ISLANDS','DADRA & NAGAR HAVELI & DAMAN & DIU','LADAKH','LAKSHADWEEP'];
@@ -96,15 +96,15 @@ const base = import.meta.env.BASE_URL;
     };
 
     // Map init — use fitBounds immediately to avoid layout shift when data loads
-    var map = L.map('map',{center:[22,82.5],zoom:4,minZoom:4,maxZoom:18,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false,preferCanvas:true,doubleClickZoom:false});
+    var map = L.map('map',{center:[22,82.5],zoom:5,minZoom:4,maxZoom:18,zoomSnap:0,zoomDelta:1,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false,preferCanvas:true,doubleClickZoom:false});
 
     // Compute panel-aware padding dynamically from actual DOM
     function getPanelPadding() {
       var isMobile = window.innerWidth <= 640;
       if (isMobile) return { paddingTopLeft: [10, 10], paddingBottomRight: [10, 80] };
       var panel = document.getElementById('panel');
-      var panelW = panel ? (panel.offsetWidth + panel.offsetLeft + 30) : 330;
-      var sliderW = 90; // timeline slider + zoom controls + margin
+      var panelW = panel ? (panel.offsetWidth + panel.offsetLeft + 12) : 314;
+      var sliderW = 65; // timeline slider + zoom controls + margin
       return { paddingTopLeft: [panelW, 10], paddingBottomRight: [sliderW, 10] };
     }
 
