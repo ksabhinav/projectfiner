@@ -676,6 +676,29 @@ const base = import.meta.env.BASE_URL;
           { field: 'total_mudra_disb_amt', label: 'Total MUDRA Amount', unit: '₹', desc: 'Total MUDRA loan amount disbursed in Rs. Lakhs.', fallbacks: ['total_mudra_o_s_amt'] },
         ],
       },
+      nrlm_shg: {
+        title: 'Self-Help Groups (NRLM)',
+        desc: 'District-level SHG formation data from DAY-NRLM (Deendayal Antyodaya Yojana – National Rural Livelihoods Mission). Covers 745 districts across all states. Live data scraped from nrlm.gov.in.',
+        metrics: [
+          { field: 'shg_total', label: 'Total SHGs', unit: '', desc: 'Total Self-Help Groups in the district (new + revived + pre-NRLM). Source: DAY-NRLM MIS, nrlm.gov.in.' },
+          { field: 'members_total', label: 'Total SHG Members', unit: '', desc: 'Total women members across all SHGs in the district. Each SHG typically has 10–20 members.' },
+          { field: 'shg_new', label: 'New SHGs', unit: '', desc: 'SHGs formed under the current NRLM programme.' },
+          { field: 'shg_prenrlm', label: 'Pre-NRLM SHGs', unit: '', desc: 'Legacy SHGs formed before NRLM, now integrated into the mission.' },
+        ],
+      },
+      rbi_bsr_credit: {
+        title: 'Bank Credit (RBI BSR-1)',
+        desc: 'District-level outstanding bank credit from RBI\'s Basic Statistical Returns (BSR-1). Covers 698 districts. Source: RBI DBIE, data as of March 2025 and March 2020.',
+        metrics: [
+          { field: 'total_accounts_2025', label: 'Total Credit Accounts (2025)', unit: '', desc: 'Total number of outstanding credit accounts across all banks, population groups, and sectors. March 2025. Source: RBI BSR-1.' },
+          { field: 'total_credit_lakhs_2025', label: 'Total Credit Outstanding (2025)', unit: '₹', desc: 'Total outstanding bank credit in Rs. Lakhs. March 2025. Source: RBI BSR-1.' },
+          { field: 'agri_accounts_2025', label: 'Agriculture Credit Accounts (2025)', unit: '', desc: 'Outstanding agricultural credit accounts (direct + indirect finance). March 2025.' },
+          { field: 'personal_loan_accounts_2025', label: 'Personal Loan Accounts (2025)', unit: '', desc: 'Outstanding personal loan accounts (housing, vehicles, education, consumer durables, other). March 2025.' },
+          { field: 'rural_accounts_2025', label: 'Rural Credit Accounts (2025)', unit: '', desc: 'Credit accounts in rural centres (population < 10,000). March 2025.' },
+          { field: 'total_accounts_2020', label: 'Total Credit Accounts (2020)', unit: '', desc: 'Total outstanding credit accounts. March 2020. Source: RBI BSR-1.' },
+          { field: 'total_credit_lakhs_2020', label: 'Total Credit Outstanding (2020)', unit: '₹', desc: 'Total outstanding bank credit in Rs. Lakhs. March 2020.' },
+        ],
+      },
       nfhs_health_insurance: {
         title: 'Health Insurance Coverage (NFHS-5)',
         desc: 'Percentage of households with any usual member covered under a health insurance or financing scheme. Source: National Family Health Survey (NFHS-5), 2019–21. Covers 637 districts across India.',
@@ -1454,13 +1477,21 @@ const base = import.meta.env.BASE_URL;
     // Falls back to nearest earlier quarter if requested quarter has very sparse data
     function loadIndicatorData(indicator, quarter) {
       // Static-file indicators (no quarterly data)
-      if (indicator === 'rbi_banking_outlets' || indicator === 'nfhs_health_insurance') {
+      if (indicator === 'rbi_banking_outlets' || indicator === 'nfhs_health_insurance' ||
+          indicator === 'nrlm_shg' || indicator === 'rbi_bsr_credit') {
         var cacheKey = indicator + '/static';
         if (indicatorCache[cacheKey]) {
           currentIndicatorData = indicatorCache[cacheKey];
           return Promise.resolve();
         }
-        return fetch(_B + 'indicators/' + indicator + '/static.json')
+        var staticPaths = {
+          'nrlm_shg': 'nrlm/shg_district.json',
+          'rbi_bsr_credit': 'rbi/bsr_district_summary.json',
+        };
+        var staticUrl = staticPaths[indicator]
+          ? _B + staticPaths[indicator]
+          : _B + 'indicators/' + indicator + '/static.json';
+        return fetch(staticUrl)
           .then(function(r) { return r.ok ? r.json() : null; })
           .then(function(data) {
             if (data) { indicatorCache[cacheKey] = data; currentIndicatorData = data; }
