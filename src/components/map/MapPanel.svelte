@@ -103,6 +103,9 @@
     { value: 'education_loan', label: 'Education Loans' },
     { value: 'pmmy_mudra_disbursement', label: 'MUDRA / PMMY' },
     { value: 'rbi_banking_outlets', label: 'Banking Infrastructure (RBI)' },
+    { value: 'nrlm_shg', label: 'Self-Help Groups (NRLM)' },
+    { value: 'rbi_bsr_credit', label: 'Bank Credit (RBI BSR-1)' },
+    { value: 'nfhs_health_insurance', label: 'Health Insurance (NFHS-5)' },
   ];
 
   // Geocoder debounce

@@ -920,8 +920,14 @@ const base = import.meta.env.BASE_URL;
     // Resolve a GeoJSON feature to a lookup entry using LGD census codes first, then name matching
     function resolveLookup(feature, lookup) {
       var props = feature.properties;
+      // 0. Try direct LGD code match (for NRLM/RBI data that has lgd field)
+      var lgdCode = String(props.DIST_LGD || '').trim();
+      if (lgdCode) {
+        var lgdEntry = lookup.get('__lgd__' + lgdCode);
+        if (lgdEntry) return lgdEntry;
+      }
       // 1. Try LGD census code (DIST_LGD in GeoJSON = census 2011 code)
-      var code = String(props.DIST_LGD || '').trim();
+      var code = lgdCode;
       if (code && code !== 'NOT AVAILABLE' && lgdCensusToNames[code]) {
         var names = lgdCensusToNames[code];
         for (var i = 0; i < names.length; i++) {
@@ -1052,6 +1058,8 @@ const base = import.meta.env.BASE_URL;
           entry.fallbackQuarter = currentIndicatorData.quarter;
         }
         lookup.set(dn, entry);
+        // Also key by LGD code for direct matching (NRLM, RBI BSR data)
+        if (rec.lgd) lookup.set('__lgd__' + String(rec.lgd), entry);
       }
       return lookup;
     }
