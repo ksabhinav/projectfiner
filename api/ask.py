@@ -77,7 +77,7 @@ def bm25_search(query, top_k=8, state_filter=None):
     return scores[:top_k]
 
 
-# ── Claude Answering ─────────────────────────────────────────
+# ── Llama Answering (Groq) ────────────────────────────────────
 
 SYSTEM_PROMPT = """You are a knowledgeable assistant for Project FINER, a financial inclusion research platform focused on India. You answer questions based on SLBC (State Level Bankers' Committee) data — structured district-level tables, agenda booklets, and minutes of meetings.
 
@@ -92,10 +92,10 @@ Guidelines:
 - States covered: Assam, Meghalaya, Manipur, Mizoram, Nagaland, Arunachal Pradesh, Tripura, Sikkim, Bihar, West Bengal, Jharkhand, Odisha, Chhattisgarh, Karnataka, Kerala, Tamil Nadu."""
 
 
-def ask_claude(question, context_chunks):
-    api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+def ask_llama(question, context_chunks):
+    api_key = os.environ.get("GROQ_API_KEY", "").strip()
     if not api_key:
-        raise Exception("ANTHROPIC_API_KEY not set")
+        raise Exception("GROQ_API_KEY not set")
 
     # Build context from retrieved chunks
     context_parts = []
@@ -106,13 +106,13 @@ def ask_claude(question, context_chunks):
     context = "\n\n".join(context_parts)
 
     payload = json.dumps({
-        "model": "claude-sonnet-4-20250514",
+        "model": "llama-3.3-70b-versatile",
         "max_tokens": 1024,
-        "system": SYSTEM_PROMPT,
         "messages": [
+            {"role": "system", "content": SYSTEM_PROMPT},
             {
                 "role": "user",
-                "content": f"""Based on the following excerpts from SLBC NE meeting documents, answer this question:
+                "content": f"""Based on the following excerpts from SLBC meeting documents, answer this question:
 
 Question: {question}
 
@@ -125,12 +125,11 @@ Answer the question based on the context above. Cite the source documents when r
     }).encode("utf-8")
 
     req = urllib.request.Request(
-        "https://api.anthropic.com/v1/messages",
+        "https://api.groq.com/openai/v1/chat/completions",
         data=payload,
         headers={
             "Content-Type": "application/json",
-            "x-api-key": api_key,
-            "anthropic-version": "2023-06-01",
+            "Authorization": f"Bearer {api_key}",
         },
         method="POST",
     )
@@ -138,7 +137,7 @@ Answer the question based on the context above. Cite the source documents when r
     with urllib.request.urlopen(req, timeout=25) as resp:
         result = json.loads(resp.read().decode("utf-8"))
 
-    return result["content"][0]["text"]
+    return result["choices"][0]["message"]["content"]
 
 
 # ── State Detection ───────────────────────────────────────────
@@ -272,11 +271,11 @@ class handler(BaseHTTPRequestHandler):
             })
             return
 
-        # Ask Claude
+        # Ask Llama via Groq
         try:
-            answer = ask_claude(question, context_chunks)
+            answer = ask_llama(question, context_chunks)
         except Exception as e:
-            self._respond(500, {"error": f"Claude API error: {str(e)}"})
+            self._respond(500, {"error": f"Groq API error: {str(e)}"})
             return
 
         sources = [
