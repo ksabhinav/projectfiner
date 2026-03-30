@@ -106,7 +106,7 @@ const base = import.meta.env.BASE_URL;
       var panelW = panel ? (panel.offsetWidth + panel.offsetLeft + 12) : 314;
       var sliderW = 65; // timeline slider + zoom controls + margin
       var headerEl = document.querySelector('header');
-      var topPad = headerEl ? (headerEl.offsetHeight + 10) : 70; // clear fixed header
+      var topPad = headerEl ? (headerEl.offsetHeight + 20) : 80; // clear fixed header + breathing room
       return { paddingTopLeft: [panelW, topPad], paddingBottomRight: [sliderW, 10] };
     }
 
