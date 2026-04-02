@@ -2,10 +2,10 @@
 
 ## What This Project Is
 
-**Project FINER** (Financial Inclusion in the North East Region) is a data platform mapping financial inclusion across India — 36 states/UTs, 800+ districts, 16 indicators. It publishes interactive maps, charts, and downloadable datasets covering banking infrastructure, credit access, government schemes, digital payments, and capital markets.
+**Project FINER** (Financial Inclusion in the North East Region) is a data platform mapping financial inclusion across India — 36 states/UTs, 800+ districts, 20 indicators. It publishes interactive maps, charts, and downloadable datasets covering banking infrastructure, credit access, government schemes, digital payments, and capital markets.
 
 - **Hosted on**: GitHub Pages with custom domain at `projectfiner.com`
-- **Large data**: Cloudflare R2 at `data.projectfiner.com` (banking outlet point data, 1.4 GB)
+- **Large data**: Cloudflare R2 at `data.projectfiner.com` (banking outlet point data 1.4 GB + RAG index files ~142 MB)
 - **Repo**: `https://github.com/ksabhinav/projectfiner.git`
 - **Branch**: `main`
 - **Framework**: Astro 6 + Svelte 5 (static site generation)
@@ -53,9 +53,9 @@ projectfiner/
 │   │       └── Insights.svelte            # Curated data stories with category filter pills
 │   │
 │   ├── pages/
-│   │   ├── index.astro                     # HOMEPAGE — Full-screen Leaflet map (capital markets + FI indicators)
+│   │   ├── index.astro                     # HOMEPAGE — Full-screen Leaflet choropleth map (20 FI indicators)
 │   │   ├── about/index.astro               # About page (what FINER is, coverage, data sources, contact)
-│   │   ├── ask/index.astro                 # AI chat interface
+│   │   ├── ask/index.astro                 # AI chat interface (RAG over SLBC + all indicators via Groq/Llama)
 │   │   ├── slbc-data/
 │   │   │   ├── index.astro                 # Redirects to data-download
 │   │   │   └── {state}/download.astro      # Per-state SLBC download pages
@@ -107,8 +107,21 @@ projectfiner/
     │   # Per-state outlet JSON files (1.4 GB total) hosted on Cloudflare R2:
     │   # https://data.projectfiner.com/banking-outlets/{state}.json
     ├── district_lgd_codes.json             # 765 districts with LGD codes + 109 aliases
+    ├── indicators/
+    │   ├── manifest.json                   # {indicators: [...], quarters: [...], latest_quarter}
+    │   ├── capital_markets_access/
+    │   │   └── static.json                 # 780 districts: cap_total, cap_cdsl, cap_nsdl, cap_mfdi, cap_mfdc
+    │   └── {indicator}/                    # One dir per indicator, quarterly JSON files
     └── data/
         └── district_boundaries.geojson     # District boundaries with capital markets counts
+│
+├── scripts/
+│   └── rag/
+│       ├── build_index.py                  # Build BM25 index from text files → data/rag/index/
+│       ├── ingest_structured_data.py       # SLBC _complete.json → text chunks
+│       ├── ingest_indicator_files.py       # public/indicators/ → text chunks (all 20 indicators)
+│       ├── extract_text.py                 # PDF text extraction
+│       └── summarize_minutes.py            # Meeting minutes summariser (uses ANTHROPIC_API_KEY)
 │
 ├── db/                                     # SQLite backbone (data pipeline)
 │   ├── finer.db                            # SQLite database (gitignored, ~200 MB, rebuilt via build.sh)
@@ -163,29 +176,23 @@ projectfiner/
 
 ### 1. Capital Markets Access
 
-Interactive map (homepage) + downloadable data on capital markets infrastructure across India.
+Downloadable data on capital markets infrastructure across India. The raw point data (CDSL/NSDL/MFD individual locations) is available for download on the Downloads page but is **no longer shown as individual markers on the map** — it is now aggregated to district-level counts and exposed as the `capital_markets_access` choropleth indicator.
 
 **Data sources** (scraped from official websites):
-- **CDSL** — Depository Participant service centres (20,612 records)
-- **NSDL** — Depository Participant service centres (57,005 records)
-- **AMFI** — Mutual Fund Distributors, Individual (187,254 records)
-- **AMFI** — Mutual Fund Distributors, Corporate (10,760 records)
+- **CDSL** — Depository Participant service centres (20,612 records) — `public/DPSCs/cdsl_dp_centres.json`
+- **NSDL** — Depository Participant service centres (57,005 records) — `public/DPSCs/nsdl_dp_centres.json`
+- **AMFI** — Mutual Fund Distributors, Individual (187,254 records) — `public/MFDs/mfd_individual.json`
+- **AMFI** — Mutual Fund Distributors, Corporate (10,760 records) — `public/MFDs/mfd_corporate.json`
 
-**JSON format**: Compressed single-character keys to reduce file size:
+**JSON format**: Compressed single-character keys:
 ```
 n = name, a = address, id = DP ID, p = pincode, e = email,
 u = website, st = state, loc = city/location, t = type, arn = ARN, c = city
 ```
 
-**Homepage map features**:
-- Leaflet + MarkerCluster with 260k+ access points
-- `preferCanvas: true` on map init to avoid SVG pixelation during zoom/flyTo
-- Choropleth view (district-level density) and Points view (clustered markers)
-- Layer toggles for CDSL, NSDL, MFD Individual, MFD Corporate
-- District drilldown on click, state filtering, location search (Photon geocoder)
-- Panel includes "Project FINER" branding + nav pills to other sections
-- Mode toggle: "Banking Access" (FI indicators choropleth) and "Capital Market Access" (points/choropleth)
-- Vertical timeline slider for quarter selection (latest at top, oldest at bottom)
+**District-level aggregate**: `public/indicators/capital_markets_access/static.json`
+- 780 districts, fields: `cap_total`, `cap_cdsl`, `cap_nsdl`, `cap_mfdi`, `cap_mfdc`
+- Source: `district_boundaries.geojson` which has `cdsl_cnt`, `nsdl_cnt`, `mfdi_cnt`, `mfdc_cnt` embedded
 
 ### 2. SLBC Data — District-Level Financial Inclusion
 
@@ -281,11 +288,11 @@ Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) q
 
 **Important**: Quarter keys in the JSON use snake_case (`june_2020`, `sept_2025`), while folder names on disk use `YYYY-MM` format (`2020-06`, `2025-09`). Mapped via `QUARTER_FOLDERS` and `QUARTER_LABELS` in `src/lib/slbc-categories.ts`.
 
-### 3. FI Indicators Choropleth (homepage, Banking Access mode)
+### 3. FI Indicators Choropleth (homepage)
 
-Full-screen Leaflet choropleth map showing 7 key financial inclusion indicators across all 22 states at the district level. Accessed via the homepage "Banking Access" mode toggle or `/?mode=banking`.
+Full-screen Leaflet choropleth map — the entire homepage. No mode toggle; always shows the FI indicator choropleth. Panel has Indicator / Metric / State dropdowns.
 
-**16 Indicators**: Credit-Deposit Ratio, PM Jan Dhan Yojana, Branch Network, Kisan Credit Card, Self Help Groups, Digital Transactions (incl. PhonePe UPI), Aadhaar Authentication, Banking Infrastructure (RBI), Social Security, PMEGP, Housing/PMAY, Stand Up India, SC/ST Lending, Women's Credit, Education Loans, MUDRA/PMMY
+**20 Indicators**: Credit-Deposit Ratio, PM Jan Dhan Yojana, Branch Network, Kisan Credit Card, Self Help Groups, Digital Transactions (incl. PhonePe UPI), Aadhaar Authentication, Banking Infrastructure (RBI), Social Security, PMEGP, Housing/PMAY, Stand Up India, SC/ST Lending, Women's Credit, Education Loans, MUDRA/PMMY, NRLM SHG, RBI BSR Credit, Health Insurance (NFHS), Capital Markets Access
 
 **800+ districts across 36 states/UTs**
 
@@ -295,13 +302,17 @@ Full-screen Leaflet choropleth map showing 7 key financial inclusion indicators 
 - Uses `flattenTimeseries()` to handle nested JSON structure
 - Uses `normalizePeriod()` to convert "June 2020" → "2020-06" for sorting
 - `preferCanvas: true` prevents SVG pixelation during `flyTo` animations
+- `zoomSnap: 0` enables fractional zoom so `fitBounds` fills the content area optimally (e.g. zoom 5.22 instead of rounding down to 5)
 - India outline GeoJSON simplified with Douglas-Peucker (`tolerance=0.001`, `preserve_topology=True`)
 
-**Map bounds** (expanded for all-India coverage):
-- `ALL_STATES_BOUNDS`: `L.latLngBounds(L.latLng(8, 68), L.latLng(31, 97.5))`
-- Desktop `maxBounds`: `L.latLngBounds(L.latLng(2, 62), L.latLng(40, 112))`
-- Mobile `maxBounds`: `L.latLngBounds(L.latLng(0, 60), L.latLng(45, 112))`
-- `flyToNE()` now uses `flyToBounds(ALL_STATES_BOUNDS)` on both mobile and desktop
+**Map bounds** (expanded for all-India coverage including J&K/Ladakh):
+- `ALL_STATES_BOUNDS`: `L.latLngBounds(L.latLng(7.5, 67.5), L.latLng(35.5, 98))` — full India incl. J&K, Kutch, A&N
+- Desktop `maxBounds`: `L.latLngBounds(L.latLng(2, 50.0), L.latLng(40, 115.0))` — west extended to 50°E so `fitBounds` padding is not clamped by `_limitCenter`
+- Mobile `maxBounds`: `L.latLngBounds(L.latLng(0, 48.0), L.latLng(45, 115.0))`
+- `flyToNE()` uses `flyToBounds(ALL_STATES_BOUNDS)` on both mobile and desktop
+- **Top padding**: `getPanelPadding()` reads `header.offsetHeight + 20` (≈80px) to clear the fixed 60px header
+
+**Critical maxBounds/fitBounds interaction**: With `maxBoundsViscosity: 1.0`, Leaflet's `_limitCenter` shifts the map center east if the ideal center (accounting for panel padding) would show area west of `maxBounds.west`. Previously `west=62°E` caused India to appear left-shifted behind the panel. Fix: expand `maxBounds` west to 50°E so the left edge at zoom 5.2 (~53°E) stays inside `maxBounds`.
 
 **Critical data matching patterns**:
 
@@ -574,14 +585,23 @@ public/indicators/
 │   └── ...
 ├── rbi_banking_outlets/
 │   └── static.json                        # No quarterly data — single snapshot
-└── ... (16 indicator directories, 437 files, 7.19 MB total)
+├── capital_markets_access/
+│   └── static.json                        # 780 districts: cap_total/cdsl/nsdl/mfdi/mfdc
+├── nfhs_health_insurance/
+│   ├── 2021-03.json                       # NFHS-5 (2019-21), 637 districts, field: pct
+│   └── 2016-03.json                       # NFHS-4 (2015-16), 637 districts, field: pct
+└── ... (20 indicator directories total)
 ```
+
+**Static indicators** (no quarterly data, load `static.json`): `rbi_banking_outlets`, `capital_markets_access`
+
+**Per-indicator timePoints** (slider shows only specific time points instead of global quarters): `nfhs_health_insurance` uses `timePoints: ['2021-03', '2016-03']` in the INDICATORS config. When selected, `switchSliderToTimePoints()` replaces the global slider quarters; `restoreSliderToManifest()` restores them on switch-away.
 
 **Important**: When indicator data changes (new SLBC extraction, new PhonePe quarter, etc.), regenerate:
 ```bash
 python3 db/export_indicator_files.py
 ```
-The frontend caches loaded indicator files in `indicatorCache` — no duplicate fetches for the same indicator+quarter.
+Then also rebuild the RAG index (see Ask/RAG section). The frontend caches loaded indicator files in `indicatorCache` — no duplicate fetches for the same indicator+quarter.
 
 ## Shared Modules (src/lib/)
 
@@ -611,11 +631,7 @@ The frontend caches loaded indicator files in `indicatorCache` — no duplicate 
 **Counts**: 167,960 branches + 2.1M BCs + 147K CSPs = 2.47M total
 - Largest: UP (443K), Bihar (260K), Maharashtra (214K)
 
-**On map**: Two forms in Banking Access mode:
-1. **Choropleth**: "Banking Infrastructure (RBI)" indicator shows district-level counts from `district_counts.json` (128 KB, in Git)
-2. **Access points**: When a state is selected, individual outlet markers load on-demand from R2 (`data.projectfiner.com/banking-outlets/{state}.json`). Color-coded: blue (branches), green (BCs), orange (CSPs). Street tiles appear behind the choropleth for geographic context. Points clear when state is deselected.
-
-**NOT in Capital Markets mode** — banking outlets are banking infrastructure, not capital market intermediaries. Capital Markets only shows CDSL, NSDL, MFD points.
+**On map**: The "Banking Infrastructure (RBI)" indicator shows district-level aggregate counts as a choropleth, loaded from `district_counts.json` (128 KB, in Git). Individual outlet markers are **not shown on the map** — only the choropleth. The per-state outlet JSON files on R2 remain available for download but are not rendered on the homepage map.
 
 ## PhonePe Pulse UPI Data
 
@@ -630,6 +646,74 @@ The frontend caches loaded indicator files in `indicatorCache` — no duplicate 
 - Merged into `slbcData` on the frontend by matching state + district + period
 
 **On map**: Part of "Digital Transactions" indicator group. Default metric when selecting Digital Transactions.
+
+## Ask / RAG (`/ask`)
+
+AI chat interface that answers questions about SLBC data and all FINER indicators using retrieval-augmented generation (RAG).
+
+**Frontend**: `src/pages/ask/index.astro` renders an `<AskChat>` Svelte component.
+
+**Backend**: Vercel serverless function at `api/ask.py` (Python, `BaseHTTPRequestHandler`).
+
+### LLM: Llama 3.3 70B via Groq
+
+- **Model**: `llama-3.3-70b-versatile`
+- **API**: Groq's OpenAI-compatible endpoint — `https://api.groq.com/openai/v1/chat/completions`
+- **Auth**: Bearer token via `GROQ_API_KEY` environment variable (set in Vercel dashboard under project Settings → Environment Variables)
+- **Why Groq**: Free tier, fast inference, no cost for the query volume this project receives
+
+### RAG Index (BM25, no embeddings)
+
+- **Algorithm**: BM25 (term frequency × inverse document frequency) — simple, no GPU, no vector DB
+- **Index files** stored on **Cloudflare R2** at `data.projectfiner.com/rag/`:
+  - `chunks.json` — all text chunks with metadata (state, type, quarter, page range, text)
+  - `bm25_params.json` — precomputed idf, per-doc TF, doc lengths, k1/b parameters
+- **Cold-start loading**: Both files fetched via `urllib.request.urlopen()` at module load time (once per Vercel function cold start). ~142 MB total.
+- **Total chunks**: ~26,107 (22,938 SLBC meeting document chunks + ~2,969 FINER indicator chunks + ~191 trend summary chunks)
+
+### Document Coverage
+
+1. **SLBC meeting documents** (~22,938 chunks): Agenda booklets, minutes, tables extracted from quarterly PDFs for all 22 states. Text files in `data/rag/text/{state}/{type}/`
+2. **FINER indicator data** (~2,969 chunks): All 20 indicators × all quarters × all states. One chunk per (indicator, quarter, state), generated from `public/indicators/` JSON files.
+3. **Trend summary chunks** (~191 chunks): One chunk per (indicator, state) covering **all quarters in a single document**. Contains the full time-series as a quarter-by-quarter table plus net change. Optimised for "how did X change over time in Y state" queries — BM25 returns the full trend in one hit instead of needing 20+ separate quarter chunks.
+
+### Rebuilding the RAG Index
+
+When indicator data or SLBC data changes, rebuild and redeploy:
+
+```bash
+# 1. Regenerate SLBC text chunks (if SLBC data changed)
+python3 scripts/rag/ingest_structured_data.py
+
+# 2. Regenerate indicator text chunks (always, since indicators update more often)
+python3 scripts/rag/ingest_indicator_files.py
+# Output: data/rag/text/{state}/tables/{indicator}_{quarter}.txt (~2,969 files)
+
+# 3. Regenerate trend summary chunks (one per indicator+state, all quarters in one chunk)
+python3 scripts/rag/build_trend_summaries.py
+# Output: data/rag/text/{state}/tables/{indicator}_trend_summary.txt (~191 files)
+# These answer "how did X change in Y" queries without needing 20+ separate chunk retrievals
+
+# 4. Rebuild BM25 index
+python3 scripts/rag/build_index.py
+# Output: data/rag/index/chunks.json, data/rag/index/bm25_params.json
+
+# 4. Upload to R2
+npx wrangler r2 object put "projectfiner-data/rag/chunks.json" \
+  --file=data/rag/index/chunks.json --content-type="application/json" --remote
+npx wrangler r2 object put "projectfiner-data/rag/bm25_params.json" \
+  --file=data/rag/index/bm25_params.json --content-type="application/json" --remote
+```
+
+No Vercel redeployment needed — the API reads fresh index from R2 on next cold start.
+
+### Query Pipeline
+
+1. Auto-detect state from query (e.g. "Assam" → `state_filter="Assam"`)
+2. BM25 search over all chunks (pre-filtered by state if detected), `top_k=30`
+3. Build context: up to 6 chunks, preferring tables for data-oriented queries
+4. Send to Llama 3.3 70B via Groq with system prompt instructing it to cite sources
+5. Return `{ answer, sources }` — sources include state, type, quarter, page range, snippet
 
 ## Data Validation Pipeline
 
@@ -656,7 +740,7 @@ The frontend caches loaded indicator files in `indicatorCache` — no duplicate 
 6. **2021 SLBC quarters have very few tables** (1–2 each) because only Excel ZIP archives were available.
 7. **PDF text reversal**: SLBC PDFs have landscape-rotated pages where cell text is stored backwards (`str[::-1]`).
 8. **SLBC category classification**: NPS tables must be classified with high-priority rules to avoid false matches from field names containing "Education" and "Loan".
-9. **Homepage IS the map**: The capital markets map is the homepage (`/`). Old `/capital-markets/map` redirects to `/`. FI indicators are accessed via `/?mode=banking` or the "Banking Access" toggle.
+9. **Homepage IS the FI choropleth map**: There is no mode toggle. The homepage always shows the FI indicator choropleth. Old `/capital-markets/map` redirects to `/`. There is no `/?mode=banking` or `/?mode=capital` — those URL params are ignored.
 10. **Timeseries JSON is nested, NOT flat**: Structure is `{ periods: [{ period, districts: [{...}] }] }`. Must flatten before use. The `flattenTimeseries()` function handles this.
 11. **Period format mismatch**: Timeseries JSON stores periods as "June 2020", "September 2024" etc., but code normalizes to "2020-06" format. Always use `normalizePeriod()`.
 12. **State file naming**: Slug uses hyphens (`arunachal-pradesh`), NOT underscores. File path: `slbc-data/arunachal-pradesh/arunachal-pradesh_fi_timeseries.json`.

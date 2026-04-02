@@ -153,7 +153,7 @@ INDICATORS = {
             {'field': 'imps_a_c', 'label': 'IMPS Transactions', 'unit': '',
              'fallbacks': ['imps', 'digital_imps_no']},
             {'field': 'cards_debit_credit_a_c', 'label': 'Card Transactions', 'unit': '',
-             'fallbacks': ['cards_debit_credit', 'cards_debit', 'digital_cards_no']},
+             'fallbacks': ['debit_credit_cards_a_c', 'cards_debit_credit', 'cards_debit', 'digital_cards_no']},
             {'field': 'ussd_a_c', 'label': 'USSD Transactions', 'unit': '',
              'fallbacks': ['ussd', 'digital_ussd_no']},
         ],

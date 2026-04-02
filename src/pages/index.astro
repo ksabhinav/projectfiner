@@ -250,7 +250,7 @@ const base = import.meta.env.BASE_URL;
           { field: 'digital_coverage_sb_a_c', label: 'SB A/Cs Digitally Covered', unit: '', desc: 'Absolute number of savings bank accounts that have been enabled with at least one digital payment mode.', fallbacks: ['total_operative_sb_a_c', 'no_of_operative_sb_a_c_covered_with_at_least_one_digital_mode', 'debit_rupay_cards_coverage_total_no_of_accounts_covered', 'debit_rupay_cards_coverage_total_no_of_accounts_covered_g', 'coverage_with_at_least_one_of_the_digital_modes_of_payment_debit_rupay_cards,_in'] },
           { field: 'bhim_upi_a_c', label: 'BHIM/UPI A/Cs (SLBC)', unit: '', desc: 'Accounts enabled for UPI payments via BHIM or other UPI apps, as reported in SLBC booklets.', fallbacks: ['bhim_upi', 'bhim_aadhaar_a_c', 'digital_bhim_upi_no'] },
           { field: 'imps_a_c', label: 'IMPS Transactions', unit: '', desc: 'Accounts enabled for Immediate Payment Service — real-time interbank transfers via mobile/internet banking.', fallbacks: ['imps', 'digital_imps_no'] },
-          { field: 'cards_debit_credit_a_c', label: 'Card Transactions', unit: '', desc: 'Accounts with active debit or credit cards that can be used at ATMs and PoS terminals.', fallbacks: ['cards_debit_credit', 'cards_debit', 'digital_cards_no'] },
+          { field: 'cards_debit_credit_a_c', label: 'Card Transactions', unit: '', desc: 'Accounts with active debit or credit cards that can be used at ATMs and PoS terminals.', fallbacks: ['debit_credit_cards_a_c', 'cards_debit_credit', 'cards_debit', 'digital_cards_no'] },
           { field: 'ussd_a_c', label: 'USSD Transactions', unit: '', desc: 'Accounts enabled for *99# USSD-based banking — works on basic feature phones without internet.', fallbacks: ['ussd', 'digital_ussd_no'] },
         ],
       },
@@ -392,7 +392,6 @@ const base = import.meta.env.BASE_URL;
           { field: 'rbi_outlets__bc', label: 'Business Correspondents', unit: '', desc: 'Banking agents with micro-ATM devices providing basic services (deposits, withdrawals, remittances) in unbanked areas. Typically shopkeepers or individual agents.' },
           { field: 'rbi_outlets__csp', label: 'Customer Service Points', unit: '', desc: 'Fixed-location service points similar to BCs but with more permanent infrastructure. Part of the Common Service Centre (CSC) network.' },
           { field: 'rbi_outlets__rural', label: 'Rural Outlets', unit: '', desc: 'Banking outlets in centres with population under 10,000. Critical for last-mile financial access in villages.' },
-          { field: 'rbi_outlets__semi_urban', label: 'Semi-Urban Outlets', unit: '', desc: 'Banking outlets in centres with population between 10,000 and 1 lakh.' },
           { field: 'rbi_outlets__urban', label: 'Urban Outlets', unit: '', desc: 'Banking outlets in centres with population between 1 lakh and 10 lakh.' },
           { field: 'rbi_outlets__metro', label: 'Metropolitan Outlets', unit: '', desc: 'Banking outlets in centres with population over 10 lakh.' },
         ],
@@ -1201,20 +1200,14 @@ const base = import.meta.env.BASE_URL;
     function loadIndicatorData(indicator, quarter) {
       // Static-file indicators (no quarterly data)
       if (indicator === 'rbi_banking_outlets' ||
-          indicator === 'nrlm_shg' || indicator === 'rbi_bsr_credit' ||
+          indicator === 'nrlm_shg' ||
           indicator === 'capital_markets_access') {
         var cacheKey = indicator + '/static';
         if (indicatorCache[cacheKey]) {
           currentIndicatorData = indicatorCache[cacheKey];
           return Promise.resolve();
         }
-        var staticPaths = {
-          'nrlm_shg': 'nrlm/shg_district.json',
-          'rbi_bsr_credit': 'rbi/bsr_district_summary.json',
-        };
-        var staticUrl = staticPaths[indicator]
-          ? _B + staticPaths[indicator]
-          : _B + 'indicators/' + indicator + '/static.json';
+        var staticUrl = _B + 'indicators/' + indicator + '/static.json';
         return fetch(staticUrl)
           .then(function(r) { return r.ok ? r.json() : null; })
           .then(function(data) {
