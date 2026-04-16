@@ -817,6 +817,11 @@ No Vercel redeployment needed — the API reads fresh index from R2 on next cold
 37. **Info tooltip descriptions**: Each of the 7 indicators and 30+ metrics has a `desc` property in the INDICATORS object. Shown via `(i)` button next to dropdowns. Hover shows a `position:fixed` popover. Touch devices: tap to show, tap elsewhere to hide.
 38. **Zoom control position**: `margin-top: 60px!important` on `.leaflet-control-zoom` to avoid overlap with the transparent Header nav capsules on the homepage.
 39. **Aadhaar cross-category fallbacks**: Only `pmjdy`, `pmjdy_2`, `pmjdy_3` — NOT `digital_transactions`, `fi_kcc`, `women_finance` (those contain different metrics like BHIM transaction counts and digital coverage, not CASA seeding/authentication).
+40. **OG image for social sharing**: `public/og-image.jpg` (1200×630, 257KB) + meta tags in `BaseLayout.astro`. WhatsApp/Telegram cache previews aggressively — share in a new chat or add `?v=2` to force re-scrape. Test at `opengraph.xyz`.
+41. **R2 CORS must include both www and non-www origins**: CORS rules at `data.projectfiner.com` must allow both `https://projectfiner.com` AND `https://www.projectfiner.com`. Missing www caused "Failed to fetch" errors for banking outlet loading.
+42. **R2 custom domain has no directory listing**: `data.projectfiner.com/` returns 404. Only direct file paths work. This is expected R2 behavior.
+43. **LFS + GitHub Pages incompatibility**: Git LFS pointer files are served as-is by GitHub Pages (133 bytes instead of actual data). All large data files must be on Cloudflare R2, not LFS.
+44. **Progressive loading fallback threshold**: When the selected quarter has fewer than 300 districts for an indicator, `loadIndicatorData()` falls back to the nearest earlier quarter with ≥300 districts.
 
 ## Data Quality Pipeline
 
