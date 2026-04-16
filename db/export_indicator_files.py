@@ -322,6 +322,17 @@ INDICATORS = {
             {'field': 'nfhs4_pct', 'label': 'NFHS-4 Coverage (%)', 'unit': '%'},
         ],
     },
+    'aadhaar_enrollment': {
+        'title': 'Aadhaar Enrollment (UIDAI)',
+        'category': None,  # From aadhaar_enrollment table, not SLBC
+        'source': 'aadhaar_dist',
+        'metrics': [
+            {'field': 'total_enrolled', 'label': 'Total New Enrollments', 'unit': ''},
+            {'field': 'age_18_plus', 'label': 'Adult (18+)', 'unit': ''},
+            {'field': 'age_5_17', 'label': 'Youth (5–17)', 'unit': ''},
+            {'field': 'age_0_5', 'label': 'Children (0–5)', 'unit': ''},
+        ],
+    },
 }
 
 # Cross-category fallbacks: when the primary category doesn't have a field,
@@ -630,6 +641,75 @@ def export_nfhs_health_insurance(db):
     return 1
 
 
+def export_aadhaar_enrollment(db):
+    """
+    Export Aadhaar enrollment data as quarterly files.
+    Source: aadhaar_enrollment table (date format DD-MM-YYYY, Apr–Dec 2025).
+    Quarter mapping:
+      months 04-06 → 2025-06 (Jun 2025 quarter, Q1 FY26)
+      months 07-09 → 2025-09 (Sep 2025 quarter, Q2 FY26)
+      months 10-12 → 2025-12 (Dec 2025 quarter, Q3 FY26)
+    """
+    out_dir = os.path.join(OUTPUT_DIR, 'aadhaar_enrollment')
+    os.makedirs(out_dir, exist_ok=True)
+
+    rows = db.execute("""
+        SELECT
+            d.name AS district_name,
+            s.slug AS state_slug,
+            CASE
+                WHEN CAST(SUBSTR(ae.date, 4, 2) AS INTEGER) BETWEEN 4 AND 6 THEN '2025-06'
+                WHEN CAST(SUBSTR(ae.date, 4, 2) AS INTEGER) BETWEEN 7 AND 9 THEN '2025-09'
+                WHEN CAST(SUBSTR(ae.date, 4, 2) AS INTEGER) BETWEEN 10 AND 12 THEN '2025-12'
+            END AS quarter_code,
+            SUM(ae.age_0_5 + ae.age_5_17 + ae.age_18_plus) AS total_enrolled,
+            SUM(ae.age_0_5)     AS age_0_5,
+            SUM(ae.age_5_17)    AS age_5_17,
+            SUM(ae.age_18_plus) AS age_18_plus
+        FROM aadhaar_enrollment ae
+        JOIN districts d ON ae.district_lgd = d.lgd_code
+        JOIN states s ON d.state_lgd_code = s.lgd_code
+        WHERE ae.district_lgd IS NOT NULL
+          AND CAST(SUBSTR(ae.date, 4, 2) AS INTEGER) BETWEEN 4 AND 12
+          AND SUBSTR(ae.date, 7, 4) = '2025'
+        GROUP BY d.name, s.slug, quarter_code
+        HAVING quarter_code IS NOT NULL
+        ORDER BY quarter_code, s.slug, d.name
+    """).fetchall()
+
+    # Group by quarter
+    by_quarter = {}
+    for district_name, state_slug, quarter_code, total, a05, a517, a18 in rows:
+        if quarter_code not in by_quarter:
+            by_quarter[quarter_code] = []
+        entry = {
+            'district': district_name,
+            'state': state_slug,
+            'total_enrolled': total,
+            'age_0_5': a05,
+            'age_5_17': a517,
+            'age_18_plus': a18,
+        }
+        by_quarter[quarter_code].append(entry)
+
+    files_written = 0
+    for quarter_code, districts in sorted(by_quarter.items()):
+        out = {
+            'indicator': 'aadhaar_enrollment',
+            'quarter': quarter_code,
+            'label': format_quarter_label(quarter_code),
+            'description': 'New Aadhaar enrollments by district (UIDAI, Apr–Dec 2025)',
+            'districts': districts,
+        }
+        path = os.path.join(out_dir, f'{quarter_code}.json')
+        with open(path, 'w') as f:
+            json.dump(out, f, separators=(',', ':'), ensure_ascii=False)
+        files_written += 1
+        print(f'    {quarter_code}: {len(districts)} districts')
+
+    return files_written
+
+
 def export_manifest(slbc_quarters, phonepe_quarters):
     """Generate the manifest.json with available indicators and quarters."""
     # Combine all quarters that have any data
@@ -689,6 +769,17 @@ def main():
             sz = os.path.getsize(fpath) if os.path.exists(fpath) else 0
             total_size += sz
             print(f'  {indicator_key}: 1 file ({sz / 1024:.1f} KB)')
+        elif indicator_def.get('source') == 'aadhaar_dist':
+            # Quarterly Aadhaar enrollment data
+            n = export_aadhaar_enrollment(db)
+            total_files += n
+            ind_dir = os.path.join(OUTPUT_DIR, indicator_key)
+            ind_size = sum(
+                os.path.getsize(os.path.join(ind_dir, f))
+                for f in os.listdir(ind_dir) if f.endswith('.json')
+            ) if os.path.exists(ind_dir) else 0
+            total_size += ind_size
+            print(f'  {indicator_key}: {n} files ({ind_size / 1024:.1f} KB total)')
         else:
             # SLBC-based indicator (may include PhonePe for digital_transactions)
             # Determine which quarters to process

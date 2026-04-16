@@ -41,6 +41,8 @@ export const INDICATOR_KEYS = [
   'education_loan',
   'pmmy_mudra_disbursement',
   'rbi_banking_outlets',
+  'nfhs_health_insurance',
+  'aadhaar_enrollment',
 ] as const;
 
 /**
