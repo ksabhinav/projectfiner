@@ -246,7 +246,7 @@ Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) q
 2. **`slbcne.nic.in`** (PDF booklets) = **FALLBACK** — only used to fill gaps for data/categories not available on the online portal.
 **NE Portal Source**: [onlineslbcne.nic.in](https://onlineslbcne.nic.in) — structured data for all 8 NE states
 **NE PDF Source**: [SLBC NE - Meghalaya Booklets](https://slbcne.nic.in/meghalaya/booklet.php) — quarterly PDF booklets (fallback)
-**Bihar Source**: [SLBC Bihar Agenda Papers](https://www.slbcbihar.com/SlBCHeldMeeting.aspx) (44th–95th meetings)
+**Bihar Source**: [SLBC Bihar Agenda Papers](https://www.slbcbihar.com/SlBCHeldMeeting.aspx) (90th–95th meetings only; 82nd–89th are scanned images with unusable OCR and are currently excluded)
 **West Bengal Source**: SLBC WB Agenda Papers (130th–171st meetings), PDFs stored in `slbc-data/west-bengal/`
 **Jharkhand/Odisha/Chhattisgarh Source**: NE-style extraction from respective SLBC booklets
 **Kerala Source**: [SLBC Kerala](https://slbckerala.com) — annexure PDFs from meeting pages
@@ -270,7 +270,7 @@ Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) q
 | Assam | Sep 2025 | 30 | 35 |
 | Manipur | Sep 2025 | 39 | 16 |
 | Tripura | Sep 2025 | 32 | 8 |
-| Bihar | Sep 2025 | 25 | 38 |
+| Bihar | Sep 2025 | 6 | 38 |
 | West Bengal | Dec 2025 | 39 | 23 |
 | Mizoram | Sep 2025 | 22 | 11 |
 | Meghalaya | Sep 2025 | 15 | 12 |
@@ -452,10 +452,11 @@ Three analysis sub-pages with shared sub-nav tabs (Rankings, Trends):
 
 Bihar SLBC data was extracted separately from the NE states:
 
-**Source PDFs**: Downloaded from `slbcbihar.com` — 44th through 95th SLBC meeting agenda papers
-- Some PDFs are text-native (extractable with pdfplumber)
-- Some are scanned images requiring OCR (done via PDF Expert app on macOS)
-- SSL certificate errors on the site required `curl -sk` (insecure flag)
+**Source PDFs**: 12 PDFs in `slbc-data/bihar/` covering the 82nd–95th meetings (`82nd_agenda.pdf` through `95th_agenda.pdf`)
+- **Only 6 are actually extracted** — `extract_bihar_v2.py` (line 704) whitelists only the 90th–95th meetings (Jun 2024 → Sep 2025), because those are text-native PDFs
+- The 82nd–89th PDFs are scanned images; OCR'd versions had poor quality and are deliberately commented out in the script
+- SSL certificate errors on the source site required `curl -sk` (insecure flag)
+- To extend coverage backwards, the 82nd–89th PDFs would need re-OCR with a higher-quality engine (Google Document AI, Azure Form Recognizer, or Claude-assisted OCR) before they can be ingested
 
 **Extraction**: Uses pdfplumber similar to NE states, but Bihar PDFs have different table structures:
 - Tables start halfway through the booklet (after narrative sections)
@@ -469,7 +470,7 @@ Bihar SLBC data was extracted separately from the NE states:
 - `BIHAR_HR_FIXES`: Human-readable name corrections
 - All 7 FI indicators resolve correctly after standardization
 
-**Data coverage**: 25 quarters from March 2019 to September 2025, 38 districts
+**Data coverage**: 6 quarters from June 2024 to September 2025, 38 districts. (Older meetings exist as scanned PDFs but are not yet extracted — see Source PDFs above.)
 
 ## West Bengal Data Pipeline
 
