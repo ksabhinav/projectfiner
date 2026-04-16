@@ -18,7 +18,11 @@ from match_districts import DistrictMatcher
 
 MONTHS = {'january': '01', 'february': '02', 'march': '03', 'april': '04',
           'may': '05', 'june': '06', 'july': '07', 'august': '08',
-          'september': '09', 'october': '10', 'november': '11', 'december': '12'}
+          'september': '09', 'october': '10', 'november': '11', 'december': '12',
+          # Abbreviated forms (Haryana uses "Dec 2022", "Mar 2023", etc.)
+          'jan': '01', 'feb': '02', 'mar': '03', 'apr': '04',
+          'jun': '06', 'jul': '07', 'aug': '08',
+          'sep': '09', 'oct': '10', 'nov': '11', 'dec': '12'}
 
 # States with SLBC timeseries data
 SLBC_STATES = [
@@ -168,7 +172,7 @@ def import_state_timeseries(db, matcher, slug, field_cache, period_cache):
             if not isinstance(records, list):
                 continue
             for rec in records:
-                period_label = rec.get('period', '')
+                period_label = rec.get('period', rec.get('quarter', ''))
                 if not period_label:
                     continue
 

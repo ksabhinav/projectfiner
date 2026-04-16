@@ -715,8 +715,18 @@ def export_manifest(slbc_quarters, phonepe_quarters):
     # Combine all quarters that have any data
     all_quarters = sorted(set(slbc_quarters) | set(phonepe_quarters), reverse=True)
 
+    # Include all indicator directories that exist on disk (handles indicators
+    # exported by external scripts: nrlm_shg, capital_markets_access, rbi_bsr_credit, etc.)
+    exported_indicators = list(INDICATORS.keys())
+    for entry in os.listdir(OUTPUT_DIR):
+        entry_path = os.path.join(OUTPUT_DIR, entry)
+        if os.path.isdir(entry_path) and entry not in exported_indicators:
+            # Only include if it has at least one JSON file
+            if any(f.endswith('.json') for f in os.listdir(entry_path)):
+                exported_indicators.append(entry)
+
     manifest = {
-        'indicators': list(INDICATORS.keys()),
+        'indicators': exported_indicators,
         'quarters': all_quarters,
         'latest_quarter': all_quarters[0] if all_quarters else None,
     }
