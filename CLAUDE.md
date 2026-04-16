@@ -38,22 +38,28 @@ projectfiner/
 │
 ├── src/
 │   ├── layouts/
-│   │   ├── BaseLayout.astro                # Base HTML shell (fonts, global CSS, <slot />)
+│   │   ├── BaseLayout.astro                # Base HTML shell (fonts, global CSS, OG meta tags, <slot />)
 │   │   └── PageLayout.astro                # Extends BaseLayout with Header + Footer; accepts activeSubNav prop
 │   │
 │   ├── components/
-│   │   ├── Header.astro                    # Shared nav bar with frosted glass styling + optional analysis sub-nav
+│   │   ├── Header.astro                    # Shared nav bar with frosted glass capsule buttons + optional analysis sub-nav
+│   │   │                                   # Accepts `transparent` prop for floating over the homepage map
 │   │   ├── Footer.astro                    # Simple footer with dynamic year
 │   │   ├── MeghalayaDownload.svelte        # SLBC download UI (indicator/quarter tabs, CSV/Excel)
 │   │   ├── DownloadManager.svelte          # Capital markets download cards (CDSL/NSDL/MFD)
+│   │   ├── map/                            # Map components (extracted from index.astro)
+│   │   │   ├── MapPanel.svelte             # Left panel: mode toggle, indicator/metric/state dropdowns, outlet toggle, search (612 lines)
+│   │   │   ├── TimelineSlider.svelte       # Vertical quarterly timeline with round dot marks, drag/click (321 lines)
+│   │   │   ├── MapLegend.svelte            # Color legends for banking + capital markets modes (262 lines)
+│   │   │   ├── FocusOverlay.svelte         # District focus: SVG shape + value overlay on double-click (258 lines)
+│   │   │   └── InfoTooltip.svelte          # Hover (i) popover with indicator/metric descriptions (88 lines)
 │   │   └── analysis/
 │   │       ├── DataExplorer.svelte         # Interactive data explorer (Plotly charts, correlation, CSV upload)
 │   │       ├── DistrictRankings.svelte     # Sortable leaderboard with traffic-light badges
-│   │       ├── TrendTracker.svelte         # District profile with sparkline cards + expandable Plotly charts
-│   │       └── Insights.svelte            # Curated data stories with category filter pills
+│   │       └── TrendTracker.svelte         # District profile with sparkline cards + expandable Plotly charts
 │   │
 │   ├── pages/
-│   │   ├── index.astro                     # HOMEPAGE — Full-screen Leaflet choropleth map (20 FI indicators)
+│   │   ├── index.astro                     # HOMEPAGE — Full-screen Leaflet choropleth map (20 FI indicators, ~2071 lines)
 │   │   ├── about/index.astro               # About page (what FINER is, coverage, data sources, contact)
 │   │   ├── ask/index.astro                 # AI chat interface (RAG over SLBC + all indicators via Groq/Llama)
 │   │   ├── slbc-data/
@@ -70,7 +76,10 @@ projectfiner/
 │   ├── lib/
 │   │   ├── constants.ts                    # COLORS, CAPITAL_MARKETS_SOURCES, FILE_ICON_SVG
 │   │   ├── download.ts                     # saveBlob(), rowsToCsv(), downloadCsv(), downloadXlsx()
-│   │   ├── slbc-categories.ts              # CATEGORY_INFO (48 cats), QUARTER_ORDER/LABELS/FOLDERS
+│   │   ├── slbc-categories.ts              # CATEGORY_INFO (48 cats), QUARTER_ORDER/LABELS/FOLDERS, CATEGORY_DESCRIPTIONS (45 hover tooltips)
+│   │   ├── map-bridge.ts                   # TypeScript event bridge for map↔Svelte communication (finer:* custom events)
+│   │   ├── map-indicators.ts               # 16 indicator definitions (shared between map and analysis pages)
+│   │   ├── format-utils.ts                 # Shared prettyFieldName(), fmtNum(), fmtWithUnit(), normalizePeriod(), periodLabel()
 │   │   └── insights-data.ts               # 13 curated Insight objects with real SLBC data
 │   │
 │   └── styles/
@@ -88,7 +97,9 @@ projectfiner/
     │   └── ...                             # District/state boundaries, HQs, etc.
     ├── data/
     │   └── district_boundaries.geojson     # District boundaries (808 total) with capital markets counts
+    ├── og-image.jpg                         # Open Graph image for social sharing (1200×630, rural banking illustration)
     ├── pincode_coords.json                 # Pincode → [lat, lng] lookup
+    ├── district_lgd_codes.json             # 765 districts with LGD codes + 109 aliases
     ├── slbc-data/
     │   ├── standardize_fields.py           # Cross-state field standardization script
     │   └── {state}/                        # All 22 states
@@ -146,10 +157,28 @@ projectfiner/
 
 ### Astro + Svelte
 - **Astro pages** (`.astro`) handle layout, routing, and static HTML generation
-- **Svelte components** (`.svelte`) handle interactive UI (download managers, data explorer, analysis tools)
+- **Svelte components** (`.svelte`) handle interactive UI (download managers, data explorer, analysis tools, and map controls)
 - Svelte uses **Svelte 5 runes**: `$state`, `$derived`, `$derived.by`, `$effect`, `$props`, `onMount`
-- **Leaflet map** on homepage is kept as `<script is:inline>` (too imperative for Svelte)
+- **Leaflet map core** on homepage is kept as `<script is:inline>` (imperative DOM, SSR-incompatible), but all UI panels are Svelte components communicating via an event bus
 - `define:vars={{ base }}` passes Astro variables to inline scripts via `window.__FINER_BASE`
+
+### Homepage Map Architecture (Svelte + Leaflet Hybrid)
+
+The homepage map is a **hybrid** — Leaflet handles canvas/tiles as inline JS, while all UI panels are Svelte components.
+
+**Event bus**: `src/lib/map-bridge.ts` — TypeScript interfaces + `finer:*` CustomEvent dispatchers/listeners
+- Svelte components fire events (e.g. `finer:indicator-change`, `finer:quarter-change`, `finer:state-filter`) that the inline map script listens to via `window.addEventListener`
+- Map fires back events (e.g. `finer:district-click`, `finer:data-loaded`) that Svelte components subscribe to
+- All events dispatched on `window` — no shared module state needed between inline JS and Svelte
+
+**5 Svelte components** mounted with `client:load` in `index.astro`:
+1. `MapPanel.svelte` — entire left panel: indicator/metric dropdowns, scope/state filter, outlet toggle, search, mobile bottom sheet with gesture drag
+2. `TimelineSlider.svelte` — vertical quarterly timeline with round dot marks (6×6px, `border-radius: 50%`), hover-scale thumb
+3. `MapLegend.svelte` — adaptive choropleth legend, rebuilds on each data refresh
+4. `FocusOverlay.svelte` — district focus mode: full-viewport overlay with SVG district shape + stats
+5. `InfoTooltip.svelte` — hover/tap popover for indicator and metric `(i)` descriptions
+
+**Map centering**: `getPanelPadding()` in `index.astro` reads the panel's actual rendered DOM width and returns `paddingTopLeft: [336, 80]` (panel 290px + 16px offset + 30px gap) and `paddingBottomRight: [90, 20]` (timeline + zoom controls). A polling loop waits for the panel to render before the initial `fitBounds` call.
 
 ### Navigation Architecture
 - **Header.astro** provides a shared navigation bar across ALL pages (including homepage)
@@ -171,6 +200,19 @@ projectfiner/
 - `import.meta.env.BASE_URL` returns `/` (with trailing slash) for the custom domain `projectfiner.com`
 - All hrefs in Astro templates use `${base}path` (no extra `/` needed since base has trailing slash)
 - Inline scripts access base via `window.__FINER_BASE` set by a `define:vars` script block
+
+### Social Sharing (Open Graph)
+
+`src/layouts/BaseLayout.astro` includes Open Graph and Twitter Card meta tags for rich previews on WhatsApp, Twitter, Facebook, LinkedIn:
+```html
+<meta property="og:title" content="Project FINER" />
+<meta property="og:description" content="Financial Inclusion across India — interactive district-level maps" />
+<meta property="og:image" content="https://projectfiner.com/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+```
+- **Image**: `public/og-image.jpg` — 1200×630px rural banking illustration, 257 KB JPEG (converted from RGBA PNG via Pillow `im.convert('RGB')` before saving)
 
 ## Main Data Sections
 
@@ -297,9 +339,8 @@ Full-screen Leaflet choropleth map — the entire homepage. No mode toggle; alwa
 **800+ districts across 36 states/UTs**
 
 **Key architecture decisions**:
-- Built as inline JS (`<script is:inline>`) in `index.astro` — NOT Svelte — because Leaflet is too imperative
-- Loads all 22 state timeseries JSONs in parallel via `Promise.all()`
-- Uses `flattenTimeseries()` to handle nested JSON structure
+- Leaflet core (tile layer, GeoJSON, flyTo, tooltips) kept as inline JS (`<script is:inline>`) in `index.astro` — UI panels are Svelte components connected via `finer:*` event bus (see above)
+- **Progressive loading**: on page load only fetches `indicators/manifest.json` (748B) + `district_lgd_codes.json` (138KB); indicator data (~50-100KB per file) fetched on demand when indicator/quarter changes. No longer loads all 22 state timeseries JSONs. See [Progressive Loading](#progressive-loading-indicators) section.
 - Uses `normalizePeriod()` to convert "June 2020" → "2020-06" for sorting
 - `preferCanvas: true` prevents SVG pixelation during `flyTo` animations
 - `zoomSnap: 0` enables fractional zoom so `fitBounds` fills the content area optimally (e.g. zoom 5.22 instead of rounding down to 5)
@@ -403,11 +444,9 @@ Three analysis sub-pages with shared sub-nav tabs (Rankings, Trends):
 - Uses `flattenTimeseries()` and `normalizePeriod()` from inline helpers
 
 #### Pre-built Insights (`/analysis/insights/`)
+- **Removed from analysis sub-nav** — page still exists at `/analysis/insights/` but not linked from navigation
 - 13 curated data stories with real numbers from SLBC timeseries
 - Data defined in `src/lib/insights-data.ts`
-- Category filter pills (CD Ratio, Digital, Branches, KCC, PMJDY, Comparison)
-- 2-column card grid with terracotta left border accent
-- Each card shows: category badge, headline stat, title, narrative, tags
 
 ## Bihar Data Pipeline
 
@@ -611,10 +650,17 @@ Then also rebuild the RAG index (see Ask/RAG section). The frontend caches loade
 - `prettyFieldName()` — snake_case → Title Case with acronym preservation (CASA, KCC, NPA, etc.)
 - `normalizePeriod()` / `periodLabel()` — "June 2020" ↔ "2020-06" conversion
 
-**`map-indicators.ts`** — indicator definitions (shared between map and future Svelte components):
-- 16 indicator categories with field names, fallbacks, descriptions, units
+**`map-bridge.ts`** — event bus between Leaflet inline JS and Svelte map components:
+- TypeScript interfaces for all `finer:*` event payloads
+- `dispatchFinerEvent(type, detail)` — fires a CustomEvent on `window`
+- `onFinerEvent(type, handler)` — subscribes, returns an unsubscribe function
+- Events fired by Svelte → map: `finer:indicator-change`, `finer:quarter-change`, `finer:state-filter`, `finer:scope-change`, `finer:outlet-toggle`
+- Events fired by map → Svelte: `finer:district-click`, `finer:data-loaded`, `finer:quarters-available`
 
-**Important**: `index.astro`'s `<script is:inline>` CANNOT import TypeScript modules. The map still has its own copies of these functions in inline JS. The shared modules are used by Svelte components (TrendTracker, DistrictRankings, DataExplorer) to avoid duplication.
+**`map-indicators.ts`** — indicator definitions (shared between map and Svelte components):
+- 20 indicator categories with field names, fallbacks, descriptions, units
+
+**Important**: `index.astro`'s `<script is:inline>` CANNOT import TypeScript modules. The inline map script has its own copies of utility functions (fmtNum, normalizePeriod, etc.). The shared TypeScript modules (`format-utils.ts`, `map-bridge.ts`) are used by the 5 Svelte map components and the analysis page components.
 
 ## RBI Banking Outlet Data
 
@@ -734,7 +780,7 @@ No Vercel redeployment needed — the API reads fresh index from R2 on next cold
 
 1. **Base URL**: `base` in `astro.config.mjs` is `/` for the custom domain `projectfiner.com`.
 2. **`define:vars` IIFE**: Astro wraps `define:vars` scripts in an IIFE, so variables aren't accessible in subsequent `<script is:inline>` blocks. Use `window.__FINER_BASE` to pass the base URL.
-3. **Leaflet kept as inline JS**: Both maps (homepage capital markets + FI indicators) are imperative DOM code. Converting to Svelte would be complex and Leaflet has SSR issues. Keep as `<script is:inline>`.
+3. **Leaflet kept as inline JS**: Leaflet's tile layer, GeoJSON rendering, flyTo, and tooltips remain as `<script is:inline>` (imperative, SSR-incompatible). The UI panels (MapPanel, TimelineSlider, MapLegend, FocusOverlay, InfoTooltip) are Svelte components communicating with the inline JS via `finer:*` CustomEvents on `window`. See `src/lib/map-bridge.ts`.
 4. **JSON quarter keys vs folder names**: Master JSON uses `june_2020` but disk folders are `2020-06`. Mapped in `slbc-categories.ts`.
 5. **Large JSON files**: Some data files are 15–18MB. They load fine in browser but be aware of GitHub's 100MB file limit.
 6. **2021 SLBC quarters have very few tables** (1–2 each) because only Excel ZIP archives were available.
