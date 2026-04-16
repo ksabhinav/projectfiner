@@ -257,7 +257,7 @@ Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) q
 **Maharashtra Source**: [Bank of Maharashtra SLBC](https://bankofmaharashtra.bank.in) — PDFs (values in Crores, converted to Lakhs)
 **Haryana Source**: [SLBC Haryana (PNB)](https://slbcharyana.pnb.bank.in) — Excel files (values in Crores, converted to Lakhs)
 **Telangana Source**: [SLBC Telangana](https://telanganaslbc.com) — PDFs
-**Uttarakhand Source**: [SLBC Uttarakhand](https://slbcuttarakhand.com) — PDFs
+**Uttarakhand Source**: [SLBC Uttarakhand](https://slbcuttarakhand.com) — PDFs (76th–88th meetings extracted; 61st–75th excluded due to Devanagari font encoding / unusable OCR)
 
 **Coverage**:
 - Quarters range from March 2018 to December 2025 (varies by state — not all states have every quarter)
@@ -288,7 +288,7 @@ Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) q
 | Maharashtra | Dec 2025 | 3 | 36 |
 | Haryana | Dec 2025 | 13 | 23 |
 | Telangana | Dec 2024 | 1 | 33 |
-| Uttarakhand | Sep 2021 | 1 | 13 |
+| Uttarakhand | Dec 2023 | 14 | 13 |
 
 **Timeseries JSON structure** (`{state}_fi_timeseries.json`):
 ```json
@@ -471,6 +471,41 @@ Bihar SLBC data was extracted separately from the NE states:
 - All 7 FI indicators resolve correctly after standardization
 
 **Data coverage**: 6 quarters from June 2024 to September 2025, 38 districts. (Older meetings exist as scanned PDFs but are not yet extracted — see Source PDFs above.)
+
+## Uttarakhand Data Pipeline
+
+Uttarakhand SLBC data uses a dedicated extractor because its tables have an unusual structure: **each district-wise table contains multiple quarters side-by-side as columns** (e.g. "March 2021 | March 2022 | March 2023 | Dec 2023" all within a single row of Dehradun's values).
+
+**Source PDFs**: 27 PDFs in `slbc-data/uttarakhand/` covering the 61st–88th meetings. Of these, **only 11 are text-native and extracted** (`76th`, `77th`, `78th_spl`, `79th`, `82nd`, `83rd`, `84th_spl`, `85th`, `86th`, `87th`, `88th`). The 16 older PDFs (61st–75th) use custom Devanagari font encoding that yields `(cid:XX)` garbage from pdfplumber; recovering them would require a Devanagari OCR pipeline.
+
+**Extraction script**: `slbc-data/uttarakhand/extract_uttarakhand.py`
+- Uses pdfplumber; parses up to 3 header rows to build `column → (category, metric, quarter)` mappings, then emits one record per `(district, quarter)` per table
+- Filters out noise-date matches (years <2018 or >2024 from misread prose/page numbers)
+- Canonicalizes 13 district aliases: `Hardwar/Hardwar (A)/Haridwar (Asp.)` → `Haridwar`, `U.S. Nagar (A)/Udham Singh Nagar (A)` → `Udham Singh Nagar`, `Tehri` → `Tehri Garhwal`, etc.
+- Converts Crore amounts to Lakhs (×100) based on "Cr." / "Crores" hints in table headers
+- When the same (district, quarter, field) appears in multiple PDFs, prefers the most recent booklet (88th > 87th > ... > 76th)
+
+**Field standardization**: After extraction, a post-pass renames UK-specific field names to canonical SLBC names that `db/export_indicator_files.py` expects:
+- `pmjdy__no_of_active_pmjdy_a_c` → `pmjdy__total_pmjdy_no`
+- `pmjdy__no_of_pmjdy_accounts_female/male` → `pmjdy__female_no/male_no`
+- `shg__shg_credit_linked_no` → `shg__credit_linked_no`
+- `shg__total_no_of_shg` → `shg__savings_linked_no`
+
+**District aliases in SQLite**: The DB has typo'd or differently-spaced UK district names (`Udam Singh Nagar` is missing an 'h', `Rudra Prayag` is spaced, `Uttar Kashi` is spaced). 11 aliases are registered in `district_aliases` to resolve extractor output to the right LGD codes.
+
+**Data coverage**: 14 quarters from March 2019 to December 2023, 13 districts. 7 of 14 quarters are fully populated across the 6 FI categories present in UK source (credit_deposit_ratio, pmjdy, branch_network, kcc, shg, digital_transactions); 4 quarters are sparse due to short agenda booklets. Aadhaar authentication is not present as a separate category in UK source — the frontend's existing `CROSS_CATEGORY_FALLBACKS` maps `aadhaar_authentication → pmjdy` which is where UK's aadhaar seeding/OD data lives anyway.
+
+**Branch counts caveat**: Most UK tables report branches as **"per lakh population" ratios** (e.g. 37 branches/lakh for Dehradun) rather than absolute totals. Only the March 2021 quarter has a table with absolute `total_branch` counts. Other quarters' `branch_network` tables surface ratio metrics, not absolute counts — users should interpret this accordingly when comparing UK to other states.
+
+**Running extraction**:
+```bash
+cd slbc-data/uttarakhand/
+python3 extract_uttarakhand.py
+# Outputs: uttarakhand_complete.json, uttarakhand_fi_timeseries.json, uttarakhand_fi_timeseries.csv, quarterly/*/*.csv
+# Then: cp outputs to public/slbc-data/uttarakhand/
+# Then: DELETE from slbc_data WHERE source_file='uttarakhand'; re-run import_slbc for UK
+# Then: python3 db/export_indicator_files.py
+```
 
 ## West Bengal Data Pipeline
 
