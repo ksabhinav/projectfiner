@@ -180,6 +180,28 @@ The homepage map is a **hybrid** — Leaflet handles canvas/tiles as inline JS, 
 
 **Map centering**: `getPanelPadding()` in `index.astro` reads the panel's actual rendered DOM width and returns `paddingTopLeft: [336, 80]` (panel 290px + 16px offset + 30px gap) and `paddingBottomRight: [90, 20]` (timeline + zoom controls). A polling loop waits for the panel to render before the initial `fitBounds` call.
 
+### State-level focus (inset navigator)
+
+Bottom-right of the main map renders a **clickable state navigator** (200×180 px Leaflet inset). Click any state to focus on it:
+
+- **Main map** flies to state bounds (`flyToBounds` with padding 40)
+- **Non-focus states** render in dim grey (18% opacity, `#d8d3ca` fill) — kept as visual context, not hidden
+- **Color ramp** is recomputed from the focused state's distribution only, so within-state contrast pops (a moderate district nationally can show as the brightest in a poor state)
+- **Legend label** is suffixed with state name, e.g. `"Total Deposits (₹ Lakhs) · Uttarakhand"`
+- **"All India" reset button** appears beneath the inset, clears focus and flies back to all-India bounds
+- **Click a dim state on the main map** also focuses it (alt entry path)
+- **URL persistence**: `?state=<slug>` for shareable views; auto-applied on page load
+
+**Files involved**:
+- `scripts/build_state_bounds.py` — precomputes per-state bounds + LGD codes from `public/data/india_states.geojson` joined to `db/finer.db.states`. Output: `public/state-bounds.json` (11 KB, all 35 states/UTs).
+- `public/state-bounds.json` — keyed by 2-letter state code (e.g. `UK`, `KA`), each entry has `bounds`, `centroid`, `lgd`, `slug`, `finer_name`.
+- `public/data/india_states.geojson` — 35-feature state outlines used by both the inset and (potentially) the main map.
+- All inset rendering + focus logic lives inline in `src/pages/index.astro` under the "Section 5a — State inset map" comment block.
+
+**Event protocol**: a focus change dispatches a `finer:stateFilterChange` CustomEvent on `window` with `detail: { state: '<UPPERCASE STATE_UT>' or '' }`. The empty string means "All India". Both the inset click handlers and the URL-load logic dispatch this event; the main map's choropleth subscriber reads `bankingStateFilter` (a module-level variable) and rebuilds.
+
+**Mobile**: inset is `display: none` on screens < 768px (existing top-bar legend layout prevails).
+
 ### Navigation Architecture
 - **Header.astro** provides a shared navigation bar across ALL pages (including homepage)
 - Nav links render as frosted glass capsule buttons (white bg, backdrop-blur, rounded corners, hover lift)
@@ -748,6 +770,40 @@ Then also rebuild the RAG index (see Ask/RAG section). The frontend caches loade
 
 **Import script**: `db/import_aadhaar.py` — reads from `~/Downloads/finer_data/aadhaar/aadhaar_enrolment_2025_combined.csv`
 
+## SHRUG-derived Indicators
+
+Three indicators sourced from the **SHRUG v2.1** dataset (Socioeconomic High-resolution Rural-Urban Geographic Platform, Development Data Lab — devdatalab.org/shrug). Licence: **CC BY-NC-SA 4.0** — non-commercial, requires attribution.
+
+All three share the same join pattern: SHRUG's `(pc11_state_id, pc11_district_id)` (zero-padded 2- and 3-digit) → FINER `(state_lgd, census_2011_code)` after stripping leading zeros. ~98% match rate (13 unmatched districts are post-2014 splits — Telangana districts, Ladakh, D&D/DnH).
+
+### `facebook_rwi` — Meta Relative Wealth Index 2021
+- **Build script**: `db/shrug/build_facebook_rwi.py`
+- **Source**: `~/Downloads/finer_data/shrug/facebook-rwi/facebook_rwi_pc11dist.csv` (already district-aggregated by SHRUG from Chi et al. 2022 RWI)
+- **Output**: `public/indicators/facebook_rwi/2021-12.json` — 625 districts
+- **Metrics**: `rwi_mean` (centred ~0, scale roughly -2 to +2), `rwi_max`, `rwi_min`, `rwi_spread` (max − min, intra-district inequality proxy)
+
+### `pmgsy_roads` — PMGSY rural roads (cumulative through 2015)
+- **Build script**: `db/shrug/build_pmgsy_roads.py`
+- **Source**: `~/Downloads/finer_data/shrug/pmgsy/pmgsy_2015_shrid.csv` (589k shrids, ~113k with completed roads)
+- **Output**: `public/indicators/pmgsy_roads/2015-12.json` — 542 districts
+- **Aggregation**: parses `shrid2` format (`XX-YY-ZZZ-...` where YY=pc11 state, ZZZ=pc11 district), counts roads + sums km + sums cost ₹ Lakhs per district. Splits into new vs upgraded.
+- **Metrics**: `roads_total`, `km_total`, `roads_new`, `roads_upg`, `cost_total_lakhs`
+
+### `viirs_nightlights` — VIIRS annual nightlights 2012–2023
+- **Build script**: `db/shrug/build_viirs_nightlights.py`
+- **Source**: `~/Downloads/finer_data/shrug/viirs/viirs_annual_pc11dist.dta` (DTA, district-aggregated). Uses `category=='median-masked'` (more robust than `average-masked` to fires/outliers).
+- **Output**: 12 yearly files at `public/indicators/viirs_nightlights/{2012..2023}-12.json`, each ~625 districts, ~69 KB
+- **Metrics**: `nl_mean` (mean radiance, nW/cm²/sr), `nl_sum` (total light output, area-weighted), `nl_max` (peak cell — typically the largest urban cluster)
+- **Timeline**: `timePoints: ['2023-12','2022-12',...,'2012-12']` — 12 December snapshots
+
+**Manifest discovery**: SHRUG indicators are picked up automatically by the directory-scan logic in `db/export_indicator_files.py:export_manifest()` — no edit needed when adding new SHRUG-style external indicators (Aadhaar/NFHS pattern).
+
+**Datasets considered and skipped**:
+- **SECC poverty/consumption (2011)** — superseded by NFHS-5 (2019–21) which already provides modern poverty/asset proxies.
+- **SHRUG RBI directory** (~154k branches, mostly pre-2017) — FINER's existing `rbi_banking_outlets` (RBI DBIE, 2.47M outlets, GPS-tagged) is far superior.
+- **DMSP nightlights** (1992–2013, low resolution, saturates in cities) — VIIRS replaces it.
+- **VCF forest cover, scheduled areas** — not directly relevant to financial inclusion.
+
 ## Ask / RAG (`/ask`)
 
 AI chat interface that answers questions about SLBC data and all FINER indicators using retrieval-augmented generation (RAG).
@@ -866,6 +922,10 @@ No Vercel redeployment needed — the API reads fresh index from R2 on next cold
 31. **Double-click zoom disabled on map**: `doubleClickZoom: false` in Leaflet map init to prevent conflict with district focus mode activation.
 32. **Map initial position uses fitBounds, not setView**: Map initializes with `fitBounds(ALL_STATES_BOUNDS, { paddingTopLeft: [306, 10] })` to account for the left panel from the first frame. This prevents the visible layout shift that occurred when using a fixed center/zoom followed by `flyToNE()`.
 33. **Contact email**: mail@projectfiner.com (configured via GoDaddy email + Cloudflare DNS MX/SPF records).
+34. **NE portal scraper currently broken**: `scrape_onlineslbc.py` form submissions to `onlineslbcne.nic.in` get redirected to `error.php` (101-byte JS redirect response). Form page fetches OK (HTTP 200, 5 KB), CSRF token extracted, state cookie set — but the POST is rejected. Form has only `quarter`, `year`, `token`, submit fields visible, so likely a validation rule or hidden field changed server-side. Diagnostic: capture a real browser submission via DevTools → Network → Copy as cURL, replay headers/body, diff against scraper's POST. **Not currently urgent** — all 6 NE-portal states are at Dec 2025 in SQLite; Mar 2026 likely not published yet (May 2026 today).
+35. **`.gitignore` convention for SLBC source data**: PDFs, zips, rar, xlsx in both `slbc-data/` and `public/slbc-data/` are deliberately untracked. Only Python extraction scripts and the canonical aggregated outputs in `public/slbc-data/<state>/{state}_fi_timeseries.json|csv|complete.json|fi_slim.json` get committed. Intermediate extracts (`slbc-data/<state>/<state>_complete.json` etc.) and `quarterly/`, `extracted/`, `pdfs/`, `_temp/` subdirs are also ignored. `git add -A` after a fresh clone or pipeline run will appear to want to add hundreds of MBs — those are local-only working files.
+36. **`.wrangler/` and `__pycache__/` ignored**: Cloudflare R2 dev cache (~25-50 MB blob files) and Python bytecode never committed.
+37. **State-focus URL param `?state=`**: When focused via URL load, the scraper waits up to 4 seconds (40 × 100ms polling) for `distGeoJSON` to load before dispatching the focus event. This is to ensure the choropleth renders before the focus tries to apply.
 34. **Unit labels**: Monetary fields show "₹ Lakhs", percentages show "%". On the map: `fmtWithUnit(val, unit)` handles formatting. In analysis pages: `prettyFieldName()` auto-detects from field suffix (`_amt` → ₹ Lakhs, `_pct` → %). All SLBC monetary values are in **Rs. Lakhs** (1 Lakh = ₹100,000).
 35. **Acronym preservation in analysis pages**: `prettyFieldName()` in TrendTracker, DistrictRankings, DataExplorer converts snake_case to Title Case then fixes 17 acronyms (CASA, KCC, NPA, PMJDY, SHG, ATM, UPI, IMPS, USSD, PMEGP, NULM, NRLM, SB, CD, CSP, AePS, DBT). Add new acronyms to all 3 files when needed.
 36. **Bare→_amt field normalization**: Fields like `crop_loan` and `crop_loan_amt` that represent the same metric across different quarters were normalized to the `_amt` form. Script at `/tmp/normalize_amt_fields.py`. Only merged when a `_no` version exists (confirming bare = amount not count) or values have similar magnitude. 7,470 renames across 11 states.
