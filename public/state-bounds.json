@@ -1,0 +1,737 @@
+{
+  "DN": {
+    "name": "Dadra & Nagar Haveli & Daman & Diu",
+    "state_code": "DN",
+    "bounds": [
+      [
+        20.04959,
+        70.87093
+      ],
+      [
+        20.77144,
+        73.21772
+      ]
+    ],
+    "centroid": [
+      20.410514999999997,
+      72.044325
+    ],
+    "lgd": 38,
+    "slug": "the-dadra-and-nagar-haveli-and-daman-and-diu",
+    "finer_name": "The Dadra and Nagar Haveli and Daman and Diu"
+  },
+  "HP": {
+    "name": "Himachal Pradesh",
+    "state_code": "HP",
+    "bounds": [
+      [
+        30.37734,
+        75.59482
+      ],
+      [
+        33.25102,
+        79.00892
+      ]
+    ],
+    "centroid": [
+      31.81418,
+      77.30187000000001
+    ],
+    "lgd": 2,
+    "slug": "himachal-pradesh",
+    "finer_name": "Himachal Pradesh"
+  },
+  "AR": {
+    "name": "Arunachal Pradesh",
+    "state_code": "AR",
+    "bounds": [
+      [
+        26.65575,
+        91.56407
+      ],
+      [
+        29.46595,
+        97.4129
+      ]
+    ],
+    "centroid": [
+      28.060850000000002,
+      94.488485
+    ],
+    "lgd": 12,
+    "slug": "arunachal-pradesh",
+    "finer_name": "Arunachal Pradesh"
+  },
+  "AS": {
+    "name": "Assam",
+    "state_code": "AS",
+    "bounds": [
+      [
+        24.13627,
+        89.6986
+      ],
+      [
+        27.96302,
+        96.01771
+      ]
+    ],
+    "centroid": [
+      26.049644999999998,
+      92.858155
+    ],
+    "lgd": 18,
+    "slug": "assam",
+    "finer_name": "Assam"
+  },
+  "MN": {
+    "name": "Manipur",
+    "state_code": "MN",
+    "bounds": [
+      [
+        23.83285,
+        92.97289
+      ],
+      [
+        25.68489,
+        94.74416
+      ]
+    ],
+    "centroid": [
+      24.75887,
+      93.858525
+    ],
+    "lgd": 14,
+    "slug": "manipur",
+    "finer_name": "Manipur"
+  },
+  "ML": {
+    "name": "Meghalaya",
+    "state_code": "ML",
+    "bounds": [
+      [
+        25.0278,
+        89.82543
+      ],
+      [
+        26.11576,
+        92.80085
+      ]
+    ],
+    "centroid": [
+      25.57178,
+      91.31314
+    ],
+    "lgd": 17,
+    "slug": "meghalaya",
+    "finer_name": "Meghalaya"
+  },
+  "MZ": {
+    "name": "Mizoram",
+    "state_code": "MZ",
+    "bounds": [
+      [
+        21.94004,
+        92.26053
+      ],
+      [
+        24.52112,
+        93.43691
+      ]
+    ],
+    "centroid": [
+      23.23058,
+      92.84872
+    ],
+    "lgd": 15,
+    "slug": "mizoram",
+    "finer_name": "Mizoram"
+  },
+  "NL": {
+    "name": "Nagaland",
+    "state_code": "NL",
+    "bounds": [
+      [
+        25.20357,
+        93.32697
+      ],
+      [
+        27.03222,
+        95.24225
+      ]
+    ],
+    "centroid": [
+      26.117894999999997,
+      94.28461
+    ],
+    "lgd": 13,
+    "slug": "nagaland",
+    "finer_name": "Nagaland"
+  },
+  "SK": {
+    "name": "Sikkim",
+    "state_code": "SK",
+    "bounds": [
+      [
+        27.07926,
+        88.01233
+      ],
+      [
+        28.12869,
+        88.9192
+      ]
+    ],
+    "centroid": [
+      27.603975,
+      88.465765
+    ],
+    "lgd": 11,
+    "slug": "sikkim",
+    "finer_name": "Sikkim"
+  },
+  "LD": {
+    "name": "Lakshadweep",
+    "state_code": "LD",
+    "bounds": [
+      [
+        8.27301,
+        72.16466
+      ],
+      [
+        11.70366,
+        73.70164
+      ]
+    ],
+    "centroid": [
+      9.988335,
+      72.93315
+    ],
+    "lgd": 31,
+    "slug": "lakshadweep",
+    "finer_name": "Lakshadweep"
+  },
+  "AN": {
+    "name": "Andaman & Nicobar",
+    "state_code": "AN",
+    "bounds": [
+      [
+        6.75278,
+        92.19589
+      ],
+      [
+        13.67696,
+        94.26511
+      ]
+    ],
+    "centroid": [
+      10.21487,
+      93.2305
+    ],
+    "lgd": 35,
+    "slug": "andaman-nicobar",
+    "finer_name": "Andaman and Nicobar Islands"
+  },
+  "WB": {
+    "name": "West Bengal",
+    "state_code": "WB",
+    "bounds": [
+      [
+        21.52759,
+        85.81967
+      ],
+      [
+        27.22098,
+        89.8826
+      ]
+    ],
+    "centroid": [
+      24.374285,
+      87.851135
+    ],
+    "lgd": 19,
+    "slug": "west-bengal",
+    "finer_name": "West Bengal"
+  },
+  "KL": {
+    "name": "Kerala",
+    "state_code": "KL",
+    "bounds": [
+      [
+        8.29302,
+        74.86434
+      ],
+      [
+        12.79546,
+        77.4124
+      ]
+    ],
+    "centroid": [
+      10.54424,
+      76.13837000000001
+    ],
+    "lgd": 32,
+    "slug": "kerala",
+    "finer_name": "Kerala"
+  },
+  "CT": {
+    "name": "Chhattisgarh",
+    "state_code": "CT",
+    "bounds": [
+      [
+        17.78415,
+        80.24443
+      ],
+      [
+        24.10602,
+        84.38051
+      ]
+    ],
+    "centroid": [
+      20.945085,
+      82.31246999999999
+    ],
+    "lgd": 22,
+    "slug": "chhattisgarh",
+    "finer_name": "Chhattisgarh"
+  },
+  "OR": {
+    "name": "Odisha",
+    "state_code": "OR",
+    "bounds": [
+      [
+        17.81269,
+        81.39181
+      ],
+      [
+        22.56751,
+        87.48611
+      ]
+    ],
+    "centroid": [
+      20.1901,
+      84.43896000000001
+    ],
+    "lgd": 21,
+    "slug": "odisha",
+    "finer_name": "Odisha"
+  },
+  "CH": {
+    "name": "Chandigarh",
+    "state_code": "CH",
+    "bounds": [
+      [
+        30.667,
+        76.70518
+      ],
+      [
+        30.79414,
+        76.84822
+      ]
+    ],
+    "centroid": [
+      30.73057,
+      76.7767
+    ],
+    "lgd": 4,
+    "slug": "chandigarh",
+    "finer_name": "Chandigarh"
+  },
+  "DL": {
+    "name": "Delhi",
+    "state_code": "DL",
+    "bounds": [
+      [
+        28.40467,
+        76.84241
+      ],
+      [
+        28.87068,
+        77.34741
+      ]
+    ],
+    "centroid": [
+      28.637675,
+      77.09491
+    ],
+    "lgd": 7,
+    "slug": "delhi",
+    "finer_name": "Delhi"
+  },
+  "GJ": {
+    "name": "Gujarat",
+    "state_code": "GJ",
+    "bounds": [
+      [
+        20.12233,
+        68.17766
+      ],
+      [
+        24.71211,
+        74.47604
+      ]
+    ],
+    "centroid": [
+      22.41722,
+      71.32685000000001
+    ],
+    "lgd": 24,
+    "slug": "gujarat",
+    "finer_name": "Gujarat"
+  },
+  "HR": {
+    "name": "Haryana",
+    "state_code": "HR",
+    "bounds": [
+      [
+        27.6536,
+        74.47334
+      ],
+      [
+        30.92854,
+        77.60459
+      ]
+    ],
+    "centroid": [
+      29.29107,
+      76.03896499999999
+    ],
+    "lgd": 6,
+    "slug": "haryana",
+    "finer_name": "Haryana"
+  },
+  "PB": {
+    "name": "Punjab",
+    "state_code": "PB",
+    "bounds": [
+      [
+        29.54207,
+        73.87978
+      ],
+      [
+        32.50341,
+        76.93868
+      ]
+    ],
+    "centroid": [
+      31.02274,
+      75.40923000000001
+    ],
+    "lgd": 3,
+    "slug": "punjab",
+    "finer_name": "Punjab"
+  },
+  "UP": {
+    "name": "Uttar Pradesh",
+    "state_code": "UP",
+    "bounds": [
+      [
+        23.87142,
+        77.08395
+      ],
+      [
+        30.40094,
+        84.63465
+      ]
+    ],
+    "centroid": [
+      27.13618,
+      80.85929999999999
+    ],
+    "lgd": 9,
+    "slug": "uttar-pradesh",
+    "finer_name": "Uttar Pradesh"
+  },
+  "KA": {
+    "name": "Karnataka",
+    "state_code": "KA",
+    "bounds": [
+      [
+        11.59697,
+        74.06626
+      ],
+      [
+        18.47296,
+        78.57977
+      ]
+    ],
+    "centroid": [
+      15.034965,
+      76.323015
+    ],
+    "lgd": 29,
+    "slug": "karnataka",
+    "finer_name": "Karnataka"
+  },
+  "AP": {
+    "name": "Andhra Pradesh",
+    "state_code": "AP",
+    "bounds": [
+      [
+        12.62403,
+        76.76499
+      ],
+      [
+        19.16639,
+        84.76146
+      ]
+    ],
+    "centroid": [
+      15.895209999999999,
+      80.763225
+    ],
+    "lgd": 28,
+    "slug": "andhra-pradesh",
+    "finer_name": "Andhra Pradesh"
+  },
+  "BR": {
+    "name": "Bihar",
+    "state_code": "BR",
+    "bounds": [
+      [
+        24.26049,
+        83.32022
+      ],
+      [
+        27.52112,
+        88.29353
+      ]
+    ],
+    "centroid": [
+      25.890805,
+      85.806875
+    ],
+    "lgd": 10,
+    "slug": "bihar",
+    "finer_name": "Bihar"
+  },
+  "GA": {
+    "name": "Goa",
+    "state_code": "GA",
+    "bounds": [
+      [
+        14.75577,
+        73.67993
+      ],
+      [
+        15.80102,
+        74.33587
+      ]
+    ],
+    "centroid": [
+      15.278395,
+      74.0079
+    ],
+    "lgd": 30,
+    "slug": "goa",
+    "finer_name": "Goa"
+  },
+  "JH": {
+    "name": "Jharkhand",
+    "state_code": "JH",
+    "bounds": [
+      [
+        21.97067,
+        83.32935
+      ],
+      [
+        25.3325,
+        87.9628
+      ]
+    ],
+    "centroid": [
+      23.651584999999997,
+      85.646075
+    ],
+    "lgd": 20,
+    "slug": "jharkhand",
+    "finer_name": "Jharkhand"
+  },
+  "MP": {
+    "name": "Madhya Pradesh",
+    "state_code": "MP",
+    "bounds": [
+      [
+        21.07069,
+        74.02938
+      ],
+      [
+        26.86336,
+        82.81261
+      ]
+    ],
+    "centroid": [
+      23.967025,
+      78.420995
+    ],
+    "lgd": 23,
+    "slug": "madhya-pradesh",
+    "finer_name": "Madhya Pradesh"
+  },
+  "MH": {
+    "name": "Maharashtra",
+    "state_code": "MH",
+    "bounds": [
+      [
+        15.60609,
+        72.64199
+      ],
+      [
+        22.02241,
+        80.89496
+      ]
+    ],
+    "centroid": [
+      18.81425,
+      76.768475
+    ],
+    "lgd": 27,
+    "slug": "maharashtra",
+    "finer_name": "Maharashtra"
+  },
+  "PY": {
+    "name": "Puducherry",
+    "state_code": "PY",
+    "bounds": [
+      [
+        10.82799,
+        75.52656
+      ],
+      [
+        16.75593,
+        82.3104
+      ]
+    ],
+    "centroid": [
+      13.79196,
+      78.91848
+    ],
+    "lgd": 34,
+    "slug": "puducherry",
+    "finer_name": "Puducherry"
+  },
+  "RJ": {
+    "name": "Rajasthan",
+    "state_code": "RJ",
+    "bounds": [
+      [
+        23.05866,
+        69.48443
+      ],
+      [
+        30.19815,
+        78.27226
+      ]
+    ],
+    "centroid": [
+      26.628405,
+      73.878345
+    ],
+    "lgd": 8,
+    "slug": "rajasthan",
+    "finer_name": "Rajasthan"
+  },
+  "TN": {
+    "name": "Tamil Nadu",
+    "state_code": "TN",
+    "bounds": [
+      [
+        8.07803,
+        76.23308
+      ],
+      [
+        13.56463,
+        80.34527
+      ]
+    ],
+    "centroid": [
+      10.82133,
+      78.289175
+    ],
+    "lgd": 33,
+    "slug": "tamil-nadu",
+    "finer_name": "Tamil Nadu"
+  },
+  "TS": {
+    "name": "Telangana",
+    "state_code": "TS",
+    "bounds": [
+      [
+        15.83633,
+        77.23576
+      ],
+      [
+        19.9143,
+        81.32264
+      ]
+    ],
+    "centroid": [
+      17.875315,
+      79.2792
+    ],
+    "lgd": 36,
+    "slug": "telangana",
+    "finer_name": "Telangana"
+  },
+  "TR": {
+    "name": "Tripura",
+    "state_code": "TR",
+    "bounds": [
+      [
+        22.93845,
+        91.15424
+      ],
+      [
+        24.53064,
+        92.33178
+      ]
+    ],
+    "centroid": [
+      23.734544999999997,
+      91.74301
+    ],
+    "lgd": 16,
+    "slug": "tripura",
+    "finer_name": "Tripura"
+  },
+  "UK": {
+    "name": "Uttarakhand",
+    "state_code": "UK",
+    "bounds": [
+      [
+        28.72283,
+        77.57232
+      ],
+      [
+        31.46208,
+        81.04661
+      ]
+    ],
+    "centroid": [
+      30.092455,
+      79.309465
+    ],
+    "lgd": 5,
+    "slug": "uttarakhand",
+    "finer_name": "Uttarakhand"
+  },
+  "JK": {
+    "name": "Jammu & Kashmir",
+    "state_code": "JK",
+    "bounds": [
+      [
+        32.27601,
+        72.51668
+      ],
+      [
+        37.08814,
+        80.34508
+      ]
+    ],
+    "centroid": [
+      34.682075,
+      76.43088
+    ],
+    "lgd": 1,
+    "slug": "jammu-kashmir",
+    "finer_name": "Jammu and Kashmir"
+  }
+}

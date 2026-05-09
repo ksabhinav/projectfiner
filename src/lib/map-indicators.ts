@@ -43,6 +43,9 @@ export const INDICATOR_KEYS = [
   'rbi_banking_outlets',
   'nfhs_health_insurance',
   'aadhaar_enrollment',
+  'facebook_rwi',
+  'pmgsy_roads',
+  'viirs_nightlights',
 ] as const;
 
 /**

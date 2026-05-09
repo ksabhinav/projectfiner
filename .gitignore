@@ -6,3 +6,43 @@ data/rag/
 api/index_data/
 .vercel
 db/finer.db
+.wrangler/
+__pycache__/
+*.pyc
+
+# SLBC source data — keep local only (PDFs, zips, scrapes, intermediate JSONs)
+slbc-data/**/*.pdf
+slbc-data/**/*.zip
+slbc-data/**/*.rar
+slbc-data/**/*.xlsx
+slbc-data/**/*.xls
+slbc-data/**/quarterly/
+slbc-data/**/extracted/
+slbc-data/**/_temp/
+slbc-data/**/pdfs/
+slbc-data/scraped_data/
+slbc-data/**/scraped_data/
+# Large intermediate scrape outputs
+slbc-data/ne_*.json
+slbc-data/*_checkpoint.json
+slbc-data/*_blockwise_*.json
+slbc-data/scraped_data/
+
+# Intermediate per-state extraction outputs (large; canonical copies live in public/slbc-data/)
+slbc-data/**/*_complete.json
+slbc-data/**/*_fi_timeseries.json
+slbc-data/**/*_fi_timeseries.csv
+slbc-data/**/*_fi_slim.json
+
+# Public-side SLBC source PDFs (downloads served via separate route — keep local)
+public/slbc-data/**/*.pdf
+public/slbc-data/**/*.zip
+public/slbc-data/**/*.xlsx
+public/slbc-data/**/pdfs/
+
+# Scrape outputs
+scraped_data/
+scraped_data_fy26/
+
+# Local build/dev artifacts
+.cache/

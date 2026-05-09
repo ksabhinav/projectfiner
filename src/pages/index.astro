@@ -15,6 +15,11 @@ const base = import.meta.env.BASE_URL;
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
   <div id="map"></div>
+  <div id="state-inset-wrap" aria-label="State navigator">
+    <div id="state-inset-label">Click a state to focus</div>
+    <div id="state-inset-map"></div>
+    <button id="state-inset-reset" type="button" title="Show all India" aria-label="Show all India">All India</button>
+  </div>
 
   <InfoTooltip client:load />
   <MapPanel client:load />
@@ -166,7 +171,20 @@ const base = import.meta.env.BASE_URL;
 
     window.addEventListener('finer:stateFilterChange', function(e) {
       bankingStateFilter = e.detail.state;
+      // Persist in URL
+      try {
+        var params = new URLSearchParams(window.location.search);
+        if (bankingStateFilter) {
+          params.set('state', bankingStateFilter.toLowerCase().replace(/\s+/g, '-'));
+        } else {
+          params.delete('state');
+        }
+        var qs = params.toString();
+        history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : ''));
+      } catch (err) { /* ignore */ }
       if (slbcLoaded) { buildChoropleth_banking(); updateLabelVisibility_banking(); }
+      // Update inset highlight
+      if (typeof updateInsetHighlight === 'function') updateInsetHighlight();
       if (bankingStateFilter) {
         var stateFts = distGeoJSON ? distGeoJSON.features.filter(function(f) {
           return f.properties.STATE_UT?.toUpperCase()?.trim() === bankingStateFilter;
@@ -175,7 +193,13 @@ const base = import.meta.env.BASE_URL;
           var group = L.geoJSON({ type: 'FeatureCollection', features: stateFts });
           map.flyToBounds(group.getBounds(), { padding: [40, 40], maxZoom: 9, duration: 1.0 });
         }
-      } else { flyToNE(); }
+      } else if (currentScope === 'ne') {
+        flyToNE();
+      } else {
+        // Return to All India view
+        var pad = window.innerWidth < 768 ? { padding: [10, 10] } : { padding: [40, 40] };
+        map.flyToBounds(ALL_STATES_BOUNDS, Object.assign({}, pad, { duration: 1.0 }));
+      }
     });
 
     // Map zoom/move events for banking labels
@@ -416,6 +440,39 @@ const base = import.meta.env.BASE_URL;
           { field: 'cap_nsdl', label: 'NSDL Service Centres', unit: '', desc: 'NSDL Depository Participant service centres.' },
           { field: 'cap_mfdi', label: 'MFD Individual', unit: '', desc: 'Individual Mutual Fund Distributors registered with AMFI.' },
           { field: 'cap_mfdc', label: 'MFD Corporate', unit: '', desc: 'Corporate Mutual Fund Distributors registered with AMFI.' },
+        ],
+      },
+      facebook_rwi: {
+        title: 'Relative Wealth Index (Meta)',
+        desc: 'Facebook/Meta Relative Wealth Index 2021 — a satellite + connectivity-derived proxy for household wealth, calibrated against DHS surveys. Scale roughly -2 (poorest) to +2 (richest), centered around the India national average. Granular and modern: covers 625 districts. Source: SHRUG v2.1 aggregation of Chi et al. (2022) Meta Data for Good RWI. Licence: CC BY-NC-SA 4.0.',
+        timePoints: ['2021-12'],
+        metrics: [
+          { field: 'rwi_mean', label: 'Mean RWI', unit: '', desc: 'District-level mean of Facebook RWI cells. Higher = wealthier than India average. Negative = poorer.' },
+          { field: 'rwi_max', label: 'Max RWI (richest pocket)', unit: '', desc: 'Wealthiest 2.4 km cell in the district. Indicates intra-district inequality when paired with min.' },
+          { field: 'rwi_min', label: 'Min RWI (poorest pocket)', unit: '', desc: 'Poorest 2.4 km cell in the district.' },
+          { field: 'rwi_spread', label: 'Wealth Spread', unit: '', desc: 'max − min within the district. High = unequal; low = uniformly wealthy or uniformly poor.' },
+        ],
+      },
+      pmgsy_roads: {
+        title: 'PMGSY Rural Roads',
+        desc: 'Cumulative Pradhan Mantri Gram Sadak Yojana rural road construction through 2015, aggregated from village-level shrid records. Captures the central rural connectivity scheme that underwrites last-mile access (including reach to bank branches and BCs). 542 districts. Source: SHRUG v2.1 — PMGSY 2015 cumulative shrid data. Licence: CC BY-NC-SA 4.0.',
+        timePoints: ['2015-12'],
+        metrics: [
+          { field: 'roads_total', label: 'Total Roads (new + upgraded)', unit: '', desc: 'Number of completed PMGSY road segments (new construction + upgrades) in the district through 2015.' },
+          { field: 'km_total', label: 'Total Length (km)', unit: 'km', desc: 'Total km of completed PMGSY road in the district through 2015.' },
+          { field: 'roads_new', label: 'New Roads', unit: '', desc: 'Newly-constructed PMGSY road segments.' },
+          { field: 'roads_upg', label: 'Upgraded Roads', unit: '', desc: 'Upgraded existing road segments under PMGSY.' },
+          { field: 'cost_total_lakhs', label: 'Total Cost (₹ Lakhs)', unit: '₹', desc: 'Total PMGSY expenditure in the district (₹ Lakhs).' },
+        ],
+      },
+      viirs_nightlights: {
+        title: 'Nightlights (VIIRS, annual)',
+        desc: 'Annual nighttime light intensity from the NOAA/Colorado School of Mines VIIRS satellite, aggregated to district level using SHRUG. Long-running proxy for economic activity / electrification / urbanization. Use the timeline slider to compare 2012 vs 2023 and see which districts lit up over the decade. Source: SHRUG v2.1 — VIIRS annual median-masked composites. Licence: CC BY-NC-SA 4.0.',
+        timePoints: ['2023-12', '2022-12', '2021-12', '2020-12', '2019-12', '2018-12', '2017-12', '2016-12', '2015-12', '2014-12', '2013-12', '2012-12'],
+        metrics: [
+          { field: 'nl_mean', label: 'Mean Intensity', unit: '', desc: 'Mean nighttime light radiance per district cell. Standard VIIRS units (nW/cm²/sr).' },
+          { field: 'nl_sum', label: 'Total Light Output', unit: '', desc: 'Sum of all cell radiance — a population/area-weighted total. Useful for total economic activity proxy.' },
+          { field: 'nl_max', label: 'Peak Intensity', unit: '', desc: 'Brightest cell in the district — typically the largest urban cluster.' },
         ],
       },
     };
@@ -712,11 +769,9 @@ const base = import.meta.env.BASE_URL;
         var dn = normDist(rec.district);
         if (!dn) continue;
 
-        // If state filter is active, skip non-matching states
-        if (bankingStateFilter) {
-          var recState = (rec.state || '').toUpperCase().replace(/-/g, ' ');
-          if (recState !== bankingStateFilter && STATE_SLUGS[bankingStateFilter] !== rec.state) continue;
-        }
+        // Note: state focus filtering is now applied at render time (style function)
+        // rather than at lookup time, so all districts retain data and non-focus
+        // states can be rendered as dimmed context.
 
         // Get the primary metric value
         var val = null;
@@ -797,25 +852,46 @@ const base = import.meta.env.BASE_URL;
           var st = f.properties.STATE_UT?.toUpperCase()?.trim();
           if (!NE_STATES.includes(st)) return false;
           if (currentScope === 'ne' && NE_ALL.indexOf(st) < 0) return false;
-          if (bankingStateFilter && st !== bankingStateFilter) return false;
+          // When state focus is active, keep ALL features (don't filter) — non-focus
+          // states will be rendered in dim context style.
           return true;
         }),
       };
 
+      // Collect values for break computation. When a state is focused, compute
+      // breaks from only that state's distribution so within-state contrast is preserved.
       var allVals = [];
       filtered.features.forEach(function(f) {
+        var st = f.properties.STATE_UT?.toUpperCase()?.trim();
+        if (bankingStateFilter && st !== bankingStateFilter) return;
         var data = resolveLookup(f, lookup);
         if (data && data.value !== null) allVals.push(data.value);
       });
       var breaks = computeBreaks(allVals);
 
       var legendLabel = metric.label + (metric.unit === '₹' ? ' (₹ Lakhs)' : metric.unit === '%' ? ' (%)' : '');
+      if (bankingStateFilter) {
+        // Annotate legend with focused state name (Title Case)
+        var stTitle = bankingStateFilter.toLowerCase().replace(/\b\w/g, function(c){return c.toUpperCase();});
+        legendLabel = legendLabel + ' · ' + stTitle;
+      }
       updateLegend_banking(legendLabel, breaks, ramp);
 
       choroLayer = L.geoJSON(filtered, {
         style: function(feature) {
+          var st = feature.properties.STATE_UT?.toUpperCase()?.trim();
           var data = resolveLookup(feature, lookup);
           var val = data ? data.value : null;
+          // Non-focus states: render as dim grey context
+          if (bankingStateFilter && st !== bankingStateFilter) {
+            return {
+              fillColor: '#d8d3ca',
+              fillOpacity: 0.18,
+              color: '#c8bfb0',
+              weight: 0.5,
+              opacity: 0.4,
+            };
+          }
           return {
             fillColor: getColor(val, breaks, ramp),
             fillOpacity: val === null ? 0.5 : 0.78,
@@ -826,6 +902,16 @@ const base = import.meta.env.BASE_URL;
         },
         onEachFeature: function(feature, layer) {
           var p = feature.properties;
+          var st = p.STATE_UT?.toUpperCase()?.trim();
+          // Skip event binding for dim non-focus states (no hover, no click)
+          if (bankingStateFilter && st !== bankingStateFilter) {
+            // Click on dim state in main map should focus that state
+            layer.on('click', function(e) {
+              L.DomEvent.stopPropagation(e);
+              window.dispatchEvent(new CustomEvent('finer:stateFilterChange', { detail: { state: st } }));
+            });
+            return;
+          }
           var data = resolveLookup(feature, lookup);
 
           layer.on({
@@ -1523,13 +1609,204 @@ const base = import.meta.env.BASE_URL;
     window.addEventListener('finer:scopeChange', function(e) { switchScope(e.detail.scope); });
 
     // ══════════════════════════════════════════
+    // Section 5a — State inset map (clickable navigator)
+    // ══════════════════════════════════════════
+    var insetMap = null;
+    var insetLayer = null;
+    var insetByCode = {};       // 2-letter code -> Leaflet layer
+    var insetByStateUT = {};    // UPPERCASE STATE_UT -> 2-letter code
+    var stateBoundsByCode = {}; // 2-letter code -> bounds entry from state-bounds.json
+
+    function updateInsetHighlight() {
+      if (!insetLayer) {
+        // Even without inset, update header label + reset button
+        var lbl = document.getElementById('state-inset-label');
+        var rb = document.getElementById('state-inset-reset');
+        if (lbl) {
+          if (bankingStateFilter) {
+            var t = bankingStateFilter.toLowerCase().replace(/\b\w/g, function(c){return c.toUpperCase();});
+            lbl.textContent = 'Focused: ' + t;
+          } else {
+            lbl.textContent = 'Click a state to focus';
+          }
+        }
+        if (rb) rb.classList.toggle('active', !!bankingStateFilter);
+        return;
+      }
+      var lbl2 = document.getElementById('state-inset-label');
+      var rb2 = document.getElementById('state-inset-reset');
+      if (lbl2) {
+        if (bankingStateFilter) {
+          var ti = bankingStateFilter.toLowerCase().replace(/\b\w/g, function(c){return c.toUpperCase();});
+          lbl2.textContent = 'Focused: ' + ti;
+        } else {
+          lbl2.textContent = 'Click a state to focus';
+        }
+      }
+      if (rb2) rb2.classList.toggle('active', !!bankingStateFilter);
+
+      insetLayer.eachLayer(function(layer) {
+        var code = layer.feature?.properties?.state_code;
+        var stateName = layer.feature?.properties?.state_name?.toUpperCase().replace(/&/g, 'AND').replace(/\s+/g, ' ').trim();
+        var focused = bankingStateFilter && (
+          stateName === bankingStateFilter
+          || stateName === bankingStateFilter.replace(/&/g, 'AND')
+          || (stateBoundsByCode[code]?.finer_name?.toUpperCase() === bankingStateFilter)
+        );
+        if (focused) {
+          layer.setStyle({ fillColor: '#b8603e', fillOpacity: 0.85, color: '#6b4c2a', weight: 1.5 });
+          layer.bringToFront();
+        } else {
+          layer.setStyle({ fillColor: '#e8e4dc', fillOpacity: 0.7, color: '#bbb3a4', weight: 0.5 });
+        }
+      });
+    }
+
+    // Reset button — clears state focus
+    (function() {
+      var rb = document.getElementById('state-inset-reset');
+      if (rb) {
+        rb.addEventListener('click', function() {
+          window.dispatchEvent(new CustomEvent('finer:stateFilterChange', { detail: { state: '' } }));
+        });
+      }
+    })();
+
+    function initInsetMap() {
+      var insetEl = document.getElementById('state-inset-map');
+      if (!insetEl) return;
+      // Slightly tighter India bounds for inset view (so all of India fits without too much whitespace)
+      var INSET_BOUNDS = L.latLngBounds(L.latLng(7, 68), L.latLng(36, 98));
+      insetMap = L.map(insetEl, {
+        center: [22, 82],
+        zoom: 3,
+        zoomControl: false,
+        attributionControl: false,
+        dragging: false,
+        scrollWheelZoom: false,
+        doubleClickZoom: false,
+        boxZoom: false,
+        touchZoom: false,
+        keyboard: false,
+        zoomSnap: 0,
+      });
+      insetMap.fitBounds(INSET_BOUNDS, { padding: [4, 4] });
+
+      // Build state name → STATE_UT-like uppercase normalised key (matches main map's STATE_UT)
+      var STATE_NAME_TO_UT = {
+        'Andhra Pradesh': 'ANDHRA PRADESH',
+        'Arunachal Pradesh': 'ARUNACHAL PRADESH',
+        'Assam': 'ASSAM',
+        'Bihar': 'BIHAR',
+        'Chhattisgarh': 'CHHATTISGARH',
+        'Goa': 'GOA',
+        'Gujarat': 'GUJARAT',
+        'Haryana': 'HARYANA',
+        'Himachal Pradesh': 'HIMACHAL PRADESH',
+        'Jharkhand': 'JHARKHAND',
+        'Karnataka': 'KARNATAKA',
+        'Kerala': 'KERALA',
+        'Madhya Pradesh': 'MADHYA PRADESH',
+        'Maharashtra': 'MAHARASHTRA',
+        'Manipur': 'MANIPUR',
+        'Meghalaya': 'MEGHALAYA',
+        'Mizoram': 'MIZORAM',
+        'Nagaland': 'NAGALAND',
+        'Odisha': 'ODISHA',
+        'Punjab': 'PUNJAB',
+        'Rajasthan': 'RAJASTHAN',
+        'Sikkim': 'SIKKIM',
+        'Tamil Nadu': 'TAMIL NADU',
+        'Telangana': 'TELANGANA',
+        'Tripura': 'TRIPURA',
+        'Uttar Pradesh': 'UTTAR PRADESH',
+        'Uttarakhand': 'UTTARAKHAND',
+        'West Bengal': 'WEST BENGAL',
+        'Jammu & Kashmir': 'JAMMU AND KASHMIR',
+        'Delhi': 'DELHI',
+        'Chandigarh': 'CHANDIGARH',
+        'Puducherry': 'PUDUCHERRY',
+        'Andaman & Nicobar': 'ANDAMAN & NICOBAR',
+        'Lakshadweep': 'LAKSHADWEEP',
+        'Dadra & Nagar Haveli & Daman & Diu': 'DADRA & NAGAR HAVELI & DAMAN & DIU',
+      };
+
+      Promise.all([
+        fetch(_B + 'data/india_states.geojson').then(function(r){return r.json();}),
+        fetch(_B + 'state-bounds.json').then(function(r){return r.json();}).catch(function(){return {};}),
+      ]).then(function(results) {
+        var geo = results[0];
+        stateBoundsByCode = results[1] || {};
+        insetLayer = L.geoJSON(geo, {
+          style: {
+            fillColor: '#e8e4dc',
+            fillOpacity: 0.7,
+            color: '#bbb3a4',
+            weight: 0.5,
+          },
+          onEachFeature: function(feature, layer) {
+            var code = feature.properties.state_code;
+            var stateName = feature.properties.state_name;
+            var stateUT = STATE_NAME_TO_UT[stateName] || stateName.toUpperCase();
+            insetByCode[code] = layer;
+            insetByStateUT[stateUT] = code;
+
+            layer.on({
+              mouseover: function(e) {
+                if (!bankingStateFilter || (e.target !== insetByCode[insetByStateUT[bankingStateFilter]])) {
+                  e.target.setStyle({ fillColor: '#d4845f', fillOpacity: 0.6, color: '#8a4a2a', weight: 1 });
+                }
+                e.target.bindTooltip(stateName, { className: 'inset-tip', direction: 'top', offset: [0, -4] }).openTooltip();
+              },
+              mouseout: function(e) {
+                e.target.closeTooltip();
+                updateInsetHighlight();
+              },
+              click: function(e) {
+                L.DomEvent.stopPropagation(e);
+                // Toggle: clicking the focused state again clears focus
+                if (bankingStateFilter === stateUT) {
+                  window.dispatchEvent(new CustomEvent('finer:stateFilterChange', { detail: { state: '' } }));
+                } else {
+                  window.dispatchEvent(new CustomEvent('finer:stateFilterChange', { detail: { state: stateUT } }));
+                }
+              },
+            });
+          },
+        }).addTo(insetMap);
+        updateInsetHighlight();
+      });
+    }
+
+    // Defer init until DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initInsetMap);
+    } else {
+      initInsetMap();
+    }
+
+    // ══════════════════════════════════════════
     // Section 5 — URL parameter support
     // ══════════════════════════════════════════
-    // Check for scope=ne URL param
+    // Check for ?scope=ne and ?state=<slug-or-name>
     (function() {
       var params = new URLSearchParams(window.location.search);
       if (params.get('scope') === 'ne') {
         switchScope('ne');
+      }
+      var st = params.get('state');
+      if (st) {
+        // Translate slug → STATE_UT (uppercase). Wait until distGeoJSON loads to fly.
+        var ut = st.toUpperCase().replace(/-/g, ' ');
+        // Wait briefly for distGeoJSON load before dispatching
+        var attempts = 0;
+        var iv = setInterval(function() {
+          attempts++;
+          if (distGeoJSON || attempts > 40) {
+            clearInterval(iv);
+            window.dispatchEvent(new CustomEvent('finer:stateFilterChange', { detail: { state: ut } }));
+          }
+        }, 100);
       }
     })();
 
@@ -1687,6 +1964,15 @@ const base = import.meta.env.BASE_URL;
   .leaflet-control-zoom a:hover{background:#fff!important;color:#1a1410!important}
 
   #wm{position:absolute;bottom:20px;right:110px;z-index:1000;font-family:'Inter',sans-serif;font-size:9px;font-weight:500;color:rgba(0,0,0,0.15);letter-spacing:0.06em;pointer-events:none}
+  #state-inset-wrap{position:absolute;bottom:24px;right:16px;z-index:1000;width:200px;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.5);border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,0.05);overflow:hidden}
+  #state-inset-label{font-family:'Inter',sans-serif;font-size:9px;font-weight:500;color:#7a7068;letter-spacing:0.04em;padding:8px 12px 4px;text-transform:uppercase}
+  #state-inset-map{height:180px;width:100%;background:#faf8f5;cursor:pointer}
+  #state-inset-map .leaflet-container{background:#faf8f5}
+  #state-inset-reset{display:none;width:100%;background:transparent;border:none;border-top:1px solid rgba(224,221,216,0.5);padding:8px 12px;font-family:'Inter',sans-serif;font-size:10px;font-weight:600;color:#b8603e;cursor:pointer;letter-spacing:0.02em;transition:background 0.2s}
+  #state-inset-reset:hover{background:rgba(184,96,62,0.08)}
+  #state-inset-reset.active{display:block}
+  .inset-tip{padding:3px 8px!important;background:rgba(26,20,16,0.92)!important;color:#fff!important;font-family:'Inter',sans-serif!important;font-size:10px!important;font-weight:500!important;border:none!important;border-radius:4px!important;box-shadow:0 2px 8px rgba(0,0,0,0.15)!important;letter-spacing:0.02em}
+  .inset-tip:before{display:none!important}
   #btn-back{display:none;position:absolute;top:90px;right:16px;z-index:1000;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.5);padding:10px 16px;font-family:'Inter',sans-serif;font-size:10px;font-weight:500;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.04);color:#555048;border-radius:8px;transition:all 0.25s}
   #btn-back:hover{background:#fff;box-shadow:0 6px 20px rgba(0,0,0,0.08);color:#1a1410}
 
@@ -1778,6 +2064,7 @@ const base = import.meta.env.BASE_URL;
 
     /* Legends — inline compact strip at top-left */
     #legend{bottom:auto!important;top:8px;left:8px;right:auto;padding:6px 10px;border-radius:8px;font-size:9px}
+    #state-inset-wrap{display:none!important}
     #legend .lr{margin-bottom:3px;font-size:9px;gap:6px}
     #legend .ldot{width:7px;height:7px}
 
