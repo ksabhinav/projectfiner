@@ -259,9 +259,9 @@ export const ATLAS_INDICATORS: AtlasIndicator[] = [
   { key: 'sui_outstanding_amt',           indicatorKey: 'sui',                     metricIdx: 2, name: 'Stand Up India (Amount)',       units: '₹ L', category: 'schemes', subgroup: 'scheme',    rampKey: 'saffron' },
 
   // ===== Digital ==========================================================
-  { key: 'digital_transactions',          name: 'UPI Transactions (Count)',      units: 'no.',  category: 'digital', subgroup: 'headline',  rampKey: 'peacock' },
-  { key: 'upi_transaction_amount',        indicatorKey: 'digital_transactions',    metricIdx: 1, name: 'UPI Transactions (Amount)',     units: '₹ L', category: 'digital', subgroup: 'headline',  rampKey: 'peacock' },
-  { key: 'sb_digital_coverage',           indicatorKey: 'digital_transactions',    metricIdx: 2, name: 'SB Digital Coverage',           units: '%',   category: 'digital', subgroup: 'inclusion', rampKey: 'peacock' },
+  { key: 'digital_transactions',          name: 'UPI Transactions (PhonePe)',    units: 'no.',  category: 'digital', subgroup: 'headline',  rampKey: 'vermillion' },
+  { key: 'upi_transaction_amount',        indicatorKey: 'digital_transactions',    metricIdx: 1, name: 'UPI Amount (PhonePe)',           units: '₹ L', category: 'digital', subgroup: 'headline',  rampKey: 'vermillion' },
+  { key: 'sb_digital_coverage',           indicatorKey: 'digital_transactions',    metricIdx: 2, name: 'SB Digital Coverage',            units: '%',   category: 'digital', subgroup: 'inclusion', rampKey: 'peacock' },
 
   // ===== Capital markets ==================================================
   { key: 'capital_markets_access',        indicatorKey: 'capital_markets_access',  metricIdx: 0, name: 'Capital Markets Access (Total)', units: 'no.', category: 'capital-markets', subgroup: 'headline',  rampKey: 'peacock' },

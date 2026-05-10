@@ -283,29 +283,24 @@
   .tl-dot.year-dot.active {
     background: #B84A2E;
   }
+  /* Pre-Atlas flat-bar thumb shape — proportional to 6px track. Vermillion
+     fill, soft shadow, no halo (halo on a thin track felt like a UFO). */
   .timeline-thumb {
     position: absolute;
     left: 50%;
-    width: 14px;
-    height: 14px;
-    margin-left: -7px;
-    margin-top: -7px;
+    width: 18px;
+    height: 8px;
+    margin-left: -9px;
+    margin-top: -4px;
     background: #B84A2E;
-    border-radius: 50%;
+    border-radius: 4px;
     cursor: grab;
-    /* No `top` transition — must follow the cursor exactly during drag.
-       Only the halo + scale animate on hover. */
-    transition: box-shadow 160ms ease;
     z-index: 2;
-    /* Atlas: ringed halo around current quarter */
-    box-shadow:
-      0 0 0 4px rgba(184, 74, 46, 0.18),
-      0 2px 4px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 1px 4px rgba(184, 74, 46, 0.3);
+    transition: box-shadow 160ms ease;
   }
   .timeline-thumb:hover {
-    box-shadow:
-      0 0 0 5px rgba(184, 74, 46, 0.22),
-      0 2px 8px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 2px 8px rgba(184, 74, 46, 0.45);
   }
   .timeline-thumb:active {
     cursor: grabbing;
@@ -346,20 +341,12 @@
       width: 2px;
     }
     .tl-bound { font-size: 8px; letter-spacing: 0.04em; }
-    /* Round thumb stays round — just slightly smaller, halo softer */
+    /* Mobile: same flat-bar thumb, slightly narrower */
     .timeline-thumb {
-      width: 12px;
-      height: 12px;
-      margin-left: -6px;
-      margin-top: -6px;
-      box-shadow:
-        0 0 0 3px rgba(184, 74, 46, 0.18),
-        0 1px 3px rgba(0, 0, 0, 0.12);
-    }
-    .timeline-thumb:hover {
-      box-shadow:
-        0 0 0 4px rgba(184, 74, 46, 0.22),
-        0 1px 6px rgba(0, 0, 0, 0.18);
+      width: 14px;
+      height: 6px;
+      margin-left: -7px;
+      margin-top: -3px;
     }
     .tl-dot.year-dot { width: 5px; height: 5px; margin-left: -2.5px; margin-top: -2.5px; }
     /* Italic label below the track — smaller, tighter on mobile */
