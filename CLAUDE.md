@@ -291,7 +291,7 @@ Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) q
 |-------|---------------|----------------|-----------|
 | Assam | Sep 2025 | 30 | 35 |
 | Manipur | Sep 2025 | 39 | 16 |
-| Tripura | Sep 2025 | 32 | 8 |
+| Tripura | Dec 2025 | 35 | 8 |
 | Bihar | Sep 2025 | 6 | 38 |
 | West Bengal | Dec 2025 | 39 | 23 |
 | Mizoram | Sep 2025 | 22 | 11 |
@@ -528,6 +528,29 @@ python3 extract_uttarakhand.py
 # Then: DELETE from slbc_data WHERE source_file='uttarakhand'; re-run import_slbc for UK
 # Then: python3 db/export_indicator_files.py
 ```
+
+## Tripura Data Pipeline
+
+Tripura SLBC data was fully re-extracted from source PDFs hosted at `slbctripura.pnb.bank.in/Back_Paper_Quarterly.asp` (PNB is the SLBC convenor for Tripura). The previous data came from a mixture of NE-portal scraping (sparse coverage of older quarters) and partial PDF extraction.
+
+**Source PDFs**: 30 PDFs in `slbc-data/tripura/` covering the 125th–154th SLBC meetings (Jun 2018 → Dec 2025). Naming convention: `{N}{th|st|nd|rd}_{month3}{year}.pdf` (e.g. `131st_dec2019.pdf`, `154th_dec2025_agenda.pdf`).
+
+**Extraction script**: `slbc-data/tripura/extract_tripura.py` (~700 lines, modelled on `extract_uttarakhand.py`).
+- Uses pdfplumber. Tripura's recent agendas use the same multi-quarter-per-table format as UK (e.g. CD ratio table in 154th has 5 quarter columns: Dec 2024 → Dec 2025 plus Q-o-Q and Y-o-Y delta columns — the deltas are skipped during parsing).
+- Skips non-data tables: TOC pages, bank-wise (vs district-wise) summaries, "ATM allocation by block" rosters, garbled rotated-text artefacts, "Q-o-Q change" / "Y-o-Y change" delta columns.
+- Recognises 8 Tripura districts (Dhalai, Gomati, Khowai, North Tripura, Sepahijala, South Tripura, Unakoti, West Tripura) plus aliases like "Sipahijala" and "Dhalai Total" suffix-stripping.
+- Quarter de-duplication: same `(district, quarter, field)` may appear in multiple PDFs (e.g. Dec 2024 appears in 5 different tables across 150th-154th); always uses the most recent meeting's value.
+- Pulls 3 historical quarters (Mar/Sep/Dec 2017) from multi-quarter tables in the older PDFs that weren't previously extracted.
+
+**Field standardization**: Same canonical-rename pattern as UK. The most impactful renames apply to digital_transactions where TR's verbose field names like `coverage_with_at_least_one_of_the_digital_modes_of_payment_..._pct_coverage` map to `coverage_sb_pct`. CD ratio's `overall_cd_ratio` is already canonical.
+
+**Data coverage**: 35 quarters from March 2017 to December 2025, 8 districts. CD ratio in all 35 quarters; digital_transactions in 11; branch_network in 14; PMJDY in 9; KCC in 7; SHG in 7. Aadhaar authentication absent (frontend cross-category fallback maps to PMJDY).
+
+**KCC caveat**: Tripura PDFs report KCC by **crop season** (Kharif loanee/non-loanee, Rabi loanee/non-loanee), not by cumulative card count. So `kcc__total_no_of_kcc` (the canonical primary field for the KCC indicator) is not populated — TR districts won't appear on the KCC indicator on the homepage. Consider this a structural source limitation rather than an extraction bug.
+
+**Branch caveat (Dec 2025 only)**: The 154th meeting agenda doesn't include absolute branch counts — only BC coverage percentages. Same UK-style caveat. Earlier Tripura quarters (134th-153rd) do have absolute branch_network counts.
+
+**Where the source files live**: `~/Downloads/slbc_tripura_pdfs/` is the original local download cache; for the pipeline they're consolidated into `slbc-data/tripura/` (untracked per `.gitignore` convention).
 
 ## West Bengal Data Pipeline
 

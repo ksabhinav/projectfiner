@@ -1,9 +1,9 @@
-District,Total Branch,Total Deposit,Total Advance,Overall CD Ratio
-West Tripura,210,2335054.72,1094473.84,47
-Sepahijala,59,217579.99,146332.67,67
-Khowai,41,165546.66,104405.53,63
-Dhalai,49,138560.51,132851.46,96
-Gomati,65,244829.26,157289.17,64
-South Tripura,63,241663.75,152828.71,63
-Unakoti,35,131624.03,87508.25,66
-North Tripura,49,209119.09,123971.22,59
+district,cd_ratio,no_of_brs,total_deposit,total_advance
+Dhalai,96,49,144256.74,137781.05
+Gomati,63,65,247118.39,164719.61
+Khowai,59,44,173507.05,113512.68
+North Tripura,59,50,220082.52,131201.88
+Sepahijala,68,59,222289.35,131906.38
+South Tripura,61,63,241979.15,160868.61
+Unakoti,66,35,136859.37,80040.14
+West Tripura,51,215,2357201.13,1169752.72

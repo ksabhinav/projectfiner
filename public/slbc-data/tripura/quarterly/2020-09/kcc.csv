@@ -1,8 +1,9 @@
-District,Cumulative number of KCC applications Received,PM Kisan KCC Sanctioned (Cumulative),KCC Limit Sanctioned (in Rs lakhs),Application not found to be eligible,Pending Applications,Cumulative Applications Received Consented PMSBY,Consented PMJJBY,Cumulative Applications Sanctioned Consented PMSBY
-West Tripura,12561,6012,2718,1440,1874,5044,1438,3265
-Sepahijala,14712,8548,2510,2012,1154,1481,301,574
-Khowai,11335,5004,1253,1850,1084,1070,229,294
-Dhalai,24726,10441,2896,5111,4502,2092,279,411
-Gomati,23776,12678,4233,2405,3990,2851,557,1437
-South Tripura,25993,12082,3858,2958,5173,4089,718,1941
-North Tripura,22407,9786,2264,4585,4021,5803,314,1287
+district,status_of_kcc_applications_sanctioned_kcc_crop_loan_b,status_of_kcc_applications_sanctioned_farmers_with_ah_or_fisheries_activities_kcc_crop_loan_with_dairy_activity_c,status_of_kcc_applications_sanctioned_farmers_with_ah_or_fisheries_activities_kcc_crop_loan_with_any_other_allied_activities_c,status_of_kcc_applications_sanctioned_only_animal_husbandry_dairy_d,status_of_kcc_applications_sanctioned_only_animal_husbandry_poultry_d,status_of_kcc_applications_sanctioned_only_animal_husbandry_others_d,status_of_kcc_applications_sanctioned_fisheries_others_e,status_of_kcc_applications_sanctioned_grand_total_others_g_b_c_d_e,kcc_limit_sanctioned_in_rs_lakhs_kcc_crop_loan_others_h,kcc_limit_sanctioned_in_rs_lakhs_farmers_with_ah_or_fisheries_activities_kcc_crop_loan_with_dairy_activity,kcc_limit_sanctioned_in_rs_lakhs_farmers_with_ah_or_fisheries_activities_kcc_crop_loan_with_any_other_allied_activities,kcc_limit_sanctioned_in_rs_lakhs_only_animal_husbandry_dairy_j,kcc_limit_sanctioned_in_rs_lakhs_only_animal_husbandry_poultry_j,kcc_limit_sanctioned_in_rs_lakhs_only_animal_husbandry_others_j,kcc_limit_sanctioned_in_rs_lakhs_fisheries_others_k,kcc_limit_sanctioned_in_rs_lakhs_grand_total_others_l_h_i_j_k,kcc_limit_sanctioned_in_rs_lakhs_applicant_already_having_a_kcc_either_in_same_bank_or_other_banks_cooperative_pacs_or_existing_kcc_under_default_npa_others_m,kcc_limit_sanctioned_in_rs_lakhs_non_availability_of_land_records_no_clear_title_disputed_land_records_etc_others_n,kcc_limit_sanctioned_in_rs_lakhs_total_others_o_m_n,kcc_limit_sanctioned_in_rs_lakhs_total_others_p_g_o,consented_pmsby_total_others_p_g_o,consented_pmjjby_total_others_p_g_o
+Dhalai,10441,275,385,233,205,287,67,11889,2896,173,79,146,69,63,51,3477,5111,3220,8331,4502,2092,2097
+Gomati,12678,565,750,13,128,224,10,14368,4233,332,334,111,59,42,62,5173,2405,2983,5422,3990,2851,2088
+Khowai,5004,420,451,15,10,123,37,6060,1253,172,132,61,22,35,31,1706,1850,2341,4191,1084,1070,1070
+North Tripura,9786,12,445,16,13,176,33,10482,2264,168,338,160,31,111,73,3145,4585,3319,7904,4021,5803,5153
+Sepahijala,8548,655,745,124,68,75,14,10230,2510,264,219,109,41,25,40,3208,2012,1316,3328,1154,1481,1344
+South Tripura,12082,565,514,138,41,340,57,13738,3858,366,269,177,73,180,79,5002,2958,4071,7082,5173,4089,3024
+Unakoti,3299,209,131,14,109,141,5,3909,893,187,69,73,72,52,29,1374,1495,794,2288,968,1307,1300
+West Tripura,6012,373,451,84,47,94,11,7076,2718,286,254,113,34,109,38,3553,1440,2171,3611,1874,5044,3228

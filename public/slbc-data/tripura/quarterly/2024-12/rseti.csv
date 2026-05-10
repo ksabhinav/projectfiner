@@ -1,6 +1,6 @@
-District,Male,Female,Total,SC,ST,Obc,Mc,With owned fund,With bank Loan,Wage Employed,Apl,Bpl
-Gomati,14,834,284,115,249,216,14,171,113,0,0,848
-Dhalai,33,729,107,100,476,152,2,9,98,0,0,762
-Sepahijala,29,671,32,231,104,241,87,32,6,0,0,700
-West Tripura,73,663,137,183,294,196,6,90,47,0,6,730
-Unakoti,155,490,181,149,212,168,22,129,52,0,0,645
+district,state_tripura_no_of_program_me,state_tripura_no_of_participants_male,state_tripura_no_of_participants_female,state_tripura_no_of_participants_total,state_tripura_out_of_total_participants_sc,state_tripura_out_of_total_participants_st,state_tripura_out_of_total_participants_obc,state_tripura_out_of_total_participants_mc,state_tripura_no_of_trainees_employed_with_owned_fund,state_tripura_no_of_trainees_employed_with_bank_loan,state_tripura_no_of_trainees_employed_wage_employed,state_tripura_no_of_trainees_employed_total,state_tripura_financial_status_of_trainees_apl,state_tripura_financial_status_of_trainees_bpl,state_tripura_financial_status_of_trainees_total
+Dhalai,25,33,729,762,100,476,152,2,9,98,0,107,0,762,762
+Gomati,26,14,834,848,115,249,216,14,171,113,0,284,0,848,848
+Sepahijala,21,29,671,700,231,104,241,87,32,6,0,32,0,700,700
+Unakoti,24,155,490,645,149,212,168,22,129,52,0,181,0,645,645
+West Tripura,28,73,663,736,183,294,196,6,90,47,0,137,6,730,736

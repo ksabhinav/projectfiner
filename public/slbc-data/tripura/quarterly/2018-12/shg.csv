@@ -1,9 +1,6 @@
-District,Deposit Linkage No. of Groups,Amt,Capacity Building No.,Rf No.,Credit Linked No.,No. of Federations
-West Tripura,4704,273.50,4357,4483,272,173
-Sepahijala,3760,80.00,2880,3457,80,140
-Khowai,2966,211.00,184,2742,211,104
-North Tripura,3900,250.40,6081,3455,251,146
-Unakoti,2671,232.50,4132,2224,251,86
-Dhalai,287,290.50,182,402,244,84
-Gomati,193,199.50,153,419,133,183
-South Tripura,351,216.00,221,196,149,29
+district,nerlp_rs_in_lakhs_deposit_linkage_no_of_groups,nerlp_rs_in_lakhs_deposit_linkage_amt,nerlp_rs_in_lakhs_capacity_building_no_amt,nerlp_rs_in_lakhs_rf_amt,nerlp_rs_in_lakhs_credit_linked_no,amt_in_rs_lacs_nerlp_rs_in_lakhs_credit_linked,amt_in_rs_lacs_nerlp_rs_in_lakhs_no_of_federati_ons
+Khowai,2966,296.77,576,1922.8,73,73,104
+North Tripura,3900,550.28,6081,4000,101,104.4,146
+Sepahijala,3760,231.78,2880,69.14,80,80,140
+Unakoti,2671,321,2021,444,87,87.5,83
+West Tripura,4704,1202.13,4357,896.6,158,159.5,173
