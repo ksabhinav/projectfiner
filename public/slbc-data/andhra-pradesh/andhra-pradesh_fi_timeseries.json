@@ -1,0 +1,812 @@
+{
+  "periods": [
+    {
+      "period": "March 2023",
+      "districts": [
+        {
+          "district": "Alluri Sitharama Raju",
+          "period": "March 2023",
+          "branch_network__cd_ratio": 118.0
+        },
+        {
+          "district": "Anakapalli",
+          "period": "March 2023",
+          "branch_network__cd_ratio": 154.0
+        },
+        {
+          "district": "Anantapur",
+          "period": "March 2023",
+          "branch_network__cd_ratio": 149.0
+        },
+        {
+          "district": "Annamayya",
+          "period": "March 2023",
+          "branch_network__cd_ratio": 140.0
+        },
+        {
+          "district": "Bapatla",
+          "period": "March 2023",
+          "branch_network__cd_ratio": 182.0
+        },
+        {
+          "district": "Chittoor",
+          "period": "March 2023",
+          "branch_network__cd_ratio": 110.0,
+          "branch_network__lbc_of_ap_217th_meeting_of_slbc_convener_list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no": 17.0,
+          "branch_network__population": 3466.0
+        },
+        {
+          "district": "Konaseema",
+          "period": "March 2023",
+          "branch_network__cd_ratio": 177.0
+        },
+        {
+          "district": "East Godavari",
+          "period": "March 2023",
+          "branch_network__cd_ratio": 164.0
+        },
+        {
+          "district": "Eluru",
+          "period": "March 2023",
+          "branch_network__cd_ratio": 176.0,
+          "branch_network__lbc_of_ap_217th_meeting_of_slbc_convener_list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no": 21.0,
+          "branch_network__population": 7084.0
+        },
+        {
+          "district": "Guntur",
+          "period": "March 2023",
+          "branch_network__cd_ratio": 126.0
+        },
+        {
+          "district": "Kakinada",
+          "period": "March 2023",
+          "branch_network__list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no_1_2_3": 10.0,
+          "branch_network__population_3946_3636_5058": 3088.0,
+          "branch_network__lbc_of_ap_217th_meeting_of_slbc_convener_list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no": 16.0,
+          "branch_network__population": 5069.0,
+          "credit_deposit_ratio__cd_ratio": 136.0
+        },
+        {
+          "district": "Palnadu",
+          "period": "March 2023",
+          "branch_network__lbc_of_ap_217th_meeting_of_slbc_convener_list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no": 19.0,
+          "branch_network__population": 5971.0,
+          "credit_deposit_ratio__cd_ratio": 216.0
+        },
+        {
+          "district": "Krishna",
+          "period": "March 2023",
+          "credit_deposit_ratio__cd_ratio": 180.0
+        },
+        {
+          "district": "Kurnool",
+          "period": "March 2023",
+          "credit_deposit_ratio__cd_ratio": 145.0
+        },
+        {
+          "district": "Nandyal",
+          "period": "March 2023",
+          "credit_deposit_ratio__cd_ratio": 190.0
+        },
+        {
+          "district": "Ntr",
+          "period": "March 2023",
+          "credit_deposit_ratio__cd_ratio": 183.0
+        },
+        {
+          "district": "Parvathipuram Manyam",
+          "period": "March 2023",
+          "credit_deposit_ratio__cd_ratio": 152.0
+        },
+        {
+          "district": "Prakasam",
+          "period": "March 2023",
+          "credit_deposit_ratio__cd_ratio": 193.0
+        },
+        {
+          "district": "Spsr Nellore",
+          "period": "March 2023",
+          "credit_deposit_ratio__cd_ratio": 162.0
+        },
+        {
+          "district": "Sri Sathya Sai",
+          "period": "March 2023",
+          "credit_deposit_ratio__cd_ratio": 155.0
+        },
+        {
+          "district": "Srikakulam",
+          "period": "March 2023",
+          "credit_deposit_ratio__cd_ratio": 136.0
+        },
+        {
+          "district": "Tirupati",
+          "period": "March 2023",
+          "credit_deposit_ratio__cd_ratio": 83.0
+        },
+        {
+          "district": "Visakhapatanam",
+          "period": "March 2023",
+          "credit_deposit_ratio__cd_ratio": 124.0
+        },
+        {
+          "district": "Vizianagaram",
+          "period": "March 2023",
+          "credit_deposit_ratio__cd_ratio": 142.0
+        },
+        {
+          "district": "West Godavari",
+          "period": "March 2023",
+          "credit_deposit_ratio__cd_ratio": 188.0
+        },
+        {
+          "district": "Y.s.r.",
+          "period": "March 2023",
+          "credit_deposit_ratio__cd_ratio": 152.0
+        }
+      ]
+    },
+    {
+      "period": "June 2023",
+      "districts": [
+        {
+          "district": "Alluri Sitharama Raju",
+          "period": "June 2023",
+          "branch_network__cd_ratio": 117.0
+        },
+        {
+          "district": "Anakapalli",
+          "period": "June 2023",
+          "branch_network__cd_ratio": 156.0
+        },
+        {
+          "district": "Anantapur",
+          "period": "June 2023",
+          "branch_network__cd_ratio": 149.0
+        },
+        {
+          "district": "Annamayya",
+          "period": "June 2023",
+          "branch_network__cd_ratio": 139.0
+        },
+        {
+          "district": "Bapatla",
+          "period": "June 2023",
+          "branch_network__cd_ratio": 181.0
+        },
+        {
+          "district": "Chittoor",
+          "period": "June 2023",
+          "branch_network__cd_ratio": 112.0,
+          "branch_network__s_n": 17.0,
+          "branch_network__population": 3466.0
+        },
+        {
+          "district": "Konaseema",
+          "period": "June 2023",
+          "branch_network__cd_ratio": 181.0
+        },
+        {
+          "district": "East Godavari",
+          "period": "June 2023",
+          "branch_network__cd_ratio": 164.0
+        },
+        {
+          "district": "Eluru",
+          "period": "June 2023",
+          "branch_network__cd_ratio": 175.0,
+          "branch_network__s_n": 21.0,
+          "branch_network__population": 7084.0
+        },
+        {
+          "district": "Guntur",
+          "period": "June 2023",
+          "branch_network__cd_ratio": 125.0
+        },
+        {
+          "district": "Kakinada",
+          "period": "June 2023",
+          "branch_network__cd_ratio": 140.0,
+          "branch_network__s_n": 16.0,
+          "branch_network__population": 5069.0
+        },
+        {
+          "district": "Krishna",
+          "period": "June 2023",
+          "branch_network__cd_ratio": 179.0
+        },
+        {
+          "district": "Kurnool",
+          "period": "June 2023",
+          "branch_network__cd_ratio": 145.0
+        },
+        {
+          "district": "Palnadu",
+          "period": "June 2023",
+          "branch_network__s_n": 19.0,
+          "branch_network__population": 5971.0,
+          "credit_deposit_ratio__cd_ratio": 218.0
+        },
+        {
+          "district": "Nandyal",
+          "period": "June 2023",
+          "credit_deposit_ratio__cd_ratio": 172.0
+        },
+        {
+          "district": "Ntr",
+          "period": "June 2023",
+          "credit_deposit_ratio__cd_ratio": 170.0
+        },
+        {
+          "district": "Parvathipuram Manyam",
+          "period": "June 2023",
+          "credit_deposit_ratio__cd_ratio": 154.0
+        },
+        {
+          "district": "Prakasam",
+          "period": "June 2023",
+          "credit_deposit_ratio__cd_ratio": 184.0
+        },
+        {
+          "district": "Spsr Nellore",
+          "period": "June 2023",
+          "credit_deposit_ratio__cd_ratio": 163.0
+        },
+        {
+          "district": "Sri Sathya Sai",
+          "period": "June 2023",
+          "credit_deposit_ratio__cd_ratio": 159.0
+        },
+        {
+          "district": "Srikakulam",
+          "period": "June 2023",
+          "credit_deposit_ratio__cd_ratio": 136.0
+        },
+        {
+          "district": "Tirupati",
+          "period": "June 2023",
+          "credit_deposit_ratio__cd_ratio": 80.0
+        },
+        {
+          "district": "Visakhapatanam",
+          "period": "June 2023",
+          "credit_deposit_ratio__cd_ratio": 122.0
+        },
+        {
+          "district": "Vizianagaram",
+          "period": "June 2023",
+          "credit_deposit_ratio__cd_ratio": 144.0
+        },
+        {
+          "district": "West Godavari",
+          "period": "June 2023",
+          "credit_deposit_ratio__cd_ratio": 191.0
+        },
+        {
+          "district": "Y.s.r.",
+          "period": "June 2023",
+          "credit_deposit_ratio__cd_ratio": 148.0
+        }
+      ]
+    },
+    {
+      "period": "September 2023",
+      "districts": [
+        {
+          "district": "Alluri Sitharama Raju",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 118.0
+        },
+        {
+          "district": "Anakapalli",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 170.0
+        },
+        {
+          "district": "Anantapur",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 156.0
+        },
+        {
+          "district": "Annamayya",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 147.0
+        },
+        {
+          "district": "Bapatla",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 188.0
+        },
+        {
+          "district": "Chittoor",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 114.0
+        },
+        {
+          "district": "Konaseema",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 190.0
+        },
+        {
+          "district": "East Godavari",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 172.0
+        },
+        {
+          "district": "Eluru",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 184.0
+        },
+        {
+          "district": "Guntur",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 132.0
+        },
+        {
+          "district": "Kakinada",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 143.0
+        },
+        {
+          "district": "Krishna",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 193.0
+        },
+        {
+          "district": "Kurnool",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 152.0
+        },
+        {
+          "district": "Nandyal",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 183.0
+        },
+        {
+          "district": "Ntr",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 174.0
+        },
+        {
+          "district": "Palnadu",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 242.0
+        },
+        {
+          "district": "Parvathipuram Manyam",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 166.0
+        },
+        {
+          "district": "Prakasam",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 192.0
+        },
+        {
+          "district": "Spsr Nellore",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 172.0
+        },
+        {
+          "district": "Sri Sathya Sai",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 163.0
+        },
+        {
+          "district": "Srikakulam",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 146.0
+        },
+        {
+          "district": "Tirupati",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": 82.0
+        }
+      ]
+    },
+    {
+      "period": "December 2023",
+      "districts": [
+        {
+          "district": "Alluri Sitharama Raju",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 129.0
+        },
+        {
+          "district": "Anakapalli",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 176.0
+        },
+        {
+          "district": "Anantapur",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 162.0
+        },
+        {
+          "district": "Annamayya",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 153.0
+        },
+        {
+          "district": "Bapatla",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 198.0
+        },
+        {
+          "district": "Chittoor",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 135.0
+        },
+        {
+          "district": "Konaseema",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 199.0
+        },
+        {
+          "district": "East Godavari",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 180.0
+        },
+        {
+          "district": "Eluru",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 194.0
+        },
+        {
+          "district": "Guntur",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 135.0
+        },
+        {
+          "district": "Kakinada",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 150.0
+        },
+        {
+          "district": "Krishna",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 194.0
+        },
+        {
+          "district": "Kurnool",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 158.0
+        },
+        {
+          "district": "Nandyal",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 191.0
+        },
+        {
+          "district": "Ntr",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 177.0
+        },
+        {
+          "district": "Palnadu",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 253.0
+        },
+        {
+          "district": "Parvathipuram Manyam",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 171.0
+        },
+        {
+          "district": "Prakasam",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 207.0
+        },
+        {
+          "district": "Spsr Nellore",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 181.0
+        },
+        {
+          "district": "Sri Sathya Sai",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 173.0
+        },
+        {
+          "district": "Srikakulam",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 153.0
+        },
+        {
+          "district": "Tirupati",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 81.0
+        },
+        {
+          "district": "Visakhapatanam",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 121.0
+        },
+        {
+          "district": "Vizianagaram",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 162.0
+        },
+        {
+          "district": "West Godavari",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 209.0
+        },
+        {
+          "district": "Y.s.r.",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": 164.0
+        }
+      ]
+    },
+    {
+      "period": "March 2024",
+      "districts": [
+        {
+          "district": "Alluri Sitharama Raju",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 126.0
+        },
+        {
+          "district": "Anakapalli",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 179.0
+        },
+        {
+          "district": "Anantapur",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 162.0
+        },
+        {
+          "district": "Annamayya",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 161.0
+        },
+        {
+          "district": "Bapatla",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 201.0
+        },
+        {
+          "district": "Chittoor",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 139.0
+        },
+        {
+          "district": "Konaseema",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 206.0
+        },
+        {
+          "district": "East Godavari",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 183.0
+        },
+        {
+          "district": "Eluru",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 199.0
+        },
+        {
+          "district": "Guntur",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 140.0
+        },
+        {
+          "district": "Kakinada",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 151.0
+        },
+        {
+          "district": "Krishna",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 196.0
+        },
+        {
+          "district": "Kurnool",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 156.0
+        },
+        {
+          "district": "Nandyal",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 188.0
+        },
+        {
+          "district": "Ntr",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 167.0
+        },
+        {
+          "district": "Palnadu",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 248.0
+        },
+        {
+          "district": "Parvathipuram Manyam",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 168.0
+        },
+        {
+          "district": "Prakasam",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 205.0
+        },
+        {
+          "district": "Spsr Nellore",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 179.0
+        },
+        {
+          "district": "Sri Sathya Sai",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 170.0
+        },
+        {
+          "district": "Srikakulam",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 154.0
+        },
+        {
+          "district": "Tirupati",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 82.0
+        },
+        {
+          "district": "Visakhapatanam",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 120.0
+        },
+        {
+          "district": "Vizianagaram",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 163.0
+        },
+        {
+          "district": "West Godavari",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 217.0
+        },
+        {
+          "district": "Y.s.r.",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": 165.0
+        }
+      ]
+    },
+    {
+      "period": "June 2024",
+      "districts": [
+        {
+          "district": "Alluri Sitharama Raju",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 129.0
+        },
+        {
+          "district": "Anakapalli",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 180.0
+        },
+        {
+          "district": "Anantapur",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 166.0
+        },
+        {
+          "district": "Annamayya",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 163.0
+        },
+        {
+          "district": "Bapatla",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 198.0
+        },
+        {
+          "district": "Chittoor",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 139.0
+        },
+        {
+          "district": "Konaseema",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 213.0
+        },
+        {
+          "district": "East Godavari",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 184.0
+        },
+        {
+          "district": "Eluru",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 195.0
+        },
+        {
+          "district": "Guntur",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 140.0
+        },
+        {
+          "district": "Kakinada",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 158.0
+        },
+        {
+          "district": "Krishna",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 183.0
+        },
+        {
+          "district": "Kurnool",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 157.0
+        },
+        {
+          "district": "Nandyal",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 192.0
+        },
+        {
+          "district": "Ntr",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 171.0
+        },
+        {
+          "district": "Palnadu",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 250.0
+        },
+        {
+          "district": "Parvathipuram Manyam",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 171.0
+        },
+        {
+          "district": "Prakasam",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 202.0
+        },
+        {
+          "district": "Spsr Nellore",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 180.0
+        },
+        {
+          "district": "Sri Sathya Sai",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 169.0
+        },
+        {
+          "district": "Srikakulam",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 158.0
+        },
+        {
+          "district": "Tirupati",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 82.0
+        },
+        {
+          "district": "Visakhapatanam",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 121.0
+        },
+        {
+          "district": "Vizianagaram",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 166.0
+        },
+        {
+          "district": "West Godavari",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 217.0
+        },
+        {
+          "district": "Y.s.r.",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": 169.0
+        }
+      ]
+    }
+  ]
+}

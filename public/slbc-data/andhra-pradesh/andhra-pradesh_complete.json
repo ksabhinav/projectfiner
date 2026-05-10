@@ -1,0 +1,596 @@
+{
+  "state": "Andhra Pradesh",
+  "quarters": {
+    "2023-03": {
+      "period": "March 2023",
+      "tables": {
+        "branch_network": {
+          "fields": [
+            "name_of_the_district",
+            "cd_ratio",
+            "list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no_1_2_3",
+            "district_name_alluri_sita_ramaraju",
+            "sub_district_name_koyyuru_gangavaram_vr_puram",
+            "village_name_adakula_nellipudi_waddegudem",
+            "population_3946_3636_5058",
+            "whether_an_ippb_centre_exists_in_the_village_yes_no_no",
+            "lbc_of_ap_217th_meeting_of_slbc_convener_list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no",
+            "district_name",
+            "sub_district_name",
+            "village_name",
+            "population",
+            "whether_an_ippb_centre_exists_in_the_village_yes_no"
+          ],
+          "districts": {
+            "Alluri Sitharama Raju": {
+              "cd_ratio": 118.0
+            },
+            "Anakapalli": {
+              "cd_ratio": 154.0
+            },
+            "Anantapur": {
+              "cd_ratio": 149.0
+            },
+            "Annamayya": {
+              "cd_ratio": 140.0
+            },
+            "Bapatla": {
+              "cd_ratio": 182.0
+            },
+            "Chittoor": {
+              "cd_ratio": 110.0,
+              "lbc_of_ap_217th_meeting_of_slbc_convener_list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no": 17.0,
+              "population": 3466.0
+            },
+            "Konaseema": {
+              "cd_ratio": 177.0
+            },
+            "East Godavari": {
+              "cd_ratio": 164.0
+            },
+            "Eluru": {
+              "cd_ratio": 176.0,
+              "lbc_of_ap_217th_meeting_of_slbc_convener_list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no": 21.0,
+              "population": 7084.0
+            },
+            "Guntur": {
+              "cd_ratio": 126.0
+            },
+            "Kakinada": {
+              "list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no_1_2_3": 10.0,
+              "population_3946_3636_5058": 3088.0,
+              "lbc_of_ap_217th_meeting_of_slbc_convener_list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no": 16.0,
+              "population": 5069.0
+            },
+            "Palnadu": {
+              "lbc_of_ap_217th_meeting_of_slbc_convener_list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no": 19.0,
+              "population": 5971.0
+            }
+          }
+        },
+        "credit_deposit_ratio": {
+          "fields": [
+            "217th_meeting_of_slbc_name_of_the_district",
+            "convener_cd_ratio"
+          ],
+          "districts": {
+            "Kakinada": {
+              "convener_cd_ratio": 136.0
+            },
+            "Krishna": {
+              "convener_cd_ratio": 180.0
+            },
+            "Kurnool": {
+              "convener_cd_ratio": 145.0
+            },
+            "Nandyal": {
+              "convener_cd_ratio": 190.0
+            },
+            "Ntr": {
+              "convener_cd_ratio": 183.0
+            },
+            "Palnadu": {
+              "convener_cd_ratio": 216.0
+            },
+            "Parvathipuram Manyam": {
+              "convener_cd_ratio": 152.0
+            },
+            "Prakasam": {
+              "convener_cd_ratio": 193.0
+            },
+            "Spsr Nellore": {
+              "convener_cd_ratio": 162.0
+            },
+            "Sri Sathya Sai": {
+              "convener_cd_ratio": 155.0
+            },
+            "Srikakulam": {
+              "convener_cd_ratio": 136.0
+            },
+            "Tirupati": {
+              "convener_cd_ratio": 83.0
+            },
+            "Visakhapatanam": {
+              "convener_cd_ratio": 124.0
+            },
+            "Vizianagaram": {
+              "convener_cd_ratio": 142.0
+            },
+            "West Godavari": {
+              "convener_cd_ratio": 188.0
+            },
+            "Y.s.r.": {
+              "convener_cd_ratio": 152.0
+            }
+          }
+        }
+      }
+    },
+    "2023-06": {
+      "period": "June 2023",
+      "tables": {
+        "branch_network": {
+          "fields": [
+            "name_of_the_district",
+            "cd_ratio",
+            "s_n",
+            "district_name",
+            "sub_district_name",
+            "village_name",
+            "population"
+          ],
+          "districts": {
+            "Alluri Sitharama Raju": {
+              "cd_ratio": 117.0
+            },
+            "Anakapalli": {
+              "cd_ratio": 156.0
+            },
+            "Anantapur": {
+              "cd_ratio": 149.0
+            },
+            "Annamayya": {
+              "cd_ratio": 139.0
+            },
+            "Bapatla": {
+              "cd_ratio": 181.0
+            },
+            "Chittoor": {
+              "cd_ratio": 112.0,
+              "s_n": 17.0,
+              "population": 3466.0
+            },
+            "Konaseema": {
+              "cd_ratio": 181.0
+            },
+            "East Godavari": {
+              "cd_ratio": 164.0
+            },
+            "Eluru": {
+              "cd_ratio": 175.0,
+              "s_n": 21.0,
+              "population": 7084.0
+            },
+            "Guntur": {
+              "cd_ratio": 125.0
+            },
+            "Kakinada": {
+              "cd_ratio": 140.0,
+              "s_n": 16.0,
+              "population": 5069.0
+            },
+            "Krishna": {
+              "cd_ratio": 179.0
+            },
+            "Kurnool": {
+              "cd_ratio": 145.0
+            },
+            "Palnadu": {
+              "s_n": 19.0,
+              "population": 5971.0
+            }
+          }
+        },
+        "credit_deposit_ratio": {
+          "fields": [
+            "217th_meeting_of_slbc_name_of_the_district",
+            "convener_cd_ratio"
+          ],
+          "districts": {
+            "Nandyal": {
+              "convener_cd_ratio": 172.0
+            },
+            "Ntr": {
+              "convener_cd_ratio": 170.0
+            },
+            "Palnadu": {
+              "convener_cd_ratio": 218.0
+            },
+            "Parvathipuram Manyam": {
+              "convener_cd_ratio": 154.0
+            },
+            "Prakasam": {
+              "convener_cd_ratio": 184.0
+            },
+            "Spsr Nellore": {
+              "convener_cd_ratio": 163.0
+            },
+            "Sri Sathya Sai": {
+              "convener_cd_ratio": 159.0
+            },
+            "Srikakulam": {
+              "convener_cd_ratio": 136.0
+            },
+            "Tirupati": {
+              "convener_cd_ratio": 80.0
+            },
+            "Visakhapatanam": {
+              "convener_cd_ratio": 122.0
+            },
+            "Vizianagaram": {
+              "convener_cd_ratio": 144.0
+            },
+            "West Godavari": {
+              "convener_cd_ratio": 191.0
+            },
+            "Y.s.r.": {
+              "convener_cd_ratio": 148.0
+            }
+          }
+        }
+      }
+    },
+    "2023-09": {
+      "period": "September 2023",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "name_of_the_district",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Alluri Sitharama Raju": {
+              "cd_ratio": 118.0
+            },
+            "Anakapalli": {
+              "cd_ratio": 170.0
+            },
+            "Anantapur": {
+              "cd_ratio": 156.0
+            },
+            "Annamayya": {
+              "cd_ratio": 147.0
+            },
+            "Bapatla": {
+              "cd_ratio": 188.0
+            },
+            "Chittoor": {
+              "cd_ratio": 114.0
+            },
+            "Konaseema": {
+              "cd_ratio": 190.0
+            },
+            "East Godavari": {
+              "cd_ratio": 172.0
+            },
+            "Eluru": {
+              "cd_ratio": 184.0
+            },
+            "Guntur": {
+              "cd_ratio": 132.0
+            },
+            "Kakinada": {
+              "cd_ratio": 143.0
+            },
+            "Krishna": {
+              "cd_ratio": 193.0
+            },
+            "Kurnool": {
+              "cd_ratio": 152.0
+            },
+            "Nandyal": {
+              "cd_ratio": 183.0
+            },
+            "Ntr": {
+              "cd_ratio": 174.0
+            },
+            "Palnadu": {
+              "cd_ratio": 242.0
+            },
+            "Parvathipuram Manyam": {
+              "cd_ratio": 166.0
+            },
+            "Prakasam": {
+              "cd_ratio": 192.0
+            },
+            "Spsr Nellore": {
+              "cd_ratio": 172.0
+            },
+            "Sri Sathya Sai": {
+              "cd_ratio": 163.0
+            },
+            "Srikakulam": {
+              "cd_ratio": 146.0
+            },
+            "Tirupati": {
+              "cd_ratio": 82.0
+            }
+          }
+        }
+      }
+    },
+    "2023-12": {
+      "period": "December 2023",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "name_of_the_district",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Alluri Sitharama Raju": {
+              "cd_ratio": 129.0
+            },
+            "Anakapalli": {
+              "cd_ratio": 176.0
+            },
+            "Anantapur": {
+              "cd_ratio": 162.0
+            },
+            "Annamayya": {
+              "cd_ratio": 153.0
+            },
+            "Bapatla": {
+              "cd_ratio": 198.0
+            },
+            "Chittoor": {
+              "cd_ratio": 135.0
+            },
+            "Konaseema": {
+              "cd_ratio": 199.0
+            },
+            "East Godavari": {
+              "cd_ratio": 180.0
+            },
+            "Eluru": {
+              "cd_ratio": 194.0
+            },
+            "Guntur": {
+              "cd_ratio": 135.0
+            },
+            "Kakinada": {
+              "cd_ratio": 150.0
+            },
+            "Krishna": {
+              "cd_ratio": 194.0
+            },
+            "Kurnool": {
+              "cd_ratio": 158.0
+            },
+            "Nandyal": {
+              "cd_ratio": 191.0
+            },
+            "Ntr": {
+              "cd_ratio": 177.0
+            },
+            "Palnadu": {
+              "cd_ratio": 253.0
+            },
+            "Parvathipuram Manyam": {
+              "cd_ratio": 171.0
+            },
+            "Prakasam": {
+              "cd_ratio": 207.0
+            },
+            "Spsr Nellore": {
+              "cd_ratio": 181.0
+            },
+            "Sri Sathya Sai": {
+              "cd_ratio": 173.0
+            },
+            "Srikakulam": {
+              "cd_ratio": 153.0
+            },
+            "Tirupati": {
+              "cd_ratio": 81.0
+            },
+            "Visakhapatanam": {
+              "cd_ratio": 121.0
+            },
+            "Vizianagaram": {
+              "cd_ratio": 162.0
+            },
+            "West Godavari": {
+              "cd_ratio": 209.0
+            },
+            "Y.s.r.": {
+              "cd_ratio": 164.0
+            }
+          }
+        }
+      }
+    },
+    "2024-03": {
+      "period": "March 2024",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "name_of_the_district",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Alluri Sitharama Raju": {
+              "cd_ratio": 126.0
+            },
+            "Anakapalli": {
+              "cd_ratio": 179.0
+            },
+            "Anantapur": {
+              "cd_ratio": 162.0
+            },
+            "Annamayya": {
+              "cd_ratio": 161.0
+            },
+            "Bapatla": {
+              "cd_ratio": 201.0
+            },
+            "Chittoor": {
+              "cd_ratio": 139.0
+            },
+            "Konaseema": {
+              "cd_ratio": 206.0
+            },
+            "East Godavari": {
+              "cd_ratio": 183.0
+            },
+            "Eluru": {
+              "cd_ratio": 199.0
+            },
+            "Guntur": {
+              "cd_ratio": 140.0
+            },
+            "Kakinada": {
+              "cd_ratio": 151.0
+            },
+            "Krishna": {
+              "cd_ratio": 196.0
+            },
+            "Kurnool": {
+              "cd_ratio": 156.0
+            },
+            "Nandyal": {
+              "cd_ratio": 188.0
+            },
+            "Ntr": {
+              "cd_ratio": 167.0
+            },
+            "Palnadu": {
+              "cd_ratio": 248.0
+            },
+            "Parvathipuram Manyam": {
+              "cd_ratio": 168.0
+            },
+            "Prakasam": {
+              "cd_ratio": 205.0
+            },
+            "Spsr Nellore": {
+              "cd_ratio": 179.0
+            },
+            "Sri Sathya Sai": {
+              "cd_ratio": 170.0
+            },
+            "Srikakulam": {
+              "cd_ratio": 154.0
+            },
+            "Tirupati": {
+              "cd_ratio": 82.0
+            },
+            "Visakhapatanam": {
+              "cd_ratio": 120.0
+            },
+            "Vizianagaram": {
+              "cd_ratio": 163.0
+            },
+            "West Godavari": {
+              "cd_ratio": 217.0
+            },
+            "Y.s.r.": {
+              "cd_ratio": 165.0
+            }
+          }
+        }
+      }
+    },
+    "2024-06": {
+      "period": "June 2024",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "name_of_the_district",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Alluri Sitharama Raju": {
+              "cd_ratio": 129.0
+            },
+            "Anakapalli": {
+              "cd_ratio": 180.0
+            },
+            "Anantapur": {
+              "cd_ratio": 166.0
+            },
+            "Annamayya": {
+              "cd_ratio": 163.0
+            },
+            "Bapatla": {
+              "cd_ratio": 198.0
+            },
+            "Chittoor": {
+              "cd_ratio": 139.0
+            },
+            "Konaseema": {
+              "cd_ratio": 213.0
+            },
+            "East Godavari": {
+              "cd_ratio": 184.0
+            },
+            "Eluru": {
+              "cd_ratio": 195.0
+            },
+            "Guntur": {
+              "cd_ratio": 140.0
+            },
+            "Kakinada": {
+              "cd_ratio": 158.0
+            },
+            "Krishna": {
+              "cd_ratio": 183.0
+            },
+            "Kurnool": {
+              "cd_ratio": 157.0
+            },
+            "Nandyal": {
+              "cd_ratio": 192.0
+            },
+            "Ntr": {
+              "cd_ratio": 171.0
+            },
+            "Palnadu": {
+              "cd_ratio": 250.0
+            },
+            "Parvathipuram Manyam": {
+              "cd_ratio": 171.0
+            },
+            "Prakasam": {
+              "cd_ratio": 202.0
+            },
+            "Spsr Nellore": {
+              "cd_ratio": 180.0
+            },
+            "Sri Sathya Sai": {
+              "cd_ratio": 169.0
+            },
+            "Srikakulam": {
+              "cd_ratio": 158.0
+            },
+            "Tirupati": {
+              "cd_ratio": 82.0
+            },
+            "Visakhapatanam": {
+              "cd_ratio": 121.0
+            },
+            "Vizianagaram": {
+              "cd_ratio": 166.0
+            },
+            "West Godavari": {
+              "cd_ratio": 217.0
+            },
+            "Y.s.r.": {
+              "cd_ratio": 169.0
+            }
+          }
+        }
+      }
+    }
+  }
+}
