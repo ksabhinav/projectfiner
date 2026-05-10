@@ -1,25 +1,2033 @@
 {
   "state": "Andhra Pradesh",
   "quarters": {
+    "2018-06": {
+      "period": "June 2018",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "cd_ratio"
+          ],
+          "districts": {
+            "Srikakulam": {
+              "cd_ratio": 90.52
+            },
+            "Vizianagaram": {
+              "cd_ratio": 92.67
+            },
+            "Visakhapatanam": {
+              "cd_ratio": 106.2
+            },
+            "East Godavari": {
+              "cd_ratio": 117.89
+            },
+            "West Godavari": {
+              "cd_ratio": 140.01
+            },
+            "Krishna": {
+              "cd_ratio": 133.4
+            },
+            "Guntur": {
+              "cd_ratio": 142.11
+            },
+            "Prakasam": {
+              "cd_ratio": 158.8
+            },
+            "Spsr Nellore": {
+              "cd_ratio": 137.86
+            },
+            "Chittoor": {
+              "cd_ratio": 64.16
+            },
+            "Y.s.r.": {
+              "cd_ratio": 112.48
+            },
+            "Kurnool": {
+              "cd_ratio": 113.53
+            }
+          }
+        }
+      }
+    },
+    "2018-12": {
+      "period": "December 2018",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "cd_ratio"
+          ],
+          "districts": {
+            "Srikakulam": {
+              "cd_ratio": 93.28
+            },
+            "Vizianagaram": {
+              "cd_ratio": 100.88
+            },
+            "Visakhapatanam": {
+              "cd_ratio": 122.25
+            },
+            "East Godavari": {
+              "cd_ratio": 120.87
+            },
+            "West Godavari": {
+              "cd_ratio": 146.26
+            },
+            "Krishna": {
+              "cd_ratio": 128.98
+            },
+            "Guntur": {
+              "cd_ratio": 145.15
+            },
+            "Prakasam": {
+              "cd_ratio": 164.28
+            },
+            "Spsr Nellore": {
+              "cd_ratio": 141.37
+            },
+            "Chittoor": {
+              "cd_ratio": 64.83
+            },
+            "Y.s.r.": {
+              "cd_ratio": 106.37
+            },
+            "Kurnool": {
+              "cd_ratio": 119.12
+            }
+          }
+        }
+      }
+    },
+    "2019-03": {
+      "period": "March 2019",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "cd_ratio"
+          ],
+          "districts": {
+            "Srikakulam": {
+              "cd_ratio": 106.48
+            },
+            "Vizianagaram": {
+              "cd_ratio": 117.64
+            },
+            "Visakhapatanam": {
+              "cd_ratio": 131.13
+            },
+            "East Godavari": {
+              "cd_ratio": 123.51
+            },
+            "West Godavari": {
+              "cd_ratio": 150.93
+            },
+            "Krishna": {
+              "cd_ratio": 148.11
+            },
+            "Guntur": {
+              "cd_ratio": 139.73
+            },
+            "Prakasam": {
+              "cd_ratio": 169.17
+            },
+            "Spsr Nellore": {
+              "cd_ratio": 138.74
+            },
+            "Chittoor": {
+              "cd_ratio": 69.71
+            },
+            "Y.s.r.": {
+              "cd_ratio": 108.25
+            },
+            "Kurnool": {
+              "cd_ratio": 131.47
+            }
+          }
+        }
+      }
+    },
+    "2019-06": {
+      "period": "June 2019",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "cd_ratio"
+          ],
+          "districts": {
+            "Srikakulam": {
+              "cd_ratio": 97.8
+            },
+            "Vizianagaram": {
+              "cd_ratio": 97.8
+            },
+            "Visakhapatanam": {
+              "cd_ratio": 119.66
+            },
+            "East Godavari": {
+              "cd_ratio": 130.76
+            },
+            "West Godavari": {
+              "cd_ratio": 147.02
+            },
+            "Krishna": {
+              "cd_ratio": 147.57
+            },
+            "Guntur": {
+              "cd_ratio": 149.98
+            },
+            "Prakasam": {
+              "cd_ratio": 164.78
+            },
+            "Spsr Nellore": {
+              "cd_ratio": 148.85
+            },
+            "Chittoor": {
+              "cd_ratio": 85.53
+            },
+            "Y.s.r.": {
+              "cd_ratio": 112.88
+            },
+            "Kurnool": {
+              "cd_ratio": 126.34
+            }
+          }
+        },
+        "shg": {
+          "fields": [
+            "shg_credit_linkage",
+            "jlg_financing"
+          ],
+          "districts": {
+            "Anantapur": {
+              "shg_credit_linkage": 50000.0,
+              "jlg_financing": 200.0
+            },
+            "Chittoor": {
+              "shg_credit_linkage": 60000.0,
+              "jlg_financing": 150.0
+            },
+            "Y.s.r.": {
+              "shg_credit_linkage": 30000.0,
+              "jlg_financing": 150.0
+            },
+            "Kurnool": {
+              "shg_credit_linkage": 40000.0,
+              "jlg_financing": 550.0
+            },
+            "Spsr Nellore": {
+              "shg_credit_linkage": 40000.0,
+              "jlg_financing": 100.0
+            },
+            "Prakasam": {
+              "shg_credit_linkage": 50000.0,
+              "jlg_financing": 1600.0
+            },
+            "Guntur": {
+              "shg_credit_linkage": 60000.0,
+              "jlg_financing": 1000.0
+            },
+            "Krishna": {
+              "shg_credit_linkage": 60000.0,
+              "jlg_financing": 11100.0
+            },
+            "East Godavari": {
+              "shg_credit_linkage": 70000.0,
+              "jlg_financing": 6000.0
+            },
+            "West Godavari": {
+              "shg_credit_linkage": 50000.0,
+              "jlg_financing": 16200.0
+            },
+            "Visakhapatanam": {
+              "shg_credit_linkage": 30000.0,
+              "jlg_financing": 500.0
+            },
+            "Vizianagaram": {
+              "shg_credit_linkage": 30000.0,
+              "jlg_financing": 550.0
+            },
+            "Srikakulam": {
+              "shg_credit_linkage": 30000.0,
+              "jlg_financing": 1900.0
+            }
+          }
+        }
+      }
+    },
+    "2019-09": {
+      "period": "September 2019",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "cd_ratio"
+          ],
+          "districts": {
+            "Srikakulam": {
+              "cd_ratio": 98.71
+            },
+            "Vizianagaram": {
+              "cd_ratio": 91.18
+            },
+            "Visakhapatanam": {
+              "cd_ratio": 118.07
+            },
+            "East Godavari": {
+              "cd_ratio": 128.27
+            },
+            "West Godavari": {
+              "cd_ratio": 145.23
+            },
+            "Krishna": {
+              "cd_ratio": 151.35
+            },
+            "Guntur": {
+              "cd_ratio": 141.89
+            },
+            "Prakasam": {
+              "cd_ratio": 161.01
+            },
+            "Spsr Nellore": {
+              "cd_ratio": 144.94
+            },
+            "Chittoor": {
+              "cd_ratio": 70.27
+            },
+            "Y.s.r.": {
+              "cd_ratio": 124.1
+            },
+            "Kurnool": {
+              "cd_ratio": 120.35
+            }
+          }
+        }
+      }
+    },
+    "2019-12": {
+      "period": "December 2019",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "cd_ratio"
+          ],
+          "districts": {
+            "Srikakulam": {
+              "cd_ratio": 98.7
+            },
+            "Vizianagaram": {
+              "cd_ratio": 91.18
+            },
+            "Visakhapatanam": {
+              "cd_ratio": 118.06
+            },
+            "East Godavari": {
+              "cd_ratio": 128.27
+            },
+            "West Godavari": {
+              "cd_ratio": 145.22
+            },
+            "Krishna": {
+              "cd_ratio": 151.34
+            },
+            "Guntur": {
+              "cd_ratio": 141.88
+            },
+            "Prakasam": {
+              "cd_ratio": 161.0
+            },
+            "Spsr Nellore": {
+              "cd_ratio": 144.94
+            },
+            "Chittoor": {
+              "cd_ratio": 70.27
+            },
+            "Y.s.r.": {
+              "cd_ratio": 124.09
+            },
+            "Kurnool": {
+              "cd_ratio": 120.35
+            }
+          }
+        }
+      }
+    },
+    "2020-03": {
+      "period": "March 2020",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "cd_ratio"
+          ],
+          "districts": {
+            "Srikakulam": {
+              "cd_ratio": 90.26
+            },
+            "Vizianagaram": {
+              "cd_ratio": 85.38
+            },
+            "Visakhapatanam": {
+              "cd_ratio": 180.45
+            },
+            "East Godavari": {
+              "cd_ratio": 127.76
+            },
+            "West Godavari": {
+              "cd_ratio": 142.04
+            },
+            "Krishna": {
+              "cd_ratio": 143.7
+            },
+            "Guntur": {
+              "cd_ratio": 131.02
+            },
+            "Prakasam": {
+              "cd_ratio": 141.71
+            },
+            "Spsr Nellore": {
+              "cd_ratio": 128.38
+            },
+            "Chittoor": {
+              "cd_ratio": 77.34
+            },
+            "Y.s.r.": {
+              "cd_ratio": 94.25
+            },
+            "Kurnool": {
+              "cd_ratio": 118.94
+            }
+          }
+        }
+      }
+    },
+    "2020-09": {
+      "period": "September 2020",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "cd_ratio",
+            "total_deposit",
+            "total_advance"
+          ],
+          "districts": {
+            "Srikakulam": {
+              "cd_ratio": 93.32,
+              "total_deposit": 14156.89,
+              "total_advance": 13211.25
+            },
+            "Vizianagaram": {
+              "cd_ratio": 114.04,
+              "total_deposit": 12115.55,
+              "total_advance": 13816.54
+            },
+            "Visakhapatanam": {
+              "cd_ratio": 200.67,
+              "total_deposit": 33065.56,
+              "total_advance": 66352.7
+            },
+            "East Godavari": {
+              "cd_ratio": 128.2,
+              "total_deposit": 46093.43,
+              "total_advance": 59093.63
+            },
+            "West Godavari": {
+              "cd_ratio": 145.62,
+              "total_deposit": 25365.47,
+              "total_advance": 36937.67
+            },
+            "Krishna": {
+              "cd_ratio": 6.0,
+              "total_deposit": 62237.96,
+              "total_advance": 95557.51
+            },
+            "Guntur": {
+              "cd_ratio": 7.0,
+              "total_deposit": 37352.27,
+              "total_advance": 46021.22
+            },
+            "Prakasam": {
+              "cd_ratio": 8.0,
+              "total_deposit": 19041.01,
+              "total_advance": 23991.08
+            },
+            "Spsr Nellore": {
+              "cd_ratio": 9.0,
+              "total_deposit": 21683.63,
+              "total_advance": 25263.29
+            },
+            "Chittoor": {
+              "cd_ratio": 10.0,
+              "total_deposit": 38905.4,
+              "total_advance": 26324.31
+            },
+            "Y.s.r.": {
+              "cd_ratio": 11.0,
+              "total_deposit": 19574.29,
+              "total_advance": 19667.86
+            },
+            "Kurnool": {
+              "cd_ratio": 13.0,
+              "total_deposit": 20670.45,
+              "total_advance": 23937.39
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "no_of_branches_rural",
+            "branch_semi_urban",
+            "branch_urban",
+            "total_branch"
+          ],
+          "districts": {
+            "Srikakulam": {
+              "no_of_branches_rural": 103.0,
+              "branch_semi_urban": 58.0,
+              "total_branch": 332.0
+            },
+            "Vizianagaram": {
+              "no_of_branches_rural": 88.0,
+              "branch_semi_urban": 77.0,
+              "total_branch": 289.0
+            },
+            "Visakhapatanam": {
+              "no_of_branches_rural": 124.0,
+              "branch_semi_urban": 44.0,
+              "branch_urban": 451.0,
+              "total_branch": 793.0
+            },
+            "East Godavari": {
+              "no_of_branches_rural": 285.0,
+              "branch_semi_urban": 237.0,
+              "total_branch": 822.0
+            },
+            "West Godavari": {
+              "no_of_branches_rural": 267.0,
+              "branch_semi_urban": 154.0,
+              "total_branch": 646.0
+            },
+            "Krishna": {
+              "no_of_branches_rural": 273.0,
+              "branch_semi_urban": 113.0,
+              "branch_urban": 269.0,
+              "total_branch": 905.0
+            },
+            "Guntur": {
+              "no_of_branches_rural": 260.0,
+              "branch_semi_urban": 287.0,
+              "total_branch": 861.0
+            },
+            "Prakasam": {
+              "no_of_branches_rural": 197.0,
+              "branch_semi_urban": 89.0,
+              "total_branch": 485.0
+            },
+            "Spsr Nellore": {
+              "no_of_branches_rural": 152.0,
+              "branch_semi_urban": 135.0,
+              "total_branch": 437.0
+            },
+            "Chittoor": {
+              "no_of_branches_rural": 186.0,
+              "branch_semi_urban": 194.0,
+              "total_branch": 635.0
+            },
+            "Y.s.r.": {
+              "no_of_branches_rural": 125.0,
+              "branch_semi_urban": 114.0,
+              "total_branch": 377.0
+            },
+            "Kurnool": {
+              "no_of_branches_rural": 135.0,
+              "branch_semi_urban": 176.0,
+              "total_branch": 484.0
+            }
+          }
+        },
+        "priority_sector": {
+          "fields": [
+            "short_term_production_loans",
+            "agrl_ter_m_loans",
+            "farm_credit",
+            "agr_infra",
+            "ancillary_activities",
+            "total_agrl_advance",
+            "msme",
+            "others_under_priority",
+            "total_priority_sector"
+          ],
+          "districts": {
+            "Srikakulam": {
+              "short_term_production_loans": 4693.72,
+              "agrl_ter_m_loans": 2573.04,
+              "farm_credit": 7266.76,
+              "agr_infra": 4.58,
+              "ancillary_activities": 182.96,
+              "msme": 1324.79,
+              "total_priority_sector": 9985.16
+            },
+            "Vizianagaram": {
+              "short_term_production_loans": 3538.87,
+              "agrl_ter_m_loans": 1960.27,
+              "farm_credit": 5499.14,
+              "agr_infra": 4.42,
+              "ancillary_activities": 101.14,
+              "total_agrl_advance": 5604.7,
+              "msme": 1802.79,
+              "total_priority_sector": 9415.85
+            },
+            "Visakhapatanam": {
+              "short_term_production_loans": 4732.68,
+              "agrl_ter_m_loans": 2990.4,
+              "farm_credit": 7723.08,
+              "agr_infra": 6.54,
+              "ancillary_activities": 249.29,
+              "total_agrl_advance": 7978.91,
+              "msme": 6769.56,
+              "others_under_priority": 3242.53,
+              "total_priority_sector": 17991.0
+            },
+            "East Godavari": {
+              "short_term_production_loans": 11978.42,
+              "agrl_ter_m_loans": 9924.96,
+              "farm_credit": 21903.38,
+              "agr_infra": 22.58,
+              "ancillary_activities": 1172.49,
+              "total_agrl_advance": 23098.45,
+              "msme": 7517.28,
+              "others_under_priority": 4019.15,
+              "total_priority_sector": 34634.88
+            },
+            "West Godavari": {
+              "short_term_production_loans": 13676.04,
+              "agrl_ter_m_loans": 5018.12,
+              "farm_credit": 18694.16,
+              "agr_infra": 62.14,
+              "ancillary_activities": 1274.45,
+              "total_agrl_advance": 20030.75,
+              "msme": 5421.15,
+              "others_under_priority": 2661.77,
+              "total_priority_sector": 28113.67
+            },
+            "Krishna": {
+              "short_term_production_loans": 11190.64,
+              "agrl_ter_m_loans": 8408.98,
+              "farm_credit": 19599.62,
+              "agr_infra": 26.45,
+              "ancillary_activities": 832.25,
+              "total_agrl_advance": 20458.32,
+              "msme": 8746.74,
+              "others_under_priority": 6439.23,
+              "total_priority_sector": 35644.29
+            },
+            "Guntur": {
+              "short_term_production_loans": 14244.81,
+              "agrl_ter_m_loans": 7479.26,
+              "farm_credit": 21724.07,
+              "agr_infra": 121.74,
+              "ancillary_activities": 1063.7,
+              "total_agrl_advance": 22909.51,
+              "msme": 8650.85,
+              "others_under_priority": 4560.66,
+              "total_priority_sector": 36121.02
+            },
+            "Prakasam": {
+              "short_term_production_loans": 9300.58,
+              "agrl_ter_m_loans": 4570.4,
+              "farm_credit": 13870.98,
+              "agr_infra": 43.78,
+              "ancillary_activities": 283.37,
+              "total_agrl_advance": 14198.13,
+              "msme": 3410.54,
+              "others_under_priority": 1910.59,
+              "total_priority_sector": 19519.26
+            },
+            "Spsr Nellore": {
+              "short_term_production_loans": 6943.68,
+              "agrl_ter_m_loans": 4293.97,
+              "farm_credit": 11237.65,
+              "agr_infra": 14.39,
+              "ancillary_activities": 497.17,
+              "total_agrl_advance": 11749.21,
+              "msme": 3517.89,
+              "others_under_priority": 2173.08,
+              "total_priority_sector": 17440.18
+            },
+            "Chittoor": {
+              "short_term_production_loans": 10679.91,
+              "agrl_ter_m_loans": 3926.34,
+              "farm_credit": 14606.25,
+              "agr_infra": 14.95,
+              "ancillary_activities": 251.0,
+              "total_agrl_advance": 14872.2,
+              "msme": 3746.69,
+              "others_under_priority": 2213.09,
+              "total_priority_sector": 20831.98
+            },
+            "Y.s.r.": {
+              "short_term_production_loans": 6104.16,
+              "agrl_ter_m_loans": 3031.45,
+              "farm_credit": 9135.61,
+              "agr_infra": 65.82,
+              "ancillary_activities": 228.24,
+              "total_agrl_advance": 9429.67,
+              "msme": 2448.35,
+              "others_under_priority": 1695.85,
+              "total_priority_sector": 13573.87
+            },
+            "Kurnool": {
+              "short_term_production_loans": 8420.08,
+              "agrl_ter_m_loans": 3442.33,
+              "farm_credit": 11862.41,
+              "agr_infra": 92.58,
+              "ancillary_activities": 434.82,
+              "total_agrl_advance": 12389.81,
+              "msme": 2947.11,
+              "others_under_priority": 1902.08,
+              "total_priority_sector": 17239.0
+            }
+          }
+        },
+        "annual_credit_plan": {
+          "fields": [
+            "target",
+            "ach"
+          ],
+          "districts": {
+            "Srikakulam": {
+              "target": 650.0,
+              "ach": 14.7
+            },
+            "Vizianagaram": {
+              "target": 754.0,
+              "ach": 14.0
+            },
+            "Visakhapatanam": {
+              "target": 2500.0,
+              "ach": 19.15
+            },
+            "East Godavari": {
+              "target": 1276.07,
+              "ach": 26.22
+            },
+            "West Godavari": {
+              "target": 1400.0,
+              "ach": 32.91
+            },
+            "Krishna": {
+              "target": 3300.0,
+              "ach": 16.05
+            },
+            "Guntur": {
+              "target": 2000.0,
+              "ach": 20.01
+            },
+            "Prakasam": {
+              "target": 1600.0,
+              "ach": 19.93
+            },
+            "Spsr Nellore": {
+              "target": 850.0,
+              "ach": 33.86
+            },
+            "Chittoor": {
+              "target": 810.01,
+              "ach": 47.1
+            },
+            "Y.s.r.": {
+              "target": 1120.0,
+              "ach": 23.3
+            },
+            "Kurnool": {
+              "target": 1180.0,
+              "ach": 18.04
+            }
+          }
+        }
+      }
+    },
+    "2021-06": {
+      "period": "June 2021",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "cd_ratio",
+            "total_deposit",
+            "total_advance"
+          ],
+          "districts": {
+            "Chittoor": {
+              "cd_ratio": 78.9,
+              "total_deposit": 41810.17,
+              "total_advance": 32986.45
+            },
+            "East Godavari": {
+              "cd_ratio": 126.2,
+              "total_deposit": 37031.74,
+              "total_advance": 46734.16
+            },
+            "Guntur": {
+              "cd_ratio": 125.28,
+              "total_deposit": 41723.0,
+              "total_advance": 52269.01
+            },
+            "Krishna": {
+              "cd_ratio": 180.72,
+              "total_deposit": 63547.94,
+              "total_advance": 114845.72
+            },
+            "Kurnool": {
+              "cd_ratio": 130.09,
+              "total_deposit": 20153.43,
+              "total_advance": 26216.84
+            },
+            "Prakasam": {
+              "cd_ratio": 158.27,
+              "total_deposit": 17329.08,
+              "total_advance": 27427.26
+            },
+            "Spsr Nellore": {
+              "cd_ratio": 139.07,
+              "total_deposit": 18060.96,
+              "total_advance": 25116.72
+            },
+            "Srikakulam": {
+              "cd_ratio": 105.45,
+              "total_deposit": 12234.64,
+              "total_advance": 12901.81
+            },
+            "Visakhapatanam": {
+              "cd_ratio": 123.27,
+              "total_deposit": 60448.76,
+              "total_advance": 74517.84
+            },
+            "Vizianagaram": {
+              "cd_ratio": 110.24,
+              "total_deposit": 10057.07,
+              "total_advance": 11087.15
+            },
+            "West Godavari": {
+              "cd_ratio": 146.67,
+              "total_deposit": 26143.64,
+              "total_advance": 38345.18
+            },
+            "Y.s.r.": {
+              "cd_ratio": 107.85,
+              "total_deposit": 18733.33,
+              "total_advance": 20203.49
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "no_of_branches_rural",
+            "branch_semi_urban",
+            "branch_urban",
+            "branch_metro",
+            "total_branch"
+          ],
+          "districts": {
+            "Anantapur": {
+              "no_of_branches_rural": 170.0,
+              "branch_semi_urban": 137.0,
+              "branch_urban": 172.0,
+              "total_branch": 479.0
+            },
+            "Chittoor": {
+              "no_of_branches_rural": 259.0,
+              "branch_semi_urban": 176.0,
+              "branch_urban": 184.0,
+              "total_branch": 619.0
+            },
+            "East Godavari": {
+              "no_of_branches_rural": 296.0,
+              "branch_semi_urban": 276.0,
+              "branch_urban": 237.0,
+              "total_branch": 809.0
+            },
+            "Guntur": {
+              "no_of_branches_rural": 317.0,
+              "branch_semi_urban": 246.0,
+              "branch_urban": 292.0,
+              "total_branch": 855.0
+            },
+            "Y.s.r.": {
+              "no_of_branches_rural": 137.0,
+              "branch_semi_urban": 121.0,
+              "branch_urban": 116.0,
+              "total_branch": 374.0
+            },
+            "Krishna": {
+              "no_of_branches_rural": 249.0,
+              "branch_semi_urban": 276.0,
+              "branch_urban": 111.0,
+              "branch_metro": 247.0,
+              "total_branch": 883.0
+            },
+            "Kurnool": {
+              "no_of_branches_rural": 160.0,
+              "branch_semi_urban": 117.0,
+              "branch_urban": 205.0,
+              "total_branch": 482.0
+            },
+            "Spsr Nellore": {
+              "no_of_branches_rural": 149.0,
+              "branch_semi_urban": 152.0,
+              "branch_urban": 137.0,
+              "total_branch": 438.0
+            },
+            "Prakasam": {
+              "no_of_branches_rural": 198.0,
+              "branch_semi_urban": 197.0,
+              "branch_urban": 87.0,
+              "total_branch": 482.0
+            },
+            "Srikakulam": {
+              "no_of_branches_rural": 175.0,
+              "branch_semi_urban": 98.0,
+              "branch_urban": 59.0,
+              "total_branch": 332.0
+            },
+            "Vizianagaram": {
+              "no_of_branches_rural": 126.0,
+              "branch_semi_urban": 92.0,
+              "branch_urban": 74.0,
+              "total_branch": 292.0
+            },
+            "West Godavari": {
+              "no_of_branches_rural": 227.0,
+              "branch_semi_urban": 262.0,
+              "branch_urban": 145.0,
+              "total_branch": 634.0
+            }
+          }
+        },
+        "priority_sector": {
+          "fields": [
+            "short_term",
+            "agrl_term",
+            "farm",
+            "agr_infra",
+            "ancillary",
+            "total_agrl",
+            "msme",
+            "export",
+            "others_under",
+            "total_priority"
+          ],
+          "districts": {
+            "Chittoor": {
+              "short_term": 9887.51,
+              "agrl_term": 3341.35,
+              "farm": 13228.87,
+              "agr_infra": 64.54,
+              "ancillary": 137.77,
+              "total_agrl": 13431.18,
+              "msme": 4161.59,
+              "export": 11.53,
+              "others_under": 2391.07,
+              "total_priority": 19995.37
+            },
+            "East Godavari": {
+              "short_term": 12728.81,
+              "agrl_term": 4741.37,
+              "farm": 17470.18,
+              "agr_infra": 236.33,
+              "ancillary": 765.21,
+              "total_agrl": 18471.72,
+              "msme": 5964.5,
+              "export": 89.12,
+              "others_under": 2641.4,
+              "total_priority": 27166.74
+            },
+            "Guntur": {
+              "short_term": 13780.67,
+              "agrl_term": 5123.48,
+              "farm": 18904.15,
+              "agr_infra": 48.93,
+              "ancillary": 647.91,
+              "total_agrl": 19600.99,
+              "msme": 7969.77,
+              "export": 61.66,
+              "others_under": 3508.24,
+              "total_priority": 31140.66
+            },
+            "Krishna": {
+              "short_term": 15985.56,
+              "agrl_term": 7009.08,
+              "farm": 22994.64,
+              "agr_infra": 193.66,
+              "ancillary": 556.09,
+              "total_agrl": 23744.39,
+              "msme": 8795.87,
+              "export": 46.18,
+              "others_under": 7102.18,
+              "total_priority": 39688.63
+            },
+            "Kurnool": {
+              "short_term": 9300.94,
+              "agrl_term": 2882.41,
+              "farm": 12183.35,
+              "agr_infra": 70.06,
+              "ancillary": 101.34,
+              "total_agrl": 12354.75,
+              "msme": 3153.32,
+              "export": 12.82,
+              "others_under": 2133.84,
+              "total_priority": 17654.73
+            },
+            "Prakasam": {
+              "short_term": 11591.27,
+              "agrl_term": 4280.49,
+              "farm": 15871.77,
+              "agr_infra": 47.22,
+              "ancillary": 160.71,
+              "total_agrl": 16079.7,
+              "msme": 4040.45,
+              "export": 89.98,
+              "others_under": 1991.53,
+              "total_priority": 22201.66
+            },
+            "Spsr Nellore": {
+              "short_term": 7162.96,
+              "agrl_term": 3062.78,
+              "farm": 10225.74,
+              "agr_infra": 21.73,
+              "ancillary": 356.49,
+              "total_agrl": 10603.96,
+              "msme": 3617.29,
+              "export": 27.49,
+              "others_under": 2146.25,
+              "total_priority": 16395.0
+            },
+            "Srikakulam": {
+              "short_term": 4252.51,
+              "agrl_term": 2463.85,
+              "farm": 6716.36,
+              "agr_infra": 8.22,
+              "ancillary": 36.37,
+              "total_agrl": 6760.94,
+              "msme": 1846.48,
+              "export": 11.44,
+              "others_under": 1983.46,
+              "total_priority": 10602.33
+            },
+            "Visakhapatanam": {
+              "short_term": 7232.3,
+              "agrl_term": 3631.2,
+              "farm": 10863.51,
+              "agr_infra": 44.33,
+              "ancillary": 440.77,
+              "total_agrl": 11348.61,
+              "msme": 9104.39,
+              "export": 15.41,
+              "others_under": 4451.78,
+              "total_priority": 24920.19
+            },
+            "Vizianagaram": {
+              "short_term": 5028.4,
+              "agrl_term": 1623.41,
+              "farm": 6651.8,
+              "agr_infra": 9.53,
+              "ancillary": 25.03,
+              "total_agrl": 6686.36,
+              "msme": 1741.92,
+              "export": 5.79,
+              "others_under": 2789.58,
+              "total_priority": 11223.65
+            },
+            "West Godavari": {
+              "short_term": 13365.31,
+              "agrl_term": 4705.44,
+              "farm": 18070.75,
+              "agr_infra": 91.41,
+              "ancillary": 619.32,
+              "total_agrl": 18781.48,
+              "msme": 4689.49,
+              "export": 59.64,
+              "others_under": 2770.06,
+              "total_priority": 26300.66
+            },
+            "Y.s.r.": {
+              "short_term": 6034.42,
+              "agrl_term": 2866.67,
+              "farm": 8901.09,
+              "agr_infra": 43.56,
+              "ancillary": 1402.8,
+              "total_agrl": 10347.45,
+              "msme": 2716.88,
+              "export": 7.16,
+              "others_under": 1908.57,
+              "total_priority": 14980.07
+            }
+          }
+        },
+        "annual_credit_plan": {
+          "fields": [
+            "short_term_crop_production_trgt",
+            "agrl_term_loans_including_trgt",
+            "total_agriculture_trgt",
+            "msme_trgt",
+            "export_credit_trgt",
+            "education_loans_trgt",
+            "housing_loans_trgt",
+            "social_infrastructure_trgt_6",
+            "renewable_trgt_1",
+            "others_under_priority_sector_trgt",
+            "total_priority_sector_trgt",
+            "non_priority_sector_trgt",
+            "total_credit_trgt"
+          ],
+          "districts": {
+            "Chittoor": {
+              "short_term_crop_production_trgt": 9750.0,
+              "agrl_term_loans_including_trgt": 4057.0,
+              "total_agriculture_trgt": 13807.0,
+              "msme_trgt": 3350.0,
+              "export_credit_trgt": 4.0,
+              "education_loans_trgt": 82.0,
+              "housing_loans_trgt": 703.0,
+              "renewable_trgt_1": 8.0,
+              "others_under_priority_sector_trgt": 869.0,
+              "total_priority_sector_trgt": 18026.0,
+              "non_priority_sector_trgt": 4693.0,
+              "total_credit_trgt": 22719.0
+            },
+            "East Godavari": {
+              "short_term_crop_production_trgt": 10385.0,
+              "agrl_term_loans_including_trgt": 5615.0,
+              "total_agriculture_trgt": 16000.0,
+              "msme_trgt": 5400.0,
+              "export_credit_trgt": 10.0,
+              "education_loans_trgt": 200.0,
+              "housing_loans_trgt": 940.0,
+              "others_under_priority_sector_trgt": 1460.0,
+              "total_priority_sector_trgt": 22860.0,
+              "non_priority_sector_trgt": 6840.0,
+              "total_credit_trgt": 29700.0
+            },
+            "Guntur": {
+              "short_term_crop_production_trgt": 15000.0,
+              "agrl_term_loans_including_trgt": 4320.0,
+              "total_agriculture_trgt": 19320.0,
+              "msme_trgt": 5000.0,
+              "export_credit_trgt": 250.0,
+              "education_loans_trgt": 373.0,
+              "housing_loans_trgt": 1464.0,
+              "others_under_priority_sector_trgt": 2500.0,
+              "total_priority_sector_trgt": 26820.0,
+              "non_priority_sector_trgt": 5000.0,
+              "total_credit_trgt": 31820.0
+            },
+            "Krishna": {
+              "short_term_crop_production_trgt": 12000.0,
+              "agrl_term_loans_including_trgt": 4525.0,
+              "total_agriculture_trgt": 16525.0,
+              "msme_trgt": 7497.0,
+              "education_loans_trgt": 422.0,
+              "housing_loans_trgt": 1891.0,
+              "others_under_priority_sector_trgt": 3301.0,
+              "total_priority_sector_trgt": 27324.0,
+              "non_priority_sector_trgt": 17504.0,
+              "total_credit_trgt": 44827.0
+            },
+            "Kurnool": {
+              "short_term_crop_production_trgt": 8287.0,
+              "agrl_term_loans_including_trgt": 2241.0,
+              "total_agriculture_trgt": 10528.0,
+              "msme_trgt": 1940.0,
+              "export_credit_trgt": 4.0,
+              "education_loans_trgt": 61.0,
+              "housing_loans_trgt": 247.0,
+              "others_under_priority_sector_trgt": 968.0,
+              "total_priority_sector_trgt": 13436.0,
+              "non_priority_sector_trgt": 3741.0,
+              "total_credit_trgt": 17177.0
+            },
+            "Prakasam": {
+              "short_term_crop_production_trgt": 9523.0,
+              "agrl_term_loans_including_trgt": 2732.0,
+              "total_agriculture_trgt": 12256.0,
+              "msme_trgt": 2723.0,
+              "export_credit_trgt": 69.0,
+              "education_loans_trgt": 91.0,
+              "housing_loans_trgt": 516.0,
+              "others_under_priority_sector_trgt": 1601.0,
+              "total_priority_sector_trgt": 16580.0,
+              "non_priority_sector_trgt": 2892.0,
+              "total_credit_trgt": 19471.0
+            },
+            "Spsr Nellore": {
+              "short_term_crop_production_trgt": 7001.0,
+              "agrl_term_loans_including_trgt": 2286.0,
+              "total_agriculture_trgt": 9287.0,
+              "msme_trgt": 1755.0,
+              "export_credit_trgt": 20.0,
+              "education_loans_trgt": 217.0,
+              "housing_loans_trgt": 847.0,
+              "others_under_priority_sector_trgt": 1556.0,
+              "total_priority_sector_trgt": 12599.0,
+              "non_priority_sector_trgt": 3942.0,
+              "total_credit_trgt": 16541.0
+            },
+            "Srikakulam": {
+              "short_term_crop_production_trgt": 3904.0,
+              "agrl_term_loans_including_trgt": 1833.0,
+              "total_agriculture_trgt": 5737.0,
+              "msme_trgt": 1134.0,
+              "export_credit_trgt": 2.0,
+              "education_loans_trgt": 41.0,
+              "housing_loans_trgt": 596.0,
+              "social_infrastructure_trgt_6": 6.0,
+              "others_under_priority_sector_trgt": 679.0,
+              "total_priority_sector_trgt": 7550.0,
+              "non_priority_sector_trgt": 1364.0,
+              "total_credit_trgt": 8914.0
+            },
+            "Visakhapatanam": {
+              "short_term_crop_production_trgt": 3950.0,
+              "agrl_term_loans_including_trgt": 1651.0,
+              "total_agriculture_trgt": 5601.0,
+              "msme_trgt": 6600.0,
+              "export_credit_trgt": 700.0,
+              "education_loans_trgt": 100.0,
+              "housing_loans_trgt": 1511.0,
+              "social_infrastructure_trgt_6": 6.0,
+              "renewable_trgt_1": 8.0,
+              "others_under_priority_sector_trgt": 3075.0,
+              "total_priority_sector_trgt": 15276.0,
+              "non_priority_sector_trgt": 14000.0,
+              "total_credit_trgt": 29276.0
+            },
+            "Vizianagaram": {
+              "short_term_crop_production_trgt": 3061.0,
+              "agrl_term_loans_including_trgt": 1283.0,
+              "total_agriculture_trgt": 4344.0,
+              "msme_trgt": 710.0,
+              "export_credit_trgt": 5.0,
+              "education_loans_trgt": 50.0,
+              "housing_loans_trgt": 550.0,
+              "others_under_priority_sector_trgt": 650.0,
+              "total_priority_sector_trgt": 5704.0,
+              "non_priority_sector_trgt": 1045.0,
+              "total_credit_trgt": 6749.0
+            },
+            "West Godavari": {
+              "short_term_crop_production_trgt": 11300.0,
+              "agrl_term_loans_including_trgt": 3240.0,
+              "total_agriculture_trgt": 14540.0,
+              "msme_trgt": 3350.0,
+              "education_loans_trgt": 106.0,
+              "housing_loans_trgt": 600.0,
+              "renewable_trgt_1": 5.0,
+              "others_under_priority_sector_trgt": 1666.0,
+              "total_priority_sector_trgt": 19556.0,
+              "non_priority_sector_trgt": 3800.0,
+              "total_credit_trgt": 23356.0
+            },
+            "Y.s.r.": {
+              "short_term_crop_production_trgt": 6600.0,
+              "agrl_term_loans_including_trgt": 2430.0,
+              "total_agriculture_trgt": 9030.0,
+              "msme_trgt": 1800.0,
+              "education_loans_trgt": 26.0,
+              "housing_loans_trgt": 332.0,
+              "others_under_priority_sector_trgt": 1140.0,
+              "total_priority_sector_trgt": 11970.0,
+              "non_priority_sector_trgt": 2900.0,
+              "total_credit_trgt": 14870.0
+            }
+          }
+        }
+      }
+    },
+    "2021-09": {
+      "period": "September 2021",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "cd_ratio"
+          ],
+          "districts": {
+            "Srikakulam": {
+              "cd_ratio": 121.4
+            },
+            "Vizianagaram": {
+              "cd_ratio": 120.55
+            },
+            "Visakhapatanam": {
+              "cd_ratio": 111.97
+            },
+            "East Godavari": {
+              "cd_ratio": 129.05
+            },
+            "West Godavari": {
+              "cd_ratio": 144.52
+            },
+            "Krishna": {
+              "cd_ratio": 196.94
+            },
+            "Guntur": {
+              "cd_ratio": 132.1
+            },
+            "Prakasam": {
+              "cd_ratio": 166.8
+            },
+            "Spsr Nellore": {
+              "cd_ratio": 146.03
+            },
+            "Chittoor": {
+              "cd_ratio": 83.05
+            },
+            "Y.s.r.": {
+              "cd_ratio": 116.5
+            },
+            "Anantapur": {
+              "cd_ratio": 122.88
+            },
+            "Kurnool": {
+              "cd_ratio": 141.61
+            }
+          }
+        }
+      }
+    },
+    "2021-12": {
+      "period": "December 2021",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Anantapur": {
+              "total_deposit": 23466.17,
+              "total_advance": 29993.08,
+              "cd_ratio": 127.81
+            },
+            "Chittoor": {
+              "total_deposit": 42255.12,
+              "total_advance": 35723.0,
+              "cd_ratio": 84.54
+            },
+            "East Godavari": {
+              "total_deposit": 38293.49,
+              "total_advance": 50625.35,
+              "cd_ratio": 132.2
+            },
+            "Guntur": {
+              "total_deposit": 43957.27,
+              "total_advance": 61505.53,
+              "cd_ratio": 139.92
+            },
+            "Y.s.r.": {
+              "total_deposit": 65054.49,
+              "total_advance": 124954.32,
+              "cd_ratio": 192.08
+            },
+            "Krishna": {
+              "total_deposit": 19830.61,
+              "total_advance": 28158.21,
+              "cd_ratio": 141.99
+            },
+            "Kurnool": {
+              "total_deposit": 17613.15,
+              "total_advance": 30348.33,
+              "cd_ratio": 172.3
+            },
+            "Spsr Nellore": {
+              "total_deposit": 18695.24,
+              "total_advance": 27927.03,
+              "cd_ratio": 149.38
+            },
+            "Prakasam": {
+              "total_deposit": 12010.41,
+              "total_advance": 14888.9,
+              "cd_ratio": 123.97
+            },
+            "Srikakulam": {
+              "total_deposit": 61689.08,
+              "total_advance": 78973.1,
+              "cd_ratio": 128.02
+            },
+            "Vizianagaram": {
+              "total_deposit": 26197.82,
+              "total_advance": 40679.32,
+              "cd_ratio": 155.28
+            },
+            "West Godavari": {
+              "total_deposit": 19015.71,
+              "total_advance": 22344.66,
+              "cd_ratio": 117.51
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "no_of_branches_rural",
+            "branch_semi_urban",
+            "branch_urban",
+            "branch_metro",
+            "total_branch"
+          ],
+          "districts": {
+            "Chittoor": {
+              "no_of_branches_rural": 263.0,
+              "branch_semi_urban": 180.0,
+              "branch_urban": 190.0,
+              "branch_metro": 3.0,
+              "total_branch": 636.0
+            },
+            "East Godavari": {
+              "no_of_branches_rural": 301.0,
+              "branch_semi_urban": 286.0,
+              "branch_urban": 236.0,
+              "branch_metro": 2.0,
+              "total_branch": 825.0
+            },
+            "Guntur": {
+              "no_of_branches_rural": 323.0,
+              "branch_semi_urban": 249.0,
+              "branch_urban": 296.0,
+              "branch_metro": 2.0,
+              "total_branch": 870.0
+            },
+            "Krishna": {
+              "no_of_branches_rural": 249.0,
+              "branch_semi_urban": 275.0,
+              "branch_urban": 113.0,
+              "branch_metro": 251.0,
+              "total_branch": 888.0
+            },
+            "Kurnool": {
+              "no_of_branches_rural": 160.0,
+              "branch_semi_urban": 120.0,
+              "branch_urban": 204.0,
+              "branch_metro": 1.0,
+              "total_branch": 485.0
+            },
+            "Prakasam": {
+              "no_of_branches_rural": 200.0,
+              "branch_semi_urban": 200.0,
+              "branch_urban": 86.0,
+              "branch_metro": 1.0,
+              "total_branch": 487.0
+            },
+            "Spsr Nellore": {
+              "no_of_branches_rural": 149.0,
+              "branch_semi_urban": 156.0,
+              "branch_urban": 136.0,
+              "branch_metro": 1.0,
+              "total_branch": 442.0
+            },
+            "Srikakulam": {
+              "no_of_branches_rural": 176.0,
+              "branch_semi_urban": 102.0,
+              "branch_urban": 61.0,
+              "branch_metro": 1.0,
+              "total_branch": 340.0
+            },
+            "Visakhapatanam": {
+              "no_of_branches_rural": 176.0,
+              "branch_semi_urban": 113.0,
+              "branch_urban": 38.0,
+              "branch_metro": 451.0,
+              "total_branch": 778.0
+            },
+            "Vizianagaram": {
+              "no_of_branches_rural": 127.0,
+              "branch_semi_urban": 92.0,
+              "branch_urban": 75.0,
+              "branch_metro": 1.0,
+              "total_branch": 295.0
+            },
+            "West Godavari": {
+              "no_of_branches_rural": 228.0,
+              "branch_semi_urban": 267.0,
+              "branch_urban": 145.0,
+              "branch_metro": 2.0,
+              "total_branch": 642.0
+            },
+            "Y.s.r.": {
+              "no_of_branches_rural": 138.0,
+              "branch_semi_urban": 121.0,
+              "branch_urban": 120.0,
+              "branch_metro": 1.0,
+              "total_branch": 380.0
+            }
+          }
+        },
+        "priority_sector": {
+          "fields": [
+            "short_term",
+            "agrl_term",
+            "farm",
+            "agr",
+            "ancillary",
+            "total_agrl",
+            "msme",
+            "export",
+            "others_under",
+            "total_priority"
+          ],
+          "districts": {
+            "Chittoor": {
+              "short_term": 11635.06,
+              "agrl_term": 3904.88,
+              "farm": 15539.94,
+              "agr": 331.28,
+              "ancillary": 419.61,
+              "total_agrl": 16290.83,
+              "msme": 4307.95,
+              "export": 0.0,
+              "others_under": 2349.64,
+              "total_priority": 22948.42
+            },
+            "East Godavari": {
+              "short_term": 12509.53,
+              "agrl_term": 5455.13,
+              "farm": 17964.65,
+              "agr": 478.95,
+              "ancillary": 2280.98,
+              "total_agrl": 20724.59,
+              "msme": 6865.52,
+              "export": 0.03,
+              "others_under": 3298.61,
+              "total_priority": 30888.75
+            },
+            "Guntur": {
+              "short_term": 14950.26,
+              "agrl_term": 5617.82,
+              "farm": 20568.08,
+              "agr": 315.64,
+              "ancillary": 2280.76,
+              "total_agrl": 23164.47,
+              "msme": 10009.49,
+              "export": 70.8,
+              "others_under": 3882.7,
+              "total_priority": 37127.47
+            },
+            "Krishna": {
+              "short_term": 14947.6,
+              "agrl_term": 8182.86,
+              "farm": 23130.46,
+              "agr": 282.72,
+              "ancillary": 1014.45,
+              "total_agrl": 24427.64,
+              "msme": 12458.87,
+              "export": 0.0,
+              "others_under": 5162.72,
+              "total_priority": 42049.23
+            },
+            "Kurnool": {
+              "short_term": 10012.35,
+              "agrl_term": 3843.56,
+              "farm": 13855.9,
+              "agr": 139.22,
+              "ancillary": 265.45,
+              "total_agrl": 14260.57,
+              "msme": 3344.87,
+              "export": 0.0,
+              "others_under": 2297.83,
+              "total_priority": 19903.27
+            },
+            "Prakasam": {
+              "short_term": 12203.46,
+              "agrl_term": 5006.75,
+              "farm": 17210.22,
+              "agr": 101.6,
+              "ancillary": 250.84,
+              "total_agrl": 17562.65,
+              "msme": 3939.3,
+              "export": 29.19,
+              "others_under": 3249.63,
+              "total_priority": 24780.78
+            },
+            "Spsr Nellore": {
+              "short_term": 7666.81,
+              "agrl_term": 3468.59,
+              "farm": 11135.4,
+              "agr": 195.19,
+              "ancillary": 593.6,
+              "total_agrl": 11924.19,
+              "msme": 4225.02,
+              "export": 1.26,
+              "others_under": 2166.01,
+              "total_priority": 18316.48
+            },
+            "Srikakulam": {
+              "short_term": 4867.34,
+              "agrl_term": 3022.37,
+              "farm": 7889.71,
+              "agr": 49.66,
+              "ancillary": 105.19,
+              "total_agrl": 8044.56,
+              "msme": 1629.94,
+              "export": 0.0,
+              "others_under": 1738.89,
+              "total_priority": 11413.39
+            },
+            "Visakhapatanam": {
+              "short_term": 7341.58,
+              "agrl_term": 4005.28,
+              "farm": 11346.86,
+              "agr": 462.32,
+              "ancillary": 775.63,
+              "total_agrl": 12584.8,
+              "msme": 11256.47,
+              "export": 34.41,
+              "others_under": 4074.44,
+              "total_priority": 27950.12
+            },
+            "Vizianagaram": {
+              "short_term": 3557.84,
+              "agrl_term": 1929.56,
+              "farm": 5487.4,
+              "agr": 109.42,
+              "ancillary": 56.66,
+              "total_agrl": 5653.48,
+              "msme": 1321.66,
+              "export": 0.0,
+              "others_under": 2005.52,
+              "total_priority": 8980.67
+            },
+            "West Godavari": {
+              "short_term": 13279.55,
+              "agrl_term": 5464.31,
+              "farm": 18743.86,
+              "agr": 199.5,
+              "ancillary": 1501.64,
+              "total_agrl": 20444.99,
+              "msme": 5675.35,
+              "export": 27.99,
+              "others_under": 3560.54,
+              "total_priority": 29708.88
+            },
+            "Y.s.r.": {
+              "short_term": 6467.08,
+              "agrl_term": 3621.06,
+              "farm": 10088.14,
+              "agr": 206.97,
+              "ancillary": 93.5,
+              "total_agrl": 10388.62,
+              "msme": 2628.98,
+              "export": 0.0,
+              "others_under": 1546.26,
+              "total_priority": 14563.86
+            }
+          }
+        },
+        "annual_credit_plan": {
+          "fields": [
+            "short_term_crop_production_trgt",
+            "agrl_term_loans_trgt",
+            "total_agriculture_trgt",
+            "msme_trgt",
+            "export_credit_trgt_2",
+            "education_loans_trgt",
+            "housing_loans_trgt",
+            "no",
+            "social_infrastructure_trgt_6",
+            "renewable_trgt_1",
+            "others_under_priority_trgt",
+            "total_priority_sector_trgt",
+            "non_priority_sector_trgt",
+            "total_credit_trgt"
+          ],
+          "districts": {
+            "Chittoor": {
+              "short_term_crop_production_trgt": 9750.0,
+              "agrl_term_loans_trgt": 4057.0,
+              "total_agriculture_trgt": 13807.0,
+              "msme_trgt": 3350.0,
+              "export_credit_trgt_2": 4.0,
+              "education_loans_trgt": 82.0,
+              "housing_loans_trgt": 703.0,
+              "no": 2.0,
+              "renewable_trgt_1": 8.0,
+              "others_under_priority_trgt": 865.0,
+              "total_priority_sector_trgt": 18026.0,
+              "non_priority_sector_trgt": 4693.0,
+              "total_credit_trgt": 22719.0
+            },
+            "East Godavari": {
+              "short_term_crop_production_trgt": 10385.0,
+              "agrl_term_loans_trgt": 5615.0,
+              "total_agriculture_trgt": 16000.0,
+              "msme_trgt": 5400.0,
+              "education_loans_trgt": 200.0,
+              "housing_loans_trgt": 940.0,
+              "no": 3.0,
+              "others_under_priority_trgt": 1450.0,
+              "total_priority_sector_trgt": 22860.0,
+              "non_priority_sector_trgt": 6840.0,
+              "total_credit_trgt": 29700.0
+            },
+            "Guntur": {
+              "short_term_crop_production_trgt": 15000.0,
+              "agrl_term_loans_trgt": 4320.0,
+              "total_agriculture_trgt": 19320.0,
+              "msme_trgt": 5000.0,
+              "education_loans_trgt": 373.0,
+              "housing_loans_trgt": 1464.0,
+              "no": 4.0,
+              "others_under_priority_trgt": 2250.0,
+              "total_priority_sector_trgt": 26820.0,
+              "non_priority_sector_trgt": 5000.0,
+              "total_credit_trgt": 31820.0
+            },
+            "Krishna": {
+              "short_term_crop_production_trgt": 12000.0,
+              "agrl_term_loans_trgt": 4525.0,
+              "total_agriculture_trgt": 16525.0,
+              "msme_trgt": 7497.0,
+              "education_loans_trgt": 422.0,
+              "housing_loans_trgt": 1891.0,
+              "no": 5.0,
+              "others_under_priority_trgt": 3301.0,
+              "total_priority_sector_trgt": 27324.0,
+              "total_credit_trgt": 44827.0
+            },
+            "Kurnool": {
+              "short_term_crop_production_trgt": 8287.0,
+              "agrl_term_loans_trgt": 2241.0,
+              "total_agriculture_trgt": 10528.0,
+              "msme_trgt": 1940.0,
+              "export_credit_trgt_2": 4.0,
+              "education_loans_trgt": 61.0,
+              "housing_loans_trgt": 247.0,
+              "no": 6.0,
+              "others_under_priority_trgt": 964.0,
+              "total_priority_sector_trgt": 13436.0,
+              "non_priority_sector_trgt": 3741.0,
+              "total_credit_trgt": 17177.0
+            },
+            "Prakasam": {
+              "short_term_crop_production_trgt": 9523.0,
+              "agrl_term_loans_trgt": 2732.0,
+              "total_agriculture_trgt": 12256.0,
+              "msme_trgt": 2723.0,
+              "education_loans_trgt": 91.0,
+              "housing_loans_trgt": 516.0,
+              "no": 7.0,
+              "others_under_priority_trgt": 1532.0,
+              "total_priority_sector_trgt": 16580.0,
+              "non_priority_sector_trgt": 2892.0,
+              "total_credit_trgt": 19471.0
+            },
+            "Spsr Nellore": {
+              "short_term_crop_production_trgt": 7001.0,
+              "agrl_term_loans_trgt": 2286.0,
+              "msme_trgt": 1755.0,
+              "education_loans_trgt": 217.0,
+              "housing_loans_trgt": 847.0,
+              "no": 8.0,
+              "others_under_priority_trgt": 1536.0,
+              "total_priority_sector_trgt": 12599.0,
+              "non_priority_sector_trgt": 3942.0,
+              "total_credit_trgt": 16541.0
+            },
+            "Srikakulam": {
+              "short_term_crop_production_trgt": 3904.0,
+              "agrl_term_loans_trgt": 1833.0,
+              "msme_trgt": 1134.0,
+              "export_credit_trgt_2": 2.0,
+              "education_loans_trgt": 41.0,
+              "housing_loans_trgt": 596.0,
+              "no": 9.0,
+              "social_infrastructure_trgt_6": 6.0,
+              "others_under_priority_trgt": 678.0,
+              "non_priority_sector_trgt": 1364.0,
+              "total_credit_trgt": 8914.0
+            },
+            "Visakhapatanam": {
+              "short_term_crop_production_trgt": 3950.0,
+              "agrl_term_loans_trgt": 1651.0,
+              "msme_trgt": 6600.0,
+              "education_loans_trgt": 100.0,
+              "housing_loans_trgt": 1511.0,
+              "no": 10.0,
+              "social_infrastructure_trgt_6": 6.0,
+              "renewable_trgt_1": 8.0,
+              "others_under_priority_trgt": 2375.0,
+              "total_priority_sector_trgt": 15276.0,
+              "total_credit_trgt": 29276.0
+            },
+            "Vizianagaram": {
+              "short_term_crop_production_trgt": 3061.0,
+              "agrl_term_loans_trgt": 1283.0,
+              "msme_trgt": 710.0,
+              "export_credit_trgt_2": 5.0,
+              "education_loans_trgt": 50.0,
+              "housing_loans_trgt": 550.0,
+              "no": 11.0,
+              "others_under_priority_trgt": 645.0,
+              "non_priority_sector_trgt": 1045.0,
+              "total_credit_trgt": 6749.0
+            },
+            "West Godavari": {
+              "short_term_crop_production_trgt": 11300.0,
+              "agrl_term_loans_trgt": 3240.0,
+              "total_agriculture_trgt": 14540.0,
+              "msme_trgt": 3350.0,
+              "education_loans_trgt": 106.0,
+              "housing_loans_trgt": 600.0,
+              "no": 12.0,
+              "renewable_trgt_1": 5.0,
+              "others_under_priority_trgt": 1666.0,
+              "total_priority_sector_trgt": 19556.0,
+              "non_priority_sector_trgt": 3800.0,
+              "total_credit_trgt": 23356.0
+            },
+            "Y.s.r.": {
+              "short_term_crop_production_trgt": 6600.0,
+              "agrl_term_loans_trgt": 2430.0,
+              "msme_trgt": 1800.0,
+              "education_loans_trgt": 26.0,
+              "housing_loans_trgt": 332.0,
+              "no": 13.0,
+              "others_under_priority_trgt": 1140.0,
+              "total_priority_sector_trgt": 11970.0,
+              "non_priority_sector_trgt": 2900.0,
+              "total_credit_trgt": 14870.0
+            }
+          }
+        }
+      }
+    },
+    "2022-03": {
+      "period": "March 2022",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "cd_ratio"
+          ],
+          "districts": {
+            "Chittoor": {
+              "cd_ratio": 93.19
+            },
+            "East Godavari": {
+              "cd_ratio": 144.45
+            },
+            "Guntur": {
+              "cd_ratio": 116.04
+            },
+            "Krishna": {
+              "cd_ratio": 209.57
+            },
+            "Kurnool": {
+              "cd_ratio": 148.36
+            },
+            "Prakasam": {
+              "cd_ratio": 160.18
+            },
+            "Spsr Nellore": {
+              "cd_ratio": 148.26
+            },
+            "Srikakulam": {
+              "cd_ratio": 128.66
+            },
+            "Visakhapatanam": {
+              "cd_ratio": 114.22
+            },
+            "Vizianagaram": {
+              "cd_ratio": 118.5
+            },
+            "West Godavari": {
+              "cd_ratio": 145.34
+            },
+            "Y.s.r.": {
+              "cd_ratio": 131.33
+            }
+          }
+        }
+      }
+    },
+    "2022-09": {
+      "period": "September 2022",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "cd_ratio"
+          ],
+          "districts": {
+            "Alluri Sitharama Raju": {
+              "cd_ratio": 110.0
+            },
+            "Anakapalli": {
+              "cd_ratio": 157.0
+            },
+            "Anantapur": {
+              "cd_ratio": 143.0
+            },
+            "Annamayya": {
+              "cd_ratio": 135.0
+            },
+            "Bapatla": {
+              "cd_ratio": 171.0
+            },
+            "Chittoor": {
+              "cd_ratio": 111.0
+            },
+            "Konaseema": {
+              "cd_ratio": 160.0
+            },
+            "East Godavari": {
+              "cd_ratio": 152.0
+            },
+            "Eluru": {
+              "cd_ratio": 158.0
+            },
+            "Guntur": {
+              "cd_ratio": 123.0
+            },
+            "Kakinada": {
+              "cd_ratio": 125.0
+            },
+            "Krishna": {
+              "cd_ratio": 194.0
+            },
+            "Kurnool": {
+              "cd_ratio": 138.0
+            },
+            "Nandyal": {
+              "cd_ratio": 171.0
+            },
+            "Ntr": {
+              "cd_ratio": 189.0
+            },
+            "Palnadu": {
+              "cd_ratio": 224.0
+            },
+            "Parvathipuram Manyam": {
+              "cd_ratio": 147.0
+            },
+            "Prakasam": {
+              "cd_ratio": 179.0
+            },
+            "Spsr Nellore": {
+              "cd_ratio": 151.0
+            },
+            "Sri Sathya Sai": {
+              "cd_ratio": 148.0
+            },
+            "Srikakulam": {
+              "cd_ratio": 129.0
+            },
+            "Tirupati": {
+              "cd_ratio": 78.0
+            },
+            "Visakhapatanam": {
+              "cd_ratio": 117.0
+            },
+            "Vizianagaram": {
+              "cd_ratio": 136.0
+            },
+            "West Godavari": {
+              "cd_ratio": 173.0
+            },
+            "Y.s.r.": {
+              "cd_ratio": 143.0
+            }
+          }
+        }
+      }
+    },
+    "2022-12": {
+      "period": "December 2022",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "cd_ratio"
+          ],
+          "districts": {
+            "Alluri Sitharama Raju": {
+              "cd_ratio": 115.0
+            },
+            "Anakapalli": {
+              "cd_ratio": 151.0
+            },
+            "Anantapur": {
+              "cd_ratio": 149.0
+            },
+            "Annamayya": {
+              "cd_ratio": 140.0
+            },
+            "Bapatla": {
+              "cd_ratio": 179.0
+            },
+            "Chittoor": {
+              "cd_ratio": 109.0
+            },
+            "Konaseema": {
+              "cd_ratio": 171.0
+            },
+            "East Godavari": {
+              "cd_ratio": 158.0
+            },
+            "Eluru": {
+              "cd_ratio": 170.0
+            },
+            "Guntur": {
+              "cd_ratio": 123.0
+            },
+            "Kakinada": {
+              "cd_ratio": 132.0
+            },
+            "Krishna": {
+              "cd_ratio": 182.0
+            },
+            "Kurnool": {
+              "cd_ratio": 145.0
+            },
+            "Nandyal": {
+              "cd_ratio": 175.0
+            },
+            "Ntr": {
+              "cd_ratio": 235.0
+            },
+            "Palnadu": {
+              "cd_ratio": 186.0
+            },
+            "Parvathipuram Manyam": {
+              "cd_ratio": 152.0
+            },
+            "Prakasam": {
+              "cd_ratio": 190.0
+            },
+            "Spsr Nellore": {
+              "cd_ratio": 159.0
+            },
+            "Sri Sathya Sai": {
+              "cd_ratio": 150.0
+            },
+            "Srikakulam": {
+              "cd_ratio": 133.0
+            },
+            "Tirupati": {
+              "cd_ratio": 81.0
+            },
+            "Visakhapatanam": {
+              "cd_ratio": 123.0
+            },
+            "Vizianagaram": {
+              "cd_ratio": 140.0
+            },
+            "West Godavari": {
+              "cd_ratio": 179.0
+            },
+            "Y.s.r.": {
+              "cd_ratio": 157.0
+            }
+          }
+        }
+      }
+    },
     "2023-03": {
       "period": "March 2023",
       "tables": {
-        "branch_network": {
+        "credit_deposit_ratio": {
           "fields": [
-            "name_of_the_district",
-            "cd_ratio",
-            "list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no_1_2_3",
-            "district_name_alluri_sita_ramaraju",
-            "sub_district_name_koyyuru_gangavaram_vr_puram",
-            "village_name_adakula_nellipudi_waddegudem",
-            "population_3946_3636_5058",
-            "whether_an_ippb_centre_exists_in_the_village_yes_no_no",
-            "lbc_of_ap_217th_meeting_of_slbc_convener_list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no",
-            "district_name",
-            "sub_district_name",
-            "village_name",
-            "population",
-            "whether_an_ippb_centre_exists_in_the_village_yes_no"
+            "cd_ratio"
           ],
           "districts": {
             "Alluri Sitharama Raju": {
@@ -38,9 +2046,7 @@
               "cd_ratio": 182.0
             },
             "Chittoor": {
-              "cd_ratio": 110.0,
-              "lbc_of_ap_217th_meeting_of_slbc_convener_list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no": 17.0,
-              "population": 3466.0
+              "cd_ratio": 110.0
             },
             "Konaseema": {
               "cd_ratio": 177.0
@@ -49,78 +2055,58 @@
               "cd_ratio": 164.0
             },
             "Eluru": {
-              "cd_ratio": 176.0,
-              "lbc_of_ap_217th_meeting_of_slbc_convener_list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no": 21.0,
-              "population": 7084.0
+              "cd_ratio": 176.0
             },
             "Guntur": {
               "cd_ratio": 126.0
             },
             "Kakinada": {
-              "list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no_1_2_3": 10.0,
-              "population_3946_3636_5058": 3088.0,
-              "lbc_of_ap_217th_meeting_of_slbc_convener_list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no": 16.0,
-              "population": 5069.0
-            },
-            "Palnadu": {
-              "lbc_of_ap_217th_meeting_of_slbc_convener_list_of_villages_with_population_of_more_than_3000_not_having_a_brick_and_mortar_bank_branch_s_no": 19.0,
-              "population": 5971.0
-            }
-          }
-        },
-        "credit_deposit_ratio": {
-          "fields": [
-            "217th_meeting_of_slbc_name_of_the_district",
-            "convener_cd_ratio"
-          ],
-          "districts": {
-            "Kakinada": {
-              "convener_cd_ratio": 136.0
+              "cd_ratio": 136.0
             },
             "Krishna": {
-              "convener_cd_ratio": 180.0
+              "cd_ratio": 180.0
             },
             "Kurnool": {
-              "convener_cd_ratio": 145.0
+              "cd_ratio": 145.0
             },
             "Nandyal": {
-              "convener_cd_ratio": 190.0
+              "cd_ratio": 190.0
             },
             "Ntr": {
-              "convener_cd_ratio": 183.0
+              "cd_ratio": 183.0
             },
             "Palnadu": {
-              "convener_cd_ratio": 216.0
+              "cd_ratio": 216.0
             },
             "Parvathipuram Manyam": {
-              "convener_cd_ratio": 152.0
+              "cd_ratio": 152.0
             },
             "Prakasam": {
-              "convener_cd_ratio": 193.0
+              "cd_ratio": 193.0
             },
             "Spsr Nellore": {
-              "convener_cd_ratio": 162.0
+              "cd_ratio": 162.0
             },
             "Sri Sathya Sai": {
-              "convener_cd_ratio": 155.0
+              "cd_ratio": 155.0
             },
             "Srikakulam": {
-              "convener_cd_ratio": 136.0
+              "cd_ratio": 136.0
             },
             "Tirupati": {
-              "convener_cd_ratio": 83.0
+              "cd_ratio": 83.0
             },
             "Visakhapatanam": {
-              "convener_cd_ratio": 124.0
+              "cd_ratio": 124.0
             },
             "Vizianagaram": {
-              "convener_cd_ratio": 142.0
+              "cd_ratio": 142.0
             },
             "West Godavari": {
-              "convener_cd_ratio": 188.0
+              "cd_ratio": 188.0
             },
             "Y.s.r.": {
-              "convener_cd_ratio": 152.0
+              "cd_ratio": 152.0
             }
           }
         }
@@ -129,15 +2115,9 @@
     "2023-06": {
       "period": "June 2023",
       "tables": {
-        "branch_network": {
+        "credit_deposit_ratio": {
           "fields": [
-            "name_of_the_district",
-            "cd_ratio",
-            "s_n",
-            "district_name",
-            "sub_district_name",
-            "village_name",
-            "population"
+            "cd_ratio"
           ],
           "districts": {
             "Alluri Sitharama Raju": {
@@ -156,9 +2136,7 @@
               "cd_ratio": 181.0
             },
             "Chittoor": {
-              "cd_ratio": 112.0,
-              "s_n": 17.0,
-              "population": 3466.0
+              "cd_ratio": 112.0
             },
             "Konaseema": {
               "cd_ratio": 181.0
@@ -167,17 +2145,13 @@
               "cd_ratio": 164.0
             },
             "Eluru": {
-              "cd_ratio": 175.0,
-              "s_n": 21.0,
-              "population": 7084.0
+              "cd_ratio": 175.0
             },
             "Guntur": {
               "cd_ratio": 125.0
             },
             "Kakinada": {
-              "cd_ratio": 140.0,
-              "s_n": 16.0,
-              "population": 5069.0
+              "cd_ratio": 140.0
             },
             "Krishna": {
               "cd_ratio": 179.0
@@ -185,56 +2159,44 @@
             "Kurnool": {
               "cd_ratio": 145.0
             },
-            "Palnadu": {
-              "s_n": 19.0,
-              "population": 5971.0
-            }
-          }
-        },
-        "credit_deposit_ratio": {
-          "fields": [
-            "217th_meeting_of_slbc_name_of_the_district",
-            "convener_cd_ratio"
-          ],
-          "districts": {
             "Nandyal": {
-              "convener_cd_ratio": 172.0
+              "cd_ratio": 172.0
             },
             "Ntr": {
-              "convener_cd_ratio": 170.0
+              "cd_ratio": 170.0
             },
             "Palnadu": {
-              "convener_cd_ratio": 218.0
+              "cd_ratio": 218.0
             },
             "Parvathipuram Manyam": {
-              "convener_cd_ratio": 154.0
+              "cd_ratio": 154.0
             },
             "Prakasam": {
-              "convener_cd_ratio": 184.0
+              "cd_ratio": 184.0
             },
             "Spsr Nellore": {
-              "convener_cd_ratio": 163.0
+              "cd_ratio": 163.0
             },
             "Sri Sathya Sai": {
-              "convener_cd_ratio": 159.0
+              "cd_ratio": 159.0
             },
             "Srikakulam": {
-              "convener_cd_ratio": 136.0
+              "cd_ratio": 136.0
             },
             "Tirupati": {
-              "convener_cd_ratio": 80.0
+              "cd_ratio": 80.0
             },
             "Visakhapatanam": {
-              "convener_cd_ratio": 122.0
+              "cd_ratio": 122.0
             },
             "Vizianagaram": {
-              "convener_cd_ratio": 144.0
+              "cd_ratio": 144.0
             },
             "West Godavari": {
-              "convener_cd_ratio": 191.0
+              "cd_ratio": 191.0
             },
             "Y.s.r.": {
-              "convener_cd_ratio": 148.0
+              "cd_ratio": 148.0
             }
           }
         }
@@ -245,7 +2207,6 @@
       "tables": {
         "credit_deposit_ratio": {
           "fields": [
-            "name_of_the_district",
             "cd_ratio"
           ],
           "districts": {
@@ -324,7 +2285,6 @@
       "tables": {
         "credit_deposit_ratio": {
           "fields": [
-            "name_of_the_district",
             "cd_ratio"
           ],
           "districts": {
@@ -415,7 +2375,6 @@
       "tables": {
         "credit_deposit_ratio": {
           "fields": [
-            "name_of_the_district",
             "cd_ratio"
           ],
           "districts": {
@@ -506,7 +2465,6 @@
       "tables": {
         "credit_deposit_ratio": {
           "fields": [
-            "name_of_the_district",
             "cd_ratio"
           ],
           "districts": {

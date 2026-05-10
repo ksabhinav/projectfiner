@@ -311,7 +311,7 @@ Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) q
 | Haryana | Dec 2025 | 13 | 23 |
 | Telangana | Dec 2024 | 1 | 33 |
 | Uttarakhand | Dec 2023 | 14 | 13 |
-| Andhra Pradesh | Jun 2024 | 6 | 26 |
+| Andhra Pradesh | Jun 2024 | 20 | 26 |
 
 **Timeseries JSON structure** (`{state}_fi_timeseries.json`):
 ```json
@@ -530,42 +530,49 @@ python3 extract_uttarakhand.py
 # Then: python3 db/export_indicator_files.py
 ```
 
-## Andhra Pradesh Data Pipeline (initial / quick win)
+## Andhra Pradesh Data Pipeline
 
-Andhra Pradesh was added as a "quick win" — the live `slbcap.nic.in` site is unreachable, but the Wayback Machine has snapshots of 6 recent agendas. Currently bootstrapped with **6 consecutive quarters**: March 2023 → June 2024 (223rd–228th SLBC meetings). A comprehensive AP backfill (~113 archived agendas covering 1990s–present) is documented as a future task in `~/.claude/.../project_finer_pending.md`.
+Andhra Pradesh SLBC data, comprehensively backfilled across three district-structure eras: post-2014 split (13 districts, 2018-2022) and post-2022 reorganization (26 districts, 2022-2024). Pre-2014 united-AP era is **not** present — the available archived PDFs from that period (166-201, ~2009-2014) only contain bank-wise CD ratio in narrative format, not district-wise tables.
 
-**Source PDFs**: 6 agendas in `slbc-data/andhra-pradesh/` (`223rd_agenda.pdf` – `228th_agenda.pdf`), each 2.5–3.6 MB, downloaded via the Wayback Machine `id_/` raw-content URL pattern. The original source is `https://www.slbcap.nic.in/pages/SLBC%20Meetings/`. Use `https://web.archive.org/cdx/search/cdx?url=slbcap.nic.in&matchType=domain&filter=mimetype:application/pdf&filter=urlkey:.*agenda.*` to discover snapshot timestamps.
+**Source**: The live `slbcap.nic.in` is currently unreachable. ~52 PDFs were downloaded via the Wayback Machine using the `id_/` raw-content URL pattern at the `20250815` snapshot timestamp. CDX query for discovery:
+```
+https://web.archive.org/cdx/search/cdx?url=slbcap.nic.in&matchType=domain&filter=mimetype:application/pdf
+```
 
-**Extraction script**: `slbc-data/andhra-pradesh/extract_andhra_pradesh.py` (~280 lines). Quick-win design — pulls only district-wise tables that classify cleanly into the standard FI categories. Coverage:
-- `credit_deposit_ratio`: all 6 quarters (13–26 districts each, all 26 in latest 3)
-- `branch_network`: 2 oldest quarters only (12–16 districts) — recent agendas don't have absolute branch counts at district level
+**Extraction script**: `slbc-data/andhra-pradesh/extract_andhra_pradesh.py` (~700 lines). Handles the 47-meeting `MEETING_QUARTER` mapping with explicit per-meeting quarter codes (the relationship between meeting number and reported quarter isn't a simple linear mapping — special meetings, missed quarters, and meeting-date-vs-quarter-end offsets all required hand-tuning).
 
-**Filename → quarter** (from PDF "as on DD.MM.YYYY" line in first 5 pages):
-- 223rd → 2023-03   |  226th → 2023-12
-- 224th → 2023-06   |  227th → 2024-03
-- 225th → 2023-09   |  228th → 2024-06
+**Coverage**: 20 quarters from June 2018 to June 2024. 1,229 rows in `slbc_data`. Categories:
+- `credit_deposit_ratio`: all 20 quarters (12-26 districts each)
+- `branch_network`, `priority_sector`, `annual_credit_plan`: 3 quarters each (2020-09, 2021-06, 2021-12 — the meetings that publish a fuller data appendix)
+- `shg`: 1 quarter (2019-06)
 
-**District canonicalization** (10 aliases for the 26 modern AP districts post-2022 reorganization):
-- "Ananthapuramu" → "Anantapur"
-- "Dr. B.R.Ambedkar Konaseema" → "Konaseema"
-- "Y.S.R" / "Y.S.R Kadapa" / "Cuddapah" / "Kadapa" → "Y.s.r." (FINER's existing canonical form)
-- "Visakhapatnam" → "Visakhapatanam" (DB has typo)
-- "SPSR Nellore" / "Sri Potti Sriramulu Nellore" → "Spsr Nellore"
-- "NTR" / "N.T.R." → "Ntr"
+**Quarter gaps in coverage** (PDFs that were truncated by Wayback or the meeting wasn't archived):
+- 2018-09 (205_agenda.pdf — corrupt, EOF error)
+- 2018-03 (203 reports same; would only differ if a separate PDF existed)
+- 2019-12 → 2020-06 (truncated 9-page archives)
+- 2020-12, 2021-03 (missing meetings)
+- 2022-06 (220th meeting not in archive)
+
+**District canonicalization** — the AP region has had 3 district structures over time:
+- **Pre-2014 (United AP, 23 districts)**: covered both modern AP + 10 Telangana districts. Extractor's `DISTRICT_ALIASES` dict registers all of these and routes per-district to the appropriate `state_slug` (`andhra-pradesh` or `telangana`). However, no extractable district-wise tables were found in the available pre-2014 PDFs from the Wayback archive — they only carry bank-wise summaries. The dual-state plumbing is in place if better source PDFs are obtained later.
+- **2014-2022 (13 modern AP districts)**: Anantapur, Chittoor, East Godavari, Guntur, Krishna, Kurnool, Prakasam, Nellore (canonical: Spsr Nellore), Srikakulam, Visakhapatnam (DB has typo: `Visakhapatanam`), Vizianagaram, West Godavari, YSR/Cuddapah/Kadapa (canonical: `Y.s.r.`)
+- **2022+ (26 modern AP districts)**: above 13 plus Alluri Sitharama Raju, Anakapalli, Annamayya, Bapatla, Eluru, Kakinada, Konaseema (full name in PDFs: "Dr. B.R.Ambedkar Konaseema"), Nandyal, NTR (canonical: `Ntr`), Palnadu, Parvathipuram Manyam, Sri Sathya Sai, Tirupati
+
+Aliases registered for ~30 spelling/naming variants ("Ananthapuramu" / "Cuddapah" / "Visakhapatnam" / "Mahabubnagar" / etc.) — see `_add()` calls in the extractor.
 
 **Field standardization**: AP's older PDFs (223rd, 224th) use the field name `Convener CD Ratio` which gets snake-cased to `convener_cd_ratio` and then renamed to canonical `cd_ratio` so it matches `db/export_indicator_files.py`'s fallback list.
 
-**Classification fallback**: AP page titles are often garbled by overlapping rotated text (e.g. "S LBC of AP 228th Meeting | SL2B.3C D oifs AtrPic t w i s e p o s i t i o n o f C D21 r7a th t Mioe aetsi nogn"). When the page-title classifier returns None, the script falls back to classifying based on the table's own header rows.
+**Classification fallbacks**: AP page titles are often garbled by overlapping rotated text (e.g. "SL2B.3C D oifs AtrPic t w i s e p o s i t i o n o f C D21 r7a th t Mioe aetsi nogn"). When the page-title classifier returns None, the script falls back to classifying based on the table's own header rows. A `REJECT` sentinel prevents fall-through from header-rejection (e.g. RSETI/SSA tables) into page-text classification on the same page.
 
-**Min-districts threshold**: Tables with fewer than 10 unique resolved districts after dedup are dropped. This filters out misclassifications like the "list of villages without brick-and-mortar branch" table (rows are villages — same district appears multiple times — only ~5 unique districts).
+**Bank-wise table filter**: `is_bankwise_table()` rejects tables whose first 3 columns match common bank names (SBI, BoB, HDFC, etc.) — filters out per-bank summaries that would otherwise pollute district-wise outputs.
 
-**Data coverage**: 6 quarters from March 2023 to June 2024, 26 districts. 170 rows in `slbc_data`. CD ratio in all 6 quarters; `branch_network` in 2 oldest only.
+**Min-districts threshold**: Tables with fewer than 10 unique resolved districts after dedup are dropped. Filters out misclassifications like "list of villages without brick-and-mortar branch" tables (rows are villages, same district repeated — only ~5 unique districts).
 
-**Caveat — this is initial coverage only**:
-- Pre-2014 SLBC AP meetings cover both modern AP and Telangana districts (which were split off in 2014)
-- 2014–2022 meetings cover 13 → 23 districts (post-2014 split, before 2022 reorganization)
-- Post-2022 meetings cover the current 26 districts
-- A comprehensive backfill would need to handle all three district structures + the AP/TG split
+**Telangana pre-2014 routing**: Extractor's `DISTRICT_ALIASES` dict maps 10 Telangana district aliases to `(district, 'telangana')` tuples. The output writer creates `slbc-data/andhra-pradesh/telangana_pre2014_*.json` files when district-wise pre-2014 data is found. Currently empty — see "no extractable pre-2014 data" caveat above.
+
+**Future improvements**:
+- The 220th meeting (Jun 2022) and several Sep 2018-Mar 2021 quarters are missing — could be filled if better PDF sources surface
+- Pre-2014 era (1990s-2014) requires a different source; SLBC AP minutes/proceedings might have district-wise summaries that the agendas omit
 
 ## Tripura Data Pipeline
 
