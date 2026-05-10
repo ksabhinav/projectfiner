@@ -6,7 +6,7 @@
   let {}: Props = $props();
 
   // ── State ──
-  let scope = $state<'india' | 'ne'>('ne');
+  let scope = $state<'india' | 'ne'>('india');
 
   // Banking controls
   let currentIndicator = $state('digital_transactions');
@@ -154,7 +154,7 @@
     // Read initial state from window.__FINER
     const s = getFinerState();
     if (s) {
-      scope = s.scope || 'ne';
+      scope = s.scope || 'india';
       currentIndicator = s.indicator || 'digital_transactions';
       currentMetricIdx = s.metricIdx || 0;
       bankingStateFilter = s.stateFilter || '';
