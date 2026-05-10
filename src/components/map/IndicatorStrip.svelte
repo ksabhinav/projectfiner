@@ -174,16 +174,28 @@
 
   <!-- "When" cell removed — the vertical timeline on the right edge picks the quarter. -->
 
-  <button
-    class="cell where"
-    class:active={openCell === 'where'}
-    onclick={() => (openCell = openCell === 'where' ? null : 'where')}
-    aria-haspopup="listbox"
-    aria-expanded={openCell === 'where'}
-  >
-    <span class="k">Where</span>
-    <span class="v">{scope}</span>
-  </button>
+  <div class="cell-wrap">
+    <button
+      class="cell where"
+      class:active={openCell === 'where'}
+      onclick={() => (openCell = openCell === 'where' ? null : 'where')}
+      aria-haspopup="listbox"
+      aria-expanded={openCell === 'where'}
+    >
+      <span class="k">Where</span>
+      <span class="v">{scope}</span>
+    </button>
+    {#if scopeStateUT}
+      <button
+        class="clear"
+        onclick={(e) => { e.stopPropagation(); selectScope('All India'); }}
+        aria-label="Clear state filter — show All India"
+        title="Show All India"
+      >
+        ×
+      </button>
+    {/if}
+  </div>
 
   <span class="spacer"></span>
 
@@ -300,6 +312,32 @@
   .cell.what .v { color: var(--vermillion-d, #8E331E); }
   .cell.what  { min-width: 240px; }
   .cell.when, .cell.where { min-width: 158px; }
+
+  /* Where cell wrapper — holds the cell + an optional × clear button */
+  .cell-wrap {
+    display: flex;
+    align-items: stretch;
+    border-right: 1px solid var(--rule-soft, #E8E2D5);
+  }
+  .cell-wrap .cell {
+    border-right: 0;
+  }
+  .clear {
+    background: transparent;
+    border: 0;
+    border-left: 1px dashed var(--rule, #D9D2C5);
+    cursor: pointer;
+    padding: 0 12px;
+    font-size: 18px;
+    line-height: 1;
+    color: var(--mist, #6E665E);
+    font-family: 'Inter', sans-serif;
+    transition: color 160ms ease, background 160ms ease;
+  }
+  .clear:hover {
+    color: var(--vermillion, #B84A2E);
+    background: var(--paper-deep, #ECE5D6);
+  }
 
   .spacer { flex: 1; }
 
