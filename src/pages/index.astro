@@ -17,6 +17,19 @@ const base = import.meta.env.BASE_URL;
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
   <div id="map"></div>
+
+  <!-- Atlas loading state — shown until first indicator data lands -->
+  <div id="map-loading" aria-live="polite">
+    <svg class="ml-mark" viewBox="0 0 36 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="4"  width="14" height="6" fill="#B84A2E"/>
+      <rect x="0" y="14" width="22" height="6" fill="#1B140E"/>
+      <rect x="0" y="24" width="36" height="6" fill="#1B140E"/>
+      <rect x="0" y="34" width="20" height="6" fill="#D4A24A"/>
+    </svg>
+    <div class="ml-text">Loading the <span class="em">atlas</span>…</div>
+    <div class="ml-detail" id="ml-detail">FETCHING DISTRICTS</div>
+    <div class="ml-dots"><span></span><span></span><span></span></div>
+  </div>
   <!-- State inset removed — Where cell in IndicatorStrip handles state focus. -->
   <IndicatorStrip client:load />
   <MapLegend client:load />
@@ -1370,6 +1383,9 @@ const base = import.meta.env.BASE_URL;
           buildChoropleth_banking();
           updateLabelVisibility_banking();
           flyToNE(false);
+          // Hide the Atlas loading overlay
+          var ml = document.getElementById('map-loading');
+          if (ml) ml.classList.add('hidden');
         });
       }).catch(function(err) {
         var _sb=document.getElementById('stats-banking');if(_sb)_sb.textContent='Error: '+err.message;
@@ -1379,6 +1395,9 @@ const base = import.meta.env.BASE_URL;
     // Load a single indicator file (~50-100 KB) for the given indicator+quarter
     // Falls back to nearest earlier quarter if requested quarter has very sparse data
     function loadIndicatorData(indicator, quarter) {
+      // Update Atlas loading detail line if visible
+      var mlD = document.getElementById('ml-detail');
+      if (mlD) mlD.textContent = ('FETCHING ' + indicator.toUpperCase().replace(/_/g, ' ') + ' · ' + (quarter || 'LATEST')).trim();
       // Static-file indicators (no quarterly data)
       if (indicator === 'rbi_banking_outlets' ||
           indicator === 'nrlm_shg' ||
@@ -1873,6 +1892,45 @@ const base = import.meta.env.BASE_URL;
   .leaflet-control-zoom a:hover{background:#fff!important;color:#1a1410!important}
 
   #wm{position:absolute;bottom:20px;right:110px;z-index:1000;font-family:'Inter',sans-serif;font-size:9px;font-weight:500;color:rgba(0,0,0,0.15);letter-spacing:0.06em;pointer-events:none}
+  /* ── Atlas map loading state ── */
+  #map-loading{
+    position:absolute;top:108px;left:0;right:0;bottom:0;
+    background:#F4EFE6;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:14px;
+    z-index:600;
+    transition:opacity 400ms ease,visibility 0s linear 400ms;
+    pointer-events:none;
+  }
+  #map-loading.hidden{opacity:0;visibility:hidden}
+  #map-loading .ml-mark{width:36px;height:50px;opacity:0.85}
+  #map-loading .ml-text{
+    font-family:'Fraunces',Georgia,serif;font-weight:400;
+    font-variation-settings:'opsz' 60;
+    font-size:20px;letter-spacing:-0.015em;color:#1B140E;
+  }
+  #map-loading .ml-text .em{color:#B84A2E;font-style:italic;font-weight:380;}
+  #map-loading .ml-detail{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10px;color:#6E665E;
+    letter-spacing:0.06em;text-transform:uppercase;
+  }
+  #map-loading .ml-dots{display:inline-flex;gap:6px;margin-top:2px}
+  #map-loading .ml-dots span{
+    width:7px;height:7px;border-radius:50%;
+    background:#B84A2E;
+    animation:ml-pulse 1400ms cubic-bezier(0.32,0.72,0.40,1.00) infinite;
+  }
+  #map-loading .ml-dots span:nth-child(2){animation-delay:180ms}
+  #map-loading .ml-dots span:nth-child(3){animation-delay:360ms}
+  @keyframes ml-pulse{
+    0%,100%{transform:scale(0.65);opacity:0.4}
+    50%{transform:scale(1);opacity:1}
+  }
+  @media (max-width: 640px){
+    #map-loading{top:102px}
+    #map-loading .ml-text{font-size:17px}
+  }
   /* State inset CSS removed — Where cell handles state focus. */
   #btn-back{display:none;position:absolute;top:90px;right:16px;z-index:1000;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.5);padding:10px 16px;font-family:'Inter',sans-serif;font-size:10px;font-weight:500;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.04);color:#555048;border-radius:8px;transition:all 0.25s}
   #btn-back:hover{background:#fff;box-shadow:0 6px 20px rgba(0,0,0,0.08);color:#1a1410}

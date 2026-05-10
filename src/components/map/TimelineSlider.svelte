@@ -286,28 +286,29 @@
   .tl-dot.year-dot.active {
     background: #B84A2E;
   }
-  /* Pre-Atlas flat-bar thumb shape — proportional to 6px track. Vermillion
-     fill, soft shadow, no halo (halo on a thin track felt like a UFO). */
+  /* Atlas: round vermillion thumb with halo ring */
   .timeline-thumb {
     position: absolute;
     left: 50%;
-    width: 18px;
-    height: 8px;
-    margin-left: -9px;
-    margin-top: -4px;
+    width: 14px;
+    height: 14px;
+    margin-left: -7px;
+    margin-top: -7px;
     background: #B84A2E;
-    border-radius: 4px;
+    border-radius: 50%;
     cursor: grab;
     z-index: 2;
-    box-shadow: 0 1px 4px rgba(184, 74, 46, 0.3);
     transition: box-shadow 160ms ease;
+    box-shadow:
+      0 0 0 4px rgba(184, 74, 46, 0.18),
+      0 2px 4px rgba(0, 0, 0, 0.12);
   }
   .timeline-thumb:hover {
-    box-shadow: 0 2px 8px rgba(184, 74, 46, 0.45);
+    box-shadow:
+      0 0 0 5px rgba(184, 74, 46, 0.22),
+      0 2px 8px rgba(0, 0, 0, 0.18);
   }
-  .timeline-thumb:active {
-    cursor: grabbing;
-  }
+  .timeline-thumb:active { cursor: grabbing; }
   /* Atlas: italic Fraunces label below the track ("Dec / 2025" stacked) */
   .tl-current-label {
     font-family: 'Fraunces', Georgia, serif;
@@ -344,12 +345,15 @@
       width: 4px;
     }
     .tl-bound { font-size: 8px; letter-spacing: 0.04em; }
-    /* Mobile: same flat-bar thumb, slightly narrower */
+    /* Mobile: round thumb scaled down */
     .timeline-thumb {
-      width: 14px;
-      height: 6px;
-      margin-left: -7px;
-      margin-top: -3px;
+      width: 12px;
+      height: 12px;
+      margin-left: -6px;
+      margin-top: -6px;
+      box-shadow:
+        0 0 0 3px rgba(184, 74, 46, 0.18),
+        0 1px 3px rgba(0, 0, 0, 0.12);
     }
     .tl-dot.year-dot { width: 5px; height: 5px; margin-left: -2.5px; margin-top: -2.5px; }
     /* Italic label below the track — smaller, tighter on mobile */
