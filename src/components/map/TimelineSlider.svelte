@@ -209,6 +209,9 @@
     flex-direction: column;
     align-items: center;
     gap: 6px;
+    /* Pin column width so longer/shorter labels (Mar vs September) don't
+       reflow the column and visually shift the track sideways during scrub. */
+    width: 60px;
     user-select: none;
     -webkit-user-select: none;
   }
@@ -333,12 +336,12 @@
   }
 
   @media (max-width: 640px) {
-    .time-slider { right: 8px; gap: 4px; }
+    .time-slider { right: 8px; gap: 4px; width: 48px; }
     .timeline-track {
       height: calc(100vh - 280px);   /* fill available vertical space */
       max-height: 360px;
       min-height: 180px;
-      width: 2px;
+      width: 4px;
     }
     .tl-bound { font-size: 8px; letter-spacing: 0.04em; }
     /* Mobile: same flat-bar thumb, slightly narrower */
