@@ -328,7 +328,7 @@
     font-size: 9px;
   }
 
-  /* Simple dropdowns for When and Where */
+  /* Simple dropdowns for When and Where (already fixed-positioned, just leaving for clarity) */
   .simple-panel {
     position: fixed;
     top: calc(var(--header-h, 52px) + var(--strip-h, 56px) + 6px);
@@ -338,7 +338,7 @@
     box-shadow: 0 24px 48px rgba(27, 20, 14, 0.18);
     padding: 6px 0;
     min-width: 180px;
-    max-height: 380px;
+    max-height: calc(100vh - 130px);
     overflow-y: auto;
     z-index: 1100;
     animation: drop 260ms cubic-bezier(0.32, 0.72, 0.40, 1.00);

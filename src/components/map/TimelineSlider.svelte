@@ -223,12 +223,11 @@
   }
   .timeline-track {
     position: relative;
-    width: 6px;
-    height: 200px;
-    background: rgba(200, 192, 184, 0.35);
-    border-radius: 3px;
+    width: 2px;
+    height: clamp(220px, 60vh, 420px);
+    background: var(--rule, #D9D2C5);
+    border-radius: 1px;
     cursor: pointer;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
   }
   .timeline-fill {
     position: absolute;
@@ -236,7 +235,7 @@
     left: 0;
     width: 100%;
     background: #B84A2E;
-    border-radius: 3px;
+    border-radius: 1px;
     /* No height transition — animating during drag causes visible chase */
   }
   .timeline-dots {
@@ -338,10 +337,32 @@
   }
 
   @media (max-width: 640px) {
-    .time-slider { right: 8px; }
-    .timeline-track { height: 120px; width: 5px; }
-    .tl-bound { font-size: 8px; }
-    .quarter-label { font-size: 10px; right: 20px; }
-    .timeline-thumb { width: 16px; margin-left: -8px; height: 5px; }
+    .time-slider { right: 8px; gap: 4px; }
+    .timeline-track {
+      height: calc(100vh - 280px);   /* fill available vertical space */
+      max-height: 360px;
+      min-height: 180px;
+      width: 2px;
+    }
+    .tl-bound { font-size: 8px; letter-spacing: 0.04em; }
+    /* Round thumb stays round — just slightly smaller, halo softer */
+    .timeline-thumb {
+      width: 12px;
+      height: 12px;
+      margin-left: -6px;
+      margin-top: -6px;
+      box-shadow:
+        0 0 0 3px rgba(184, 74, 46, 0.18),
+        0 1px 3px rgba(0, 0, 0, 0.12);
+    }
+    .timeline-thumb:hover {
+      box-shadow:
+        0 0 0 4px rgba(184, 74, 46, 0.22),
+        0 1px 6px rgba(0, 0, 0, 0.18);
+    }
+    .tl-dot.year-dot { width: 5px; height: 5px; margin-left: -2.5px; margin-top: -2.5px; }
+    /* Italic label below the track — smaller, tighter on mobile */
+    .tl-current-label { font-size: 11px; margin-top: 6px; }
+    .tl-current-label .y { font-size: 9px; }
   }
 </style>

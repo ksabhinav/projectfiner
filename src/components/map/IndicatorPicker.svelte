@@ -72,17 +72,20 @@
 
 <style>
   .picker-panel {
-    position: absolute;
+    position: fixed;
     top: calc(var(--header-h, 52px) + var(--strip-h, 56px) + 6px);
     left: 22px;
     width: 320px;
-    background: var(--paper);
-    border: 1px solid var(--ink);
+    background: var(--paper, #F4EFE6);
+    border: 1px solid var(--ink, #1B140E);
     border-radius: 6px;
     box-shadow: 0 24px 48px rgba(27, 20, 14, 0.18), 0 4px 12px rgba(27, 20, 14, 0.06);
     z-index: 1100;
     overflow: hidden;
     animation: drop var(--dur-base, 260ms) var(--ease-quick, cubic-bezier(0.32, 0.72, 0.40, 1.00));
+    max-height: calc(100vh - 130px);
+    display: flex;
+    flex-direction: column;
   }
   .picker-panel::before {
     content: '';
