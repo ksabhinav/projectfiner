@@ -43,47 +43,107 @@
   </svg>
 {/snippet}
 
-<div class="datasets">
+<div class="dl-grid">
   {#each [
-    { id: 'cdsl', color: '#b8603e', title: 'CDSL DP Service Centres', count: '20,612 records', desc: 'Depository Participant service centres registered with Central Depository Services Limited.', source: 'CDSL website, as on 14 March 2026', fields: ['Name','Address','DP ID','Pincode','Email','Website','State','City'] },
-    { id: 'nsdl', color: '#3d7a8e', title: 'NSDL DP Service Centres', count: '57,005 records', desc: 'Depository Participant service centres registered with National Securities Depository Limited.', source: 'NSDL website, as on 14 March 2026', fields: ['Name','Address','DP ID','Pincode','Email','Website','Type','State','City'] },
-    { id: 'mfdi', color: '#5a7a3a', title: 'MF Distributors — Individual', count: '187,254 records', desc: 'Individual Mutual Fund Distributors registered with AMFI.', source: 'AMFI website, as on 14 March 2026', fields: ['Name','ARN','Pincode','State','Location','City'] },
-    { id: 'mfdc', color: '#8b6914', title: 'MF Distributors — Corporate', count: '10,760 records', desc: 'Corporate Mutual Fund Distributors registered with AMFI.', source: 'AMFI website, as on 14 March 2026', fields: ['Name','ARN','Pincode','State','Location','City'] },
+    { id: 'cdsl', eye: 'CDSL', title: 'Depository participants',          count: '20,612 service centres',  source: 'CDSL website, as on 14 March 2026',  fields: ['Name','Address','DP ID','Pincode','Email','Website','State','City'] },
+    { id: 'nsdl', eye: 'NSDL', title: 'Depository participants',          count: '57,005 service centres',  source: 'NSDL website, as on 14 March 2026',  fields: ['Name','Address','DP ID','Pincode','Email','Website','Type','State','City'] },
+    { id: 'mfdi', eye: 'AMFI', title: 'MF Distributors — Individual',     count: '187,254 distributors',    source: 'AMFI website, as on 14 March 2026',  fields: ['Name','ARN','Pincode','State','Location','City'] },
+    { id: 'mfdc', eye: 'AMFI', title: 'MF Distributors — Corporate',      count: '10,760 distributors',     source: 'AMFI website, as on 14 March 2026',  fields: ['Name','ARN','Pincode','State','Location','City'] },
   ] as ds}
-    <div class="dataset">
-      <div class="dataset-inner" style="border-left-color: {ds.color}">
-        <div class="dataset-head">
-          <h2><span class="dataset-dot" style="background: {ds.color}"></span>{ds.title}</h2>
-          <span class="badge" style="color: {ds.color}; border-color: {ds.color}">{ds.count}</span>
-        </div>
-        <div class="meta">
-          {ds.desc}<br>Source: {ds.source}
-        </div>
-        <div class="fields">
-          Fields: {#each ds.fields as f}<code>{f}</code> {/each}
-        </div>
-        <div class="btn-row">
-          <button class="btn" class:downloading={downloading[`${ds.id}-csv`]} onclick={() => download(ds.id, 'csv')}>
-            {@render fileIcon()}CSV
-          </button>
-          <button class="btn" class:downloading={downloading[`${ds.id}-xlsx`]} onclick={() => download(ds.id, 'xlsx')}>
-            {@render fileIcon()}Excel
-          </button>
-        </div>
+    <div class="dl-card">
+      <div class="dl-card-eye">{ds.eye}</div>
+      <div class="dl-card-name">{ds.title}</div>
+      <div class="dl-card-meta">{ds.count}<br>{ds.source}</div>
+      <div class="dl-card-actions">
+        <button class="dl-btn primary" class:downloading={downloading[`${ds.id}-csv`]} onclick={() => download(ds.id, 'csv')}>
+          CSV
+        </button>
+        <button class="dl-btn" class:downloading={downloading[`${ds.id}-xlsx`]} onclick={() => download(ds.id, 'xlsx')}>
+          XLSX
+        </button>
       </div>
     </div>
   {/each}
 </div>
 
 <style>
-  .dataset { background: #fff; border: 1px solid var(--border); margin-bottom: 16px; border-radius: 8px; box-shadow: var(--card-shadow); overflow: hidden; transition: box-shadow 0.2s; }
-  .dataset:hover { box-shadow: var(--card-shadow-hover); }
-  .dataset-inner { padding: 24px 28px; border-left: 3px solid transparent; }
-  .dataset-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; flex-wrap: wrap; gap: 8px; }
-  h2 { font-size: 15px; font-weight: 700; color: var(--text); letter-spacing: 0.01em; }
-  .dataset-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; vertical-align: middle; }
-  .meta { font-family: var(--font-sans); font-size: 11px; font-weight: 400; color: var(--muted); line-height: 1.8; margin-bottom: 14px; }
-  .fields { font-family: var(--font-sans); font-size: 10px; color: var(--muted); margin-bottom: 16px; line-height: 1.8; }
-  .fields code { background: #f4f2ee; padding: 2px 7px; font-size: 10px; color: #555048; border-radius: 3px; font-weight: 500; }
-  .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+  /* Atlas dl-card pattern — matches /downloads page */
+  .dl-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .dl-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--paper, #F4EFE6);
+    border: 1px solid var(--rule, #D9D2C5);
+    border-left: 3px solid var(--peacock, #1E4960);
+    border-radius: 4px;
+    padding: 16px 16px 14px;
+    transition: transform 160ms ease, box-shadow 160ms ease, border-left-color 160ms ease;
+  }
+  .dl-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(27, 20, 14, 0.06);
+    border-left-color: var(--peacock-d, #0E2F44);
+  }
+  .dl-card-eye {
+    font-family: 'Inter', sans-serif;
+    font-size: 8.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--peacock, #1E4960);
+    margin-bottom: 5px;
+  }
+  .dl-card-name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    font-variation-settings: 'opsz' 60;
+    font-size: 18px;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+    color: var(--ink, #1B140E);
+    margin-bottom: 8px;
+  }
+  .dl-card-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px;
+    color: var(--mist, #6E665E);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .dl-card-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .dl-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 6px 10px;
+    border: 1px solid var(--ink, #1B140E);
+    background: var(--paper, #F4EFE6);
+    color: var(--ink, #1B140E);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 160ms ease, transform 160ms ease;
+  }
+  .dl-btn.primary {
+    background: var(--ink, #1B140E);
+    color: var(--paper, #F4EFE6);
+  }
+  .dl-btn:hover { transform: translateY(-1px); }
+  .dl-btn.downloading { opacity: 0.5; cursor: wait; }
+
+  @media (max-width: 760px) {
+    .dl-grid { grid-template-columns: 1fr; gap: 10px; }
+  }
 </style>

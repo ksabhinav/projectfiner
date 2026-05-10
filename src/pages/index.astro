@@ -1,11 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
-import MapPanel from '../components/map/MapPanel.svelte';
+import IndicatorStrip from '../components/map/IndicatorStrip.svelte';
 import MapLegend from '../components/map/MapLegend.svelte';
-import InfoTooltip from '../components/map/InfoTooltip.svelte';
 import TimelineSlider from '../components/map/TimelineSlider.svelte';
 import FocusOverlay from '../components/map/FocusOverlay.svelte';
+import SearchPalette from '../components/map/SearchPalette.svelte';
+// FactCard import removed with the Finding button. Restore both when findings.json grows:
+// import FactCard from '../components/map/FactCard.svelte';
 
 const base = import.meta.env.BASE_URL;
 ---
@@ -15,23 +17,24 @@ const base = import.meta.env.BASE_URL;
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
   <div id="map"></div>
-  <div id="state-inset-wrap" aria-label="State navigator">
-    <div id="state-inset-label">Click a state to focus</div>
-    <div id="state-inset-map"></div>
-    <button id="state-inset-reset" type="button" title="Show all India" aria-label="Show all India">All India</button>
-  </div>
-
-  <InfoTooltip client:load />
-  <MapPanel client:load />
+  <!-- State inset removed — Where cell in IndicatorStrip handles state focus. -->
+  <IndicatorStrip client:load />
   <MapLegend client:load />
 
   <!-- Vertical timeline (Svelte component) -->
   <TimelineSlider client:load />
 
-  <div id="wm">Project FINER</div>
+  {/* Old watermark removed — brand is in the Header */}
 
   <!-- District Focus Mode overlay (Svelte component) -->
   <FocusOverlay client:load />
+
+  <!-- ⌘K search palette -->
+  <SearchPalette client:load />
+  <!-- "A finding" card hidden until findings.json has 30+ curated entries.
+       Re-enable: import FactCard above + uncomment the line below + uncomment <FindingButton /> in IndicatorStrip.svelte
+       <FactCard client:load /> -->
+
 
   <script is:inline define:vars={{ base }}>
     window.__FINER_BASE = base;
@@ -89,28 +92,29 @@ const base = import.meta.env.BASE_URL;
     // Map init — use fitBounds immediately to avoid layout shift when data loads
     var map = L.map('map',{center:[22,82.5],zoom:5,minZoom:4,maxZoom:18,zoomSnap:0,zoomDelta:1,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false,preferCanvas:true,doubleClickZoom:false});
 
-    // Compute panel-aware padding dynamically from actual DOM
+    // Atlas: chrome is now header (52px) + strip (56px) = 108px on top, no left panel
     function getPanelPadding() {
       var isMobile = window.innerWidth <= 640;
-      if (isMobile) return { paddingTopLeft: [10, 10], paddingBottomRight: [10, 80] };
-      var panel = document.getElementById('panel');
-      var panelW = panel ? (panel.offsetWidth + panel.offsetLeft + 12) : 314;
-      var sliderW = 65; // timeline slider + zoom controls + margin
       var headerEl = document.querySelector('header');
-      var topPad = headerEl ? (headerEl.offsetHeight + 20) : 80; // clear fixed header + breathing room
-      return { paddingTopLeft: [panelW, topPad], paddingBottomRight: [sliderW, 10] };
+      var strip = document.getElementById('indicator-strip');
+      var headerH = headerEl ? headerEl.offsetHeight : 52;
+      var stripH = strip ? strip.offsetHeight : 56;
+      var topPad = headerH + stripH + 12; // breathing room below the strip
+      if (isMobile) return { paddingTopLeft: [10, topPad], paddingBottomRight: [10, 80] };
+      var sliderW = 65; // timeline slider + zoom controls + margin
+      return { paddingTopLeft: [10, topPad], paddingBottomRight: [sliderW, 10] };
     }
 
-    // Position map after panel Svelte component has rendered
+    // Position map immediately — strip mounts above the map, no width to wait for
     function fitMapWhenReady() {
-      var panel = document.getElementById('panel');
-      if (panel && panel.offsetWidth > 50) {
+      map.invalidateSize({ animate: false });
+      var pad = getPanelPadding();
+      map.fitBounds(ALL_STATES_BOUNDS, Object.assign({}, pad, { animate: false }));
+      // Re-fit once strip has rendered to grab actual height
+      setTimeout(function() {
         map.invalidateSize({ animate: false });
-        var pad = getPanelPadding();
-        map.fitBounds(ALL_STATES_BOUNDS, Object.assign({}, pad, { animate: false }));
-      } else {
-        setTimeout(fitMapWhenReady, 50);
-      }
+        map.fitBounds(ALL_STATES_BOUNDS, Object.assign({}, getPanelPadding(), { animate: false }));
+      }, 200);
     }
     fitMapWhenReady();
 
@@ -138,15 +142,15 @@ const base = import.meta.env.BASE_URL;
       }
     }
 
-    // White canvas tile for Banking Access mode (HiDPI aware)
-    var whiteCanvasTile = new (L.GridLayer.extend({createTile:function(){var t=document.createElement('canvas');var r=window.devicePixelRatio||1;t.width=t.height=256*r;t.style.width=t.style.height='256px';var c=t.getContext('2d');c.scale(r,r);c.fillStyle='#fff';c.fillRect(0,0,256,256);return t;}}));
-    whiteCanvasTile.addTo(map);
+    // Atlas: paper canvas tile so empty regions and ocean show paper color
+    var paperCanvasTile = new (L.GridLayer.extend({createTile:function(){var t=document.createElement('canvas');var r=window.devicePixelRatio||1;t.width=t.height=256*r;t.style.width=t.style.height='256px';var c=t.getContext('2d');c.scale(r,r);c.fillStyle='#F4EFE6';c.fillRect(0,0,256,256);return t;}}));
+    paperCanvasTile.addTo(map);
 
-    // India outline layer (simplified from datameet composite — includes coastline + correct Kashmir boundary)
+    // India outline layer — Atlas paper-deep fill so unmapped districts blend
     var indiaOutlineLayer = null;
     fetch(_B + 'Maps/india-outline.geojson')
       .then(function(r){return r.json();}).then(function(geo){
-        indiaOutlineLayer = L.geoJSON(geo,{style:{fillColor:'#faf9f7',fillOpacity:1,color:'#ccc8c0',weight:1.2,opacity:0.6},interactive:false}).addTo(map);
+        indiaOutlineLayer = L.geoJSON(geo,{style:{fillColor:'#ECE5D6',fillOpacity:1,color:'#B8AC95',weight:1,opacity:0.5},interactive:false}).addTo(map);
       }).catch(function(){});
 
     // State name → code mapping
@@ -477,14 +481,48 @@ const base = import.meta.env.BASE_URL;
       },
     };
 
-    // Color ramps
-    var RAMP_DEFAULT = ['#faf6f0','#f0e0c8','#e8c89a','#d4a06a','#b8603e','#8a3a1a'];
-    var RAMP_GREEN   = ['#f5f9f0','#d4eac0','#a8d48a','#6ab04c','#3a8a2a','#1a5a10'];
-    var RAMP_BLUE    = ['#f0f5fa','#c8ddf0','#8ab8d4','#4a90b8','#2a6a8e','#104060'];
+    // Atlas identity ramps — six 5-stop arrays interpolated from the three-stop
+    // gradients in src/lib/map-indicators.ts (atlasRampGradient). Picked per
+    // indicator via ATLAS_RAMP_BY_INDICATOR below.
+    var RAMP_VERMILLION = ['#F4E1D6','#EDC9B2','#E0A88E','#CC7A56','#B84A2E','#8E331E'];
+    var RAMP_SAGE       = ['#E8E8DC','#D2D8BE','#B8C4A0','#8AA478','#5E7A4A','#42592F'];
+    var RAMP_PEACOCK    = ['#D4DCE0','#B5C9D2','#8AAEC0','#4F8298','#1E4960','#0E2F44'];
+    var RAMP_SAFFRON    = ['#F8E8C4','#EED8A6','#E0C684','#D4B260','#D4A24A','#A07A30'];
+    var RAMP_BURGUNDY   = ['#E8D8D4','#D8B0AA','#C4928A','#A85F55','#8C2E20','#591C12'];
+    var RAMP_DEFAULT    = RAMP_VERMILLION;
+    // Legacy aliases — referenced elsewhere; keep so other code paths don't break
+    var RAMP_GREEN      = RAMP_SAGE;
+    var RAMP_BLUE       = RAMP_PEACOCK;
+
+    var ATLAS_RAMP_BY_INDICATOR = {
+      branch_network:          RAMP_VERMILLION,
+      rbi_banking_outlets:     RAMP_VERMILLION,
+      aadhaar_authentication:  RAMP_VERMILLION,
+      credit_deposit_ratio:    RAMP_SAGE,
+      rbi_bsr_credit:          RAMP_VERMILLION,
+      kcc:                     RAMP_VERMILLION,
+      sc_st_finance:           RAMP_VERMILLION,
+      women_finance:           RAMP_VERMILLION,
+      education_loan:          RAMP_VERMILLION,
+      shg:                     RAMP_SAFFRON,
+      nrlm_shg:                RAMP_SAFFRON,
+      pmmy_mudra_disbursement: RAMP_SAFFRON,
+      pmjdy:                   RAMP_VERMILLION,
+      housing_pmay:            RAMP_SAFFRON,
+      pmegp:                   RAMP_SAFFRON,
+      sui:                     RAMP_SAFFRON,
+      social_security:         RAMP_SAFFRON,
+      digital_transactions:    RAMP_PEACOCK,
+      capital_markets_access:  RAMP_PEACOCK,
+      nfhs_health_insurance:   RAMP_SAGE,
+      aadhaar_enrollment:      RAMP_VERMILLION,
+      facebook_rwi:            RAMP_SAGE,
+      pmgsy_roads:             RAMP_SAFFRON,
+      viirs_nightlights:       RAMP_SAFFRON,
+    };
 
     function getRamp(indicator) {
-      // All indicators use terracotta for now
-      return RAMP_DEFAULT;
+      return ATLAS_RAMP_BY_INDICATOR[indicator] || RAMP_DEFAULT;
     }
 
     // Banking state
@@ -885,11 +923,11 @@ const base = import.meta.env.BASE_URL;
           // Non-focus states: render as dim grey context
           if (bankingStateFilter && st !== bankingStateFilter) {
             return {
-              fillColor: '#d8d3ca',
-              fillOpacity: 0.18,
-              color: '#c8bfb0',
+              fillColor: '#E2DAC8',
+              fillOpacity: 0.35,
+              color: '#B8AC95',
               weight: 0.5,
-              opacity: 0.4,
+              opacity: 0.45,
             };
           }
           return {
@@ -917,27 +955,56 @@ const base = import.meta.env.BASE_URL;
           layer.on({
             mouseover: function(e) {
               e.target.setStyle({ weight: 2.5, color: '#6b4c2a', fillOpacity: 0.92 });
+              // Atlas tooltip — district name, italic state, big Fraunces stat
+              // for the active metric, mono meta line at foot.
               var tip = '<div class="dist-tooltip">'
                 + '<div class="dtt-head">'
                 + '<div class="dtt-name">' + p.DISTRICT + '</div>'
                 + '<div class="dtt-state">' + p.STATE_UT + '</div>'
                 + '</div>';
               if (data) {
-                if (data.fallbackQuarter) {
-                  tip += '<div class="dtt-fallback">Data from ' + fmtQuarter(data.fallbackQuarter) + '</div>';
-                }
-                tip += '<div class="dtt-metrics">';
+                // Find the active metric value
+                var activeLabel = metric.label;
+                var activeVal = data.metrics[activeLabel];
+                var activeUnit = data.units ? data.units[activeLabel] : '';
+                var activeFmt = activeVal !== null && activeVal !== undefined
+                  ? fmtWithUnit(activeVal, activeUnit) : '—';
+                // Split formatted value into number + unit suffix for typographic styling
+                var unitMatch = activeFmt.match(/^([^A-Za-z%₹]*[\d.,]+)\s*(.*)$/);
+                var bigNum = unitMatch ? unitMatch[1].trim() : activeFmt;
+                var bigUnit = unitMatch ? unitMatch[2].trim() : '';
+                tip += '<div class="dtt-stat-block">'
+                  + '<div class="dtt-stat">' + bigNum
+                  + (bigUnit ? '<span class="dtt-stat-unit">' + bigUnit + '</span>' : '')
+                  + '</div>'
+                  + '<div class="dtt-stat-label">' + activeLabel + '</div>'
+                  + '</div>';
+                // Other metrics as a tight list
+                var otherCount = 0;
+                var others = '';
                 for (var label in data.metrics) {
+                  if (label === activeLabel) continue;
                   var val = data.metrics[label];
                   var u = data.units ? data.units[label] : '';
-                  var formatted = val !== null ? fmtWithUnit(val, u) : '—';
-                  var isCurrent = label === metric.label;
-                  tip += '<div class="dtt-row' + (isCurrent ? ' dtt-active' : '') + '">'
+                  var formatted = val !== null && val !== undefined ? fmtWithUnit(val, u) : '—';
+                  others += '<div class="dtt-row">'
                     + '<span class="dtt-label">' + label + '</span>'
                     + '<span class="dtt-val">' + formatted + '</span>'
                     + '</div>';
+                  otherCount++;
+                  if (otherCount >= 4) break;
                 }
-                tip += '</div>';
+                if (otherCount) tip += '<div class="dtt-others">' + others + '</div>';
+                // Source line — Atlas mono meta
+                var sourceQ = data.fallbackQuarter || currentQuarter;
+                var indKey = (window.__FINER && window.__FINER.indicator) ? window.__FINER.indicator.replace(/_/g, ' ') : 'SLBC';
+                tip += '<div class="dtt-meta">'
+                  + '<span>' + indKey.toUpperCase() + '</span>'
+                  + '<span>' + fmtQuarter(sourceQ).toUpperCase() + '</span>'
+                  + '</div>';
+                if (data.fallbackQuarter) {
+                  tip += '<div class="dtt-fallback">' + fmtQuarter(data.fallbackQuarter) + ' (latest available)</div>';
+                }
               } else {
                 tip += '<div class="dtt-empty">No data available</div>';
               }
@@ -994,6 +1061,7 @@ const base = import.meta.env.BASE_URL;
 
     // ── District Focus Mode ──
     var focusedDistrict = null;
+    var focusedSvgPath = '';   // cached SVG path so timeline/indicator changes don't blank the polygon
     var focusedState = null;
 
     function geoToSVGPath(geometry, width, height) {
@@ -1059,8 +1127,9 @@ const base = import.meta.env.BASE_URL;
       focusedDistrict = districtName;
       focusedState = stateName || feature.properties.STATE_UT;
 
-      var svgPath = geoToSVGPath(feature.geometry, 400, 400);
-      updateFocusPanel(svgPath);
+      // Cache the path so timeline/indicator changes don't blank it
+      focusedSvgPath = geoToSVGPath(feature.geometry, 400, 400);
+      updateFocusPanel(focusedSvgPath);
     }
 
     function updateFocusPanel(svgPathOverride) {
@@ -1081,14 +1150,17 @@ const base = import.meta.env.BASE_URL;
         return w.charAt(0) + w.slice(1).toLowerCase();
       }).join(' ');
 
+      // Always reuse the cached focusedSvgPath unless an override was passed
+      var pathToUse = svgPathOverride || focusedSvgPath;
+
       var focusDetail = {
         active: true,
         district: titleCased,
         state: focusedState || '',
-        svgPath: svgPathOverride || '',
+        svgPath: pathToUse,
         svgViewBox: '0 0 400 400',
         fillColor: color,
-        strokeColor: ramp[4] || '#b8603e',
+        strokeColor: ramp[4] || '#B84A2E',
         metricLabel: metric.label,
         value: val !== null ? fmtWithUnit(val, metric.unit) : 'No data',
         quarter: fmtQuarter(currentQuarter),
@@ -1100,12 +1172,24 @@ const base = import.meta.env.BASE_URL;
     function exitFocus() {
       focusedDistrict = null;
       focusedState = null;
+      focusedSvgPath = '';
       window.__FINER.focus = { active: false };
       window.dispatchEvent(new CustomEvent('finer:focusUpdate', { detail: { active: false, district: '', state: '', svgPath: '', svgViewBox: '0 0 400 400', fillColor: '', strokeColor: '', metricLabel: '', value: '', quarter: '' } }));
     }
 
     // Focus mode — FocusOverlay.svelte handles its own event listeners (close, ESC, backdrop)
     window.addEventListener('finer:exitFocus', function() { exitFocus(); });
+
+    // Atlas: SearchPalette fires this after picking a district from ⌘K
+    window.addEventListener('finer:focusDistrict', function(e) {
+      var d = (e.detail && e.detail.district) || '';
+      var st = (e.detail && e.detail.state) || '';
+      if (!d) return;
+      // Wait briefly so the state-filter event has time to apply (map fly-to)
+      setTimeout(function() {
+        focusDistrict(normDist(d.toUpperCase()), st);
+      }, 250);
+    });
 
     // Banking district labels
     function buildDistrictLabels_banking() {
@@ -1608,182 +1692,8 @@ const base = import.meta.env.BASE_URL;
     // Scope toggle — listen for Svelte event
     window.addEventListener('finer:scopeChange', function(e) { switchScope(e.detail.scope); });
 
-    // ══════════════════════════════════════════
-    // Section 5a — State inset map (clickable navigator)
-    // ══════════════════════════════════════════
-    var insetMap = null;
-    var insetLayer = null;
-    var insetByCode = {};       // 2-letter code -> Leaflet layer
-    var insetByStateUT = {};    // UPPERCASE STATE_UT -> 2-letter code
-    var stateBoundsByCode = {}; // 2-letter code -> bounds entry from state-bounds.json
+    // State inset map removed — Where cell in IndicatorStrip handles state focus.
 
-    function updateInsetHighlight() {
-      if (!insetLayer) {
-        // Even without inset, update header label + reset button
-        var lbl = document.getElementById('state-inset-label');
-        var rb = document.getElementById('state-inset-reset');
-        if (lbl) {
-          if (bankingStateFilter) {
-            var t = bankingStateFilter.toLowerCase().replace(/\b\w/g, function(c){return c.toUpperCase();});
-            lbl.textContent = 'Focused: ' + t;
-          } else {
-            lbl.textContent = 'Click a state to focus';
-          }
-        }
-        if (rb) rb.classList.toggle('active', !!bankingStateFilter);
-        return;
-      }
-      var lbl2 = document.getElementById('state-inset-label');
-      var rb2 = document.getElementById('state-inset-reset');
-      if (lbl2) {
-        if (bankingStateFilter) {
-          var ti = bankingStateFilter.toLowerCase().replace(/\b\w/g, function(c){return c.toUpperCase();});
-          lbl2.textContent = 'Focused: ' + ti;
-        } else {
-          lbl2.textContent = 'Click a state to focus';
-        }
-      }
-      if (rb2) rb2.classList.toggle('active', !!bankingStateFilter);
-
-      insetLayer.eachLayer(function(layer) {
-        var code = layer.feature?.properties?.state_code;
-        var stateName = layer.feature?.properties?.state_name?.toUpperCase().replace(/&/g, 'AND').replace(/\s+/g, ' ').trim();
-        var focused = bankingStateFilter && (
-          stateName === bankingStateFilter
-          || stateName === bankingStateFilter.replace(/&/g, 'AND')
-          || (stateBoundsByCode[code]?.finer_name?.toUpperCase() === bankingStateFilter)
-        );
-        if (focused) {
-          layer.setStyle({ fillColor: '#b8603e', fillOpacity: 0.85, color: '#6b4c2a', weight: 1.5 });
-          layer.bringToFront();
-        } else {
-          layer.setStyle({ fillColor: '#e8e4dc', fillOpacity: 0.7, color: '#bbb3a4', weight: 0.5 });
-        }
-      });
-    }
-
-    // Reset button — clears state focus
-    (function() {
-      var rb = document.getElementById('state-inset-reset');
-      if (rb) {
-        rb.addEventListener('click', function() {
-          window.dispatchEvent(new CustomEvent('finer:stateFilterChange', { detail: { state: '' } }));
-        });
-      }
-    })();
-
-    function initInsetMap() {
-      var insetEl = document.getElementById('state-inset-map');
-      if (!insetEl) return;
-      // Slightly tighter India bounds for inset view (so all of India fits without too much whitespace)
-      var INSET_BOUNDS = L.latLngBounds(L.latLng(7, 68), L.latLng(36, 98));
-      insetMap = L.map(insetEl, {
-        center: [22, 82],
-        zoom: 3,
-        zoomControl: false,
-        attributionControl: false,
-        dragging: false,
-        scrollWheelZoom: false,
-        doubleClickZoom: false,
-        boxZoom: false,
-        touchZoom: false,
-        keyboard: false,
-        zoomSnap: 0,
-      });
-      insetMap.fitBounds(INSET_BOUNDS, { padding: [4, 4] });
-
-      // Build state name → STATE_UT-like uppercase normalised key (matches main map's STATE_UT)
-      var STATE_NAME_TO_UT = {
-        'Andhra Pradesh': 'ANDHRA PRADESH',
-        'Arunachal Pradesh': 'ARUNACHAL PRADESH',
-        'Assam': 'ASSAM',
-        'Bihar': 'BIHAR',
-        'Chhattisgarh': 'CHHATTISGARH',
-        'Goa': 'GOA',
-        'Gujarat': 'GUJARAT',
-        'Haryana': 'HARYANA',
-        'Himachal Pradesh': 'HIMACHAL PRADESH',
-        'Jharkhand': 'JHARKHAND',
-        'Karnataka': 'KARNATAKA',
-        'Kerala': 'KERALA',
-        'Madhya Pradesh': 'MADHYA PRADESH',
-        'Maharashtra': 'MAHARASHTRA',
-        'Manipur': 'MANIPUR',
-        'Meghalaya': 'MEGHALAYA',
-        'Mizoram': 'MIZORAM',
-        'Nagaland': 'NAGALAND',
-        'Odisha': 'ODISHA',
-        'Punjab': 'PUNJAB',
-        'Rajasthan': 'RAJASTHAN',
-        'Sikkim': 'SIKKIM',
-        'Tamil Nadu': 'TAMIL NADU',
-        'Telangana': 'TELANGANA',
-        'Tripura': 'TRIPURA',
-        'Uttar Pradesh': 'UTTAR PRADESH',
-        'Uttarakhand': 'UTTARAKHAND',
-        'West Bengal': 'WEST BENGAL',
-        'Jammu & Kashmir': 'JAMMU AND KASHMIR',
-        'Delhi': 'DELHI',
-        'Chandigarh': 'CHANDIGARH',
-        'Puducherry': 'PUDUCHERRY',
-        'Andaman & Nicobar': 'ANDAMAN & NICOBAR',
-        'Lakshadweep': 'LAKSHADWEEP',
-        'Dadra & Nagar Haveli & Daman & Diu': 'DADRA & NAGAR HAVELI & DAMAN & DIU',
-      };
-
-      Promise.all([
-        fetch(_B + 'data/india_states.geojson').then(function(r){return r.json();}),
-        fetch(_B + 'state-bounds.json').then(function(r){return r.json();}).catch(function(){return {};}),
-      ]).then(function(results) {
-        var geo = results[0];
-        stateBoundsByCode = results[1] || {};
-        insetLayer = L.geoJSON(geo, {
-          style: {
-            fillColor: '#e8e4dc',
-            fillOpacity: 0.7,
-            color: '#bbb3a4',
-            weight: 0.5,
-          },
-          onEachFeature: function(feature, layer) {
-            var code = feature.properties.state_code;
-            var stateName = feature.properties.state_name;
-            var stateUT = STATE_NAME_TO_UT[stateName] || stateName.toUpperCase();
-            insetByCode[code] = layer;
-            insetByStateUT[stateUT] = code;
-
-            layer.on({
-              mouseover: function(e) {
-                if (!bankingStateFilter || (e.target !== insetByCode[insetByStateUT[bankingStateFilter]])) {
-                  e.target.setStyle({ fillColor: '#d4845f', fillOpacity: 0.6, color: '#8a4a2a', weight: 1 });
-                }
-                e.target.bindTooltip(stateName, { className: 'inset-tip', direction: 'top', offset: [0, -4] }).openTooltip();
-              },
-              mouseout: function(e) {
-                e.target.closeTooltip();
-                updateInsetHighlight();
-              },
-              click: function(e) {
-                L.DomEvent.stopPropagation(e);
-                // Toggle: clicking the focused state again clears focus
-                if (bankingStateFilter === stateUT) {
-                  window.dispatchEvent(new CustomEvent('finer:stateFilterChange', { detail: { state: '' } }));
-                } else {
-                  window.dispatchEvent(new CustomEvent('finer:stateFilterChange', { detail: { state: stateUT } }));
-                }
-              },
-            });
-          },
-        }).addTo(insetMap);
-        updateInsetHighlight();
-      });
-    }
-
-    // Defer init until DOM is ready
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initInsetMap);
-    } else {
-      initInsetMap();
-    }
 
     // ══════════════════════════════════════════
     // Section 5 — URL parameter support
@@ -1923,23 +1833,22 @@ const base = import.meta.env.BASE_URL;
   .lr:last-child{margin-bottom:0}
   .ldot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
 
-  .dist-tooltip{font-family:'Inter',sans-serif;font-size:11px;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(224,221,216,0.6);padding:0;box-shadow:0 8px 32px rgba(0,0,0,0.12),0 2px 8px rgba(0,0,0,0.06);border-radius:10px;min-width:200px;max-width:260px;overflow:hidden}
-  .dtt-head{padding:12px 16px 10px;border-bottom:1px solid rgba(224,221,216,0.5);background:rgba(245,244,241,0.5)}
-  .dtt-name{font-family:'Playfair Display',Georgia,serif;font-size:15px;font-weight:700;color:#1a1410;letter-spacing:-0.01em}
-  .dtt-state{font-size:10px;font-weight:500;color:#aaa09a;margin-top:1px;text-transform:uppercase;letter-spacing:0.04em}
-  .dtt-fallback{font-size:9px;color:#b8603e;font-style:italic;padding:5px 16px;background:rgba(184,96,62,0.05);border-bottom:1px solid rgba(224,221,216,0.3)}
-  .dtt-metrics{padding:8px 0}
-  .dtt-row{display:flex;justify-content:space-between;align-items:center;padding:3px 16px;gap:12px;transition:background 0.1s}
-  .dtt-row.dtt-active{background:rgba(184,96,62,0.06)}
-  .dtt-label{color:#888078;font-size:10px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:140px}
-  .dtt-row.dtt-active .dtt-label{color:#1a1410;font-weight:600}
-  .dtt-val{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;color:#1a1410;white-space:nowrap}
-  .dtt-row:not(.dtt-active) .dtt-val{color:#888078;font-weight:500}
-  .dtt-empty{padding:12px 16px;color:#aaa09a;font-size:11px;text-align:center}
-  .dtt-total{border-bottom:1px solid rgba(224,221,216,0.4);padding-bottom:6px;margin-bottom:2px}
-  .dtt-total .dtt-label{color:#1a1410;font-weight:600}
-  .dtt-total .dtt-val{font-weight:700;color:#1a1410}
-  .dtt-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;vertical-align:middle}
+  /* === Atlas tooltip === */
+  .dist-tooltip{font-family:'Source Serif 4',Georgia,serif;font-size:12px;background:#F4EFE6;border:1px solid #1B140E;padding:14px 16px;box-shadow:0 8px 24px rgba(27,20,14,0.18);border-radius:4px;min-width:220px;max-width:260px;color:#1B140E}
+  .dtt-head{margin-bottom:10px}
+  .dtt-name{font-family:'Fraunces',Georgia,serif;font-weight:400;font-variation-settings:'opsz' 60;font-size:17px;line-height:1.05;letter-spacing:-0.01em;color:#1B140E;margin-bottom:1px}
+  .dtt-state{font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-size:12px;color:#6E665E;letter-spacing:0}
+  .dtt-stat-block{padding:8px 0 10px;border-top:1px solid #D9D2C5;border-bottom:1px solid #E8E2D5}
+  .dtt-stat{font-family:'Fraunces',Georgia,serif;font-weight:380;font-variation-settings:'opsz' 144;font-size:30px;line-height:0.95;color:#8E331E;font-feature-settings:'tnum';letter-spacing:-0.01em}
+  .dtt-stat-unit{font-size:13px;color:#6E665E;font-weight:300;margin-left:3px;letter-spacing:0}
+  .dtt-stat-label{font-family:'Inter',sans-serif;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:#6E665E;margin-top:5px}
+  .dtt-others{padding:8px 0 4px}
+  .dtt-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:1.5px 0}
+  .dtt-label{font-family:'Source Serif 4',Georgia,serif;color:#6E665E;font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:140px}
+  .dtt-val{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;color:#3D332A;white-space:nowrap}
+  .dtt-empty{font-style:italic;color:#6E665E;font-size:12px;padding:4px 0}
+  .dtt-meta{margin-top:8px;padding-top:8px;border-top:1px solid #D9D2C5;display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:9px;color:#6E665E;letter-spacing:0.06em}
+  .dtt-fallback{margin-top:4px;font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-size:10.5px;color:#8E331E}
   .leaflet-tooltip{padding:0!important;border:none!important;background:none!important;box-shadow:none!important}
   .dist-label{background:none!important;border:none!important;box-shadow:none!important;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:9px;font-weight:600;color:#555048;text-transform:uppercase;letter-spacing:0.05em;text-shadow:0 0 5px #fff,0 0 5px #fff,1px 0 4px #fff,-1px 0 4px #fff,0 1px 4px #fff,0 -1px 4px #fff;white-space:nowrap;pointer-events:none;padding:0!important;opacity:0.8}
 
@@ -1959,20 +1868,12 @@ const base = import.meta.env.BASE_URL;
   .pmeta{font-size:10px;color:#aaa09a}
   .pmeta a{color:#b8603e;text-decoration:none}
   .leaflet-attribution-flag{display:none!important}
-  .leaflet-control-zoom{border-radius:10px!important;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.04)!important;border:1px solid rgba(224,221,216,0.5)!important;margin-top:60px!important}
+  .leaflet-control-zoom{border-radius:6px!important;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.05)!important;border:1px solid var(--rule, rgba(217,210,197,0.7))!important;margin-top:118px!important}
   .leaflet-control-zoom a{font-family:'Inter',sans-serif!important;font-weight:500!important;color:#555048!important;border-color:rgba(232,229,224,0.5)!important;background:rgba(255,255,255,0.94)!important;width:34px!important;height:34px!important;line-height:34px!important}
   .leaflet-control-zoom a:hover{background:#fff!important;color:#1a1410!important}
 
   #wm{position:absolute;bottom:20px;right:110px;z-index:1000;font-family:'Inter',sans-serif;font-size:9px;font-weight:500;color:rgba(0,0,0,0.15);letter-spacing:0.06em;pointer-events:none}
-  #state-inset-wrap{position:absolute;bottom:24px;right:16px;z-index:1000;width:200px;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.5);border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,0.05);overflow:hidden}
-  #state-inset-label{font-family:'Inter',sans-serif;font-size:9px;font-weight:500;color:#7a7068;letter-spacing:0.04em;padding:8px 12px 4px;text-transform:uppercase}
-  #state-inset-map{height:180px;width:100%;background:#faf8f5;cursor:pointer}
-  #state-inset-map .leaflet-container{background:#faf8f5}
-  #state-inset-reset{display:none;width:100%;background:transparent;border:none;border-top:1px solid rgba(224,221,216,0.5);padding:8px 12px;font-family:'Inter',sans-serif;font-size:10px;font-weight:600;color:#b8603e;cursor:pointer;letter-spacing:0.02em;transition:background 0.2s}
-  #state-inset-reset:hover{background:rgba(184,96,62,0.08)}
-  #state-inset-reset.active{display:block}
-  .inset-tip{padding:3px 8px!important;background:rgba(26,20,16,0.92)!important;color:#fff!important;font-family:'Inter',sans-serif!important;font-size:10px!important;font-weight:500!important;border:none!important;border-radius:4px!important;box-shadow:0 2px 8px rgba(0,0,0,0.15)!important;letter-spacing:0.02em}
-  .inset-tip:before{display:none!important}
+  /* State inset CSS removed — Where cell handles state focus. */
   #btn-back{display:none;position:absolute;top:90px;right:16px;z-index:1000;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.5);padding:10px 16px;font-family:'Inter',sans-serif;font-size:10px;font-weight:500;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.04);color:#555048;border-radius:8px;transition:all 0.25s}
   #btn-back:hover{background:#fff;box-shadow:0 6px 20px rgba(0,0,0,0.08);color:#1a1410}
 
@@ -1985,24 +1886,7 @@ const base = import.meta.env.BASE_URL;
   .info-popover.visible{display:block}
   @keyframes infoAppear{0%{opacity:0;transform:translateY(-4px)}100%{opacity:1;transform:translateY(0)}}
 
-  /* ── District Focus Mode ── */
-  .district-focus{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:1200;background:rgba(245,244,241,0.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);align-items:center;justify-content:center}
-  .district-focus.active{display:flex;animation:focusAppear 0.35s ease}
-  body:has(.district-focus.active) #panel{z-index:1300!important}
-  body:has(.district-focus.active) #time-slider{z-index:1300!important}
-  body:has(.district-focus.active) .header-transparent{z-index:1300!important}
-  @keyframes focusAppear{0%{opacity:0}0%{opacity:0}100%{opacity:1}}
-  .focus-shape-wrap{position:relative;display:flex;align-items:center;justify-content:center}
-  .focus-svg{width:380px;height:380px;filter:drop-shadow(4px 6px 12px rgba(0,0,0,0.15));overflow:visible}
-  .focus-path{stroke:#b8603e;stroke-width:3;stroke-linejoin:round;transition:fill 0.3s ease}
-  .focus-info{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;width:80%}
-  .focus-name{font-family:'Playfair Display',Georgia,serif;font-size:26px;font-weight:700;color:#1a1410;letter-spacing:-0.01em;margin-bottom:16px;text-shadow:-2px -2px 0 #fff,2px -2px 0 #fff,-2px 2px 0 #fff,2px 2px 0 #fff,0 0 8px rgba(255,255,255,0.95)}
-  .focus-metric-label{font-family:'Inter',sans-serif;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#1a1410;margin-bottom:6px;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff,0 0 6px rgba(255,255,255,0.9)}
-  .focus-value{font-family:Georgia,serif;font-size:44px;font-weight:700;color:#1a1410;line-height:1;margin-bottom:12px;text-shadow:-2px -2px 0 #fff,2px -2px 0 #fff,-2px 2px 0 #fff,2px 2px 0 #fff,0 0 10px rgba(255,255,255,0.95)}
-  .focus-quarter{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#888078;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff,0 0 5px rgba(255,255,255,0.9)}
-  .focus-close{position:absolute;top:-16px;right:-16px;width:36px;height:36px;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);border:1px solid rgba(224,221,216,0.5);border-radius:8px;font-size:20px;font-weight:600;color:#555048;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.04);transition:all 0.2s;line-height:1}
-  .focus-close:hover{background:#fff;color:#1a1410;box-shadow:0 6px 20px rgba(0,0,0,0.08);transform:translateY(-1px)}
-  .focus-state{font-family:'Inter',sans-serif;font-size:10px;font-weight:500;color:#aaa09a;text-transform:uppercase;letter-spacing:0.06em;margin-top:4px;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff,0 0 5px rgba(255,255,255,0.9)}
+  /* District Focus Mode CSS lives in src/components/map/FocusOverlay.svelte */
 
   /* ── Bottom-sheet handle + mobile nav (hidden on desktop) ── */
   #panel-handle{display:none}
@@ -2056,15 +1940,11 @@ const base = import.meta.env.BASE_URL;
     #quarter-label{font-size:9px;right:14px}
     #timeline-thumb{width:9px;margin-left:-4.5px}
     /* Focus mode — smaller on mobile */
-    .focus-svg{width:260px;height:260px}
-    .focus-name{font-size:20px}
-    .focus-value{font-size:32px}
-    .focus-metric-label{font-size:9px}
-    .focus-quarter{font-size:10px}
+    /* Focus mode mobile sizes handled by FocusOverlay.svelte */
 
     /* Legends — inline compact strip at top-left */
     #legend{bottom:auto!important;top:8px;left:8px;right:auto;padding:6px 10px;border-radius:8px;font-size:9px}
-    #state-inset-wrap{display:none!important}
+    /* state-inset removed */
     #legend .lr{margin-bottom:3px;font-size:9px;gap:6px}
     #legend .ldot{width:7px;height:7px}
 

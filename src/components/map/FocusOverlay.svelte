@@ -1,4 +1,11 @@
 <script lang="ts">
+  /**
+   * FocusOverlay.svelte — Atlas focus mode
+   *
+   * Full-viewport ink overlay. District rendered as a vermillion silhouette
+   * on the left; stat block on the right with the active metric in saffron.
+   * ESC hint at the foot, 'X' close in the top-right.
+   */
   import { onMount } from 'svelte';
   import { onFiner, dispatchFiner, getFinerState } from '../../lib/map-bridge';
   import type { FocusUpdateDetail } from '../../lib/map-bridge';
@@ -11,8 +18,6 @@
   let stateName = $state('');
   let svgPath = $state('');
   let svgViewBox = $state('0 0 400 400');
-  let fillColor = $state('#b8603e');
-  let strokeColor = $state('#6b4c2a');
   let metricLabel = $state('');
   let value = $state('');
   let quarter = $state('');
@@ -24,8 +29,6 @@
     stateName = detail.state;
     svgPath = detail.svgPath;
     svgViewBox = detail.svgViewBox || '0 0 400 400';
-    fillColor = detail.fillColor || '#b8603e';
-    strokeColor = detail.strokeColor || '#6b4c2a';
     metricLabel = detail.metricLabel;
     value = detail.value;
     quarter = detail.quarter;
@@ -38,28 +41,35 @@
 
   function handleBackdropClick(e: MouseEvent) {
     const target = e.target as HTMLElement;
-    if (target.classList.contains('district-focus')) {
-      exitFocus();
-    }
+    if (target.classList.contains('district-focus')) exitFocus();
   }
 
   function handleKeydown(e: KeyboardEvent) {
-    if (e.key === 'Escape' && active) {
-      exitFocus();
-    }
+    if (e.key === 'Escape' && active) exitFocus();
+  }
+
+  // Split formatted "73.2%" → number + unit-suffix for typographic styling
+  let valNum = $derived.by(() => {
+    if (!value) return '';
+    const m = String(value).match(/^([^A-Za-z%₹]*[\d.,]+)\s*(.*)$/);
+    return m ? m[1].trim() : value;
+  });
+  let valUnit = $derived.by(() => {
+    if (!value) return '';
+    const m = String(value).match(/^([^A-Za-z%₹]*[\d.,]+)\s*(.*)$/);
+    return m ? m[2].trim() : '';
+  });
+
+  function titleCase(s: string): string {
+    if (!s) return '';
+    return s.split(' ').map(w => w[0] + w.slice(1).toLowerCase()).join(' ');
   }
 
   onMount(() => {
-    // Sync from global state if focus is already active
     const s = getFinerState();
-    if (s?.focus?.active) {
-      applyUpdate(s.focus);
-    }
+    if (s?.focus?.active) applyUpdate(s.focus);
 
-    const unsubs = [
-      onFiner('focusUpdate', applyUpdate),
-    ];
-
+    const unsubs = [onFiner('focusUpdate', applyUpdate)];
     window.addEventListener('keydown', handleKeydown);
 
     return () => {
@@ -71,29 +81,46 @@
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
-<div
-  class="district-focus"
-  class:active
-  onclick={handleBackdropClick}
->
-  <div class="focus-shape-wrap">
-    <svg class="focus-svg" viewBox={svgViewBox} preserveAspectRatio="xMidYMid meet">
-      <path
-        class="focus-path"
-        d={svgPath}
-        fill={fillColor}
-        stroke={strokeColor}
-        stroke-width="2"
-      />
-    </svg>
-    <div class="focus-info">
-      <div class="focus-name">{district}</div>
-      <div class="focus-state">{stateName}</div>
-      <div class="focus-metric-label">{metricLabel}</div>
-      <div class="focus-value">{value}</div>
-      <div class="focus-quarter">{quarter}</div>
+<div class="district-focus" class:active onclick={handleBackdropClick}>
+  <button class="focus-close" onclick={exitFocus} aria-label="Close focus">×</button>
+
+  <div class="focus-grid">
+    <div class="focus-shape-col">
+      <svg class="focus-svg" viewBox={svgViewBox} preserveAspectRatio="xMidYMid meet">
+        <path
+          class="focus-path"
+          d={svgPath}
+          fill="#B84A2E"
+          stroke="#8E331E"
+          stroke-width="2"
+        />
+      </svg>
     </div>
-    <button class="focus-close" onclick={exitFocus}>&times;</button>
+
+    <div class="focus-info-col">
+      <div class="focus-eyebrow">A district profile</div>
+      <h2 class="focus-name">{district}</h2>
+      <div class="focus-state">{titleCase(stateName)}</div>
+
+      <div class="focus-stats">
+        <div class="stat active">
+          <div class="stat-label">{metricLabel}</div>
+          <div class="stat-num">
+            {valNum}{#if valUnit}<span class="stat-unit"> {valUnit}</span>{/if}
+          </div>
+        </div>
+      </div>
+
+      <div class="focus-meta">
+        <span>{quarter}</span>
+        <span class="rule"></span>
+        <span>SOURCE · SLBC</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="focus-hint">
+    <span class="kbd">ESC</span> to exit
   </div>
 </div>
 
@@ -101,158 +128,199 @@
   .district-focus {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     z-index: 1200;
-    background: rgba(245,244,241,0.88);
+    background: rgba(13, 9, 6, 0.99);          /* 99% — near-pure black, kills map bleed */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     align-items: center;
     justify-content: center;
+    padding: 60px 80px;
   }
-
   .district-focus.active {
     display: flex;
-    animation: focusAppear 0.35s ease;
+    animation: focusAppear 0.35s cubic-bezier(0.20, 0.80, 0.20, 1.00);
   }
-
   @keyframes focusAppear {
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
 
-  .focus-shape-wrap {
-    position: relative;
+  .focus-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    gap: 80px;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+  }
+
+  .focus-shape-col {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
   .focus-svg {
-    width: 380px;
-    height: 380px;
-    filter: drop-shadow(4px 6px 12px rgba(0,0,0,0.15));
+    width: 100%;
+    max-width: 460px;
+    aspect-ratio: 1;
+    filter: drop-shadow(0 12px 32px rgba(184, 74, 46, 0.35));
     overflow: visible;
   }
-
   .focus-path {
-    stroke-width: 3;
     stroke-linejoin: round;
     transition: fill 0.3s ease;
   }
 
-  .focus-info {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    pointer-events: none;
-    width: 80%;
+  .focus-info-col { color: var(--paper, #F4EFE6); }
+
+  .focus-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #D4A24A;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .focus-eyebrow::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(217, 210, 197, 0.2);
+    max-width: 180px;
   }
 
   .focus-name {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 26px;
-    font-weight: 700;
-    color: #1a1410;
-    letter-spacing: -0.01em;
-    margin-bottom: 16px;
-    text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff, 0 0 8px rgba(255,255,255,0.95);
-  }
-
-  .focus-state {
-    font-family: 'Inter', sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    color: #aaa09a;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin-top: 4px;
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 0 0 5px rgba(255,255,255,0.9);
-  }
-
-  .focus-metric-label {
-    font-family: 'Inter', sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #1a1410;
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    font-variation-settings: 'opsz' 144;
+    font-size: 64px;
+    line-height: 1.0;
+    letter-spacing: -0.025em;
+    color: #F4EFE6;
     margin-bottom: 6px;
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 0 0 6px rgba(255,255,255,0.9);
+  }
+  .focus-state {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    color: rgba(244, 239, 230, 0.6);
+    margin-bottom: 36px;
   }
 
-  .focus-value {
-    font-family: Georgia, serif;
-    font-size: 44px;
-    font-weight: 700;
-    color: #1a1410;
-    line-height: 1;
-    margin-bottom: 12px;
-    text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff, 0 0 10px rgba(255,255,255,0.95);
+  .focus-stats {
+    border-top: 1px solid rgba(217, 210, 197, 0.18);
+    border-bottom: 1px solid rgba(217, 210, 197, 0.18);
+    padding: 22px 0;
+    margin-bottom: 22px;
   }
-
-  .focus-quarter {
+  .stat-label {
     font-family: 'Inter', sans-serif;
-    font-size: 12px;
+    font-size: 9.5px;
     font-weight: 600;
-    color: #888078;
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 0 0 5px rgba(255,255,255,0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(244, 239, 230, 0.55);
+    margin-bottom: 6px;
+  }
+  .stat-num {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 380;
+    font-variation-settings: 'opsz' 144;
+    font-size: 80px;
+    line-height: 0.9;
+    letter-spacing: -0.025em;
+    color: #D4A24A; /* saffron — Atlas: active stat highlighted */
+    font-feature-settings: 'tnum';
+  }
+  .stat-unit {
+    font-size: 32px;
+    color: rgba(244, 239, 230, 0.45);
+    font-weight: 300;
+    margin-left: 6px;
+  }
+
+  .focus-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: rgba(244, 239, 230, 0.55);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .focus-meta .rule {
+    flex: 0 0 auto;
+    width: 28px;
+    height: 1px;
+    background: rgba(217, 210, 197, 0.3);
   }
 
   .focus-close {
     position: absolute;
-    top: -16px;
-    right: -16px;
-    width: 36px;
-    height: 36px;
-    background: rgba(255,255,255,0.94);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(224,221,216,0.5);
-    border-radius: 8px;
-    font-size: 20px;
-    font-weight: 600;
-    color: #555048;
+    top: 24px;
+    right: 28px;
+    width: 38px;
+    height: 38px;
+    background: transparent;
+    border: 1px solid rgba(217, 210, 197, 0.25);
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: 300;
+    color: rgba(244, 239, 230, 0.7);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-    transition: all 0.2s;
     line-height: 1;
+    transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+    font-family: 'Inter', sans-serif;
   }
-
   .focus-close:hover {
-    background: #fff;
-    color: #1a1410;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    transform: translateY(-1px);
+    background: rgba(244, 239, 230, 0.08);
+    border-color: rgba(217, 210, 197, 0.55);
+    color: #F4EFE6;
   }
 
-  /* ── Mobile ── */
-  @media (max-width: 640px) {
-    .focus-svg {
-      width: 260px;
-      height: 260px;
-    }
+  .focus-hint {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: 12.5px;
+    color: rgba(244, 239, 230, 0.55);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .kbd {
+    font-family: 'IBM Plex Mono', monospace;
+    font-style: normal;
+    font-size: 10px;
+    background: rgba(244, 239, 230, 0.08);
+    border: 1px solid rgba(217, 210, 197, 0.2);
+    padding: 3px 7px;
+    border-radius: 3px;
+    color: rgba(244, 239, 230, 0.75);
+    letter-spacing: 0.08em;
+  }
 
-    .focus-name {
-      font-size: 20px;
-    }
-
-    .focus-value {
-      font-size: 32px;
-    }
-
-    .focus-metric-label {
-      font-size: 9px;
-    }
-
-    .focus-quarter {
-      font-size: 10px;
-    }
+  /* Mobile: stack columns */
+  @media (max-width: 760px) {
+    .district-focus { padding: 60px 24px 80px; align-items: flex-start; padding-top: 80px; }
+    .focus-grid { grid-template-columns: 1fr; gap: 28px; }
+    .focus-svg { max-width: 220px; }
+    .focus-name { font-size: 38px; }
+    .focus-state { font-size: 14px; margin-bottom: 22px; }
+    .stat-num { font-size: 54px; }
+    .stat-unit { font-size: 22px; }
+    .focus-eyebrow { font-size: 9px; }
   }
 </style>

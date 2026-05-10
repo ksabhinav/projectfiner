@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Not on the map | Project FINER" description="The link you followed leads somewhere FINER doesn't currently cover.">
+  <Header />
+
+  <div class="nf-canvas">
+    <div class="nf-content">
+      <svg class="nf-mark" viewBox="0 0 56 76" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="0" y="6"  width="22" height="10" fill="#B84A2E"/>
+        <rect x="0" y="22" width="36" height="10" fill="#1B140E"/>
+        <rect x="0" y="38" width="56" height="10" fill="#1B140E"/>
+        <rect x="0" y="54" width="30" height="10" fill="#D4A24A"/>
+      </svg>
+
+      <div class="nf-eye">404 · not in the atlas</div>
+      <div class="nf-num">404</div>
+      <div class="nf-title">This page <span class="em">isn't on the map.</span></div>
+      <div class="nf-dek">The link you followed leads somewhere FINER doesn't currently cover. Two ways back into the atlas.</div>
+
+      <div class="nf-actions">
+        <a href={base} class="nf-btn primary">Open the map</a>
+        <a href={`${base}ask`} class="nf-btn ghost">Ask FINER</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .nf-canvas {
+    background: var(--paper, #F4EFE6);
+    min-height: calc(100vh - 52px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+  }
+  .nf-content {
+    text-align: center;
+    max-width: 540px;
+  }
+  .nf-mark {
+    width: 56px;
+    height: 76px;
+    margin: 0 auto 28px;
+    display: block;
+  }
+
+  .nf-eye {
+    font-family: 'Inter', sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--vermillion, #B84A2E);
+    margin-bottom: 18px;
+  }
+
+  .nf-num {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 380;
+    font-variation-settings: 'opsz' 144;
+    font-size: 96px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--vermillion-d, #8E331E);
+    font-feature-settings: 'tnum';
+    margin-bottom: 8px;
+  }
+
+  .nf-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 380;
+    font-variation-settings: 'opsz' 144, 'SOFT' 30;
+    font-size: 32px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--ink, #1B140E);
+    margin-bottom: 12px;
+  }
+  .nf-title .em {
+    color: var(--vermillion-d, #8E331E);
+    font-style: italic;
+    font-weight: 320;
+  }
+
+  .nf-dek {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink-soft, #3D332A);
+    line-height: 1.55;
+    margin-bottom: 32px;
+  }
+
+  .nf-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .nf-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 12px 18px;
+    border: 1px solid var(--ink, #1B140E);
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 160ms ease;
+  }
+  .nf-btn.primary {
+    background: var(--ink, #1B140E);
+    color: var(--paper, #F4EFE6);
+  }
+  .nf-btn.ghost {
+    background: var(--paper, #F4EFE6);
+    color: var(--ink, #1B140E);
+  }
+  .nf-btn:hover { transform: translateY(-1px); }
+  .nf-btn:active { transform: translateY(0); }
+
+  @media (max-width: 760px) {
+    .nf-num { font-size: 72px; }
+    .nf-title { font-size: 24px; }
+    .nf-dek { font-size: 14px; }
+  }
+</style>

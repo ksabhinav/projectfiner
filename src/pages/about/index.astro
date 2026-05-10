@@ -174,9 +174,6 @@ const base = import.meta.env.BASE_URL;
         </div>
       </div>
 
-      <div class="prose src-disclaimer">
-        <p><strong>Disclaimer.</strong> Neither the data sources, the Development Data Lab, nor Project FINER warrants the accuracy or completeness of this data. Use at your own risk; cite original sources where applicable.</p>
-      </div>
     </section>
 
     <!-- ── Open Source ── -->
@@ -207,123 +204,164 @@ const base = import.meta.env.BASE_URL;
 </PageLayout>
 
 <style>
+  /* ── Atlas about page ── */
   .about {
     max-width: 780px;
     margin: 0 auto;
-    padding: 8px 40px 64px;
+    padding: 16px 40px 80px;
   }
 
+  /* Section label override — Atlas vermillion eyebrow with hairline rule */
+  .about :global(.section-label) {
+    font-family: 'Inter', sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--vermillion, #B84A2E);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .about :global(.section-label)::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule, #D9D2C5);
+    max-width: 220px;
+  }
+
+  /* Section divider becomes a single hairline below */
   .about-section {
-    padding: 32px 0;
-    border-bottom: 1px solid var(--border);
+    padding: 36px 0;
+    border-bottom: 1px solid var(--rule-soft, #E8E2D5);
   }
   .about-section.last {
     border-bottom: none;
     padding-bottom: 0;
   }
 
+  /* Editorial body prose — Source Serif, slightly tighter line height */
   .prose p {
-    font-family: var(--font-serif);
-    font-size: 15px;
-    line-height: 1.75;
-    color: var(--text);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 16px;
+    line-height: 1.72;
+    color: var(--ink-soft, #3D332A);
     margin-bottom: 14px;
   }
-  .prose p:last-child {
-    margin-bottom: 0;
-  }
+  .prose p:last-child { margin-bottom: 0; }
   .prose strong {
     font-weight: 600;
+    color: var(--ink, #1B140E);
   }
   .prose em {
     font-style: italic;
-    color: var(--muted);
+    color: var(--vermillion-d, #8E331E);
   }
+  .prose a {
+    color: var(--ink, #1B140E);
+    text-decoration: underline;
+    text-decoration-color: var(--rule, #D9D2C5);
+    text-underline-offset: 2px;
+    transition: text-decoration-color 160ms ease;
+  }
+  .prose a:hover { text-decoration-color: var(--vermillion, #B84A2E); }
 
-  /* ── 3-column cards ── */
+  /* ── "What We Do" 3-column cards · Atlas treatment ── */
   .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-top: 4px;
+    gap: 24px;
+    margin-top: 8px;
   }
-
   .about-card {
-    padding: 24px 20px;
-    border-left: 3px solid var(--accent);
+    padding: 0 0 0 16px;
+    border-left: 2px solid var(--rule, #D9D2C5);
+    background: transparent;
+    transition: border-left-color 160ms ease;
   }
+  .about-card:hover { border-left-color: var(--vermillion, #B84A2E); }
   .card-icon {
-    color: var(--accent);
+    color: var(--vermillion, #B84A2E);
     margin-bottom: 14px;
   }
   .about-card h3 {
-    font-family: var(--font-serif);
-    font-size: 16px;
-    font-weight: 600;
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    font-variation-settings: 'opsz' 60;
+    font-size: 22px;
+    letter-spacing: -0.01em;
     margin-bottom: 8px;
-    color: var(--text);
+    color: var(--ink, #1B140E);
   }
   .about-card p {
-    font-family: var(--font-sans);
-    font-size: 12px;
-    line-height: 1.7;
-    color: var(--muted);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: var(--ink-soft, #3D332A);
+    margin: 0;
   }
 
-  /* ── Stats row ── */
+  /* ── Stats row · Atlas: no outer box, just hairlines between ── */
   .stats-row {
     display: flex;
     gap: 0;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 28px;
+    border: 0;
+    border-top: 1px solid var(--rule, #D9D2C5);
+    border-bottom: 1px solid var(--rule, #D9D2C5);
+    border-radius: 0;
+    overflow: visible;
+    margin: 12px 0 28px;
+    padding: 22px 0;
   }
   .stat-block {
     flex: 1;
-    padding: 24px 16px;
-    text-align: center;
-    border-right: 1px solid var(--border);
+    padding: 0 16px;
+    text-align: left;
+    border-right: 1px solid var(--rule-soft, #E8E2D5);
   }
-  .stat-block:last-child {
-    border-right: none;
-  }
+  .stat-block:last-child { border-right: none; }
   .stat-number {
-    font-family: var(--font-serif);
-    font-size: 28px;
-    font-weight: 600;
-    color: var(--text);
-    letter-spacing: -0.02em;
-    margin-bottom: 4px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 380;
+    font-variation-settings: 'opsz' 144;
+    font-size: 40px;
+    color: var(--vermillion-d, #8E331E);
+    letter-spacing: -0.025em;
+    line-height: 1;
+    margin-bottom: 8px;
+    font-feature-settings: 'tnum';
   }
   .stat-desc {
-    font-family: var(--font-sans);
-    font-size: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--label);
+    letter-spacing: 0.1em;
+    color: var(--mist, #6E665E);
   }
 
   /* ── State listing ── */
   .state-list-wrapper {
-    margin-top: 4px;
+    margin-top: 8px;
   }
   .sub-label {
-    font-family: var(--font-sans);
-    font-size: 10px;
-    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--accent);
-    margin-top: 20px;
-    margin-bottom: 6px;
+    letter-spacing: 0.14em;
+    color: var(--vermillion, #B84A2E);
+    margin-top: 22px;
+    margin-bottom: 8px;
   }
   .state-names {
-    font-family: var(--font-serif);
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--muted);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--ink-soft, #3D332A);
   }
 
   /* ── Source grid ── */
@@ -353,81 +391,164 @@ const base = import.meta.env.BASE_URL;
     line-height: 1.5;
   }
 
-  /* ── Detailed source citations ── */
+  /* ── Detailed source citations · Atlas bibliographic treatment ── */
   .src-group {
-    font-family: var(--font-sans);
-    font-size: 11px;
-    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--text);
-    margin: 24px 0 12px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid var(--border);
+    letter-spacing: 0.18em;
+    color: var(--vermillion, #B84A2E);
+    margin: 36px 0 18px;
+    padding-bottom: 0;
+    border-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 14px;
   }
+  .src-group::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule, #D9D2C5);
+  }
+
   .src-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 22px;
     margin-bottom: 16px;
   }
+
+  /* Cards become spaced items with a vermillion left rule — no box, no chrome */
   .src-card {
-    padding: 14px 16px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background: var(--card);
+    padding: 0 0 0 18px;
+    border: 0;
+    border-left: 2px solid var(--rule, #D9D2C5);
+    background: transparent;
+    border-radius: 0;
+    transition: border-left-color 160ms ease;
   }
+  .src-card:hover {
+    border-left-color: var(--vermillion, #B84A2E);
+  }
+
+  /* Source name — Fraunces, editorial */
   .src-name {
-    font-family: var(--font-sans);
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text);
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    font-variation-settings: 'opsz' 60;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    color: var(--ink, #1B140E);
     margin-bottom: 8px;
+    line-height: 1.25;
   }
+
+  /* Citation prose — Source Serif, the body voice */
   .src-cite {
-    font-family: var(--font-sans);
-    font-size: 12px;
-    color: var(--text);
-    line-height: 1.55;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 13.5px;
+    color: var(--ink-soft, #3D332A);
+    line-height: 1.6;
     margin-bottom: 6px;
   }
   .src-cite em {
     font-style: italic;
+    color: var(--ink, #1B140E);
   }
+  .src-cite a {
+    color: var(--ink, #1B140E);
+    text-decoration: underline;
+    text-decoration-color: var(--rule, #D9D2C5);
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+    transition: text-decoration-color 160ms ease;
+  }
+  .src-cite a:hover { text-decoration-color: var(--vermillion, #B84A2E); }
+
+  /* Meta line — mono, the data voice. Dotted-line divider for the bibliographic feel. */
   .src-meta {
-    font-family: var(--font-sans);
-    font-size: 11px;
-    color: var(--muted);
-    line-height: 1.5;
-    margin-top: 6px;
-    padding-top: 6px;
-    border-top: 1px dotted var(--border);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--mist, #6E665E);
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    margin-top: 8px;
+    padding-top: 7px;
+    border-top: 0;
+    position: relative;
+  }
+  .src-meta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 1px;
+    background: var(--vermillion, #B84A2E);
+    opacity: 0.5;
   }
   .src-meta a {
-    color: var(--terracotta, #b8603e);
+    color: var(--vermillion, #B84A2E);
     text-decoration: none;
+    border-bottom: 1px dotted rgba(184, 74, 46, 0.4);
+    transition: border-bottom-color 160ms ease;
   }
-  .src-meta a:hover { text-decoration: underline; }
+  .src-meta a:hover {
+    border-bottom-color: var(--vermillion, #B84A2E);
+  }
+
+  /* SHRUG license preamble — italic Source Serif on paper-deep, with a saffron rule */
   .src-license-note {
-    margin-top: 12px;
+    margin: 20px 0 24px;
+    padding: 14px 18px;
+    background: rgba(212, 162, 74, 0.06);
+    border-left: 2px solid var(--saffron, #D4A24A);
+    border-radius: 0 4px 4px 0;
   }
   .src-license-note p {
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.55;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-soft, #3D332A);
+    line-height: 1.65;
   }
+  .src-license-note p em {
+    font-style: normal;
+    color: var(--mist, #6E665E);
+    font-size: 12px;
+  }
+  .src-license-note a {
+    color: var(--ink, #1B140E);
+    text-decoration: underline;
+    text-decoration-color: rgba(184, 74, 46, 0.4);
+    text-underline-offset: 2px;
+  }
+
+  /* Disclaimer — burgundy left rule to mark as warning */
   .src-disclaimer {
-    margin-top: 24px;
-    padding: 12px 16px;
-    background: rgba(184, 96, 62, 0.04);
-    border-left: 3px solid var(--terracotta, #b8603e);
-    border-radius: 4px;
+    margin-top: 32px;
+    padding: 14px 18px;
+    background: rgba(140, 46, 32, 0.04);
+    border-left: 2px solid var(--burgundy, #8C2E20);
   }
   .src-disclaimer p {
-    font-size: 12px;
-    color: var(--text);
-    line-height: 1.55;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 12.5px;
+    color: var(--ink-soft, #3D332A);
+    line-height: 1.65;
     margin: 0;
+  }
+  .src-disclaimer strong {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 10px;
+    color: var(--burgundy, #8C2E20);
+    display: inline-block;
+    margin-right: 8px;
   }
 
   /* ── Responsive ── */

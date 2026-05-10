@@ -1,37 +1,220 @@
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ── Design Tokens ── */
+/* ==========================================================================
+   FINER · Atlas Identity · Design Tokens (new — additive)
+   These tokens are available to new components. Existing tokens below
+   remain unchanged so legacy components keep working.
+   ========================================================================== */
 :root {
-  --bg: #f5f4f1;
+  /* === Atlas palette === */
+  --paper:         #F4EFE6;
+  --paper-deep:    #ECE5D6;
+  --paper-deeper:  #E2DAC8;
+  --ink:           #1B140E;
+  --ink-soft:      #3D332A;
+  --vermillion:    #B84A2E;
+  --vermillion-d:  #8E331E;
+  --peacock:       #1E4960;
+  --peacock-d:     #0E2F44;
+  --saffron:       #D4A24A;
+  --saffron-d:     #A07A30;
+  --sage:          #5E7A4A;
+  --burgundy:      #8C2E20;
+  --mist:          #6E665E;
+  --mist-soft:     #9A9089;
+  --rule:          #D9D2C5;
+  --rule-soft:     #E8E2D5;
+
+  /* === Choropleth ramps === */
+  --ramp-vermillion-stops: #F4E1D6, #E0A88E, #B84A2E;
+  --ramp-sage-stops:       #E8E8DC, #B8C4A0, #5E7A4A;
+  --ramp-peacock-stops:    #D4DCE0, #8AAEC0, #1E4960;
+  --ramp-saffron-stops:    #F8E8C4, #E0C684, #D4A24A;
+  --ramp-burgundy-stops:   #E8D8D4, #C4928A, #8C2E20;
+  --ramp-vermillion: linear-gradient(90deg, #F4E1D6 0%, #E0A88E 50%, #B84A2E 100%);
+  --ramp-sage:       linear-gradient(90deg, #E8E8DC 0%, #B8C4A0 50%, #5E7A4A 100%);
+  --ramp-peacock:    linear-gradient(90deg, #D4DCE0 0%, #8AAEC0 50%, #1E4960 100%);
+  --ramp-saffron:    linear-gradient(90deg, #F8E8C4 0%, #E0C684 50%, #D4A24A 100%);
+  --ramp-burgundy:   linear-gradient(90deg, #E8D8D4 0%, #C4928A 50%, #8C2E20 100%);
+
+  /* === Atlas typography === */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'Source Serif 4', Georgia, serif;
+  --font-ui:      'Inter', system-ui, sans-serif;
+
+  /* === Motion === */
+  --ease-quick:    cubic-bezier(0.32, 0.72, 0.40, 1.00);
+  --ease-soft:     cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-emphatic: cubic-bezier(0.20, 0.80, 0.20, 1.00);
+  --ease-exit:     cubic-bezier(0.55, 0.00, 0.85, 0.30);
+  --dur-instant:    80ms;
+  --dur-fast:       160ms;
+  --dur-base:       260ms;
+  --dur-slow:       400ms;
+  --dur-deliberate: 600ms;
+
+  /* === Layout === */
+  --header-h:    52px;
+  --strip-h:     56px;
+  --chrome-h:    108px;
+  --gradient-hairline: linear-gradient(90deg, var(--vermillion), var(--saffron));
+}
+
+/* ── Design Tokens (legacy — now aliased to Atlas tokens) ──
+   Legacy components use these names; aliasing here makes them inherit Atlas.
+   To revert any single component to its old colour, replace `var(--accent)`
+   with `#b8603e` literal in that file.
+*/
+:root {
+  --bg: var(--paper);                    /* was #f5f4f1 */
   --card: #ffffff;
-  --text: #1a1410;
-  --muted: #888078;
-  --label: #aaa09a;
-  --accent: #b8603e;
-  --accent-dark: #8a4a2e;
-  --teal: #3d7a8e;
-  --olive: #5a7a3a;
-  --gold: #8b6914;
-  --border: #e8e5e0;
-  --border-dark: #e0ddd8;
-  --card-shadow: 0 1px 3px rgba(0,0,0,0.03);
-  --card-shadow-hover: 0 4px 16px rgba(0,0,0,0.06);
-  --btn-bg: #faf9f7;
-  --font-serif: 'Georgia', serif;
-  --font-sans: 'Inter', sans-serif;
+  --text: var(--ink);                    /* was #1a1410 */
+  --muted: var(--mist);                  /* was #888078 */
+  --label: var(--mist-soft);             /* was #aaa09a */
+  --accent: var(--vermillion);           /* was #b8603e (terracotta) */
+  --accent-dark: var(--vermillion-d);    /* was #8a4a2e */
+  --teal: var(--peacock);                /* was #3d7a8e */
+  --olive: var(--sage);                  /* was #5a7a3a */
+  --gold: var(--saffron-d);              /* was #8b6914 */
+  --border: var(--rule-soft);            /* was #e8e5e0 */
+  --border-dark: var(--rule);            /* was #e0ddd8 */
+  --card-shadow: 0 1px 3px rgba(27,20,14,0.04);
+  --card-shadow-hover: 0 4px 16px rgba(27,20,14,0.07);
+  --btn-bg: var(--paper-deep);           /* was #faf9f7 */
+  --font-serif: var(--font-body);        /* was 'Georgia' — now Source Serif 4 */
+  --font-sans: var(--font-ui);           /* was 'Inter' — same family */
   --font-mono: 'IBM Plex Mono', monospace;
 }
 
-body {
-  font-family: var(--font-serif);
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
+/* Atlas reduced-motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
-a { color: var(--accent); text-decoration: none; font-weight: 500; transition: color 0.15s; }
-a:hover { color: var(--accent-dark); }
+body {
+  font-family: var(--font-body, 'Source Serif 4', Georgia, serif);
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--vermillion); text-decoration: none; font-weight: 500; transition: color 0.15s; }
+a:hover { color: var(--vermillion-d); }
+
+/* Map page Body — Leaflet base layer should match paper so empty regions blend */
+#map { background: var(--paper); }
+
+/* ==========================================================================
+   Atlas Header (in global.css to bypass Astro scoped-CSS quirks)
+   ========================================================================== */
+
+.finer-header {
+  position: sticky;
+  top: 0;
+  height: var(--header-h, 52px);
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  z-index: 1020;
+}
+.finer-header.transparent {
+  position: fixed;
+  left: 0; right: 0; top: 0;
+  background: rgba(244, 239, 230, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.finer-header::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--vermillion), var(--saffron));
+}
+
+.finer-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: opacity 0.2s;
+}
+.finer-header .brand:hover { opacity: 0.78; }
+.finer-header .brand-mark {
+  width: 18px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.finer-header .brand-text {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-variation-settings: 'opsz' 60;
+  font-size: 19px;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  line-height: 1;
+}
+.finer-header .brand-dot { color: var(--vermillion); }
+
+.finer-header .nav {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.finer-header .nav-cap {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 9.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 9px 13px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--rule);
+  color: var(--ink-soft);
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+.finer-header .nav-cap:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--mist-soft);
+  color: var(--ink);
+}
+.finer-header .nav-cap.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+@media (max-width: 760px) {
+  .finer-header { padding: 0 16px; }
+  .finer-header .nav-cap { padding: 8px 10px; font-size: 9px; }
+  .finer-header .nav .nav-cap:nth-child(n+5) { display: none; }
+}
+
+/* When focus mode is active, header + strip + timeline stay above the overlay
+   so users can still pick a different indicator / quarter while focused. */
+body:has(.district-focus.active) .finer-header,
+body:has(.district-focus.active) #indicator-strip,
+body:has(.district-focus.active) .picker-panel,
+body:has(.district-focus.active) .simple-panel,
+body:has(.district-focus.active) .time-slider {
+  z-index: 1300 !important;
+}
 
 /* ── Section Label ── */
 .section-label {

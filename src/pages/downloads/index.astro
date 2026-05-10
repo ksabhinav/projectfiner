@@ -1,0 +1,253 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import DownloadManager from '../../components/DownloadManager.svelte';
+const base = import.meta.env.BASE_URL;
+
+const neStates = [
+  { name: 'Assam',             meta: '30 quarters · 35 districts · 51 categories · 948 CSVs', slug: 'assam' },
+  { name: 'Meghalaya',         meta: '15 quarters · 12 districts · 48 categories · 604 CSVs', slug: 'meghalaya' },
+  { name: 'Manipur',           meta: '39 quarters · 16 districts · 45 categories · 620 CSVs', slug: 'manipur' },
+  { name: 'Arunachal Pradesh', meta: '18 quarters · 26 districts · 46 categories · 519 CSVs', slug: 'arunachal-pradesh' },
+  { name: 'Mizoram',           meta: '22 quarters · 11 districts · 38 categories · 241 CSVs', slug: 'mizoram' },
+  { name: 'Tripura',           meta: '33 quarters · 8 districts · 21 categories · 160 CSVs', slug: 'tripura' },
+  { name: 'Nagaland',          meta: '7 quarters · 16 districts · 25 categories · 57 CSVs', slug: 'nagaland' },
+  { name: 'Sikkim',            meta: '4 quarters · 6 districts · 3 categories · 12 CSVs',     slug: 'sikkim' },
+];
+
+const otherStates = [
+  { name: 'Bihar',        meta: '25 quarters · 38 districts · 60 categories · 334 CSVs', slug: 'bihar' },
+  { name: 'Jharkhand',    meta: '10 quarters · 24 districts · 64 categories · 472 CSVs', slug: 'jharkhand' },
+  { name: 'Odisha',       meta: '8 quarters · 30 districts · 50 categories · 175 CSVs',  slug: 'odisha' },
+  { name: 'Chhattisgarh', meta: '12 quarters · 33 districts · 4 categories · 48 CSVs',   slug: 'chhattisgarh' },
+  { name: 'West Bengal',  meta: '38 quarters · 23 districts · 22 categories · 331 CSVs', slug: 'west-bengal' },
+  { name: 'Karnataka',    meta: '10 quarters · 31 districts · 40 categories',            slug: 'karnataka' },
+  { name: 'Kerala',       meta: '23 quarters · 14 districts · 7 categories',             slug: 'kerala' },
+  { name: 'Tamil Nadu',   meta: '10 quarters · 38 districts · 33 categories',            slug: 'tamil-nadu' },
+];
+---
+
+<BaseLayout title="Downloads | Project FINER" description="Datasets, in three formats. Every indicator FINER tracks — CSV, XLSX, and the original source booklet.">
+  <Header activeNav="downloads" />
+
+  <div class="dl-page">
+    <h1 class="dl-title">Datasets, in <span class="em">several formats</span>.</h1>
+    <p class="dl-dek">
+      Every indicator FINER tracks, downloadable as CSV and XLSX, with links to the original source.
+      <span class="cite">Cite as:</span> <em>"FINER (projectfiner.com), via [original source]."</em>
+    </p>
+
+    <div class="dl-section-eye">SLBC bookers · North-East · 8 states</div>
+    <div class="dl-grid">
+      {neStates.map(state => (
+        <a class="dl-card" href={`${base}slbc-data/${state.slug}/download`}>
+          <div class="dl-card-eye">SLBC {state.name}</div>
+          <div class="dl-card-name">{state.name}<span class="meta-suffix"> · all quarters</span></div>
+          <div class="dl-card-meta">{state.meta}</div>
+          <div class="dl-card-actions">
+            <span class="dl-btn primary">Browse →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="dl-section-eye">SLBC bookers · Other states · 8 states</div>
+    <div class="dl-grid">
+      {otherStates.map(state => (
+        <a class="dl-card" href={`${base}slbc-data/${state.slug}/download`}>
+          <div class="dl-card-eye">SLBC {state.name}</div>
+          <div class="dl-card-name">{state.name}<span class="meta-suffix"> · all quarters</span></div>
+          <div class="dl-card-meta">{state.meta}</div>
+          <div class="dl-card-actions">
+            <span class="dl-btn primary">Browse →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="dl-section-eye">Meeting minutes · 6 NE states</div>
+    <a class="dl-card minutes" href={`${base}slbc-data/meeting-minutes`}>
+      <div class="dl-card-eye">SLBC meetings</div>
+      <div class="dl-card-name">Minutes of the Meeting</div>
+      <div class="dl-card-meta">141 SLBC meeting minutes summarised · Links to source PDFs</div>
+      <div class="dl-card-actions">
+        <span class="dl-btn primary">Browse →</span>
+      </div>
+    </a>
+
+    <div class="dl-section-eye">Capital markets · districts × providers</div>
+    <DownloadManager client:load />
+  </div>
+</BaseLayout>
+
+<style>
+  .dl-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 36px 32px 60px;
+  }
+
+  /* Atlas page title */
+  .dl-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 380;
+    font-variation-settings: 'opsz' 144, 'SOFT' 30;
+    font-size: 44px;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    color: var(--ink, #1B140E);
+    margin: 0 0 10px;
+  }
+  .dl-title .em {
+    color: var(--vermillion-d, #8E331E);
+    font-style: italic;
+    font-weight: 320;
+  }
+
+  /* Italic Source Serif dek with cite-as line */
+  .dl-dek {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink-soft, #3D332A);
+    line-height: 1.55;
+    margin: 0 0 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--rule, #D9D2C5);
+    max-width: 740px;
+  }
+  .dl-dek .cite {
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--vermillion, #B84A2E);
+    margin-right: 4px;
+  }
+  .dl-dek em {
+    font-style: italic;
+    color: var(--ink, #1B140E);
+  }
+
+  /* Atlas section eyebrow with trailing rule */
+  .dl-section-eye {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--vermillion, #B84A2E);
+    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .dl-section-eye::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule, #D9D2C5);
+  }
+  .dl-section-eye:not(:first-child) { margin-top: 36px; }
+
+  /* Card grid */
+  .dl-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 4px;
+  }
+
+  /* Atlas data card — paper bg, 1px rule, 3px vermillion left rule */
+  .dl-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--paper, #F4EFE6);
+    border: 1px solid var(--rule, #D9D2C5);
+    border-left: 3px solid var(--vermillion, #B84A2E);
+    border-radius: 4px;
+    padding: 16px 16px 14px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 160ms ease, box-shadow 160ms ease, border-left-color 160ms ease;
+  }
+  .dl-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(27, 20, 14, 0.06);
+    border-left-color: var(--vermillion-d, #8E331E);
+  }
+  .dl-card.minutes {
+    border-left-color: var(--peacock, #1E4960);
+    margin-bottom: 4px;
+  }
+  .dl-card.minutes:hover { border-left-color: var(--peacock-d, #0E2F44); }
+
+  .dl-card-eye {
+    font-family: 'Inter', sans-serif;
+    font-size: 8.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--mist, #6E665E);
+    margin-bottom: 5px;
+  }
+  .dl-card-name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    font-variation-settings: 'opsz' 60;
+    font-size: 18px;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+    color: var(--ink, #1B140E);
+    margin-bottom: 8px;
+  }
+  .dl-card-name .meta-suffix {
+    color: var(--mist, #6E665E);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .dl-card-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px;
+    color: var(--mist, #6E665E);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .dl-card-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .dl-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--ink, #1B140E);
+    background: var(--paper, #F4EFE6);
+    color: var(--ink, #1B140E);
+  }
+  .dl-btn.primary {
+    background: var(--ink, #1B140E);
+    color: var(--paper, #F4EFE6);
+  }
+
+  @media (max-width: 760px) {
+    .dl-page { padding: 28px 18px 48px; }
+    .dl-title { font-size: 32px; }
+    .dl-dek { font-size: 14.5px; }
+    .dl-grid { grid-template-columns: 1fr; gap: 10px; }
+  }
+</style>

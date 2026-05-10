@@ -28,6 +28,9 @@
   let startOpacity = $derived(pct < 15 ? 0 : 1);
   let endOpacity = $derived(pct > 85 ? 0 : 1);
   let label = $derived(currentQuarter ? periodLabel(currentQuarter) : '');
+  // Split "Dec 2025" → month "Dec" + year "2025" for the Atlas two-line label
+  let labelMonth = $derived(label ? label.split(' ')[0] : '');
+  let labelYear = $derived(label ? (label.split(' ')[1] || '') : '');
 
   // Dot data
   interface DotData { pct: number; isYearDot: boolean; idx: number }
@@ -168,13 +171,13 @@
     <div
       class="timeline-fill"
       style:height="{pct}%"
-      style:background="rgba({accentRGB().r},{accentRGB().g},{accentRGB().b},0.35)"
     ></div>
     <div class="timeline-dots">
       {#each dots as dot}
         <div
           class="tl-dot"
           class:year-dot={dot.isYearDot}
+          class:past={dot.idx < currentIdx}
           class:active={dot.idx === currentIdx}
           style:top="{dot.pct}%"
           onclick={() => handleDotClick(dot.idx)}
@@ -184,14 +187,14 @@
     <div
       class="timeline-thumb"
       style:top="{pct}%"
-      style:background={accentColor}
       onmousedown={handleThumbMousedown}
       ontouchstart={(e) => { dragging = true; e.preventDefault(); }}
-    >
-      <div class="quarter-label" style:color={accentColor}>{label}</div>
-    </div>
+    ></div>
   </div>
   <div class="tl-bound" style:opacity={endOpacity}>{endYear}</div>
+  <div class="tl-current-label">
+    {labelMonth}<span class="y">{labelYear}</span>
+  </div>
 </div>
 {/if}
 
@@ -232,8 +235,9 @@
     top: 0;
     left: 0;
     width: 100%;
+    background: #B84A2E;
     border-radius: 3px;
-    transition: height 0.15s ease;
+    /* No height transition — animating during drag causes visible chase */
   }
   .timeline-dots {
     position: absolute;
@@ -265,51 +269,67 @@
     height: 6px;
     margin-left: -3px;
     margin-top: -3px;
-    background: rgba(170, 160, 154, 0.45);
+    background: #9A9089;
     border-radius: 50%;
   }
   .tl-dot.year-dot:hover {
-    background: rgba(184, 96, 62, 0.5);
+    background: #1B140E;
     transform: scale(1.3);
   }
+  /* Atlas: past quarters fill in vermillion to show progress */
+  .tl-dot.year-dot.past {
+    background: #B84A2E;
+  }
   .tl-dot.year-dot.active {
-    background: rgba(184, 96, 62, 0.6);
+    background: #B84A2E;
   }
   .timeline-thumb {
     position: absolute;
     left: 50%;
-    width: 18px;
-    height: 8px;
-    margin-left: -9px;
-    margin-top: -4px;
-    background: #b8603e;
-    border-radius: 4px;
+    width: 14px;
+    height: 14px;
+    margin-left: -7px;
+    margin-top: -7px;
+    background: #B84A2E;
+    border-radius: 50%;
     cursor: grab;
-    transition: top 0.15s ease, transform 0.15s ease;
+    /* No `top` transition — must follow the cursor exactly during drag.
+       Only the halo + scale animate on hover. */
+    transition: box-shadow 160ms ease;
     z-index: 2;
-    box-shadow: 0 1px 4px rgba(184, 96, 62, 0.3);
+    /* Atlas: ringed halo around current quarter */
+    box-shadow:
+      0 0 0 4px rgba(184, 74, 46, 0.18),
+      0 2px 4px rgba(0, 0, 0, 0.12);
   }
   .timeline-thumb:hover {
-    transform: scale(1.2);
-    box-shadow: 0 2px 10px rgba(184, 96, 62, 0.4);
+    box-shadow:
+      0 0 0 5px rgba(184, 74, 46, 0.22),
+      0 2px 8px rgba(0, 0, 0, 0.18);
   }
   .timeline-thumb:active {
     cursor: grabbing;
-    box-shadow: 0 2px 12px rgba(184, 96, 62, 0.5);
   }
-  .quarter-label {
-    position: absolute;
-    right: 24px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    color: #b8603e;
-    letter-spacing: 0.04em;
+  /* Atlas: italic Fraunces label below the track ("Dec / 2025" stacked) */
+  .tl-current-label {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-variation-settings: 'opsz' 60;
+    font-size: 13px;
+    color: #1B140E;
+    margin-top: 8px;
+    text-align: center;
+    line-height: 1.1;
     white-space: nowrap;
-    pointer-events: none;
-    text-transform: uppercase;
+  }
+  .tl-current-label .y {
+    display: block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-style: normal;
+    font-size: 10px;
+    color: #6E665E;
+    margin-top: 1px;
   }
 
   /* Focus mode z-index boost */

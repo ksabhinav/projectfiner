@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FINER · Atlas Open Graph card
+  Source for og-image.png (1200×630). Edit text or colours here, then
+  re-run scripts/build-og-image.py (or any SVG→PNG tool that loads Google
+  Fonts correctly — Playwright/Puppeteer recommended) to regenerate the PNG.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" font-family="'Fraunces', Georgia, serif">
+  <defs>
+    <linearGradient id="hairline" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#B84A2E"/>
+      <stop offset="100%" stop-color="#D4A24A"/>
+    </linearGradient>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap');
+      .body  { font-family: 'Source Serif 4', Georgia, serif; }
+      .mono  { font-family: 'IBM Plex Mono', monospace; }
+      .ink   { fill: #1B140E; }
+      .ink-soft { fill: #3D332A; }
+      .mist  { fill: #6E665E; }
+      .verm  { fill: #B84A2E; }
+      .verm-d{ fill: #8E331E; }
+      .saffron { fill: #D4A24A; }
+    </style>
+  </defs>
+
+  <!-- Paper background -->
+  <rect width="1200" height="630" fill="#F4EFE6"/>
+
+  <!-- Top vermillion → saffron gradient hairline (12 px) -->
+  <rect x="0" y="0" width="1200" height="12" fill="url(#hairline)"/>
+
+  <!-- Brand block (top-left): four-bar mark + FINER. wordmark -->
+  <g transform="translate(80, 76)">
+    <!-- mark scaled ×4.2 from 18×24 base = 75.6 × 100.8 -->
+    <g transform="scale(4.2)">
+      <rect x="0" y="2"  width="7"  height="3" fill="#B84A2E"/>
+      <rect x="0" y="7"  width="11" height="3" fill="#1B140E"/>
+      <rect x="0" y="12" width="18" height="3" fill="#1B140E"/>
+      <rect x="0" y="17" width="9"  height="3" fill="#D4A24A"/>
+    </g>
+    <text x="96" y="74" font-size="64" font-weight="400" letter-spacing="-1.4" class="ink">FINER<tspan class="verm">.</tspan></text>
+  </g>
+
+  <!-- Top-right meta -->
+  <g class="mono" font-size="18" text-anchor="end">
+    <text x="1120" y="92"  class="mist">ATLAS · INDIA</text>
+    <text x="1120" y="116" class="mist">EST. 2024</text>
+  </g>
+
+  <!-- Headline: "An atlas of financial inclusion in India." -->
+  <text x="80" y="306" font-size="76" font-weight="400" letter-spacing="-2.3">
+    <tspan class="ink">An atlas of </tspan>
+    <tspan class="verm" font-style="italic" font-weight="320">financial inclusion</tspan>
+    <tspan class="ink"> in India.</tspan>
+  </text>
+
+  <!-- Horizontal rule above stat block -->
+  <line x1="80" y1="410" x2="1120" y2="410" stroke="#D9D2C5" stroke-width="1"/>
+
+  <!-- Stat block -->
+  <g transform="translate(80, 514)">
+    <!-- "20 indicators" -->
+    <text x="0" y="0" font-size="84" font-weight="380" letter-spacing="-2.2" class="verm-d">20</text>
+    <text x="80" y="-12" font-size="30" font-weight="300" class="mist">indicators</text>
+
+    <!-- "800+ districts" -->
+    <text x="440" y="0" font-size="84" font-weight="380" letter-spacing="-2.2" class="ink-soft">800+</text>
+    <text x="650" y="-12" font-size="30" font-weight="300" class="mist">districts</text>
+  </g>
+
+  <!-- Right context -->
+  <text x="1120" y="476" class="body" font-size="20" text-anchor="end" class="ink-soft">since 2018  ·  22 states</text>
+  <text x="1120" y="508" class="body" font-size="20" text-anchor="end" class="mist">1.19 M rows of district-level data</text>
+
+  <!-- Bottom row -->
+  <text x="80"   y="572" font-size="26" font-style="italic" class="mist">district by district, quarter by quarter.</text>
+  <text x="1120" y="576" class="body" font-size="22" text-anchor="end" class="ink">projectfiner.com</text>
+</svg>

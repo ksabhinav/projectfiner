@@ -12,11 +12,83 @@ interface Props {
   hideFooter?: boolean;
 }
 
-const { title, pageTitle, subtitle, backLink, activeSubNav, hideFooter } = Astro.props;
+const { title, pageTitle, subtitle, backLink, hideFooter } = Astro.props;
+
+// Auto-derive activeNav from the URL so the right pill is highlighted.
+const path = Astro.url?.pathname ?? '';
+let activeNav: 'map' | 'about' | 'ask' | 'downloads' | undefined;
+if (path.startsWith('/about'))                                 activeNav = 'about';
+else if (path.startsWith('/ask'))                              activeNav = 'ask';
+else if (path.startsWith('/capital-markets')
+      || path.startsWith('/slbc-data')
+      || path.startsWith('/downloads'))                        activeNav = 'downloads';
+else if (path === '/' || path === ''
+      || path.startsWith('/fi-indicators'))                    activeNav = 'map';
+// /analysis/*, /scatter/* — no nav tab; leave undefined so no pill is active
 ---
 
 <BaseLayout title={title}>
-  <Header title={pageTitle} subtitle={subtitle} backLink={backLink} activeSubNav={activeSubNav} />
+  <Header activeNav={activeNav} />
+
+  {(pageTitle || subtitle || backLink) && (
+    <div class="page-hero">
+      <div class="hero-inner">
+        {backLink && <a href={backLink.href} class="back-link">&larr; {backLink.label}</a>}
+        {pageTitle && <h1 class="page-title">{pageTitle}</h1>}
+        {subtitle && <p class="page-subtitle" set:html={subtitle} />}
+      </div>
+    </div>
+  )}
+
   <slot />
   {!hideFooter && <Footer />}
 </BaseLayout>
+
+<style>
+  .page-hero {
+    padding: 32px 40px 24px;
+    position: relative;
+    border-bottom: 1px solid var(--rule-soft, #E8E2D5);
+    background: var(--paper, #F4EFE6);
+  }
+  .hero-inner {
+    max-width: 900px;
+  }
+  .page-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    font-variation-settings: 'opsz' 144;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink, #1B140E);
+    margin-bottom: 8px;
+  }
+  .page-subtitle {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--ink-soft, #3D332A);
+    line-height: 1.55;
+    max-width: 680px;
+  }
+  .back-link {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--mist, #6E665E);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    transition: color 0.15s;
+  }
+  .back-link:hover { color: var(--vermillion, #B84A2E); }
+
+  @media (max-width: 760px) {
+    .page-hero { padding: 24px 20px 20px; }
+    .page-title { font-size: 26px; }
+  }
+</style>
