@@ -193,29 +193,19 @@
 </script>
 
 <!-- Full dataset downloads -->
-<div class="section-label">Full Dataset</div>
-<div class="dataset">
-  <div class="dataset-inner" style="border-left-color: #b8603e">
-    <div class="dataset-head">
-      <h2><span class="dataset-dot" style="background: #b8603e"></span>Complete Time-Series</h2>
-      <span class="badge" style="color: #b8603e; border-color: #b8603e">All quarters × all districts × all indicators</span>
-    </div>
-    <div class="meta">Wide-format table: one row per district per quarter, all indicator fields as columns.</div>
-    <div class="btn-row">
-      <button class="btn" class:downloading={downloading['ts-csv']} onclick={() => downloadTimeseries('csv')}>
-        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>
-        CSV
-      </button>
-      <button class="btn" class:downloading={downloading['ts-xlsx']} onclick={() => downloadTimeseries('xlsx')}>
-        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 18H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V10h10v2zM13 9V3.5L18.5 9H13z"/></svg>
-        Excel
-      </button>
-    </div>
+<div class="sd-section-eye">Full dataset</div>
+<a class="dataset">
+  <div class="dataset-eye">SLBC Meghalaya</div>
+  <div class="dataset-name">Complete Time-Series</div>
+  <div class="dataset-meta">All quarters × all districts × all indicators · wide-format · one row per district per quarter</div>
+  <div class="dataset-actions">
+    <button class="dl-btn primary" class:downloading={downloading['ts-csv']} onclick={() => downloadTimeseries('csv')}>CSV</button>
+    <button class="dl-btn" class:downloading={downloading['ts-xlsx']} onclick={() => downloadTimeseries('xlsx')}>XLSX</button>
   </div>
-</div>
+</a>
 
 <!-- Tabs -->
-<div class="section-label">Individual Downloads</div>
+<div class="sd-section-eye">Individual downloads</div>
 <div class="tabs">
   <div class="tab" class:active={activeTab === 'indicator'} onclick={() => activeTab = 'indicator'}>By Indicator</div>
   <div class="tab" class:active={activeTab === 'quarter'} onclick={() => activeTab = 'quarter'}>By Quarter</div>
@@ -265,39 +255,122 @@
 {/if}
 
 <style>
-  .dataset { background: #fff; border: 1px solid var(--border); margin-bottom: 10px; border-radius: 8px; box-shadow: var(--card-shadow); overflow: hidden; transition: box-shadow 0.2s; }
-  .dataset:hover { box-shadow: var(--card-shadow-hover); }
-  .dataset-inner { padding: 20px 24px; border-left: 3px solid transparent; }
-  .dataset-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-  h2 { font-size: 14px; font-weight: 700; color: var(--text); letter-spacing: 0.01em; }
-  .dataset-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; vertical-align: middle; }
-  .meta { font-family: var(--font-sans); font-size: 11px; font-weight: 400; color: var(--muted); line-height: 1.7; margin-top: 8px; }
-  .btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
-  .btn svg { width: 13px; height: 13px; fill: currentColor; }
+  /* Atlas state-download styling — same as StateDownload.svelte */
+  .sd-section-eye {
+    font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.16em;
+    color: var(--vermillion, #B84A2E);
+    margin: 28px 0 14px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .sd-section-eye::after { content: ''; flex: 1; height: 1px; background: var(--rule, #D9D2C5); }
+  .sd-section-eye:first-child { margin-top: 8px; }
 
-  .tabs { display: flex; gap: 0; margin-bottom: 20px; border-bottom: 1px solid var(--border-dark); }
-  .tab { font-family: var(--font-sans); font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 10px 20px; cursor: pointer; color: var(--muted); border-bottom: 2px solid transparent; transition: all 0.2s; }
-  .tab:hover { color: var(--text); }
-  .tab.active { color: var(--text); border-bottom-color: var(--accent); }
+  .dataset {
+    display: flex; flex-direction: column;
+    background: var(--paper, #F4EFE6);
+    border: 1px solid var(--rule, #D9D2C5);
+    border-left: 3px solid var(--vermillion, #B84A2E);
+    border-radius: 4px;
+    padding: 18px 20px 16px;
+    margin-bottom: 24px;
+    text-decoration: none; color: inherit;
+    transition: border-left-color 160ms ease, box-shadow 160ms ease;
+  }
+  .dataset:hover { border-left-color: var(--vermillion-d, #8E331E); box-shadow: 0 4px 14px rgba(27, 20, 14, 0.06); }
+  .dataset-eye {
+    font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--mist, #6E665E); margin-bottom: 5px;
+  }
+  .dataset-name {
+    font-family: 'Fraunces', Georgia, serif; font-weight: 400;
+    font-variation-settings: 'opsz' 60;
+    font-size: 22px; letter-spacing: -0.015em; line-height: 1.15;
+    color: var(--ink, #1B140E); margin-bottom: 8px;
+  }
+  .dataset-meta {
+    font-family: 'IBM Plex Mono', monospace; font-size: 9.5px;
+    color: var(--mist, #6E665E); letter-spacing: 0.05em; text-transform: uppercase;
+    margin-bottom: 14px; line-height: 1.6;
+  }
+  .dataset-actions { display: flex; gap: 6px; flex-wrap: wrap; }
 
-  .loading-msg { font-family: var(--font-sans); font-size: 11px; color: var(--label); text-align: center; padding: 40px; }
+  .dl-btn {
+    font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    padding: 7px 12px;
+    border: 1px solid var(--ink, #1B140E);
+    background: var(--paper, #F4EFE6); color: var(--ink, #1B140E);
+    border-radius: 4px; cursor: pointer;
+    transition: opacity 160ms ease, transform 160ms ease;
+  }
+  .dl-btn.primary { background: var(--ink, #1B140E); color: var(--paper, #F4EFE6); }
+  .dl-btn:hover { transform: translateY(-1px); }
+  .dl-btn.downloading { opacity: 0.5; cursor: wait; }
 
-  .ind-grid { display: grid; grid-template-columns: 1fr; gap: 8px; }
-  .ind-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: box-shadow 0.2s; }
-  .ind-card:hover { box-shadow: var(--card-shadow-hover); }
-  .ind-inner { padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-  .ind-info { flex: 1; min-width: 200px; }
-  .ind-name { font-family: var(--font-sans); font-size: 12px; font-weight: 600; color: var(--text); }
-  .ind-desc { font-family: var(--font-sans); font-size: 10px; color: var(--muted); margin-top: 2px; }
+  .tabs { display: flex; gap: 4px; margin-bottom: 18px; }
+  .tab {
+    font-family: 'Inter', sans-serif; font-size: 9.5px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    padding: 8px 14px; border-radius: 99px;
+    background: var(--paper-deep, #ECE5D6);
+    border: 1px solid var(--rule, #D9D2C5);
+    color: var(--ink-soft, #3D332A); cursor: pointer;
+    transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+  }
+  .tab:hover { background: var(--paper, #F4EFE6); border-color: var(--mist-soft, #9A9089); color: var(--ink, #1B140E); }
+  .tab.active { background: var(--ink, #1B140E); color: var(--paper, #F4EFE6); border-color: var(--ink, #1B140E); }
+
+  .loading-msg {
+    font-family: 'Source Serif 4', Georgia, serif; font-style: italic;
+    font-size: 14px; color: var(--mist, #6E665E);
+    text-align: center; padding: 36px;
+  }
+
+  .ind-grid { display: flex; flex-direction: column; gap: 0; }
+  .ind-card {
+    background: transparent; border: 0;
+    border-bottom: 1px solid var(--rule-soft, #E8E2D5);
+    border-left: 2px solid transparent;
+    transition: border-left-color 160ms ease, background 160ms ease;
+  }
+  .ind-card:hover { border-left-color: var(--vermillion, #B84A2E); background: var(--paper-deep, #ECE5D6); }
+  .ind-inner { padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .ind-info { flex: 1; min-width: 220px; }
+  .ind-name { font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-variation-settings: 'opsz' 60; font-size: 15px; color: var(--ink, #1B140E); line-height: 1.25; }
+  .ind-desc { font-family: 'Source Serif 4', Georgia, serif; font-size: 12.5px; color: var(--ink-soft, #3D332A); line-height: 1.55; margin-top: 4px; }
   .ind-btns { display: flex; gap: 6px; flex-shrink: 0; }
-  .btn-sm { font-family: var(--font-sans); font-size: 9px; font-weight: 600; padding: 6px 12px; border: 1px solid var(--border-dark); background: var(--btn-bg); color: var(--text); cursor: pointer; letter-spacing: 0.04em; text-transform: uppercase; transition: all 0.2s; border-radius: 4px; }
-  .btn-sm:hover { background: var(--text); color: #fff; border-color: var(--text); }
+  .btn-sm {
+    font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    padding: 6px 10px;
+    border: 1px solid var(--ink, #1B140E);
+    background: var(--paper, #F4EFE6); color: var(--ink, #1B140E);
+    cursor: pointer; border-radius: 4px;
+    transition: transform 160ms ease;
+  }
+  .btn-sm:hover { transform: translateY(-1px); }
   .btn-sm.downloading { opacity: 0.5; cursor: wait; }
 
-  .q-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
-  .q-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; transition: box-shadow 0.2s; }
-  .q-card:hover { box-shadow: var(--card-shadow-hover); }
-  .q-label { font-family: var(--font-sans); font-size: 12px; font-weight: 600; color: var(--text); }
-  .q-meta { font-family: var(--font-sans); font-size: 9px; color: var(--label); margin-top: 2px; }
+  .q-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .q-card {
+    background: var(--paper, #F4EFE6);
+    border: 1px solid var(--rule, #D9D2C5);
+    border-left: 3px solid var(--peacock, #1E4960);
+    border-radius: 4px;
+    padding: 14px 16px;
+    transition: border-left-color 160ms ease, box-shadow 160ms ease;
+  }
+  .q-card:hover { border-left-color: var(--peacock-d, #0E2F44); box-shadow: 0 4px 14px rgba(27, 20, 14, 0.06); }
+  .q-label { font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-variation-settings: 'opsz' 60; font-size: 16px; color: var(--ink, #1B140E); letter-spacing: -0.01em; }
+  .q-meta { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--mist, #6E665E); letter-spacing: 0.05em; text-transform: uppercase; margin-top: 4px; }
   .q-btns { display: flex; gap: 6px; margin-top: 10px; }
+
+  @media (max-width: 760px) {
+    .ind-inner { padding: 12px 14px; }
+    .ind-info { min-width: 100%; }
+    .ind-btns { width: 100%; }
+    .q-grid { grid-template-columns: 1fr; }
+  }
 </style>
