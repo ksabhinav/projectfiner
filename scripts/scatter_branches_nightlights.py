@@ -113,8 +113,10 @@ print(f"Wrote {png_path} ({png_path.stat().st_size/1024:.1f} KB)")
 
 
 # ─── Interactive HTML ────────────────────────────────────────────────
+# Inline the data directly so the HTML works when opened via file:// without a server.
 print("Writing interactive HTML...")
 html_path = out_dir / 'branches_vs_nightlights.html'
+inlined_data = json.dumps({'count': len(joined), 'districts': joined}, separators=(',', ':'))
 html = """<!doctype html>
 <html lang="en">
 <head>
@@ -149,7 +151,9 @@ html = """<!doctype html>
   </p>
 
   <script>
-    fetch('branches_vs_nightlights_data.json').then(r => r.json()).then(data => {
+    // Data inlined for file:// compatibility. Same data also at /charts/branches_vs_nightlights_data.json.
+    const data = __DATA_PLACEHOLDER__;
+    {
       document.getElementById('n-districts').textContent = data.count.toLocaleString();
       const districts = data.districts;
       const trace = {
@@ -174,12 +178,12 @@ html = """<!doctype html>
         margin: { l: 70, r: 30, t: 24, b: 60 },
       };
       Plotly.newPlot('chart', [trace], layout, { responsive: true, displayModeBar: 'hover' });
-    });
+    }
   </script>
 </body>
 </html>"""
 with open(html_path, 'w') as f:
-    f.write(html)
+    f.write(html.replace('__DATA_PLACEHOLDER__', inlined_data))
 print(f"Wrote {html_path} ({html_path.stat().st_size/1024:.1f} KB)")
 
 

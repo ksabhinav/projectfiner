@@ -1,0 +1,546 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<PageLayout title="Scatter Explorer · Project FINER">
+  <div class="explorer">
+    <header class="hd">
+      <h1>Scatter Explorer</h1>
+      <p class="lede">Pick any two indicators. Each dot is one Indian district. Hover for details.</p>
+    </header>
+
+    <div class="controls">
+      <div class="axis-block">
+        <div class="axis-label">X axis</div>
+        <select id="x-ind"></select>
+        <select id="x-met"></select>
+      </div>
+
+      <div class="axis-block">
+        <div class="axis-label">Y axis</div>
+        <select id="y-ind"></select>
+        <select id="y-met"></select>
+      </div>
+
+      <div class="axis-block">
+        <div class="axis-label">Quarter</div>
+        <select id="quarter"></select>
+      </div>
+
+      <div class="axis-block">
+        <div class="axis-label">Filter state</div>
+        <select id="state-filter">
+          <option value="">All India</option>
+        </select>
+      </div>
+
+      <div class="axis-block toggle-block">
+        <div class="axis-label">Y scale</div>
+        <div class="toggle-group">
+          <button id="yscale-linear" class="toggle-btn active" data-scale="linear">Linear</button>
+          <button id="yscale-log" class="toggle-btn" data-scale="log">Log</button>
+        </div>
+      </div>
+
+      <div class="axis-block toggle-block">
+        <div class="axis-label">X scale</div>
+        <div class="toggle-group">
+          <button id="xscale-linear" class="toggle-btn active" data-scale="linear">Linear</button>
+          <button id="xscale-log" class="toggle-btn" data-scale="log">Log</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="stats" class="stats"></div>
+    <div id="chart" class="chart"></div>
+    <div id="topbottom" class="topbottom"></div>
+
+    <p class="src-note">
+      Sources are listed on the <a href={`${base}about#sources`}>About page</a>. Note: this page joins district records by (district, state). Some districts may be missing if the two indicators don't share coverage. Pearson <em>r</em> shown is calculated on the (linear or log-transformed) values currently plotted.
+    </p>
+  </div>
+</PageLayout>
+
+<style>
+  .explorer { max-width: 1100px; margin: 0 auto; padding: 16px 24px 48px; }
+  .hd h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 28px; margin: 0 0 6px; color: #1a1410; }
+  .lede { color: #6b6058; font-size: 14px; line-height: 1.55; max-width: 720px; margin: 0; }
+
+  .controls {
+    display: flex; flex-wrap: wrap; gap: 14px;
+    margin: 24px 0 16px;
+    padding: 16px;
+    background: #fdfcfa;
+    border: 1px solid #e8e4dc;
+    border-radius: 8px;
+  }
+  .axis-block { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .axis-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    color: #6b6058;
+  }
+  select {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    padding: 7px 10px;
+    border: 1px solid #d4cfc4;
+    border-radius: 5px;
+    background: #fff;
+    color: #1a1410;
+    min-width: 180px;
+    cursor: pointer;
+  }
+  select:focus { outline: 2px solid #b8603e; outline-offset: -1px; }
+  select:not([disabled]):hover { border-color: #b8603e; }
+
+  .toggle-block { min-width: 120px; }
+  .toggle-group { display: inline-flex; border: 1px solid #d4cfc4; border-radius: 5px; overflow: hidden; }
+  .toggle-btn {
+    background: #fff; border: 0; padding: 7px 12px;
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500;
+    color: #6b6058; cursor: pointer; transition: all 0.15s;
+  }
+  .toggle-btn.active { background: #b8603e; color: #fff; }
+  .toggle-btn:not(.active):hover { background: #f5f0e8; }
+
+  .stats {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    min-height: 28px;
+    margin-bottom: 4px;
+  }
+  .stat-pill {
+    display: inline-block;
+    padding: 4px 11px;
+    background: #f5f0e8;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: #6b4c2a;
+  }
+  .stat-pill.strong { background: #b8603e; color: #fff; }
+
+  .chart {
+    margin: 8px 0 16px;
+    height: 580px;
+    border: 1px solid #e8e4dc;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  .topbottom { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .tbcol h4 {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.05em; color: #6b6058;
+    margin: 0 0 8px;
+  }
+  .tbcol ul { list-style: none; padding: 0; margin: 0; }
+  .tbcol li {
+    display: flex; justify-content: space-between; gap: 12px;
+    padding: 4px 0;
+    font-family: 'Inter', sans-serif; font-size: 12px;
+    border-bottom: 1px dotted #e8e4dc;
+  }
+  .tbcol li .dn { color: #1a1410; }
+  .tbcol li .dn em { color: #888; font-style: normal; font-size: 10px; }
+  .tbcol li .v { color: #b8603e; font-variant-numeric: tabular-nums; }
+
+  .src-note { font-size: 11px; color: #888; line-height: 1.5; margin-top: 8px; }
+  .src-note a { color: #b8603e; text-decoration: none; }
+  .src-note a:hover { text-decoration: underline; }
+
+  @media (max-width: 768px) {
+    .controls { flex-direction: column; }
+    select { width: 100%; }
+    .topbottom { grid-template-columns: 1fr; }
+    .chart { height: 460px; }
+  }
+</style>
+
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js" is:inline></script>
+
+<script is:inline define:vars={{ base }}>
+  // ─── Data definitions ─────────────────────────────────────────
+  // Curated indicator + metric labels with friendly names. Mirrors the
+  // homepage's INDICATORS dict but adds a self-contained version here so
+  // the scatter page works standalone.
+  const INDICATORS = [
+    {
+      key: 'credit_deposit_ratio', label: 'Credit-Deposit Ratio (SLBC)',
+      metrics: [
+        { field: 'overall_cd_ratio', label: 'Overall CD Ratio (%)', unit: '%' },
+        { field: 'total_deposit', label: 'Total Deposits (₹ Lakhs)', unit: '₹L' },
+        { field: 'total_advance', label: 'Total Advances (₹ Lakhs)', unit: '₹L' },
+        { field: 'total_branch', label: 'Total Branches (count)', unit: '' },
+      ],
+    },
+    {
+      key: 'pmjdy', label: 'PM Jan Dhan Yojana (SLBC)',
+      metrics: [
+        { field: 'total_pmjdy_no', label: 'Total PMJDY Accounts', unit: '' },
+        { field: 'no_of_zero_balance_a_c', label: 'Zero-Balance Accounts', unit: '' },
+        { field: 'no_of_aadhaar_seeded', label: 'Aadhaar-Seeded Accounts', unit: '' },
+        { field: 'no_of_rupay_card_issued', label: 'RuPay Cards Issued', unit: '' },
+        { field: 'female_no', label: 'Female Accounts', unit: '' },
+        { field: 'rural_no', label: 'Rural Accounts', unit: '' },
+      ],
+    },
+    {
+      key: 'kcc', label: 'Kisan Credit Card (SLBC)',
+      metrics: [
+        { field: 'total_no_of_kcc', label: 'KCC Cards Issued', unit: '' },
+        { field: 'outstanding_amt', label: 'KCC Outstanding (₹ Lakhs)', unit: '₹L' },
+        { field: 'no_of_rupay_card_issued', label: 'KCC RuPay Cards', unit: '' },
+      ],
+    },
+    {
+      key: 'shg', label: 'Self Help Groups (SLBC)',
+      metrics: [
+        { field: 'savings_linked_no', label: 'Savings-Linked SHGs', unit: '' },
+        { field: 'credit_linked_no', label: 'Credit-Linked SHGs', unit: '' },
+        { field: 'shg_o_s_amt', label: 'SHG Outstanding (₹ Lakhs)', unit: '₹L' },
+      ],
+    },
+    {
+      key: 'branch_network', label: 'Branch Network (SLBC)',
+      metrics: [
+        { field: 'total_branch', label: 'Total Branches', unit: '' },
+        { field: 'branch_rural', label: 'Rural Branches', unit: '' },
+        { field: 'total_atm', label: 'ATMs', unit: '' },
+        { field: 'total_csp', label: 'CSPs (BC outlets)', unit: '' },
+      ],
+    },
+    {
+      key: 'rbi_banking_outlets', label: 'Banking Infrastructure (RBI)',
+      static: true,
+      metrics: [
+        { field: 'rbi_outlets__total', label: 'Total Banking Outlets', unit: '' },
+        { field: 'rbi_outlets__branch', label: 'Bank Branches', unit: '' },
+        { field: 'rbi_outlets__bc', label: 'Business Correspondents (BCs)', unit: '' },
+        { field: 'rbi_outlets__csp', label: 'CSPs', unit: '' },
+        { field: 'rbi_outlets__rural', label: 'Rural Outlets', unit: '' },
+        { field: 'rbi_outlets__semi_urban', label: 'Semi-Urban Outlets', unit: '' },
+        { field: 'rbi_outlets__urban', label: 'Urban Outlets', unit: '' },
+        { field: 'rbi_outlets__metro', label: 'Metro Outlets', unit: '' },
+      ],
+    },
+    {
+      key: 'digital_transactions', label: 'Digital Transactions (PhonePe)',
+      metrics: [
+        { field: 'transaction_count', label: 'PhonePe UPI Transaction Count', unit: '' },
+        { field: 'transaction_amount', label: 'PhonePe UPI Transaction Amount (₹)', unit: '₹' },
+      ],
+    },
+    {
+      key: 'aadhaar_enrollment', label: 'Aadhaar Enrollment (UIDAI)',
+      metrics: [
+        { field: 'total_enrolled', label: 'Total New Enrollments', unit: '' },
+        { field: 'age_18_plus', label: 'Adult Enrollments (18+)', unit: '' },
+        { field: 'age_5_17', label: 'Youth Enrollments (5–17)', unit: '' },
+        { field: 'age_0_5', label: 'Child Enrollments (0–5)', unit: '' },
+      ],
+    },
+    {
+      key: 'nfhs_health_insurance', label: 'Health Insurance (NFHS-5)',
+      metrics: [
+        { field: 'pct', label: 'Households Insured (%)', unit: '%' },
+      ],
+    },
+    {
+      key: 'facebook_rwi', label: 'Wealth Index (Meta RWI)',
+      metrics: [
+        { field: 'rwi_mean', label: 'Mean RWI', unit: '' },
+        { field: 'rwi_max', label: 'Max RWI (richest pocket)', unit: '' },
+        { field: 'rwi_min', label: 'Min RWI (poorest pocket)', unit: '' },
+        { field: 'rwi_spread', label: 'Wealth Spread (max − min)', unit: '' },
+      ],
+    },
+    {
+      key: 'viirs_nightlights', label: 'Nightlights (VIIRS)',
+      metrics: [
+        { field: 'nl_mean', label: 'Mean Nightlight Intensity', unit: '' },
+        { field: 'nl_sum', label: 'Total Light Output', unit: '' },
+        { field: 'nl_max', label: 'Peak Brightness', unit: '' },
+      ],
+    },
+    {
+      key: 'pmgsy_roads', label: 'PMGSY Rural Roads',
+      static: true,
+      metrics: [
+        { field: 'roads_total', label: 'Roads Built (count)', unit: '' },
+        { field: 'km_total', label: 'Roads Built (km)', unit: 'km' },
+        { field: 'cost_total_lakhs', label: 'PMGSY Spend (₹ Lakhs)', unit: '₹L' },
+      ],
+    },
+  ];
+
+  const STATES = [
+    'Andhra Pradesh','Arunachal Pradesh','Assam','Bihar','Chhattisgarh','Gujarat','Haryana',
+    'Himachal Pradesh','Jharkhand','Karnataka','Kerala','Madhya Pradesh','Maharashtra','Manipur',
+    'Meghalaya','Mizoram','Nagaland','Odisha','Punjab','Rajasthan','Sikkim','Tamil Nadu',
+    'Telangana','Tripura','Uttar Pradesh','Uttarakhand','West Bengal',
+    'Delhi','Chandigarh','Puducherry','Andaman & Nicobar','Lakshadweep',
+    'Jammu & Kashmir','Ladakh','Goa',
+  ];
+
+  // ─── State ─────────────────────────────────────────────────────
+  const dataCache = new Map(); // key: `${indicator}/${quarter}` -> JSON
+  let manifest = null;
+
+  // ─── Helpers ───────────────────────────────────────────────────
+  function norm(s) {
+    return (s || '').toUpperCase().replace(/-/g, ' ').replace(/\./g, '').replace(/\s+/g, ' ').trim();
+  }
+  function pearson(xs, ys) {
+    const n = xs.length;
+    if (n < 3) return null;
+    const mx = xs.reduce((a,b)=>a+b,0)/n, my = ys.reduce((a,b)=>a+b,0)/n;
+    let ssxy=0, ssxx=0, ssyy=0;
+    for (let i=0;i<n;i++) {
+      const dx = xs[i]-mx, dy = ys[i]-my;
+      ssxy += dx*dy; ssxx += dx*dx; ssyy += dy*dy;
+    }
+    if (ssxx <= 0 || ssyy <= 0) return null;
+    return ssxy / Math.sqrt(ssxx * ssyy);
+  }
+  function fmtVal(v) {
+    if (v === null || v === undefined || isNaN(v)) return '—';
+    const a = Math.abs(v);
+    if (a >= 1e7) return (v/1e7).toFixed(1) + ' cr';
+    if (a >= 1e5) return (v/1e5).toFixed(1) + ' L';
+    if (a >= 1e3) return (v/1e3).toFixed(0) + 'k';
+    if (a < 0.1) return v.toFixed(3);
+    return v.toFixed(2);
+  }
+
+  // ─── Populate dropdowns ────────────────────────────────────────
+  const xIndSel = document.getElementById('x-ind');
+  const yIndSel = document.getElementById('y-ind');
+  const xMetSel = document.getElementById('x-met');
+  const yMetSel = document.getElementById('y-met');
+  const qSel = document.getElementById('quarter');
+  const stateSel = document.getElementById('state-filter');
+
+  for (const ind of INDICATORS) {
+    const optX = document.createElement('option');
+    optX.value = ind.key; optX.textContent = ind.label; xIndSel.appendChild(optX);
+    const optY = document.createElement('option');
+    optY.value = ind.key; optY.textContent = ind.label; yIndSel.appendChild(optY);
+  }
+  for (const s of STATES) {
+    const o = document.createElement('option');
+    o.value = s; o.textContent = s; stateSel.appendChild(o);
+  }
+
+  // Defaults — show RWI vs UPI count (the "wealth equalizer" story we just discussed)
+  xIndSel.value = 'facebook_rwi';
+  yIndSel.value = 'digital_transactions';
+
+  function refreshMetrics(side) {
+    const indKey = (side === 'x' ? xIndSel : yIndSel).value;
+    const metSel = side === 'x' ? xMetSel : yMetSel;
+    const ind = INDICATORS.find(i => i.key === indKey);
+    metSel.innerHTML = '';
+    for (const m of ind.metrics) {
+      const o = document.createElement('option');
+      o.value = m.field; o.textContent = m.label; metSel.appendChild(o);
+    }
+  }
+  refreshMetrics('x');
+  refreshMetrics('y');
+
+  // ─── Load manifest, populate quarter dropdown ──────────────────
+  async function loadManifest() {
+    const r = await fetch(base + 'indicators/manifest.json');
+    manifest = await r.json();
+    refreshQuarters();
+  }
+
+  function refreshQuarters() {
+    if (!manifest) return;
+    const xQs = manifest.quarters_per_indicator?.[xIndSel.value] || manifest.quarters || [];
+    const yQs = manifest.quarters_per_indicator?.[yIndSel.value] || manifest.quarters || [];
+    const xInd = INDICATORS.find(i => i.key === xIndSel.value);
+    const yInd = INDICATORS.find(i => i.key === yIndSel.value);
+
+    qSel.innerHTML = '';
+    // If either side is static, show "static" only
+    if (xInd?.static || yInd?.static) {
+      const o = document.createElement('option');
+      o.value = '__static__'; o.textContent = 'Latest available (mixed periods)';
+      qSel.appendChild(o); qSel.disabled = true; return;
+    }
+    qSel.disabled = false;
+    // Intersection of quarters available to both indicators
+    const common = (xQs.length && yQs.length)
+      ? xQs.filter(q => yQs.includes(q)).sort().reverse()
+      : (xQs.length ? xQs.slice().reverse() : yQs.slice().reverse());
+    for (const q of common) {
+      const o = document.createElement('option');
+      o.value = q; o.textContent = q; qSel.appendChild(o);
+    }
+    if (!common.length) {
+      const o = document.createElement('option');
+      o.value = ''; o.textContent = '(no overlapping quarters)';
+      qSel.appendChild(o);
+    }
+  }
+
+  // ─── Fetch indicator file ──────────────────────────────────────
+  async function loadIndicatorFile(indKey, quarter) {
+    const ind = INDICATORS.find(i => i.key === indKey);
+    let path;
+    if (ind?.static) {
+      path = `${base}indicators/${indKey}/static.json`;
+    } else {
+      path = `${base}indicators/${indKey}/${quarter}.json`;
+    }
+    const cacheKey = `${indKey}/${quarter}`;
+    if (dataCache.has(cacheKey)) return dataCache.get(cacheKey);
+    try {
+      const r = await fetch(path);
+      if (!r.ok) return null;
+      const j = await r.json();
+      dataCache.set(cacheKey, j);
+      return j;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  // ─── Render scatter ────────────────────────────────────────────
+  let xScale = 'linear', yScale = 'linear';
+
+  async function render() {
+    const xKey = xIndSel.value, yKey = yIndSel.value;
+    const xMet = xMetSel.value, yMet = yMetSel.value;
+    const xInd = INDICATORS.find(i => i.key === xKey);
+    const yInd = INDICATORS.find(i => i.key === yKey);
+    const xMetObj = xInd.metrics.find(m => m.field === xMet);
+    const yMetObj = yInd.metrics.find(m => m.field === yMet);
+
+    let xQ = qSel.value, yQ = qSel.value;
+    if (xInd.static) xQ = 'static';
+    if (yInd.static) yQ = 'static';
+
+    document.getElementById('stats').innerHTML = '<span class="stat-pill">Loading…</span>';
+    const [xData, yData] = await Promise.all([
+      loadIndicatorFile(xKey, xQ),
+      loadIndicatorFile(yKey, yQ),
+    ]);
+
+    if (!xData || !yData) {
+      document.getElementById('stats').innerHTML = '<span class="stat-pill">Data not available for this combination.</span>';
+      Plotly.purge('chart');
+      document.getElementById('topbottom').innerHTML = '';
+      return;
+    }
+
+    // Build lookup keyed by (district, state)
+    const yLookup = new Map();
+    for (const r of yData.districts) {
+      const key = norm(r.district) + '|' + norm(r.state);
+      const v = parseFloat(r[yMet]);
+      if (!isNaN(v)) yLookup.set(key, { v, district: r.district, state: r.state });
+    }
+
+    const stateFilter = stateSel.value;
+    const stateFilterNorm = stateFilter ? norm(stateFilter) : null;
+
+    const points = [];
+    for (const r of xData.districts) {
+      const key = norm(r.district) + '|' + norm(r.state);
+      const xVal = parseFloat(r[xMet]);
+      if (isNaN(xVal)) continue;
+      if (stateFilterNorm && norm(r.state) !== stateFilterNorm) continue;
+      const yEntry = yLookup.get(key);
+      if (!yEntry) continue;
+      // Skip non-positive values when log-scaled
+      if (xScale === 'log' && xVal <= 0) continue;
+      if (yScale === 'log' && yEntry.v <= 0) continue;
+      points.push({
+        district: r.district, state: r.state,
+        x: xVal, y: yEntry.v,
+      });
+    }
+
+    if (points.length < 2) {
+      document.getElementById('stats').innerHTML = '<span class="stat-pill">Not enough data after filters.</span>';
+      Plotly.purge('chart');
+      document.getElementById('topbottom').innerHTML = '';
+      return;
+    }
+
+    // Compute Pearson r on transformed axes
+    const xs = points.map(p => xScale === 'log' ? Math.log(p.x) : p.x);
+    const ys = points.map(p => yScale === 'log' ? Math.log(p.y) : p.y);
+    const r = pearson(xs, ys);
+
+    // Stats pills
+    const pills = [
+      `<span class="stat-pill strong">${points.length} districts</span>`,
+      r !== null ? `<span class="stat-pill">Pearson r = ${r >= 0 ? '+' : ''}${r.toFixed(2)}</span>` : '',
+      `<span class="stat-pill">${xMetObj.label} (${xScale})</span>`,
+      `<span class="stat-pill">${yMetObj.label} (${yScale})</span>`,
+    ].filter(Boolean).join(' ');
+    document.getElementById('stats').innerHTML = pills;
+
+    // Plotly trace
+    const trace = {
+      x: points.map(p => p.x),
+      y: points.map(p => p.y),
+      mode: 'markers', type: 'scatter',
+      marker: { size: 7, color: '#b8603e', opacity: 0.55, line: { width: 0 } },
+      text: points.map(p => `<b>${p.district}</b>, ${p.state}<br>${xMetObj.label}: ${fmtVal(p.x)}<br>${yMetObj.label}: ${fmtVal(p.y)}`),
+      hovertemplate: '%{text}<extra></extra>',
+    };
+    const layout = {
+      xaxis: { title: xMetObj.label, type: xScale, gridcolor: '#eee', zeroline: true, zerolinecolor: '#bbb' },
+      yaxis: { title: yMetObj.label, type: yScale, gridcolor: '#eee', zeroline: true, zerolinecolor: '#bbb' },
+      hovermode: 'closest',
+      plot_bgcolor: '#fdfcfa', paper_bgcolor: '#fff',
+      font: { family: 'Inter, sans-serif', size: 12, color: '#1a1410' },
+      margin: { l: 70, r: 30, t: 20, b: 60 },
+    };
+    Plotly.react('chart', [trace], layout, { responsive: true, displayModeBar: 'hover' });
+
+    // Top / bottom 5
+    const topY = points.slice().sort((a,b) => b.y - a.y).slice(0, 6);
+    const botY = points.slice().sort((a,b) => a.y - b.y).slice(0, 6);
+    const fmtRow = p => `<li><span class="dn">${p.district} <em>${p.state}</em></span><span class="v">${fmtVal(p.y)}</span></li>`;
+    document.getElementById('topbottom').innerHTML = `
+      <div class="tbcol"><h4>Top by ${yMetObj.label}</h4><ul>${topY.map(fmtRow).join('')}</ul></div>
+      <div class="tbcol"><h4>Bottom by ${yMetObj.label}</h4><ul>${botY.map(fmtRow).join('')}</ul></div>
+    `;
+  }
+
+  // ─── Wire events ──────────────────────────────────────────────
+  xIndSel.addEventListener('change', () => { refreshMetrics('x'); refreshQuarters(); render(); });
+  yIndSel.addEventListener('change', () => { refreshMetrics('y'); refreshQuarters(); render(); });
+  xMetSel.addEventListener('change', render);
+  yMetSel.addEventListener('change', render);
+  qSel.addEventListener('change', render);
+  stateSel.addEventListener('change', render);
+
+  // Scale toggles
+  document.querySelectorAll('#yscale-linear, #yscale-log').forEach(btn => {
+    btn.addEventListener('click', () => {
+      yScale = btn.dataset.scale;
+      document.querySelectorAll('#yscale-linear, #yscale-log').forEach(b => b.classList.toggle('active', b === btn));
+      render();
+    });
+  });
+  document.querySelectorAll('#xscale-linear, #xscale-log').forEach(btn => {
+    btn.addEventListener('click', () => {
+      xScale = btn.dataset.scale;
+      document.querySelectorAll('#xscale-linear, #xscale-log').forEach(b => b.classList.toggle('active', b === btn));
+      render();
+    });
+  });
+
+  // ─── Initialize ───────────────────────────────────────────────
+  loadManifest().then(render);
+</script>
+</PageLayout>

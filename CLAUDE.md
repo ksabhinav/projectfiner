@@ -309,7 +309,7 @@ Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) q
 | Gujarat | Dec 2025 | 10 | 33 |
 | Maharashtra | Dec 2025 | 3 | 36 |
 | Haryana | Dec 2025 | 13 | 23 |
-| Telangana | Dec 2024 | 1 | 33 |
+| Telangana | Dec 2025 | 13 | 33 |
 | Uttarakhand | Dec 2023 | 14 | 13 |
 | Andhra Pradesh | Jun 2024 | 20 | 26 |
 
@@ -529,6 +529,47 @@ python3 extract_uttarakhand.py
 # Then: DELETE from slbc_data WHERE source_file='uttarakhand'; re-run import_slbc for UK
 # Then: python3 db/export_indicator_files.py
 ```
+
+## Telangana Data Pipeline
+
+Telangana SLBC data uses an unusual extraction path: the **CQR (Comprehensive Quarterly Return) Annexure PDFs**, not the SLBC agendas. The agenda PDFs reference "Annexure-B" for district-wise CD ratio but don't bundle the annexure (a structural difference from AP's agendas, which include district-wise data inline). The CQR Annexures live on a separate page at `telanganaslbc.com/reports.aspx` and contain the clean district-wise tables.
+
+**Source page**: [telanganaslbc.com/reports.aspx → "Quarterly - Comprehensive Quarterly Return"](https://telanganaslbc.com/reports.aspx) — 40+ CQR Annexure PDFs going back to Dec 2015.
+
+**Currently extracted**: 14 PDFs covering Dec 2022 → Dec 2025 (cqr_2022-12.pdf through cqr_2025-12.pdf). Older CQR PDFs (Dec 2015 → Sep 2022) downloadable from same page if backfill is wanted.
+
+**Extraction script**: `slbc-data/telangana/extract_telangana_cqr.py` (~280 lines). Per CQR PDF, processes 5 district-wise annexures:
+- Annexure-2 (`branch_network`): Rural/Semi-Urban/Urban/Total branch counts per district
+- Annexure-4 (`credit_deposit_ratio`): Branch + Deposits/Advances by area-type + CD ratio
+- Annexure-6 (`priority_sector`): Priority Sector Advances breakdown (Crop Loan, Term Loan, Agri-infra, MSME, Education, Housing, etc.)
+- Annexure-8 (`non_priority_sector`): Non-priority advances
+- Annexure-10 (`acp_achievement`): ACP target vs achievement
+
+PMJDY, KCC, SHG, MUDRA are bank-wise only in CQR (Annexures 17, 18, 19, etc.) — not district-wise. Those would need a separate path (likely the standalone SLBC agendas, which sometimes include them, or RTI for the missing district annexures).
+
+**Rotated-page handling** (Jun 2025 + Sep 2025 PDFs): The CD ratio + Priority Sector pages in those two CQRs are laid out 180° rotated. Cell text is character-reversed (`DABALIDA` = `ADILABAD` reversed) and the table grid is transposed (rows ↔ columns swapped). Extractor detects this via the `_is_reversed_page()` heuristic (looks for "ERUXENNA" / "ANAGNALET CBLS" markers) and applies a transpose + cell-reversal pass. Branch network on these PDFs extracts cleanly; CD ratio on the same PDFs partially recovers but Jun + Sep 2025 still drop CD ratio. The other 11 quarters extract cleanly across all 4 categories.
+
+**District canonicalization**: 33 modern Telangana districts (post-2019). Aliases handle uppercase variants from PDF text plus historical naming changes:
+- `JAGTIAL` / `JAGTIYAL` → `Jagitial`
+- `WARANGAL URBAN` → `Hanumakonda` (post-2021 rename)
+- `WARANGAL RURAL` → `Warangal`
+- `RANGAREDDY` / `R.R.` → `Ranga Reddy`
+- `KUMARAM BHEEM` / `ASIFABAD` → `Kumuram Bheem Asifabad`
+- `MEDCHAL` (alone) → `Medchal Malkajgiri`
+- Plus standard variations on multi-word names
+
+**Coverage**:
+- `branch_network`: 13/13 quarters (Dec 2022 → Dec 2025), all 33 districts
+- `credit_deposit_ratio`: 11/13 quarters (Jun + Sep 2025 missing due to rotation issue)
+- `priority_sector`: 11/13 quarters
+- `non_priority_sector`: 11/13 quarters
+
+Total: 26,280 rows in `slbc_data` (was 99 before this extraction).
+
+**Future improvements**:
+- Fix the rotated-page CD ratio extraction for Jun + Sep 2025
+- Backfill from older CQR PDFs (Dec 2015 → Sep 2022, ~26 more quarters available)
+- Cross-reference SLBC agendas (36th–48th in `slbc-data/telangana/*_agenda.pdf`) for any district-wise PMJDY/KCC/SHG tables not in the CQRs
 
 ## Andhra Pradesh Data Pipeline
 

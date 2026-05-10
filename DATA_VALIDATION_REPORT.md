@@ -1,79 +1,150 @@
 # Project FINER - Data Validation Report
 
-Generated: 2026-03-24 19:55:47
+Generated: 2026-05-10 17:13:06
 
-States processed: 1
-Total issues: **60** (Critical: 58, Warning: 0, Info: 2)
+States processed: 23
+Total issues: **26** (Critical: 5, Warning: 20, Info: 1)
 
 ## Summary by State and Issue Type
 
-| State | 10x_jump | outlier | Total |
-| --- | --- | --- | --- |
-| haryana | 58 | 2 | 60 |
+| State | 10x_jump | missing_district | outlier | period_gap | Total |
+| --- | --- | --- | --- | --- | --- |
+| andhra-pradesh | 5 | 5 | 1 | 1 | 12 |
+| arunachal-pradesh | - | 1 | - | 1 | 2 |
+| assam | - | 2 | - | - | 2 |
+| bihar | - | - | - | - | 0 |
+| chhattisgarh | - | - | - | - | 0 |
+| gujarat | - | - | - | - | 0 |
+| haryana | - | - | - | - | 0 |
+| jharkhand | - | - | - | - | 0 |
+| karnataka | - | - | - | - | 0 |
+| kerala | - | - | - | 1 | 1 |
+| maharashtra | - | - | - | - | 0 |
+| manipur | - | - | - | 1 | 1 |
+| meghalaya | - | - | - | - | 0 |
+| mizoram | - | - | - | 1 | 1 |
+| nagaland | - | 1 | - | 1 | 2 |
+| odisha | - | - | - | 1 | 1 |
+| rajasthan | - | - | - | - | 0 |
+| sikkim | - | - | - | 1 | 1 |
+| tamil-nadu | - | - | - | - | 0 |
+| telangana | - | - | - | - | 0 |
+| tripura | - | - | - | 1 | 1 |
+| uttarakhand | - | - | - | 1 | 1 |
+| west-bengal | - | - | - | 1 | 1 |
 
 ## Detailed Findings
 
 
-### Haryana
+### Andhra Pradesh
 
 
-#### 10X Jump (58 issues)
+#### 10X Jump (5 issues)
 
-- [**CRITICAL**] **AMBALA** | `hsfdc_sponsored` @ Dec 2025: Value dropped to 8.17%: 416.00 (Sep 2025) -> 34.00 (Dec 2025)
-- [**CRITICAL**] **AMBALA** | `hsfdc_sanctioned` @ Jun 2024: Value dropped to 8.70%: 92.00 (Mar 2024) -> 8.00 (Jun 2024)
-- [**CRITICAL**] **BHIWANI** | `hsfdc_sponsored` @ Jun 2024: Value dropped to 8.71%: 1,435.00 (Mar 2024) -> 125.00 (Jun 2024)
-- [**CRITICAL**] **BHIWANI** | `hsfdc_sanctioned` @ Jun 2024: Value dropped to 3.59%: 473.00 (Mar 2024) -> 17.00 (Jun 2024)
-- [**CRITICAL**] **FARIDABAD** | `hsfdc_sponsored` @ Dec 2025: Value dropped to 7.42%: 391.00 (Sep 2025) -> 29.00 (Dec 2025)
-- [**CRITICAL**] **FARIDABAD** | `hsfdc_sanctioned` @ Jun 2024: Value dropped to 8.97%: 78.00 (Mar 2024) -> 7.00 (Jun 2024)
-- [**CRITICAL**] **FATEHABAD** | `hsfdc_sponsored` @ Dec 2025: Value dropped to 7.57%: 846.00 (Sep 2025) -> 64.00 (Dec 2025)
-- [**CRITICAL**] **FATEHABAD** | `hsfdc_sanctioned` @ Jun 2024: Value dropped to 4.38%: 251.00 (Mar 2024) -> 11.00 (Jun 2024)
-- [**CRITICAL**] **GURUGRAM** | `hsfdc_sponsored` @ Dec 2025: Value dropped to 7.34%: 286.00 (Sep 2025) -> 21.00 (Dec 2025)
-- [**CRITICAL**] **GURUGRAM** | `hsfdc_sanctioned` @ Jun 2024: Value dropped to 3.12%: 96.00 (Mar 2024) -> 3.00 (Jun 2024)
-- [**CRITICAL**] **HISAR** | `hsfdc_sponsored` @ Jun 2024: Value dropped to 2.78%: 1,078.00 (Mar 2024) -> 30.00 (Jun 2024)
-- [**CRITICAL**] **HISAR** | `hsfdc_sanctioned` @ Jun 2024: Value dropped to 7.99%: 363.00 (Mar 2024) -> 29.00 (Jun 2024)
-- [**CRITICAL**] **JHAJJAR** | `hsfdc_sponsored` @ Jun 2024: Value dropped to 6.28%: 733.00 (Mar 2024) -> 46.00 (Jun 2024)
-- [**CRITICAL**] **JIND** | `hsfdc_sponsored` @ Dec 2025: Value dropped to 3.45%: 928.00 (Sep 2025) -> 32.00 (Dec 2025)
-- [**CRITICAL**] **JIND** | `hsfdc_sanctioned` @ Jun 2024: Value dropped to 3.98%: 176.00 (Mar 2024) -> 7.00 (Jun 2024)
-- [**CRITICAL**] **KAITHAL** | `hsfdc_sponsored` @ Dec 2025: Value dropped to 4.97%: 785.00 (Sep 2025) -> 39.00 (Dec 2025)
-- [**CRITICAL**] **KURUKSHETRA** | `hsfdc_sanctioned` @ Jun 2024: Value dropped to 8.70%: 115.00 (Mar 2024) -> 10.00 (Jun 2024)
-- [**CRITICAL**] **MAHENDRAGARH** | `hsfdc_sanctioned` @ Jun 2024: Value dropped to 6.25%: 128.00 (Mar 2024) -> 8.00 (Jun 2024)
-- [**CRITICAL**] **NUH** | `hsfdc_sponsored` @ Dec 2025: Value dropped to 6.59%: 167.00 (Sep 2025) -> 11.00 (Dec 2025)
-- [**CRITICAL**] **NUH** | `hsfdc_sanctioned` @ Mar 2025: Value jumped 27.0x: 1.00 (Dec 2024) -> 27.00 (Mar 2025)
-- [**CRITICAL**] **NUH** | `hsfdc_sanctioned` @ Dec 2025: Value dropped to 9.52%: 21.00 (Sep 2025) -> 2.00 (Dec 2025)
-- [**CRITICAL**] **PALWAL** | `hsfdc_sponsored` @ Jun 2024: Value dropped to 0.59%: 339.00 (Mar 2024) -> 2.00 (Jun 2024)
-- [**CRITICAL**] **PALWAL** | `hsfdc_sponsored` @ Sep 2024: Value jumped 20.5x: 2.00 (Jun 2024) -> 41.00 (Sep 2024)
-- [**CRITICAL**] **PALWAL** | `hsfdc_sanctioned` @ Jun 2024: Value dropped to 3.51%: 57.00 (Mar 2024) -> 2.00 (Jun 2024)
-- [**CRITICAL**] **PANCHKULA** | `hsfdc_sanctioned` @ Jun 2024: Value dropped to 2.90%: 69.00 (Mar 2024) -> 2.00 (Jun 2024)
-- [**CRITICAL**] **PANCHKULA** | `hsfdc_sanctioned` @ Jun 2025: Value dropped to 8.33%: 12.00 (Mar 2025) -> 1.00 (Jun 2025)
-- [**CRITICAL**] **PANIPAT** | `hsfdc_sanctioned` @ Jun 2024: Value dropped to 3.85%: 78.00 (Mar 2024) -> 3.00 (Jun 2024)
-- [**CRITICAL**] **REWARI** | `hsfdc_sanctioned` @ Jun 2024: Value dropped to 2.50%: 120.00 (Mar 2024) -> 3.00 (Jun 2024)
-- [**CRITICAL**] **ROHTAK** | `hsfdc_sanctioned` @ Jun 2024: Value dropped to 5.18%: 193.00 (Mar 2024) -> 10.00 (Jun 2024)
-- [**CRITICAL**] **SIRSA** | `hsfdc_sponsored` @ Jun 2024: Value dropped to 2.53%: 831.00 (Mar 2024) -> 21.00 (Jun 2024)
-- [**CRITICAL**] **SIRSA** | `hsfdc_sanctioned` @ Jun 2024: Value dropped to 7.42%: 283.00 (Mar 2024) -> 21.00 (Jun 2024)
-- [**CRITICAL**] **SONIPAT** | `kcc_ah_applications_received` @ Sep 2023: Value jumped 23.9x: 93.00 (Jun 2023) -> 2,224.00 (Sep 2023)
-- [**CRITICAL**] **SONIPAT** | `kcc_ah_applications_accepted` @ Sep 2023: Value jumped 23.7x: 93.00 (Jun 2023) -> 2,200.00 (Sep 2023)
-- [**CRITICAL**] **SONIPAT** | `kcc_ah_applications_sanctioned` @ Sep 2023: Value jumped 23.4x: 93.00 (Jun 2023) -> 2,177.00 (Sep 2023)
-- [**CRITICAL**] **SONIPAT** | `hsfdc_sanctioned` @ Jun 2024: Value dropped to 5.94%: 101.00 (Mar 2024) -> 6.00 (Jun 2024)
-- [**CRITICAL**] **YAMUNANAGAR** | `hsfdc_sponsored` @ Dec 2025: Value dropped to 4.69%: 426.00 (Sep 2025) -> 20.00 (Dec 2025)
-- [**CRITICAL**] **YAMUNANAGAR** | `hsfdc_sanctioned` @ Jun 2024: Value dropped to 7.41%: 243.00 (Mar 2024) -> 18.00 (Jun 2024)
-- [**CRITICAL**] **BHIWANI** | `hsfdc_applications` @ Jun 2024: Value dropped to 8.71%: 1,435.00 (Mar 2024) -> 125.00 (Jun 2024)
-- [**CRITICAL**] **FARIDABAD** | `hsfdc_applications` @ Dec 2025: Value dropped to 8.95%: 391.00 (Sep 2025) -> 35.00 (Dec 2025)
-- [**CRITICAL**] **FATEHABAD** | `shg_savings_linked_amt` @ Dec 2025: Value dropped to 3.58%: 2.10 (Sep 2023) -> 0.08 (Dec 2025)
-- [**CRITICAL**] **GURUGRAM** | `hsfdc_applications` @ Dec 2025: Value dropped to 7.34%: 286.00 (Sep 2025) -> 21.00 (Dec 2025)
-- [**CRITICAL**] **HISAR** | `hsfdc_applications` @ Jun 2024: Value dropped to 2.78%: 1,078.00 (Mar 2024) -> 30.00 (Jun 2024)
-- [**CRITICAL**] **JHAJJAR** | `hsfdc_applications` @ Jun 2024: Value dropped to 6.28%: 733.00 (Mar 2024) -> 46.00 (Jun 2024)
-- [**CRITICAL**] **JHAJJAR** | `shg_savings_linked_amt` @ Dec 2025: Value dropped to 6.10%: 0.77 (Sep 2023) -> 0.05 (Dec 2025)
-- [**CRITICAL**] **JIND** | `hsfdc_applications` @ Dec 2025: Value dropped to 6.14%: 928.00 (Sep 2025) -> 57.00 (Dec 2025)
-- [**CRITICAL**] **KAITHAL** | `hsfdc_applications` @ Dec 2025: Value dropped to 9.55%: 785.00 (Sep 2025) -> 75.00 (Dec 2025)
-- [**CRITICAL**] **KARNAL** | `shg_savings_linked_amt` @ Dec 2025: Value dropped to 8.25%: 5.08 (Sep 2023) -> 0.42 (Dec 2025)
-- [**CRITICAL**] **MAHENDRAGARH** | `shg_savings_linked_amt` @ Dec 2025: Value dropped to 0.00%: 1,144.88 (Sep 2023) -> 0.01 (Dec 2025)
-- [**CRITICAL**] **MAHENDRAGARH** | `shg_credit_linked_amt` @ Dec 2025: Value dropped to 0.00%: 157,100.27 (Sep 2023) -> 6.02 (Dec 2025)
-- [**CRITICAL**] **NUH** | `hsfdc_applications` @ Dec 2025: Value dropped to 6.59%: 167.00 (Sep 2025) -> 11.00 (Dec 2025)
+- [**CRITICAL**] **Visakhapatanam** | `branch_network__branch_urban` @ December 2021: Value dropped to 8.43%: 451.00 (September 2020) -> 38.00 (December 2021)
+- [**CRITICAL**] **East Godavari** | `priority_sector__agr_infra` @ June 2021: Value jumped 10.5x: 22.58 (September 2020) -> 236.33 (June 2021)
+- [**CRITICAL**] **East Godavari** | `priority_sector__export` @ December 2021: Value dropped to 0.03%: 89.12 (June 2021) -> 0.03 (December 2021)
+- [**CRITICAL**] **Spsr Nellore** | `priority_sector__export` @ December 2021: Value dropped to 4.58%: 27.49 (June 2021) -> 1.26 (December 2021)
+- [**CRITICAL**] **Y.s.r.** | `priority_sector__ancillary` @ December 2021: Value dropped to 6.67%: 1,402.80 (June 2021) -> 93.50 (December 2021)
 
-*...and 8 more issues of this type (run with --verbose for full output)*
+#### Missing District (5 issues)
+
+- [WARNING] **Vizianagaram** | `-` @ September 2023: District missing from this period but present in adjacent periods
+- [WARNING] **Visakhapatanam** | `-` @ September 2023: District missing from this period but present in adjacent periods
+- [WARNING] **West Godavari** | `-` @ September 2023: District missing from this period but present in adjacent periods
+- [WARNING] **Y.s.r.** | `-` @ September 2023: District missing from this period but present in adjacent periods
+- [WARNING] **Anantapur** | `-` @ March 2022: District missing from this period but present in adjacent periods
+
+#### Outlier (1 issues)
+
+- [info] **Visakhapatanam** | `credit_deposit_ratio__cd_ratio` @ September 2020: Value 200.67 is 3.2 std devs from mean 127.44 (stddev=23.14)
+
+#### Period Gap (1 issues)
+
+- [WARNING] **ALL** | `-` @ ALL: Missing 5 quarter(s): September 2018, June 2020, December 2020, March 2021, June 2022
+
+### Arunachal Pradesh
 
 
-#### Outlier (2 issues)
+#### Missing District (1 issues)
 
-- [info] **CHARKI DADRI** | `pmjdy_rupay_card` @ Sep 2025: Value 103,847.00 is 3.0 std devs from mean 89,461.73 (stddev=4,754.05)
-- [info] **KAITHAL** | `hsfdc_sponsored` @ Dec 2025: Value 39.00 is 3.0 std devs from mean 653.08 (stddev=201.89)
+- [WARNING] **Kamle** | `-` @ December 2020: District missing from this period but present in adjacent periods
+
+#### Period Gap (1 issues)
+
+- [WARNING] **ALL** | `-` @ ALL: Missing 6 quarter(s): June 2018, September 2018, December 2018, March 2019, June 2019, March 2020
+
+### Assam
+
+
+#### Missing District (2 issues)
+
+- [WARNING] **Dima Hasao** | `-` @ September 2017: District missing from this period but present in adjacent periods
+- [WARNING] **Dima Hasao** | `-` @ December 2017: District missing from this period but present in adjacent periods
+
+### Kerala
+
+
+#### Period Gap (1 issues)
+
+- [WARNING] **ALL** | `-` @ ALL: Missing 1 quarter(s): September 2020
+
+### Manipur
+
+
+#### Period Gap (1 issues)
+
+- [WARNING] **ALL** | `-` @ ALL: Missing 3 quarter(s): March 2016, June 2016, September 2016
+
+### Mizoram
+
+
+#### Period Gap (1 issues)
+
+- [WARNING] **ALL** | `-` @ ALL: Missing 15 quarter(s): June 2015, September 2015, December 2015, March 2016, June 2016, December 2016, March 2018, June 2018, September 2018, December 2018 ...and 5 more
+
+### Nagaland
+
+
+#### Missing District (1 issues)
+
+- [WARNING] **Noklak** | `-` @ September 2021: District missing from this period but present in adjacent periods
+
+#### Period Gap (1 issues)
+
+- [WARNING] **ALL** | `-` @ ALL: Missing 2 quarter(s): December 2019, March 2020
+
+### Odisha
+
+
+#### Period Gap (1 issues)
+
+- [WARNING] **ALL** | `-` @ ALL: Missing 1 quarter(s): June 2024
+
+### Sikkim
+
+
+#### Period Gap (1 issues)
+
+- [WARNING] **ALL** | `-` @ ALL: Missing 3 quarter(s): December 2023, March 2024, December 2024
+
+### Tripura
+
+
+#### Period Gap (1 issues)
+
+- [WARNING] **ALL** | `-` @ ALL: Missing 1 quarter(s): June 2017
+
+### Uttarakhand
+
+
+#### Period Gap (1 issues)
+
+- [WARNING] **ALL** | `-` @ ALL: Missing 6 quarter(s): June 2019, September 2019, December 2019, June 2020, September 2020, December 2021
+
+### West Bengal
+
+
+#### Period Gap (1 issues)
+
+- [WARNING] **ALL** | `-` @ ALL: Missing 2 quarter(s): June 2020, September 2023
