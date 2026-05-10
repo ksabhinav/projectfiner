@@ -623,7 +623,34 @@ Aliases registered for ~30 spelling/naming variants ("Ananthapuramu" / "Cuddapah
 - **digital_transactions: 0 quarters** — but AP shows up on the homepage's digital indicator via PhonePe (pan-India source), not SLBC
 - AP is essentially a **CD-ratio-only state** in our data. 20 quarters CDR vs Assam's 35-quarter cross-indicator coverage. Cross-state comparisons should use CDR.
 
-**Known data fix applied**: AP 2020-09 originally had 7 districts (Krishna, Guntur, Prakasam, Spsr Nellore, Chittoor, Y.s.r., Kurnool) with bogus CD ratios of 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 13.0 — these were the row's S.No. column misaligned as `cd_ratio` in the 213th meeting PDF's multi-table page. Patched post-extraction by deleting those 7 specific (district, period, field) records. The 5 remaining 2020-09 districts (East Godavari, Srikakulam, Visakhapatanam, Vizianagaram, West Godavari) have correct values in the 93-200% range.
+**Known data fixes applied**:
+- AP 2020-09 originally had 7 districts (Krishna, Guntur, Prakasam, Spsr Nellore, Chittoor, Y.s.r., Kurnool) with bogus CD ratios of 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 13.0 — these were the row's S.No. column misaligned as `cd_ratio` in the 213th meeting PDF's multi-table page. Patched post-extraction by deleting those 7 specific (district, period, field) records. The 5 remaining 2020-09 districts (East Godavari, Srikakulam, Visakhapatanam, Vizianagaram, West Godavari) have correct values in the 93-200% range.
+- East Godavari Jun 2021 `priority_sector__agr_infra`: extractor pulled `236.33` (an unrelated row), corrected to `126.20` (the value verified against the 216th meeting PDF page 10). Patch applied to both `slbc-data/andhra-pradesh/*.json` and `public/slbc-data/andhra-pradesh/*.json`.
+
+**Validation flags currently unresolved (real PDF values, not bugs)**:
+- East Godavari `priority_sector__export` Dec 2021 drop to 0.03 (from 89.12 in Jun 2021) — value is correct in source PDF
+- Spsr Nellore + Y.s.r. `priority_sector__export`/`ancillary` Dec 2021 large drops — confirmed correct in source PDFs
+- Visakhapatanam `branch_network__branch_urban` Dec 2021 = 38 (from 451 in Sep 2020) — correct in source; 451 was likely the all-area sum (a different field), 38 the urban-only count.
+
+## Uttar Pradesh Data Pipeline (in progress)
+
+UP is being added as the highest-priority missing-SLBC state (250M population, 75 districts). Data extraction is partially complete; not yet imported into SQLite or exposed to the frontend.
+
+**Source**: [slbcup.com](https://slbcup.com) agenda PDFs. Two flavours of source files:
+- **Text-native PDFs** (Mar 2019 → Jun 2022, 14 quarters): downloaded into `slbc-data/uttar-pradesh/` as `YYYY-MM_booklet.pdf`
+- **Scanned PDFs** (Sep 2022 → Dec 2025, 12 quarters): downloaded into `slbc-data/uttar-pradesh/scanned_for_ocr/`. User OCR'd these manually via PDF Expert; one file is corrupt (TBD which).
+- 2025-Q2 missing — confirmed not on slbcup.com (source omission, not download failure).
+
+**Extractor**: `slbc-data/uttar-pradesh/extract_uttar_pradesh.py` (modelled on the Telangana CQR extractor). 75-district canonicalization includes the 2018 renames (Allahabad→Prayagraj, Faizabad→Ayodhya), Lakhimpur Kheri→Kheri, etc.
+
+**Status**: extractor exists; no `public/slbc-data/uttar-pradesh/` outputs yet. Once extraction completes:
+1. Copy outputs to `public/slbc-data/uttar-pradesh/`
+2. `python3 db/import_slbc.py` (UP-only)
+3. `python3 db/export_indicator_files.py`
+4. Regenerate `_fi_slim.json`
+5. Add row to coverage table above and bump state count to 23
+
+**Parallel slbcup.com pages** (`CDRatioDistrict.aspx`, etc.) are mostly placeholders, so the agenda PDFs are the canonical source.
 
 ## Tripura Data Pipeline
 
@@ -1067,6 +1094,9 @@ No Vercel redeployment needed — the API reads fresh index from R2 on next cold
 42. **R2 custom domain has no directory listing**: `data.projectfiner.com/` returns 404. Only direct file paths work. This is expected R2 behavior.
 43. **LFS + GitHub Pages incompatibility**: Git LFS pointer files are served as-is by GitHub Pages (133 bytes instead of actual data). All large data files must be on Cloudflare R2, not LFS.
 44. **Progressive loading fallback threshold**: When the selected quarter has fewer than 300 districts for an indicator, `loadIndicatorData()` falls back to the nearest earlier quarter with ≥300 districts.
+45. **MapPanel scope default must be `'india'`, not `'ne'`**: `MapPanel.svelte` has two places that initialize the scope toggle — `let scope = $state<'india' | 'ne'>('india')` (line ~9) and `scope = s.scope || 'india'` in the global state load fallback (line ~157). Both must default to `'india'`, otherwise the NE focus toggle visually says "NE" while the map still shows all-India bounds (the toggle and the map fall out of sync because the map fits to `ALL_STATES_BOUNDS` regardless of toggle state on initial load).
+46. **AP source PDFs are only on Wayback Machine**: `slbcap.nic.in` is unreachable. Use `https://web.archive.org/web/20250815*/slbcap.nic.in` with the `id_/` raw-content URL pattern. CDX query for discovery: `https://web.archive.org/cdx/search/cdx?url=slbcap.nic.in&matchType=domain&filter=mimetype:application/pdf`.
+47. **UP scanned-PDF cutoff**: text-native ends at 2022-Q2; 2022-Q3 onwards are scanned. Don't assume mid-2023 is the boundary.
 
 ## Data Quality Pipeline
 
