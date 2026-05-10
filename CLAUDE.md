@@ -574,6 +574,16 @@ Aliases registered for ~30 spelling/naming variants ("Ananthapuramu" / "Cuddapah
 - The 220th meeting (Jun 2022) and several Sep 2018-Mar 2021 quarters are missing — could be filled if better PDF sources surface
 - Pre-2014 era (1990s-2014) requires a different source; SLBC AP minutes/proceedings might have district-wise summaries that the agendas omit
 
+**Indicator coverage caveats** (significant — AP is much narrower than NE states):
+- **PMJDY: 0 quarters** — source agendas don't break out PMJDY by district
+- **KCC: 0 quarters** — same; AP agendas only report state-level KCC totals
+- **branch_network: 3 quarters only** (Sep 2020, Jun 2021, Dec 2021) — most quarters lack absolute branch counts
+- **SHG: 1 quarter only** (Jun 2019)
+- **digital_transactions: 0 quarters** — but AP shows up on the homepage's digital indicator via PhonePe (pan-India source), not SLBC
+- AP is essentially a **CD-ratio-only state** in our data. 20 quarters CDR vs Assam's 35-quarter cross-indicator coverage. Cross-state comparisons should use CDR.
+
+**Known data fix applied**: AP 2020-09 originally had 7 districts (Krishna, Guntur, Prakasam, Spsr Nellore, Chittoor, Y.s.r., Kurnool) with bogus CD ratios of 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 13.0 — these were the row's S.No. column misaligned as `cd_ratio` in the 213th meeting PDF's multi-table page. Patched post-extraction by deleting those 7 specific (district, period, field) records. The 5 remaining 2020-09 districts (East Godavari, Srikakulam, Visakhapatanam, Vizianagaram, West Godavari) have correct values in the 93-200% range.
+
 ## Tripura Data Pipeline
 
 Tripura SLBC data was fully re-extracted from source PDFs hosted at `slbctripura.pnb.bank.in/Back_Paper_Quarterly.asp` (PNB is the SLBC convenor for Tripura). The previous data came from a mixture of NE-portal scraping (sparse coverage of older quarters) and partial PDF extraction.
@@ -596,6 +606,17 @@ Tripura SLBC data was fully re-extracted from source PDFs hosted at `slbctripura
 **Branch caveat (Dec 2025 only)**: The 154th meeting agenda doesn't include absolute branch counts — only BC coverage percentages. Same UK-style caveat. Earlier Tripura quarters (134th-153rd) do have absolute branch_network counts.
 
 **Where the source files live**: `~/Downloads/slbc_tripura_pdfs/` is the original local download cache; for the pipeline they're consolidated into `slbc-data/tripura/` (untracked per `.gitignore` convention).
+
+**Indicator coverage caveats** (TR is sparser than NE-portal states):
+- CD ratio: all 35 quarters ✅
+- branch_network: 14 quarters
+- digital_transactions: 11 quarters
+- PMJDY: 9 quarters
+- KCC: 7 quarters (reported by crop season only — see KCC caveat above)
+- SHG: 7 quarters
+- Compare to Assam: 23-35 quarters per indicator. TR's recent agendas (2024+) have shrunk to mostly CD ratio + some digital coverage; historical PMJDY/KCC/SHG coverage was better in 2018-2022 era.
+
+**Field-name pollution cleanup**: TR's `digital_transactions` originally had **114 distinct field names** (many >150 chars long) because the multi-row table headers got concatenated into snake_case keys. Post-extraction prune dropped fields with names >50 chars, retaining the canonical ones (`coverage_sb_pct`, `digital_coverage_sb_a_c`, `total_operative_sb_a_c`) plus reasonable-length fallbacks. Result: 14 distinct field names in DB. Patch is applied at the timeseries JSON level, not the extractor — running `extract_tripura.py` fresh would re-introduce the pollution (would need to bake the prune into the extractor in a future iteration).
 
 ## West Bengal Data Pipeline
 
