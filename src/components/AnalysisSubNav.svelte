@@ -24,7 +24,8 @@
   const tabs: { id: SubNavId; label: string; href: string }[] = [
     { id: 'rankings', label: 'Rankings', href: `${base}analysis/rankings/` },
     { id: 'trends',   label: 'Trends',   href: `${base}analysis/trends/` },
-    { id: 'insights', label: 'Insights', href: `${base}analysis/insights/` },
+    // Insights tab hidden. Page still reachable at /analysis/insights/.
+    // { id: 'insights', label: 'Insights', href: `${base}analysis/insights/` },
   ];
 </script>
 
