@@ -178,11 +178,18 @@ export const ATLAS_SUBGROUPS: { id: AtlasSubgroup; label: string }[] = [
  */
 export const ATLAS_INDICATORS: AtlasIndicator[] = [
   // ===== Banking ==========================================================
+  // Branch Network (SLBC, quarterly time-series, ~300 districts coverage)
   { key: 'branch_network',                name: 'Branch Network',                units: 'no.',  category: 'banking', subgroup: 'headline',  rampKey: 'vermillion' },
-  { key: 'branch_network_rural',          indicatorKey: 'branch_network',          metricIdx: 1, name: 'Rural Branches',                units: 'no.', category: 'banking', subgroup: 'inclusion', rampKey: 'vermillion' },
-  { key: 'branch_network_atms',           indicatorKey: 'branch_network',          metricIdx: 4, name: 'ATMs',                          units: 'no.', category: 'banking', subgroup: 'inclusion', rampKey: 'vermillion' },
-  { key: 'branch_network_csps',           indicatorKey: 'branch_network',          metricIdx: 5, name: 'Business Correspondents (CSPs)', units: 'no.', category: 'banking', subgroup: 'inclusion', rampKey: 'vermillion' },
-  { key: 'rbi_banking_outlets',           name: 'Banking Infrastructure (RBI)',  units: 'no.',  category: 'banking', subgroup: 'headline',  rampKey: 'vermillion' },
+  // RBI snapshot: comprehensive (700+ districts) but no time-series — ATM not
+  // available here (RBI Banking Outlet Locator covers branches/BC/CSP/offices).
+  // For ATM/CSP time-series, the SLBC branch_network indicator is the source
+  // but coverage is sparser (~55%); kept under the headline rather than a
+  // separate picker pick.
+  { key: 'rbi_banking_outlets',           name: 'Banking Infrastructure (RBI · snapshot)',           units: 'no.',  category: 'banking', subgroup: 'headline',  rampKey: 'vermillion' },
+  { key: 'rbi_branches',                  indicatorKey: 'rbi_banking_outlets', metricIdx: 1, name: 'Bank Branches (RBI · snapshot)',         units: 'no.', category: 'banking', subgroup: 'inclusion', rampKey: 'vermillion' },
+  { key: 'rbi_bc',                        indicatorKey: 'rbi_banking_outlets', metricIdx: 2, name: 'Business Correspondents (RBI · snapshot)', units: 'no.', category: 'banking', subgroup: 'inclusion', rampKey: 'vermillion' },
+  { key: 'rbi_csp',                       indicatorKey: 'rbi_banking_outlets', metricIdx: 3, name: 'CSPs (RBI · snapshot)',                  units: 'no.', category: 'banking', subgroup: 'inclusion', rampKey: 'vermillion' },
+  { key: 'rbi_rural',                     indicatorKey: 'rbi_banking_outlets', metricIdx: 4, name: 'Rural Outlets (RBI · snapshot)',         units: 'no.', category: 'banking', subgroup: 'inclusion', rampKey: 'vermillion' },
   { key: 'aadhaar_authentication',        name: 'Aadhaar Authentication',        units: 'no.',  category: 'banking', subgroup: 'inclusion', rampKey: 'vermillion' },
   { key: 'aadhaar_authentication_used',   indicatorKey: 'aadhaar_authentication',  metricIdx: 2, name: 'Aadhaar Authenticated CASA',    units: 'no.', category: 'banking', subgroup: 'inclusion', rampKey: 'vermillion' },
 

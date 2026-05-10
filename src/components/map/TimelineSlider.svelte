@@ -223,11 +223,12 @@
   }
   .timeline-track {
     position: relative;
-    width: 2px;
-    height: clamp(220px, 60vh, 420px);
-    background: var(--rule, #D9D2C5);
-    border-radius: 1px;
+    width: 6px;
+    height: 220px;
+    background: rgba(200, 192, 184, 0.35);
+    border-radius: 3px;
     cursor: pointer;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
   }
   .timeline-fill {
     position: absolute;
