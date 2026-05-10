@@ -101,45 +101,81 @@ const base = import.meta.env.BASE_URL;
       </div>
     </section>
 
-    <!-- ── Data Sources ── -->
-    <section class="about-section">
-      <div class="section-label">Data Sources</div>
+    <!-- ── Data Sources & Attributions ── -->
+    <section class="about-section" id="sources">
+      <div class="section-label">Data Sources &amp; Attributions</div>
       <div class="prose">
-        <p>Our primary dataset is extracted from <strong>SLBC quarterly booklets</strong> — the PDF reports published by State Level Bankers' Committees after each quarterly meeting. These contain district-level data on banking infrastructure, credit, deposits, government schemes, and more.</p>
+        <p>Project FINER aggregates data from many sources. Several have specific citation requirements; we list them below in the form recommended by the original publishers. If you reuse any of these data, please cite the original sources rather than (or in addition to) Project FINER.</p>
       </div>
-      <div class="source-grid">
-        <div class="source-item">
-          <div class="source-name">SLBC Booklets</div>
-          <div class="source-detail">District-level banking indicators, 48+ categories per quarter</div>
+
+      <h3 class="src-group">Government & Banking</h3>
+      <div class="src-list">
+        <div class="src-card">
+          <div class="src-name">SLBC quarterly data</div>
+          <div class="src-cite">State Level Bankers' Committee (SLBC) quarterly meeting agendas, published by lead-bank convenors per state.</div>
+          <div class="src-meta">Coverage: 22 of 30 SLBC states · Aggregation: District · License: Public information</div>
         </div>
-        <div class="source-item">
-          <div class="source-name">CDSL &amp; NSDL</div>
-          <div class="source-detail">Depository participant service centres across India</div>
+        <div class="src-card">
+          <div class="src-name">RBI Banking Outlet Locator</div>
+          <div class="src-cite">Reserve Bank of India, Database on Indian Economy (DBIE) — Banking Outlet Locator. Comprehensive registry of branches, ATMs, BCs, CSPs, and Digital Banking Units.</div>
+          <div class="src-meta">Coverage: National · Source: <a href="https://dbie.rbi.org.in/" target="_blank" rel="noopener">dbie.rbi.org.in</a></div>
         </div>
-        <div class="source-item">
-          <div class="source-name">AMFI</div>
-          <div class="source-detail">Mutual fund distributor locations (individual &amp; corporate)</div>
+        <div class="src-card">
+          <div class="src-name">UIDAI district enrolment data</div>
+          <div class="src-cite">Unique Identification Authority of India (UIDAI) — district-level Aadhaar enrolment counts by date, age group, and pincode for April–December 2025.</div>
+          <div class="src-meta">Coverage: 985 districts · Source: <a href="https://uidai.gov.in/" target="_blank" rel="noopener">uidai.gov.in</a></div>
         </div>
-        <div class="source-item">
-          <div class="source-name">RBI DBIE</div>
-          <div class="source-detail">Basic Statistical Returns — district-level credit &amp; deposits</div>
+        <div class="src-card">
+          <div class="src-name">DAY-NRLM (SHGs)</div>
+          <div class="src-cite">Deendayal Antyodaya Yojana — National Rural Livelihoods Mission (DAY-NRLM), Ministry of Rural Development, Government of India. District-level SHG data.</div>
+          <div class="src-meta">Coverage: National · Source: <a href="https://nrlm.gov.in/" target="_blank" rel="noopener">nrlm.gov.in</a></div>
         </div>
-        <div class="source-item">
-          <div class="source-name">NPCI</div>
-          <div class="source-detail">NFS district-wise ATM transaction volumes, UPI state statistics</div>
+        <div class="src-card">
+          <div class="src-name">CDSL · NSDL · AMFI</div>
+          <div class="src-cite">Combined district-level counts from CDSL Depository Participant service centres, NSDL DP service centres, and AMFI Mutual Fund Distributor registries.</div>
+          <div class="src-meta">Coverage: National · Sources: <a href="https://www.cdslindia.com/" target="_blank" rel="noopener">cdslindia.com</a> · <a href="https://www.nsdl.co.in/" target="_blank" rel="noopener">nsdl.co.in</a> · <a href="https://www.amfiindia.com/" target="_blank" rel="noopener">amfiindia.com</a></div>
         </div>
-        <div class="source-item">
-          <div class="source-name">NFHS-5</div>
-          <div class="source-detail">District-level health insurance coverage (637 districts); state-level women bank account &amp; mobile phone access</div>
+        <div class="src-card">
+          <div class="src-name">PhonePe Pulse</div>
+          <div class="src-cite">PhonePe Pulse — open data on digital payment transactions through the PhonePe UPI platform.</div>
+          <div class="src-meta">Coverage: National · Source: <a href="https://www.phonepe.com/pulse/" target="_blank" rel="noopener">phonepe.com/pulse</a></div>
         </div>
-        <div class="source-item">
-          <div class="source-name">UIDAI</div>
-          <div class="source-detail">Aadhaar enrollment and saturation data by district</div>
+      </div>
+
+      <h3 class="src-group">Health Statistics</h3>
+      <div class="src-list">
+        <div class="src-card">
+          <div class="src-name">NFHS-5 · Health Insurance Coverage</div>
+          <div class="src-cite">International Institute for Population Sciences (IIPS) and ICF. 2021. <em>National Family Health Survey (NFHS-5), 2019–21: India.</em> Mumbai: IIPS.</div>
+          <div class="src-meta">Coverage: 637 districts surveyed · Producer: IIPS, ICF, Ministry of Health &amp; Family Welfare, GoI · Source: <a href="https://rchiips.org/nfhs/" target="_blank" rel="noopener">rchiips.org/nfhs</a></div>
         </div>
-        <div class="source-item">
-          <div class="source-name">PhonePe Pulse</div>
-          <div class="source-detail">UPI transaction data by state (FY22&ndash;FY24)</div>
+      </div>
+
+      <h3 class="src-group">SHRUG-derived (Development Data Lab)</h3>
+      <div class="prose src-license-note">
+        <p>The following datasets are sourced from the <a href="https://www.devdatalab.org/shrug" target="_blank" rel="noopener">Socioeconomic High-resolution Rural-Urban Geographic Platform (SHRUG)</a> v2.1, maintained by Development Data Lab (DDL). All SHRUG datasets are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a>. Per DDL: <em>"Neither DDL nor the contributors of data to DDL shall be held liable for any improper or incorrect use or application of the data provided."</em></p>
+      </div>
+      <div class="src-list">
+        <div class="src-card">
+          <div class="src-name">Meta Relative Wealth Index 2021</div>
+          <div class="src-cite">Chi, Guanghua, Han Fang, Sourav Chatterjee, and Joshua E. Blumenstock. "Microestimates of wealth for all low- and middle-income countries." <em>Proceedings of the National Academy of Sciences</em> 119, no. 3 (2022): e2113658119.</div>
+          <div class="src-cite">Asher, Sam, Tobias Lunt, Ryu Matsuura, and Paul Novosad. "Development research at high geographic resolution: an analysis of night-lights, firms, and poverty in India using the SHRUG open data platform." <em>The World Bank Economic Review</em> 35, no. 4 (2021): 845–871.</div>
+          <div class="src-meta">Producer: Meta Data for Good · License: CC BY-NC-SA 4.0 · Source: <a href="https://data.humdata.org/dataset/relative-wealth-index" target="_blank" rel="noopener">data.humdata.org/dataset/relative-wealth-index</a></div>
         </div>
+        <div class="src-card">
+          <div class="src-name">VIIRS Annual Nightlights (2012–2023)</div>
+          <div class="src-cite">Asher, Sam, Tobias Lunt, Ryu Matsuura, and Paul Novosad. "Development research at high geographic resolution: an analysis of night-lights, firms, and poverty in India using the SHRUG open data platform." <em>The World Bank Economic Review</em> 35, no. 4 (2021): 845–871.</div>
+          <div class="src-meta">Producer: Colorado School of Mines, Earth Observatory Group (NOAA/CSM) · License: CC BY-NC-SA 4.0 · Source: <a href="https://eogdata.mines.edu/products/vnl/" target="_blank" rel="noopener">eogdata.mines.edu/products/vnl</a></div>
+        </div>
+        <div class="src-card">
+          <div class="src-name">PMGSY Rural Roads (cumulative through 2015)</div>
+          <div class="src-cite">Asher, Sam, and Paul Novosad. "Rural Roads and Local Economic Development." <em>American Economic Review</em> 110, no. 3 (2020): 797–823.</div>
+          <div class="src-meta">Producer: National Rural Roads Development Authority (NRRDA), Ministry of Rural Development · License: CC BY-NC-SA 4.0 · Source: <a href="http://omms.nic.in/" target="_blank" rel="noopener">omms.nic.in</a></div>
+        </div>
+      </div>
+
+      <div class="prose src-disclaimer">
+        <p><strong>Disclaimer.</strong> Neither the data sources, the Development Data Lab, nor Project FINER warrants the accuracy or completeness of this data. Use at your own risk; cite original sources where applicable.</p>
       </div>
     </section>
 
@@ -315,6 +351,83 @@ const base = import.meta.env.BASE_URL;
     font-size: 11px;
     color: var(--muted);
     line-height: 1.5;
+  }
+
+  /* ── Detailed source citations ── */
+  .src-group {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text);
+    margin: 24px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  .src-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .src-card {
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--card);
+  }
+  .src-name {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .src-cite {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    color: var(--text);
+    line-height: 1.55;
+    margin-bottom: 6px;
+  }
+  .src-cite em {
+    font-style: italic;
+  }
+  .src-meta {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dotted var(--border);
+  }
+  .src-meta a {
+    color: var(--terracotta, #b8603e);
+    text-decoration: none;
+  }
+  .src-meta a:hover { text-decoration: underline; }
+  .src-license-note {
+    margin-top: 12px;
+  }
+  .src-license-note p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+  .src-disclaimer {
+    margin-top: 24px;
+    padding: 12px 16px;
+    background: rgba(184, 96, 62, 0.04);
+    border-left: 3px solid var(--terracotta, #b8603e);
+    border-radius: 4px;
+  }
+  .src-disclaimer p {
+    font-size: 12px;
+    color: var(--text);
+    line-height: 1.55;
+    margin: 0;
   }
 
   /* ── Responsive ── */

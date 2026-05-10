@@ -967,7 +967,7 @@ const base = import.meta.env.BASE_URL;
       if (metricLabel.indexOf('(₹') >= 0) unit = '₹';
       else if (metricLabel.indexOf('(%)') >= 0) unit = '%';
       window.__FINER.legendData = { title: metricLabel, breaks: breaks, ramp: ramp, unit: unit };
-      window.dispatchEvent(new CustomEvent('finer:legendUpdate', { detail: { title: metricLabel, breaks: breaks, ramp: ramp, unit: unit } }));
+      window.dispatchEvent(new CustomEvent('finer:legendUpdate', { detail: { title: metricLabel, breaks: breaks, ramp: ramp, unit: unit, indicator: currentIndicator } }));
     }
 
     function updateStats_banking(lookup, allVals) {

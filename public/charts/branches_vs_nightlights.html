@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bank branches vs nighttime light · Project FINER</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap">
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #fdfcfa; color: #1a1410; max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+    h1 { font-family: 'Playfair Display', serif; font-size: 28px; margin: 0 0 8px; }
+    .lede { color: #6b6058; font-size: 14px; line-height: 1.55; max-width: 720px; }
+    .meta { font-size: 11px; color: #999; margin-top: 24px; line-height: 1.55; }
+    .meta a { color: #b8603e; text-decoration: none; }
+    .meta a:hover { text-decoration: underline; }
+    #chart { margin: 24px 0; }
+  </style>
+</head>
+<body>
+  <h1>Bank branches vs nighttime light intensity</h1>
+  <p class="lede">Each dot is an Indian district. Horizontal axis: mean nighttime light radiance from VIIRS satellite imagery in 2023 (a proxy for economic activity / electrification). Vertical axis: number of bank branches in the district per RBI's DBIE database. Both axes log-scale.</p>
+
+  <div id="chart" style="width:100%;height:640px;"></div>
+
+  <p class="meta">
+    n = <span id="n-districts"></span> districts.
+    Sources:
+    <a href="https://dbie.rbi.org.in/" target="_blank">RBI DBIE Banking Outlet Locator</a> ·
+    VIIRS Annual Nightlights via <a href="https://www.devdatalab.org/shrug" target="_blank">SHRUG v2.1</a> (Development Data Lab, CC BY-NC-SA 4.0).
+    Plaintext citations:
+    Asher, Lunt, Matsuura, Novosad — World Bank Economic Review 2021.
+  </p>
+
+  <script>
+    fetch('branches_vs_nightlights_data.json').then(r => r.json()).then(data => {
+      document.getElementById('n-districts').textContent = data.count.toLocaleString();
+      const districts = data.districts;
+      const trace = {
+        x: districts.map(d => d.nl_mean),
+        y: districts.map(d => d.branches),
+        mode: 'markers',
+        type: 'scatter',
+        marker: {
+          size: 7, color: '#b8603e', opacity: 0.55,
+          line: { width: 0 },
+        },
+        text: districts.map(d => `<b>${d.district}</b>, ${d.state}<br>Branches: ${d.branches.toLocaleString()}<br>BCs: ${d.bcs.toLocaleString()}<br>Total outlets: ${d.total_outlets.toLocaleString()}<br>Nightlight (mean): ${d.nl_mean.toFixed(2)}`),
+        hovertemplate: '%{text}<extra></extra>',
+      };
+      const layout = {
+        xaxis: { title: 'Mean nighttime light intensity (VIIRS 2023)', type: 'log', gridcolor: '#eee' },
+        yaxis: { title: 'Bank branches per district (RBI)', type: 'log', gridcolor: '#eee' },
+        hovermode: 'closest',
+        plot_bgcolor: '#fdfcfa',
+        paper_bgcolor: '#fdfcfa',
+        font: { family: 'Inter, sans-serif', size: 12, color: '#1a1410' },
+        margin: { l: 70, r: 30, t: 24, b: 60 },
+      };
+      Plotly.newPlot('chart', [trace], layout, { responsive: true, displayModeBar: 'hover' });
+    });
+  </script>
+</body>
+</html>

@@ -41,6 +41,9 @@
     return fmtNum(val);
   }
 
+  // Compose href that uses Astro's BASE_URL so Sources link works under any base path
+  const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
+
   onMount(() => {
     syncFromGlobal();
 
@@ -109,6 +112,7 @@
         <div class="no-data-swatch"></div>
         <span class="no-data-label">No data</span>
       </div>
+      <a href="{baseUrl}/about#sources" class="legend-source-link" title="View data sources & citations">Sources →</a>
     </div>
   </div>
 {/if}
@@ -207,6 +211,25 @@
     font-size: 9px;
     color: #aaa09a;
     letter-spacing: 0.03em;
+  }
+
+  .legend-source-link {
+    display: inline-block;
+    margin-top: 8px;
+    padding-top: 6px;
+    border-top: 1px solid #e8e5e0;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    color: #b8603e;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color 0.15s;
+  }
+  .legend-source-link:hover {
+    color: #8a4a2e;
   }
 
   /* ── Mobile ── */
