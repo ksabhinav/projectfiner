@@ -1,10 +1,16 @@
 """
-Generate 100 'Surprise Me' facts from FINER data.
+Generate ~100 'Surprise Me' facts from FINER data.
 
-Mines top/bottom percentiles, sharp QoQ moves, and milestone crossings across
-all indicators (SLBC, RBI banking outlets, NFHS, Aadhaar, Facebook RWI, VIIRS,
-PMGSY, PhonePe UPI). Facts go through `_curate()` filter to drop weak ones,
-keep variety, and balance the 100-card deck across geographies + indicators.
+Each fact's scope language matches the actual coverage of its source:
+- SLBC indicators (CDR, PMJDY, KCC, etc.) — covers 22 of India's 30 SLBC states.
+  Use "in our SLBC sample", NOT "in India".
+- RBI banking outlets — full RBI DBIE national dataset. Can say "in India".
+- UIDAI Aadhaar enrollment — 985 districts × Apr–Dec 2025. Can say "in India" with
+  date qualifier.
+- NFHS-5 health insurance — 637 districts surveyed. Can say "in India" with NFHS scope.
+- Meta RWI / VIIRS nightlights / PMGSY — SHRUG datasets covering ~625 districts
+  (pre-2014 boundaries). Use "in our sample" or qualify.
+- PhonePe Pulse — pan-India.
 
 Outputs:
   public/facts/facts.json       — array of {id, category, headline, lede, stat, source, indicator, period, state, district, map_link}
@@ -1245,6 +1251,179 @@ if rwi_path.exists():
         f"RWI gap {abs(r_sorted[0]['rwi_mean'] - r_sorted[-1]['rwi_mean']):.1f}",
         "SHRUG v2.1 — Meta RWI 2021",
         'facebook_rwi', '2021-12')
+
+
+# ============================================================
+# CURATION PASS — fix scope claims, cap repetition, tighten sources
+# ============================================================
+print("\nCurating: scope, repetition, sources...")
+
+# --- Scope replacements per indicator ---
+# Default: every SLBC fact gets "in our SLBC sample" instead of "in India".
+SLBC_INDICATORS = {'credit_deposit_ratio', 'pmjdy', 'kcc', 'shg', 'branch_network'}
+# Aadhaar/NFHS/RBI cover most of India; PhonePe, capital_markets are pan-India
+NATIONAL_INDICATORS = {'rbi_banking_outlets', 'aadhaar_enrollment', 'capital_markets_access',
+                       'digital_transactions'}
+# SHRUG-derived (with attribution requirement)
+SHRUG_INDICATORS = {'facebook_rwi', 'viirs_nightlights', 'pmgsy_roads'}
+# NFHS (with attribution requirement)
+NFHS_INDICATORS = {'nfhs_health_insurance'}
+
+SCOPE_PHRASE = {
+    'credit_deposit_ratio': 'in our SLBC data',
+    'pmjdy': 'in our SLBC data',
+    'kcc': 'in our SLBC data',
+    'shg': 'in our SLBC data',
+    'branch_network': 'in our SLBC data',
+    # SHRUG-derived: ~625 districts (pre-2014 boundaries)
+    'facebook_rwi': 'in the 625-district SHRUG sample',
+    'viirs_nightlights': 'in the 625-district SHRUG sample',
+    'pmgsy_roads': 'in the SHRUG-PMGSY sample',
+    # NFHS-5: 637 districts surveyed
+    'nfhs_health_insurance': 'across the 637 districts surveyed by NFHS-5',
+    # UIDAI: 985 districts × Apr-Dec 2025
+    'aadhaar_enrollment': 'among the 985 districts in the UIDAI dataset',
+    # RBI: full national dataset
+    'rbi_banking_outlets': 'in India',
+    # PhonePe: pan-India
+    'digital_transactions': 'in India',
+    'capital_markets_access': 'in India',
+}
+
+
+def fix_scope(text, indicator):
+    """Replace overclaim phrases with indicator-appropriate scope.
+
+    Headlines and ledes shouldn't claim 'India's most X' if our coverage is partial.
+    For SLBC indicators (22 of 30 states), rephrase to scope-honest claims.
+    For RBI/PhonePe/CapMkts (truly national), keep 'India' framing.
+    """
+    scope = SCOPE_PHRASE.get(indicator, 'in our data')
+    is_partial_coverage = indicator in SLBC_INDICATORS or indicator in SHRUG_INDICATORS
+
+    # First — fix headline-style overclaims ("India's most X")
+    if is_partial_coverage:
+        # Generic "India's <SUPERLATIVE>" → "Our sample's <SUPERLATIVE>"
+        text = re.sub(r"\bIndia's (most|biggest|largest|smallest|heaviest|busiest|wealthiest|quietest|brightest|darkest|highest|lowest|fastest|slowest|deepest|widest|toughest|richest|poorest|tallest|shortest|loudest)\b",
+                      r"Our sample's \1", text)
+        text = re.sub(r"\bIndia's only ", "Among our data, the only ", text)
+        # "among India's lowest/highest/etc."
+        text = re.sub(r"\bamong India's (most|biggest|largest|smallest|heaviest|highest|lowest|fastest|slowest)\b",
+                      r"among the \1", text)
+        # "the largest of any X in India" →  "the largest of any X in our SLBC data"
+        # (handled by the in-India replacement below)
+
+    replacements = [
+        (r'\bin India\b', scope),
+        (r'\bin the country\b', scope),
+        (r'\bin any Indian district\b', f'of any district {scope}'),
+        (r'\bin any major district\b', f'of any major district {scope}'),
+        (r'\bin any single district\b', f'of any single district {scope}'),
+        (r'\bof any district\b', f'of any district {scope}'),
+        (r'\bof any single district\b', f'of any single district {scope}'),
+        (r'\bof any major state\b', f'of any state {scope}'),
+        (r'\bof any state\b', f'of any state {scope}'),
+        (r'\bof any major district\b', f'of any major district {scope}'),
+        # Skip "any other district of the state" — that's a within-state claim, not an
+        # India-wide one, so it doesn't need scope qualifying.
+        (r'\bany other district\b(?!\s+of\b)', f'any other district {scope}'),
+        (r'\bany other state\b(?!\s+of\b)', f'any other state {scope}'),
+        (r'\bof any Indian district\b', f'of any district {scope}'),
+        (r'\ball Indian districts\b', f'all districts {scope}'),
+        (r'\bnationally\b', scope),
+    ]
+    for pattern, repl in replacements:
+        text = re.sub(pattern, repl, text)
+    # Strip duplicated scope phrases
+    text = re.sub(rf'({re.escape(scope)})[\s,—.]*({re.escape(scope)})', r'\1', text)
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+
+# --- Source line attribution standardization ---
+# Per-indicator source citations.
+# SHRUG datasets (CC BY-NC-SA 4.0) require:
+#   1. The core SHRUG citation: Asher, Lunt, Matsuura, Novosad 2021 (World Bank Econ Review)
+#   2. Module-specific citations (Chi et al. 2022 for RWI; Asher & Novosad 2020 for PMGSY)
+#   3. Attribution to Development Data Lab + license
+# NFHS data: IIPS / ICF / Ministry of Health & Family Welfare
+SOURCE_BY_INDICATOR = {
+    'credit_deposit_ratio': 'SLBC quarterly data',
+    'pmjdy': 'SLBC quarterly data',
+    'kcc': 'SLBC quarterly data',
+    'shg': 'SLBC quarterly data',
+    'branch_network': 'SLBC quarterly data',
+    'rbi_banking_outlets': 'RBI DBIE Banking Outlet Locator',
+    'nfhs_health_insurance': 'NFHS-5 (2019–21), International Institute for Population Sciences (IIPS) / ICF / Ministry of Health & Family Welfare, GoI',
+    'aadhaar_enrollment': 'UIDAI district enrolment data, Apr–Dec 2025',
+    # SHRUG citations match docs.devdatalab.org plaintext format
+    'facebook_rwi': 'Chi et al., PNAS 2022 (Microestimates of wealth) + Asher et al., World Bank Economic Review 2021. SHRUG v2.1, Development Data Lab. CC BY-NC-SA 4.0.',
+    'viirs_nightlights': 'NOAA/Colorado School of Mines VIIRS via Asher et al., World Bank Economic Review 2021. SHRUG v2.1, Development Data Lab. CC BY-NC-SA 4.0.',
+    'pmgsy_roads': 'Asher & Novosad, American Economic Review 2020 (Rural Roads and Local Economic Development). NRRDA / Ministry of Rural Development. SHRUG v2.1, Development Data Lab. CC BY-NC-SA 4.0.',
+    'nrlm_shg': 'DAY-NRLM, Ministry of Rural Development, Government of India',
+    'digital_transactions': 'PhonePe Pulse',
+    'capital_markets_access': 'CDSL + NSDL + AMFI registries',
+}
+
+
+def fix_source(source, indicator, period=None):
+    """Use a clean canonical source line, append period if relevant."""
+    base = SOURCE_BY_INDICATOR.get(indicator, source)
+    if period and indicator in SLBC_INDICATORS:
+        base = f"{base}, {period}"
+    # Aadhaar source already says "Apr–Dec 2025"; don't append period
+    return base
+
+
+# --- Strip verbose explanatory phrases from ledes ---
+LEDE_STRIP_PATTERNS = [
+    r'\s*Each is mapped to GPS coordinates in RBI\'s DBIE database\.',
+    r'\s*Crops include cotton, paddy, sugarcane\.',
+    r'\s*Each is a licensed advisor/seller of mutual fund products\.',
+    r'\s*Each card provides revolving short-term credit at subsidized rates for crop production and allied activities\.',
+    r'\s*\(calibrated against DHS surveys\)',
+    r'\s*— branches, BCs, ATMs, CSPs and DBUs combined\.',
+    r' Each one geo-tagged\.',
+    r' A signature of remoteness and low population density\.',
+    r' Reflects a combination of low population density, mountainous terrain, and limited industrial activity\.',
+]
+
+
+def strip_lede(lede):
+    for pat in LEDE_STRIP_PATTERNS:
+        lede = re.sub(pat, '', lede)
+    # Collapse double spaces
+    lede = re.sub(r'\s+', ' ', lede).strip()
+    return lede
+
+
+# --- Apply curation ---
+for f in facts:
+    f['headline'] = fix_scope(f['headline'], f['indicator'])
+    f['lede'] = strip_lede(fix_scope(f['lede'], f['indicator']))
+    f['source'] = fix_source(f['source'], f['indicator'], f.get('period'))
+
+
+# --- Cap repetitive categories ---
+# Limit state_leader 'heaviest-borrowing' to 8 (was 25)
+heaviest = [f for f in facts if f['category'] == 'state_leader' and 'heaviest' in f['headline'].lower()]
+heaviest_to_keep = set(f['id'] for f in heaviest[:8])
+heaviest_to_drop = set(f['id'] for f in heaviest[8:])
+# Limit state_leader 'low' to 4
+state_low_leaders = [f for f in facts
+                     if f['category'] == 'state_leader' and ('starved' in f['headline'].lower() or 'most credit-starved' in f['headline'].lower())]
+slow_to_drop = set(f['id'] for f in state_low_leaders[4:])
+# Limit extreme_high CDR (heaviest borrowers) to top 2
+cdr_eh = [f for f in facts if f['category'] == 'extreme_high' and f['indicator'] == 'credit_deposit_ratio']
+cdr_eh_to_drop = set(f['id'] for f in cdr_eh[2:5])
+
+drop_ids = heaviest_to_drop | slow_to_drop | cdr_eh_to_drop
+print(f"  Dropping {len(drop_ids)} repetitive facts")
+facts = [f for f in facts if f['id'] not in drop_ids]
+
+# Renumber
+for i, f in enumerate(facts):
+    f['id'] = f'{i+1:03d}'
 
 
 # ============================================================

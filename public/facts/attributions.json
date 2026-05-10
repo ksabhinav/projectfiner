@@ -1,0 +1,141 @@
+{
+  "$comment": "Canonical citations per indicator, verified from devdatalab.org/shrug docs and primary source pages. Format mirrors the SHRUG documentation page structure: plaintext citation / BibTeX / About / Source URL / Producer / Geographic Coverage / Aggregations / License / Notes.",
+  "$last_updated": "2026-05-10",
+
+  "_global_disclaimer": "Neither the data sources, the Development Data Lab, nor Project FINER warrants the accuracy or completeness of this data. Use at your own risk. Cite original sources where applicable.",
+
+  "credit_deposit_ratio": {
+    "label": "SLBC quarterly data",
+    "plaintext": "State Level Bankers' Committee (SLBC) quarterly meeting agendas and data sheets, published by lead-bank convenors per state.",
+    "geographic_coverage": "22 of 30 SLBC states (covered in FINER as of May 2026): all 8 NE states, Bihar, West Bengal, Jharkhand, Odisha, Chhattisgarh, Kerala, Karnataka, Tamil Nadu, Rajasthan, Gujarat, Maharashtra, Haryana, Telangana, Uttarakhand, Andhra Pradesh.",
+    "aggregations": "District (per quarter)",
+    "producer": "Lead-bank convenors (state SLBCs)",
+    "license": "Public information published by SLBC convenor banks",
+    "source_urls": "Per state — see CLAUDE.md > Main Data Sections > SLBC sources"
+  },
+  "pmjdy": { "shares_with": "credit_deposit_ratio" },
+  "kcc": { "shares_with": "credit_deposit_ratio" },
+  "shg": { "shares_with": "credit_deposit_ratio" },
+  "branch_network": { "shares_with": "credit_deposit_ratio" },
+  "social_security": { "shares_with": "credit_deposit_ratio" },
+  "pmegp": { "shares_with": "credit_deposit_ratio" },
+  "housing_pmay": { "shares_with": "credit_deposit_ratio" },
+  "sui": { "shares_with": "credit_deposit_ratio" },
+  "sc_st_finance": { "shares_with": "credit_deposit_ratio" },
+  "women_finance": { "shares_with": "credit_deposit_ratio" },
+  "education_loan": { "shares_with": "credit_deposit_ratio" },
+  "pmmy_mudra_disbursement": { "shares_with": "credit_deposit_ratio" },
+  "aadhaar_authentication": { "shares_with": "credit_deposit_ratio" },
+
+  "rbi_banking_outlets": {
+    "label": "RBI Banking Outlet Locator",
+    "plaintext": "Reserve Bank of India, Database on Indian Economy (DBIE) — Banking Outlet Locator. Comprehensive registry of branches, ATMs, Business Correspondents, CSPs, and Digital Banking Units across India.",
+    "geographic_coverage": "National (all India)",
+    "aggregations": "Outlet-level (geo-tagged), aggregated to district",
+    "producer": "Reserve Bank of India",
+    "license": "Public information",
+    "source_url": "https://dbie.rbi.org.in/"
+  },
+
+  "nfhs_health_insurance": {
+    "label": "NFHS-5 (2019–21) — Health Insurance Coverage",
+    "plaintext": "International Institute for Population Sciences (IIPS) and ICF. 2021. National Family Health Survey (NFHS-5), 2019–21: India. Mumbai: IIPS.",
+    "indicator_definition": "Households with any usual member covered under a health insurance or health-financing scheme.",
+    "geographic_coverage": "637 districts surveyed",
+    "aggregations": "District",
+    "producer": "International Institute for Population Sciences (IIPS); ICF; Ministry of Health & Family Welfare, Government of India",
+    "license": "Public health-statistics data",
+    "source_url": "https://rchiips.org/nfhs/"
+  },
+
+  "aadhaar_enrollment": {
+    "label": "UIDAI district enrolment data",
+    "plaintext": "Unique Identification Authority of India (UIDAI). District-level Aadhaar enrolment counts by date, age group, and pincode for April–December 2025.",
+    "geographic_coverage": "985 districts",
+    "aggregations": "District (per day, aggregated to quarter)",
+    "producer": "Unique Identification Authority of India (UIDAI)",
+    "license": "Public information published by UIDAI",
+    "source_url": "https://uidai.gov.in/",
+    "notes": "Source files: aadhaar_enrolment_2025_combined.csv, UIDAI_enrollment_detailed.csv, district_wise_aadhaar_registration.csv (downloaded March 2026). Original URL not retained — citation is best-effort."
+  },
+
+  "nrlm_shg": {
+    "label": "DAY-NRLM Self-Help Groups",
+    "plaintext": "Deendayal Antyodaya Yojana — National Rural Livelihoods Mission (DAY-NRLM), Ministry of Rural Development, Government of India. District-level data on Self-Help Groups (SHGs) under the NRLM portal.",
+    "indicator_definition": "Number of women's Self-Help Groups formed and credit-linked under NRLM.",
+    "geographic_coverage": "National",
+    "aggregations": "District (cumulative + per-period)",
+    "producer": "Ministry of Rural Development, Government of India",
+    "license": "Public information published by NRLM",
+    "source_url": "https://nrlm.gov.in/"
+  },
+
+  "facebook_rwi": {
+    "label": "Meta Relative Wealth Index 2021",
+    "plaintext_module": "Chi, Guanghua, Han Fang, Sourav Chatterjee, and Joshua E. Blumenstock. \"Microestimates of wealth for all low- and middle-income countries.\" Proceedings of the National Academy of Sciences 119, no. 3 (2022): e2113658119.",
+    "plaintext_shrug": "Asher, Sam, Tobias Lunt, Ryu Matsuura, and Paul Novosad. \"Development research at high geographic resolution: an analysis of night-lights, firms, and poverty in India using the SHRUG open data platform.\" The World Bank Economic Review 35, no. 4 (2021): 845–871.",
+    "about": "Meta/Facebook's Relative Wealth Index (RWI) predicted for every populated 2.4-km grid cell in India. Supervised machine-learning trained on Demographic and Health Surveys ground truth, satellite imagery, mobile-network data, topographic maps, and aggregated/deidentified Facebook connectivity data. Released 2021 (DHS round 2015–16).",
+    "geographic_coverage": "National (625 districts in our extracted sample)",
+    "aggregations": "shrid, subdistrict, district, constituency",
+    "producer": "Meta Data for Good (Chi, Fang, Chatterjee, Blumenstock); SHRUG aggregation by Development Data Lab",
+    "license": "CC BY-NC-SA 4.0",
+    "license_text": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International. Non-commercial use only. Attribution required. Derivatives must share-alike under same license.",
+    "source_url": "https://data.humdata.org/dataset/relative-wealth-index",
+    "shrug_url": "https://www.devdatalab.org/shrug",
+    "shrug_release": "v2.1 (December 2024)"
+  },
+
+  "viirs_nightlights": {
+    "label": "VIIRS Annual Nightlights",
+    "plaintext_module": "Asher, Sam, Tobias Lunt, Ryu Matsuura, and Paul Novosad. \"Development research at high geographic resolution: an analysis of night-lights, firms, and poverty in India using the SHRUG open data platform.\" The World Bank Economic Review 35, no. 4 (2021): 845–871.",
+    "about": "Gridded night lights data, aggregated and calibrated for consistent time-series estimation. Annual VIIRS composites available 2012–2023. Two variants: 'average-masked' (smoother) and 'median-masked' (more robust to fires/outliers). FINER uses median-masked.",
+    "geographic_coverage": "National (625 districts in our extracted sample, 2012–2023)",
+    "aggregations": "shrid, subdistrict, district, constituency",
+    "producer": "Colorado School of Mines, Earth Observatory Group (NOAA/CSM); SHRUG aggregation by Development Data Lab",
+    "license": "CC BY-NC-SA 4.0",
+    "source_url": "https://eogdata.mines.edu/products/vnl/",
+    "shrug_url": "https://www.devdatalab.org/shrug",
+    "shrug_release": "v2.1 (December 2024)"
+  },
+
+  "pmgsy_roads": {
+    "label": "PMGSY Rural Roads (cumulative through 2015)",
+    "plaintext_module": "Asher, Sam, and Paul Novosad. \"Rural Roads and Local Economic Development.\" American Economic Review 110, no. 3 (2020): 797–823.",
+    "plaintext_shrug": "Asher, Sam, Tobias Lunt, Ryu Matsuura, and Paul Novosad. \"Development research at high geographic resolution: an analysis of night-lights, firms, and poverty in India using the SHRUG open data platform.\" The World Bank Economic Review 35, no. 4 (2021): 845–871.",
+    "about": "Administrative data from the Pradhan Mantri Gram Sadak Yojana (PMGSY) rural road construction program, launched by the Government of India to provide connectivity to unconnected habitations as part of a poverty reduction strategy. Habitations are smaller than villages; for each village, road variables describe the earliest new and upgraded roads completed within a shrid.",
+    "geographic_coverage": "National (542 districts with completed roads by 2015)",
+    "aggregations": "shrid, subdistrict, district, constituency",
+    "producer": "National Rural Roads Development Authority (NRRDA), Ministry of Rural Development; SHRUG aggregation by Development Data Lab",
+    "license": "CC BY-NC-SA 4.0",
+    "source_url": "http://omms.nic.in/",
+    "shrug_url": "https://www.devdatalab.org/shrug",
+    "shrug_release": "v2.1 (December 2024)",
+    "notes": "Cumulative through 2015. PMGSY continues; later years would require fresh extraction from omms.nic.in."
+  },
+
+  "_shrug_disclaimer": "SHRUG datasets are licensed under CC BY-NC-SA 4.0. Quoting Development Data Lab: 'Neither DDL nor the contributors of data to DDL shall be held liable for any improper or incorrect use or application of the data provided.' Visit https://www.devdatalab.org/shrug for the latest version.",
+
+  "digital_transactions": {
+    "label": "PhonePe Pulse",
+    "plaintext": "PhonePe Pulse — open data on digital payment transactions through the PhonePe UPI platform. Per-district aggregates for transaction count and amount.",
+    "geographic_coverage": "National",
+    "aggregations": "District (per quarter)",
+    "producer": "PhonePe Private Limited",
+    "license": "Open data under PhonePe Pulse terms",
+    "source_url": "https://www.phonepe.com/pulse/"
+  },
+
+  "capital_markets_access": {
+    "label": "CDSL + NSDL + AMFI registries",
+    "plaintext": "Combined district-level counts from CDSL Depository Participant service centres, NSDL DP service centres, and AMFI Mutual Fund Distributor registries.",
+    "geographic_coverage": "National",
+    "aggregations": "District",
+    "producer": "CDSL (Central Depository Services Limited), NSDL (National Securities Depository Limited), AMFI (Association of Mutual Funds in India)",
+    "license": "Public registry data",
+    "source_urls": [
+      "https://www.cdslindia.com/",
+      "https://www.nsdl.co.in/",
+      "https://www.amfiindia.com/"
+    ]
+  }
+}

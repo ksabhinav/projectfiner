@@ -67,6 +67,7 @@
     { value: 'kcc', label: 'Kisan Credit Card' },
     { value: 'shg', label: 'Self Help Groups' },
     { value: 'aadhaar_authentication', label: 'Aadhaar Authentication' },
+    { value: 'aadhaar_enrollment', label: 'Aadhaar Enrollment (UIDAI)' },
     { value: 'social_security', label: 'Social Security (PMSBY/PMJJBY/APY)' },
     { value: 'pmegp', label: 'PM Employment Generation' },
     { value: 'housing_pmay', label: 'Housing / PMAY' },
@@ -79,6 +80,10 @@
     { value: 'nrlm_shg', label: 'Self-Help Groups (NRLM)' },
     { value: 'nfhs_health_insurance', label: 'Health Insurance (NFHS-5)' },
     { value: 'capital_markets_access', label: 'Capital Markets Access' },
+    // SHRUG-derived indicators (Development Data Lab, CC BY-NC-SA 4.0)
+    { value: 'facebook_rwi', label: 'Wealth Index (Meta RWI)' },
+    { value: 'viirs_nightlights', label: 'Nightlights (VIIRS)' },
+    { value: 'pmgsy_roads', label: 'PMGSY Rural Roads' },
   ];
 
   // ── Handlers ──
