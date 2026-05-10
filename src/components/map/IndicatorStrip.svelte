@@ -375,9 +375,25 @@
   }
 
   @media (max-width: 760px) {
+    .strip { height: 50px; }
     .search { display: none; }
-    .cell { min-width: auto !important; padding: 7px 12px; }
-    .cell .v { font-size: 13px; }
-    .simple-panel.when, .simple-panel.where { left: 8px; right: 8px; min-width: 0; }
+    .spacer { display: none; }
+    /* Two cells (What, Where) split the strip evenly */
+    .cell {
+      flex: 1 1 0;
+      min-width: 0 !important;
+      padding: 6px 12px;
+      overflow: hidden;
+    }
+    .cell .k { font-size: 8px; margin-bottom: 2px; }
+    .cell .v {
+      font-size: 13px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .cell .v::after { font-size: 11px; }
+    /* Where dropdown follows the cell, full-width */
+    .simple-panel.where { left: 8px; right: 8px; min-width: 0; }
   }
 </style>

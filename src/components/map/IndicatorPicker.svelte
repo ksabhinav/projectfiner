@@ -161,4 +161,22 @@
     from { opacity: 0; transform: translateY(-6px); }
     to   { opacity: 1; transform: translateY(0); }
   }
+
+  /* Mobile: full-width panel with safe insets, drop the speech-bubble caret
+     since the strip cells span the full width and the caret position is
+     ambiguous. Limit list height so the panel doesn't eat the whole map. */
+  @media (max-width: 760px) {
+    .picker-panel {
+      left: 8px;
+      right: 8px;
+      width: auto;
+      max-width: none;
+    }
+    .picker-panel::before { display: none; }
+    .pills { padding: 8px 10px 6px; }
+    .pill { padding: 4px 8px; font-size: 8.5px; }
+    .list { max-height: 60vh; }
+    .item { padding: 8px 14px 8px 12px; }
+    .item .name { font-size: 13px; }
+  }
 </style>
