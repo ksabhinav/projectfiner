@@ -120,7 +120,7 @@ export const NE_CODES = ['AS', 'ML', 'MN', 'MZ', 'NL', 'TR', 'AR', 'SK'];
    ========================================================================== */
 
 export type AtlasCategory =
-  | 'banking' | 'credit' | 'schemes' | 'digital' | 'capital-markets' | 'demographics';
+  | 'banking' | 'credit' | 'schemes' | 'digital' | 'capital-markets' | 'demographics' | 'insurance';
 
 export type AtlasSubgroup = 'headline' | 'inclusion' | 'scheme';
 
@@ -157,6 +157,7 @@ export const ATLAS_CATEGORIES: { id: AtlasCategory; label: string }[] = [
   { id: 'credit',          label: 'Credit' },
   { id: 'schemes',         label: 'Schemes' },
   { id: 'digital',         label: 'Payments' },
+  { id: 'insurance',       label: 'Insurance' },
   { id: 'capital-markets', label: 'Capital markets' },
   { id: 'demographics',    label: 'Demographics' },
 ];
@@ -247,8 +248,8 @@ export const ATLAS_INDICATORS: AtlasIndicator[] = [
   { key: 'pmjdy_rural',                   indicatorKey: 'pmjdy',                   metricIdx: 5, name: 'PMJDY Rural Accounts',          units: 'no.', category: 'schemes', subgroup: 'headline',  rampKey: 'vermillion' },
 
   { key: 'social_security',               indicatorKey: 'social_security',         metricIdx: 3, name: 'Social Security (Total)',       units: 'no.', category: 'schemes', subgroup: 'scheme',    rampKey: 'saffron' },
-  { key: 'social_pmsby',                  indicatorKey: 'social_security',         metricIdx: 0, name: 'PMSBY (Accident Insurance)',    units: 'no.', category: 'schemes', subgroup: 'scheme',    rampKey: 'saffron' },
-  { key: 'social_pmjjby',                 indicatorKey: 'social_security',         metricIdx: 1, name: 'PMJJBY (Life Insurance)',       units: 'no.', category: 'schemes', subgroup: 'scheme',    rampKey: 'saffron' },
+  { key: 'social_pmsby',                  indicatorKey: 'social_security',         metricIdx: 0, name: 'PMSBY (Accident Insurance)',    units: 'no.', category: 'insurance', subgroup: 'scheme',    rampKey: 'saffron' },
+  { key: 'social_pmjjby',                 indicatorKey: 'social_security',         metricIdx: 1, name: 'PMJJBY (Life Insurance)',       units: 'no.', category: 'insurance', subgroup: 'scheme',    rampKey: 'saffron' },
   { key: 'social_apy',                    indicatorKey: 'social_security',         metricIdx: 2, name: 'APY (Atal Pension)',            units: 'no.', category: 'schemes', subgroup: 'scheme',    rampKey: 'saffron' },
 
   { key: 'housing_pmay',                  name: 'Rural Housing Loans',           units: 'no.',  category: 'schemes', subgroup: 'scheme',    rampKey: 'saffron' },
@@ -271,7 +272,7 @@ export const ATLAS_INDICATORS: AtlasIndicator[] = [
   { key: 'capital_markets_mfdc',          indicatorKey: 'capital_markets_access',  metricIdx: 4, name: 'MF Distributors (Corporate)',   units: 'no.', category: 'capital-markets', subgroup: 'inclusion', rampKey: 'peacock' },
 
   // ===== Demographics =====================================================
-  { key: 'nfhs_health_insurance',         name: 'Health Insurance (NFHS)',       units: '%',    category: 'demographics', subgroup: 'headline', rampKey: 'sage' },
+  { key: 'nfhs_health_insurance',         name: 'Health Insurance (NFHS)',       units: '%',    category: 'insurance', subgroup: 'headline', rampKey: 'sage' },
   { key: 'aadhaar_enrollment',            name: 'Aadhaar Enrolment (UIDAI)',     units: 'no.',  category: 'demographics', subgroup: 'headline', rampKey: 'vermillion' },
   { key: 'facebook_rwi',                  name: 'Relative Wealth Index (Meta)',  units: 'idx',  category: 'demographics', subgroup: 'headline', rampKey: 'sage' },
   { key: 'pmgsy_roads',                   name: 'PMGSY Rural Roads',             units: 'no.',  category: 'demographics', subgroup: 'headline', rampKey: 'saffron' },
