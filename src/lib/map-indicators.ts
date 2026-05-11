@@ -153,10 +153,10 @@ export interface AtlasIndicator {
 }
 
 export const ATLAS_CATEGORIES: { id: AtlasCategory; label: string }[] = [
-  { id: 'banking',         label: 'Banking' },
+  { id: 'banking',         label: 'Banking Infra' },
   { id: 'credit',          label: 'Credit' },
   { id: 'schemes',         label: 'Schemes' },
-  { id: 'digital',         label: 'Digital' },
+  { id: 'digital',         label: 'Payments' },
   { id: 'capital-markets', label: 'Capital markets' },
   { id: 'demographics',    label: 'Demographics' },
 ];
