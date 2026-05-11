@@ -262,24 +262,28 @@ u = website, st = state, loc = city/location, t = type, arn = ARN, c = city
 
 Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) quarterly PDF booklets.
 
-**Currently available**: 22 states — 8 NE states (Assam, Meghalaya, Manipur, Arunachal Pradesh, Mizoram, Tripura, Nagaland, Sikkim) + Bihar + West Bengal + Jharkhand + Odisha + Chhattisgarh + Kerala + Karnataka + Tamil Nadu + Rajasthan + Gujarat + Maharashtra + Haryana + Telangana + Uttarakhand
+**Currently available**: **25 states** — 8 NE states (Assam, Meghalaya, Manipur, Arunachal Pradesh, Mizoram, Tripura, Nagaland, Sikkim) + Bihar + West Bengal + Jharkhand + Odisha + Chhattisgarh + Kerala + Karnataka + Tamil Nadu + Rajasthan + Gujarat + Maharashtra + Haryana + Telangana + Uttarakhand + Andhra Pradesh + **Madhya Pradesh** + **Uttar Pradesh**
 **NE Data Hierarchy (CRITICAL)**:
 1. **`onlineslbcne.nic.in`** (online portal) = **PRIMARY/GOLD STANDARD** for all 8 NE states. This structured data must NEVER be overwritten by PDF extraction. It has cleaner, more reliable data.
 2. **`slbcne.nic.in`** (PDF booklets) = **FALLBACK** — only used to fill gaps for data/categories not available on the online portal.
 **NE Portal Source**: [onlineslbcne.nic.in](https://onlineslbcne.nic.in) — structured data for all 8 NE states
 **NE PDF Source**: [SLBC NE - Meghalaya Booklets](https://slbcne.nic.in/meghalaya/booklet.php) — quarterly PDF booklets (fallback)
-**Bihar Source**: [SLBC Bihar Agenda Papers](https://www.slbcbihar.com/SlBCHeldMeeting.aspx) (90th–95th meetings only; 82nd–89th are scanned images with unusable OCR and are currently excluded)
+**Bihar Source**: [SLBC Bihar Agenda Papers](https://www.slbcbihar.com/SlBCHeldMeeting.aspx) (90th–95th meetings) + **95th Reference Book** (sep 2025 thicker extraction, 23k cells via `slbc-data/bihar/extract_bihar_95th_reference.py`) + **Dec 2025 XLSX** direct from `slbcbihar.com/documents/CD Ratio DW 31.12.2025.xlsx`. 82nd–89th are scanned images with unusable OCR and are currently excluded.
 **West Bengal Source**: SLBC WB Agenda Papers (130th–171st meetings), PDFs stored in `slbc-data/west-bengal/`
-**Jharkhand/Odisha/Chhattisgarh Source**: NE-style extraction from respective SLBC booklets
+**Jharkhand/Odisha Source**: NE-style extraction from respective SLBC booklets
+**Chhattisgarh Source**: [slbcchhattisgarh.com](https://slbcchhattisgarh.com) (migrated May 2026 — dedicated site with per-meeting Excel data-tables, replaces old slbcne.nic.in fallback). 14 quarters (Sep 2022 → Dec 2025). v2 extractor: `slbc-data/chhattisgarh/extract_chhattisgarh_v2.py`.
 **Kerala Source**: [SLBC Kerala](https://slbckerala.com) — annexure PDFs from meeting pages
 **Karnataka Source**: [SLBC Karnataka](https://slbckarnataka.com) — annexure PDFs from meeting pages
 **Tamil Nadu Source**: [SLBC Tamil Nadu](https://slbctn.com) — annexure PDFs from meeting pages
-**Rajasthan Source**: [SLBC Rajasthan](https://slbcrajasthan.in) — Excel files
-**Gujarat Source**: [SLBC Gujarat](https://slbcgujarat.in) — ZIP archives
-**Maharashtra Source**: [Bank of Maharashtra SLBC](https://bankofmaharashtra.bank.in) — PDFs (values in Crores, converted to Lakhs)
-**Haryana Source**: [SLBC Haryana (PNB)](https://slbcharyana.pnb.bank.in) — Excel files (values in Crores, converted to Lakhs)
+**Rajasthan Source**: [SLBC Rajasthan](https://slbcrajasthan.in) — Excel files (only **2 quarters** publicly available; older PDFs are scanned images, no archive). v2 extractor + audit: `slbc-data/rajasthan/extract_rajasthan_v2.py`, `meetings_audit.txt`.
+**Gujarat Source**: [SLBC Gujarat](https://slbcgujarat.in) — ZIP archives per meeting. **36 quarters** (Mar 2017 → Dec 2025) extracted via `slbc-data/gujarat/extract_gujarat_v2.py` (recursive ZIP walker, handles 8 different sheet-naming conventions across years).
+**Maharashtra Source**: [Bank of Maharashtra SLBC](https://bankofmaharashtra.bank.in) — PDFs (values in Crores, converted to Lakhs at extract time — already in canonical ₹ Lakhs in our DB)
+**Haryana Source**: [SLBC Haryana (PNB)](https://slbcharyana.pnb.bank.in) — Excel/Excel-XLS files. **37 quarters** (Dec 2014 → Dec 2025) via `slbc-data/haryana/extract_haryana_v2.py`. ×100 Crore→Lakh conversion in `is_monetary_field()`. Two source quarters (156th, 160th) label values "Crores" but actually print in Lakhs — auto-detected when median deposit > 100k Cr.
 **Telangana Source**: [SLBC Telangana](https://telanganaslbc.com) — PDFs
 **Uttarakhand Source**: [SLBC Uttarakhand](https://slbcuttarakhand.com) — PDFs (76th–88th meetings extracted; 61st–75th excluded due to Devanagari font encoding / unusable OCR)
+**Andhra Pradesh Source**: archived PDFs on Wayback Machine (`web.archive.org/web/2025*/slbcap.nic.in`) — see dedicated section below
+**Madhya Pradesh Source**: [slbcmadhyapradesh.in](https://www.slbcmadhyapradesh.in/slbc-meeting.aspx) — Excel data-tables per meeting. 6 quarters (Mar 2020 + Sep 2023 → Dec 2025) via `slbc-data/madhya-pradesh/scrape_mp_archive.py` + the XLSX parser inline. **MP SLBC publishes district-level data ONLY for CD ratio** — all other metrics are bank-wise. Branch counts for MP come from the RBI Banking Outlets snapshot indicator instead.
+**Uttar Pradesh Source**: [slbcup.com](https://slbcup.com) — agenda PDFs. **25 quarters** (Mar 2019 → Dec 2025) via `slbc-data/uttar-pradesh/extract_uttar_pradesh.py` (pdftotext + linear-time tokenizer; see UP Data Pipeline section). Source values in **Crores** — ×100 conversion already applied to `credit_deposit_ratio__total_deposit` / `total_advances` / `total_advance` / etc. for `state_lgd_code=9`.
 
 **Coverage**:
 - Quarters range from March 2018 to December 2025 (varies by state — not all states have every quarter)
@@ -301,17 +305,19 @@ Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) q
 | Sikkim | Mar 2025 | 4 | 6 |
 | Jharkhand | Sep 2025 | 10 | 24 |
 | Odisha | Dec 2025 | 8 | 30 |
-| Chhattisgarh | Dec 2025 | 12 | 33 |
+| Chhattisgarh | Dec 2025 | 14 | 33 |
 | Kerala | Dec 2025 | 23 | 14 |
 | Karnataka | Jun 2025 | 7 | 31 |
 | Tamil Nadu | Dec 2025 | 10 | 38 |
 | Rajasthan | Dec 2025 | 2 | 41 |
-| Gujarat | Dec 2025 | 10 | 33 |
+| Gujarat | Dec 2025 | 36 | 33 |
 | Maharashtra | Dec 2025 | 3 | 36 |
-| Haryana | Dec 2025 | 13 | 23 |
+| Haryana | Dec 2025 | 37 | 22 |
 | Telangana | Dec 2025 | 13 | 33 |
 | Uttarakhand | Dec 2023 | 14 | 13 |
 | Andhra Pradesh | Jun 2024 | 20 | 26 |
+| Madhya Pradesh | Dec 2025 | 6 | 55 |
+| Uttar Pradesh | Dec 2025 | 25 | 75 |
 
 **Timeseries JSON structure** (`{state}_fi_timeseries.json`):
 ```json
@@ -357,7 +363,12 @@ Machine-readable datasets extracted from State Level Bankers' Committee (SLBC) q
 
 Full-screen Leaflet choropleth map — the entire homepage. No mode toggle; always shows the FI indicator choropleth. Panel has Indicator / Metric / State dropdowns.
 
-**20 Indicators**: Credit-Deposit Ratio, PM Jan Dhan Yojana, Branch Network, Kisan Credit Card, Self Help Groups, Digital Transactions (incl. PhonePe UPI), Aadhaar Authentication, Banking Infrastructure (RBI), Social Security, PMEGP, Housing/PMAY, Stand Up India, SC/ST Lending, Women's Credit, Education Loans, MUDRA/PMMY, NRLM SHG, RBI BSR Credit, Health Insurance (NFHS), Capital Markets Access
+**25 Indicators**: Credit-Deposit Ratio, PM Jan Dhan Yojana, Branch Network, Kisan Credit Card, Self Help Groups, Digital Transactions (PhonePe UPI), Aadhaar Authentication, Banking Infrastructure (RBI), Social Security (Atal Pension), PMEGP, Housing/PMAY, Stand Up India, SC/ST Lending, Women's Credit, Education Loans, MUDRA/PMMY, NRLM SHG, RBI BSR Credit, **Health Insurance (NFHS)** — moved to Insurance category, Capital Markets Access, **PMSBY (Accident Insurance)** + **PMJJBY (Life Insurance)** — Insurance category, Aadhaar Enrollment (UIDAI), Meta RWI, PMGSY Roads, VIIRS Nightlights, **Elevation & Terrain Ruggedness (SRTM)**, **Agricultural Land Use & Irrigation (Census 2011 VD)**.
+
+**7 picker categories** (in `ATLAS_CATEGORIES`):
+- Banking Infra · Credit · Schemes · Payments · **Insurance** · Capital Markets · Demographics
+
+Category renames during the Atlas refinement (May 2026): Banking → "Banking Infra", Digital → "Payments". A dedicated **Insurance** category was carved out — PMSBY (was Schemes), PMJJBY (was Schemes), Health Insurance NFHS (was Demographics) all moved in. APY (pension) stays in Schemes.
 
 **800+ districts across 36 states/UTs**
 
@@ -370,11 +381,11 @@ Full-screen Leaflet choropleth map — the entire homepage. No mode toggle; alwa
 - India outline GeoJSON simplified with Douglas-Peucker (`tolerance=0.001`, `preserve_topology=True`)
 
 **Map bounds** (expanded for all-India coverage including J&K/Ladakh):
-- `ALL_STATES_BOUNDS`: `L.latLngBounds(L.latLng(7.5, 67.5), L.latLng(35.5, 98))` — full India incl. J&K, Kutch, A&N
-- Desktop `maxBounds`: `L.latLngBounds(L.latLng(2, 50.0), L.latLng(40, 115.0))` — west extended to 50°E so `fitBounds` padding is not clamped by `_limitCenter`
-- Mobile `maxBounds`: `L.latLngBounds(L.latLng(0, 48.0), L.latLng(45, 115.0))`
+- `ALL_STATES_BOUNDS`: `L.latLngBounds(L.latLng(6.5, 67.5), L.latLng(37.5, 98))` — full India incl. J&K/Ladakh (north ~37.1°N) + Kutch + A&N (south ~6.75°N)
+- Desktop `maxBounds`: `L.latLngBounds(L.latLng(2, 50.0), L.latLng(46, 115.0))` — north widened to 46°N so the +72 strip-padding can actually slide content down (with the old 40°N max, `_limitCenter` clamped any padding above ~12px → silent no-op)
+- Mobile `maxBounds`: `L.latLngBounds(L.latLng(0, 48.0), L.latLng(45, 115.0))` — kept conservative; bigger numbers added empty whitespace above India on phones
 - `flyToNE()` uses `flyToBounds(ALL_STATES_BOUNDS)` on both mobile and desktop
-- **Top padding**: `getPanelPadding()` reads `header.offsetHeight + 20` (≈80px) to clear the fixed 60px header
+- **Top padding** (`getPanelPadding()`): mobile = header+strip+12, desktop = header+strip+**72** (the latter is needed for J&K/Ladakh's northern fingers to clear the strip's bottom edge; lower values like +36 silently no-op due to maxBounds clamping)
 
 **Critical maxBounds/fitBounds interaction**: With `maxBoundsViscosity: 1.0`, Leaflet's `_limitCenter` shifts the map center east if the ideal center (accounting for panel padding) would show area west of `maxBounds.west`. Previously `west=62°E` caused India to appear left-shifted behind the panel. Fix: expand `maxBounds` west to 50°E so the left edge at zoom 5.2 (~53°E) stays inside `maxBounds`.
 
@@ -632,25 +643,44 @@ Aliases registered for ~30 spelling/naming variants ("Ananthapuramu" / "Cuddapah
 - Spsr Nellore + Y.s.r. `priority_sector__export`/`ancillary` Dec 2021 large drops — confirmed correct in source PDFs
 - Visakhapatanam `branch_network__branch_urban` Dec 2021 = 38 (from 451 in Sep 2020) — correct in source; 451 was likely the all-area sum (a different field), 38 the urban-only count.
 
-## Uttar Pradesh Data Pipeline (in progress)
+## Uttar Pradesh Data Pipeline
 
-UP is being added as the highest-priority missing-SLBC state (250M population, 75 districts). Data extraction is partially complete; not yet imported into SQLite or exposed to the frontend.
+**Live** — 25 quarters across 18 categories, 34k+ rows in `slbc_data` for `state_lgd_code=9`. UP is FINER's 25th state and was the highest-priority missing-SLBC slot (240M pop, 75 districts).
 
-**Source**: [slbcup.com](https://slbcup.com) agenda PDFs. Two flavours of source files:
-- **Text-native PDFs** (Mar 2019 → Jun 2022, 14 quarters): downloaded into `slbc-data/uttar-pradesh/` as `YYYY-MM_booklet.pdf`
-- **Scanned PDFs** (Sep 2022 → Dec 2025, 12 quarters): downloaded into `slbc-data/uttar-pradesh/scanned_for_ocr/`. User OCR'd these manually via PDF Expert; one file is corrupt (TBD which).
-- 2025-Q2 missing — confirmed not on slbcup.com (source omission, not download failure).
+**Source**: [slbcup.com](https://slbcup.com) agenda PDFs. 26 quarterly booklets covering Mar 2019 → Dec 2025 (2025-Q1 = `2025-03_booklet.pdf` is corrupt — pdftotext XRef errors, source-file issue not extractor — and 2025-Q2 was never published by the source).
 
-**Extractor**: `slbc-data/uttar-pradesh/extract_uttar_pradesh.py` (modelled on the Telangana CQR extractor). 75-district canonicalization includes the 2018 renames (Allahabad→Prayagraj, Faizabad→Ayodhya), Lakhimpur Kheri→Kheri, etc.
+**Extractor**: `slbc-data/uttar-pradesh/extract_uttar_pradesh.py`. 75-district canonical list + heavy alias map covering OCR artefacts (Allahabad→Prayagraj, Faizabad→Ayodhya, Lakhimpur Kheri→Kheri, "Sonebhadra"→Sonbhadra, "Avraiya"→Auraiya, etc.).
 
-**Status**: extractor exists; no `public/slbc-data/uttar-pradesh/` outputs yet. Once extraction completes:
-1. Copy outputs to `public/slbc-data/uttar-pradesh/`
-2. `python3 db/import_slbc.py` (UP-only)
-3. `python3 db/export_indicator_files.py`
-4. Regenerate `_fi_slim.json`
-5. Add row to coverage table above and bump state count to 23
+**Two extractor design decisions resolved during build**:
+1. **pdftotext (poppler), NOT pdfplumber.** pdfplumber's per-page `extract_text()` on the 100 MB OCR'd UP booklets took ~1 hour per file. `pdftotext -layout` via subprocess does the whole file in ~0.3s — ~12,000× faster. Wall-clock pipeline runtime dropped from "would never complete" to 13.5s for all 26 PDFs.
+2. **Linear-time tokenizer, NOT a single combined regex.** The original `parse_data_row()` regex `^\s*(\d{1,3})\s+([A-Za-z…]{2,40}?)\s+((?:[+-]?\d+(?:[\.,]\d+)?\s*){2,})\s*$` had catastrophic backtracking on prose lines that almost-but-not-quite looked like data rows — would CPU-loop indefinitely. Replaced with a per-token validator: split on whitespace, validate each token with anchored `fullmatch` against tiny patterns (`_SNO_RE`, `_NUM_RE`, `_WORD_RE`), then walk: token 0 = sno, walk word tokens to first numeric (capped at 6), remaining must all be numeric/gap markers. Hard caps: line length ≤400 chars, token count ≤60. Also bounded `classify_page` input to 6000 chars.
+3. **Per-PDF 60s wall-clock timeout** via `multiprocessing.Pipe` worker (`_run_extract_with_timeout`); failing PDFs are skipped, not fatal. Per-PDF flushed progress prints.
 
-**Parallel slbcup.com pages** (`CDRatioDistrict.aspx`, etc.) are mostly placeholders, so the agenda PDFs are the canonical source.
+**Critical bug fixed (May 2026)**: original UP extractor had **sticky `current_cat` across pages** — once a page classified as `credit_deposit_ratio`, every subsequent page's `<sno> <district> <num> <num>` rows got accumulated as CD-ratio data even if those pages were about Pending RC / RSETI / etc. Result: Agra Dec 2025 was being stored as `dep=10899 adv=172.65` (from the Pending RC table) which became a bogus 1.5% derived CD ratio. **Fix in `extract_pdf`**: each PDF page must self-classify; `credit_deposit_ratio` pages need ≥10 plausible district rows before commit (rejects title pages, partial bleeds). After the fix, Agra 2024-03 cleanly reads dep=57878 adv=39724 cdr=68.63% — exactly matches the source PDF.
+
+**UNIT CAVEAT**: UP's source booklets carry CD-ratio amounts in **Crores** (the table header says "Amount in Crore"). FINER's canonical unit is **₹ Lakhs**, so `credit_deposit_ratio__total_deposit` / `total_advances` / `total_advance` / etc. for `state_lgd_code=9` are stored after **×100 conversion** to Lakhs. Verified: Lucknow Dec 2024 deposit = ₹28.3M Lakhs = ₹2.83 lakh Cr, in line with other major-city deposits.
+
+**UP 2025-09 + 2025-12 CD-ratio empty**: those quarters' CD-ratio tables have rows split across 2 visual PDF lines (deposits on one line, advances+ratio on the next, district name dangling separately). pdftotext can't reconstruct them. Other categories (PMJDY, MUDRA, SHG, etc.) extract fine for those quarters — only the CD-ratio table has this layout.
+
+**Period-label normalization**: the extractor emits some quarters as `"2023-06"` (raw code) vs older quarters as `"June 2023"` (labeled). `import_slbc.py`'s `normalize_period` expects "Month YYYY" — a post-process pass converts the raw-format labels before import (~9 quarters affected per run). Bake this into the extractor in a future iteration.
+
+## Madhya Pradesh Data Pipeline
+
+**Live** — 6 quarters of district-wise Credit-Deposit Ratio, 55 districts. MP is FINER's 24th state (added before UP).
+
+**Source**: [slbcmadhyapradesh.in](https://www.slbcmadhyapradesh.in/slbc-meeting.aspx) — the MP SLBC publishes clean per-meeting **XLSX data-tables** going back to ~2017 (much cleaner than PDF extraction). The site lists 197 meetings (Dec 2007 → Mar 2026); only the recent 6 ship the district-wise CD-ratio sheet in the format we parse.
+
+**Pipeline**:
+- `slbc-data/madhya-pradesh/scrape_mp_archive.py` — walks `/slbc-meeting.aspx`, finds direct XLSX links matching `Slbc-data-{mmm}{yy}-final-*.xlsx`, downloads to `slbc-data/madhya-pradesh/raw/`.
+- Inline parser (in the import script) — reads each XLSX's `CD Ratio_3(ii)Dist` sheet, requires `district name` substring in header row (avoids the row-0 title trap "DISTRICT WISE CD RATIO" which also contains those words), extracts `District | Deposits | Advances | CD Ratio` columns.
+
+**Quarters extracted**: Mar 2020, Sep 2023, Mar 2024, Jun 2024, Sep 2025, Dec 2025 — 51-55 districts each (reflects MP's 2023 reorg adding Maihar, Mauganj, Pandhurna).
+
+**3 new districts registered**: Maihar (lgd 779, carved from Satna 2023), Mauganj (780, from Rewa 2024), Pandhurna (781, from Chhindwara 2023). Aliases added: Hoshangabad → Narmadapuram (2022 rename), Agar-malwa → Agar Malwa.
+
+**MP IS A CD-RATIO-ONLY STATE in our data**. The XLSX has 36 sheets but only `CD Ratio_3(ii)Dist` is district-wise — every other sheet (Branches/ATMs, PMJDY, KCC, SHG, MUDRA, PMEGP, PMAY, Aadhaar) is bank-wise (rows = banks). For "branches per MP district" use the `rbi_banking_outlets` snapshot indicator, not `branch_network`.
+
+**Parallel slbcup.com pages** (`CDRatioDistrict.aspx`, etc.) are mostly placeholders, so the agenda PDFs are the canonical UP source.
 
 ## Tripura Data Pipeline
 
@@ -929,9 +959,17 @@ Then also rebuild the RAG index (see Ask/RAG section). The frontend caches loade
 
 ## SHRUG-derived Indicators
 
-Three indicators sourced from the **SHRUG v2.1** dataset (Socioeconomic High-resolution Rural-Urban Geographic Platform, Development Data Lab — devdatalab.org/shrug). Licence: **CC BY-NC-SA 4.0** — non-commercial, requires attribution.
+**Five** indicators sourced from the **SHRUG v2.1** dataset (Socioeconomic High-resolution Rural-Urban Geographic Platform, Development Data Lab — devdatalab.org/shrug). Licence: **CC BY-NC-SA 4.0** — non-commercial, requires attribution.
 
-All three share the same join pattern: SHRUG's `(pc11_state_id, pc11_district_id)` (zero-padded 2- and 3-digit) → FINER `(state_lgd, census_2011_code)` after stripping leading zeros. ~98% match rate (13 unmatched districts are post-2014 splits — Telangana districts, Ladakh, D&D/DnH).
+All five share the same join pattern: SHRUG's `(pc11_state_id, pc11_district_id)` (zero-padded 2- and 3-digit) → FINER `(state_lgd, census_2011_code)` after stripping leading zeros. ~98% match rate.
+
+**Shared helper**: `db/shrug/_shared.py` — `build_finer_lookup()` returns the join dict and handles **post-Census-2011 state splits** via `PC11_STATE_ALIASES`:
+- Telangana (lgd 36) ← Andhra Pradesh's PC11 code "28" (carved June 2014)
+- Ladakh (lgd 37) ← Jammu & Kashmir's PC11 code "01" (carved October 2019)
+
+Without this aliasing, Telangana + Ladakh polygons rendered grey on every SHRUG indicator even though the data sat right there under the parent state's PC11 code. Pre-Census-2011 splits (Chhattisgarh 2000, Jharkhand 2000, Uttarakhand 2000) don't need aliasing — Census 2011 already used the post-split codes.
+
+Coverage post-fix: **10 of 33 Telangana districts** light up (the pre-2014 original 10 — Hyderabad, Adilabad, Karimnagar, Khammam, Mahbubnagar, Medak, Nalgonda, Nizamabad, Rangareddy, Warangal). The 23 newer Telangana districts (carved 2016-2022) didn't exist in Census 2011 boundaries so SHRUG genuinely has no data for them. Same constraint applies to post-2022 AP / Rajasthan reorg districts.
 
 ### `facebook_rwi` — Meta Relative Wealth Index 2021
 - **Build script**: `db/shrug/build_facebook_rwi.py`
@@ -949,9 +987,25 @@ All three share the same join pattern: SHRUG's `(pc11_state_id, pc11_district_id
 ### `viirs_nightlights` — VIIRS annual nightlights 2012–2023
 - **Build script**: `db/shrug/build_viirs_nightlights.py`
 - **Source**: `~/Downloads/finer_data/shrug/viirs/viirs_annual_pc11dist.dta` (DTA, district-aggregated). Uses `category=='median-masked'` (more robust than `average-masked` to fires/outliers).
-- **Output**: 12 yearly files at `public/indicators/viirs_nightlights/{2012..2023}-12.json`, each ~625 districts, ~69 KB
+- **Output**: 12 yearly files at `public/indicators/viirs_nightlights/{2012..2023}-12.json`, each ~637 districts, ~70 KB
 - **Metrics**: `nl_mean` (mean radiance, nW/cm²/sr), `nl_sum` (total light output, area-weighted), `nl_max` (peak cell — typically the largest urban cluster)
 - **Timeline**: `timePoints: ['2023-12','2022-12',...,'2012-12']` — 12 December snapshots
+
+### `elevation_terrain` — Elevation & Terrain Ruggedness (SRTM Feb 2000)
+- **Build script**: `db/shrug/build_elevation.py`
+- **Source**: `~/Downloads/finer_data/shrug-elevation/elevation_pc11dist.csv` (NASA SRTM 30m DEM, captured Feb 2000, district-aggregated by SHRUG v2.1)
+- **Output**: `public/indicators/elevation_terrain/static.json` — 637 districts. Slider locked to `timePoints: ['2000-02']`.
+- **Metrics**: `elevation_mean` (m, plain-vs-hill divide), `elevation_max` (m, peak), `elevation_range` (max−min, Riley-style TRI proxy), `elevation_std` (alternate TRI proxy)
+- **Picker placement**: Demographics group, peacock ramp. Useful as control variable when explaining banking thinness in Himalayan / NE / J&K districts.
+- **Citation**: Farr & Kobrick (2000), Eos 81(48):583-585. DOI 10.1029/EO081i048p00583.
+
+### `crop_production` — Agricultural Land Use & Irrigation (Census 2011 VD)
+- **Build script**: `db/shrug/build_crop_production.py`
+- **Source**: `~/Downloads/finer_data/shrug-vd11/pc11_vd_clean_pc11dist.tab` (Census 2011 Village Directory land-use, district-aggregated by SHRUG)
+- **Why "crop_production" not "ag_output"**: SHRUG v2.1 doesn't publish district-level crop output (rice/wheat tonnes); the closest pc11dist-level dataset is Village Directory land-use stats. Display title is "Agricultural Land Use & Irrigation" (more honest) but the indicator key stays `crop_production`.
+- **Output**: `public/indicators/crop_production/static.json` — 580 districts. Slider locked to Census 2011 snapshot.
+- **Metrics**: total cropland (ha), irrigated area (ha), irrigation % coverage, canal/tubewell/tank/other irrigation breakdown.
+- **Picker placement**: Credit category (inclusion subgroup) — irrigated cropland is the structural driver of KCC + crop-loan demand.
 
 **Manifest discovery**: SHRUG indicators are picked up automatically by the directory-scan logic in `db/export_indicator_files.py:export_manifest()` — no edit needed when adding new SHRUG-style external indicators (Aadhaar/NFHS pattern).
 
@@ -1097,6 +1151,19 @@ No Vercel redeployment needed — the API reads fresh index from R2 on next cold
 45. **MapPanel scope default must be `'india'`, not `'ne'`**: `MapPanel.svelte` has two places that initialize the scope toggle — `let scope = $state<'india' | 'ne'>('india')` (line ~9) and `scope = s.scope || 'india'` in the global state load fallback (line ~157). Both must default to `'india'`, otherwise the NE focus toggle visually says "NE" while the map still shows all-India bounds (the toggle and the map fall out of sync because the map fits to `ALL_STATES_BOUNDS` regardless of toggle state on initial load).
 46. **AP source PDFs are only on Wayback Machine**: `slbcap.nic.in` is unreachable. Use `https://web.archive.org/web/20250815*/slbcap.nic.in` with the `id_/` raw-content URL pattern. CDX query for discovery: `https://web.archive.org/cdx/search/cdx?url=slbcap.nic.in&matchType=domain&filter=mimetype:application/pdf`.
 47. **UP scanned-PDF cutoff**: text-native ends at 2022-Q2; 2022-Q3 onwards are scanned. Don't assume mid-2023 is the boundary.
+48. **UP CD-ratio: units in Crores, requires ×100 → Lakhs at import time**: The UP booklet's district-wise CD-ratio table header literally says "Amount in Crore". Every other state in FINER stores deposits/advances in ₹ Lakhs. UP's `credit_deposit_ratio__total_deposit` / `total_advances` / `total_advance` / etc. for `state_lgd_code=9` are stored after ×100 conversion. The cd_ratio % field is unitless so no conversion needed.
+49. **UP page-isolation in `extract_pdf`**: The extractor must NOT keep `current_cat` sticky across PDF pages. Once a page classifies as `credit_deposit_ratio`, the Pending RC / RSETI / etc. tables on subsequent pages have the same `<sno> <district> <num> <num>` layout and get falsely accumulated as CD-ratio data. Fix: each page must self-classify; `credit_deposit_ratio` pages require ≥10 plausible district rows before commit. Other categories use a softer threshold of ≥4.
+50. **UP 2025-09 + 2025-12 CD-ratio empty by design**: The Dec 2025 booklet's CD-ratio table splits each district's row across 2 visual PDF lines (deposits on one line, advances+ratio on the next, district name dangling separately). pdftotext can't reconstruct them into single rows. Better empty than wrong. Other categories extract fine.
+51. **Derived CD ratio with sanity bound (5-400%)**: When `overall_cd_ratio` is missing but `total_deposit` and `total_advance` are populated, `db/export_indicator_files.py` computes `advance/deposit*100` — but only commits if the result falls in 5-400%. Outside that range it's almost always a source-unit mismatch (UP's OCR'd booklets sometimes report advances in Lakhs and sometimes in Crores per row; the row-level mismatch produces 1-2% bogus CD ratios). Better no-data than nonsense.
+52. **State-qualified district lookup in `resolveLookup`**: District names aren't globally unique — Bilaspur is in HP and Chhattisgarh; Balrampur is in UP and Chhattisgarh; Pratapgarh / Aurangabad / Hamirpur repeat across multiple states. The choropleth's `buildDistrictLookup` keys entries by `"{state_slug}|{district}"` (in addition to a plain-name fallback). `resolveLookup` uses `normStateSlug(STATE_UT)` to compose the lookup key. Without this, Chhattisgarh data was painting onto Himachal's Bilaspur polygon + UP's Balrampur polygon.
+53. **12 bogus `source='slbc'` district_aliases purged (May 2026)**: A bad fuzzy-match during ingestion of new districts had registered cross-state aliases — Phalodi → Tamulpur (Assam), Beawar → Annamayya (AP), Salumbar → Tseminyu (Nagaland), and 9 others. These caused Phalodi (Rajasthan) to render with Tamulpur's Assam SLBC data. Deleted from both SQLite and `public/district_lgd_codes.json`. Also state-qualified the canonical-form fallback path in `resolveLookup` so stray future aliases can't recreate the bug.
+54. **`NEW_DISTRICT_PARENTS` parent-fallback for post-2020 carved districts**: 31 new districts (16 Rajasthan 2023 — Phalodi/Balotra/Beawar/etc., 13 AP 2022 — Anakapalli/Bapatla/Nandyal/etc., 1 Punjab 2021 — Malerkotla) inherit their pre-reorg parent's choropleth value with `inheritedFrom` tag → tooltip discloses "Reported under <parent> (pre-reorg SLBC structure)". Inline JS only; no SQLite changes.
+55. **SHRUG indicators must NOT use the cross-state shared matcher's fuzzy fallback**: The shared matcher in some Python builders maps new-district names by string similarity. Without the `_shared.PC11_STATE_ALIASES` aliasing, Telangana districts had `census_2011_code` populated but `state_lgd_code=36` while SHRUG records sat under `pc11_state_id="28"` (AP) — the join failed silently. Fixed by registering each FINER district under both its current state's PC11 code AND any predecessor state code (Telangana ← AP "28", Ladakh ← J&K "01"). Use `db/shrug/_shared.py:build_finer_lookup()` for all future SHRUG builders.
+56. **maxBounds `_limitCenter` silently clamps padding bumps**: With `maxBoundsViscosity: 1.0`, increasing fitBounds top-padding only moves content DOWN if there's room above the bound. With desktop maxBounds.north=40°N at fit-zoom ~5.4, the viewport top was at ~41°N (~1° above 40°N max) and got clamped → any topPad increase silently no-op'd. Fix: widen north to 46°N so the +72 strip-padding can actually slide content down to clear J&K/Ladakh's northern fingers from the strip's bottom edge. Mobile kept at 45°N (bumping it added empty whitespace).
+57. **Shareable URLs across map + analysis pages**: `?indicator=&metric=&quarter=&state=` on the homepage; `?state=&category=&quarter=&field=&sort=col:dir` on `/analysis/rankings/`; `?state=&district=&category=` on `/analysis/trends/`. Read on mount, mirrored on every change via `history.replaceState()` (no history-stack pollution). TimelineSlider listens for `finer:quarterChange` so URL hydration of `?quarter=` actually moves the thumb (it didn't, originally — the slider's `quartersReady` handler overwrote the URL-set quarter).
+58. **Snapshot indicators lock the slider via `timePoints`**: `rbi_banking_outlets` (May 2026), `capital_markets_access` (May 2025), `nrlm_shg` (Mar 2026), `rbi_bsr_credit` (Mar 2025), `elevation_terrain` (Feb 2000), `crop_production` (Census 2011), `nfhs_health_insurance` (Mar 2021 + Mar 2016), `aadhaar_enrollment` (3 quarters in 2025), `digital_transactions` (Mar 2024 cap due to PhonePe Pulse). When selected, `switchSliderToTimePoints()` replaces the global slider quarters; `restoreSliderToManifest()` restores them on switch-away.
+59. **Mobile timeline is horizontal at the bottom**: TimelineSlider.svelte detects `(max-width: 640px)` via matchMedia. On mobile, position flips from `right: 16px; vertical` to `left/right pinned, bottom: 16px; horizontal`. Mobile MapLegend is `display: none`. Mobile FocusOverlay close button is a vermillion pill anchored bottom-center.
+60. **OG image regeneration**: `python3 scripts/build_og_image.py` renders `public/og-image.svg` → `public/og-image.png` via cairosvg + brew cairo (needs `DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib`). The PNG must stay 1200×630 for proper WhatsApp/Twitter card sizing.
 
 ## Data Quality Pipeline
 
