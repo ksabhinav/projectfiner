@@ -755,6 +755,60 @@ const base = import.meta.env.BASE_URL;
         .replace(/^-+|-+$/g, '');
     }
 
+    // Districts created post-2020 whose SLBC source still reports against
+    // the pre-reorg parent district. When a new-district polygon (e.g.
+    // Phalodi, Balotra, Bapatla) has no SLBC row of its own, the lookup
+    // falls back to the parent's data and tags the entry with
+    // `inheritedFrom` so the tooltip can disclose the inheritance.
+    //
+    // Keys are pre-normDist'd (uppercase, A-Z + space only) below.
+    var NEW_DISTRICT_PARENTS_RAW = {
+      // ── Rajasthan — August 2023 reorganisation ──
+      'Phalodi':              ['Jodhpur',       'rajasthan'],
+      'Balotra':              ['Barmer',        'rajasthan'],
+      'Beawar':               ['Ajmer',         'rajasthan'],
+      'Kekri':                ['Ajmer',         'rajasthan'],
+      'Salumbar':             ['Udaipur',       'rajasthan'],
+      'Didwana-Kuchaman':     ['Nagaur',        'rajasthan'],
+      'Khairthal-Tijara':     ['Alwar',         'rajasthan'],
+      'Kotputli-Behror':      ['Alwar',         'rajasthan'],
+      'Deeg':                 ['Bharatpur',     'rajasthan'],
+      'Dudu':                 ['Jaipur',        'rajasthan'],
+      'Jaipur Rural':         ['Jaipur',        'rajasthan'],
+      'Gangapur City':        ['Sawai Madhopur','rajasthan'],
+      'Anupgarh':             ['Ganganagar',    'rajasthan'],
+      'Sanchore':             ['Jalore',        'rajasthan'],
+      'Shahpura':             ['Bhilwara',      'rajasthan'],
+      'Neem Ka Thana':        ['Sikar',         'rajasthan'],
+      // ── Andhra Pradesh — April 2022 reorganisation ──
+      'Alluri Sitharama Raju':        ['Visakhapatnam',  'andhra-pradesh'],
+      'Anakapalli':                   ['Visakhapatnam',  'andhra-pradesh'],
+      'Annamayya':                    ['Y.S.R.',         'andhra-pradesh'],
+      'Bapatla':                      ['Guntur',         'andhra-pradesh'],
+      'Eluru':                        ['West Godavari',  'andhra-pradesh'],
+      'Kakinada':                     ['East Godavari',  'andhra-pradesh'],
+      'Konaseema':                    ['East Godavari',  'andhra-pradesh'],
+      'Dr. B.R. Ambedkar Konaseema':  ['East Godavari',  'andhra-pradesh'],
+      'Nandyal':                      ['Kurnool',        'andhra-pradesh'],
+      'NTR':                          ['Krishna',        'andhra-pradesh'],
+      'Palnadu':                      ['Guntur',         'andhra-pradesh'],
+      'Parvathipuram Manyam':         ['Vizianagaram',   'andhra-pradesh'],
+      'Sri Sathya Sai':               ['Anantapur',      'andhra-pradesh'],
+      'Tirupati':                     ['Chittoor',       'andhra-pradesh'],
+      // ── Punjab — May 2021 ──
+      'Malerkotla':                   ['Sangrur',        'punjab'],
+    };
+    // Pre-normalize keys + parent-name once for lookups
+    var NEW_DISTRICT_PARENTS = {};
+    var NEW_DISTRICT_PARENTS_DISPLAY = {}; // normDist(name) → human-readable parent name for tooltips
+    (function() {
+      for (var k in NEW_DISTRICT_PARENTS_RAW) {
+        var v = NEW_DISTRICT_PARENTS_RAW[k];
+        NEW_DISTRICT_PARENTS[normDist(k)] = [normDist(v[0]), v[1]];
+        NEW_DISTRICT_PARENTS_DISPLAY[normDist(k)] = v[0];
+      }
+    })();
+
     // Resolve a GeoJSON feature to a lookup entry using LGD census codes first,
     // then a STATE-QUALIFIED name match (prevents cross-state collisions on
     // names like Bilaspur HP/CG, Balrampur UP/CG, etc.), then plain name
@@ -785,6 +839,22 @@ const base = import.meta.env.BASE_URL;
         if (aliasDn) {
           var sqAlias = lookup.get(stateSlug + '|' + aliasDn);
           if (sqAlias) return sqAlias;
+        }
+        // 1.5 New-district parent fallback — post-2020 carved districts
+        //     (Phalodi, Balotra, Bapatla, …) whose SLBC source still
+        //     reports under the pre-reorg parent (Jodhpur, Barmer,
+        //     Guntur, …). Return the parent's entry with an
+        //     `inheritedFrom` tag so the tooltip can disclose.
+        var parentInfo = NEW_DISTRICT_PARENTS[dn];
+        if (parentInfo && parentInfo[1] === stateSlug) {
+          var parentEntry = lookup.get(stateSlug + '|' + parentInfo[0]);
+          if (parentEntry) {
+            // Shallow-clone so we don't mutate the cached parent entry
+            var inherited = {};
+            for (var pk in parentEntry) { inherited[pk] = parentEntry[pk]; }
+            inherited.inheritedFrom = NEW_DISTRICT_PARENTS_DISPLAY[dn] || parentInfo[0];
+            return inherited;
+          }
         }
       }
       // 2. LGD census code → name list (legacy path)
@@ -1091,6 +1161,13 @@ const base = import.meta.env.BASE_URL;
                 if (data.fallbackQuarter) {
                   tip += '<div class="dtt-fallback">' + fmtQuarter(data.fallbackQuarter) + ' (latest available)</div>';
                 }
+                if (data.inheritedFrom) {
+                  // New (post-2020) district whose SLBC source still reports
+                  // under the pre-reorg parent. Disclose the inheritance so
+                  // the colour isn't misread as the carved district's own data.
+                  tip += '<div class="dtt-fallback">Reported under '
+                    + data.inheritedFrom + ' (pre-reorg SLBC structure)</div>';
+                }
               } else {
                 tip += '<div class="dtt-empty">No data available</div>';
               }
@@ -1223,7 +1300,32 @@ const base = import.meta.env.BASE_URL;
       var lookup = buildDistrictLookup();
       var ind = INDICATORS[currentIndicator];
       var metric = ind.metrics[currentMetricIdx];
-      var data = lookup.get(focusedDistrict) || lookup.get(DISTRICT_ALIASES[focusedDistrict]);
+      // Same resolver as choropleth: state-qualified, then parent-district
+      // fallback for post-2020 carved districts, then name-only as last resort.
+      var fState = normStateSlug(focusedState);
+      var data = null;
+      if (fState) {
+        data = lookup.get(fState + '|' + focusedDistrict);
+        if (!data) {
+          var aliasD = DISTRICT_ALIASES[focusedDistrict];
+          if (aliasD) data = lookup.get(fState + '|' + aliasD);
+        }
+        if (!data) {
+          // New-district parent fallback
+          var parentInfo = NEW_DISTRICT_PARENTS[focusedDistrict];
+          if (parentInfo && parentInfo[1] === fState) {
+            var pEntry = lookup.get(fState + '|' + parentInfo[0]);
+            if (pEntry) {
+              data = {};
+              for (var pk in pEntry) { data[pk] = pEntry[pk]; }
+              data.inheritedFrom = NEW_DISTRICT_PARENTS_DISPLAY[focusedDistrict] || parentInfo[0];
+            }
+          }
+        }
+      }
+      if (!data) {
+        data = lookup.get(focusedDistrict) || lookup.get(DISTRICT_ALIASES[focusedDistrict]);
+      }
       var ramp = getRamp(currentIndicator);
 
       var val = data ? data.value : null;
