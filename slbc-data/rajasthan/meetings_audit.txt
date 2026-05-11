@@ -1,0 +1,119 @@
+SLBC Rajasthan — Source Audit
+==============================
+Audited 2026-05-11 against https://slbcrajasthan.in/
+
+Discovery Pages
+---------------
+1. https://slbcrajasthan.in/SLBC_Meeting_Held.aspx — Meeting archive (PDF only)
+2. https://slbcrajasthan.in/Annexture.aspx — Latest data annexures (PDF historically, XLSX from Sep 2025)
+
+KEY FINDING — Excel archive does NOT go back
+--------------------------------------------
+slbcrajasthan.in only began publishing the structured XLSX annexure bundles
+(Annex 1-12, 13-20, 21-33) with the 167th meeting (Nov 2025 -> Sep 2025 data).
+Prior quarters were published as scanned PDF Annexures or as scanned PDF
+single-files. The Annexture.aspx page is a "current quarter" page — it overwrites
+the same filenames each cycle, so earlier XLSX versions are not preserved
+on the server, and Wayback Machine has no snapshots of the XLSX archive.
+
+Therefore: the dedicated SLBC Rajasthan site does NOT have a deeper Excel
+archive analogous to Madhya Pradesh's. Backfill beyond Sep 2025 + Dec 2025
+is not feasible from this source without OCR of scanned PDFs (out of scope:
+pdftotext + openpyxl + urllib only).
+
+Meeting List (full archive)
+---------------------------
+Meeting   Date         File Available     Data Type        Quarter Covered (est.)
+168       23.02.2026   Agenda + Minutes   PDF (text)       Dec 2025  *
+167       19.11.2025   Agenda             PDF (text)       Sep 2025  *
+166       08.08.2025   Agenda + Minutes   PDF (text)       Jun 2025  **
+165       13.05.2025   Agenda + Minutes   PDF (text)       Mar 2025  **
+164       20.02.2025   Agenda + Minutes   PDF (text)       Dec 2024  **
+163       19.11.2024   Agenda + Minutes   PDF (text)       Sep 2024  **
+162       (n/a)        Agenda + Minutes   PDF (text)       Jun 2024  **
+161       (n/a)        Agenda + Minutes   PDF (text)       Mar 2024  **
+160       (n/a)        Agenda+Minutes     PDF (combined)   Dec 2023  **
+159       (n/a)        Agenda + Minutes   PDF              Sep 2023  **
+158       (n/a)        Agenda + Minutes   PDF              Jun 2023  **
+157       15.05.2023   Agenda + Minutes   PDF              Mar 2023  **
+156       10.03.2023   Agenda + Minutes   PDF              Dec 2022  **
+155       27.12.2022   Agenda + Minutes   PDF              Sep 2022  **
+154       28.09.2022   Agenda + Minutes   PDF              Jun 2022  **
+153       21.07.2022   Agenda + Minutes   PDF              Mar 2022  **
+152       27.03.2022   Agenda + Minutes   PDF              Dec 2021  **
+151       27.12.2021   Agenda + Minutes   PDF              Sep 2021  **
+150       27.09.2021   Agenda + Minutes   PDF              Jun 2021  **
+149       25.06.2021   Agenda + Minutes   PDF              Mar 2021  **
+148       16/26.03.2020 Agenda+Minutes    PDF              Dec 2019  **
+147       23.09.2020   Agenda + Minutes   PDF              ~Sep 2020 **
+146       23.09.2020   Agenda + Minutes   PDF              ~Jun 2020 **
+145       29.06.2020   Agenda + Minutes   PDF              Mar 2020  **
+144       30.03.2020   Minutes only       PDF              Dec 2019  **
+143       02.12.2019   Minutes only       PDF              Sep 2019  **
+142       26.08.2019   Minutes only       PDF              Jun 2019  **
+141       17.05.2019   Minutes only       PDF              Mar 2019  **
+140       27.03.2019   Minutes only       PDF              Dec 2018  **
+139       07.01.2019   Minutes only       PDF              Sep 2018  **
+138       26.09.2018   Minutes only       PDF              Jun 2018  **
+137       15.06.2018   Minutes only       PDF              Mar 2018  **
+136       20.03.2018   Minutes only       PDF              Dec 2017  **
+135       05.12.2017   Minutes only       PDF              Sep 2017  **
+134       27.09.2017   Minutes only       PDF              Jun 2017  **
+132       28.03.2017   Minutes only       PDF              Dec 2016  **
+131       28.11.2016   Minutes only       PDF              Sep 2016  **
+130       08.09.2016   Minutes only       PDF              Jun 2016  **
+129       08.06.2016   Minutes only       PDF              Mar 2016  **
+128       17.02.2016   Minutes only       PDF              Dec 2015  **
+127       17.12.2015   Minutes only       PDF              Sep 2015  **
+126       13.08.2015   Minutes only       PDF              Jun 2015  **
+125       29.05.2015   Minutes only       PDF              Mar 2015  **
+124       24.02.2015   Minutes only       PDF              Dec 2014  **
+123       18.11.2014   Minutes only       PDF              Sep 2014  **
+122       13.08.2014   Minutes only       PDF              Jun 2014  **
+121       11.06.2014   Minutes only       PDF              Mar 2014  **
+120-105   2010-2014    Minutes only       PDF              Earlier quarters
+
+Legend:
+  * = Annex 1-12 / 13-20 / 21-33 XLSX files PROVIDED (clean machine-readable).
+      Currently extracted -> Sep 2025 + Dec 2025 (the 2 quarters in our DB).
+  ** = Agenda / Minutes PDF only. NO district-wise tables embedded — the
+       PDFs reference "Annexure-X is attached separately" but the separate
+       annexures from these meetings were either (a) never published on the
+       site, or (b) replaced with later XLSX versions when the site refreshed.
+
+Verification of agenda PDF content
+----------------------------------
+- Checked 166th Agenda (1.7 MB, 37 pages, text-native): zero district-wise
+  data rows. No mentions of Ajmer/Alwar/Jaipur in tables — references like
+  "Detailed Bank-wise advances is as per Annexure-2 & district wise deposit,
+  advances & CD ratio as per Annexure-3" indicate the data is in separate
+  annexure files (not in the agenda).
+- Checked 165th Minutes: same — no district-wise tables.
+- Checked currently-live Annexures-1/2/3.pdf on site (June 2025 data):
+  scanned IMAGES (pdfimages shows gray, 8 bpc, 2481x3506 raster). Not
+  text-extractable with pdftotext.
+
+Wayback Machine search
+----------------------
+CDX search for slbcrajasthan.in confirms:
+- 4 snapshots of /Annexture.aspx between Mar 2025 and Jan 2026
+- 2025-03-16 + 2025-05-24 snapshots: Annexures 1-12, 13-19, 20-33 are all PDFs (scanned)
+- 2025-09-10 snapshot: same — Annexures-1/2/3 PDFs (scanned)
+- Only the 2026-01-23 snapshot (post-167th meeting) shows the XLSX files for the first time
+- No Wayback captures of historical XLSX files in /Raj_Pdf/ at all
+- BC.xlsx, SHG.xlsx and similar are bank-wise aggregates (not district-wise FI indicators) — not useful for our schema
+
+Conclusion / Recommendation
+---------------------------
+- The 2-quarter limit reflects the actual source coverage, not a gap in our
+  pipeline. The existing extractor (extract_rajasthan.py) is comprehensive
+  and captures 18+ category tables from the 6 XLSX files.
+- To deepen Rajasthan coverage in FINER, future options are:
+  (a) Wait for SLBC to publish quarter 169 (Mar 2026 data) in XLSX form
+  (b) OCR the scanned Annexures PDFs (requires new OCR pipeline — out of
+      scope for this task)
+  (c) Request CSV/Excel exports from SLBC Rajasthan directly (Indian
+      Overseas Bank is the SLBC convener; mail address on site)
+
+No additional files were downloaded as part of this audit — the existing
+6 XLSX files in raw/ remain the complete corpus.
