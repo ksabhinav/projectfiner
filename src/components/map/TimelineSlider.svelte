@@ -361,20 +361,23 @@
     z-index: 1300 !important;
   }
 
-  /* ── Mobile: horizontal slider docked at the bottom of the map ────────── */
+  /* ── Mobile: horizontal slider docked at the bottom of the map ──────────
+     Override unconditionally on mobile (no .horizontal class dependency) —
+     Svelte 5 + Astro scoped CSS has been unreliable with dynamic class
+     modifiers, so we collapse the override to plain media-query selectors. */
   @media (max-width: 640px) {
-    .time-slider.horizontal {
-      position: fixed;
-      left: 12px;
-      right: 12px;
-      bottom: 16px;
-      top: auto;
-      transform: none;
-      width: auto;
-      flex-direction: row;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 14px;
+    .time-slider {
+      position: fixed !important;
+      left: 12px !important;
+      right: 12px !important;
+      bottom: 16px !important;
+      top: auto !important;
+      transform: none !important;
+      width: auto !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 8px 14px !important;
       background: rgba(244, 239, 230, 0.94);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
@@ -382,51 +385,49 @@
       border-radius: 99px;
       box-shadow: 0 4px 14px rgba(27, 20, 14, 0.08);
     }
-    .time-slider.horizontal .tl-bound {
+    .time-slider .tl-bound {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 9px;
       color: var(--mist, #6E665E);
       flex-shrink: 0;
     }
-    .time-slider.horizontal .timeline-track {
-      flex: 1;
-      width: auto;
-      height: 4px;
-      border-radius: 2px;
-      background: rgba(200, 192, 184, 0.4);
-      box-shadow: none;
+    .time-slider .timeline-track {
+      flex: 1 !important;
+      width: auto !important;
+      height: 4px !important;
+      border-radius: 2px !important;
+      background: rgba(200, 192, 184, 0.4) !important;
+      box-shadow: none !important;
     }
-    .time-slider.horizontal .timeline-fill {
+    .time-slider .timeline-fill {
       height: 100% !important;
-      border-radius: 2px;
+      border-radius: 2px !important;
     }
-    /* Round thumb stays round, anchored on the horizontal axis */
-    .time-slider.horizontal .timeline-thumb {
-      width: 14px; height: 14px;
-      margin-left: -7px; margin-top: -7px;
-      border-radius: 50%;
+    .time-slider .timeline-thumb {
+      width: 14px !important; height: 14px !important;
+      margin-left: -7px !important; margin-top: -7px !important;
+      border-radius: 50% !important;
       box-shadow:
         0 0 0 3px rgba(184, 74, 46, 0.18),
-        0 1px 3px rgba(0, 0, 0, 0.18);
+        0 1px 3px rgba(0, 0, 0, 0.18) !important;
     }
-    /* Year dots ride the horizontal axis */
-    .time-slider.horizontal .tl-dot {
-      width: 8px; height: 14px;
-      margin-left: -4px; margin-top: -7px;
+    .time-slider .tl-dot {
+      width: 8px !important; height: 14px !important;
+      margin-left: -4px !important; margin-top: -7px !important;
     }
-    .time-slider.horizontal .tl-dot.year-dot {
-      width: 5px; height: 5px;
-      margin-left: -2.5px; margin-top: -2.5px;
+    .time-slider .tl-dot.year-dot {
+      width: 5px !important; height: 5px !important;
+      margin-left: -2.5px !important; margin-top: -2.5px !important;
     }
-    .time-slider.horizontal .tl-current-label {
-      font-size: 11px;
-      margin-top: 0;
+    .time-slider .tl-current-label {
+      font-size: 11px !important;
+      margin-top: 0 !important;
       flex-shrink: 0;
       min-width: 50px;
       text-align: center;
     }
-    .time-slider.horizontal .tl-current-label .y {
-      display: inline;
+    .time-slider .tl-current-label .y {
+      display: inline !important;
       font-size: 11px;
       margin-left: 3px;
       color: var(--mist, #6E665E);
