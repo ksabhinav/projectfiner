@@ -1204,6 +1204,31 @@ const base = import.meta.env.BASE_URL;
               e.target.closeTooltip();
             },
             dblclick: function(e) {
+              // Desktop: double-click → focus mode (kept for hover-capable
+              // devices). On iOS Safari Leaflet's dblclick is flaky because
+              // the browser's native double-tap-to-zoom competes with it
+              // even after doubleClickZoom:false. Mobile handled below via
+              // click + contextmenu.
+              L.DomEvent.stopPropagation(e);
+              L.DomEvent.preventDefault(e);
+              focusDistrict(normDist(p.DISTRICT), p.STATE_UT);
+            },
+            click: function(e) {
+              // Touch devices — single tap goes straight to focus mode.
+              // Hover-driven tooltips don't apply on touch anyway, so we
+              // skip the preview and open the full focus view immediately.
+              // Detection: any device that lacks a hover pointer (covers
+              // iOS + Android + tablets without distinguishing brand).
+              var isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+              if (!isTouch) return;
+              L.DomEvent.stopPropagation(e);
+              L.DomEvent.preventDefault(e);
+              focusDistrict(normDist(p.DISTRICT), p.STATE_UT);
+            },
+            contextmenu: function(e) {
+              // Long-press on touch fires `contextmenu` in Leaflet — second
+              // path to focus on devices where `(hover: none)` reports false
+              // (rare but happens on some Android tablets in desktop-mode).
               L.DomEvent.stopPropagation(e);
               L.DomEvent.preventDefault(e);
               focusDistrict(normDist(p.DISTRICT), p.STATE_UT);
