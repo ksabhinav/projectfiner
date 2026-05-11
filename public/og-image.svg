@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  FINER · Atlas Open Graph card
-  Source for og-image.png (1200×630). Edit text or colours here, then
-  re-run scripts/build-og-image.py (or any SVG→PNG tool that loads Google
-  Fonts correctly — Playwright/Puppeteer recommended) to regenerate the PNG.
+  FINER · Atlas Open Graph card (1200×630)
+
+  Layout:
+    Row 1: brand mark + wordmark        | top-right meta
+    Row 2: headline (one line, fits)
+    Row 3: stat block — N indicators / 800+ districts / 25 states
+    Row 4: tagline                       | projectfiner.com
+
+  Regenerate the PNG from this SVG with:
+    python3 scripts/build_og_image.py
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" font-family="'Fraunces', Georgia, serif">
   <defs>
@@ -24,56 +30,54 @@
     </style>
   </defs>
 
-  <!-- Paper background -->
   <rect width="1200" height="630" fill="#F4EFE6"/>
-
-  <!-- Top vermillion → saffron gradient hairline (12 px) -->
   <rect x="0" y="0" width="1200" height="12" fill="url(#hairline)"/>
 
-  <!-- Brand block (top-left): four-bar mark + FINER. wordmark -->
-  <g transform="translate(80, 76)">
-    <!-- mark scaled ×4.2 from 18×24 base = 75.6 × 100.8 -->
-    <g transform="scale(4.2)">
+  <!-- Brand block: four-bar mark + FINER. -->
+  <g transform="translate(80, 70)">
+    <g transform="scale(3.6)">
       <rect x="0" y="2"  width="7"  height="3" fill="#B84A2E"/>
       <rect x="0" y="7"  width="11" height="3" fill="#1B140E"/>
       <rect x="0" y="12" width="18" height="3" fill="#1B140E"/>
       <rect x="0" y="17" width="9"  height="3" fill="#D4A24A"/>
     </g>
-    <text x="96" y="74" font-size="64" font-weight="400" letter-spacing="-1.4" class="ink">FINER<tspan class="verm">.</tspan></text>
+    <text x="84" y="64" font-size="54" font-weight="400" letter-spacing="-1.2" class="ink">FINER<tspan class="verm">.</tspan></text>
   </g>
 
   <!-- Top-right meta -->
-  <g class="mono" font-size="18" text-anchor="end">
-    <text x="1120" y="92"  class="mist">ATLAS · INDIA</text>
-    <text x="1120" y="116" class="mist">EST. 2024</text>
+  <g class="mono" font-size="16" text-anchor="end">
+    <text x="1120" y="86"  class="mist">ATLAS · INDIA</text>
+    <text x="1120" y="108" class="mist">EST. 2024</text>
   </g>
 
-  <!-- Headline: "An atlas of financial inclusion in India." -->
-  <text x="80" y="306" font-size="76" font-weight="400" letter-spacing="-2.3">
+  <!-- Headline: smaller font, one line.
+       Total at 56px Fraunces is ≈980px wide — fits inside the 1040px text area. -->
+  <text x="80" y="290" font-size="56" font-weight="400" letter-spacing="-1.6">
     <tspan class="ink">An atlas of </tspan>
     <tspan class="verm" font-style="italic" font-weight="320">financial inclusion</tspan>
     <tspan class="ink"> in India.</tspan>
   </text>
 
-  <!-- Horizontal rule above stat block -->
-  <line x1="80" y1="410" x2="1120" y2="410" stroke="#D9D2C5" stroke-width="1"/>
+  <!-- Subhead, in italic Source Serif -->
+  <text x="80" y="345" class="body mist" font-size="24" font-style="italic">district by district, quarter by quarter</text>
 
-  <!-- Stat block -->
-  <g transform="translate(80, 514)">
-    <!-- "20 indicators" -->
-    <text x="0" y="0" font-size="84" font-weight="380" letter-spacing="-2.2" class="verm-d">20</text>
-    <text x="80" y="-12" font-size="30" font-weight="300" class="mist">indicators</text>
+  <line x1="80" y1="395" x2="1120" y2="395" stroke="#D9D2C5" stroke-width="1"/>
 
-    <!-- "800+ districts" -->
-    <text x="440" y="0" font-size="84" font-weight="380" letter-spacing="-2.2" class="ink-soft">800+</text>
-    <text x="650" y="-12" font-size="30" font-weight="300" class="mist">districts</text>
+  <!-- Stat block, three columns equally spaced.
+       Numbers sit on the same baseline (y=510). Labels are aligned bottom
+       relative to the number's cap-height (y=498). -->
+  <g transform="translate(80, 510)">
+    <text x="0"    y="0" font-size="72" font-weight="380" letter-spacing="-1.8" class="verm-d">25</text>
+    <text x="84"   y="-8" font-size="22" font-weight="300" class="mist">indicators</text>
+
+    <text x="380"  y="0" font-size="72" font-weight="380" letter-spacing="-1.8" class="ink-soft">800+</text>
+    <text x="554"  y="-8" font-size="22" font-weight="300" class="mist">districts</text>
+
+    <text x="760"  y="0" font-size="72" font-weight="380" letter-spacing="-1.8" class="ink-soft">25</text>
+    <text x="844"  y="-8" font-size="22" font-weight="300" class="mist">states</text>
   </g>
 
-  <!-- Right context -->
-  <text x="1120" y="476" class="body" font-size="20" text-anchor="end" class="ink-soft">since 2018  ·  22 states</text>
-  <text x="1120" y="508" class="body" font-size="20" text-anchor="end" class="mist">1.19 M rows of district-level data</text>
-
-  <!-- Bottom row -->
-  <text x="80"   y="572" font-size="26" font-style="italic" class="mist">district by district, quarter by quarter.</text>
-  <text x="1120" y="576" class="body" font-size="22" text-anchor="end" class="ink">projectfiner.com</text>
+  <!-- Bottom row: tag + url -->
+  <text x="80"   y="588" class="body mist" font-size="20">PhonePe · RBI · SLBC · UIDAI · NFHS · SHRUG · SRTM</text>
+  <text x="1120" y="588" class="body ink" font-size="22" text-anchor="end">projectfiner.com</text>
 </svg>
