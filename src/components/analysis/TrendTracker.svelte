@@ -414,7 +414,51 @@
     expandedCard = expandedCard === key ? null : key;
   }
 
+  // ── Shareable URL state ─────────────────────────────────────────────
+  // Hydrate (state, district, category-filter) from URL on init; push
+  // changes back via history.replaceState so the address bar always
+  // reflects the current view.
+  let urlHydrated = false;
+  function hydrateFromUrl() {
+    if (typeof window === 'undefined') return;
+    const p = new URLSearchParams(window.location.search);
+    const s = p.get('state');
+    const d = p.get('district');
+    const cat = p.get('category');
+    if (s && STATES.some(st => st.slug === s)) selectedState = s;
+    if (d) selectedDistrict = d;
+    if (cat) selectedCategoryFilter = cat;
+    urlHydrated = true;
+  }
+  function syncUrlState() {
+    if (typeof window === 'undefined' || !urlHydrated) return;
+    const p = new URLSearchParams(window.location.search);
+    if (selectedState && selectedState !== 'meghalaya') p.set('state', selectedState);
+    else p.delete('state');
+    if (selectedDistrict) p.set('district', selectedDistrict); else p.delete('district');
+    if (selectedCategoryFilter && selectedCategoryFilter !== 'all') p.set('category', selectedCategoryFilter);
+    else p.delete('category');
+    const qs = p.toString();
+    history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : ''));
+  }
+  $effect(() => {
+    void selectedState; void selectedDistrict; void selectedCategoryFilter;
+    syncUrlState();
+  });
+
+  let shareCopied = $state(false);
+  async function copyShareLink() {
+    if (typeof navigator === 'undefined' || !navigator.clipboard) return;
+    try {
+      syncUrlState();
+      await navigator.clipboard.writeText(window.location.href);
+      shareCopied = true;
+      setTimeout(() => { shareCopied = false; }, 1400);
+    } catch {/* clipboard blocked */}
+  }
+
   onMount(async () => {
+    hydrateFromUrl();
     await loadStateData(selectedState);
     loading = false;
   });
@@ -469,6 +513,10 @@
       {#if loadingState}
         <div class="loading-indicator">Loading...</div>
       {/if}
+
+      <button class="share-btn" onclick={copyShareLink} title="Copy a link to this district's profile">
+        {shareCopied ? '✓ Link copied' : '↗ Copy share link'}
+      </button>
     </div>
 
     <!-- District summary header -->
@@ -661,6 +709,28 @@
     flex-wrap: wrap;
   }
   .control-group { display: flex; flex-direction: column; gap: 5px; }
+  .share-btn {
+    /* Atlas mono pill — matches MapLegend + DistrictRankings. */
+    margin-left: auto;
+    align-self: flex-end;
+    padding: 8px 14px;
+    background: transparent;
+    border: 1px solid var(--rule, #D9D2C5);
+    border-radius: 99px;
+    color: var(--ink-soft, #3D332A);
+    font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: background 0.18s, border-color 0.18s, color 0.18s;
+  }
+  .share-btn:hover {
+    background: var(--paper-deep, #ECE5D6);
+    border-color: var(--ink, #1B140E);
+    color: var(--vermillion, #B84A2E);
+  }
+  .share-btn:active { transform: translateY(1px); }
   .ctrl-label {
     font-family: var(--font-sans);
     font-size: 8px;

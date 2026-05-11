@@ -187,17 +187,10 @@ const base = import.meta.env.BASE_URL;
 
     window.addEventListener('finer:stateFilterChange', function(e) {
       bankingStateFilter = e.detail.state;
-      // Persist in URL
-      try {
-        var params = new URLSearchParams(window.location.search);
-        if (bankingStateFilter) {
-          params.set('state', bankingStateFilter.toLowerCase().replace(/\s+/g, '-'));
-        } else {
-          params.delete('state');
-        }
-        var qs = params.toString();
-        history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : ''));
-      } catch (err) { /* ignore */ }
+      // syncUrl() (defined further down) writes state + indicator + metric +
+      // quarter together; we call it lazily here in case the listener fires
+      // before syncUrl is defined on first page load.
+      if (typeof syncUrl === 'function') syncUrl();
       if (slbcLoaded) { buildChoropleth_banking(); updateLabelVisibility_banking(); }
       // Update inset highlight
       if (typeof updateInsetHighlight === 'function') updateInsetHighlight();
@@ -1663,6 +1656,57 @@ const base = import.meta.env.BASE_URL;
       window.dispatchEvent(new CustomEvent('finer:timelineColor', { detail: { color: accent } }));
     }
 
+    // ── Shareable URL state ─────────────────────────────────────────────
+    // Mirrors the currently-displayed view into the address bar so any URL
+    // can be copy-pasted to share an exact view:
+    //   ?indicator=<key>&metric=<idx>&quarter=<YYYY-MM>&state=<slug>
+    // Each dispatcher (indicator / metric / quarter / state-filter) calls
+    // syncUrl() right after it mutates the global, so the URL is always
+    // a single source-of-truth for the rendered map. history.replaceState
+    // is used (no new history entry) so back-button still works naturally.
+    function syncUrl() {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        if (currentIndicator && currentIndicator !== 'digital_transactions') {
+          params.set('indicator', currentIndicator);
+        } else {
+          params.delete('indicator');
+        }
+        if (currentMetricIdx && currentMetricIdx > 0) {
+          params.set('metric', String(currentMetricIdx));
+        } else {
+          params.delete('metric');
+        }
+        // Only persist quarter if it differs from the indicator's default
+        // latest. Avoids clutter for the canonical "latest" view.
+        var ind = INDICATORS[currentIndicator];
+        var defaultQ = (ind && ind.timePoints && ind.timePoints.length)
+                       ? ind.timePoints[0]
+                       : (manifestQuarters && manifestQuarters[0]) || '';
+        if (currentQuarter && currentQuarter !== defaultQ) {
+          params.set('quarter', currentQuarter);
+        } else {
+          params.delete('quarter');
+        }
+        if (bankingStateFilter) {
+          params.set('state', bankingStateFilter.toLowerCase().replace(/\s+/g, '-'));
+        } else {
+          params.delete('state');
+        }
+        var qs = params.toString();
+        history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : ''));
+      } catch (err) { /* URL mutation is non-fatal */ }
+    }
+    // Expose a "copy current view URL" helper that the legend / strip
+    // can call from a button (built in MapLegend.svelte).
+    window.__FINER_COPY_URL = function() {
+      syncUrl();
+      try {
+        navigator.clipboard.writeText(window.location.href);
+        return true;
+      } catch (e) { return false; }
+    };
+
     // Banking event listeners — listen for Svelte events
     window.addEventListener('finer:indicatorChange', function(e) {
       var prevIndicator = currentIndicator;
@@ -1672,6 +1716,7 @@ const base = import.meta.env.BASE_URL;
       window.__FINER.indicator = currentIndicator;
       window.__FINER.metricIdx = currentMetricIdx;
       updateTimelineColor();
+      syncUrl();
 
       var ind = INDICATORS[currentIndicator];
       var prevInd = INDICATORS[prevIndicator];
@@ -1692,6 +1737,7 @@ const base = import.meta.env.BASE_URL;
 
     window.addEventListener('finer:metricChange', function(e) {
       currentMetricIdx = e.detail.metricIdx;
+      syncUrl();
       if (slbcLoaded) buildChoropleth_banking();
     });
 
@@ -1703,6 +1749,7 @@ const base = import.meta.env.BASE_URL;
       currentQIdx = e.detail.idx;
       // Keep __FINER in sync so MapLegend's source citation can re-derive.
       window.__FINER.quarter = currentQuarter;
+      syncUrl();
       loadIndicatorData(currentIndicator, currentQuarter).then(function() {
         buildChoropleth_banking();
       });
@@ -1906,17 +1953,64 @@ const base = import.meta.env.BASE_URL;
     // ══════════════════════════════════════════
     // Section 5 — URL parameter support
     // ══════════════════════════════════════════
-    // Check for ?scope=ne and ?state=<slug-or-name>
+    // Shareable-URL hydration: read ?indicator= / ?metric= / ?quarter= /
+    // ?state= / ?scope= and apply them as the initial view. Each param
+    // dispatches the same event the user would fire by interacting with
+    // the strip / picker, so the downstream effects (data load, choropleth
+    // rebuild, slider position, inset focus, legend citation) all run
+    // through the existing flow with no special-casing.
     (function() {
       var params = new URLSearchParams(window.location.search);
+
+      // 1. Scope (NE vs All-India). Applies first so the rest of the
+      //    hydration runs against the right map extents.
       if (params.get('scope') === 'ne') {
         switchScope('ne');
       }
+
+      // 2. Indicator + metric. Fire indicatorChange so all subscribers
+      //    (slider colour, slider time points, choropleth, legend) update.
+      var ind = params.get('indicator');
+      var metricIdxStr = params.get('metric');
+      var metricIdx = metricIdxStr ? Math.max(0, parseInt(metricIdxStr, 10)) : 0;
+      if (ind && INDICATORS[ind]) {
+        currentIndicator = ind;
+        currentMetricIdx = metricIdx;
+        window.__FINER.indicator = currentIndicator;
+        window.__FINER.metricIdx = currentMetricIdx;
+        // Defer the dispatch so MapPanel / IndicatorStrip / TimelineSlider
+        // are mounted before they need to receive it.
+        setTimeout(function() {
+          window.dispatchEvent(new CustomEvent('finer:indicatorChange', {
+            detail: { indicator: ind, metricIdx: metricIdx },
+          }));
+        }, 0);
+      }
+
+      // 3. Quarter (YYYY-MM). Wait until the slider has populated quarters
+      //    before dispatching, otherwise the slider's onMount will overwrite
+      //    our preference.
+      var q = params.get('quarter');
+      if (q && /^\d{4}-\d{2}$/.test(q)) {
+        var qAttempts = 0;
+        var qiv = setInterval(function() {
+          qAttempts++;
+          if ((sortedQuarters && sortedQuarters.indexOf(q) >= 0) || qAttempts > 60) {
+            clearInterval(qiv);
+            if (sortedQuarters && sortedQuarters.indexOf(q) >= 0) {
+              window.dispatchEvent(new CustomEvent('finer:quarterChange', {
+                detail: { quarter: q, idx: sortedQuarters.indexOf(q) },
+              }));
+            }
+          }
+        }, 100);
+      }
+
+      // 4. State filter (Translate slug → STATE_UT for the dispatcher).
+      //    Wait for distGeoJSON to load so the focus flyTo has bounds.
       var st = params.get('state');
       if (st) {
-        // Translate slug → STATE_UT (uppercase). Wait until distGeoJSON loads to fly.
         var ut = st.toUpperCase().replace(/-/g, ' ');
-        // Wait briefly for distGeoJSON load before dispatching
         var attempts = 0;
         var iv = setInterval(function() {
           attempts++;

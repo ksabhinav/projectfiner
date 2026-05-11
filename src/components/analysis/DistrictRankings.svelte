@@ -319,7 +319,65 @@
     }
   });
 
+  // ── Shareable URL state ─────────────────────────────────────────────
+  // Hydrate the initial selection from ?state= / ?category= / ?quarter= /
+  // ?field= / ?sort= so a copy-pasted URL renders the same ranking view.
+  // After hydration each $effect below writes the URL back.
+  let urlHydrated = false;
+  function hydrateFromUrl() {
+    if (typeof window === 'undefined') return;
+    const p = new URLSearchParams(window.location.search);
+    const s = p.get('state');
+    const cat = p.get('category');
+    const q = p.get('quarter');
+    const fld = p.get('field');
+    const sort = p.get('sort');  // 'value:desc' / 'district:asc' / etc.
+    if (s && STATES.some(st => st.slug === s)) selectedState = s;
+    if (s === 'all') selectedState = 'all';
+    if (cat) selectedCategory = cat;
+    if (q) selectedQuarter = q;
+    if (fld) selectedField = fld;
+    if (sort && sort.includes(':')) {
+      const [c, d] = sort.split(':');
+      if (c === 'value' || c === 'district' || c === 'state') sortCol = c as any;
+      if (d === 'asc' || d === 'desc') sortDir = d as any;
+    }
+    urlHydrated = true;
+  }
+  function syncUrl() {
+    if (typeof window === 'undefined' || !urlHydrated) return;
+    const p = new URLSearchParams(window.location.search);
+    if (selectedState && selectedState !== 'assam') p.set('state', selectedState);
+    else p.delete('state');
+    if (selectedCategory) p.set('category', selectedCategory); else p.delete('category');
+    if (selectedQuarter) p.set('quarter', selectedQuarter); else p.delete('quarter');
+    if (selectedField) p.set('field', selectedField); else p.delete('field');
+    if (sortCol !== 'value' || sortDir !== 'desc') p.set('sort', `${sortCol}:${sortDir}`);
+    else p.delete('sort');
+    const qs = p.toString();
+    history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : ''));
+  }
+  // Mirror state into the URL after each user-driven change. We list every
+  // selector by name so Svelte's reactivity actually subscribes to them.
+  $effect(() => {
+    void selectedState; void selectedCategory; void selectedQuarter;
+    void selectedField; void sortCol; void sortDir;
+    syncUrl();
+  });
+
+  let shareCopied = $state(false);
+  async function copyShareLink() {
+    if (typeof navigator === 'undefined' || !navigator.clipboard) return;
+    try {
+      syncUrl();
+      await navigator.clipboard.writeText(window.location.href);
+      shareCopied = true;
+      setTimeout(() => { shareCopied = false; }, 1400);
+    } catch {/* clipboard blocked — silent fail */}
+  }
+
   onMount(async () => {
+    hydrateFromUrl();
     await loadData();
     loading = false;
   });
@@ -374,6 +432,10 @@
           {/each}
         </select>
       </div>
+
+      <button class="share-btn" onclick={copyShareLink} title="Copy a link to this exact ranking view">
+        {shareCopied ? '✓ Link copied' : '↗ Copy share link'}
+      </button>
 
       <!-- Summary stats -->
       {#if sortedRows.length > 0}
@@ -506,6 +568,28 @@
     top: 20px;
   }
   .control-section { margin-bottom: 16px; }
+  .share-btn {
+    /* Atlas mono pill — matches MapLegend's copy-link button on the map */
+    width: 100%;
+    margin: 8px 0 14px;
+    padding: 8px 10px;
+    background: transparent;
+    border: 1px solid var(--rule, #D9D2C5);
+    border-radius: 99px;
+    color: var(--ink-soft, #3D332A);
+    font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: background 0.18s, border-color 0.18s, color 0.18s;
+  }
+  .share-btn:hover {
+    background: var(--paper-deep, #ECE5D6);
+    border-color: var(--ink, #1B140E);
+    color: var(--vermillion, #B84A2E);
+  }
+  .share-btn:active { transform: translateY(1px); }
   .ctrl-label {
     font-family: var(--font-sans);
     font-size: 9px;
