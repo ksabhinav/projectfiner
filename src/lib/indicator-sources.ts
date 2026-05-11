@@ -117,7 +117,7 @@ export function getSourceCitation(
     // All-India SLBC view
     return {
       label: `SLBC quarterly booklets · ${q}`,
-      attribution: 'Aggregated district-level data from State Level Bankers\' Committee booklets across 23 states. Use the state-focus toggle to see a specific state\'s URL.',
+      attribution: 'Aggregated district-level data from State Level Bankers\' Committee booklets across 24 states (including Madhya Pradesh from Mar 2026). Use the state-focus toggle to see a specific state\'s URL.',
     };
   }
 
