@@ -151,6 +151,10 @@
     const handleSelectStart = (e: Event) => { if (dragging) e.preventDefault(); };
     const handleTouchMove = (e: TouchEvent) => {
       if (!dragging || quarters.length === 0) return;
+      // Claim the gesture so the page doesn't scroll while scrubbing.
+      // Must be a non-passive listener for preventDefault to work — see
+      // the addEventListener call below.
+      if (e.cancelable) e.preventDefault();
       const idx = posToIdx(e.touches[0].clientX, e.touches[0].clientY);
       if (idx !== currentIdx) {
         setPosition(idx);
@@ -162,7 +166,9 @@
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseup', handleMouseUp);
     document.addEventListener('selectstart', handleSelectStart);
-    document.addEventListener('touchmove', handleTouchMove);
+    // passive:false is required so handleTouchMove can preventDefault and
+    // stop the page from scrolling while the user scrubs the slider.
+    document.addEventListener('touchmove', handleTouchMove, { passive: false });
     document.addEventListener('touchend', handleTouchEnd);
 
     return () => {
@@ -377,13 +383,17 @@
       flex-direction: row !important;
       align-items: center !important;
       gap: 10px !important;
-      padding: 8px 14px !important;
+      padding: 10px 14px !important;
       background: rgba(244, 239, 230, 0.94);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border: 1px solid var(--rule, #D9D2C5);
       border-radius: 99px;
       box-shadow: 0 4px 14px rgba(27, 20, 14, 0.08);
+      /* Tell the browser we're handling all touch gestures here — no
+         horizontal page scroll, no back-swipe, no pull-to-refresh while
+         the user is scrubbing the timeline. */
+      touch-action: none !important;
     }
     .time-slider .tl-bound {
       font-family: 'IBM Plex Mono', monospace;
@@ -398,6 +408,26 @@
       border-radius: 2px !important;
       background: rgba(200, 192, 184, 0.4) !important;
       box-shadow: none !important;
+      /* Larger invisible touch target — the 4px hairline is hard to
+         hit on a thumb; pad the track with a transparent ::before
+         that captures pointer events across a 28px-tall band. */
+      position: relative;
+      touch-action: none !important;
+    }
+    .time-slider .timeline-track::before {
+      /* Invisible hit-extender. pointer-events: auto (default for pseudos
+         on a positioned parent) so taps on this band still trigger the
+         track's mousedown/touchstart handlers. */
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -14px;
+      bottom: -14px;
+      background: transparent;
+    }
+    .time-slider .timeline-thumb {
+      touch-action: none !important;
     }
     .time-slider .timeline-fill {
       height: 100% !important;
