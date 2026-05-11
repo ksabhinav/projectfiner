@@ -61,18 +61,31 @@
   onMount(() => {
     syncFromGlobal();
 
+    // The choropleth pipeline fires camelCase events (finer:indicatorChange,
+    // finer:quarterChange, finer:stateFilterChange) — listen directly so the
+    // citation updates the instant the selection changes, not only after the
+    // legend redraw.
+    const onChange = () => syncFromGlobal();
+    window.addEventListener('finer:indicatorChange', onChange);
+    window.addEventListener('finer:quarterChange', onChange);
+    window.addEventListener('finer:stateFilterChange', onChange);
+
     const unsubs = [
       onFiner('legendUpdate', (detail) => {
         legendTitle = detail.title;
         legendBreaks = detail.breaks;
         legendRamp = detail.ramp;
         legendUnit = detail.unit;
-        // Pick up latest indicator/quarter/state so the citation stays in sync.
         syncFromGlobal();
       }),
       onFiner('stateUpdate', () => {
         syncFromGlobal();
       }),
+      () => {
+        window.removeEventListener('finer:indicatorChange', onChange);
+        window.removeEventListener('finer:quarterChange', onChange);
+        window.removeEventListener('finer:stateFilterChange', onChange);
+      },
     ];
 
     return () => unsubs.forEach(fn => fn());

@@ -1504,6 +1504,9 @@ const base = import.meta.env.BASE_URL;
       var prevIndicator = currentIndicator;
       currentIndicator = e.detail.indicator;
       currentMetricIdx = e.detail.metricIdx;
+      // Keep __FINER in sync so MapLegend's source citation can re-derive.
+      window.__FINER.indicator = currentIndicator;
+      window.__FINER.metricIdx = currentMetricIdx;
       updateTimelineColor();
 
       var ind = INDICATORS[currentIndicator];
@@ -1534,6 +1537,8 @@ const base = import.meta.env.BASE_URL;
     window.addEventListener('finer:quarterChange', function(e) {
       currentQuarter = e.detail.quarter;
       currentQIdx = e.detail.idx;
+      // Keep __FINER in sync so MapLegend's source citation can re-derive.
+      window.__FINER.quarter = currentQuarter;
       loadIndicatorData(currentIndicator, currentQuarter).then(function() {
         buildChoropleth_banking();
       });
