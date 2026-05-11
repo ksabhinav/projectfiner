@@ -194,19 +194,23 @@
     onmousedown={handleTrackMousedown}
     ontouchstart={(e) => { dragging = true; const t = e.touches[0]; const idx = posToIdx(t.clientX, t.clientY); setPosition(idx); emitQuarterChange(); }}
   >
+    <!-- Fill semantics: red = "how recent is the selection".
+         Mobile (horizontal, latest=right): width = posPct, anchored LEFT,
+           so latest = full bar, oldest = empty.
+         Desktop (vertical, latest=top): height = pct, anchored TOP. -->
     <div
       class="timeline-fill"
       style:height={isMobile ? '100%' : `${pct}%`}
-      style:width={isMobile ? `${pct}%` : '100%'}
-      style:right={isMobile ? '0' : 'auto'}
-      style:left={isMobile ? 'auto' : '0'}
+      style:width={isMobile ? `${posPct}%` : '100%'}
+      style:left="0"
+      style:top="0"
     ></div>
     <div class="timeline-dots">
       {#each dots as dot}
         <div
           class="tl-dot"
           class:year-dot={dot.isYearDot}
-          class:past={dot.idx < currentIdx}
+          class:past={isMobile ? dot.idx > currentIdx : dot.idx < currentIdx}
           class:active={dot.idx === currentIdx}
           style:top={isMobile ? '50%' : `${dot.pct}%`}
           style:left={isMobile ? `${100 - dot.pct}%` : '50%'}
