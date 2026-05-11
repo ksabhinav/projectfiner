@@ -20,6 +20,8 @@ slbc-data/**/quarterly/
 slbc-data/**/extracted/
 slbc-data/**/_temp/
 slbc-data/**/pdfs/
+slbc-data/**/downloads/
+slbc-data/**/data-tables/
 slbc-data/scraped_data/
 slbc-data/**/scraped_data/
 # Large intermediate scrape outputs
