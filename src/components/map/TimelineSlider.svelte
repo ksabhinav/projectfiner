@@ -289,34 +289,25 @@
     width: 100%;
     height: 100%;
   }
-  /* Every quarter gets a small visible tick. Year boundaries (first
-     dot of a new year) get a bigger filled dot — see .year-dot below. */
+  /* Per-quarter ticks are invisible by default — only year boundaries
+     get a visible dot (see .year-dot below). Tried showing every
+     quarter as a small tick but the paper-coloured past-ticks on the
+     vermillion fill read as ugly white speckle. The thumb position +
+     month/year label below the track tell the user where they are. */
   .tl-dot {
     position: absolute;
     left: 50%;
-    width: 4px;
-    height: 4px;
-    margin-left: -2px;
-    margin-top: -2px;
-    background: #C8C0B8;
-    border-radius: 50%;
+    width: 14px;
+    height: 8px;
+    margin-left: -7px;
+    margin-top: -4px;
+    background: transparent;
     cursor: pointer;
-    transition: background 0.15s, transform 0.15s;
-  }
-  /* Larger invisible hit target so the 4px tick is still tappable */
-  .tl-dot::after {
-    content: '';
-    position: absolute;
-    inset: -8px;
+    transition: background 0.15s;
+    border-radius: 4px;
   }
   .tl-dot:hover {
-    background: #1B140E;
-    transform: scale(1.4);
-  }
-  /* Past (older-than-current on both axes) ticks ride the fill, so they
-     should still be visible on top of the vermillion bar */
-  .tl-dot.past {
-    background: #F4EFE6;
+    background: rgba(184, 96, 62, 0.18);
   }
   .tl-dot.active {
     background: transparent;
@@ -464,13 +455,13 @@
         0 0 0 3px rgba(184, 74, 46, 0.18),
         0 1px 3px rgba(0, 0, 0, 0.18) !important;
     }
-    /* Mobile: every-quarter tick is a small visible round dot riding
-       the horizontal track. Year-boundary ticks are bigger filled
-       circles (defined globally below). */
+    /* Mobile: per-quarter ticks stay invisible (large hit target only);
+       only year-boundary dots are rendered visibly. */
     .time-slider .tl-dot {
-      width: 4px !important; height: 4px !important;
-      margin-left: -2px !important; margin-top: -2px !important;
+      width: 14px !important; height: 14px !important;
+      margin-left: -7px !important; margin-top: -7px !important;
       border-radius: 50% !important;
+      background: transparent !important;
     }
     .time-slider .tl-dot.year-dot {
       width: 6px !important; height: 6px !important;
