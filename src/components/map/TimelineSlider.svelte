@@ -20,9 +20,12 @@
   let dragging = false;
   let sliderTimer: ReturnType<typeof setTimeout> | null = null;
   let trackEl: HTMLDivElement;
+  let isMobile = $state(false);
 
   // Computed
   let pct = $derived(quarters.length > 1 ? (currentIdx / (quarters.length - 1)) * 100 : 0);
+  // Mobile (horizontal): latest quarter at RIGHT, so visual left% = 100 - pct
+  let posPct = $derived(isMobile ? 100 - pct : pct);
   let startYear = $derived(quarters.length > 0 ? quarters[0].substring(0, 4) : '');
   let endYear = $derived(quarters.length > 0 ? quarters[quarters.length - 1].substring(0, 4) : '');
   let startOpacity = $derived(pct < 15 ? 0 : 1);
@@ -48,10 +51,18 @@
     return result;
   });
 
-  function posToIdx(clientY: number): number {
+  function posToIdx(clientX: number, clientY: number): number {
     if (!trackEl) return 0;
     const rect = trackEl.getBoundingClientRect();
-    const p = Math.max(0, Math.min(1, (clientY - rect.top) / rect.height));
+    let p: number;
+    if (isMobile) {
+      // Horizontal: latest quarter (idx 0) anchored RIGHT, oldest (idx n-1) LEFT
+      // so dragging right → newer time. quarters[] is latest-first.
+      p = Math.max(0, Math.min(1, 1 - (clientX - rect.left) / rect.width));
+    } else {
+      // Vertical: latest at top, oldest at bottom
+      p = Math.max(0, Math.min(1, (clientY - rect.top) / rect.height));
+    }
     return Math.round(p * (quarters.length - 1));
   }
 
@@ -75,7 +86,7 @@
 
   function handleTrackMousedown(e: MouseEvent) {
     dragging = true;
-    const idx = posToIdx(e.clientY);
+    const idx = posToIdx(e.clientX, e.clientY);
     setPosition(idx);
     emitQuarterChange();
   }
@@ -86,6 +97,12 @@
   }
 
   onMount(() => {
+    // Track orientation for mobile horizontal layout
+    const mq = window.matchMedia('(max-width: 640px)');
+    isMobile = mq.matches;
+    const onResize = (e: MediaQueryListEvent) => { isMobile = e.matches; };
+    mq.addEventListener('change', onResize);
+
     // Read initial state
     const state = getFinerState();
     if (state) {
@@ -124,7 +141,7 @@
     const handleMouseMove = (e: MouseEvent) => {
       if (!dragging || quarters.length === 0) return;
       e.preventDefault();
-      const idx = posToIdx(e.clientY);
+      const idx = posToIdx(e.clientX, e.clientY);
       if (idx !== currentIdx) {
         setPosition(idx);
         emitQuarterChange();
@@ -134,7 +151,7 @@
     const handleSelectStart = (e: Event) => { if (dragging) e.preventDefault(); };
     const handleTouchMove = (e: TouchEvent) => {
       if (!dragging || quarters.length === 0) return;
-      const idx = posToIdx(e.touches[0].clientY);
+      const idx = posToIdx(e.touches[0].clientX, e.touches[0].clientY);
       if (idx !== currentIdx) {
         setPosition(idx);
         emitQuarterChange();
@@ -150,6 +167,7 @@
 
     return () => {
       unsub1(); unsub2(); unsub3();
+      mq.removeEventListener('change', onResize);
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
       document.removeEventListener('selectstart', handleSelectStart);
@@ -160,17 +178,22 @@
 </script>
 
 {#if visible && quarters.length > 0}
-<div class="time-slider" id="time-slider">
-  <div class="tl-bound" style:opacity={startOpacity}>{startYear}</div>
+<div class="time-slider" id="time-slider" class:horizontal={isMobile}>
+  <!-- On mobile (horizontal): oldest year on the left, latest on the right.
+       On desktop (vertical): startYear (latest) on top, endYear (oldest) on bottom. -->
+  <div class="tl-bound" style:opacity={isMobile ? endOpacity : startOpacity}>{isMobile ? endYear : startYear}</div>
   <div
     class="timeline-track"
     bind:this={trackEl}
     onmousedown={handleTrackMousedown}
-    ontouchstart={(e) => { dragging = true; const idx = posToIdx(e.touches[0].clientY); setPosition(idx); emitQuarterChange(); }}
+    ontouchstart={(e) => { dragging = true; const t = e.touches[0]; const idx = posToIdx(t.clientX, t.clientY); setPosition(idx); emitQuarterChange(); }}
   >
     <div
       class="timeline-fill"
-      style:height="{pct}%"
+      style:height={isMobile ? '100%' : `${pct}%`}
+      style:width={isMobile ? `${pct}%` : '100%'}
+      style:right={isMobile ? '0' : 'auto'}
+      style:left={isMobile ? 'auto' : '0'}
     ></div>
     <div class="timeline-dots">
       {#each dots as dot}
@@ -179,19 +202,21 @@
           class:year-dot={dot.isYearDot}
           class:past={dot.idx < currentIdx}
           class:active={dot.idx === currentIdx}
-          style:top="{dot.pct}%"
+          style:top={isMobile ? '50%' : `${dot.pct}%`}
+          style:left={isMobile ? `${100 - dot.pct}%` : '50%'}
           onclick={() => handleDotClick(dot.idx)}
         ></div>
       {/each}
     </div>
     <div
       class="timeline-thumb"
-      style:top="{pct}%"
+      style:top={isMobile ? '50%' : `${pct}%`}
+      style:left={isMobile ? `${posPct}%` : '50%'}
       onmousedown={handleThumbMousedown}
       ontouchstart={(e) => { dragging = true; e.preventDefault(); }}
     ></div>
   </div>
-  <div class="tl-bound" style:opacity={endOpacity}>{endYear}</div>
+  <div class="tl-bound" style:opacity={isMobile ? startOpacity : endOpacity}>{isMobile ? startYear : endYear}</div>
   <div class="tl-current-label">
     {labelMonth}<span class="y">{labelYear}</span>
   </div>
@@ -336,28 +361,75 @@
     z-index: 1300 !important;
   }
 
+  /* ── Mobile: horizontal slider docked at the bottom of the map ────────── */
   @media (max-width: 640px) {
-    .time-slider { right: 8px; gap: 4px; width: 48px; }
-    .timeline-track {
-      height: calc(100vh - 280px);   /* fill available vertical space */
-      max-height: 360px;
-      min-height: 180px;
-      width: 4px;
+    .time-slider.horizontal {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 16px;
+      top: auto;
+      transform: none;
+      width: auto;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      background: rgba(244, 239, 230, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--rule, #D9D2C5);
+      border-radius: 99px;
+      box-shadow: 0 4px 14px rgba(27, 20, 14, 0.08);
     }
-    .tl-bound { font-size: 8px; letter-spacing: 0.04em; }
-    /* Mobile: round thumb scaled down */
-    .timeline-thumb {
-      width: 12px;
-      height: 12px;
-      margin-left: -6px;
-      margin-top: -6px;
+    .time-slider.horizontal .tl-bound {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      color: var(--mist, #6E665E);
+      flex-shrink: 0;
+    }
+    .time-slider.horizontal .timeline-track {
+      flex: 1;
+      width: auto;
+      height: 4px;
+      border-radius: 2px;
+      background: rgba(200, 192, 184, 0.4);
+      box-shadow: none;
+    }
+    .time-slider.horizontal .timeline-fill {
+      height: 100% !important;
+      border-radius: 2px;
+    }
+    /* Round thumb stays round, anchored on the horizontal axis */
+    .time-slider.horizontal .timeline-thumb {
+      width: 14px; height: 14px;
+      margin-left: -7px; margin-top: -7px;
+      border-radius: 50%;
       box-shadow:
         0 0 0 3px rgba(184, 74, 46, 0.18),
-        0 1px 3px rgba(0, 0, 0, 0.12);
+        0 1px 3px rgba(0, 0, 0, 0.18);
     }
-    .tl-dot.year-dot { width: 5px; height: 5px; margin-left: -2.5px; margin-top: -2.5px; }
-    /* Italic label below the track — smaller, tighter on mobile */
-    .tl-current-label { font-size: 11px; margin-top: 6px; }
-    .tl-current-label .y { font-size: 9px; }
+    /* Year dots ride the horizontal axis */
+    .time-slider.horizontal .tl-dot {
+      width: 8px; height: 14px;
+      margin-left: -4px; margin-top: -7px;
+    }
+    .time-slider.horizontal .tl-dot.year-dot {
+      width: 5px; height: 5px;
+      margin-left: -2.5px; margin-top: -2.5px;
+    }
+    .time-slider.horizontal .tl-current-label {
+      font-size: 11px;
+      margin-top: 0;
+      flex-shrink: 0;
+      min-width: 50px;
+      text-align: center;
+    }
+    .time-slider.horizontal .tl-current-label .y {
+      display: inline;
+      font-size: 11px;
+      margin-left: 3px;
+      color: var(--mist, #6E665E);
+    }
   }
 </style>

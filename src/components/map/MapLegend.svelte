@@ -175,9 +175,7 @@
   /* ── Mobile ── */
   @media (max-width: 640px) {
     .legend-wrap {
-      bottom: auto;
-      top: 8px;
-      left: 8px;
+      display: none;
     }
 
     .legend-box {
