@@ -797,13 +797,23 @@ const base = import.meta.env.BASE_URL;
         }
       }
       // 3. Last-resort name-only fallback — only used when state-qualified
-      //    didn't match. For colliding names this returns *some* state's data
-      //    rather than nothing, but the state-qualified path above prevents
-      //    that from happening when both records have a state field.
+      //    didn't match. Try the canonical-form lookup but STATE-QUALIFY
+      //    it first (otherwise stray cross-state aliases in lgd codes,
+      //    e.g. a wrongly-set alias "Phalodi"→"Tamulpur" (Assam), would
+      //    paint Assam data onto a Rajasthan polygon). Plain-name lookup
+      //    remains the very last resort for indicators where the record
+      //    doesn't carry a state field.
       var canonical2 = lgdNameToCanonical[dn];
       if (canonical2 && canonical2 !== dn) {
-        var entry2 = lookup.get(canonical2);
-        if (entry2) return entry2;
+        if (stateSlug) {
+          var sqEntry2 = lookup.get(stateSlug + '|' + canonical2);
+          if (sqEntry2) return sqEntry2;
+        }
+        // If canonical doesn't have a state-qualified entry, do NOT
+        // fall through to plain canonical lookup — that's where the
+        // cross-state contamination happens. Continue to plain-name
+        // and DISTRICT_ALIASES fallbacks below, which are bounded to
+        // the polygon's own name.
       }
       return lookup.get(dn) || lookup.get(DISTRICT_ALIASES[dn]) || null;
     }
