@@ -28,18 +28,10 @@ def main():
     print(f"VIIRS rows (median-masked): {len(df)}")
     print(f"Years: {sorted(df['year'].unique())}")
 
-    db = sqlite3.connect(ROOT / 'db/finer.db')
-    finer = {}
-    for r in db.execute("""SELECT d.lgd_code, d.name, d.state_lgd_code, d.census_2011_code, s.name
-                           FROM districts d JOIN states s ON s.lgd_code=d.state_lgd_code
-                           WHERE d.census_2011_code IS NOT NULL AND d.census_2011_code != ''"""):
-        lgd, dname, st_lgd, c11, sname = r
-        try:
-            key = (f"{st_lgd:02d}", f"{int(c11):03d}")
-        except ValueError:
-            continue
-        finer[key] = (lgd, dname, sname)
-    db.close()
+    # Shared lookup with Telangana + Ladakh PC11 aliases
+    import sys as _sys; _sys.path.insert(0, str(Path(__file__).parent))
+    from _shared import build_finer_lookup  # type: ignore
+    finer = build_finer_lookup(ROOT / 'db/finer.db')
 
     OUT_DIR.mkdir(exist_ok=True)
     for year in sorted(df['year'].unique()):

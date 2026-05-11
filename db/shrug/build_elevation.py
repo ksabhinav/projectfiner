@@ -39,19 +39,12 @@ OUT = ROOT / 'public/indicators/elevation_terrain/static.json'
 
 
 def main():
-    db = sqlite3.connect(ROOT / 'db/finer.db')
-    # Build (pc11_state, pc11_district) → (lgd, district_name, state_name) map
-    finer = {}
-    for r in db.execute("""SELECT d.lgd_code, d.name, d.state_lgd_code, d.census_2011_code, s.name
-                           FROM districts d JOIN states s ON s.lgd_code=d.state_lgd_code
-                           WHERE d.census_2011_code IS NOT NULL AND d.census_2011_code != ''"""):
-        lgd, dname, st_lgd, c11, sname = r
-        try:
-            key = (f"{st_lgd:02d}", f"{int(c11):03d}")
-        except ValueError:
-            continue
-        finer[key] = (lgd, dname, sname)
-    db.close()
+    # Use shared lookup so Telangana (carved from AP in 2014) and Ladakh
+    # (carved from J&K in 2019) are joinable against SHRUG's Census-2011
+    # pc11_state_id (28 = AP, 01 = J&K).
+    import sys as _sys; _sys.path.insert(0, str(Path(__file__).parent))
+    from _shared import build_finer_lookup  # type: ignore
+    finer = build_finer_lookup(ROOT / 'db/finer.db')
 
     if not SRC.exists():
         raise SystemExit(f"Source file not found: {SRC}")

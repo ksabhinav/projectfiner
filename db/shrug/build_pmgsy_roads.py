@@ -36,18 +36,10 @@ def parse_float(s):
 
 
 def main():
-    db = sqlite3.connect(ROOT / 'db/finer.db')
-    finer = {}
-    for r in db.execute("""SELECT d.lgd_code, d.name, d.state_lgd_code, d.census_2011_code, s.name
-                           FROM districts d JOIN states s ON s.lgd_code=d.state_lgd_code
-                           WHERE d.census_2011_code IS NOT NULL AND d.census_2011_code != ''"""):
-        lgd, dname, st_lgd, c11, sname = r
-        try:
-            key = (f"{st_lgd:02d}", f"{int(c11):03d}")
-        except ValueError:
-            continue
-        finer[key] = (lgd, dname, sname)
-    db.close()
+    # Shared lookup with Telangana + Ladakh PC11 aliases
+    import sys as _sys; _sys.path.insert(0, str(Path(__file__).parent))
+    from _shared import build_finer_lookup  # type: ignore
+    finer = build_finer_lookup(ROOT / 'db/finer.db')
 
     # Aggregate per (pc11_state, pc11_dist)
     agg = defaultdict(lambda: {
