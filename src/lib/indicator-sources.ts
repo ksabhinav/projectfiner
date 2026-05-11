@@ -184,6 +184,13 @@ export function getSourceCitation(
         url: 'https://www2.jpl.nasa.gov/srtm/',
         attribution: 'NASA Shuttle Radar Topography Mission (SRTM) 30 m DEM, captured February 2000. District aggregation via SHRUG v2.1 (Asher, Lunt, Matsuura, Novosad — Development Data Lab). Within-district std and max−min serve as Riley-style terrain ruggedness proxies. Citation: Farr & Kobrick (2000), Eos 81(48):583-585. Licence: SHRUG CC BY-NC-SA 4.0; SRTM is public domain.',
       };
+
+    case 'crop_production':
+      return {
+        label: 'Census 2011 Village Directory land use (via SHRUG v2.1)',
+        url: 'https://devdatalab.org/shrug',
+        attribution: 'Office of the Registrar General & Census Commissioner, India — Population Census 2011 Village Directory land-use accounts. District aggregation via SHRUG v2.1 (Asher, Lunt, Matsuura, Novosad — Development Data Lab). Net Sown Area and Irrigated Area are the canonical agricultural-production proxies at district level; SHRUG does not publish district-level crop-output tonnes for India. Licence: SHRUG CC BY-NC-SA 4.0; Census of India © Government of India.',
+      };
   }
 
   // Unknown indicator

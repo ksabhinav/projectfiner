@@ -508,6 +508,21 @@ const base = import.meta.env.BASE_URL;
           { field: 'elevation_std',    label: 'Elevation Std. Dev. (m)', unit: 'm', desc: 'Standard deviation of elevation across the district — alternate TRI proxy. Higher = more rugged terrain.' },
         ],
       },
+      crop_production: {
+        title: 'Agricultural Land Use & Irrigation',
+        desc: 'District-level cropland and irrigation statistics from the Census 2011 Village Directory, aggregated via SHRUG v2.1. Net Sown Area is the district\'s cultivated footprint; Irrigated Area is the share with assured water (canal + tubewell). Together they are the strongest pan-India proxy for KCC penetration, agri-credit demand, MSP procurement reach, and rural-credit profitability — a useful structural control alongside SLBC banking indicators. SHRUG does not publish district-level crop-output tonnes, so cropland area + irrigation intensity are the canonical agricultural-production proxies available at this geography.',
+        // Static Census 2011 snapshot.
+        timePoints: ['2011-03'],
+        metrics: [
+          { field: 'cropland_ha',      label: 'Net Sown Area (ha)',         unit: '', desc: 'Net Area Sown — the district\'s total cultivated land in hectares (Census 2011 Village Directory). The denominator for any per-hectare agri statistic.' },
+          { field: 'irrigated_ha',     label: 'Total Irrigated Area (ha)',  unit: '', desc: 'Area irrigated by all sources (canal + well/tubewell + tank/lake + waterfall + other), in hectares. Climate-resilient cropland — the strongest predictor of KCC density and assured agri-credit appetite.' },
+          { field: 'irrigation_pct',   label: 'Irrigation Coverage (%)',    unit: '%', desc: 'Irrigated area as a share of (irrigated + unirrigated) cropland. 100% = fully assured-water (Punjab–Haryana wheat-rice belt); <30% = rain-fed (much of central/eastern India).' },
+          { field: 'canal_irr_ha',     label: 'Canal-irrigated (ha)',       unit: '', desc: 'Area irrigated by canals — a marker of major-irrigation-project districts (Indira Gandhi Canal, Krishna-Godavari delta, Cauvery delta, Punjab branch canals).' },
+          { field: 'tubewell_irr_ha',  label: 'Tubewell-irrigated (ha)',    unit: '', desc: 'Area irrigated by wells / tubewells. High values mark groundwater-dependent districts (Punjab interior, western UP, north Gujarat) — flag for stressed-aquifer risk.' },
+          { field: 'unirrigated_ha',   label: 'Unirrigated Area (ha)',      unit: '', desc: 'Rain-fed cropland in hectares. Higher = more weather-dependent agricultural income, higher rural-credit volatility.' },
+          { field: 'forest_ha',        label: 'Forest Area (ha)',           unit: '', desc: 'Forest area within the district\'s land use accounts. Context for hilly / scheduled-area districts where cropland is naturally limited.' },
+        ],
+      },
     };
 
     // Atlas identity ramps — six 5-stop arrays interpolated from the three-stop
@@ -549,6 +564,7 @@ const base = import.meta.env.BASE_URL;
       pmgsy_roads:             RAMP_SAFFRON,
       viirs_nightlights:       RAMP_SAFFRON,
       elevation_terrain:       RAMP_PEACOCK,
+      crop_production:         RAMP_SAGE,
     };
 
     function getRamp(indicator) {
@@ -1589,7 +1605,8 @@ const base = import.meta.env.BASE_URL;
       if (indicator === 'rbi_banking_outlets' ||
           indicator === 'nrlm_shg' ||
           indicator === 'capital_markets_access' ||
-          indicator === 'elevation_terrain') {
+          indicator === 'elevation_terrain' ||
+          indicator === 'crop_production') {
         var cacheKey = indicator + '/static';
         if (indicatorCache[cacheKey]) {
           currentIndicatorData = indicatorCache[cacheKey];

@@ -47,6 +47,7 @@ export const INDICATOR_KEYS = [
   'pmgsy_roads',
   'viirs_nightlights',
   'elevation_terrain',
+  'crop_production',
 ] as const;
 
 /**
@@ -279,6 +280,8 @@ export const ATLAS_INDICATORS: AtlasIndicator[] = [
   { key: 'pmgsy_roads',                   name: 'PMGSY Rural Roads',             units: 'no.',  category: 'demographics', subgroup: 'headline', rampKey: 'saffron' },
   { key: 'viirs_nightlights',             name: 'Nightlights (VIIRS)',           units: 'idx',  category: 'demographics', subgroup: 'headline', rampKey: 'saffron' },
   { key: 'elevation_terrain',             name: 'Elevation & Ruggedness (SRTM)', units: 'm',    category: 'demographics', subgroup: 'headline', rampKey: 'peacock' },
+  { key: 'crop_production',               name: 'Agricultural Land & Irrigation (Census)', units: 'ha', category: 'credit', subgroup: 'inclusion', rampKey: 'sage' },
+  { key: 'crop_irrigation_pct',           indicatorKey: 'crop_production', metricIdx: 2, name: 'Irrigation Coverage (Census)', units: '%', category: 'credit', subgroup: 'inclusion', rampKey: 'sage' },
 ];
 
 export function atlasIndicatorByKey(key: string): AtlasIndicator | undefined {
