@@ -114,10 +114,7 @@
         {/if}
       </div>
       {#if citation.attribution}
-        <!-- Attribution can contain inline DOI / paper / portal links —
-             rendered with {@html} so the linkified output is interactive.
-             getSourceCitation() emits sanitised content only. -->
-        <div class="legend-attribution">{@html citation.attribution}</div>
+        <div class="legend-attribution">{citation.attribution}</div>
       {/if}
     </div>
   </div>
@@ -215,22 +212,6 @@
     font-size: 10px;
     color: var(--mist, #6E665E);
     line-height: 1.45;
-  }
-  /* DOI / portal links embedded inside the attribution — kept subtle
-     so the legend doesn't turn into a wall of blue. Dotted underline,
-     vermillion on hover. */
-  .legend-attribution :global(a) {
-    color: var(--ink-soft, #3D332A);
-    text-decoration: none;
-    border-bottom: 1px dotted var(--mist, #6E665E);
-    transition: color 0.15s, border-color 0.15s;
-  }
-  .legend-attribution :global(a:hover) {
-    color: var(--vermillion, #B84A2E);
-    border-bottom-color: var(--vermillion, #B84A2E);
-  }
-  .legend-attribution :global(em) {
-    font-style: italic;
   }
 
 
