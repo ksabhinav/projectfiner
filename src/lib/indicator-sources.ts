@@ -25,7 +25,7 @@ const SLBC_STATE_URLS: Record<string, { name: string; url: string }> = {
   'arunachal-pradesh':  { name: 'Arunachal Pradesh', url: 'https://onlineslbcne.nic.in' },
   'assam':              { name: 'Assam',           url: 'https://onlineslbcne.nic.in' },
   'bihar':              { name: 'Bihar',           url: 'https://www.slbcbihar.com/SlBCHeldMeeting.aspx' },
-  'chhattisgarh':       { name: 'Chhattisgarh',    url: 'https://slbcne.nic.in/meghalaya/booklet.php' }, // NE-style extraction; replace if dedicated CG page found
+  'chhattisgarh':       { name: 'Chhattisgarh',    url: 'https://slbcchhattisgarh.com' }, // Dedicated SLBC CG site, Excel data-tables per meeting
   'gujarat':            { name: 'Gujarat',         url: 'https://slbcgujarat.in' },
   'haryana':            { name: 'Haryana',         url: 'https://slbcharyana.pnb.bank.in' },
   'jharkhand':          { name: 'Jharkhand',       url: 'https://onlineslbcne.nic.in' },
