@@ -1,0 +1,400 @@
+// Project FINER — Findings (curated district-level observations from the data
+// platform). All numbers verified against the regenerated indicator JSONs in
+// public/indicators/ as of the latest available quarter for each indicator.
+//
+// Each finding has: an id, a one-line title, a 2-4 sentence body, a hero stat
+// to display prominently, the indicator + quarter it draws from, and a list
+// of districts/states relevant to the story (for click-through to the map).
+
+export interface Finding {
+  id: string;
+  title: string;
+  body: string;
+  statValue: string;
+  statLabel: string;
+  category: FindingCategory;
+  indicator: string;          // map indicator key
+  quarter: string | null;     // "YYYY-MM" or null (static)
+  tags: string[];
+  // Optional: districts to spotlight when this finding is opened
+  spotlight?: { state: string; district: string }[];
+}
+
+export const FINDING_CATEGORIES = [
+  'All',
+  'Concentration',
+  'Disparity',
+  'Access Gap',
+  'Adoption',
+  'Anomaly',
+  'Growth',
+  'Regional Pattern',
+] as const;
+
+export type FindingCategory = (typeof FINDING_CATEGORIES)[number];
+
+export const findings: Finding[] = [
+  {
+    id: 'cd-arunachal-floor',
+    title: 'Arunachal Pradesh holds the four lowest district CD ratios in India',
+    body: "Dibang Valley (11.9%), Shi Yomi (12.0%), Tawang (14.0%) and Upper Siang (20.7%) record the four lowest district-level credit-deposit ratios across all 351 districts in the December 2025 SLBC data. All four are sparsely populated frontier hill districts where bank deposits accumulate (tourism, government salaries) but viable lending opportunities are scarce. The state average sits well below the RBI's 60% norm.",
+    statValue: '11.9%',
+    statLabel: 'Dibang Valley CD Ratio · Dec 2025',
+    category: 'Disparity',
+    indicator: 'credit_deposit_ratio',
+    quarter: '2025-12',
+    tags: ['arunachal-pradesh', 'cd-ratio', 'frontier'],
+    spotlight: [
+      { state: 'arunachal-pradesh', district: 'Dibang Valley' },
+      { state: 'arunachal-pradesh', district: 'Shi Yomi' },
+      { state: 'arunachal-pradesh', district: 'Tawang' },
+    ],
+  },
+  {
+    id: 'cd-rajasthan-ceiling',
+    title: "Rajasthan's Barmer runs a 340% CD ratio — banks lend three rupees for every one deposited",
+    body: 'Barmer in Rajasthan posts a district-level CD ratio of 339.8% in December 2025, the highest of any district in the SLBC dataset. Outstanding advances of ₹26,107 crore dwarf deposits of ₹7,684 crore. The pattern reflects large-ticket project lending (oil/gas, refineries, renewables) booked locally even though the depositor base remains small. Jodhpur (Rajasthan) and Kallakurichi (Tamil Nadu) follow the same shape.',
+    statValue: '339.8%',
+    statLabel: 'Barmer CD Ratio · Dec 2025',
+    category: 'Anomaly',
+    indicator: 'credit_deposit_ratio',
+    quarter: '2025-12',
+    tags: ['rajasthan', 'cd-ratio', 'project-lending'],
+    spotlight: [{ state: 'rajasthan', district: 'Barmer' }],
+  },
+  {
+    id: 'pmjdy-bengal-scale',
+    title: 'South 24 Parganas holds 56 lakh Jan Dhan accounts — more than 18 entire states',
+    body: 'South 24 Parganas in West Bengal alone has 56.2 lakh PMJDY accounts as of December 2025, the highest in the country. Three of the top five district-level PMJDY rolls are in West Bengal (South 24 Parganas, Murshidabad 51.7L, Nadia 34.1L), reflecting both the state population density and the depth of the rural BSBD push.',
+    statValue: '56.2 L',
+    statLabel: 'PMJDY Accounts, South 24 Parganas',
+    category: 'Concentration',
+    indicator: 'pmjdy',
+    quarter: '2025-12',
+    tags: ['west-bengal', 'pmjdy', 'scale'],
+    spotlight: [
+      { state: 'west-bengal', district: '24 Paraganas South' },
+      { state: 'west-bengal', district: 'Murshidabad' },
+    ],
+  },
+  {
+    id: 'pmjdy-zero-balance-mizoram',
+    title: '1-in-4 Jan Dhan accounts in Mizoram have never seen a single rupee',
+    body: 'Lunglei (25.0%), Champhai (22.7%) and Kolasib (22.1%) in Mizoram have the highest share of zero-balance PMJDY accounts in India. Dibrugarh in Assam (22.4%) and Lower Siang in Arunachal Pradesh (24.1%) round out the top five. Account opening succeeded; activation did not. By contrast, Noklak (Nagaland) reports just 0.2% zero-balance accounts — the cleanest activation rate.',
+    statValue: '25.0%',
+    statLabel: 'Lunglei Zero-Balance Share',
+    category: 'Access Gap',
+    indicator: 'pmjdy',
+    quarter: '2025-12',
+    tags: ['mizoram', 'pmjdy', 'dormancy'],
+    spotlight: [
+      { state: 'mizoram', district: 'Lunglei' },
+      { state: 'mizoram', district: 'Champhai' },
+    ],
+  },
+  {
+    id: 'kcc-bengal-shadow',
+    title: 'West Bengal carries the heaviest KCC load: Hooghly tops at 3.95 lakh outstanding cards',
+    body: 'Of the six districts with the highest outstanding KCC counts in December 2025, four are in West Bengal — Hooghly (3.95 L), Purba Bardhaman (2.80 L), Birbhum (2.40 L), Bankura (1.98 L). Gujarat contributes Banas Kantha (3.17 L) and Rajkot (2.34 L). The clustering reflects both the dense smallholder farming geography of the Gangetic plain and the aggressive KCC saturation drive of recent years.',
+    statValue: '3.95 L',
+    statLabel: 'Outstanding KCCs in Hooghly',
+    category: 'Concentration',
+    indicator: 'kcc',
+    quarter: '2025-12',
+    tags: ['west-bengal', 'kcc', 'agriculture'],
+    spotlight: [
+      { state: 'west-bengal', district: 'Hooghly' },
+      { state: 'gujarat', district: 'Banas Kantha' },
+    ],
+  },
+  {
+    id: 'aadhaar-seeding-gap',
+    title: "Aadhaar-seeding gap: Rajasthan/Maharashtra have 94% PMJDY accounts linked, Manipur barely 30%",
+    body: 'In December 2025, Aadhaar-seeded CASA shares run 94.7% in Barmer, 94.5% in Jodhpur, 94.0% in Nashik — meaning almost every operative savings account is DBT-ready. The same metric is 29.9% in Jiribam (Manipur), 30.8% in Tamenglong, 35.4% in Kamrup Metro (Assam). The seeding gap effectively rationrs access to Aadhaar-routed welfare and subsidies in the hill districts.',
+    statValue: '64.8 pp',
+    statLabel: 'Seeding gap, Barmer vs Jiribam',
+    category: 'Regional Pattern',
+    indicator: 'aadhaar_authentication',
+    quarter: '2025-12',
+    tags: ['aadhaar', 'rajasthan', 'manipur', 'dbt'],
+    spotlight: [
+      { state: 'rajasthan', district: 'Barmer' },
+      { state: 'manipur', district: 'Jiribam' },
+    ],
+  },
+  {
+    id: 'rbi-outlets-pune-peak',
+    title: 'Pune district hosts 18,500 banking outlets — more than 200 districts combined',
+    body: 'Pune leads the country with 18,502 banking outlets (branches + BCs + CSPs) according to the RBI DBIE locator. Bengaluru Urban (17,641) and West Bengal\'s North 24 Parganas (15,285), Murshidabad (15,279) and South 24 Parganas (15,008) round out the top five. At the other extreme, Pakke Kessang in Arunachal Pradesh has just 3 outlets, Meluri in Nagaland has 5, and Kamjong in Manipur has 8.',
+    statValue: '18,502',
+    statLabel: 'Banking Outlets in Pune',
+    category: 'Concentration',
+    indicator: 'rbi_banking_outlets',
+    quarter: null,
+    tags: ['rbi', 'pune', 'concentration'],
+    spotlight: [
+      { state: 'maharashtra', district: 'Pune' },
+      { state: 'arunachal-pradesh', district: 'Pakke Kessang' },
+    ],
+  },
+  {
+    id: 'bc-vs-branch-mp',
+    title: "In Madhya Pradesh's Sidhi district there are 70 Business Correspondents for every bank branch",
+    body: "RBI's national totals show 168K branches against 2.08 million BCs and 215K CSPs — 84% of all banking outlets are non-branch. Sidhi (MP) takes this to the extreme with 70 BCs per branch (74 branches, 5,220 BCs). Sheopur and Morena (MP), Madhepura (Bihar), and Dhubri (Assam) all run 55–65× BC-to-branch ratios. In urban Delhi the ratio is below 1 — South-East Delhi has 326 branches but only 216 BCs.",
+    statValue: '70.5×',
+    statLabel: 'BCs per branch, Sidhi (MP)',
+    category: 'Regional Pattern',
+    indicator: 'rbi_banking_outlets',
+    quarter: null,
+    tags: ['rbi', 'business-correspondents', 'rural'],
+    spotlight: [
+      { state: 'madhya-pradesh', district: 'Sidhi' },
+      { state: 'madhya-pradesh', district: 'Sheopur' },
+    ],
+  },
+  {
+    id: 'capital-markets-top10',
+    title: 'Top-10 districts hold 26% of all India\'s capital-markets access points; 65 districts have zero',
+    body: "Across 780 districts, the top 10 — Mumbai Suburban (15,310 points), Thane (9,922), Pune (8,987), Ahmedabad (8,834), New Delhi (6,991), Bengaluru Urban (6,656), Surat (5,503), Kolkata (5,234), and two more — together account for 25.7% of all CDSL, NSDL and mutual-fund-distributor service points in the country. 65 districts have zero access points of any kind. Capital markets reach remains aggressively urban.",
+    statValue: '25.7%',
+    statLabel: 'Top 10 districts\' share of access',
+    category: 'Concentration',
+    indicator: 'capital_markets_access',
+    quarter: null,
+    tags: ['capital-markets', 'concentration'],
+    spotlight: [
+      { state: 'maharashtra', district: 'Mumbai Suburban' },
+      { state: 'gujarat', district: 'Ahmedabad' },
+    ],
+  },
+  {
+    id: 'phonepe-bengaluru',
+    title: "Bengaluru Urban processed ₹15 lakh crore of UPI in a single quarter — more than 30 states' SLBC deposits combined",
+    body: 'In the March 2024 quarter, PhonePe alone routed ₹14.98 lakh crore across 1.35 billion transactions inside Bengaluru Urban district. PhonePe is roughly half the UPI market, so the underlying district volume is closer to ₹30 lakh crore. Pune, Rangareddy (Hyderabad outskirts), Hyderabad city and Jaipur follow, but none exceed half of Bengaluru\'s value. The national PhonePe quarterly total in Mar 2024 was ₹27 lakh crore over 19 billion transactions.',
+    statValue: '₹14.98 L Cr',
+    statLabel: 'Bengaluru Urban UPI · Q4 FY24',
+    category: 'Concentration',
+    indicator: 'digital_transactions',
+    quarter: '2024-03',
+    tags: ['karnataka', 'upi', 'phonepe', 'concentration'],
+    spotlight: [
+      { state: 'karnataka', district: 'Bengaluru Urban' },
+      { state: 'telangana', district: 'Rangareddy' },
+    ],
+  },
+  {
+    id: 'tripura-digital-saturation',
+    title: 'All eight Tripura districts now report 100% digital coverage of savings accounts',
+    body: 'Tripura has driven its SLBC-reported digital coverage of savings bank accounts to 100% across every district as of September 2025 — every operative SB account is enabled with at least one digital payment mode (RuPay card, UPI, IMPS, USSD or net banking). This is the only state in the SLBC dataset to hit that ceiling. At the other end of the curve, Khordha (Odisha) sits at 70.6%, with Cuttack and Bhadrak only slightly higher.',
+    statValue: '100%',
+    statLabel: 'SB digital coverage, all of Tripura',
+    category: 'Adoption',
+    indicator: 'digital_transactions',
+    quarter: '2025-09',
+    tags: ['tripura', 'digital', 'saturation'],
+    spotlight: [
+      { state: 'tripura', district: 'West Tripura' },
+      { state: 'odisha', district: 'Khordha' },
+    ],
+  },
+  {
+    id: 'nrlm-bengal-shg',
+    title: "West Bengal's Murshidabad alone has 93,000 SHGs — more than 14 entire states' NRLM rolls",
+    body: 'Murshidabad (92,933 SHGs), South 24 Parganas (92,424), Purba Medinipur (80,484) and North 24 Parganas (74,395) are the largest SHG concentrations in the national NRLM MIS. The national total across 745 districts is 86 lakh SHGs covering 8.98 crore women. West Bengal\'s SHG density is the result of a 15-year sustained Anandadhara mobilisation under the state rural-livelihoods mission.',
+    statValue: '92,933',
+    statLabel: 'SHGs in Murshidabad',
+    category: 'Concentration',
+    indicator: 'nrlm_shg',
+    quarter: null,
+    tags: ['west-bengal', 'shg', 'nrlm'],
+    spotlight: [
+      { state: 'west-bengal', district: 'Murshidabad' },
+      { state: 'west-bengal', district: '24 Paraganas South' },
+    ],
+  },
+  {
+    id: 'branch-density-chennai',
+    title: 'Chennai has 2,147 bank branches; Kamle (Arunachal) and Kamjong (Manipur) have one each',
+    body: 'Chennai district leads the SLBC December 2025 data with 2,147 bank branches, followed by Mumbai Suburban (1,450), Hyderabad (1,179), Thane (1,086) and Surat (1,059). Kamle in Arunachal and Kamjong in Manipur — both districts created since 2017 — report just one branch each. Anjaw, Dibang Valley and Kra Daadi report two. The branch network is one of the most spatially unequal pieces of Indian financial infrastructure.',
+    statValue: '2,147 vs 1',
+    statLabel: 'Chennai vs Kamle / Kamjong',
+    category: 'Disparity',
+    indicator: 'branch_network',
+    quarter: '2025-12',
+    tags: ['branch-network', 'disparity'],
+    spotlight: [
+      { state: 'tamil-nadu', district: 'Chennai' },
+      { state: 'manipur', district: 'Kamjong' },
+    ],
+  },
+  {
+    id: 'nfhs-rajasthan-cover',
+    title: 'Rajasthan is the only state averaging 88% health-insurance coverage; Bihar averages 14%',
+    body: 'Rajasthan\'s state-mediated Chiranjeevi/MMHIS schemes pushed average district health-insurance coverage to 88.4% by 2019–21 (NFHS-5) — the highest in India. Barmer (97.8%), Dungarpur (97.5%) and Jalore (96.6%) lead. The bottom of the table is unambiguous: Bihar averages 14.1%, J&K 12.3%, and North & Middle Andaman just 2.1%. The Bihar–Rajasthan gap is the single largest indicator divergence in the NFHS dataset.',
+    statValue: '88.4% vs 14.1%',
+    statLabel: 'State-avg health cover, Rajasthan vs Bihar',
+    category: 'Regional Pattern',
+    indicator: 'nfhs_health_insurance',
+    quarter: '2021-03',
+    tags: ['rajasthan', 'bihar', 'health-insurance', 'nfhs'],
+    spotlight: [
+      { state: 'rajasthan', district: 'Barmer' },
+      { state: 'bihar', district: 'Patna' },
+    ],
+  },
+  {
+    id: 'rwi-central-delhi',
+    title: 'Meta Relative Wealth Index ranks Central Delhi as India\'s richest district, Bijapur (Chhattisgarh) the poorest',
+    body: 'The Meta/Chi-et-al Relative Wealth Index for 2021 (CC BY-NC-SA, sourced via SHRUG) places Central Delhi at +1.26 standard deviations above the Indian mean, followed by Chennai (+1.22), Kolkata (+1.18) and Mumbai (+1.15). Bijapur in Chhattisgarh anchors the bottom at -0.53, with Narayanpur and Simdega close behind. State averages: Chandigarh leads (+1.03), Mizoram tail-ends (-0.37). The index uses satellite + Facebook activity proxies and is intentionally non-monetary.',
+    statValue: '+1.26 vs −0.53',
+    statLabel: 'RWI: Central Delhi vs Bijapur',
+    category: 'Regional Pattern',
+    indicator: 'facebook_rwi',
+    quarter: '2021-12',
+    tags: ['rwi', 'wealth', 'shrug'],
+    spotlight: [
+      { state: 'Delhi', district: 'Central' },
+      { state: 'Chhattisgarh', district: 'Bijapur' },
+    ],
+  },
+  {
+    id: 'viirs-sheohar-30x',
+    title: "Bihar's Sheohar saw nightlights brighten 30× between 2012 and 2023 — a rural-electrification signal",
+    body: 'VIIRS satellite mean radiance in Sheohar district (Bihar) rose from 0.054 nW/cm²/sr in 2012 to 1.630 in 2023 — a 30-fold increase. Siwan (19×), Nawada (15×), Arwal (15×) and Sitamarhi (14×) follow the same pattern; all top-5 growth districts are in Bihar. At the other end, North-East Delhi and East Delhi actually saw mean radiance fall (saturation + better light-pollution discipline), and Tinsukia in Assam dimmed 35%.',
+    statValue: '30.0×',
+    statLabel: 'Sheohar nightlights, 2012→2023',
+    category: 'Growth',
+    indicator: 'viirs_nightlights',
+    quarter: '2023-12',
+    tags: ['bihar', 'nightlights', 'electrification', 'shrug'],
+    spotlight: [
+      { state: 'Bihar', district: 'Sheohar' },
+      { state: 'Bihar', district: 'Siwan' },
+    ],
+  },
+  {
+    id: 'pmgsy-surguja',
+    title: "Chhattisgarh's Surguja got 9,991 km of PMGSY rural roads — the most of any district in India",
+    body: 'Through 2015, Surguja in Chhattisgarh accumulated 9,991 km of PMGSY-funded rural roads across 1,152 distinct projects — by far the most of any single district. Medinipur West (West Bengal) follows at 7,763 km, Bankura at 7,644 km, Birbhum at 6,791 km. The leaders are all eastern-belt high-density rural districts where village connectivity was the binding constraint at the start of the programme.',
+    statValue: '9,991 km',
+    statLabel: 'PMGSY roads, Surguja (CG)',
+    category: 'Regional Pattern',
+    indicator: 'pmgsy_roads',
+    quarter: '2015-12',
+    tags: ['chhattisgarh', 'pmgsy', 'rural-roads', 'shrug'],
+    spotlight: [{ state: 'Chhattisgarh', district: 'Surguja' }],
+  },
+  {
+    id: 'shg-savings-credit-anomaly',
+    title: 'SHG data shows 19× more credit-linked groups than savings-linked groups in some Assam districts — a definition mismatch',
+    body: 'Five Assam districts (Charaideo, Karbi Anglong, Majuli, Chirang and others) report credit-linked SHG counts 15–19 times higher than savings-linked groups in September 2025. The math is impossible (every credit-linked SHG must first be savings-linked). The likely cause is the SLBC reporting mixing cumulative credit-linked counts with current-quarter savings-linked counts. Mirror anomaly in NE hill districts (Anjaw, East Kameng) where credit-linked is <20% of savings-linked.',
+    statValue: '19.1×',
+    statLabel: 'Charaideo credit:savings ratio',
+    category: 'Anomaly',
+    indicator: 'shg',
+    quarter: '2025-09',
+    tags: ['shg', 'data-quality', 'assam'],
+    spotlight: [{ state: 'assam', district: 'Charaideo' }],
+  },
+  {
+    id: 'mudra-bihar-sishu',
+    title: "Bihar dominates the smallest MUDRA tier: Patna disbursed 78,000 Shishu loans (₹50K each) in a quarter",
+    body: 'Patna alone disbursed 77,965 Shishu loans (sub-₹50,000 tickets) in the quarter ending September 2025, followed by Gaya (43,598), Muzaffarpur (29,936) and Samastipur (23,686) — all in Bihar. Shishu volume tracks micro-enterprise demand among the unbanked. By contrast, Jharkhand districts dominate the total MUDRA disbursement amount: Dhanbad (₹727.5 crore), Ranchi (₹695.2 crore), East Singhbhum (₹519.5 crore).',
+    statValue: '77,965',
+    statLabel: 'Shishu loans, Patna · Q2 FY26',
+    category: 'Regional Pattern',
+    indicator: 'pmmy_mudra_disbursement',
+    quarter: '2025-09',
+    tags: ['bihar', 'jharkhand', 'mudra', 'pmmy'],
+    spotlight: [
+      { state: 'bihar', district: 'Patna' },
+      { state: 'jharkhand', district: 'Dhanbad' },
+    ],
+  },
+  {
+    id: 'pmsby-maharashtra-stack',
+    title: 'Maharashtra districts dominate PMSBY enrolment — Pune leads with 45 lakh insured',
+    body: 'Pune district has 45.5 lakh active PMSBY (Pradhan Mantri Suraksha Bima Yojana) enrolments as of September 2025 — accident insurance at ₹20/year covering ₹2 lakh. The top five PMSBY districts in the SLBC data are all in Maharashtra: Pune, Thane (21.6 L), Mumbai Suburban (20.9 L), Nagpur (19.0 L), Nashik (18.5 L). Maharashtra\'s aggressive bank-led auto-debit enrolment under the JDY co-pull explains the concentration.',
+    statValue: '45.5 L',
+    statLabel: 'PMSBY enrolment, Pune',
+    category: 'Concentration',
+    indicator: 'social_security',
+    quarter: '2025-09',
+    tags: ['maharashtra', 'pmsby', 'social-security'],
+    spotlight: [
+      { state: 'maharashtra', district: 'Pune' },
+      { state: 'maharashtra', district: 'Thane' },
+    ],
+  },
+  {
+    id: 'apy-bengal-pension',
+    title: "West Bengal's Murshidabad has the most APY pension subscribers of any district nationally",
+    body: 'Atal Pension Yojana — the ₹1,000–5,000/month guaranteed pension scheme for the unorganized sector — has its biggest district roll in Murshidabad (6.03 lakh), followed by Pune (5.49 L), Thane (5.32 L), South 24 Parganas (4.89 L) and Jaipur (4.64 L). The Bengal lead is notable because APY enrolment correlates with formal-sector tracking; it suggests the state\'s ASHA + SHG networks are also pulling APY pickup.',
+    statValue: '6.03 L',
+    statLabel: 'APY subscribers, Murshidabad',
+    category: 'Regional Pattern',
+    indicator: 'social_security',
+    quarter: '2025-09',
+    tags: ['west-bengal', 'apy', 'pension'],
+    spotlight: [{ state: 'west-bengal', district: 'Murshidabad' }],
+  },
+  {
+    id: 'pmegp-jodhpur',
+    title: "Rajasthan's Jodhpur disbursed ₹22.4 crore under PMEGP in a single quarter — the national peak",
+    body: 'PMEGP (Prime Minister\'s Employment Generation Programme) bank disbursements in the September 2025 quarter peaked at ₹22.42 crore in Jodhpur (Rajasthan), followed by Jaipur (₹13.19 Cr), Imphal West (₹9.17 Cr), Aizawl (₹9.06 Cr) and East Khasi Hills (₹7.67 Cr). The Rajasthan dominance is striking — the scheme typically over-indexes in the NE because of grant-component preferences, but Rajasthan\'s margin-money pipeline appears to have unblocked.',
+    statValue: '₹22.4 Cr',
+    statLabel: 'PMEGP disbursed CY, Jodhpur',
+    category: 'Adoption',
+    indicator: 'pmegp',
+    quarter: '2025-09',
+    tags: ['rajasthan', 'pmegp', 'employment'],
+    spotlight: [{ state: 'rajasthan', district: 'Jodhpur' }],
+  },
+  {
+    id: 'sc-maharashtra-pune',
+    title: "Maharashtra's SC borrower disbursement is 5× the rest of the country combined",
+    body: 'In the September 2025 SLBC data, the top five districts for SC borrower loan disbursements (no.) are all in Maharashtra: Pune (47,400), Nanded (41,400), Chandrapur (22,600), Thane (21,300) and Nandurbar (19,200). No district outside Maharashtra appears in the top 30. The scale suggests Maharashtra is the only major state currently extracting and publishing this disaggregation at district level — a reporting-coverage finding as much as a substantive one.',
+    statValue: '47,400',
+    statLabel: 'SC loans disbursed, Pune',
+    category: 'Adoption',
+    indicator: 'sc_st_finance',
+    quarter: '2025-09',
+    tags: ['maharashtra', 'sc-st-finance', 'reporting'],
+    spotlight: [
+      { state: 'maharashtra', district: 'Pune' },
+      { state: 'maharashtra', district: 'Nanded' },
+    ],
+  },
+  {
+    id: 'aadhaar-q3fy26-leaders',
+    title: 'New Aadhaar enrolments Oct–Dec 2025: WB and Maharashtra cities lead, but volumes are small',
+    body: 'In the Oct–Dec 2025 UIDAI hackathon snapshot, the highest new Aadhaar enrolment counts come from South 24 Parganas (24,083), Murshidabad (22,034), Pune (17,607), Thane (17,331), Jaipur (14,943) and Hyderabad (14,710). Children aged 0–5 dominate the enrolments in Murshidabad (19,172) and South 24 Parganas (18,060) — first-time Aadhaar issuance for newborns, not adult re-enrolment. Total Q3 FY26 enrolment across all 714 reporting districts is roughly 23 lakh.',
+    statValue: '24,083',
+    statLabel: 'New Aadhaar enrolments, S 24 Parganas',
+    category: 'Adoption',
+    indicator: 'aadhaar_enrollment',
+    quarter: '2025-12',
+    tags: ['aadhaar', 'enrolment', 'west-bengal'],
+    spotlight: [
+      { state: 'west-bengal', district: '24 Paraganas South' },
+      { state: 'west-bengal', district: 'Murshidabad' },
+    ],
+  },
+  {
+    id: 'bc-as-banking',
+    title: 'Banking the unbanked is 84% non-branch: India runs 2.08 million Business Correspondents against 168,000 bank branches',
+    body: 'Aggregating the RBI DBIE banking-outlet locator: India\'s formal banking footprint comprises 168K branches, 2.08 million Business Correspondents and 215K Customer Service Points — 2.47 million total outlets. 67% of outlets sit in rural areas; only 8% are in metros. The choropleth-level density patterns trace the BC network, not the branch network, in every rural state — branches are essentially a constant in rural India, BCs are the variable.',
+    statValue: '12.4×',
+    statLabel: 'BCs per branch (national)',
+    category: 'Regional Pattern',
+    indicator: 'rbi_banking_outlets',
+    quarter: null,
+    tags: ['rbi', 'business-correspondents', 'national'],
+  },
+];
+
+// Quick accessor: findings filtered by category (case-insensitive 'All' is included)
+export function findingsByCategory(cat: FindingCategory): Finding[] {
+  if (cat === 'All') return findings;
+  return findings.filter(f => f.category === cat);
+}

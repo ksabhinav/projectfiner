@@ -199,9 +199,8 @@
 
   <span class="spacer"></span>
 
-  <!-- "A finding" button hidden until public/findings.json has 30+ curated entries.
-       Re-enable: uncomment <FindingButton /> below + uncomment <FactCard client:load /> in index.astro -->
-  <!-- <FindingButton /> -->
+  <!-- "A finding" button — backed by public/findings.json (25 curated entries) -->
+  <FindingButton />
 
   <span class="search" role="button" tabindex="0" onclick={() => dispatch('finer:open-search', {})}>
     <span class="glass" aria-hidden="true">⌕</span>

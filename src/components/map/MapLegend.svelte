@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import { onFiner, getFinerState } from '../../lib/map-bridge';
   import { fmtNum } from '../../lib/format-utils';
+  import { getSourceCitation } from '../../lib/indicator-sources';
 
   interface Props {}
   let {}: Props = $props();
@@ -15,11 +16,15 @@
   let legendRamp: string[] = $state([]);
   let legendUnit = $state('');
   let stateFilter = $state(''); // current state focus, '' = All India
+  let currentIndicator = $state('');
+  let currentQuarter = $state('');
 
   function syncFromGlobal() {
     const s = getFinerState();
     if (!s) return;
     if (typeof s.stateFilter === 'string') stateFilter = s.stateFilter;
+    if (typeof s.indicator === 'string') currentIndicator = s.indicator;
+    if (typeof s.quarter === 'string') currentQuarter = s.quarter;
     if (s.legendData) {
       legendTitle = s.legendData.title;
       legendBreaks = s.legendData.breaks;
@@ -27,6 +32,9 @@
       legendUnit = s.legendData.unit;
     }
   }
+
+  // Live citation: recomputes whenever indicator / quarter / state focus changes.
+  let citation = $derived(getSourceCitation(currentIndicator, currentQuarter, stateFilter));
 
   function titleCase(s: string): string {
     if (!s) return '';
@@ -53,16 +61,31 @@
   onMount(() => {
     syncFromGlobal();
 
+    // The choropleth pipeline fires camelCase events (finer:indicatorChange,
+    // finer:quarterChange, finer:stateFilterChange) — listen directly so the
+    // citation updates the instant the selection changes, not only after the
+    // legend redraw.
+    const onChange = () => syncFromGlobal();
+    window.addEventListener('finer:indicatorChange', onChange);
+    window.addEventListener('finer:quarterChange', onChange);
+    window.addEventListener('finer:stateFilterChange', onChange);
+
     const unsubs = [
       onFiner('legendUpdate', (detail) => {
         legendTitle = detail.title;
         legendBreaks = detail.breaks;
         legendRamp = detail.ramp;
         legendUnit = detail.unit;
+        syncFromGlobal();
       }),
       onFiner('stateUpdate', () => {
         syncFromGlobal();
       }),
+      () => {
+        window.removeEventListener('finer:indicatorChange', onChange);
+        window.removeEventListener('finer:quarterChange', onChange);
+        window.removeEventListener('finer:stateFilterChange', onChange);
+      },
     ];
 
     return () => unsubs.forEach(fn => fn());
@@ -82,8 +105,17 @@
           <span>{formatLabel(brk, legendUnit)}</span>
         {/each}
       </div>
-      <div class="legend-meta">Adaptive — recomputed from visible districts on each filter change.</div>
-      <a href="{baseUrl}/about#sources" class="legend-source-link" title="View data sources &amp; citations">SOURCES →</a>
+      <div class="legend-source" title={citation.attribution || citation.label}>
+        <span class="legend-source-prefix">Source:</span>
+        {#if citation.url}
+          <a href={citation.url} target="_blank" rel="noopener noreferrer" class="legend-source-link">{citation.label}</a>
+        {:else}
+          <span class="legend-source-label">{citation.label}</span>
+        {/if}
+      </div>
+      {#if citation.attribution}
+        <div class="legend-attribution">{citation.attribution}</div>
+      {/if}
     </div>
   </div>
 {/if}
@@ -144,32 +176,42 @@
     margin-top: 4px;
   }
 
-  .legend-meta {
-    margin-top: 8px;
+  /* Live source citation — replaces the old "Adaptive — recomputed" note + Sources link */
+  .legend-source {
+    margin-top: 10px;
     padding-top: 8px;
     border-top: 1px solid var(--rule-soft, #E8E2D5);
-    font-family: var(--font-body, 'Source Serif 4', Georgia, serif);
-    font-style: italic;
-    font-size: 11px;
-    color: var(--mist, #6E665E);
-    line-height: 1.4;
-  }
-
-  /* .no-data-row, .lr, .ldot styles removed with capital-markets dot/choro modes. */
-
-  .legend-source-link {
-    display: block;
-    margin-top: 6px;
     font-family: var(--font-mono, 'IBM Plex Mono', monospace);
-    font-size: 9px;
-    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.4;
+    color: var(--ink-soft, #3D332A);
+  }
+  .legend-source-prefix {
     color: var(--mist, #6E665E);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-right: 4px;
+    font-size: 9px;
+  }
+  .legend-source-link {
+    color: var(--vermillion, #B84A2E);
     text-decoration: none;
-    letter-spacing: 0.06em;
+    border-bottom: 1px dotted currentColor;
     transition: color 0.15s;
   }
   .legend-source-link:hover {
-    color: var(--vermillion, #B84A2E);
+    color: var(--vermillion-dark, #8a3a23);
+  }
+  .legend-source-label {
+    color: var(--ink-soft, #3D332A);
+  }
+  .legend-attribution {
+    margin-top: 4px;
+    font-family: var(--font-body, 'Source Serif 4', Georgia, serif);
+    font-style: italic;
+    font-size: 10px;
+    color: var(--mist, #6E665E);
+    line-height: 1.45;
   }
 
   /* ── Mobile ── */

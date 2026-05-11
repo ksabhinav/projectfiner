@@ -6,8 +6,8 @@ import MapLegend from '../components/map/MapLegend.svelte';
 import TimelineSlider from '../components/map/TimelineSlider.svelte';
 import FocusOverlay from '../components/map/FocusOverlay.svelte';
 import SearchPalette from '../components/map/SearchPalette.svelte';
-// FactCard import removed with the Finding button. Restore both when findings.json grows:
-// import FactCard from '../components/map/FactCard.svelte';
+// FactCard renders the "A finding" modal triggered by the strip button.
+import FactCard from '../components/map/FactCard.svelte';
 
 const base = import.meta.env.BASE_URL;
 ---
@@ -44,9 +44,8 @@ const base = import.meta.env.BASE_URL;
 
   <!-- ⌘K search palette -->
   <SearchPalette client:load />
-  <!-- "A finding" card hidden until findings.json has 30+ curated entries.
-       Re-enable: import FactCard above + uncomment the line below + uncomment <FindingButton /> in IndicatorStrip.svelte
-       <FactCard client:load /> -->
+  <!-- "A finding" card — fired by FindingButton on the indicator strip -->
+  <FactCard client:load />
 
 
   <script is:inline define:vars={{ base }}>
@@ -558,10 +557,12 @@ const base = import.meta.env.BASE_URL;
     var DISTRICT_ALIASES = {
       'PAPUMPARE': 'PAPUM PARE',
       'KEYI PANYOR': 'CAPITAL COMPLEX',
+      'LEPA RADA': 'LEPARADA',
       'DARANG': 'DARRANG',
       'MARIGAON': 'MORIGAON',
       'SIBSAGAR': 'SIVASAGAR',
       'SRIBHUMI': 'KARIMGANJ',
+      'KAMRUP RURAL': 'KAMRUP',
       'WEST KARBI ANAGLONG': 'WEST KARBI ANGLONG',
       'KAMJANG': 'KAMJONG',
       'RIBHOI': 'RI BHOI',
@@ -572,8 +573,13 @@ const base = import.meta.env.BASE_URL;
       'PASHCHIM CHAMPARAN': 'PASHCHIMI CHAMPARAN',
       // Jharkhand — GeoJSON vs SLBC
       'SARAIKELA-KHARSAWAN': 'SERAIKELA-KHARSAWAN',
+      'EAST SINGHBHUM': 'EAST SINGHBUM',
+      'SAHIBGANJ': 'SAHEBGANJ',
       // Odisha — GeoJSON vs SLBC
       'ANUGUL': 'ANGUL',
+      'BALASORE': 'BALESHWAR',
+      'SUBARNAPUR': 'SONEPUR',
+      'JAGATSINGHPUR': 'JAGATSINGHAPUR',
       // Chhattisgarh — GeoJSON vs SLBC
       'DAKSHIN BASTAR DANTEWARA': 'DANTEWADA',
       'UTTAR BASTAR KANKER': 'KANKER',
@@ -581,6 +587,7 @@ const base = import.meta.env.BASE_URL;
       'GARIYABAND': 'GARIABAND',
       'JANJGIR  CHAMPA': 'JANJGIRCHAMPA',
       'JANJGIR CHAMPA': 'JANJGIRCHAMPA',
+      'SARANGARHBILAIGARH': 'SARANGARH BILAIGARH',
       'KAWARDHA KABIRDHAM': 'KABIRDHAM',
       'KHAIRGARH-CHHUIKHADAN-GANDAI': 'KHAIRAGARH-CHHUIKHADAN-GANDAI',
       'JAJAPUR': 'JAJPUR',
@@ -595,7 +602,8 @@ const base = import.meta.env.BASE_URL;
       'DARJILING': 'DARJEELING',
       'HAORA': 'HOWRAH',
       'HUGLI': 'HOOGHLY',
-      'KOCH BIHAR': 'COOCH BEHAR',
+      'KOCH BIHAR': 'COOCHBEHAR',
+      'SOUTH PARGANAS': 'PARAGANAS SOUTH',
       'MALDAH': 'MALDA',
       'NORTH TWENTY FOUR PARGANAS': 'NORTH 24 PARGANAS',
       'NORTH TWENTYFOUR PARGANAS': 'NORTH 24 PARGANAS',
@@ -634,6 +642,7 @@ const base = import.meta.env.BASE_URL;
       'KUMURAM BHEEM': 'KUMURAM BHEEM ASIFABAD',
       'MAHBUBNAGAR': 'MAHABUBNAGAR',
       'MEDCHAL-MALKAJGIRI': 'MEDCHAL MALKAJGIRI',
+      'MEDCHALMALKAJGIRI': 'MEDCHAL MALKAJGIRI',
       // Haryana — GeoJSON vs SLBC
       'CHARKI DADRI': 'CHARKHI DADRI',
       'MAHENDRAGARH': 'M.GARH',
@@ -651,7 +660,8 @@ const base = import.meta.env.BASE_URL;
       'SABAR KANTHA': 'SABARKANTHA',
       // Maharashtra — GeoJSON vs SLBC (renamed districts)
       'AHILYANAGAR': 'AHMEDNAGAR',
-      'CHHATRAPATI SAMBHAJI NAGAR': 'CHHATRAPATI SAMBHAJINAGAR',
+      'CHHATRAPATI SAMBHAJI NAGAR': 'AURANGABAD',
+      'DHARASHIV': 'OSMANABAD',
       // Rajasthan — GeoJSON vs SLBC
       'CHITTAURGARH': 'CHITTORGARH',
       'DHAULPUR': 'DHOLPUR',
@@ -668,19 +678,19 @@ const base = import.meta.env.BASE_URL;
     var CROSS_CATEGORY_FALLBACKS = {
       'branch_network': ['credit_deposit_ratio', 'kcc', 'fi_kcc', 'digital_transactions', 'branch_network_p2', 'branch_network_p3', 'branch_network_p4', 'atm_network', 'business_correspondents'],
       'credit_deposit_ratio': ['key_indicators', 'district_misc', 'cd_ratio'],
-      'kcc': ['fi_kcc', 'kcc_animal_husbandry', 'kcc_fishery', 'kcc_outstanding', 'kcc_fisheries'],
+      'kcc': ['fi_kcc', 'kcc_animal_husbandry', 'kcc_fishery', 'kcc_outstanding', 'kcc_outstanding_2', 'kcc_outstanding_3', 'kcc_outstanding_4', 'kcc_fisheries'],
       'shg': ['shg_nrlm', 'nrlm', 'shg_p2', 'shg_p3', 'jlg'],
-      'digital_transactions': ['phonepe_upi', 'digital_payments', 'digital_coverage_savings', 'digital_coverage_savings_p2', 'digital_coverage_business', 'women_finance'],
-      'social_security': ['social_security_schemes', 'social_security_claims', 'social_security_2', 'apy'],
+      'digital_transactions': ['digital_transactions_2', 'phonepe_upi', 'digital_payments', 'digital_coverage_savings', 'digital_coverage_savings_p2', 'digital_coverage_savings_p3', 'digital_coverage_savings_p4', 'digital_coverage_business', 'women_finance'],
+      'social_security': ['social_security_2', 'social_security_3', 'social_security_schemes', 'social_security_schemes_2', 'social_security_claims', 'social_security_claims_2', 'apy', 'apy_2', 'pmsby', 'pmsby_2', 'pmjjby', 'pmjjby_2'],
       'pmjdy': ['pmjdy_p2', 'pmjdy_p3', 'pmjdy_p4', 'social_security_schemes', 'pmjdy_2', 'pmjdy_3'],
-      'aadhaar_authentication': ['pmjdy', 'pmjdy_2', 'pmjdy_3'],
-      'pmegp': ['pmegp_2'],
-      'housing_pmay': ['housing_pmay_p2'],
-      'sui': ['stand_up_india'],
-      'sc_st_finance': ['sc_st_lending', 'weaker_section_os'],
-      'women_finance': ['women_finance_2'],
+      'aadhaar_authentication': ['pmjdy', 'pmjdy_2', 'pmjdy_3', 'pmjdy_p2', 'pmjdy_p3'],
+      'pmegp': ['pmegp_2', 'pmegp_3', 'pmegp_4', 'pmegp_outstanding'],
+      'housing_pmay': ['housing_pmay_2', 'housing_pmay_p2', 'housing_finance', 'housing_loan'],
+      'sui': ['stand_up_india', 'stand_up_india_2', 'stand_up_india_p2', 'sui_2'],
+      'sc_st_finance': ['sc_st_finance_2', 'sc_st_finance_p2', 'sc_st_lending', 'sc_st_loans', 'weaker_section', 'weaker_section_os'],
+      'women_finance': ['women_finance_2', 'women_finance_p2'],
       'education_loan': ['education_loan_2'],
-      'pmmy_mudra_disbursement': ['pmmy_mudra_os_npa', 'mudra', 'mudra_2'],
+      'pmmy_mudra_disbursement': ['pmmy_mudra_disbursement_2', 'pmmy_mudra_os_npa', 'pmmy_mudra', 'pmmy', 'mudra', 'mudra_2', 'mudra_outstanding'],
     };
 
     function normalizePeriod(p) {
@@ -1447,7 +1457,10 @@ const base = import.meta.env.BASE_URL;
           }
           var qIdx = manifestData.quarters.indexOf(quarter);
           if (qIdx < 0) qIdx = 0;
-          var tryQuarters = manifestData.quarters.slice(qIdx + 1, qIdx + 6); // Try up to 5 earlier quarters
+          // Widened from 5 to 12 — digital_transactions (PhonePe) only ships
+          // through Mar 2024, so the fallback chain needs ~7 quarters to reach
+          // it from a Dec 2025 selection.
+          var tryQuarters = manifestData.quarters.slice(qIdx + 1, qIdx + 13);
 
           return tryQuarters.reduce(function(chain, fallbackQ) {
             return chain.then(function(found) {
@@ -1491,6 +1504,9 @@ const base = import.meta.env.BASE_URL;
       var prevIndicator = currentIndicator;
       currentIndicator = e.detail.indicator;
       currentMetricIdx = e.detail.metricIdx;
+      // Keep __FINER in sync so MapLegend's source citation can re-derive.
+      window.__FINER.indicator = currentIndicator;
+      window.__FINER.metricIdx = currentMetricIdx;
       updateTimelineColor();
 
       var ind = INDICATORS[currentIndicator];
@@ -1521,6 +1537,8 @@ const base = import.meta.env.BASE_URL;
     window.addEventListener('finer:quarterChange', function(e) {
       currentQuarter = e.detail.quarter;
       currentQIdx = e.detail.idx;
+      // Keep __FINER in sync so MapLegend's source citation can re-derive.
+      window.__FINER.quarter = currentQuarter;
       loadIndicatorData(currentIndicator, currentQuarter).then(function() {
         buildChoropleth_banking();
       });
