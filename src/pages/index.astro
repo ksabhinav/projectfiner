@@ -75,15 +75,13 @@ const base = import.meta.env.BASE_URL;
     var _B = window.__FINER_BASE;
 
     var _isMobile = window.innerWidth <= 640;
-    // maxBounds. The north edge must extend several degrees above
-    // ALL_STATES_BOUNDS's 37.5°N so the desktop's strip-padding can
-    // actually move the content downward — Leaflet's _limitCenter
-    // clamps the viewport against maxBounds, and at zoom ~5.4 the
-    // top of the screen sits ~4° lat above the visible content. With
-    // north=40°N it was being clamped (top of viewport tried to reach
-    // ~41°N but couldn't, so the padding bump silently no-op'd).
+    // Desktop north widened to 46°N so the +72 strip-padding can
+    // actually slide content down (Leaflet's _limitCenter clamps
+    // against maxBounds; with north=40°N the padding silently no-op'd).
+    // Mobile kept at the original 45°N — bumping it added unwanted
+    // whitespace above India on phones.
     var INDIA_BOUNDS = _isMobile
-      ? L.latLngBounds(L.latLng(0, 48.0), L.latLng(48, 115.0))
+      ? L.latLngBounds(L.latLng(0, 48.0), L.latLng(45, 115.0))
       : L.latLngBounds(L.latLng(2, 50.0), L.latLng(46, 115.0));
     var NE_BOUNDS    = L.latLngBounds(L.latLng(17.5, 79.5), L.latLng(29.5, 97.5));
     var ALL_STATES_BOUNDS = L.latLngBounds(L.latLng(6.5, 67.5), L.latLng(37.5, 98)); // Full India incl J&K/Ladakh (north ~37.1°N), Kutch, A&N (south ~6.75°N)
@@ -1214,31 +1212,6 @@ const base = import.meta.env.BASE_URL;
               e.target.closeTooltip();
             },
             dblclick: function(e) {
-              // Desktop: double-click → focus mode (kept for hover-capable
-              // devices). On iOS Safari Leaflet's dblclick is flaky because
-              // the browser's native double-tap-to-zoom competes with it
-              // even after doubleClickZoom:false. Mobile handled below via
-              // click + contextmenu.
-              L.DomEvent.stopPropagation(e);
-              L.DomEvent.preventDefault(e);
-              focusDistrict(normDist(p.DISTRICT), p.STATE_UT);
-            },
-            click: function(e) {
-              // Touch devices — single tap goes straight to focus mode.
-              // Hover-driven tooltips don't apply on touch anyway, so we
-              // skip the preview and open the full focus view immediately.
-              // Detection: any device that lacks a hover pointer (covers
-              // iOS + Android + tablets without distinguishing brand).
-              var isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
-              if (!isTouch) return;
-              L.DomEvent.stopPropagation(e);
-              L.DomEvent.preventDefault(e);
-              focusDistrict(normDist(p.DISTRICT), p.STATE_UT);
-            },
-            contextmenu: function(e) {
-              // Long-press on touch fires `contextmenu` in Leaflet — second
-              // path to focus on devices where `(hover: none)` reports false
-              // (rare but happens on some Android tablets in desktop-mode).
               L.DomEvent.stopPropagation(e);
               L.DomEvent.preventDefault(e);
               focusDistrict(normDist(p.DISTRICT), p.STATE_UT);
