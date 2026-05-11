@@ -177,6 +177,13 @@ export function getSourceCitation(
         url: 'https://omms.nic.in/',
         attribution: 'Pradhan Mantri Gram Sadak Yojana — Online Management, Monitoring and Accounting System (OMMAS), Ministry of Rural Development. Cumulative through 2015. District aggregation via SHRUG v2.1 (Asher, Lunt, Matsuura, Novosad — Development Data Lab). Licence: CC BY-NC-SA 4.0.',
       };
+
+    case 'elevation_terrain':
+      return {
+        label: 'SRTM elevation, Feb 2000 (NASA, via SHRUG v2.1)',
+        url: 'https://www2.jpl.nasa.gov/srtm/',
+        attribution: 'NASA Shuttle Radar Topography Mission (SRTM) 30m DEM, captured February 2000. District aggregation via SHRUG v2.1 (Asher, Lunt, Matsuura, Novosad — Development Data Lab). Within-district std and max−min serve as Riley-style terrain ruggedness proxies. Citation: Farr & Kobrick (2000), Eos 81(48):583-585. Licence: SHRUG CC BY-NC-SA 4.0; SRTM is public domain.',
+      };
   }
 
   // Unknown indicator

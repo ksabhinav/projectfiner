@@ -46,6 +46,7 @@ export const INDICATOR_KEYS = [
   'facebook_rwi',
   'pmgsy_roads',
   'viirs_nightlights',
+  'elevation_terrain',
 ] as const;
 
 /**
@@ -277,6 +278,7 @@ export const ATLAS_INDICATORS: AtlasIndicator[] = [
   { key: 'facebook_rwi',                  name: 'Relative Wealth Index (Meta)',  units: 'idx',  category: 'demographics', subgroup: 'headline', rampKey: 'sage' },
   { key: 'pmgsy_roads',                   name: 'PMGSY Rural Roads',             units: 'no.',  category: 'demographics', subgroup: 'headline', rampKey: 'saffron' },
   { key: 'viirs_nightlights',             name: 'Nightlights (VIIRS)',           units: 'idx',  category: 'demographics', subgroup: 'headline', rampKey: 'saffron' },
+  { key: 'elevation_terrain',             name: 'Elevation & Ruggedness (SRTM)', units: 'm',    category: 'demographics', subgroup: 'headline', rampKey: 'peacock' },
 ];
 
 export function atlasIndicatorByKey(key: string): AtlasIndicator | undefined {

@@ -496,6 +496,18 @@ const base = import.meta.env.BASE_URL;
           { field: 'nl_max', label: 'Peak Intensity', unit: '', desc: 'Brightest cell in the district — typically the largest urban cluster.' },
         ],
       },
+      elevation_terrain: {
+        title: 'Elevation & Terrain Ruggedness',
+        desc: 'District-level elevation statistics from NASA\'s 30m-resolution Shuttle Radar Topography Mission (SRTM, Feb 2000), aggregated via SHRUG v2.1. Mean elevation maps the plain-vs-hill divide; within-district elevation std + max-min range serve as Riley-style terrain ruggedness proxies — a useful control for explaining why some districts have thin banking networks or low CD ratios despite their hinterland.',
+        // Static SRTM snapshot. Lock the slider to its capture month.
+        timePoints: ['2000-02'],
+        metrics: [
+          { field: 'elevation_mean',   label: 'Mean Elevation (m)',     unit: 'm', desc: 'District-level mean elevation in metres above sea level. SRTM 30m DEM, captured Feb 2000.' },
+          { field: 'elevation_max',    label: 'Peak Elevation (m)',     unit: 'm', desc: 'Maximum elevation within the district. Identifies hill stations and Himalayan peaks.' },
+          { field: 'elevation_range',  label: 'Elevation Range (max−min, m)', unit: 'm', desc: 'Max minus min within the district — a Riley-style terrain ruggedness proxy. High = mountainous, low = plains.' },
+          { field: 'elevation_std',    label: 'Elevation Std. Dev. (m)', unit: 'm', desc: 'Standard deviation of elevation across the district — alternate TRI proxy. Higher = more rugged terrain.' },
+        ],
+      },
     };
 
     // Atlas identity ramps — six 5-stop arrays interpolated from the three-stop
@@ -536,6 +548,7 @@ const base = import.meta.env.BASE_URL;
       facebook_rwi:            RAMP_SAGE,
       pmgsy_roads:             RAMP_SAFFRON,
       viirs_nightlights:       RAMP_SAFFRON,
+      elevation_terrain:       RAMP_PEACOCK,
     };
 
     function getRamp(indicator) {
@@ -1575,7 +1588,8 @@ const base = import.meta.env.BASE_URL;
       // Static-file indicators (no quarterly data)
       if (indicator === 'rbi_banking_outlets' ||
           indicator === 'nrlm_shg' ||
-          indicator === 'capital_markets_access') {
+          indicator === 'capital_markets_access' ||
+          indicator === 'elevation_terrain') {
         var cacheKey = indicator + '/static';
         if (indicatorCache[cacheKey]) {
           currentIndicatorData = indicatorCache[cacheKey];
