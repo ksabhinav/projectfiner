@@ -195,22 +195,27 @@
     ontouchstart={(e) => { dragging = true; const t = e.touches[0]; const idx = posToIdx(t.clientX, t.clientY); setPosition(idx); emitQuarterChange(); }}
   >
     <!-- Fill semantics: red = "how recent is the selection".
-         Mobile (horizontal, latest=right): width = posPct, anchored LEFT,
-           so latest = full bar, oldest = empty.
-         Desktop (vertical, latest=top): height = pct, anchored TOP. -->
+         Latest quarter = full bar; oldest = empty bar.
+         Mobile (horizontal, latest=right): width = posPct, anchored LEFT
+           — fills from left edge to thumb. At latest thumb is on the
+           right and posPct = 100, so the whole bar is red.
+         Desktop (vertical, latest=top): height = 100 - pct, anchored
+           BOTTOM — fills from bottom edge up to thumb. At latest thumb
+           is on top and (100 - pct) = 100, so the whole bar is red. -->
     <div
       class="timeline-fill"
-      style:height={isMobile ? '100%' : `${pct}%`}
+      style:height={isMobile ? '100%' : `${100 - pct}%`}
       style:width={isMobile ? `${posPct}%` : '100%'}
       style:left="0"
-      style:top="0"
+      style:bottom={isMobile ? 'auto' : '0'}
+      style:top={isMobile ? '0' : 'auto'}
     ></div>
     <div class="timeline-dots">
       {#each dots as dot}
         <div
           class="tl-dot"
           class:year-dot={dot.isYearDot}
-          class:past={isMobile ? dot.idx > currentIdx : dot.idx < currentIdx}
+          class:past={dot.idx > currentIdx}
           class:active={dot.idx === currentIdx}
           style:top={isMobile ? '50%' : `${dot.pct}%`}
           style:left={isMobile ? `${100 - dot.pct}%` : '50%'}
