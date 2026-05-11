@@ -395,7 +395,10 @@ const base = import.meta.env.BASE_URL;
       },
       nrlm_shg: {
         title: 'Self-Help Groups (NRLM)',
-        desc: 'District-level SHG formation data from DAY-NRLM (Deendayal Antyodaya Yojana – National Rural Livelihoods Mission). Covers 745 districts across all states. Live data scraped from nrlm.gov.in.',
+        desc: 'District-level SHG formation data from DAY-NRLM (Deendayal Antyodaya Yojana – National Rural Livelihoods Mission). Covers 745 districts across all states. Live data scraped from nrlm.gov.in on 30 March 2026.',
+        // Static snapshot — slider locks to the scrape date so users see exactly
+        // when the numbers were captured (per static.json scraped_date).
+        timePoints: ['2026-03'],
         metrics: [
           { field: 'shg_total', label: 'Total SHGs', unit: '', desc: 'Total Self-Help Groups in the district (new + revived + pre-NRLM). Source: DAY-NRLM MIS, nrlm.gov.in.' },
           { field: 'members_total', label: 'Total SHG Members', unit: '', desc: 'Total women members across all SHGs in the district. Each SHG typically has 10–20 members.' },
@@ -406,6 +409,10 @@ const base = import.meta.env.BASE_URL;
       rbi_bsr_credit: {
         title: 'Bank Credit (RBI BSR-1)',
         desc: 'District-level outstanding bank credit from RBI\'s Basic Statistical Returns (BSR-1). Covers 698 districts. Source: RBI DBIE, data as of March 2025 and March 2020.',
+        // Two BSR snapshots — Mar 2025 and Mar 2020 — but most metrics are
+        // labelled per-year inside the same record. Lock to the latest BSR
+        // snapshot so the slider isn't a misleading time-series control.
+        timePoints: ['2025-03'],
         metrics: [
           { field: 'total_accounts_2025', label: 'Total Credit Accounts (2025)', unit: '', desc: 'Total number of outstanding credit accounts across all banks, population groups, and sectors. March 2025. Source: RBI BSR-1.' },
           { field: 'total_credit_lakhs_2025', label: 'Total Credit Outstanding (2025)', unit: '₹', desc: 'Total outstanding bank credit in Rs. Lakhs. March 2025. Source: RBI BSR-1.' },
@@ -437,7 +444,9 @@ const base = import.meta.env.BASE_URL;
       },
       rbi_banking_outlets: {
         title: 'Banking Infrastructure (RBI)',
-        desc: 'Comprehensive banking outlet data from RBI\'s DBIE portal covering 2.47 million outlets across India — every bank branch, Business Correspondent, CSP, ATM, and Digital Banking Unit with exact GPS coordinates.',
+        desc: 'Comprehensive banking outlet data from RBI\'s DBIE portal covering 2.47 million outlets across India — every bank branch, Business Correspondent, CSP, ATM, and Digital Banking Unit with exact GPS coordinates. Snapshot downloaded May 2026.',
+        // Static snapshot — slider locks to the download date.
+        timePoints: ['2026-05'],
         metrics: [
           { field: 'rbi_outlets__total', label: 'Total Banking Outlets', unit: '', desc: 'Total number of banking access points in the district including branches, BCs, CSPs, ATMs, offices, and DBUs. Source: RBI DBIE Banking Outlet Locator.' },
           { field: 'rbi_outlets__branch', label: 'Bank Branches', unit: '', desc: 'Number of licensed bank branches (all bank types — PSBs, private, RRBs, SFBs, cooperative). Each branch has a unique Part-1 code and IFSC.' },
@@ -450,7 +459,9 @@ const base = import.meta.env.BASE_URL;
       },
       capital_markets_access: {
         title: 'Capital Markets Access',
-        desc: 'Number of capital market intermediaries per district. Covers CDSL Depository Participant service centres, NSDL DP service centres, and AMFI Mutual Fund Distributors (individual and corporate). Data from CDSL, NSDL, and AMFI. Static snapshot.',
+        desc: 'Number of capital market intermediaries per district. Covers CDSL Depository Participant service centres (20,612), NSDL DP service centres (57,005), AMFI Mutual Fund Distributors — Individual (187,254) and Corporate (10,760). Static snapshot scraped May 2025.',
+        // Static snapshot — slider locks to the scrape date.
+        timePoints: ['2025-05'],
         metrics: [
           { field: 'cap_total', label: 'Total Access Points', unit: '', desc: 'Total capital market access points: CDSL + NSDL DP service centres + MFD individual + MFD corporate.' },
           { field: 'cap_cdsl', label: 'CDSL Service Centres', unit: '', desc: 'CDSL Depository Participant service centres.' },
