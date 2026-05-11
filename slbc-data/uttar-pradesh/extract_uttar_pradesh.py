@@ -16,12 +16,14 @@ Output schema matches FINER's other state extractors (telangana, uttarakhand):
   uttar-pradesh_fi_timeseries.csv
   quarterly/{YYYY-MM}/{category}.csv
 """
-import csv, json, os, re, glob, sys
+import csv, json, os, re, glob, sys, time
 from collections import defaultdict
 from pathlib import Path
-import pdfplumber
 
 SRC_DIR = Path(__file__).resolve().parent
+
+# Per-PDF wall-clock budget (seconds). If exceeded, skip and continue.
+PDF_TIME_BUDGET_S = 60
 
 # ─── 75 UP districts (canonical, per FINER DB state_lgd=9) ────────────
 UP_CANONICAL = [
@@ -221,6 +223,10 @@ def classify_page(text):
     """
     if not text:
         return (None, None)
+    # Cap input: only the first ~6000 chars of a page matter for title classification.
+    # Massive (10000+ char) pages from OCR garbage waste cycles otherwise.
+    if len(text) > 6000:
+        text = text[:6000]
     upper = text.upper()
     # Strip ALL non-alphanumerics to defeat the random spacing/punctuation
     flat = re.sub(r'[^A-Z0-9]', '', upper)
@@ -319,30 +325,82 @@ def find_header_text(text):
 
 # ─── Row extraction from text lines ──────────────────────────────────
 
-# Pattern: optional whitespace, sno, whitespace, district name (words), whitespace, numbers
-ROW_PATTERN = re.compile(
-    r'^\s*(\d{1,3})\s+'                                # serial number
-    r'([A-Za-z][A-Za-z\.\'\(\)\-\s]{2,40}?)\s+'        # district name
-    r'((?:[+-]?\d+(?:[\.,]\d+)?\s*){2,})'              # at least 2 numeric tokens
-    r'\s*$'
-)
-# Some rows have district name with embedded digits, e.g. "Sant Ravidas Nagar Bhadohi 123 ..."
-# We allow multi-word district names. The non-greedy match terminates at whitespace before
-# the first numeric token.
+# Linear-time tokenizers — applied per-token, never against the whole line.
+# Avoids catastrophic backtracking that occurred in the previous combined regex.
+_SNO_RE = re.compile(r'^\d{1,3}[\.\)]?$')
+_NUM_RE = re.compile(r'^[+-]?\d+(?:[\.,]\d+)?%?$')
+_WORD_RE = re.compile(r'^[A-Za-z][A-Za-z\.\'\(\)\-]{0,30}$')
+
+# Hard cap on line length — long pdftotext lines (page-wide layout junk)
+# rarely contain district rows and are the main backtracking attractor.
+_MAX_LINE_LEN = 400
+_MAX_TOKENS = 60
+
 
 def parse_data_row(line):
-    """Try to parse a 'N. district num1 num2 ...' row. Returns (district, [floats]) or None."""
-    m = ROW_PATTERN.match(line)
-    if not m:
+    """Try to parse a 'N district num1 num2 ...' row via tokenization.
+
+    Linear-time replacement for the prior single-regex approach. Splits on
+    whitespace, validates each token with anchored fullmatch (no backtracking),
+    then reassembles: <sno> <district words...> <numbers...>.
+    Returns (district, [floats]) or None.
+    """
+    if line is None:
         return None
-    sno, dname_raw, numstr = m.groups()
-    dname = normalize_district(dname_raw)
+    if len(line) > _MAX_LINE_LEN:
+        return None
+    line = line.strip()
+    if not line:
+        return None
+    # Cheap first-char filter: line must start with a digit (serial number).
+    if not line[0].isdigit():
+        return None
+
+    tokens = line.split()
+    if len(tokens) < 4 or len(tokens) > _MAX_TOKENS:
+        return None
+
+    # Token 0: serial number
+    if not _SNO_RE.fullmatch(tokens[0]):
+        return None
+
+    # Walk forward: word tokens are part of the district name, until we hit
+    # the first numeric token. Then all remaining tokens must be numeric.
+    name_parts = []
+    i = 1
+    n = len(tokens)
+    while i < n and len(name_parts) < 6:
+        tok = tokens[i]
+        if _NUM_RE.fullmatch(tok):
+            break
+        if not _WORD_RE.fullmatch(tok):
+            return None
+        name_parts.append(tok)
+        i += 1
+    if not name_parts or i >= n:
+        return None
+
+    # Remaining tokens: numbers (allow occasional dash/NA as gaps).
+    nums = []
+    while i < n:
+        tok = tokens[i]
+        if _NUM_RE.fullmatch(tok):
+            v = parse_value(tok)
+            if v is not None:
+                nums.append(v)
+        elif tok in ('-', '—', 'NA', 'N/A', 'Nil', 'NIL', 'nil', '.', '..'):
+            pass  # skip gap markers
+        else:
+            return None  # unexpected token → not a clean data row
+        i += 1
+
+    if len(nums) < 2:
+        return None
+
+    dname = normalize_district(' '.join(name_parts))
     if not dname:
         return None
-    nums = re.findall(r'[+-]?\d+(?:[\.,]\d+)?', numstr)
-    vals = [parse_value(n) for n in nums]
-    vals = [v for v in vals if v is not None]
-    return (dname, vals)
+    return (dname, nums)
 
 
 # ─── Field-name mapping per category ──────────────────────────────────
@@ -440,51 +498,45 @@ def assign_fields(category, vals):
 # ─── Main per-PDF extractor ───────────────────────────────────────────
 
 def extract_pdf(pdf_path):
-    """Returns dict of category → {district: {field: value}}."""
+    """Returns dict of category → {district: {field: value}}.
+
+    Uses `pdftotext -layout` (poppler) instead of pdfplumber. On the 100MB
+    OCR'd UP booklets pdfplumber's per-page extract_text() takes ~1h per
+    PDF; pdftotext does the whole file in <1s with comparable layout
+    quality. Pages are split on the form-feed character (\\x0c).
+    """
+    import subprocess
     result = defaultdict(lambda: defaultdict(dict))
     try:
-        p = pdfplumber.open(pdf_path)
+        out = subprocess.run(
+            ['pdftotext', '-layout', str(pdf_path), '-'],
+            capture_output=True, timeout=300, check=False,
+        )
+        full_text = out.stdout.decode('utf-8', errors='replace')
     except Exception as e:
-        print(f"  ERR opening: {e}")
-        return result
+        print(f"  ERR pdftotext: {e}")
+        return {}
+    if not full_text:
+        return {}
 
-    # Walk pages with state machine: when we see a district-wise title, we
-    # accumulate rows until next title or end of page region.
+    pages = full_text.split('\x0c')  # form-feed = page separator
     current_cat = None
-    rows_in_section = []
-
-    for page_idx, page in enumerate(p.pages):
-        try:
-            text = page.extract_text() or ''
-        except Exception:
+    for text in pages:
+        if not text.strip():
             continue
-
         cat, _ = classify_page(text)
         if cat:
             current_cat = cat
-            rows_in_section = []
-
         if not current_cat:
             continue
-
-        # Try parsing each line as a data row
-        section_rows = []
         for line in text.split('\n'):
             parsed = parse_data_row(line)
             if parsed:
                 dname, vals = parsed
-                section_rows.append((dname, vals))
-
-        # If page has too few district rows (< 5) and we didn't just start a new category,
-        # likely a header / non-data page — skip.
-        if section_rows:
-            for dname, vals in section_rows:
                 rec = assign_fields(current_cat, vals)
                 if rec:
-                    # Merge — most recent wins for overlapping fields
                     result[current_cat][dname].update(rec)
 
-    p.close()
     # Drop categories with too few districts (likely misclassified)
     cleaned = {}
     for cat, dist_data in result.items():
@@ -510,25 +562,97 @@ QUARTER_LABEL = {
 }
 
 
+def _extract_worker(conn, pdf_path):
+    """Module-level worker (must be top-level so spawn can pickle it).
+
+    Uses a Pipe connection (not Queue) — on macOS spawn-context, Queue's
+    feeder thread can race with process exit and lose results for fast
+    workers. Pipe.send() is synchronous so the data is reliably delivered.
+    """
+    try:
+        conn.send(('ok', extract_pdf(pdf_path)))
+    except Exception as e:  # noqa: BLE001
+        try:
+            conn.send(('error', repr(e)))
+        except Exception:
+            pass
+    finally:
+        conn.close()
+
+
+def _run_extract_with_timeout(pdf_path, timeout_s):
+    """Run extract_pdf in a worker process with a hard wall-clock timeout.
+
+    Returns (status, result) where status is 'ok' | 'timeout' | 'error'.
+    Uses multiprocessing so we can actually kill catastrophic regex CPU
+    burn — signal-based timers don't interrupt pure-C regex execution.
+    """
+    import multiprocessing as mp
+    ctx = mp.get_context('spawn')  # safe on macOS
+    parent_conn, child_conn = ctx.Pipe(duplex=False)
+    p = ctx.Process(target=_extract_worker, args=(child_conn, pdf_path))
+    p.start()
+    child_conn.close()  # parent doesn't write
+    deadline = time.time() + timeout_s
+    result = None
+    while time.time() < deadline:
+        remaining = max(0.0, deadline - time.time())
+        if parent_conn.poll(min(remaining, 1.0)):
+            try:
+                result = parent_conn.recv()
+            except EOFError:
+                result = None
+            break
+        if not p.is_alive():
+            # worker exited; final poll
+            if parent_conn.poll(0.1):
+                try:
+                    result = parent_conn.recv()
+                except EOFError:
+                    pass
+            break
+    parent_conn.close()
+    if p.is_alive():
+        p.terminate()
+        p.join(5)
+        if p.is_alive():
+            p.kill()
+        if result is None:
+            return ('timeout', None)
+    p.join(5)
+    if result is None:
+        return ('error', 'no result from worker')
+    return result
+
+
 def main():
     pdfs = sorted(glob.glob(str(SRC_DIR / '20*-*_booklet.pdf')))
-    print(f"Found {len(pdfs)} UP booklets")
+    print(f"Found {len(pdfs)} UP booklets", flush=True)
 
     complete = {'state': 'Uttar Pradesh', 'quarters': {}}
+    succeeded = []
+    failed = []
     for fp in pdfs:
         m = re.search(r'(\d{4}-\d{2})_booklet\.pdf', os.path.basename(fp))
         if not m:
             continue
         period = m.group(1)
         label = QUARTER_LABEL.get(period, period)
-        print(f"\n=== {os.path.basename(fp)} → {period} ({label}) ===")
-        try:
-            cats = extract_pdf(fp)
-        except Exception as e:
-            print(f"  EXTRACTION ERROR: {e}")
+        print(f"\n=== {os.path.basename(fp)} → {period} ({label}) ===", flush=True)
+        t0 = time.time()
+        status, cats = _run_extract_with_timeout(fp, PDF_TIME_BUDGET_S)
+        elapsed = time.time() - t0
+        if status == 'timeout':
+            print(f"  TIMEOUT after {elapsed:.1f}s (budget {PDF_TIME_BUDGET_S}s) — skipping", flush=True)
+            failed.append((period, 'timeout'))
+            continue
+        if status == 'error':
+            print(f"  EXTRACTION ERROR after {elapsed:.1f}s: {cats}", flush=True)
+            failed.append((period, 'error'))
             continue
         if not cats:
-            print(f"  no district tables extracted")
+            print(f"  no district tables extracted ({elapsed:.1f}s)", flush=True)
+            failed.append((period, 'empty'))
             continue
         tables_dict = {}
         for cat, dist_data in cats.items():
@@ -541,8 +665,10 @@ def main():
                 'fields': field_set,
                 'districts': dict(dist_data),
             }
-            print(f"  {cat}: {len(dist_data)} districts, {len(field_set)} fields")
+            print(f"  {cat}: {len(dist_data)} districts, {len(field_set)} fields", flush=True)
         complete['quarters'][period] = {'period': label, 'tables': tables_dict}
+        succeeded.append(period)
+        print(f"  done in {elapsed:.1f}s — {len(tables_dict)} categories", flush=True)
 
     out_complete = SRC_DIR / 'uttar-pradesh_complete.json'
     with open(out_complete, 'w') as f:
@@ -595,8 +721,11 @@ def main():
                         w.writerow([dname] + [rec.get(fk, '') for fk in table['fields']])
 
     # Summary
-    print(f"\n=== SUMMARY ===")
-    print(f"Quarters extracted: {len(complete['quarters'])}")
+    print(f"\n=== SUMMARY ===", flush=True)
+    print(f"Quarters extracted: {len(complete['quarters'])}", flush=True)
+    print(f"Succeeded ({len(succeeded)}): {', '.join(succeeded)}", flush=True)
+    if failed:
+        print(f"Failed ({len(failed)}): {failed}", flush=True)
     cat_quarters = defaultdict(int)
     cat_max_districts = defaultdict(int)
     for q in complete['quarters'].values():
