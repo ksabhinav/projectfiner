@@ -289,20 +289,34 @@
     width: 100%;
     height: 100%;
   }
+  /* Every quarter gets a small visible tick. Year boundaries (first
+     dot of a new year) get a bigger filled dot — see .year-dot below. */
   .tl-dot {
     position: absolute;
     left: 50%;
-    width: 14px;
-    height: 8px;
-    margin-left: -7px;
-    margin-top: -4px;
-    background: transparent;
+    width: 4px;
+    height: 4px;
+    margin-left: -2px;
+    margin-top: -2px;
+    background: #C8C0B8;
+    border-radius: 50%;
     cursor: pointer;
-    transition: all 0.15s;
-    border-radius: 4px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  /* Larger invisible hit target so the 4px tick is still tappable */
+  .tl-dot::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
   }
   .tl-dot:hover {
-    background: rgba(184, 96, 62, 0.2);
+    background: #1B140E;
+    transform: scale(1.4);
+  }
+  /* Past (older-than-current on both axes) ticks ride the fill, so they
+     should still be visible on top of the vermillion bar */
+  .tl-dot.past {
+    background: #F4EFE6;
   }
   .tl-dot.active {
     background: transparent;
@@ -450,13 +464,17 @@
         0 0 0 3px rgba(184, 74, 46, 0.18),
         0 1px 3px rgba(0, 0, 0, 0.18) !important;
     }
+    /* Mobile: every-quarter tick is a small visible round dot riding
+       the horizontal track. Year-boundary ticks are bigger filled
+       circles (defined globally below). */
     .time-slider .tl-dot {
-      width: 8px !important; height: 14px !important;
-      margin-left: -4px !important; margin-top: -7px !important;
+      width: 4px !important; height: 4px !important;
+      margin-left: -2px !important; margin-top: -2px !important;
+      border-radius: 50% !important;
     }
     .time-slider .tl-dot.year-dot {
-      width: 5px !important; height: 5px !important;
-      margin-left: -2.5px !important; margin-top: -2.5px !important;
+      width: 6px !important; height: 6px !important;
+      margin-left: -3px !important; margin-top: -3px !important;
     }
     .time-slider .tl-current-label {
       font-size: 11px !important;

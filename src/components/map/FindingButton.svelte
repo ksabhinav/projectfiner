@@ -23,6 +23,8 @@
   .finding-btn {
     align-self: center;
     margin-right: 16px;
+    /* Don't let the strip's flex cells squish the pill on small screens */
+    flex-shrink: 0;
     background: #B84A2E;
     color: #F4EFE6;
     font-family: 'Inter', sans-serif;
@@ -62,16 +64,34 @@
   }
 
   @media (max-width: 760px) {
+    /* On phones the strip hides the spacer + search, so the pill sits
+       flush against the Where cell's right separator. Add left margin
+       so it doesn't visually cross/touch that separator, shrink the
+       pill, and tighten the shadow so it doesn't overshoot the 50px-
+       tall strip's bottom border. */
     .finding-btn {
-      margin-right: 8px;
+      margin-left: 10px;
+      margin-right: 10px;
       padding: 7px 10px;
       font-size: 9px;
-      /* Tighter shadow so it doesn't overshoot the 50px-tall strip's bottom border. */
+      letter-spacing: 0.10em;
+      gap: 5px;
       box-shadow: 0 1px 0 #8E331E, 0 2px 4px rgba(184, 74, 46, 0.16);
     }
     .finding-btn:hover {
       box-shadow: 0 2px 0 #8E331E, 0 3px 6px rgba(184, 74, 46, 0.22);
     }
     .finding-btn svg { width: 11px; height: 11px; }
+  }
+  /* Very narrow phones (≤380px): collapse to icon only so the pill
+     never overlaps the Where cell separator. The aria-label keeps it
+     accessible. */
+  @media (max-width: 380px) {
+    .finding-btn {
+      font-size: 0;        /* hide text node */
+      padding: 8px;
+      gap: 0;
+    }
+    .finding-btn svg { width: 14px; height: 14px; }
   }
 </style>
