@@ -558,6 +558,25 @@ def export_slbc_indicator(indicator_key, indicator_def, slbc_data, phonepe_data,
                     entry[field] = val
                     has_data = True
 
+            # Derived CD ratio: if overall_cd_ratio missing but both
+            # total_deposit and total_advance are populated, compute it.
+            # Only apply when the derived value is in a plausible bound
+            # (5–400%) — outside that range it's almost always a unit
+            # mismatch in the source (e.g. UP's OCR'd booklets where
+            # some districts carry advances in Lakhs and others in
+            # Crores). We'd rather show no-data than a bogus 1.5%.
+            if indicator_key == 'credit_deposit_ratio' and entry.get('overall_cd_ratio') is None:
+                try:
+                    dep = float(str(entry.get('total_deposit') or '').replace(',', ''))
+                    adv = float(str(entry.get('total_advance') or '').replace(',', ''))
+                    if dep > 0 and adv > 0:
+                        derived = adv / dep * 100
+                        if 5 <= derived <= 400:
+                            entry['overall_cd_ratio'] = str(round(derived, 2))
+                            has_data = True
+                except (ValueError, TypeError):
+                    pass
+
             if has_data:
                 districts.append(entry)
 
