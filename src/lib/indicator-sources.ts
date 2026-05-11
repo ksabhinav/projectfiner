@@ -31,6 +31,7 @@ const SLBC_STATE_URLS: Record<string, { name: string; url: string }> = {
   'jharkhand':          { name: 'Jharkhand',       url: 'https://onlineslbcne.nic.in' },
   'karnataka':          { name: 'Karnataka',       url: 'https://slbckarnataka.com' },
   'kerala':             { name: 'Kerala',          url: 'https://slbckerala.com' },
+  'madhya-pradesh':     { name: 'Madhya Pradesh',  url: 'https://www.slbcmadhyapradesh.in/slbc-meeting.aspx' },
   'maharashtra':        { name: 'Maharashtra',     url: 'https://bankofmaharashtra.bank.in' },
   'manipur':            { name: 'Manipur',         url: 'https://onlineslbcne.nic.in' },
   'meghalaya':          { name: 'Meghalaya',       url: 'https://onlineslbcne.nic.in' },
