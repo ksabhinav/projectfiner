@@ -62,6 +62,16 @@
   }
 
   @media (max-width: 760px) {
-    .finding-btn { margin-right: 8px; padding: 8px 11px; font-size: 9px; }
+    .finding-btn {
+      margin-right: 8px;
+      padding: 7px 10px;
+      font-size: 9px;
+      /* Tighter shadow so it doesn't overshoot the 50px-tall strip's bottom border. */
+      box-shadow: 0 1px 0 #8E331E, 0 2px 4px rgba(184, 74, 46, 0.16);
+    }
+    .finding-btn:hover {
+      box-shadow: 0 2px 0 #8E331E, 0 3px 6px rgba(184, 74, 46, 0.22);
+    }
+    .finding-btn svg { width: 11px; height: 11px; }
   }
 </style>
