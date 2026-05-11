@@ -161,28 +161,50 @@ export function getSourceCitation(
       return {
         label: 'Meta Relative Wealth Index 2021 (CC BY-NC-SA, via SHRUG v2.1)',
         url: 'https://devdatalab.org/shrug',
-        attribution: 'Chi, G., Fang, H., Chatterjee, S., & Blumenstock, J. E. (2022). Microestimates of wealth for all low- and middle-income countries. PNAS 119(3). District aggregation via SHRUG v2.1 (Asher, Lunt, Matsuura, Novosad — Development Data Lab). Licence: CC BY-NC-SA 4.0.',
+        attribution: '<a href="https://doi.org/10.1073/pnas.2113658119" target="_blank" rel="noopener">Chi et al. (2022)</a>, ' +
+          'Microestimates of wealth for all low- and middle-income countries, ' +
+          '<em>PNAS</em> 119(3). District aggregation via ' +
+          '<a href="https://doi.org/10.1093/wber/lhab015" target="_blank" rel="noopener">SHRUG v2.1</a> ' +
+          '(Asher, Lunt, Matsuura, Novosad — Development Data Lab). Licence: ' +
+          '<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>.',
       };
 
     case 'viirs_nightlights':
       return {
         label: `VIIRS DNB nightlights · ${q.split(' ')[1] || quarter} (EOG/NOAA, via SHRUG v2.1)`,
         url: 'https://eogdata.mines.edu/products/vnl/',
-        attribution: 'Earth Observation Group, Payne Institute for Public Policy, Colorado School of Mines / NOAA VIIRS Day–Night Band annual composites (median-masked). District aggregation via SHRUG v2.1 (Asher, Lunt, Matsuura, Novosad — Development Data Lab). Licence: CC BY-NC-SA 4.0.',
+        attribution: '<a href="https://eogdata.mines.edu/products/vnl/" target="_blank" rel="noopener">Earth Observation Group</a>, ' +
+          'Payne Institute for Public Policy, Colorado School of Mines / NOAA VIIRS Day–Night Band annual composites (median-masked). ' +
+          'District aggregation via <a href="https://doi.org/10.1093/wber/lhab015" target="_blank" rel="noopener">SHRUG v2.1</a> ' +
+          '(Asher, Lunt, Matsuura, Novosad — Development Data Lab). Licence: ' +
+          '<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>.',
       };
 
     case 'pmgsy_roads':
       return {
         label: 'PMGSY rural roads through 2015 (MoRD, via SHRUG v2.1)',
         url: 'https://omms.nic.in/',
-        attribution: 'Pradhan Mantri Gram Sadak Yojana — Online Management, Monitoring and Accounting System (OMMAS), Ministry of Rural Development. Cumulative through 2015. District aggregation via SHRUG v2.1 (Asher, Lunt, Matsuura, Novosad — Development Data Lab). Licence: CC BY-NC-SA 4.0.',
+        attribution: 'Pradhan Mantri Gram Sadak Yojana — ' +
+          '<a href="https://omms.nic.in/" target="_blank" rel="noopener">OMMAS</a>, ' +
+          'Ministry of Rural Development. Cumulative through 2015. District aggregation via ' +
+          '<a href="https://doi.org/10.1093/wber/lhab015" target="_blank" rel="noopener">SHRUG v2.1</a> ' +
+          '(Asher, Lunt, Matsuura, Novosad — Development Data Lab). Licence: ' +
+          '<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>.',
       };
 
     case 'elevation_terrain':
       return {
         label: 'SRTM elevation, Feb 2000 (NASA, via SHRUG v2.1)',
         url: 'https://www2.jpl.nasa.gov/srtm/',
-        attribution: 'NASA Shuttle Radar Topography Mission (SRTM) 30m DEM, captured February 2000. District aggregation via SHRUG v2.1 (Asher, Lunt, Matsuura, Novosad — Development Data Lab). Within-district std and max−min serve as Riley-style terrain ruggedness proxies. Citation: Farr & Kobrick (2000), Eos 81(48):583-585. Licence: SHRUG CC BY-NC-SA 4.0; SRTM is public domain.',
+        attribution: 'NASA <a href="https://www2.jpl.nasa.gov/srtm/" target="_blank" rel="noopener">Shuttle Radar Topography Mission</a> ' +
+          '(SRTM) 30 m DEM, captured February 2000. District aggregation via ' +
+          '<a href="https://doi.org/10.1093/wber/lhab015" target="_blank" rel="noopener">SHRUG v2.1</a> ' +
+          '(Asher, Lunt, Matsuura, Novosad — Development Data Lab). Within-district std and max−min serve as ' +
+          'Riley-style terrain ruggedness proxies. Citation: ' +
+          '<a href="https://doi.org/10.1029/EO081i048p00583" target="_blank" rel="noopener">Farr &amp; Kobrick (2000)</a>, ' +
+          '<em>Eos</em> 81(48):583-585. Licence: SHRUG ' +
+          '<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>; ' +
+          'SRTM is public domain.',
       };
   }
 
