@@ -745,7 +745,20 @@ const base = import.meta.env.BASE_URL;
         .replace(/[^A-Z\s]/g, '').replace(/\s+/g, ' ').trim();
     }
 
-    // Resolve a GeoJSON feature to a lookup entry using LGD census codes first, then name matching
+    // Normalize a state value (either GeoJSON's "HIMACHAL PRADESH" or an
+    // indicator JSON's "himachal-pradesh" / "DADRA & NAGAR HAVELI") to a
+    // single canonical slug for state-qualified district lookups.
+    function normStateSlug(s) {
+      return (s || '').toLowerCase()
+        .replace(/&/g, 'and')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+    }
+
+    // Resolve a GeoJSON feature to a lookup entry using LGD census codes first,
+    // then a STATE-QUALIFIED name match (prevents cross-state collisions on
+    // names like Bilaspur HP/CG, Balrampur UP/CG, etc.), then plain name
+    // fallback for records that don't carry state.
     function resolveLookup(feature, lookup) {
       var props = feature.properties;
       // 0. Try direct LGD code match (for NRLM/RBI data that has lgd field)
@@ -754,23 +767,44 @@ const base = import.meta.env.BASE_URL;
         var lgdEntry = lookup.get('__lgd__' + lgdCode);
         if (lgdEntry) return lgdEntry;
       }
-      // 1. Try LGD census code (DIST_LGD in GeoJSON = census 2011 code)
+      // 1. State-qualified district lookup — primary path now that every
+      //    indicator record carries a state field. Disambiguates name
+      //    collisions across states (Bilaspur HP vs Bilaspur CG, etc.).
+      var dn = normDist(props.DISTRICT);
+      var stateSlug = normStateSlug(props.STATE_UT);
+      if (stateSlug && dn) {
+        var sqEntry = lookup.get(stateSlug + '|' + dn);
+        if (sqEntry) return sqEntry;
+        // Try the canonical/alias form under the same state
+        var canonical = lgdNameToCanonical[dn];
+        if (canonical && canonical !== dn) {
+          var sqCanon = lookup.get(stateSlug + '|' + canonical);
+          if (sqCanon) return sqCanon;
+        }
+        var aliasDn = DISTRICT_ALIASES[dn];
+        if (aliasDn) {
+          var sqAlias = lookup.get(stateSlug + '|' + aliasDn);
+          if (sqAlias) return sqAlias;
+        }
+      }
+      // 2. LGD census code → name list (legacy path)
       var code = lgdCode;
       if (code && code !== 'NOT AVAILABLE' && lgdCensusToNames[code]) {
         var names = lgdCensusToNames[code];
         for (var i = 0; i < names.length; i++) {
-          var entry = lookup.get(names[i]);
+          var entry = lookup.get(stateSlug + '|' + names[i]);
           if (entry) return entry;
         }
       }
-      // 2. Try LGD name→canonical resolver
-      var dn = normDist(props.DISTRICT);
-      var canonical = lgdNameToCanonical[dn];
-      if (canonical && canonical !== dn) {
-        var entry = lookup.get(canonical);
-        if (entry) return entry;
+      // 3. Last-resort name-only fallback — only used when state-qualified
+      //    didn't match. For colliding names this returns *some* state's data
+      //    rather than nothing, but the state-qualified path above prevents
+      //    that from happening when both records have a state field.
+      var canonical2 = lgdNameToCanonical[dn];
+      if (canonical2 && canonical2 !== dn) {
+        var entry2 = lookup.get(canonical2);
+        if (entry2) return entry2;
       }
-      // 3. Fall back to direct name match + DISTRICT_ALIASES
       return lookup.get(dn) || lookup.get(DISTRICT_ALIASES[dn]) || null;
     }
 
@@ -878,11 +912,18 @@ const base = import.meta.env.BASE_URL;
           allUnits[m.label] = m.unit || '';
         }
 
-        var entry = { value: val, metrics: allVals, units: allUnits, district: rec.district };
+        var entry = { value: val, metrics: allVals, units: allUnits, district: rec.district, state: rec.state };
         // Check if data is from a fallback quarter
         if (currentIndicatorData.quarter && currentIndicatorData.quarter !== currentQuarter) {
           entry.fallbackQuarter = currentIndicatorData.quarter;
         }
+        // State-qualified key (primary, prevents cross-state name collisions
+        // — e.g. Bilaspur exists in both HP and CG; without this both polygons
+        // would resolve to whichever record was stored last under "BILASPUR").
+        var recStateSlug = normStateSlug(rec.state);
+        if (recStateSlug) lookup.set(recStateSlug + '|' + dn, entry);
+        // Plain-name fallback key — only useful for indicators where the
+        // polygon's state doesn't normalize to the record's state slug.
         lookup.set(dn, entry);
         // Also key by LGD code for direct matching (NRLM, RBI BSR data)
         if (rec.lgd) lookup.set('__lgd__' + String(rec.lgd), entry);
