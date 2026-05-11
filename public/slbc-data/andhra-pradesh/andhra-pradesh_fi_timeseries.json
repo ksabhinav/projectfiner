@@ -1,67 +1,69 @@
 {
+  "source": "SLBC Andhra Pradesh",
+  "state": "andhra-pradesh",
   "periods": [
     {
       "period": "June 2018",
       "districts": [
         {
-          "district": "Srikakulam",
+          "district": "Chittoor",
           "period": "June 2018",
-          "credit_deposit_ratio__cd_ratio": 90.52
-        },
-        {
-          "district": "Vizianagaram",
-          "period": "June 2018",
-          "credit_deposit_ratio__cd_ratio": 92.67
-        },
-        {
-          "district": "Visakhapatanam",
-          "period": "June 2018",
-          "credit_deposit_ratio__cd_ratio": 106.2
+          "credit_deposit_ratio__cd_ratio": "64.16"
         },
         {
           "district": "East Godavari",
           "period": "June 2018",
-          "credit_deposit_ratio__cd_ratio": 117.89
-        },
-        {
-          "district": "West Godavari",
-          "period": "June 2018",
-          "credit_deposit_ratio__cd_ratio": 140.01
-        },
-        {
-          "district": "Krishna",
-          "period": "June 2018",
-          "credit_deposit_ratio__cd_ratio": 133.4
+          "credit_deposit_ratio__cd_ratio": "117.89"
         },
         {
           "district": "Guntur",
           "period": "June 2018",
-          "credit_deposit_ratio__cd_ratio": 142.11
+          "credit_deposit_ratio__cd_ratio": "142.11"
         },
         {
-          "district": "Prakasam",
+          "district": "Krishna",
           "period": "June 2018",
-          "credit_deposit_ratio__cd_ratio": 158.8
-        },
-        {
-          "district": "Spsr Nellore",
-          "period": "June 2018",
-          "credit_deposit_ratio__cd_ratio": 137.86
-        },
-        {
-          "district": "Chittoor",
-          "period": "June 2018",
-          "credit_deposit_ratio__cd_ratio": 64.16
-        },
-        {
-          "district": "Y.s.r.",
-          "period": "June 2018",
-          "credit_deposit_ratio__cd_ratio": 112.48
+          "credit_deposit_ratio__cd_ratio": "133.4"
         },
         {
           "district": "Kurnool",
           "period": "June 2018",
-          "credit_deposit_ratio__cd_ratio": 113.53
+          "credit_deposit_ratio__cd_ratio": "113.53"
+        },
+        {
+          "district": "Prakasam",
+          "period": "June 2018",
+          "credit_deposit_ratio__cd_ratio": "158.8"
+        },
+        {
+          "district": "Spsr Nellore",
+          "period": "June 2018",
+          "credit_deposit_ratio__cd_ratio": "137.86"
+        },
+        {
+          "district": "Srikakulam",
+          "period": "June 2018",
+          "credit_deposit_ratio__cd_ratio": "90.52"
+        },
+        {
+          "district": "Visakhapatanam",
+          "period": "June 2018",
+          "credit_deposit_ratio__cd_ratio": "106.2"
+        },
+        {
+          "district": "Vizianagaram",
+          "period": "June 2018",
+          "credit_deposit_ratio__cd_ratio": "92.67"
+        },
+        {
+          "district": "West Godavari",
+          "period": "June 2018",
+          "credit_deposit_ratio__cd_ratio": "140.01"
+        },
+        {
+          "district": "Y.s.r.",
+          "period": "June 2018",
+          "credit_deposit_ratio__cd_ratio": "112.48"
         }
       ]
     },
@@ -69,64 +71,64 @@
       "period": "December 2018",
       "districts": [
         {
-          "district": "Srikakulam",
+          "district": "Chittoor",
           "period": "December 2018",
-          "credit_deposit_ratio__cd_ratio": 93.28
-        },
-        {
-          "district": "Vizianagaram",
-          "period": "December 2018",
-          "credit_deposit_ratio__cd_ratio": 100.88
-        },
-        {
-          "district": "Visakhapatanam",
-          "period": "December 2018",
-          "credit_deposit_ratio__cd_ratio": 122.25
+          "credit_deposit_ratio__cd_ratio": "64.83"
         },
         {
           "district": "East Godavari",
           "period": "December 2018",
-          "credit_deposit_ratio__cd_ratio": 120.87
-        },
-        {
-          "district": "West Godavari",
-          "period": "December 2018",
-          "credit_deposit_ratio__cd_ratio": 146.26
-        },
-        {
-          "district": "Krishna",
-          "period": "December 2018",
-          "credit_deposit_ratio__cd_ratio": 128.98
+          "credit_deposit_ratio__cd_ratio": "120.87"
         },
         {
           "district": "Guntur",
           "period": "December 2018",
-          "credit_deposit_ratio__cd_ratio": 145.15
+          "credit_deposit_ratio__cd_ratio": "145.15"
         },
         {
-          "district": "Prakasam",
+          "district": "Krishna",
           "period": "December 2018",
-          "credit_deposit_ratio__cd_ratio": 164.28
-        },
-        {
-          "district": "Spsr Nellore",
-          "period": "December 2018",
-          "credit_deposit_ratio__cd_ratio": 141.37
-        },
-        {
-          "district": "Chittoor",
-          "period": "December 2018",
-          "credit_deposit_ratio__cd_ratio": 64.83
-        },
-        {
-          "district": "Y.s.r.",
-          "period": "December 2018",
-          "credit_deposit_ratio__cd_ratio": 106.37
+          "credit_deposit_ratio__cd_ratio": "128.98"
         },
         {
           "district": "Kurnool",
           "period": "December 2018",
-          "credit_deposit_ratio__cd_ratio": 119.12
+          "credit_deposit_ratio__cd_ratio": "119.12"
+        },
+        {
+          "district": "Prakasam",
+          "period": "December 2018",
+          "credit_deposit_ratio__cd_ratio": "164.28"
+        },
+        {
+          "district": "Spsr Nellore",
+          "period": "December 2018",
+          "credit_deposit_ratio__cd_ratio": "141.37"
+        },
+        {
+          "district": "Srikakulam",
+          "period": "December 2018",
+          "credit_deposit_ratio__cd_ratio": "93.28"
+        },
+        {
+          "district": "Visakhapatanam",
+          "period": "December 2018",
+          "credit_deposit_ratio__cd_ratio": "122.25"
+        },
+        {
+          "district": "Vizianagaram",
+          "period": "December 2018",
+          "credit_deposit_ratio__cd_ratio": "100.88"
+        },
+        {
+          "district": "West Godavari",
+          "period": "December 2018",
+          "credit_deposit_ratio__cd_ratio": "146.26"
+        },
+        {
+          "district": "Y.s.r.",
+          "period": "December 2018",
+          "credit_deposit_ratio__cd_ratio": "106.37"
         }
       ]
     },
@@ -134,64 +136,64 @@
       "period": "March 2019",
       "districts": [
         {
-          "district": "Srikakulam",
+          "district": "Chittoor",
           "period": "March 2019",
-          "credit_deposit_ratio__cd_ratio": 106.48
-        },
-        {
-          "district": "Vizianagaram",
-          "period": "March 2019",
-          "credit_deposit_ratio__cd_ratio": 117.64
-        },
-        {
-          "district": "Visakhapatanam",
-          "period": "March 2019",
-          "credit_deposit_ratio__cd_ratio": 131.13
+          "credit_deposit_ratio__cd_ratio": "69.71"
         },
         {
           "district": "East Godavari",
           "period": "March 2019",
-          "credit_deposit_ratio__cd_ratio": 123.51
-        },
-        {
-          "district": "West Godavari",
-          "period": "March 2019",
-          "credit_deposit_ratio__cd_ratio": 150.93
-        },
-        {
-          "district": "Krishna",
-          "period": "March 2019",
-          "credit_deposit_ratio__cd_ratio": 148.11
+          "credit_deposit_ratio__cd_ratio": "123.51"
         },
         {
           "district": "Guntur",
           "period": "March 2019",
-          "credit_deposit_ratio__cd_ratio": 139.73
+          "credit_deposit_ratio__cd_ratio": "139.73"
         },
         {
-          "district": "Prakasam",
+          "district": "Krishna",
           "period": "March 2019",
-          "credit_deposit_ratio__cd_ratio": 169.17
-        },
-        {
-          "district": "Spsr Nellore",
-          "period": "March 2019",
-          "credit_deposit_ratio__cd_ratio": 138.74
-        },
-        {
-          "district": "Chittoor",
-          "period": "March 2019",
-          "credit_deposit_ratio__cd_ratio": 69.71
-        },
-        {
-          "district": "Y.s.r.",
-          "period": "March 2019",
-          "credit_deposit_ratio__cd_ratio": 108.25
+          "credit_deposit_ratio__cd_ratio": "148.11"
         },
         {
           "district": "Kurnool",
           "period": "March 2019",
-          "credit_deposit_ratio__cd_ratio": 131.47
+          "credit_deposit_ratio__cd_ratio": "131.47"
+        },
+        {
+          "district": "Prakasam",
+          "period": "March 2019",
+          "credit_deposit_ratio__cd_ratio": "169.17"
+        },
+        {
+          "district": "Spsr Nellore",
+          "period": "March 2019",
+          "credit_deposit_ratio__cd_ratio": "138.74"
+        },
+        {
+          "district": "Srikakulam",
+          "period": "March 2019",
+          "credit_deposit_ratio__cd_ratio": "106.48"
+        },
+        {
+          "district": "Visakhapatanam",
+          "period": "March 2019",
+          "credit_deposit_ratio__cd_ratio": "131.13"
+        },
+        {
+          "district": "Vizianagaram",
+          "period": "March 2019",
+          "credit_deposit_ratio__cd_ratio": "117.64"
+        },
+        {
+          "district": "West Godavari",
+          "period": "March 2019",
+          "credit_deposit_ratio__cd_ratio": "150.93"
+        },
+        {
+          "district": "Y.s.r.",
+          "period": "March 2019",
+          "credit_deposit_ratio__cd_ratio": "108.25"
         }
       ]
     },
@@ -199,94 +201,94 @@
       "period": "June 2019",
       "districts": [
         {
-          "district": "Srikakulam",
+          "district": "Anantapur",
           "period": "June 2019",
-          "credit_deposit_ratio__cd_ratio": 97.8,
-          "shg__shg_credit_linkage": 30000.0,
-          "shg__jlg_financing": 1900.0
-        },
-        {
-          "district": "Vizianagaram",
-          "period": "June 2019",
-          "credit_deposit_ratio__cd_ratio": 97.8,
-          "shg__shg_credit_linkage": 30000.0,
-          "shg__jlg_financing": 550.0
-        },
-        {
-          "district": "Visakhapatanam",
-          "period": "June 2019",
-          "credit_deposit_ratio__cd_ratio": 119.66,
-          "shg__shg_credit_linkage": 30000.0,
-          "shg__jlg_financing": 500.0
-        },
-        {
-          "district": "East Godavari",
-          "period": "June 2019",
-          "credit_deposit_ratio__cd_ratio": 130.76,
-          "shg__shg_credit_linkage": 70000.0,
-          "shg__jlg_financing": 6000.0
-        },
-        {
-          "district": "West Godavari",
-          "period": "June 2019",
-          "credit_deposit_ratio__cd_ratio": 147.02,
-          "shg__shg_credit_linkage": 50000.0,
-          "shg__jlg_financing": 16200.0
-        },
-        {
-          "district": "Krishna",
-          "period": "June 2019",
-          "credit_deposit_ratio__cd_ratio": 147.57,
-          "shg__shg_credit_linkage": 60000.0,
-          "shg__jlg_financing": 11100.0
-        },
-        {
-          "district": "Guntur",
-          "period": "June 2019",
-          "credit_deposit_ratio__cd_ratio": 149.98,
-          "shg__shg_credit_linkage": 60000.0,
-          "shg__jlg_financing": 1000.0
-        },
-        {
-          "district": "Prakasam",
-          "period": "June 2019",
-          "credit_deposit_ratio__cd_ratio": 164.78,
-          "shg__shg_credit_linkage": 50000.0,
-          "shg__jlg_financing": 1600.0
-        },
-        {
-          "district": "Spsr Nellore",
-          "period": "June 2019",
-          "credit_deposit_ratio__cd_ratio": 148.85,
-          "shg__shg_credit_linkage": 40000.0,
-          "shg__jlg_financing": 100.0
+          "shg__jlg_financing": "200.0",
+          "shg__shg_credit_linkage": "50000.0"
         },
         {
           "district": "Chittoor",
           "period": "June 2019",
-          "credit_deposit_ratio__cd_ratio": 85.53,
-          "shg__shg_credit_linkage": 60000.0,
-          "shg__jlg_financing": 150.0
+          "credit_deposit_ratio__cd_ratio": "85.53",
+          "shg__jlg_financing": "150.0",
+          "shg__shg_credit_linkage": "60000.0"
         },
         {
-          "district": "Y.s.r.",
+          "district": "East Godavari",
           "period": "June 2019",
-          "credit_deposit_ratio__cd_ratio": 112.88,
-          "shg__shg_credit_linkage": 30000.0,
-          "shg__jlg_financing": 150.0
+          "credit_deposit_ratio__cd_ratio": "130.76",
+          "shg__jlg_financing": "6000.0",
+          "shg__shg_credit_linkage": "70000.0"
+        },
+        {
+          "district": "Guntur",
+          "period": "June 2019",
+          "credit_deposit_ratio__cd_ratio": "149.98",
+          "shg__jlg_financing": "1000.0",
+          "shg__shg_credit_linkage": "60000.0"
+        },
+        {
+          "district": "Krishna",
+          "period": "June 2019",
+          "credit_deposit_ratio__cd_ratio": "147.57",
+          "shg__jlg_financing": "11100.0",
+          "shg__shg_credit_linkage": "60000.0"
         },
         {
           "district": "Kurnool",
           "period": "June 2019",
-          "credit_deposit_ratio__cd_ratio": 126.34,
-          "shg__shg_credit_linkage": 40000.0,
-          "shg__jlg_financing": 550.0
+          "credit_deposit_ratio__cd_ratio": "126.34",
+          "shg__jlg_financing": "550.0",
+          "shg__shg_credit_linkage": "40000.0"
         },
         {
-          "district": "Anantapur",
+          "district": "Prakasam",
           "period": "June 2019",
-          "shg__shg_credit_linkage": 50000.0,
-          "shg__jlg_financing": 200.0
+          "credit_deposit_ratio__cd_ratio": "164.78",
+          "shg__jlg_financing": "1600.0",
+          "shg__shg_credit_linkage": "50000.0"
+        },
+        {
+          "district": "Spsr Nellore",
+          "period": "June 2019",
+          "credit_deposit_ratio__cd_ratio": "148.85",
+          "shg__jlg_financing": "100.0",
+          "shg__shg_credit_linkage": "40000.0"
+        },
+        {
+          "district": "Srikakulam",
+          "period": "June 2019",
+          "credit_deposit_ratio__cd_ratio": "97.8",
+          "shg__jlg_financing": "1900.0",
+          "shg__shg_credit_linkage": "30000.0"
+        },
+        {
+          "district": "Visakhapatanam",
+          "period": "June 2019",
+          "credit_deposit_ratio__cd_ratio": "119.66",
+          "shg__jlg_financing": "500.0",
+          "shg__shg_credit_linkage": "30000.0"
+        },
+        {
+          "district": "Vizianagaram",
+          "period": "June 2019",
+          "credit_deposit_ratio__cd_ratio": "97.8",
+          "shg__jlg_financing": "550.0",
+          "shg__shg_credit_linkage": "30000.0"
+        },
+        {
+          "district": "West Godavari",
+          "period": "June 2019",
+          "credit_deposit_ratio__cd_ratio": "147.02",
+          "shg__jlg_financing": "16200.0",
+          "shg__shg_credit_linkage": "50000.0"
+        },
+        {
+          "district": "Y.s.r.",
+          "period": "June 2019",
+          "credit_deposit_ratio__cd_ratio": "112.88",
+          "shg__jlg_financing": "150.0",
+          "shg__shg_credit_linkage": "30000.0"
         }
       ]
     },
@@ -294,64 +296,64 @@
       "period": "September 2019",
       "districts": [
         {
-          "district": "Srikakulam",
+          "district": "Chittoor",
           "period": "September 2019",
-          "credit_deposit_ratio__cd_ratio": 98.71
-        },
-        {
-          "district": "Vizianagaram",
-          "period": "September 2019",
-          "credit_deposit_ratio__cd_ratio": 91.18
-        },
-        {
-          "district": "Visakhapatanam",
-          "period": "September 2019",
-          "credit_deposit_ratio__cd_ratio": 118.07
+          "credit_deposit_ratio__cd_ratio": "70.27"
         },
         {
           "district": "East Godavari",
           "period": "September 2019",
-          "credit_deposit_ratio__cd_ratio": 128.27
-        },
-        {
-          "district": "West Godavari",
-          "period": "September 2019",
-          "credit_deposit_ratio__cd_ratio": 145.23
-        },
-        {
-          "district": "Krishna",
-          "period": "September 2019",
-          "credit_deposit_ratio__cd_ratio": 151.35
+          "credit_deposit_ratio__cd_ratio": "128.27"
         },
         {
           "district": "Guntur",
           "period": "September 2019",
-          "credit_deposit_ratio__cd_ratio": 141.89
+          "credit_deposit_ratio__cd_ratio": "141.89"
         },
         {
-          "district": "Prakasam",
+          "district": "Krishna",
           "period": "September 2019",
-          "credit_deposit_ratio__cd_ratio": 161.01
-        },
-        {
-          "district": "Spsr Nellore",
-          "period": "September 2019",
-          "credit_deposit_ratio__cd_ratio": 144.94
-        },
-        {
-          "district": "Chittoor",
-          "period": "September 2019",
-          "credit_deposit_ratio__cd_ratio": 70.27
-        },
-        {
-          "district": "Y.s.r.",
-          "period": "September 2019",
-          "credit_deposit_ratio__cd_ratio": 124.1
+          "credit_deposit_ratio__cd_ratio": "151.35"
         },
         {
           "district": "Kurnool",
           "period": "September 2019",
-          "credit_deposit_ratio__cd_ratio": 120.35
+          "credit_deposit_ratio__cd_ratio": "120.35"
+        },
+        {
+          "district": "Prakasam",
+          "period": "September 2019",
+          "credit_deposit_ratio__cd_ratio": "161.01"
+        },
+        {
+          "district": "Spsr Nellore",
+          "period": "September 2019",
+          "credit_deposit_ratio__cd_ratio": "144.94"
+        },
+        {
+          "district": "Srikakulam",
+          "period": "September 2019",
+          "credit_deposit_ratio__cd_ratio": "98.71"
+        },
+        {
+          "district": "Visakhapatanam",
+          "period": "September 2019",
+          "credit_deposit_ratio__cd_ratio": "118.07"
+        },
+        {
+          "district": "Vizianagaram",
+          "period": "September 2019",
+          "credit_deposit_ratio__cd_ratio": "91.18"
+        },
+        {
+          "district": "West Godavari",
+          "period": "September 2019",
+          "credit_deposit_ratio__cd_ratio": "145.23"
+        },
+        {
+          "district": "Y.s.r.",
+          "period": "September 2019",
+          "credit_deposit_ratio__cd_ratio": "124.1"
         }
       ]
     },
@@ -359,64 +361,64 @@
       "period": "December 2019",
       "districts": [
         {
-          "district": "Srikakulam",
+          "district": "Chittoor",
           "period": "December 2019",
-          "credit_deposit_ratio__cd_ratio": 98.7
-        },
-        {
-          "district": "Vizianagaram",
-          "period": "December 2019",
-          "credit_deposit_ratio__cd_ratio": 91.18
-        },
-        {
-          "district": "Visakhapatanam",
-          "period": "December 2019",
-          "credit_deposit_ratio__cd_ratio": 118.06
+          "credit_deposit_ratio__cd_ratio": "70.27"
         },
         {
           "district": "East Godavari",
           "period": "December 2019",
-          "credit_deposit_ratio__cd_ratio": 128.27
-        },
-        {
-          "district": "West Godavari",
-          "period": "December 2019",
-          "credit_deposit_ratio__cd_ratio": 145.22
-        },
-        {
-          "district": "Krishna",
-          "period": "December 2019",
-          "credit_deposit_ratio__cd_ratio": 151.34
+          "credit_deposit_ratio__cd_ratio": "128.27"
         },
         {
           "district": "Guntur",
           "period": "December 2019",
-          "credit_deposit_ratio__cd_ratio": 141.88
+          "credit_deposit_ratio__cd_ratio": "141.88"
         },
         {
-          "district": "Prakasam",
+          "district": "Krishna",
           "period": "December 2019",
-          "credit_deposit_ratio__cd_ratio": 161.0
-        },
-        {
-          "district": "Spsr Nellore",
-          "period": "December 2019",
-          "credit_deposit_ratio__cd_ratio": 144.94
-        },
-        {
-          "district": "Chittoor",
-          "period": "December 2019",
-          "credit_deposit_ratio__cd_ratio": 70.27
-        },
-        {
-          "district": "Y.s.r.",
-          "period": "December 2019",
-          "credit_deposit_ratio__cd_ratio": 124.09
+          "credit_deposit_ratio__cd_ratio": "151.34"
         },
         {
           "district": "Kurnool",
           "period": "December 2019",
-          "credit_deposit_ratio__cd_ratio": 120.35
+          "credit_deposit_ratio__cd_ratio": "120.35"
+        },
+        {
+          "district": "Prakasam",
+          "period": "December 2019",
+          "credit_deposit_ratio__cd_ratio": "161.0"
+        },
+        {
+          "district": "Spsr Nellore",
+          "period": "December 2019",
+          "credit_deposit_ratio__cd_ratio": "144.94"
+        },
+        {
+          "district": "Srikakulam",
+          "period": "December 2019",
+          "credit_deposit_ratio__cd_ratio": "98.7"
+        },
+        {
+          "district": "Visakhapatanam",
+          "period": "December 2019",
+          "credit_deposit_ratio__cd_ratio": "118.06"
+        },
+        {
+          "district": "Vizianagaram",
+          "period": "December 2019",
+          "credit_deposit_ratio__cd_ratio": "91.18"
+        },
+        {
+          "district": "West Godavari",
+          "period": "December 2019",
+          "credit_deposit_ratio__cd_ratio": "145.22"
+        },
+        {
+          "district": "Y.s.r.",
+          "period": "December 2019",
+          "credit_deposit_ratio__cd_ratio": "124.09"
         }
       ]
     },
@@ -424,64 +426,64 @@
       "period": "March 2020",
       "districts": [
         {
-          "district": "Srikakulam",
+          "district": "Chittoor",
           "period": "March 2020",
-          "credit_deposit_ratio__cd_ratio": 90.26
-        },
-        {
-          "district": "Vizianagaram",
-          "period": "March 2020",
-          "credit_deposit_ratio__cd_ratio": 85.38
-        },
-        {
-          "district": "Visakhapatanam",
-          "period": "March 2020",
-          "credit_deposit_ratio__cd_ratio": 180.45
+          "credit_deposit_ratio__cd_ratio": "77.34"
         },
         {
           "district": "East Godavari",
           "period": "March 2020",
-          "credit_deposit_ratio__cd_ratio": 127.76
-        },
-        {
-          "district": "West Godavari",
-          "period": "March 2020",
-          "credit_deposit_ratio__cd_ratio": 142.04
-        },
-        {
-          "district": "Krishna",
-          "period": "March 2020",
-          "credit_deposit_ratio__cd_ratio": 143.7
+          "credit_deposit_ratio__cd_ratio": "127.76"
         },
         {
           "district": "Guntur",
           "period": "March 2020",
-          "credit_deposit_ratio__cd_ratio": 131.02
+          "credit_deposit_ratio__cd_ratio": "131.02"
         },
         {
-          "district": "Prakasam",
+          "district": "Krishna",
           "period": "March 2020",
-          "credit_deposit_ratio__cd_ratio": 141.71
-        },
-        {
-          "district": "Spsr Nellore",
-          "period": "March 2020",
-          "credit_deposit_ratio__cd_ratio": 128.38
-        },
-        {
-          "district": "Chittoor",
-          "period": "March 2020",
-          "credit_deposit_ratio__cd_ratio": 77.34
-        },
-        {
-          "district": "Y.s.r.",
-          "period": "March 2020",
-          "credit_deposit_ratio__cd_ratio": 94.25
+          "credit_deposit_ratio__cd_ratio": "143.7"
         },
         {
           "district": "Kurnool",
           "period": "March 2020",
-          "credit_deposit_ratio__cd_ratio": 118.94
+          "credit_deposit_ratio__cd_ratio": "118.94"
+        },
+        {
+          "district": "Prakasam",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "141.71"
+        },
+        {
+          "district": "Spsr Nellore",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "128.38"
+        },
+        {
+          "district": "Srikakulam",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "90.26"
+        },
+        {
+          "district": "Visakhapatanam",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "180.45"
+        },
+        {
+          "district": "Vizianagaram",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "85.38"
+        },
+        {
+          "district": "West Godavari",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "142.04"
+        },
+        {
+          "district": "Y.s.r.",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "94.25"
         }
       ]
     },
@@ -489,248 +491,248 @@
       "period": "September 2020",
       "districts": [
         {
-          "district": "Srikakulam",
+          "district": "Chittoor",
           "period": "September 2020",
-          "credit_deposit_ratio__cd_ratio": 93.32,
-          "credit_deposit_ratio__total_deposit": 14156.89,
-          "credit_deposit_ratio__total_advance": 13211.25,
-          "branch_network__no_of_branches_rural": 103.0,
-          "branch_network__branch_semi_urban": 58.0,
-          "branch_network__total_branch": 332.0,
-          "priority_sector__short_term_production_loans": 4693.72,
-          "priority_sector__agrl_ter_m_loans": 2573.04,
-          "priority_sector__farm_credit": 7266.76,
-          "priority_sector__agr_infra": 4.58,
-          "priority_sector__ancillary_activities": 182.96,
-          "priority_sector__msme": 1324.79,
-          "priority_sector__total_priority_sector": 9985.16,
-          "annual_credit_plan__target": 650.0,
-          "annual_credit_plan__ach": 14.7
-        },
-        {
-          "district": "Vizianagaram",
-          "period": "September 2020",
-          "credit_deposit_ratio__cd_ratio": 114.04,
-          "credit_deposit_ratio__total_deposit": 12115.55,
-          "credit_deposit_ratio__total_advance": 13816.54,
-          "branch_network__no_of_branches_rural": 88.0,
-          "branch_network__branch_semi_urban": 77.0,
-          "branch_network__total_branch": 289.0,
-          "priority_sector__short_term_production_loans": 3538.87,
-          "priority_sector__agrl_ter_m_loans": 1960.27,
-          "priority_sector__farm_credit": 5499.14,
-          "priority_sector__agr_infra": 4.42,
-          "priority_sector__ancillary_activities": 101.14,
-          "priority_sector__total_agrl_advance": 5604.7,
-          "priority_sector__msme": 1802.79,
-          "priority_sector__total_priority_sector": 9415.85,
-          "annual_credit_plan__target": 754.0,
-          "annual_credit_plan__ach": 14.0
-        },
-        {
-          "district": "Visakhapatanam",
-          "period": "September 2020",
-          "credit_deposit_ratio__cd_ratio": 200.67,
-          "credit_deposit_ratio__total_deposit": 33065.56,
-          "credit_deposit_ratio__total_advance": 66352.7,
-          "branch_network__no_of_branches_rural": 124.0,
-          "branch_network__branch_semi_urban": 44.0,
-          "branch_network__branch_urban": 451.0,
-          "branch_network__total_branch": 793.0,
-          "priority_sector__short_term_production_loans": 4732.68,
-          "priority_sector__agrl_ter_m_loans": 2990.4,
-          "priority_sector__farm_credit": 7723.08,
-          "priority_sector__agr_infra": 6.54,
-          "priority_sector__ancillary_activities": 249.29,
-          "priority_sector__total_agrl_advance": 7978.91,
-          "priority_sector__msme": 6769.56,
-          "priority_sector__others_under_priority": 3242.53,
-          "priority_sector__total_priority_sector": 17991.0,
-          "annual_credit_plan__target": 2500.0,
-          "annual_credit_plan__ach": 19.15
+          "annual_credit_plan__ach": "47.1",
+          "annual_credit_plan__target": "810.01",
+          "branch_network__branch_semi_urban": "194.0",
+          "branch_network__no_of_branches_rural": "186.0",
+          "branch_network__total_branch": "635.0",
+          "credit_deposit_ratio__total_advance": "26324.31",
+          "credit_deposit_ratio__total_deposit": "38905.4",
+          "priority_sector__agr_infra": "14.95",
+          "priority_sector__agrl_ter_m_loans": "3926.34",
+          "priority_sector__ancillary_activities": "251.0",
+          "priority_sector__farm_credit": "14606.25",
+          "priority_sector__msme": "3746.69",
+          "priority_sector__others_under_priority": "2213.09",
+          "priority_sector__short_term_production_loans": "10679.91",
+          "priority_sector__total_agrl_advance": "14872.2",
+          "priority_sector__total_priority_sector": "20831.98"
         },
         {
           "district": "East Godavari",
           "period": "September 2020",
-          "credit_deposit_ratio__cd_ratio": 128.2,
-          "credit_deposit_ratio__total_deposit": 46093.43,
-          "credit_deposit_ratio__total_advance": 59093.63,
-          "branch_network__no_of_branches_rural": 285.0,
-          "branch_network__branch_semi_urban": 237.0,
-          "branch_network__total_branch": 822.0,
-          "priority_sector__short_term_production_loans": 11978.42,
-          "priority_sector__agrl_ter_m_loans": 9924.96,
-          "priority_sector__farm_credit": 21903.38,
-          "priority_sector__agr_infra": 22.58,
-          "priority_sector__ancillary_activities": 1172.49,
-          "priority_sector__total_agrl_advance": 23098.45,
-          "priority_sector__msme": 7517.28,
-          "priority_sector__others_under_priority": 4019.15,
-          "priority_sector__total_priority_sector": 34634.88,
-          "annual_credit_plan__target": 1276.07,
-          "annual_credit_plan__ach": 26.22
-        },
-        {
-          "district": "West Godavari",
-          "period": "September 2020",
-          "credit_deposit_ratio__cd_ratio": 145.62,
-          "credit_deposit_ratio__total_deposit": 25365.47,
-          "credit_deposit_ratio__total_advance": 36937.67,
-          "branch_network__no_of_branches_rural": 267.0,
-          "branch_network__branch_semi_urban": 154.0,
-          "branch_network__total_branch": 646.0,
-          "priority_sector__short_term_production_loans": 13676.04,
-          "priority_sector__agrl_ter_m_loans": 5018.12,
-          "priority_sector__farm_credit": 18694.16,
-          "priority_sector__agr_infra": 62.14,
-          "priority_sector__ancillary_activities": 1274.45,
-          "priority_sector__total_agrl_advance": 20030.75,
-          "priority_sector__msme": 5421.15,
-          "priority_sector__others_under_priority": 2661.77,
-          "priority_sector__total_priority_sector": 28113.67,
-          "annual_credit_plan__target": 1400.0,
-          "annual_credit_plan__ach": 32.91
-        },
-        {
-          "district": "Krishna",
-          "period": "September 2020",
-          "credit_deposit_ratio__total_deposit": 62237.96,
-          "credit_deposit_ratio__total_advance": 95557.51,
-          "branch_network__no_of_branches_rural": 273.0,
-          "branch_network__branch_semi_urban": 113.0,
-          "branch_network__branch_urban": 269.0,
-          "branch_network__total_branch": 905.0,
-          "priority_sector__short_term_production_loans": 11190.64,
-          "priority_sector__agrl_ter_m_loans": 8408.98,
-          "priority_sector__farm_credit": 19599.62,
-          "priority_sector__agr_infra": 26.45,
-          "priority_sector__ancillary_activities": 832.25,
-          "priority_sector__total_agrl_advance": 20458.32,
-          "priority_sector__msme": 8746.74,
-          "priority_sector__others_under_priority": 6439.23,
-          "priority_sector__total_priority_sector": 35644.29,
-          "annual_credit_plan__target": 3300.0,
-          "annual_credit_plan__ach": 16.05
+          "annual_credit_plan__ach": "26.22",
+          "annual_credit_plan__target": "1276.07",
+          "branch_network__branch_semi_urban": "237.0",
+          "branch_network__no_of_branches_rural": "285.0",
+          "branch_network__total_branch": "822.0",
+          "credit_deposit_ratio__cd_ratio": "128.2",
+          "credit_deposit_ratio__total_advance": "59093.63",
+          "credit_deposit_ratio__total_deposit": "46093.43",
+          "priority_sector__agr_infra": "22.58",
+          "priority_sector__agrl_ter_m_loans": "9924.96",
+          "priority_sector__ancillary_activities": "1172.49",
+          "priority_sector__farm_credit": "21903.38",
+          "priority_sector__msme": "7517.28",
+          "priority_sector__others_under_priority": "4019.15",
+          "priority_sector__short_term_production_loans": "11978.42",
+          "priority_sector__total_agrl_advance": "23098.45",
+          "priority_sector__total_priority_sector": "34634.88"
         },
         {
           "district": "Guntur",
           "period": "September 2020",
-          "credit_deposit_ratio__total_deposit": 37352.27,
-          "credit_deposit_ratio__total_advance": 46021.22,
-          "branch_network__no_of_branches_rural": 260.0,
-          "branch_network__branch_semi_urban": 287.0,
-          "branch_network__total_branch": 861.0,
-          "priority_sector__short_term_production_loans": 14244.81,
-          "priority_sector__agrl_ter_m_loans": 7479.26,
-          "priority_sector__farm_credit": 21724.07,
-          "priority_sector__agr_infra": 121.74,
-          "priority_sector__ancillary_activities": 1063.7,
-          "priority_sector__total_agrl_advance": 22909.51,
-          "priority_sector__msme": 8650.85,
-          "priority_sector__others_under_priority": 4560.66,
-          "priority_sector__total_priority_sector": 36121.02,
-          "annual_credit_plan__target": 2000.0,
-          "annual_credit_plan__ach": 20.01
+          "annual_credit_plan__ach": "20.01",
+          "annual_credit_plan__target": "2000.0",
+          "branch_network__branch_semi_urban": "287.0",
+          "branch_network__no_of_branches_rural": "260.0",
+          "branch_network__total_branch": "861.0",
+          "credit_deposit_ratio__total_advance": "46021.22",
+          "credit_deposit_ratio__total_deposit": "37352.27",
+          "priority_sector__agr_infra": "121.74",
+          "priority_sector__agrl_ter_m_loans": "7479.26",
+          "priority_sector__ancillary_activities": "1063.7",
+          "priority_sector__farm_credit": "21724.07",
+          "priority_sector__msme": "8650.85",
+          "priority_sector__others_under_priority": "4560.66",
+          "priority_sector__short_term_production_loans": "14244.81",
+          "priority_sector__total_agrl_advance": "22909.51",
+          "priority_sector__total_priority_sector": "36121.02"
         },
         {
-          "district": "Prakasam",
+          "district": "Krishna",
           "period": "September 2020",
-          "credit_deposit_ratio__total_deposit": 19041.01,
-          "credit_deposit_ratio__total_advance": 23991.08,
-          "branch_network__no_of_branches_rural": 197.0,
-          "branch_network__branch_semi_urban": 89.0,
-          "branch_network__total_branch": 485.0,
-          "priority_sector__short_term_production_loans": 9300.58,
-          "priority_sector__agrl_ter_m_loans": 4570.4,
-          "priority_sector__farm_credit": 13870.98,
-          "priority_sector__agr_infra": 43.78,
-          "priority_sector__ancillary_activities": 283.37,
-          "priority_sector__total_agrl_advance": 14198.13,
-          "priority_sector__msme": 3410.54,
-          "priority_sector__others_under_priority": 1910.59,
-          "priority_sector__total_priority_sector": 19519.26,
-          "annual_credit_plan__target": 1600.0,
-          "annual_credit_plan__ach": 19.93
-        },
-        {
-          "district": "Spsr Nellore",
-          "period": "September 2020",
-          "credit_deposit_ratio__total_deposit": 21683.63,
-          "credit_deposit_ratio__total_advance": 25263.29,
-          "branch_network__no_of_branches_rural": 152.0,
-          "branch_network__branch_semi_urban": 135.0,
-          "branch_network__total_branch": 437.0,
-          "priority_sector__short_term_production_loans": 6943.68,
-          "priority_sector__agrl_ter_m_loans": 4293.97,
-          "priority_sector__farm_credit": 11237.65,
-          "priority_sector__agr_infra": 14.39,
-          "priority_sector__ancillary_activities": 497.17,
-          "priority_sector__total_agrl_advance": 11749.21,
-          "priority_sector__msme": 3517.89,
-          "priority_sector__others_under_priority": 2173.08,
-          "priority_sector__total_priority_sector": 17440.18,
-          "annual_credit_plan__target": 850.0,
-          "annual_credit_plan__ach": 33.86
-        },
-        {
-          "district": "Chittoor",
-          "period": "September 2020",
-          "credit_deposit_ratio__total_deposit": 38905.4,
-          "credit_deposit_ratio__total_advance": 26324.31,
-          "branch_network__no_of_branches_rural": 186.0,
-          "branch_network__branch_semi_urban": 194.0,
-          "branch_network__total_branch": 635.0,
-          "priority_sector__short_term_production_loans": 10679.91,
-          "priority_sector__agrl_ter_m_loans": 3926.34,
-          "priority_sector__farm_credit": 14606.25,
-          "priority_sector__agr_infra": 14.95,
-          "priority_sector__ancillary_activities": 251.0,
-          "priority_sector__total_agrl_advance": 14872.2,
-          "priority_sector__msme": 3746.69,
-          "priority_sector__others_under_priority": 2213.09,
-          "priority_sector__total_priority_sector": 20831.98,
-          "annual_credit_plan__target": 810.01,
-          "annual_credit_plan__ach": 47.1
-        },
-        {
-          "district": "Y.s.r.",
-          "period": "September 2020",
-          "credit_deposit_ratio__total_deposit": 19574.29,
-          "credit_deposit_ratio__total_advance": 19667.86,
-          "branch_network__no_of_branches_rural": 125.0,
-          "branch_network__branch_semi_urban": 114.0,
-          "branch_network__total_branch": 377.0,
-          "priority_sector__short_term_production_loans": 6104.16,
-          "priority_sector__agrl_ter_m_loans": 3031.45,
-          "priority_sector__farm_credit": 9135.61,
-          "priority_sector__agr_infra": 65.82,
-          "priority_sector__ancillary_activities": 228.24,
-          "priority_sector__total_agrl_advance": 9429.67,
-          "priority_sector__msme": 2448.35,
-          "priority_sector__others_under_priority": 1695.85,
-          "priority_sector__total_priority_sector": 13573.87,
-          "annual_credit_plan__target": 1120.0,
-          "annual_credit_plan__ach": 23.3
+          "annual_credit_plan__ach": "16.05",
+          "annual_credit_plan__target": "3300.0",
+          "branch_network__branch_semi_urban": "113.0",
+          "branch_network__branch_urban": "269.0",
+          "branch_network__no_of_branches_rural": "273.0",
+          "branch_network__total_branch": "905.0",
+          "credit_deposit_ratio__total_advance": "95557.51",
+          "credit_deposit_ratio__total_deposit": "62237.96",
+          "priority_sector__agr_infra": "26.45",
+          "priority_sector__agrl_ter_m_loans": "8408.98",
+          "priority_sector__ancillary_activities": "832.25",
+          "priority_sector__farm_credit": "19599.62",
+          "priority_sector__msme": "8746.74",
+          "priority_sector__others_under_priority": "6439.23",
+          "priority_sector__short_term_production_loans": "11190.64",
+          "priority_sector__total_agrl_advance": "20458.32",
+          "priority_sector__total_priority_sector": "35644.29"
         },
         {
           "district": "Kurnool",
           "period": "September 2020",
-          "credit_deposit_ratio__total_deposit": 20670.45,
-          "credit_deposit_ratio__total_advance": 23937.39,
-          "branch_network__no_of_branches_rural": 135.0,
-          "branch_network__branch_semi_urban": 176.0,
-          "branch_network__total_branch": 484.0,
-          "priority_sector__short_term_production_loans": 8420.08,
-          "priority_sector__agrl_ter_m_loans": 3442.33,
-          "priority_sector__farm_credit": 11862.41,
-          "priority_sector__agr_infra": 92.58,
-          "priority_sector__ancillary_activities": 434.82,
-          "priority_sector__total_agrl_advance": 12389.81,
-          "priority_sector__msme": 2947.11,
-          "priority_sector__others_under_priority": 1902.08,
-          "priority_sector__total_priority_sector": 17239.0,
-          "annual_credit_plan__target": 1180.0,
-          "annual_credit_plan__ach": 18.04
+          "annual_credit_plan__ach": "18.04",
+          "annual_credit_plan__target": "1180.0",
+          "branch_network__branch_semi_urban": "176.0",
+          "branch_network__no_of_branches_rural": "135.0",
+          "branch_network__total_branch": "484.0",
+          "credit_deposit_ratio__total_advance": "23937.39",
+          "credit_deposit_ratio__total_deposit": "20670.45",
+          "priority_sector__agr_infra": "92.58",
+          "priority_sector__agrl_ter_m_loans": "3442.33",
+          "priority_sector__ancillary_activities": "434.82",
+          "priority_sector__farm_credit": "11862.41",
+          "priority_sector__msme": "2947.11",
+          "priority_sector__others_under_priority": "1902.08",
+          "priority_sector__short_term_production_loans": "8420.08",
+          "priority_sector__total_agrl_advance": "12389.81",
+          "priority_sector__total_priority_sector": "17239.0"
+        },
+        {
+          "district": "Prakasam",
+          "period": "September 2020",
+          "annual_credit_plan__ach": "19.93",
+          "annual_credit_plan__target": "1600.0",
+          "branch_network__branch_semi_urban": "89.0",
+          "branch_network__no_of_branches_rural": "197.0",
+          "branch_network__total_branch": "485.0",
+          "credit_deposit_ratio__total_advance": "23991.08",
+          "credit_deposit_ratio__total_deposit": "19041.01",
+          "priority_sector__agr_infra": "43.78",
+          "priority_sector__agrl_ter_m_loans": "4570.4",
+          "priority_sector__ancillary_activities": "283.37",
+          "priority_sector__farm_credit": "13870.98",
+          "priority_sector__msme": "3410.54",
+          "priority_sector__others_under_priority": "1910.59",
+          "priority_sector__short_term_production_loans": "9300.58",
+          "priority_sector__total_agrl_advance": "14198.13",
+          "priority_sector__total_priority_sector": "19519.26"
+        },
+        {
+          "district": "Spsr Nellore",
+          "period": "September 2020",
+          "annual_credit_plan__ach": "33.86",
+          "annual_credit_plan__target": "850.0",
+          "branch_network__branch_semi_urban": "135.0",
+          "branch_network__no_of_branches_rural": "152.0",
+          "branch_network__total_branch": "437.0",
+          "credit_deposit_ratio__total_advance": "25263.29",
+          "credit_deposit_ratio__total_deposit": "21683.63",
+          "priority_sector__agr_infra": "14.39",
+          "priority_sector__agrl_ter_m_loans": "4293.97",
+          "priority_sector__ancillary_activities": "497.17",
+          "priority_sector__farm_credit": "11237.65",
+          "priority_sector__msme": "3517.89",
+          "priority_sector__others_under_priority": "2173.08",
+          "priority_sector__short_term_production_loans": "6943.68",
+          "priority_sector__total_agrl_advance": "11749.21",
+          "priority_sector__total_priority_sector": "17440.18"
+        },
+        {
+          "district": "Srikakulam",
+          "period": "September 2020",
+          "annual_credit_plan__ach": "14.7",
+          "annual_credit_plan__target": "650.0",
+          "branch_network__branch_semi_urban": "58.0",
+          "branch_network__no_of_branches_rural": "103.0",
+          "branch_network__total_branch": "332.0",
+          "credit_deposit_ratio__cd_ratio": "93.32",
+          "credit_deposit_ratio__total_advance": "13211.25",
+          "credit_deposit_ratio__total_deposit": "14156.89",
+          "priority_sector__agr_infra": "4.58",
+          "priority_sector__agrl_ter_m_loans": "2573.04",
+          "priority_sector__ancillary_activities": "182.96",
+          "priority_sector__farm_credit": "7266.76",
+          "priority_sector__msme": "1324.79",
+          "priority_sector__short_term_production_loans": "4693.72",
+          "priority_sector__total_priority_sector": "9985.16"
+        },
+        {
+          "district": "Visakhapatanam",
+          "period": "September 2020",
+          "annual_credit_plan__ach": "19.15",
+          "annual_credit_plan__target": "2500.0",
+          "branch_network__branch_semi_urban": "44.0",
+          "branch_network__branch_urban": "451.0",
+          "branch_network__no_of_branches_rural": "124.0",
+          "branch_network__total_branch": "793.0",
+          "credit_deposit_ratio__cd_ratio": "200.67",
+          "credit_deposit_ratio__total_advance": "66352.7",
+          "credit_deposit_ratio__total_deposit": "33065.56",
+          "priority_sector__agr_infra": "6.54",
+          "priority_sector__agrl_ter_m_loans": "2990.4",
+          "priority_sector__ancillary_activities": "249.29",
+          "priority_sector__farm_credit": "7723.08",
+          "priority_sector__msme": "6769.56",
+          "priority_sector__others_under_priority": "3242.53",
+          "priority_sector__short_term_production_loans": "4732.68",
+          "priority_sector__total_agrl_advance": "7978.91",
+          "priority_sector__total_priority_sector": "17991.0"
+        },
+        {
+          "district": "Vizianagaram",
+          "period": "September 2020",
+          "annual_credit_plan__ach": "14.0",
+          "annual_credit_plan__target": "754.0",
+          "branch_network__branch_semi_urban": "77.0",
+          "branch_network__no_of_branches_rural": "88.0",
+          "branch_network__total_branch": "289.0",
+          "credit_deposit_ratio__cd_ratio": "114.04",
+          "credit_deposit_ratio__total_advance": "13816.54",
+          "credit_deposit_ratio__total_deposit": "12115.55",
+          "priority_sector__agr_infra": "4.42",
+          "priority_sector__agrl_ter_m_loans": "1960.27",
+          "priority_sector__ancillary_activities": "101.14",
+          "priority_sector__farm_credit": "5499.14",
+          "priority_sector__msme": "1802.79",
+          "priority_sector__short_term_production_loans": "3538.87",
+          "priority_sector__total_agrl_advance": "5604.7",
+          "priority_sector__total_priority_sector": "9415.85"
+        },
+        {
+          "district": "West Godavari",
+          "period": "September 2020",
+          "annual_credit_plan__ach": "32.91",
+          "annual_credit_plan__target": "1400.0",
+          "branch_network__branch_semi_urban": "154.0",
+          "branch_network__no_of_branches_rural": "267.0",
+          "branch_network__total_branch": "646.0",
+          "credit_deposit_ratio__cd_ratio": "145.62",
+          "credit_deposit_ratio__total_advance": "36937.67",
+          "credit_deposit_ratio__total_deposit": "25365.47",
+          "priority_sector__agr_infra": "62.14",
+          "priority_sector__agrl_ter_m_loans": "5018.12",
+          "priority_sector__ancillary_activities": "1274.45",
+          "priority_sector__farm_credit": "18694.16",
+          "priority_sector__msme": "5421.15",
+          "priority_sector__others_under_priority": "2661.77",
+          "priority_sector__short_term_production_loans": "13676.04",
+          "priority_sector__total_agrl_advance": "20030.75",
+          "priority_sector__total_priority_sector": "28113.67"
+        },
+        {
+          "district": "Y.s.r.",
+          "period": "September 2020",
+          "annual_credit_plan__ach": "23.3",
+          "annual_credit_plan__target": "1120.0",
+          "branch_network__branch_semi_urban": "114.0",
+          "branch_network__no_of_branches_rural": "125.0",
+          "branch_network__total_branch": "377.0",
+          "credit_deposit_ratio__total_advance": "19667.86",
+          "credit_deposit_ratio__total_deposit": "19574.29",
+          "priority_sector__agr_infra": "65.82",
+          "priority_sector__agrl_ter_m_loans": "3031.45",
+          "priority_sector__ancillary_activities": "228.24",
+          "priority_sector__farm_credit": "9135.61",
+          "priority_sector__msme": "2448.35",
+          "priority_sector__others_under_priority": "1695.85",
+          "priority_sector__short_term_production_loans": "6104.16",
+          "priority_sector__total_agrl_advance": "9429.67",
+          "priority_sector__total_priority_sector": "13573.87"
         }
       ]
     },
@@ -738,395 +740,395 @@
       "period": "June 2021",
       "districts": [
         {
+          "district": "Anantapur",
+          "period": "June 2021",
+          "branch_network__branch_semi_urban": "137.0",
+          "branch_network__branch_urban": "172.0",
+          "branch_network__no_of_branches_rural": "170.0",
+          "branch_network__total_branch": "479.0"
+        },
+        {
           "district": "Chittoor",
           "period": "June 2021",
-          "credit_deposit_ratio__cd_ratio": 78.9,
-          "credit_deposit_ratio__total_deposit": 41810.17,
-          "credit_deposit_ratio__total_advance": 32986.45,
-          "branch_network__no_of_branches_rural": 259.0,
-          "branch_network__branch_semi_urban": 176.0,
-          "branch_network__branch_urban": 184.0,
-          "branch_network__total_branch": 619.0,
-          "priority_sector__short_term": 9887.51,
-          "priority_sector__agrl_term": 3341.35,
-          "priority_sector__farm": 13228.87,
-          "priority_sector__agr_infra": 64.54,
-          "priority_sector__ancillary": 137.77,
-          "priority_sector__total_agrl": 13431.18,
-          "priority_sector__msme": 4161.59,
-          "priority_sector__export": 11.53,
-          "priority_sector__others_under": 2391.07,
-          "priority_sector__total_priority": 19995.37,
-          "annual_credit_plan__short_term_crop_production_trgt": 9750.0,
-          "annual_credit_plan__agrl_term_loans_including_trgt": 4057.0,
-          "annual_credit_plan__total_agriculture_trgt": 13807.0,
-          "annual_credit_plan__msme_trgt": 3350.0,
-          "annual_credit_plan__export_credit_trgt": 4.0,
-          "annual_credit_plan__education_loans_trgt": 82.0,
-          "annual_credit_plan__housing_loans_trgt": 703.0,
-          "annual_credit_plan__renewable_trgt_1": 8.0,
-          "annual_credit_plan__others_under_priority_sector_trgt": 869.0,
-          "annual_credit_plan__total_priority_sector_trgt": 18026.0,
-          "annual_credit_plan__non_priority_sector_trgt": 4693.0,
-          "annual_credit_plan__total_credit_trgt": 22719.0
+          "annual_credit_plan__agrl_term_loans_including_trgt": "4057.0",
+          "annual_credit_plan__education_loans_trgt": "82.0",
+          "annual_credit_plan__export_credit_trgt": "4.0",
+          "annual_credit_plan__housing_loans_trgt": "703.0",
+          "annual_credit_plan__msme_trgt": "3350.0",
+          "annual_credit_plan__non_priority_sector_trgt": "4693.0",
+          "annual_credit_plan__others_under_priority_sector_trgt": "869.0",
+          "annual_credit_plan__renewable_trgt_1": "8.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "9750.0",
+          "annual_credit_plan__total_agriculture_trgt": "13807.0",
+          "annual_credit_plan__total_credit_trgt": "22719.0",
+          "annual_credit_plan__total_priority_sector_trgt": "18026.0",
+          "branch_network__branch_semi_urban": "176.0",
+          "branch_network__branch_urban": "184.0",
+          "branch_network__no_of_branches_rural": "259.0",
+          "branch_network__total_branch": "619.0",
+          "credit_deposit_ratio__cd_ratio": "78.9",
+          "credit_deposit_ratio__total_advance": "32986.45",
+          "credit_deposit_ratio__total_deposit": "41810.17",
+          "priority_sector__agr_infra": "64.54",
+          "priority_sector__agrl_term": "3341.35",
+          "priority_sector__ancillary": "137.77",
+          "priority_sector__export": "11.53",
+          "priority_sector__farm": "13228.87",
+          "priority_sector__msme": "4161.59",
+          "priority_sector__others_under": "2391.07",
+          "priority_sector__short_term": "9887.51",
+          "priority_sector__total_agrl": "13431.18",
+          "priority_sector__total_priority": "19995.37"
         },
         {
           "district": "East Godavari",
           "period": "June 2021",
-          "credit_deposit_ratio__cd_ratio": 126.2,
-          "credit_deposit_ratio__total_deposit": 37031.74,
-          "credit_deposit_ratio__total_advance": 46734.16,
-          "branch_network__no_of_branches_rural": 296.0,
-          "branch_network__branch_semi_urban": 276.0,
-          "branch_network__branch_urban": 237.0,
-          "branch_network__total_branch": 809.0,
-          "priority_sector__short_term": 12728.81,
-          "priority_sector__agrl_term": 4741.37,
-          "priority_sector__farm": 17470.18,
-          "priority_sector__agr_infra": 126.2,
-          "priority_sector__ancillary": 765.21,
-          "priority_sector__total_agrl": 18471.72,
-          "priority_sector__msme": 5964.5,
-          "priority_sector__export": 89.12,
-          "priority_sector__others_under": 2641.4,
-          "priority_sector__total_priority": 27166.74,
-          "annual_credit_plan__short_term_crop_production_trgt": 10385.0,
-          "annual_credit_plan__agrl_term_loans_including_trgt": 5615.0,
-          "annual_credit_plan__total_agriculture_trgt": 16000.0,
-          "annual_credit_plan__msme_trgt": 5400.0,
-          "annual_credit_plan__export_credit_trgt": 10.0,
-          "annual_credit_plan__education_loans_trgt": 200.0,
-          "annual_credit_plan__housing_loans_trgt": 940.0,
-          "annual_credit_plan__others_under_priority_sector_trgt": 1460.0,
-          "annual_credit_plan__total_priority_sector_trgt": 22860.0,
-          "annual_credit_plan__non_priority_sector_trgt": 6840.0,
-          "annual_credit_plan__total_credit_trgt": 29700.0
+          "annual_credit_plan__agrl_term_loans_including_trgt": "5615.0",
+          "annual_credit_plan__education_loans_trgt": "200.0",
+          "annual_credit_plan__export_credit_trgt": "10.0",
+          "annual_credit_plan__housing_loans_trgt": "940.0",
+          "annual_credit_plan__msme_trgt": "5400.0",
+          "annual_credit_plan__non_priority_sector_trgt": "6840.0",
+          "annual_credit_plan__others_under_priority_sector_trgt": "1460.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "10385.0",
+          "annual_credit_plan__total_agriculture_trgt": "16000.0",
+          "annual_credit_plan__total_credit_trgt": "29700.0",
+          "annual_credit_plan__total_priority_sector_trgt": "22860.0",
+          "branch_network__branch_semi_urban": "276.0",
+          "branch_network__branch_urban": "237.0",
+          "branch_network__no_of_branches_rural": "296.0",
+          "branch_network__total_branch": "809.0",
+          "credit_deposit_ratio__cd_ratio": "126.2",
+          "credit_deposit_ratio__total_advance": "46734.16",
+          "credit_deposit_ratio__total_deposit": "37031.74",
+          "priority_sector__agr_infra": "236.33",
+          "priority_sector__agrl_term": "4741.37",
+          "priority_sector__ancillary": "765.21",
+          "priority_sector__export": "89.12",
+          "priority_sector__farm": "17470.18",
+          "priority_sector__msme": "5964.5",
+          "priority_sector__others_under": "2641.4",
+          "priority_sector__short_term": "12728.81",
+          "priority_sector__total_agrl": "18471.72",
+          "priority_sector__total_priority": "27166.74"
         },
         {
           "district": "Guntur",
           "period": "June 2021",
-          "credit_deposit_ratio__cd_ratio": 125.28,
-          "credit_deposit_ratio__total_deposit": 41723.0,
-          "credit_deposit_ratio__total_advance": 52269.01,
-          "branch_network__no_of_branches_rural": 317.0,
-          "branch_network__branch_semi_urban": 246.0,
-          "branch_network__branch_urban": 292.0,
-          "branch_network__total_branch": 855.0,
-          "priority_sector__short_term": 13780.67,
-          "priority_sector__agrl_term": 5123.48,
-          "priority_sector__farm": 18904.15,
-          "priority_sector__agr_infra": 48.93,
-          "priority_sector__ancillary": 647.91,
-          "priority_sector__total_agrl": 19600.99,
-          "priority_sector__msme": 7969.77,
-          "priority_sector__export": 61.66,
-          "priority_sector__others_under": 3508.24,
-          "priority_sector__total_priority": 31140.66,
-          "annual_credit_plan__short_term_crop_production_trgt": 15000.0,
-          "annual_credit_plan__agrl_term_loans_including_trgt": 4320.0,
-          "annual_credit_plan__total_agriculture_trgt": 19320.0,
-          "annual_credit_plan__msme_trgt": 5000.0,
-          "annual_credit_plan__export_credit_trgt": 250.0,
-          "annual_credit_plan__education_loans_trgt": 373.0,
-          "annual_credit_plan__housing_loans_trgt": 1464.0,
-          "annual_credit_plan__others_under_priority_sector_trgt": 2500.0,
-          "annual_credit_plan__total_priority_sector_trgt": 26820.0,
-          "annual_credit_plan__non_priority_sector_trgt": 5000.0,
-          "annual_credit_plan__total_credit_trgt": 31820.0
+          "annual_credit_plan__agrl_term_loans_including_trgt": "4320.0",
+          "annual_credit_plan__education_loans_trgt": "373.0",
+          "annual_credit_plan__export_credit_trgt": "250.0",
+          "annual_credit_plan__housing_loans_trgt": "1464.0",
+          "annual_credit_plan__msme_trgt": "5000.0",
+          "annual_credit_plan__non_priority_sector_trgt": "5000.0",
+          "annual_credit_plan__others_under_priority_sector_trgt": "2500.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "15000.0",
+          "annual_credit_plan__total_agriculture_trgt": "19320.0",
+          "annual_credit_plan__total_credit_trgt": "31820.0",
+          "annual_credit_plan__total_priority_sector_trgt": "26820.0",
+          "branch_network__branch_semi_urban": "246.0",
+          "branch_network__branch_urban": "292.0",
+          "branch_network__no_of_branches_rural": "317.0",
+          "branch_network__total_branch": "855.0",
+          "credit_deposit_ratio__cd_ratio": "125.28",
+          "credit_deposit_ratio__total_advance": "52269.01",
+          "credit_deposit_ratio__total_deposit": "41723.0",
+          "priority_sector__agr_infra": "48.93",
+          "priority_sector__agrl_term": "5123.48",
+          "priority_sector__ancillary": "647.91",
+          "priority_sector__export": "61.66",
+          "priority_sector__farm": "18904.15",
+          "priority_sector__msme": "7969.77",
+          "priority_sector__others_under": "3508.24",
+          "priority_sector__short_term": "13780.67",
+          "priority_sector__total_agrl": "19600.99",
+          "priority_sector__total_priority": "31140.66"
         },
         {
           "district": "Krishna",
           "period": "June 2021",
-          "credit_deposit_ratio__cd_ratio": 180.72,
-          "credit_deposit_ratio__total_deposit": 63547.94,
-          "credit_deposit_ratio__total_advance": 114845.72,
-          "branch_network__no_of_branches_rural": 249.0,
-          "branch_network__branch_semi_urban": 276.0,
-          "branch_network__branch_urban": 111.0,
-          "branch_network__branch_metro": 247.0,
-          "branch_network__total_branch": 883.0,
-          "priority_sector__short_term": 15985.56,
-          "priority_sector__agrl_term": 7009.08,
-          "priority_sector__farm": 22994.64,
-          "priority_sector__agr_infra": 193.66,
-          "priority_sector__ancillary": 556.09,
-          "priority_sector__total_agrl": 23744.39,
-          "priority_sector__msme": 8795.87,
-          "priority_sector__export": 46.18,
-          "priority_sector__others_under": 7102.18,
-          "priority_sector__total_priority": 39688.63,
-          "annual_credit_plan__short_term_crop_production_trgt": 12000.0,
-          "annual_credit_plan__agrl_term_loans_including_trgt": 4525.0,
-          "annual_credit_plan__total_agriculture_trgt": 16525.0,
-          "annual_credit_plan__msme_trgt": 7497.0,
-          "annual_credit_plan__education_loans_trgt": 422.0,
-          "annual_credit_plan__housing_loans_trgt": 1891.0,
-          "annual_credit_plan__others_under_priority_sector_trgt": 3301.0,
-          "annual_credit_plan__total_priority_sector_trgt": 27324.0,
-          "annual_credit_plan__non_priority_sector_trgt": 17504.0,
-          "annual_credit_plan__total_credit_trgt": 44827.0
+          "annual_credit_plan__agrl_term_loans_including_trgt": "4525.0",
+          "annual_credit_plan__education_loans_trgt": "422.0",
+          "annual_credit_plan__housing_loans_trgt": "1891.0",
+          "annual_credit_plan__msme_trgt": "7497.0",
+          "annual_credit_plan__non_priority_sector_trgt": "17504.0",
+          "annual_credit_plan__others_under_priority_sector_trgt": "3301.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "12000.0",
+          "annual_credit_plan__total_agriculture_trgt": "16525.0",
+          "annual_credit_plan__total_credit_trgt": "44827.0",
+          "annual_credit_plan__total_priority_sector_trgt": "27324.0",
+          "branch_network__branch_metro": "247.0",
+          "branch_network__branch_semi_urban": "276.0",
+          "branch_network__branch_urban": "111.0",
+          "branch_network__no_of_branches_rural": "249.0",
+          "branch_network__total_branch": "883.0",
+          "credit_deposit_ratio__cd_ratio": "180.72",
+          "credit_deposit_ratio__total_advance": "114845.72",
+          "credit_deposit_ratio__total_deposit": "63547.94",
+          "priority_sector__agr_infra": "193.66",
+          "priority_sector__agrl_term": "7009.08",
+          "priority_sector__ancillary": "556.09",
+          "priority_sector__export": "46.18",
+          "priority_sector__farm": "22994.64",
+          "priority_sector__msme": "8795.87",
+          "priority_sector__others_under": "7102.18",
+          "priority_sector__short_term": "15985.56",
+          "priority_sector__total_agrl": "23744.39",
+          "priority_sector__total_priority": "39688.63"
         },
         {
           "district": "Kurnool",
           "period": "June 2021",
-          "credit_deposit_ratio__cd_ratio": 130.09,
-          "credit_deposit_ratio__total_deposit": 20153.43,
-          "credit_deposit_ratio__total_advance": 26216.84,
-          "branch_network__no_of_branches_rural": 160.0,
-          "branch_network__branch_semi_urban": 117.0,
-          "branch_network__branch_urban": 205.0,
-          "branch_network__total_branch": 482.0,
-          "priority_sector__short_term": 9300.94,
-          "priority_sector__agrl_term": 2882.41,
-          "priority_sector__farm": 12183.35,
-          "priority_sector__agr_infra": 70.06,
-          "priority_sector__ancillary": 101.34,
-          "priority_sector__total_agrl": 12354.75,
-          "priority_sector__msme": 3153.32,
-          "priority_sector__export": 12.82,
-          "priority_sector__others_under": 2133.84,
-          "priority_sector__total_priority": 17654.73,
-          "annual_credit_plan__short_term_crop_production_trgt": 8287.0,
-          "annual_credit_plan__agrl_term_loans_including_trgt": 2241.0,
-          "annual_credit_plan__total_agriculture_trgt": 10528.0,
-          "annual_credit_plan__msme_trgt": 1940.0,
-          "annual_credit_plan__export_credit_trgt": 4.0,
-          "annual_credit_plan__education_loans_trgt": 61.0,
-          "annual_credit_plan__housing_loans_trgt": 247.0,
-          "annual_credit_plan__others_under_priority_sector_trgt": 968.0,
-          "annual_credit_plan__total_priority_sector_trgt": 13436.0,
-          "annual_credit_plan__non_priority_sector_trgt": 3741.0,
-          "annual_credit_plan__total_credit_trgt": 17177.0
+          "annual_credit_plan__agrl_term_loans_including_trgt": "2241.0",
+          "annual_credit_plan__education_loans_trgt": "61.0",
+          "annual_credit_plan__export_credit_trgt": "4.0",
+          "annual_credit_plan__housing_loans_trgt": "247.0",
+          "annual_credit_plan__msme_trgt": "1940.0",
+          "annual_credit_plan__non_priority_sector_trgt": "3741.0",
+          "annual_credit_plan__others_under_priority_sector_trgt": "968.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "8287.0",
+          "annual_credit_plan__total_agriculture_trgt": "10528.0",
+          "annual_credit_plan__total_credit_trgt": "17177.0",
+          "annual_credit_plan__total_priority_sector_trgt": "13436.0",
+          "branch_network__branch_semi_urban": "117.0",
+          "branch_network__branch_urban": "205.0",
+          "branch_network__no_of_branches_rural": "160.0",
+          "branch_network__total_branch": "482.0",
+          "credit_deposit_ratio__cd_ratio": "130.09",
+          "credit_deposit_ratio__total_advance": "26216.84",
+          "credit_deposit_ratio__total_deposit": "20153.43",
+          "priority_sector__agr_infra": "70.06",
+          "priority_sector__agrl_term": "2882.41",
+          "priority_sector__ancillary": "101.34",
+          "priority_sector__export": "12.82",
+          "priority_sector__farm": "12183.35",
+          "priority_sector__msme": "3153.32",
+          "priority_sector__others_under": "2133.84",
+          "priority_sector__short_term": "9300.94",
+          "priority_sector__total_agrl": "12354.75",
+          "priority_sector__total_priority": "17654.73"
         },
         {
           "district": "Prakasam",
           "period": "June 2021",
-          "credit_deposit_ratio__cd_ratio": 158.27,
-          "credit_deposit_ratio__total_deposit": 17329.08,
-          "credit_deposit_ratio__total_advance": 27427.26,
-          "branch_network__no_of_branches_rural": 198.0,
-          "branch_network__branch_semi_urban": 197.0,
-          "branch_network__branch_urban": 87.0,
-          "branch_network__total_branch": 482.0,
-          "priority_sector__short_term": 11591.27,
-          "priority_sector__agrl_term": 4280.49,
-          "priority_sector__farm": 15871.77,
-          "priority_sector__agr_infra": 47.22,
-          "priority_sector__ancillary": 160.71,
-          "priority_sector__total_agrl": 16079.7,
-          "priority_sector__msme": 4040.45,
-          "priority_sector__export": 89.98,
-          "priority_sector__others_under": 1991.53,
-          "priority_sector__total_priority": 22201.66,
-          "annual_credit_plan__short_term_crop_production_trgt": 9523.0,
-          "annual_credit_plan__agrl_term_loans_including_trgt": 2732.0,
-          "annual_credit_plan__total_agriculture_trgt": 12256.0,
-          "annual_credit_plan__msme_trgt": 2723.0,
-          "annual_credit_plan__export_credit_trgt": 69.0,
-          "annual_credit_plan__education_loans_trgt": 91.0,
-          "annual_credit_plan__housing_loans_trgt": 516.0,
-          "annual_credit_plan__others_under_priority_sector_trgt": 1601.0,
-          "annual_credit_plan__total_priority_sector_trgt": 16580.0,
-          "annual_credit_plan__non_priority_sector_trgt": 2892.0,
-          "annual_credit_plan__total_credit_trgt": 19471.0
+          "annual_credit_plan__agrl_term_loans_including_trgt": "2732.0",
+          "annual_credit_plan__education_loans_trgt": "91.0",
+          "annual_credit_plan__export_credit_trgt": "69.0",
+          "annual_credit_plan__housing_loans_trgt": "516.0",
+          "annual_credit_plan__msme_trgt": "2723.0",
+          "annual_credit_plan__non_priority_sector_trgt": "2892.0",
+          "annual_credit_plan__others_under_priority_sector_trgt": "1601.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "9523.0",
+          "annual_credit_plan__total_agriculture_trgt": "12256.0",
+          "annual_credit_plan__total_credit_trgt": "19471.0",
+          "annual_credit_plan__total_priority_sector_trgt": "16580.0",
+          "branch_network__branch_semi_urban": "197.0",
+          "branch_network__branch_urban": "87.0",
+          "branch_network__no_of_branches_rural": "198.0",
+          "branch_network__total_branch": "482.0",
+          "credit_deposit_ratio__cd_ratio": "158.27",
+          "credit_deposit_ratio__total_advance": "27427.26",
+          "credit_deposit_ratio__total_deposit": "17329.08",
+          "priority_sector__agr_infra": "47.22",
+          "priority_sector__agrl_term": "4280.49",
+          "priority_sector__ancillary": "160.71",
+          "priority_sector__export": "89.98",
+          "priority_sector__farm": "15871.77",
+          "priority_sector__msme": "4040.45",
+          "priority_sector__others_under": "1991.53",
+          "priority_sector__short_term": "11591.27",
+          "priority_sector__total_agrl": "16079.7",
+          "priority_sector__total_priority": "22201.66"
         },
         {
           "district": "Spsr Nellore",
           "period": "June 2021",
-          "credit_deposit_ratio__cd_ratio": 139.07,
-          "credit_deposit_ratio__total_deposit": 18060.96,
-          "credit_deposit_ratio__total_advance": 25116.72,
-          "branch_network__no_of_branches_rural": 149.0,
-          "branch_network__branch_semi_urban": 152.0,
-          "branch_network__branch_urban": 137.0,
-          "branch_network__total_branch": 438.0,
-          "priority_sector__short_term": 7162.96,
-          "priority_sector__agrl_term": 3062.78,
-          "priority_sector__farm": 10225.74,
-          "priority_sector__agr_infra": 21.73,
-          "priority_sector__ancillary": 356.49,
-          "priority_sector__total_agrl": 10603.96,
-          "priority_sector__msme": 3617.29,
-          "priority_sector__export": 27.49,
-          "priority_sector__others_under": 2146.25,
-          "priority_sector__total_priority": 16395.0,
-          "annual_credit_plan__short_term_crop_production_trgt": 7001.0,
-          "annual_credit_plan__agrl_term_loans_including_trgt": 2286.0,
-          "annual_credit_plan__total_agriculture_trgt": 9287.0,
-          "annual_credit_plan__msme_trgt": 1755.0,
-          "annual_credit_plan__export_credit_trgt": 20.0,
-          "annual_credit_plan__education_loans_trgt": 217.0,
-          "annual_credit_plan__housing_loans_trgt": 847.0,
-          "annual_credit_plan__others_under_priority_sector_trgt": 1556.0,
-          "annual_credit_plan__total_priority_sector_trgt": 12599.0,
-          "annual_credit_plan__non_priority_sector_trgt": 3942.0,
-          "annual_credit_plan__total_credit_trgt": 16541.0
+          "annual_credit_plan__agrl_term_loans_including_trgt": "2286.0",
+          "annual_credit_plan__education_loans_trgt": "217.0",
+          "annual_credit_plan__export_credit_trgt": "20.0",
+          "annual_credit_plan__housing_loans_trgt": "847.0",
+          "annual_credit_plan__msme_trgt": "1755.0",
+          "annual_credit_plan__non_priority_sector_trgt": "3942.0",
+          "annual_credit_plan__others_under_priority_sector_trgt": "1556.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "7001.0",
+          "annual_credit_plan__total_agriculture_trgt": "9287.0",
+          "annual_credit_plan__total_credit_trgt": "16541.0",
+          "annual_credit_plan__total_priority_sector_trgt": "12599.0",
+          "branch_network__branch_semi_urban": "152.0",
+          "branch_network__branch_urban": "137.0",
+          "branch_network__no_of_branches_rural": "149.0",
+          "branch_network__total_branch": "438.0",
+          "credit_deposit_ratio__cd_ratio": "139.07",
+          "credit_deposit_ratio__total_advance": "25116.72",
+          "credit_deposit_ratio__total_deposit": "18060.96",
+          "priority_sector__agr_infra": "21.73",
+          "priority_sector__agrl_term": "3062.78",
+          "priority_sector__ancillary": "356.49",
+          "priority_sector__export": "27.49",
+          "priority_sector__farm": "10225.74",
+          "priority_sector__msme": "3617.29",
+          "priority_sector__others_under": "2146.25",
+          "priority_sector__short_term": "7162.96",
+          "priority_sector__total_agrl": "10603.96",
+          "priority_sector__total_priority": "16395.0"
         },
         {
           "district": "Srikakulam",
           "period": "June 2021",
-          "credit_deposit_ratio__cd_ratio": 105.45,
-          "credit_deposit_ratio__total_deposit": 12234.64,
-          "credit_deposit_ratio__total_advance": 12901.81,
-          "branch_network__no_of_branches_rural": 175.0,
-          "branch_network__branch_semi_urban": 98.0,
-          "branch_network__branch_urban": 59.0,
-          "branch_network__total_branch": 332.0,
-          "priority_sector__short_term": 4252.51,
-          "priority_sector__agrl_term": 2463.85,
-          "priority_sector__farm": 6716.36,
-          "priority_sector__agr_infra": 8.22,
-          "priority_sector__ancillary": 36.37,
-          "priority_sector__total_agrl": 6760.94,
-          "priority_sector__msme": 1846.48,
-          "priority_sector__export": 11.44,
-          "priority_sector__others_under": 1983.46,
-          "priority_sector__total_priority": 10602.33,
-          "annual_credit_plan__short_term_crop_production_trgt": 3904.0,
-          "annual_credit_plan__agrl_term_loans_including_trgt": 1833.0,
-          "annual_credit_plan__total_agriculture_trgt": 5737.0,
-          "annual_credit_plan__msme_trgt": 1134.0,
-          "annual_credit_plan__export_credit_trgt": 2.0,
-          "annual_credit_plan__education_loans_trgt": 41.0,
-          "annual_credit_plan__housing_loans_trgt": 596.0,
-          "annual_credit_plan__social_infrastructure_trgt_6": 6.0,
-          "annual_credit_plan__others_under_priority_sector_trgt": 679.0,
-          "annual_credit_plan__total_priority_sector_trgt": 7550.0,
-          "annual_credit_plan__non_priority_sector_trgt": 1364.0,
-          "annual_credit_plan__total_credit_trgt": 8914.0
+          "annual_credit_plan__agrl_term_loans_including_trgt": "1833.0",
+          "annual_credit_plan__education_loans_trgt": "41.0",
+          "annual_credit_plan__export_credit_trgt": "2.0",
+          "annual_credit_plan__housing_loans_trgt": "596.0",
+          "annual_credit_plan__msme_trgt": "1134.0",
+          "annual_credit_plan__non_priority_sector_trgt": "1364.0",
+          "annual_credit_plan__others_under_priority_sector_trgt": "679.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "3904.0",
+          "annual_credit_plan__social_infrastructure_trgt_6": "6.0",
+          "annual_credit_plan__total_agriculture_trgt": "5737.0",
+          "annual_credit_plan__total_credit_trgt": "8914.0",
+          "annual_credit_plan__total_priority_sector_trgt": "7550.0",
+          "branch_network__branch_semi_urban": "98.0",
+          "branch_network__branch_urban": "59.0",
+          "branch_network__no_of_branches_rural": "175.0",
+          "branch_network__total_branch": "332.0",
+          "credit_deposit_ratio__cd_ratio": "105.45",
+          "credit_deposit_ratio__total_advance": "12901.81",
+          "credit_deposit_ratio__total_deposit": "12234.64",
+          "priority_sector__agr_infra": "8.22",
+          "priority_sector__agrl_term": "2463.85",
+          "priority_sector__ancillary": "36.37",
+          "priority_sector__export": "11.44",
+          "priority_sector__farm": "6716.36",
+          "priority_sector__msme": "1846.48",
+          "priority_sector__others_under": "1983.46",
+          "priority_sector__short_term": "4252.51",
+          "priority_sector__total_agrl": "6760.94",
+          "priority_sector__total_priority": "10602.33"
         },
         {
           "district": "Visakhapatanam",
           "period": "June 2021",
-          "credit_deposit_ratio__cd_ratio": 123.27,
-          "credit_deposit_ratio__total_deposit": 60448.76,
-          "credit_deposit_ratio__total_advance": 74517.84,
-          "priority_sector__short_term": 7232.3,
-          "priority_sector__agrl_term": 3631.2,
-          "priority_sector__farm": 10863.51,
-          "priority_sector__agr_infra": 44.33,
-          "priority_sector__ancillary": 440.77,
-          "priority_sector__total_agrl": 11348.61,
-          "priority_sector__msme": 9104.39,
-          "priority_sector__export": 15.41,
-          "priority_sector__others_under": 4451.78,
-          "priority_sector__total_priority": 24920.19,
-          "annual_credit_plan__short_term_crop_production_trgt": 3950.0,
-          "annual_credit_plan__agrl_term_loans_including_trgt": 1651.0,
-          "annual_credit_plan__total_agriculture_trgt": 5601.0,
-          "annual_credit_plan__msme_trgt": 6600.0,
-          "annual_credit_plan__export_credit_trgt": 700.0,
-          "annual_credit_plan__education_loans_trgt": 100.0,
-          "annual_credit_plan__housing_loans_trgt": 1511.0,
-          "annual_credit_plan__social_infrastructure_trgt_6": 6.0,
-          "annual_credit_plan__renewable_trgt_1": 8.0,
-          "annual_credit_plan__others_under_priority_sector_trgt": 3075.0,
-          "annual_credit_plan__total_priority_sector_trgt": 15276.0,
-          "annual_credit_plan__non_priority_sector_trgt": 14000.0,
-          "annual_credit_plan__total_credit_trgt": 29276.0
+          "annual_credit_plan__agrl_term_loans_including_trgt": "1651.0",
+          "annual_credit_plan__education_loans_trgt": "100.0",
+          "annual_credit_plan__export_credit_trgt": "700.0",
+          "annual_credit_plan__housing_loans_trgt": "1511.0",
+          "annual_credit_plan__msme_trgt": "6600.0",
+          "annual_credit_plan__non_priority_sector_trgt": "14000.0",
+          "annual_credit_plan__others_under_priority_sector_trgt": "3075.0",
+          "annual_credit_plan__renewable_trgt_1": "8.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "3950.0",
+          "annual_credit_plan__social_infrastructure_trgt_6": "6.0",
+          "annual_credit_plan__total_agriculture_trgt": "5601.0",
+          "annual_credit_plan__total_credit_trgt": "29276.0",
+          "annual_credit_plan__total_priority_sector_trgt": "15276.0",
+          "credit_deposit_ratio__cd_ratio": "123.27",
+          "credit_deposit_ratio__total_advance": "74517.84",
+          "credit_deposit_ratio__total_deposit": "60448.76",
+          "priority_sector__agr_infra": "44.33",
+          "priority_sector__agrl_term": "3631.2",
+          "priority_sector__ancillary": "440.77",
+          "priority_sector__export": "15.41",
+          "priority_sector__farm": "10863.51",
+          "priority_sector__msme": "9104.39",
+          "priority_sector__others_under": "4451.78",
+          "priority_sector__short_term": "7232.3",
+          "priority_sector__total_agrl": "11348.61",
+          "priority_sector__total_priority": "24920.19"
         },
         {
           "district": "Vizianagaram",
           "period": "June 2021",
-          "credit_deposit_ratio__cd_ratio": 110.24,
-          "credit_deposit_ratio__total_deposit": 10057.07,
-          "credit_deposit_ratio__total_advance": 11087.15,
-          "branch_network__no_of_branches_rural": 126.0,
-          "branch_network__branch_semi_urban": 92.0,
-          "branch_network__branch_urban": 74.0,
-          "branch_network__total_branch": 292.0,
-          "priority_sector__short_term": 5028.4,
-          "priority_sector__agrl_term": 1623.41,
-          "priority_sector__farm": 6651.8,
-          "priority_sector__agr_infra": 9.53,
-          "priority_sector__ancillary": 25.03,
-          "priority_sector__total_agrl": 6686.36,
-          "priority_sector__msme": 1741.92,
-          "priority_sector__export": 5.79,
-          "priority_sector__others_under": 2789.58,
-          "priority_sector__total_priority": 11223.65,
-          "annual_credit_plan__short_term_crop_production_trgt": 3061.0,
-          "annual_credit_plan__agrl_term_loans_including_trgt": 1283.0,
-          "annual_credit_plan__total_agriculture_trgt": 4344.0,
-          "annual_credit_plan__msme_trgt": 710.0,
-          "annual_credit_plan__export_credit_trgt": 5.0,
-          "annual_credit_plan__education_loans_trgt": 50.0,
-          "annual_credit_plan__housing_loans_trgt": 550.0,
-          "annual_credit_plan__others_under_priority_sector_trgt": 650.0,
-          "annual_credit_plan__total_priority_sector_trgt": 5704.0,
-          "annual_credit_plan__non_priority_sector_trgt": 1045.0,
-          "annual_credit_plan__total_credit_trgt": 6749.0
+          "annual_credit_plan__agrl_term_loans_including_trgt": "1283.0",
+          "annual_credit_plan__education_loans_trgt": "50.0",
+          "annual_credit_plan__export_credit_trgt": "5.0",
+          "annual_credit_plan__housing_loans_trgt": "550.0",
+          "annual_credit_plan__msme_trgt": "710.0",
+          "annual_credit_plan__non_priority_sector_trgt": "1045.0",
+          "annual_credit_plan__others_under_priority_sector_trgt": "650.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "3061.0",
+          "annual_credit_plan__total_agriculture_trgt": "4344.0",
+          "annual_credit_plan__total_credit_trgt": "6749.0",
+          "annual_credit_plan__total_priority_sector_trgt": "5704.0",
+          "branch_network__branch_semi_urban": "92.0",
+          "branch_network__branch_urban": "74.0",
+          "branch_network__no_of_branches_rural": "126.0",
+          "branch_network__total_branch": "292.0",
+          "credit_deposit_ratio__cd_ratio": "110.24",
+          "credit_deposit_ratio__total_advance": "11087.15",
+          "credit_deposit_ratio__total_deposit": "10057.07",
+          "priority_sector__agr_infra": "9.53",
+          "priority_sector__agrl_term": "1623.41",
+          "priority_sector__ancillary": "25.03",
+          "priority_sector__export": "5.79",
+          "priority_sector__farm": "6651.8",
+          "priority_sector__msme": "1741.92",
+          "priority_sector__others_under": "2789.58",
+          "priority_sector__short_term": "5028.4",
+          "priority_sector__total_agrl": "6686.36",
+          "priority_sector__total_priority": "11223.65"
         },
         {
           "district": "West Godavari",
           "period": "June 2021",
-          "credit_deposit_ratio__cd_ratio": 146.67,
-          "credit_deposit_ratio__total_deposit": 26143.64,
-          "credit_deposit_ratio__total_advance": 38345.18,
-          "branch_network__no_of_branches_rural": 227.0,
-          "branch_network__branch_semi_urban": 262.0,
-          "branch_network__branch_urban": 145.0,
-          "branch_network__total_branch": 634.0,
-          "priority_sector__short_term": 13365.31,
-          "priority_sector__agrl_term": 4705.44,
-          "priority_sector__farm": 18070.75,
-          "priority_sector__agr_infra": 91.41,
-          "priority_sector__ancillary": 619.32,
-          "priority_sector__total_agrl": 18781.48,
-          "priority_sector__msme": 4689.49,
-          "priority_sector__export": 59.64,
-          "priority_sector__others_under": 2770.06,
-          "priority_sector__total_priority": 26300.66,
-          "annual_credit_plan__short_term_crop_production_trgt": 11300.0,
-          "annual_credit_plan__agrl_term_loans_including_trgt": 3240.0,
-          "annual_credit_plan__total_agriculture_trgt": 14540.0,
-          "annual_credit_plan__msme_trgt": 3350.0,
-          "annual_credit_plan__education_loans_trgt": 106.0,
-          "annual_credit_plan__housing_loans_trgt": 600.0,
-          "annual_credit_plan__renewable_trgt_1": 5.0,
-          "annual_credit_plan__others_under_priority_sector_trgt": 1666.0,
-          "annual_credit_plan__total_priority_sector_trgt": 19556.0,
-          "annual_credit_plan__non_priority_sector_trgt": 3800.0,
-          "annual_credit_plan__total_credit_trgt": 23356.0
+          "annual_credit_plan__agrl_term_loans_including_trgt": "3240.0",
+          "annual_credit_plan__education_loans_trgt": "106.0",
+          "annual_credit_plan__housing_loans_trgt": "600.0",
+          "annual_credit_plan__msme_trgt": "3350.0",
+          "annual_credit_plan__non_priority_sector_trgt": "3800.0",
+          "annual_credit_plan__others_under_priority_sector_trgt": "1666.0",
+          "annual_credit_plan__renewable_trgt_1": "5.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "11300.0",
+          "annual_credit_plan__total_agriculture_trgt": "14540.0",
+          "annual_credit_plan__total_credit_trgt": "23356.0",
+          "annual_credit_plan__total_priority_sector_trgt": "19556.0",
+          "branch_network__branch_semi_urban": "262.0",
+          "branch_network__branch_urban": "145.0",
+          "branch_network__no_of_branches_rural": "227.0",
+          "branch_network__total_branch": "634.0",
+          "credit_deposit_ratio__cd_ratio": "146.67",
+          "credit_deposit_ratio__total_advance": "38345.18",
+          "credit_deposit_ratio__total_deposit": "26143.64",
+          "priority_sector__agr_infra": "91.41",
+          "priority_sector__agrl_term": "4705.44",
+          "priority_sector__ancillary": "619.32",
+          "priority_sector__export": "59.64",
+          "priority_sector__farm": "18070.75",
+          "priority_sector__msme": "4689.49",
+          "priority_sector__others_under": "2770.06",
+          "priority_sector__short_term": "13365.31",
+          "priority_sector__total_agrl": "18781.48",
+          "priority_sector__total_priority": "26300.66"
         },
         {
           "district": "Y.s.r.",
           "period": "June 2021",
-          "credit_deposit_ratio__cd_ratio": 107.85,
-          "credit_deposit_ratio__total_deposit": 18733.33,
-          "credit_deposit_ratio__total_advance": 20203.49,
-          "branch_network__no_of_branches_rural": 137.0,
-          "branch_network__branch_semi_urban": 121.0,
-          "branch_network__branch_urban": 116.0,
-          "branch_network__total_branch": 374.0,
-          "priority_sector__short_term": 6034.42,
-          "priority_sector__agrl_term": 2866.67,
-          "priority_sector__farm": 8901.09,
-          "priority_sector__agr_infra": 43.56,
-          "priority_sector__ancillary": 1402.8,
-          "priority_sector__total_agrl": 10347.45,
-          "priority_sector__msme": 2716.88,
-          "priority_sector__export": 7.16,
-          "priority_sector__others_under": 1908.57,
-          "priority_sector__total_priority": 14980.07,
-          "annual_credit_plan__short_term_crop_production_trgt": 6600.0,
-          "annual_credit_plan__agrl_term_loans_including_trgt": 2430.0,
-          "annual_credit_plan__total_agriculture_trgt": 9030.0,
-          "annual_credit_plan__msme_trgt": 1800.0,
-          "annual_credit_plan__education_loans_trgt": 26.0,
-          "annual_credit_plan__housing_loans_trgt": 332.0,
-          "annual_credit_plan__others_under_priority_sector_trgt": 1140.0,
-          "annual_credit_plan__total_priority_sector_trgt": 11970.0,
-          "annual_credit_plan__non_priority_sector_trgt": 2900.0,
-          "annual_credit_plan__total_credit_trgt": 14870.0
-        },
-        {
-          "district": "Anantapur",
-          "period": "June 2021",
-          "branch_network__no_of_branches_rural": 170.0,
-          "branch_network__branch_semi_urban": 137.0,
-          "branch_network__branch_urban": 172.0,
-          "branch_network__total_branch": 479.0
+          "annual_credit_plan__agrl_term_loans_including_trgt": "2430.0",
+          "annual_credit_plan__education_loans_trgt": "26.0",
+          "annual_credit_plan__housing_loans_trgt": "332.0",
+          "annual_credit_plan__msme_trgt": "1800.0",
+          "annual_credit_plan__non_priority_sector_trgt": "2900.0",
+          "annual_credit_plan__others_under_priority_sector_trgt": "1140.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "6600.0",
+          "annual_credit_plan__total_agriculture_trgt": "9030.0",
+          "annual_credit_plan__total_credit_trgt": "14870.0",
+          "annual_credit_plan__total_priority_sector_trgt": "11970.0",
+          "branch_network__branch_semi_urban": "121.0",
+          "branch_network__branch_urban": "116.0",
+          "branch_network__no_of_branches_rural": "137.0",
+          "branch_network__total_branch": "374.0",
+          "credit_deposit_ratio__cd_ratio": "107.85",
+          "credit_deposit_ratio__total_advance": "20203.49",
+          "credit_deposit_ratio__total_deposit": "18733.33",
+          "priority_sector__agr_infra": "43.56",
+          "priority_sector__agrl_term": "2866.67",
+          "priority_sector__ancillary": "1402.8",
+          "priority_sector__export": "7.16",
+          "priority_sector__farm": "8901.09",
+          "priority_sector__msme": "2716.88",
+          "priority_sector__others_under": "1908.57",
+          "priority_sector__short_term": "6034.42",
+          "priority_sector__total_agrl": "10347.45",
+          "priority_sector__total_priority": "14980.07"
         }
       ]
     },
@@ -1134,69 +1136,69 @@
       "period": "September 2021",
       "districts": [
         {
-          "district": "Srikakulam",
+          "district": "Anantapur",
           "period": "September 2021",
-          "credit_deposit_ratio__cd_ratio": 121.4
-        },
-        {
-          "district": "Vizianagaram",
-          "period": "September 2021",
-          "credit_deposit_ratio__cd_ratio": 120.55
-        },
-        {
-          "district": "Visakhapatanam",
-          "period": "September 2021",
-          "credit_deposit_ratio__cd_ratio": 111.97
-        },
-        {
-          "district": "East Godavari",
-          "period": "September 2021",
-          "credit_deposit_ratio__cd_ratio": 129.05
-        },
-        {
-          "district": "West Godavari",
-          "period": "September 2021",
-          "credit_deposit_ratio__cd_ratio": 144.52
-        },
-        {
-          "district": "Krishna",
-          "period": "September 2021",
-          "credit_deposit_ratio__cd_ratio": 196.94
-        },
-        {
-          "district": "Guntur",
-          "period": "September 2021",
-          "credit_deposit_ratio__cd_ratio": 132.1
-        },
-        {
-          "district": "Prakasam",
-          "period": "September 2021",
-          "credit_deposit_ratio__cd_ratio": 166.8
-        },
-        {
-          "district": "Spsr Nellore",
-          "period": "September 2021",
-          "credit_deposit_ratio__cd_ratio": 146.03
+          "credit_deposit_ratio__cd_ratio": "122.88"
         },
         {
           "district": "Chittoor",
           "period": "September 2021",
-          "credit_deposit_ratio__cd_ratio": 83.05
+          "credit_deposit_ratio__cd_ratio": "83.05"
         },
         {
-          "district": "Y.s.r.",
+          "district": "East Godavari",
           "period": "September 2021",
-          "credit_deposit_ratio__cd_ratio": 116.5
+          "credit_deposit_ratio__cd_ratio": "129.05"
         },
         {
-          "district": "Anantapur",
+          "district": "Guntur",
           "period": "September 2021",
-          "credit_deposit_ratio__cd_ratio": 122.88
+          "credit_deposit_ratio__cd_ratio": "132.1"
+        },
+        {
+          "district": "Krishna",
+          "period": "September 2021",
+          "credit_deposit_ratio__cd_ratio": "196.94"
         },
         {
           "district": "Kurnool",
           "period": "September 2021",
-          "credit_deposit_ratio__cd_ratio": 141.61
+          "credit_deposit_ratio__cd_ratio": "141.61"
+        },
+        {
+          "district": "Prakasam",
+          "period": "September 2021",
+          "credit_deposit_ratio__cd_ratio": "166.8"
+        },
+        {
+          "district": "Spsr Nellore",
+          "period": "September 2021",
+          "credit_deposit_ratio__cd_ratio": "146.03"
+        },
+        {
+          "district": "Srikakulam",
+          "period": "September 2021",
+          "credit_deposit_ratio__cd_ratio": "121.4"
+        },
+        {
+          "district": "Visakhapatanam",
+          "period": "September 2021",
+          "credit_deposit_ratio__cd_ratio": "111.97"
+        },
+        {
+          "district": "Vizianagaram",
+          "period": "September 2021",
+          "credit_deposit_ratio__cd_ratio": "120.55"
+        },
+        {
+          "district": "West Godavari",
+          "period": "September 2021",
+          "credit_deposit_ratio__cd_ratio": "144.52"
+        },
+        {
+          "district": "Y.s.r.",
+          "period": "September 2021",
+          "credit_deposit_ratio__cd_ratio": "116.5"
         }
       ]
     },
@@ -1206,402 +1208,402 @@
         {
           "district": "Anantapur",
           "period": "December 2021",
-          "credit_deposit_ratio__total_deposit": 23466.17,
-          "credit_deposit_ratio__total_advance": 29993.08,
-          "credit_deposit_ratio__cd_ratio": 127.81
+          "credit_deposit_ratio__cd_ratio": "127.81",
+          "credit_deposit_ratio__total_advance": "29993.08",
+          "credit_deposit_ratio__total_deposit": "23466.17"
         },
         {
           "district": "Chittoor",
           "period": "December 2021",
-          "credit_deposit_ratio__total_deposit": 42255.12,
-          "credit_deposit_ratio__total_advance": 35723.0,
-          "credit_deposit_ratio__cd_ratio": 84.54,
-          "branch_network__no_of_branches_rural": 263.0,
-          "branch_network__branch_semi_urban": 180.0,
-          "branch_network__branch_urban": 190.0,
-          "branch_network__branch_metro": 3.0,
-          "branch_network__total_branch": 636.0,
-          "priority_sector__short_term": 11635.06,
-          "priority_sector__agrl_term": 3904.88,
-          "priority_sector__farm": 15539.94,
-          "priority_sector__agr": 331.28,
-          "priority_sector__ancillary": 419.61,
-          "priority_sector__total_agrl": 16290.83,
-          "priority_sector__msme": 4307.95,
-          "priority_sector__export": 0.0,
-          "priority_sector__others_under": 2349.64,
-          "priority_sector__total_priority": 22948.42,
-          "annual_credit_plan__short_term_crop_production_trgt": 9750.0,
-          "annual_credit_plan__agrl_term_loans_trgt": 4057.0,
-          "annual_credit_plan__total_agriculture_trgt": 13807.0,
-          "annual_credit_plan__msme_trgt": 3350.0,
-          "annual_credit_plan__export_credit_trgt_2": 4.0,
-          "annual_credit_plan__education_loans_trgt": 82.0,
-          "annual_credit_plan__housing_loans_trgt": 703.0,
-          "annual_credit_plan__no": 2.0,
-          "annual_credit_plan__renewable_trgt_1": 8.0,
-          "annual_credit_plan__others_under_priority_trgt": 865.0,
-          "annual_credit_plan__total_priority_sector_trgt": 18026.0,
-          "annual_credit_plan__non_priority_sector_trgt": 4693.0,
-          "annual_credit_plan__total_credit_trgt": 22719.0
+          "annual_credit_plan__agrl_term_loans_trgt": "4057.0",
+          "annual_credit_plan__education_loans_trgt": "82.0",
+          "annual_credit_plan__export_credit_trgt_2": "4.0",
+          "annual_credit_plan__housing_loans_trgt": "703.0",
+          "annual_credit_plan__msme_trgt": "3350.0",
+          "annual_credit_plan__no": "2.0",
+          "annual_credit_plan__non_priority_sector_trgt": "4693.0",
+          "annual_credit_plan__others_under_priority_trgt": "865.0",
+          "annual_credit_plan__renewable_trgt_1": "8.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "9750.0",
+          "annual_credit_plan__total_agriculture_trgt": "13807.0",
+          "annual_credit_plan__total_credit_trgt": "22719.0",
+          "annual_credit_plan__total_priority_sector_trgt": "18026.0",
+          "branch_network__branch_metro": "3.0",
+          "branch_network__branch_semi_urban": "180.0",
+          "branch_network__branch_urban": "190.0",
+          "branch_network__no_of_branches_rural": "263.0",
+          "branch_network__total_branch": "636.0",
+          "credit_deposit_ratio__cd_ratio": "84.54",
+          "credit_deposit_ratio__total_advance": "35723.0",
+          "credit_deposit_ratio__total_deposit": "42255.12",
+          "priority_sector__agr": "331.28",
+          "priority_sector__agrl_term": "3904.88",
+          "priority_sector__ancillary": "419.61",
+          "priority_sector__export": "0.0",
+          "priority_sector__farm": "15539.94",
+          "priority_sector__msme": "4307.95",
+          "priority_sector__others_under": "2349.64",
+          "priority_sector__short_term": "11635.06",
+          "priority_sector__total_agrl": "16290.83",
+          "priority_sector__total_priority": "22948.42"
         },
         {
           "district": "East Godavari",
           "period": "December 2021",
-          "credit_deposit_ratio__total_deposit": 38293.49,
-          "credit_deposit_ratio__total_advance": 50625.35,
-          "credit_deposit_ratio__cd_ratio": 132.2,
-          "branch_network__no_of_branches_rural": 301.0,
-          "branch_network__branch_semi_urban": 286.0,
-          "branch_network__branch_urban": 236.0,
-          "branch_network__branch_metro": 2.0,
-          "branch_network__total_branch": 825.0,
-          "priority_sector__short_term": 12509.53,
-          "priority_sector__agrl_term": 5455.13,
-          "priority_sector__farm": 17964.65,
-          "priority_sector__agr": 478.95,
-          "priority_sector__ancillary": 2280.98,
-          "priority_sector__total_agrl": 20724.59,
-          "priority_sector__msme": 6865.52,
-          "priority_sector__export": 0.03,
-          "priority_sector__others_under": 3298.61,
-          "priority_sector__total_priority": 30888.75,
-          "annual_credit_plan__short_term_crop_production_trgt": 10385.0,
-          "annual_credit_plan__agrl_term_loans_trgt": 5615.0,
-          "annual_credit_plan__total_agriculture_trgt": 16000.0,
-          "annual_credit_plan__msme_trgt": 5400.0,
-          "annual_credit_plan__education_loans_trgt": 200.0,
-          "annual_credit_plan__housing_loans_trgt": 940.0,
-          "annual_credit_plan__no": 3.0,
-          "annual_credit_plan__others_under_priority_trgt": 1450.0,
-          "annual_credit_plan__total_priority_sector_trgt": 22860.0,
-          "annual_credit_plan__non_priority_sector_trgt": 6840.0,
-          "annual_credit_plan__total_credit_trgt": 29700.0
+          "annual_credit_plan__agrl_term_loans_trgt": "5615.0",
+          "annual_credit_plan__education_loans_trgt": "200.0",
+          "annual_credit_plan__housing_loans_trgt": "940.0",
+          "annual_credit_plan__msme_trgt": "5400.0",
+          "annual_credit_plan__no": "3.0",
+          "annual_credit_plan__non_priority_sector_trgt": "6840.0",
+          "annual_credit_plan__others_under_priority_trgt": "1450.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "10385.0",
+          "annual_credit_plan__total_agriculture_trgt": "16000.0",
+          "annual_credit_plan__total_credit_trgt": "29700.0",
+          "annual_credit_plan__total_priority_sector_trgt": "22860.0",
+          "branch_network__branch_metro": "2.0",
+          "branch_network__branch_semi_urban": "286.0",
+          "branch_network__branch_urban": "236.0",
+          "branch_network__no_of_branches_rural": "301.0",
+          "branch_network__total_branch": "825.0",
+          "credit_deposit_ratio__cd_ratio": "132.2",
+          "credit_deposit_ratio__total_advance": "50625.35",
+          "credit_deposit_ratio__total_deposit": "38293.49",
+          "priority_sector__agr": "478.95",
+          "priority_sector__agrl_term": "5455.13",
+          "priority_sector__ancillary": "2280.98",
+          "priority_sector__export": "0.03",
+          "priority_sector__farm": "17964.65",
+          "priority_sector__msme": "6865.52",
+          "priority_sector__others_under": "3298.61",
+          "priority_sector__short_term": "12509.53",
+          "priority_sector__total_agrl": "20724.59",
+          "priority_sector__total_priority": "30888.75"
         },
         {
           "district": "Guntur",
           "period": "December 2021",
-          "credit_deposit_ratio__total_deposit": 43957.27,
-          "credit_deposit_ratio__total_advance": 61505.53,
-          "credit_deposit_ratio__cd_ratio": 139.92,
-          "branch_network__no_of_branches_rural": 323.0,
-          "branch_network__branch_semi_urban": 249.0,
-          "branch_network__branch_urban": 296.0,
-          "branch_network__branch_metro": 2.0,
-          "branch_network__total_branch": 870.0,
-          "priority_sector__short_term": 14950.26,
-          "priority_sector__agrl_term": 5617.82,
-          "priority_sector__farm": 20568.08,
-          "priority_sector__agr": 315.64,
-          "priority_sector__ancillary": 2280.76,
-          "priority_sector__total_agrl": 23164.47,
-          "priority_sector__msme": 10009.49,
-          "priority_sector__export": 70.8,
-          "priority_sector__others_under": 3882.7,
-          "priority_sector__total_priority": 37127.47,
-          "annual_credit_plan__short_term_crop_production_trgt": 15000.0,
-          "annual_credit_plan__agrl_term_loans_trgt": 4320.0,
-          "annual_credit_plan__total_agriculture_trgt": 19320.0,
-          "annual_credit_plan__msme_trgt": 5000.0,
-          "annual_credit_plan__education_loans_trgt": 373.0,
-          "annual_credit_plan__housing_loans_trgt": 1464.0,
-          "annual_credit_plan__no": 4.0,
-          "annual_credit_plan__others_under_priority_trgt": 2250.0,
-          "annual_credit_plan__total_priority_sector_trgt": 26820.0,
-          "annual_credit_plan__non_priority_sector_trgt": 5000.0,
-          "annual_credit_plan__total_credit_trgt": 31820.0
-        },
-        {
-          "district": "Y.s.r.",
-          "period": "December 2021",
-          "credit_deposit_ratio__total_deposit": 65054.49,
-          "credit_deposit_ratio__total_advance": 124954.32,
-          "credit_deposit_ratio__cd_ratio": 192.08,
-          "branch_network__no_of_branches_rural": 138.0,
-          "branch_network__branch_semi_urban": 121.0,
-          "branch_network__branch_urban": 120.0,
-          "branch_network__branch_metro": 1.0,
-          "branch_network__total_branch": 380.0,
-          "priority_sector__short_term": 6467.08,
-          "priority_sector__agrl_term": 3621.06,
-          "priority_sector__farm": 10088.14,
-          "priority_sector__agr": 206.97,
-          "priority_sector__ancillary": 93.5,
-          "priority_sector__total_agrl": 10388.62,
-          "priority_sector__msme": 2628.98,
-          "priority_sector__export": 0.0,
-          "priority_sector__others_under": 1546.26,
-          "priority_sector__total_priority": 14563.86,
-          "annual_credit_plan__short_term_crop_production_trgt": 6600.0,
-          "annual_credit_plan__agrl_term_loans_trgt": 2430.0,
-          "annual_credit_plan__msme_trgt": 1800.0,
-          "annual_credit_plan__education_loans_trgt": 26.0,
-          "annual_credit_plan__housing_loans_trgt": 332.0,
-          "annual_credit_plan__no": 13.0,
-          "annual_credit_plan__others_under_priority_trgt": 1140.0,
-          "annual_credit_plan__total_priority_sector_trgt": 11970.0,
-          "annual_credit_plan__non_priority_sector_trgt": 2900.0,
-          "annual_credit_plan__total_credit_trgt": 14870.0
+          "annual_credit_plan__agrl_term_loans_trgt": "4320.0",
+          "annual_credit_plan__education_loans_trgt": "373.0",
+          "annual_credit_plan__housing_loans_trgt": "1464.0",
+          "annual_credit_plan__msme_trgt": "5000.0",
+          "annual_credit_plan__no": "4.0",
+          "annual_credit_plan__non_priority_sector_trgt": "5000.0",
+          "annual_credit_plan__others_under_priority_trgt": "2250.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "15000.0",
+          "annual_credit_plan__total_agriculture_trgt": "19320.0",
+          "annual_credit_plan__total_credit_trgt": "31820.0",
+          "annual_credit_plan__total_priority_sector_trgt": "26820.0",
+          "branch_network__branch_metro": "2.0",
+          "branch_network__branch_semi_urban": "249.0",
+          "branch_network__branch_urban": "296.0",
+          "branch_network__no_of_branches_rural": "323.0",
+          "branch_network__total_branch": "870.0",
+          "credit_deposit_ratio__cd_ratio": "139.92",
+          "credit_deposit_ratio__total_advance": "61505.53",
+          "credit_deposit_ratio__total_deposit": "43957.27",
+          "priority_sector__agr": "315.64",
+          "priority_sector__agrl_term": "5617.82",
+          "priority_sector__ancillary": "2280.76",
+          "priority_sector__export": "70.8",
+          "priority_sector__farm": "20568.08",
+          "priority_sector__msme": "10009.49",
+          "priority_sector__others_under": "3882.7",
+          "priority_sector__short_term": "14950.26",
+          "priority_sector__total_agrl": "23164.47",
+          "priority_sector__total_priority": "37127.47"
         },
         {
           "district": "Krishna",
           "period": "December 2021",
-          "credit_deposit_ratio__total_deposit": 19830.61,
-          "credit_deposit_ratio__total_advance": 28158.21,
-          "credit_deposit_ratio__cd_ratio": 141.99,
-          "branch_network__no_of_branches_rural": 249.0,
-          "branch_network__branch_semi_urban": 275.0,
-          "branch_network__branch_urban": 113.0,
-          "branch_network__branch_metro": 251.0,
-          "branch_network__total_branch": 888.0,
-          "priority_sector__short_term": 14947.6,
-          "priority_sector__agrl_term": 8182.86,
-          "priority_sector__farm": 23130.46,
-          "priority_sector__agr": 282.72,
-          "priority_sector__ancillary": 1014.45,
-          "priority_sector__total_agrl": 24427.64,
-          "priority_sector__msme": 12458.87,
-          "priority_sector__export": 0.0,
-          "priority_sector__others_under": 5162.72,
-          "priority_sector__total_priority": 42049.23,
-          "annual_credit_plan__short_term_crop_production_trgt": 12000.0,
-          "annual_credit_plan__agrl_term_loans_trgt": 4525.0,
-          "annual_credit_plan__total_agriculture_trgt": 16525.0,
-          "annual_credit_plan__msme_trgt": 7497.0,
-          "annual_credit_plan__education_loans_trgt": 422.0,
-          "annual_credit_plan__housing_loans_trgt": 1891.0,
-          "annual_credit_plan__no": 5.0,
-          "annual_credit_plan__others_under_priority_trgt": 3301.0,
-          "annual_credit_plan__total_priority_sector_trgt": 27324.0,
-          "annual_credit_plan__total_credit_trgt": 44827.0
+          "annual_credit_plan__agrl_term_loans_trgt": "4525.0",
+          "annual_credit_plan__education_loans_trgt": "422.0",
+          "annual_credit_plan__housing_loans_trgt": "1891.0",
+          "annual_credit_plan__msme_trgt": "7497.0",
+          "annual_credit_plan__no": "5.0",
+          "annual_credit_plan__others_under_priority_trgt": "3301.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "12000.0",
+          "annual_credit_plan__total_agriculture_trgt": "16525.0",
+          "annual_credit_plan__total_credit_trgt": "44827.0",
+          "annual_credit_plan__total_priority_sector_trgt": "27324.0",
+          "branch_network__branch_metro": "251.0",
+          "branch_network__branch_semi_urban": "275.0",
+          "branch_network__branch_urban": "113.0",
+          "branch_network__no_of_branches_rural": "249.0",
+          "branch_network__total_branch": "888.0",
+          "credit_deposit_ratio__cd_ratio": "141.99",
+          "credit_deposit_ratio__total_advance": "28158.21",
+          "credit_deposit_ratio__total_deposit": "19830.61",
+          "priority_sector__agr": "282.72",
+          "priority_sector__agrl_term": "8182.86",
+          "priority_sector__ancillary": "1014.45",
+          "priority_sector__export": "0.0",
+          "priority_sector__farm": "23130.46",
+          "priority_sector__msme": "12458.87",
+          "priority_sector__others_under": "5162.72",
+          "priority_sector__short_term": "14947.6",
+          "priority_sector__total_agrl": "24427.64",
+          "priority_sector__total_priority": "42049.23"
         },
         {
           "district": "Kurnool",
           "period": "December 2021",
-          "credit_deposit_ratio__total_deposit": 17613.15,
-          "credit_deposit_ratio__total_advance": 30348.33,
-          "credit_deposit_ratio__cd_ratio": 172.3,
-          "branch_network__no_of_branches_rural": 160.0,
-          "branch_network__branch_semi_urban": 120.0,
-          "branch_network__branch_urban": 204.0,
-          "branch_network__branch_metro": 1.0,
-          "branch_network__total_branch": 485.0,
-          "priority_sector__short_term": 10012.35,
-          "priority_sector__agrl_term": 3843.56,
-          "priority_sector__farm": 13855.9,
-          "priority_sector__agr": 139.22,
-          "priority_sector__ancillary": 265.45,
-          "priority_sector__total_agrl": 14260.57,
-          "priority_sector__msme": 3344.87,
-          "priority_sector__export": 0.0,
-          "priority_sector__others_under": 2297.83,
-          "priority_sector__total_priority": 19903.27,
-          "annual_credit_plan__short_term_crop_production_trgt": 8287.0,
-          "annual_credit_plan__agrl_term_loans_trgt": 2241.0,
-          "annual_credit_plan__total_agriculture_trgt": 10528.0,
-          "annual_credit_plan__msme_trgt": 1940.0,
-          "annual_credit_plan__export_credit_trgt_2": 4.0,
-          "annual_credit_plan__education_loans_trgt": 61.0,
-          "annual_credit_plan__housing_loans_trgt": 247.0,
-          "annual_credit_plan__no": 6.0,
-          "annual_credit_plan__others_under_priority_trgt": 964.0,
-          "annual_credit_plan__total_priority_sector_trgt": 13436.0,
-          "annual_credit_plan__non_priority_sector_trgt": 3741.0,
-          "annual_credit_plan__total_credit_trgt": 17177.0
-        },
-        {
-          "district": "Spsr Nellore",
-          "period": "December 2021",
-          "credit_deposit_ratio__total_deposit": 18695.24,
-          "credit_deposit_ratio__total_advance": 27927.03,
-          "credit_deposit_ratio__cd_ratio": 149.38,
-          "branch_network__no_of_branches_rural": 149.0,
-          "branch_network__branch_semi_urban": 156.0,
-          "branch_network__branch_urban": 136.0,
-          "branch_network__branch_metro": 1.0,
-          "branch_network__total_branch": 442.0,
-          "priority_sector__short_term": 7666.81,
-          "priority_sector__agrl_term": 3468.59,
-          "priority_sector__farm": 11135.4,
-          "priority_sector__agr": 195.19,
-          "priority_sector__ancillary": 593.6,
-          "priority_sector__total_agrl": 11924.19,
-          "priority_sector__msme": 4225.02,
-          "priority_sector__export": 1.26,
-          "priority_sector__others_under": 2166.01,
-          "priority_sector__total_priority": 18316.48,
-          "annual_credit_plan__short_term_crop_production_trgt": 7001.0,
-          "annual_credit_plan__agrl_term_loans_trgt": 2286.0,
-          "annual_credit_plan__msme_trgt": 1755.0,
-          "annual_credit_plan__education_loans_trgt": 217.0,
-          "annual_credit_plan__housing_loans_trgt": 847.0,
-          "annual_credit_plan__no": 8.0,
-          "annual_credit_plan__others_under_priority_trgt": 1536.0,
-          "annual_credit_plan__total_priority_sector_trgt": 12599.0,
-          "annual_credit_plan__non_priority_sector_trgt": 3942.0,
-          "annual_credit_plan__total_credit_trgt": 16541.0
+          "annual_credit_plan__agrl_term_loans_trgt": "2241.0",
+          "annual_credit_plan__education_loans_trgt": "61.0",
+          "annual_credit_plan__export_credit_trgt_2": "4.0",
+          "annual_credit_plan__housing_loans_trgt": "247.0",
+          "annual_credit_plan__msme_trgt": "1940.0",
+          "annual_credit_plan__no": "6.0",
+          "annual_credit_plan__non_priority_sector_trgt": "3741.0",
+          "annual_credit_plan__others_under_priority_trgt": "964.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "8287.0",
+          "annual_credit_plan__total_agriculture_trgt": "10528.0",
+          "annual_credit_plan__total_credit_trgt": "17177.0",
+          "annual_credit_plan__total_priority_sector_trgt": "13436.0",
+          "branch_network__branch_metro": "1.0",
+          "branch_network__branch_semi_urban": "120.0",
+          "branch_network__branch_urban": "204.0",
+          "branch_network__no_of_branches_rural": "160.0",
+          "branch_network__total_branch": "485.0",
+          "credit_deposit_ratio__cd_ratio": "172.3",
+          "credit_deposit_ratio__total_advance": "30348.33",
+          "credit_deposit_ratio__total_deposit": "17613.15",
+          "priority_sector__agr": "139.22",
+          "priority_sector__agrl_term": "3843.56",
+          "priority_sector__ancillary": "265.45",
+          "priority_sector__export": "0.0",
+          "priority_sector__farm": "13855.9",
+          "priority_sector__msme": "3344.87",
+          "priority_sector__others_under": "2297.83",
+          "priority_sector__short_term": "10012.35",
+          "priority_sector__total_agrl": "14260.57",
+          "priority_sector__total_priority": "19903.27"
         },
         {
           "district": "Prakasam",
           "period": "December 2021",
-          "credit_deposit_ratio__total_deposit": 12010.41,
-          "credit_deposit_ratio__total_advance": 14888.9,
-          "credit_deposit_ratio__cd_ratio": 123.97,
-          "branch_network__no_of_branches_rural": 200.0,
-          "branch_network__branch_semi_urban": 200.0,
-          "branch_network__branch_urban": 86.0,
-          "branch_network__branch_metro": 1.0,
-          "branch_network__total_branch": 487.0,
-          "priority_sector__short_term": 12203.46,
-          "priority_sector__agrl_term": 5006.75,
-          "priority_sector__farm": 17210.22,
-          "priority_sector__agr": 101.6,
-          "priority_sector__ancillary": 250.84,
-          "priority_sector__total_agrl": 17562.65,
-          "priority_sector__msme": 3939.3,
-          "priority_sector__export": 29.19,
-          "priority_sector__others_under": 3249.63,
-          "priority_sector__total_priority": 24780.78,
-          "annual_credit_plan__short_term_crop_production_trgt": 9523.0,
-          "annual_credit_plan__agrl_term_loans_trgt": 2732.0,
-          "annual_credit_plan__total_agriculture_trgt": 12256.0,
-          "annual_credit_plan__msme_trgt": 2723.0,
-          "annual_credit_plan__education_loans_trgt": 91.0,
-          "annual_credit_plan__housing_loans_trgt": 516.0,
-          "annual_credit_plan__no": 7.0,
-          "annual_credit_plan__others_under_priority_trgt": 1532.0,
-          "annual_credit_plan__total_priority_sector_trgt": 16580.0,
-          "annual_credit_plan__non_priority_sector_trgt": 2892.0,
-          "annual_credit_plan__total_credit_trgt": 19471.0
+          "annual_credit_plan__agrl_term_loans_trgt": "2732.0",
+          "annual_credit_plan__education_loans_trgt": "91.0",
+          "annual_credit_plan__housing_loans_trgt": "516.0",
+          "annual_credit_plan__msme_trgt": "2723.0",
+          "annual_credit_plan__no": "7.0",
+          "annual_credit_plan__non_priority_sector_trgt": "2892.0",
+          "annual_credit_plan__others_under_priority_trgt": "1532.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "9523.0",
+          "annual_credit_plan__total_agriculture_trgt": "12256.0",
+          "annual_credit_plan__total_credit_trgt": "19471.0",
+          "annual_credit_plan__total_priority_sector_trgt": "16580.0",
+          "branch_network__branch_metro": "1.0",
+          "branch_network__branch_semi_urban": "200.0",
+          "branch_network__branch_urban": "86.0",
+          "branch_network__no_of_branches_rural": "200.0",
+          "branch_network__total_branch": "487.0",
+          "credit_deposit_ratio__cd_ratio": "123.97",
+          "credit_deposit_ratio__total_advance": "14888.9",
+          "credit_deposit_ratio__total_deposit": "12010.41",
+          "priority_sector__agr": "101.6",
+          "priority_sector__agrl_term": "5006.75",
+          "priority_sector__ancillary": "250.84",
+          "priority_sector__export": "29.19",
+          "priority_sector__farm": "17210.22",
+          "priority_sector__msme": "3939.3",
+          "priority_sector__others_under": "3249.63",
+          "priority_sector__short_term": "12203.46",
+          "priority_sector__total_agrl": "17562.65",
+          "priority_sector__total_priority": "24780.78"
+        },
+        {
+          "district": "Spsr Nellore",
+          "period": "December 2021",
+          "annual_credit_plan__agrl_term_loans_trgt": "2286.0",
+          "annual_credit_plan__education_loans_trgt": "217.0",
+          "annual_credit_plan__housing_loans_trgt": "847.0",
+          "annual_credit_plan__msme_trgt": "1755.0",
+          "annual_credit_plan__no": "8.0",
+          "annual_credit_plan__non_priority_sector_trgt": "3942.0",
+          "annual_credit_plan__others_under_priority_trgt": "1536.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "7001.0",
+          "annual_credit_plan__total_credit_trgt": "16541.0",
+          "annual_credit_plan__total_priority_sector_trgt": "12599.0",
+          "branch_network__branch_metro": "1.0",
+          "branch_network__branch_semi_urban": "156.0",
+          "branch_network__branch_urban": "136.0",
+          "branch_network__no_of_branches_rural": "149.0",
+          "branch_network__total_branch": "442.0",
+          "credit_deposit_ratio__cd_ratio": "149.38",
+          "credit_deposit_ratio__total_advance": "27927.03",
+          "credit_deposit_ratio__total_deposit": "18695.24",
+          "priority_sector__agr": "195.19",
+          "priority_sector__agrl_term": "3468.59",
+          "priority_sector__ancillary": "593.6",
+          "priority_sector__export": "1.26",
+          "priority_sector__farm": "11135.4",
+          "priority_sector__msme": "4225.02",
+          "priority_sector__others_under": "2166.01",
+          "priority_sector__short_term": "7666.81",
+          "priority_sector__total_agrl": "11924.19",
+          "priority_sector__total_priority": "18316.48"
         },
         {
           "district": "Srikakulam",
           "period": "December 2021",
-          "credit_deposit_ratio__total_deposit": 61689.08,
-          "credit_deposit_ratio__total_advance": 78973.1,
-          "credit_deposit_ratio__cd_ratio": 128.02,
-          "branch_network__no_of_branches_rural": 176.0,
-          "branch_network__branch_semi_urban": 102.0,
-          "branch_network__branch_urban": 61.0,
-          "branch_network__branch_metro": 1.0,
-          "branch_network__total_branch": 340.0,
-          "priority_sector__short_term": 4867.34,
-          "priority_sector__agrl_term": 3022.37,
-          "priority_sector__farm": 7889.71,
-          "priority_sector__agr": 49.66,
-          "priority_sector__ancillary": 105.19,
-          "priority_sector__total_agrl": 8044.56,
-          "priority_sector__msme": 1629.94,
-          "priority_sector__export": 0.0,
-          "priority_sector__others_under": 1738.89,
-          "priority_sector__total_priority": 11413.39,
-          "annual_credit_plan__short_term_crop_production_trgt": 3904.0,
-          "annual_credit_plan__agrl_term_loans_trgt": 1833.0,
-          "annual_credit_plan__msme_trgt": 1134.0,
-          "annual_credit_plan__export_credit_trgt_2": 2.0,
-          "annual_credit_plan__education_loans_trgt": 41.0,
-          "annual_credit_plan__housing_loans_trgt": 596.0,
-          "annual_credit_plan__no": 9.0,
-          "annual_credit_plan__social_infrastructure_trgt_6": 6.0,
-          "annual_credit_plan__others_under_priority_trgt": 678.0,
-          "annual_credit_plan__non_priority_sector_trgt": 1364.0,
-          "annual_credit_plan__total_credit_trgt": 8914.0
-        },
-        {
-          "district": "Vizianagaram",
-          "period": "December 2021",
-          "credit_deposit_ratio__total_deposit": 26197.82,
-          "credit_deposit_ratio__total_advance": 40679.32,
-          "credit_deposit_ratio__cd_ratio": 155.28,
-          "branch_network__no_of_branches_rural": 127.0,
-          "branch_network__branch_semi_urban": 92.0,
-          "branch_network__branch_urban": 75.0,
-          "branch_network__branch_metro": 1.0,
-          "branch_network__total_branch": 295.0,
-          "priority_sector__short_term": 3557.84,
-          "priority_sector__agrl_term": 1929.56,
-          "priority_sector__farm": 5487.4,
-          "priority_sector__agr": 109.42,
-          "priority_sector__ancillary": 56.66,
-          "priority_sector__total_agrl": 5653.48,
-          "priority_sector__msme": 1321.66,
-          "priority_sector__export": 0.0,
-          "priority_sector__others_under": 2005.52,
-          "priority_sector__total_priority": 8980.67,
-          "annual_credit_plan__short_term_crop_production_trgt": 3061.0,
-          "annual_credit_plan__agrl_term_loans_trgt": 1283.0,
-          "annual_credit_plan__msme_trgt": 710.0,
-          "annual_credit_plan__export_credit_trgt_2": 5.0,
-          "annual_credit_plan__education_loans_trgt": 50.0,
-          "annual_credit_plan__housing_loans_trgt": 550.0,
-          "annual_credit_plan__no": 11.0,
-          "annual_credit_plan__others_under_priority_trgt": 645.0,
-          "annual_credit_plan__non_priority_sector_trgt": 1045.0,
-          "annual_credit_plan__total_credit_trgt": 6749.0
-        },
-        {
-          "district": "West Godavari",
-          "period": "December 2021",
-          "credit_deposit_ratio__total_deposit": 19015.71,
-          "credit_deposit_ratio__total_advance": 22344.66,
-          "credit_deposit_ratio__cd_ratio": 117.51,
-          "branch_network__no_of_branches_rural": 228.0,
-          "branch_network__branch_semi_urban": 267.0,
-          "branch_network__branch_urban": 145.0,
-          "branch_network__branch_metro": 2.0,
-          "branch_network__total_branch": 642.0,
-          "priority_sector__short_term": 13279.55,
-          "priority_sector__agrl_term": 5464.31,
-          "priority_sector__farm": 18743.86,
-          "priority_sector__agr": 199.5,
-          "priority_sector__ancillary": 1501.64,
-          "priority_sector__total_agrl": 20444.99,
-          "priority_sector__msme": 5675.35,
-          "priority_sector__export": 27.99,
-          "priority_sector__others_under": 3560.54,
-          "priority_sector__total_priority": 29708.88,
-          "annual_credit_plan__short_term_crop_production_trgt": 11300.0,
-          "annual_credit_plan__agrl_term_loans_trgt": 3240.0,
-          "annual_credit_plan__total_agriculture_trgt": 14540.0,
-          "annual_credit_plan__msme_trgt": 3350.0,
-          "annual_credit_plan__education_loans_trgt": 106.0,
-          "annual_credit_plan__housing_loans_trgt": 600.0,
-          "annual_credit_plan__no": 12.0,
-          "annual_credit_plan__renewable_trgt_1": 5.0,
-          "annual_credit_plan__others_under_priority_trgt": 1666.0,
-          "annual_credit_plan__total_priority_sector_trgt": 19556.0,
-          "annual_credit_plan__non_priority_sector_trgt": 3800.0,
-          "annual_credit_plan__total_credit_trgt": 23356.0
+          "annual_credit_plan__agrl_term_loans_trgt": "1833.0",
+          "annual_credit_plan__education_loans_trgt": "41.0",
+          "annual_credit_plan__export_credit_trgt_2": "2.0",
+          "annual_credit_plan__housing_loans_trgt": "596.0",
+          "annual_credit_plan__msme_trgt": "1134.0",
+          "annual_credit_plan__no": "9.0",
+          "annual_credit_plan__non_priority_sector_trgt": "1364.0",
+          "annual_credit_plan__others_under_priority_trgt": "678.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "3904.0",
+          "annual_credit_plan__social_infrastructure_trgt_6": "6.0",
+          "annual_credit_plan__total_credit_trgt": "8914.0",
+          "branch_network__branch_metro": "1.0",
+          "branch_network__branch_semi_urban": "102.0",
+          "branch_network__branch_urban": "61.0",
+          "branch_network__no_of_branches_rural": "176.0",
+          "branch_network__total_branch": "340.0",
+          "credit_deposit_ratio__cd_ratio": "128.02",
+          "credit_deposit_ratio__total_advance": "78973.1",
+          "credit_deposit_ratio__total_deposit": "61689.08",
+          "priority_sector__agr": "49.66",
+          "priority_sector__agrl_term": "3022.37",
+          "priority_sector__ancillary": "105.19",
+          "priority_sector__export": "0.0",
+          "priority_sector__farm": "7889.71",
+          "priority_sector__msme": "1629.94",
+          "priority_sector__others_under": "1738.89",
+          "priority_sector__short_term": "4867.34",
+          "priority_sector__total_agrl": "8044.56",
+          "priority_sector__total_priority": "11413.39"
         },
         {
           "district": "Visakhapatanam",
           "period": "December 2021",
-          "branch_network__no_of_branches_rural": 176.0,
-          "branch_network__branch_semi_urban": 113.0,
-          "branch_network__branch_urban": 38.0,
-          "branch_network__branch_metro": 451.0,
-          "branch_network__total_branch": 778.0,
-          "priority_sector__short_term": 7341.58,
-          "priority_sector__agrl_term": 4005.28,
-          "priority_sector__farm": 11346.86,
-          "priority_sector__agr": 462.32,
-          "priority_sector__ancillary": 775.63,
-          "priority_sector__total_agrl": 12584.8,
-          "priority_sector__msme": 11256.47,
-          "priority_sector__export": 34.41,
-          "priority_sector__others_under": 4074.44,
-          "priority_sector__total_priority": 27950.12,
-          "annual_credit_plan__short_term_crop_production_trgt": 3950.0,
-          "annual_credit_plan__agrl_term_loans_trgt": 1651.0,
-          "annual_credit_plan__msme_trgt": 6600.0,
-          "annual_credit_plan__education_loans_trgt": 100.0,
-          "annual_credit_plan__housing_loans_trgt": 1511.0,
-          "annual_credit_plan__no": 10.0,
-          "annual_credit_plan__social_infrastructure_trgt_6": 6.0,
-          "annual_credit_plan__renewable_trgt_1": 8.0,
-          "annual_credit_plan__others_under_priority_trgt": 2375.0,
-          "annual_credit_plan__total_priority_sector_trgt": 15276.0,
-          "annual_credit_plan__total_credit_trgt": 29276.0
+          "annual_credit_plan__agrl_term_loans_trgt": "1651.0",
+          "annual_credit_plan__education_loans_trgt": "100.0",
+          "annual_credit_plan__housing_loans_trgt": "1511.0",
+          "annual_credit_plan__msme_trgt": "6600.0",
+          "annual_credit_plan__no": "10.0",
+          "annual_credit_plan__others_under_priority_trgt": "2375.0",
+          "annual_credit_plan__renewable_trgt_1": "8.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "3950.0",
+          "annual_credit_plan__social_infrastructure_trgt_6": "6.0",
+          "annual_credit_plan__total_credit_trgt": "29276.0",
+          "annual_credit_plan__total_priority_sector_trgt": "15276.0",
+          "branch_network__branch_metro": "451.0",
+          "branch_network__branch_semi_urban": "113.0",
+          "branch_network__branch_urban": "38.0",
+          "branch_network__no_of_branches_rural": "176.0",
+          "branch_network__total_branch": "778.0",
+          "priority_sector__agr": "462.32",
+          "priority_sector__agrl_term": "4005.28",
+          "priority_sector__ancillary": "775.63",
+          "priority_sector__export": "34.41",
+          "priority_sector__farm": "11346.86",
+          "priority_sector__msme": "11256.47",
+          "priority_sector__others_under": "4074.44",
+          "priority_sector__short_term": "7341.58",
+          "priority_sector__total_agrl": "12584.8",
+          "priority_sector__total_priority": "27950.12"
+        },
+        {
+          "district": "Vizianagaram",
+          "period": "December 2021",
+          "annual_credit_plan__agrl_term_loans_trgt": "1283.0",
+          "annual_credit_plan__education_loans_trgt": "50.0",
+          "annual_credit_plan__export_credit_trgt_2": "5.0",
+          "annual_credit_plan__housing_loans_trgt": "550.0",
+          "annual_credit_plan__msme_trgt": "710.0",
+          "annual_credit_plan__no": "11.0",
+          "annual_credit_plan__non_priority_sector_trgt": "1045.0",
+          "annual_credit_plan__others_under_priority_trgt": "645.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "3061.0",
+          "annual_credit_plan__total_credit_trgt": "6749.0",
+          "branch_network__branch_metro": "1.0",
+          "branch_network__branch_semi_urban": "92.0",
+          "branch_network__branch_urban": "75.0",
+          "branch_network__no_of_branches_rural": "127.0",
+          "branch_network__total_branch": "295.0",
+          "credit_deposit_ratio__cd_ratio": "155.28",
+          "credit_deposit_ratio__total_advance": "40679.32",
+          "credit_deposit_ratio__total_deposit": "26197.82",
+          "priority_sector__agr": "109.42",
+          "priority_sector__agrl_term": "1929.56",
+          "priority_sector__ancillary": "56.66",
+          "priority_sector__export": "0.0",
+          "priority_sector__farm": "5487.4",
+          "priority_sector__msme": "1321.66",
+          "priority_sector__others_under": "2005.52",
+          "priority_sector__short_term": "3557.84",
+          "priority_sector__total_agrl": "5653.48",
+          "priority_sector__total_priority": "8980.67"
+        },
+        {
+          "district": "West Godavari",
+          "period": "December 2021",
+          "annual_credit_plan__agrl_term_loans_trgt": "3240.0",
+          "annual_credit_plan__education_loans_trgt": "106.0",
+          "annual_credit_plan__housing_loans_trgt": "600.0",
+          "annual_credit_plan__msme_trgt": "3350.0",
+          "annual_credit_plan__no": "12.0",
+          "annual_credit_plan__non_priority_sector_trgt": "3800.0",
+          "annual_credit_plan__others_under_priority_trgt": "1666.0",
+          "annual_credit_plan__renewable_trgt_1": "5.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "11300.0",
+          "annual_credit_plan__total_agriculture_trgt": "14540.0",
+          "annual_credit_plan__total_credit_trgt": "23356.0",
+          "annual_credit_plan__total_priority_sector_trgt": "19556.0",
+          "branch_network__branch_metro": "2.0",
+          "branch_network__branch_semi_urban": "267.0",
+          "branch_network__branch_urban": "145.0",
+          "branch_network__no_of_branches_rural": "228.0",
+          "branch_network__total_branch": "642.0",
+          "credit_deposit_ratio__cd_ratio": "117.51",
+          "credit_deposit_ratio__total_advance": "22344.66",
+          "credit_deposit_ratio__total_deposit": "19015.71",
+          "priority_sector__agr": "199.5",
+          "priority_sector__agrl_term": "5464.31",
+          "priority_sector__ancillary": "1501.64",
+          "priority_sector__export": "27.99",
+          "priority_sector__farm": "18743.86",
+          "priority_sector__msme": "5675.35",
+          "priority_sector__others_under": "3560.54",
+          "priority_sector__short_term": "13279.55",
+          "priority_sector__total_agrl": "20444.99",
+          "priority_sector__total_priority": "29708.88"
+        },
+        {
+          "district": "Y.s.r.",
+          "period": "December 2021",
+          "annual_credit_plan__agrl_term_loans_trgt": "2430.0",
+          "annual_credit_plan__education_loans_trgt": "26.0",
+          "annual_credit_plan__housing_loans_trgt": "332.0",
+          "annual_credit_plan__msme_trgt": "1800.0",
+          "annual_credit_plan__no": "13.0",
+          "annual_credit_plan__non_priority_sector_trgt": "2900.0",
+          "annual_credit_plan__others_under_priority_trgt": "1140.0",
+          "annual_credit_plan__short_term_crop_production_trgt": "6600.0",
+          "annual_credit_plan__total_credit_trgt": "14870.0",
+          "annual_credit_plan__total_priority_sector_trgt": "11970.0",
+          "branch_network__branch_metro": "1.0",
+          "branch_network__branch_semi_urban": "121.0",
+          "branch_network__branch_urban": "120.0",
+          "branch_network__no_of_branches_rural": "138.0",
+          "branch_network__total_branch": "380.0",
+          "credit_deposit_ratio__cd_ratio": "192.08",
+          "credit_deposit_ratio__total_advance": "124954.32",
+          "credit_deposit_ratio__total_deposit": "65054.49",
+          "priority_sector__agr": "206.97",
+          "priority_sector__agrl_term": "3621.06",
+          "priority_sector__ancillary": "93.5",
+          "priority_sector__export": "0.0",
+          "priority_sector__farm": "10088.14",
+          "priority_sector__msme": "2628.98",
+          "priority_sector__others_under": "1546.26",
+          "priority_sector__short_term": "6467.08",
+          "priority_sector__total_agrl": "10388.62",
+          "priority_sector__total_priority": "14563.86"
         }
       ]
     },
@@ -1611,62 +1613,62 @@
         {
           "district": "Chittoor",
           "period": "March 2022",
-          "credit_deposit_ratio__cd_ratio": 93.19
+          "credit_deposit_ratio__cd_ratio": "93.19"
         },
         {
           "district": "East Godavari",
           "period": "March 2022",
-          "credit_deposit_ratio__cd_ratio": 144.45
+          "credit_deposit_ratio__cd_ratio": "144.45"
         },
         {
           "district": "Guntur",
           "period": "March 2022",
-          "credit_deposit_ratio__cd_ratio": 116.04
+          "credit_deposit_ratio__cd_ratio": "116.04"
         },
         {
           "district": "Krishna",
           "period": "March 2022",
-          "credit_deposit_ratio__cd_ratio": 209.57
+          "credit_deposit_ratio__cd_ratio": "209.57"
         },
         {
           "district": "Kurnool",
           "period": "March 2022",
-          "credit_deposit_ratio__cd_ratio": 148.36
+          "credit_deposit_ratio__cd_ratio": "148.36"
         },
         {
           "district": "Prakasam",
           "period": "March 2022",
-          "credit_deposit_ratio__cd_ratio": 160.18
+          "credit_deposit_ratio__cd_ratio": "160.18"
         },
         {
           "district": "Spsr Nellore",
           "period": "March 2022",
-          "credit_deposit_ratio__cd_ratio": 148.26
+          "credit_deposit_ratio__cd_ratio": "148.26"
         },
         {
           "district": "Srikakulam",
           "period": "March 2022",
-          "credit_deposit_ratio__cd_ratio": 128.66
+          "credit_deposit_ratio__cd_ratio": "128.66"
         },
         {
           "district": "Visakhapatanam",
           "period": "March 2022",
-          "credit_deposit_ratio__cd_ratio": 114.22
+          "credit_deposit_ratio__cd_ratio": "114.22"
         },
         {
           "district": "Vizianagaram",
           "period": "March 2022",
-          "credit_deposit_ratio__cd_ratio": 118.5
+          "credit_deposit_ratio__cd_ratio": "118.5"
         },
         {
           "district": "West Godavari",
           "period": "March 2022",
-          "credit_deposit_ratio__cd_ratio": 145.34
+          "credit_deposit_ratio__cd_ratio": "145.34"
         },
         {
           "district": "Y.s.r.",
           "period": "March 2022",
-          "credit_deposit_ratio__cd_ratio": 131.33
+          "credit_deposit_ratio__cd_ratio": "131.33"
         }
       ]
     },
@@ -1676,132 +1678,132 @@
         {
           "district": "Alluri Sitharama Raju",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 110.0
+          "credit_deposit_ratio__cd_ratio": "110.0"
         },
         {
           "district": "Anakapalli",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 157.0
+          "credit_deposit_ratio__cd_ratio": "157.0"
         },
         {
           "district": "Anantapur",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 143.0
+          "credit_deposit_ratio__cd_ratio": "143.0"
         },
         {
           "district": "Annamayya",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 135.0
+          "credit_deposit_ratio__cd_ratio": "135.0"
         },
         {
           "district": "Bapatla",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 171.0
+          "credit_deposit_ratio__cd_ratio": "171.0"
         },
         {
           "district": "Chittoor",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 111.0
-        },
-        {
-          "district": "Konaseema",
-          "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 160.0
+          "credit_deposit_ratio__cd_ratio": "111.0"
         },
         {
           "district": "East Godavari",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 152.0
+          "credit_deposit_ratio__cd_ratio": "152.0"
         },
         {
           "district": "Eluru",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 158.0
+          "credit_deposit_ratio__cd_ratio": "158.0"
         },
         {
           "district": "Guntur",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 123.0
+          "credit_deposit_ratio__cd_ratio": "123.0"
         },
         {
           "district": "Kakinada",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 125.0
+          "credit_deposit_ratio__cd_ratio": "125.0"
+        },
+        {
+          "district": "Konaseema",
+          "period": "September 2022",
+          "credit_deposit_ratio__cd_ratio": "160.0"
         },
         {
           "district": "Krishna",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 194.0
+          "credit_deposit_ratio__cd_ratio": "194.0"
         },
         {
           "district": "Kurnool",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 138.0
+          "credit_deposit_ratio__cd_ratio": "138.0"
         },
         {
           "district": "Nandyal",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 171.0
+          "credit_deposit_ratio__cd_ratio": "171.0"
         },
         {
           "district": "Ntr",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 189.0
+          "credit_deposit_ratio__cd_ratio": "189.0"
         },
         {
           "district": "Palnadu",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 224.0
+          "credit_deposit_ratio__cd_ratio": "224.0"
         },
         {
           "district": "Parvathipuram Manyam",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 147.0
+          "credit_deposit_ratio__cd_ratio": "147.0"
         },
         {
           "district": "Prakasam",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 179.0
+          "credit_deposit_ratio__cd_ratio": "179.0"
         },
         {
           "district": "Spsr Nellore",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 151.0
+          "credit_deposit_ratio__cd_ratio": "151.0"
         },
         {
           "district": "Sri Sathya Sai",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 148.0
+          "credit_deposit_ratio__cd_ratio": "148.0"
         },
         {
           "district": "Srikakulam",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 129.0
+          "credit_deposit_ratio__cd_ratio": "129.0"
         },
         {
           "district": "Tirupati",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 78.0
+          "credit_deposit_ratio__cd_ratio": "78.0"
         },
         {
           "district": "Visakhapatanam",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 117.0
+          "credit_deposit_ratio__cd_ratio": "117.0"
         },
         {
           "district": "Vizianagaram",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 136.0
+          "credit_deposit_ratio__cd_ratio": "136.0"
         },
         {
           "district": "West Godavari",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 173.0
+          "credit_deposit_ratio__cd_ratio": "173.0"
         },
         {
           "district": "Y.s.r.",
           "period": "September 2022",
-          "credit_deposit_ratio__cd_ratio": 143.0
+          "credit_deposit_ratio__cd_ratio": "143.0"
         }
       ]
     },
@@ -1811,132 +1813,132 @@
         {
           "district": "Alluri Sitharama Raju",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 115.0
+          "credit_deposit_ratio__cd_ratio": "115.0"
         },
         {
           "district": "Anakapalli",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 151.0
+          "credit_deposit_ratio__cd_ratio": "151.0"
         },
         {
           "district": "Anantapur",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 149.0
+          "credit_deposit_ratio__cd_ratio": "149.0"
         },
         {
           "district": "Annamayya",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 140.0
+          "credit_deposit_ratio__cd_ratio": "140.0"
         },
         {
           "district": "Bapatla",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 179.0
+          "credit_deposit_ratio__cd_ratio": "179.0"
         },
         {
           "district": "Chittoor",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 109.0
-        },
-        {
-          "district": "Konaseema",
-          "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 171.0
+          "credit_deposit_ratio__cd_ratio": "109.0"
         },
         {
           "district": "East Godavari",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 158.0
+          "credit_deposit_ratio__cd_ratio": "158.0"
         },
         {
           "district": "Eluru",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 170.0
+          "credit_deposit_ratio__cd_ratio": "170.0"
         },
         {
           "district": "Guntur",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 123.0
+          "credit_deposit_ratio__cd_ratio": "123.0"
         },
         {
           "district": "Kakinada",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 132.0
+          "credit_deposit_ratio__cd_ratio": "132.0"
+        },
+        {
+          "district": "Konaseema",
+          "period": "December 2022",
+          "credit_deposit_ratio__cd_ratio": "171.0"
         },
         {
           "district": "Krishna",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 182.0
+          "credit_deposit_ratio__cd_ratio": "182.0"
         },
         {
           "district": "Kurnool",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 145.0
+          "credit_deposit_ratio__cd_ratio": "145.0"
         },
         {
           "district": "Nandyal",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 175.0
+          "credit_deposit_ratio__cd_ratio": "175.0"
         },
         {
           "district": "Ntr",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 235.0
+          "credit_deposit_ratio__cd_ratio": "235.0"
         },
         {
           "district": "Palnadu",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 186.0
+          "credit_deposit_ratio__cd_ratio": "186.0"
         },
         {
           "district": "Parvathipuram Manyam",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 152.0
+          "credit_deposit_ratio__cd_ratio": "152.0"
         },
         {
           "district": "Prakasam",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 190.0
+          "credit_deposit_ratio__cd_ratio": "190.0"
         },
         {
           "district": "Spsr Nellore",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 159.0
+          "credit_deposit_ratio__cd_ratio": "159.0"
         },
         {
           "district": "Sri Sathya Sai",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 150.0
+          "credit_deposit_ratio__cd_ratio": "150.0"
         },
         {
           "district": "Srikakulam",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 133.0
+          "credit_deposit_ratio__cd_ratio": "133.0"
         },
         {
           "district": "Tirupati",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 81.0
+          "credit_deposit_ratio__cd_ratio": "81.0"
         },
         {
           "district": "Visakhapatanam",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 123.0
+          "credit_deposit_ratio__cd_ratio": "123.0"
         },
         {
           "district": "Vizianagaram",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 140.0
+          "credit_deposit_ratio__cd_ratio": "140.0"
         },
         {
           "district": "West Godavari",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 179.0
+          "credit_deposit_ratio__cd_ratio": "179.0"
         },
         {
           "district": "Y.s.r.",
           "period": "December 2022",
-          "credit_deposit_ratio__cd_ratio": 157.0
+          "credit_deposit_ratio__cd_ratio": "157.0"
         }
       ]
     },
@@ -1946,132 +1948,132 @@
         {
           "district": "Alluri Sitharama Raju",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 118.0
+          "credit_deposit_ratio__cd_ratio": "118.0"
         },
         {
           "district": "Anakapalli",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 154.0
+          "credit_deposit_ratio__cd_ratio": "154.0"
         },
         {
           "district": "Anantapur",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 149.0
+          "credit_deposit_ratio__cd_ratio": "149.0"
         },
         {
           "district": "Annamayya",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 140.0
+          "credit_deposit_ratio__cd_ratio": "140.0"
         },
         {
           "district": "Bapatla",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 182.0
+          "credit_deposit_ratio__cd_ratio": "182.0"
         },
         {
           "district": "Chittoor",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 110.0
-        },
-        {
-          "district": "Konaseema",
-          "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 177.0
+          "credit_deposit_ratio__cd_ratio": "110.0"
         },
         {
           "district": "East Godavari",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 164.0
+          "credit_deposit_ratio__cd_ratio": "164.0"
         },
         {
           "district": "Eluru",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 176.0
+          "credit_deposit_ratio__cd_ratio": "176.0"
         },
         {
           "district": "Guntur",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 126.0
+          "credit_deposit_ratio__cd_ratio": "126.0"
         },
         {
           "district": "Kakinada",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 136.0
+          "credit_deposit_ratio__cd_ratio": "136.0"
+        },
+        {
+          "district": "Konaseema",
+          "period": "March 2023",
+          "credit_deposit_ratio__cd_ratio": "177.0"
         },
         {
           "district": "Krishna",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 180.0
+          "credit_deposit_ratio__cd_ratio": "180.0"
         },
         {
           "district": "Kurnool",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 145.0
+          "credit_deposit_ratio__cd_ratio": "145.0"
         },
         {
           "district": "Nandyal",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 190.0
+          "credit_deposit_ratio__cd_ratio": "190.0"
         },
         {
           "district": "Ntr",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 183.0
+          "credit_deposit_ratio__cd_ratio": "183.0"
         },
         {
           "district": "Palnadu",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 216.0
+          "credit_deposit_ratio__cd_ratio": "216.0"
         },
         {
           "district": "Parvathipuram Manyam",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 152.0
+          "credit_deposit_ratio__cd_ratio": "152.0"
         },
         {
           "district": "Prakasam",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 193.0
+          "credit_deposit_ratio__cd_ratio": "193.0"
         },
         {
           "district": "Spsr Nellore",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 162.0
+          "credit_deposit_ratio__cd_ratio": "162.0"
         },
         {
           "district": "Sri Sathya Sai",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 155.0
+          "credit_deposit_ratio__cd_ratio": "155.0"
         },
         {
           "district": "Srikakulam",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 136.0
+          "credit_deposit_ratio__cd_ratio": "136.0"
         },
         {
           "district": "Tirupati",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 83.0
+          "credit_deposit_ratio__cd_ratio": "83.0"
         },
         {
           "district": "Visakhapatanam",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 124.0
+          "credit_deposit_ratio__cd_ratio": "124.0"
         },
         {
           "district": "Vizianagaram",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 142.0
+          "credit_deposit_ratio__cd_ratio": "142.0"
         },
         {
           "district": "West Godavari",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 188.0
+          "credit_deposit_ratio__cd_ratio": "188.0"
         },
         {
           "district": "Y.s.r.",
           "period": "March 2023",
-          "credit_deposit_ratio__cd_ratio": 152.0
+          "credit_deposit_ratio__cd_ratio": "152.0"
         }
       ]
     },
@@ -2081,132 +2083,132 @@
         {
           "district": "Alluri Sitharama Raju",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 117.0
+          "credit_deposit_ratio__cd_ratio": "117.0"
         },
         {
           "district": "Anakapalli",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 156.0
+          "credit_deposit_ratio__cd_ratio": "156.0"
         },
         {
           "district": "Anantapur",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 149.0
+          "credit_deposit_ratio__cd_ratio": "149.0"
         },
         {
           "district": "Annamayya",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 139.0
+          "credit_deposit_ratio__cd_ratio": "139.0"
         },
         {
           "district": "Bapatla",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 181.0
+          "credit_deposit_ratio__cd_ratio": "181.0"
         },
         {
           "district": "Chittoor",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 112.0
-        },
-        {
-          "district": "Konaseema",
-          "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 181.0
+          "credit_deposit_ratio__cd_ratio": "112.0"
         },
         {
           "district": "East Godavari",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 164.0
+          "credit_deposit_ratio__cd_ratio": "164.0"
         },
         {
           "district": "Eluru",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 175.0
+          "credit_deposit_ratio__cd_ratio": "175.0"
         },
         {
           "district": "Guntur",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 125.0
+          "credit_deposit_ratio__cd_ratio": "125.0"
         },
         {
           "district": "Kakinada",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 140.0
+          "credit_deposit_ratio__cd_ratio": "140.0"
+        },
+        {
+          "district": "Konaseema",
+          "period": "June 2023",
+          "credit_deposit_ratio__cd_ratio": "181.0"
         },
         {
           "district": "Krishna",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 179.0
+          "credit_deposit_ratio__cd_ratio": "179.0"
         },
         {
           "district": "Kurnool",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 145.0
+          "credit_deposit_ratio__cd_ratio": "145.0"
         },
         {
           "district": "Nandyal",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 172.0
+          "credit_deposit_ratio__cd_ratio": "172.0"
         },
         {
           "district": "Ntr",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 170.0
+          "credit_deposit_ratio__cd_ratio": "170.0"
         },
         {
           "district": "Palnadu",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 218.0
+          "credit_deposit_ratio__cd_ratio": "218.0"
         },
         {
           "district": "Parvathipuram Manyam",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 154.0
+          "credit_deposit_ratio__cd_ratio": "154.0"
         },
         {
           "district": "Prakasam",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 184.0
+          "credit_deposit_ratio__cd_ratio": "184.0"
         },
         {
           "district": "Spsr Nellore",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 163.0
+          "credit_deposit_ratio__cd_ratio": "163.0"
         },
         {
           "district": "Sri Sathya Sai",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 159.0
+          "credit_deposit_ratio__cd_ratio": "159.0"
         },
         {
           "district": "Srikakulam",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 136.0
+          "credit_deposit_ratio__cd_ratio": "136.0"
         },
         {
           "district": "Tirupati",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 80.0
+          "credit_deposit_ratio__cd_ratio": "80.0"
         },
         {
           "district": "Visakhapatanam",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 122.0
+          "credit_deposit_ratio__cd_ratio": "122.0"
         },
         {
           "district": "Vizianagaram",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 144.0
+          "credit_deposit_ratio__cd_ratio": "144.0"
         },
         {
           "district": "West Godavari",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 191.0
+          "credit_deposit_ratio__cd_ratio": "191.0"
         },
         {
           "district": "Y.s.r.",
           "period": "June 2023",
-          "credit_deposit_ratio__cd_ratio": 148.0
+          "credit_deposit_ratio__cd_ratio": "148.0"
         }
       ]
     },
@@ -2216,112 +2218,112 @@
         {
           "district": "Alluri Sitharama Raju",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 118.0
+          "credit_deposit_ratio__cd_ratio": "118.0"
         },
         {
           "district": "Anakapalli",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 170.0
+          "credit_deposit_ratio__cd_ratio": "170.0"
         },
         {
           "district": "Anantapur",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 156.0
+          "credit_deposit_ratio__cd_ratio": "156.0"
         },
         {
           "district": "Annamayya",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 147.0
+          "credit_deposit_ratio__cd_ratio": "147.0"
         },
         {
           "district": "Bapatla",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 188.0
+          "credit_deposit_ratio__cd_ratio": "188.0"
         },
         {
           "district": "Chittoor",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 114.0
-        },
-        {
-          "district": "Konaseema",
-          "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 190.0
+          "credit_deposit_ratio__cd_ratio": "114.0"
         },
         {
           "district": "East Godavari",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 172.0
+          "credit_deposit_ratio__cd_ratio": "172.0"
         },
         {
           "district": "Eluru",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 184.0
+          "credit_deposit_ratio__cd_ratio": "184.0"
         },
         {
           "district": "Guntur",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 132.0
+          "credit_deposit_ratio__cd_ratio": "132.0"
         },
         {
           "district": "Kakinada",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 143.0
+          "credit_deposit_ratio__cd_ratio": "143.0"
+        },
+        {
+          "district": "Konaseema",
+          "period": "September 2023",
+          "credit_deposit_ratio__cd_ratio": "190.0"
         },
         {
           "district": "Krishna",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 193.0
+          "credit_deposit_ratio__cd_ratio": "193.0"
         },
         {
           "district": "Kurnool",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 152.0
+          "credit_deposit_ratio__cd_ratio": "152.0"
         },
         {
           "district": "Nandyal",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 183.0
+          "credit_deposit_ratio__cd_ratio": "183.0"
         },
         {
           "district": "Ntr",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 174.0
+          "credit_deposit_ratio__cd_ratio": "174.0"
         },
         {
           "district": "Palnadu",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 242.0
+          "credit_deposit_ratio__cd_ratio": "242.0"
         },
         {
           "district": "Parvathipuram Manyam",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 166.0
+          "credit_deposit_ratio__cd_ratio": "166.0"
         },
         {
           "district": "Prakasam",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 192.0
+          "credit_deposit_ratio__cd_ratio": "192.0"
         },
         {
           "district": "Spsr Nellore",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 172.0
+          "credit_deposit_ratio__cd_ratio": "172.0"
         },
         {
           "district": "Sri Sathya Sai",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 163.0
+          "credit_deposit_ratio__cd_ratio": "163.0"
         },
         {
           "district": "Srikakulam",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 146.0
+          "credit_deposit_ratio__cd_ratio": "146.0"
         },
         {
           "district": "Tirupati",
           "period": "September 2023",
-          "credit_deposit_ratio__cd_ratio": 82.0
+          "credit_deposit_ratio__cd_ratio": "82.0"
         }
       ]
     },
@@ -2331,132 +2333,132 @@
         {
           "district": "Alluri Sitharama Raju",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 129.0
+          "credit_deposit_ratio__cd_ratio": "129.0"
         },
         {
           "district": "Anakapalli",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 176.0
+          "credit_deposit_ratio__cd_ratio": "176.0"
         },
         {
           "district": "Anantapur",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 162.0
+          "credit_deposit_ratio__cd_ratio": "162.0"
         },
         {
           "district": "Annamayya",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 153.0
+          "credit_deposit_ratio__cd_ratio": "153.0"
         },
         {
           "district": "Bapatla",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 198.0
+          "credit_deposit_ratio__cd_ratio": "198.0"
         },
         {
           "district": "Chittoor",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 135.0
-        },
-        {
-          "district": "Konaseema",
-          "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 199.0
+          "credit_deposit_ratio__cd_ratio": "135.0"
         },
         {
           "district": "East Godavari",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 180.0
+          "credit_deposit_ratio__cd_ratio": "180.0"
         },
         {
           "district": "Eluru",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 194.0
+          "credit_deposit_ratio__cd_ratio": "194.0"
         },
         {
           "district": "Guntur",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 135.0
+          "credit_deposit_ratio__cd_ratio": "135.0"
         },
         {
           "district": "Kakinada",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 150.0
+          "credit_deposit_ratio__cd_ratio": "150.0"
+        },
+        {
+          "district": "Konaseema",
+          "period": "December 2023",
+          "credit_deposit_ratio__cd_ratio": "199.0"
         },
         {
           "district": "Krishna",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 194.0
+          "credit_deposit_ratio__cd_ratio": "194.0"
         },
         {
           "district": "Kurnool",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 158.0
+          "credit_deposit_ratio__cd_ratio": "158.0"
         },
         {
           "district": "Nandyal",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 191.0
+          "credit_deposit_ratio__cd_ratio": "191.0"
         },
         {
           "district": "Ntr",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 177.0
+          "credit_deposit_ratio__cd_ratio": "177.0"
         },
         {
           "district": "Palnadu",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 253.0
+          "credit_deposit_ratio__cd_ratio": "253.0"
         },
         {
           "district": "Parvathipuram Manyam",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 171.0
+          "credit_deposit_ratio__cd_ratio": "171.0"
         },
         {
           "district": "Prakasam",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 207.0
+          "credit_deposit_ratio__cd_ratio": "207.0"
         },
         {
           "district": "Spsr Nellore",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 181.0
+          "credit_deposit_ratio__cd_ratio": "181.0"
         },
         {
           "district": "Sri Sathya Sai",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 173.0
+          "credit_deposit_ratio__cd_ratio": "173.0"
         },
         {
           "district": "Srikakulam",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 153.0
+          "credit_deposit_ratio__cd_ratio": "153.0"
         },
         {
           "district": "Tirupati",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 81.0
+          "credit_deposit_ratio__cd_ratio": "81.0"
         },
         {
           "district": "Visakhapatanam",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 121.0
+          "credit_deposit_ratio__cd_ratio": "121.0"
         },
         {
           "district": "Vizianagaram",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 162.0
+          "credit_deposit_ratio__cd_ratio": "162.0"
         },
         {
           "district": "West Godavari",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 209.0
+          "credit_deposit_ratio__cd_ratio": "209.0"
         },
         {
           "district": "Y.s.r.",
           "period": "December 2023",
-          "credit_deposit_ratio__cd_ratio": 164.0
+          "credit_deposit_ratio__cd_ratio": "164.0"
         }
       ]
     },
@@ -2466,132 +2468,132 @@
         {
           "district": "Alluri Sitharama Raju",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 126.0
+          "credit_deposit_ratio__cd_ratio": "126.0"
         },
         {
           "district": "Anakapalli",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 179.0
+          "credit_deposit_ratio__cd_ratio": "179.0"
         },
         {
           "district": "Anantapur",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 162.0
+          "credit_deposit_ratio__cd_ratio": "162.0"
         },
         {
           "district": "Annamayya",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 161.0
+          "credit_deposit_ratio__cd_ratio": "161.0"
         },
         {
           "district": "Bapatla",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 201.0
+          "credit_deposit_ratio__cd_ratio": "201.0"
         },
         {
           "district": "Chittoor",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 139.0
-        },
-        {
-          "district": "Konaseema",
-          "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 206.0
+          "credit_deposit_ratio__cd_ratio": "139.0"
         },
         {
           "district": "East Godavari",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 183.0
+          "credit_deposit_ratio__cd_ratio": "183.0"
         },
         {
           "district": "Eluru",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 199.0
+          "credit_deposit_ratio__cd_ratio": "199.0"
         },
         {
           "district": "Guntur",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 140.0
+          "credit_deposit_ratio__cd_ratio": "140.0"
         },
         {
           "district": "Kakinada",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 151.0
+          "credit_deposit_ratio__cd_ratio": "151.0"
+        },
+        {
+          "district": "Konaseema",
+          "period": "March 2024",
+          "credit_deposit_ratio__cd_ratio": "206.0"
         },
         {
           "district": "Krishna",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 196.0
+          "credit_deposit_ratio__cd_ratio": "196.0"
         },
         {
           "district": "Kurnool",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 156.0
+          "credit_deposit_ratio__cd_ratio": "156.0"
         },
         {
           "district": "Nandyal",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 188.0
+          "credit_deposit_ratio__cd_ratio": "188.0"
         },
         {
           "district": "Ntr",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 167.0
+          "credit_deposit_ratio__cd_ratio": "167.0"
         },
         {
           "district": "Palnadu",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 248.0
+          "credit_deposit_ratio__cd_ratio": "248.0"
         },
         {
           "district": "Parvathipuram Manyam",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 168.0
+          "credit_deposit_ratio__cd_ratio": "168.0"
         },
         {
           "district": "Prakasam",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 205.0
+          "credit_deposit_ratio__cd_ratio": "205.0"
         },
         {
           "district": "Spsr Nellore",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 179.0
+          "credit_deposit_ratio__cd_ratio": "179.0"
         },
         {
           "district": "Sri Sathya Sai",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 170.0
+          "credit_deposit_ratio__cd_ratio": "170.0"
         },
         {
           "district": "Srikakulam",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 154.0
+          "credit_deposit_ratio__cd_ratio": "154.0"
         },
         {
           "district": "Tirupati",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 82.0
+          "credit_deposit_ratio__cd_ratio": "82.0"
         },
         {
           "district": "Visakhapatanam",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 120.0
+          "credit_deposit_ratio__cd_ratio": "120.0"
         },
         {
           "district": "Vizianagaram",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 163.0
+          "credit_deposit_ratio__cd_ratio": "163.0"
         },
         {
           "district": "West Godavari",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 217.0
+          "credit_deposit_ratio__cd_ratio": "217.0"
         },
         {
           "district": "Y.s.r.",
           "period": "March 2024",
-          "credit_deposit_ratio__cd_ratio": 165.0
+          "credit_deposit_ratio__cd_ratio": "165.0"
         }
       ]
     },
@@ -2601,132 +2603,132 @@
         {
           "district": "Alluri Sitharama Raju",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 129.0
+          "credit_deposit_ratio__cd_ratio": "129.0"
         },
         {
           "district": "Anakapalli",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 180.0
+          "credit_deposit_ratio__cd_ratio": "180.0"
         },
         {
           "district": "Anantapur",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 166.0
+          "credit_deposit_ratio__cd_ratio": "166.0"
         },
         {
           "district": "Annamayya",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 163.0
+          "credit_deposit_ratio__cd_ratio": "163.0"
         },
         {
           "district": "Bapatla",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 198.0
+          "credit_deposit_ratio__cd_ratio": "198.0"
         },
         {
           "district": "Chittoor",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 139.0
-        },
-        {
-          "district": "Konaseema",
-          "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 213.0
+          "credit_deposit_ratio__cd_ratio": "139.0"
         },
         {
           "district": "East Godavari",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 184.0
+          "credit_deposit_ratio__cd_ratio": "184.0"
         },
         {
           "district": "Eluru",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 195.0
+          "credit_deposit_ratio__cd_ratio": "195.0"
         },
         {
           "district": "Guntur",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 140.0
+          "credit_deposit_ratio__cd_ratio": "140.0"
         },
         {
           "district": "Kakinada",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 158.0
+          "credit_deposit_ratio__cd_ratio": "158.0"
+        },
+        {
+          "district": "Konaseema",
+          "period": "June 2024",
+          "credit_deposit_ratio__cd_ratio": "213.0"
         },
         {
           "district": "Krishna",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 183.0
+          "credit_deposit_ratio__cd_ratio": "183.0"
         },
         {
           "district": "Kurnool",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 157.0
+          "credit_deposit_ratio__cd_ratio": "157.0"
         },
         {
           "district": "Nandyal",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 192.0
+          "credit_deposit_ratio__cd_ratio": "192.0"
         },
         {
           "district": "Ntr",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 171.0
+          "credit_deposit_ratio__cd_ratio": "171.0"
         },
         {
           "district": "Palnadu",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 250.0
+          "credit_deposit_ratio__cd_ratio": "250.0"
         },
         {
           "district": "Parvathipuram Manyam",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 171.0
+          "credit_deposit_ratio__cd_ratio": "171.0"
         },
         {
           "district": "Prakasam",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 202.0
+          "credit_deposit_ratio__cd_ratio": "202.0"
         },
         {
           "district": "Spsr Nellore",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 180.0
+          "credit_deposit_ratio__cd_ratio": "180.0"
         },
         {
           "district": "Sri Sathya Sai",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 169.0
+          "credit_deposit_ratio__cd_ratio": "169.0"
         },
         {
           "district": "Srikakulam",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 158.0
+          "credit_deposit_ratio__cd_ratio": "158.0"
         },
         {
           "district": "Tirupati",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 82.0
+          "credit_deposit_ratio__cd_ratio": "82.0"
         },
         {
           "district": "Visakhapatanam",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 121.0
+          "credit_deposit_ratio__cd_ratio": "121.0"
         },
         {
           "district": "Vizianagaram",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 166.0
+          "credit_deposit_ratio__cd_ratio": "166.0"
         },
         {
           "district": "West Godavari",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 217.0
+          "credit_deposit_ratio__cd_ratio": "217.0"
         },
         {
           "district": "Y.s.r.",
           "period": "June 2024",
-          "credit_deposit_ratio__cd_ratio": 169.0
+          "credit_deposit_ratio__cd_ratio": "169.0"
         }
       ]
     }
