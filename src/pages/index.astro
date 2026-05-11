@@ -111,7 +111,10 @@ const base = import.meta.env.BASE_URL;
       var strip = document.getElementById('indicator-strip');
       var headerH = headerEl ? headerEl.offsetHeight : 52;
       var stripH = strip ? strip.offsetHeight : 56;
-      var topPad = headerH + stripH + 12; // breathing room below the strip
+      // Extra breathing room below the strip so J&K / Ladakh's
+      // northern tip isn't clipped against the strip's bottom edge.
+      // Previous +12 was too tight on desktop.
+      var topPad = headerH + stripH + 36;
       if (isMobile) return { paddingTopLeft: [10, topPad], paddingBottomRight: [10, 80] };
       var sliderW = 65; // timeline slider + zoom controls + margin
       return { paddingTopLeft: [10, topPad], paddingBottomRight: [sliderW, 10] };
