@@ -506,31 +506,35 @@ def regenerate_indicator(indicator_key: str, indicator_def: dict,
                     seen.add(key)
                     rows.append(entry)
 
-        # For digital_transactions: merge with existing PhonePe transaction_*
-        # values from the existing file so we don't drop those.
-        if preserve_phonepe and indicator_key == 'digital_transactions':
+        # For digital_transactions: only emit quarters that have PhonePe UPI
+        # data (transaction_count / transaction_amount). The headline metric
+        # for this indicator is "UPI Transaction Count (PhonePe)"; without
+        # PhonePe a quarter is misleading even if SLBC digital-coverage fields
+        # exist. PhonePe Pulse currently ships through Mar 2024.
+        if indicator_key == 'digital_transactions':
             existing_path = os.path.join(out_dir, f'{qcode}.json')
+            phonepe_rows = {}  # (state, district_upper) -> {transaction_count, transaction_amount}
             if os.path.exists(existing_path):
                 with open(existing_path) as f:
                     prev = json.load(f)
-                # index previous entries by (state, district upper)
-                prev_idx = {}
                 for r in prev.get('districts', []):
-                    prev_idx[(r.get('state'), str(r.get('district', '')).upper())] = r
-                # add transaction_count/_amount to existing rows
-                new_idx = {(r['state'], r['district'].upper()): r for r in rows}
-                for k, prev_r in prev_idx.items():
-                    txn_keys = {kk: vv for kk, vv in prev_r.items()
-                                if kk in ('transaction_count', 'transaction_amount')}
-                    if not txn_keys:
-                        continue
-                    if k in new_idx:
-                        new_idx[k].update(txn_keys)
-                    else:
-                        merged = {'district': prev_r['district'], 'state': prev_r['state']}
-                        merged.update(txn_keys)
-                        rows.append(merged)
-                        new_idx[k] = merged
+                    txn = {k: v for k, v in r.items()
+                           if k in ('transaction_count', 'transaction_amount')}
+                    if txn:
+                        phonepe_rows[(r.get('state'), str(r.get('district','')).upper())] = (r, txn)
+            if not phonepe_rows:
+                # No PhonePe data for this quarter → skip the file entirely.
+                continue
+            # Merge PhonePe values onto matching SLBC rows; add PhonePe-only rows.
+            new_idx = {(r['state'], r['district'].upper()): r for r in rows}
+            for k, (prev_r, txn) in phonepe_rows.items():
+                if k in new_idx:
+                    new_idx[k].update(txn)
+                else:
+                    merged = {'district': prev_r['district'], 'state': prev_r['state']}
+                    merged.update(txn)
+                    rows.append(merged)
+                    new_idx[k] = merged
 
         if not rows:
             continue
