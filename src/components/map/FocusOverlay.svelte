@@ -314,7 +314,10 @@
 
   /* Mobile: stack columns */
   @media (max-width: 760px) {
-    .district-focus { padding: 60px 24px 80px; align-items: flex-start; padding-top: 80px; }
+    /* Pad the bottom enough so the close button at the bottom (mobile-
+       only) doesn't overlap the value, and keep top padding for status
+       bars. */
+    .district-focus { padding: 60px 24px 110px; align-items: flex-start; padding-top: 80px; }
     .focus-grid { grid-template-columns: 1fr; gap: 28px; }
     .focus-svg { max-width: 220px; }
     .focus-name { font-size: 38px; }
@@ -322,5 +325,37 @@
     .stat-num { font-size: 54px; }
     .stat-unit { font-size: 22px; }
     .focus-eyebrow { font-size: 9px; }
+    /* Bigger, more findable close affordance on phones. The 38px pill
+       at top-right edge is too small for a thumb and easily missed.
+       Switch to a vermillion pill labelled "✕ Close" anchored to the
+       bottom — clearly tappable, in the natural thumb-zone. */
+    .focus-close {
+      top: auto;
+      bottom: 24px;
+      right: 50%;
+      transform: translateX(50%);
+      width: auto;
+      min-width: 120px;
+      height: 48px;
+      padding: 0 22px;
+      background: rgba(184, 74, 46, 0.95);
+      border-color: rgba(244, 239, 230, 0.18);
+      border-radius: 99px;
+      color: #F4EFE6;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.04em;
+      box-shadow: 0 4px 20px rgba(184, 74, 46, 0.45);
+    }
+    .focus-close::after {
+      content: ' Close';
+    }
+    .focus-close:active {
+      background: rgba(142, 51, 30, 0.95);
+      transform: translateX(50%) translateY(1px);
+    }
+    /* Hide the ESC keyboard hint on mobile — there's no keyboard. */
+    .focus-hint { display: none; }
   }
 </style>
