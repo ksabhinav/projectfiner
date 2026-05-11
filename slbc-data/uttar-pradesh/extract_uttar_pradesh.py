@@ -520,22 +520,39 @@ def extract_pdf(pdf_path):
         return {}
 
     pages = full_text.split('\x0c')  # form-feed = page separator
-    current_cat = None
+    # Page-by-page extraction. The previous version made `current_cat`
+    # sticky across pages — which contaminated CD-ratio rows with rows
+    # from totally unrelated downstream tables (e.g. UP 2025-12's
+    # "Pending RC Position" page that has the same Sr/District/2-number
+    # layout as the CD-ratio table). To avoid that we only emit rows on
+    # pages that classify themselves. Long multi-page tables risk being
+    # truncated; in practice the UP booklets repeat the section title on
+    # each continuation page so classify_page() picks them up cleanly.
     for text in pages:
         if not text.strip():
             continue
         cat, _ = classify_page(text)
-        if cat:
-            current_cat = cat
-        if not current_cat:
+        if not cat:
             continue
+        # Pre-pass: collect candidate (district, vals) tuples for this page
+        page_rows = []
         for line in text.split('\n'):
             parsed = parse_data_row(line)
             if parsed:
-                dname, vals = parsed
-                rec = assign_fields(current_cat, vals)
-                if rec:
-                    result[current_cat][dname].update(rec)
+                page_rows.append(parsed)
+        # Sanity check — pages with very few district rows are usually
+        # title pages or partial bleeds, not real data pages. CD-ratio
+        # specifically: require at least 10 plausible rows before
+        # accepting them. Other categories sometimes have legitimately
+        # short tables (e.g. atm_network with 6 columns), so use a softer
+        # threshold of 4.
+        min_rows = 10 if cat == 'credit_deposit_ratio' else 4
+        if len(page_rows) < min_rows:
+            continue
+        for dname, vals in page_rows:
+            rec = assign_fields(cat, vals)
+            if rec:
+                result[cat][dname].update(rec)
 
     # Drop categories with too few districts (likely misclassified)
     cleaned = {}
