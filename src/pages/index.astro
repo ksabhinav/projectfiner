@@ -75,9 +75,16 @@ const base = import.meta.env.BASE_URL;
     var _B = window.__FINER_BASE;
 
     var _isMobile = window.innerWidth <= 640;
+    // maxBounds. The north edge must extend several degrees above
+    // ALL_STATES_BOUNDS's 37.5°N so the desktop's strip-padding can
+    // actually move the content downward — Leaflet's _limitCenter
+    // clamps the viewport against maxBounds, and at zoom ~5.4 the
+    // top of the screen sits ~4° lat above the visible content. With
+    // north=40°N it was being clamped (top of viewport tried to reach
+    // ~41°N but couldn't, so the padding bump silently no-op'd).
     var INDIA_BOUNDS = _isMobile
-      ? L.latLngBounds(L.latLng(0, 48.0), L.latLng(45, 115.0))  // Wide west so fitBounds padding isn't clamped
-      : L.latLngBounds(L.latLng(2, 50.0), L.latLng(40, 115.0)); // Wide west so fitBounds padding isn't clamped
+      ? L.latLngBounds(L.latLng(0, 48.0), L.latLng(48, 115.0))
+      : L.latLngBounds(L.latLng(2, 50.0), L.latLng(46, 115.0));
     var NE_BOUNDS    = L.latLngBounds(L.latLng(17.5, 79.5), L.latLng(29.5, 97.5));
     var ALL_STATES_BOUNDS = L.latLngBounds(L.latLng(6.5, 67.5), L.latLng(37.5, 98)); // Full India incl J&K/Ladakh (north ~37.1°N), Kutch, A&N (south ~6.75°N)
     var NE_CENTER    = [20, 82.5]; // Visual center of all 19 states (lat 8-30, lng 68-97.5)
