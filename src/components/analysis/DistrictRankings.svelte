@@ -433,10 +433,6 @@
         </select>
       </div>
 
-      <button class="share-btn" onclick={copyShareLink} title="Copy a link to this exact ranking view">
-        {shareCopied ? '✓ Link copied' : '↗ Copy share link'}
-      </button>
-
       <!-- Summary stats -->
       {#if sortedRows.length > 0}
         <div class="summary-box">

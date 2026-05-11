@@ -112,11 +112,21 @@
       visible = state.mode === 'banking';
     }
 
-    // Listen for quarters from inline JS
+    // Listen for quarters from inline JS. When quartersReady fires, respect
+    // any pre-set quarter on the global (e.g. from URL hydration via
+    // ?quarter=YYYY-MM) so the slider thumb lands at the URL position
+    // instead of defaulting to the latest entry.
     const unsub1 = onFiner('quartersReady', (detail: { quarters: string[] }) => {
       quarters = detail.quarters;
-      currentIdx = 0;
-      currentQuarter = quarters[0] || '';
+      const w: any = typeof window !== 'undefined' ? window : {};
+      const preferred = w.__FINER?.quarter;
+      if (preferred && quarters.indexOf(preferred) >= 0) {
+        currentIdx = quarters.indexOf(preferred);
+        currentQuarter = preferred;
+      } else {
+        currentIdx = 0;
+        currentQuarter = quarters[0] || '';
+      }
     });
 
     // Listen for mode changes
@@ -135,6 +145,21 @@
     // Listen for color ramp changes
     const unsub3 = onFiner('timelineColor', (detail: { color: string }) => {
       accentColor = detail.color;
+    });
+
+    // External programmatic quarter changes (e.g. URL hydration dispatches
+    // `finer:quarterChange` after the inline JS finishes loading) need to
+    // move the slider thumb. Without this listener the inline state
+    // updates but the slider stays parked at the default position. Guard
+    // against echo: only react if the requested quarter differs from
+    // what we already show.
+    const unsub4 = onFiner('quarterChange', (detail: { quarter: string; idx: number }) => {
+      if (!detail || detail.quarter === currentQuarter) return;
+      const idx = quarters.indexOf(detail.quarter);
+      if (idx >= 0) {
+        currentIdx = idx;
+        currentQuarter = detail.quarter;
+      }
     });
 
     // Global mouse/touch handlers for drag
@@ -172,7 +197,7 @@
     document.addEventListener('touchend', handleTouchEnd);
 
     return () => {
-      unsub1(); unsub2(); unsub3();
+      unsub1(); unsub2(); unsub3(); unsub4();
       mq.removeEventListener('change', onResize);
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);

@@ -36,22 +36,6 @@
   // Live citation: recomputes whenever indicator / quarter / state focus changes.
   let citation = $derived(getSourceCitation(currentIndicator, currentQuarter, stateFilter));
 
-  // ── Copy-link affordance (shareable URL state) ────────────────────────────
-  // The inline map JS exposes window.__FINER_COPY_URL() which syncs the
-  // current view (indicator/metric/quarter/state) into the URL, then writes
-  // it to the clipboard. We flip a one-second "copied" state on success
-  // so the button gives visual feedback.
-  let copied = $state(false);
-  function handleShare() {
-    if (typeof (window as any).__FINER_COPY_URL === 'function') {
-      const ok = (window as any).__FINER_COPY_URL();
-      if (ok) {
-        copied = true;
-        setTimeout(() => { copied = false; }, 1400);
-      }
-    }
-  }
-
   function titleCase(s: string): string {
     if (!s) return '';
     return s.split(' ').map(w => w[0] + w.slice(1).toLowerCase()).join(' ');
@@ -132,14 +116,6 @@
       {#if citation.attribution}
         <div class="legend-attribution">{citation.attribution}</div>
       {/if}
-      <button
-        class="legend-share"
-        title="Copy a shareable link to this exact view"
-        onclick={handleShare}
-        aria-label="Copy shareable link"
-      >
-        {copied ? '✓ Copied' : '↗ Copy share link'}
-      </button>
     </div>
   </div>
 {/if}
@@ -238,29 +214,6 @@
     line-height: 1.45;
   }
 
-  /* Atlas-styled "Copy share link" button — sits below the source +
-     attribution lines as a small mono pill. */
-  .legend-share {
-    margin-top: 10px;
-    width: 100%;
-    padding: 6px 10px;
-    background: transparent;
-    border: 1px solid var(--rule, #D9D2C5);
-    border-radius: 99px;
-    color: var(--ink-soft, #3D332A);
-    font-family: var(--font-mono, 'IBM Plex Mono', monospace);
-    font-size: 9.5px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    cursor: pointer;
-    transition: background 0.18s, border-color 0.18s, color 0.18s;
-  }
-  .legend-share:hover {
-    background: var(--paper-deep, #ECE5D6);
-    border-color: var(--ink, #1B140E);
-    color: var(--vermillion, #B84A2E);
-  }
-  .legend-share:active { transform: translateY(1px); }
 
   /* ── Mobile ── */
   @media (max-width: 640px) {

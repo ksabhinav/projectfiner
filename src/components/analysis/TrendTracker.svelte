@@ -513,10 +513,6 @@
       {#if loadingState}
         <div class="loading-indicator">Loading...</div>
       {/if}
-
-      <button class="share-btn" onclick={copyShareLink} title="Copy a link to this district's profile">
-        {shareCopied ? '✓ Link copied' : '↗ Copy share link'}
-      </button>
     </div>
 
     <!-- District summary header -->
