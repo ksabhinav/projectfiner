@@ -6,8 +6,8 @@ import MapLegend from '../components/map/MapLegend.svelte';
 import TimelineSlider from '../components/map/TimelineSlider.svelte';
 import FocusOverlay from '../components/map/FocusOverlay.svelte';
 import SearchPalette from '../components/map/SearchPalette.svelte';
-// FactCard import removed with the Finding button. Restore both when findings.json grows:
-// import FactCard from '../components/map/FactCard.svelte';
+// FactCard renders the "A finding" modal triggered by the strip button.
+import FactCard from '../components/map/FactCard.svelte';
 
 const base = import.meta.env.BASE_URL;
 ---
@@ -44,9 +44,8 @@ const base = import.meta.env.BASE_URL;
 
   <!-- ⌘K search palette -->
   <SearchPalette client:load />
-  <!-- "A finding" card hidden until findings.json has 30+ curated entries.
-       Re-enable: import FactCard above + uncomment the line below + uncomment <FindingButton /> in IndicatorStrip.svelte
-       <FactCard client:load /> -->
+  <!-- "A finding" card — fired by FindingButton on the indicator strip -->
+  <FactCard client:load />
 
 
   <script is:inline define:vars={{ base }}>
