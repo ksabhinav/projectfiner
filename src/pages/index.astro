@@ -1376,6 +1376,12 @@ const base = import.meta.env.BASE_URL;
         slbcLoaded = true;
         populateMetrics();
         populateSlider();
+        // If the default indicator has its own timePoints (e.g. digital_transactions
+        // capped at Mar 2024), use those instead of the global manifest quarters.
+        var initInd = INDICATORS[currentIndicator];
+        if (initInd && initInd.timePoints && initInd.timePoints.length) {
+          switchSliderToTimePoints(initInd.timePoints);
+        }
         updateTimelineColor();
 
         // Load the initial indicator data
