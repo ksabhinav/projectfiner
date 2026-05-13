@@ -31,6 +31,7 @@ const SLBC_STATE_URLS: Record<string, { name: string; url: string }> = {
   'jharkhand':          { name: 'Jharkhand',       url: 'https://onlineslbcne.nic.in' },
   'karnataka':          { name: 'Karnataka',       url: 'https://slbckarnataka.com' },
   'kerala':             { name: 'Kerala',          url: 'https://slbckerala.com' },
+  'ladakh':             { name: 'Ladakh',          url: 'https://utlbcladakh.com' },
   'madhya-pradesh':     { name: 'Madhya Pradesh',  url: 'https://www.slbcmadhyapradesh.in/slbc-meeting.aspx' },
   'maharashtra':        { name: 'Maharashtra',     url: 'https://bankofmaharashtra.bank.in' },
   'manipur':            { name: 'Manipur',         url: 'https://onlineslbcne.nic.in' },
@@ -117,7 +118,7 @@ export function getSourceCitation(
     // All-India SLBC view
     return {
       label: `SLBC quarterly booklets · ${q}`,
-      attribution: 'Aggregated district-level data from State Level Bankers\' Committee booklets across 25 states. Use the state-focus toggle to see a specific state\'s URL.',
+      attribution: 'Aggregated district-level data from State Level Bankers\' Committee (SLBC) booklets across 25 states + UT Level Bankers\' Committee (UTLBC) for Ladakh. Use the state-focus toggle to see a specific source URL.',
     };
   }
 
