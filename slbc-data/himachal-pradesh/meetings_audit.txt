@@ -1,0 +1,85 @@
+Himachal Pradesh SLBC — Meetings Audit
+=======================================
+Date audited: 2026-05-13
+Source: https://slbchp.com/Slbcmeetingspage/agenda-minutes.aspx
+SLBC convenor: Punjab National Bank, Circle Office, The Mall, Shimla
+Districts: 12 (Bilaspur, Chamba, Hamirpur, Kangra, Kinnaur, Kullu,
+            Lahul Spiti, Mandi, Shimla, Sirmaur, Solan, Una)
+
+GRANULARITY VERDICT: DISTRICT-WISE  ✓
+  Annexures 2, 4, 6, 10, 12, 14, 16, 18/18A, 20, 22, 24, 26, 27/28,
+  30, 32/32A, 34, 37/37A/37B, 38, 40/40A, 44, 45, 46, 48, 50, 50A,
+  52, 54, 56, 58, 60, 62, 64, 66, 72, 74/74A are all district-wise
+  (12 rows per annexure). UNITS: "(Rs. In lacs)" — already in Lakhs,
+  NO Crore->Lakh conversion needed.
+
+UNITS NOTE:
+  Header on every monetary district-wise annexure literally reads
+  "(Rs. In lacs)". Verified against ANNEX-05 (Bank-wise) and
+  ANNEX-06 (District-wise). HP CQR is therefore ALREADY in canonical
+  FINER units. The Haryana v2 ×100 conversion does NOT apply here.
+  Cross-check: Bilaspur Dec 2025 deposits = ₹10,166 Cr (₹10.16 lakh Cr
+  for HP state seems right — HP state-wide deposits ~₹2 lakh Cr at end-2025).
+
+MEETINGS COVERAGE (most recent first)
+-------------------------------------
+179th  (Dec 2025)  ZIP w/ 4 XLSX annexure bundles  AGENDA + MINUTES  ← extracted
+178th  (Sep 2025)  PDF agenda + PDF minutes
+177th  (Jun 2025)  PDF agenda + minutes ZIP
+176th  (Mar 2025)  PDF agenda + PDF minutes
+175th  (Dec 2024)  PDF agenda + PDF minutes
+174th  (Sep 2024)  PDF agenda
+173rd  (Jun 2024)  PDF agenda
+171st  (Dec 2023)  PDF agenda
+170th  (Sep 2023)  PDF agenda
+168th  (Mar 2023)  PDF agenda
+167th  (Dec 2022)  PDF agenda
+166th  (Sep 2022)  PDF agenda
+165th  (Jun 2022)  PDF agenda
+164th  (Mar 2022)  PDF agenda Final
+163rd  (Dec 2021)  ZIP archive (Excel-based)
+162nd  (Sep 2021)  RAR archive (Excel-based)
+160th  (Mar 2021)  RAR archive
+159th  (Dec 2020)  ZIP archive
+158th  (Sep 2020)  RAR archive
+157th  (Jun 2020)  ZIP archive
+156th  (Mar 2020)  ZIP archive
+155th  (Dec 2019)  ZIP archive
+154th  (Sep 2019)  ZIP archive (Note, Tables, Annx)
+153rd  (Jun 2019)  ZIP archive (Final Papers)
+152nd  (Mar 2019)  ZIP archive (Agenda Note Tables)
+151st  (Dec 2018)  PDF agenda note
+150th  (Sep 2018)  PDF agenda note Index + PDF minutes
+149th & older      (various)
+
+CQR LISTING:
+   "../Files/Meetings/CQR-DEC-2025.zip"   <- this is actually the Sep 2025 CQR
+                                              tabled in Dec 2025 meeting cycle;
+                                              "AS ON September 2025" in headers
+   "../Files/Dec2025/179th SLBC Agenda- Quarter - Dec 25.zip"  <- the actual
+                                              Dec 2025 CQR with "AS ON December
+                                              2025" headers. THIS is what we
+                                              extract from.
+
+CURRENT EXTRACTION SCOPE:
+  - Quarter: Dec 2025 only (the only quarter with bundled XLSX annexures
+    on the SLBC HP website). Older meetings are PDFs that would need a
+    separate pdfplumber pipeline (similar to Uttarakhand) for backfill.
+  - All 12 districts present in every annexure.
+  - Categories captured: branch_network, credit_deposit_ratio,
+    priority_sector (agri/MSME/other PS/weaker sections),
+    non_priority_sector, annual_credit_plan (agri/MSME/other/total),
+    digital_transactions (Annex-34), kcc (Annex-44/45/46),
+    education_loan (Annex-48), shg (Annex-50), pmegp (Annex-50A),
+    nrlm (Annex-52), minority_loans (Annex-54/56), sc_st (Annex-58),
+    women (Annex-60), pmjdy (Annex-62), mudra (Annex-64),
+    standup_india (Annex-66), aadhaar_authentication / casa (Annex-72),
+    npa (Annex-37/37A/37B/38/40/40A), investment_credit (Annex-74).
+
+FUTURE: backfilling 178th + earlier quarters requires either:
+  (a) a pdfplumber pipeline against the 12-year backlog of PDF agendas
+      (similar plumbing to slbc-data/uttarakhand/extract_uttarakhand.py),
+  (b) emailing slbchp@pnb.co.in for archive XLSX, or
+  (c) accepting Dec 2025 as snapshot (the Ladakh pattern — single
+      snapshot quarter is sufficient for the choropleth to light up
+      HP's 12 districts).

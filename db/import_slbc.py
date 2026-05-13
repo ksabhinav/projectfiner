@@ -27,11 +27,11 @@ MONTHS = {'january': '01', 'february': '02', 'march': '03', 'april': '04',
 # States with SLBC timeseries data
 SLBC_STATES = [
     'andhra-pradesh', 'arunachal-pradesh', 'assam', 'bihar',
-    'chhattisgarh', 'gujarat', 'haryana', 'jharkhand', 'karnataka',
-    'kerala', 'madhya-pradesh', 'maharashtra', 'manipur', 'meghalaya',
-    'mizoram', 'nagaland', 'odisha', 'rajasthan', 'sikkim',
-    'tamil-nadu', 'telangana', 'tripura', 'uttar-pradesh',
-    'uttarakhand', 'west-bengal',
+    'chhattisgarh', 'gujarat', 'haryana', 'himachal-pradesh',
+    'jharkhand', 'karnataka', 'kerala', 'madhya-pradesh',
+    'maharashtra', 'manipur', 'meghalaya', 'mizoram', 'nagaland',
+    'odisha', 'rajasthan', 'sikkim', 'tamil-nadu', 'telangana',
+    'tripura', 'uttar-pradesh', 'uttarakhand', 'west-bengal',
 ]
 
 
