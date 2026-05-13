@@ -2,10 +2,55 @@
 interface Props {
   title: string;
   description?: string;
+  /** Page-relative path, e.g. "/about/". Used for canonical URL + og:url.
+      Defaults to the current page's pathname when omitted. */
+  path?: string;
 }
 
-const { title, description = 'Putting India\'s financial inclusion data on the map, district by district, indicator by indicator. Open, interactive and machine-readable.' } = Astro.props;
+const defaultDescription = 'Project FINER — open, interactive maps and downloadable datasets covering financial inclusion across India. District-level data on 20+ indicators across 800+ districts: PMJDY, KCC, SHG, MUDRA, RBI banking outlets, capital markets, UPI digital payments, NFHS health insurance, and more.';
+const { title, description = defaultDescription, path } = Astro.props;
 const base = import.meta.env.BASE_URL;
+const SITE = 'https://projectfiner.com';
+const pagePath = path ?? Astro.url.pathname;
+const canonicalUrl = SITE + (pagePath.endsWith('/') ? pagePath : pagePath + '/');
+
+// JSON-LD structured data — tells Google "this is a dataset platform run by Project FINER".
+// Rendered once per page from BaseLayout so every page is described.
+const orgLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Project FINER',
+  url: SITE,
+  logo: `${SITE}/favicon.svg`,
+  description: 'Putting India\'s financial inclusion data on the map, district by district, indicator by indicator.',
+  email: 'mail@projectfiner.com',
+  sameAs: ['https://github.com/ksabhinav/projectfiner'],
+};
+const datasetLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'Project FINER — Financial Inclusion in India',
+  description: 'District-level financial inclusion data for India: SLBC banking indicators, RBI DBIE banking outlets, NRLM SHGs, PhonePe UPI, NFHS health insurance, UIDAI Aadhaar enrolment, SHRUG-derived wealth and infrastructure layers. 800+ districts, 20+ indicators, quarterly time series back to 2015.',
+  url: SITE,
+  keywords: ['financial inclusion', 'India', 'PMJDY', 'Jan Dhan', 'KCC', 'SHG', 'MUDRA', 'UPI', 'SLBC', 'banking', 'choropleth', 'district', 'NFHS', 'RBI'],
+  spatialCoverage: 'India',
+  temporalCoverage: '2015-03/..',
+  creator: { '@type': 'Organization', name: 'Project FINER', url: SITE },
+  license: 'https://github.com/ksabhinav/projectfiner/blob/main/LICENSE',
+  isAccessibleForFree: true,
+};
+const webSiteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Project FINER',
+  url: SITE,
+  description: defaultDescription,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: { '@type': 'EntryPoint', urlTemplate: `${SITE}/ask/?q={search_term_string}` },
+    'query-input': 'required name=search_term_string',
+  },
+};
 ---
 
 <!DOCTYPE html>
@@ -15,6 +60,7 @@ const base = import.meta.env.BASE_URL;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
   <title>{title}</title>
+  <link rel="canonical" href={canonicalUrl} />
 
   <!-- Atlas favicons —  bump version to force re-fetch when redesigned -->
   <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg?v=2`} />
@@ -28,19 +74,25 @@ const base = import.meta.env.BASE_URL;
 
   <!-- Open Graph / WhatsApp / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://projectfiner.com/" />
+  <meta property="og:url" content={canonicalUrl} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content="https://projectfiner.com/og-image.png?v=2" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Project FINER" />
+  <meta property="og:locale" content="en_IN" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content="https://projectfiner.com/og-image.png?v=2" />
+
+  <!-- JSON-LD structured data — Organization + Dataset + WebSite SearchAction -->
+  <script type="application/ld+json" set:html={JSON.stringify(orgLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(datasetLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(webSiteLd)} />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
