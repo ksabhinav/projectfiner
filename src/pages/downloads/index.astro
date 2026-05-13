@@ -15,15 +15,36 @@ const neStates = [
   { name: 'Sikkim',            meta: '4 quarters · 6 districts · 3 categories · 12 CSVs',     slug: 'sikkim' },
 ];
 
+// Other major states already integrated (south, east, central). Stats from
+// SQLite slbc_data (refreshed May 2026).
 const otherStates = [
-  { name: 'Bihar',        meta: '25 quarters · 38 districts · 60 categories · 334 CSVs', slug: 'bihar' },
-  { name: 'Jharkhand',    meta: '10 quarters · 24 districts · 64 categories · 472 CSVs', slug: 'jharkhand' },
-  { name: 'Odisha',       meta: '8 quarters · 30 districts · 50 categories · 175 CSVs',  slug: 'odisha' },
-  { name: 'Chhattisgarh', meta: '12 quarters · 33 districts · 4 categories · 48 CSVs',   slug: 'chhattisgarh' },
-  { name: 'West Bengal',  meta: '38 quarters · 23 districts · 22 categories · 331 CSVs', slug: 'west-bengal' },
-  { name: 'Karnataka',    meta: '10 quarters · 31 districts · 40 categories',            slug: 'karnataka' },
-  { name: 'Kerala',       meta: '23 quarters · 14 districts · 7 categories',             slug: 'kerala' },
-  { name: 'Tamil Nadu',   meta: '10 quarters · 38 districts · 33 categories',            slug: 'tamil-nadu' },
+  { name: 'Bihar',          meta: '25 quarters · 38 districts · 60 categories',           slug: 'bihar' },
+  { name: 'Jharkhand',      meta: '10 quarters · 24 districts · 64 categories',           slug: 'jharkhand' },
+  { name: 'Odisha',         meta: '8 quarters · 30 districts · 50 categories',            slug: 'odisha' },
+  { name: 'Chhattisgarh',   meta: '14 quarters · 33 districts · 4 categories',            slug: 'chhattisgarh' },
+  { name: 'West Bengal',    meta: '38 quarters · 23 districts · 22 categories',           slug: 'west-bengal' },
+  { name: 'Karnataka',      meta: '10 quarters · 31 districts · 40 categories',           slug: 'karnataka' },
+  { name: 'Kerala',         meta: '23 quarters · 14 districts · 7 categories',            slug: 'kerala' },
+  { name: 'Tamil Nadu',     meta: '10 quarters · 38 districts · 33 categories',           slug: 'tamil-nadu' },
+  { name: 'Andhra Pradesh', meta: '20 quarters · 26 districts · 5 categories',            slug: 'andhra-pradesh' },
+  { name: 'Telangana',      meta: '13 quarters · 33 districts · 4 categories',            slug: 'telangana' },
+  { name: 'Maharashtra',    meta: '3 quarters · 36 districts · 20 categories',            slug: 'maharashtra' },
+  { name: 'Madhya Pradesh', meta: '6 quarters · 55 districts · CD-ratio only',            slug: 'madhya-pradesh' },
+  { name: 'Uttar Pradesh',  meta: '25 quarters · 75 districts · 16 categories',           slug: 'uttar-pradesh' },
+  { name: 'Uttarakhand',    meta: '14 quarters · 13 districts · 21 categories',           slug: 'uttarakhand' },
+  { name: 'Gujarat',        meta: '36 quarters · 33 districts · 13 categories',           slug: 'gujarat' },
+  { name: 'Rajasthan',      meta: '2 quarters · 33 districts · 18 categories',            slug: 'rajasthan' },
+  { name: 'Haryana',        meta: '37 quarters · 22 districts · 6 categories',            slug: 'haryana' },
+  { name: 'Himachal Pradesh', meta: '1 quarter · 12 districts · 15 categories',           slug: 'himachal-pradesh' },
+];
+
+// UT / National Capital — published by the respective UTLBC (UT Level
+// Bankers' Committee) or NCT SLBC. Smaller scale but data is district-wise.
+const utStates = [
+  { name: 'NCT of Delhi',   meta: '13 quarters · 11 districts · CD ratio + branches',  slug: 'delhi' },
+  { name: 'Jammu & Kashmir', meta: '6 quarters · 20 districts · CD ratio + branches',  slug: 'jammu-kashmir' },
+  { name: 'Ladakh',         meta: '1 quarter · 2 districts · CD ratio + branches',     slug: 'ladakh' },
+  { name: 'Goa',            meta: '23 quarters · 2 districts · branch network only',   slug: 'goa' },
 ];
 ---
 
@@ -51,11 +72,25 @@ const otherStates = [
       ))}
     </div>
 
-    <div class="dl-section-eye">SLBC bookers · Other states · 8 states</div>
+    <div class="dl-section-eye">SLBC booklets · Other states · {otherStates.length} states</div>
     <div class="dl-grid">
       {otherStates.map(state => (
         <a class="dl-card" href={`${base}slbc-data/${state.slug}/download`}>
           <div class="dl-card-eye">SLBC {state.name}</div>
+          <div class="dl-card-name">{state.name}<span class="meta-suffix"> · all quarters</span></div>
+          <div class="dl-card-meta">{state.meta}</div>
+          <div class="dl-card-actions">
+            <span class="dl-btn primary">Browse →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="dl-section-eye">UTLBC / NCT · {utStates.length} UTs &amp; Goa</div>
+    <div class="dl-grid">
+      {utStates.map(state => (
+        <a class="dl-card" href={`${base}slbc-data/${state.slug}/download`}>
+          <div class="dl-card-eye">{state.slug === 'goa' ? 'SLBC' : state.slug === 'delhi' ? 'SLBC' : 'UTLBC'} {state.name}</div>
           <div class="dl-card-name">{state.name}<span class="meta-suffix"> · all quarters</span></div>
           <div class="dl-card-meta">{state.meta}</div>
           <div class="dl-card-actions">
