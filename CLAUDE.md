@@ -38,8 +38,8 @@ projectfiner/
 │
 ├── src/
 │   ├── layouts/
-│   │   ├── BaseLayout.astro                # Base HTML shell (fonts, global CSS, OG meta tags, <slot />)
-│   │   └── PageLayout.astro                # Extends BaseLayout with Header + Footer; accepts activeSubNav prop
+│   │   ├── BaseLayout.astro                # Base HTML shell (fonts, global CSS, OG meta tags, canonical URL, JSON-LD, <slot />)
+│   │   └── PageLayout.astro                # Extends BaseLayout with Header + Footer; accepts activeSubNav + description props
 │   │
 │   ├── components/
 │   │   ├── Header.astro                    # Shared nav bar with frosted glass capsule buttons + optional analysis sub-nav
@@ -50,9 +50,12 @@ projectfiner/
 │   │   ├── map/                            # Map components (extracted from index.astro)
 │   │   │   ├── MapPanel.svelte             # Left panel: mode toggle, indicator/metric/state dropdowns, outlet toggle, search (612 lines)
 │   │   │   ├── TimelineSlider.svelte       # Vertical quarterly timeline with round dot marks, drag/click (321 lines)
-│   │   │   ├── MapLegend.svelte            # Color legends for banking + capital markets modes (262 lines)
+│   │   │   ├── MapLegend.svelte            # Choropleth legend + live source citation (per indicator/quarter/state)
 │   │   │   ├── FocusOverlay.svelte         # District focus: SVG shape + value overlay on double-click (258 lines)
-│   │   │   └── InfoTooltip.svelte          # Hover (i) popover with indicator/metric descriptions (88 lines)
+│   │   │   ├── InfoTooltip.svelte          # Hover (i) popover with indicator/metric descriptions (88 lines)
+│   │   │   ├── IndicatorStrip.svelte       # Top strip (What/When/Where cells) — hosts the FindingButton
+│   │   │   ├── FindingButton.svelte        # Vermillion "A finding" pill — fires finer:show-finding
+│   │   │   └── FactCard.svelte             # Modal that cycles through public/findings.json entries
 │   │   └── analysis/
 │   │       ├── DataExplorer.svelte         # Interactive data explorer (Plotly charts, correlation, CSV upload)
 │   │       ├── DistrictRankings.svelte     # Sortable leaderboard with traffic-light badges
@@ -80,7 +83,9 @@ projectfiner/
 │   │   ├── map-bridge.ts                   # TypeScript event bridge for map↔Svelte communication (finer:* custom events)
 │   │   ├── map-indicators.ts               # 16 indicator definitions (shared between map and analysis pages)
 │   │   ├── format-utils.ts                 # Shared prettyFieldName(), fmtNum(), fmtWithUnit(), normalizePeriod(), periodLabel()
-│   │   └── insights-data.ts               # 13 curated Insight objects with real SLBC data
+│   │   ├── insights-data.ts                # 13 curated Insight objects with real SLBC data (legacy /analysis/insights/ page)
+│   │   ├── findings-data.ts                # 25 typed Finding entries (mirrors public/findings.json) for future programmatic use
+│   │   └── indicator-sources.ts            # getSourceCitation(indicator, quarter, state) → label/url/attribution; powers MapLegend citation
 │   │
 │   └── styles/
 │       └── global.css                      # Design system CSS custom properties + shared classes
@@ -98,6 +103,10 @@ projectfiner/
     ├── data/
     │   └── district_boundaries.geojson     # District boundaries (808 total) with capital markets counts
     ├── og-image.jpg                         # Open Graph image for social sharing (1200×630, rural banking illustration)
+    ├── findings.json                        # 25 curated finding entries — backs the FactCard "A finding" modal
+    ├── sitemap.xml                          # Static sitemap (25 canonical pages), referenced by robots.txt + GSC
+    ├── robots.txt                           # Allow HTML, disallow heavy data dirs, sitemap pointer
+    ├── BingSiteAuth.xml                     # Bing Webmaster Tools verification token
     ├── pincode_coords.json                 # Pincode → [lat, lng] lookup
     ├── district_lgd_codes.json             # 765 districts with LGD codes + 109 aliases
     ├── slbc-data/
@@ -146,11 +155,14 @@ projectfiner/
 │   ├── match_districts.py                  # Shared district name → LGD code resolver
 │   ├── export_timeseries.py               # SQLite → {state}_fi_timeseries.json
 │   ├── export_phonepe.py                  # SQLite → phonepe_district_timeseries.json
-│   └── aggregate_banking_outlets.py       # Raw outlets → district_counts.json
+│   ├── aggregate_banking_outlets.py       # Raw outlets → district_counts.json
+│   └── regenerate_indicator_files_from_states.py   # No-DB regenerator: reads _fi_timeseries.json directly, applies broad fallback chain, writes public/indicators/*.json
 │
 ├── validate_data.py                        # Automated data quality checks (7 validators)
 ├── DATA_COMPLETENESS.md                    # Coverage matrix: 9 indicators × 22 states
-└── DATA_VALIDATION_REPORT.md              # Latest validation findings
+├── DATA_VALIDATION_REPORT.md               # Latest validation findings
+├── AUDIT_REPORT.md                         # Full data-quality audit: staleness, outliers, missing states, refresh queue
+└── SEO_CHECKLIST.md                        # One-time manual SEO steps (GSC verify, sitemap submit, Bing, backlinks)
 ```
 
 ## Architecture Notes
@@ -222,6 +234,39 @@ Bottom-right of the main map renders a **clickable state navigator** (200×180 p
 - `import.meta.env.BASE_URL` returns `/` (with trailing slash) for the custom domain `projectfiner.com`
 - All hrefs in Astro templates use `${base}path` (no extra `/` needed since base has trailing slash)
 - Inline scripts access base via `window.__FINER_BASE` set by a `define:vars` script block
+
+### Source citation (legend footer)
+
+`MapLegend.svelte` renders a live citation under the colour ramp:
+- **SLBC indicators**: `Source: SLBC <State> · <Quarter>` linking to the state's SLBC portal (e.g. `slbcrajasthan.in`). All-India view collapses to `Source: SLBC quarterly booklets · <Quarter>`.
+- **PhonePe**: `PhonePe Pulse · <Quarter>` → `github.com/PhonePe/pulse`.
+- **RBI / NRLM / NFHS / UIDAI / Capital markets / SHRUG**: full attribution with proper licence note (CC BY-NC-SA for SHRUG layers).
+
+Centralised in `src/lib/indicator-sources.ts`. The legend listens for `finer:indicatorChange`, `finer:quarterChange`, `finer:stateFilterChange` events and re-derives the citation immediately. Long attribution shows on hover as `title` tooltip. **Do not add the per-state SLBC URL map anywhere else** — single source of truth.
+
+### "A finding" feature (FactCard modal)
+
+Vermillion **"A finding"** pill on `IndicatorStrip.svelte` (right side, before the ⌘K search) fires `finer:show-finding`. `FactCard.svelte` listens, fetches `public/findings.json` (25 verified entries, each backed by exact numbers from `public/indicators/*.json`), and shows a card with title, hero stat, lede, source, plus three actions:
+- **Open in map** → fires `finer:indicatorChange` + `finer:quarterChange` + `finer:stateFilterChange` to deep-link the choropleth to the finding's `(indicator, quarter, state)`
+- **Read the note** → `/fact/<slug>` (page doesn't exist yet — graceful 404)
+- **Another →** → cycles through the 25 entries
+
+To add a finding: edit `public/findings.json` directly (shape: `Finding` interface in `FactCard.svelte`). Also exists as typed TS in `src/lib/findings-data.ts` for programmatic use, but the JSON is canonical because the FactCard fetches it at runtime.
+
+### SEO infrastructure
+
+Code-side SEO ships through `BaseLayout.astro`:
+- `<link rel="canonical">` per page (auto-derived from `Astro.url.pathname`)
+- `og:url` matches canonical; `og:locale en_IN`
+- Three JSON-LD blocks injected per page: `Organization`, `Dataset` (eligible for Google Dataset Search), `WebSite` with `SearchAction` (in-result search box pointing at `/ask/?q=...`)
+- `PageLayout.astro` accepts a `description` prop and forwards to `BaseLayout` — used by 23 pages to surface unique snippets in Google results
+
+Static helpers in `public/`:
+- `sitemap.xml` — 25 canonical pages, hand-maintained (add new pages here too)
+- `robots.txt` — allows HTML, disallows heavy data dirs (`/indicators/`, `/slbc-data/`, etc) so Google's crawl budget goes to indexable HTML
+- `BingSiteAuth.xml` — Bing Webmaster Tools verification token
+
+Manual steps (Google Search Console DNS verify, sitemap submit, URL Inspection, Bing) are documented in `SEO_CHECKLIST.md`.
 
 ### Social Sharing (Open Graph)
 
@@ -473,7 +518,7 @@ Three analysis sub-pages with shared sub-nav tabs (Rankings, Trends):
 - District profile view with sparkline cards (inline SVG `<polyline>`, no Plotly dependency for cards)
 - QoQ change arrows: green ▲ for increase, red ▼ for decrease
 - NPA metrics have **inverted logic** (decrease is good → green)
-- Category filter pills to narrow visible metrics
+- **Indicator → Sub-metric** dropdowns (replaced the 30-pill row in May 2026). Default indicator auto-picks the first available so the page lands on a populated view; picking a specific sub-metric auto-expands its Plotly chart, eliminating the "scroll past 80 cards to reach the chart" pain.
 - Click-to-expand any card → loads full Plotly time series chart via dynamic import
 - Uses `flattenTimeseries()` and `normalizePeriod()` from inline helpers
 
@@ -844,6 +889,13 @@ python3 db/extract.py validate --state assam  # Run quality checks only
 ```
 Config: `db/state_config.json` — per-state metadata (script paths, PDF dirs, source URLs, notes).
 
+**No-DB regenerator**: `db/regenerate_indicator_files_from_states.py` is the **canonical path** for rebuilding `public/indicators/*.json` without rebuilding the SQLite DB. It reads each state's `_fi_timeseries.json` directly and applies a much broader category + field fallback chain than `db/export_indicator_files.py` does — covering aliases like `housing_finance`, `housing_loan`, `pmegp_3/4`, `stand_up_india_p2`, `pmmy_mudra`, `mudra_2`, `apy_2`, plus singular/plural field-name variants (`shishu_account` vs `shishu_no`, `pmjdy_total_ac` vs `total_pmjdy_no`, etc.). Run after extending any state's extractor or fixing a field-name bug:
+```bash
+python3 db/regenerate_indicator_files_from_states.py                       # all 15 SLBC indicators
+python3 db/regenerate_indicator_files_from_states.py social_security pmegp # specific indicators
+```
+The script refuses to write `digital_transactions` quarters that lack PhonePe `transaction_count`/`_amount` (so the headline UPI metric never goes silently missing). PhonePe Pulse currently ceilings at Mar 2024.
+
 **Field Mappings**: `db/field_mappings.json` — 84 canonical field definitions mapping 543 state-specific variants across 16 indicators. Includes `reverse_lookup` (189 entries) and `haryana_field_map` (24 entries for Haryana's non-standard format).
 
 ## Progressive Loading (indicators/)
@@ -937,6 +989,8 @@ Then also rebuild the RAG index (see Ask/RAG section). The frontend caches loade
 - Merged into `slbcData` on the frontend by matching state + district + period
 
 **On map**: Part of "Digital Transactions" indicator group. Default metric when selecting Digital Transactions.
+
+**Upstream staleness**: PhonePe Pulse currently ships through **Mar 2024** (Q4 FY24) only. Quarters 2024-06 onwards have NO PhonePe data, only SLBC-side digital-coverage fields. The regenerator script refuses to write `digital_transactions` quarter files that lack PhonePe data; selecting Dec 2025 + Digital Transactions falls back automatically to Mar 2024 via the homepage's quarter-fallback chain (window widened to 12 quarters so the 7-quarter gap resolves cleanly). The italic "Data from Mar 2024" hint appears on tooltips. Nothing to do until upstream Pulse refreshes.
 
 ## Aadhaar Enrollment Data (UIDAI)
 
@@ -1164,6 +1218,13 @@ No Vercel redeployment needed — the API reads fresh index from R2 on next cold
 58. **Snapshot indicators lock the slider via `timePoints`**: `rbi_banking_outlets` (May 2026), `capital_markets_access` (May 2025), `nrlm_shg` (Mar 2026), `rbi_bsr_credit` (Mar 2025), `elevation_terrain` (Feb 2000), `crop_production` (Census 2011), `nfhs_health_insurance` (Mar 2021 + Mar 2016), `aadhaar_enrollment` (3 quarters in 2025), `digital_transactions` (Mar 2024 cap due to PhonePe Pulse). When selected, `switchSliderToTimePoints()` replaces the global slider quarters; `restoreSliderToManifest()` restores them on switch-away.
 59. **Mobile timeline is horizontal at the bottom**: TimelineSlider.svelte detects `(max-width: 640px)` via matchMedia. On mobile, position flips from `right: 16px; vertical` to `left/right pinned, bottom: 16px; horizontal`. Mobile MapLegend is `display: none`. Mobile FocusOverlay close button is a vermillion pill anchored bottom-center.
 60. **OG image regeneration**: `python3 scripts/build_og_image.py` renders `public/og-image.svg` → `public/og-image.png` via cairosvg + brew cairo (needs `DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib`). The PNG must stay 1200×630 for proper WhatsApp/Twitter card sizing.
+61. **`db/regenerate_indicator_files_from_states.py` is the canonical no-DB regenerator**: After extending any state's extractor OR adding a new field-name variant, run this script — NOT `db/export_indicator_files.py`. The regenerator pulls from `public/slbc-data/<state>/<state>_fi_timeseries.json` directly and applies a much broader fallback chain (15 SLBC indicators, ~30 quarters each). The DB-based export script still works but its fallback lists are narrower; running it without first updating its `INDICATORS` dict will silently drop states that the regenerator catches.
+62. **DISTRICT_ALIASES maps GeoJSON-name → data-name**: When you add a new alias because data exists but a polygon won't paint, the key is the GeoJSON `DISTRICT` (after `normDist`) and the value is the data-side district name. Reverse direction is wrong and will fail silently. Note this is the polygon-rendering alias and works alongside the state-qualified `resolveLookup` from #52 — both are needed. May 2026 audit additions: LEPA RADA, KAMRUP RURAL, KOCH BIHAR→COOCHBEHAR (one word — WB source uses no space), SOUTH PARGANAS→PARAGANAS SOUTH (word order), Maharashtra renames AHILYANAGAR/CHHATRAPATI SAMBHAJI NAGAR/DHARASHIV → old names AHMEDNAGAR/AURANGABAD/OSMANABAD (SLBC source still uses pre-2023 names), Odisha BALASORE/SUBARNAPUR/JAGATSINGHPUR, Chhattisgarh SARANGARHBILAIGARH, Telangana MEDCHALMALKAJGIRI, Jharkhand EAST SINGHBHUM/SAHIBGANJ. Test: re-run `db/regenerate_indicator_files_from_states.py` then count unpaintable rows — should be 0.
+63. **`?state=<slug>` URL focus race during init**: The init `flyToNE` call in `loadBankingData().then()` (around line 1402 of `index.astro`) was unconditional and wiped any URL-driven state focus that landed milliseconds earlier from the polling block in Section 5 (URL parameter support). Fix is in place: the callback now checks `bankingStateFilter` first and either skips `flyToNE` or re-issues `flyToBounds(stateBounds)` to lock in the URL-driven focus. Don't add another unconditional flyTo in the same chain. See also #57 for the broader shareable-URL story.
+64. **digital_transactions Mar 2024 ceiling — detail**: Extends gotcha #58. PhonePe Pulse hasn't released data past Q4 FY24. Quarters 2024-06 onwards contain only SLBC digital-coverage fields, no PhonePe `transaction_count`/`_amount` — and the default Digital Transactions metric is "UPI Transaction Count (PhonePe)" so those quarters would render fake-empty. The regenerator (#61) refuses to write `digital_transactions/<quarter>.json` for any quarter lacking PhonePe data. Selecting Dec 2025 + Digital Transactions falls back to Mar 2024 via the 12-quarter fallback window in `loadIndicatorData`. Don't manually generate empty digital_transactions files.
+65. **`src/lib/indicator-sources.ts` is the canonical SLBC state-URL map**: When a state's SLBC portal moves or you add a state, edit only this file. MapLegend reads it via `getSourceCitation(indicator, quarter, state)`. The about-page sources section and any other SLBC URL list should be kept in sync but the citation map is authoritative for the legend.
+66. **GitHub Pages deploys only on push to `main`**: `.github/workflows/deploy.yml` triggers on `branches: [main]` only. Branch protection on `main` blocks direct pushes — use a PR. The workflow: develop on a feature branch → PR → merge → ~2-3 min until projectfiner.com updates. Don't try `git push origin main` directly; it returns HTTP 403.
+67. **Static sitemap at `public/sitemap.xml` — update manually**: When you add a new page under `src/pages/`, append its URL to `public/sitemap.xml`. Chose static over `@astrojs/sitemap` to avoid `package-lock.json` churn — switching later is a one-line `npm install @astrojs/sitemap` + an `astro.config.mjs` integration entry.
 
 ## Data Quality Pipeline
 
