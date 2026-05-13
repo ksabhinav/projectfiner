@@ -80,7 +80,10 @@
   // User selections
   let selectedState = $state('meghalaya');
   let selectedDistrict = $state('');
-  let selectedCategoryFilter = $state('all');
+  // Indicator picker (top-level grouping): default '' means "pick first available".
+  // Sub-metric picker (within that indicator): 'all' shows every card, otherwise a single metric key.
+  let selectedCategoryFilter = $state('');
+  let selectedSubMetric = $state('all');
   let expandedCard: string | null = $state(null);
 
   // Flattened data: array of { district, period, normalizedPeriod, ...fields }
@@ -230,10 +233,42 @@
     });
   });
 
-  // Derived: filtered metrics based on category filter
-  let filteredMetrics: MetricInfo[] = $derived.by(() => {
-    if (selectedCategoryFilter === 'all') return allMetrics;
+  // Auto-pick the first available indicator on load so the user lands on a
+  // populated view instead of an empty "all" grid of 100+ cards.
+  $effect(() => {
+    if (!selectedCategoryFilter && availableCategories.length > 0) {
+      selectedCategoryFilter = availableCategories[0];
+    }
+  });
+
+  // Derived: metrics in the currently-selected indicator (sub-metric pool).
+  let metricsInIndicator: MetricInfo[] = $derived.by(() => {
+    if (!selectedCategoryFilter) return [];
     return allMetrics.filter(m => m.category === selectedCategoryFilter);
+  });
+
+  // Derived: filtered metrics based on indicator + sub-metric filter
+  let filteredMetrics: MetricInfo[] = $derived.by(() => {
+    if (!selectedCategoryFilter) return allMetrics;
+    const inInd = allMetrics.filter(m => m.category === selectedCategoryFilter);
+    if (selectedSubMetric === 'all') return inInd;
+    return inInd.filter(m => m.key === selectedSubMetric);
+  });
+
+  // When the user picks a specific sub-metric, auto-expand the card so the
+  // full Plotly chart renders immediately (the user's pain was scrolling
+  // through 80+ cards to find the chart).
+  $effect(() => {
+    if (selectedSubMetric !== 'all') {
+      expandedCard = selectedSubMetric;
+      ensurePlotly();
+    }
+  });
+
+  // Reset sub-metric when indicator changes
+  $effect(() => {
+    selectedCategoryFilter;
+    selectedSubMetric = 'all';
   });
 
   // Period labels map
@@ -284,7 +319,8 @@
       rawData = await res.json();
       flatRecords = flattenTimeseries(rawData);
       selectedDistrict = '';
-      selectedCategoryFilter = 'all';
+      selectedCategoryFilter = '';   // will auto-pick first available via $effect
+      selectedSubMetric = 'all';
       expandedCard = null;
     } catch (e: any) {
       error = `Failed to load ${slug} data: ${e.message}`;
@@ -495,27 +531,29 @@
       </div>
     {/if}
 
-    <!-- Category filter pills (ordered: core FI first) -->
+    <!-- Two-tier indicator pickers: Indicator → Sub-metric.
+         Replaces the long row of category pills that made it hard to scroll
+         to the chart. Selecting a sub-metric auto-expands its Plotly chart. -->
     {#if availableCategories.length > 0}
-      <div class="category-pills">
-        <button
-          class="cat-pill"
-          class:active={selectedCategoryFilter === 'all'}
-          onclick={() => selectedCategoryFilter = 'all'}
-        >
-          All ({allMetrics.length})
-        </button>
-        {#each availableCategories as cat}
-          {@const count = allMetrics.filter(m => m.category === cat).length}
-          <button
-            class="cat-pill"
-            class:active={selectedCategoryFilter === cat}
-            onclick={() => selectedCategoryFilter = cat}
-            data-tip={CATEGORY_DESCRIPTIONS[cat] || ''}
-          >
-            {CATEGORY_INFO[cat] || prettyCategoryName(cat)} ({count})
-          </button>
-        {/each}
+      <div class="indicator-pickers">
+        <div class="control-group">
+          <label class="ctrl-label" for="indicator-select">Indicator</label>
+          <select id="indicator-select" bind:value={selectedCategoryFilter} class="select">
+            {#each availableCategories as cat}
+              {@const count = allMetrics.filter(m => m.category === cat).length}
+              <option value={cat}>{CATEGORY_INFO[cat] || prettyCategoryName(cat)} ({count})</option>
+            {/each}
+          </select>
+        </div>
+        <div class="control-group">
+          <label class="ctrl-label" for="submetric-select">Sub-metric</label>
+          <select id="submetric-select" bind:value={selectedSubMetric} class="select">
+            <option value="all">All sub-metrics ({metricsInIndicator.length})</option>
+            {#each metricsInIndicator as m}
+              <option value={m.key}>{m.label}</option>
+            {/each}
+          </select>
+        </div>
       </div>
     {/if}
 
@@ -660,6 +698,19 @@
     align-items: flex-end;
     flex-wrap: wrap;
   }
+  .indicator-pickers {
+    display: flex;
+    gap: 16px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    padding: 14px 16px;
+    background: rgba(184,96,62,0.04);
+    border: 1px solid rgba(184,96,62,0.12);
+    border-radius: 8px;
+  }
+  .indicator-pickers .control-group { flex: 1 1 220px; min-width: 200px; }
   .control-group { display: flex; flex-direction: column; gap: 5px; }
   .ctrl-label {
     font-family: var(--font-sans);
