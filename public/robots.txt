@@ -1,0 +1,21 @@
+# Project FINER — Financial Inclusion in the North East Region
+# https://projectfiner.com
+
+User-agent: *
+Allow: /
+
+# Don't crawl the per-quarter indicator JSON files (heavy data payloads, not
+# meant to be search-indexed individually). The HTML pages link them as data
+# assets, not crawl targets.
+Disallow: /indicators/
+Disallow: /digital-payments/
+Disallow: /DPSCs/
+Disallow: /MFDs/
+Disallow: /banking-outlets/
+Disallow: /slbc-data/
+
+# Allow the OG image so previews work in chat apps + search snippets.
+Allow: /og-image.png
+Allow: /og-image.jpg
+
+Sitemap: https://projectfiner.com/sitemap.xml

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Project FINER sitemap. Update when new pages are added.
+     If a page is missing here, request indexing manually via Google Search Console
+     URL Inspection. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://projectfiner.com/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://projectfiner.com/about/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://projectfiner.com/ask/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://projectfiner.com/analysis/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://projectfiner.com/analysis/rankings/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://projectfiner.com/analysis/trends/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://projectfiner.com/analysis/insights/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://projectfiner.com/capital-markets/data-download/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Per-state SLBC download pages (auto: one per state directory) -->
+  <url><loc>https://projectfiner.com/slbc-data/arunachal-pradesh/download/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://projectfiner.com/slbc-data/assam/download/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://projectfiner.com/slbc-data/bihar/download/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://projectfiner.com/slbc-data/chhattisgarh/download/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://projectfiner.com/slbc-data/jharkhand/download/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://projectfiner.com/slbc-data/karnataka/download/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://projectfiner.com/slbc-data/kerala/download/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://projectfiner.com/slbc-data/manipur/download/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://projectfiner.com/slbc-data/meghalaya/download/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://projectfiner.com/slbc-data/mizoram/download/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://projectfiner.com/slbc-data/nagaland/download/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://projectfiner.com/slbc-data/odisha/download/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://projectfiner.com/slbc-data/sikkim/download/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://projectfiner.com/slbc-data/tamil-nadu/download/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://projectfiner.com/slbc-data/tripura/download/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://projectfiner.com/slbc-data/west-bengal/download/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>
