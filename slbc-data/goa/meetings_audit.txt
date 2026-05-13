@@ -1,0 +1,82 @@
+Goa SLBC — meetings & district-wise data audit
+==============================================
+Source portal:  https://slbcgoa.com  (HTTP 200, verified 2026-05-13)
+SLBC convenor:  State Bank of India, Local Head Office, EDC Plaza, Patto, Panaji
+Districts:      2 (North Goa lgd_code=551, South Goa lgd_code=552)
+State LGD:      30
+
+Meetings archive
+----------------
+Meeting   Quarter         Agenda PDF                                        DW branch table   Other DW data
+93rd-109th  2014?-2020-Mar  Various (older scans)                            -                 -
+110th       Jun 2020        AGENDA and BACKGROUND PAPERS OF 110 SLBC...     YES               -
+111th       Sep 2020        AGENDA OF 111 SLBC MEETING                       YES               -
+112th       Dec 2020        AGENDA and BACKGROUND PAPERS OF 112 SLBC...     YES               -
+113th       Mar 2021        AGENDA and BACKGROUND PAPERS OF 113 SLBC...     YES               -
+114th       Jun 2021        AGENDA and BACKGROUND PAPERS OF 114 SLBC...     YES               -
+115th       Sep 2021        AGENDA AND BACKGROUND PAPERS OF 115 SLBC SEPT21  YES               -
+116th       Dec 2021        AGENDA OF 116 SLBC MEETING DEC 21               YES               -
+117th       Mar 2022        AGENDA OF 117 SLBC MEETING                      YES               -
+118th       Jun 2022        AGENDA OF 118 SLBC MEETING                      YES               -
+119th       Sep 2022        AGENDA 119th SLBC MEETING                       YES               -
+120th       Dec 2022        AGENDA OF 120th SLBC MEETING                    YES               -
+121st       Mar 2023        AGENDA 121st SLBC MEETING                       YES               -
+122nd       Jun 2023        AGENDA 122nd SLBC MEETING                       YES               -
+123rd       Sep 2023        123rd AGENDA OF SLBC MEETING                    YES               ACP target N/S
+124th       Dec 2023        AGENDA OF 124th SLBC MEETING                    YES               ACP target N/S
+125th       Mar 2024        AGENDA OF 125th SLBC MEETING                    YES               -
+126th       Jun 2024        AGENDA OF 126th SLBC MEETING                    YES               -
+127th       Sep 2024        127th SLBC MEETING AGENDA                       YES               -
+128th       Dec 2024        AGENDA OF 128th SLBC MEETING                    YES               ACP target N/S
+129th       Mar 2025        Agenda Background Papers (129th)                YES               -
+130th       Jun 2025        AGENDA OF 130th SLBC MEETING                    YES               -
+131st       Sep 2025        AGENDA 131st SLBC MEETING                       YES               -
+132nd       Dec 2025        132d SLBC AGENDA                                YES               ACP target N/S
+
+Granularity finding
+-------------------
+ONLY consistently district-wise data across all 23 quarters: BANKING NETWORK
+(Agenda No. 3 / "Banking Scenario of the State"). Format:
+  Type             Banks   North Goa (Rural / SU)   South Goa (Rural / SU)   Total
+  Public Sector    12      ...                      ...                      ...
+  ...
+  Grand Total      48      <north_total>            <south_total>            <state_total>
+
+Pre-2021 agendas (110-113) lack the Rural/SU split and end with "Total" not
+"Grand Total" — same 4-column shape (banks, north, south, total) is handled
+by a fallback regex in extract_goa.py.
+
+State-aggregate only (BANK-WISE, NOT DISTRICT-WISE):
+- Deposits, Advances, CD Ratio
+- PMJDY
+- KCC
+- SHG / Bank linkage
+- MUDRA / PMMY
+- APY / Social Security
+- Education loan
+- Housing / PMAY
+- All Aadhaar-seeding & authentication data
+
+This is the same structural pattern as Madhya Pradesh and partly Andhra Pradesh
+in FINER: a state whose SLBC reports most categories per-bank rather than
+per-district. Branch counts are the only quarterly per-district metric.
+
+ACP target (Agenda No. 9): N/S split, but only appears in Q4 (Dec-quarter)
+agendas (annual planning). Not ingested — annual cadence, FINER timeseries
+schema assumes quarterly.
+
+FLC camp counts: aggregated "491 camps in North Goa and 463 Camps in South Goa"
+mentioned in narrative — no per-quarter structured table.
+
+Goa Branch counts also have a known SLBC reporting anomaly in 116th–121st
+meetings (Dec 2021 → Mar 2023): SFB Rural jumps from 0 to 101 then back to 0,
+inflating the totals (~1024-1031 vs the ~770-810 baseline). The data is
+faithful to source — likely an accounting change re: FI Sub-Service Area
+touchpoints, undone in the 122nd meeting.
+
+Extracted output
+----------------
+File:                   slbc-data/goa/goa_fi_timeseries.json
+Quarters covered:       23 (Jun 2020 → Dec 2025)
+Districts per quarter:  2 (North Goa, South Goa)
+Field:                  branch_network__total_branch (count, integer)

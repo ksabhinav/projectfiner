@@ -26,6 +26,8 @@ const SLBC_STATE_URLS: Record<string, { name: string; url: string }> = {
   'assam':              { name: 'Assam',           url: 'https://onlineslbcne.nic.in' },
   'bihar':              { name: 'Bihar',           url: 'https://www.slbcbihar.com/SlBCHeldMeeting.aspx' },
   'chhattisgarh':       { name: 'Chhattisgarh',    url: 'https://slbcchhattisgarh.com' }, // Dedicated SLBC CG site, Excel data-tables per meeting
+  'delhi':              { name: 'NCT of Delhi',    url: 'https://slbcdelhi.pnb.bank.in' }, // Convenor: Punjab National Bank (since April 2020)
+  'goa':                { name: 'Goa',             url: 'https://slbcgoa.com' }, // Convenor: State Bank of India; only branch_network is district-wise
   'gujarat':            { name: 'Gujarat',         url: 'https://slbcgujarat.in' },
   'haryana':            { name: 'Haryana',         url: 'https://slbcharyana.pnb.bank.in' },
   'jharkhand':          { name: 'Jharkhand',       url: 'https://onlineslbcne.nic.in' },
