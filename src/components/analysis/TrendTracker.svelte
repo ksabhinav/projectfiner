@@ -263,6 +263,36 @@
   // flips this to show every extracted field.
   let showAllMetrics = $state(false);
 
+  // Counts shown on the segmented control. Compute by walking the
+  // current district's records ONCE per mode — separate from the
+  // `allMetrics` derivation which is mode-dependent.
+  let coreMetricCount = $derived.by(() => {
+    if (districtRecords.length === 0) return 0;
+    const seen = new Set<string>();
+    for (const r of districtRecords) {
+      for (const key of Object.keys(r)) {
+        if (!key.includes('__')) continue;
+        const cat = key.split('__')[0];
+        if (EXCLUDED_CATEGORIES.has(cat)) continue;
+        if (TREND_TRACKER_WHITELIST.has(key)) seen.add(key);
+      }
+    }
+    return seen.size;
+  });
+  let allMetricCount = $derived.by(() => {
+    if (districtRecords.length === 0) return 0;
+    const seen = new Set<string>();
+    for (const r of districtRecords) {
+      for (const key of Object.keys(r)) {
+        if (!key.includes('__') || key === 'as_on_date') continue;
+        const cat = key.split('__')[0];
+        if (EXCLUDED_CATEGORIES.has(cat)) continue;
+        seen.add(key);
+      }
+    }
+    return seen.size;
+  });
+
   let allMetrics: MetricInfo[] = $derived.by(() => {
     if (districtRecords.length === 0) return [];
 
@@ -676,16 +706,33 @@
         <div class="loading-indicator">Loading...</div>
       {/if}
 
-      <!-- Whitelist / unfiltered toggle. Default = canonical metrics
-           only (the ~25 fields that 1:1 mirror the homepage choropleth
-           indicators). Toggled on, shows every extracted field
-           including OCR artefacts and extractor-fallback placeholders. -->
-      <label class="metric-mode-toggle" title={showAllMetrics
-        ? 'Switch back to the canonical ~25 indicators'
-        : 'Show every extracted field, including extractor artefacts'}>
-        <input type="checkbox" bind:checked={showAllMetrics} />
-        <span>{showAllMetrics ? 'All extracted fields' : 'Headline indicators only'}</span>
-      </label>
+      <!-- Whitelist / firehose toggle as a two-button segmented control.
+           Concrete counts ("Core · 24" / "All · 1,634") make the
+           trade-off legible without the user having to read jargon. -->
+      <div class="metric-mode" role="tablist" aria-label="Metric view">
+        <button
+          type="button"
+          role="tab"
+          aria-selected={!showAllMetrics}
+          class="metric-mode-btn"
+          class:active={!showAllMetrics}
+          onclick={() => { showAllMetrics = false; }}
+        >
+          Core
+          <span class="metric-mode-count">{coreMetricCount}</span>
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={showAllMetrics}
+          class="metric-mode-btn"
+          class:active={showAllMetrics}
+          onclick={() => { showAllMetrics = true; }}
+        >
+          All
+          <span class="metric-mode-count">{allMetricCount}</span>
+        </button>
+      </div>
     </div>
 
     <!-- District summary header -->
@@ -894,18 +941,26 @@
   .indicator-pickers .control-group { flex: 1 1 220px; min-width: 200px; }
   .control-group { display: flex; flex-direction: column; gap: 5px; }
 
-  /* Whitelist toggle — right-aligned mono pill, parks beside the
-     district selector. Active state (checked) lights the border
-     vermillion to signal the user is now viewing the firehose. */
-  .metric-mode-toggle {
+  /* Segmented control — "Core · 24" / "All · 1,634" — right-aligned
+     beside the district selector. Active segment fills with ink to
+     mirror the Atlas analysis sub-nav. Each segment shows a small
+     concrete count badge so the user knows what they're switching to. */
+  .metric-mode {
     margin-left: auto;
     display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 14px;
+    align-items: stretch;
     border: 1px solid var(--rule, #D9D2C5);
     border-radius: 99px;
+    overflow: hidden;
     background: transparent;
+  }
+  .metric-mode-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: transparent;
+    border: none;
     color: var(--ink-soft, #3D332A);
     font-family: var(--font-mono, 'IBM Plex Mono', monospace);
     font-size: 10px;
@@ -913,20 +968,26 @@
     letter-spacing: 0.06em;
     cursor: pointer;
     user-select: none;
-    transition: background 0.18s, border-color 0.18s, color 0.18s;
+    transition: background 0.18s, color 0.18s;
   }
-  .metric-mode-toggle:hover {
-    background: var(--paper-deep, #ECE5D6);
-    border-color: var(--ink, #1B140E);
+  .metric-mode-btn:hover { background: var(--paper-deep, #ECE5D6); }
+  .metric-mode-btn.active {
+    background: var(--ink, #1B140E);
+    color: var(--paper, #F4EFE6);
   }
-  .metric-mode-toggle input[type="checkbox"] {
-    accent-color: var(--vermillion, #B84A2E);
-    width: 12px; height: 12px;
-    margin: 0;
+  .metric-mode-count {
+    display: inline-block;
+    min-width: 22px;
+    padding: 0 5px;
+    border-radius: 9px;
+    background: rgba(0,0,0,0.08);
+    color: inherit;
+    font-size: 9.5px;
+    font-weight: 600;
+    text-align: center;
   }
-  .metric-mode-toggle:has(input:checked) {
-    border-color: var(--vermillion, #B84A2E);
-    color: var(--vermillion, #B84A2E);
+  .metric-mode-btn.active .metric-mode-count {
+    background: rgba(255,255,255,0.16);
   }
 
   .share-btn {
