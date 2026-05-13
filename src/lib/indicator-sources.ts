@@ -30,6 +30,8 @@ const SLBC_STATE_URLS: Record<string, { name: string; url: string }> = {
   'goa':                { name: 'Goa',             url: 'https://slbcgoa.com' }, // Convenor: State Bank of India; only branch_network is district-wise
   'gujarat':            { name: 'Gujarat',         url: 'https://slbcgujarat.in' },
   'haryana':            { name: 'Haryana',         url: 'https://slbcharyana.pnb.bank.in' },
+  'himachal-pradesh':   { name: 'Himachal Pradesh', url: 'https://slbchp.com' }, // Convenor: Punjab National Bank, Shimla
+  'jammu-kashmir':      { name: 'Jammu & Kashmir', url: 'https://www.jkslbc.com' },
   'jharkhand':          { name: 'Jharkhand',       url: 'https://onlineslbcne.nic.in' },
   'karnataka':          { name: 'Karnataka',       url: 'https://slbckarnataka.com' },
   'kerala':             { name: 'Kerala',          url: 'https://slbckerala.com' },

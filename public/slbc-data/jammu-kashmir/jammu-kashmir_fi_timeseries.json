@@ -1,0 +1,1116 @@
+{
+  "source": "SLBC Jammu Kashmir",
+  "state": "jammu-kashmir",
+  "periods": [
+    {
+      "period": "September 2022",
+      "districts": [
+        {
+          "district": "Anantnag",
+          "period": "September 2022",
+          "branch_network__total_branch": "138",
+          "credit_deposit_ratio__cd_ratio": "74.75",
+          "credit_deposit_ratio__gross_npa": "19548.0",
+          "credit_deposit_ratio__total_advance": "517927.0",
+          "credit_deposit_ratio__total_deposit": "692917.48"
+        },
+        {
+          "district": "Bandipora",
+          "period": "September 2022",
+          "branch_network__total_branch": "46",
+          "credit_deposit_ratio__cd_ratio": "87.91",
+          "credit_deposit_ratio__gross_npa": "9499.0",
+          "credit_deposit_ratio__total_advance": "139057.0",
+          "credit_deposit_ratio__total_deposit": "158184.15"
+        },
+        {
+          "district": "Baramulla",
+          "period": "September 2022",
+          "branch_network__total_branch": "169",
+          "credit_deposit_ratio__cd_ratio": "98.76",
+          "credit_deposit_ratio__gross_npa": "39813.0",
+          "credit_deposit_ratio__total_advance": "596084.0",
+          "credit_deposit_ratio__total_deposit": "603559.8"
+        },
+        {
+          "district": "Budgam",
+          "period": "September 2022",
+          "branch_network__total_branch": "102",
+          "credit_deposit_ratio__cd_ratio": "96.54",
+          "credit_deposit_ratio__gross_npa": "22637.0",
+          "credit_deposit_ratio__total_advance": "408949.0",
+          "credit_deposit_ratio__total_deposit": "423586.48"
+        },
+        {
+          "district": "Doda",
+          "period": "September 2022",
+          "branch_network__total_branch": "59",
+          "credit_deposit_ratio__cd_ratio": "63.81",
+          "credit_deposit_ratio__gross_npa": "4047.0",
+          "credit_deposit_ratio__total_advance": "178061.0",
+          "credit_deposit_ratio__total_deposit": "279046.06"
+        },
+        {
+          "district": "Ganderbal",
+          "period": "September 2022",
+          "branch_network__total_branch": "45",
+          "credit_deposit_ratio__cd_ratio": "85.87",
+          "credit_deposit_ratio__gross_npa": "10201.0",
+          "credit_deposit_ratio__total_advance": "153960.0",
+          "credit_deposit_ratio__total_deposit": "179289.6"
+        },
+        {
+          "district": "Jammu",
+          "period": "September 2022",
+          "branch_network__total_branch": "433",
+          "credit_deposit_ratio__cd_ratio": "34.77",
+          "credit_deposit_ratio__gross_npa": "137550.0",
+          "credit_deposit_ratio__total_advance": "1962066.94",
+          "credit_deposit_ratio__total_deposit": "5643172.05"
+        },
+        {
+          "district": "Kathua",
+          "period": "September 2022",
+          "branch_network__total_branch": "112",
+          "credit_deposit_ratio__cd_ratio": "45.54",
+          "credit_deposit_ratio__gross_npa": "16916.0",
+          "credit_deposit_ratio__total_advance": "375119.0",
+          "credit_deposit_ratio__total_deposit": "823661.02"
+        },
+        {
+          "district": "Kishtwar",
+          "period": "September 2022",
+          "branch_network__total_branch": "32",
+          "credit_deposit_ratio__cd_ratio": "49.12",
+          "credit_deposit_ratio__gross_npa": "1068.0",
+          "credit_deposit_ratio__total_advance": "105224.0",
+          "credit_deposit_ratio__total_deposit": "214206.25"
+        },
+        {
+          "district": "Kulgam",
+          "period": "September 2022",
+          "branch_network__total_branch": "57",
+          "credit_deposit_ratio__cd_ratio": "88.38",
+          "credit_deposit_ratio__gross_npa": "7132.0",
+          "credit_deposit_ratio__total_advance": "183680.0",
+          "credit_deposit_ratio__total_deposit": "207819.15"
+        },
+        {
+          "district": "Kupwara",
+          "period": "September 2022",
+          "branch_network__total_branch": "89",
+          "credit_deposit_ratio__cd_ratio": "124.68",
+          "credit_deposit_ratio__gross_npa": "19701.0",
+          "credit_deposit_ratio__total_advance": "361615.0",
+          "credit_deposit_ratio__total_deposit": "290043.25"
+        },
+        {
+          "district": "Poonch",
+          "period": "September 2022",
+          "branch_network__total_branch": "51",
+          "credit_deposit_ratio__cd_ratio": "51.02",
+          "credit_deposit_ratio__gross_npa": "2904.0",
+          "credit_deposit_ratio__total_advance": "168469.0",
+          "credit_deposit_ratio__total_deposit": "330221.84"
+        },
+        {
+          "district": "Pulwama",
+          "period": "September 2022",
+          "branch_network__total_branch": "93",
+          "credit_deposit_ratio__cd_ratio": "103.01",
+          "credit_deposit_ratio__gross_npa": "31085.0",
+          "credit_deposit_ratio__total_advance": "419157.0",
+          "credit_deposit_ratio__total_deposit": "406894.16"
+        },
+        {
+          "district": "Rajouri",
+          "period": "September 2022",
+          "branch_network__total_branch": "98",
+          "credit_deposit_ratio__cd_ratio": "48.71",
+          "credit_deposit_ratio__gross_npa": "3956.0",
+          "credit_deposit_ratio__total_advance": "281050.0",
+          "credit_deposit_ratio__total_deposit": "576963.27"
+        },
+        {
+          "district": "Ramban",
+          "period": "September 2022",
+          "branch_network__total_branch": "37",
+          "credit_deposit_ratio__cd_ratio": "84.8",
+          "credit_deposit_ratio__gross_npa": "2603.0",
+          "credit_deposit_ratio__total_advance": "151836.0",
+          "credit_deposit_ratio__total_deposit": "179049.24"
+        },
+        {
+          "district": "Reasi",
+          "period": "September 2022",
+          "branch_network__total_branch": "55",
+          "credit_deposit_ratio__cd_ratio": "37.79",
+          "credit_deposit_ratio__gross_npa": "2783.0",
+          "credit_deposit_ratio__total_advance": "137371.0",
+          "credit_deposit_ratio__total_deposit": "363499.78"
+        },
+        {
+          "district": "Samba",
+          "period": "September 2022",
+          "branch_network__total_branch": "91",
+          "credit_deposit_ratio__cd_ratio": "57.29",
+          "credit_deposit_ratio__gross_npa": "10363.0",
+          "credit_deposit_ratio__total_advance": "369768.46",
+          "credit_deposit_ratio__total_deposit": "645437.9"
+        },
+        {
+          "district": "Shopian",
+          "period": "September 2022",
+          "branch_network__total_branch": "38",
+          "credit_deposit_ratio__cd_ratio": "139.91",
+          "credit_deposit_ratio__gross_npa": "9776.0",
+          "credit_deposit_ratio__total_advance": "178379.0",
+          "credit_deposit_ratio__total_deposit": "127492.62"
+        },
+        {
+          "district": "Srinagar",
+          "period": "September 2022",
+          "branch_network__total_branch": "224",
+          "credit_deposit_ratio__cd_ratio": "67.0",
+          "credit_deposit_ratio__gross_npa": "229981.0",
+          "credit_deposit_ratio__total_advance": "2164518.71",
+          "credit_deposit_ratio__total_deposit": "3230756.37"
+        },
+        {
+          "district": "Udhampur",
+          "period": "September 2022",
+          "branch_network__total_branch": "90",
+          "credit_deposit_ratio__cd_ratio": "47.78",
+          "credit_deposit_ratio__gross_npa": "4168.0",
+          "credit_deposit_ratio__total_advance": "292331.76",
+          "credit_deposit_ratio__total_deposit": "611863.44"
+        }
+      ]
+    },
+    {
+      "period": "September 2023",
+      "districts": [
+        {
+          "district": "Anantnag",
+          "period": "September 2023",
+          "branch_network__total_branch": "137",
+          "credit_deposit_ratio__cd_ratio": "82.06",
+          "credit_deposit_ratio__gross_npa": "13666.0",
+          "credit_deposit_ratio__total_advance": "602196.0",
+          "credit_deposit_ratio__total_deposit": "733870.24"
+        },
+        {
+          "district": "Bandipora",
+          "period": "September 2023",
+          "branch_network__total_branch": "46",
+          "credit_deposit_ratio__cd_ratio": "100.41",
+          "credit_deposit_ratio__gross_npa": "5645.0",
+          "credit_deposit_ratio__total_advance": "162904.0",
+          "credit_deposit_ratio__total_deposit": "162244.0"
+        },
+        {
+          "district": "Baramulla",
+          "period": "September 2023",
+          "branch_network__total_branch": "168",
+          "credit_deposit_ratio__cd_ratio": "110.28",
+          "credit_deposit_ratio__gross_npa": "27759.0",
+          "credit_deposit_ratio__total_advance": "701427.0",
+          "credit_deposit_ratio__total_deposit": "636018.81"
+        },
+        {
+          "district": "Budgam",
+          "period": "September 2023",
+          "branch_network__total_branch": "108",
+          "credit_deposit_ratio__cd_ratio": "110.01",
+          "credit_deposit_ratio__gross_npa": "11582.0",
+          "credit_deposit_ratio__total_advance": "493923.94",
+          "credit_deposit_ratio__total_deposit": "448999.7"
+        },
+        {
+          "district": "Doda",
+          "period": "September 2023",
+          "branch_network__total_branch": "59",
+          "credit_deposit_ratio__cd_ratio": "75.94",
+          "credit_deposit_ratio__gross_npa": "3377.0",
+          "credit_deposit_ratio__total_advance": "223197.0",
+          "credit_deposit_ratio__total_deposit": "293928.81"
+        },
+        {
+          "district": "Ganderbal",
+          "period": "September 2023",
+          "branch_network__total_branch": "47",
+          "credit_deposit_ratio__cd_ratio": "94.94",
+          "credit_deposit_ratio__gross_npa": "5861.0",
+          "credit_deposit_ratio__total_advance": "178246.0",
+          "credit_deposit_ratio__total_deposit": "187742.81"
+        },
+        {
+          "district": "Jammu",
+          "period": "September 2023",
+          "branch_network__total_branch": "451",
+          "credit_deposit_ratio__cd_ratio": "39.07",
+          "credit_deposit_ratio__gross_npa": "107177.0",
+          "credit_deposit_ratio__total_advance": "2369705.0",
+          "credit_deposit_ratio__total_deposit": "6065330.35"
+        },
+        {
+          "district": "Kathua",
+          "period": "September 2023",
+          "branch_network__total_branch": "118",
+          "credit_deposit_ratio__cd_ratio": "50.29",
+          "credit_deposit_ratio__gross_npa": "16792.0",
+          "credit_deposit_ratio__total_advance": "466694.69",
+          "credit_deposit_ratio__total_deposit": "928028.01"
+        },
+        {
+          "district": "Kishtwar",
+          "period": "September 2023",
+          "branch_network__total_branch": "33",
+          "credit_deposit_ratio__cd_ratio": "56.45",
+          "credit_deposit_ratio__gross_npa": "728.0",
+          "credit_deposit_ratio__total_advance": "133234.0",
+          "credit_deposit_ratio__total_deposit": "236001.0"
+        },
+        {
+          "district": "Kulgam",
+          "period": "September 2023",
+          "branch_network__total_branch": "58",
+          "credit_deposit_ratio__cd_ratio": "98.66",
+          "credit_deposit_ratio__gross_npa": "4138.0",
+          "credit_deposit_ratio__total_advance": "217936.0",
+          "credit_deposit_ratio__total_deposit": "220891.5"
+        },
+        {
+          "district": "Kupwara",
+          "period": "September 2023",
+          "branch_network__total_branch": "90",
+          "credit_deposit_ratio__cd_ratio": "138.16",
+          "credit_deposit_ratio__gross_npa": "12647.0",
+          "credit_deposit_ratio__total_advance": "426150.0",
+          "credit_deposit_ratio__total_deposit": "308442.0"
+        },
+        {
+          "district": "Poonch",
+          "period": "September 2023",
+          "branch_network__total_branch": "54",
+          "credit_deposit_ratio__cd_ratio": "54.07",
+          "credit_deposit_ratio__gross_npa": "2064.0",
+          "credit_deposit_ratio__total_advance": "194270.0",
+          "credit_deposit_ratio__total_deposit": "359291.0"
+        },
+        {
+          "district": "Pulwama",
+          "period": "September 2023",
+          "branch_network__total_branch": "96",
+          "credit_deposit_ratio__cd_ratio": "110.25",
+          "credit_deposit_ratio__gross_npa": "18257.0",
+          "credit_deposit_ratio__total_advance": "489727.0",
+          "credit_deposit_ratio__total_deposit": "444203.2"
+        },
+        {
+          "district": "Rajouri",
+          "period": "September 2023",
+          "branch_network__total_branch": "98",
+          "credit_deposit_ratio__cd_ratio": "54.5",
+          "credit_deposit_ratio__gross_npa": "2937.0",
+          "credit_deposit_ratio__total_advance": "336309.0",
+          "credit_deposit_ratio__total_deposit": "617064.04"
+        },
+        {
+          "district": "Ramban",
+          "period": "September 2023",
+          "branch_network__total_branch": "39",
+          "credit_deposit_ratio__cd_ratio": "70.26",
+          "credit_deposit_ratio__gross_npa": "1908.0",
+          "credit_deposit_ratio__total_advance": "139534.0",
+          "credit_deposit_ratio__total_deposit": "198582.82"
+        },
+        {
+          "district": "Reasi",
+          "period": "September 2023",
+          "branch_network__total_branch": "56",
+          "credit_deposit_ratio__cd_ratio": "50.1",
+          "credit_deposit_ratio__gross_npa": "1688.0",
+          "credit_deposit_ratio__total_advance": "170635.0",
+          "credit_deposit_ratio__total_deposit": "340602.12"
+        },
+        {
+          "district": "Samba",
+          "period": "September 2023",
+          "branch_network__total_branch": "95",
+          "credit_deposit_ratio__cd_ratio": "58.17",
+          "credit_deposit_ratio__gross_npa": "8977.0",
+          "credit_deposit_ratio__total_advance": "422041.0",
+          "credit_deposit_ratio__total_deposit": "725475.02"
+        },
+        {
+          "district": "Shopian",
+          "period": "September 2023",
+          "branch_network__total_branch": "39",
+          "credit_deposit_ratio__cd_ratio": "156.6",
+          "credit_deposit_ratio__gross_npa": "5393.0",
+          "credit_deposit_ratio__total_advance": "214693.3",
+          "credit_deposit_ratio__total_deposit": "137100.12"
+        },
+        {
+          "district": "Srinagar",
+          "period": "September 2023",
+          "branch_network__total_branch": "243",
+          "credit_deposit_ratio__cd_ratio": "74.08",
+          "credit_deposit_ratio__gross_npa": "222909.0",
+          "credit_deposit_ratio__total_advance": "2528522.0",
+          "credit_deposit_ratio__total_deposit": "3413249.07"
+        },
+        {
+          "district": "Udhampur",
+          "period": "September 2023",
+          "branch_network__total_branch": "93",
+          "credit_deposit_ratio__cd_ratio": "50.31",
+          "credit_deposit_ratio__gross_npa": "3923.0",
+          "credit_deposit_ratio__total_advance": "342736.33",
+          "credit_deposit_ratio__total_deposit": "681208.65"
+        }
+      ]
+    },
+    {
+      "period": "December 2023",
+      "districts": [
+        {
+          "district": "Anantnag",
+          "period": "December 2023",
+          "branch_network__total_branch": "137",
+          "credit_deposit_ratio__cd_ratio": "79.67",
+          "credit_deposit_ratio__gross_npa": "14482.0",
+          "credit_deposit_ratio__total_advance": "609637.0",
+          "credit_deposit_ratio__total_deposit": "765247.18"
+        },
+        {
+          "district": "Bandipora",
+          "period": "December 2023",
+          "branch_network__total_branch": "47",
+          "credit_deposit_ratio__cd_ratio": "100.61",
+          "credit_deposit_ratio__gross_npa": "5711.0",
+          "credit_deposit_ratio__total_advance": "166338.0",
+          "credit_deposit_ratio__total_deposit": "165337.0"
+        },
+        {
+          "district": "Baramulla",
+          "period": "December 2023",
+          "branch_network__total_branch": "171",
+          "credit_deposit_ratio__cd_ratio": "105.01",
+          "credit_deposit_ratio__gross_npa": "31815.0",
+          "credit_deposit_ratio__total_advance": "706311.0",
+          "credit_deposit_ratio__total_deposit": "672639.0"
+        },
+        {
+          "district": "Budgam",
+          "period": "December 2023",
+          "branch_network__total_branch": "104",
+          "credit_deposit_ratio__cd_ratio": "109.8",
+          "credit_deposit_ratio__gross_npa": "11542.0",
+          "credit_deposit_ratio__total_advance": "504821.88",
+          "credit_deposit_ratio__total_deposit": "459759.16"
+        },
+        {
+          "district": "Doda",
+          "period": "December 2023",
+          "branch_network__total_branch": "59",
+          "credit_deposit_ratio__cd_ratio": "78.04",
+          "credit_deposit_ratio__gross_npa": "3867.0",
+          "credit_deposit_ratio__total_advance": "232462.0",
+          "credit_deposit_ratio__total_deposit": "297858.74"
+        },
+        {
+          "district": "Ganderbal",
+          "period": "December 2023",
+          "branch_network__total_branch": "48",
+          "credit_deposit_ratio__cd_ratio": "94.4",
+          "credit_deposit_ratio__gross_npa": "5700.0",
+          "credit_deposit_ratio__total_advance": "182441.0",
+          "credit_deposit_ratio__total_deposit": "193258.87"
+        },
+        {
+          "district": "Jammu",
+          "period": "December 2023",
+          "branch_network__total_branch": "452",
+          "credit_deposit_ratio__cd_ratio": "40.18",
+          "credit_deposit_ratio__gross_npa": "111573.0",
+          "credit_deposit_ratio__total_advance": "2457714.0",
+          "credit_deposit_ratio__total_deposit": "6116292.61"
+        },
+        {
+          "district": "Kathua",
+          "period": "December 2023",
+          "branch_network__total_branch": "117",
+          "credit_deposit_ratio__cd_ratio": "52.21",
+          "credit_deposit_ratio__gross_npa": "15850.0",
+          "credit_deposit_ratio__total_advance": "493011.53",
+          "credit_deposit_ratio__total_deposit": "944298.0"
+        },
+        {
+          "district": "Kishtwar",
+          "period": "December 2023",
+          "branch_network__total_branch": "32",
+          "credit_deposit_ratio__cd_ratio": "58.38",
+          "credit_deposit_ratio__gross_npa": "755.0",
+          "credit_deposit_ratio__total_advance": "140280.0",
+          "credit_deposit_ratio__total_deposit": "240281.0"
+        },
+        {
+          "district": "Kulgam",
+          "period": "December 2023",
+          "branch_network__total_branch": "58",
+          "credit_deposit_ratio__cd_ratio": "88.12",
+          "credit_deposit_ratio__gross_npa": "4712.0",
+          "credit_deposit_ratio__total_advance": "216275.0",
+          "credit_deposit_ratio__total_deposit": "245432.5"
+        },
+        {
+          "district": "Kupwara",
+          "period": "December 2023",
+          "branch_network__total_branch": "90",
+          "credit_deposit_ratio__cd_ratio": "141.02",
+          "credit_deposit_ratio__gross_npa": "12602.0",
+          "credit_deposit_ratio__total_advance": "440965.0",
+          "credit_deposit_ratio__total_deposit": "312691.0"
+        },
+        {
+          "district": "Poonch",
+          "period": "December 2023",
+          "branch_network__total_branch": "55",
+          "credit_deposit_ratio__cd_ratio": "55.5",
+          "credit_deposit_ratio__gross_npa": "2216.0",
+          "credit_deposit_ratio__total_advance": "201569.0",
+          "credit_deposit_ratio__total_deposit": "363216.0"
+        },
+        {
+          "district": "Pulwama",
+          "period": "December 2023",
+          "branch_network__total_branch": "97",
+          "credit_deposit_ratio__cd_ratio": "107.45",
+          "credit_deposit_ratio__gross_npa": "19971.0",
+          "credit_deposit_ratio__total_advance": "500210.0",
+          "credit_deposit_ratio__total_deposit": "465548.81"
+        },
+        {
+          "district": "Rajouri",
+          "period": "December 2023",
+          "branch_network__total_branch": "98",
+          "credit_deposit_ratio__cd_ratio": "56.79",
+          "credit_deposit_ratio__gross_npa": "3718.0",
+          "credit_deposit_ratio__total_advance": "351156.0",
+          "credit_deposit_ratio__total_deposit": "618309.0"
+        },
+        {
+          "district": "Ramban",
+          "period": "December 2023",
+          "branch_network__total_branch": "39",
+          "credit_deposit_ratio__cd_ratio": "71.76",
+          "credit_deposit_ratio__gross_npa": "2029.0",
+          "credit_deposit_ratio__total_advance": "142635.0",
+          "credit_deposit_ratio__total_deposit": "198757.37"
+        },
+        {
+          "district": "Reasi",
+          "period": "December 2023",
+          "branch_network__total_branch": "56",
+          "credit_deposit_ratio__cd_ratio": "52.04",
+          "credit_deposit_ratio__gross_npa": "1554.0",
+          "credit_deposit_ratio__total_advance": "178178.0",
+          "credit_deposit_ratio__total_deposit": "342386.86"
+        },
+        {
+          "district": "Samba",
+          "period": "December 2023",
+          "branch_network__total_branch": "94",
+          "credit_deposit_ratio__cd_ratio": "59.02",
+          "credit_deposit_ratio__gross_npa": "8992.0",
+          "credit_deposit_ratio__total_advance": "434906.0",
+          "credit_deposit_ratio__total_deposit": "736923.76"
+        },
+        {
+          "district": "Shopian",
+          "period": "December 2023",
+          "branch_network__total_branch": "40",
+          "credit_deposit_ratio__cd_ratio": "129.88",
+          "credit_deposit_ratio__gross_npa": "5877.0",
+          "credit_deposit_ratio__total_advance": "206849.0",
+          "credit_deposit_ratio__total_deposit": "159260.87"
+        },
+        {
+          "district": "Srinagar",
+          "period": "December 2023",
+          "branch_network__total_branch": "243",
+          "credit_deposit_ratio__cd_ratio": "73.69",
+          "credit_deposit_ratio__gross_npa": "213634.0",
+          "credit_deposit_ratio__total_advance": "2573817.0",
+          "credit_deposit_ratio__total_deposit": "3492766.39"
+        },
+        {
+          "district": "Udhampur",
+          "period": "December 2023",
+          "branch_network__total_branch": "94",
+          "credit_deposit_ratio__cd_ratio": "52.18",
+          "credit_deposit_ratio__gross_npa": "4324.0",
+          "credit_deposit_ratio__total_advance": "359469.49",
+          "credit_deposit_ratio__total_deposit": "688930.68"
+        }
+      ]
+    },
+    {
+      "period": "March 2024",
+      "districts": [
+        {
+          "district": "Anantnag",
+          "period": "March 2024",
+          "branch_network__total_branch": "136",
+          "credit_deposit_ratio__cd_ratio": "78.29",
+          "credit_deposit_ratio__gross_npa": "13672.0",
+          "credit_deposit_ratio__total_advance": "628499.0",
+          "credit_deposit_ratio__total_deposit": "802789.92"
+        },
+        {
+          "district": "Bandipora",
+          "period": "March 2024",
+          "branch_network__total_branch": "47",
+          "credit_deposit_ratio__cd_ratio": "96.05",
+          "credit_deposit_ratio__gross_npa": "5265.0",
+          "credit_deposit_ratio__total_advance": "169213.0",
+          "credit_deposit_ratio__total_deposit": "176174.0"
+        },
+        {
+          "district": "Baramulla",
+          "period": "March 2024",
+          "branch_network__total_branch": "172",
+          "credit_deposit_ratio__cd_ratio": "103.56",
+          "credit_deposit_ratio__gross_npa": "31077.0",
+          "credit_deposit_ratio__total_advance": "723844.0",
+          "credit_deposit_ratio__total_deposit": "698951.0"
+        },
+        {
+          "district": "Budgam",
+          "period": "March 2024",
+          "branch_network__total_branch": "108",
+          "credit_deposit_ratio__cd_ratio": "107.29",
+          "credit_deposit_ratio__gross_npa": "10644.0",
+          "credit_deposit_ratio__total_advance": "517139.86",
+          "credit_deposit_ratio__total_deposit": "482020.74"
+        },
+        {
+          "district": "Doda",
+          "period": "March 2024",
+          "branch_network__total_branch": "59",
+          "credit_deposit_ratio__cd_ratio": "77.18",
+          "credit_deposit_ratio__gross_npa": "3800.0",
+          "credit_deposit_ratio__total_advance": "238998.0",
+          "credit_deposit_ratio__total_deposit": "309664.61"
+        },
+        {
+          "district": "Ganderbal",
+          "period": "March 2024",
+          "branch_network__total_branch": "49",
+          "credit_deposit_ratio__cd_ratio": "93.87",
+          "credit_deposit_ratio__gross_npa": "5458.0",
+          "credit_deposit_ratio__total_advance": "189816.0",
+          "credit_deposit_ratio__total_deposit": "202205.53"
+        },
+        {
+          "district": "Jammu",
+          "period": "March 2024",
+          "branch_network__total_branch": "459",
+          "credit_deposit_ratio__cd_ratio": "40.31",
+          "credit_deposit_ratio__gross_npa": "106245.0",
+          "credit_deposit_ratio__total_advance": "2538073.0",
+          "credit_deposit_ratio__total_deposit": "6296535.96"
+        },
+        {
+          "district": "Kathua",
+          "period": "March 2024",
+          "branch_network__total_branch": "122",
+          "credit_deposit_ratio__cd_ratio": "53.23",
+          "credit_deposit_ratio__gross_npa": "16514.0",
+          "credit_deposit_ratio__total_advance": "515478.86",
+          "credit_deposit_ratio__total_deposit": "968481.0"
+        },
+        {
+          "district": "Kishtwar",
+          "period": "March 2024",
+          "branch_network__total_branch": "32",
+          "credit_deposit_ratio__cd_ratio": "55.44",
+          "credit_deposit_ratio__gross_npa": "893.0",
+          "credit_deposit_ratio__total_advance": "144303.0",
+          "credit_deposit_ratio__total_deposit": "260266.0"
+        },
+        {
+          "district": "Kulgam",
+          "period": "March 2024",
+          "branch_network__total_branch": "58",
+          "credit_deposit_ratio__cd_ratio": "87.48",
+          "credit_deposit_ratio__gross_npa": "4748.0",
+          "credit_deposit_ratio__total_advance": "222295.0",
+          "credit_deposit_ratio__total_deposit": "254100.84"
+        },
+        {
+          "district": "Kupwara",
+          "period": "March 2024",
+          "branch_network__total_branch": "90",
+          "credit_deposit_ratio__cd_ratio": "131.44",
+          "credit_deposit_ratio__gross_npa": "11983.0",
+          "credit_deposit_ratio__total_advance": "446902.0",
+          "credit_deposit_ratio__total_deposit": "340014.0"
+        },
+        {
+          "district": "Poonch",
+          "period": "March 2024",
+          "branch_network__total_branch": "56",
+          "credit_deposit_ratio__cd_ratio": "53.93",
+          "credit_deposit_ratio__gross_npa": "2304.0",
+          "credit_deposit_ratio__total_advance": "206305.0",
+          "credit_deposit_ratio__total_deposit": "382522.0"
+        },
+        {
+          "district": "Pulwama",
+          "period": "March 2024",
+          "branch_network__total_branch": "98",
+          "credit_deposit_ratio__cd_ratio": "108.44",
+          "credit_deposit_ratio__gross_npa": "16558.0",
+          "credit_deposit_ratio__total_advance": "517839.0",
+          "credit_deposit_ratio__total_deposit": "477547.5"
+        },
+        {
+          "district": "Rajouri",
+          "period": "March 2024",
+          "branch_network__total_branch": "101",
+          "credit_deposit_ratio__cd_ratio": "56.83",
+          "credit_deposit_ratio__gross_npa": "3461.0",
+          "credit_deposit_ratio__total_advance": "363792.0",
+          "credit_deposit_ratio__total_deposit": "640142.0"
+        },
+        {
+          "district": "Ramban",
+          "period": "March 2024",
+          "branch_network__total_branch": "39",
+          "credit_deposit_ratio__cd_ratio": "69.21",
+          "credit_deposit_ratio__gross_npa": "1941.0",
+          "credit_deposit_ratio__total_advance": "145065.0",
+          "credit_deposit_ratio__total_deposit": "209603.46"
+        },
+        {
+          "district": "Reasi",
+          "period": "March 2024",
+          "branch_network__total_branch": "56",
+          "credit_deposit_ratio__cd_ratio": "50.38",
+          "credit_deposit_ratio__gross_npa": "1614.0",
+          "credit_deposit_ratio__total_advance": "184833.0",
+          "credit_deposit_ratio__total_deposit": "366850.42"
+        },
+        {
+          "district": "Samba",
+          "period": "March 2024",
+          "branch_network__total_branch": "96",
+          "credit_deposit_ratio__cd_ratio": "59.25",
+          "credit_deposit_ratio__gross_npa": "11209.0",
+          "credit_deposit_ratio__total_advance": "445966.0",
+          "credit_deposit_ratio__total_deposit": "752645.9"
+        },
+        {
+          "district": "Shopian",
+          "period": "March 2024",
+          "branch_network__total_branch": "40",
+          "credit_deposit_ratio__cd_ratio": "132.89",
+          "credit_deposit_ratio__gross_npa": "5546.0",
+          "credit_deposit_ratio__total_advance": "214531.0",
+          "credit_deposit_ratio__total_deposit": "161437.78"
+        },
+        {
+          "district": "Srinagar",
+          "period": "March 2024",
+          "branch_network__total_branch": "247",
+          "credit_deposit_ratio__cd_ratio": "71.23",
+          "credit_deposit_ratio__gross_npa": "212389.0",
+          "credit_deposit_ratio__total_advance": "2592594.0",
+          "credit_deposit_ratio__total_deposit": "3639505.6"
+        },
+        {
+          "district": "Udhampur",
+          "period": "March 2024",
+          "branch_network__total_branch": "93",
+          "credit_deposit_ratio__cd_ratio": "52.31",
+          "credit_deposit_ratio__gross_npa": "4123.0",
+          "credit_deposit_ratio__total_advance": "367497.56",
+          "credit_deposit_ratio__total_deposit": "702575.71"
+        }
+      ]
+    },
+    {
+      "period": "March 2025",
+      "districts": [
+        {
+          "district": "Anantnag",
+          "period": "March 2025",
+          "branch_network__total_branch": "139",
+          "credit_deposit_ratio__cd_ratio": "76.76",
+          "credit_deposit_ratio__gross_npa": "13803.0",
+          "credit_deposit_ratio__total_advance": "665579.92",
+          "credit_deposit_ratio__total_deposit": "867110.86"
+        },
+        {
+          "district": "Bandipora",
+          "period": "March 2025",
+          "branch_network__total_branch": "47",
+          "credit_deposit_ratio__cd_ratio": "94.91",
+          "credit_deposit_ratio__gross_npa": "8564.0",
+          "credit_deposit_ratio__total_advance": "181115.0",
+          "credit_deposit_ratio__total_deposit": "190821.0"
+        },
+        {
+          "district": "Baramulla",
+          "period": "March 2025",
+          "branch_network__total_branch": "170",
+          "credit_deposit_ratio__cd_ratio": "92.57",
+          "credit_deposit_ratio__gross_npa": "34201.0",
+          "credit_deposit_ratio__total_advance": "759217.0",
+          "credit_deposit_ratio__total_deposit": "820127.0"
+        },
+        {
+          "district": "Budgam",
+          "period": "March 2025",
+          "branch_network__total_branch": "111",
+          "credit_deposit_ratio__cd_ratio": "106.65",
+          "credit_deposit_ratio__gross_npa": "10338.0",
+          "credit_deposit_ratio__total_advance": "524511.93",
+          "credit_deposit_ratio__total_deposit": "491795.23"
+        },
+        {
+          "district": "Doda",
+          "period": "March 2025",
+          "branch_network__total_branch": "62",
+          "credit_deposit_ratio__cd_ratio": "78.06",
+          "credit_deposit_ratio__gross_npa": "3751.0",
+          "credit_deposit_ratio__total_advance": "260693.0",
+          "credit_deposit_ratio__total_deposit": "333960.13"
+        },
+        {
+          "district": "Ganderbal",
+          "period": "March 2025",
+          "branch_network__total_branch": "49",
+          "credit_deposit_ratio__cd_ratio": "91.28",
+          "credit_deposit_ratio__gross_npa": "4973.0",
+          "credit_deposit_ratio__total_advance": "205707.0",
+          "credit_deposit_ratio__total_deposit": "225358.99"
+        },
+        {
+          "district": "Jammu",
+          "period": "March 2025",
+          "branch_network__total_branch": "464",
+          "credit_deposit_ratio__cd_ratio": "40.16",
+          "credit_deposit_ratio__gross_npa": "113517.0",
+          "credit_deposit_ratio__total_advance": "2729899.0",
+          "credit_deposit_ratio__total_deposit": "6797649.25"
+        },
+        {
+          "district": "Kathua",
+          "period": "March 2025",
+          "branch_network__total_branch": "129",
+          "credit_deposit_ratio__cd_ratio": "54.13",
+          "credit_deposit_ratio__gross_npa": "19264.0",
+          "credit_deposit_ratio__total_advance": "585677.46",
+          "credit_deposit_ratio__total_deposit": "1081890.0"
+        },
+        {
+          "district": "Kishtwar",
+          "period": "March 2025",
+          "branch_network__total_branch": "35",
+          "credit_deposit_ratio__cd_ratio": "60.08",
+          "credit_deposit_ratio__gross_npa": "844.0",
+          "credit_deposit_ratio__total_advance": "167182.0",
+          "credit_deposit_ratio__total_deposit": "278255.0"
+        },
+        {
+          "district": "Kulgam",
+          "period": "March 2025",
+          "branch_network__total_branch": "58",
+          "credit_deposit_ratio__cd_ratio": "83.06",
+          "credit_deposit_ratio__gross_npa": "4772.0",
+          "credit_deposit_ratio__total_advance": "234803.97",
+          "credit_deposit_ratio__total_deposit": "282701.48"
+        },
+        {
+          "district": "Kupwara",
+          "period": "March 2025",
+          "branch_network__total_branch": "91",
+          "credit_deposit_ratio__cd_ratio": "126.8",
+          "credit_deposit_ratio__gross_npa": "13725.0",
+          "credit_deposit_ratio__total_advance": "471041.0",
+          "credit_deposit_ratio__total_deposit": "371469.0"
+        },
+        {
+          "district": "Poonch",
+          "period": "March 2025",
+          "branch_network__total_branch": "58",
+          "credit_deposit_ratio__cd_ratio": "51.48",
+          "credit_deposit_ratio__gross_npa": "2328.0",
+          "credit_deposit_ratio__total_advance": "216863.0",
+          "credit_deposit_ratio__total_deposit": "421295.0"
+        },
+        {
+          "district": "Pulwama",
+          "period": "March 2025",
+          "branch_network__total_branch": "97",
+          "credit_deposit_ratio__cd_ratio": "108.47",
+          "credit_deposit_ratio__gross_npa": "17085.0",
+          "credit_deposit_ratio__total_advance": "559656.87",
+          "credit_deposit_ratio__total_deposit": "515945.34"
+        },
+        {
+          "district": "Rajouri",
+          "period": "March 2025",
+          "branch_network__total_branch": "98",
+          "credit_deposit_ratio__cd_ratio": "55.58",
+          "credit_deposit_ratio__gross_npa": "4869.0",
+          "credit_deposit_ratio__total_advance": "390884.0",
+          "credit_deposit_ratio__total_deposit": "703345.0"
+        },
+        {
+          "district": "Ramban",
+          "period": "March 2025",
+          "branch_network__total_branch": "38",
+          "credit_deposit_ratio__cd_ratio": "67.56",
+          "credit_deposit_ratio__gross_npa": "2206.0",
+          "credit_deposit_ratio__total_advance": "151180.0",
+          "credit_deposit_ratio__total_deposit": "223786.03"
+        },
+        {
+          "district": "Reasi",
+          "period": "March 2025",
+          "branch_network__total_branch": "57",
+          "credit_deposit_ratio__cd_ratio": "53.81",
+          "credit_deposit_ratio__gross_npa": "1918.0",
+          "credit_deposit_ratio__total_advance": "203313.0",
+          "credit_deposit_ratio__total_deposit": "377855.04"
+        },
+        {
+          "district": "Samba",
+          "period": "March 2025",
+          "branch_network__total_branch": "102",
+          "credit_deposit_ratio__cd_ratio": "60.27",
+          "credit_deposit_ratio__gross_npa": "12598.0",
+          "credit_deposit_ratio__total_advance": "497517.0",
+          "credit_deposit_ratio__total_deposit": "825429.17"
+        },
+        {
+          "district": "Shopian",
+          "period": "March 2025",
+          "branch_network__total_branch": "41",
+          "credit_deposit_ratio__cd_ratio": "116.78",
+          "credit_deposit_ratio__gross_npa": "6416.0",
+          "credit_deposit_ratio__total_advance": "220691.12",
+          "credit_deposit_ratio__total_deposit": "188972.34"
+        },
+        {
+          "district": "Srinagar",
+          "period": "March 2025",
+          "branch_network__total_branch": "253",
+          "credit_deposit_ratio__cd_ratio": "66.17",
+          "credit_deposit_ratio__gross_npa": "190248.0",
+          "credit_deposit_ratio__total_advance": "2606940.0",
+          "credit_deposit_ratio__total_deposit": "3939821.91"
+        },
+        {
+          "district": "Udhampur",
+          "period": "March 2025",
+          "branch_network__total_branch": "98",
+          "credit_deposit_ratio__cd_ratio": "53.99",
+          "credit_deposit_ratio__gross_npa": "4125.0",
+          "credit_deposit_ratio__total_advance": "409899.15",
+          "credit_deposit_ratio__total_deposit": "759213.99"
+        }
+      ]
+    },
+    {
+      "period": "December 2025",
+      "districts": [
+        {
+          "district": "Anantnag",
+          "period": "December 2025",
+          "branch_network__total_branch": "139",
+          "credit_deposit_ratio__cd_ratio": "79.44",
+          "credit_deposit_ratio__gross_npa": "14137.0",
+          "credit_deposit_ratio__total_advance": "721624.0",
+          "credit_deposit_ratio__total_deposit": "908358.27"
+        },
+        {
+          "district": "Bandipora",
+          "period": "December 2025",
+          "branch_network__total_branch": "47",
+          "credit_deposit_ratio__cd_ratio": "99.68",
+          "credit_deposit_ratio__gross_npa": "8702.0",
+          "credit_deposit_ratio__total_advance": "197528.0",
+          "credit_deposit_ratio__total_deposit": "198163.0"
+        },
+        {
+          "district": "Baramulla",
+          "period": "December 2025",
+          "branch_network__total_branch": "175",
+          "credit_deposit_ratio__cd_ratio": "96.56",
+          "credit_deposit_ratio__gross_npa": "33879.0",
+          "credit_deposit_ratio__total_advance": "807531.0",
+          "credit_deposit_ratio__total_deposit": "836281.3"
+        },
+        {
+          "district": "Budgam",
+          "period": "December 2025",
+          "branch_network__total_branch": "113",
+          "credit_deposit_ratio__cd_ratio": "105.19",
+          "credit_deposit_ratio__gross_npa": "14054.0",
+          "credit_deposit_ratio__total_advance": "556143.58",
+          "credit_deposit_ratio__total_deposit": "528712.0"
+        },
+        {
+          "district": "Doda",
+          "period": "December 2025",
+          "branch_network__total_branch": "62",
+          "credit_deposit_ratio__cd_ratio": "78.11",
+          "credit_deposit_ratio__gross_npa": "4379.0",
+          "credit_deposit_ratio__total_advance": "273371.0",
+          "credit_deposit_ratio__total_deposit": "349975.0"
+        },
+        {
+          "district": "Ganderbal",
+          "period": "December 2025",
+          "branch_network__total_branch": "50",
+          "credit_deposit_ratio__cd_ratio": "95.28",
+          "credit_deposit_ratio__gross_npa": "4148.0",
+          "credit_deposit_ratio__total_advance": "229625.0",
+          "credit_deposit_ratio__total_deposit": "240988.0"
+        },
+        {
+          "district": "Jammu",
+          "period": "December 2025",
+          "branch_network__total_branch": "473",
+          "credit_deposit_ratio__cd_ratio": "41.64",
+          "credit_deposit_ratio__gross_npa": "108664.0",
+          "credit_deposit_ratio__total_advance": "3031286.0",
+          "credit_deposit_ratio__total_deposit": "7280202.4"
+        },
+        {
+          "district": "Kathua",
+          "period": "December 2025",
+          "branch_network__total_branch": "127",
+          "credit_deposit_ratio__cd_ratio": "53.18",
+          "credit_deposit_ratio__gross_npa": "11130.0",
+          "credit_deposit_ratio__total_advance": "615367.49",
+          "credit_deposit_ratio__total_deposit": "1157194.78"
+        },
+        {
+          "district": "Kishtwar",
+          "period": "December 2025",
+          "branch_network__total_branch": "35",
+          "credit_deposit_ratio__cd_ratio": "64.14",
+          "credit_deposit_ratio__gross_npa": "952.0",
+          "credit_deposit_ratio__total_advance": "185163.0",
+          "credit_deposit_ratio__total_deposit": "288667.0"
+        },
+        {
+          "district": "Kulgam",
+          "period": "December 2025",
+          "branch_network__total_branch": "58",
+          "credit_deposit_ratio__cd_ratio": "87.88",
+          "credit_deposit_ratio__gross_npa": "5211.0",
+          "credit_deposit_ratio__total_advance": "259529.0",
+          "credit_deposit_ratio__total_deposit": "295314.0"
+        },
+        {
+          "district": "Kupwara",
+          "period": "December 2025",
+          "branch_network__total_branch": "93",
+          "credit_deposit_ratio__cd_ratio": "131.32",
+          "credit_deposit_ratio__gross_npa": "14515.0",
+          "credit_deposit_ratio__total_advance": "511233.0",
+          "credit_deposit_ratio__total_deposit": "389310.0"
+        },
+        {
+          "district": "Poonch",
+          "period": "December 2025",
+          "branch_network__total_branch": "56",
+          "credit_deposit_ratio__cd_ratio": "54.96",
+          "credit_deposit_ratio__gross_npa": "2769.0",
+          "credit_deposit_ratio__total_advance": "237112.0",
+          "credit_deposit_ratio__total_deposit": "431414.0"
+        },
+        {
+          "district": "Pulwama",
+          "period": "December 2025",
+          "branch_network__total_branch": "97",
+          "credit_deposit_ratio__cd_ratio": "113.44",
+          "credit_deposit_ratio__gross_npa": "15503.0",
+          "credit_deposit_ratio__total_advance": "612240.0",
+          "credit_deposit_ratio__total_deposit": "539710.0"
+        },
+        {
+          "district": "Rajouri",
+          "period": "December 2025",
+          "branch_network__total_branch": "103",
+          "credit_deposit_ratio__cd_ratio": "56.62",
+          "credit_deposit_ratio__gross_npa": "5214.0",
+          "credit_deposit_ratio__total_advance": "420791.0",
+          "credit_deposit_ratio__total_deposit": "743123.71"
+        },
+        {
+          "district": "Ramban",
+          "period": "December 2025",
+          "branch_network__total_branch": "37",
+          "credit_deposit_ratio__cd_ratio": "72.77",
+          "credit_deposit_ratio__gross_npa": "2183.0",
+          "credit_deposit_ratio__total_advance": "163182.66",
+          "credit_deposit_ratio__total_deposit": "224234.0"
+        },
+        {
+          "district": "Reasi",
+          "period": "December 2025",
+          "branch_network__total_branch": "59",
+          "credit_deposit_ratio__cd_ratio": "54.87",
+          "credit_deposit_ratio__gross_npa": "2347.0",
+          "credit_deposit_ratio__total_advance": "219982.0",
+          "credit_deposit_ratio__total_deposit": "400901.0"
+        },
+        {
+          "district": "Samba",
+          "period": "December 2025",
+          "branch_network__total_branch": "103",
+          "credit_deposit_ratio__cd_ratio": "57.04",
+          "credit_deposit_ratio__gross_npa": "7468.0",
+          "credit_deposit_ratio__total_advance": "517253.9",
+          "credit_deposit_ratio__total_deposit": "906841.0"
+        },
+        {
+          "district": "Shopian",
+          "period": "December 2025",
+          "branch_network__total_branch": "42",
+          "credit_deposit_ratio__cd_ratio": "126.77",
+          "credit_deposit_ratio__gross_npa": "5029.0",
+          "credit_deposit_ratio__total_advance": "247802.0",
+          "credit_deposit_ratio__total_deposit": "195480.0"
+        },
+        {
+          "district": "Srinagar",
+          "period": "December 2025",
+          "branch_network__total_branch": "253",
+          "credit_deposit_ratio__cd_ratio": "68.18",
+          "credit_deposit_ratio__gross_npa": "162639.0",
+          "credit_deposit_ratio__total_advance": "2676589.0",
+          "credit_deposit_ratio__total_deposit": "3925829.81"
+        },
+        {
+          "district": "Udhampur",
+          "period": "December 2025",
+          "branch_network__total_branch": "98",
+          "credit_deposit_ratio__cd_ratio": "54.67",
+          "credit_deposit_ratio__gross_npa": "4810.0",
+          "credit_deposit_ratio__total_advance": "442871.2",
+          "credit_deposit_ratio__total_deposit": "810012.04"
+        }
+      ]
+    }
+  ]
+}

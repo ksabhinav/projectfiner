@@ -1,0 +1,18 @@
+# J&K UTLBC — meetings/quarter audit
+
+Source portal: https://www.jkslbc.com/  (UTLBC convenor: J&K Bank Ltd)
+
+Live page lists only the current quarter; historical CD-ratio annexures retrieved via Wayback Machine.
+
+  2022-09  (September 2022) — 20 districts — WAYBACK_2022/7. CD RATIO DISTRICTWISE.xlsx
+  2023-09  (September 2023) — 20 districts — WAYBACK_2023_NEW/5. CD RATIO DISTRICTWISE_new.xlsx
+  2023-12  (December 2023) — 20 districts — WAYBACK_2023/5. CD RATIO DISTRICTWISE.xlsx
+  2024-03  (March 2024) — 20 districts — WAYBACK_2024/7. CD RATIO DISTRICTWISE.xlsx
+  2025-03  (March 2025) — 20 districts — WAYBACK_2025_MAR/ATTACHMENT-4 CD RATIO DIST.xlsx
+  2025-12  (December 2025) — 20 districts — DEC2025/07. CD RATIO DISTWISE DEC25.xlsx
+
+Note: J&K SLBC reports amounts in Crores; extractor converts to Lakhs (×100)
+to match FINER canonical unit. cd_ratio is left as a percent (unitless).
+Categories captured: credit_deposit_ratio + branch_network (CD-ratio annexure only).
+PMJDY/KCC/SHG/digital coverage tables exist in J&K UTLBC agendas but only as
+bank-wise summaries (not district-wise) so they are not present in this extract.
