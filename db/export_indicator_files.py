@@ -278,6 +278,22 @@ INDICATORS = {
              'fallbacks': ['of_which_girl_student_sanctioned_amt', 'of_which_girl_student_o_s_amt']},
         ],
     },
+    'priority_sector': {
+        'title': 'Priority Sector Lending (ACP)',
+        'category': 'priority_sector',
+        'metrics': [
+            {'field': 'total_ps_achievement_amt', 'label': 'Total PS Achievement', 'unit': '₹',
+             'fallbacks': ['total_ps', 'priority_sector', 'total_priority']},
+            {'field': 'agri_achievement_amt', 'label': 'Agriculture', 'unit': '₹',
+             'fallbacks': ['agri', 'farm', 'farm_credit', 'crop_loan_amt', 'agri_term']},
+            {'field': 'msme_achievement_amt', 'label': 'MSME', 'unit': '₹',
+             'fallbacks': ['msme']},
+            {'field': 'ops_achievement_amt', 'label': 'Other Priority Sector', 'unit': '₹',
+             'fallbacks': ['other_ps', 'ancillary_activities', 'ancillary', 'export']},
+            {'field': 'total_ps_achievement_pct', 'label': 'Total PS % Achievement', 'unit': '%',
+             'fallbacks': ['total_ps_pct']},
+        ],
+    },
     'pmmy_mudra_disbursement': {
         'title': 'MUDRA / PMMY',
         'category': 'pmmy_mudra_disbursement',

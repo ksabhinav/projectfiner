@@ -59,7 +59,7 @@ const SLBC_INDICATORS = new Set<string>([
   'credit_deposit_ratio', 'pmjdy', 'branch_network', 'kcc', 'shg',
   'aadhaar_authentication', 'social_security', 'pmegp', 'housing_pmay',
   'sui', 'sc_st_finance', 'women_finance', 'education_loan',
-  'pmmy_mudra_disbursement',
+  'pmmy_mudra_disbursement', 'priority_sector',
 ]);
 
 // "March 2025" style label from "2025-03"

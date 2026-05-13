@@ -40,6 +40,7 @@ export const INDICATOR_KEYS = [
   'women_finance',
   'education_loan',
   'pmmy_mudra_disbursement',
+  'priority_sector',
   'rbi_banking_outlets',
   'nfhs_health_insurance',
   'aadhaar_enrollment',
@@ -242,6 +243,13 @@ export const ATLAS_INDICATORS: AtlasIndicator[] = [
   { key: 'mudra_shishu',                  indicatorKey: 'pmmy_mudra_disbursement', metricIdx: 0, name: 'MUDRA Shishu (≤ ₹50K)',         units: 'no.', category: 'credit', subgroup: 'scheme',    rampKey: 'saffron' },
   { key: 'mudra_kishore',                 indicatorKey: 'pmmy_mudra_disbursement', metricIdx: 2, name: 'MUDRA Kishore (₹50K–5L)',       units: 'no.', category: 'credit', subgroup: 'scheme',    rampKey: 'saffron' },
   { key: 'mudra_tarun',                   indicatorKey: 'pmmy_mudra_disbursement', metricIdx: 4, name: 'MUDRA Tarun (₹5–20L)',          units: 'no.', category: 'credit', subgroup: 'scheme',    rampKey: 'saffron' },
+
+  // Priority Sector Lending (ACP achievement)
+  { key: 'priority_sector',               name: 'Priority Sector Lending (ACP)',  units: '₹ L', category: 'credit', subgroup: 'headline',  rampKey: 'vermillion' },
+  { key: 'ps_agri',                       indicatorKey: 'priority_sector',         metricIdx: 1, name: 'PS — Agriculture',              units: '₹ L', category: 'credit', subgroup: 'inclusion', rampKey: 'vermillion' },
+  { key: 'ps_msme',                       indicatorKey: 'priority_sector',         metricIdx: 2, name: 'PS — MSME',                     units: '₹ L', category: 'credit', subgroup: 'inclusion', rampKey: 'vermillion' },
+  { key: 'ps_other',                      indicatorKey: 'priority_sector',         metricIdx: 3, name: 'PS — Other (Housing, Edu)',     units: '₹ L', category: 'credit', subgroup: 'inclusion', rampKey: 'vermillion' },
+  { key: 'ps_total_pct',                  indicatorKey: 'priority_sector',         metricIdx: 4, name: 'PS Achievement %',              units: '%',   category: 'credit', subgroup: 'inclusion', rampKey: 'sage' },
 
   // ===== Schemes ==========================================================
   { key: 'pmjdy',                         name: 'PM Jan Dhan Yojana',            units: 'no.',  category: 'schemes', subgroup: 'headline',  rampKey: 'vermillion' },
