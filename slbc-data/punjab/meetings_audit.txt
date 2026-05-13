@@ -1,0 +1,141 @@
+Punjab SLBC Meetings & Data Audit
+==================================
+
+Convenor: Punjab National Bank (PNB), Zonal Office, Sector 17-B, Chandigarh.
+Website:  https://slbcpunjab.pnb.bank.in   (mirrors the slbc<state>.pnb.bank.in
+          pattern also used for Haryana, Himachal Pradesh, Delhi)
+Agenda:   https://slbcpunjab.pnb.bank.in/slbc-agenda/
+Districts: 22 pre-May-2021, 23 post-May-2021 (Malerkotla carved from Sangrur).
+
+------------------------------------------------------------------------------
+GRANULARITY FINDING — IMPORTANT
+------------------------------------------------------------------------------
+
+Punjab SLBC publishes most quarterly data BANK-WISE (rows = banks across all
+Punjab), not DISTRICT-WISE. This is the OPPOSITE of Haryana / HP / Delhi
+(all on the same PNB-hosted CMS) where the basic-banking-data annexure is
+district-wise.
+
+Verified by direct file inspection:
+
+  Annexure-3 / -16 / -20 "BASIC BANKING DATA" (every quarter):
+      Sheet: "BANK WISE"  -> rows = 30+ banks, columns = Branches /
+      Deposits / Advances / CD Ratio (Rural/Semi-Urban/Urban/Total).
+      Sample: Annexure-16-BASIC-BANKING-DATA-JUNE25.xlsx -> 44 rows
+      with column "Bank Name" as primary key. NO district column.
+
+  Annexure-*-AREAWISE-CD-RATIO (every quarter):
+      Aggregate state CD ratio split by Rural / Semi-Urban / Urban
+      branches. NOT a per-district split.
+
+  Annexure-*-Jalandhar-CD-Ratio / Annexure-*-Kapurthala-CD-Ratio /
+  Annexure-*-SBS-Nagar-CD-Ratio / Annexure-*-Hoshiarpur-CD-Ratio /
+  Annexure-*-Pathankot-CD-Ratio / Annexure-*-Rupanagar-CD-Ratio:
+      Per-district CD ratio mini-tables for 6 Doaba-region districts
+      only (Jalandhar, Kapurthala, SBS Nagar, Hoshiarpur, Pathankot,
+      Rupnagar). Inside each: bank-wise rows for that district. Not
+      a Punjab-wide table.
+
+What IS district-wise (all 22/23 districts in one table):
+
+  Annexure-*-ACP-Districtwise (every quarter Sep-2020 onwards):
+      "DISTRICT WISE ACHIEVEMENTS VIS A VIS TARGETS UNDER ANNUAL
+      CREDIT PLAN" -- 4 buckets x 3 metrics per district:
+        Agri / MSME / Other PS / Total PS  ->  Target, Achievement,
+        % Achievement.  Amounts in Crores.  Currently the only
+        consistently-quarterly district-wise sheet across the
+        full meeting archive.
+
+  Annexure-*-NRLM-Districtwise (sporadic):
+      SHG / NRLM credit linkage by district. Available in some 2022
+      meetings but not consistently every quarter.
+
+  Annexure-13.1-District-wise-Ghar-Ghar-KCC (sporadic, 2024+):
+      KCC saturation campaign progress per district. Single quarter.
+
+  Annexure-5/-6-KCC-District-wise (sporadic):
+      KCC daily monitoring per district. Single-shot annexures.
+
+Conclusion: Punjab is a PRIORITY-SECTOR-DISTRICT-WISE state in FINER (the
+analogue of Madhya Pradesh which is CD-ratio-district-wise-only). Punjab
+contributes:
+
+  priority_sector__agri_target_amt / _achievement_amt / _achievement_pct
+  priority_sector__msme_target_amt / _achievement_amt / _achievement_pct
+  priority_sector__ops_target_amt  / _achievement_amt / _achievement_pct
+  priority_sector__total_ps_target_amt / _achievement_amt / _achievement_pct
+
+per district per quarter.
+
+Punjab does NOT contribute district-wise CD ratio, deposits, advances, branch
+counts, PMJDY, MUDRA, or SHG to FINER -- those metrics are state-aggregate
+only in the source. The standard FINER FI indicators (credit_deposit_ratio,
+branch_network, pmjdy, kcc) will show Punjab as a blank state in the choropleth.
+
+------------------------------------------------------------------------------
+QUARTERS EXTRACTED  (19 total)
+------------------------------------------------------------------------------
+
+  Q       Period          Districts  Source File                    ACP Year
+  ----    ----            ---------  -----------                    --------
+  1       September 2020  22         Annexure-27-ACP-Districtwise   2020-21
+  2       December 2020   22         Annexure-22-ACP-Districtwise   2020-21
+  3       March 2021      22         Annexure-21-ACP-Districtwise   2020-21
+  4       September 2021  23         Annexure-21-ACP-Districtwise   2021-22
+  5       December 2021   23         Annexure-18-ACP-Districtwise   2021-22
+  6       March 2022      23         Annexure-31-ACP-Districtwise-1 2021-22
+  7       June 2022       23         Annexure-32-ACP-Districtwise-1 2022-23
+  8       September 2022  23         Annexure-29-ACP-District-wise  2022-23
+  9       December 2022   23         Annexure-20-ACP-District-wise  2022-23
+  10      March 2023      23         Annexure-20-ACP-District-wise  2022-23
+  11      June 2023       23         Annexure-2-ACP-District-wise   2023-24
+  12      September 2023  23         Annexure-2-ACP-District-wise   2023-24
+  13      December 2023   23         Annexure-2-ACP-Districtwise    2023-24
+  14      June 2024       23         Annexure-2-ACP-DISTRICT-WISE   2024-25
+  15      September 2024  23         Annexure-2-ACP-Districtwise    2024-25
+  16      December 2024   23         Annexure-2-ACP-Districtwise    2024-25
+  17      March 2025      23         Annexure-2-ACP-Districtwise    2024-25
+  18      June 2025       23         Annexure-1.1-ACP-Districtwise  2025-26
+  19      December 2025   23         Annexure-1.1-ACP-Districtwise  2025-26
+
+Gaps:
+  - June 2020, June 2021 not available in any meeting's annexure pack.
+  - March 2024 not available (no 167th/168th meeting annexure with district
+    ACP for that period -- the Mar 2024 quarter is implied by 168th but the
+    district-wise file points back to the Dec 2023 ACP achievement).
+  - September 2025 ACP appears bank-wise only in the 174th meeting (Nov 2025
+    bucket) -- no district-wise file published for that quarter.
+
+------------------------------------------------------------------------------
+UNIT CONVERSION
+------------------------------------------------------------------------------
+
+Source unit: Crores (header literally says "Amount in cr").
+FINER unit:  Lakhs.
+Applied:     monetary fields (Target_amt, Achievement_amt) multiplied by 100.
+             Achievement_pct kept as is (source uses 0.92 decimal form ->
+             converted to 92 % to match FINER convention).
+
+Sample Ludhiana priority_sector__total_ps_achievement_amt:
+  Dec 2024 source: Rs 40,321.06 Crores  -> stored as 4,032,106.10 Lakhs
+  Dec 2025 source: Rs 49,631.88 Crores  -> stored as 4,963,188.12 Lakhs
+
+------------------------------------------------------------------------------
+DISTRICTS (canonical FINER names, 23 modern)
+------------------------------------------------------------------------------
+
+  Amritsar, Barnala, Bathinda, Faridkot, Fatehgarh Sahib, Fazilka, Ferozepur,
+  Gurdaspur, Hoshiarpur, Jalandhar, Kapurthala, Ludhiana, Malerkotla (post
+  May-2021), Mansa, Moga, Mohali (=SAS Nagar), Muktsar (=Sri Muktsar Sahib),
+  Pathankot, Patiala, Rupnagar (=Ropar), Sangrur, SBS Nagar (=Shahid Bhagat
+  Singh Nagar / Nawanshahr), Tarn Taran.
+
+Pre-2021 files have 22 (Malerkotla absent; rows for Sangrur include the
+later-Malerkotla territory).
+
+Aliases handled in extractor:
+  SAS NAGAR / S.A.S. NAGAR / Sahibzada Ajit Singh Nagar -> Mohali
+  Sri Muktsar Sahib / Muktsar Sahib / Mukatsar          -> Muktsar
+  Rupanagar / Ropar                                     -> Rupnagar
+  Ferozepur / Ferozpur / Firozpur                       -> Ferozepur
+  Nawanshahr / Shaheed Bhagat Singh Nagar / SBS Nagar   -> SBS Nagar

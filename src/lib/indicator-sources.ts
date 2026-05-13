@@ -43,6 +43,7 @@ const SLBC_STATE_URLS: Record<string, { name: string; url: string }> = {
   'mizoram':            { name: 'Mizoram',         url: 'https://onlineslbcne.nic.in' },
   'nagaland':           { name: 'Nagaland',        url: 'https://onlineslbcne.nic.in' },
   'odisha':             { name: 'Odisha',          url: 'https://onlineslbcne.nic.in' }, // sourced through NE-style extraction
+  'punjab':             { name: 'Punjab',          url: 'https://slbcpunjab.pnb.bank.in' }, // Convenor: Punjab National Bank, Chandigarh. District-wise data is priority-sector ACP only.
   'rajasthan':          { name: 'Rajasthan',       url: 'https://slbcrajasthan.in' },
   'sikkim':             { name: 'Sikkim',          url: 'https://onlineslbcne.nic.in' },
   'tamil-nadu':         { name: 'Tamil Nadu',      url: 'https://slbctn.com' },

@@ -30,7 +30,7 @@ SLBC_STATES = [
     'chhattisgarh', 'gujarat', 'haryana', 'himachal-pradesh',
     'jharkhand', 'karnataka', 'kerala', 'madhya-pradesh',
     'maharashtra', 'manipur', 'meghalaya', 'mizoram', 'nagaland',
-    'odisha', 'rajasthan', 'sikkim', 'tamil-nadu', 'telangana',
+    'odisha', 'punjab', 'rajasthan', 'sikkim', 'tamil-nadu', 'telangana',
     'tripura', 'uttar-pradesh', 'uttarakhand', 'west-bengal',
 ]
 
