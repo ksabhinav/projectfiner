@@ -1399,7 +1399,21 @@ const base = import.meta.env.BASE_URL;
           buildDistrictLabels_banking();
           buildChoropleth_banking();
           updateLabelVisibility_banking();
-          flyToNE(false);
+          // Respect a state focus that was applied from ?state=<slug> during init —
+          // otherwise this unconditional flyToNE wipes the URL-driven focus.
+          if (!bankingStateFilter) {
+            flyToNE(false);
+          } else {
+            // Re-issue the URL-state focus now that the choropleth is fully built
+            // (the earlier dispatch may have raced ahead of choropleth readiness).
+            var stateFts = distGeoJSON ? distGeoJSON.features.filter(function(f) {
+              return f.properties.STATE_UT?.toUpperCase()?.trim() === bankingStateFilter;
+            }) : [];
+            if (stateFts.length) {
+              var group = L.geoJSON({ type: 'FeatureCollection', features: stateFts });
+              map.flyToBounds(group.getBounds(), { padding: [40, 40], maxZoom: 9, duration: 1.0 });
+            }
+          }
           // Hide the Atlas loading overlay
           var ml = document.getElementById('map-loading');
           if (ml) ml.classList.add('hidden');
