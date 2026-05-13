@@ -141,16 +141,142 @@
     'ads_progress', 'district_misc',
   ]);
 
+  // ── Canonical metric whitelist (the "useful 22-or-so") ────────────────
+  // Each state's SLBC extraction surfaces hundreds of fields, many of
+  // which are OCR-artefact junk (`rseti__no_ofno_of_persons_prograpmm…`),
+  // extractor-fallback placeholders (`jansuraksha__col_1` / `_2`), or
+  // back-office accounting metadata. The Trends page is most useful
+  // when it shows only the canonical district-profile metrics that map
+  // 1:1 with the homepage choropleth's metrics. The list below is the
+  // union of common field-name variants across the 25 SLBC sources —
+  // any one variant matching surfaces the metric on the card grid.
+  // Power users can flip `showAllMetrics = true` to see the unfiltered
+  // 1,000+ fields.
+  const TREND_TRACKER_WHITELIST = new Set<string>([
+    // Banking — CD ratio + Branch Network
+    'credit_deposit_ratio__total_deposit',
+    'credit_deposit_ratio__deposit',
+    'credit_deposit_ratio__deposits',
+    'credit_deposit_ratio__total_advance',
+    'credit_deposit_ratio__total_advances',
+    'credit_deposit_ratio__advance',
+    'credit_deposit_ratio__advances',
+    'credit_deposit_ratio__overall_cd_ratio',
+    'credit_deposit_ratio__cd_ratio',
+    'branch_network__total_branch',
+    'branch_network__total_branches',
+    'branch_network__no_of_branches',
+    'branch_network__branch_rural',
+    'branch_network__branch_semi_urban',
+    'branch_network__branch_urban',
+    'branch_network__total_atm',
+    'branch_network__no_of_atm',
+    // PMJDY
+    'pmjdy__total_pmjdy_no',
+    'pmjdy__total_no',
+    'pmjdy__no_of_pmjdy_accounts',
+    'pmjdy__total_pmjdy_a_c',
+    'pmjdy__rupay_card_issued',
+    'pmjdy__rupay_card_no',
+    'pmjdy__no_of_aadhaar_seeded',
+    'pmjdy__aadhaar_seeded',
+    'pmjdy__female_no',
+    'pmjdy__rural_no',
+    // Aadhaar authentication
+    'aadhaar_authentication__no_of_aadhaar_seeded_casa',
+    'aadhaar_authentication__no_of_operative_casa',
+    'aadhaar_authentication__no_of_authenticated_casa',
+    // KCC
+    'kcc__total_no_of_kcc',
+    'kcc__no_of_kcc',
+    'kcc__total_kcc_no',
+    'kcc__rupay_card_issued_in_kcc',
+    'kcc__o_s_position_no_of_cards_issued',
+    'kcc__outstanding_amt',
+    'kcc__total_o_s_kcc_amt',
+    'kcc__kcc_outstanding_amt',
+    'kcc__npa_amt',
+    'kcc__npa_no',
+    // SHG
+    'shg__savings_linked_no',
+    'shg__credit_linked_no',
+    'shg__current_fy_savings_linked_no',
+    'shg__current_fy_credit_linked_no',
+    'shg__total_sanction_no',
+    'shg__outstanding_amt',
+    'shg__shg_o_s',
+    // MUDRA
+    'pmmy_mudra_disbursement__shishu_no',
+    'pmmy_mudra_disbursement__shishu_amt',
+    'pmmy_mudra_disbursement__kishor_no',
+    'pmmy_mudra_disbursement__kishor_amt',
+    'pmmy_mudra_disbursement__tarun_no',
+    'pmmy_mudra_disbursement__tarun_amt',
+    'pmmy_mudra_disbursement__total_no',
+    'pmmy_mudra_disbursement__total_amt',
+    'pmmy_mudra_disbursement__total_mudra_disb_no',
+    'pmmy_mudra_disbursement__total_mudra_disb_amt',
+    // PMEGP
+    'pmegp__sanctioned_no',
+    'pmegp__disbursed_no',
+    'pmegp__margin_money_amt',
+    'pmegp__sanctioned_amt',
+    // Housing PMAY
+    'housing_pmay__sanctioned_no',
+    'housing_pmay__disbursed_no',
+    'housing_pmay__disbursed_amt',
+    // Insurance — social security
+    'social_security__pmsby_eligible',
+    'social_security__pmjjby_eligible',
+    'social_security__apy_subscribers',
+    'social_security_pmsby__total_no',
+    'social_security_pmsby__claims_total_no',
+    'social_security_pmjjby__total_no',
+    'social_security_pmjjby__claims_total_no',
+    'social_security_apy__total_no',
+    'social_security_apy__subscribers',
+    // Digital
+    'digital_transactions__coverage_sb_pct',
+    'digital_transactions__transaction_count',
+    'digital_transactions__digital_coverage_sb_a_c',
+    'digital_transactions__bhim_upi_a_c',
+    // SC/ST + Women
+    'sc_st_finance__sc_advances_amt',
+    'sc_st_finance__sc_advances_no',
+    'sc_st_finance__st_advances_amt',
+    'sc_st_finance__st_advances_no',
+    'women_finance__women_advances_amt',
+    'women_finance__women_advances_no',
+    // Education
+    'education_loan__outstanding_amt',
+    'education_loan__outstanding_no',
+    'education_loan__disbursed_no',
+    // Stand-Up India
+    'sui__sc_no',
+    'sui__st_no',
+    'sui__women_no',
+    'sui__total_no',
+    'sui__total_amt',
+  ]);
+
+  // Default: filter to canonical metrics. Toggle below the controls
+  // flips this to show every extracted field.
+  let showAllMetrics = $state(false);
+
   let allMetrics: MetricInfo[] = $derived.by(() => {
     if (districtRecords.length === 0) return [];
 
-    // Collect all fields that have category__field pattern
+    // Collect all fields that have category__field pattern.
+    // Default mode: filter through TREND_TRACKER_WHITELIST so users see
+    // only the canonical ~25 district-profile metrics. Power mode (when
+    // `showAllMetrics` toggle is on) shows every extracted field.
     const fieldSet = new Set<string>();
     for (const r of districtRecords) {
       for (const key of Object.keys(r)) {
         if (key.includes('__') && key !== 'as_on_date') {
           const cat = key.split('__')[0];
           if (EXCLUDED_CATEGORIES.has(cat)) continue;
+          if (!showAllMetrics && !TREND_TRACKER_WHITELIST.has(key)) continue;
           fieldSet.add(key);
         }
       }
@@ -549,6 +675,17 @@
       {#if loadingState}
         <div class="loading-indicator">Loading...</div>
       {/if}
+
+      <!-- Whitelist / unfiltered toggle. Default = canonical metrics
+           only (the ~25 fields that 1:1 mirror the homepage choropleth
+           indicators). Toggled on, shows every extracted field
+           including OCR artefacts and extractor-fallback placeholders. -->
+      <label class="metric-mode-toggle" title={showAllMetrics
+        ? 'Switch back to the canonical ~25 indicators'
+        : 'Show every extracted field, including extractor artefacts'}>
+        <input type="checkbox" bind:checked={showAllMetrics} />
+        <span>{showAllMetrics ? 'All extracted fields' : 'Headline indicators only'}</span>
+      </label>
     </div>
 
     <!-- District summary header -->
@@ -756,6 +893,42 @@
   }
   .indicator-pickers .control-group { flex: 1 1 220px; min-width: 200px; }
   .control-group { display: flex; flex-direction: column; gap: 5px; }
+
+  /* Whitelist toggle — right-aligned mono pill, parks beside the
+     district selector. Active state (checked) lights the border
+     vermillion to signal the user is now viewing the firehose. */
+  .metric-mode-toggle {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: 1px solid var(--rule, #D9D2C5);
+    border-radius: 99px;
+    background: transparent;
+    color: var(--ink-soft, #3D332A);
+    font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.18s, border-color 0.18s, color 0.18s;
+  }
+  .metric-mode-toggle:hover {
+    background: var(--paper-deep, #ECE5D6);
+    border-color: var(--ink, #1B140E);
+  }
+  .metric-mode-toggle input[type="checkbox"] {
+    accent-color: var(--vermillion, #B84A2E);
+    width: 12px; height: 12px;
+    margin: 0;
+  }
+  .metric-mode-toggle:has(input:checked) {
+    border-color: var(--vermillion, #B84A2E);
+    color: var(--vermillion, #B84A2E);
+  }
+
   .share-btn {
     /* Atlas mono pill — matches MapLegend + DistrictRankings. */
     margin-left: auto;
