@@ -1,0 +1,70 @@
+Delhi SLBC — meetings audit
+============================================================
+
+Source: https://slbcdelhi.pnb.bank.in/
+Convenor: Punjab National Bank (since April 2020; previously
+          Punjab & Sind Bank was the convenor).
+State LGD code: 7
+11 revenue districts: Central, East, New Delhi, North, North
+  East, North West, Shahdara, South, South East, South West, West.
+
+Granularity: district-wise (all 11 revenue districts), NOT
+NCT-aggregate only.  Each quarterly agenda booklet's first
+agenda page carries a 'District wise analysis of NCT of Delhi'
+table with five numeric columns:
+    Branches | ATMs | Deposits | Advances | CD Ratio
+
+Unit conventions:
+  - Meetings 110th–121st: amounts in Crores (page-1 summary).
+  - Meeting 122nd: Annexure-5 reports same five columns
+    but with deposits/advances in actual rupees (×10^7 of crores).
+  Extractor auto-detects via median-deposit threshold and
+  converts everything to ₹ Lakhs (FINER canonical).
+
+Meetings ingested:
+
+  Meeting   Quarter             Rows   Unit at source
+  --------  ------------------  -----  ---------------
+  110       December 2022       11     Crores
+  111       March 2023          11     Crores
+  112       June 2023           11     Crores
+  113       September 2023      11     Crores
+  114       December 2023       11     Crores
+  115       March 2024          11     Crores
+  116       June 2024           11     Crores
+  117       September 2024      11     Crores
+  118       December 2024       11     Crores
+  119       March 2025          11     Crores
+  120       June 2025           11     Crores
+  121       September 2025      11     Crores
+  122       December 2025       11     Rupees (actual)
+
+
+Indicator coverage:
+  - credit_deposit_ratio: 13 quarters × 11 districts
+    (total_deposit, total_advance, cd_ratio)
+  - branch_network: 13 quarters × 11 districts
+    (total_branch, total_atm)
+
+Not extracted (annexures with bank-wise rather than district-wise
+granularity, parked for future expansion):
+  - PMJDY accounts (Annexure-7+)  — public/private bank rows,
+    not district rows
+  - KCC (Annexure-3, 14)          — bank-wise only
+  - MUDRA (Annexure-12)           — bank-wise only
+  - SHG (under 'NULM/DAY-NRLM')   — bank-wise
+  - PMEGP / Stand Up India / APY  — bank-wise targets
+
+(Delhi SLBC publishes district-wise rural-branch counts in a
+separate table, and district-wise APY targets — they're noted
+here but not yet imported.  CD-ratio + branch counts are the
+two indicators with comprehensive 11-district coverage.)
+
+Known source-side anomalies (preserved as-is, NOT corrected):
+  - 113th meeting (Sep 2023): per-district advances column
+    appears truncated relative to the reported overall CDR
+    (per-district advances sum to ~₹964,846 Cr, implying
+     65.49% CDR; but the booklet footer reports 103.77%).
+    Per-district CD-ratio % values are independently printed
+    in the same row and used as-is for that quarter.
+    Faithful to source per FINER data-integrity rules.

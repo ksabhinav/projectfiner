@@ -1,0 +1,1579 @@
+{
+  "state": "Delhi",
+  "state_lgd_code": 7,
+  "quarters": {
+    "december_2022": {
+      "period": "December 2022",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Central": {
+              "total_deposit": "19894300.0",
+              "total_advance": "18907100.0",
+              "cd_ratio": "95.04"
+            },
+            "East": {
+              "total_deposit": "7267200.0",
+              "total_advance": "2339200.0",
+              "cd_ratio": "32.19"
+            },
+            "New Delhi": {
+              "total_deposit": "41621900.0",
+              "total_advance": "98090100.0",
+              "cd_ratio": "235.67"
+            },
+            "North": {
+              "total_deposit": "5416500.0",
+              "total_advance": "2246600.0",
+              "cd_ratio": "41.48"
+            },
+            "North East": {
+              "total_deposit": "1081000.0",
+              "total_advance": "794200.0",
+              "cd_ratio": "73.47"
+            },
+            "North West": {
+              "total_deposit": "8052000.0",
+              "total_advance": "3328400.0",
+              "cd_ratio": "41.34"
+            },
+            "Shahdara": {
+              "total_deposit": "3810700.0",
+              "total_advance": "1275200.0",
+              "cd_ratio": "33.46"
+            },
+            "South": {
+              "total_deposit": "18622900.0",
+              "total_advance": "5509300.0",
+              "cd_ratio": "29.58"
+            },
+            "South East": {
+              "total_deposit": "12064000.0",
+              "total_advance": "9267000.0",
+              "cd_ratio": "76.82"
+            },
+            "South West": {
+              "total_deposit": "9693200.0",
+              "total_advance": "3245000.0",
+              "cd_ratio": "33.48"
+            },
+            "West": {
+              "total_deposit": "11431700.0",
+              "total_advance": "3980100.0",
+              "cd_ratio": "34.82"
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "total_branch",
+            "total_atm"
+          ],
+          "districts": {
+            "Central": {
+              "total_branch": "420",
+              "total_atm": "843"
+            },
+            "East": {
+              "total_branch": "255",
+              "total_atm": "567"
+            },
+            "New Delhi": {
+              "total_branch": "387",
+              "total_atm": "765"
+            },
+            "North": {
+              "total_branch": "268",
+              "total_atm": "424"
+            },
+            "North East": {
+              "total_branch": "66",
+              "total_atm": "173"
+            },
+            "North West": {
+              "total_branch": "393",
+              "total_atm": "660"
+            },
+            "Shahdara": {
+              "total_branch": "146",
+              "total_atm": "248"
+            },
+            "South": {
+              "total_branch": "419",
+              "total_atm": "1165"
+            },
+            "South East": {
+              "total_branch": "334",
+              "total_atm": "592"
+            },
+            "South West": {
+              "total_branch": "374",
+              "total_atm": "1109"
+            },
+            "West": {
+              "total_branch": "524",
+              "total_atm": "811"
+            }
+          }
+        }
+      }
+    },
+    "march_2023": {
+      "period": "March 2023",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Central": {
+              "total_deposit": "21302300.0",
+              "total_advance": "19262100.0",
+              "cd_ratio": "90.42"
+            },
+            "East": {
+              "total_deposit": "7232900.0",
+              "total_advance": "2518900.0",
+              "cd_ratio": "34.83"
+            },
+            "New Delhi": {
+              "total_deposit": "44474200.0",
+              "total_advance": "98574400.0",
+              "cd_ratio": "221.64"
+            },
+            "North": {
+              "total_deposit": "5836800.0",
+              "total_advance": "2441800.0",
+              "cd_ratio": "41.83"
+            },
+            "North East": {
+              "total_deposit": "1173800.0",
+              "total_advance": "822300.0",
+              "cd_ratio": "70.05"
+            },
+            "North West": {
+              "total_deposit": "8227300.0",
+              "total_advance": "3538000.0",
+              "cd_ratio": "43.0"
+            },
+            "Shahdara": {
+              "total_deposit": "6408700.0",
+              "total_advance": "2861200.0",
+              "cd_ratio": "44.65"
+            },
+            "South": {
+              "total_deposit": "16367700.0",
+              "total_advance": "3862400.0",
+              "cd_ratio": "23.6"
+            },
+            "South East": {
+              "total_deposit": "12107300.0",
+              "total_advance": "10453700.0",
+              "cd_ratio": "86.34"
+            },
+            "South West": {
+              "total_deposit": "10019500.0",
+              "total_advance": "3282900.0",
+              "cd_ratio": "32.77"
+            },
+            "West": {
+              "total_deposit": "11764000.0",
+              "total_advance": "4220800.0",
+              "cd_ratio": "35.88"
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "total_branch",
+            "total_atm"
+          ],
+          "districts": {
+            "Central": {
+              "total_branch": "423",
+              "total_atm": "844"
+            },
+            "East": {
+              "total_branch": "249",
+              "total_atm": "565"
+            },
+            "New Delhi": {
+              "total_branch": "392",
+              "total_atm": "777"
+            },
+            "North": {
+              "total_branch": "264",
+              "total_atm": "424"
+            },
+            "North East": {
+              "total_branch": "65",
+              "total_atm": "174"
+            },
+            "North West": {
+              "total_branch": "387",
+              "total_atm": "629"
+            },
+            "Shahdara": {
+              "total_branch": "152",
+              "total_atm": "262"
+            },
+            "South": {
+              "total_branch": "412",
+              "total_atm": "1139"
+            },
+            "South East": {
+              "total_branch": "339",
+              "total_atm": "593"
+            },
+            "South West": {
+              "total_branch": "380",
+              "total_atm": "1112"
+            },
+            "West": {
+              "total_branch": "530",
+              "total_atm": "829"
+            }
+          }
+        }
+      }
+    },
+    "june_2023": {
+      "period": "June 2023",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Central": {
+              "total_deposit": "21531127.89",
+              "total_advance": "19369015.53",
+              "cd_ratio": "89.96"
+            },
+            "East": {
+              "total_deposit": "7372668.34",
+              "total_advance": "2583783.93",
+              "cd_ratio": "35.05"
+            },
+            "New Delhi": {
+              "total_deposit": "45696092.11",
+              "total_advance": "103136613.6",
+              "cd_ratio": "225.7"
+            },
+            "North": {
+              "total_deposit": "5966130.52",
+              "total_advance": "2503899.05",
+              "cd_ratio": "41.97"
+            },
+            "North East": {
+              "total_deposit": "1215370.49",
+              "total_advance": "826909.4",
+              "cd_ratio": "68.04"
+            },
+            "North West": {
+              "total_deposit": "8380947.62",
+              "total_advance": "3626838.93",
+              "cd_ratio": "43.27"
+            },
+            "Shahdara": {
+              "total_deposit": "3992088.55",
+              "total_advance": "1377586.03",
+              "cd_ratio": "34.51"
+            },
+            "South": {
+              "total_deposit": "19565447.34",
+              "total_advance": "5981527.0",
+              "cd_ratio": "30.57"
+            },
+            "South East": {
+              "total_deposit": "12717117.51",
+              "total_advance": "10524851.7",
+              "cd_ratio": "82.76"
+            },
+            "South West": {
+              "total_deposit": "10570278.36",
+              "total_advance": "3389076.09",
+              "cd_ratio": "32.06"
+            },
+            "West": {
+              "total_deposit": "11783779.71",
+              "total_advance": "4297313.18",
+              "cd_ratio": "36.47"
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "total_branch",
+            "total_atm"
+          ],
+          "districts": {
+            "Central": {
+              "total_branch": "428",
+              "total_atm": "835"
+            },
+            "East": {
+              "total_branch": "250",
+              "total_atm": "534"
+            },
+            "New Delhi": {
+              "total_branch": "388",
+              "total_atm": "740"
+            },
+            "North": {
+              "total_branch": "268",
+              "total_atm": "432"
+            },
+            "North East": {
+              "total_branch": "65",
+              "total_atm": "162"
+            },
+            "North West": {
+              "total_branch": "387",
+              "total_atm": "609"
+            },
+            "Shahdara": {
+              "total_branch": "157",
+              "total_atm": "267"
+            },
+            "South": {
+              "total_branch": "419",
+              "total_atm": "1134"
+            },
+            "South East": {
+              "total_branch": "341",
+              "total_atm": "593"
+            },
+            "South West": {
+              "total_branch": "381",
+              "total_atm": "1112"
+            },
+            "West": {
+              "total_branch": "528",
+              "total_atm": "826"
+            }
+          }
+        }
+      }
+    },
+    "september_2023": {
+      "period": "September 2023",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Central": {
+              "total_deposit": "17880200.0",
+              "total_advance": "17413300.0",
+              "cd_ratio": "86.34"
+            },
+            "East": {
+              "total_deposit": "2398600.0",
+              "total_advance": "2191100.0",
+              "cd_ratio": "36.83"
+            },
+            "New Delhi": {
+              "total_deposit": "98204700.0",
+              "total_advance": "53950700.0",
+              "cd_ratio": "215.87"
+            },
+            "North": {
+              "total_deposit": "2170000.0",
+              "total_advance": "1878300.0",
+              "cd_ratio": "44.55"
+            },
+            "North East": {
+              "total_deposit": "781400.0",
+              "total_advance": "496400.0",
+              "cd_ratio": "67.58"
+            },
+            "North West": {
+              "total_deposit": "3275400.0",
+              "total_advance": "3931700.0",
+              "cd_ratio": "45.86"
+            },
+            "Shahdara": {
+              "total_deposit": "1331100.0",
+              "total_advance": "1406600.0",
+              "cd_ratio": "38.3"
+            },
+            "South": {
+              "total_deposit": "5279600.0",
+              "total_advance": "3829100.0",
+              "cd_ratio": "30.01"
+            },
+            "South East": {
+              "total_deposit": "9030900.0",
+              "total_advance": "4932900.0",
+              "cd_ratio": "82.48"
+            },
+            "South West": {
+              "total_deposit": "3082200.0",
+              "total_advance": "2554500.0",
+              "cd_ratio": "33.09"
+            },
+            "West": {
+              "total_deposit": "3896400.0",
+              "total_advance": "3900100.0",
+              "cd_ratio": "38.24"
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "total_branch",
+            "total_atm"
+          ],
+          "districts": {
+            "Central": {
+              "total_branch": "428",
+              "total_atm": "838"
+            },
+            "East": {
+              "total_branch": "258",
+              "total_atm": "551"
+            },
+            "New Delhi": {
+              "total_branch": "389",
+              "total_atm": "782"
+            },
+            "North": {
+              "total_branch": "270",
+              "total_atm": "415"
+            },
+            "North East": {
+              "total_branch": "65",
+              "total_atm": "172"
+            },
+            "North West": {
+              "total_branch": "391",
+              "total_atm": "624"
+            },
+            "Shahdara": {
+              "total_branch": "156",
+              "total_atm": "252"
+            },
+            "South": {
+              "total_branch": "420",
+              "total_atm": "1125"
+            },
+            "South East": {
+              "total_branch": "344",
+              "total_atm": "587"
+            },
+            "South West": {
+              "total_branch": "382",
+              "total_atm": "1096"
+            },
+            "West": {
+              "total_branch": "533",
+              "total_atm": "843"
+            }
+          }
+        }
+      }
+    },
+    "december_2023": {
+      "period": "December 2023",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Central": {
+              "total_deposit": "23343500.0",
+              "total_advance": "20037400.0",
+              "cd_ratio": "85.84"
+            },
+            "East": {
+              "total_deposit": "7649400.0",
+              "total_advance": "2877800.0",
+              "cd_ratio": "37.62"
+            },
+            "New Delhi": {
+              "total_deposit": "48107000.0",
+              "total_advance": "104986700.0",
+              "cd_ratio": "218.24"
+            },
+            "North": {
+              "total_deposit": "6213300.0",
+              "total_advance": "2927600.0",
+              "cd_ratio": "47.12"
+            },
+            "North East": {
+              "total_deposit": "1230900.0",
+              "total_advance": "836800.0",
+              "cd_ratio": "67.98"
+            },
+            "North West": {
+              "total_deposit": "8854200.0",
+              "total_advance": "4193600.0",
+              "cd_ratio": "47.36"
+            },
+            "Shahdara": {
+              "total_deposit": "4078600.0",
+              "total_advance": "1506100.0",
+              "cd_ratio": "36.93"
+            },
+            "South": {
+              "total_deposit": "19672300.0",
+              "total_advance": "6659100.0",
+              "cd_ratio": "33.85"
+            },
+            "South East": {
+              "total_deposit": "13843400.0",
+              "total_advance": "11038000.0",
+              "cd_ratio": "79.73"
+            },
+            "South West": {
+              "total_deposit": "10734600.0",
+              "total_advance": "3433000.0",
+              "cd_ratio": "31.98"
+            },
+            "West": {
+              "total_deposit": "12641100.0",
+              "total_advance": "4953700.0",
+              "cd_ratio": "39.19"
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "total_branch",
+            "total_atm"
+          ],
+          "districts": {
+            "Central": {
+              "total_branch": "433",
+              "total_atm": "837"
+            },
+            "East": {
+              "total_branch": "257",
+              "total_atm": "591"
+            },
+            "New Delhi": {
+              "total_branch": "387",
+              "total_atm": "761"
+            },
+            "North": {
+              "total_branch": "277",
+              "total_atm": "401"
+            },
+            "North East": {
+              "total_branch": "68",
+              "total_atm": "180"
+            },
+            "North West": {
+              "total_branch": "403",
+              "total_atm": "622"
+            },
+            "Shahdara": {
+              "total_branch": "162",
+              "total_atm": "253"
+            },
+            "South": {
+              "total_branch": "424",
+              "total_atm": "1112"
+            },
+            "South East": {
+              "total_branch": "351",
+              "total_atm": "591"
+            },
+            "South West": {
+              "total_branch": "384",
+              "total_atm": "1082"
+            },
+            "West": {
+              "total_branch": "550",
+              "total_atm": "844"
+            }
+          }
+        }
+      }
+    },
+    "march_2024": {
+      "period": "March 2024",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Central": {
+              "total_deposit": "23729100.0",
+              "total_advance": "21390300.0",
+              "cd_ratio": "90.14"
+            },
+            "East": {
+              "total_deposit": "7754800.0",
+              "total_advance": "3175600.0",
+              "cd_ratio": "40.95"
+            },
+            "New Delhi": {
+              "total_deposit": "52718400.0",
+              "total_advance": "107550200.0",
+              "cd_ratio": "204.01"
+            },
+            "North": {
+              "total_deposit": "6293900.0",
+              "total_advance": "2981800.0",
+              "cd_ratio": "47.38"
+            },
+            "North East": {
+              "total_deposit": "1289100.0",
+              "total_advance": "860100.0",
+              "cd_ratio": "66.72"
+            },
+            "North West": {
+              "total_deposit": "9203900.0",
+              "total_advance": "4346800.0",
+              "cd_ratio": "47.23"
+            },
+            "Shahdara": {
+              "total_deposit": "4284700.0",
+              "total_advance": "1569700.0",
+              "cd_ratio": "36.63"
+            },
+            "South": {
+              "total_deposit": "20389000.0",
+              "total_advance": "6588200.0",
+              "cd_ratio": "32.31"
+            },
+            "South East": {
+              "total_deposit": "13957600.0",
+              "total_advance": "10697300.0",
+              "cd_ratio": "76.64"
+            },
+            "South West": {
+              "total_deposit": "12901600.0",
+              "total_advance": "3491200.0",
+              "cd_ratio": "27.06"
+            },
+            "West": {
+              "total_deposit": "13026600.0",
+              "total_advance": "5015200.0",
+              "cd_ratio": "38.5"
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "total_branch",
+            "total_atm"
+          ],
+          "districts": {
+            "Central": {
+              "total_branch": "434",
+              "total_atm": "847"
+            },
+            "East": {
+              "total_branch": "264",
+              "total_atm": "541"
+            },
+            "New Delhi": {
+              "total_branch": "391",
+              "total_atm": "800"
+            },
+            "North": {
+              "total_branch": "271",
+              "total_atm": "412"
+            },
+            "North East": {
+              "total_branch": "71",
+              "total_atm": "170"
+            },
+            "North West": {
+              "total_branch": "385",
+              "total_atm": "616"
+            },
+            "Shahdara": {
+              "total_branch": "176",
+              "total_atm": "266"
+            },
+            "South": {
+              "total_branch": "430",
+              "total_atm": "1139"
+            },
+            "South East": {
+              "total_branch": "352",
+              "total_atm": "591"
+            },
+            "South West": {
+              "total_branch": "390",
+              "total_atm": "1101"
+            },
+            "West": {
+              "total_branch": "539",
+              "total_atm": "835"
+            }
+          }
+        }
+      }
+    },
+    "june_2024": {
+      "period": "June 2024",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Central": {
+              "total_deposit": "24215200.0",
+              "total_advance": "26771800.0",
+              "cd_ratio": "110.56"
+            },
+            "East": {
+              "total_deposit": "7970000.0",
+              "total_advance": "3298400.0",
+              "cd_ratio": "41.39"
+            },
+            "New Delhi": {
+              "total_deposit": "51955100.0",
+              "total_advance": "104893400.0",
+              "cd_ratio": "201.89"
+            },
+            "North": {
+              "total_deposit": "6286500.0",
+              "total_advance": "3051300.0",
+              "cd_ratio": "48.54"
+            },
+            "North East": {
+              "total_deposit": "1363400.0",
+              "total_advance": "889900.0",
+              "cd_ratio": "65.27"
+            },
+            "North West": {
+              "total_deposit": "9077200.0",
+              "total_advance": "4517100.0",
+              "cd_ratio": "49.76"
+            },
+            "Shahdara": {
+              "total_deposit": "4511700.0",
+              "total_advance": "1603000.0",
+              "cd_ratio": "35.53"
+            },
+            "South": {
+              "total_deposit": "20495300.0",
+              "total_advance": "7470700.0",
+              "cd_ratio": "36.45"
+            },
+            "South East": {
+              "total_deposit": "14289100.0",
+              "total_advance": "10376400.0",
+              "cd_ratio": "72.62"
+            },
+            "South West": {
+              "total_deposit": "12568400.0",
+              "total_advance": "3652400.0",
+              "cd_ratio": "29.06"
+            },
+            "West": {
+              "total_deposit": "13129600.0",
+              "total_advance": "5107600.0",
+              "cd_ratio": "38.9"
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "total_branch",
+            "total_atm"
+          ],
+          "districts": {
+            "Central": {
+              "total_branch": "429",
+              "total_atm": "815"
+            },
+            "East": {
+              "total_branch": "266",
+              "total_atm": "531"
+            },
+            "New Delhi": {
+              "total_branch": "393",
+              "total_atm": "774"
+            },
+            "North": {
+              "total_branch": "278",
+              "total_atm": "413"
+            },
+            "North East": {
+              "total_branch": "67",
+              "total_atm": "155"
+            },
+            "North West": {
+              "total_branch": "404",
+              "total_atm": "613"
+            },
+            "Shahdara": {
+              "total_branch": "165",
+              "total_atm": "266"
+            },
+            "South": {
+              "total_branch": "427",
+              "total_atm": "1123"
+            },
+            "South East": {
+              "total_branch": "351",
+              "total_atm": "555"
+            },
+            "South West": {
+              "total_branch": "394",
+              "total_atm": "1092"
+            },
+            "West": {
+              "total_branch": "554",
+              "total_atm": "840"
+            }
+          }
+        }
+      }
+    },
+    "september_2024": {
+      "period": "September 2024",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Central": {
+              "total_deposit": "24799000.0",
+              "total_advance": "22502300.0",
+              "cd_ratio": "90.74"
+            },
+            "East": {
+              "total_deposit": "8001500.0",
+              "total_advance": "3448000.0",
+              "cd_ratio": "43.09"
+            },
+            "New Delhi": {
+              "total_deposit": "56363300.0",
+              "total_advance": "107497400.0",
+              "cd_ratio": "190.72"
+            },
+            "North": {
+              "total_deposit": "5523400.0",
+              "total_advance": "2865900.0",
+              "cd_ratio": "51.89"
+            },
+            "North East": {
+              "total_deposit": "1282600.0",
+              "total_advance": "818600.0",
+              "cd_ratio": "63.82"
+            },
+            "North West": {
+              "total_deposit": "9446000.0",
+              "total_advance": "4867600.0",
+              "cd_ratio": "51.53"
+            },
+            "Shahdara": {
+              "total_deposit": "4659200.0",
+              "total_advance": "1661500.0",
+              "cd_ratio": "35.66"
+            },
+            "South": {
+              "total_deposit": "19377300.0",
+              "total_advance": "5383400.0",
+              "cd_ratio": "27.78"
+            },
+            "South East": {
+              "total_deposit": "15907200.0",
+              "total_advance": "12543300.0",
+              "cd_ratio": "78.85"
+            },
+            "South West": {
+              "total_deposit": "11757400.0",
+              "total_advance": "3630500.0",
+              "cd_ratio": "30.88"
+            },
+            "West": {
+              "total_deposit": "13559800.0",
+              "total_advance": "6315200.0",
+              "cd_ratio": "46.57"
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "total_branch",
+            "total_atm"
+          ],
+          "districts": {
+            "Central": {
+              "total_branch": "440",
+              "total_atm": "815"
+            },
+            "East": {
+              "total_branch": "266",
+              "total_atm": "523"
+            },
+            "New Delhi": {
+              "total_branch": "411",
+              "total_atm": "772"
+            },
+            "North": {
+              "total_branch": "268",
+              "total_atm": "400"
+            },
+            "North East": {
+              "total_branch": "58",
+              "total_atm": "156"
+            },
+            "North West": {
+              "total_branch": "410",
+              "total_atm": "596"
+            },
+            "Shahdara": {
+              "total_branch": "171",
+              "total_atm": "271"
+            },
+            "South": {
+              "total_branch": "419",
+              "total_atm": "707"
+            },
+            "South East": {
+              "total_branch": "361",
+              "total_atm": "962"
+            },
+            "South West": {
+              "total_branch": "396",
+              "total_atm": "1049"
+            },
+            "West": {
+              "total_branch": "554",
+              "total_atm": "828"
+            }
+          }
+        }
+      }
+    },
+    "december_2024": {
+      "period": "December 2024",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Central": {
+              "total_deposit": "25006100.0",
+              "total_advance": "20881600.0",
+              "cd_ratio": "83.51"
+            },
+            "East": {
+              "total_deposit": "7427200.0",
+              "total_advance": "3109900.0",
+              "cd_ratio": "41.87"
+            },
+            "New Delhi": {
+              "total_deposit": "54528000.0",
+              "total_advance": "111456600.0",
+              "cd_ratio": "204.4"
+            },
+            "North": {
+              "total_deposit": "5438200.0",
+              "total_advance": "2506900.0",
+              "cd_ratio": "46.1"
+            },
+            "North East": {
+              "total_deposit": "1112600.0",
+              "total_advance": "644300.0",
+              "cd_ratio": "57.91"
+            },
+            "North West": {
+              "total_deposit": "9523200.0",
+              "total_advance": "4614800.0",
+              "cd_ratio": "48.46"
+            },
+            "Shahdara": {
+              "total_deposit": "4466400.0",
+              "total_advance": "1446600.0",
+              "cd_ratio": "32.39"
+            },
+            "South": {
+              "total_deposit": "20416900.0",
+              "total_advance": "5836700.0",
+              "cd_ratio": "28.59"
+            },
+            "South East": {
+              "total_deposit": "16082000.0",
+              "total_advance": "13360100.0",
+              "cd_ratio": "83.08"
+            },
+            "South West": {
+              "total_deposit": "12517600.0",
+              "total_advance": "3591300.0",
+              "cd_ratio": "28.69"
+            },
+            "West": {
+              "total_deposit": "14247400.0",
+              "total_advance": "6352100.0",
+              "cd_ratio": "44.58"
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "total_branch",
+            "total_atm"
+          ],
+          "districts": {
+            "Central": {
+              "total_branch": "438",
+              "total_atm": "851"
+            },
+            "East": {
+              "total_branch": "263",
+              "total_atm": "588"
+            },
+            "New Delhi": {
+              "total_branch": "411",
+              "total_atm": "735"
+            },
+            "North": {
+              "total_branch": "282",
+              "total_atm": "499"
+            },
+            "North East": {
+              "total_branch": "61",
+              "total_atm": "232"
+            },
+            "North West": {
+              "total_branch": "412",
+              "total_atm": "692"
+            },
+            "Shahdara": {
+              "total_branch": "166",
+              "total_atm": "339"
+            },
+            "South": {
+              "total_branch": "425",
+              "total_atm": "783"
+            },
+            "South East": {
+              "total_branch": "364",
+              "total_atm": "650"
+            },
+            "South West": {
+              "total_branch": "404",
+              "total_atm": "813"
+            },
+            "West": {
+              "total_branch": "575",
+              "total_atm": "899"
+            }
+          }
+        }
+      }
+    },
+    "march_2025": {
+      "period": "March 2025",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Central": {
+              "total_deposit": "24746100.0",
+              "total_advance": "19516000.0",
+              "cd_ratio": "78.86"
+            },
+            "East": {
+              "total_deposit": "7620900.0",
+              "total_advance": "3148600.0",
+              "cd_ratio": "41.32"
+            },
+            "New Delhi": {
+              "total_deposit": "63084500.0",
+              "total_advance": "119104100.0",
+              "cd_ratio": "188.8"
+            },
+            "North": {
+              "total_deposit": "5530900.0",
+              "total_advance": "2569000.0",
+              "cd_ratio": "46.45"
+            },
+            "North East": {
+              "total_deposit": "1144800.0",
+              "total_advance": "644000.0",
+              "cd_ratio": "56.25"
+            },
+            "North West": {
+              "total_deposit": "9771000.0",
+              "total_advance": "4773100.0",
+              "cd_ratio": "48.85"
+            },
+            "Shahdara": {
+              "total_deposit": "4624300.0",
+              "total_advance": "1542700.0",
+              "cd_ratio": "33.36"
+            },
+            "South": {
+              "total_deposit": "21150700.0",
+              "total_advance": "5962900.0",
+              "cd_ratio": "28.19"
+            },
+            "South East": {
+              "total_deposit": "17035800.0",
+              "total_advance": "12492300.0",
+              "cd_ratio": "73.33"
+            },
+            "South West": {
+              "total_deposit": "14424600.0",
+              "total_advance": "3633000.0",
+              "cd_ratio": "25.19"
+            },
+            "West": {
+              "total_deposit": "14668700.0",
+              "total_advance": "6749800.0",
+              "cd_ratio": "46.02"
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "total_branch",
+            "total_atm"
+          ],
+          "districts": {
+            "Central": {
+              "total_branch": "442",
+              "total_atm": "875"
+            },
+            "East": {
+              "total_branch": "258",
+              "total_atm": "558"
+            },
+            "New Delhi": {
+              "total_branch": "416",
+              "total_atm": "755"
+            },
+            "North": {
+              "total_branch": "285",
+              "total_atm": "504"
+            },
+            "North East": {
+              "total_branch": "60",
+              "total_atm": "212"
+            },
+            "North West": {
+              "total_branch": "423",
+              "total_atm": "704"
+            },
+            "Shahdara": {
+              "total_branch": "174",
+              "total_atm": "352"
+            },
+            "South": {
+              "total_branch": "435",
+              "total_atm": "792"
+            },
+            "South East": {
+              "total_branch": "360",
+              "total_atm": "665"
+            },
+            "South West": {
+              "total_branch": "411",
+              "total_atm": "821"
+            },
+            "West": {
+              "total_branch": "557",
+              "total_atm": "927"
+            }
+          }
+        }
+      }
+    },
+    "june_2025": {
+      "period": "June 2025",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Central": {
+              "total_deposit": "25419600.0",
+              "total_advance": "20020500.0",
+              "cd_ratio": "78.76"
+            },
+            "East": {
+              "total_deposit": "7829600.0",
+              "total_advance": "3099700.0",
+              "cd_ratio": "39.59"
+            },
+            "New Delhi": {
+              "total_deposit": "56721400.0",
+              "total_advance": "107376700.0",
+              "cd_ratio": "189.31"
+            },
+            "North": {
+              "total_deposit": "5607800.0",
+              "total_advance": "2637700.0",
+              "cd_ratio": "47.04"
+            },
+            "North East": {
+              "total_deposit": "1159300.0",
+              "total_advance": "667700.0",
+              "cd_ratio": "57.6"
+            },
+            "North West": {
+              "total_deposit": "9869100.0",
+              "total_advance": "4798300.0",
+              "cd_ratio": "48.62"
+            },
+            "Shahdara": {
+              "total_deposit": "4646900.0",
+              "total_advance": "1503700.0",
+              "cd_ratio": "32.36"
+            },
+            "South": {
+              "total_deposit": "21330800.0",
+              "total_advance": "5896800.0",
+              "cd_ratio": "27.64"
+            },
+            "South East": {
+              "total_deposit": "16777200.0",
+              "total_advance": "13887600.0",
+              "cd_ratio": "82.78"
+            },
+            "South West": {
+              "total_deposit": "13029200.0",
+              "total_advance": "3798500.0",
+              "cd_ratio": "29.15"
+            },
+            "West": {
+              "total_deposit": "14847900.0",
+              "total_advance": "6719500.0",
+              "cd_ratio": "45.26"
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "total_branch",
+            "total_atm"
+          ],
+          "districts": {
+            "Central": {
+              "total_branch": "446",
+              "total_atm": "834"
+            },
+            "East": {
+              "total_branch": "257",
+              "total_atm": "530"
+            },
+            "New Delhi": {
+              "total_branch": "419",
+              "total_atm": "726"
+            },
+            "North": {
+              "total_branch": "285",
+              "total_atm": "487"
+            },
+            "North East": {
+              "total_branch": "61",
+              "total_atm": "210"
+            },
+            "North West": {
+              "total_branch": "420",
+              "total_atm": "678"
+            },
+            "Shahdara": {
+              "total_branch": "177",
+              "total_atm": "345"
+            },
+            "South": {
+              "total_branch": "438",
+              "total_atm": "764"
+            },
+            "South East": {
+              "total_branch": "358",
+              "total_atm": "642"
+            },
+            "South West": {
+              "total_branch": "412",
+              "total_atm": "797"
+            },
+            "West": {
+              "total_branch": "565",
+              "total_atm": "901"
+            }
+          }
+        }
+      }
+    },
+    "september_2025": {
+      "period": "September 2025",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Central": {
+              "total_deposit": "26325500.0",
+              "total_advance": "20942900.0",
+              "cd_ratio": "79.55"
+            },
+            "East": {
+              "total_deposit": "8059000.0",
+              "total_advance": "3372800.0",
+              "cd_ratio": "41.85"
+            },
+            "New Delhi": {
+              "total_deposit": "59129400.0",
+              "total_advance": "113173600.0",
+              "cd_ratio": "191.4"
+            },
+            "North": {
+              "total_deposit": "5818800.0",
+              "total_advance": "2757500.0",
+              "cd_ratio": "47.39"
+            },
+            "North East": {
+              "total_deposit": "1186200.0",
+              "total_advance": "668700.0",
+              "cd_ratio": "56.37"
+            },
+            "North West": {
+              "total_deposit": "10009200.0",
+              "total_advance": "4997600.0",
+              "cd_ratio": "49.93"
+            },
+            "Shahdara": {
+              "total_deposit": "4737300.0",
+              "total_advance": "1583300.0",
+              "cd_ratio": "33.42"
+            },
+            "South": {
+              "total_deposit": "22306900.0",
+              "total_advance": "5554900.0",
+              "cd_ratio": "24.9"
+            },
+            "South East": {
+              "total_deposit": "17573700.0",
+              "total_advance": "14431400.0",
+              "cd_ratio": "82.12"
+            },
+            "South West": {
+              "total_deposit": "16431000.0",
+              "total_advance": "3854900.0",
+              "cd_ratio": "23.46"
+            },
+            "West": {
+              "total_deposit": "15181600.0",
+              "total_advance": "6807100.0",
+              "cd_ratio": "44.84"
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "total_branch",
+            "total_atm"
+          ],
+          "districts": {
+            "Central": {
+              "total_branch": "449",
+              "total_atm": "749"
+            },
+            "East": {
+              "total_branch": "257",
+              "total_atm": "456"
+            },
+            "New Delhi": {
+              "total_branch": "418",
+              "total_atm": "742"
+            },
+            "North": {
+              "total_branch": "286",
+              "total_atm": "377"
+            },
+            "North East": {
+              "total_branch": "59",
+              "total_atm": "117"
+            },
+            "North West": {
+              "total_branch": "421",
+              "total_atm": "565"
+            },
+            "Shahdara": {
+              "total_branch": "182",
+              "total_atm": "264"
+            },
+            "South": {
+              "total_branch": "437",
+              "total_atm": "680"
+            },
+            "South East": {
+              "total_branch": "358",
+              "total_atm": "879"
+            },
+            "South West": {
+              "total_branch": "415",
+              "total_atm": "1011"
+            },
+            "West": {
+              "total_branch": "566",
+              "total_atm": "782"
+            }
+          }
+        }
+      }
+    },
+    "december_2025": {
+      "period": "December 2025",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Central": {
+              "total_deposit": "27477869.35",
+              "total_advance": "20765238.01",
+              "cd_ratio": "75.57"
+            },
+            "East": {
+              "total_deposit": "8123603.72",
+              "total_advance": "3470904.51",
+              "cd_ratio": "42.73"
+            },
+            "New Delhi": {
+              "total_deposit": "58024154.22",
+              "total_advance": "119582687.74",
+              "cd_ratio": "206.09"
+            },
+            "North": {
+              "total_deposit": "5929961.88",
+              "total_advance": "2846666.76",
+              "cd_ratio": "48.0"
+            },
+            "North East": {
+              "total_deposit": "1210952.49",
+              "total_advance": "657706.37",
+              "cd_ratio": "54.31"
+            },
+            "North West": {
+              "total_deposit": "10305750.15",
+              "total_advance": "5156387.66",
+              "cd_ratio": "50.03"
+            },
+            "Shahdara": {
+              "total_deposit": "4856923.31",
+              "total_advance": "1630462.95",
+              "cd_ratio": "33.57"
+            },
+            "South": {
+              "total_deposit": "22240515.78",
+              "total_advance": "5870307.14",
+              "cd_ratio": "26.39"
+            },
+            "South East": {
+              "total_deposit": "17821556.34",
+              "total_advance": "15650935.9",
+              "cd_ratio": "87.82"
+            },
+            "South West": {
+              "total_deposit": "13245333.73",
+              "total_advance": "4147713.49",
+              "cd_ratio": "31.31"
+            },
+            "West": {
+              "total_deposit": "15480588.1",
+              "total_advance": "6986191.99",
+              "cd_ratio": "45.13"
+            }
+          }
+        },
+        "branch_network": {
+          "fields": [
+            "total_branch",
+            "total_atm"
+          ],
+          "districts": {
+            "Central": {
+              "total_branch": "451",
+              "total_atm": "730"
+            },
+            "East": {
+              "total_branch": "261",
+              "total_atm": "447"
+            },
+            "New Delhi": {
+              "total_branch": "419",
+              "total_atm": "733"
+            },
+            "North": {
+              "total_branch": "292",
+              "total_atm": "392"
+            },
+            "North East": {
+              "total_branch": "60",
+              "total_atm": "113"
+            },
+            "North West": {
+              "total_branch": "429",
+              "total_atm": "572"
+            },
+            "Shahdara": {
+              "total_branch": "188",
+              "total_atm": "266"
+            },
+            "South": {
+              "total_branch": "439",
+              "total_atm": "676"
+            },
+            "South East": {
+              "total_branch": "360",
+              "total_atm": "897"
+            },
+            "South West": {
+              "total_branch": "416",
+              "total_atm": "1026"
+            },
+            "West": {
+              "total_branch": "571",
+              "total_atm": "779"
+            }
+          }
+        }
+      }
+    }
+  }
+}
