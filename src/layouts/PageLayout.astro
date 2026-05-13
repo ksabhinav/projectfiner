@@ -8,12 +8,15 @@ interface Props {
   title: string;
   pageTitle: string;
   subtitle?: string;
+  /** SEO meta description — surfaces as the snippet under the result on Google.
+      Keep under ~155 characters. If omitted, BaseLayout uses the site-wide default. */
+  description?: string;
   backLink?: { href: string; label: string };
   activeSubNav?: 'rankings' | 'trends' | 'insights' | string;
   hideFooter?: boolean;
 }
 
-const { title, pageTitle, subtitle, backLink, activeSubNav, hideFooter } = Astro.props;
+const { title, pageTitle, subtitle, description, backLink, activeSubNav, hideFooter } = Astro.props;
 
 // Auto-derive activeNav from the URL so the right pill is highlighted.
 const path = Astro.url?.pathname ?? '';
@@ -34,7 +37,7 @@ const validSubNav = activeSubNav === 'rankings' || activeSubNav === 'trends' || 
   ? activeSubNav : null;
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} description={description}>
   <Header activeNav={activeNav} />
 
   {(pageTitle || subtitle || backLink) && (
