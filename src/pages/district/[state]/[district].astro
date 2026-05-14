@@ -136,6 +136,7 @@ const subtitleHtml = [
   subtitle={subtitleHtml}
   backLink={{ href: `${base}slbc-data/${data.state}/download/`, label: `${stateLabel} data` }}
   extraJsonLd={datasetLd}
+  ogImage={`/og/district/${data.state}/${data.districtSlug}.png`}
 >
   <div class="container">
     <DistrictPage client:load data={data} basePath={base} />

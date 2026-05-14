@@ -215,6 +215,12 @@ INDICATOR_ORDER = [
 ]
 
 STATE_LABELS = {
+    'andaman-nicobar': 'Andaman & Nicobar Islands',
+    'chandigarh': 'Chandigarh',
+    'dadra-nagar-haveli': 'Dadra & Nagar Haveli',
+    'daman-diu': 'Daman & Diu',
+    'lakshadweep': 'Lakshadweep',
+    'puducherry': 'Puducherry',
     'andhra-pradesh': 'Andhra Pradesh',
     'arunachal-pradesh': 'Arunachal Pradesh',
     'assam': 'Assam',
