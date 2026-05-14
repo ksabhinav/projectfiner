@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-14T18:12:33Z",
+  "generatedAt": "2026-05-14T18:31:21Z",
   "states": {
     "andhra-pradesh": {
       "stateUrl": "https://web.archive.org/web/2025*/slbcap.nic.in",
@@ -7,158 +7,90 @@
       "latest": {
         "timestamp": "20260316001803",
         "date": "2026-03-16",
-        "url": "https://web.archive.org/web/20260316001803/https://www.slbcap.nic.in/"
+        "url": "https://web.archive.org/web/20260316001803/https://www.slbcap.nic.in/",
+        "variantUrl": "https://web.archive.org/web/2025*/slbcap.nic.in"
+      },
+      "variants": [
+        {
+          "url": "https://web.archive.org/web/2025*/slbcap.nic.in",
+          "host": "slbcap.nic.in",
+          "snapshotCount": 121,
+          "oldestDate": "2010-07-24",
+          "newestDate": "2026-03-16",
+          "snapshotCalendar": "https://web.archive.org/web/*/slbcap.nic.in",
+          "newestUrl": "https://web.archive.org/web/20260316001803/https://www.slbcap.nic.in/"
+        }
+      ],
+      "deepestArchive": {
+        "host": "slbcap.nic.in",
+        "snapshotCount": 121,
+        "snapshotCalendar": "https://web.archive.org/web/*/slbcap.nic.in",
+        "oldestDate": "2010-07-24"
       }
     },
     "arunachal-pradesh": {
       "stateUrl": "https://onlineslbcne.nic.in",
       "snapshotCalendar": "https://web.archive.org/web/*/onlineslbcne.nic.in",
-      "latest": null
+      "latest": null,
+      "variants": [
+        {
+          "url": "https://onlineslbcne.nic.in",
+          "host": "onlineslbcne.nic.in",
+          "snapshotCount": 0,
+          "oldestDate": null,
+          "newestDate": null,
+          "snapshotCalendar": "https://web.archive.org/web/*/onlineslbcne.nic.in",
+          "newestUrl": null
+        }
+      ]
     },
     "assam": {
       "stateUrl": "https://onlineslbcne.nic.in",
       "snapshotCalendar": "https://web.archive.org/web/*/onlineslbcne.nic.in",
-      "latest": null
+      "latest": null,
+      "variants": [
+        {
+          "url": "https://onlineslbcne.nic.in",
+          "host": "onlineslbcne.nic.in",
+          "snapshotCount": 0,
+          "oldestDate": null,
+          "newestDate": null,
+          "snapshotCalendar": "https://web.archive.org/web/*/onlineslbcne.nic.in",
+          "newestUrl": null
+        }
+      ]
     },
     "bihar": {
       "stateUrl": "https://www.slbcbihar.com/SlBCHeldMeeting.aspx",
       "snapshotCalendar": "https://web.archive.org/web/*/www.slbcbihar.com",
-      "latest": null
+      "latest": null,
+      "variants": [
+        {
+          "url": "https://www.slbcbihar.com/SlBCHeldMeeting.aspx",
+          "host": "www.slbcbihar.com",
+          "snapshotCount": 0,
+          "oldestDate": null,
+          "newestDate": null,
+          "snapshotCalendar": "https://web.archive.org/web/*/www.slbcbihar.com",
+          "newestUrl": null
+        }
+      ]
     },
     "chhattisgarh": {
       "stateUrl": "https://slbcchhattisgarh.com",
       "snapshotCalendar": "https://web.archive.org/web/*/slbcchhattisgarh.com",
-      "latest": null
-    },
-    "delhi": {
-      "stateUrl": "https://slbcdelhi.pnb.bank.in",
-      "snapshotCalendar": "https://web.archive.org/web/*/slbcdelhi.pnb.bank.in",
-      "latest": null
-    },
-    "goa": {
-      "stateUrl": "https://slbcgoa.com",
-      "snapshotCalendar": "https://web.archive.org/web/*/slbcgoa.com",
-      "latest": null
-    },
-    "gujarat": {
-      "stateUrl": "https://slbcgujarat.in",
-      "snapshotCalendar": "https://web.archive.org/web/*/slbcgujarat.in",
-      "latest": null
-    },
-    "haryana": {
-      "stateUrl": "https://slbcharyana.pnb.bank.in",
-      "snapshotCalendar": "https://web.archive.org/web/*/slbcharyana.pnb.bank.in",
-      "latest": null
-    },
-    "himachal-pradesh": {
-      "stateUrl": "https://slbchp.com",
-      "snapshotCalendar": "https://web.archive.org/web/*/slbchp.com",
-      "latest": null
-    },
-    "jammu-kashmir": {
-      "stateUrl": "https://www.jkslbc.com",
-      "snapshotCalendar": "https://web.archive.org/web/*/www.jkslbc.com",
-      "latest": null
-    },
-    "jharkhand": {
-      "stateUrl": "https://onlineslbcne.nic.in",
-      "snapshotCalendar": "https://web.archive.org/web/*/onlineslbcne.nic.in",
-      "latest": null
-    },
-    "karnataka": {
-      "stateUrl": "https://slbckarnataka.com",
-      "snapshotCalendar": "https://web.archive.org/web/*/slbckarnataka.com",
-      "latest": null
-    },
-    "kerala": {
-      "stateUrl": "https://slbckerala.com",
-      "snapshotCalendar": "https://web.archive.org/web/*/slbckerala.com",
-      "latest": null
-    },
-    "ladakh": {
-      "stateUrl": "https://utlbcladakh.com",
-      "snapshotCalendar": "https://web.archive.org/web/*/utlbcladakh.com",
-      "latest": null
-    },
-    "madhya-pradesh": {
-      "stateUrl": "https://www.slbcmadhyapradesh.in/slbc-meeting.aspx",
-      "snapshotCalendar": "https://web.archive.org/web/*/www.slbcmadhyapradesh.in",
-      "latest": null
-    },
-    "maharashtra": {
-      "stateUrl": "https://bankofmaharashtra.bank.in",
-      "snapshotCalendar": "https://web.archive.org/web/*/bankofmaharashtra.bank.in",
-      "latest": null
-    },
-    "manipur": {
-      "stateUrl": "https://onlineslbcne.nic.in",
-      "snapshotCalendar": "https://web.archive.org/web/*/onlineslbcne.nic.in",
-      "latest": null
-    },
-    "meghalaya": {
-      "stateUrl": "https://onlineslbcne.nic.in",
-      "snapshotCalendar": "https://web.archive.org/web/*/onlineslbcne.nic.in",
-      "latest": null
-    },
-    "mizoram": {
-      "stateUrl": "https://onlineslbcne.nic.in",
-      "snapshotCalendar": "https://web.archive.org/web/*/onlineslbcne.nic.in",
-      "latest": null
-    },
-    "nagaland": {
-      "stateUrl": "https://onlineslbcne.nic.in",
-      "snapshotCalendar": "https://web.archive.org/web/*/onlineslbcne.nic.in",
-      "latest": null
-    },
-    "odisha": {
-      "stateUrl": "https://onlineslbcne.nic.in",
-      "snapshotCalendar": "https://web.archive.org/web/*/onlineslbcne.nic.in",
-      "latest": null
-    },
-    "punjab": {
-      "stateUrl": "https://slbcpunjab.pnb.bank.in",
-      "snapshotCalendar": "https://web.archive.org/web/*/slbcpunjab.pnb.bank.in",
-      "latest": null
-    },
-    "rajasthan": {
-      "stateUrl": "https://slbcrajasthan.in",
-      "snapshotCalendar": "https://web.archive.org/web/*/slbcrajasthan.in",
-      "latest": null
-    },
-    "sikkim": {
-      "stateUrl": "https://onlineslbcne.nic.in",
-      "snapshotCalendar": "https://web.archive.org/web/*/onlineslbcne.nic.in",
-      "latest": null
-    },
-    "tamil-nadu": {
-      "stateUrl": "https://slbctn.com",
-      "snapshotCalendar": "https://web.archive.org/web/*/slbctn.com",
-      "latest": null
-    },
-    "telangana": {
-      "stateUrl": "https://telanganaslbc.com",
-      "snapshotCalendar": "https://web.archive.org/web/*/telanganaslbc.com",
-      "latest": null
-    },
-    "tripura": {
-      "stateUrl": "https://slbctripura.pnb.bank.in/Back_Paper_Quarterly.asp",
-      "snapshotCalendar": "https://web.archive.org/web/*/slbctripura.pnb.bank.in",
-      "latest": null
-    },
-    "uttarakhand": {
-      "stateUrl": "https://slbcuttarakhand.com",
-      "snapshotCalendar": "https://web.archive.org/web/*/slbcuttarakhand.com",
-      "latest": null
-    },
-    "west-bengal": {
-      "stateUrl": "https://slbcwb.com",
-      "snapshotCalendar": "https://web.archive.org/web/*/slbcwb.com",
-      "latest": null
-    },
-    "uttar-pradesh": {
-      "stateUrl": "https://slbcup.com",
-      "snapshotCalendar": "https://web.archive.org/web/*/slbcup.com",
-      "latest": null
+      "latest": null,
+      "variants": [
+        {
+          "url": "https://slbcchhattisgarh.com",
+          "host": "slbcchhattisgarh.com",
+          "snapshotCount": 0,
+          "oldestDate": null,
+          "newestDate": null,
+          "snapshotCalendar": "https://web.archive.org/web/*/slbcchhattisgarh.com",
+          "newestUrl": null
+        }
+      ]
     }
   }
 }

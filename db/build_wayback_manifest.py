@@ -62,25 +62,44 @@ USER_AGENT = 'projectfiner-wayback-manifest/1.0 (https://projectfiner.com)'
 # Retry with backoff so the cron doesn't red on flake.
 RETRIES = 2
 RETRY_BACKOFF_S = 4
-REQUEST_TIMEOUT_S = 20  # CDX usually responds in <5s; slow lookups can
-                        # wait until the daily cron refreshes the manifest.
+REQUEST_TIMEOUT_S = 30  # CDX is slower for `cdx_overview` (returns the full
+                        # snapshot list) than `cdx_latest` (single row).
+                        # 30s is enough for the deepest sites; tighter
+                        # rejects e.g. slbcchhattisgarh.com which can take
+                        # 20s+ to start streaming.
 INTER_REQUEST_DELAY_S = 3  # be polite, ~20req/min ceiling
 
 
-def parse_slbc_urls() -> dict[str, str]:
-    """Return {state_slug: portal_url} from indicator-sources.ts."""
+def parse_slbc_urls() -> dict[str, dict]:
+    """Return {state_slug: {url, aliasUrls}} from indicator-sources.ts.
+
+    Picks up the optional `aliasUrls: ['...', '...']` field so the manifest
+    builder can crawl both the current and legacy domains per state. Used
+    to navigate the .bank.in migration window — see indicator-sources.ts
+    header comment for context.
+    """
     text = SLBC_SOURCES_TS.read_text()
     m = re.search(r'SLBC_STATE_URLS[^=]*=\s*\{(.+?)\n\};', text, re.DOTALL)
     if not m:
         print('ERROR: SLBC_STATE_URLS block not found', file=sys.stderr)
         sys.exit(1)
     block = m.group(1)
-    # Each line: 'slug': { name: '...', url: '...' },
-    out: dict[str, str] = {}
-    for line in block.splitlines():
-        m = re.search(r"'([^']+)':\s*\{\s*name:\s*'[^']+',\s*url:\s*'([^']+)'", line)
-        if m:
-            out[m.group(1)] = m.group(2)
+    out: dict[str, dict] = {}
+    # Match each entry's full body { ... } so we can pull primary url AND
+    # the optional aliasUrls array. A simpler line-by-line approach misses
+    # multi-line aliasUrls literals.
+    for entry in re.finditer(
+        r"'([^']+)':\s*\{\s*name:\s*'[^']+',\s*url:\s*'([^']+)'([^}]*)\}",
+        block,
+    ):
+        slug = entry.group(1)
+        url = entry.group(2)
+        rest = entry.group(3) or ''
+        aliases: list[str] = []
+        m_alias = re.search(r"aliasUrls:\s*\[(.*?)\]", rest, re.DOTALL)
+        if m_alias:
+            aliases = re.findall(r"'([^']+)'", m_alias.group(1))
+        out[slug] = {'url': url, 'aliasUrls': aliases}
     return out
 
 
@@ -110,6 +129,72 @@ def _fetch_via_curl(cdx_url: str) -> str:
     if result.returncode != 0:
         raise RuntimeError(f'curl exit {result.returncode}: {result.stderr.strip()[:120]}')
     return result.stdout
+
+
+def _cdx_query(qs_params: dict) -> list | None:
+    """Run a CDX query, returning the parsed JSON rows (sans header)
+    or None on persistent failure."""
+    qs = parse.urlencode(qs_params)
+    cdx_url = f'{CDX_BASE}?{qs}'
+    last_err = ''
+    for attempt in range(1, RETRIES + 1):
+        try:
+            payload = _fetch_via_urllib(cdx_url)
+        except Exception as e:
+            err = str(e)
+            if 'CERTIFICATE_VERIFY_FAILED' in err or 'SSL' in err.upper():
+                try:
+                    payload = _fetch_via_curl(cdx_url)
+                except Exception as ce:
+                    last_err = f'curl: {ce}'
+                    payload = None
+            else:
+                last_err = err
+                payload = None
+        if payload is None:
+            if attempt < RETRIES:
+                time.sleep(RETRY_BACKOFF_S * attempt)
+            continue
+        try:
+            data = json.loads(payload)
+        except json.JSONDecodeError as e:
+            last_err = f'json: {e}'
+            if attempt < RETRIES:
+                time.sleep(RETRY_BACKOFF_S * attempt)
+            continue
+        if not data:
+            return []  # success with no results
+        return data[1:] if len(data) >= 1 else []  # drop header row
+    print(f'  WARN: CDX failed for {qs_params.get("url")}: {last_err}', file=sys.stderr)
+    return None
+
+
+def cdx_overview(url: str) -> dict | None:
+    """Return aggregate stats for a URL: count, oldest, newest snapshot.
+
+    Single CDX query that returns timestamps for every 200 snapshot.
+    For very-active domains this can be 100s of rows; for thin domains
+    it'll be 0-10.
+    """
+    rows = _cdx_query({
+        'url': url,
+        'output': 'json',
+        'filter': 'statuscode:200',
+        'fl': 'timestamp,original',
+    })
+    if rows is None:
+        return None
+    if not rows:
+        return {'count': 0, 'oldest': None, 'newest': None, 'newest_original': None}
+    # Rows arrive newest-last per CDX default (sorted by timestamp asc).
+    oldest = rows[0]
+    newest = rows[-1]
+    return {
+        'count': len(rows),
+        'oldest': oldest[0],
+        'newest': newest[0],
+        'newest_original': newest[1],
+    }
 
 
 def cdx_latest(url: str) -> dict | None:
@@ -171,6 +256,11 @@ def main():
                     help='Skip CDX calls. Write only the snapshotCalendar URLs '
                          '(zero network, <1s). Useful for an initial pass; the '
                          'daily cron then enriches with `latest` over time.')
+    ap.add_argument('--audit', action='store_true',
+                    help='Also emit public/sources/wayback-audit.json with '
+                         'per-variant snapshot counts + oldest/newest. Slower '
+                         '(one extra CDX call per variant) but gives a full '
+                         'coverage map across primary + alias URLs.')
     args = ap.parse_args()
 
     state_urls = parse_slbc_urls()
@@ -204,53 +294,154 @@ def main():
     # cost one CDX query instead of eight.
     cache: dict[str, dict | None] = {}
 
+    overview_cache: dict[str, dict | None] = {}
+
+    def ymd(ts: str) -> str:
+        try:
+            return f'{ts[0:4]}-{ts[4:6]}-{ts[6:8]}'
+        except Exception:
+            return ts
+
     if args.stub:
         print(f'stub mode: generating snapshotCalendar for {len(items)} states (no CDX)…')
+    elif args.audit:
+        print(f'auditing CDX for {len(items)} state portals (primary + aliases)…')
     else:
-        print(f'querying CDX for {len(items)} state portals…')
+        print(f'querying CDX for {len(items)} state portals (primary + aliases)…')
+
     states_out: dict[str, dict] = {}
-    for i, (slug, url) in enumerate(items, 1):
-        upstream = upstream_of(url)
-        host = host_only(upstream)
+    for i, (slug, meta) in enumerate(items, 1):
+        primary_url = meta['url']
+        alias_urls = meta.get('aliasUrls', [])
+        # Collect every candidate variant for this state. Order matters for
+        # tiebreaks — primary first, then aliases in declaration order.
+        variants = [primary_url] + list(alias_urls)
+
+        # Primary citation always shows the canonical hostname.
+        host = host_only(upstream_of(primary_url))
         calendar = f'https://web.archive.org/web/*/{host}'
-        if args.stub:
-            # Preserve existing latest snapshot if any
-            existing_latest = existing.get(slug, {}).get('latest') if args.merge else None
-            result = None
-            cache_hit = False
-        else:
-            cache_hit = upstream in cache
-            if cache_hit:
-                result = cache[upstream]
+
+        # Per-variant audit data so we can pick the deepest archive.
+        variant_records: list[dict] = []
+        for v in variants:
+            upstream = upstream_of(v)
+            if args.stub:
+                variant_records.append({
+                    'url': v,
+                    'cdxUrl': upstream,
+                    'host': host_only(upstream),
+                    'count': None,
+                    'oldest': None,
+                    'newest': None,
+                    'newestUrl': None,
+                })
+                continue
+            cache_key = upstream
+            if args.audit:
+                if cache_key in overview_cache:
+                    o = overview_cache[cache_key]
+                    cache_hit = True
+                else:
+                    o = cdx_overview(upstream)
+                    overview_cache[cache_key] = o
+                    cache_hit = False
             else:
-                result = cdx_latest(upstream)
-                cache[upstream] = result
+                # Lightweight mode: just `latest` per variant.
+                if cache_key in cache:
+                    r = cache[cache_key]
+                    cache_hit = True
+                else:
+                    r = cdx_latest(upstream)
+                    cache[cache_key] = r
+                    cache_hit = False
+                if r:
+                    o = {'count': None, 'oldest': None,
+                         'newest': r['timestamp'], 'newest_original': r['original']}
+                else:
+                    o = None
+            # CDX failure: record an empty-but-typed entry so downstream
+            # code doesn't trip on None.
+            if o is None:
+                o = {'count': 0, 'oldest': None, 'newest': None, 'newest_original': None}
+            newest_ts = o.get('newest')
+            newest_orig = o.get('newest_original') or upstream
+            variant_records.append({
+                'url': v,
+                'cdxUrl': upstream,
+                'host': host_only(upstream),
+                'count': o.get('count'),
+                'oldest': o.get('oldest'),
+                'newest': newest_ts,
+                'newestUrl': f'https://web.archive.org/web/{newest_ts}/{newest_orig}' if newest_ts else None,
+            })
+            if not args.stub and not cache_hit and i * len(variants) > 1:
+                time.sleep(INTER_REQUEST_DELAY_S)
+
+        # Pick the freshest-snapshot variant for `latest` (this drives the
+        # district page's "Wayback snapshot 2026-MM-DD" link).
+        freshest = None
+        for vr in variant_records:
+            if vr.get('newest') and (not freshest or vr['newest'] > freshest['newest']):
+                freshest = vr
+        # Pick the deepest-archive variant for the "history" link (the all-
+        # snapshots calendar — point it at the host with the most snapshots
+        # or, in the absence of counts, the host with the oldest snapshot).
+        deepest = None
+        for vr in variant_records:
+            if args.audit:
+                if vr.get('count'):
+                    if not deepest or (vr['count'] or 0) > (deepest['count'] or 0):
+                        deepest = vr
+            else:
+                if vr.get('oldest'):
+                    if not deepest or (vr['oldest'] or '') < (deepest['oldest'] or 'z'):
+                        deepest = vr
+
         latest = None
-        if result:
-            ts = result['timestamp']
-            try:
-                date_pretty = f'{ts[0:4]}-{ts[4:6]}-{ts[6:8]}'
-            except Exception:
-                date_pretty = ts
+        if freshest:
             latest = {
-                'timestamp': ts,
-                'date': date_pretty,
-                'url': f'https://web.archive.org/web/{ts}/{result["original"]}',
+                'timestamp': freshest['newest'],
+                'date': ymd(freshest['newest']),
+                'url': freshest['newestUrl'],
+                'variantUrl': freshest['url'],
             }
         elif (args.merge or args.stub) and slug in existing and existing[slug].get('latest'):
-            # Keep previous good entry rather than nulling it out
             latest = existing[slug]['latest']
 
-        states_out[slug] = {
-            'stateUrl': url,
+        out_entry = {
+            'stateUrl': primary_url,
             'snapshotCalendar': calendar,
             'latest': latest,
         }
-        marker = latest['date'] if latest else '—'
-        cached_tag = ' (cached)' if cache_hit else ''
-        print(f'  [{i:2d}/{len(items)}] {slug:22} {marker}{cached_tag}')
-        if not args.stub and i < len(items) and not cache_hit:
-            time.sleep(INTER_REQUEST_DELAY_S)
+        if args.audit:
+            out_entry['variants'] = [
+                {
+                    'url': vr['url'],
+                    'host': vr['host'],
+                    'snapshotCount': vr['count'],
+                    'oldestDate': ymd(vr['oldest']) if vr['oldest'] else None,
+                    'newestDate': ymd(vr['newest']) if vr['newest'] else None,
+                    'snapshotCalendar': f'https://web.archive.org/web/*/{vr["host"]}',
+                    'newestUrl': vr['newestUrl'],
+                }
+                for vr in variant_records
+            ]
+            if deepest:
+                out_entry['deepestArchive'] = {
+                    'host': deepest['host'],
+                    'snapshotCount': deepest['count'],
+                    'snapshotCalendar': f'https://web.archive.org/web/*/{deepest["host"]}',
+                    'oldestDate': ymd(deepest['oldest']) if deepest.get('oldest') else None,
+                }
+
+        states_out[slug] = out_entry
+
+        latest_marker = latest['date'] if latest else '—'
+        if args.audit:
+            counts = ' + '.join(str(vr.get('count') or 0) for vr in variant_records)
+            print(f'  [{i:2d}/{len(items)}] {slug:22} latest={latest_marker:11} snapshots={counts}')
+        else:
+            print(f'  [{i:2d}/{len(items)}] {slug:22} latest={latest_marker}')
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     out = {
