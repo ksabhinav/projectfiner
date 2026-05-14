@@ -1,0 +1,94 @@
+# Daily Wayback Machine snapshots.
+#
+# Runs once a day at 03:30 UTC (09:00 IST). Fires Save Page Now (SPN2)
+# requests at the Internet Archive for:
+#
+#   1. The upstream SLBC state portals we depend on. This is the
+#      high-leverage run — protects data we don't control. If a portal
+#      gets overwritten (jkslbc.com pattern, see CLAUDE.md #70) we
+#      still have a snapshot.
+#   2. The top-of-funnel projectfiner.com pages (homepage, /about,
+#      /analysis/*, /downloads, every state download page).
+#   3. A 1/7th rotating cohort of /district/<state>/<district>/ pages
+#      so every district is refreshed once a week.
+#
+# Failures don't fail the workflow — Wayback's SPN is best-effort and
+# occasionally returns 429. The next day's run will catch up.
+#
+# Manual trigger via workflow_dispatch supports a `mode` input for
+# one-off catch-up runs.
+
+name: Wayback daily snapshots
+
+on:
+  schedule:
+    # 03:30 UTC = 09:00 IST. Avoids hitting SPN during US/EU peak hours.
+    - cron: '30 3 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Snapshot mode'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - high-value
+          - districts-cohort
+          - upstream-slbc
+          - all
+
+permissions:
+  contents: read
+
+jobs:
+  upstream-slbc:
+    # The most important run — protects data we don't control.
+    name: Snapshot upstream SLBC portals
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || inputs.mode == 'upstream-slbc' || inputs.mode == 'all'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Snapshot SLBC sources
+        run: python3 scripts/wayback_save.py --mode upstream-slbc
+        # Keep going even if some SPN calls 429 — the script's own
+        # back-off handles rate limiting; we don't want the cron to red.
+        continue-on-error: true
+        env:
+          # Optional: set these as repo secrets for higher SPN rate
+          # limits + job IDs in the response. The script works without
+          # them, just slower (1 req every 8s).
+          WAYBACK_ACCESS_KEY: ${{ secrets.WAYBACK_ACCESS_KEY }}
+          WAYBACK_SECRET: ${{ secrets.WAYBACK_SECRET }}
+
+  high-value:
+    # Top-of-funnel projectfiner.com pages. Sitemap is small (~25 URLs)
+    # so this completes in <5 min.
+    name: Snapshot top-of-funnel pages
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || inputs.mode == 'high-value' || inputs.mode == 'all'
+    needs: upstream-slbc  # serialise so we don't share a rate-limit bucket
+    steps:
+      - uses: actions/checkout@v4
+      - name: Snapshot high-value pages
+        run: python3 scripts/wayback_save.py --mode high-value
+        continue-on-error: true
+        env:
+          WAYBACK_ACCESS_KEY: ${{ secrets.WAYBACK_ACCESS_KEY }}
+          WAYBACK_SECRET: ${{ secrets.WAYBACK_SECRET }}
+
+  districts-cohort:
+    # A 1/7th rotating slice of district pages. ~120 URLs/day, full
+    # coverage in a week. Run last because it's the longest job
+    # (~15-20 min) and we don't want it gating the more important ones.
+    name: Snapshot district cohort (1/7 weekly rotation)
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || inputs.mode == 'districts-cohort' || inputs.mode == 'all'
+    needs: high-value
+    steps:
+      - uses: actions/checkout@v4
+      - name: Snapshot district cohort
+        run: python3 scripts/wayback_save.py --mode districts-cohort
+        continue-on-error: true
+        env:
+          WAYBACK_ACCESS_KEY: ${{ secrets.WAYBACK_ACCESS_KEY }}
+          WAYBACK_SECRET: ${{ secrets.WAYBACK_SECRET }}
