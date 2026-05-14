@@ -29,12 +29,22 @@
     polygon?: DistrictPolygon;
   }
 
+  interface WaybackEntry {
+    stateUrl: string;
+    snapshotCalendar: string;
+    latest?: { timestamp: string; date: string; url: string } | null;
+  }
+
   interface Props {
     data: DistrictData;
     basePath: string;
+    /** Wayback snapshot info for this district's state, looked up by the
+        Astro page from public/sources/wayback.json. Optional; when absent
+        the Sources block falls back to the live URL only. */
+    wayback?: WaybackEntry | null;
   }
 
-  let { data, basePath }: Props = $props();
+  let { data, basePath, wayback = null }: Props = $props();
 
   const indicators = Object.entries(data.indicators);
 
@@ -60,6 +70,18 @@
     }
     return Array.from(byKey.values());
   })();
+
+  /** True if the citation's URL is the state's SLBC portal — i.e. matches
+      the Wayback entry. Used to decide whether to render a "Wayback ↗"
+      link next to the live URL. */
+  function citationMatchesPortal(citUrl: string | undefined): boolean {
+    if (!citUrl || !wayback) return false;
+    // Trim trailing slashes / paths for a forgiving compare. Most SLBC URLs
+    // in indicator-sources.ts are root domain anyway, but a few include a
+    // path (e.g. slbcbihar.com/SlBCHeldMeeting.aspx).
+    const norm = (u: string) => u.replace(/\/$/, '');
+    return norm(citUrl) === norm(wayback.stateUrl);
+  }
 
   // Raw JSON download for this exact district.
   const rawJsonHref = `${basePath}districts/${data.state}/${data.districtSlug}.json`;
@@ -219,6 +241,25 @@
               covers: {g.indicatorLabels.join(', ')}
             </span>
           </div>
+          {#if citationMatchesPortal(g.citation.url) && wayback}
+            <!-- Wayback Machine archive — guarantees the source URL is permanent
+                 even when the upstream portal moves, 404s, or overwrites in place
+                 (J&K Bank pattern, CLAUDE.md #70). -->
+            <p class="src-archive">
+              <span class="src-archive-eye">Archive</span>
+              {#if wayback.latest}
+                <a class="src-link" href={wayback.latest.url} target="_blank" rel="noopener">
+                  Wayback snapshot {wayback.latest.date}
+                  <span class="src-ext" aria-hidden="true">&nearr;</span>
+                </a>
+                &nbsp;&middot;&nbsp;
+              {/if}
+              <a class="src-link" href={wayback.snapshotCalendar} target="_blank" rel="noopener">
+                All snapshots
+                <span class="src-ext" aria-hidden="true">&nearr;</span>
+              </a>
+            </p>
+          {/if}
           {#if g.citation.attribution}
             <p class="src-attr">{g.citation.attribution}</p>
           {/if}
@@ -439,6 +480,27 @@
     color: var(--mist, #6E665E);
     font-style: italic;
     max-width: 680px;
+  }
+  .src-archive {
+    margin: 4px 0 0 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--mist, #6E665E);
+    letter-spacing: 0.03em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .src-archive-eye {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 10px;
+    color: var(--mist, #6E665E);
+    padding: 2px 6px;
+    background: rgba(184, 74, 46, 0.08);
+    border-radius: 4px;
+    margin-right: 4px;
   }
   .src-raw {
     margin: 14px 0 0 0;

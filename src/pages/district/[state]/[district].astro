@@ -15,6 +15,11 @@
 import PageLayout from '../../../layouts/PageLayout.astro';
 import DistrictPage from '../../../components/DistrictPage.svelte';
 import indexJson from '../../../../public/districts/index.json';
+// Wayback Machine snapshot manifest — one entry per state.
+// Built by db/build_wayback_manifest.py and refreshed by the daily
+// wayback-daily.yml workflow. Missing entries gracefully degrade to
+// "no archive link" on the district page.
+import waybackManifest from '../../../../public/sources/wayback.json';
 
 export async function getStaticPaths() {
   // Read the index built by db/build_district_pages.py and create a route
@@ -31,16 +36,17 @@ export async function getStaticPaths() {
         'utf-8',
       );
       const data = JSON.parse(raw);
+      const wayback = (waybackManifest as any).states?.[d.state] ?? null;
       return {
         params: { state: d.state, district: d.districtSlug },
-        props: { data },
+        props: { data, wayback },
       };
     }),
   );
   return paths;
 }
 
-const { data } = Astro.props;
+const { data, wayback } = Astro.props;
 const base = import.meta.env.BASE_URL;
 
 const stateLabel = data.stateLabel;
@@ -139,7 +145,7 @@ const subtitleHtml = [
   ogImage={`/og/district/${data.state}/${data.districtSlug}.png`}
 >
   <div class="container">
-    <DistrictPage client:load data={data} basePath={base} />
+    <DistrictPage client:load data={data} basePath={base} wayback={wayback} />
   </div>
 </PageLayout>
 
