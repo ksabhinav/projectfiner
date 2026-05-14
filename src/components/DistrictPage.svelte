@@ -14,6 +14,7 @@
     latest: SeriesPoint;
     series: SeriesPoint[];
   }
+  interface DistrictPolygon { path: string; viewBox: string }
   interface DistrictData {
     state: string;
     stateLabel: string;
@@ -21,6 +22,11 @@
     districtSlug: string;
     latestQuarter: string;
     indicators: Record<string, IndicatorBlock>;
+    /** Pre-projected SVG path string for the district's boundary polygon.
+        Built by db/build_district_polygons.py from district_boundaries.geojson.
+        Optional: a handful of post-2022 carved districts have no boundary
+        in our source GeoJSON yet. */
+    polygon?: DistrictPolygon;
   }
 
   interface Props {
@@ -134,13 +140,25 @@
 </script>
 
 <section class="district-page">
-  <!-- Freshness badge: how stale is the most-recent data we have for this district -->
-  <div class="freshness-row">
-    <span class="freshness {freshnessTone(data.latestQuarter)}">
-      Last update: <strong>{fmtQuarter(data.latestQuarter)}</strong>
-      <span class="dot">·</span>
-      {freshnessText(data.latestQuarter)}
-    </span>
+  <!-- Top row: freshness badge on the left, district-polygon sticker on the right -->
+  <div class="top-row">
+    <div class="freshness-row">
+      <span class="freshness {freshnessTone(data.latestQuarter)}">
+        Last update: <strong>{fmtQuarter(data.latestQuarter)}</strong>
+        <span class="dot">·</span>
+        {freshnessText(data.latestQuarter)}
+      </span>
+    </div>
+    {#if data.polygon}
+      <!-- District polygon sticker. Pre-projected at build time
+           (db/build_district_polygons.py) so there's zero runtime cost. -->
+      <figure class="poly-sticker">
+        <svg viewBox={data.polygon.viewBox} preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <path d={data.polygon.path} fill="#B84A2E" fill-opacity="0.12" stroke="#B84A2E" stroke-width="1.5" stroke-linejoin="round" />
+        </svg>
+        <figcaption>{data.district}</figcaption>
+      </figure>
+    {/if}
   </div>
 
   <div class="grid">
@@ -228,7 +246,40 @@
     color: var(--ink, #1B140E);
     font-family: 'Source Serif 4', Georgia, serif;
   }
-  .freshness-row { margin-bottom: 18px; }
+  .top-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 18px;
+  }
+  .freshness-row { flex: 1 1 auto; }
+  /* District polygon sticker — floats to the right of the freshness badge.
+     Small, atlas-toned outline; no labels. Falls back to flowing under the
+     badge on narrow screens. */
+  .poly-sticker {
+    flex: 0 0 auto;
+    margin: 0;
+    width: 160px;
+    text-align: center;
+  }
+  .poly-sticker svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .poly-sticker figcaption {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--mist, #6E665E);
+    margin-top: 4px;
+  }
+  @media (max-width: 540px) {
+    .top-row { flex-direction: column; gap: 12px; }
+    .poly-sticker { width: 120px; align-self: flex-start; }
+  }
   .freshness {
     display: inline-flex;
     align-items: center;
