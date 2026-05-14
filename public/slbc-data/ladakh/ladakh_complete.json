@@ -1,0 +1,55 @@
+{
+  "source": "SLBC Ladakh",
+  "state": "ladakh",
+  "description": "Ladakh UTLBC quarterly district-level financial inclusion data.",
+  "amount_unit": "Rs. Lakhs",
+  "quarters": {
+    "2026-03": {
+      "period": "March 2026",
+      "as_on_date": "",
+      "fy": "",
+      "tables": {
+        "branch_network": {
+          "fields": [
+            "District",
+            "total_branch"
+          ],
+          "num_districts": 2,
+          "districts": {
+            "Kargil": {
+              "District": "Kargil",
+              "total_branch": "39"
+            },
+            "Leh Ladakh": {
+              "District": "Leh Ladakh",
+              "total_branch": "71"
+            }
+          }
+        },
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "cd_ratio",
+            "total_advance",
+            "total_deposit"
+          ],
+          "num_districts": 2,
+          "districts": {
+            "Kargil": {
+              "District": "Kargil",
+              "cd_ratio": "43.05",
+              "total_advance": "167120.0",
+              "total_deposit": "388232.0"
+            },
+            "Leh Ladakh": {
+              "District": "Leh Ladakh",
+              "cd_ratio": "46.11",
+              "total_advance": "345011.0",
+              "total_deposit": "748201.0"
+            }
+          }
+        }
+      }
+    }
+  }
+}
