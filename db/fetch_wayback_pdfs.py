@@ -44,8 +44,12 @@ ROOT = Path(__file__).resolve().parent.parent
 USER_AGENT = 'projectfiner-wayback-fetcher/1.0 (https://projectfiner.com)'
 CDX_BASE = 'https://web.archive.org/cdx/search/cdx'
 WAYBACK_RAW = 'https://web.archive.org/web/{ts}id_/{orig}'
-INTER_DOWNLOAD_DELAY_S = 1.5  # polite throttle
+INTER_DOWNLOAD_DELAY_S = 4.0   # polite throttle; Wayback throttles bursts
+                               # of >15 req/min by refusing the connection.
 DOWNLOAD_TIMEOUT_S = 90
+DOWNLOAD_RETRIES = 3           # transient connection refusals are common —
+                               # retry with exponential backoff before giving up.
+RETRY_BACKOFF_S = 10           # base delay; multiplied by attempt number
 
 EXT_FILTER = {
     'pdf':  r'.*\.pdf',
@@ -131,31 +135,43 @@ def _curl_get(url: str, timeout: int = 60) -> str:
 
 
 def _curl_download(url: str, dest: Path, timeout: int = DOWNLOAD_TIMEOUT_S) -> int:
-    """Stream a single file to disk. Returns bytes written."""
+    """Stream a single file to disk. Returns bytes written.
+
+    Retries on transient curl failures (connection refused, timeout, recv
+    failure) with exponential backoff. Wayback rate-limits aggressively
+    when burst rate exceeds ~15req/min, refusing the TCP connection rather
+    than 503ing — those are exit 7s, expected and recoverable.
+    """
     dest.parent.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_suffix(dest.suffix + '.part')
-    p = subprocess.run(
-        ['curl', '-sS', '-L', '-A', USER_AGENT, '--max-time', str(timeout),
-         '-o', str(tmp), '-w', '%{http_code}', url],
-        capture_output=True, text=True, check=False,
-    )
-    if p.returncode != 0:
+    last_err = ''
+    for attempt in range(1, DOWNLOAD_RETRIES + 1):
+        p = subprocess.run(
+            ['curl', '-sS', '-L', '-A', USER_AGENT, '--max-time', str(timeout),
+             '--connect-timeout', '30',
+             '-o', str(tmp), '-w', '%{http_code}', url],
+            capture_output=True, text=True, check=False,
+        )
+        if p.returncode == 0:
+            code = (p.stdout or '').strip()
+            if code.startswith('2'):
+                size = tmp.stat().st_size if tmp.exists() else 0
+                # Wayback occasionally serves an HTML "snapshot doesn't exist" stub
+                if size < 256:
+                    head = tmp.read_bytes()[:200] if tmp.exists() else b''
+                    if b'<html' in head.lower() or b'<!doctype' in head.lower():
+                        tmp.unlink(missing_ok=True)
+                        raise RuntimeError('HTML stub (Wayback returned a 200-wrapped error page)')
+                tmp.rename(dest)
+                return size
+            last_err = f'http {code}'
+        else:
+            last_err = f'curl exit {p.returncode}: {p.stderr.strip()[:160]}'
         if tmp.exists():
             tmp.unlink()
-        raise RuntimeError(f'curl exit {p.returncode}: {p.stderr.strip()[:200]}')
-    code = (p.stdout or '').strip()
-    if not code.startswith('2'):
-        if tmp.exists():
-            tmp.unlink()
-        raise RuntimeError(f'http {code}')
-    size = tmp.stat().st_size
-    if size < 256:  # Wayback occasionally returns an HTML "this snapshot doesn't exist" stub
-        head = tmp.read_bytes()[:200]
-        if b'<html' in head.lower() or b'<!doctype' in head.lower():
-            tmp.unlink()
-            raise RuntimeError('HTML stub (Wayback returned a 200-wrapped error page)')
-    tmp.rename(dest)
-    return size
+        if attempt < DOWNLOAD_RETRIES:
+            time.sleep(RETRY_BACKOFF_S * attempt)
+    raise RuntimeError(last_err)
 
 
 def safe_filename(url: str) -> str:
@@ -193,6 +209,10 @@ def main():
                     help='Same as --dry-run; emit the manifest with planned downloads only.')
     ap.add_argument('--skip-existing', action='store_true', default=True,
                     help='Skip files already present locally (default on).')
+    ap.add_argument('--reuse-inventory', action='store_true',
+                    help='Skip the CDX query; read the planned URL list from '
+                         'the existing manifest.json. Useful when CDX is flaky '
+                         'and you just want to resume downloading.')
     args = ap.parse_args()
 
     exts = [e.strip().lower() for e in args.ext.split(',') if e.strip()]
@@ -201,14 +221,22 @@ def main():
         print(f'unknown extension(s): {bad}; valid: {list(EXT_FILTER)}', file=sys.stderr)
         sys.exit(2)
 
-    inv = cdx_pdf_inventory(args.host, exts)
-    if args.limit:
-        inv = inv[: args.limit]
-    print(f'\n{len(inv)} unique file(s) to consider', file=sys.stderr)
-
     dest_root = ROOT / 'slbc-data' / args.state / 'wayback'
     manifest_path = dest_root / 'manifest.json'
     dest_root.mkdir(parents=True, exist_ok=True)
+
+    if args.reuse_inventory and manifest_path.exists():
+        prev = json.loads(manifest_path.read_text())
+        inv = [{'ts': e['snapshotTimestamp'], 'orig': e['originalUrl'],
+                'mime': '', 'key': e['canonicalUrl']}
+               for e in prev.get('files', [])]
+        print(f'reusing inventory from {manifest_path.relative_to(ROOT)} '
+              f'({len(inv)} files)', file=sys.stderr)
+    else:
+        inv = cdx_pdf_inventory(args.host, exts)
+    if args.limit:
+        inv = inv[: args.limit]
+    print(f'\n{len(inv)} unique file(s) to consider', file=sys.stderr)
 
     # Existing manifest entries (for resume)
     existing: dict[str, dict] = {}

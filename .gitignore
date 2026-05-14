@@ -18,6 +18,12 @@ slbc-data/**/*.xlsx
 slbc-data/**/*.xls
 slbc-data/**/quarterly/
 slbc-data/**/extracted/
+# Exception: tracked wayback-extracted JSONs are committed artifacts
+# (raw historical SLBC tables recovered from Wayback). The PDFs they
+# came from are gitignored above but the structured extractions are
+# durable and reproducible from db/extract_wayback_*.py + the manifest.
+!slbc-data/**/wayback/extracted/
+!slbc-data/**/wayback/extracted/*.json
 slbc-data/**/_temp/
 slbc-data/**/pdfs/
 slbc-data/**/downloads/
