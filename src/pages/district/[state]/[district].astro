@@ -1,0 +1,148 @@
+---
+/**
+ * Per-district landing page.
+ *
+ * URL: /district/<state-slug>/<district-slug>/
+ * Build inputs: public/districts/index.json (list of pages to prerender)
+ *               public/districts/<state-slug>/<district-slug>.json (per-page data)
+ *
+ * Generated upstream by db/build_district_pages.py. Re-run that script
+ * whenever indicator files change.
+ *
+ * Emits a Schema.org Dataset JSON-LD block per district so Google Dataset
+ * Search and other harvesters can index each district's headline numbers.
+ */
+import PageLayout from '../../../layouts/PageLayout.astro';
+import DistrictPage from '../../../components/DistrictPage.svelte';
+import indexJson from '../../../../public/districts/index.json';
+
+export async function getStaticPaths() {
+  // Read the index built by db/build_district_pages.py and create a route
+  // for each (state, district) pair. Pass the row through so the page can
+  // also load its detailed JSON at build time.
+  const fs = await import('node:fs/promises');
+  const path = await import('node:path');
+  const root = path.resolve('public/districts');
+
+  const paths = await Promise.all(
+    indexJson.districts.map(async (d: any) => {
+      const raw = await fs.readFile(
+        path.join(root, d.state, `${d.districtSlug}.json`),
+        'utf-8',
+      );
+      const data = JSON.parse(raw);
+      return {
+        params: { state: d.state, district: d.districtSlug },
+        props: { data },
+      };
+    }),
+  );
+  return paths;
+}
+
+const { data } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+const stateLabel = data.stateLabel;
+const districtName = data.district;
+const latestQuarter = data.latestQuarter;
+const latestLabel = latestQuarter
+  ? new Date(latestQuarter + '-01').toLocaleString('en-US', { month: 'long', year: 'numeric' })
+  : '';
+
+// Page-level SEO copy. The first 155 chars become the Google snippet.
+const description = `${districtName}, ${stateLabel} — financial inclusion data across ${
+  Object.keys(data.indicators).length
+} indicators: credit-deposit ratio, PMJDY, KCC, SHG, branches and more. Updated ${latestLabel}. Free & open dataset from Project FINER.`;
+
+// Headline metrics shown in the subtitle: pull a few popular ones if present.
+const headlinePairs: Array<{ label: string; value: string; unit: string }> = [];
+const showcase = ['credit_deposit_ratio', 'pmjdy', 'branch_network', 'kcc'];
+for (const k of showcase) {
+  const ind = data.indicators?.[k];
+  if (!ind) continue;
+  headlinePairs.push({
+    label: ind.label,
+    value: String(ind.latest.value),
+    unit: ind.unit,
+  });
+  if (headlinePairs.length >= 3) break;
+}
+
+// JSON-LD Dataset block — one per district, lets Google Dataset Search list
+// each district as a discoverable dataset of its own.
+const SITE = 'https://projectfiner.com';
+const pageUrl = `${SITE}/district/${data.state}/${data.districtSlug}/`;
+const distributionUrl = `${SITE}/districts/${data.state}/${data.districtSlug}.json`;
+const datasetLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: `${districtName} (${stateLabel}) — Financial Inclusion Indicators`,
+  description,
+  url: pageUrl,
+  identifier: pageUrl,
+  keywords: [
+    'financial inclusion', 'India', districtName, stateLabel,
+    'PMJDY', 'KCC', 'SHG', 'credit-deposit ratio', 'SLBC',
+  ],
+  spatialCoverage: {
+    '@type': 'Place',
+    name: `${districtName}, ${stateLabel}, India`,
+  },
+  temporalCoverage: latestQuarter
+    ? `2015-03/${latestQuarter}`
+    : '2015-03/..',
+  variableMeasured: Object.values(data.indicators).map((ind: any) => ({
+    '@type': 'PropertyValue',
+    name: ind.label,
+    value: String(ind.latest.value),
+    unitText: ind.unit || undefined,
+    measurementTechnique: 'SLBC quarterly booklet + open data layers',
+  })),
+  creator: {
+    '@type': 'Organization',
+    name: 'Project FINER',
+    url: SITE,
+  },
+  distribution: [
+    {
+      '@type': 'DataDownload',
+      encodingFormat: 'application/json',
+      contentUrl: distributionUrl,
+    },
+    {
+      '@type': 'DataDownload',
+      encodingFormat: 'text/csv',
+      contentUrl: `${SITE}/slbc-data/${data.state}/${data.state}_fi_timeseries.csv`,
+    },
+  ],
+  isAccessibleForFree: true,
+  license: 'https://github.com/ksabhinav/projectfiner/blob/main/LICENSE',
+};
+
+const subtitleHtml = [
+  latestLabel ? `<strong>Latest: ${latestLabel}</strong>` : '',
+  headlinePairs
+    .map((p) => `${p.label}: <strong>${p.value}${p.unit ? p.unit : ''}</strong>`)
+    .join(' &middot; '),
+  `<br><a href="${base}slbc-data/${data.state}/download/">All ${stateLabel} data</a> &middot; <a href="${base}">Open map &rarr;</a>`,
+].filter(Boolean).join(' &middot; ');
+---
+
+<PageLayout
+  title={`${districtName} — ${stateLabel} financial inclusion data | Project FINER`}
+  description={description}
+  pageTitle={`${districtName}, ${stateLabel}`}
+  subtitle={subtitleHtml}
+  backLink={{ href: `${base}slbc-data/${data.state}/download/`, label: `${stateLabel} data` }}
+  extraJsonLd={datasetLd}
+>
+  <div class="container">
+    <DistrictPage client:load data={data} basePath={base} />
+  </div>
+</PageLayout>
+
+<style>
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 40px 60px; }
+  @media (max-width: 760px) { .container { padding: 16px 20px 40px; } }
+</style>

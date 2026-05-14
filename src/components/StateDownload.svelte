@@ -1,5 +1,6 @@
 <script lang="ts">
   import { CATEGORY_INFO, prettyCategoryName } from '../lib/slbc-categories';
+  import DistrictDirectory from './DistrictDirectory.svelte';
 
   interface Props {
     stateName: string;
@@ -237,6 +238,9 @@
 
   loadMaster();
 </script>
+
+<!-- District directory: links to /district/<state>/<district> landing pages -->
+<DistrictDirectory stateSlug={stateSlug} stateName={stateName} />
 
 <!-- Full dataset downloads -->
 <div class="sd-section-eye">Full dataset</div>

@@ -14,9 +14,11 @@ interface Props {
   backLink?: { href: string; label: string };
   activeSubNav?: 'rankings' | 'trends' | 'insights' | string;
   hideFooter?: boolean;
+  /** Per-page Schema.org JSON-LD object(s). Forwarded to BaseLayout. */
+  extraJsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { title, pageTitle, subtitle, description, backLink, activeSubNav, hideFooter } = Astro.props;
+const { title, pageTitle, subtitle, description, backLink, activeSubNav, hideFooter, extraJsonLd } = Astro.props;
 
 // Auto-derive activeNav from the URL so the right pill is highlighted.
 const path = Astro.url?.pathname ?? '';
@@ -37,7 +39,7 @@ const validSubNav = activeSubNav === 'rankings' || activeSubNav === 'trends' || 
   ? activeSubNav : null;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} extraJsonLd={extraJsonLd}>
   <Header activeNav={activeNav} />
 
   {(pageTitle || subtitle || backLink) && (

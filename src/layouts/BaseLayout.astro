@@ -5,10 +5,15 @@ interface Props {
   /** Page-relative path, e.g. "/about/". Used for canonical URL + og:url.
       Defaults to the current page's pathname when omitted. */
   path?: string;
+  /** Per-page Schema.org JSON-LD object(s). Rendered after the site-wide
+      Organization/Dataset/WebSite blocks. Pass a single object or an array.
+      Used by per-district pages to inject a Dataset-per-district. */
+  extraJsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const defaultDescription = 'Project FINER — open, interactive maps and downloadable datasets covering financial inclusion across India. District-level data on 20+ indicators across 800+ districts: PMJDY, KCC, SHG, MUDRA, RBI banking outlets, capital markets, UPI digital payments, NFHS health insurance, and more.';
-const { title, description = defaultDescription, path } = Astro.props;
+const { title, description = defaultDescription, path, extraJsonLd } = Astro.props;
+const extraJsonLdArray = Array.isArray(extraJsonLd) ? extraJsonLd : (extraJsonLd ? [extraJsonLd] : []);
 const base = import.meta.env.BASE_URL;
 const SITE = 'https://projectfiner.com';
 const pagePath = path ?? Astro.url.pathname;
@@ -93,6 +98,9 @@ const webSiteLd = {
   <script type="application/ld+json" set:html={JSON.stringify(orgLd)} />
   <script type="application/ld+json" set:html={JSON.stringify(datasetLd)} />
   <script type="application/ld+json" set:html={JSON.stringify(webSiteLd)} />
+  {extraJsonLdArray.map((ld) => (
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  ))}
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
