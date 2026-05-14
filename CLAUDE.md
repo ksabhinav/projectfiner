@@ -47,6 +47,9 @@ projectfiner/
 │   │   ├── Footer.astro                    # Simple footer with dynamic year
 │   │   ├── MeghalayaDownload.svelte        # SLBC download UI (indicator/quarter tabs, CSV/Excel)
 │   │   ├── DownloadManager.svelte          # Capital markets download cards (CDSL/NSDL/MFD)
+│   │   ├── DistrictPage.svelte             # Per-district landing page body (freshness badge, polygon sticker, indicator grid w/ sparklines, Sources & methods w/ Wayback links)
+│   │   ├── DistrictDirectory.svelte        # Grid of district-page links, mounted inside StateDownload.svelte
+│   │   ├── StateDownload.svelte            # Per-state download UI (used by all /slbc-data/<slug>/download/ pages)
 │   │   ├── map/                            # Map components (extracted from index.astro)
 │   │   │   ├── MapPanel.svelte             # Left panel: mode toggle, indicator/metric/state dropdowns, outlet toggle, search (612 lines)
 │   │   │   ├── TimelineSlider.svelte       # Vertical quarterly timeline with round dot marks, drag/click (321 lines)
@@ -65,6 +68,8 @@ projectfiner/
 │   │   ├── index.astro                     # HOMEPAGE — Full-screen Leaflet choropleth map (20 FI indicators, ~2071 lines)
 │   │   ├── about/index.astro               # About page (what FINER is, coverage, data sources, contact)
 │   │   ├── ask/index.astro                 # AI chat interface (RAG over SLBC + all indicators via Groq/Llama)
+│   │   ├── district/
+│   │   │   └── [state]/[district].astro    # Dynamic per-district landing pages (839 prerendered, May 2026)
 │   │   ├── slbc-data/
 │   │   │   ├── index.astro                 # Redirects to data-download
 │   │   │   └── {state}/download.astro      # Per-state SLBC download pages
@@ -109,6 +114,14 @@ projectfiner/
     ├── BingSiteAuth.xml                     # Bing Webmaster Tools verification token
     ├── pincode_coords.json                 # Pincode → [lat, lng] lookup
     ├── district_lgd_codes.json             # 765 districts with LGD codes + 109 aliases
+    ├── districts/                          # Per-district landing-page data (May 2026)
+    │   ├── index.json                      # 839 (state, district) entries — drives the dynamic Astro route
+    │   ├── state-freshness.json            # Per-state latest-quarter summary
+    │   └── <state>/<district>.json         # 839 files: indicators[], polygon{path,viewBox}, latestQuarter
+    ├── og/
+    │   └── district/<state>/<district>.png # 839 per-district OG cards (1200×630) for social shares
+    ├── sources/
+    │   └── wayback.json                    # CDX manifest: per-state primary + alias URLs, freshest snapshot, deepest archive
     ├── slbc-data/
     │   ├── standardize_fields.py           # Cross-state field standardization script
     │   └── {state}/                        # All 22 states
@@ -135,14 +148,6 @@ projectfiner/
     └── data/
         └── district_boundaries.geojson     # District boundaries with capital markets counts
 │
-├── scripts/
-│   └── rag/
-│       ├── build_index.py                  # Build BM25 index from text files → data/rag/index/
-│       ├── ingest_structured_data.py       # SLBC _complete.json → text chunks
-│       ├── ingest_indicator_files.py       # public/indicators/ → text chunks (all 20 indicators)
-│       ├── extract_text.py                 # PDF text extraction
-│       └── summarize_minutes.py            # Meeting minutes summariser (uses ANTHROPIC_API_KEY)
-│
 ├── db/                                     # SQLite backbone (data pipeline)
 │   ├── finer.db                            # SQLite database (gitignored, ~200 MB, rebuilt via build.sh)
 │   ├── build.sh                            # Run full pipeline: init → import → export
@@ -156,7 +161,28 @@ projectfiner/
 │   ├── export_timeseries.py               # SQLite → {state}_fi_timeseries.json
 │   ├── export_phonepe.py                  # SQLite → phonepe_district_timeseries.json
 │   ├── aggregate_banking_outlets.py       # Raw outlets → district_counts.json
-│   └── regenerate_indicator_files_from_states.py   # No-DB regenerator: reads _fi_timeseries.json directly, applies broad fallback chain, writes public/indicators/*.json
+│   ├── regenerate_indicator_files_from_states.py   # No-DB regenerator: reads _fi_timeseries.json directly, applies broad fallback chain, writes public/indicators/*.json
+│   ├── build_district_pages.py            # Aggregate indicators → public/districts/<state>/<dist>.json + auto-update sitemap.xml
+│   ├── build_district_polygons.py         # Inject simplified SVG polygon paths into each district JSON
+│   ├── build_wayback_manifest.py          # CDX-driven manifest of upstream SLBC URL snapshots (--audit, --merge, --stub)
+│   ├── fetch_wayback_pdfs.py              # Bulk PDF download from Wayback for a given state portal (manifest + rate-limited)
+│   └── extract_wayback_kerala.py          # Per-state template: pdfplumber → raw district-table JSONs (clone per state)
+│
+├── scripts/
+│   ├── build_og_image.py                  # Site-wide OG card regen (cairosvg)
+│   ├── build_og_district_images.py        # Renders 839 per-district 1200×630 cards
+│   ├── wayback_save.py                    # SPN cron driver: high-value / districts-cohort / upstream-slbc modes
+│   ├── build_state_bounds.py              # State bounding boxes
+│   └── rag/                               # RAG indexing for /ask
+│       ├── build_index.py                 # BM25 index from text files → data/rag/index/
+│       ├── ingest_structured_data.py      # SLBC _complete.json → text chunks
+│       ├── ingest_indicator_files.py      # public/indicators/ → text chunks (all 20 indicators)
+│       ├── extract_text.py                # PDF text extraction
+│       └── summarize_minutes.py           # Meeting minutes summariser (uses ANTHROPIC_API_KEY)
+│
+├── .github/workflows/
+│   ├── deploy.yml                          # GitHub Actions: build + deploy to Pages
+│   └── wayback-daily.yml                   # Daily SPN cron (03:30 UTC) + manifest refresh
 │
 ├── validate_data.py                        # Automated data quality checks (7 validators)
 ├── DATA_COMPLETENESS.md                    # Coverage matrix: 9 indicators × 22 states
@@ -280,6 +306,81 @@ Manual steps (Google Search Console DNS verify, sitemap submit, URL Inspection, 
 <meta name="twitter:card" content="summary_large_image" />
 ```
 - **Image**: `public/og-image.jpg` — 1200×630px rural banking illustration, 257 KB JPEG (converted from RGBA PNG via Pillow `im.convert('RGB')` before saving)
+- **Per-page override**: BaseLayout accepts an optional `ogImage` prop (forwarded by `PageLayout`). District pages pass `/og/district/<state>/<district>.png` for context-specific cards (see District Landing Pages below). Per-page Schema.org JSON-LD is similarly threaded via `extraJsonLd`.
+
+### District Landing Pages (`/district/<state>/<district>/`)
+
+May 2026 expansion. One prerendered page per (state, district) — **839 in total** across 36 states/UTs — surfaces every indicator's latest value for that district plus an inline sparkline of the time series. The unit of organic search intent ("Ludhiana CD ratio", "Goalpara PMJDY").
+
+Each page contains:
+1. **Freshness badge** — green/amber/red tinted "Last update: <quarter> · N quarters ago" computed at build time from the indicator data.
+2. **District polygon sticker** — small inline SVG of the district's boundary, pre-projected to a 1000×620 viewBox at build time. Zero JS, zero mapping-library runtime. 827/839 match a feature in `public/data/district_boundaries.geojson`; the rest are post-2022 carves not yet in our boundary file.
+3. **Indicator grid** — one card per indicator (latest value + sparkline). Cards only render when data exists, so sparse states (Goa, Punjab) get a small grid rather than a sea of dashes.
+4. **Sources & methods block** — every numeric cell is one click away from its canonical source URL (state SLBC portal, PhonePe Pulse, RBI DBIE, NFHS, SHRUG, UIDAI). Sources are grouped: the SLBC entry collapses to a single row covering all SLBC-derived indicators instead of repeating.
+5. **Wayback archive links** — alongside each SLBC citation, a "Wayback snapshot YYYY-MM-DD ↗ · All snapshots ↗" row. When the state has a legacy domain with deeper Wayback history (RBI `.bank.in` migration), a "Deeper history (host, N snapshots, since YYYY)" link surfaces it.
+6. **Per-district Schema.org Dataset JSON-LD** — emitted by the dynamic route into `<script type="application/ld+json">` so Google Dataset Search indexes each district as its own discoverable dataset. Site-wide Organization/Dataset/WebSite blocks continue to render from BaseLayout.
+7. **Per-district OG image** — `public/og/district/<state>/<district>.png` (1200×630) generated at build time. Every district URL shared on Twitter/WhatsApp/LinkedIn arrives with a contextual mini-dashboard.
+
+**Pipeline (re-run in this order whenever indicator data changes):**
+
+```
+python3 db/build_district_pages.py        # aggregates indicators → public/districts/<state>/<dist>.json
+python3 db/build_district_polygons.py     # injects polygon path into each JSON
+DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib \
+  python3 scripts/build_og_district_images.py   # generates 839 PNG cards
+```
+
+The first script also auto-maintains `public/sitemap.xml` via a `<!-- begin district urls --><!-- end district urls -->` block — all 839 URLs are search-engine-discoverable. State-level "last-updated" freshness is summarized in `public/districts/state-freshness.json`.
+
+**State discoverability**: `src/components/DistrictDirectory.svelte` is mounted inside `StateDownload.svelte`, so every `/slbc-data/<slug>/download/` page shows a grid of links to that state's district pages. Loads `public/districts/index.json` client-side on mount.
+
+**Adding a new indicator**: extend the `HEADLINES` dict in `db/build_district_pages.py` (label + headline field + fallbacks chain). Then re-run the pipeline. The indicator card appears on every district where data exists.
+
+### Wayback Machine Infrastructure
+
+Two complementary pipelines: a daily SPN cron that snapshots URLs to Wayback going forward, and a CDX manifest + bulk-PDF backfill that recovers history from Wayback going backward.
+
+**Forward — daily SPN cron** (`.github/workflows/wayback-daily.yml`, fires at 03:30 UTC):
+
+Three sequential jobs, each `continue-on-error: true`:
+
+1. **upstream-slbc** — Snapshots the 23 unique URLs parsed from `SLBC_STATE_URLS` in `src/lib/indicator-sources.ts`, **plus every `aliasUrls` entry**. Highest leverage: protects data we don't control (jkslbc.com overwrites in place, see gotcha #73).
+2. **high-value** — ~25 top-of-funnel projectfiner.com URLs from `public/sitemap.xml` (homepage, /about, /analysis/*, /downloads, every state download page).
+3. **districts-cohort** — Deterministic 1/7 rotation of the 839 `/district/<state>/<district>/` URLs. `(day_of_year mod 7)` picks the cohort, so every district refreshes once a week; re-runs on the same day hit the same set. ~120 URLs/day.
+4. **refresh-manifest** — Runs `db/build_wayback_manifest.py --merge --audit`, commits `public/sources/wayback.json` back to main when it changed (with a bot identity). Always runs after `upstream-slbc` so it queries CDX for snapshots we just queued.
+
+Script: `scripts/wayback_save.py` — stdlib-only, polite throttle (8s/req for ~7 req/min, under the anonymous SPN ceiling). Optional `WAYBACK_ACCESS_KEY`/`WAYBACK_SECRET` secrets raise the rate limit.
+
+**Backward — CDX manifest** (`db/build_wayback_manifest.py` → `public/sources/wayback.json`):
+
+For each state portal URL **plus every `aliasUrls` entry**, queries the Wayback CDX API for the latest 200-status snapshot. Output per state:
+
+```json
+"kerala": {
+  "stateUrl": "https://slbckerala.com",
+  "snapshotCalendar": "https://web.archive.org/web/*/slbckerala.com",
+  "latest": { "timestamp": "...", "date": "2023-10-04", "url": "https://web.archive.org/..." },
+  "variants": [ { "host": "slbckerala.com", "snapshotCount": 123, "oldestDate": "2008-06-07", ... } ],
+  "deepestArchive": { "host": "slbckerala.com", "snapshotCount": 123, ... }
+}
+```
+
+Flags: `--stub` (zero network, just calendar URLs), `--merge` (keep last good snapshot when CDX fails), `--audit` (per-variant snapshot counts + oldest/newest — enables the "Deeper history" surface on district pages). Curl fallback handles macOS Python 3.14 SSL issues. Dedupes by upstream URL (NE states sharing `onlineslbcne.nic.in` cost one CDX call total).
+
+**Backward — bulk PDF fetcher + per-state extractor**:
+
+```
+python3 db/fetch_wayback_pdfs.py <state-slug> <host>
+python3 db/extract_wayback_<state>.py
+```
+
+`db/fetch_wayback_pdfs.py` walks Wayback CDX for every PDF (or XLSX/DOC/ZIP) ever archived under `<host>/*`, dedupes by canonical URL keeping the latest snapshot, downloads via `web.archive.org/web/<ts>id_/<orig>` (the `id_` modifier returns raw bytes, not the wrapped HTML viewer). Rate-limit aware (4s delay, 3 retries with exponential backoff, rejects <256-byte HTML stubs that Wayback serves when a snapshot doesn't actually have the file). Idempotent — `--skip-existing` (default) resumes a failed run for free; `--reuse-inventory` skips the CDX query when the manifest already exists.
+
+Writes `slbc-data/<state>/wayback/manifest.json` (tracked) plus the PDFs themselves under `slbc-data/<state>/wayback/<year>/<filename>.pdf` (gitignored).
+
+`db/extract_wayback_kerala.py` is the template per-state extractor. Walks the manifest, opens each PDF with pdfplumber, identifies the table whose first column matches that state's canonical district list (with alias map for SLBC quirks — e.g. Trivandrum→Thiruvananthapuram, Calicut→Kozhikode), infers the reporting period heuristically from the title text, and writes raw `{title, inferredPeriod, districts, headers, rows}` to `slbc-data/<state>/wayback/extracted/<basename>.json`. The extracted JSONs are tracked via a `.gitignore` exception (`!slbc-data/**/wayback/extracted/`).
+
+**Coverage so far (May 2026 first audit)**: Kerala 123 snapshots back to 2008, HP 104 to 2008, UP 85 to 2008, Uttarakhand 64 to 2016, Bihar 52 to 2015, Ladakh 21 to 2021. Other 25 states populate progressively via the nightly cron. Kerala 1st run extracted 22 historical district-wise tables spanning Sep 2009 → Mar 2017 (DCP achievement, DCB banking stats, SGSY, Kudumbashree NHG, Crop Loan/Term Loan, SLBC agendas #99–#118) — 13+ years of district-level data that wasn't in FINER before.
 
 ## Main Data Sections
 
@@ -1247,6 +1348,15 @@ No Vercel redeployment needed — the API reads fresh index from R2 on next cold
 75. **PNB-convenor SLBC URL pattern is inconsistent**: PNB convenes Haryana, HP, Punjab, Delhi (since April 2020). URLs split: Haryana uses `slbcharyana.pnb.bank.in`, Punjab uses `slbcpunjab.pnb.bank.in`, Delhi uses `slbcdelhi.pnb.bank.in` — the `.pnb.bank.in` subdomain pattern. But **HP breaks that pattern with its own dedicated domain `slbchp.com`** (NOT `slbchp.pnb.bank.in`, which doesn't exist). Probe both candidates when adding a new PNB-convenor state.
 76. **Priority Sector Lending indicator was added to surface Punjab + complement Telangana/HP**: The `priority_sector` indicator in `INDICATORS` config has metrics `total_ps_achievement_amt`, `agri_achievement_amt`, `msme_achievement_amt`, `ops_achievement_amt`, `total_ps_achievement_pct`. Field-fallbacks chain catches variants: `agri` / `farm` / `farm_credit` / `crop_loan_amt` / `agri_term` for the agri metric; `ancillary_activities` / `ancillary` / `export` for "other". Telangana has 11+ quarters in this indicator, Punjab has 19, HP has 1 (Dec 2025), and a few others (AP, UP, etc.) have sparse coverage. Cross-state comparability is limited by extractor schema differences — surface this in the UI when adding a tooltip.
 77. **UTLBC bodies are real for J&K + Ladakh**: Earlier CLAUDE assumption "UTs don't have SLBC equivalent" was wrong. J&K and Ladakh both have UTLBC (UT Level Bankers' Committee) — same pattern as state SLBC, run by the convenor bank. Other UTs without dedicated bodies (A&N, Chandigarh, D&NH/D&D, Lakshadweep, Puducherry) genuinely don't have UTLBC — they get rolled into nearest state's lead-bank reporting.
+78. **District page pipeline order matters**: After any change to indicator data under `public/indicators/<ind>/<quarter>.json`, re-run the three scripts in this order: `db/build_district_pages.py` (aggregates into per-district JSONs and updates the sitemap), then `db/build_district_polygons.py` (injects polygon paths — requires the per-district JSONs to exist), then `DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib python3 scripts/build_og_district_images.py` (renders 839 OG PNGs, idempotent so only changed districts re-render). Skipping any step leaves stale data on `/district/<state>/<district>/` pages. The OG step is the slowest (~30s on M-series). PNGs are gitignored at `slbc-data/**/*.pdf` etc but `public/og/district/**/*.png` ARE tracked.
+79. **Per-district page OG images are 1200×630 PNGs at `public/og/district/<state>/<district>.png`** — and YES they're committed to the repo (~31 MB total). GitHub Pages serves them; every district URL gets a contextual mini-dashboard preview on social shares. The rendering pipeline (`scripts/build_og_district_images.py` → cairosvg) needs `DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib` on macOS; on Linux runners it's automatic.
+80. **`public/districts/index.json` is the truth for which district pages exist**: `src/pages/district/[state]/[district].astro` calls `getStaticPaths()` against this file. If a district is in `public/districts/<state>/<dist>.json` but missing from `index.json`, Astro won't generate a route for it. Re-run `db/build_district_pages.py` to rebuild both.
+81. **DistrictDirectory.svelte is client-side fetch, not SSR**: The state download page's district grid loads via `fetch('/districts/index.json')` after JS mounts. SSR HTML won't contain district links — fine for users but means crawlers without JS rely on the sitemap (which is auto-maintained). When debugging "missing district directory", check JS console for fetch errors, not HTML source.
+82. **GitHub Pages 1 GB repo limit — never commit raw SLBC PDFs/XLSX**: `slbc-data/` has ~3.8 GB of raw source files. `.gitignore` already covers `slbc-data/**/*.{pdf,zip,rar,xlsx,xls}` plus various intermediate directories. The Wayback PDF fetcher (`db/fetch_wayback_pdfs.py`) drops files under `slbc-data/<state>/wayback/<year>/`, which the same rules catch. But the EXTRACTED JSONs (`slbc-data/**/wayback/extracted/*.json`) ARE tracked via an explicit `!` exception in `.gitignore` — they're the durable structured output and worth committing. If the exception breaks (e.g. someone removes the `!` line), the recovered Kerala history disappears from the repo.
+83. **RBI `.bank.in` migration affects SLBC URLs (transition through Oct 2026)**: RBI's Indian Domain Names — Banks notification (Oct 2024) created the `.bank.in` TLD as the mandated namespace for Indian banks. PNB-convenor states already serve from `slbc<state>.pnb.bank.in`; Bank of Maharashtra mandate is to register `bankofmaharashtra.bank.in` while keeping content on `bankofmaharashtra.in`. Implication for archive: NEW domains have thin Wayback history; LEGACY domains have years of snapshots. `SLBC_STATE_URLS` in `indicator-sources.ts` carries an optional `aliasUrls?: string[]` per state — populated for Delhi, Haryana, Punjab, Tripura (legacy `.pnb.in`), and Maharashtra (alias `.bank.in`). The daily Wayback cron snapshots ALL variants so both ends accrue history. The district page Sources block surfaces "Deeper history (host, N snapshots, since YYYY)" when the deepest-archive variant differs from the primary.
+84. **Wayback CDX is intermittent — every script must `--merge`**: The CDX API 503s and times-out frequently under load. `db/build_wayback_manifest.py` retries 2× then writes null `latest` for that state — UNLESS `--merge` is set, in which case it preserves yesterday's good value. The daily cron uses `--merge --audit`. When running locally, always pass `--merge` if you don't want yesterday's data overwritten by today's transient failure. Also: macOS Python 3.14 fails SSL handshake to CDX without "Install Certificates.command"; the scripts fall back to curl subprocess automatically, but if both fail you'll see `WARN: CDX failed`.
+85. **Wayback SPN anonymous rate limit is ~15 req/min**: `scripts/wayback_save.py` throttles to 8s/req for ~7.5 req/min headroom. Bursting beyond this gets connection refusals (curl exit 7), not 503s — TCP-level rate limiting. For higher throughput, register at `archive.org/account/s3.php` and set `WAYBACK_ACCESS_KEY` + `WAYBACK_SECRET` as GitHub repo secrets; the cron picks them up. Same applies to `db/fetch_wayback_pdfs.py` for bulk PDF downloads — its `INTER_DOWNLOAD_DELAY_S=4.0` + 3-retry/10s-backoff handles the rate limiting but it's slow (408-PDF Kerala download takes ~30 min).
+86. **`public/data/district_boundaries.geojson` uses pre-rename district names for some states**: 780 features with cleanish `STATE_UT` (28 features have null `STATE_UT` and are skipped). The polygon builder in `db/build_district_polygons.py` maintains a `DISTRICT_ALIASES` map for ~80 SLBC-side name variants that don't slugify-match the GeoJSON's `DISTRICT` field — covers Maharashtra post-2023 renames (Ahilyanagar←Ahmednagar, Chhatrapati Sambhaji Nagar←Aurangabad, Dharashiv←Osmanabad), J&K transliterations (Bandipura/Baramula/Badgam/Punch/Rajauri/Riasi/Shupiyan), Karnataka post-2014 Kannada spellings (Bengaluru/Mysuru/Ballari/Vijayapura/Kalaburagi/Belagavi/Shivamogga/Tumakuru/Chamarajanagara/Davanagere), West Bengal old-vs-new (Koch Bihar←Cooch Behar, Haora←Howrah, Hugli←Hooghly, Birbham←Birbhum), Sikkim 2021 renames (Pakyong←East/Mangan←North/Namchi←South/Gyalshing←West). 827/839 districts currently match — the 12 misses are post-2022 carved districts not in the GeoJSON yet (Chhattisgarh: Gaurella-Pendra-Marwahi, Mohla-Manpur-Ambagarh, etc.) plus four outlying UTs (Lakshadweep, Mahe, Yanam, plus four bizarre Delhi entries slugged as "east-sikkim" which point to an upstream pipeline bug). Districts without a polygon just render the freshness badge alone — the page still works.
 
 ## Data Quality Pipeline
 
