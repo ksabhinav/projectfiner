@@ -92,3 +92,33 @@ jobs:
         env:
           WAYBACK_ACCESS_KEY: ${{ secrets.WAYBACK_ACCESS_KEY }}
           WAYBACK_SECRET: ${{ secrets.WAYBACK_SECRET }}
+
+  refresh-manifest:
+    # Refresh public/sources/wayback.json so each district page's "Wayback
+    # snapshot" link points to a recent capture. Runs AFTER the upstream-slbc
+    # job above so we're querying CDX for snapshots we just queued.
+    # Commits the updated manifest if it actually changed.
+    name: Refresh Wayback CDX manifest
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || inputs.mode == 'all'
+    needs: upstream-slbc
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build wayback.json from CDX
+        # --merge preserves last good snapshot when CDX 503s on a state,
+        # so the manifest never regresses to all-null.
+        run: python3 db/build_wayback_manifest.py --merge
+      - name: Commit manifest if changed
+        run: |
+          set -euo pipefail
+          if git diff --quiet public/sources/wayback.json; then
+            echo "no manifest changes"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/sources/wayback.json
+          git commit -m "chore(wayback): refresh CDX manifest [skip ci]"
+          git push
