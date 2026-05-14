@@ -1,9 +1,11 @@
 <script lang="ts">
   /**
    * District landing-page body. Renders the headline grid (one card per
-   * indicator with latest value + inline sparkline) and a freshness badge
-   * that summarises "how stale is this district's data right now".
+   * indicator with latest value + inline sparkline), a freshness badge
+   * that summarises "how stale is this district's data right now", and
+   * a Sources & methods block that lists where every number came from.
    */
+  import { getSourceCitation, type SourceCitation } from '../lib/indicator-sources';
 
   interface SeriesPoint { quarter: string; value: number | string; field?: string }
   interface IndicatorBlock {
@@ -29,6 +31,33 @@
   let { data, basePath }: Props = $props();
 
   const indicators = Object.entries(data.indicators);
+
+  /**
+   * Group the on-page indicators by their source citation so all SLBC-derived
+   * cards collapse to a single row ("SLBC Punjab — covers CD ratio, PMJDY,
+   * KCC…") rather than printing the same citation eight times. Each group
+   * carries the human labels of the indicators it backs.
+   */
+  interface SourceGroup { citation: SourceCitation; indicatorLabels: string[] }
+  const sourceGroups: SourceGroup[] = (() => {
+    const byKey = new Map<string, SourceGroup>();
+    for (const [key, ind] of indicators) {
+      const cit = getSourceCitation(key, ind.latest.quarter, data.state);
+      // Group by label+url; attribution is shown but doesn't split groups.
+      const groupKey = `${cit.label}::${cit.url ?? ''}`;
+      const existing = byKey.get(groupKey);
+      if (existing) {
+        existing.indicatorLabels.push(ind.label);
+      } else {
+        byKey.set(groupKey, { citation: cit, indicatorLabels: [ind.label] });
+      }
+    }
+    return Array.from(byKey.values());
+  })();
+
+  // Raw JSON download for this exact district.
+  const rawJsonHref = `${basePath}districts/${data.state}/${data.districtSlug}.json`;
+  const stateCsvHref = `${basePath}slbc-data/${data.state}/${data.state}_fi_timeseries.csv`;
 
   function fmtValue(v: number | string, unit: string): string {
     if (v == null || v === '') return '—';
@@ -147,6 +176,45 @@
     </a>
   </div>
 
+  <!-- Sources & methods: where every number above came from. Each row links
+       to the canonical source (state SLBC portal, dataset page, etc.) plus
+       attribution where applicable. Grouping prevents the SLBC entry from
+       repeating once per indicator. -->
+  <details class="sources" open>
+    <summary>
+      <span class="src-eye">Sources &amp; methods</span>
+      <span class="src-toggle">show / hide</span>
+    </summary>
+    <ul class="src-list">
+      {#each sourceGroups as g}
+        <li class="src-item">
+          <div class="src-head">
+            {#if g.citation.url}
+              <a class="src-label" href={g.citation.url} target="_blank" rel="noopener">
+                {g.citation.label}
+                <span class="src-ext" aria-hidden="true">&nearr;</span>
+              </a>
+            {:else}
+              <span class="src-label">{g.citation.label}</span>
+            {/if}
+            <span class="src-covers">
+              covers: {g.indicatorLabels.join(', ')}
+            </span>
+          </div>
+          {#if g.citation.attribution}
+            <p class="src-attr">{g.citation.attribution}</p>
+          {/if}
+        </li>
+      {/each}
+    </ul>
+    <p class="src-raw">
+      Raw data for this district:
+      <a class="src-link" href={rawJsonHref}>district JSON</a>
+      &middot;
+      <a class="src-link" href={stateCsvHref}>{data.stateLabel} full CSV</a>
+    </p>
+  </details>
+
   <p class="footer-note">
     Headline values are the latest observation per indicator from SLBC quarterly
     booklets and other open-data layers (RBI DBIE, NFHS, UIDAI, PhonePe Pulse,
@@ -245,6 +313,96 @@
   .action-link:hover { border-color: var(--vermillion, #B84A2E); }
   .action-link.secondary { color: var(--ink-soft, #3D332A); }
   .action-link.secondary:hover { border-color: var(--ink-soft, #3D332A); }
+
+  /* Sources & methods block — collapsible. Open by default so the trust
+     signal is visible without an extra click. */
+  .sources {
+    margin-top: 32px;
+    border-top: 1px solid var(--rule-soft, #E8E2D5);
+    padding-top: 16px;
+  }
+  .sources summary {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    list-style: none;
+    margin-bottom: 12px;
+  }
+  .sources summary::-webkit-details-marker { display: none; }
+  .src-eye {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink, #1B140E);
+    font-weight: 500;
+  }
+  .src-toggle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    color: var(--mist, #6E665E);
+    text-transform: uppercase;
+  }
+  .src-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .src-item {
+    padding-left: 12px;
+    border-left: 2px solid var(--rule-soft, #E8E2D5);
+  }
+  .src-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 14px;
+  }
+  .src-label {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--vermillion, #B84A2E);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  a.src-label:hover { border-bottom-color: var(--vermillion, #B84A2E); }
+  .src-ext { font-size: 11px; margin-left: 3px; }
+  .src-covers {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.03em;
+    color: var(--mist, #6E665E);
+  }
+  .src-attr {
+    margin: 4px 0 0 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--mist, #6E665E);
+    font-style: italic;
+    max-width: 680px;
+  }
+  .src-raw {
+    margin: 14px 0 0 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--mist, #6E665E);
+    letter-spacing: 0.03em;
+  }
+  .src-link {
+    color: var(--vermillion, #B84A2E);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  .src-link:hover { border-bottom-color: var(--vermillion, #B84A2E); }
 
   .footer-note {
     margin-top: 22px;
