@@ -267,8 +267,16 @@
   .time-slider {
     position: absolute;
     right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
+    /* Vertical placement uses clamp() so we don't overlap the Leaflet zoom
+       controls (which live at top:0 + margin-top:118px and run ~70px tall,
+       so the no-go zone is roughly 0-200px from the top of the map).
+       - Prefer centred position (calc(50% - 150px) where 150px ≈ half the
+         slider's ~300px total height).
+       - Floor at 200px so on shorter windows we sit BELOW the zoom controls
+         instead of bleeding through them.
+       - Cap at calc(100vh - 320px) so on very short windows we don't fall
+         off the bottom of the viewport. */
+    top: clamp(200px, calc(50% - 150px), calc(100vh - 320px));
     z-index: 1000;
     display: flex;
     flex-direction: column;
