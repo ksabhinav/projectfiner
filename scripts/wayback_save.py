@@ -70,9 +70,16 @@ def load_sitemap_urls() -> list[str]:
 def load_upstream_slbc_urls() -> list[str]:
     """Parse SLBC_STATE_URLS out of src/lib/indicator-sources.ts.
 
-    Format is a const map with `'<slug>': { name: '...', url: '...' },`
-    entries. We extract every URL literal and dedupe — several NE states
-    share onlineslbcne.nic.in so we only ping it once.
+    Format is a const map with entries like:
+      'punjab': { name: '...', url: '...', aliasUrls: ['...', '...'] }
+    We extract every primary URL AND every aliasUrls entry so the daily
+    cron snapshots both current and legacy domains. Crucial during the
+    RBI .bank.in migration window — the new domains have thin Wayback
+    history and we want to thicken it while the legacy domains are still
+    alive.
+
+    Returns a deduped list in input order (Python 3.7+ dict preserves
+    insertion order).
     """
     if not SLBC_SOURCES_TS.exists():
         print(f'ERROR: {SLBC_SOURCES_TS} not found', file=sys.stderr)
@@ -87,9 +94,12 @@ def load_upstream_slbc_urls() -> list[str]:
               file=sys.stderr)
         sys.exit(1)
     block = m.group(1)
-    urls = re.findall(r"url:\s*'([^']+)'", block)
-    # Dedupe in input order — Python 3.7+ dict preserves insertion order.
-    return list(dict.fromkeys(urls))
+    primary = re.findall(r"url:\s*'([^']+)'", block)
+    # Every quoted URL inside any `aliasUrls: [...]` literal.
+    aliases: list[str] = []
+    for arr in re.findall(r"aliasUrls:\s*\[(.*?)\]", block, re.DOTALL):
+        aliases.extend(re.findall(r"'([^']+)'", arr))
+    return list(dict.fromkeys(primary + aliases))
 
 
 def partition(urls: list[str]) -> tuple[list[str], list[str]]:

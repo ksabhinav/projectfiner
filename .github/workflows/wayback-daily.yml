@@ -109,7 +109,11 @@ jobs:
       - name: Build wayback.json from CDX
         # --merge preserves last good snapshot when CDX 503s on a state,
         # so the manifest never regresses to all-null.
-        run: python3 db/build_wayback_manifest.py --merge
+        # --audit produces per-variant counts + oldest/newest so the
+        # district page can surface the legacy domain with the deepest
+        # Wayback history (relevant during the RBI .bank.in migration
+        # window — new domains have thin Wayback coverage).
+        run: python3 db/build_wayback_manifest.py --merge --audit
       - name: Commit manifest if changed
         run: |
           set -euo pipefail

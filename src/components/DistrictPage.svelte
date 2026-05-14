@@ -29,10 +29,29 @@
     polygon?: DistrictPolygon;
   }
 
+  interface WaybackVariant {
+    url: string;
+    host: string;
+    snapshotCount: number | null;
+    oldestDate: string | null;
+    newestDate: string | null;
+    snapshotCalendar: string;
+    newestUrl: string | null;
+  }
   interface WaybackEntry {
     stateUrl: string;
     snapshotCalendar: string;
-    latest?: { timestamp: string; date: string; url: string } | null;
+    latest?: { timestamp: string; date: string; url: string; variantUrl?: string } | null;
+    /** Per-variant audit (when the manifest was built with --audit).
+        Lets the page surface the variant with the deepest history when
+        the primary domain is new/thin (RBI .bank.in migration). */
+    variants?: WaybackVariant[];
+    deepestArchive?: {
+      host: string;
+      snapshotCount: number | null;
+      snapshotCalendar: string;
+      oldestDate: string | null;
+    } | null;
   }
 
   interface Props {
@@ -244,7 +263,11 @@
           {#if citationMatchesPortal(g.citation.url) && wayback}
             <!-- Wayback Machine archive — guarantees the source URL is permanent
                  even when the upstream portal moves, 404s, or overwrites in place
-                 (J&K Bank pattern, CLAUDE.md #70). -->
+                 (J&K Bank pattern, CLAUDE.md #70). When the manifest carries
+                 audit data, also surfaces the legacy variant with the deepest
+                 archive (relevant during the RBI .bank.in migration window:
+                 new domains are thin in Wayback, legacy domains have years
+                 of history). -->
             <p class="src-archive">
               <span class="src-archive-eye">Archive</span>
               {#if wayback.latest}
@@ -258,6 +281,13 @@
                 All snapshots
                 <span class="src-ext" aria-hidden="true">&nearr;</span>
               </a>
+              {#if wayback.deepestArchive && wayback.deepestArchive.host !== (new URL(wayback.stateUrl)).host && wayback.deepestArchive.snapshotCount}
+                &nbsp;&middot;&nbsp;
+                <a class="src-link" href={wayback.deepestArchive.snapshotCalendar} target="_blank" rel="noopener" title="Domain with the deepest Wayback history — often the legacy site during the RBI .bank.in migration">
+                  Deeper history ({wayback.deepestArchive.host}, {wayback.deepestArchive.snapshotCount} snapshots{wayback.deepestArchive.oldestDate ? `, since ${wayback.deepestArchive.oldestDate.slice(0,4)}` : ''})
+                  <span class="src-ext" aria-hidden="true">&nearr;</span>
+                </a>
+              {/if}
             </p>
           {/if}
           {#if g.citation.attribution}
