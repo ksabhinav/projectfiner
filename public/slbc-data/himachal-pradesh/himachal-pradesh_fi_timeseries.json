@@ -1,6 +1,226 @@
 {
   "periods": [
     {
+      "period": "June 2013",
+      "districts": [
+        {
+          "district": "Bilaspur",
+          "period": "June 2013",
+          "branch_network__branches_total": "97",
+          "credit_deposit_ratio__no_of_branches": "97"
+        },
+        {
+          "district": "Chamba",
+          "period": "June 2013",
+          "branch_network__branches_total": "91",
+          "credit_deposit_ratio__no_of_branches": "91"
+        },
+        {
+          "district": "Hamirpur",
+          "period": "June 2013",
+          "branch_network__branches_total": "125",
+          "credit_deposit_ratio__no_of_branches": "125"
+        },
+        {
+          "district": "Kangra",
+          "period": "June 2013",
+          "branch_network__branches_total": "337",
+          "credit_deposit_ratio__no_of_branches": "337"
+        },
+        {
+          "district": "Kinnaur",
+          "period": "June 2013",
+          "branch_network__branches_total": "40",
+          "credit_deposit_ratio__no_of_branches": "40"
+        },
+        {
+          "district": "Kullu",
+          "period": "June 2013",
+          "branch_network__branches_total": "107",
+          "credit_deposit_ratio__no_of_branches": "107"
+        },
+        {
+          "district": "Mandi",
+          "period": "June 2013",
+          "branch_network__branches_total": "202",
+          "credit_deposit_ratio__no_of_branches": "202"
+        },
+        {
+          "district": "Shimla",
+          "period": "June 2013",
+          "branch_network__branches_total": "256",
+          "credit_deposit_ratio__no_of_branches": "256"
+        },
+        {
+          "district": "Sirmaur",
+          "period": "June 2013",
+          "branch_network__branches_total": "105",
+          "credit_deposit_ratio__no_of_branches": "105"
+        },
+        {
+          "district": "Solan",
+          "period": "June 2013",
+          "branch_network__branches_total": "183",
+          "credit_deposit_ratio__no_of_branches": "183"
+        },
+        {
+          "district": "Una",
+          "period": "June 2013",
+          "branch_network__branches_total": "118",
+          "credit_deposit_ratio__no_of_branches": "118"
+        }
+      ]
+    },
+    {
+      "period": "March 2020",
+      "districts": [
+        {
+          "district": "Bilaspur",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "27.35"
+        },
+        {
+          "district": "Chamba",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "26.56"
+        },
+        {
+          "district": "Hamirpur",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "21.17"
+        },
+        {
+          "district": "Kangra",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "24.5"
+        },
+        {
+          "district": "Kinnaur",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "43.24"
+        },
+        {
+          "district": "Kullu",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "40.34"
+        },
+        {
+          "district": "Mandi",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "23.78"
+        },
+        {
+          "district": "Shimla",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "44.88"
+        },
+        {
+          "district": "Sirmaur",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "62.49"
+        },
+        {
+          "district": "Solan",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "64.48"
+        },
+        {
+          "district": "Una",
+          "period": "March 2020",
+          "credit_deposit_ratio__cd_ratio": "33.26"
+        }
+      ]
+    },
+    {
+      "period": "November 2023",
+      "districts": [
+        {
+          "district": "Bilaspur",
+          "period": "November 2023",
+          "branch_network__branches_total": "133",
+          "credit_deposit_ratio__no_of_branches": "133",
+          "atm_network__atm_total": "95"
+        },
+        {
+          "district": "Chamba",
+          "period": "November 2023",
+          "branch_network__branches_total": "128",
+          "credit_deposit_ratio__no_of_branches": "128",
+          "atm_network__atm_total": "80"
+        },
+        {
+          "district": "Hamirpur",
+          "period": "November 2023",
+          "branch_network__branches_total": "173",
+          "credit_deposit_ratio__no_of_branches": "173",
+          "atm_network__atm_total": "161"
+        },
+        {
+          "district": "Kangra",
+          "period": "November 2023",
+          "branch_network__branches_total": "426",
+          "credit_deposit_ratio__no_of_branches": "426",
+          "atm_network__atm_total": "430"
+        },
+        {
+          "district": "Kinnaur",
+          "period": "November 2023",
+          "branch_network__branches_total": "55",
+          "credit_deposit_ratio__no_of_branches": "55",
+          "atm_network__atm_total": "37"
+        },
+        {
+          "district": "Kullu",
+          "period": "November 2023",
+          "branch_network__branches_total": "138",
+          "credit_deposit_ratio__no_of_branches": "138",
+          "atm_network__atm_total": "131"
+        },
+        {
+          "district": "Lahaul & Spiti",
+          "period": "November 2023",
+          "branch_network__branches_total": "26",
+          "credit_deposit_ratio__no_of_branches": "26",
+          "atm_network__atm_total": "15"
+        },
+        {
+          "district": "Mandi",
+          "period": "November 2023",
+          "branch_network__branches_total": "262",
+          "credit_deposit_ratio__no_of_branches": "262",
+          "atm_network__atm_total": "214"
+        },
+        {
+          "district": "Shimla",
+          "period": "November 2023",
+          "branch_network__branches_total": "369",
+          "credit_deposit_ratio__no_of_branches": "369",
+          "atm_network__atm_total": "343"
+        },
+        {
+          "district": "Sirmaur",
+          "period": "November 2023",
+          "branch_network__branches_total": "152",
+          "credit_deposit_ratio__no_of_branches": "152",
+          "atm_network__atm_total": "140"
+        },
+        {
+          "district": "Solan",
+          "period": "November 2023",
+          "branch_network__branches_total": "274",
+          "credit_deposit_ratio__no_of_branches": "274",
+          "atm_network__atm_total": "374"
+        },
+        {
+          "district": "Una",
+          "period": "November 2023",
+          "branch_network__branches_total": "156",
+          "credit_deposit_ratio__no_of_branches": "156",
+          "atm_network__atm_total": "150"
+        }
+      ]
+    },
+    {
       "period": "December 2025",
       "districts": [
         {
