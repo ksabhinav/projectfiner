@@ -1,0 +1,2328 @@
+{
+  "state": "goa",
+  "host": "slbcgoa.com",
+  "extensions": [
+    "pdf"
+  ],
+  "generatedAt": "2026-05-15T10:52:42Z",
+  "counts": {
+    "planned": 289,
+    "downloaded": 0,
+    "cached": 0,
+    "errored": 0
+  },
+  "files": [
+    {
+      "canonicalUrl": "slbcgoa.com/download/87th%20slbc%20goa%20meeting%20on%2023rd%20december%202014.pdf",
+      "originalUrl": "http://slbcgoa.com/download/87th%20SLBC%20GOA%20MEETING%20ON%2023rd%20December%202014.pdf",
+      "snapshotTimestamp": "20150222200850",
+      "snapshotUrl": "https://web.archive.org/web/20150222200850id_/http://slbcgoa.com/download/87th%20SLBC%20GOA%20MEETING%20ON%2023rd%20December%202014.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/87th_SLBC_GOA_MEETING_ON_23rd_December_2014.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/slbccalendar_2015.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/slbccalendar_2015.pdf",
+      "snapshotTimestamp": "20150512222726",
+      "snapshotUrl": "https://web.archive.org/web/20150512222726id_/http://slbcgoa.com:80/download/slbccalendar_2015.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/slbccalendar_2015.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/dfs_goi_circular/list_of_26_schemes.pdf",
+      "originalUrl": "http://slbcgoa.com:80/dfs_goi_circular/list_of_26_schemes.pdf",
+      "snapshotTimestamp": "20150512234122",
+      "snapshotUrl": "https://web.archive.org/web/20150512234122id_/http://slbcgoa.com:80/dfs_goi_circular/list_of_26_schemes.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/list_of_26_schemes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/05_09_2013/specialslbc_minutes.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/05_09_2013/specialslbc_minutes.pdf",
+      "snapshotTimestamp": "20150514080705",
+      "snapshotUrl": "https://web.archive.org/web/20150514080705id_/http://slbcgoa.com:80/download/meetings/05_09_2013/specialslbc_minutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/specialslbc_minutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/06_08_2014/minutes_special_slbc_meeting.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/06_08_2014/minutes_special_slbc_meeting.pdf",
+      "snapshotTimestamp": "20150514080711",
+      "snapshotUrl": "https://web.archive.org/web/20150514080711id_/http://slbcgoa.com:80/download/meetings/06_08_2014/minutes_special_slbc_meeting.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/minutes_special_slbc_meeting.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/09_10_12/minutes_slbc_09102012.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/09_10_12/Minutes_SLBC_09102012.pdf",
+      "snapshotTimestamp": "20150514080718",
+      "snapshotUrl": "https://web.archive.org/web/20150514080718id_/http://slbcgoa.com:80/download/meetings/09_10_12/Minutes_SLBC_09102012.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Minutes_SLBC_09102012.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/09_10_12/agenda_of_slbc_meeting_for_march_and_june_09_10_%2012.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/09_10_12/agenda_of_slbc_meeting_for_march_and_june_09_10_%2012.pdf",
+      "snapshotTimestamp": "20150514080721",
+      "snapshotUrl": "https://web.archive.org/web/20150514080721id_/http://slbcgoa.com:80/download/meetings/09_10_12/agenda_of_slbc_meeting_for_march_and_june_09_10_%2012.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/agenda_of_slbc_meeting_for_march_and_june_09_10__12.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/15_7_2014/85th_agenda.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/15_7_2014/85th_agenda.pdf",
+      "snapshotTimestamp": "20150514080727",
+      "snapshotUrl": "https://web.archive.org/web/20150514080727id_/http://slbcgoa.com:80/download/meetings/15_7_2014/85th_agenda.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/85th_agenda.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/15_7_2014/85th_minutes.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/15_7_2014/85th_minutes.pdf",
+      "snapshotTimestamp": "20150514080731",
+      "snapshotUrl": "https://web.archive.org/web/20150514080731id_/http://slbcgoa.com:80/download/meetings/15_7_2014/85th_minutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/85th_minutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/15_7_2014/annexures_85th_15_7_2014.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/15_7_2014/ANNEXURES_85th_15_7_2014.pdf",
+      "snapshotTimestamp": "20150514080736",
+      "snapshotUrl": "https://web.archive.org/web/20150514080736id_/http://slbcgoa.com:80/download/meetings/15_7_2014/ANNEXURES_85th_15_7_2014.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/ANNEXURES_85th_15_7_2014.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/16_12_2013/minutes%20of%20su%20group%20priority%20sector%20.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/16_12_2013/Minutes%20of%20Su%20group%20Priority%20sector%20.pdf",
+      "snapshotTimestamp": "20150514080742",
+      "snapshotUrl": "https://web.archive.org/web/20150514080742id_/http://slbcgoa.com:80/download/meetings/16_12_2013/Minutes%20of%20Su%20group%20Priority%20sector%20.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Minutes_of_Su_group_Priority_sector_.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/16_12_2013/minutes%20of%20sub%20group%20on%20shgs%20on%2016_12_2013.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/16_12_2013/Minutes%20of%20sub%20group%20on%20SHGs%20on%2016_12_2013.pdf",
+      "snapshotTimestamp": "20150514080747",
+      "snapshotUrl": "https://web.archive.org/web/20150514080747id_/http://slbcgoa.com:80/download/meetings/16_12_2013/Minutes%20of%20sub%20group%20on%20SHGs%20on%2016_12_2013.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Minutes_of_sub_group_on_SHGs_on_16_12_2013.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/16_12_2013/ssgfidated17-12-13.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/16_12_2013/SSGFIdated17-12-13.pdf",
+      "snapshotTimestamp": "20150514080752",
+      "snapshotUrl": "https://web.archive.org/web/20150514080752id_/http://slbcgoa.com:80/download/meetings/16_12_2013/SSGFIdated17-12-13.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/SSGFIdated17-12-13.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/21_10_2013/minutes_21_oct_2013.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/21_10_2013/minutes_21_oct_2013.pdf",
+      "snapshotTimestamp": "20150514080759",
+      "snapshotUrl": "https://web.archive.org/web/20150514080759id_/http://slbcgoa.com:80/download/meetings/21_10_2013/minutes_21_oct_2013.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/minutes_21_oct_2013.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/22_1_2013/minutes_81st_meeting_22_1_2013.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/22_1_2013/minutes_81st_meeting_22_1_2013.pdf",
+      "snapshotTimestamp": "20150514081038",
+      "snapshotUrl": "https://web.archive.org/web/20150514081038id_/http://slbcgoa.com:80/download/meetings/22_1_2013/minutes_81st_meeting_22_1_2013.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/minutes_81st_meeting_22_1_2013.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/24_09_2014/86th_ageneda_background.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/24_09_2014/86th_Ageneda_Background.pdf",
+      "snapshotTimestamp": "20150514081042",
+      "snapshotUrl": "https://web.archive.org/web/20150514081042id_/http://slbcgoa.com:80/download/meetings/24_09_2014/86th_Ageneda_Background.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/86th_Ageneda_Background.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/24_09_2014/86th_minutes.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/24_09_2014/86th_minutes.pdf",
+      "snapshotTimestamp": "20150514081047",
+      "snapshotUrl": "https://web.archive.org/web/20150514081047id_/http://slbcgoa.com:80/download/meetings/24_09_2014/86th_minutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/86th_minutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/26_02_2014/agenda%20of%2084th_slbc%20_meeting%20_26-02-2014_revised.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/26_02_2014/Agenda%20of%2084th_SLBC%20_Meeting%20_26-02-2014_REVISED.pdf",
+      "snapshotTimestamp": "20150514081053",
+      "snapshotUrl": "https://web.archive.org/web/20150514081053id_/http://slbcgoa.com:80/download/meetings/26_02_2014/Agenda%20of%2084th_SLBC%20_Meeting%20_26-02-2014_REVISED.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Agenda_of_84th_SLBC__Meeting__26-02-2014_REVISED.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/26_02_2014/actiona_taken.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/26_02_2014/actiona_taken.pdf",
+      "snapshotTimestamp": "20150514081059",
+      "snapshotUrl": "https://web.archive.org/web/20150514081059id_/http://slbcgoa.com:80/download/meetings/26_02_2014/actiona_taken.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/actiona_taken.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/26_9_2011/agenda%20items%20%20of%20slbc%20%20meeting%20dated%2026.09.2011final.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/26_9_2011/Agenda%20Items%20%20OF%20SLBC%20%20Meeting%20dated%2026.09.2011final.pdf",
+      "snapshotTimestamp": "20150514081104",
+      "snapshotUrl": "https://web.archive.org/web/20150514081104id_/http://slbcgoa.com:80/download/meetings/26_9_2011/Agenda%20Items%20%20OF%20SLBC%20%20Meeting%20dated%2026.09.2011final.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Agenda_Items_OF_SLBC_Meeting_dated_26.09.2011final.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/28_6_2013/ssg_rseti_dated_25_06_2013_r.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/28_6_2013/SSG_RSETI_dated_25_06_2013_R.pdf",
+      "snapshotTimestamp": "20150514081109",
+      "snapshotUrl": "https://web.archive.org/web/20150514081109id_/http://slbcgoa.com:80/download/meetings/28_6_2013/SSG_RSETI_dated_25_06_2013_R.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/SSG_RSETI_dated_25_06_2013_R.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/28_6_2013/agenda_item_28_june_2013.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/28_6_2013/agenda_item_28_june_2013.pdf",
+      "snapshotTimestamp": "20150514081114",
+      "snapshotUrl": "https://web.archive.org/web/20150514081114id_/http://slbcgoa.com:80/download/meetings/28_6_2013/agenda_item_28_june_2013.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/agenda_item_28_june_2013.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/28_6_2013/sub_group_meeting_of_gss_on%2025_june_2013_r.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/28_6_2013/sub_group_meeting_of_gss_on%2025_june_2013_R.pdf",
+      "snapshotTimestamp": "20150514081121",
+      "snapshotUrl": "https://web.archive.org/web/20150514081121id_/http://slbcgoa.com:80/download/meetings/28_6_2013/sub_group_meeting_of_gss_on%2025_june_2013_R.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/sub_group_meeting_of_gss_on_25_june_2013_R.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/28_6_2013/subgroup_meeting_of_shg_26_june_2013_modified_r.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/28_6_2013/subgroup_meeting_of_SHG_26_june_2013_modified_R.pdf",
+      "snapshotTimestamp": "20150514081125",
+      "snapshotUrl": "https://web.archive.org/web/20150514081125id_/http://slbcgoa.com:80/download/meetings/28_6_2013/subgroup_meeting_of_SHG_26_june_2013_modified_R.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/subgroup_meeting_of_SHG_26_june_2013_modified_R.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/87th/87th_agenda.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/87th/87th_agenda.pdf",
+      "snapshotTimestamp": "20150514081130",
+      "snapshotUrl": "https://web.archive.org/web/20150514081130id_/http://slbcgoa.com:80/download/meetings/87th/87th_agenda.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/87th_agenda.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/87th/87th_minutes.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/87th/87th_minutes.pdf",
+      "snapshotTimestamp": "20150514081236",
+      "snapshotUrl": "https://web.archive.org/web/20150514081236id_/http://slbcgoa.com:80/download/meetings/87th/87th_minutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/87th_minutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/15_7_2014/index_85th_15_7_2014.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/15_7_2014/Index_85th_15_7_2014.pdf",
+      "snapshotTimestamp": "20150514081241",
+      "snapshotUrl": "https://web.archive.org/web/20150514081241id_/http://slbcgoa.com:80/download/meetings/15_7_2014/Index_85th_15_7_2014.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Index_85th_15_7_2014.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/15_9_2011/minutes%20of%20sub%20group%20meeting%2014%20150911.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/15_9_2011/MINUTES%20OF%20SUB%20GROUP%20MEETING%2014%20150911.pdf",
+      "snapshotTimestamp": "20150514081247",
+      "snapshotUrl": "https://web.archive.org/web/20150514081247id_/http://slbcgoa.com:80/download/meetings/15_9_2011/MINUTES%20OF%20SUB%20GROUP%20MEETING%2014%20150911.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/MINUTES_OF_SUB_GROUP_MEETING_14_150911.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/15_9_2011/minutes%20of%20the%20meeting%20of%20steering%20sub-group%20of%20slbc%20goa%20h%85.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/15_9_2011/Minutes%20of%20the%20meeting%20of%20Steering%20Sub-group%20of%20SLBC%20Goa%20h%85.pdf",
+      "snapshotTimestamp": "20150514081252",
+      "snapshotUrl": "https://web.archive.org/web/20150514081252id_/http://slbcgoa.com:80/download/meetings/15_9_2011/Minutes%20of%20the%20meeting%20of%20Steering%20Sub-group%20of%20SLBC%20Goa%20h%85.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Minutes_of_the_meeting_of_Steering_Sub-group_of_SLBC_Goa_h�.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/16_12_2013/minutes%20of%20slbc%20goa%20steering%20sub%20group%20on%20rseti%20held%20on%2016.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/16_12_2013/Minutes%20of%20SLBC%20Goa%20Steering%20Sub%20Group%20on%20RSETI%20held%20on%2016.pdf",
+      "snapshotTimestamp": "20150514081257",
+      "snapshotUrl": "https://web.archive.org/web/20150514081257id_/http://slbcgoa.com:80/download/meetings/16_12_2013/Minutes%20of%20SLBC%20Goa%20Steering%20Sub%20Group%20on%20RSETI%20held%20on%2016.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Minutes_of_SLBC_Goa_Steering_Sub_Group_on_RSETI_held_on_16.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/16_12_2013/minutes_of_gss_meeting%20.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/16_12_2013/Minutes_of_GSS_meeting%20.pdf",
+      "snapshotTimestamp": "20150514081303",
+      "snapshotUrl": "https://web.archive.org/web/20150514081303id_/http://slbcgoa.com:80/download/meetings/16_12_2013/Minutes_of_GSS_meeting%20.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Minutes_of_GSS_meeting_.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/21_10_2013/annexures_21_oct_2013.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/21_10_2013/ANNEXURES_21_oct_2013.pdf",
+      "snapshotTimestamp": "20150514081307",
+      "snapshotUrl": "https://web.archive.org/web/20150514081307id_/http://slbcgoa.com:80/download/meetings/21_10_2013/ANNEXURES_21_oct_2013.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/ANNEXURES_21_oct_2013.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/21_10_2013/agenda_of_slbc_meeting_21_oct_2013.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/21_10_2013/Agenda_of_SLBC_Meeting_21_oct_2013.pdf",
+      "snapshotTimestamp": "20150514081313",
+      "snapshotUrl": "https://web.archive.org/web/20150514081313id_/http://slbcgoa.com:80/download/meetings/21_10_2013/Agenda_of_SLBC_Meeting_21_oct_2013.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Agenda_of_SLBC_Meeting_21_oct_2013.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/21_10_2013/index_21_oct_2013.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/21_10_2013/Index_21_oct_2013.pdf",
+      "snapshotTimestamp": "20150514081318",
+      "snapshotUrl": "https://web.archive.org/web/20150514081318id_/http://slbcgoa.com:80/download/meetings/21_10_2013/Index_21_oct_2013.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Index_21_oct_2013.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/22_1_2013/anexure_4_slbc_meeting_dated_%2022_01_2013.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/22_1_2013/Anexure_4_SLBC_meeting_dated_%2022_01_2013.pdf",
+      "snapshotTimestamp": "20150514081324",
+      "snapshotUrl": "https://web.archive.org/web/20150514081324id_/http://slbcgoa.com:80/download/meetings/22_1_2013/Anexure_4_SLBC_meeting_dated_%2022_01_2013.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Anexure_4_SLBC_meeting_dated__22_01_2013.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/22_1_2013/annexure_slbc_meeting_dated_22_01_2013.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/22_1_2013/Annexure_SLBC_Meeting_dated_22_01_2013.pdf",
+      "snapshotTimestamp": "20150514081329",
+      "snapshotUrl": "https://web.archive.org/web/20150514081329id_/http://slbcgoa.com:80/download/meetings/22_1_2013/Annexure_SLBC_Meeting_dated_22_01_2013.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Annexure_SLBC_Meeting_dated_22_01_2013.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/22_1_2013/agenda_item_22_jan_2013.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/22_1_2013/agenda_item_22_jan_2013.pdf",
+      "snapshotTimestamp": "20150514081334",
+      "snapshotUrl": "https://web.archive.org/web/20150514081334id_/http://slbcgoa.com:80/download/meetings/22_1_2013/agenda_item_22_jan_2013.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/agenda_item_22_jan_2013.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/23_12_11/agenda%20of%20slbc%20%20meeting%20dated%20231211.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/23_12_11/Agenda%20of%20SLBC%20%20Meeting%20dated%20231211.pdf",
+      "snapshotTimestamp": "20150514081340",
+      "snapshotUrl": "https://web.archive.org/web/20150514081340id_/http://slbcgoa.com:80/download/meetings/23_12_11/Agenda%20of%20SLBC%20%20Meeting%20dated%20231211.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Agenda_of_SLBC_Meeting_dated_231211.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/23_12_11/minutes_slbc_231211.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/23_12_11/Minutes_SLBC_231211.pdf",
+      "snapshotTimestamp": "20150514081347",
+      "snapshotUrl": "https://web.archive.org/web/20150514081347id_/http://slbcgoa.com:80/download/meetings/23_12_11/Minutes_SLBC_231211.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Minutes_SLBC_231211.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/26_02_2014/minutes_of_slbc_meeting_on_26_02_2014.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/26_02_2014/Minutes_of_SLBC_meeting_on_26_02_2014.pdf",
+      "snapshotTimestamp": "20150514081352",
+      "snapshotUrl": "https://web.archive.org/web/20150514081352id_/http://slbcgoa.com:80/download/meetings/26_02_2014/Minutes_of_SLBC_meeting_on_26_02_2014.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Minutes_of_SLBC_meeting_on_26_02_2014.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/28_6_2013/minutes_of_sub_group_meeting_on_financial_inclusion_on_27.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/28_6_2013/Minutes_of_sub_group_meeting_on_Financial_Inclusion_on_27.pdf",
+      "snapshotTimestamp": "20150514081456",
+      "snapshotUrl": "https://web.archive.org/web/20150514081456id_/http://slbcgoa.com:80/download/meetings/28_6_2013/Minutes_of_sub_group_meeting_on_Financial_Inclusion_on_27.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Minutes_of_sub_group_meeting_on_Financial_Inclusion_on_27.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/28_6_2013/priority_sector_26_june2013_r.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/28_6_2013/PRIORITY_SECTOR_26_june2013_R.pdf",
+      "snapshotTimestamp": "20150514081540",
+      "snapshotUrl": "https://web.archive.org/web/20150514081540id_/http://slbcgoa.com:80/download/meetings/28_6_2013/PRIORITY_SECTOR_26_june2013_R.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/PRIORITY_SECTOR_26_june2013_R.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/28_6_2013/minutes_28_june_2013_r.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/28_6_2013/minutes_28_june_2013_R.pdf",
+      "snapshotTimestamp": "20150514081606",
+      "snapshotUrl": "https://web.archive.org/web/20150514081606id_/http://slbcgoa.com:80/download/meetings/28_6_2013/minutes_28_june_2013_R.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/minutes_28_june_2013_R.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/notice%2088%20th%20slbc%20goa%20agenda%20&%20back%20ground%20papers.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/notice%2088%20th%20slbc%20goa%20agenda%20&%20back%20ground%20papers.pdf",
+      "snapshotTimestamp": "20150528032042",
+      "snapshotUrl": "https://web.archive.org/web/20150528032042id_/http://slbcgoa.com:80/download/notice%2088%20th%20slbc%20goa%20agenda%20&%20back%20ground%20papers.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/notice_88_th_slbc_goa_agenda_back_ground_papers.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/pmjdy.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/PMJDY.pdf",
+      "snapshotTimestamp": "20150528072805",
+      "snapshotUrl": "https://web.archive.org/web/20150528072805id_/http://slbcgoa.com:80/download/PMJDY.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/PMJDY.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/88th/88th_agenda.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/88th/88th_agenda.pdf",
+      "snapshotTimestamp": "20150528073851",
+      "snapshotUrl": "https://web.archive.org/web/20150528073851id_/http://slbcgoa.com:80/download/meetings/88th/88th_agenda.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/88th_agenda.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/88th/88th_minutes.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/meetings/88th/88th_minutes.pdf",
+      "snapshotTimestamp": "20150528073900",
+      "snapshotUrl": "https://web.archive.org/web/20150528073900id_/http://slbcgoa.com:80/download/meetings/88th/88th_minutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/88th_minutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/pmjdy/certificate%20under%20pmjdy.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/pmjdy/Certificate%20under%20PMJDY.pdf",
+      "snapshotTimestamp": "20150528073909",
+      "snapshotUrl": "https://web.archive.org/web/20150528073909id_/http://slbcgoa.com:80/download/pmjdy/Certificate%20under%20PMJDY.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/Certificate_under_PMJDY.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/pmjdy/slbc%20goa%20-pmdjy%2030.08.2014.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/pmjdy/SLBC%20GOA%20-PMDJY%2030.08.2014.pdf",
+      "snapshotTimestamp": "20150528073924",
+      "snapshotUrl": "https://web.archive.org/web/20150528073924id_/http://slbcgoa.com:80/download/pmjdy/SLBC%20GOA%20-PMDJY%2030.08.2014.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/SLBC_GOA_-PMDJY_30.08.2014.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/special_meeting_6th_aug.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/special_meeting_6th_aug.pdf",
+      "snapshotTimestamp": "20150528073933",
+      "snapshotUrl": "https://web.archive.org/web/20150528073933id_/http://slbcgoa.com:80/download/special_meeting_6th_aug.pdf",
+      "localPath": "slbc-data/goa/wayback/2015/special_meeting_6th_aug.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/pmjdy/pradhan%20mantri%20jandhan%20yojana.pdf",
+      "originalUrl": "http://slbcgoa.com:80/download/pmjdy/PRADHAN%20MANTRI%20JANDHAN%20YOJANA.pdf",
+      "snapshotTimestamp": "20160212131715",
+      "snapshotUrl": "https://web.archive.org/web/20160212131715id_/http://slbcgoa.com:80/download/pmjdy/PRADHAN%20MANTRI%20JANDHAN%20YOJANA.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/PRADHAN_MANTRI_JANDHAN_YOJANA.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/91st_slbc_meeting_notice.pdf",
+      "originalUrl": "http://www.slbcgoa.com:80/download/91st_slbc_meeting_notice.pdf",
+      "snapshotTimestamp": "20160717054125",
+      "snapshotUrl": "https://web.archive.org/web/20160717054125id_/http://www.slbcgoa.com:80/download/91st_slbc_meeting_notice.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/91st_slbc_meeting_notice.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/goa_csp_contact_details.pdf",
+      "originalUrl": "http://www.slbcgoa.com:80/download/Goa_CSP_contact_details.pdf",
+      "snapshotTimestamp": "20160717054132",
+      "snapshotUrl": "https://web.archive.org/web/20160717054132id_/http://www.slbcgoa.com:80/download/Goa_CSP_contact_details.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/Goa_CSP_contact_details.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/msme%20care%20centre.pdf",
+      "originalUrl": "http://www.slbcgoa.com:80/download/MSME%20CARE%20CENTRE.pdf",
+      "snapshotTimestamp": "20160717054141",
+      "snapshotUrl": "https://web.archive.org/web/20160717054141id_/http://www.slbcgoa.com:80/download/MSME%20CARE%20CENTRE.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/MSME_CARE_CENTRE.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/90th/agenda.pdf",
+      "originalUrl": "http://www.slbcgoa.com:80/download/meetings/90th/agenda.pdf",
+      "snapshotTimestamp": "20160717054147",
+      "snapshotUrl": "https://web.archive.org/web/20160717054147id_/http://www.slbcgoa.com:80/download/meetings/90th/agenda.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/agenda.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/92nd/92nd_agenda.pdf",
+      "originalUrl": "http://www.slbcgoa.com:80/download/meetings/92nd/92nd_agenda.pdf",
+      "snapshotTimestamp": "20160717054155",
+      "snapshotUrl": "https://web.archive.org/web/20160717054155id_/http://www.slbcgoa.com:80/download/meetings/92nd/92nd_agenda.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/92nd_agenda.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/93rd/93rd_agenda.pdf",
+      "originalUrl": "http://www.slbcgoa.com:80/download/meetings/93rd/93rd_agenda.pdf",
+      "snapshotTimestamp": "20160717054540",
+      "snapshotUrl": "https://web.archive.org/web/20160717054540id_/http://www.slbcgoa.com:80/download/meetings/93rd/93rd_agenda.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/93rd_agenda.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/goa%20state%20list%20of%20unbanked%20villages.pdf",
+      "originalUrl": "http://www.slbcgoa.com:80/download/GOA%20STATE%20LIST%20OF%20UNBANKED%20VILLAGES.pdf",
+      "snapshotTimestamp": "20160717054623",
+      "snapshotUrl": "https://web.archive.org/web/20160717054623id_/http://www.slbcgoa.com:80/download/GOA%20STATE%20LIST%20OF%20UNBANKED%20VILLAGES.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/GOA_STATE_LIST_OF_UNBANKED_VILLAGES.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/90th/90th_minutes.pdf",
+      "originalUrl": "http://www.slbcgoa.com:80/download/meetings/90th/90th_minutes.pdf",
+      "snapshotTimestamp": "20160717054629",
+      "snapshotUrl": "https://web.archive.org/web/20160717054629id_/http://www.slbcgoa.com:80/download/meetings/90th/90th_minutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/90th_minutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/91st/91st_minutes.pdf",
+      "originalUrl": "http://www.slbcgoa.com:80/download/meetings/91st/91st_minutes.pdf",
+      "snapshotTimestamp": "20160717054950",
+      "snapshotUrl": "https://web.archive.org/web/20160717054950id_/http://www.slbcgoa.com:80/download/meetings/91st/91st_minutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/91st_minutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/93rd/93rd_minutes.pdf",
+      "originalUrl": "http://www.slbcgoa.com:80/download/meetings/93rd/93rd_minutes.pdf",
+      "snapshotTimestamp": "20160717060600",
+      "snapshotUrl": "https://web.archive.org/web/20160717060600id_/http://www.slbcgoa.com:80/download/meetings/93rd/93rd_minutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/93rd_minutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/slbccalendar_2016.pdf",
+      "originalUrl": "http://www.slbcgoa.com:80/download/slbccalendar_2016.pdf",
+      "snapshotTimestamp": "20160717161800",
+      "snapshotUrl": "https://web.archive.org/web/20160717161800id_/http://www.slbcgoa.com:80/download/slbccalendar_2016.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/slbccalendar_2016.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/92nd/92nd_minutes.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/92nd/92nd_minutes.pdf",
+      "snapshotTimestamp": "20160914063056",
+      "snapshotUrl": "https://web.archive.org/web/20160914063056id_/http://slbcgoa.com/download/meetings/92nd/92nd_minutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/92nd_minutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/90th/annexure%20xi.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/90th/ANNEXURE%20XI.pdf",
+      "snapshotTimestamp": "20160914071835",
+      "snapshotUrl": "https://web.archive.org/web/20160914071835id_/http://slbcgoa.com/download/meetings/90th/ANNEXURE%20XI.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/ANNEXURE_XI.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/92nd/annexure%20iii.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/92nd/annexure%20iii.pdf",
+      "snapshotTimestamp": "20160914072930",
+      "snapshotUrl": "https://web.archive.org/web/20160914072930id_/http://slbcgoa.com/download/meetings/92nd/annexure%20iii.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/annexure_iii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/91st/annexure%20ii.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/91st/ANNEXURE%20II.pdf",
+      "snapshotTimestamp": "20160914073317",
+      "snapshotUrl": "https://web.archive.org/web/20160914073317id_/http://slbcgoa.com/download/meetings/91st/ANNEXURE%20II.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/ANNEXURE_II.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/22_1_2013/annexure_3.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/22_1_2013/Annexure_3.pdf",
+      "snapshotTimestamp": "20160914075714",
+      "snapshotUrl": "https://web.archive.org/web/20160914075714id_/http://slbcgoa.com/download/meetings/22_1_2013/Annexure_3.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/Annexure_3.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/92nd/annexure%20vii.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/92nd/annexure%20vii.pdf",
+      "snapshotTimestamp": "20160914091936",
+      "snapshotUrl": "https://web.archive.org/web/20160914091936id_/http://slbcgoa.com/download/meetings/92nd/annexure%20vii.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/annexure_vii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/92nd/annexure%20ii.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/92nd/annexure%20ii.pdf",
+      "snapshotTimestamp": "20160914094226",
+      "snapshotUrl": "https://web.archive.org/web/20160914094226id_/http://slbcgoa.com/download/meetings/92nd/annexure%20ii.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/annexure_ii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/92nd/annexure%20v.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/92nd/annexure%20v.pdf",
+      "snapshotTimestamp": "20160914094826",
+      "snapshotUrl": "https://web.archive.org/web/20160914094826id_/http://slbcgoa.com/download/meetings/92nd/annexure%20v.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/annexure_v.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/91st/91st_agenda.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/91st/91st_agenda.pdf",
+      "snapshotTimestamp": "20160914105653",
+      "snapshotUrl": "https://web.archive.org/web/20160914105653id_/http://slbcgoa.com/download/meetings/91st/91st_agenda.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/91st_agenda.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/91st/annexure%20i.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/91st/ANNEXURE%20I.pdf",
+      "snapshotTimestamp": "20160914110536",
+      "snapshotUrl": "https://web.archive.org/web/20160914110536id_/http://slbcgoa.com/download/meetings/91st/ANNEXURE%20I.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/ANNEXURE_I.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/90th/annexure%20vii.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/90th/ANNEXURE%20VII.pdf",
+      "snapshotTimestamp": "20160914110755",
+      "snapshotUrl": "https://web.archive.org/web/20160914110755id_/http://slbcgoa.com/download/meetings/90th/ANNEXURE%20VII.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/ANNEXURE_VII.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/90th/annexure%20viiib.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/90th/Annexure%20VIIIb.pdf",
+      "snapshotTimestamp": "20160914110826",
+      "snapshotUrl": "https://web.archive.org/web/20160914110826id_/http://slbcgoa.com/download/meetings/90th/Annexure%20VIIIb.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/Annexure_VIIIb.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/90th/agenda%20&%20background%20papers%2090th%20slbc%20goa%20meeting.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/90th/Agenda%20&%20Background%20papers%2090th%20SLBC%20Goa%20meeting.pdf",
+      "snapshotTimestamp": "20160914113145",
+      "snapshotUrl": "https://web.archive.org/web/20160914113145id_/http://slbcgoa.com/download/meetings/90th/Agenda%20&%20Background%20papers%2090th%20SLBC%20Goa%20meeting.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/Agenda_Background_papers_90th_SLBC_Goa_meeting.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/92nd/annexure%20xv.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/92nd/annexure%20xv.pdf",
+      "snapshotTimestamp": "20160914113839",
+      "snapshotUrl": "https://web.archive.org/web/20160914113839id_/http://slbcgoa.com/download/meetings/92nd/annexure%20xv.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/annexure_xv.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/26_02_2014/statistical_data.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/26_02_2014/Statistical_Data.pdf",
+      "snapshotTimestamp": "20160915033002",
+      "snapshotUrl": "https://web.archive.org/web/20160915033002id_/http://slbcgoa.com/download/meetings/26_02_2014/Statistical_Data.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/Statistical_Data.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/92nd/annexure%20xiii.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/92nd/annexure%20xiii.pdf",
+      "snapshotTimestamp": "20160915033048",
+      "snapshotUrl": "https://web.archive.org/web/20160915033048id_/http://slbcgoa.com/download/meetings/92nd/annexure%20xiii.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/annexure_xiii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/91st/annexure%20iii.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/91st/ANNEXURE%20III.pdf",
+      "snapshotTimestamp": "20160915033052",
+      "snapshotUrl": "https://web.archive.org/web/20160915033052id_/http://slbcgoa.com/download/meetings/91st/ANNEXURE%20III.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/ANNEXURE_III.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/91st/annexure%20x.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/91st/ANNEXURE%20X.pdf",
+      "snapshotTimestamp": "20160915033105",
+      "snapshotUrl": "https://web.archive.org/web/20160915033105id_/http://slbcgoa.com/download/meetings/91st/ANNEXURE%20X.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/ANNEXURE_X.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/92nd/annexure%20xiv.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/92nd/annexure%20xiv.pdf",
+      "snapshotTimestamp": "20160915033113",
+      "snapshotUrl": "https://web.archive.org/web/20160915033113id_/http://slbcgoa.com/download/meetings/92nd/annexure%20xiv.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/annexure_xiv.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/90th/annexure%20v.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/90th/ANNEXURE%20V.pdf",
+      "snapshotTimestamp": "20160915072454",
+      "snapshotUrl": "https://web.archive.org/web/20160915072454id_/http://slbcgoa.com/download/meetings/90th/ANNEXURE%20V.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/ANNEXURE_V.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/92nd/annexure%20viii.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/92nd/annexure%20viii.pdf",
+      "snapshotTimestamp": "20160915072459",
+      "snapshotUrl": "https://web.archive.org/web/20160915072459id_/http://slbcgoa.com/download/meetings/92nd/annexure%20viii.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/annexure_viii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/90th/annexure%20xiii.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/90th/ANNEXURE%20XIII.pdf",
+      "snapshotTimestamp": "20160915072514",
+      "snapshotUrl": "https://web.archive.org/web/20160915072514id_/http://slbcgoa.com/download/meetings/90th/ANNEXURE%20XIII.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/ANNEXURE_XIII.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/92nd/annexure%20vi.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/92nd/annexure%20vi.pdf",
+      "snapshotTimestamp": "20160915072518",
+      "snapshotUrl": "https://web.archive.org/web/20160915072518id_/http://slbcgoa.com/download/meetings/92nd/annexure%20vi.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/annexure_vi.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/92nd/annexure%20iv.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/92nd/annexure%20iv.pdf",
+      "snapshotTimestamp": "20160915072556",
+      "snapshotUrl": "https://web.archive.org/web/20160915072556id_/http://slbcgoa.com/download/meetings/92nd/annexure%20iv.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/annexure_iv.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/download/meetings/91st/annexure%20xii.pdf",
+      "originalUrl": "http://slbcgoa.com/download/meetings/91st/ANNEXURE%20XII.pdf",
+      "snapshotTimestamp": "20160915072604",
+      "snapshotUrl": "https://web.archive.org/web/20160915072604id_/http://slbcgoa.com/download/meetings/91st/ANNEXURE%20XII.pdf",
+      "localPath": "slbc-data/goa/wayback/2016/ANNEXURE_XII.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/100th%20slbc%20goa%20govt%20deptt%20intimation%20no%20885.pdf",
+      "originalUrl": "http://slbcgoa.com:80/documents/100th%20slbc%20Goa%20govt%20deptt%20intimation%20NO%20885.pdf",
+      "snapshotTimestamp": "20180417160321",
+      "snapshotUrl": "https://web.archive.org/web/20180417160321id_/http://slbcgoa.com:80/documents/100th%20slbc%20Goa%20govt%20deptt%20intimation%20NO%20885.pdf",
+      "localPath": "slbc-data/goa/wayback/2018/100th_slbc_Goa_govt_deptt_intimation_NO_885.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/all%20members%20bk%20106.pdf",
+      "originalUrl": "http://slbcgoa.com:80/documents/ALL%20MEMBERS%20BK%20106.pdf",
+      "snapshotTimestamp": "20191222014104",
+      "snapshotUrl": "https://web.archive.org/web/20191222014104id_/http://slbcgoa.com:80/documents/ALL%20MEMBERS%20BK%20106.pdf",
+      "localPath": "slbc-data/goa/wayback/2019/ALL_MEMBERS_BK_106.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/intimation%20letter%20-%20101st%20slbc%20goa%20meeting.pdf",
+      "originalUrl": "http://slbcgoa.com:80/documents/INTIMATION%20LETTER%20-%20101ST%20SLBC%20GOA%20MEETING.pdf",
+      "snapshotTimestamp": "20191222015159",
+      "snapshotUrl": "https://web.archive.org/web/20191222015159id_/http://slbcgoa.com:80/documents/INTIMATION%20LETTER%20-%20101ST%20SLBC%20GOA%20MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2019/INTIMATION_LETTER_-_101ST_SLBC_GOA_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/rbi/rbi%20master%20circular%20%e2%80%93%20know%20your%20customer%20(kyc)%20norms%20(as%20on%20july%202015).pdf",
+      "originalUrl": "http://slbcgoa.com/RBI/rbi%20master%20circular%20%E2%80%93%20know%20your%20customer%20(kyc)%20norms%20(as%20on%20july%202015).pdf",
+      "snapshotTimestamp": "20210126080425",
+      "snapshotUrl": "https://web.archive.org/web/20210126080425id_/http://slbcgoa.com/RBI/rbi%20master%20circular%20%E2%80%93%20know%20your%20customer%20(kyc)%20norms%20(as%20on%20july%202015).pdf",
+      "localPath": "slbc-data/goa/wayback/2021/rbi_master_circular_–_know_your_customer_kyc_norms_as_on_july_2015_.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/rbi/rbi%20master%20circular-%20loans%20and%20advances%20%e2%80%93%20statutory%20and%20other%20restrictions%20(as%20on%20july-2015).pdf",
+      "originalUrl": "http://slbcgoa.com/RBI/rbi%20master%20circular-%20loans%20and%20advances%20%E2%80%93%20statutory%20and%20other%20restrictions%20(as%20on%20july-2015).pdf",
+      "snapshotTimestamp": "20210126090610",
+      "snapshotUrl": "https://web.archive.org/web/20210126090610id_/http://slbcgoa.com/RBI/rbi%20master%20circular-%20loans%20and%20advances%20%E2%80%93%20statutory%20and%20other%20restrictions%20(as%20on%20july-2015).pdf",
+      "localPath": "slbc-data/goa/wayback/2021/rbi_master_circular-_loans_and_advances_–_statutory_and_other_restrictions_as_on_july-2015_.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/rbi/rbi%20master%20circular%20%e2%80%93%20detection%20and%20impounding%20of%20counterfeit%20notes%20(as%20on%20july%202015).pdf",
+      "originalUrl": "http://slbcgoa.com/RBI/rbi%20master%20circular%20%E2%80%93%20detection%20and%20impounding%20of%20counterfeit%20notes%20(as%20on%20july%202015).pdf",
+      "snapshotTimestamp": "20210126091347",
+      "snapshotUrl": "https://web.archive.org/web/20210126091347id_/http://slbcgoa.com/RBI/rbi%20master%20circular%20%E2%80%93%20detection%20and%20impounding%20of%20counterfeit%20notes%20(as%20on%20july%202015).pdf",
+      "localPath": "slbc-data/goa/wayback/2021/rbi_master_circular_–_detection_and_impounding_of_counterfeit_notes_as_on_july_2015_.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/rbi/rbi%20master%20circular%20%e2%80%93%20mobile%20banking%20transactions%20%e2%80%93%20operative%20guidelines%20for%20banks%20(as%20on%20july%202015).pdf",
+      "originalUrl": "http://slbcgoa.com/RBI/rbi%20master%20circular%20%E2%80%93%20mobile%20banking%20transactions%20%E2%80%93%20operative%20guidelines%20for%20banks%20(as%20on%20july%202015).pdf",
+      "snapshotTimestamp": "20210126094124",
+      "snapshotUrl": "https://web.archive.org/web/20210126094124id_/http://slbcgoa.com/RBI/rbi%20master%20circular%20%E2%80%93%20mobile%20banking%20transactions%20%E2%80%93%20operative%20guidelines%20for%20banks%20(as%20on%20july%202015).pdf",
+      "localPath": "slbc-data/goa/wayback/2021/rbi_master_circular_–_mobile_banking_transactions_–_operative_guidelines_for_banks_as_on_july_2015_.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/rbi/rbi%20master%20circular%20%e2%80%93%20housing%20finance%20(as%20on%20july%202015).pdf",
+      "originalUrl": "http://slbcgoa.com/RBI/rbi%20master%20circular%20%E2%80%93%20housing%20finance%20(as%20on%20july%202015).pdf",
+      "snapshotTimestamp": "20210126094247",
+      "snapshotUrl": "https://web.archive.org/web/20210126094247id_/http://slbcgoa.com/RBI/rbi%20master%20circular%20%E2%80%93%20housing%20finance%20(as%20on%20july%202015).pdf",
+      "localPath": "slbc-data/goa/wayback/2021/rbi_master_circular_–_housing_finance_as_on_july_2015_.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/sfp%202019-20.pdf",
+      "originalUrl": "http://slbcgoa.com/documents/SFP%202019-20.pdf",
+      "snapshotTimestamp": "20220531131616",
+      "snapshotUrl": "https://web.archive.org/web/20220531131616id_/http://slbcgoa.com/documents/SFP%202019-20.pdf",
+      "localPath": "slbc-data/goa/wayback/2022/SFP_2019-20.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/107_intimation%20letter%20mem%20banks_0002.pdf",
+      "originalUrl": "http://slbcgoa.com/documents/107_INTIMATION%20LETTER%20MEM%20BANKS_0002.pdf",
+      "snapshotTimestamp": "20220531131617",
+      "snapshotUrl": "https://web.archive.org/web/20220531131617id_/http://slbcgoa.com/documents/107_INTIMATION%20LETTER%20MEM%20BANKS_0002.pdf",
+      "localPath": "slbc-data/goa/wayback/2022/107_INTIMATION_LETTER_MEM_BANKS_0002.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/108th_slbc_goa_meet_intimation_letter_change_in_venue.pdf",
+      "originalUrl": "http://slbcgoa.com/documents/108th_SLBC_GOA_MEET_INTIMATION_LETTER_Change_in_venue.pdf",
+      "snapshotTimestamp": "20220531131617",
+      "snapshotUrl": "https://web.archive.org/web/20220531131617id_/http://slbcgoa.com/documents/108th_SLBC_GOA_MEET_INTIMATION_LETTER_Change_in_venue.pdf",
+      "localPath": "slbc-data/goa/wayback/2022/108th_SLBC_GOA_MEET_INTIMATION_LETTER_Change_in_venue.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/south%20goa%20plp%20final%2017%20oct%2017.pdf",
+      "originalUrl": "http://slbcgoa.com/documents/South%20Goa%20PLP%20Final%2017%20Oct%2017.pdf",
+      "snapshotTimestamp": "20220531131626",
+      "snapshotUrl": "https://web.archive.org/web/20220531131626id_/http://slbcgoa.com/documents/South%20Goa%20PLP%20Final%2017%20Oct%2017.pdf",
+      "localPath": "slbc-data/goa/wayback/2022/South_Goa_PLP_Final_17_Oct_17.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/north%20goa%20plp%20final.pdf",
+      "originalUrl": "http://slbcgoa.com/documents/North%20Goa%20PLP%20Final.pdf",
+      "snapshotTimestamp": "20220531131642",
+      "snapshotUrl": "https://web.archive.org/web/20220531131642id_/http://slbcgoa.com/documents/North%20Goa%20PLP%20Final.pdf",
+      "localPath": "slbc-data/goa/wayback/2022/North_Goa_PLP_Final.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexurevii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93annexurevii.pdf",
+      "snapshotTimestamp": "20230126215008",
+      "snapshotUrl": "https://web.archive.org/web/20230126215008id_/http://slbcgoa.com/Meeting/93annexurevii.pdf",
+      "localPath": "slbc-data/goa/wayback/2023/93annexurevii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexureii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93annexureii.pdf",
+      "snapshotTimestamp": "20230331000239",
+      "snapshotUrl": "https://web.archive.org/web/20230331000239id_/http://slbcgoa.com/Meeting/93annexureii.pdf",
+      "localPath": "slbc-data/goa/wayback/2023/93annexureii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/97annexure%20ix.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/97annexure%20ix.pdf",
+      "snapshotTimestamp": "20230331002256",
+      "snapshotUrl": "https://web.archive.org/web/20230331002256id_/http://slbcgoa.com/Meeting/97annexure%20ix.pdf",
+      "localPath": "slbc-data/goa/wayback/2023/97annexure_ix.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93rd_agenda.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93rd_agenda.pdf",
+      "snapshotTimestamp": "20230331003551",
+      "snapshotUrl": "https://web.archive.org/web/20230331003551id_/http://slbcgoa.com/Meeting/93rd_agenda.pdf",
+      "localPath": "slbc-data/goa/wayback/2023/93rd_agenda.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/95annexure%20vii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/95ANNEXURE%20VII.pdf",
+      "snapshotTimestamp": "20230331005240",
+      "snapshotUrl": "https://web.archive.org/web/20230331005240id_/http://slbcgoa.com/Meeting/95ANNEXURE%20VII.pdf",
+      "localPath": "slbc-data/goa/wayback/2023/95ANNEXURE_VII.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda95th.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA95th.pdf",
+      "snapshotTimestamp": "20230331005319",
+      "snapshotUrl": "https://web.archive.org/web/20230331005319id_/http://slbcgoa.com/Meeting/AGENDA95th.pdf",
+      "localPath": "slbc-data/goa/wayback/2023/AGENDA95th.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexurexx.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93annexurexx.pdf",
+      "snapshotTimestamp": "20230331010556",
+      "snapshotUrl": "https://web.archive.org/web/20230331010556id_/http://slbcgoa.com/Meeting/93annexurexx.pdf",
+      "localPath": "slbc-data/goa/wayback/2023/93annexurexx.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20of%20120th%20slbc%20meeting.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA%20OF%20120th%20SLBC%20MEETING.pdf",
+      "snapshotTimestamp": "20240304152510",
+      "snapshotUrl": "https://web.archive.org/web/20240304152510id_/http://slbcgoa.com/Meeting/AGENDA%20OF%20120th%20SLBC%20MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_OF_120th_SLBC_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda_121st%20slbc%20meeting.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA_121st%20SLBC%20MEETING.pdf",
+      "snapshotTimestamp": "20240331183948",
+      "snapshotUrl": "https://web.archive.org/web/20240331183948id_/http://slbcgoa.com/Meeting/AGENDA_121st%20SLBC%20MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_121st_SLBC_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/120th%20slbc%20minutes%20approved.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/120th%20SLBC%20Minutes%20Approved.pdf",
+      "snapshotTimestamp": "20240406002023",
+      "snapshotUrl": "https://web.archive.org/web/20240406002023id_/http://slbcgoa.com/Meeting/120th%20SLBC%20Minutes%20Approved.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/120th_SLBC_Minutes_Approved.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/114th%20slbc%20minutes%20goa%20.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/114th%20slbc%20minutes%20goa%20.pdf",
+      "snapshotTimestamp": "20240629045602",
+      "snapshotUrl": "https://web.archive.org/web/20240629045602id_/http://slbcgoa.com/Meeting/114th%20slbc%20minutes%20goa%20.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/114th_slbc_minutes_goa_.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20background%20papers%20of%20102nd%20slbc%20goa%20meet%2025-09-2018%20(1).pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA%20BACKGROUND%20PAPERS%20OF%20102nd%20SLBC%20GOA%20MEET%2025-09-2018%20(1).pdf",
+      "snapshotTimestamp": "20240629052318",
+      "snapshotUrl": "https://web.archive.org/web/20240629052318id_/http://slbcgoa.com/Meeting/AGENDA%20BACKGROUND%20PAPERS%20OF%20102nd%20SLBC%20GOA%20MEET%2025-09-2018%20(1).pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_BACKGROUND_PAPERS_OF_102nd_SLBC_GOA_MEET_25-09-2018_1_.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexurexi.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93annexurexi.pdf",
+      "snapshotTimestamp": "20240629053608",
+      "snapshotUrl": "https://web.archive.org/web/20240629053608id_/http://slbcgoa.com/Meeting/93annexurexi.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/93annexurexi.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/94annexurevi.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/94annexurevi.pdf",
+      "snapshotTimestamp": "20240629183505",
+      "snapshotUrl": "https://web.archive.org/web/20240629183505id_/http://slbcgoa.com/Meeting/94annexurevi.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/94annexurevi.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutes%20of%20the116th%20slbc.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/Minutes%20of%20the116th%20SLBC.pdf",
+      "snapshotTimestamp": "20240630122724",
+      "snapshotUrl": "https://web.archive.org/web/20240630122724id_/http://slbcgoa.com/Meeting/Minutes%20of%20the116th%20SLBC.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/Minutes_of_the116th_SLBC.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexurexvii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93annexurexvii.pdf",
+      "snapshotTimestamp": "20240701022443",
+      "snapshotUrl": "https://web.archive.org/web/20240701022443id_/http://slbcgoa.com/Meeting/93annexurexvii.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/93annexurexvii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/97annexure%20-%20vii%20notification%20pmfby.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/97annexure%20-%20vii%20notification%20pmfby.pdf",
+      "snapshotTimestamp": "20240701023102",
+      "snapshotUrl": "https://web.archive.org/web/20240701023102id_/http://slbcgoa.com/Meeting/97annexure%20-%20vii%20notification%20pmfby.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/97annexure_-_vii_notification_pmfby.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/96annexureviii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/96ANNEXUREVIII.pdf",
+      "snapshotTimestamp": "20240701030515",
+      "snapshotUrl": "https://web.archive.org/web/20240701030515id_/http://slbcgoa.com/Meeting/96ANNEXUREVIII.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/96ANNEXUREVIII.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/94annexureix.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/94annexureix.pdf",
+      "snapshotTimestamp": "20240701051929",
+      "snapshotUrl": "https://web.archive.org/web/20240701051929id_/http://slbcgoa.com/Meeting/94annexureix.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/94annexureix.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/95annexure%20iv.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/95ANNEXURE%20IV.pdf",
+      "snapshotTimestamp": "20240701054533",
+      "snapshotUrl": "https://web.archive.org/web/20240701054533id_/http://slbcgoa.com/Meeting/95ANNEXURE%20IV.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/95ANNEXURE_IV.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/94annexurei.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/94annexurei.pdf",
+      "snapshotTimestamp": "20240701164844",
+      "snapshotUrl": "https://web.archive.org/web/20240701164844id_/http://slbcgoa.com/Meeting/94annexurei.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/94annexurei.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutes%20of%20106th%20slbc%20goa%20meet%2028.08.2019.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/MINUTES%20OF%20106TH%20SLBC%20GOA%20MEET%2028.08.2019.pdf",
+      "snapshotTimestamp": "20240701233956",
+      "snapshotUrl": "https://web.archive.org/web/20240701233956id_/http://slbcgoa.com/Meeting/MINUTES%20OF%20106TH%20SLBC%20GOA%20MEET%2028.08.2019.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/MINUTES_OF_106TH_SLBC_GOA_MEET_28.08.2019.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%2098th%20slbc%20goa%20meeting%2013.09.2017.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA%2098TH%20SLBC%20GOA%20MEETING%2013.09.2017.pdf",
+      "snapshotTimestamp": "20240702105055",
+      "snapshotUrl": "https://web.archive.org/web/20240702105055id_/http://slbcgoa.com/Meeting/AGENDA%2098TH%20SLBC%20GOA%20MEETING%2013.09.2017.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_98TH_SLBC_GOA_MEETING_13.09.2017.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20101st%20slbc%20goa%20meeting.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA%20101ST%20SLBC%20GOA%20MEETING.pdf",
+      "snapshotTimestamp": "20240703042930",
+      "snapshotUrl": "https://web.archive.org/web/20240703042930id_/http://slbcgoa.com/Meeting/AGENDA%20101ST%20SLBC%20GOA%20MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_101ST_SLBC_GOA_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure-iii%20%20-%20apy.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/ANNEXURE-III%20%20-%20APY.pdf",
+      "snapshotTimestamp": "20240703052843",
+      "snapshotUrl": "https://web.archive.org/web/20240703052843id_/http://slbcgoa.com/Meeting/ANNEXURE-III%20%20-%20APY.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/ANNEXURE-III_-_APY.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/95annexure%20vi.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/95ANNEXURE%20VI.pdf",
+      "snapshotTimestamp": "20240703061315",
+      "snapshotUrl": "https://web.archive.org/web/20240703061315id_/http://slbcgoa.com/Meeting/95ANNEXURE%20VI.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/95ANNEXURE_VI.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20and%20background%20papers%20of%20113%20slbc%20meeting.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA%20and%20BACKGROUND%20PAPERS%20OF%20113%20SLBC%20MEETING.pdf",
+      "snapshotTimestamp": "20240703065644",
+      "snapshotUrl": "https://web.archive.org/web/20240703065644id_/http://slbcgoa.com/Meeting/AGENDA%20and%20BACKGROUND%20PAPERS%20OF%20113%20SLBC%20MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_and_BACKGROUND_PAPERS_OF_113_SLBC_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutes%20of100th%20meeting%20of%20slbc%20goa.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/MINUTES%20OF100TH%20MEETING%20OF%20SLBC%20GOA.pdf",
+      "snapshotTimestamp": "20240703072016",
+      "snapshotUrl": "https://web.archive.org/web/20240703072016id_/http://slbcgoa.com/Meeting/MINUTES%20OF100TH%20MEETING%20OF%20SLBC%20GOA.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/MINUTES_OF100TH_MEETING_OF_SLBC_GOA.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutes%20of%20115%20slbc%20meeting.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/Minutes%20of%20115%20SLBC%20Meeting.pdf",
+      "snapshotTimestamp": "20240703104740",
+      "snapshotUrl": "https://web.archive.org/web/20240703104740id_/http://slbcgoa.com/Meeting/Minutes%20of%20115%20SLBC%20Meeting.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/Minutes_of_115_SLBC_Meeting.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure-vii%20-%20deds.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/ANNEXURE-VII%20-%20DEDS.pdf",
+      "snapshotTimestamp": "20240703114842",
+      "snapshotUrl": "https://web.archive.org/web/20240703114842id_/http://slbcgoa.com/Meeting/ANNEXURE-VII%20-%20DEDS.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/ANNEXURE-VII_-_DEDS.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexurev.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93annexurev.pdf",
+      "snapshotTimestamp": "20240703123952",
+      "snapshotUrl": "https://web.archive.org/web/20240703123952id_/http://slbcgoa.com/Meeting/93annexurev.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/93annexurev.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda_119th_slbc_meeting.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA_119th_SLBC_MEETING.pdf",
+      "snapshotTimestamp": "20240703132242",
+      "snapshotUrl": "https://web.archive.org/web/20240703132242id_/http://slbcgoa.com/Meeting/AGENDA_119th_SLBC_MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_119th_SLBC_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/99th%20slbc%20goa%20meet%20intimation.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/99TH%20SLBC%20GOA%20MEET%20INTIMATION.pdf",
+      "snapshotTimestamp": "20240703140812",
+      "snapshotUrl": "https://web.archive.org/web/20240703140812id_/http://slbcgoa.com/Meeting/99TH%20SLBC%20GOA%20MEET%20INTIMATION.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/99TH_SLBC_GOA_MEET_INTIMATION.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93rd_minutes.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93rd_minutes.pdf",
+      "snapshotTimestamp": "20240703141644",
+      "snapshotUrl": "https://web.archive.org/web/20240703141644id_/http://slbcgoa.com/Meeting/93rd_minutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/93rd_minutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/96annexureiv.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/96ANNEXUREIV.pdf",
+      "snapshotTimestamp": "20240703151610",
+      "snapshotUrl": "https://web.archive.org/web/20240703151610id_/http://slbcgoa.com/Meeting/96ANNEXUREIV.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/96ANNEXUREIV.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20and%20background%20papers%20of%20110%20slbc%20meeting%20final.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA%20and%20BACKGROUND%20PAPERS%20OF%20110%20SLBC%20MEETING%20final.pdf",
+      "snapshotTimestamp": "20240703155229",
+      "snapshotUrl": "https://web.archive.org/web/20240703155229id_/http://slbcgoa.com/Meeting/AGENDA%20and%20BACKGROUND%20PAPERS%20OF%20110%20SLBC%20MEETING%20final.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_and_BACKGROUND_PAPERS_OF_110_SLBC_MEETING_final.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexurexv.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93annexurexv.pdf",
+      "snapshotTimestamp": "20240703162934",
+      "snapshotUrl": "https://web.archive.org/web/20240703162934id_/http://slbcgoa.com/Meeting/93annexurexv.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/93annexurexv.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/minutes%20of%20103rd%20slbc%20goa%20meet%2020.12.2018.pdf",
+      "originalUrl": "http://slbcgoa.com/documents/MINUTES%20OF%20103RD%20SLBC%20GOA%20MEET%2020.12.2018.pdf",
+      "snapshotTimestamp": "20240703163521",
+      "snapshotUrl": "https://web.archive.org/web/20240703163521id_/http://slbcgoa.com/documents/MINUTES%20OF%20103RD%20SLBC%20GOA%20MEET%2020.12.2018.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/MINUTES_OF_103RD_SLBC_GOA_MEET_20.12.2018.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20and%20background%20papers%20of%20108th%20slbc%20goa%20meet%2027.02.2020%20final.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA%20and%20BACKGROUND%20PAPERS%20OF%20108TH%20SLBC%20GOA%20MEET%2027.02.2020%20FINAL.pdf",
+      "snapshotTimestamp": "20240704025934",
+      "snapshotUrl": "https://web.archive.org/web/20240704025934id_/http://slbcgoa.com/Meeting/AGENDA%20and%20BACKGROUND%20PAPERS%20OF%20108TH%20SLBC%20GOA%20MEET%2027.02.2020%20FINAL.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_and_BACKGROUND_PAPERS_OF_108TH_SLBC_GOA_MEET_27.02.2020_FINAL.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda_of_118_slbc_meeting.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA_OF_118_SLBC_MEETING.pdf",
+      "snapshotTimestamp": "20240704041944",
+      "snapshotUrl": "https://web.archive.org/web/20240704041944id_/http://slbcgoa.com/Meeting/AGENDA_OF_118_SLBC_MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_OF_118_SLBC_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexurexiv.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93annexurexiv.pdf",
+      "snapshotTimestamp": "20240704055542",
+      "snapshotUrl": "https://web.archive.org/web/20240704055542id_/http://slbcgoa.com/Meeting/93annexurexiv.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/93annexurexiv.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/95annexure%20viii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/95ANNEXURE%20VIII.pdf",
+      "snapshotTimestamp": "20240704081043",
+      "snapshotUrl": "https://web.archive.org/web/20240704081043id_/http://slbcgoa.com/Meeting/95ANNEXURE%20VIII.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/95ANNEXURE_VIII.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexurex.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93annexurex.pdf",
+      "snapshotTimestamp": "20240705052413",
+      "snapshotUrl": "https://web.archive.org/web/20240705052413id_/http://slbcgoa.com/Meeting/93annexurex.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/93annexurex.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexureiv.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93annexureiv.pdf",
+      "snapshotTimestamp": "20240705091908",
+      "snapshotUrl": "https://web.archive.org/web/20240705091908id_/http://slbcgoa.com/Meeting/93annexureiv.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/93annexureiv.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20and%20background%20papers%20of%20111%20slbc%20meeting.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA%20and%20BACKGROUND%20PAPERS%20OF%20111%20SLBC%20MEETING.pdf",
+      "snapshotTimestamp": "20240705144456",
+      "snapshotUrl": "https://web.archive.org/web/20240705144456id_/http://slbcgoa.com/Meeting/AGENDA%20and%20BACKGROUND%20PAPERS%20OF%20111%20SLBC%20MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_and_BACKGROUND_PAPERS_OF_111_SLBC_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/121_slbc_minutes.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/121_SLBC_Minutes.pdf",
+      "snapshotTimestamp": "20240714074045",
+      "snapshotUrl": "https://web.archive.org/web/20240714074045id_/http://slbcgoa.com/Meeting/121_SLBC_Minutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/121_SLBC_Minutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/123rd%20%20agenda%20of%20slbc%20meeting.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/123rd%20%20AGENDA%20OF%20SLBC%20MEETING.pdf",
+      "snapshotTimestamp": "20240714083817",
+      "snapshotUrl": "https://web.archive.org/web/20240714083817id_/http://slbcgoa.com/Meeting/123rd%20%20AGENDA%20OF%20SLBC%20MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/123rd_AGENDA_OF_SLBC_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/123rd_slbc_minutes.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/123rd_SLBC_MINUTES.pdf",
+      "snapshotTimestamp": "20240715201549",
+      "snapshotUrl": "https://web.archive.org/web/20240715201549id_/http://slbcgoa.com/Meeting/123rd_SLBC_MINUTES.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/123rd_SLBC_MINUTES.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure-viii%20100th%20slbc%20meeting-addl%20agenda-rbi.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/ANNEXURE-VIII%20100th%20SLBC%20meeting-Addl%20Agenda-RBI.PDF",
+      "snapshotTimestamp": "20240727015317",
+      "snapshotUrl": "https://web.archive.org/web/20240727015317id_/http://slbcgoa.com/Meeting/ANNEXURE-VIII%20100th%20SLBC%20meeting-Addl%20Agenda-RBI.PDF",
+      "localPath": "slbc-data/goa/wayback/2024/ANNEXURE-VIII_100th_SLBC_meeting-Addl_Agenda-RBI.PDF",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutes%20of%20113%20th%20slbc%20meeting.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/Minutes%20of%20113%20th%20SLBC%20meeting.pdf",
+      "snapshotTimestamp": "20240815142335",
+      "snapshotUrl": "https://web.archive.org/web/20240815142335id_/http://slbcgoa.com/Meeting/Minutes%20of%20113%20th%20SLBC%20meeting.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/Minutes_of_113_th_SLBC_meeting.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexurexvi.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93annexurexvi.pdf",
+      "snapshotTimestamp": "20240815145202",
+      "snapshotUrl": "https://web.archive.org/web/20240815145202id_/http://slbcgoa.com/Meeting/93annexurexvi.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/93annexurexvi.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20background%20papersof%20105th%20slbc%20goa%20meet%2024.06.2019.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA%20BACKGROUND%20PAPERSOF%20105TH%20SLBC%20GOA%20MEET%2024.06.2019.pdf",
+      "snapshotTimestamp": "20240815151256",
+      "snapshotUrl": "https://web.archive.org/web/20240815151256id_/http://slbcgoa.com/Meeting/AGENDA%20BACKGROUND%20PAPERSOF%20105TH%20SLBC%20GOA%20MEET%2024.06.2019.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_BACKGROUND_PAPERSOF_105TH_SLBC_GOA_MEET_24.06.2019.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutes98thslbcgoameetingheldon13sept2017.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/MINUTES98THSLBCGOAMEETINGHELDON13SEPT2017.pdf",
+      "snapshotTimestamp": "20240815151640",
+      "snapshotUrl": "https://web.archive.org/web/20240815151640id_/http://slbcgoa.com/Meeting/MINUTES98THSLBCGOAMEETINGHELDON13SEPT2017.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/MINUTES98THSLBCGOAMEETINGHELDON13SEPT2017.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/94annexurevii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/94annexurevii.pdf",
+      "snapshotTimestamp": "20240815151744",
+      "snapshotUrl": "https://web.archive.org/web/20240815151744id_/http://slbcgoa.com/Meeting/94annexurevii.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/94annexurevii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutesof94thslb.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/MINUTESOF94THSLB.pdf",
+      "snapshotTimestamp": "20240815151817",
+      "snapshotUrl": "https://web.archive.org/web/20240815151817id_/http://slbcgoa.com/Meeting/MINUTESOF94THSLB.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/MINUTESOF94THSLB.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda_of_117_slbc_meeting.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA_OF_117_SLBC_MEETING.pdf",
+      "snapshotTimestamp": "20240815152934",
+      "snapshotUrl": "https://web.archive.org/web/20240815152934id_/http://slbcgoa.com/Meeting/AGENDA_OF_117_SLBC_MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_OF_117_SLBC_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure%20v%20-%20%20promotion%20%20to%20digital%20payments.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/ANNEXURE%20V%20-%20%20promotion%20%20to%20digital%20payments.pdf",
+      "snapshotTimestamp": "20240815153453",
+      "snapshotUrl": "https://web.archive.org/web/20240815153453id_/http://slbcgoa.com/Meeting/ANNEXURE%20V%20-%20%20promotion%20%20to%20digital%20payments.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/ANNEXURE_V_-_promotion_to_digital_payments.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/pmjjby_enrollment_form.pdf",
+      "originalUrl": "http://slbcgoa.com/documents/PMJJBY_Enrollment_Form.pdf",
+      "snapshotTimestamp": "20240815153618",
+      "snapshotUrl": "https://web.archive.org/web/20240815153618id_/http://slbcgoa.com/documents/PMJJBY_Enrollment_Form.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/PMJJBY_Enrollment_Form.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/96annexurevii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/96ANNEXUREVII.pdf",
+      "snapshotTimestamp": "20240815155122",
+      "snapshotUrl": "https://web.archive.org/web/20240815155122id_/http://slbcgoa.com/Meeting/96ANNEXUREVII.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/96ANNEXUREVII.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutes%20of%20the%20110th%20slbc%20meeting.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/Minutes%20of%20the%20110th%20SLBC%20meeting.pdf",
+      "snapshotTimestamp": "20240815160123",
+      "snapshotUrl": "https://web.archive.org/web/20240815160123id_/http://slbcgoa.com/Meeting/Minutes%20of%20the%20110th%20SLBC%20meeting.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/Minutes_of_the_110th_SLBC_meeting.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure%20iii%20%20-%20apy.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/ANNEXURE%20III%20%20-%20APY.pdf",
+      "snapshotTimestamp": "20240815160652",
+      "snapshotUrl": "https://web.archive.org/web/20240815160652id_/http://slbcgoa.com/Meeting/ANNEXURE%20III%20%20-%20APY.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/ANNEXURE_III_-_APY.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexurei.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93annexurei.pdf",
+      "snapshotTimestamp": "20240815161559",
+      "snapshotUrl": "https://web.archive.org/web/20240815161559id_/http://slbcgoa.com/Meeting/93annexurei.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/93annexurei.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/slbc_118_minutes.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/SLBC_118_MINUTES.pdf",
+      "snapshotTimestamp": "20240815162106",
+      "snapshotUrl": "https://web.archive.org/web/20240815162106id_/http://slbcgoa.com/Meeting/SLBC_118_MINUTES.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/SLBC_118_MINUTES.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure%20vi%20promotion%20%20to%20digital%20payments.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/ANNEXURE%20VI%20promotion%20%20to%20digital%20payments.pdf",
+      "snapshotTimestamp": "20240815162215",
+      "snapshotUrl": "https://web.archive.org/web/20240815162215id_/http://slbcgoa.com/Meeting/ANNEXURE%20VI%20promotion%20%20to%20digital%20payments.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/ANNEXURE_VI_promotion_to_digital_payments.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20background%20papers%20of%20106th%20slbc%20goa%20meet%2028.08.2019.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA%20BACKGROUND%20PAPERS%20OF%20106TH%20SLBC%20GOA%20MEET%2028.08.2019.PDF",
+      "snapshotTimestamp": "20240902155844",
+      "snapshotUrl": "https://web.archive.org/web/20240902155844id_/http://slbcgoa.com/Meeting/AGENDA%20BACKGROUND%20PAPERS%20OF%20106TH%20SLBC%20GOA%20MEET%2028.08.2019.PDF",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_BACKGROUND_PAPERS_OF_106TH_SLBC_GOA_MEET_28.08.2019.PDF",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure%20iv%20-%20clss.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/ANNEXURE%20IV%20-%20CLSS.pdf",
+      "snapshotTimestamp": "20241205181353",
+      "snapshotUrl": "https://web.archive.org/web/20241205181353id_/http://slbcgoa.com/Meeting/ANNEXURE%20IV%20-%20CLSS.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/ANNEXURE_IV_-_CLSS.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure%20viii%20-%20interest%20subsidy%20on%20loans.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/ANNEXURE%20VIII%20-%20INTEREST%20SUBSIDY%20ON%20LOANS.pdf",
+      "snapshotTimestamp": "20241205181604",
+      "snapshotUrl": "https://web.archive.org/web/20241205181604id_/http://slbcgoa.com/Meeting/ANNEXURE%20VIII%20-%20INTEREST%20SUBSIDY%20ON%20LOANS.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/ANNEXURE_VIII_-_INTEREST_SUBSIDY_ON_LOANS.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure-ix%20100%20th%20slbc%20-%20additional%20agenda.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/ANNEXURE-IX%20100%20th%20SLBC%20-%20Additional%20Agenda.PDF",
+      "snapshotTimestamp": "20241205181855",
+      "snapshotUrl": "https://web.archive.org/web/20241205181855id_/http://slbcgoa.com/Meeting/ANNEXURE-IX%20100%20th%20SLBC%20-%20Additional%20Agenda.PDF",
+      "localPath": "slbc-data/goa/wayback/2024/ANNEXURE-IX_100_th_SLBC_-_Additional_Agenda.PDF",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20background%20papers%20of%20104th%20slbc%20goa%20meeting%20a.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA%20BACKGROUND%20PAPERS%20OF%20104TH%20SLBC%20GOA%20MEETING%20a.pdf",
+      "snapshotTimestamp": "20241205182049",
+      "snapshotUrl": "https://web.archive.org/web/20241205182049id_/http://slbcgoa.com/Meeting/AGENDA%20BACKGROUND%20PAPERS%20OF%20104TH%20SLBC%20GOA%20MEETING%20a.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_BACKGROUND_PAPERS_OF_104TH_SLBC_GOA_MEETING_a.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda96.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA96.pdf",
+      "snapshotTimestamp": "20241205182300",
+      "snapshotUrl": "https://web.archive.org/web/20241205182300id_/http://slbcgoa.com/Meeting/AGENDA96.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA96.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/101annexure-vi%20-%20%20promotion%20%20to%20digital%20payments.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/101ANNEXURE-VI%20-%20%20promotion%20%20to%20digital%20payments.pdf",
+      "snapshotTimestamp": "20241205182407",
+      "snapshotUrl": "https://web.archive.org/web/20241205182407id_/http://slbcgoa.com/Meeting/101ANNEXURE-VI%20-%20%20promotion%20%20to%20digital%20payments.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/101ANNEXURE-VI_-_promotion_to_digital_payments.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure-iv%20doubling%20farmers%20income.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/ANNEXURE-IV%20DOUBLING%20FARMERS%20INCOME.PDF",
+      "snapshotTimestamp": "20241205182532",
+      "snapshotUrl": "https://web.archive.org/web/20241205182532id_/http://slbcgoa.com/Meeting/ANNEXURE-IV%20DOUBLING%20FARMERS%20INCOME.PDF",
+      "localPath": "slbc-data/goa/wayback/2024/ANNEXURE-IV_DOUBLING_FARMERS_INCOME.PDF",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutes%20of%20107th%20slbc%20goa%20meet%2017.12.2019.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/MINUTES%20OF%20107TH%20SLBC%20GOA%20MEET%2017.12.2019.pdf",
+      "snapshotTimestamp": "20241205182733",
+      "snapshotUrl": "https://web.archive.org/web/20241205182733id_/http://slbcgoa.com/Meeting/MINUTES%20OF%20107TH%20SLBC%20GOA%20MEET%2017.12.2019.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/MINUTES_OF_107TH_SLBC_GOA_MEET_17.12.2019.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure%20-%20vii%20-%20official%20gazette%20rabi%202017-18.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/ANNEXURE%20-%20VII%20-%20Official%20Gazette%20Rabi%202017-18.pdf",
+      "snapshotTimestamp": "20241205182832",
+      "snapshotUrl": "https://web.archive.org/web/20241205182832id_/http://slbcgoa.com/Meeting/ANNEXURE%20-%20VII%20-%20Official%20Gazette%20Rabi%202017-18.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/ANNEXURE_-_VII_-_Official_Gazette_Rabi_2017-18.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20%2097th%20%20meetinng%20of%20%20slbc%20goa%20%2023.06%202017%20final.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA%20%2097th%20%20MEETINNG%20OF%20%20SLBC%20GOA%20%2023.06%202017%20FINAL.pdf",
+      "snapshotTimestamp": "20241205183106",
+      "snapshotUrl": "https://web.archive.org/web/20241205183106id_/http://slbcgoa.com/Meeting/AGENDA%20%2097th%20%20MEETINNG%20OF%20%20SLBC%20GOA%20%2023.06%202017%20FINAL.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_97th_MEETINNG_OF_SLBC_GOA_23.06_2017_FINAL.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure%20xi%20-%20apy.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/annexure%20XI%20-%20APY.pdf",
+      "snapshotTimestamp": "20241205183216",
+      "snapshotUrl": "https://web.archive.org/web/20241205183216id_/http://slbcgoa.com/Meeting/annexure%20XI%20-%20APY.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/annexure_XI_-_APY.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/97annexure%20iii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/97annexure%20iii.pdf",
+      "snapshotTimestamp": "20241205183417",
+      "snapshotUrl": "https://web.archive.org/web/20241205183417id_/http://slbcgoa.com/Meeting/97annexure%20iii.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/97annexure_iii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/101annexure-iii%20%20-%20apy.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/101ANNEXURE-III%20%20-%20APY.pdf",
+      "snapshotTimestamp": "20241205183633",
+      "snapshotUrl": "https://web.archive.org/web/20241205183633id_/http://slbcgoa.com/Meeting/101ANNEXURE-III%20%20-%20APY.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/101ANNEXURE-III_-_APY.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/97annex-ii-a%20minority%20data%20as%20on%2031.03.2017.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/97ANNEX-II-A%20MINORITY%20DATA%20AS%20ON%2031.03.2017.pdf",
+      "snapshotTimestamp": "20241205183716",
+      "snapshotUrl": "https://web.archive.org/web/20241205183716id_/http://slbcgoa.com/Meeting/97ANNEX-II-A%20MINORITY%20DATA%20AS%20ON%2031.03.2017.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/97ANNEX-II-A_MINORITY_DATA_AS_ON_31.03.2017.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20and%20background%20papers%20of%20115%20slbc%20meeting%20sept%2021.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA%20AND%20BACKGROUND%20PAPERS%20OF%20115%20SLBC%20MEETING%20SEPT%2021.pdf",
+      "snapshotTimestamp": "20241205183801",
+      "snapshotUrl": "https://web.archive.org/web/20241205183801id_/http://slbcgoa.com/Meeting/AGENDA%20AND%20BACKGROUND%20PAPERS%20OF%20115%20SLBC%20MEETING%20SEPT%2021.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_AND_BACKGROUND_PAPERS_OF_115_SLBC_MEETING_SEPT_21.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexurexix.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93annexurexix.pdf",
+      "snapshotTimestamp": "20241205183846",
+      "snapshotUrl": "https://web.archive.org/web/20241205183846id_/http://slbcgoa.com/Meeting/93annexurexix.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/93annexurexix.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/96annexurev.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/96ANNEXUREV.pdf",
+      "snapshotTimestamp": "20241205184016",
+      "snapshotUrl": "https://web.archive.org/web/20241205184016id_/http://slbcgoa.com/Meeting/96ANNEXUREV.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/96ANNEXUREV.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/95annexure%20i.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/95ANNEXURE%20I.pdf",
+      "snapshotTimestamp": "20241205184058",
+      "snapshotUrl": "https://web.archive.org/web/20241205184058id_/http://slbcgoa.com/Meeting/95ANNEXURE%20I.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/95ANNEXURE_I.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/97annexure-i.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/97ANNEXURE-I.pdf",
+      "snapshotTimestamp": "20241205184904",
+      "snapshotUrl": "https://web.archive.org/web/20241205184904id_/http://slbcgoa.com/Meeting/97ANNEXURE-I.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/97ANNEXURE-I.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/112%20minutes%20of%20slbc,dec%202020.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/112%20Minutes%20of%20SLBC,DEC%202020.pdf",
+      "snapshotTimestamp": "20241205185034",
+      "snapshotUrl": "https://web.archive.org/web/20241205185034id_/http://slbcgoa.com/Meeting/112%20Minutes%20of%20SLBC,DEC%202020.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/112_Minutes_of_SLBC_DEC_2020.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/97annexure-v%20doubling%20farmers%20income.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/97annexure-v%20doubling%20farmers%20income.pdf",
+      "snapshotTimestamp": "20241205185115",
+      "snapshotUrl": "https://web.archive.org/web/20241205185115id_/http://slbcgoa.com/Meeting/97annexure-v%20doubling%20farmers%20income.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/97annexure-v_doubling_farmers_income.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/lettere%20to%20all%20members.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/LETTERE%20TO%20ALL%20MEMBERS.pdf",
+      "snapshotTimestamp": "20241205185434",
+      "snapshotUrl": "https://web.archive.org/web/20241205185434id_/http://slbcgoa.com/Meeting/LETTERE%20TO%20ALL%20MEMBERS.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/LETTERE_TO_ALL_MEMBERS.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/97annexure%20vi.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/97annexure%20vi.pdf",
+      "snapshotTimestamp": "20241205190110",
+      "snapshotUrl": "https://web.archive.org/web/20241205190110id_/http://slbcgoa.com/Meeting/97annexure%20vi.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/97annexure_vi.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/95annexure%20v.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/95ANNEXURE%20V.pdf",
+      "snapshotTimestamp": "20241205190151",
+      "snapshotUrl": "https://web.archive.org/web/20241205190151id_/http://slbcgoa.com/Meeting/95ANNEXURE%20V.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/95ANNEXURE_V.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/122_slbc_minutes.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/122_SLBC_MINUTES.pdf",
+      "snapshotTimestamp": "20241205190310",
+      "snapshotUrl": "https://web.archive.org/web/20241205190310id_/http://slbcgoa.com/Meeting/122_SLBC_MINUTES.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/122_SLBC_MINUTES.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/slbc%20109%20minutes.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/SLBC%20109%20Minutes.pdf",
+      "snapshotTimestamp": "20241205190346",
+      "snapshotUrl": "https://web.archive.org/web/20241205190346id_/http://slbcgoa.com/Meeting/SLBC%20109%20Minutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/SLBC_109_Minutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure%20ii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/ANNEXURE%20II.pdf",
+      "snapshotTimestamp": "20241205190423",
+      "snapshotUrl": "https://web.archive.org/web/20241205190423id_/http://slbcgoa.com/Meeting/ANNEXURE%20II.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/ANNEXURE_II.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexureiii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93annexureiii.pdf",
+      "snapshotTimestamp": "20241205190501",
+      "snapshotUrl": "https://web.archive.org/web/20241205190501id_/http://slbcgoa.com/Meeting/93annexureiii.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/93annexureiii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure%20v%20-%20dfs-%20letter-%2028.8.2017-%20amendment%20to%20pmlarules%202005-%20small%20accounts.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/ANNEXURE%20V%20-%20DFS-%20letter-%2028.8.2017-%20Amendment%20to%20PMLARules%202005-%20Small%20Accounts.pdf",
+      "snapshotTimestamp": "20241205190651",
+      "snapshotUrl": "https://web.archive.org/web/20241205190651id_/http://slbcgoa.com/Meeting/ANNEXURE%20V%20-%20DFS-%20letter-%2028.8.2017-%20Amendment%20to%20PMLARules%202005-%20Small%20Accounts.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/ANNEXURE_V_-_DFS-_letter-_28.8.2017-_Amendment_to_PMLARules_2005-_Small_Accounts.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexurevi.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93annexurevi.pdf",
+      "snapshotTimestamp": "20241205191515",
+      "snapshotUrl": "https://web.archive.org/web/20241205191515id_/http://slbcgoa.com/Meeting/93annexurevi.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/93annexurevi.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/101annexure-ii-13%20acp%202018-19%20for%20goa%20state.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/101ANNEXURE-II-13%20ACP%202018-19%20FOR%20GOA%20STATE.pdf",
+      "snapshotTimestamp": "20241205191625",
+      "snapshotUrl": "https://web.archive.org/web/20241205191625id_/http://slbcgoa.com/Meeting/101ANNEXURE-II-13%20ACP%202018-19%20FOR%20GOA%20STATE.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/101ANNEXURE-II-13_ACP_2018-19_FOR_GOA_STATE.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/95annexure%20ii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/95ANNEXURE%20II.pdf",
+      "snapshotTimestamp": "20241205191701",
+      "snapshotUrl": "https://web.archive.org/web/20241205191701id_/http://slbcgoa.com/Meeting/95ANNEXURE%20II.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/95ANNEXURE_II.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/97annexure%20-%20viii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/97annexure%20-%20viii.pdf",
+      "snapshotTimestamp": "20241205191814",
+      "snapshotUrl": "https://web.archive.org/web/20241205191814id_/http://slbcgoa.com/Meeting/97annexure%20-%20viii.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/97annexure_-_viii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/97annexiidepositadvances.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/97ANNEXIIDEPOSITADVANCES.pdf",
+      "snapshotTimestamp": "20241205191851",
+      "snapshotUrl": "https://web.archive.org/web/20241205191851id_/http://slbcgoa.com/Meeting/97ANNEXIIDEPOSITADVANCES.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/97ANNEXIIDEPOSITADVANCES.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure%20i%20-%20minutes%20of%20%2097th%20%20meetinng%20of%20%20slbc%20goa%20%2023-06-2017.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/ANNEXURE%20I%20-%20MINUTES%20OF%20%2097th%20%20MEETINNG%20OF%20%20SLBC%20GOA%20%2023-06-2017.pdf",
+      "snapshotTimestamp": "20241205192428",
+      "snapshotUrl": "https://web.archive.org/web/20241205192428id_/http://slbcgoa.com/Meeting/ANNEXURE%20I%20-%20MINUTES%20OF%20%2097th%20%20MEETINNG%20OF%20%20SLBC%20GOA%20%2023-06-2017.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/ANNEXURE_I_-_MINUTES_OF_97th_MEETINNG_OF_SLBC_GOA_23-06-2017.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/101annexure-vii%20-%20deds.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/101ANNEXURE-VII%20-%20DEDS.pdf",
+      "snapshotTimestamp": "20241205192659",
+      "snapshotUrl": "https://web.archive.org/web/20241205192659id_/http://slbcgoa.com/Meeting/101ANNEXURE-VII%20-%20DEDS.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/101ANNEXURE-VII_-_DEDS.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/slbc_117_minutes.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/SLBC_117_MINUTES.pdf",
+      "snapshotTimestamp": "20241205192850",
+      "snapshotUrl": "https://web.archive.org/web/20241205192850id_/http://slbcgoa.com/Meeting/SLBC_117_MINUTES.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/SLBC_117_MINUTES.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/94annexureiii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/94annexureiii.pdf",
+      "snapshotTimestamp": "20241205193043",
+      "snapshotUrl": "https://web.archive.org/web/20241205193043id_/http://slbcgoa.com/Meeting/94annexureiii.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/94annexureiii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure-%20iv%20doubling%20farmers%20income.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/ANNEXURE-%20IV%20DOUBLING%20FARMERS%20INCOME.pdf",
+      "snapshotTimestamp": "20241205193302",
+      "snapshotUrl": "https://web.archive.org/web/20241205193302id_/http://slbcgoa.com/Meeting/ANNEXURE-%20IV%20DOUBLING%20FARMERS%20INCOME.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/ANNEXURE-_IV_DOUBLING_FARMERS_INCOME.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/108th%20slbc%20meeting%20minutes.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/108th%20SLBC%20Meeting%20Minutes.pdf",
+      "snapshotTimestamp": "20241205193548",
+      "snapshotUrl": "https://web.archive.org/web/20241205193548id_/http://slbcgoa.com/Meeting/108th%20SLBC%20Meeting%20Minutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/108th_SLBC_Meeting_Minutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/97annex%20-ii-b%20acp%20performance%20%2031.03.2017%20goa%20state.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/97ANNEX%20-II-B%20ACP%20PERFORMANCE%20%2031.03.2017%20GOA%20STATE.pdf",
+      "snapshotTimestamp": "20241205193610",
+      "snapshotUrl": "https://web.archive.org/web/20241205193610id_/http://slbcgoa.com/Meeting/97ANNEX%20-II-B%20ACP%20PERFORMANCE%20%2031.03.2017%20GOA%20STATE.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/97ANNEX_-II-B_ACP_PERFORMANCE_31.03.2017_GOA_STATE.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agendagoa.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/agendagoa.pdf",
+      "snapshotTimestamp": "20241205194503",
+      "snapshotUrl": "https://web.archive.org/web/20241205194503id_/http://slbcgoa.com/Meeting/agendagoa.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/agendagoa.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/94annexureii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/94annexureii.pdf",
+      "snapshotTimestamp": "20241205194610",
+      "snapshotUrl": "https://web.archive.org/web/20241205194610id_/http://slbcgoa.com/Meeting/94annexureii.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/94annexureii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutesof97thmeetinngofslbcgoa23062017.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/MINUTESOF97thMEETINNGOFSLBCGOA23062017.pdf",
+      "snapshotTimestamp": "20241205194616",
+      "snapshotUrl": "https://web.archive.org/web/20241205194616id_/http://slbcgoa.com/Meeting/MINUTESOF97thMEETINNGOFSLBCGOA23062017.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/MINUTESOF97thMEETINNGOFSLBCGOA23062017.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20and%20background%20papers%20of%20114%20slbc%20meeting.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA%20and%20BACKGROUND%20PAPERS%20OF%20114%20SLBC%20MEETING.pdf",
+      "snapshotTimestamp": "20241205194926",
+      "snapshotUrl": "https://web.archive.org/web/20241205194926id_/http://slbcgoa.com/Meeting/AGENDA%20and%20BACKGROUND%20PAPERS%20OF%20114%20SLBC%20MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_and_BACKGROUND_PAPERS_OF_114_SLBC_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/97annexure%20%20iv.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/97ANNEXURE%20%20IV.pdf",
+      "snapshotTimestamp": "20241205195031",
+      "snapshotUrl": "https://web.archive.org/web/20241205195031id_/http://slbcgoa.com/Meeting/97ANNEXURE%20%20IV.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/97ANNEXURE_IV.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/96annexurevi.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/96ANNEXUREVI.pdf",
+      "snapshotTimestamp": "20241205195241",
+      "snapshotUrl": "https://web.archive.org/web/20241205195241id_/http://slbcgoa.com/Meeting/96ANNEXUREVI.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/96ANNEXUREVI.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/95annexure%20iii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/95ANNEXURE%20III.pdf",
+      "snapshotTimestamp": "20241205195748",
+      "snapshotUrl": "https://web.archive.org/web/20241205195748id_/http://slbcgoa.com/Meeting/95ANNEXURE%20III.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/95ANNEXURE_III.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/96annexureiii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/96ANNEXUREIII.pdf",
+      "snapshotTimestamp": "20241205195852",
+      "snapshotUrl": "https://web.archive.org/web/20241205195852id_/http://slbcgoa.com/Meeting/96ANNEXUREIII.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/96ANNEXUREIII.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/101annexure-v%20-%20clss.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/101ANNEXURE-V%20-%20CLSS.pdf",
+      "snapshotTimestamp": "20241205195954",
+      "snapshotUrl": "https://web.archive.org/web/20241205195954id_/http://slbcgoa.com/Meeting/101ANNEXURE-V%20-%20CLSS.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/101ANNEXURE-V_-_CLSS.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/96annexureii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/96ANNEXUREII.pdf",
+      "snapshotTimestamp": "20241205200106",
+      "snapshotUrl": "https://web.archive.org/web/20241205200106id_/http://slbcgoa.com/Meeting/96ANNEXUREII.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/96ANNEXUREII.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutes%20of%2099th%20meeting%20of%20slbc%20goa.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/MINUTES%20OF%2099TH%20MEETING%20OF%20SLBC%20GOA.pdf",
+      "snapshotTimestamp": "20241205200515",
+      "snapshotUrl": "https://web.archive.org/web/20241205200515id_/http://slbcgoa.com/Meeting/MINUTES%20OF%2099TH%20MEETING%20OF%20SLBC%20GOA.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/MINUTES_OF_99TH_MEETING_OF_SLBC_GOA.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20of%20116%20slbc%20meeting%20dec%2021.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA%20OF%20116%20SLBC%20MEETING%20DEC%2021.pdf",
+      "snapshotTimestamp": "20241205200727",
+      "snapshotUrl": "https://web.archive.org/web/20241205200727id_/http://slbcgoa.com/Meeting/AGENDA%20OF%20116%20SLBC%20MEETING%20DEC%2021.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_OF_116_SLBC_MEETING_DEC_21.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutesof95thslb.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/MINUTESOF95THSLB.pdf",
+      "snapshotTimestamp": "20241205201219",
+      "snapshotUrl": "https://web.archive.org/web/20241205201219id_/http://slbcgoa.com/Meeting/MINUTESOF95THSLB.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/MINUTESOF95THSLB.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/101annexure-iv%20doubling%20farmers%20income.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/101ANNEXURE-IV%20DOUBLING%20FARMERS%20INCOME.PDF",
+      "snapshotTimestamp": "20241205201300",
+      "snapshotUrl": "https://web.archive.org/web/20241205201300id_/http://slbcgoa.com/Meeting/101ANNEXURE-IV%20DOUBLING%20FARMERS%20INCOME.PDF",
+      "localPath": "slbc-data/goa/wayback/2024/101ANNEXURE-IV_DOUBLING_FARMERS_INCOME.PDF",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/95annexure%20ix.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/95ANNEXURE%20IX.pdf",
+      "snapshotTimestamp": "20241205201341",
+      "snapshotUrl": "https://web.archive.org/web/20241205201341id_/http://slbcgoa.com/Meeting/95ANNEXURE%20IX.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/95ANNEXURE_IX.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexurexviii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/93annexurexviii.pdf",
+      "snapshotTimestamp": "20241205201659",
+      "snapshotUrl": "https://web.archive.org/web/20241205201659id_/http://slbcgoa.com/Meeting/93annexurexviii.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/93annexurexviii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20background%20papers%20of%20103rd%20slbc%20goa%20meeting.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA%20BACKGROUND%20PAPERS%20OF%20103RD%20SLBC%20GOA%20MEETING.pdf",
+      "snapshotTimestamp": "20241205201928",
+      "snapshotUrl": "https://web.archive.org/web/20241205201928id_/http://slbcgoa.com/Meeting/AGENDA%20BACKGROUND%20PAPERS%20OF%20103RD%20SLBC%20GOA%20MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_BACKGROUND_PAPERS_OF_103RD_SLBC_GOA_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutes%20of%20105th%20slbc%20goa%20meet%2024.06.2019.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/MINUTES%20OF%20105TH%20SLBC%20GOA%20MEET%2024.06.2019.pdf",
+      "snapshotTimestamp": "20241205202006",
+      "snapshotUrl": "https://web.archive.org/web/20241205202006id_/http://slbcgoa.com/Meeting/MINUTES%20OF%20105TH%20SLBC%20GOA%20MEET%2024.06.2019.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/MINUTES_OF_105TH_SLBC_GOA_MEET_24.06.2019.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutes%20of%20102nd%20slbc%20goa%20meeting%20held%20on%2025.09.2018.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/MINUTES%20OF%20102ND%20SLBC%20GOA%20MEETING%20HELD%20ON%2025.09.2018.pdf",
+      "snapshotTimestamp": "20241205202045",
+      "snapshotUrl": "https://web.archive.org/web/20241205202045id_/http://slbcgoa.com/Meeting/MINUTES%20OF%20102ND%20SLBC%20GOA%20MEETING%20HELD%20ON%2025.09.2018.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/MINUTES_OF_102ND_SLBC_GOA_MEETING_HELD_ON_25.09.2018.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20and%20background%20papers%20of%20107th%20slbc%20goa%20meet%2017.12.2019%20final.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/AGENDA%20And%20BACKGROUND%20PAPERS%20OF%20107TH%20SLBC%20GOA%20MEET%2017.12.2019%20FINAL.pdf",
+      "snapshotTimestamp": "20241205202158",
+      "snapshotUrl": "https://web.archive.org/web/20241205202158id_/http://slbcgoa.com/Meeting/AGENDA%20And%20BACKGROUND%20PAPERS%20OF%20107TH%20SLBC%20GOA%20MEET%2017.12.2019%20FINAL.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/AGENDA_And_BACKGROUND_PAPERS_OF_107TH_SLBC_GOA_MEET_17.12.2019_FINAL.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/94annexureviii.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/94annexureviii.pdf",
+      "snapshotTimestamp": "20241205202233",
+      "snapshotUrl": "https://web.archive.org/web/20241205202233id_/http://slbcgoa.com/Meeting/94annexureviii.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/94annexureviii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutes.%20of%20111th%20slbc%20.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/MINUTES.%20of%20111th%20SLBC%20.pdf",
+      "snapshotTimestamp": "20241205202535",
+      "snapshotUrl": "https://web.archive.org/web/20241205202535id_/http://slbcgoa.com/Meeting/MINUTES.%20of%20111th%20SLBC%20.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/MINUTES._of_111th_SLBC_.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/94annexurev.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/94annexurev.pdf",
+      "snapshotTimestamp": "20241205202648",
+      "snapshotUrl": "https://web.archive.org/web/20241205202648id_/http://slbcgoa.com/Meeting/94annexurev.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/94annexurev.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure-%20viii%20-%20looting%20of%20cash%20from%20atms.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/ANNEXURE-%20VIII%20-%20LOOTING%20OF%20CASH%20FROM%20ATMs.pdf",
+      "snapshotTimestamp": "20241205202723",
+      "snapshotUrl": "https://web.archive.org/web/20241205202723id_/http://slbcgoa.com/Meeting/ANNEXURE-%20VIII%20-%20LOOTING%20OF%20CASH%20FROM%20ATMs.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/ANNEXURE-_VIII_-_LOOTING_OF_CASH_FROM_ATMs.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure%20vii%20-%20money%20laundering.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/annexure%20VII%20-%20MONEY%20LAUNDERING.pdf",
+      "snapshotTimestamp": "20241205202910",
+      "snapshotUrl": "https://web.archive.org/web/20241205202910id_/http://slbcgoa.com/Meeting/annexure%20VII%20-%20MONEY%20LAUNDERING.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/annexure_VII_-_MONEY_LAUNDERING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure-v%20-%20clss.pdf",
+      "originalUrl": "http://slbcgoa.com/Meeting/ANNEXURE-V%20-%20CLSS.pdf",
+      "snapshotTimestamp": "20241205202943",
+      "snapshotUrl": "https://web.archive.org/web/20241205202943id_/http://slbcgoa.com/Meeting/ANNEXURE-V%20-%20CLSS.pdf",
+      "localPath": "slbc-data/goa/wayback/2024/ANNEXURE-V_-_CLSS.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/124th%20slbc%20minutes.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/124th%20SLBC%20Minutes.pdf",
+      "snapshotTimestamp": "20250117174255",
+      "snapshotUrl": "https://web.archive.org/web/20250117174255id_/https://slbcgoa.com/Meeting/124th%20SLBC%20Minutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/124th_SLBC_Minutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutes%20of%20the%20125th%20slbc%20meeeting%20.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/MINUTES%20OF%20THE%20125TH%20SLBC%20MEEETING%20.pdf",
+      "snapshotTimestamp": "20250117175847",
+      "snapshotUrl": "https://web.archive.org/web/20250117175847id_/https://slbcgoa.com/Meeting/MINUTES%20OF%20THE%20125TH%20SLBC%20MEEETING%20.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/MINUTES_OF_THE_125TH_SLBC_MEEETING_.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20of%20125th%20slbc%20meeting.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/AGENDA%20OF%20125th%20SLBC%20MEETING.pdf",
+      "snapshotTimestamp": "20250117180413",
+      "snapshotUrl": "https://web.archive.org/web/20250117180413id_/https://slbcgoa.com/Meeting/AGENDA%20OF%20125th%20SLBC%20MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/AGENDA_OF_125th_SLBC_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda_122nd_slbc_meeting.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/AGENDA_122nd_SLBC_MEETING.pdf",
+      "snapshotTimestamp": "20250117185054",
+      "snapshotUrl": "https://web.archive.org/web/20250117185054id_/https://slbcgoa.com/Meeting/AGENDA_122nd_SLBC_MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/AGENDA_122nd_SLBC_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20of%20124th%20slbc%20meeting.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/AGENDA%20OF%20124th%20SLBC%20MEETING.pdf",
+      "snapshotTimestamp": "20250117185944",
+      "snapshotUrl": "https://web.archive.org/web/20250117185944id_/https://slbcgoa.com/Meeting/AGENDA%20OF%20124th%20SLBC%20MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/AGENDA_OF_124th_SLBC_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/rbi/rbi%20master%20circular%20-%20priority%20sector%20lending-%20targets%20and%20classification.pdf",
+      "originalUrl": "https://slbcgoa.com/RBI/rbi%20master%20circular%20-%20priority%20sector%20lending-%20targets%20and%20classification.pdf",
+      "snapshotTimestamp": "20250208053134",
+      "snapshotUrl": "https://web.archive.org/web/20250208053134id_/https://slbcgoa.com/RBI/rbi%20master%20circular%20-%20priority%20sector%20lending-%20targets%20and%20classification.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/rbi_master_circular_-_priority_sector_lending-_targets_and_classification.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/flyer%20_marathi.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/flyer%20_marathi.pdf",
+      "snapshotTimestamp": "20250208053310",
+      "snapshotUrl": "https://web.archive.org/web/20250208053310id_/https://slbcgoa.com/documents/flyer%20_marathi.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/flyer__marathi.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/ammended-goa-state-solar-policy-2017-for-comments-and-suggestions.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/Ammended-Goa-State-Solar-Policy-2017-for-comments-and-suggestions.pdf",
+      "snapshotTimestamp": "20250208053626",
+      "snapshotUrl": "https://web.archive.org/web/20250208053626id_/https://slbcgoa.com/documents/Ammended-Goa-State-Solar-Policy-2017-for-comments-and-suggestions.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/Ammended-Goa-State-Solar-Policy-2017-for-comments-and-suggestions.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/general-term-loan-scheme.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/General-Term-Loan-Scheme.pdf",
+      "snapshotTimestamp": "20250208054720",
+      "snapshotUrl": "https://web.archive.org/web/20250208054720id_/https://slbcgoa.com/documents/General-Term-Loan-Scheme.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/General-Term-Loan-Scheme.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/cmry-scheme-2023.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/CMRY-Scheme-2023.pdf",
+      "snapshotTimestamp": "20250208054939",
+      "snapshotUrl": "https://web.archive.org/web/20250208054939id_/https://slbcgoa.com/documents/CMRY-Scheme-2023.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/CMRY-Scheme-2023.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/pmjdy_form.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/PMJDY_FORM.pdf",
+      "snapshotTimestamp": "20250208055105",
+      "snapshotUrl": "https://web.archive.org/web/20250208055105id_/https://slbcgoa.com/documents/PMJDY_FORM.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/PMJDY_FORM.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/flyer_hindi.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/Flyer_Hindi.pdf",
+      "snapshotTimestamp": "20250208055235",
+      "snapshotUrl": "https://web.archive.org/web/20250208055235id_/https://slbcgoa.com/documents/Flyer_Hindi.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/Flyer_Hindi.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/rbi/rbi%20master%20circular%20on%20wilful%20defaulters(as%20on%20july-%202015).pdf",
+      "originalUrl": "https://slbcgoa.com/RBI/rbi%20master%20circular%20on%20wilful%20defaulters(as%20on%20july-%202015).pdf",
+      "snapshotTimestamp": "20250208060101",
+      "snapshotUrl": "https://web.archive.org/web/20250208060101id_/https://slbcgoa.com/RBI/rbi%20master%20circular%20on%20wilful%20defaulters(as%20on%20july-%202015).pdf",
+      "localPath": "slbc-data/goa/wayback/2025/rbi_master_circular_on_wilful_defaulters_as_on_july-_2015_.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/kamdhenu-sudharit-amended-scheme-14-october-2021-1-9.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/Kamdhenu-Sudharit-Amended-Scheme-14-October-2021-1-9.pdf",
+      "snapshotTimestamp": "20250208062353",
+      "snapshotUrl": "https://web.archive.org/web/20250208062353id_/https://slbcgoa.com/documents/Kamdhenu-Sudharit-Amended-Scheme-14-October-2021-1-9.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/Kamdhenu-Sudharit-Amended-Scheme-14-October-2021-1-9.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20and%20background%20papers%20of%20109th%20slbc%20goa%20meet%2026.06.2020%20(updated).pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/AGENDA%20And%20BACKGROUND%20PAPERS%20OF%20109TH%20SLBC%20GOA%20MEET%2026.06.2020%20(updated).pdf",
+      "snapshotTimestamp": "20250208062545",
+      "snapshotUrl": "https://web.archive.org/web/20250208062545id_/https://slbcgoa.com/Meeting/AGENDA%20And%20BACKGROUND%20PAPERS%20OF%20109TH%20SLBC%20GOA%20MEET%2026.06.2020%20(updated).pdf",
+      "localPath": "slbc-data/goa/wayback/2025/AGENDA_And_BACKGROUND_PAPERS_OF_109TH_SLBC_GOA_MEET_26.06.2020_updated_.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/rbi/rbi%20mater%20circular-minority%20community-01.07.2015.pdf",
+      "originalUrl": "https://slbcgoa.com/RBI/rbi%20mater%20circular-minority%20community-01.07.2015.pdf",
+      "snapshotTimestamp": "20250208062837",
+      "snapshotUrl": "https://web.archive.org/web/20250208062837id_/https://slbcgoa.com/RBI/rbi%20mater%20circular-minority%20community-01.07.2015.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/rbi_mater_circular-minority_community-01.07.2015.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/rbi/rbi%20lead%20bank%20master%20circular.pdf",
+      "originalUrl": "https://slbcgoa.com/RBI/rbi%20lead%20bank%20master%20circular.pdf",
+      "snapshotTimestamp": "20250208062951",
+      "snapshotUrl": "https://web.archive.org/web/20250208062951id_/https://slbcgoa.com/RBI/rbi%20lead%20bank%20master%20circular.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/rbi_lead_bank_master_circular.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/south%20goa%20plp%202019-20.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/South%20Goa%20PLP%202019-20.pdf",
+      "snapshotTimestamp": "20250208063118",
+      "snapshotUrl": "https://web.archive.org/web/20250208063118id_/https://slbcgoa.com/documents/South%20Goa%20PLP%202019-20.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/South_Goa_PLP_2019-20.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/slbc%20goa%20-pmdjy%2030.08.2014.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/SLBC%20GOA%20-PMDJY%2030.08.2014.pdf",
+      "snapshotTimestamp": "20250208063553",
+      "snapshotUrl": "https://web.archive.org/web/20250208063553id_/https://slbcgoa.com/documents/SLBC%20GOA%20-PMDJY%2030.08.2014.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/SLBC_GOA_-PMDJY_30.08.2014.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/notified%20goa%20state%20solar%20policy.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/Notified%20Goa%20State%20Solar%20Policy.pdf",
+      "snapshotTimestamp": "20250208063829",
+      "snapshotUrl": "https://web.archive.org/web/20250208063829id_/https://slbcgoa.com/documents/Notified%20Goa%20State%20Solar%20Policy.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/Notified_Goa_State_Solar_Policy.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/govt%20of%20goa%20it%20policy%202018.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/GOVT%20OF%20GOA%20IT%20POLICY%202018.pdf",
+      "snapshotTimestamp": "20250208063951",
+      "snapshotUrl": "https://web.archive.org/web/20250208063951id_/https://slbcgoa.com/documents/GOVT%20OF%20GOA%20IT%20POLICY%202018.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/GOVT_OF_GOA_IT_POLICY_2018.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/north%20goa%20plp%202019-20.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/North%20Goa%20PLP%202019-20.pdf",
+      "snapshotTimestamp": "20250208064622",
+      "snapshotUrl": "https://web.archive.org/web/20250208064622id_/https://slbcgoa.com/documents/North%20Goa%20PLP%202019-20.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/North_Goa_PLP_2019-20.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/flyer_english.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/Flyer_English.pdf",
+      "snapshotTimestamp": "20250208064739",
+      "snapshotUrl": "https://web.archive.org/web/20250208064739id_/https://slbcgoa.com/documents/Flyer_English.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/Flyer_English.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20and%20background%20papers%20of%20112%20slbc%20meeting.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/AGENDA%20and%20BACKGROUND%20PAPERS%20OF%20112%20SLBC%20MEETING.pdf",
+      "snapshotTimestamp": "20250208065258",
+      "snapshotUrl": "https://web.archive.org/web/20250208065258id_/https://slbcgoa.com/Meeting/AGENDA%20and%20BACKGROUND%20PAPERS%20OF%20112%20SLBC%20MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/AGENDA_and_BACKGROUND_PAPERS_OF_112_SLBC_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexureviii.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/93annexureviii.pdf",
+      "snapshotTimestamp": "20250208065842",
+      "snapshotUrl": "https://web.archive.org/web/20250208065842id_/https://slbcgoa.com/Meeting/93annexureviii.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/93annexureviii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure%20iii%20-%20clss.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/ANNEXURE%20III%20-%20CLSS.pdf",
+      "snapshotTimestamp": "20250208071258",
+      "snapshotUrl": "https://web.archive.org/web/20250208071258id_/https://slbcgoa.com/Meeting/ANNEXURE%20III%20-%20CLSS.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/ANNEXURE_III_-_CLSS.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/96thmeetingminutes.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/96thmeetingminutes.pdf",
+      "snapshotTimestamp": "20250208072305",
+      "snapshotUrl": "https://web.archive.org/web/20250208072305id_/https://slbcgoa.com/Meeting/96thmeetingminutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/96thmeetingminutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/interest-free-education-loan-scheme.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/Interest-Free-Education-Loan-Scheme.pdf",
+      "snapshotTimestamp": "20250208072529",
+      "snapshotUrl": "https://web.archive.org/web/20250208072529id_/https://slbcgoa.com/documents/Interest-Free-Education-Loan-Scheme.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/Interest-Free-Education-Loan-Scheme.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/pmsby_enrollment_form.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/PMSBY_Enrollment_Form.pdf",
+      "snapshotTimestamp": "20250208072721",
+      "snapshotUrl": "https://web.archive.org/web/20250208072721id_/https://slbcgoa.com/documents/PMSBY_Enrollment_Form.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/PMSBY_Enrollment_Form.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/pradhan%20mantri%20jandhan%20yojana.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/PRADHAN%20MANTRI%20JANDHAN%20YOJANA.pdf",
+      "snapshotTimestamp": "20250208072832",
+      "snapshotUrl": "https://web.archive.org/web/20250208072832id_/https://slbcgoa.com/documents/PRADHAN%20MANTRI%20JANDHAN%20YOJANA.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/PRADHAN_MANTRI_JANDHAN_YOJANA.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/94th_agenda.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/94th_agenda.pdf",
+      "snapshotTimestamp": "20250208073018",
+      "snapshotUrl": "https://web.archive.org/web/20250208073018id_/https://slbcgoa.com/Meeting/94th_agenda.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/94th_agenda.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure%20vi%20-%20deds.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/ANNEXURE%20VI%20-%20DEDS.pdf",
+      "snapshotTimestamp": "20250208073241",
+      "snapshotUrl": "https://web.archive.org/web/20250208073241id_/https://slbcgoa.com/Meeting/ANNEXURE%20VI%20-%20DEDS.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/ANNEXURE_VI_-_DEDS.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20of%20126th%20slbc%20meeting.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/AGENDA%20OF%20126th%20SLBC%20MEETING.pdf",
+      "snapshotTimestamp": "20250723170945",
+      "snapshotUrl": "https://web.archive.org/web/20250723170945id_/https://slbcgoa.com/Meeting/AGENDA%20OF%20126th%20SLBC%20MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/AGENDA_OF_126th_SLBC_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/goa%20state%20list%20of%20unbanked%20villages.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/GOA%20STATE%20LIST%20OF%20UNBANKED%20VILLAGES.pdf",
+      "snapshotTimestamp": "20250723171038",
+      "snapshotUrl": "https://web.archive.org/web/20250723171038id_/https://slbcgoa.com/documents/GOA%20STATE%20LIST%20OF%20UNBANKED%20VILLAGES.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/GOA_STATE_LIST_OF_UNBANKED_VILLAGES.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/126th%20slbc%20minutes.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/126th%20SLBC%20Minutes.pdf",
+      "snapshotTimestamp": "20250723171100",
+      "snapshotUrl": "https://web.archive.org/web/20250723171100id_/https://slbcgoa.com/Meeting/126th%20SLBC%20Minutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/126th_SLBC_Minutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/automated%20e-stamping%20system%20-%20bank%20guarantees-procedural%20guidelines.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/Automated%20E-Stamping%20system%20-%20Bank%20Guarantees-Procedural%20Guidelines.pdf",
+      "snapshotTimestamp": "20250723171143",
+      "snapshotUrl": "https://web.archive.org/web/20250723171143id_/https://slbcgoa.com/documents/Automated%20E-Stamping%20system%20-%20Bank%20Guarantees-Procedural%20Guidelines.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/Automated_E-Stamping_system_-_Bank_Guarantees-Procedural_Guidelines.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/goa_csp_contact_details.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/Goa_CSP_contact_details.pdf",
+      "snapshotTimestamp": "20250723171212",
+      "snapshotUrl": "https://web.archive.org/web/20250723171212id_/https://slbcgoa.com/documents/Goa_CSP_contact_details.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/Goa_CSP_contact_details.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/127th%20slbc%20meeting%20agenda.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/127th%20SLBC%20MEETING%20AGENDA.pdf",
+      "snapshotTimestamp": "20250723171229",
+      "snapshotUrl": "https://web.archive.org/web/20250723171229id_/https://slbcgoa.com/Meeting/127th%20SLBC%20MEETING%20AGENDA.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/127th_SLBC_MEETING_AGENDA.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutes%20127.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/minutes%20127.pdf",
+      "snapshotTimestamp": "20250723171234",
+      "snapshotUrl": "https://web.archive.org/web/20250723171234id_/https://slbcgoa.com/Meeting/minutes%20127.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/minutes_127.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/msme%20care%20centre.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/msme%20care%20centre.pdf",
+      "snapshotTimestamp": "20250812204518",
+      "snapshotUrl": "https://web.archive.org/web/20250812204518id_/https://slbcgoa.com/documents/msme%20care%20centre.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/msme_care_centre.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/128th%20slbc%20minutes%20(goa).pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/128TH%20SLBC%20MINUTES%20(goa).pdf",
+      "snapshotTimestamp": "20250812205535",
+      "snapshotUrl": "https://web.archive.org/web/20250812205535id_/https://slbcgoa.com/Meeting/128TH%20SLBC%20MINUTES%20(goa).pdf",
+      "localPath": "slbc-data/goa/wayback/2025/128TH_SLBC_MINUTES_goa_.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/rbi/rbi%20master%20circular%20-%20interest%20rates%20on%20advances%20(as%20on%20july-2015).pdf",
+      "originalUrl": "https://slbcgoa.com/RBI/rbi%20master%20circular%20-%20interest%20rates%20on%20advances%20(as%20on%20july-2015).pdf",
+      "snapshotTimestamp": "20250812212044",
+      "snapshotUrl": "https://web.archive.org/web/20250812212044id_/https://slbcgoa.com/RBI/rbi%20master%20circular%20-%20interest%20rates%20on%20advances%20(as%20on%20july-2015).pdf",
+      "localPath": "slbc-data/goa/wayback/2025/rbi_master_circular_-_interest_rates_on_advances_as_on_july-2015_.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/129th%20slbc%20minutes.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/129th%20SLBC%20Minutes.pdf",
+      "snapshotTimestamp": "20250812221448",
+      "snapshotUrl": "https://web.archive.org/web/20250812221448id_/https://slbcgoa.com/Meeting/129th%20SLBC%20Minutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/129th_SLBC_Minutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20of%20128th%20slbc%20meeting%20(goa).pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/AGENDA%20OF%20128th%20SLBC%20MEETING%20(goa).pdf",
+      "snapshotTimestamp": "20250812223321",
+      "snapshotUrl": "https://web.archive.org/web/20250812223321id_/https://slbcgoa.com/Meeting/AGENDA%20OF%20128th%20SLBC%20MEETING%20(goa).pdf",
+      "localPath": "slbc-data/goa/wayback/2025/AGENDA_OF_128th_SLBC_MEETING_goa_.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20%20background%20papers.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/Agenda%20%20Background%20Papers.pdf",
+      "snapshotTimestamp": "20250812223945",
+      "snapshotUrl": "https://web.archive.org/web/20250812223945id_/https://slbcgoa.com/Meeting/Agenda%20%20Background%20Papers.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/Agenda_Background_Papers.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/130th%20slbc%20minutes.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/130th%20SLBC%20Minutes.pdf",
+      "snapshotTimestamp": "20251118122445",
+      "snapshotUrl": "https://web.archive.org/web/20251118122445id_/https://slbcgoa.com/Meeting/130th%20SLBC%20Minutes.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/130th_SLBC_Minutes.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/agenda%20of%20130th%20slbc%20meeting.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/AGENDA%20OF%20130th%20SLBC%20MEETING.pdf",
+      "snapshotTimestamp": "20251118124012",
+      "snapshotUrl": "https://web.archive.org/web/20251118124012id_/https://slbcgoa.com/Meeting/AGENDA%20OF%20130th%20SLBC%20MEETING.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/AGENDA_OF_130th_SLBC_MEETING.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexurexii.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/93annexurexii.pdf",
+      "snapshotTimestamp": "20251213031037",
+      "snapshotUrl": "https://web.archive.org/web/20251213031037id_/https://slbcgoa.com/Meeting/93annexurexii.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/93annexurexii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/annexure-vi%20-%20%20promotion%20%20to%20digital%20payments.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/ANNEXURE-VI%20-%20%20promotion%20%20to%20digital%20payments.pdf",
+      "snapshotTimestamp": "20251213032805",
+      "snapshotUrl": "https://web.archive.org/web/20251213032805id_/https://slbcgoa.com/Meeting/ANNEXURE-VI%20-%20%20promotion%20%20to%20digital%20payments.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/ANNEXURE-VI_-_promotion_to_digital_payments.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/certificate%20under%20pmjdy.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/Certificate%20under%20PMJDY.pdf",
+      "snapshotTimestamp": "20251213033904",
+      "snapshotUrl": "https://web.archive.org/web/20251213033904id_/https://slbcgoa.com/documents/Certificate%20under%20PMJDY.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/Certificate_under_PMJDY.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexurexiii.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/93annexurexiii.pdf",
+      "snapshotTimestamp": "20251213034027",
+      "snapshotUrl": "https://web.archive.org/web/20251213034027id_/https://slbcgoa.com/Meeting/93annexurexiii.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/93annexurexiii.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/minutes%20of%20104th%20slbc%20goa%20meet%2006.03.2019.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/MINUTES%20OF%20104TH%20SLBC%20GOA%20MEET%2006.03.2019.pdf",
+      "snapshotTimestamp": "20251213040403",
+      "snapshotUrl": "https://web.archive.org/web/20251213040403id_/https://slbcgoa.com/Meeting/MINUTES%20OF%20104TH%20SLBC%20GOA%20MEET%2006.03.2019.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/MINUTES_OF_104TH_SLBC_GOA_MEET_06.03.2019.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/119_slbc_minutes_approved.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/119_SLBC_MINUTES_APPROVED.pdf",
+      "snapshotTimestamp": "20251213041824",
+      "snapshotUrl": "https://web.archive.org/web/20251213041824id_/https://slbcgoa.com/Meeting/119_SLBC_MINUTES_APPROVED.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/119_SLBC_MINUTES_APPROVED.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/all%20member%20banks.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/ALL%20MEMBER%20BANKS.pdf",
+      "snapshotTimestamp": "20251213042306",
+      "snapshotUrl": "https://web.archive.org/web/20251213042306id_/https://slbcgoa.com/documents/ALL%20MEMBER%20BANKS.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/ALL_MEMBER_BANKS.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/documents/pmegpscheme.pdf",
+      "originalUrl": "https://slbcgoa.com/documents/PMEGPscheme.pdf",
+      "snapshotTimestamp": "20251213043500",
+      "snapshotUrl": "https://web.archive.org/web/20251213043500id_/https://slbcgoa.com/documents/PMEGPscheme.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/PMEGPscheme.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/96annexurei.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/96ANNEXUREI.pdf",
+      "snapshotTimestamp": "20251213044934",
+      "snapshotUrl": "https://web.archive.org/web/20251213044934id_/https://slbcgoa.com/Meeting/96ANNEXUREI.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/96ANNEXUREI.pdf",
+      "status": "planned"
+    },
+    {
+      "canonicalUrl": "slbcgoa.com/meeting/93annexureix.pdf",
+      "originalUrl": "https://slbcgoa.com/Meeting/93annexureix.pdf",
+      "snapshotTimestamp": "20251213050219",
+      "snapshotUrl": "https://web.archive.org/web/20251213050219id_/https://slbcgoa.com/Meeting/93annexureix.pdf",
+      "localPath": "slbc-data/goa/wayback/2025/93annexureix.pdf",
+      "status": "planned"
+    }
+  ]
+}
