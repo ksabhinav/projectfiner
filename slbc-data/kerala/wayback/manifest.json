@@ -4,11 +4,11 @@
   "extensions": [
     "pdf"
   ],
-  "generatedAt": "2026-05-15T05:09:03Z",
+  "generatedAt": "2026-05-15T05:41:17Z",
   "counts": {
     "planned": 0,
-    "downloaded": 334,
-    "cached": 74,
+    "downloaded": 101,
+    "cached": 307,
     "errored": 0
   },
   "files": [
@@ -210,7 +210,7 @@
       "localPath": "slbc-data/kerala/wayback/2013/9.42-FLCC_-_Position_as_at_Oct_2012.pdf",
       "sizeBytes": 72910,
       "sha256": "52deee5941abe8cc0c8764c98ad4b64b3f5af85201676856cfd88aa79f30636e",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2012/108_slbc/9.43-flcc%20-%20activity%20reporting%20format-%20rbi%20notification%20-%20slbc.pdf",
@@ -240,7 +240,7 @@
       "localPath": "slbc-data/kerala/wayback/2013/9.46-Fishermen_Debt_Relief_Scheme_-_Suggestions_of_KSFDRC.pdf",
       "sizeBytes": 107485,
       "sha256": "ea5760fe931e4e4076698dbfa8abf1baecb1b6a00e8c2822d900026e40494499",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2012/108_slbc/9.47-amendments%20suggested%20in%20the%20format%20for%20issuing%20ec%20for%20landed%20property%20issued%20by%20sro.pdf",
@@ -260,7 +260,7 @@
       "localPath": "slbc-data/kerala/wayback/2013/9.48-Issue_of_Acknowledgement_of_Loan_Applications_to_MSME_borrowers.pdf",
       "sizeBytes": 111827,
       "sha256": "66b32aadac9cfa3f9daaa702741e008c97ea93f9526b0e56d8b062034a1709bf",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2012/108_slbc/9.50-action%20taken%20report%20on%20the%20implementation%20of%20directives%20of%20finance%20ministry.pdf",
@@ -270,7 +270,7 @@
       "localPath": "slbc-data/kerala/wayback/2013/9.50-Action_Taken_Report_on_the_implementation_of_Directives_of_Finance_Ministry.pdf",
       "sizeBytes": 163534,
       "sha256": "edd17fb8fb6504669890c84a101e168ed16c7268f2f7ecddb7c097b3a4d087e3",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2012/108_slbc/9.51-hi-tech%20farming%20-%20operational%20guidelines%20-kshm.pdf",
@@ -290,7 +290,7 @@
       "localPath": "slbc-data/kerala/wayback/2013/9.52-Rehabilitation_of_Sick_Micro_and_Small_Enterprises_-_Revised_RBI_Guideline.pdf",
       "sizeBytes": 178414,
       "sha256": "ce2589f233db7bbc383868ccc2fe21b55e6287b38ae8ec41a305b961eb6e3c55",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2012/108_slbc/9.53-district%20wise%20nhg%20grade%20link%20status%20-%20kudumbashree.pdf",
@@ -300,7 +300,7 @@
       "localPath": "slbc-data/kerala/wayback/2013/9.53-District_wise_NHG_Grade_Link_Status_-_Kudumbashree.pdf",
       "sizeBytes": 55414,
       "sha256": "89f84621acf715c0389a5ecd330aecae16faa83a6eef82a0c4f51f0de15bbda9",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2012/108_slbc/9.54-report%20on%20meaningful%20financial%20inclusion%20project%20in%20ernakulam%20district.pdf",
@@ -310,7 +310,7 @@
       "localPath": "slbc-data/kerala/wayback/2013/9.54-Report_on_Meaningful_Financial_Inclusion_Project_in_Ernakulam_District.pdf",
       "sizeBytes": 81723,
       "sha256": "b5f4d36d0a6c7d1ef205641209832094e9a360b9106d03694e7d3af203e1b5da",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2012/108_slbc/9.55-iba%20-%20revised%20education%20loan%20scheme%20-%20september%202012.pdf",
@@ -360,7 +360,7 @@
       "localPath": "slbc-data/kerala/wayback/2013/9.59-Direct_Cash_transfer_-_Progress_in_the_State.pdf",
       "sizeBytes": 68413,
       "sha256": "7995fbd47b26e85966579d4a3c61a2ddc2a3ad8a644f6787ab80ced24ef62631",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2012/108_slbc/9.61-call%20center%20-%20objectives%20and%20action%20points%20for%20banks%20and%20ldms.pdf",
@@ -390,7 +390,7 @@
       "localPath": "slbc-data/kerala/wayback/2013/9.63-Interest_Subsidy_Incentive_to_NHGs_for_Bank_Linkage_-_Kudumbashree.pdf",
       "sizeBytes": 69562,
       "sha256": "3496c2cf72def5e06dc207b343e8e32ae77ef8ef24470358db32934abfca7a1d",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2012/108_slbc/9.64-bpl%20interest%20subsidy%20on%20education%20loan%20-%20government%20order%2015.12.12.pdf",
@@ -430,7 +430,7 @@
       "localPath": "slbc-data/kerala/wayback/2013/agenda_108.pdf",
       "sizeBytes": 911496,
       "sha256": "fd53f7af37b91200944ab21d2cc9585df45b5d95af6cc11df501b075685de445",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2012/108_slbc/9.13%20sgsy%20-%20sgsy%20districtwise%20-oct%202012.pdf",
@@ -800,7 +800,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/APY_-_Pamphlet_-_English.pdf",
       "sizeBytes": 198975,
       "sha256": "d2f69c13f48aa8ee7492313fb32b8aff9a694fc90519a29273946b31cec1074f",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/pradhan%20mantri%20jeevan%20jyothi%20bima%20yojana%20(pmjjby)/pmjjby%20-%20application%20form%20%20english.pdf",
@@ -810,7 +810,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/PMJJBY_-_Application_form_English.pdf",
       "sizeBytes": 193165,
       "sha256": "4402492be336406f0de0553b61fe2c0c290669e22c99eb674ff3dbecbf7afebf",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/28_7_16/annexure%20wb-ii.pdf",
@@ -880,7 +880,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/performanceundereducationloan.pdf",
       "sizeBytes": 40990,
       "sha256": "00351477303eb4ecab007a6667256e729ca7fa55509abacd69c73181ceff0660",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/minutes99slbc9_10_09.pdf",
@@ -890,7 +890,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/minutes99slbc9_10_09.pdf",
       "sizeBytes": 83147,
       "sha256": "30600d91be64e5066ffcdbc1cb8ea2152c06e6e75af15025a847db4013dbb418",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.32.%20progress%20under%20instant%20overdraft%20facility%20as%20at%20june%202016.pdf",
@@ -900,7 +900,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.32._Progress_under_Instant_Overdraft_Facility_as_at_June_2016.pdf",
       "sizeBytes": 104045,
       "sha256": "943fca7543315928b68c57e6ec32a36634d1cd52a6563b404ca1a1ca904e867f",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.13.%20district%20wise%20breakup%20of%20crop%20loan%20&%20term%20loan%20achievement%20under%20primary%20sector%20for%202016-17%20as%20at%20june%202016.pdf",
@@ -910,7 +910,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.13._District_wise_Breakup_of_Crop_Loan_Term_Loan_Achievement_under_Primary_Sector_for_2016-17_as_at_June_2016.pdf",
       "sizeBytes": 78788,
       "sha256": "285e3d6e44338599b5f18e5cde3f2b98f80778c614919cd9c3e06d98e6caea67",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2014/sub_service_area%20_report.pdf",
@@ -920,7 +920,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/sub_service_area__report.pdf",
       "sizeBytes": 350399,
       "sha256": "174c4c52836154319ef10a03f3201c635d4d7866905d5129fe6435061030dc40",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.40.%20data%20on%20stand%20up%20india%20programme%20as%20at%20june%202016.pdf",
@@ -930,7 +930,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.40._Data_on_Stand_up_India_Programme_as_at_June_2016.pdf",
       "sizeBytes": 110058,
       "sha256": "7cc9a50caadf69de4a3a93f4804ecd72ac4adceec8696fd0418faec4306b0124",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/govt%20schemes/rajiv_rinn_yojana_guidelines.pdf",
@@ -940,7 +940,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Rajiv_Rinn_Yojana_Guidelines.pdf",
       "sizeBytes": 443045,
       "sha256": "187a0a271cddd7bb9ab2e0ebbdc62551321d0e83c4ad3585de9a9f02b0fc1816",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.28.%20data%20on%20financial%20assistance%20to%20women%20beneficiaries%20as%20at%20june%202016.pdf",
@@ -950,7 +950,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.28._Data_on_Financial_Assistance_to_Women_beneficiaries_as_at_June_2016.pdf",
       "sizeBytes": 120269,
       "sha256": "aafd917846c5c819d98bb2a2626117f9cb3ba23dfbf4afc66a9645574941e9ec",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/debtwaiver2008.pdf",
@@ -960,7 +960,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/debtwaiver2008.pdf",
       "sizeBytes": 229547,
       "sha256": "dda2f55be9e060ab7b7d6769e12078ce3a131e846ee96e63a03d9a707d8d6c1c",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/bankwiseperformanceasatseptember2009.pdf",
@@ -970,7 +970,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/bankwiseperformanceasatseptember2009.pdf",
       "sizeBytes": 14567,
       "sha256": "caddd46ec631f479788b0a5da2891d72ac473e5cab2971b88804e61834e645a4",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/review99.pdf",
@@ -980,7 +980,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/review99.pdf",
       "sizeBytes": 308143,
       "sha256": "ca04d1ba668dbbf07edd00d119c785e930ce7a1e391b7342709d7b4902b4b75a",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/thedistrictwiseandbankwiseperformanceofpmegp.pdf",
@@ -990,7 +990,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/thedistrictwiseandbankwiseperformanceofpmegp.pdf",
       "sizeBytes": 17983,
       "sha256": "795c4b74b3b3ea739fa7c594b9051787c7a578400d24760803457ae41a35745d",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/minutesslrm2009.pdf",
@@ -1000,7 +1000,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/minutesslrm2009.pdf",
       "sizeBytes": 184732,
       "sha256": "8c8600e1099c19f79be554374f74e63619e319dbcb7927c47106212cfa2e5d72",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.16.%20banking%20statistics%20of%20district%20co-operative%20banks%20(dcbs)%20as%20at%20june%202016.pdf",
@@ -1010,7 +1010,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.16._Banking_Statistics_of_District_Co-operative_Banks_DCBs_as_at_June_2016.pdf",
       "sizeBytes": 87921,
       "sha256": "617c55b7d7e27c9d09dbb505f9a9a99c0a0ec61e3309e1ba5c5e2b582037f2af",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/28_7_16/annexure%20wb-i.pdf",
@@ -1020,7 +1020,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Annexure_WB-I.pdf",
       "sizeBytes": 28530,
       "sha256": "3d6b2447eaf933bd449a37351b78ad5222ebff333c0e7dc3c7005eaf4e378876",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/minutes20_6_09.pdf",
@@ -1030,7 +1030,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/minutes20_6_09.pdf",
       "sizeBytes": 172520,
       "sha256": "e1aa38b35c860f82890fa54011defaab4599c5420fe2610d8cf1328ecdf8a6c8",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.3.%20cd%20ratio%20and%20investments%20as%20at%20june%202016.pdf",
@@ -1040,7 +1040,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.3._CD_Ratio_and_Investments_as_at_June_2016.pdf",
       "sizeBytes": 109719,
       "sha256": "e754e1cee2dcea57473cce84dbbcc16ec2e9a867b21ee011bcbce94f903fedfd",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/14_7_15/pmsby_caim_form_english.pdf",
@@ -1050,7 +1050,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/pmsby_caim_form_english.pdf",
       "sizeBytes": 96456,
       "sha256": "9d9e63f58cd5cbb3ed53aba878708e584f10caee5669e7266262a4cca74fcad9",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/cumulativeperformanceofbanksinkeralastateasatseptember2009.pdf",
@@ -1060,7 +1060,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/cumulativeperformanceofbanksinkeralastateasatseptember2009.pdf",
       "sizeBytes": 36877,
       "sha256": "15e39ffbc7760d16a7192cb1068eac4b43bc90e3f005b8b92ca76d3478bfa46d",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.11.%20dcp%20%20district%20wise%20achievement%20for%202016-17%20as%20at%20june%202016.pdf",
@@ -1070,7 +1070,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.11._DCP_District_wise_Achievement_for_2016-17_as_at_June_2016.pdf",
       "sizeBytes": 84569,
       "sha256": "a662e324e1eba6162b28b08f37df8fc8c0a3c9866ea88aee4d548ce623cf573d",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/28_7_16/annexure%20wb-f-2.pdf",
@@ -1080,7 +1080,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Annexure_WB-F-2.pdf",
       "sizeBytes": 92492,
       "sha256": "370434abaa4f091dbb2b1fa33801035216dc65f1c4b2b04ad8474efcad1e2e45",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.37.%20progress%20report%20on%20working%20of%20rsetis%20as%20at%20june%202016.pdf",
@@ -1090,7 +1090,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.37._Progress_Report_on_Working_of_RSETIs_as_at_June_2016.pdf",
       "sizeBytes": 104343,
       "sha256": "12937abff7b21a1984559b653cd166f7b21ac558e3f4174e772f384c44e820ba",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/saranya.pdf",
@@ -1100,7 +1100,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Saranya.pdf",
       "sizeBytes": 100139,
       "sha256": "2ad43ff2d339900f65af6e1db704a38d8368f3610486fa04990fc63ff3a6c143",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/pradhan%20mantri%20suraksha%20bima%20yojana%20(pmsby)/pmsby-%20application%20form%20malayalam.pdf",
@@ -1110,7 +1110,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/PMSBY-_Application_form_Malayalam.pdf",
       "sizeBytes": 224260,
       "sha256": "b54efa76f9f7c876c74423f72e98d87e1501e72a524a4630259a20af56fe148f",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/28_7_16/annexure%20wb-iii.pdf",
@@ -1120,7 +1120,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Annexure_WB-III.pdf",
       "sizeBytes": 146583,
       "sha256": "cd2820b3162803ee3596a11e1bc9caa73eab8768605cf6d92be6cc785a73a4ad",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/datasme.pdf",
@@ -1130,7 +1130,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/datasme.pdf",
       "sizeBytes": 26862,
       "sha256": "451eb5fb864273ccc5b20f040aa00fca3a49b374546834b63065d4b04026ce8b",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.33.%20total%20outsanding%20under%20mudra%20loans%20(pmmy)%20as%20at%20june%202016.pdf",
@@ -1140,7 +1140,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.33._Total_outsanding_under_MUDRA_loans_PMMY_as_at_June_2016.pdf",
       "sizeBytes": 106613,
       "sha256": "a2365d24bab34fe85bf5a9c5b3be25a41e2f105e2c4f8228759dd80c6edc2bec",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.18.%20performance%20under%20kcc%20scheme%20as%20at%20june%202016.pdf",
@@ -1150,7 +1150,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.18._Performance_under_KCC_Scheme_as_at_June_2016.pdf",
       "sizeBytes": 156864,
       "sha256": "3907e260af60fb44cc59bd011f981e416d890ef2a792bc707ae6dc1a3bfd88fe",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/14_7_15/apy%20-%20faq%20-%20malayalam.pdf",
@@ -1160,7 +1160,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/APY_-_FAQ_-_Malayalam.pdf",
       "sizeBytes": 301706,
       "sha256": "b84e5bc726401ff6ea00340b1ad7386722b07b76415a28c4a3cb75fd6ba1153d",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2013/109_slbc/minutes%20108%20slbc.pdf",
@@ -1170,7 +1170,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Minutes_108_SLBC.pdf",
       "sizeBytes": 244611,
       "sha256": "a9aed32d23953d9b9b3aba6699386172c19aed277715fb43d3059034b4a0137a",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/28_7_16/annexure%20wb-f-7.pdf",
@@ -1180,7 +1180,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Annexure_WB-F-7.pdf",
       "sizeBytes": 199650,
       "sha256": "f58a16121687047b756f37aab6dadcc3b023e15bff3f68b2f07ce422f1c51ad9",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/14_7_15/pmsby%20%20rules%20and%20faq%20malayalam.pdf",
@@ -1190,7 +1190,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/PMSBY_Rules_and_FAQ_Malayalam.pdf",
       "sizeBytes": 196001,
       "sha256": "f52e0e10510540ee32915e1c989b7a065c5a0ee26712643195f59ccc705b8457",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/118%20slbc%20agenda%20&%20annexures%20in%20pdf/table_agenda_118_slbc.pdf",
@@ -1200,7 +1200,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/table_agenda_118_slbc.pdf",
       "sizeBytes": 223113,
       "sha256": "d1bdcc7ce09ec97d23b8a7ab3a6dceeef184aa4eae9dc85ef98f5290811d8b93",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/agenda20_6_09.pdf",
@@ -1210,7 +1210,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/agenda20_6_09.pdf",
       "sizeBytes": 351877,
       "sha256": "73990ccf64a13a2632dcc6cee2fc699cc549a79646de77c37e2f742be6ba0e72",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.35.%20cumulative%20enrollment%20under%20pradhaan%20mantri%20jan%20suraksha%20yojana%20schemes%20as%20at%20june%202016.pdf",
@@ -1220,7 +1220,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.35._Cumulative_Enrollment_under_Pradhaan_Mantri_Jan_Suraksha_Yojana_Schemes_as_at_June_2016.pdf",
       "sizeBytes": 94675,
       "sha256": "61e9b5a1015b788bafbd405b7f0e4cd0cd15aaf48ba45e08780a5ea89264f3bb",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/vital%20banking%20statistics%20-%20119%20slbc.pdf",
@@ -1230,7 +1230,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/VITAL_BANKING_STATISTICS_-_119_SLBC.pdf",
       "sizeBytes": 188800,
       "sha256": "3af5e9ea6b162cddb3ecdabc4024232a73ce2c8428d965162ca101f093f0a535",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.1.%20no.%20of%20bank%20branches%20and%20deposits%20as%20at%20june%202016.pdf",
@@ -1240,7 +1240,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.1._No._of_Bank_Branches_and_Deposits_as_at_June_2016.pdf",
       "sizeBytes": 113350,
       "sha256": "1882fde8a6b7cb79fe56c9842b85876a86b23b0ca7f136cbb4e4ed778874305e",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/creditflowtomsme.pdf",
@@ -1250,7 +1250,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/creditflowtomsme.pdf",
       "sizeBytes": 24728,
       "sha256": "2cab000a5638851d00c0d55cdbd756939ee1eb16b1e4e6a8b96ef33be413da7f",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/agendaslrm_18_9_2009.pdf",
@@ -1260,7 +1260,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/agendaslrm_18_9_2009.pdf",
       "sizeBytes": 455422,
       "sha256": "ab1d4df278a29f56af23ff52c5f355c29ada125af89af518274e0aece9d7eaf3",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.22.%20mode%20of%20linkage%20-%20shgs%20financed%20directly%20with%20ngo%20facilitation.pdf",
@@ -1270,7 +1270,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.22._Mode_of_Linkage_-_SHGs_Financed_Directly_with_NGO_Facilitation.pdf",
       "sizeBytes": 150130,
       "sha256": "118f23ffef872ccb0b80e5b67a26a019d1726bbb8a54a4a3a459fa0f5d881f77",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/atal%20pension%20yojana%20(apy)/apy%20applicaiton%20form%20-%20malayalam.pdf",
@@ -1280,7 +1280,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/APY_Applicaiton_Form_-_Malayalam.pdf",
       "sizeBytes": 570071,
       "sha256": "c2082452330cebc52a574517a169d8c30e8c1a5be6645e531c9ae57357633eb2",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/pradhan%20mantri%20suraksha%20bima%20yojana%20(pmsby)/pmsby%20-%20application%20form%20english.pdf",
@@ -1290,7 +1290,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/PMSBY_-_Application_form_English.pdf",
       "sizeBytes": 151851,
       "sha256": "b748c99949d12a258f56f4e03de63d6dad2a927eda375a57be22f123b897874b",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/14_7_15/pmsby%20claim%20form%20malayalam.pdf",
@@ -1300,7 +1300,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/PMSBY_Claim_form_Malayalam.pdf",
       "sizeBytes": 231698,
       "sha256": "f319d7d822844afd0b3adfa11baf8cfbb9e6fcae4795111829be57a7e08395e4",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.12.%20dcp%20%20bank%20wise%20achievement%20for%202016-17%20as%20at%20june%202016.pdf",
@@ -1310,7 +1310,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.12._DCP_Bank_wise_Achievement_for_2016-17_as_at_June_2016.pdf",
       "sizeBytes": 165216,
       "sha256": "26e4a8df3d7960b5762be4da5b818158ac5e109dbea0f19ec03e27c490e1d666",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.27.%20performance%20under%20education%20loan%20scheme%20as%20at%20june%202016.pdf",
@@ -1320,7 +1320,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.27._Performance_under_Education_Loan_Scheme_as_at_June_2016.pdf",
       "sizeBytes": 188816,
       "sha256": "8c982dd1dda7e20093b863a1dac1299161ade4af8075cd8976a0ffa644f0f8df",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/agenda%20119%20slbc.pdf",
@@ -1330,7 +1330,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Agenda_119_SLBC.pdf",
       "sizeBytes": 3402340,
       "sha256": "5e1fb06843d0c0d2fd322e351240e23b93085b2ba8bfd4c952f6f91a3381f419",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/28_7_16/c_govt.%20notification.pdf",
@@ -1340,7 +1340,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/C_Govt._Notification.pdf",
       "sizeBytes": 614790,
       "sha256": "bee6dac437664166ef61949d3acf2b48ca38d32998cfc893eaab1ab8b1cf24c6",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/2010/malayalam_101.pdf",
@@ -1350,7 +1350,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/malayalam_101.pdf",
       "sizeBytes": 162307,
       "sha256": "e8601ead535aae8ba74f2b39f1385c51b98ea7f87cc999e3c7a379ed167d8156",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/28_7_16/annexure%20wb-f-1.pdf",
@@ -1360,7 +1360,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Annexure_WB-F-1.pdf",
       "sizeBytes": 92010,
       "sha256": "99f8943c184fe158f2f3d70c9cdfa3444e9b798eb7d360f616d02e01dd6e9218",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/atal%20pension%20yojana%20(apy)/apy%20application%20form%20-%20english.pdf",
@@ -1370,7 +1370,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/APY_Application_Form_-_English.pdf",
       "sizeBytes": 346755,
       "sha256": "38dc73b55f86e02d3ea2e38d28669aa7bff2e0244fd25bc4b35dc32f54b5752e",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/14_7_15/pmjjby_claim_form_malayalam.pdf",
@@ -1380,7 +1380,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/pmjjby_claim_form_malayalam.pdf",
       "sizeBytes": 1485078,
       "sha256": "ffe1d3d47f5f5b3f9c00646c2d0f1510d3e17781f1eda86c549c75bf2117fc05",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.46.%20coir%20udyami%20yojana%20-%20pending%20applications%20with%20banks.pdf",
@@ -1390,7 +1390,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.46._Coir_Udyami_Yojana_-_Pending_Applications_with_Banks.pdf",
       "sizeBytes": 16072,
       "sha256": "44964edba9f45e8828f10d12dde096fd26923bf0824a0c33468b37477d79608d",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/banking_services_villages_covered.pdf",
@@ -1400,7 +1400,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/banking_services_villages_covered.pdf",
       "sizeBytes": 14002,
       "sha256": "d3faec8937dfe0809f71853376bb380d0a81e9b2eb2613d08c7b740477caf7c8",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/govt%20schemes/financing%20of%20joint%20farming%20groups%20of%20bhoomi%20heen%20kisan.pdf",
@@ -1410,7 +1410,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Financing_of_Joint_Farming_Groups_of_Bhoomi_Heen_Kisan.pdf",
       "sizeBytes": 1003387,
       "sha256": "a12563facc3ee44583be0bc75d38a7a37ec365967ebd0ad124cc709ec5b7e41e",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.5.%20agriculture%20advances%20as%20at%20june%202016.pdf",
@@ -1420,7 +1420,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.5._Agriculture_advances_as_at_June_2016.pdf",
       "sizeBytes": 104450,
       "sha256": "7b4414f3fa5a859ac81153073daf5865e40994dea46329bddf2a626c786e4f10",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/keralaagendaandbackgroundnotes.pdf",
@@ -1430,7 +1430,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/keralaagendaandbackgroundnotes.pdf",
       "sizeBytes": 356404,
       "sha256": "ac3bc903507857989fe5f600ccaadfd8a6d96d95425c872d4711adae3d5f77c1",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.45.%20progress%20of%20online%20registration%20of%20msme%20loan%20applications%20by%20banks.pdf",
@@ -1440,7 +1440,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.45._Progress_of_Online_Registration_of_MSME_Loan_Applications_by_Banks.pdf",
       "sizeBytes": 98674,
       "sha256": "ed6a038d410e52d8f0f8f5273b94049b5484e81bdd891d6c00d7d25c96554e2e",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/rupey%20insurance/annexure%20-%20c%20-%20claim%20form.pdf",
@@ -1450,7 +1450,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Annexure_-_C_-_Claim_Form.pdf",
       "sizeBytes": 102511,
       "sha256": "0cd9b464d0a803ec7b89ea9fc5f1d2729bed529f4a99f0d9d192da6d7ca7ee9b",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/govt%20schemes/nulm_swarna%20jayanti%20shahari%20rozgar%20yojana%20(sjsry).pdf",
@@ -1460,7 +1460,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/NULM_Swarna_Jayanti_Shahari_Rozgar_Yojana_SJSRY_.pdf",
       "sizeBytes": 544450,
       "sha256": "c5076ec21880b6bac60b40ebe8717792a460cc6dfcb0ff20c5a2f8492f1fe4ff",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.44.%20component%20wise%20breakup%20of%20the%20milch%20animal%20-heifer%20unit%20components.pdf",
@@ -1470,7 +1470,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.44._Component_wise_breakup_of_the_milch_animal_-heifer_unit_components.pdf",
       "sizeBytes": 424733,
       "sha256": "cfddc3c6fa5fab6106c9f36b8367a721b38fecb254bb13eb0e244d556f7ee414",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/28_7_16/annexure%20wb-vii.pdf",
@@ -1480,7 +1480,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Annexure_WB-VII.pdf",
       "sizeBytes": 38719,
       "sha256": "7bbc7d245adf1c827e966b8fe961712ff8c697d5823d521ad79cb17af68107e7",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.47.%20data%20on%20atms%20made%20accessible%20to%20persons%20with%20disabilities%20as%20on%2030.06.2016.pdf",
@@ -1490,7 +1490,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.47._Data_on_ATMs_made_accessible_to_persons_with_disabilities_as_on_30.06.2016.pdf",
       "sizeBytes": 119786,
       "sha256": "c2abecd7a9022e163f88cb5f2e2bf9269b3cca555781cb6503511dd6eb6e0888",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/coverageundercgmseschemefromcgtmse.pdf",
@@ -1500,7 +1500,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/coverageundercgmseschemefromcgtmse.pdf",
       "sizeBytes": 19575,
       "sha256": "b24ca5e22a1e4b46d050824145792186436ff93524ff2e8aa76f246a9e3d6c4c",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.19.%20performance%20under%20scc,%20acc,%20lucc,%20wcc%20&%20cuy%20as%20at%20june%202016.pdf",
@@ -1510,7 +1510,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.19._Performance_Under_SCC_ACC_LUCC_WCC_CUY_as_at_June_2016.pdf",
       "sizeBytes": 214335,
       "sha256": "647c012772f3bd8baeaea622566ddd25591db5010f5fb4fbb1463894e8bc9274",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.36.%20recovery%20&%20npa%20management%20as%20on%2030.06.2016.pdf",
@@ -1520,7 +1520,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.36._Recovery_NPA_Management_as_on_30.06.2016.pdf",
       "sizeBytes": 298085,
       "sha256": "1b7cf07f38fa9b37ae9dbd0c056db31965314923e1c00e5aae9d6f288cf51bcd",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.2.%20nr%20deposits,%20advances%20%20&%20casa%20as%20at%20june%202016.pdf",
@@ -1530,7 +1530,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.2._NR_Deposits_Advances_CASA_as_at_June_2016.pdf",
       "sizeBytes": 132349,
       "sha256": "7e6b29035b2bcff4723acf10ddebb33f563da6b0ead679c285cfec9b5002c880",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/28_7_16/annexure%20wb-f-3.pdf",
@@ -1540,7 +1540,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Annexure_WB-F-3.pdf",
       "sizeBytes": 55706,
       "sha256": "26debcf6bd29e699bd4b1b1aaead3784522caadd6ea06701bffb77d7da8d9322",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/mudra%20pmmy%20application%20hindi.pdf",
@@ -1550,7 +1550,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/MUDRA_PMMY_APPLICATION_HINDI.pdf",
       "sizeBytes": 984529,
       "sha256": "26df1c662b6432f220a497ad05233de711002f8edb2146647783b8a89e556002",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/govt%20schemes/preparation%20of%20rollout%20plan%20for%20installation%20of%20cash%20dispensers%20(cds)%20and.pdf",
@@ -1560,7 +1560,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Preparation_of_rollout_plan_for_installation_of_Cash_Dispensers_CDs_and.pdf",
       "sizeBytes": 264306,
       "sha256": "8049d138b950a7019c85b7765a2d38776870a31c23a4d3349917899794dbde49",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/14_7_15/apy_famphlet_malayalam.pdf",
@@ -1570,7 +1570,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/apy_famphlet_malayalam.pdf",
       "sizeBytes": 210423,
       "sha256": "6f03d390cded5d72b72bfcddbc14c01881c84ee799459101e30c33bbea14efa7",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.25.%20progress%20report%20on%20joint%20liability%20groups(jlgs)%20as%20at%20june%202016.pdf",
@@ -1580,7 +1580,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.25._Progress_Report_on_Joint_Liability_Groups_JLGs_as_at_June_2016.pdf",
       "sizeBytes": 111090,
       "sha256": "091af497afc5411ec577f191f15f002382e217cb413af51be47d48dbddeb839c",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.9.%20data%20on%20scsts%20&%20national%20priorities%20as%20at%20june%202016.pdf",
@@ -1590,7 +1590,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.9._Data_on_SCSTs_National_Priorities_as_at_June_2016.pdf",
       "sizeBytes": 125421,
       "sha256": "c6dd16b47d6f373c3cf3f106596d94c0c39b8e87d3ab7bd4966340dba08c5007",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/govt%20schemes/nrlm%20-%20aajeevika%20-%20interest%20subvention%20scheme.pdf",
@@ -1600,7 +1600,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/NRLM_-_Aajeevika_-_Interest_Subvention_Scheme.pdf",
       "sizeBytes": 484149,
       "sha256": "92272bc2b280c1ab924540de680cffaec585b29ff2db6df0cacf3bcd6b88d8e9",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/scc_accandluccschemes.pdf",
@@ -1610,7 +1610,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/scc_accandluccschemes.pdf",
       "sizeBytes": 12619,
       "sha256": "dc733a0f15f7be212cdb2f6b371b262a2cbe4dadc5b270edfa6b45b0086f1cd7",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.41.%20data%20on%20start%20up%20india%20programme%20as%20at%20june%202016.pdf",
@@ -1620,7 +1620,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.41._Data_on_Start_up_India_Programme_as_at_June_2016.pdf",
       "sizeBytes": 95055,
       "sha256": "2d65718c7c0eb657d7303ab0649e49779183b4a7ce3b7a1cc50e77daa8a1c5bb",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.8.%20data%20on%20sub%20sectors%20of%20other%20priority%20sector%20as%20at%20june%202016.pdf",
@@ -1630,7 +1630,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.8._Data_on_Sub_Sectors_of_Other_Priority_Sector_as_at_June_2016.pdf",
       "sizeBytes": 96662,
       "sha256": "471c2cc03c034e5f730d21a74247c23c2b6a01f0e6250885f637a7e28b5aa7d4",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.20.%20micro%20finacne%20-%20shgs%20maintaining%20sb%20accounts.pdf",
@@ -1640,7 +1640,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.20._Micro_Finacne_-_SHGs_Maintaining_SB_Accounts.pdf",
       "sizeBytes": 128307,
       "sha256": "0775fd6c6f78920e39f5304a6ac6b7373bf6a271455931f8f32dca8f2b0b77cd",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.6.%20total%20outstanding%20under%20micro,small%20and%20medium%20enterprises(msme)%20&%20large%20enterprises%20as%20at%20june%202016.pdf",
@@ -1650,7 +1650,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.6._Total_outstanding_under_Micro_Small_and_Medium_Enterprises_MSME_Large_Enterprises_as_at_June_2016.pdf",
       "sizeBytes": 312183,
       "sha256": "d57c3b7e1f0a6f362f8d90c9a4d0d886698827238d5557060bbbd0f8d85a7edd",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.29.%20performance%20under%20gold%20loan%20as%20at%20june%202016.pdf",
@@ -1660,7 +1660,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.29._Performance_under_Gold_Loan_as_at_June_2016.pdf",
       "sizeBytes": 143492,
       "sha256": "a0b95faa2badc9853ca38ace206e4cb42ad3e22c79fbe403bb4b1a3703988113",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/presentposition.pdf",
@@ -1670,7 +1670,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/presentposition.pdf",
       "sizeBytes": 15787,
       "sha256": "1190db5bafad39e72df7f2667f289aba8b50d91ede660fbfda25e790fc9bc440",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/28_7_16/annexure%20wb-v.pdf",
@@ -1680,7 +1680,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Annexure_WB-V.pdf",
       "sizeBytes": 147414,
       "sha256": "92f64fd9ca30c97b7262dd69ae506552093ae8597f6f7f8249e40539b2c66b77",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/progressreportonatms.pdf",
@@ -1690,7 +1690,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/progressreportonatms.pdf",
       "sizeBytes": 37815,
       "sha256": "fc7657e1221ef77b2ccacc0463bc8d7672e8d7cdd2b3eb130de563eb45fa09eb",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/implementationofkisancreditcardschemeasatseptember2009.pdf",
@@ -1700,7 +1700,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/implementationofkisancreditcardschemeasatseptember2009.pdf",
       "sizeBytes": 14602,
       "sha256": "00c36a0efa2abcc1611d522252b5515545117465cf897870985e18aa94902a10",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.39.%20pmegp%20cumulative%20perforamance%20for%202016-17%20as%20on%2030.06.2016.pdf",
@@ -1710,7 +1710,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.39._PMEGP_Cumulative_Perforamance_for_2016-17_as_on_30.06.2016.pdf",
       "sizeBytes": 69979,
       "sha256": "e4f886c9a32491e2af13b5b7641a72efe86328da186e00933e49ed712a86764a",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.42.%20data%20on%20pradhan%20mantri%20awas%20yojana%20as%20at%20june%202016.pdf",
@@ -1720,7 +1720,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.42._Data_on_Pradhan_Mantri_Awas_Yojana_as_at_June_2016.pdf",
       "sizeBytes": 97265,
       "sha256": "960ec226f92c5a4b9c0d155d118d92420a1ccd0d426c0b0c4c6327b4c70e3524",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/minutes99slbc18_9_09.pdf",
@@ -1730,7 +1730,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/minutes99slbc18_9_09.pdf",
       "sizeBytes": 121473,
       "sha256": "443a6fec5a95d2e812ced1d6055d6ef181ee1285f5e0f0a932f1e8a3e291afef",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.38.%20rseti%20-%20training%20programmes%20conducted%20during%202016-17%20as%20at%20june%202016.pdf",
@@ -1740,7 +1740,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.38._RSETI_-_Training_Programmes_conducted_during_2016-17_as_at_June_2016.pdf",
       "sizeBytes": 76725,
       "sha256": "9185c716335f056b295858330dc4cf642f3d33185648d34e7a6fc83ff53e2026",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.30.%20recovery%20performance%20under%20government%20sponsored%20schemes%20as%20at%20june%202016.pdf",
@@ -1750,7 +1750,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.30._Recovery_Performance_under_Government_Sponsored_Schemes_as_at_June_2016.pdf",
       "sizeBytes": 331387,
       "sha256": "02bffaca15db9c660c1239c452c83c6406ae32ddcbf7cd7136e763de68e0e3a3",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/padhopardesh.pdf",
@@ -1760,7 +1760,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/padhopardesh.pdf",
       "sizeBytes": 8139484,
       "sha256": "beff8df0784c2514ec7d0bc75b3ab3ea6ea013007005f3cc374c70230da839de",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.10.%20data%20on%20dri%20and%20centrally%20sponsored%20schemes%20as%20at%20june%202016.pdf",
@@ -1770,7 +1770,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.10._Data_on_DRI_and_Centrally_Sponsored_schemes_as_at_June_2016.pdf",
       "sizeBytes": 123450,
       "sha256": "06c30da33f0bd4e6b8c8aa0f375044ab97f808eadfdadcedb48a554172584e73",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.21.%20mode%20of%20linkage%20-%20shgs%20financed%20directly%20by%20banks.pdf",
@@ -1780,7 +1780,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.21._Mode_of_Linkage_-_SHGs_Financed_Directly_by_Banks.pdf",
       "sizeBytes": 149940,
       "sha256": "b7b6a156c17af256a5cc0d204a5f7a4022d599b2f3472a14238f176ed71a14d1",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/pradhan%20mantri%20jeevan%20jyothi%20bima%20yojana%20(pmjjby)/pmjjby%20rules%20&%20faq%20-%20english.pdf",
@@ -1790,7 +1790,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/PMJJBY_Rules_FAQ_-_English.pdf",
       "sizeBytes": 124339,
       "sha256": "2c42b1cc8f40a681b25c6f403940ce92f0d9924a4f1aa97f48bac3a8439fff42",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.14.%20bank%20wise%20breakup%20of%20crop%20loan%20&%20term%20loan%20achievement%20under%20primary%20sector%20for%202016-17%20as%20at%20june%202016.pdf",
@@ -1800,7 +1800,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.14._Bank_wise_Breakup_of_Crop_Loan_Term_Loan_Achievement_under_Primary_Sector_for_2016-17_as_at_June_2016.pdf",
       "sizeBytes": 123670,
       "sha256": "ee5618e596c40eca34a394c389351ff4d5cd6d9dbeb42e88569744b9bdb3a2c9",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/mudra%20(pmmy)%20application%20english.pdf",
@@ -1810,7 +1810,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/MUDRA_PMMY_APPLICATION_ENGLISH.pdf",
       "sizeBytes": 474589,
       "sha256": "47f4f984d9a9ba071637c676d7a34a68afb3cbd891a6c737327716abef6579cf",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/2010/allocation.pdf",
@@ -1820,7 +1820,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/allocation.pdf",
       "sizeBytes": 41235,
       "sha256": "aaa99e847c75e5ed97ecbd77ec8eb4630bd57074841b654345ea1b5822a6f248",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/84733.pdf",
@@ -1830,7 +1830,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/84733.pdf",
       "sizeBytes": 61050,
       "sha256": "b47884cc2219e8f3c57cd165c735c19997f0ad1e19eea39aefa092e7e5bb523e",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.23.%20mode%20of%20linkage%20-%20shgs%20financed%20through%20the%20medium%20of%20ngos.pdf",
@@ -1840,7 +1840,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.23._Mode_of_Linkage_-_SHGs_Financed_through_the_medium_of_NGOs.pdf",
       "sizeBytes": 114106,
       "sha256": "0aca0947b0d1f13524a4b7d62f8cd1947fbc16bd026b7223225a4233823448e1",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/awards2009.pdf",
@@ -1850,7 +1850,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/awards2009.pdf",
       "sizeBytes": 38000,
       "sha256": "4dc964ac65c1fb4003279668cf53ea5d6c6541d07f894aaebe8113ba00f74c02",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.24.%20progress%20report%20on%20atms%20by%20the%20bank%20as%20at%20june%202016.pdf",
@@ -1860,7 +1860,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.24._Progress_Report_on_ATMs_by_the_Bank_as_at_June_2016.pdf",
       "sizeBytes": 102120,
       "sha256": "ecd26d54f60698cc1c2f34d2e101c97e5c3c8dcdf6b4ff8b508202b49db417cf",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/govt%20schemes/strategy%20and%20approach%20for%20electronic%20benefit%20transfer.pdf",
@@ -1870,7 +1870,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Strategy_and_Approach_for_Electronic_Benefit_Transfer.pdf",
       "sizeBytes": 48476,
       "sha256": "252ee257ac557e2c85d1ef249b3b0db8bc5e0220abc17788159fc483005bf342",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/28_7_16/annexure%20wb-f-4.pdf",
@@ -1880,7 +1880,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Annexure_WB-F-4.pdf",
       "sizeBytes": 91681,
       "sha256": "252782bae11118e15340c88d9f7ac9613b3506931378cffcbde8a3f2be23faf2",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/kesru.pdf",
@@ -1890,7 +1890,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/KESRU.pdf",
       "sizeBytes": 7434,
       "sha256": "3100f25af8cac125871c3c6f066b756a4c814a389b84bf4b048ea8bb42f9fd3f",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/pradhan%20mantri%20suraksha%20bima%20yojana%20(pmsby)/pmsby%20rules%20and%20faq%20english.pdf",
@@ -1900,7 +1900,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/PMSBY_Rules_and_FAQ_English.pdf",
       "sizeBytes": 122130,
       "sha256": "99481b4619fa888baaea94335a45c33ae17097489bf93b87db3826d6fe69a87e",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/rupey%20insurance/annex%20a%20-%20claim%20process(%20revised).pdf",
@@ -1910,7 +1910,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Annex_A_-_Claim_Process_Revised_.pdf",
       "sizeBytes": 316307,
       "sha256": "17cb8e0c1d991bed92d8c347489bee8c46515861922ed7a1e8c26c78b9edb5e0",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/annexures%20in%20pdf119%20slbc/8.17.%20performance%20under%20agri%20clinic%20&%20agri%20business%20centres%20as%20at%20june%202016.pdf",
@@ -1920,7 +1920,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/8.17._Performance_Under_Agri_Clinic_Agri_Business_Centres_as_at_June_2016.pdf",
       "sizeBytes": 121701,
       "sha256": "b3db07dab799c8888a78e0ef6f66de393399e5981ad4563e706fc3094c83fada",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/2010/bkwise_dtwise.pdf",
@@ -1930,7 +1930,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/bkwise_dtwise.pdf",
       "sizeBytes": 13272,
       "sha256": "86c628450195e7db6a182b76260da721eece5d0b8628db318d082b566b0ad2d9",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/pradhan%20mantri%20jeevan%20jyothi%20bima%20yojana%20(pmjjby)/pmjjby%20-%20application%20form%20malayalam.pdf",
@@ -1940,7 +1940,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/PMJJBY_-_Application_form_Malayalam.pdf",
       "sizeBytes": 107195,
       "sha256": "983d5a09412de9cf362e13ba9fe2346117230b1d1068dcbb91d4d0d67700f3c5",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/atal%20pension%20yojana%20(apy)/apy%20faqs%20-%20english.pdf",
@@ -1950,7 +1950,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/APY_FAQs_-_English.pdf",
       "sizeBytes": 462935,
       "sha256": "c7256ee684d38d230be6375b86f770d3ae54a33f1a61b8e0b92dd7143ab327d8",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/govt%20schemes/strategy%20and%20guidelines%20on%20financial%20inclusion.pdf",
@@ -1960,7 +1960,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Strategy_and_Guidelines_on_Financial_Inclusion.pdf",
       "sizeBytes": 130779,
       "sha256": "36424dfea734e0f7a5754a535fc2237302e9bcc45d6ce617eb6afe8470dcf977",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/28_7_16/annexure%20wb-vi.pdf",
@@ -1970,7 +1970,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Annexure_WB-VI.pdf",
       "sizeBytes": 175517,
       "sha256": "4174ace31338aa407463a6fcbab0696558dd5aeaaaa9b8cac26d52321034cc47",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/14_7_15/pmjjby%20rules%20&%20faq%20%20malayalam.pdf",
@@ -1980,7 +1980,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/PMJJBY_Rules_FAQ_Malayalam.pdf",
       "sizeBytes": 222690,
       "sha256": "3b4933837a1382ecd12d7efcc9776eb1e1d1e657b8e2ccbfae9eaffc82492e91",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/84722.pdf",
@@ -1990,7 +1990,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/84722.pdf",
       "sizeBytes": 17233,
       "sha256": "dd2afcf23e87cc856ef40414ee6710ba2ca89bc4735585478179779c5f5cfce7",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/mnais__wbcis_kharif2015.pdf",
@@ -2000,7 +2000,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/mnais__wbcis_kharif2015.pdf",
       "sizeBytes": 3525513,
       "sha256": "f1012e2175b11c621ba3f175a1f582d69f408a0e58c1b3d5610be8173707796b",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/slrm2016/agenda%20slrm%202016.pdf",
@@ -2010,7 +2010,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Agenda_SLRM_2016.pdf",
       "sizeBytes": 4766886,
       "sha256": "f280598c3c5e3e9f4907a0d780bc388772df7f302e0ca4ac9af2a26394fc8cbf",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/govt%20schemes/equity-grant-scheme-and-credit-guarantee-fund.pdf",
@@ -2020,7 +2020,7 @@
       "localPath": "slbc-data/kerala/wayback/2017/Equity-Grant-Scheme-and-Credit-Guarantee-Fund.pdf",
       "sizeBytes": 474498,
       "sha256": "57ce1c78e4c2895fa5ec2bf08eb41b8acad11416f408c67b0ee8cade7de9cab9",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2016/position%20of%20sick%20mses%20as%20at%20march%202016.pdf",
@@ -2030,7 +2030,7 @@
       "localPath": "slbc-data/kerala/wayback/2018/Position_of_Sick_MSEs_as_at_March_2016.pdf",
       "sizeBytes": 252979,
       "sha256": "920a83cda3b3dbd42cc3b48a9aefad09cb8cc2cb54b9fed49d03d15b7c0fceb4",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf2015/mudra%20(pmmy)%20loan%20application%20malayalam.pdf",
@@ -2040,7 +2040,7 @@
       "localPath": "slbc-data/kerala/wayback/2018/Mudra_PMMY_Loan_application_Malayalam.pdf",
       "sizeBytes": 1122068,
       "sha256": "ebe6c99ec34a2c45cbc7a0c97a3816cef4e82e8135e5d28584c4fff69d6716fc",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/pmfby%20kharif%202019.pdf",
@@ -2050,7 +2050,8 @@
       "localPath": "slbc-data/kerala/wayback/2019/pmfby_kharif_2019.pdf",
       "sizeBytes": 1048576,
       "sha256": "b23e5f6ebf7eeb7e08ce9e0e63da2d6e7dbe0264f926ec45753dabfba68bda25",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/rwbcis%20kharif%202019.pdf",
@@ -2060,7 +2061,8 @@
       "localPath": "slbc-data/kerala/wayback/2019/Rwbcis_kharif_2019.pdf",
       "sizeBytes": 1048576,
       "sha256": "e6340c032bc722903c7f2c330f8a75e5174cedbb05c6dc4770715c50dd19ec55",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/farmer%20suicides%20-minutes%20of%20slbc%20natural%20calamity%20sub%20committee%206th%20mar%202019.pdf",
@@ -2070,7 +2072,7 @@
       "localPath": "slbc-data/kerala/wayback/2020/Farmer_Suicides_-Minutes_of_SLBC_Natural_Calamity_Sub_Committee_6th_Mar_2019.pdf",
       "sizeBytes": 170544,
       "sha256": "a8cd11bb44b799c9890434844e827dcbaf022f7b5a43d8729fafc4ec31af1040",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/homepage_mymodal/pdf/logo%20design%20contest_guidelines.pdf",
@@ -2080,7 +2082,7 @@
       "localPath": "slbc-data/kerala/wayback/2022/LOGO_DESIGN_CONTEST_Guidelines.pdf",
       "sizeBytes": 643052,
       "sha256": "c675042fe815edd2fa87ddf9dd20e24a52ebef7df84242a562e2be5f7d4f3dff",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/991e8b12-d13f-4442-b284-175c3decda1b-annexures.pdf",
@@ -2090,7 +2092,8 @@
       "localPath": "slbc-data/kerala/wayback/2022/991e8b12-d13f-4442-b284-175c3decda1b-Annexures.pdf",
       "sizeBytes": 1048576,
       "sha256": "3fa23e5551faa0c399bb563955975933fe024be309d9006849c1796cb49114e1",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/a2cc5269-3c1a-455c-a38e-0c4f0a5e6879-agenda.pdf",
@@ -2100,7 +2103,8 @@
       "localPath": "slbc-data/kerala/wayback/2022/a2cc5269-3c1a-455c-a38e-0c4f0a5e6879-Agenda.pdf",
       "sizeBytes": 1048576,
       "sha256": "0862e55610eae0efc5505d739764efb993a7f461ef25f3cebd068cece170d39a",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/mis/upload_doc/8e54b726-98f6-4268-bc28-fc2807903d1a-annexures_slrm2022.pdf",
@@ -2110,7 +2114,8 @@
       "localPath": "slbc-data/kerala/wayback/2022/8e54b726-98f6-4268-bc28-fc2807903d1a-Annexures_SLRM2022.pdf",
       "sizeBytes": 1048576,
       "sha256": "69c59bb4e7f5422c18ed38d12873a917e1305cc0af84e2e7ae5af29a26e84da9",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/8c2589e7-e120-46e5-ae14-a202f2f296c9-slrm%202015.pdf",
@@ -2120,7 +2125,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/8c2589e7-e120-46e5-ae14-a202f2f296c9-SLRM_2015.pdf",
       "sizeBytes": 532928,
       "sha256": "87ff490b3820dbe78566e7be040c4394e1435f3264a5e97c19c7dc3dd3604604",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/845d9256-ff5e-4e48-9a0e-e6cd29bf8726-slbc%20124.pdf",
@@ -2130,7 +2135,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/845d9256-ff5e-4e48-9a0e-e6cd29bf8726-SLBC_124.pdf",
       "sizeBytes": 617912,
       "sha256": "3388bae25b9a6cdaec7e66e1e37649a7804e49927fec5f1dd222e640dc566960",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/84d3a053-1cfe-4729-802e-15ed590b1dbb-132_133%20slbc%20minutes%20edited.pdf",
@@ -2140,7 +2145,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/84d3a053-1cfe-4729-802e-15ed590b1dbb-132_133_SLBC_Minutes_edited.pdf",
       "sizeBytes": 1048576,
       "sha256": "c0f00ad601356cc296dd1e3cfb411b78fbeae0455445628378385b765c88c23f",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/71371dfc-b19c-41e2-8e1c-373f55fb4539-113%20slbc.pdf",
@@ -2150,7 +2156,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/71371dfc-b19c-41e2-8e1c-373f55fb4539-113_SLBC.pdf",
       "sizeBytes": 307661,
       "sha256": "67737157c544fe4fe4674eaa94662a7957d5a2c1b55ce5925f4cca9faf6515a5",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/16e474b3-ea81-44b3-98a9-b8f9ddd7ff27-108%20slbc.pdf",
@@ -2160,7 +2166,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/16e474b3-ea81-44b3-98a9-b8f9ddd7ff27-108_SLBC.pdf",
       "sizeBytes": 911496,
       "sha256": "fd53f7af37b91200944ab21d2cc9585df45b5d95af6cc11df501b075685de445",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/9f0c0faa-82f4-4116-a753-b38cf6627560-book_final.pdf",
@@ -2170,7 +2176,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/9f0c0faa-82f4-4116-a753-b38cf6627560-Book_Final.pdf",
       "sizeBytes": 1048576,
       "sha256": "2967c24e8ebe25f1ec61e6670bb784ff1884b6bf8439417362ba2cc0c45bc18f",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/776d1960-2ad6-4f02-a2f8-529eaefcb540-134th%20slbc%20booklet.pdf",
@@ -2180,7 +2187,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/776d1960-2ad6-4f02-a2f8-529eaefcb540-134th_SLBC_Booklet.pdf",
       "sizeBytes": 1048576,
       "sha256": "9ce04ee8db0122e9624d24fb99b42566a5ce1b7a37e22471e3705584ea765515",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/8e727543-7797-4eef-9800-6e7fc8cdeb84-117slbc%20(sep%202016).pdf",
@@ -2190,7 +2198,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/8e727543-7797-4eef-9800-6e7fc8cdeb84-117SLBC_Sep_2016_.pdf",
       "sizeBytes": 776323,
       "sha256": "5c76f6a2115b0d8d92d969e0d9391e4af89e5e4923e13bf534055b8a1b811b93",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/ee2e79cf-764e-4120-9c4a-a53eaaec74ed-slbc%20115.pdf",
@@ -2200,7 +2208,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/ee2e79cf-764e-4120-9c4a-a53eaaec74ed-SLBC_115.pdf",
       "sizeBytes": 1031932,
       "sha256": "8215d8707ec3121b76e3ad8caee1c7b1731d3a0f83445bbba8e2a9b2bddae942",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/c4d4a40d-c98c-4a68-b366-606a0f3860b5-132_133%20slbc%20minutes.pdf",
@@ -2210,7 +2218,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/c4d4a40d-c98c-4a68-b366-606a0f3860b5-132_133_SLBC_Minutes.pdf",
       "sizeBytes": 1048576,
       "sha256": "737c02ba89e79c667659ecd3bfd1552a404bb668786f78ee1511f5a48f1e1b57",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/fc6c2b41-af8c-4c4f-a024-5cbde69de1c4-final_book.pdf",
@@ -2220,7 +2229,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/fc6c2b41-af8c-4c4f-a024-5cbde69de1c4-Final_Book.pdf",
       "sizeBytes": 1048576,
       "sha256": "c33a56734ee8ecfc5513898640e201e1ad1aab57e00bd37cff2b3add98c72011",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/7ebb9aa1-a50d-4fc6-8510-fd9337ad10d6-slrm2020_131slbc%20minutes.pdf",
@@ -2230,7 +2240,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/7ebb9aa1-a50d-4fc6-8510-fd9337ad10d6-SLRM2020_131SLBC_Minutes.pdf",
       "sizeBytes": 1048576,
       "sha256": "4cddcef0011155d1d01389d6c744a343da56c0a2c37d77ba1edce8de97c16300",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/beaware_booklet_on_modus_operandi_of_financial_fraudsters_malayalam.pdf",
@@ -2240,7 +2251,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/BeAware_Booklet_on_Modus_Operandi_of_Financial_Fraudsters_Malayalam.pdf",
       "sizeBytes": 1048576,
       "sha256": "ba66098f1f9bff7e3ab07361366bdf481bfad57c4d4fb8b0b6a4b87b50d32a43",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/pmfby_rabi_1_and_2_2019_20_seasons.pdf",
@@ -2250,7 +2262,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/PMFBY_RABI_1_and_2_2019_20_SEASONS.pdf",
       "sizeBytes": 1048576,
       "sha256": "ea18bd644276a3d5d60c0ff455ee8a65b9c261a3c54bd7bf77735e8c43f80206",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/brochure_on_integrated_ombudsman_scheme.pdf",
@@ -2260,7 +2273,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/Brochure_on_Integrated_Ombudsman_Scheme.pdf",
       "sizeBytes": 1048576,
       "sha256": "1410235f3b2b7059fd14a9202ca9da20ecda8cb7f7b32ef8a4e89a2720d44657",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/unit_cost_for_investment_activities_2020-21.pdf",
@@ -2270,7 +2284,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/Unit_Cost_for_investment_activities_2020-21.pdf",
       "sizeBytes": 1048576,
       "sha256": "e30e4f039b7bbab52730091ee1a732db48c1adb2bb61aa206a6bc79ec5590052",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/466a00f8-2299-4f10-86dd-39eccf0c3dc5-slrm%202012.pdf",
@@ -2280,7 +2295,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/466a00f8-2299-4f10-86dd-39eccf0c3dc5-SLRM_2012.pdf",
       "sizeBytes": 335007,
       "sha256": "eb104f76d928056c8a3a7abb8914f70e220abd0acf9ec0ebf1827ab246fbcf3d",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/ucbooklet19-20keralaro-printedition.pdf",
@@ -2290,7 +2305,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/UCbooklet19-20KeralaRO-PrintEdition.pdf",
       "sizeBytes": 1048576,
       "sha256": "0ebd3d5691254c6b246cc712c3757b09fb426d3fe4708979a3dff69331ce2a38",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/5ba9eb15-fc9a-4f24-96b3-30a2ec42592e-annexures_136slbc_december%202021.pdf",
@@ -2300,7 +2316,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/5ba9eb15-fc9a-4f24-96b3-30a2ec42592e-Annexures_136SLBC_December_2021.pdf",
       "sizeBytes": 1048576,
       "sha256": "3fa23e5551faa0c399bb563955975933fe024be309d9006849c1796cb49114e1",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/4e663a2d-b4b8-4bb2-92b7-bf231592592c-slrm%202013.pdf",
@@ -2310,7 +2327,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/4e663a2d-b4b8-4bb2-92b7-bf231592592c-SLRM_2013.pdf",
       "sizeBytes": 837759,
       "sha256": "cc454c2ddbe5ca985633d1d8e991fe60496f9f046191c7a2f794fd91436c17bb",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/go%20-ujjeevana%20amended.pdf",
@@ -2320,7 +2337,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/GO_-UjjeevanA_Amended.pdf",
       "sizeBytes": 1048576,
       "sha256": "183472ee7f251719fc9da873edf75f37a8560e2bd3b008b6396d139298d63e75",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/nsfi_document-english.pdf",
@@ -2330,7 +2348,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/NSFI_Document-English.pdf",
       "sizeBytes": 523577,
       "sha256": "c953e6bd95f628ec7597c9071f8d40a923b814ba7e69728ca577cb9ebcfead5e",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/24e83e5e-ca5f-49c7-80ed-f38010ed41ce-agenda%20128_slbc.pdf",
@@ -2340,7 +2358,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/24e83e5e-ca5f-49c7-80ed-f38010ed41ce-Agenda_128_SLBC.pdf",
       "sizeBytes": 1048576,
       "sha256": "49854ac8fffe8058d78985d0cc5bc4ab15724f1b7e052999017cd79121534463",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/091ca605-77b6-4e5c-a8c4-d8c0165153f0-105%20slbc.pdf",
@@ -2350,7 +2369,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/091ca605-77b6-4e5c-a8c4-d8c0165153f0-105_SLBC.pdf",
       "sizeBytes": 581416,
       "sha256": "e601c70534325218d6ad44d51936f230cb67c34a2b625575da9f02f4de8307a7",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/35bfcf8c-5629-4ce0-9473-7240fdb5d2f0-125th%20slbc%20agenda_final_pdf.pdf",
@@ -2360,7 +2379,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/35bfcf8c-5629-4ce0-9473-7240fdb5d2f0-125th_SLBC_Agenda_final_pdf.pdf",
       "sizeBytes": 1048576,
       "sha256": "07b607bfaf79a26cb45e3d8d3c6e70bcfbd3aae98d125ed26f3dcc9fb67d5492",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/7ba22fc2-029e-4978-8b13-65bdffe02435-minutes_slrm%202021.pdf",
@@ -2370,7 +2390,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/7ba22fc2-029e-4978-8b13-65bdffe02435-Minutes_SLRM_2021.pdf",
       "sizeBytes": 1048576,
       "sha256": "59914e34be39919bcfddde2c9174e9f77b8185c9998f3dc78e0833fed48ae37e",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/3de8e399-83cd-4b1b-b8d5-cdf332d62f6d-slbc%20115.pdf",
@@ -2380,7 +2401,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/3de8e399-83cd-4b1b-b8d5-cdf332d62f6d-SLBC_115.pdf",
       "sizeBytes": 564938,
       "sha256": "d31aefbe27f4656cd3bdaeeb22e963beba4c36deb64b781e392cd8a8aa99da4d",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/38dc8649-2b59-4b8c-972b-fa8ba0017413-slrm%202017.pdf",
@@ -2390,7 +2411,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/38dc8649-2b59-4b8c-972b-fa8ba0017413-SLRM_2017.pdf",
       "sizeBytes": 461398,
       "sha256": "7b13776d1cd6e82dabd44ae2d904f22af7dcfa306c7068a74e451decaf98aa68",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/mis/upload_doc/f10a0fed-162c-4436-8ed2-1f9fe9500b03-book_final.pdf",
@@ -2400,7 +2421,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/f10a0fed-162c-4436-8ed2-1f9fe9500b03-Book_Final.pdf",
       "sizeBytes": 1048576,
       "sha256": "e47a85966d2f51113c30c9fcd6be4cd5fcd3b0934dbcc5a78df73bda73df5a8a",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/6a38469e-4885-4f9e-94b7-cb6968414865-slrm%202022%20booklet.pdf",
@@ -2410,7 +2432,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/6a38469e-4885-4f9e-94b7-cb6968414865-SLRM_2022_Booklet.pdf",
       "sizeBytes": 1048576,
       "sha256": "28eb38c76334fa91443277556d9b0097251a0a97262040a9dc69f036575bd07e",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/a9602701-2a61-4d40-b94b-c013b52bb8e6-agenda%20background%20notes%20june%202021.pdf",
@@ -2420,7 +2443,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/a9602701-2a61-4d40-b94b-c013b52bb8e6-Agenda_Background_Notes_June_2021.pdf",
       "sizeBytes": 1048576,
       "sha256": "be9e2c3390147976d829668980fa5c941773fd0f682bc7407afe0b2098f51d22",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/b2659f88-090c-4e73-9197-7fb9f9fb5c69-slbc%20book%20final.pdf",
@@ -2430,7 +2454,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/b2659f88-090c-4e73-9197-7fb9f9fb5c69-SLBC_BOOK_FINAL.pdf",
       "sizeBytes": 1048576,
       "sha256": "491998298f3221319f2055d3c2be88633a3fffb0a23013deab7456db5ec47bf3",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/ebece402-2e72-4284-b835-5a1fe9fb2f71-slbc%20121.pdf",
@@ -2440,7 +2465,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/ebece402-2e72-4284-b835-5a1fe9fb2f71-SLBC_121.pdf",
       "sizeBytes": 1048576,
       "sha256": "df359361cb1359a09806b979e01777cb7c0f9e430d2ca7351acbadb0a8017931",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/8c48a3ad-cc63-49ec-aa14-fb242c32c45c-130%20slbc%20agenda.pdf",
@@ -2450,7 +2476,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/8c48a3ad-cc63-49ec-aa14-fb242c32c45c-130_SLBC_Agenda.pdf",
       "sizeBytes": 1048576,
       "sha256": "3863a08ae433d9ae73d4e7a054b70de080cd8358393842c17406c5cdc97bf673",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/cyberfraud_sop.pdf",
@@ -2460,7 +2487,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/Cyberfraud_SOP.pdf",
       "sizeBytes": 361230,
       "sha256": "b6bb49ffd506680dad110425ca9d418e469f2e90b28353a6bdd30656ee8838ce",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/4bd60d01-1943-4396-917e-e3147d983164-116%20slbc%20(june%202016).pdf",
@@ -2470,7 +2497,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/4bd60d01-1943-4396-917e-e3147d983164-116_SLBC_June_2016_.pdf",
       "sizeBytes": 922887,
       "sha256": "7a84381ef3d61e896da3c353bb423cfc939351305363077a0bd889edd1680b26",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/0e1c3365-7243-4d1f-a463-c8fa0efc4b4d-102%20slbc.pdf",
@@ -2480,7 +2507,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/0e1c3365-7243-4d1f-a463-c8fa0efc4b4d-102_SLBC.pdf",
       "sizeBytes": 323763,
       "sha256": "adc0504e412da63316acf8d81c0ddf25b02d2c73678753354b5fdc2d123a101b",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/notificatiion_on_pmfby_2020-21-22.pdf",
@@ -2490,7 +2517,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/Notificatiion_on_PMFBY_2020-21-22.pdf",
       "sizeBytes": 1048576,
       "sha256": "c32d7709df8a1a23b14d23d4a7a305466da787eb9b18ef54dba3091f1ff107ff",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/7bc9c84a-2ef7-49b2-b654-a341bec672c8-slbc%20126%20agenda_final_07_12_2018.pdf",
@@ -2500,7 +2528,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/7bc9c84a-2ef7-49b2-b654-a341bec672c8-SLBC_126_agenda_final_07_12_2018.pdf",
       "sizeBytes": 1048576,
       "sha256": "1fc9afec3e0a211a3124bb052bda952ced05fd2cd413d7a9540a77bed03d8c8b",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/2968ae43-620a-4a76-9958-b418e2bd2933-113%20slbc.pdf",
@@ -2510,7 +2539,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/2968ae43-620a-4a76-9958-b418e2bd2933-113_SLBC.pdf",
       "sizeBytes": 1048576,
       "sha256": "b766e9373c07933f636190776c62a82488320226afb1a88435507158fb7ccd77",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/go-flood-landslide-notification-august%202019.pdf",
@@ -2520,7 +2550,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/GO-Flood-Landslide-Notification-August_2019.pdf",
       "sizeBytes": 1048576,
       "sha256": "aae991cf310d2b4175852c7aa28ba753dd9ee2ffbe8ec11bae6eb7ff2e1d2cf4",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/sop_bank_functioning_covid.pdf",
@@ -2530,7 +2561,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SOP_Bank_Functioning_COVID.pdf",
       "sizeBytes": 790318,
       "sha256": "24e981597bc694212488b9c45d039e2b93798fe06e6f48e20046dd14e8694c73",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/b80c97d9-ac1f-467d-bbc7-2218bcb6f403-minutes%20of%20the%20136th%20slbc%20meeting.pdf",
@@ -2540,7 +2571,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/b80c97d9-ac1f-467d-bbc7-2218bcb6f403-MINUTES_OF_THE_136th_SLBC_MEETING.pdf",
       "sizeBytes": 1048576,
       "sha256": "fe9ac5892be46c2f16ea97fb31580c9f1ad7ac03d002d3ce679475fcf0877ae6",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/9de42d95-6772-4b0e-943f-1c9f3fd3a968-129_slbc_minutes.pdf",
@@ -2550,7 +2582,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/9de42d95-6772-4b0e-943f-1c9f3fd3a968-129_SLBC_Minutes.pdf",
       "sizeBytes": 1048576,
       "sha256": "4130c7d6ccfbdd75b4e4fbd33fa958efefb6e568b1854f587d4c2bec7ad36171",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/60beb806-335c-4d45-9533-eae4c0c4f9c0-135_slbc_annexures.pdf",
@@ -2560,7 +2593,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/60beb806-335c-4d45-9533-eae4c0c4f9c0-135_SLBC_Annexures.pdf",
       "sizeBytes": 1048576,
       "sha256": "aeb9ea9d67e4423bb2919f6649b6c7b0c3d5ebee7e693c5b83d86e8450fb97c8",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/3335e36f-74dc-4d15-bc55-40be20f503ed-book_final.pdf",
@@ -2570,7 +2604,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/3335e36f-74dc-4d15-bc55-40be20f503ed-Book_Final.pdf",
       "sizeBytes": 1048576,
       "sha256": "c32d7443256896382a13bec66a36b608707d1313297366da09b11d70f1499d03",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/f7052c0f-349c-452c-bd64-c192f6c945ea-114%20slbc.pdf",
@@ -2580,7 +2615,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/f7052c0f-349c-452c-bd64-c192f6c945ea-114_SLBC.pdf",
       "sizeBytes": 515992,
       "sha256": "370db2c5aa202806f8cf0bcfd4c2a3611760dde37c99bd428d0ee36d333c16b1",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/0f2b0c9c-9d09-43cc-b60f-8bdeea433180-slbc%20122.pdf",
@@ -2590,7 +2625,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/0f2b0c9c-9d09-43cc-b60f-8bdeea433180-SLBC_122.pdf",
       "sizeBytes": 1048576,
       "sha256": "589b3c494cfabc55dca469fcb2f0a4c4cb71763febbcb8bf50542d9c556cb235",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/791dbd1a-cc1f-4ab9-8d8f-3ccbd299e7af-slrm%202011.pdf",
@@ -2600,7 +2636,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/791dbd1a-cc1f-4ab9-8d8f-3ccbd299e7af-SLRM_2011.pdf",
       "sizeBytes": 632507,
       "sha256": "f9555dad88d2187f5a8e441649368b98937b3b0b145a71e5b3d352c4bfb228a4",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/eea127fa-56bd-45b9-bb2f-f856e81ec8f9-slrm%202012.pdf",
@@ -2610,7 +2646,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/eea127fa-56bd-45b9-bb2f-f856e81ec8f9-SLRM_2012.pdf",
       "sizeBytes": 655089,
       "sha256": "0e858835e1d8b7682cd4de5fe4b2f8ccd26161bc3b5ec69fa1b3ed2a48f92587",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/ef80772e-f707-4ead-b147-54830f657146-110%20slbc.pdf",
@@ -2620,7 +2656,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/ef80772e-f707-4ead-b147-54830f657146-110_SLBC.pdf",
       "sizeBytes": 970086,
       "sha256": "72d25ac80da4c7806e5173f421c36ab93073fc7416e1286f1d025a2ab925d2ee",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/3865998a-7868-4e09-bbca-86f0c954630f-108%20slbc.pdf",
@@ -2630,7 +2666,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/3865998a-7868-4e09-bbca-86f0c954630f-108_SLBC.pdf",
       "sizeBytes": 244611,
       "sha256": "a9aed32d23953d9b9b3aba6699386172c19aed277715fb43d3059034b4a0137a",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/5dd6e068-0f92-4170-a478-65dcc8a87b53-annexures_slrm2022.pdf",
@@ -2640,7 +2676,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/5dd6e068-0f92-4170-a478-65dcc8a87b53-Annexures_SLRM2022.pdf",
       "sizeBytes": 1048576,
       "sha256": "69c59bb4e7f5422c18ed38d12873a917e1305cc0af84e2e7ae5af29a26e84da9",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/9bc83c29-22ef-4503-a0d7-cb35036ac218-book_final.pdf",
@@ -2650,7 +2687,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/9bc83c29-22ef-4503-a0d7-cb35036ac218-Book_Final.pdf",
       "sizeBytes": 1048576,
       "sha256": "2967c24e8ebe25f1ec61e6670bb784ff1884b6bf8439417362ba2cc0c45bc18f",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/cms_helping_hand_loan_scheme_cmhls_for_shgs.pdf",
@@ -2660,7 +2698,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/CMs_Helping_Hand_Loan_Scheme_CMHLS_for_SHGs.pdf",
       "sizeBytes": 1048576,
       "sha256": "9424e1e4363d7c61d4406a1ac9570278881f40b16b5a473e38ad1cf3dfab5057",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/71f938a9-b881-4742-b82e-290c8ada7871-agenda.pdf",
@@ -2670,7 +2709,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/71f938a9-b881-4742-b82e-290c8ada7871-AGENDA.pdf",
       "sizeBytes": 645657,
       "sha256": "9aa65085a51abb64660af2995a1b25af61cf40dd4b0a5fdd99a03243ccbf9a35",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/8aa909d8-f50c-42fe-9ca7-4b319a2afa76-minutes%20of%20134th%20slbc%20meeting.pdf",
@@ -2680,7 +2719,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/8aa909d8-f50c-42fe-9ca7-4b319a2afa76-Minutes_of_134th_SLBC_meeting.pdf",
       "sizeBytes": 1048576,
       "sha256": "e922778f27e6b3443c96438f528f2c0fc25a9a2bd1f7b98988c8a46acfa4e957",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/2e5ddc5a-ceec-48c1-9813-4531d6f9af76-107%20slbc.pdf",
@@ -2690,7 +2730,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/2e5ddc5a-ceec-48c1-9813-4531d6f9af76-107_SLBC.pdf",
       "sizeBytes": 368612,
       "sha256": "3f6cdcd8ce4a1405fef69ae3fdafead6449aaccf8476a15ad93afea9e2623c69",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_approved_relief_measures_flood_2019.pdf",
@@ -2700,7 +2740,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_approved_Relief_Measures_flood_2019.pdf",
       "sizeBytes": 524429,
       "sha256": "ec6f7e93b0a1842a08b29dd7dda0057ea996c534432d5f51dabdb6fbfd04d7f5",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/2b3505e3-cdd6-4753-ad2e-7aaa120fb29b-128_slbc_minutes.pdf",
@@ -2710,7 +2750,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/2b3505e3-cdd6-4753-ad2e-7aaa120fb29b-128_SLBC_Minutes.pdf",
       "sizeBytes": 1048576,
       "sha256": "2d96031065dc3421d05e990c3e4d1f9de9c9d88acf2f57e3307b331c2c769304",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/fce21176-1bdb-4b54-8821-2b296a0a06ab-slrm%202011.pdf",
@@ -2720,7 +2761,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/fce21176-1bdb-4b54-8821-2b296a0a06ab-SLRM_2011.pdf",
       "sizeBytes": 282322,
       "sha256": "80a9ee91dc3fcfa444bbe6e34d9ded6697ce860d0b991819dee3a25acf53dfae",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/508cd764-9c42-430a-97d9-fe543fcb0f18-131%20slbc%20annexures.pdf",
@@ -2730,7 +2771,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/508cd764-9c42-430a-97d9-fe543fcb0f18-131_SLBC_Annexures.pdf",
       "sizeBytes": 1048576,
       "sha256": "f5c8bf9d49d6a68a20b93683e20c75de401999bb78ee908a820eb24023a38985",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/51029bab-fc62-4ef6-8d24-032816ebec1f-118slbc%20(dec%202015).pdf",
@@ -2740,7 +2782,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/51029bab-fc62-4ef6-8d24-032816ebec1f-118SLBC_Dec_2015_.pdf",
       "sizeBytes": 1048576,
       "sha256": "50b987a9fcf240f989b6f88f12f1b35d303e8f553e2b84aebd38c676b9f7189a",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/67897547-119f-4d66-b3ef-8e6cb8d9c598-137th%20minutes.pdf",
@@ -2750,7 +2793,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/67897547-119f-4d66-b3ef-8e6cb8d9c598-137th_Minutes.pdf",
       "sizeBytes": 1048576,
       "sha256": "4ed135bcb6efb24f10ff281bcef0576e56d8c0c4ebb3d65a5b9b7d602cab495e",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/8343c7c5-bf0d-43d2-b836-9b109f2468dd-slrm%202015.pdf",
@@ -2760,7 +2804,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/8343c7c5-bf0d-43d2-b836-9b109f2468dd-SLRM_2015.pdf",
       "sizeBytes": 1048576,
       "sha256": "5a667a5a12b48707eec254f9baf7a46a7eda1fd584966c26923c8d9ce5191821",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/f4657251-69b6-41f3-b010-c42721c8710d-agenda%20129_slbc.pdf",
@@ -2770,7 +2815,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/f4657251-69b6-41f3-b010-c42721c8710d-Agenda_129_SLBC.pdf",
       "sizeBytes": 1048576,
       "sha256": "3848e581db0069758861739f530abfbd119e6e0faad16b2862dad016d89ee13c",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/adcb46b4-88c5-4976-b227-d937e08ba19a-104%20slbc.pdf",
@@ -2780,7 +2826,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/adcb46b4-88c5-4976-b227-d937e08ba19a-104_SLBC.pdf",
       "sizeBytes": 610266,
       "sha256": "043d93b7bdaa2287ea5c0dd1fd183feeba3bc0accf77034c5f7440f1668e6f29",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/d3bd4c6b-f837-480c-91ea-729ec0a7345a-127th_slbc_agenda_notes_final.pdf",
@@ -2790,7 +2836,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/d3bd4c6b-f837-480c-91ea-729ec0a7345a-127th_SLBC_Agenda_Notes_final.pdf",
       "sizeBytes": 1048576,
       "sha256": "46b85c5fdf8c0c21ffb7e6bc7ffef6b69df3bb483cf1bd6eff42e6a989f739a5",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/f2d32f5f-69cf-47c4-bb91-d43dca07f745-104%20slbc.pdf",
@@ -2800,7 +2847,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/f2d32f5f-69cf-47c4-bb91-d43dca07f745-104_SLBC.pdf",
       "sizeBytes": 215258,
       "sha256": "6b168aae18cb044abaaf4cd21817159607e9958e6ce51fbf98d2cc4ee914abc3",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/77071453-5273-4c36-848c-4d193f90df96-slrm%202013.pdf",
@@ -2810,7 +2857,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/77071453-5273-4c36-848c-4d193f90df96-SLRM_2013.pdf",
       "sizeBytes": 837759,
       "sha256": "cc454c2ddbe5ca985633d1d8e991fe60496f9f046191c7a2f794fd91436c17bb",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/disaster_management_a_department.pdf",
@@ -2820,7 +2867,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/DISASTER_MANAGEMENT_A_DEPARTMENT.pdf",
       "sizeBytes": 693247,
       "sha256": "eb6ee6002a4df891c49dd794deb27fbd8eeebf058357940d58bc41b292027a9a",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/floodnotifications2018_1.pdf",
@@ -2830,7 +2877,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/FloodNotifications2018_1.pdf",
       "sizeBytes": 300912,
       "sha256": "3709518e2d80a74d8c34a8633a9f5b3c3c0974b2999de501725617e2564d3608",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/19dd529a-ff9c-44d1-9586-44cba549d000-103%20slbc.pdf",
@@ -2840,7 +2887,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/19dd529a-ff9c-44d1-9586-44cba549d000-103_SLBC.pdf",
       "sizeBytes": 392330,
       "sha256": "d42e976a5ba6cc4a9acd3109779e53c855526004af1217e90ae588de5d1fcda4",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/industrialclusters_kerala.pdf",
@@ -2850,7 +2897,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/IndustrialClusters_Kerala.pdf",
       "sizeBytes": 223281,
       "sha256": "6c99e6b1df56cceb3d923c19d4e2b0e08c0d5414e792e28c21ad8eddabe614c2",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/453de47a-377c-49d1-a2eb-e57c6c4fa8dd-slbc%20119.pdf",
@@ -2860,7 +2907,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/453de47a-377c-49d1-a2eb-e57c6c4fa8dd-SLBC_119.pdf",
       "sizeBytes": 536104,
       "sha256": "c5b70c2e0416fe0b0edbab27aea289cbc26d68c5b1033a84887ed48ba519c44d",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/04d33303-7fe4-48de-9e69-917560e90e01-slbc%20120.pdf",
@@ -2870,7 +2917,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/04d33303-7fe4-48de-9e69-917560e90e01-SLBC_120.pdf",
       "sizeBytes": 356076,
       "sha256": "45badfdb77e55786b14dbafe36c1dc91b804f3d70a40dcff24cd4aaad03fa624",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/notification_on_rwbcis_2020-21-22.pdf",
@@ -2880,7 +2927,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/Notification_on_RWBCIS_2020-21-22.pdf",
       "sizeBytes": 1048576,
       "sha256": "6f8fc7e267b8f06790cea415ff7957381853d3a13948a1e6ac1b77f04adfd6dd",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/kcc_application.pdf",
@@ -2890,7 +2938,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/KCC_Application.pdf",
       "sizeBytes": 130204,
       "sha256": "cb86ac852a505d90d0a5b8e6adaac6a9735fdfb87dfbbdedf10166e43928e0ca",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/d744c653-ad19-4d85-8fc1-b1e51e57d4e1-slrm%202010.pdf",
@@ -2900,7 +2948,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/d744c653-ad19-4d85-8fc1-b1e51e57d4e1-SLRM_2010.pdf",
       "sizeBytes": 429902,
       "sha256": "c805e67404e25b6c5a00ae26109dad34d86368df32eb226233a03792bd62f0b2",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/4c998c5c-e233-42f9-8dba-42e3c1426ad0-slbc%20118.pdf",
@@ -2910,7 +2958,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/4c998c5c-e233-42f9-8dba-42e3c1426ad0-SLBC_118.pdf",
       "sizeBytes": 617972,
       "sha256": "88e77b6e39c71c9767e2bba5899731b4d66b7fa6eea3c862b20f26d169c23bf4",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/unitcostforinvestmentactivities2021_22.pdf",
@@ -2920,7 +2968,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/UnitCostforInvestmentActivities2021_22.pdf",
       "sizeBytes": 1048576,
       "sha256": "e5894230132b4a2707ca5498f376e74cd12b68c7cbdad95789357530114cccb4",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/48e2216e-d43f-405d-a0e1-5162f6cd5e9b-slrm%202014.pdf",
@@ -2930,7 +2979,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/48e2216e-d43f-405d-a0e1-5162f6cd5e9b-SLRM_2014.pdf",
       "sizeBytes": 645567,
       "sha256": "80a1f9ef294ef143b46d91d87558047d0c061b90133f4161adbfaba1b7b29593",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/unit_cost_for_investment_activities_2022-2023.pdf",
@@ -2940,7 +2989,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/Unit_cost_for_Investment_Activities_2022-2023.pdf",
       "sizeBytes": 1048576,
       "sha256": "2b784ebf77498676f261760843962089368e272b00fb5266ad067aa19176774f",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/b8d2877c-e10b-409e-8a75-ec6c6748e31f-minutes%20slrm%202019.pdf",
@@ -2950,7 +3000,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/b8d2877c-e10b-409e-8a75-ec6c6748e31f-Minutes_SLRM_2019.pdf",
       "sizeBytes": 1048576,
       "sha256": "702b1ac4a789f98f9d7b8a511d80568314a2ef334f8035f7e10e489b74cf3041",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/18d11d77-0fac-4226-b62d-25463383c1f4-slbc%20119.pdf",
@@ -2960,7 +3011,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/18d11d77-0fac-4226-b62d-25463383c1f4-SLBC_119.pdf",
       "sizeBytes": 1048576,
       "sha256": "2fbe0bb2bec30ed938d7f01cc3c0b626f7917a73635476c7860c9b03f113b6fd",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/c38d13fb-449a-41c0-ba36-3f609d3db114-slrm%202010.pdf",
@@ -2970,7 +3022,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/c38d13fb-449a-41c0-ba36-3f609d3db114-SLRM_2010.pdf",
       "sizeBytes": 194926,
       "sha256": "24de8f9596999a6f79be6693947ecd3ee9a65186223cbed4b8fc4970b96784cc",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/8d931885-8596-4d35-9a69-ed7f5bf06652-135_slbc_minutes_.pdf",
@@ -2980,7 +3032,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/8d931885-8596-4d35-9a69-ed7f5bf06652-135_SLBC_MINUTES_.pdf",
       "sizeBytes": 1048576,
       "sha256": "3a603af531a3dbfcadfa93fbf0550f0aa4f022f252c961f7200da1cabc3e8518",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/2a22e608-7534-4597-857e-e5dd705e44c6-slbc%20book_slrm_march%202021.pdf",
@@ -2990,7 +3043,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/2a22e608-7534-4597-857e-e5dd705e44c6-SLBC_Book_SLRM_March_2021.pdf",
       "sizeBytes": 1048576,
       "sha256": "7136455c6f3a4d8d5f591d5ab46dafc50b6faebcd37f5986861a96194946a7c4",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/032ec727-8d97-485c-be6e-25a79fb0c5c3-109%20slbc.pdf",
@@ -3000,7 +3054,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/032ec727-8d97-485c-be6e-25a79fb0c5c3-109_SLBC.pdf",
       "sizeBytes": 641813,
       "sha256": "f3c72dea1703e3f6a5d0f15ef8fea6c21a5691ada599f621bc4203cdb1a62045",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/1129927e-e95a-4442-af50-6bcb7f7bd771-annexures_march%202021.pdf",
@@ -3010,7 +3064,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/1129927e-e95a-4442-af50-6bcb7f7bd771-Annexures_March_2021.pdf",
       "sizeBytes": 1048576,
       "sha256": "9c3e38214b018992e337b93df65801b2d0a4a7ee065f03a418a259fd6002e53d",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/f75b0f3c-e093-4dc9-bb82-41713d793093-minutes_special%20slbc%202018%20aug%2029th.pdf",
@@ -3020,7 +3075,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/f75b0f3c-e093-4dc9-bb82-41713d793093-Minutes_Special_SLBC_2018_Aug_29th.pdf",
       "sizeBytes": 656929,
       "sha256": "907bc63fe23808ac725359eff9ad5bb3ed06dc37f44e319c4b3e1a459ecc148a",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/393ec321-9373-4c40-bdb1-3a29c1c122b3-118slbc%20(dec%202015).pdf",
@@ -3030,7 +3085,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/393ec321-9373-4c40-bdb1-3a29c1c122b3-118SLBC_Dec_2015_.pdf",
       "sizeBytes": 617972,
       "sha256": "88e77b6e39c71c9767e2bba5899731b4d66b7fa6eea3c862b20f26d169c23bf4",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/271776bf-2054-4118-8568-0bfb1112486c-slrm%202014.pdf",
@@ -3040,7 +3095,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/271776bf-2054-4118-8568-0bfb1112486c-SLRM_2014.pdf",
       "sizeBytes": 636988,
       "sha256": "0f8cdaee7da7d5c0493f9c1dfc6e834602669ca3f9fa4c7e46cedf8d43d40bf0",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/21b3d28a-6107-4666-910a-f0f3b748912b-minutes%20slrm%202016.pdf",
@@ -3050,7 +3105,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/21b3d28a-6107-4666-910a-f0f3b748912b-Minutes_SLRM_2016.pdf",
       "sizeBytes": 424906,
       "sha256": "d53ad0ef541ae4ef9f5e73d3825748910a210a0a9af7e366707c94be9e4d0b6c",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/374839e4-65e2-49b1-bca6-6a4c3e88b5b3-minutes.pdf",
@@ -3060,7 +3115,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/374839e4-65e2-49b1-bca6-6a4c3e88b5b3-MINUTES.pdf",
       "sizeBytes": 768568,
       "sha256": "b9d48a557448866fe526ca8fb740a61af7fd75c0806f962a39178cc3aa3054dd",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/df87b159-badf-48ee-9ccc-d5bd8690382a-slrm%202020%20annexures.pdf",
@@ -3070,7 +3125,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/df87b159-badf-48ee-9ccc-d5bd8690382a-SLRM_2020_Annexures.pdf",
       "sizeBytes": 1048576,
       "sha256": "c5c12add7bcdf322ca995f89419902d90e0c7fedaba739d360b7df240b25b4ae",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/1fd43542-0c08-456e-8176-8249bc79056f-minutes_slrm2022.pdf",
@@ -3080,7 +3136,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/1fd43542-0c08-456e-8176-8249bc79056f-Minutes_SLRM2022.pdf",
       "sizeBytes": 1048576,
       "sha256": "2bc0f342faa328ab05f3dca88bb5bebe3aaf95b38406608de2bfeb6fe1afde2d",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/49557d04-face-4527-81b5-1f5be71d7176-agenda%20slrm%202016.pdf",
@@ -3090,7 +3147,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/49557d04-face-4527-81b5-1f5be71d7176-Agenda_SLRM_2016.pdf",
       "sizeBytes": 1048576,
       "sha256": "a5f50febfa5ae2472a0cf4405be8a38eecb24fa4ed705ce727bf191cdcb6a101",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/2fd1f9cd-ced2-4ceb-97b0-b30879cce9db-slbc%20123.pdf",
@@ -3100,7 +3158,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/2fd1f9cd-ced2-4ceb-97b0-b30879cce9db-SLBC_123.pdf",
       "sizeBytes": 591854,
       "sha256": "eaf7e58d478e6fe83a1a1b902b3af4b2cdafa75da2032b7e5cd328933937cd6d",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/526612f2-f7db-43ac-af8a-12362d35d79b-slbc%20120.pdf",
@@ -3110,7 +3168,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/526612f2-f7db-43ac-af8a-12362d35d79b-SLBC_120.pdf",
       "sizeBytes": 1048576,
       "sha256": "6354043fbfd68fd400a6169003620fc98f085c5f330f8e44c37153c9b45b8a15",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/go326_consumptionhomeloan_kudumbasree.pdf",
@@ -3120,7 +3179,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/GO326_ConsumptionHomeLoan_Kudumbasree.PDF",
       "sizeBytes": 1048576,
       "sha256": "6d3923c26f3b4f47d79675ac8513ac1765c7a14d35a4213e5a172f3001a25bff",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/6aad4e2a-de41-4a6c-bc90-8f339854f42b-agenda_132_133%20slbc.pdf",
@@ -3130,7 +3190,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/6aad4e2a-de41-4a6c-bc90-8f339854f42b-Agenda_132_133_SLBC.pdf",
       "sizeBytes": 1048576,
       "sha256": "20ec6beae7758ce106d7d2292ebb17c0fc1735852de1318b77295c3d83622630",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/rwbcis_rabi_2019_20_season.pdf",
@@ -3140,7 +3201,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/RWBCIS_RABI_2019_20_SEASON.pdf",
       "sizeBytes": 1048576,
       "sha256": "a1ee8ab25dca585d58c340a5ec5f55a19e570426110ec6aa6cc1df2a698c7b6f",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/a4eb7b60-923c-456e-a56c-b18b3c5d197e-116%20slbc%20(june%202016).pdf",
@@ -3150,7 +3212,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/a4eb7b60-923c-456e-a56c-b18b3c5d197e-116_SLBC_June_2016_.pdf",
       "sizeBytes": 674106,
       "sha256": "e39b8ea4f266c367cc336c67472006b64af3ad0d54573212552495f3145028cc",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/nsfi_document-malayalam-final.pdf",
@@ -3160,7 +3222,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/NSFI_Document-Malayalam-Final.pdf",
       "sizeBytes": 870652,
       "sha256": "5e2e83947a52611f4195b9f52a3688d73ed2ccf7b376f90e67f8a8acf595efc1",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/4323400a-8915-4c29-a1ce-ef3733a956b0-annexure_sep_2022.pdf",
@@ -3170,7 +3232,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/4323400a-8915-4c29-a1ce-ef3733a956b0-Annexure_Sep_2022.pdf",
       "sizeBytes": 1048576,
       "sha256": "8e22a1bb87393ca7077f7a2eccd20bc51c503fba206684ade8c42553f539907c",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/55c35006-4b89-4138-9853-f60d6b2049b2-minutes_126_slbc_final.pdf",
@@ -3180,7 +3243,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/55c35006-4b89-4138-9853-f60d6b2049b2-Minutes_126_SLBC_Final.pdf",
       "sizeBytes": 819598,
       "sha256": "1b02fcb303bb8e585cc8d7b3e91e963f6e4ed2d5ff4b0d4edc4db0ba16215cc6",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/govt_notification_on_pmfby_2020-21-22.pdf",
@@ -3190,7 +3253,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/Govt_Notification_on_PMFBY_2020-21-22.pdf",
       "sizeBytes": 1048576,
       "sha256": "b7aaee24517dd4ed7bfab9d807802caaf276128903a1202bb028e17324286086",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/d4119140-a63b-422d-9940-73a268c08a90-114%20slbc.pdf",
@@ -3200,7 +3264,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/d4119140-a63b-422d-9940-73a268c08a90-114_SLBC.pdf",
       "sizeBytes": 515992,
       "sha256": "370db2c5aa202806f8cf0bcfd4c2a3611760dde37c99bd428d0ee36d333c16b1",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/03dc4308-edfd-40c8-b219-1b9e34d5ec67-slbc%20122.pdf",
@@ -3210,7 +3274,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/03dc4308-edfd-40c8-b219-1b9e34d5ec67-SLBC_122.pdf",
       "sizeBytes": 639525,
       "sha256": "c131334f4c4755d5d1f6fd2bde1a40300663c40b20d20152474c5f9fbf5bf5ef",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/b80df071-029b-424f-ae5a-a20bba4cbdcb-101%20slbc.pdf",
@@ -3220,7 +3284,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/b80df071-029b-424f-ae5a-a20bba4cbdcb-101_SLBC.pdf",
       "sizeBytes": 393175,
       "sha256": "ad4dcc1bf9ef9ec962a46097ba646692f049d82eaae9f731ca18323ac7359e43",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/minutesofbankersmeetingwithkudumbasree_14%2009%202018.pdf",
@@ -3230,7 +3294,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/MinutesofBankersMeetingwithKudumbasree_14_09_2018.pdf",
       "sizeBytes": 512155,
       "sha256": "dd555f750b22b24fbbd4f68d5bb8695d41ddfe186876c566696cff9cf13206b1",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/325a4984-57d5-4ce5-9a67-72f0e227eeb6-book_135th_slbc.pdf",
@@ -3240,7 +3304,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/325a4984-57d5-4ce5-9a67-72f0e227eeb6-Book_135th_SLBC.pdf",
       "sizeBytes": 1048576,
       "sha256": "975ad57196f5b2bc05bdf78d04e56c1d3e51d45656e2229ec0d23c8fcde302af",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/fe6743f0-4ef0-4110-af2d-18da5a11dd82-agenda_132_133%20slbc.pdf",
@@ -3250,7 +3315,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/fe6743f0-4ef0-4110-af2d-18da5a11dd82-Agenda_132_133_SLBC.pdf",
       "sizeBytes": 1048576,
       "sha256": "20ec6beae7758ce106d7d2292ebb17c0fc1735852de1318b77295c3d83622630",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/d8c033bf-f001-424c-9869-52a346deeef5-105%20slbc.pdf",
@@ -3260,7 +3326,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/d8c033bf-f001-424c-9869-52a346deeef5-105_SLBC.pdf",
       "sizeBytes": 581416,
       "sha256": "e601c70534325218d6ad44d51936f230cb67c34a2b625575da9f02f4de8307a7",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/717c9ed2-5c3e-4c6d-bdf1-8c5104eb09c9-106%20slbc.pdf",
@@ -3270,7 +3336,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/717c9ed2-5c3e-4c6d-bdf1-8c5104eb09c9-106_SLBC.pdf",
       "sizeBytes": 288802,
       "sha256": "7490aa40a2b5f662436081512695f195fa8678dbd95bcc60861e51dda193062b",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/f6b05e9c-5a00-4405-ac7e-9314259288dc-slrm2019%20agenda_finall.pdf",
@@ -3280,7 +3346,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/f6b05e9c-5a00-4405-ac7e-9314259288dc-SLRM2019_AGENDA_FINALL.pdf",
       "sizeBytes": 1048576,
       "sha256": "451d5fb2241463544fea399b5259fdf1d18cd9e31197c880e17e7ae53a1ca08e",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/2253045c-f988-4477-9eb4-e5df4caabd80-102%20slbc.pdf",
@@ -3290,7 +3357,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/2253045c-f988-4477-9eb4-e5df4caabd80-102_SLBC.pdf",
       "sizeBytes": 139244,
       "sha256": "6e323debdd35ead26d40a279a76fea49f557c5c5fe3f7a981a35eb0182816988",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/b3c79dd3-2f6f-4221-abd4-011a96167f3a-130_slbc_minutes.pdf",
@@ -3300,7 +3367,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/b3c79dd3-2f6f-4221-abd4-011a96167f3a-130_SLBC_Minutes.pdf",
       "sizeBytes": 1048576,
       "sha256": "7f8c6be3c9a4a9e657c9beb2559548d58ca1524d221e54290d896005c3927f7c",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/0ac4a41f-de99-4191-93d8-14035ba449a8-agenda.pdf",
@@ -3310,7 +3378,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/0ac4a41f-de99-4191-93d8-14035ba449a8-Agenda.pdf",
       "sizeBytes": 1048576,
       "sha256": "0862e55610eae0efc5505d739764efb993a7f461ef25f3cebd068cece170d39a",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/acbc2ac2-bc58-4606-85b1-cb0253170398-107%20slbc.pdf",
@@ -3320,7 +3389,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/acbc2ac2-bc58-4606-85b1-cb0253170398-107_SLBC.pdf",
       "sizeBytes": 499935,
       "sha256": "97460ea61dc07bed77c7eb3facd8b3b9f2304c3c339157ccc508029dd823d0d7",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/23826648-aa8a-4e5f-ac2c-059b418e71e9-127m.pdf",
@@ -3330,7 +3399,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/23826648-aa8a-4e5f-ac2c-059b418e71e9-127m.pdf",
       "sizeBytes": 784611,
       "sha256": "b1c16bc03170f9e18f6620e0ad397511e803b9d37437c82b35210982ce87f4b8",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/05ab8460-d02a-4911-9040-6e6054b8926e-slbc%20121.pdf",
@@ -3340,7 +3409,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/05ab8460-d02a-4911-9040-6e6054b8926e-SLBC_121.pdf",
       "sizeBytes": 454054,
       "sha256": "39d3b939ef1569b84e48f451816955e89dd243510f65b0bfee007ca87d49ac6a",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/c453bbd8-6e98-41bd-a47f-ba4e620b34e1-slrm2020_131slbc%20minutes.pdf",
@@ -3350,7 +3419,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/c453bbd8-6e98-41bd-a47f-ba4e620b34e1-SLRM2020_131SLBC_Minutes.pdf",
       "sizeBytes": 1048576,
       "sha256": "4cddcef0011155d1d01389d6c744a343da56c0a2c37d77ba1edce8de97c16300",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/ad1d674b-7dd8-4931-8734-5503bf07d738-101%20slbc.pdf",
@@ -3360,7 +3430,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/ad1d674b-7dd8-4931-8734-5503bf07d738-101_SLBC.pdf",
       "sizeBytes": 393175,
       "sha256": "ad4dcc1bf9ef9ec962a46097ba646692f049d82eaae9f731ca18323ac7359e43",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/e12818a2-eaea-4570-b004-7cc867275ea8-125th_slbc_minutes_corrected_by_gm.pdf",
@@ -3370,7 +3440,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/e12818a2-eaea-4570-b004-7cc867275ea8-125th_SLBC_Minutes_Corrected_by_GM.pdf",
       "sizeBytes": 1048576,
       "sha256": "3af97da3e793d8b8c7b11313b7149f63186636193fa1369d0d34443b784bcc69",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/868662ff-7d10-4a74-b85d-3b273f27fb25-minutes%20special%20slbc%20aug%2020th-.pdf",
@@ -3380,7 +3451,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/868662ff-7d10-4a74-b85d-3b273f27fb25-Minutes_Special_SLBC_AUG_20TH-.pdf",
       "sizeBytes": 419062,
       "sha256": "9e47f985077dad1acb74863fcabba0b9918afa49a81c22bb48b7e2c867cf7b2f",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/dd820c93-f5ac-4a55-a439-5750a297e129-110%20slbc.pdf",
@@ -3390,7 +3461,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/dd820c93-f5ac-4a55-a439-5750a297e129-110_SLBC.pdf",
       "sizeBytes": 916243,
       "sha256": "bbb9807ee953ea5a073951de22160eb674356e158ad38dcaef415148ec3b1ba1",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/go_cms_helping_hand_loan_scheme_cmhls.pdf",
@@ -3400,7 +3471,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/GO_CMs_Helping_Hand_Loan_Scheme_CMHLS.pdf",
       "sizeBytes": 506640,
       "sha256": "a144a3a932b2e3fd2a347f3a1b49245bde045f4d85ef03e71dfb7b4a6757454f",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/4795a569-edba-40ee-952a-cc6cd5217189-slrm%202017.pdf",
@@ -3410,7 +3481,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/4795a569-edba-40ee-952a-cc6cd5217189-SLRM_2017.pdf",
       "sizeBytes": 1048576,
       "sha256": "ab51500134574b1f6457d3ecc4c3fb90d0fe4a030aac693672915a00a072a9d4",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/9146c50d-f137-4735-96d5-510f0eedf6a6-agenda_slrm_2018.pdf",
@@ -3420,7 +3492,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/9146c50d-f137-4735-96d5-510f0eedf6a6-Agenda_SLRM_2018.pdf",
       "sizeBytes": 1048576,
       "sha256": "c8dd6eea19257005a99c02aa0a5356843eec4974fb4b359c840e4d423c007c92",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/06246bcd-aaea-4e3c-9674-aae69826a407-117slbc%20(sep%202016).pdf",
@@ -3430,7 +3503,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/06246bcd-aaea-4e3c-9674-aae69826a407-117SLBC_Sep_2016_.pdf",
       "sizeBytes": 776323,
       "sha256": "5c76f6a2115b0d8d92d969e0d9391e4af89e5e4923e13bf534055b8a1b811b93",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/3833768c-b911-402d-a82b-3add18c48588-slbc%20123.pdf",
@@ -3440,7 +3513,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/3833768c-b911-402d-a82b-3add18c48588-SLBC_123.pdf",
       "sizeBytes": 1048576,
       "sha256": "d681e6589702e7d2c00b6d69f24878421883c5cbb1ef3778768e318ad60314eb",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/5817aff6-7072-4932-a3d7-d7bf6e0aaaf2-slbc%20124.pdf",
@@ -3450,7 +3524,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/5817aff6-7072-4932-a3d7-d7bf6e0aaaf2-SLBC_124.pdf",
       "sizeBytes": 1048576,
       "sha256": "97d23ea8528a723b3c5cbb982e6801e16f977e48c2bc3cd2c684f6c69c1fc85a",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/c548a264-c7d7-485b-be40-036354748adf-slbc%20118.pdf",
@@ -3460,7 +3535,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/c548a264-c7d7-485b-be40-036354748adf-SLBC_118.pdf",
       "sizeBytes": 1048576,
       "sha256": "50b987a9fcf240f989b6f88f12f1b35d303e8f553e2b84aebd38c676b9f7189a",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/master_direction_priority_sector_lending_small_finance_banks.pdf",
@@ -3470,7 +3546,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/Master_Direction_Priority_Sector_Lending_Small_Finance_Banks.pdf",
       "sizeBytes": 532632,
       "sha256": "cd7189768362d0cd77ded257041e844cec7694bd82df9f39dcf01a6d90795884",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/master_direction_lending_to_micro_small_and_medium_enterprises_msme_sector.pdf",
@@ -3480,7 +3556,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/Master_Direction_Lending_to_Micro_Small_and_Medium_Enterprises_MSME_Sector.pdf",
       "sizeBytes": 418312,
       "sha256": "f195756aa690130f828526822c14dfd562137af1910d11c6e3f28baf60d843c0",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_24_15_10_2020_covid-19.pdf",
@@ -3490,7 +3566,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_24_15_10_2020_COVID-19.pdf",
       "sizeBytes": 1048576,
       "sha256": "5622015e1af7d9086b9aaf1feb441bda66eaf21f650dbf1cd9dfbc3baa054ee1",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/master_direction_regional_rural_banks_priority_sector_lending.pdf",
@@ -3500,7 +3577,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/MASTER_DIRECTION_REGIONAL_RURAL_BANKS_PRIORITY_SECTOR_LENDING.pdf",
       "sizeBytes": 334803,
       "sha256": "1fbf7db9d382c5adbde2faaafcc9df998d9cc3976841cd4630915f355be1655d",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_33_30_04_2021_covid_19.pdf",
@@ -3510,7 +3587,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_33_30_04_2021_COVID_19.pdf",
       "sizeBytes": 1048576,
       "sha256": "3069b0174c9426e91565ec5b032e73d3d6559aabb10dcaf1336f7a864c112602",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_16_08_05_2020-covid-19.pdf",
@@ -3520,7 +3598,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_16_08_05_2020-COVID-19.pdf",
       "sizeBytes": 254188,
       "sha256": "72d4a5d98cf99f1772a63fca4b7e90d779976a9ddbf6c7006fe62fe8c30fc05a",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_10_20_04_2020-covid-19.pdf",
@@ -3530,7 +3608,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_10_20_04_2020-COVID-19.pdf",
       "sizeBytes": 1048576,
       "sha256": "6e5c093c609784e81ea9ee23d5b9f3f21edab5390cf8efcd8145c87c96273462",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_26_24_11_2020_covid_19.pdf",
@@ -3540,7 +3619,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_26_24_11_2020_COVID_19.pdf",
       "sizeBytes": 459282,
       "sha256": "4b573da174e420c538d0cb215d16fea65fee55db92d270d69b6759e3781fb9da",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_5_04_04_2020-covid-19.pdf",
@@ -3550,7 +3629,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_5_04_04_2020-COVID-19.pdf",
       "sizeBytes": 1048576,
       "sha256": "c6436b6872cf0b963622b95f1ff971765bd9a4f1a7e0feab4d7b66151954eebd",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/master_circular_on_shg_linkage_rbi.pdf",
@@ -3560,7 +3640,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/Master_Circular_on_SHG_Linkage_RBI.pdf",
       "sizeBytes": 96675,
       "sha256": "51b11658ec79a67c428990c90a2a8e894ebb8c6b9adc4d97963ce7b7a7b8c08d",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_36_15_05_2021_covid_19.pdf",
@@ -3570,7 +3650,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_36_15_05_2021_COVID_19.pdf",
       "sizeBytes": 338811,
       "sha256": "7dbb4bcaf3def1f33b8bba22b5c1cba47777cdb3dd4b28eaf116b021c26dfe0c",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/rbi_master_direction_know_your_customer.pdf",
@@ -3580,7 +3660,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/RBI_Master_Direction_Know_Your_Customer.pdf",
       "sizeBytes": 615507,
       "sha256": "823701a32c24c72366ae6ce8079762a637319e8b1ac776892a24a732bc494b97",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_34_07_05_2021_covid_19.pdf",
@@ -3590,7 +3670,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_34_07_05_2021_COVID_19.pdf",
       "sizeBytes": 816266,
       "sha256": "d9634e1bbc5381983f10b2f93e27f1ca5b66efd92c38e2abf0be81e3b808e0d5",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_7_09_04_2020-covid-19.pdf",
@@ -3600,7 +3680,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_7_09_04_2020-COVID-19.pdf",
       "sizeBytes": 215325,
       "sha256": "0ebd0e1de550434722d4af178d722447cbaea6f5191b59b5daa6292b56e8a5d9",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_2_01_04_2020-covid-19.pdf",
@@ -3610,7 +3690,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_2_01_04_2020-COVID-19.pdf",
       "sizeBytes": 1048576,
       "sha256": "30c2cff7b34f39cc4b493a33c820133e349aa7aa7f9de18babb89bc9eb96eeee",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_31_20_04_2021_covid-19.pdf",
@@ -3620,7 +3701,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_31_20_04_2021_COVID-19.pdf",
       "sizeBytes": 997620,
       "sha256": "1a0637f4f07eacb75ac6da87f26702d7187687b6574d29008af79ba7c9418c2b",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_8_09_04_2020-covid-19.pdf",
@@ -3630,7 +3711,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_8_09_04_2020-COVID-19.pdf",
       "sizeBytes": 245779,
       "sha256": "882dc3ea4fdf2d09a1775421769cc1077826401b170187692013e94961ef2527",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_1_31_03_2020-covid-19.pdf",
@@ -3640,7 +3721,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_1_31_03_2020-COVID-19.pdf",
       "sizeBytes": 1048576,
       "sha256": "3229b5670a475e7768db2cbbcd1b83782ed8594cd0a8c8fbd190d10089d66e0b",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_27_18_12_2020_covid_19.pdf",
@@ -3650,7 +3732,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_27_18_12_2020_COVID_19.pdf",
       "sizeBytes": 967596,
       "sha256": "f2554f8f864ab869cb3f0d36f8bd76fec102dfb9a2e25ef3e0ac482675a731e5",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_43_14_07_2021_covid-19.pdf",
@@ -3660,7 +3742,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_43_14_07_2021_COVID-19.pdf",
       "sizeBytes": 215970,
       "sha256": "42c0ed61c40ebe1e44140650934ef9f8b0251ccf897156c5c9652047cb178e49",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/master_direction_rbi_relief_measures_by_banks_in_areas_affected_by_natural_calamities_directions_2018_scbs.pdf",
@@ -3670,7 +3752,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/Master_Direction_RBI_Relief_Measures_by_Banks_in_Areas_affected_by_Natural_Calamities_Directions_2018_SCBs.pdf",
       "sizeBytes": 217747,
       "sha256": "ec687c698a9bbc16c899368e73ab56296555bf957d43ffb6a4593cef14df0874",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_30_15_04_2021_covid-19.pdf",
@@ -3680,7 +3762,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_30_15_04_2021_COVID-19.pdf",
       "sizeBytes": 893464,
       "sha256": "d18c8989f62959f49a90e9c204f145f47e76348b7d740cd64f1a9b018935c979",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_6_06_04_2020-covid-19.pdf",
@@ -3690,7 +3772,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_6_06_04_2020-COVID-19.pdf",
       "sizeBytes": 1048576,
       "sha256": "c3f5814405969cd703fc121bbd41e1f74b50bace1ce5355e0e9f2346974a39d9",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_39_08_06_2021_covid_19.pdf",
@@ -3700,7 +3783,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_39_08_06_2021_COVID_19.pdf",
       "sizeBytes": 432187,
       "sha256": "b896d74f43cee724c7e33e9bc3a08619c797ffb82e082456bf380e40a2ee2c4f",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_9_18_04_2020-covid-19.pdf",
@@ -3710,7 +3793,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_9_18_04_2020-COVID-19.pdf",
       "sizeBytes": 494141,
       "sha256": "1b13e72b3aca24922c78dde659f98c3dfc03ac40bd7ea3390179ac607314d2a3",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_42_07_07_2021_covid_19.pdf",
@@ -3720,7 +3803,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_42_07_07_2021_COVID_19.pdf",
       "sizeBytes": 718178,
       "sha256": "d63dfec57f18107cb34ee0c8ce9c9b1f7291dcf4ba701c67d5fa1eedc811260f",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_38_29_05_2021_covid_19.pdf",
@@ -3730,7 +3813,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_38_29_05_2021_COVID_19.pdf",
       "sizeBytes": 414590,
       "sha256": "58130bd8f8c2432b63bbd8e5f12931b3e52b8dc87de11c906d343c00cf505bcd",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_11_22_04_2020-covid-19.pdf",
@@ -3740,7 +3823,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_11_22_04_2020-COVID-19.pdf",
       "sizeBytes": 1048576,
       "sha256": "e13bc0a5fda43f5c5ba385c36be2ea7176e41b2c80ce8a4b5f89186c2046ee4f",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_37_22_05_2021_covid_19.pdf",
@@ -3750,7 +3834,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_37_22_05_2021_COVID_19.pdf",
       "sizeBytes": 361543,
       "sha256": "48e098b42e8172ed7f8f1340c9d85b11d27f7e6146f8a290815d1956f5dd95f6",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_21%20_12_08_2020-covid-19.pdf",
@@ -3760,7 +3844,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_21__12_08_2020-COVID-19.pdf",
       "sizeBytes": 965229,
       "sha256": "97b0205001c2d85664eee9a735ed829a7b04d5d71a61cceaf587099f5b1e03a6",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_40_16_06_2021_covid_19.pdf",
@@ -3770,7 +3854,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_40_16_06_2021_COVID_19.pdf",
       "sizeBytes": 1048576,
       "sha256": "125254978fcd0568620e28470fe24249c1f4135e308f51ee2712be5e78bc437e",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_32_22_04_2021_covid-19.pdf",
@@ -3780,7 +3865,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_32_22_04_2021_COVID-19.pdf",
       "sizeBytes": 1048576,
       "sha256": "b69d59c9ccda44e30693ab152a55f5d109e3de321fe0408ac29be2d1996ac72c",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_35_10_05_2021_covid_19.pdf",
@@ -3790,7 +3876,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_35_10_05_2021_COVID_19.pdf",
       "sizeBytes": 406762,
       "sha256": "af23636e0f470fa7844d8400f20973383457d5f0584dd9837c7c84fc8a49adc3",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/master_direction_rbi_relief_measures_by_banks_in_areas_affected_by_natural_calamities_directions%202018_rrbs.pdf",
@@ -3800,7 +3886,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/Master_Direction_RBI_Relief_Measures_by_Banks_in_Areas_affected_by_Natural_Calamities_Directions_2018_RRBs.pdf",
       "sizeBytes": 286621,
       "sha256": "bc6da6cfbbd582c1246df633e57eab3901eed4d262d1b41fc36c753aadcf98e0",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/industrialclusters_kerala1.pdf",
@@ -3810,7 +3896,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/IndustrialClusters_Kerala1.pdf",
       "sizeBytes": 223281,
       "sha256": "6c99e6b1df56cceb3d923c19d4e2b0e08c0d5414e792e28c21ad8eddabe614c2",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_25_28_10_2020_covid-19.pdf",
@@ -3820,7 +3906,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_25_28_10_2020_COVID-19.pdf",
       "sizeBytes": 1048576,
       "sha256": "06c187f64eed2902fd904528fcc6ae8c66cbaef41dd61576887cae7a801d4b0d",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_18_29_06_2020-covid-19.pdf",
@@ -3830,7 +3917,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_18_29_06_2020-COVID-19.pdf",
       "sizeBytes": 1048576,
       "sha256": "62ad3c785b6ed63a3255bf327c7241bc52b940f7ff1bcda95d9d2c7e1452543e",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_12_24_04_2020-covid-19.pdf",
@@ -3840,7 +3928,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_12_24_04_2020-COVID-19.pdf",
       "sizeBytes": 1048576,
       "sha256": "e675345e6fb0e1ae88a0e187d1e3c6e413e612fc499e49487032a61d2af5621d",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/sarfaesi_sop.pdf",
@@ -3850,7 +3939,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SARFAESI_SOP.pdf",
       "sizeBytes": 496493,
       "sha256": "8cecef5dd6bfa25ec54d0ab6d3c90d85f3f875e62b5dda214c34acbd12cfb12f",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_15_02_05_2020-covid-19.pdf",
@@ -3860,7 +3949,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_15_02_05_2020-COVID-19.pdf",
       "sizeBytes": 229015,
       "sha256": "5879d2934a5f10c46f211984b2e58e26b600db2330e0f7d66ad633e44b6acc08",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/rbi_master_direction_lead_bank_scheme.pdf",
@@ -3870,7 +3959,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/RBI_Master_Direction_Lead_Bank_Scheme.pdf",
       "sizeBytes": 781668,
       "sha256": "5feb7019158ce4fa67dc2e77ff3472b46cd587af04c0604c1c4889c9edffcb5f",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_41_23_06_2021_covid_19.pdf",
@@ -3880,7 +3969,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_41_23_06_2021_COVID_19.pdf",
       "sizeBytes": 365852,
       "sha256": "1c7f20f3720ffa26decd696f3f4b8ef8cc2949deb7b7c46a6c855ac2455d99a8",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_13_27_04_2020-covid-19.pdf",
@@ -3890,7 +3979,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_13_27_04_2020-COVID-19.pdf",
       "sizeBytes": 1048576,
       "sha256": "519eb73c32961b30bb1782a7be232c0084609aae48ac4597a8c4c148040e8326",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_3_02_04_2020-covid-19.pdf",
@@ -3900,7 +3990,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_3_02_04_2020-COVID-19.pdf",
       "sizeBytes": 332605,
       "sha256": "26ba6480e19797d1cec09a0669d0abc11a06bb88c883c48238aee05d4c5f8d49",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_4_02_04_2020-covid-19.pdf",
@@ -3910,7 +4000,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_4_02_04_2020-COVID-19.pdf",
       "sizeBytes": 1048576,
       "sha256": "18c8fc48e5eb419432a8e965a486691bd92abc15dfe46f45fe3ea5df9e589e64",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisor_29_08_04_2021_covid_19.pdf",
@@ -3920,7 +4011,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisor_29_08_04_2021_COVID_19.pdf",
       "sizeBytes": 1048576,
       "sha256": "336a805957981e72f62a56b2772220d515727b2815862e1b41ecbc8a29efe946",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/slbc_advisory_14_02_05_2020-covid-19.pdf",
@@ -3930,7 +4022,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/SLBC_Advisory_14_02_05_2020-COVID-19.pdf",
       "sizeBytes": 320755,
       "sha256": "5e11efad3dc7cb321ac4be496ee67e7c907e58c8d0a5dedbe77f20922ecaab28",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/master_direction_priority_sector_lending_targets_scbs.pdf",
@@ -3940,7 +4032,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/MASTER_DIRECTION_PRIORITY_SECTOR_LENDING_TARGETS_SCBs.pdf",
       "sizeBytes": 562299,
       "sha256": "814fb57cd9e6b4c6102c93297b0f7785cadff2b7ff71cc794c034b1f912d76b9",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/mis/upload_doc/d8bb8771-aa7d-41e4-9344-f8703dcbe2bb-4th%20aspire%20dist.pdf",
@@ -3950,7 +4042,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/d8bb8771-aa7d-41e4-9344-f8703dcbe2bb-4th_aspire_Dist.pdf",
       "sizeBytes": 261757,
       "sha256": "183a66c6bb28e9bea9a7f4560ae0e19e577deb507beff637a2b021f199844e10",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/15e1f728-4f98-459e-b4fe-ab420ee8fddb-139%20slbc%20book_final.pdf",
@@ -3960,7 +4052,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/15e1f728-4f98-459e-b4fe-ab420ee8fddb-139_SLBC_Book_Final.pdf",
       "sizeBytes": 1048576,
       "sha256": "a25d5b852475c67bf6979169d47e754c05115d60e789099ed066542bbb303bd8",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/a4d2223d-5f2d-45dd-9c74-de468104b446-minutes%20of%20138th%20slbc%20meeting.pdf",
@@ -3970,7 +4063,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/a4d2223d-5f2d-45dd-9c74-de468104b446-Minutes_of_138th_slbc_Meeting.pdf",
       "sizeBytes": 1048576,
       "sha256": "357c35d53a947d7411d52ec1c4bc907cd3186cc8606480266e94d6a4a9d1436c",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/5a6e029c-2242-44ec-9c7c-f03c3e5c364f-139_slbc%20agenda.pdf",
@@ -3980,7 +4074,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/5a6e029c-2242-44ec-9c7c-f03c3e5c364f-139_SLBC_Agenda.pdf",
       "sizeBytes": 1048576,
       "sha256": "a6b570293c302f30901295c3c1ded8824e9b2ba3d3b0e75806075e48d09253bd",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/floodcirculars2018.pdf",
@@ -3990,7 +4085,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/FloodCirculars2018.pdf",
       "sizeBytes": 1552989,
       "sha256": "50663a372897b0694a4e8a53d6e0e386769d50585054fbfffde4dec5f7d17fba",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/floodnotifications2018_2.pdf",
@@ -4000,7 +4095,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/FloodNotifications2018_2.pdf",
       "sizeBytes": 1551360,
       "sha256": "a492eaed0748809fb131aeb4b0da077b500442be601e73b33abd9f6eae5899f2",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/floodnotifications2018_5.pdf",
@@ -4010,7 +4105,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/FloodNotifications2018_5.pdf",
       "sizeBytes": 3211527,
       "sha256": "aa21d56e366c629b014f88d0eef2a405dcda3e7d50de9c5547dce3a804a3946e",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/floodnotifications2018_4.pdf",
@@ -4020,7 +4115,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/FloodNotifications2018_4.pdf",
       "sizeBytes": 1618265,
       "sha256": "523d47ee4d128b904a5ff16d70d111526180dd40b50d3f0a5d1b8f4d09673822",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/master_circular_on_shg_linkage_nabard.pdf",
@@ -4030,7 +4125,7 @@
       "localPath": "slbc-data/kerala/wayback/2023/Master_Circular_on_SHG_Linkage_NABARD.pdf",
       "sizeBytes": 2132527,
       "sha256": "be2098768128901675122e13821f5cfcba2f7de3e25859d4bd13cb87360e1b9b",
-      "status": "downloaded"
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/uc_2023-24_final_03.08.2023.pdf",
@@ -4040,7 +4135,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/UC_2023-24_Final_03.08.2023.pdf",
       "sizeBytes": 1048576,
       "sha256": "788e787e42e941641035ef4794ef2beeaf9c253e7dce31c3c4ac87dee1aa48d7",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/3a789258-b984-43ac-b5cb-b5c0cb74da98-minutes_slbc_139.pdf",
@@ -4050,7 +4146,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/3a789258-b984-43ac-b5cb-b5c0cb74da98-Minutes_SLBC_139.pdf",
       "sizeBytes": 1048576,
       "sha256": "56e9f96c142fb0cc754aa47007ba6359cc353f1f2b70f56947a16079c230bf06",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/a13688fb-edf2-455a-873a-21ce70925612-minutes%20slrm%202023.pdf",
@@ -4060,7 +4157,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/a13688fb-edf2-455a-873a-21ce70925612-Minutes_SLRM_2023.pdf",
       "sizeBytes": 1048576,
       "sha256": "a295a3b1170f808d994365cc75477a31f8e4778ed8d9e530274a42183dd36c64",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/f6c48cb7-14a4-4596-91ac-aa3e287ff414-agenda%20final.pdf",
@@ -4070,7 +4168,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/f6c48cb7-14a4-4596-91ac-aa3e287ff414-Agenda_final.pdf",
       "sizeBytes": 1048576,
       "sha256": "1624161bb436f458626b7196a31d4b70fae54790d426156881d13d391c250be7",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/images/meetings/2644aaaf-4bfc-47a8-bf29-895913071247-annexures.pdf",
@@ -4080,7 +4179,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/2644aaaf-4bfc-47a8-bf29-895913071247-annexures.pdf",
       "sizeBytes": 1048576,
       "sha256": "996e6ab541cb183652d554811ad26a719deec3be5d7fa395c118c9f9a71dd24d",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbckerala.com/pdf/scale_of_finance_23_24.pdf",
@@ -4090,7 +4190,8 @@
       "localPath": "slbc-data/kerala/wayback/2023/Scale_of_finance_23_24.pdf",
       "sizeBytes": 1048576,
       "sha256": "4f7273bb9950dc8ff8d83da165cb6badaed2d3295f7ac05b869183b89da44e8e",
-      "status": "downloaded"
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     }
   ]
 }
