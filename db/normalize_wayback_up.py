@@ -77,22 +77,84 @@ def merge_district_data(into, addition):
 
 
 def map_extracted(extract: dict) -> dict[str, dict]:
-    """Convert one extracted JSON's tables[] into the per-district shape."""
+    """Convert one extracted JSON's tables[] into the per-district shape.
+
+    Supports the legacy single-`value` shape (ATMs / BCs from Phase 1) AND
+    the new multi-column `values: [...]` shape from Phase 2 (PMJDY,
+    Jansuraksha, Claims).
+    """
     out: dict[str, dict] = {}
     for t in extract.get('tables', []):
         ttype = t.get('tableType')
         for row in t.get('rows', []):
             d = row.get('district')
-            val = parse_num(row.get('value'))
-            if not d or val is None:
+            if not d:
                 continue
-            if ttype == 'atms_per_district':
-                out.setdefault(d, {}).setdefault('atm_network', {})['atm_total'] = val
-                out.setdefault(d, {}).setdefault('branch_network', {})['total_atm'] = val
-            elif ttype == 'bcs_per_district':
-                out.setdefault(d, {}).setdefault('business_correspondents', {})['bc_total'] = val
-                out.setdefault(d, {}).setdefault('branch_network', {})['total_bc'] = val
-                out.setdefault(d, {}).setdefault('branch_network', {})['total_csp'] = val
+            # Phase 1 (legacy) single-value shape — kept for back-compat
+            if 'value' in row and 'values' not in row:
+                val = parse_num(row.get('value'))
+                if val is None:
+                    continue
+                if ttype == 'atms_per_district':
+                    out.setdefault(d, {}).setdefault('atm_network', {})['atm_total'] = val
+                    out.setdefault(d, {}).setdefault('branch_network', {})['total_atm'] = val
+                elif ttype == 'bcs_per_district':
+                    out.setdefault(d, {}).setdefault('business_correspondents', {})['bc_total'] = val
+                    out.setdefault(d, {}).setdefault('branch_network', {})['total_bc'] = val
+                    out.setdefault(d, {}).setdefault('branch_network', {})['total_csp'] = val
+                continue
+            # Phase 2 multi-column shape
+            vals = row.get('values') or []
+            if ttype == 'atms_per_district' and len(vals) >= 1:
+                v = parse_num(vals[0])
+                if v:
+                    out.setdefault(d, {}).setdefault('atm_network', {})['atm_total'] = v
+                    out.setdefault(d, {}).setdefault('branch_network', {})['total_atm'] = v
+            elif ttype == 'bcs_per_district' and len(vals) >= 1:
+                v = parse_num(vals[0])
+                if v:
+                    out.setdefault(d, {}).setdefault('business_correspondents', {})['bc_total'] = v
+                    out.setdefault(d, {}).setdefault('branch_network', {})['total_bc'] = v
+                    out.setdefault(d, {}).setdefault('branch_network', {})['total_csp'] = v
+            elif ttype == 'pmjdy_per_district' and len(vals) >= 12:
+                # cols: rural, urban, male, female, total, active, deposit, zero_bal,
+                #       rupay_issued, aadhaar_seeded, %aadhaar, %rupay
+                rural, urban, male, female, total, active, deposit, zero_bal, \
+                    rupay, aadhaar, pct_aadhaar, pct_rupay = vals[:12]
+                pmjdy = out.setdefault(d, {}).setdefault('pmjdy', {})
+                if parse_num(rural):   pmjdy['rural_no']                 = parse_num(rural)
+                if parse_num(urban):   pmjdy['urban_no']                 = parse_num(urban)
+                if parse_num(male):    pmjdy['male_no']                  = parse_num(male)
+                if parse_num(female):  pmjdy['female_no']                = parse_num(female)
+                if parse_num(total):   pmjdy['total_pmjdy_no']           = parse_num(total)
+                if parse_num(active):  pmjdy['operative_a_c_no']         = parse_num(active)
+                if parse_num(zero_bal):pmjdy['no_of_zero_balance_a_c']   = parse_num(zero_bal)
+                if parse_num(deposit): pmjdy['deposits_held_in_the_a_c'] = parse_num(deposit)
+                if parse_num(rupay):   pmjdy['no_of_rupay_card_issued']  = parse_num(rupay)
+                if parse_num(aadhaar): pmjdy['no_of_aadhaar_seeded']     = parse_num(aadhaar)
+            elif ttype == 'jansuraksha_per_district' and len(vals) >= 3:
+                # cols: pmjjby_enrolment, pmsby_enrolment, total_enrolment
+                pmjjby, pmsby, total = vals[:3]
+                ss = out.setdefault(d, {}).setdefault('social_security', {})
+                if parse_num(pmjjby): ss['enrolment_under_pmjjby'] = parse_num(pmjjby)
+                if parse_num(pmsby):  ss['enrolment_under_pmsby']  = parse_num(pmsby)
+                if parse_num(total):  ss['total_enrolment_no']     = parse_num(total)
+            elif ttype == 'pmjjby_claims_per_district' and len(vals) >= 6:
+                paid, with_proc, rejected, pending, total, paid_amt = vals[:6]
+                ss = out.setdefault(d, {}).setdefault('social_security', {})
+                if parse_num(total):    ss['pmjjby_claims_total']     = parse_num(total)
+                if parse_num(paid):     ss['pmjjby_claims_paid']      = parse_num(paid)
+                if parse_num(rejected): ss['pmjjby_claims_rejected']  = parse_num(rejected)
+                if parse_num(paid_amt): ss['pmjjby_claim_amt_lakh']   = parse_num(paid_amt)
+            elif ttype == 'pmsby_claims_per_district' and len(vals) >= 5:
+                paid, with_proc, rejected, pending, total = vals[:5]
+                paid_amt = vals[5] if len(vals) > 5 else None
+                ss = out.setdefault(d, {}).setdefault('social_security', {})
+                if parse_num(total):    ss['pmsby_claims_total']      = parse_num(total)
+                if parse_num(paid):     ss['pmsby_claims_paid']       = parse_num(paid)
+                if parse_num(rejected): ss['pmsby_claims_rejected']   = parse_num(rejected)
+                if paid_amt and parse_num(paid_amt):
+                    ss['pmsby_claim_amt_lakh'] = parse_num(paid_amt)
     return out
 
 

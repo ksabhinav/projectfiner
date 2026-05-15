@@ -1,0 +1,682 @@
+{
+  "originalUrl": "http://www.slbcup.com/Agenda/Agenda_Booklet_Dec_2018.pdf",
+  "snapshotTimestamp": "20241119043504",
+  "sourcePdf": "slbc-data/uttar-pradesh/wayback/2024/Agenda_Booklet_Dec_2018.pdf",
+  "inferredPeriod": "2018-12",
+  "tables": [
+    {
+      "tableType": "jansuraksha_per_district",
+      "pageIndex": 22,
+      "districts": [
+        "Agra",
+        "Aligarh",
+        "Prayagraj",
+        "Ambedkar Nagar",
+        "Amethi",
+        "Auraiya",
+        "Azamgarh",
+        "Baghpat",
+        "Bahraich",
+        "Ballia",
+        "Balrampur",
+        "Banda",
+        "Barabanki",
+        "Bareilly",
+        "Basti",
+        "Bijnor",
+        "Budaun",
+        "Bulandshahr",
+        "Chandauli",
+        "Chitrakoot",
+        "Deoria",
+        "Etah",
+        "Etawah",
+        "Ayodhya",
+        "Farrukhabad",
+        "Fatehpur",
+        "Firozabad",
+        "Gautam Buddha Nagar",
+        "Ghaziabad",
+        "Ghazipur",
+        "Gonda",
+        "Gorakhpur",
+        "Hamirpur",
+        "Hapur",
+        "Hardoi",
+        "Jalaun",
+        "Jaunpur",
+        "Jhansi",
+        "Amroha",
+        "Kannauj",
+        "Kanpur Dehat",
+        "Kanpur Nagar",
+        "Kasganj",
+        "Kaushambi",
+        "Kheri",
+        "Kushinagar",
+        "Lalitpur",
+        "Lucknow",
+        "Hathras",
+        "Mahoba",
+        "Maharajganj",
+        "Mainpuri",
+        "Mathura",
+        "Meerut",
+        "Mirzapur",
+        "Moradabad",
+        "Muzaffarnagar",
+        "Pilibhit",
+        "Pratapgarh",
+        "Rae Bareli",
+        "Rampur",
+        "Saharanpur",
+        "Sambhal",
+        "Sant Kabir Nagar",
+        "Bhadohi",
+        "Shahjahanpur",
+        "Shamli",
+        "Shravasti",
+        "Siddharth Nagar",
+        "Sitapur",
+        "Sonbhadra",
+        "Sultanpur",
+        "Unnao",
+        "Varanasi"
+      ],
+      "rows": [
+        {
+          "district": "Agra",
+          "values": [
+            "453983",
+            "132487",
+            "586470"
+          ]
+        },
+        {
+          "district": "Aligarh",
+          "values": [
+            "276670",
+            "79556",
+            "356226"
+          ]
+        },
+        {
+          "district": "Prayagraj",
+          "values": [
+            "776228",
+            "135423",
+            "911651"
+          ]
+        },
+        {
+          "district": "Ambedkar Nagar",
+          "values": [
+            "176180",
+            "49111",
+            "225291"
+          ]
+        },
+        {
+          "district": "Amethi",
+          "values": [
+            "157627",
+            "37535",
+            "195161"
+          ]
+        },
+        {
+          "district": "Auraiya",
+          "values": [
+            "60531",
+            "16053",
+            "76584"
+          ]
+        },
+        {
+          "district": "Azamgarh",
+          "values": [
+            "271510",
+            "58117",
+            "329627"
+          ]
+        },
+        {
+          "district": "Baghpat",
+          "values": [
+            "78223",
+            "27351",
+            "105574"
+          ]
+        },
+        {
+          "district": "Bahraich",
+          "values": [
+            "326981",
+            "112281",
+            "439262"
+          ]
+        },
+        {
+          "district": "Ballia",
+          "values": [
+            "205308",
+            "49000",
+            "254309"
+          ]
+        },
+        {
+          "district": "Balrampur",
+          "values": [
+            "172286",
+            "34071",
+            "206357"
+          ]
+        },
+        {
+          "district": "Banda",
+          "values": [
+            "207387",
+            "72845",
+            "280233"
+          ]
+        },
+        {
+          "district": "Barabanki",
+          "values": [
+            "305633",
+            "96579",
+            "402212"
+          ]
+        },
+        {
+          "district": "Bareilly",
+          "values": [
+            "521986",
+            "116688",
+            "638674"
+          ]
+        },
+        {
+          "district": "Basti",
+          "values": [
+            "188298",
+            "30274",
+            "218572"
+          ]
+        },
+        {
+          "district": "Bijnor",
+          "values": [
+            "346418",
+            "70065",
+            "416483"
+          ]
+        },
+        {
+          "district": "Budaun",
+          "values": [
+            "289233",
+            "33712",
+            "322944"
+          ]
+        },
+        {
+          "district": "Bulandshahr",
+          "values": [
+            "200122",
+            "49948",
+            "250069"
+          ]
+        },
+        {
+          "district": "Chandauli",
+          "values": [
+            "162394",
+            "34750",
+            "197145"
+          ]
+        },
+        {
+          "district": "Chitrakoot",
+          "values": [
+            "108547",
+            "35934",
+            "144481"
+          ]
+        },
+        {
+          "district": "Deoria",
+          "values": [
+            "183842",
+            "45960",
+            "229802"
+          ]
+        },
+        {
+          "district": "Etah",
+          "values": [
+            "144898",
+            "47211",
+            "192109"
+          ]
+        },
+        {
+          "district": "Etawah",
+          "values": [
+            "80049",
+            "21312",
+            "101361"
+          ]
+        },
+        {
+          "district": "Ayodhya",
+          "values": [
+            "353974",
+            "78504",
+            "432478"
+          ]
+        },
+        {
+          "district": "Farrukhabad",
+          "values": [
+            "199173",
+            "46475",
+            "245648"
+          ]
+        },
+        {
+          "district": "Fatehpur",
+          "values": [
+            "288880",
+            "66741",
+            "355621"
+          ]
+        },
+        {
+          "district": "Firozabad",
+          "values": [
+            "175911",
+            "40912",
+            "216823"
+          ]
+        },
+        {
+          "district": "Gautam Buddha Nagar",
+          "values": [
+            "275526",
+            "118648",
+            "394173"
+          ]
+        },
+        {
+          "district": "Ghaziabad",
+          "values": [
+            "321688",
+            "135433",
+            "457121"
+          ]
+        },
+        {
+          "district": "Ghazipur",
+          "values": [
+            "205208",
+            "51780",
+            "256988"
+          ]
+        },
+        {
+          "district": "Gonda",
+          "values": [
+            "310121",
+            "66492",
+            "376614"
+          ]
+        },
+        {
+          "district": "Gorakhpur",
+          "values": [
+            "347604",
+            "80826",
+            "428430"
+          ]
+        },
+        {
+          "district": "Hamirpur",
+          "values": [
+            "114169",
+            "41034",
+            "155203"
+          ]
+        },
+        {
+          "district": "Hapur",
+          "values": [
+            "55724",
+            "15960",
+            "71683"
+          ]
+        },
+        {
+          "district": "Hardoi",
+          "values": [
+            "277088",
+            "66770",
+            "343858"
+          ]
+        },
+        {
+          "district": "Jalaun",
+          "values": [
+            "166118",
+            "58383",
+            "224501"
+          ]
+        },
+        {
+          "district": "Jaunpur",
+          "values": [
+            "260581",
+            "59796",
+            "320377"
+          ]
+        },
+        {
+          "district": "Jhansi",
+          "values": [
+            "215908",
+            "41072",
+            "256980"
+          ]
+        },
+        {
+          "district": "Amroha",
+          "values": [
+            "187526",
+            "93128",
+            "280655"
+          ]
+        },
+        {
+          "district": "Kannauj",
+          "values": [
+            "136518",
+            "36130",
+            "172648"
+          ]
+        },
+        {
+          "district": "Kanpur Dehat",
+          "values": [
+            "157774",
+            "53620",
+            "211393"
+          ]
+        },
+        {
+          "district": "Kanpur Nagar",
+          "values": [
+            "664515",
+            "120489",
+            "785004"
+          ]
+        },
+        {
+          "district": "Kasganj",
+          "values": [
+            "101332",
+            "27347",
+            "128679"
+          ]
+        },
+        {
+          "district": "Kaushambi",
+          "values": [
+            "192878",
+            "29471",
+            "222349"
+          ]
+        },
+        {
+          "district": "Kheri",
+          "values": [
+            "326249",
+            "105092",
+            "431341"
+          ]
+        },
+        {
+          "district": "Kushinagar",
+          "values": [
+            "159713",
+            "37702",
+            "197415"
+          ]
+        },
+        {
+          "district": "Lalitpur",
+          "values": [
+            "88133",
+            "18959",
+            "107092"
+          ]
+        },
+        {
+          "district": "Lucknow",
+          "values": [
+            "754023",
+            "190149",
+            "944172"
+          ]
+        },
+        {
+          "district": "Hathras",
+          "values": [
+            "141808",
+            "35220",
+            "177028"
+          ]
+        },
+        {
+          "district": "Mahoba",
+          "values": [
+            "78699",
+            "31190",
+            "109889"
+          ]
+        },
+        {
+          "district": "Maharajganj",
+          "values": [
+            "128297",
+            "23199",
+            "151497"
+          ]
+        },
+        {
+          "district": "Mainpuri",
+          "values": [
+            "157463",
+            "37083",
+            "194546"
+          ]
+        },
+        {
+          "district": "Mathura",
+          "values": [
+            "204952",
+            "52924",
+            "257876"
+          ]
+        },
+        {
+          "district": "Meerut",
+          "values": [
+            "300381",
+            "98032",
+            "398413"
+          ]
+        },
+        {
+          "district": "Mirzapur",
+          "values": [
+            "261433",
+            "71850",
+            "333283"
+          ]
+        },
+        {
+          "district": "Moradabad",
+          "values": [
+            "304230",
+            "127121",
+            "431351"
+          ]
+        },
+        {
+          "district": "Muzaffarnagar",
+          "values": [
+            "244002",
+            "62830",
+            "306832"
+          ]
+        },
+        {
+          "district": "Pilibhit",
+          "values": [
+            "197483",
+            "44589",
+            "242073"
+          ]
+        },
+        {
+          "district": "Pratapgarh",
+          "values": [
+            "275843",
+            "72882",
+            "348725"
+          ]
+        },
+        {
+          "district": "Rae Bareli",
+          "values": [
+            "421580",
+            "93762",
+            "515342"
+          ]
+        },
+        {
+          "district": "Rampur",
+          "values": [
+            "245277",
+            "75750",
+            "321027"
+          ]
+        },
+        {
+          "district": "Saharanpur",
+          "values": [
+            "287560",
+            "60201",
+            "347761"
+          ]
+        },
+        {
+          "district": "Sambhal",
+          "values": [
+            "108665",
+            "53345",
+            "162010"
+          ]
+        },
+        {
+          "district": "Sant Kabir Nagar",
+          "values": [
+            "118076",
+            "17403",
+            "135479"
+          ]
+        },
+        {
+          "district": "Bhadohi",
+          "values": [
+            "127698",
+            "27328",
+            "155025"
+          ]
+        },
+        {
+          "district": "Shahjahanpur",
+          "values": [
+            "332408",
+            "62167",
+            "394575"
+          ]
+        },
+        {
+          "district": "Shamli",
+          "values": [
+            "52166",
+            "13885",
+            "66051"
+          ]
+        },
+        {
+          "district": "Shravasti",
+          "values": [
+            "102490",
+            "34615",
+            "137105"
+          ]
+        },
+        {
+          "district": "Siddharth Nagar",
+          "values": [
+            "123157",
+            "19787",
+            "142944"
+          ]
+        },
+        {
+          "district": "Sitapur",
+          "values": [
+            "468366",
+            "144875",
+            "613241"
+          ]
+        },
+        {
+          "district": "Sonbhadra",
+          "values": [
+            "165432",
+            "43372",
+            "208804"
+          ]
+        },
+        {
+          "district": "Sultanpur",
+          "values": [
+            "273654",
+            "83106",
+            "356761"
+          ]
+        },
+        {
+          "district": "Unnao",
+          "values": [
+            "294115",
+            "77087",
+            "371202"
+          ]
+        },
+        {
+          "district": "Varanasi",
+          "values": [
+            "391952",
+            "95522",
+            "487474"
+          ]
+        }
+      ]
+    }
+  ]
+}
