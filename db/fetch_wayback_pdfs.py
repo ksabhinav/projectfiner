@@ -134,21 +134,28 @@ def _curl_get(url: str, timeout: int = 60) -> str:
     return p.stdout
 
 
-def _curl_download(url: str, dest: Path, timeout: int = DOWNLOAD_TIMEOUT_S) -> int:
-    """Stream a single file to disk. Returns bytes written.
+def _curl_download(url: str, dest: Path, timeout: int = DOWNLOAD_TIMEOUT_S) -> tuple[int, bool]:
+    """Stream a single file to disk. Returns (bytes_written, truncated_at_capture).
+
+    truncated_at_capture is True when Wayback's response header includes
+    `warning: 299 wayback content truncated` — meaning the crawler capped
+    the file at 1 MB when capturing it. There is no way to recover a fuller
+    copy from the same snapshot timestamp. We still save the partial file
+    (sometimes the head bytes are enough for downstream extraction) but
+    flag it so the caller can mark it as `truncated` and avoid retrying.
 
     Retries on transient curl failures (connection refused, timeout, recv
-    failure) with exponential backoff. Wayback rate-limits aggressively
-    when burst rate exceeds ~15req/min, refusing the TCP connection rather
-    than 503ing — those are exit 7s, expected and recoverable.
+    failure) with exponential backoff.
     """
     dest.parent.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_suffix(dest.suffix + '.part')
+    headers_path = dest.with_suffix(dest.suffix + '.hdrs')
     last_err = ''
     for attempt in range(1, DOWNLOAD_RETRIES + 1):
         p = subprocess.run(
             ['curl', '-sS', '-L', '-A', USER_AGENT, '--max-time', str(timeout),
              '--connect-timeout', '30',
+             '-D', str(headers_path),
              '-o', str(tmp), '-w', '%{http_code}', url],
             capture_output=True, text=True, check=False,
         )
@@ -161,14 +168,26 @@ def _curl_download(url: str, dest: Path, timeout: int = DOWNLOAD_TIMEOUT_S) -> i
                     head = tmp.read_bytes()[:200] if tmp.exists() else b''
                     if b'<html' in head.lower() or b'<!doctype' in head.lower():
                         tmp.unlink(missing_ok=True)
+                        headers_path.unlink(missing_ok=True)
                         raise RuntimeError('HTML stub (Wayback returned a 200-wrapped error page)')
+                # Check Wayback's "content truncated by length" warning header
+                truncated = False
+                try:
+                    hdrs = headers_path.read_text(errors='replace').lower()
+                    if 'wayback content truncated' in hdrs or 'truncated by "length"' in hdrs:
+                        truncated = True
+                except Exception:
+                    pass
+                headers_path.unlink(missing_ok=True)
                 tmp.rename(dest)
-                return size
+                return size, truncated
             last_err = f'http {code}'
         else:
             last_err = f'curl exit {p.returncode}: {p.stderr.strip()[:160]}'
         if tmp.exists():
             tmp.unlink()
+        if headers_path.exists():
+            headers_path.unlink()
         if attempt < DOWNLOAD_RETRIES:
             time.sleep(RETRY_BACKOFF_S * attempt)
     raise RuntimeError(last_err)
@@ -213,7 +232,13 @@ def main():
                     help='Skip the CDX query; read the planned URL list from '
                          'the existing manifest.json. Useful when CDX is flaky '
                          'and you just want to resume downloading.')
+    ap.add_argument('--inter-delay', type=float, default=None,
+                    help='Override INTER_DOWNLOAD_DELAY_S seconds between downloads. '
+                         'Default 4.0; bump to 8-12 when re-fetching after burst-truncation.')
     args = ap.parse_args()
+    if args.inter_delay is not None:
+        global INTER_DOWNLOAD_DELAY_S
+        INTER_DOWNLOAD_DELAY_S = args.inter_delay
 
     exts = [e.strip().lower() for e in args.ext.split(',') if e.strip()]
     bad = [e for e in exts if e not in EXT_FILTER]
@@ -273,25 +298,38 @@ def main():
             continue
 
         if args.skip_existing and local_path.exists() and local_path.stat().st_size > 256:
-            # Trust existing — sha256 only if forced
+            sz = local_path.stat().st_size
             existing_rec = existing.get(key)
-            results.append({
-                'canonicalUrl': key,
-                'originalUrl': orig,
-                'snapshotTimestamp': ts,
-                'snapshotUrl': snap_url,
-                'localPath': str(local_path.relative_to(ROOT)),
-                'sizeBytes': local_path.stat().st_size,
-                'sha256': existing_rec.get('sha256') if existing_rec else None,
-                'status': 'cached',
-            })
-            skipped += 1
-            print(f'  [{i:4d}/{len(inv)}] skip {fname[:80]} (already on disk)')
-            continue
+            # If the previous run flagged this as Wayback-capture-truncated,
+            # don't re-attempt — the truncation is server-side and permanent.
+            if existing_rec and existing_rec.get('status') == 'truncated':
+                results.append({**existing_rec, 'localPath': str(local_path.relative_to(ROOT))})
+                skipped += 1
+                print(f'  [{i:4d}/{len(inv)}] skip {fname[:75]} (Wayback-truncated at capture)')
+                continue
+            # 1MB-exact and not yet flagged → re-check headers once.
+            if sz == 1048576 and not (existing_rec and existing_rec.get('status') == 'truncated'):
+                print(f'  [{i:4d}/{len(inv)}] check {fname[:75]} (1MB; verifying truncation)')
+                local_path.unlink()
+            else:
+                results.append({
+                    'canonicalUrl': key,
+                    'originalUrl': orig,
+                    'snapshotTimestamp': ts,
+                    'snapshotUrl': snap_url,
+                    'localPath': str(local_path.relative_to(ROOT)),
+                    'sizeBytes': sz,
+                    'sha256': existing_rec.get('sha256') if existing_rec else None,
+                    'status': 'cached',
+                })
+                skipped += 1
+                print(f'  [{i:4d}/{len(inv)}] skip {fname[:80]} (already on disk)')
+                continue
 
         try:
-            size = _curl_download(snap_url, local_path)
+            size, was_truncated = _curl_download(snap_url, local_path)
             digest = file_sha256(local_path)
+            status = 'truncated' if was_truncated else 'downloaded'
             results.append({
                 'canonicalUrl': key,
                 'originalUrl': orig,
@@ -300,10 +338,16 @@ def main():
                 'localPath': str(local_path.relative_to(ROOT)),
                 'sizeBytes': size,
                 'sha256': digest,
-                'status': 'downloaded',
+                'status': status,
+                **({'note': 'Wayback truncated at capture; full file unrecoverable from this snapshot'}
+                   if was_truncated else {}),
             })
-            downloaded += 1
-            print(f'  [{i:4d}/{len(inv)}] OK   {year}/{fname[:80]:80} ({size//1024} KB)')
+            if was_truncated:
+                downloaded += 1
+                print(f'  [{i:4d}/{len(inv)}] TRNC {year}/{fname[:75]:75} ({size//1024} KB, capped at capture)')
+            else:
+                downloaded += 1
+                print(f'  [{i:4d}/{len(inv)}] OK   {year}/{fname[:80]:80} ({size//1024} KB)')
         except Exception as e:
             results.append({
                 'canonicalUrl': key,
