@@ -4,11 +4,11 @@
   "extensions": [
     "pdf"
   ],
-  "generatedAt": "2026-05-15T06:07:09Z",
+  "generatedAt": "2026-05-15T06:55:02Z",
   "counts": {
-    "planned": 236,
+    "planned": 0,
     "downloaded": 0,
-    "cached": 0,
+    "cached": 236,
     "errored": 0
   },
   "files": [
@@ -18,7 +18,9 @@
       "snapshotTimestamp": "20160910214603",
       "snapshotUrl": "https://web.archive.org/web/20160910214603id_/http://www.slbcuttarakhand.com:80/(S(nufbec44qfbex5imeteusd3w))/documents/Minutes%2057th%20%20%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2016/Minutes_57th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 308240,
+      "sha256": "8031cac2493f901f7a13c22d082248dc8d7236c9ede58ec473ae95a3292815aa",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/govt%20of%20uttarakhand.pdf",
@@ -26,7 +28,9 @@
       "snapshotTimestamp": "20180403090156",
       "snapshotUrl": "https://web.archive.org/web/20180403090156id_/http://www.slbcuttarakhand.com:80/documents/GOVT%20OF%20UTTARAKHAND.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2018/GOVT_OF_UTTARAKHAND.pdf",
-      "status": "planned"
+      "sizeBytes": 1241591,
+      "sha256": "05a9b829ea016f137ecdcfc62384ce2ac373339232a9abd11dc5c3859c89d17e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/acp_2017-18.pdf",
@@ -34,7 +38,9 @@
       "snapshotTimestamp": "20180403092546",
       "snapshotUrl": "https://web.archive.org/web/20180403092546id_/http://www.slbcuttarakhand.com:80/documents/ACP_2017-18.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2018/ACP_2017-18.pdf",
-      "status": "planned"
+      "sizeBytes": 735723,
+      "sha256": "65b1df6cc983d7c1cc48eaec048773a3cf9ae27ce119f1dc954e7e82ae6f5a26",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/pmfby/pmfby_kh_2016_notification.pdf",
@@ -42,7 +48,9 @@
       "snapshotTimestamp": "20180413121358",
       "snapshotUrl": "https://web.archive.org/web/20180413121358id_/http://www.slbcuttarakhand.com:80/PMFBY/PMFBY_KH_2016_Notification.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2018/PMFBY_KH_2016_Notification.pdf",
-      "status": "planned"
+      "sizeBytes": 904426,
+      "sha256": "d0f604116181d6759e6d562e29878aefc6dcfde5894b4ac372cc5de9370ed375",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/pmfby/farmer_registration_form.pdf",
@@ -50,7 +58,9 @@
       "snapshotTimestamp": "20180413121558",
       "snapshotUrl": "https://web.archive.org/web/20180413121558id_/http://www.slbcuttarakhand.com:80/PMFBY/Farmer_Registration_Form.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2018/Farmer_Registration_Form.pdf",
-      "status": "planned"
+      "sizeBytes": 66703,
+      "sha256": "c0891e57b7cf094a2b5e4180eeee8141bb63859d308ed9045c8886b3c2f81057",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/pmfby/pmfby_farmer_detail_format.pdf",
@@ -58,7 +68,9 @@
       "snapshotTimestamp": "20180413121610",
       "snapshotUrl": "https://web.archive.org/web/20180413121610id_/http://www.slbcuttarakhand.com:80/PMFBY/PMFBY_FARMER_DETAIL_FORMAT.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2018/PMFBY_FARMER_DETAIL_FORMAT.pdf",
-      "status": "planned"
+      "sizeBytes": 129420,
+      "sha256": "6615c5b4e9eb573f7b09767b7fbe524f715763fccebdfad663328c62d9050d01",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/pmfby/pmfby_kharif_2016_pamphlet.pdf",
@@ -66,7 +78,9 @@
       "snapshotTimestamp": "20180413121615",
       "snapshotUrl": "https://web.archive.org/web/20180413121615id_/http://www.slbcuttarakhand.com:80/PMFBY/PMFBY_KHARIF_2016_Pamphlet.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2018/PMFBY_KHARIF_2016_Pamphlet.pdf",
-      "status": "planned"
+      "sizeBytes": 279282,
+      "sha256": "5014373e6917ce8f67509545a1f0ec65e410ff4daab185b4f79ef56b051c5a99",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/pmfby/pmfby_kharif_2016_decl_form.pdf",
@@ -74,7 +88,9 @@
       "snapshotTimestamp": "20180413121620",
       "snapshotUrl": "https://web.archive.org/web/20180413121620id_/http://www.slbcuttarakhand.com:80/PMFBY/PMFBY_Kharif_2016_Decl_form.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2018/PMFBY_Kharif_2016_Decl_form.pdf",
-      "status": "planned"
+      "sizeBytes": 172600,
+      "sha256": "109a4e06d7b870eb039110c73268d9ce59162f1d0ae2be247e9cb65db33a7671",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atr63rdslbc.pdf",
@@ -82,7 +98,9 @@
       "snapshotTimestamp": "20180413121626",
       "snapshotUrl": "https://web.archive.org/web/20180413121626id_/http://www.slbcuttarakhand.com:80/documents/ATR63rdSLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2018/ATR63rdSLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 471777,
+      "sha256": "45b4c81daede03b94fa63bd6dbb9b48cfe4235f4d133d5aa794b1169a39c628e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/pmfby/kh_2016_pmfby_guidelines.pdf",
@@ -90,7 +108,9 @@
       "snapshotTimestamp": "20180516230938",
       "snapshotUrl": "https://web.archive.org/web/20180516230938id_/http://www.slbcuttarakhand.com:80/PMFBY/KH_2016_PMFBY_GUIDELINES.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2018/KH_2016_PMFBY_GUIDELINES.pdf",
-      "status": "planned"
+      "sizeBytes": 298788,
+      "sha256": "22c427e6d794b376b597343954eabc9298edb9a03c79d8a62b400b4a628d7012",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda63rdslbcmeeting.pdf",
@@ -98,7 +118,9 @@
       "snapshotTimestamp": "20190303082957",
       "snapshotUrl": "https://web.archive.org/web/20190303082957id_/http://www.slbcuttarakhand.com:80/documents/Agenda63rdSLBCmeeting.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2019/Agenda63rdSLBCmeeting.pdf",
-      "status": "planned"
+      "sizeBytes": 938890,
+      "sha256": "3b51d499888f15bf5b9c01a5d53d6526ed328183b5a4dec933c71da3a5069e55",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/agenda_book_38.pdf",
@@ -106,7 +128,9 @@
       "snapshotTimestamp": "20190303083142",
       "snapshotUrl": "https://web.archive.org/web/20190303083142id_/http://www.slbcuttarakhand.com:80/meetings/agenda_book_38.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2019/agenda_book_38.pdf",
-      "status": "planned"
+      "sizeBytes": 3967963,
+      "sha256": "8aef675109f8a4716c26b7902f0170f49789f30220cdbd51bd715d5ec969e361",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/agenda_book_43.pdf",
@@ -114,7 +138,9 @@
       "snapshotTimestamp": "20190303083151",
       "snapshotUrl": "https://web.archive.org/web/20190303083151id_/http://www.slbcuttarakhand.com:80/meetings/agenda_book_43.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2019/agenda_book_43.pdf",
-      "status": "planned"
+      "sizeBytes": 1596757,
+      "sha256": "2ab61074876af003ec334c846951ed13c2c6b801a60f9e276202d6f90e652996",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/agenda_book_44.pdf",
@@ -122,7 +148,9 @@
       "snapshotTimestamp": "20190303083220",
       "snapshotUrl": "https://web.archive.org/web/20190303083220id_/http://www.slbcuttarakhand.com:80/meetings/agenda_book_44.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2019/agenda_book_44.pdf",
-      "status": "planned"
+      "sizeBytes": 2107651,
+      "sha256": "b5282af9f7bbbd690c377266c35fc64fa810ba569898ebbfa8177ffd6d4e8e98",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/agenda_book_40.pdf",
@@ -130,7 +158,9 @@
       "snapshotTimestamp": "20190303083346",
       "snapshotUrl": "https://web.archive.org/web/20190303083346id_/http://www.slbcuttarakhand.com:80/meetings/agenda_book_40.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2019/agenda_book_40.pdf",
-      "status": "planned"
+      "sizeBytes": 2913971,
+      "sha256": "865ae75dac719fba9f1bb9ac163b228b9e6c0e7d0444d4f26280a1a8cf66bf8a",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda%2067%20th%20slbc%20meeting.pdf",
@@ -138,7 +168,9 @@
       "snapshotTimestamp": "20190712122641",
       "snapshotUrl": "https://web.archive.org/web/20190712122641id_/http://www.slbcuttarakhand.com:80/documents/AGENDA%2067%20th%20SLBC%20MEETING.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2019/AGENDA_67_th_SLBC_MEETING.pdf",
-      "status": "planned"
+      "sizeBytes": 1099744,
+      "sha256": "aa3701156b65798d78f30f6e4a08021ccf47b11ac19a9d7f6beafcb6b8b7fb58",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/(s(ussfltwtxvs1djcebmixrdhd))/documents/ugb-obc-financial-literacy.pdf",
@@ -146,7 +178,9 @@
       "snapshotTimestamp": "20190712130608",
       "snapshotUrl": "https://web.archive.org/web/20190712130608id_/http://www.slbcuttarakhand.com:80/(S(ussfltwtxvs1djcebmixrdhd))/documents/UGB-OBC-Financial-Literacy.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2019/UGB-OBC-Financial-Literacy.pdf",
-      "status": "planned"
+      "sizeBytes": 21905,
+      "sha256": "57112b7301706a0f695f01a9a6ab52bb8598bf93ccabbc280be8569fe9377ab8",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/acp_2018-19.pdf",
@@ -154,7 +188,9 @@
       "snapshotTimestamp": "20190815172703",
       "snapshotUrl": "https://web.archive.org/web/20190815172703id_/http://www.slbcuttarakhand.com/documents/ACP_2018-19.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2019/ACP_2018-19.pdf",
-      "status": "planned"
+      "sizeBytes": 720810,
+      "sha256": "d5aa899a24a6d84d62511984baea224a8747ae722baf0b62891e01b5e3705b58",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda%20%2065th%20slbc%20meeting%20date%2005.06.2018.pdf",
@@ -162,7 +198,9 @@
       "snapshotTimestamp": "20190815183108",
       "snapshotUrl": "https://web.archive.org/web/20190815183108id_/http://www.slbcuttarakhand.com/documents/Agenda%20%2065th%20SLBC%20meeting%20date%2005.06.2018.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2019/Agenda_65th_SLBC_meeting_date_05.06.2018.pdf",
-      "status": "planned"
+      "sizeBytes": 940013,
+      "sha256": "df4efd5bbd2b87af898585ea44d1f01edd0ddfe53a049ee2b9a2f5052cc9900f",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atr64thslbc.pdf",
@@ -170,7 +208,9 @@
       "snapshotTimestamp": "20190815203714",
       "snapshotUrl": "https://web.archive.org/web/20190815203714id_/http://www.slbcuttarakhand.com/documents/ATR64thSLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2019/ATR64thSLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 546438,
+      "sha256": "614b48353a17b7c7cd45a42c25b0303f69c813babb3f4ab6a1209d9b3aed43c3",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/(s(5sik4nijmvzpmehex02ftrqr))/documents/uk-govt.pdf",
@@ -178,7 +218,9 @@
       "snapshotTimestamp": "20191126103828",
       "snapshotUrl": "https://web.archive.org/web/20191126103828id_/http://www.slbcuttarakhand.com:80/(S(5sik4nijmvzpmehex02ftrqr))/documents/uk-govt.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2019/uk-govt.pdf",
-      "status": "planned"
+      "sizeBytes": 247157,
+      "sha256": "db4b6ebe17d74e7d36dd98a29ffa53eb8a208347c604d9faa7b3c36ef2873fc9",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/shashan%20list%20as%20on%2028.08.2018.pdf",
@@ -186,7 +228,9 @@
       "snapshotTimestamp": "20220128184748",
       "snapshotUrl": "https://web.archive.org/web/20220128184748id_/http://slbcuttarakhand.com/documents/shashan%20list%20as%20on%2028.08.2018.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2022/shashan_list_as_on_28.08.2018.pdf",
-      "status": "planned"
+      "sizeBytes": 385833,
+      "sha256": "b25e1ea9fe32f6ba5b3edd6c86b1786004a208eff8c233d104e056bceb996c5b",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/68th_slbc_book.pdf",
@@ -194,7 +238,10 @@
       "snapshotTimestamp": "20230326113802",
       "snapshotUrl": "https://web.archive.org/web/20230326113802id_/http://slbcuttarakhand.com/documents/68TH_SLBC_BOOK.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2023/68TH_SLBC_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "b0013a60551857415a837cdab51981d82bf93a7b4f667b4cf37b1a4a11951ebb",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/86th%20%20slbc%20agenda.pdf",
@@ -202,7 +249,9 @@
       "snapshotTimestamp": "20240302164922",
       "snapshotUrl": "https://web.archive.org/web/20240302164922id_/http://slbcuttarakhand.com/documents/86th%20%20SLBC%20Agenda.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/86th_SLBC_Agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1106873,
+      "sha256": "7465f934c277d06d621bcbfa51effb4eb2172c4a5b485547ee030c5f69aec883",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes%2059th%20%20%20slbc.pdf",
@@ -210,7 +259,9 @@
       "snapshotTimestamp": "20240423084001",
       "snapshotUrl": "https://web.archive.org/web/20240423084001id_/http://www.slbcuttarakhand.com/documents/Minutes%2059th%20%20%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Minutes_59th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 549098,
+      "sha256": "f3a83aaf74bdcf62287573b05aa1580e3378e9d7237ef96b892ca342af50edcd",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes%2056th%20%20%20slbc.pdf",
@@ -218,7 +269,9 @@
       "snapshotTimestamp": "20240517163800",
       "snapshotUrl": "https://web.archive.org/web/20240517163800id_/http://www.slbcuttarakhand.com/documents/Minutes%2056th%20%20%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Minutes_56th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 263184,
+      "sha256": "674e1de5f6180835d282febbdbb8d7cf8b89c9fdc97f4a139adf3b08ef7a6114",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_51.pdf",
@@ -226,7 +279,9 @@
       "snapshotTimestamp": "20240517163843",
       "snapshotUrl": "https://web.archive.org/web/20240517163843id_/http://www.slbcuttarakhand.com/meetings/minutes_51.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_51.pdf",
-      "status": "planned"
+      "sizeBytes": 388751,
+      "sha256": "e753ba94b70e56753bf26f9fd63b42d4b87f5bfa7e73f390fb031e9a804ace1f",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_33.pdf",
@@ -234,7 +289,9 @@
       "snapshotTimestamp": "20240517163906",
       "snapshotUrl": "https://web.archive.org/web/20240517163906id_/http://www.slbcuttarakhand.com/meetings/minutes_33.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_33.pdf",
-      "status": "planned"
+      "sizeBytes": 86010,
+      "sha256": "c1eb83cd61879045d81cba634dd18117d4c8d50399123ae30b30649772225758",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_38.pdf",
@@ -242,7 +299,9 @@
       "snapshotTimestamp": "20240517164723",
       "snapshotUrl": "https://web.archive.org/web/20240517164723id_/http://www.slbcuttarakhand.com/meetings/minutes_38.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_38.pdf",
-      "status": "planned"
+      "sizeBytes": 108230,
+      "sha256": "a829c84167ffddf0a084b5b28e8776da6641234e8dd748206066a769d21e18e8",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_36.pdf",
@@ -250,7 +309,9 @@
       "snapshotTimestamp": "20240517174020",
       "snapshotUrl": "https://web.archive.org/web/20240517174020id_/http://www.slbcuttarakhand.com/meetings/minutes_36.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_36.pdf",
-      "status": "planned"
+      "sizeBytes": 106315,
+      "sha256": "f9b7091820a3054284a10e78ea5fef2745a0d717378933a8881648097cdc5a33",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_35.pdf",
@@ -258,7 +319,9 @@
       "snapshotTimestamp": "20240517215320",
       "snapshotUrl": "https://web.archive.org/web/20240517215320id_/http://www.slbcuttarakhand.com/meetings/minutes_35.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_35.pdf",
-      "status": "planned"
+      "sizeBytes": 111452,
+      "sha256": "752c58144fafe1beb712a5851eb4afffc00d299152f9ca1ac3dbcf10eab90c67",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_54.pdf",
@@ -266,7 +329,9 @@
       "snapshotTimestamp": "20240517230926",
       "snapshotUrl": "https://web.archive.org/web/20240517230926id_/http://www.slbcuttarakhand.com/meetings/minutes_54.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_54.pdf",
-      "status": "planned"
+      "sizeBytes": 368011,
+      "sha256": "6f634bbb70576c713338bfe294873aaaa4d432719420bf079a6597e238f8cd1e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_52.pdf",
@@ -274,7 +339,9 @@
       "snapshotTimestamp": "20240518004029",
       "snapshotUrl": "https://web.archive.org/web/20240518004029id_/http://www.slbcuttarakhand.com/meetings/minutes_52.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_52.pdf",
-      "status": "planned"
+      "sizeBytes": 401700,
+      "sha256": "6b2b6214a1feba50db16f10086d2748ec56fb2d120847dca6bcdc074c4bb0aa1",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_39.pdf",
@@ -282,7 +349,9 @@
       "snapshotTimestamp": "20240518051812",
       "snapshotUrl": "https://web.archive.org/web/20240518051812id_/http://www.slbcuttarakhand.com/meetings/minutes_39.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_39.pdf",
-      "status": "planned"
+      "sizeBytes": 93417,
+      "sha256": "724791b755d598d1a2c946bdb6ce385dc59c9c8a6eeb0cbcf89fbe9828c53968",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes%2064th%20slbc%20dated%2027.02.2018.pdf",
@@ -290,7 +359,9 @@
       "snapshotTimestamp": "20240518113201",
       "snapshotUrl": "https://web.archive.org/web/20240518113201id_/http://www.slbcuttarakhand.com/documents/Minutes%2064th%20SLBC%20dated%2027.02.2018.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Minutes_64th_SLBC_dated_27.02.2018.pdf",
-      "status": "planned"
+      "sizeBytes": 516580,
+      "sha256": "053612ab36d860525428e0157f9da3d00d728a80a6723772762c80846523e40e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes_70th_slbc.pdf",
@@ -298,7 +369,9 @@
       "snapshotTimestamp": "20240518115827",
       "snapshotUrl": "https://web.archive.org/web/20240518115827id_/http://www.slbcuttarakhand.com/documents/Minutes_70th_SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Minutes_70th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 602011,
+      "sha256": "251da17cb0a21e5d666caf87f8cd96cda32c2adc0d372cd55d66d821a2a681ea",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_53.pdf",
@@ -306,7 +379,9 @@
       "snapshotTimestamp": "20240518122459",
       "snapshotUrl": "https://web.archive.org/web/20240518122459id_/http://www.slbcuttarakhand.com/meetings/minutes_53.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_53.pdf",
-      "status": "planned"
+      "sizeBytes": 340254,
+      "sha256": "9e9945f0363a9b2a0ae5fd8654de9a68e34986bf9d303d0a245c893443f51902",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes_68th_slbc_meeting.pdf",
@@ -314,7 +389,9 @@
       "snapshotTimestamp": "20240518135302",
       "snapshotUrl": "https://web.archive.org/web/20240518135302id_/http://www.slbcuttarakhand.com/documents/Minutes_68th_SLBC_meeting.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Minutes_68th_SLBC_meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 511429,
+      "sha256": "072ec2fb657991220ec915c4c7b15e64dca4e2ef534f418c345077ec57bafed7",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_29.pdf",
@@ -322,7 +399,9 @@
       "snapshotTimestamp": "20240518144426",
       "snapshotUrl": "https://web.archive.org/web/20240518144426id_/http://www.slbcuttarakhand.com/meetings/minutes_29.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_29.pdf",
-      "status": "planned"
+      "sizeBytes": 92330,
+      "sha256": "75ddc235edf241f1fcaa1d45b7c2b3d14d5f3cb0624bb496475a0fb2f6e0949a",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_28.pdf",
@@ -330,7 +409,9 @@
       "snapshotTimestamp": "20240518195235",
       "snapshotUrl": "https://web.archive.org/web/20240518195235id_/http://www.slbcuttarakhand.com/meetings/minutes_28.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_28.pdf",
-      "status": "planned"
+      "sizeBytes": 98242,
+      "sha256": "adde4076a59aa6a0ed06edc718e6bfe4160ffad9c2047c5146550b2810fdc4ef",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes%2066th%20%20slbc.pdf",
@@ -338,7 +419,9 @@
       "snapshotTimestamp": "20240518201316",
       "snapshotUrl": "https://web.archive.org/web/20240518201316id_/http://www.slbcuttarakhand.com/documents/Minutes%2066th%20%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Minutes_66th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 567072,
+      "sha256": "925285cad433d4ce5e10dbf06d079e17e6f67a3eddf5fcac24da0a42678a2462",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/agenda_book_45.pdf",
@@ -346,7 +429,10 @@
       "snapshotTimestamp": "20240518222831",
       "snapshotUrl": "https://web.archive.org/web/20240518222831id_/http://www.slbcuttarakhand.com/meetings/agenda_book_45.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/agenda_book_45.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "ac659ea0af7482e229a7991540c66419e0aefcc680e446424ce295c6e4356aeb",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/77th%20slbc%20meeting%20agenda.pdf",
@@ -354,7 +440,10 @@
       "snapshotTimestamp": "20240518230036",
       "snapshotUrl": "https://web.archive.org/web/20240518230036id_/http://www.slbcuttarakhand.com/documents/77TH%20SLBC%20MEETING%20AGENDA.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/77TH_SLBC_MEETING_AGENDA.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "21355f819b4966ef68c0be76f11901dadda9844c451b57e2e1dd8919ab5d4957",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/agenda_49th_slbc_meeting.pdf",
@@ -362,7 +451,10 @@
       "snapshotTimestamp": "20240518230719",
       "snapshotUrl": "https://web.archive.org/web/20240518230719id_/http://www.slbcuttarakhand.com/meetings/Agenda_49th_SLBC_Meeting.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Agenda_49th_SLBC_Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "17bdeec43bcf3d8e65d5eab3ab4356c0dd139d069a67dc1a59b52ef3c29feee4",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/agenda_book_48.pdf",
@@ -370,7 +462,10 @@
       "snapshotTimestamp": "20240518231233",
       "snapshotUrl": "https://web.archive.org/web/20240518231233id_/http://www.slbcuttarakhand.com/meetings/agenda_book_48.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/agenda_book_48.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "81fa0243b3d8ed6b9ccee0f4a906443bb0685759acbc8c38396ae4c3759622e3",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/82%20minutes%20june%202022-25.08.2022.pdf",
@@ -378,7 +473,9 @@
       "snapshotTimestamp": "20240519020752",
       "snapshotUrl": "https://web.archive.org/web/20240519020752id_/http://www.slbcuttarakhand.com/documents/82%20MINUTES%20JUNE%202022-25.08.2022.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/82_MINUTES_JUNE_2022-25.08.2022.pdf",
-      "status": "planned"
+      "sizeBytes": 1340928,
+      "sha256": "be8a6af100903e93607196176bd00c78fa8b79cb2e7f45e15f25407f78af9659",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes%2065th%20%20slbc%20dated%2005.06.2018.pdf",
@@ -386,7 +483,9 @@
       "snapshotTimestamp": "20240519060128",
       "snapshotUrl": "https://web.archive.org/web/20240519060128id_/http://www.slbcuttarakhand.com/documents/Minutes%2065th%20%20SLBC%20dated%2005.06.2018.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Minutes_65th_SLBC_dated_05.06.2018.pdf",
-      "status": "planned"
+      "sizeBytes": 574602,
+      "sha256": "5634e8c8b2e8dd50bf0d497129fe1104816f8f9f130b752b82e2df3053bbb5f5",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes%20%2075th%20slbc%20meeting.pdf",
@@ -394,7 +493,9 @@
       "snapshotTimestamp": "20240519073437",
       "snapshotUrl": "https://web.archive.org/web/20240519073437id_/http://www.slbcuttarakhand.com/documents/MINUTES%20%2075th%20SLBC%20MEETING.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/MINUTES_75th_SLBC_MEETING.pdf",
-      "status": "planned"
+      "sizeBytes": 2950324,
+      "sha256": "8d6798f5f5789cd05268f6f136f0034a902fe32d408de0d75924727ac1ee066e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes62ndslbcdt25aug2017.pdf",
@@ -402,7 +503,9 @@
       "snapshotTimestamp": "20240519074756",
       "snapshotUrl": "https://web.archive.org/web/20240519074756id_/http://www.slbcuttarakhand.com/documents/Minutes62ndSLBCdt25Aug2017.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Minutes62ndSLBCdt25Aug2017.pdf",
-      "status": "planned"
+      "sizeBytes": 488550,
+      "sha256": "1e0809576463845404938923ec3f8b321ad2c32b4181c3a281b0912acf24a71d",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_32.pdf",
@@ -410,7 +513,9 @@
       "snapshotTimestamp": "20240519235814",
       "snapshotUrl": "https://web.archive.org/web/20240519235814id_/http://www.slbcuttarakhand.com/meetings/minutes_32.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_32.pdf",
-      "status": "planned"
+      "sizeBytes": 82909,
+      "sha256": "908c1f08270a66b48e95f8afe80e3daa06ecfd86d87d28b5b1ece8626d8c7b05",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_14may2010.pdf",
@@ -418,7 +523,9 @@
       "snapshotTimestamp": "20240520024958",
       "snapshotUrl": "https://web.archive.org/web/20240520024958id_/http://www.slbcuttarakhand.com/meetings/minutes_14May2010.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_14May2010.pdf",
-      "status": "planned"
+      "sizeBytes": 75544,
+      "sha256": "7262f1a701d5b7f68fbfd8149f5edaad6bb4cbab8a8accacbe31016ee55ff30b",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes%20%2078th%20and%2079th%20slbc.pdf",
@@ -426,7 +533,9 @@
       "snapshotTimestamp": "20240520025208",
       "snapshotUrl": "https://web.archive.org/web/20240520025208id_/http://www.slbcuttarakhand.com/documents/Minutes%20%2078th%20and%2079th%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Minutes_78th_and_79th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 2227613,
+      "sha256": "c0aada05cc4916ae3194994ea118bf983a3a85763075a63d06ff2876ac675082",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_40.pdf",
@@ -434,7 +543,9 @@
       "snapshotTimestamp": "20240520092036",
       "snapshotUrl": "https://web.archive.org/web/20240520092036id_/http://www.slbcuttarakhand.com/meetings/minutes_40.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_40.pdf",
-      "status": "planned"
+      "sizeBytes": 20733,
+      "sha256": "2cd7d7fdde40e167e66907d910a5d39d1ffd9dbda0f6b0d8e92db216425298f6",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_37.pdf",
@@ -442,7 +553,9 @@
       "snapshotTimestamp": "20240520103915",
       "snapshotUrl": "https://web.archive.org/web/20240520103915id_/http://www.slbcuttarakhand.com/meetings/minutes_37.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_37.pdf",
-      "status": "planned"
+      "sizeBytes": 115869,
+      "sha256": "e7a4e9e62e454e2754f1ae11dc1ea7c96f03f1ca3069e3e9d644ba31015b3a92",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_31.pdf",
@@ -450,7 +563,9 @@
       "snapshotTimestamp": "20240520142340",
       "snapshotUrl": "https://web.archive.org/web/20240520142340id_/http://www.slbcuttarakhand.com/meetings/minutes_31.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_31.pdf",
-      "status": "planned"
+      "sizeBytes": 72389,
+      "sha256": "767a193ba20c5fa6f58b96ff2a980192311e4ac26b65e3eae2acc12eb54e2c6a",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes%20%2077th%20slbc.pdf",
@@ -458,7 +573,9 @@
       "snapshotTimestamp": "20240520183146",
       "snapshotUrl": "https://web.archive.org/web/20240520183146id_/http://www.slbcuttarakhand.com/documents/MINUTES%20%2077th%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/MINUTES_77th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 2492502,
+      "sha256": "8e7064d61632668cef76945c5cbb0c50db63303643b64dc06576bb1bd0aa4d46",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes%2076%20slbc%20meeting.pdf",
@@ -466,7 +583,9 @@
       "snapshotTimestamp": "20240520184933",
       "snapshotUrl": "https://web.archive.org/web/20240520184933id_/http://www.slbcuttarakhand.com/documents/MINUTES%2076%20SLBC%20MEETING.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/MINUTES_76_SLBC_MEETING.pdf",
-      "status": "planned"
+      "sizeBytes": 2465632,
+      "sha256": "f5af790e7d466e57d87c8c5489b6a6bb789ea0f1e8c21da57f1d5775b27f3fc4",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes%2058th%20%20%20slbc.pdf",
@@ -474,7 +593,9 @@
       "snapshotTimestamp": "20240521204844",
       "snapshotUrl": "https://web.archive.org/web/20240521204844id_/http://www.slbcuttarakhand.com/documents/Minutes%2058th%20%20%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Minutes_58th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 259302,
+      "sha256": "97f0acb55962093a9d5df9f881e9fd3e54fa059504006354a8b668f9d33abd36",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_49.pdf",
@@ -482,7 +603,9 @@
       "snapshotTimestamp": "20240526145011",
       "snapshotUrl": "https://web.archive.org/web/20240526145011id_/http://www.slbcuttarakhand.com/meetings/minutes_49.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_49.pdf",
-      "status": "planned"
+      "sizeBytes": 130117,
+      "sha256": "f977c2af6c732c6def3d9da524ce344517c635c61cc8ff9911574d08235d206e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_50.pdf",
@@ -490,7 +613,9 @@
       "snapshotTimestamp": "20240527072959",
       "snapshotUrl": "https://web.archive.org/web/20240527072959id_/http://www.slbcuttarakhand.com/meetings/minutes_50.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_50.pdf",
-      "status": "planned"
+      "sizeBytes": 380538,
+      "sha256": "867b17c244eb1d405920169c75e3920fd5510d30676d74abd8a7ed5effafb8e3",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes_60th_slbc.pdf",
@@ -498,7 +623,9 @@
       "snapshotTimestamp": "20240528024620",
       "snapshotUrl": "https://web.archive.org/web/20240528024620id_/http://www.slbcuttarakhand.com/documents/Minutes_60th_SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Minutes_60th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 863237,
+      "sha256": "a29a73d29227a8b4de410e85556705ef7b56790ef1924ff7e65176169a87e8b6",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes%2057th%20%20%20slbc.pdf",
@@ -506,7 +633,9 @@
       "snapshotTimestamp": "20240529010132",
       "snapshotUrl": "https://web.archive.org/web/20240529010132id_/http://www.slbcuttarakhand.com/documents/Minutes%2057th%20%20%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Minutes_57th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 308240,
+      "sha256": "8031cac2493f901f7a13c22d082248dc8d7236c9ede58ec473ae95a3292815aa",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_30.pdf",
@@ -514,7 +643,9 @@
       "snapshotTimestamp": "20240531171007",
       "snapshotUrl": "https://web.archive.org/web/20240531171007id_/http://www.slbcuttarakhand.com/meetings/minutes_30.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_30.pdf",
-      "status": "planned"
+      "sizeBytes": 88843,
+      "sha256": "c1179ee1172a53b1808d1a4de2189ce6ebad4c624856b825a3a58767eb1feee4",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes%2071st%20slbc.pdf",
@@ -522,7 +653,9 @@
       "snapshotTimestamp": "20240603050347",
       "snapshotUrl": "https://web.archive.org/web/20240603050347id_/http://www.slbcuttarakhand.com/documents/Minutes%2071st%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Minutes_71st_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 2915029,
+      "sha256": "6ac74b9dd571d14155098c31de33ace9d4e5635a81691f61eed82d6023e2f975",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_12may2010.pdf",
@@ -530,7 +663,9 @@
       "snapshotTimestamp": "20240603051845",
       "snapshotUrl": "https://web.archive.org/web/20240603051845id_/http://www.slbcuttarakhand.com/meetings/minutes_12May2010.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_12May2010.pdf",
-      "status": "planned"
+      "sizeBytes": 49817,
+      "sha256": "11cfd5d8f0151d031823b2db8c5d9aaeb181ae28db9b4bb03ac532342e8346f1",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/chamoli_document.pdf",
@@ -538,7 +673,9 @@
       "snapshotTimestamp": "20240607025452",
       "snapshotUrl": "https://web.archive.org/web/20240607025452id_/http://slbcuttarakhand.com/documents/Chamoli_document.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Chamoli_document.pdf",
-      "status": "planned"
+      "sizeBytes": 3084968,
+      "sha256": "52c63b67aff55137a75e5ed8de67521f396fa39f9fdae104a94bfb5323058370",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/almora.pdf",
@@ -546,7 +683,9 @@
       "snapshotTimestamp": "20240607150131",
       "snapshotUrl": "https://web.archive.org/web/20240607150131id_/http://slbcuttarakhand.com/documents/ALMORA.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ALMORA.pdf",
-      "status": "planned"
+      "sizeBytes": 978918,
+      "sha256": "3213ec461ee8d0f8232a2492fda4baa333ddb59bd5a6223fa1b39823ab5cc4aa",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/uttarakashi.pdf",
@@ -554,7 +693,9 @@
       "snapshotTimestamp": "20240607202016",
       "snapshotUrl": "https://web.archive.org/web/20240607202016id_/http://slbcuttarakhand.com/documents/Uttarakashi.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Uttarakashi.pdf",
-      "status": "planned"
+      "sizeBytes": 7292947,
+      "sha256": "4db88a31f43e23ebea0ab4396f9b53c6844b06923c103fdb5bd373ff8cb5194e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/pauri.pdf",
@@ -562,7 +703,9 @@
       "snapshotTimestamp": "20240607220349",
       "snapshotUrl": "https://web.archive.org/web/20240607220349id_/http://slbcuttarakhand.com/documents/PAURI.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/PAURI.pdf",
-      "status": "planned"
+      "sizeBytes": 373275,
+      "sha256": "531a079df511e4cf680ad2e58664c1ec8a4e21ed107fb553ac81b2366f4df2c8",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/nainital.pdf",
@@ -570,7 +713,9 @@
       "snapshotTimestamp": "20240609011924",
       "snapshotUrl": "https://web.archive.org/web/20240609011924id_/http://slbcuttarakhand.com/documents/NAINITAL.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/NAINITAL.pdf",
-      "status": "planned"
+      "sizeBytes": 1023537,
+      "sha256": "207ddbc2dcc4d9688776cf943c8b07e6514628a1df770988aab8109325e5f6af",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/agenda_book_46.pdf",
@@ -578,7 +723,9 @@
       "snapshotTimestamp": "20240610234458",
       "snapshotUrl": "https://web.archive.org/web/20240610234458id_/http://www.slbcuttarakhand.com/meetings/agenda_book_46.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/agenda_book_46.pdf",
-      "status": "planned"
+      "sizeBytes": 11292558,
+      "sha256": "ee2eb4b8866c55795dc75b3d37295d8e9b283c57f986471525c5544d67ef05c3",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda%2076th%20slbc%20meeting.pdf",
@@ -586,7 +733,9 @@
       "snapshotTimestamp": "20240612101134",
       "snapshotUrl": "https://web.archive.org/web/20240612101134id_/http://www.slbcuttarakhand.com/documents/AGENDA%2076TH%20SLBC%20MEETING.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/AGENDA_76TH_SLBC_MEETING.pdf",
-      "status": "planned"
+      "sizeBytes": 5277763,
+      "sha256": "b8277fe2a0eda70cb698b2f5df8b13c65616d3b71699fa4e0e430489a3cf83e4",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/slbc%20agenda%20040122.pdf",
@@ -594,7 +743,9 @@
       "snapshotTimestamp": "20240612180224",
       "snapshotUrl": "https://web.archive.org/web/20240612180224id_/http://www.slbcuttarakhand.com/documents/SLBC%20Agenda%20040122.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/SLBC_Agenda_040122.pdf",
-      "status": "planned"
+      "sizeBytes": 1378010,
+      "sha256": "3553084fb554df2def13959f5466a68c9923d99c8e8c465ee34beddcd067f0e3",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes%2067th%20%20slbc%20meeting.pdf",
@@ -602,7 +753,9 @@
       "snapshotTimestamp": "20240612205920",
       "snapshotUrl": "https://web.archive.org/web/20240612205920id_/http://www.slbcuttarakhand.com/documents/Minutes%2067th%20%20SLBC%20Meeting.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Minutes_67th_SLBC_Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 632840,
+      "sha256": "251a83b361a693d73fb4e15bcab7ea9571aceb918cb4fac7d7e1ee37f68f4cf5",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/78th%20spl.%20slbc%20agenda%20rbi.pdf",
@@ -610,7 +763,9 @@
       "snapshotTimestamp": "20240612210715",
       "snapshotUrl": "https://web.archive.org/web/20240612210715id_/http://www.slbcuttarakhand.com/documents/78th%20Spl.%20SLBC%20Agenda%20RBI.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/78th_Spl._SLBC_Agenda_RBI.pdf",
-      "status": "planned"
+      "sizeBytes": 4840987,
+      "sha256": "effcab67aa87e0fb2043df3591ff73c870a7b99dbcf1fc2a67606c6095543af9",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/agenda_book_47.pdf",
@@ -618,7 +773,9 @@
       "snapshotTimestamp": "20240613083812",
       "snapshotUrl": "https://web.archive.org/web/20240613083812id_/http://www.slbcuttarakhand.com/meetings/agenda_book_47.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/agenda_book_47.pdf",
-      "status": "planned"
+      "sizeBytes": 4397273,
+      "sha256": "99bab084b3b4bedfa04011e3b2bcceeaeb0f87ee3e5e91b74f18dd7668152009",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda__special_slbc_meeting_date_11.01.2021.pdf",
@@ -626,7 +783,9 @@
       "snapshotTimestamp": "20240613175005",
       "snapshotUrl": "https://web.archive.org/web/20240613175005id_/http://www.slbcuttarakhand.com/documents/Agenda__Special_SLBC_Meeting_date_11.01.2021.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Agenda__Special_SLBC_Meeting_date_11.01.2021.pdf",
-      "status": "planned"
+      "sizeBytes": 430114,
+      "sha256": "776abcbe99c682ea9eadfc9bfa61eeaf5878f46de6fdf4aec3278b45bf9e3a15",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/final%20agenda%20%2057th%20slbc%20meeting.pdf",
@@ -634,7 +793,9 @@
       "snapshotTimestamp": "20240613193216",
       "snapshotUrl": "https://web.archive.org/web/20240613193216id_/http://www.slbcuttarakhand.com/documents/Final%20Agenda%20%2057th%20SLBC%20meeting.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Final_Agenda_57th_SLBC_meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 800041,
+      "sha256": "2aa2b5cfb059ad59aba3646d940b4c854658ec725590034d776d9a97f1e2e2db",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/revised_agenda_59th_slbc_meeting.pdf",
@@ -642,7 +803,9 @@
       "snapshotTimestamp": "20240615170932",
       "snapshotUrl": "https://web.archive.org/web/20240615170932id_/http://www.slbcuttarakhand.com/documents/Revised_Agenda_59th_SLBC_meeting.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Revised_Agenda_59th_SLBC_meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 1911502,
+      "sha256": "8cd3ac5114064bf142279bc52886a8fa4f4b4a5ecf27db79d4af6ce95c3534b5",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes_71st_slbc.pdf",
@@ -650,7 +813,9 @@
       "snapshotTimestamp": "20240615184822",
       "snapshotUrl": "https://web.archive.org/web/20240615184822id_/http://www.slbcuttarakhand.com/documents/minutes_71st_SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/minutes_71st_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 2915029,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes87thslbcdated.pdf",
@@ -658,7 +823,9 @@
       "snapshotTimestamp": "20240615190505",
       "snapshotUrl": "https://web.archive.org/web/20240615190505id_/http://slbcuttarakhand.com/documents/Minutes87thSLBCdated.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Minutes87thSLBCdated.pdf",
-      "status": "planned"
+      "sizeBytes": 106850,
+      "sha256": "5d2c7e349a98d499045518830556b6bca49b60c1a19d05b750e10732da67e01a",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/dfs%20letter.pdf",
@@ -666,7 +833,9 @@
       "snapshotTimestamp": "20240616022322",
       "snapshotUrl": "https://web.archive.org/web/20240616022322id_/http://slbcuttarakhand.com/documents/DFS%20LETTER.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/DFS_LETTER.pdf",
-      "status": "planned"
+      "sizeBytes": 705981,
+      "sha256": "884f86a629db3b7bdf9d2c427a4172ee528e8b37f14a18f0ebd035daae4966da",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/earmarking_categorisation_of_stand_up_india_loans.pdf",
@@ -674,7 +843,9 @@
       "snapshotTimestamp": "20240616032653",
       "snapshotUrl": "https://web.archive.org/web/20240616032653id_/http://slbcuttarakhand.com/documents/Earmarking_Categorisation_of_Stand_up_India_Loans.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Earmarking_Categorisation_of_Stand_up_India_Loans.pdf",
-      "status": "planned"
+      "sizeBytes": 607500,
+      "sha256": "dee100237b1c20da12f852087e88b574770949e528ae1fb8810544a7e6109ae6",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/acp%20book%202021-22.pdf",
@@ -682,7 +853,9 @@
       "snapshotTimestamp": "20240616042205",
       "snapshotUrl": "https://web.archive.org/web/20240616042205id_/http://slbcuttarakhand.com/documents/ACP%20BOOK%202021-22.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ACP_BOOK_2021-22.pdf",
-      "status": "planned"
+      "sizeBytes": 3807229,
+      "sha256": "ba62ff74019ca5360bcb2cda6b92eee6aa571a5d3b275d5cdb64ea7a0813989e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/slbc_86_complete_book.pdf",
@@ -690,7 +863,9 @@
       "snapshotTimestamp": "20240617185426",
       "snapshotUrl": "https://web.archive.org/web/20240617185426id_/http://slbcuttarakhand.com/documents/slbc_86_complete_book.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/slbc_86_complete_book.pdf",
-      "status": "planned"
+      "sizeBytes": 42673973,
+      "sha256": "090657a5e5c98561073957ee73a9d933c5b49175c1b41a7b5608e9843bd375a1",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/list__govt_officials.pdf",
@@ -698,7 +873,9 @@
       "snapshotTimestamp": "20240619160953",
       "snapshotUrl": "https://web.archive.org/web/20240619160953id_/http://www.slbcuttarakhand.com/documents/List__Govt_Officials.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/List__Govt_Officials.pdf",
-      "status": "planned"
+      "sizeBytes": 1053449,
+      "sha256": "196cf4be6051890a118991b838770d5dee8da96dc3268d082733657b00b71317",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/agenda-53rd.pdf",
@@ -706,7 +883,9 @@
       "snapshotTimestamp": "20240629092334",
       "snapshotUrl": "https://web.archive.org/web/20240629092334id_/http://www.slbcuttarakhand.com/meetings/agenda-53rd.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/agenda-53rd.pdf",
-      "status": "planned"
+      "sizeBytes": 1015889,
+      "sha256": "716cd25161da2264f907210bcad98d40b6ebb5a07e618b266b417c38ca1f0658",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/300000-insurance%20-guidelines.pdf",
@@ -714,7 +893,9 @@
       "snapshotTimestamp": "20240629092640",
       "snapshotUrl": "https://web.archive.org/web/20240629092640id_/http://www.slbcuttarakhand.com/documents/300000-insurance%20-guidelines.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/300000-insurance_-guidelines.pdf",
-      "status": "planned"
+      "sizeBytes": 75790,
+      "sha256": "623056eb8543ec55b0df1ff5f3dfd102f6ba98bd89de15d7a5f41892c7ba442e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/40%20slbc%20agenda%20points.pdf",
@@ -722,7 +903,9 @@
       "snapshotTimestamp": "20240629092745",
       "snapshotUrl": "https://web.archive.org/web/20240629092745id_/http://www.slbcuttarakhand.com/meetings/40%20SLBC%20Agenda%20Points.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/40_SLBC_Agenda_Points.pdf",
-      "status": "planned"
+      "sizeBytes": 360843,
+      "sha256": "5ec0725b72e0437c179125a6065afedffa8f6c181405d79349a814b8c937eb99",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda_62nd_slbc_meeting.pdf",
@@ -730,7 +913,9 @@
       "snapshotTimestamp": "20240629095025",
       "snapshotUrl": "https://web.archive.org/web/20240629095025id_/http://www.slbcuttarakhand.com/documents/Agenda_62nd_SLBC_meeting.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Agenda_62nd_SLBC_meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 187165,
+      "sha256": "be8330a10264c502d31ff6a76bd9b5694193696bf9a8ce6eef71ea9db0ebb9e8",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/agenda_book_37.pdf",
@@ -738,7 +923,9 @@
       "snapshotTimestamp": "20240629111328",
       "snapshotUrl": "https://web.archive.org/web/20240629111328id_/http://www.slbcuttarakhand.com/meetings/agenda_book_37.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/agenda_book_37.pdf",
-      "status": "planned"
+      "sizeBytes": 3507207,
+      "sha256": "00488bce7ec1ec1f1e923f1263b0889f531f618114b7f208072a1707c67a4ce3",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/agenda_book_41.pdf",
@@ -746,7 +933,9 @@
       "snapshotTimestamp": "20240629112140",
       "snapshotUrl": "https://web.archive.org/web/20240629112140id_/http://www.slbcuttarakhand.com/meetings/agenda_book_41.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/agenda_book_41.pdf",
-      "status": "planned"
+      "sizeBytes": 2953095,
+      "sha256": "e2d93dafb7b6accd1f0337020c5c6cb8ec8d10a18998436a1c4bb6227883525e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda_71stslbc.pdf",
@@ -754,7 +943,9 @@
       "snapshotTimestamp": "20240629214009",
       "snapshotUrl": "https://web.archive.org/web/20240629214009id_/http://www.slbcuttarakhand.com/documents/Agenda_71stSLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Agenda_71stSLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 7535044,
+      "sha256": "80d78aae641d1107012cca003910b1588cc8b4ef628d850e7c73336f6ba16982",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/agenda_book_42.pdf",
@@ -762,7 +953,9 @@
       "snapshotTimestamp": "20240629235424",
       "snapshotUrl": "https://web.archive.org/web/20240629235424id_/http://www.slbcuttarakhand.com/meetings/agenda_book_42.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/agenda_book_42.pdf",
-      "status": "planned"
+      "sizeBytes": 4226139,
+      "sha256": "cbb4639ba25f3d27ee795bae583d051bb9ffed4cf75a7a96ba5fb09e64281dde",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/agenda_book_36.pdf",
@@ -770,7 +963,9 @@
       "snapshotTimestamp": "20240630062437",
       "snapshotUrl": "https://web.archive.org/web/20240630062437id_/http://www.slbcuttarakhand.com/meetings/agenda_book_36.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/agenda_book_36.pdf",
-      "status": "planned"
+      "sizeBytes": 2045346,
+      "sha256": "bc7972a71534a2f25bfef8af0cb807e474d41e77f16f5442bd898cc61402d559",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda__64th_slbc_meeting.pdf",
@@ -778,7 +973,9 @@
       "snapshotTimestamp": "20240630153952",
       "snapshotUrl": "https://web.archive.org/web/20240630153952id_/http://www.slbcuttarakhand.com/documents/Agenda__64th_SLBC_meeting.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Agenda__64th_SLBC_meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 1006295,
+      "sha256": "0897974f66d87bbe8ca0c782e2cd2f26505ce6afe5b542c35fea823ae5586d9a",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/81stslbcmeetingagenda.pdf",
@@ -786,7 +983,9 @@
       "snapshotTimestamp": "20240702145625",
       "snapshotUrl": "https://web.archive.org/web/20240702145625id_/http://www.slbcuttarakhand.com/documents/81stSLBCMeetingAgenda.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/81stSLBCMeetingAgenda.pdf",
-      "status": "planned"
+      "sizeBytes": 20702944,
+      "sha256": "aaf1e9359a6fe043fa29f2835743993f40f809073b6d0bffc2cea76f4410a100",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/64th_book_complete_with_numbers.pdf",
@@ -794,7 +993,9 @@
       "snapshotTimestamp": "20240703095836",
       "snapshotUrl": "https://web.archive.org/web/20240703095836id_/http://slbcuttarakhand.com/documents/64th_Book_Complete_with_numbers.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/64th_Book_Complete_with_numbers.pdf",
-      "status": "planned"
+      "sizeBytes": 17000124,
+      "sha256": "8d9138bdb28a9e57eacb8d67236566cfab9f87462c3a14363cf401606e6921f0",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/slbc%20may%202016%20book%20final.pdf",
@@ -802,7 +1003,9 @@
       "snapshotTimestamp": "20240703144657",
       "snapshotUrl": "https://web.archive.org/web/20240703144657id_/http://slbcuttarakhand.com/documents/SLBC%20May%202016%20book%20FINAL.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/SLBC_May_2016_book_FINAL.pdf",
-      "status": "planned"
+      "sizeBytes": 58413585,
+      "sha256": "6b8e9c70028ade8c85a6d525252c2bc1c0ad1bcaff262264bce202a277cfa7c5",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/66%20slbc%20book.pdf",
@@ -810,7 +1013,9 @@
       "snapshotTimestamp": "20240703162816",
       "snapshotUrl": "https://web.archive.org/web/20240703162816id_/http://slbcuttarakhand.com/documents/66%20SLBC%20BOOK.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/66_SLBC_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 14809792,
+      "sha256": "19d5b1a472b2be2b1d821b764ef671c2b8f6c285306caa86106ca2407a703cc1",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/73%20slbc%20final%20book.pdf",
@@ -818,7 +1023,9 @@
       "snapshotTimestamp": "20240704124949",
       "snapshotUrl": "https://web.archive.org/web/20240704124949id_/http://slbcuttarakhand.com/documents/73%20SLBC%20Final%20Book.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/73_SLBC_Final_Book.pdf",
-      "status": "planned"
+      "sizeBytes": 62255233,
+      "sha256": "4bafb61432606f45514834d1494379f01f59802ca5bb1ae2d5086ab1556f6646",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/63rd%20slbc%20book.pdf",
@@ -826,7 +1033,9 @@
       "snapshotTimestamp": "20240705061914",
       "snapshotUrl": "https://web.archive.org/web/20240705061914id_/http://slbcuttarakhand.com/documents/63rd%20SLBC%20BOOK.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/63rd_SLBC_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 33227725,
+      "sha256": "3eeba27fadee6be0f05c2b5b2c85f203dbd2eaa3ae7ddc2172b3b010f1958018",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/pmjjby/final_pmjjby_consent_form.pdf",
@@ -834,7 +1043,9 @@
       "snapshotTimestamp": "20240714074130",
       "snapshotUrl": "https://web.archive.org/web/20240714074130id_/http://slbcuttarakhand.com/PMJJBY/Final_PMJJBY_consent_form.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Final_PMJJBY_consent_form.pdf",
-      "status": "planned"
+      "sizeBytes": 678716,
+      "sha256": "c064c5c836f508ca4cec46edcb1ff4ae782ee753efd2e1e4af8447b2195f283d",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/final%20slbc%2088.pdf",
@@ -842,7 +1053,10 @@
       "snapshotTimestamp": "20240719201706",
       "snapshotUrl": "https://web.archive.org/web/20240719201706id_/http://slbcuttarakhand.com/documents/final%20slbc%2088.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/final_slbc_88.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "fbe2a5e44edc09356beb8eb9db6db3d37169470313b86e3b1de22ebc73b28fe7",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/slbc_87_final.pdf",
@@ -850,7 +1064,10 @@
       "snapshotTimestamp": "20240719221905",
       "snapshotUrl": "https://web.archive.org/web/20240719221905id_/http://slbcuttarakhand.com/documents/SLBC_87_FINAL.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/SLBC_87_FINAL.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "3bfa1f7e7326523aa238c417bb6478c0c72e7a4700a2b450e4feca7f2d5f7f32",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/84th_spl_slbc_agenda.pdf",
@@ -858,7 +1075,9 @@
       "snapshotTimestamp": "20240808013729",
       "snapshotUrl": "https://web.archive.org/web/20240808013729id_/http://www.slbcuttarakhand.com/documents/84th_Spl_SLBC_AGENDA.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/84th_Spl_SLBC_AGENDA.pdf",
-      "status": "planned"
+      "sizeBytes": 1810162,
+      "sha256": "89f84c50668c869fda7ead8e0226d2d46a4a34b0ccec7d82d8e0c50cc95808cd",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda87.pdf",
@@ -866,7 +1085,9 @@
       "snapshotTimestamp": "20240812133204",
       "snapshotUrl": "https://web.archive.org/web/20240812133204id_/http://www.slbcuttarakhand.com/documents/Agenda87.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Agenda87.pdf",
-      "status": "planned"
+      "sizeBytes": 827153,
+      "sha256": "ef76a303a908d0d3d770599ea920558fdcf4c0b42b6d0c4526d040a5d4589cef",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/pmsby/final_pmsby_consent_form.pdf",
@@ -874,7 +1095,9 @@
       "snapshotTimestamp": "20240813173855",
       "snapshotUrl": "https://web.archive.org/web/20240813173855id_/http://slbcuttarakhand.com/PMSBY/Final_PMSBY_consent_form.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Final_PMSBY_consent_form.pdf",
-      "status": "planned"
+      "sizeBytes": 157292,
+      "sha256": "8e7f3c7a2b423955e03fd22e35ca7a50f533e28bf78b1a3a43511b64fd4ce5b1",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/pmsby/faqs_on_pmsby.pdf",
@@ -882,7 +1105,9 @@
       "snapshotTimestamp": "20240813181148",
       "snapshotUrl": "https://web.archive.org/web/20240813181148id_/http://slbcuttarakhand.com/PMSBY/FAQs_on_PMSBY.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/FAQs_on_PMSBY.pdf",
-      "status": "planned"
+      "sizeBytes": 341500,
+      "sha256": "22beeb3f382dd1b4f5dfe50f1f3f00d6ae29fed4fe48a6afacbbefa4ef54d510",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/pmsby/final_rules_pmsby.pdf",
@@ -890,7 +1115,9 @@
       "snapshotTimestamp": "20240813182615",
       "snapshotUrl": "https://web.archive.org/web/20240813182615id_/http://slbcuttarakhand.com/PMSBY/final_rules_PMSBY.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/final_rules_PMSBY.pdf",
-      "status": "planned"
+      "sizeBytes": 330987,
+      "sha256": "b84a3bcc6eef49078ed05c7c490f6b3b52f3f5fb613b4016968ee8206a565d41",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/pmsby/final_claim_form_pmsby.pdf",
@@ -898,7 +1125,9 @@
       "snapshotTimestamp": "20240813182909",
       "snapshotUrl": "https://web.archive.org/web/20240813182909id_/http://slbcuttarakhand.com/PMSBY/final_claim_form_PMSBY.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/final_claim_form_PMSBY.pdf",
-      "status": "planned"
+      "sizeBytes": 351558,
+      "sha256": "4bf28404a1f821ec810f91d126ad90b458f069ebd30c0bf0363c742510de45dc",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/apy/flyer.pdf",
@@ -906,7 +1135,9 @@
       "snapshotTimestamp": "20240918174708",
       "snapshotUrl": "https://web.archive.org/web/20240918174708id_/http://slbcuttarakhand.com/APY/Flyer.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Flyer.pdf",
-      "status": "planned"
+      "sizeBytes": 473633,
+      "sha256": "9571c52d80195e92acba2f65ef7841a5f93caa7084d1885d2a070d3ce9c9251d",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/apy/apy_training_module_for_trainers.pdf",
@@ -914,7 +1145,10 @@
       "snapshotTimestamp": "20240918181840",
       "snapshotUrl": "https://web.archive.org/web/20240918181840id_/http://slbcuttarakhand.com/APY/APY_Training_Module_for_Trainers.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/APY_Training_Module_for_Trainers.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "dbef2b3e865753263989074712a4f77d308a7f320eef43f57fdd6abea62bcd35",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/apy/subscriber_registration_form-apy.pdf",
@@ -922,7 +1156,9 @@
       "snapshotTimestamp": "20240918184934",
       "snapshotUrl": "https://web.archive.org/web/20240918184934id_/http://slbcuttarakhand.com/APY/subscriber_registration_form-APY.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/subscriber_registration_form-APY.pdf",
-      "status": "planned"
+      "sizeBytes": 274735,
+      "sha256": "bb005c64d0ca444598232346694a96bd9f48c08bc5b4af75056d59390d216fd3",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/dehradun.pdf",
@@ -930,7 +1166,10 @@
       "snapshotTimestamp": "20241003190639",
       "snapshotUrl": "https://web.archive.org/web/20241003190639id_/http://slbcuttarakhand.com/documents/DEHRADUN.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/DEHRADUN.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "0067eee2d769f2825e5342e0d61c6a93e507cd1e1069e554a30b84c12557c5e3",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/74%20slbc%20book.pdf",
@@ -938,7 +1177,10 @@
       "snapshotTimestamp": "20241003192527",
       "snapshotUrl": "https://web.archive.org/web/20241003192527id_/http://slbcuttarakhand.com/documents/74%20SLBC%20BOOK.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/74_SLBC_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "021b953eed1b5c05f4623ac5696cddd703311f58a77c89d0c776796edb119eb6",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/slbc_62nd_book%20final.pdf",
@@ -946,7 +1188,10 @@
       "snapshotTimestamp": "20241003193301",
       "snapshotUrl": "https://web.archive.org/web/20241003193301id_/http://slbcuttarakhand.com/documents/SLBC_62nd_Book%20Final.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/SLBC_62nd_Book_Final.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "ab8d8a8da05929888f8eae057f3770251cc4e9bd64ec6041b95396686e3c49a3",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/pithoragarh.pdf",
@@ -954,7 +1199,10 @@
       "snapshotTimestamp": "20241003200835",
       "snapshotUrl": "https://web.archive.org/web/20241003200835id_/http://slbcuttarakhand.com/documents/Pithoragarh.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Pithoragarh.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "61ebb17bdeb8e3744df46a5084d2b86d40e1824be0562ea59727476c2167c937",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/claim_settlement_procedure_pmjdy_final.pdf",
@@ -962,7 +1210,9 @@
       "snapshotTimestamp": "20241010160044",
       "snapshotUrl": "https://web.archive.org/web/20241010160044id_/http://www.slbcuttarakhand.com/documents/Claim_Settlement_Procedure_PMJDY_Final.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Claim_Settlement_Procedure_PMJDY_Final.pdf",
-      "status": "planned"
+      "sizeBytes": 132863,
+      "sha256": "27ff44618e89ed145536cc39a37916ad91faeeb54d3d3dfbe9af222f327ad1fc",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/indemnity_bond_for_insurance_claim.pdf",
@@ -970,7 +1220,9 @@
       "snapshotTimestamp": "20241010161135",
       "snapshotUrl": "https://web.archive.org/web/20241010161135id_/http://www.slbcuttarakhand.com/documents/Indemnity_Bond_for_insurance_claim.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Indemnity_Bond_for_insurance_claim.pdf",
-      "status": "planned"
+      "sizeBytes": 61430,
+      "sha256": "6d7ba760511e662c381c2cb2728849034cc7e301e3d641a294d52ae757e664e1",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda-54rd.pdf",
@@ -978,7 +1230,10 @@
       "snapshotTimestamp": "20241010164247",
       "snapshotUrl": "https://web.archive.org/web/20241010164247id_/http://www.slbcuttarakhand.com/documents/agenda-54rd.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/agenda-54rd.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "2e1249dcb9df8246b2d4b3ebb264738003ef39bb76f7a818c18487fb43da485a",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/pmjdy_brochure_eng.pdf",
@@ -986,7 +1241,10 @@
       "snapshotTimestamp": "20241010171622",
       "snapshotUrl": "https://web.archive.org/web/20241010171622id_/http://www.slbcuttarakhand.com/documents/PMJDY_BROCHURE_ENG.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/PMJDY_BROCHURE_ENG.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "24f7cd8c8ed90e108a4836532d9bc2a56da395ee4b1422ff76ab97775efd9542",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/part1.pdf",
@@ -994,7 +1252,10 @@
       "snapshotTimestamp": "20241010171645",
       "snapshotUrl": "https://web.archive.org/web/20241010171645id_/http://www.slbcuttarakhand.com/documents/Part1.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Part1.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "7723ceb30c3148345fc46264c6ff0375dd1fd1d359a73b9d18dded40eff01b02",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/84th_slbc_minutes.pdf",
@@ -1002,7 +1263,9 @@
       "snapshotTimestamp": "20241010175642",
       "snapshotUrl": "https://web.archive.org/web/20241010175642id_/http://www.slbcuttarakhand.com/documents/84th_SLBC_Minutes.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/84th_SLBC_Minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 648814,
+      "sha256": "371ceae13cd0d71b8fc4cccdc8ecf50dd9df88532690706e3aef72acd72a58da",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/56th_agenda.pdf",
@@ -1010,7 +1273,10 @@
       "snapshotTimestamp": "20241010175953",
       "snapshotUrl": "https://web.archive.org/web/20241010175953id_/http://www.slbcuttarakhand.com/documents/56th_agenda.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/56th_agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "fc277a0d65c0a7313dc09ec683455c9bec98e3414877ba2b3ffb1a9e8e3ce023",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/shgs_interest_subvention_booklet.pdf",
@@ -1018,7 +1284,9 @@
       "snapshotTimestamp": "20241125053203",
       "snapshotUrl": "https://web.archive.org/web/20241125053203id_/http://slbcuttarakhand.com/documents/SHGs_Interest_Subvention_booklet.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/SHGs_Interest_Subvention_booklet.pdf",
-      "status": "planned"
+      "sizeBytes": 278182,
+      "sha256": "e03b41e12608b0c6af9495edce30d002d1df24ee6501c41ccd21fc120a48f812",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/apy/atal_pension_yojana-scheme.pdf",
@@ -1026,7 +1294,9 @@
       "snapshotTimestamp": "20241125094743",
       "snapshotUrl": "https://web.archive.org/web/20241125094743id_/http://slbcuttarakhand.com/APY/Atal_Pension_Yojana-Scheme.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Atal_Pension_Yojana-Scheme.pdf",
-      "status": "planned"
+      "sizeBytes": 221182,
+      "sha256": "6bc64f63bd6031700e5e2947799673372b5b36acb72c661fe7982bcaef821b7d",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/apy/apy_faqs.pdf",
@@ -1034,7 +1304,9 @@
       "snapshotTimestamp": "20241125160131",
       "snapshotUrl": "https://web.archive.org/web/20241125160131id_/http://slbcuttarakhand.com/APY/APY_FAQs.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/APY_FAQs.pdf",
-      "status": "planned"
+      "sizeBytes": 462935,
+      "sha256": "c7256ee684d38d230be6375b86f770d3ae54a33f1a61b8e0b92dd7143ab327d8",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/apy/apy_brochure.pdf",
@@ -1042,7 +1314,9 @@
       "snapshotTimestamp": "20241127060956",
       "snapshotUrl": "https://web.archive.org/web/20241127060956id_/http://slbcuttarakhand.com/APY/APY_Brochure.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/APY_Brochure.pdf",
-      "status": "planned"
+      "sizeBytes": 381768,
+      "sha256": "61a09b7665a4d8555ed7a1db370d8bfe95b7dc55d423ed5060109f6daea9a7ad",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/chamoli.pdf",
@@ -1050,7 +1324,9 @@
       "snapshotTimestamp": "20241204022058",
       "snapshotUrl": "https://web.archive.org/web/20241204022058id_/http://slbcuttarakhand.com/documents/Chamoli.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/Chamoli.pdf",
-      "status": "planned"
+      "sizeBytes": 2051757,
+      "sha256": "24536f2cb7de6684068d693b5ef62d7e1037dd3d53281e5c24d8db7f0ef10f0f",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/sep-nulm.pdf",
@@ -1058,7 +1334,9 @@
       "snapshotTimestamp": "20241206173938",
       "snapshotUrl": "https://web.archive.org/web/20241206173938id_/http://slbcuttarakhand.com/documents/SEP-NULM.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/SEP-NULM.pdf",
-      "status": "planned"
+      "sizeBytes": 7135248,
+      "sha256": "8dd1c2a3da74d3b63cb4e9955e41cffa02337dd85763bc42aaf57fd6fea3deba",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atr%2077th%20slbc.pdf",
@@ -1066,7 +1344,9 @@
       "snapshotTimestamp": "20241210135929",
       "snapshotUrl": "https://web.archive.org/web/20241210135929id_/http://slbcuttarakhand.com/documents/ATR%2077th%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ATR_77th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 244949,
+      "sha256": "01a2b5d3b406516ac69add526998a10459d92b11196d97882b9ad5382e9cfcd3",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atr%2078th%20and%2079th%20%20slbc.pdf",
@@ -1074,7 +1354,9 @@
       "snapshotTimestamp": "20241210140337",
       "snapshotUrl": "https://web.archive.org/web/20241210140337id_/http://slbcuttarakhand.com/documents/ATR%2078th%20and%2079th%20%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ATR_78th_and_79th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 237756,
+      "sha256": "a4ebf87764c2f0bd062be5a441a384623a40c3dacb5f196b87eb69b962e0c300",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/82%20action%20points%20june%202022-25.08.2022.pdf",
@@ -1082,7 +1364,9 @@
       "snapshotTimestamp": "20241210150558",
       "snapshotUrl": "https://web.archive.org/web/20241210150558id_/http://slbcuttarakhand.com/documents/82%20ACTION%20POINTS%20JUNE%202022-25.08.2022.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/82_ACTION_POINTS_JUNE_2022-25.08.2022.pdf",
-      "status": "planned"
+      "sizeBytes": 227424,
+      "sha256": "3168b7f70ed4adba9fd27c9d9a49ace152ba6bdf41bffba74833f7ce19f10617",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/76%20th%20slbc%20meeting%20atr.pdf",
@@ -1090,7 +1374,9 @@
       "snapshotTimestamp": "20241210154408",
       "snapshotUrl": "https://web.archive.org/web/20241210154408id_/http://slbcuttarakhand.com/documents/76%20th%20SLBC%20MEETING%20ATR.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/76_th_SLBC_MEETING_ATR.pdf",
-      "status": "planned"
+      "sizeBytes": 252113,
+      "sha256": "c4870533dbdab18ac839d54088088a0e13076409235f46f4f6527b47a05b3024",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atr%20%2064th%20%20slbc.pdf",
@@ -1098,7 +1384,9 @@
       "snapshotTimestamp": "20241214151546",
       "snapshotUrl": "https://web.archive.org/web/20241214151546id_/http://www.slbcuttarakhand.com/documents/ATR%20%2064th%20%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ATR_64th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 547994,
+      "sha256": "0fa9b39be67b0d2b3a691402213b7f59ba8a4a31d6a05e36203ff3992d7692a9",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_38.pdf",
@@ -1106,7 +1394,9 @@
       "snapshotTimestamp": "20241214151744",
       "snapshotUrl": "https://web.archive.org/web/20241214151744id_/http://www.slbcuttarakhand.com/meetings/action_point_38.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_38.pdf",
-      "status": "planned"
+      "sizeBytes": 84128,
+      "sha256": "3ecf574f52235c4bafd26a57707c3262f61f6f8c98044c99c95a79a2cf5efe45",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_32.pdf",
@@ -1114,7 +1404,9 @@
       "snapshotTimestamp": "20241214152053",
       "snapshotUrl": "https://web.archive.org/web/20241214152053id_/http://www.slbcuttarakhand.com/meetings/action_point_32.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_32.pdf",
-      "status": "planned"
+      "sizeBytes": 64797,
+      "sha256": "2ecdf09c162829528e317db5c86f8f06cc27859b55cd8b54531396fec88a5fac",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_29.pdf",
@@ -1122,7 +1414,9 @@
       "snapshotTimestamp": "20241214152247",
       "snapshotUrl": "https://web.archive.org/web/20241214152247id_/http://www.slbcuttarakhand.com/meetings/action_point_29.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_29.pdf",
-      "status": "planned"
+      "sizeBytes": 51594,
+      "sha256": "483e6046f338699c536600bbd44fe9249958cb50919f79fb65166161c28cf4a4",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_51.pdf",
@@ -1130,7 +1424,9 @@
       "snapshotTimestamp": "20241214152439",
       "snapshotUrl": "https://web.archive.org/web/20241214152439id_/http://www.slbcuttarakhand.com/meetings/action_point_51.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_51.pdf",
-      "status": "planned"
+      "sizeBytes": 601813,
+      "sha256": "1d0e501f6d1ce8910a26609f2a297e4bbb35d8b3f60de84e1fc9d644fcbde31d",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_48.pdf",
@@ -1138,7 +1434,9 @@
       "snapshotTimestamp": "20241214152746",
       "snapshotUrl": "https://web.archive.org/web/20241214152746id_/http://www.slbcuttarakhand.com/meetings/action_point_48.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_48.pdf",
-      "status": "planned"
+      "sizeBytes": 778981,
+      "sha256": "04d0401df5eec64737575ab608610f914caf15d954b8abf4644a3968bde1a2d8",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_42.pdf",
@@ -1146,7 +1444,9 @@
       "snapshotTimestamp": "20241214153230",
       "snapshotUrl": "https://web.archive.org/web/20241214153230id_/http://www.slbcuttarakhand.com/meetings/action_point_42.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_42.pdf",
-      "status": "planned"
+      "sizeBytes": 441510,
+      "sha256": "01d8d20897fc704809ac7560c70e83871a8a5c53a7ad366fd26c9980372710d9",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_33.pdf",
@@ -1154,7 +1454,9 @@
       "snapshotTimestamp": "20241214154200",
       "snapshotUrl": "https://web.archive.org/web/20241214154200id_/http://www.slbcuttarakhand.com/meetings/action_point_33.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_33.pdf",
-      "status": "planned"
+      "sizeBytes": 70801,
+      "sha256": "aa898490c9fc123e3d96458dc30f903a9bc3eb3bc5ff92564beb8814ad377c89",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/59th%20%20%20slbc%20action%20point.pdf",
@@ -1162,7 +1464,9 @@
       "snapshotTimestamp": "20241214154239",
       "snapshotUrl": "https://web.archive.org/web/20241214154239id_/http://www.slbcuttarakhand.com/documents/59th%20%20%20SLBC%20Action%20point.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/59th_SLBC_Action_point.pdf",
-      "status": "planned"
+      "sizeBytes": 391760,
+      "sha256": "90bd12e0b00560dfbb53c8ee9f36547a7d97205575b3f6584b665b37b0833338",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atr62ndslbc.pdf",
@@ -1170,7 +1474,9 @@
       "snapshotTimestamp": "20241214155054",
       "snapshotUrl": "https://web.archive.org/web/20241214155054id_/http://www.slbcuttarakhand.com/documents/ATR62ndSLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ATR62ndSLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 379795,
+      "sha256": "b0d6c4d7cbf6d8ecfb6a036d4892b08f9c59ac5d405d1e5854fe1cf36d43935b",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atr_68th_slbc.pdf",
@@ -1178,7 +1484,9 @@
       "snapshotTimestamp": "20241214155254",
       "snapshotUrl": "https://web.archive.org/web/20241214155254id_/http://www.slbcuttarakhand.com/documents/ATR_68th_SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ATR_68th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 649944,
+      "sha256": "78d98887e503e3f94203a654f0b6dbdae4fc35a1f2fa5705ca701b32606fcc5c",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_49.pdf",
@@ -1186,7 +1494,9 @@
       "snapshotTimestamp": "20241214155337",
       "snapshotUrl": "https://web.archive.org/web/20241214155337id_/http://www.slbcuttarakhand.com/meetings/action_point_49.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_49.pdf",
-      "status": "planned"
+      "sizeBytes": 175801,
+      "sha256": "e8f32c6e29f63a6355cababe8544395e624b9cc10b13c36a409b8591791ea013",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atr%20%2066th%20%20slbc.pdf",
@@ -1194,7 +1504,9 @@
       "snapshotTimestamp": "20241214160522",
       "snapshotUrl": "https://web.archive.org/web/20241214160522id_/http://www.slbcuttarakhand.com/documents/ATR%20%2066th%20%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ATR_66th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 608491,
+      "sha256": "2bc6882a4d15eb243476a3cd8750f9dc3151cf4b96f903ecc94a3fab1012f816",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_53.pdf",
@@ -1202,7 +1514,9 @@
       "snapshotTimestamp": "20241214161159",
       "snapshotUrl": "https://web.archive.org/web/20241214161159id_/http://www.slbcuttarakhand.com/meetings/action_point_53.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_53.pdf",
-      "status": "planned"
+      "sizeBytes": 336424,
+      "sha256": "cc42a71bef4b5e86ec623177b67b7a9e57292f2615fcfa968e38f2105bdbc135",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/57th%20%20%20slbc%20action%20point.pdf",
@@ -1210,7 +1524,9 @@
       "snapshotTimestamp": "20241214161328",
       "snapshotUrl": "https://web.archive.org/web/20241214161328id_/http://www.slbcuttarakhand.com/documents/57th%20%20%20SLBC%20Action%20point.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/57th_SLBC_Action_point.pdf",
-      "status": "planned"
+      "sizeBytes": 452561,
+      "sha256": "ace3c1b9d5d95b6a733bc7c9c230aaeae3f49443bae61c4fa51582962d0b8f83",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_44.pdf",
@@ -1218,7 +1534,10 @@
       "snapshotTimestamp": "20241214162126",
       "snapshotUrl": "https://web.archive.org/web/20241214162126id_/http://www.slbcuttarakhand.com/meetings/action_point_44.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_44.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "6e05982a84f4528bcddf4f0aea061d158fd4bf15f00d688f95af00c226ddfa77",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/actiontaken%20report%20%2069th%20%20slbc.pdf",
@@ -1226,7 +1545,9 @@
       "snapshotTimestamp": "20241214162651",
       "snapshotUrl": "https://web.archive.org/web/20241214162651id_/http://www.slbcuttarakhand.com/documents/ActionTaken%20Report%20%2069th%20%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ActionTaken_Report_69th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 650540,
+      "sha256": "ccb6b08b6ad4c66ed1d6ba8c6fd7c4dc83c76cada38b4f7270ec9eb92fc666f5",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atr%20%2065th%20slbc.pdf",
@@ -1234,7 +1555,9 @@
       "snapshotTimestamp": "20241214162718",
       "snapshotUrl": "https://web.archive.org/web/20241214162718id_/http://www.slbcuttarakhand.com/documents/ATR%20%2065th%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ATR_65th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 559135,
+      "sha256": "d818900c02fb8a9431f4ce24b77e1950f77e06da56be1fb60e080a6147c69b33",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atr%20-special%20slbc%20meeting%20dt.%20051020.pdf",
@@ -1242,7 +1565,9 @@
       "snapshotTimestamp": "20241214162745",
       "snapshotUrl": "https://web.archive.org/web/20241214162745id_/http://www.slbcuttarakhand.com/documents/ATR%20-Special%20SLBC%20Meeting%20dt.%20051020.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ATR_-Special_SLBC_Meeting_dt._051020.pdf",
-      "status": "planned"
+      "sizeBytes": 277388,
+      "sha256": "3c91215d3805e3d3cac72d45e27b77bcda4483e5c2c9280659165d8bd850b43d",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_35.pdf",
@@ -1250,7 +1575,9 @@
       "snapshotTimestamp": "20241214162928",
       "snapshotUrl": "https://web.archive.org/web/20241214162928id_/http://www.slbcuttarakhand.com/meetings/action_point_35.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_35.pdf",
-      "status": "planned"
+      "sizeBytes": 62913,
+      "sha256": "09ab9d254f9134ccacea8bbdbe80ad6d63041e0d266566813118767868fbc9a3",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_54.pdf",
@@ -1258,7 +1585,9 @@
       "snapshotTimestamp": "20241214163453",
       "snapshotUrl": "https://web.archive.org/web/20241214163453id_/http://www.slbcuttarakhand.com/meetings/action_point_54.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_54.pdf",
-      "status": "planned"
+      "sizeBytes": 334127,
+      "sha256": "a32bb35572482321c9ea62e88d1ecd07cc67acba0a9286697614ff1d8ddc842d",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_45.pdf",
@@ -1266,7 +1595,10 @@
       "snapshotTimestamp": "20241214164436",
       "snapshotUrl": "https://web.archive.org/web/20241214164436id_/http://www.slbcuttarakhand.com/meetings/action_point_45.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_45.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "91a3af0039675060a2a3dbe1e8eea1d88cafd8024881354ccf4e2019be19889b",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atr_%2067th_slbc%20meeting.pdf",
@@ -1274,7 +1606,9 @@
       "snapshotTimestamp": "20241214165228",
       "snapshotUrl": "https://web.archive.org/web/20241214165228id_/http://www.slbcuttarakhand.com/documents/ATR_%2067th_SLBC%20Meeting.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ATR__67th_SLBC_Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 727127,
+      "sha256": "5eb64edb07425ab8fbe3b71a9e30b1a0629da060a13731e9b1de2f39b5c87b81",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_36.pdf",
@@ -1282,7 +1616,9 @@
       "snapshotTimestamp": "20241214165608",
       "snapshotUrl": "https://web.archive.org/web/20241214165608id_/http://www.slbcuttarakhand.com/meetings/action_point_36.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_36.pdf",
-      "status": "planned"
+      "sizeBytes": 68541,
+      "sha256": "a201b2decfaa5d3af685a215a2dedb306701a5f6cb3e124116c27bfe484cb010",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atr%2058th%20%20%20slbc%20action%20point.pdf",
@@ -1290,7 +1626,9 @@
       "snapshotTimestamp": "20241214165703",
       "snapshotUrl": "https://web.archive.org/web/20241214165703id_/http://www.slbcuttarakhand.com/documents/ATR%2058th%20%20%20SLBC%20Action%20point.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ATR_58th_SLBC_Action_point.pdf",
-      "status": "planned"
+      "sizeBytes": 786175,
+      "sha256": "0a022e9d43ffcce33c14460cd2da3bc00cec2818559a529e5040447d7ce73ccf",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_30.pdf",
@@ -1298,7 +1636,9 @@
       "snapshotTimestamp": "20241214165904",
       "snapshotUrl": "https://web.archive.org/web/20241214165904id_/http://www.slbcuttarakhand.com/meetings/action_point_30.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_30.pdf",
-      "status": "planned"
+      "sizeBytes": 53451,
+      "sha256": "d60525d075a0b582774d646d16663d0d0dbfc370f5ed82fd560b0c27c26e9078",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_55.pdf",
@@ -1306,7 +1646,9 @@
       "snapshotTimestamp": "20241214170105",
       "snapshotUrl": "https://web.archive.org/web/20241214170105id_/http://www.slbcuttarakhand.com/meetings/action_point_55.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_55.pdf",
-      "status": "planned"
+      "sizeBytes": 386375,
+      "sha256": "a5e3fe4df68ce23c72f61f1d5b3155153414a153bc393ff8b8193ab99436355b",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_46.pdf",
@@ -1314,7 +1656,9 @@
       "snapshotTimestamp": "20241214170749",
       "snapshotUrl": "https://web.archive.org/web/20241214170749id_/http://www.slbcuttarakhand.com/meetings/action_point_46.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_46.pdf",
-      "status": "planned"
+      "sizeBytes": 687049,
+      "sha256": "aa33d527e0133d73c49b6d3364dbb7f9237a1ab0a84061dd14693963536fa0d8",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atr%2071st%20slbc.pdf",
@@ -1322,7 +1666,10 @@
       "snapshotTimestamp": "20241214170911",
       "snapshotUrl": "https://web.archive.org/web/20241214170911id_/http://www.slbcuttarakhand.com/documents/ATR%2071st%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ATR_71st_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "57478dca80737a40d9e46b2d47e5b862f4fede1814139a66364473859aed3238",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atr_61st_slbc.pdf",
@@ -1330,7 +1677,9 @@
       "snapshotTimestamp": "20241214171030",
       "snapshotUrl": "https://web.archive.org/web/20241214171030id_/http://www.slbcuttarakhand.com/documents/ATR_61st_SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ATR_61st_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 117381,
+      "sha256": "0eebae7c16a2e976655426673bcf5990aa1ead6e617fa31b295736d2f98db2e5",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_40.pdf",
@@ -1338,7 +1687,9 @@
       "snapshotTimestamp": "20241214171146",
       "snapshotUrl": "https://web.archive.org/web/20241214171146id_/http://www.slbcuttarakhand.com/meetings/action_point_40.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_40.pdf",
-      "status": "planned"
+      "sizeBytes": 87003,
+      "sha256": "7ff0630fd799bba0189f7008a60e138e0f6c6c3f4b1f1f4d3c0ebd708b99ed89",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atrof60thslbcactionpoint.pdf",
@@ -1346,7 +1697,9 @@
       "snapshotTimestamp": "20241214171345",
       "snapshotUrl": "https://web.archive.org/web/20241214171345id_/http://www.slbcuttarakhand.com/documents/ATRof60thSLBCactionpoint.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ATRof60thSLBCactionpoint.pdf",
-      "status": "planned"
+      "sizeBytes": 285166,
+      "sha256": "78a6777d3ddc59cb53f63a1f37c370d5f50f01c04a29cce810d9068cd3973114",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_37.pdf",
@@ -1354,7 +1707,9 @@
       "snapshotTimestamp": "20241214171458",
       "snapshotUrl": "https://web.archive.org/web/20241214171458id_/http://www.slbcuttarakhand.com/meetings/action_point_37.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_37.pdf",
-      "status": "planned"
+      "sizeBytes": 72105,
+      "sha256": "e8b3e03218f8f4dc42ab2f5eeafdc37c9e1aff7fe48305717aab86c1a859eb84",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atr%20of%20%2063rd%20%20slbc.pdf",
@@ -1362,7 +1717,9 @@
       "snapshotTimestamp": "20241214171752",
       "snapshotUrl": "https://web.archive.org/web/20241214171752id_/http://www.slbcuttarakhand.com/documents/ATR%20of%20%2063rd%20%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ATR_of_63rd_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 471777,
+      "sha256": "45b4c81daede03b94fa63bd6dbb9b48cfe4235f4d133d5aa794b1169a39c628e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atr%20%2070th%20slbc.pdf",
@@ -1370,7 +1727,10 @@
       "snapshotTimestamp": "20241214171826",
       "snapshotUrl": "https://web.archive.org/web/20241214171826id_/http://www.slbcuttarakhand.com/documents/ATR%20%2070th%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ATR_70th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "f88c46f17f1697f8ab0c88ab111d1ef2f73c941b0d8a51eb9ea025b6f9c8f98c",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_31.pdf",
@@ -1378,7 +1738,9 @@
       "snapshotTimestamp": "20241214171903",
       "snapshotUrl": "https://web.archive.org/web/20241214171903id_/http://www.slbcuttarakhand.com/meetings/action_point_31.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_31.pdf",
-      "status": "planned"
+      "sizeBytes": 69794,
+      "sha256": "eb135397706d9d3ffad4c88dcec772c46b09b93906ab1a84cf6c1b73e96f3142",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_56.pdf",
@@ -1386,7 +1748,9 @@
       "snapshotTimestamp": "20241214171937",
       "snapshotUrl": "https://web.archive.org/web/20241214171937id_/http://www.slbcuttarakhand.com/meetings/action_point_56.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_56.pdf",
-      "status": "planned"
+      "sizeBytes": 107162,
+      "sha256": "08b8344598c0c5d2d59d2d17b7a45173348efcc679dc3999fb91967bb1e5ce82",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_28.pdf",
@@ -1394,7 +1758,9 @@
       "snapshotTimestamp": "20241214172157",
       "snapshotUrl": "https://web.archive.org/web/20241214172157id_/http://www.slbcuttarakhand.com/meetings/action_point_28.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_28.pdf",
-      "status": "planned"
+      "sizeBytes": 47152,
+      "sha256": "df268153eb4b50f9e378003513df990a9246e68a8fe20720a3e4d56d5135bc3c",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_point_47.pdf",
@@ -1402,7 +1768,9 @@
       "snapshotTimestamp": "20241214172630",
       "snapshotUrl": "https://web.archive.org/web/20241214172630id_/http://www.slbcuttarakhand.com/meetings/action_point_47.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_point_47.pdf",
-      "status": "planned"
+      "sizeBytes": 899917,
+      "sha256": "09f09da3a58165b5e7452a0f275ec7add33c878db8126a12b1f2d955714f00c9",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/action_points_52.pdf",
@@ -1410,7 +1778,9 @@
       "snapshotTimestamp": "20241214172706",
       "snapshotUrl": "https://web.archive.org/web/20241214172706id_/http://www.slbcuttarakhand.com/meetings/action_points_52.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/action_points_52.pdf",
-      "status": "planned"
+      "sizeBytes": 589558,
+      "sha256": "43f5892465bdccbb0e425f535d50ea9d1c589015d396ce54594330768b07a9b0",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/atr%20special%20slbc%20meeting%20date%2011.01.2021%20(%2075th%20slbc%20meeting).pdf",
@@ -1418,7 +1788,9 @@
       "snapshotTimestamp": "20241214172919",
       "snapshotUrl": "https://web.archive.org/web/20241214172919id_/http://www.slbcuttarakhand.com/documents/ATR%20SPECIAL%20SLBC%20MEETING%20DATE%2011.01.2021%20(%2075th%20SLBC%20Meeting).pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2024/ATR_SPECIAL_SLBC_MEETING_DATE_11.01.2021_75th_SLBC_Meeting_.pdf",
-      "status": "planned"
+      "sizeBytes": 267114,
+      "sha256": "10c609b4083c39d28958a92fbab3b576c5f1c7a370113147f353671397156362",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda%20special%20slbc%20meeting%20%20dt%20051020.pdf",
@@ -1426,7 +1798,10 @@
       "snapshotTimestamp": "20250212061322",
       "snapshotUrl": "https://web.archive.org/web/20250212061322id_/http://www.slbcuttarakhand.com/documents/Agenda%20Special%20SLBC%20meeting%20%20dt%20051020.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/Agenda_Special_SLBC_meeting_dt_051020.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "c36ff31cc52801ecb43d983cf644cd6bbeb1a063de7394113a03d3bf6a16c508",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/minutes_48.pdf",
@@ -1434,7 +1809,9 @@
       "snapshotTimestamp": "20250212071212",
       "snapshotUrl": "https://web.archive.org/web/20250212071212id_/http://www.slbcuttarakhand.com/meetings/minutes_48.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/minutes_48.pdf",
-      "status": "planned"
+      "sizeBytes": 268639,
+      "sha256": "080ede6185e88be2abe0c52d1c647d891527dc0c4d3e588ca71b928beec6d7b1",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda61thslbcmeeting.pdf",
@@ -1442,7 +1819,9 @@
       "snapshotTimestamp": "20250212072434",
       "snapshotUrl": "https://web.archive.org/web/20250212072434id_/http://www.slbcuttarakhand.com/documents/Agenda61thSLBCmeeting.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/Agenda61thSLBCmeeting.pdf",
-      "status": "planned"
+      "sizeBytes": 179627,
+      "sha256": "2a377ab7f3936153bcca3eabdf74a5193a522d6549101952ab466bb4c111ae5e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/53rd_book_final.pdf",
@@ -1450,7 +1829,9 @@
       "snapshotTimestamp": "20250212073451",
       "snapshotUrl": "https://web.archive.org/web/20250212073451id_/http://www.slbcuttarakhand.com/meetings/53rd_book_final.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/53rd_book_final.pdf",
-      "status": "planned"
+      "sizeBytes": 933888,
+      "sha256": "3ba1daf16bb23a3094301300362ca8f6a4121f7e5b791ba29962239eff92f32f",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/pmjdy_claim_form_final.pdf",
@@ -1458,7 +1839,9 @@
       "snapshotTimestamp": "20250212073753",
       "snapshotUrl": "https://web.archive.org/web/20250212073753id_/http://www.slbcuttarakhand.com/documents/PMJDY_Claim_Form_Final.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/PMJDY_Claim_Form_Final.pdf",
-      "status": "planned"
+      "sizeBytes": 94717,
+      "sha256": "a76ce102bc392c287a99f4dd2fca1c548a1799c15f0cb60e93f000744d62b5b5",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda_%2060th_slbc%20meeting.pdf",
@@ -1466,7 +1849,10 @@
       "snapshotTimestamp": "20250212075510",
       "snapshotUrl": "https://web.archive.org/web/20250212075510id_/http://www.slbcuttarakhand.com/documents/Agenda_%2060th_SLBC%20meeting.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/Agenda__60th_SLBC_meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "47172e2ff5bc61cfc3cab8b86a34f1d6940cd3eb72c1cdbaa704bd7432f7e073",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes%2064th%20slbc.pdf",
@@ -1474,7 +1860,9 @@
       "snapshotTimestamp": "20250212080137",
       "snapshotUrl": "https://web.archive.org/web/20250212080137id_/http://www.slbcuttarakhand.com/documents/Minutes%2064th%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/Minutes_64th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 516580,
+      "sha256": "053612ab36d860525428e0157f9da3d00d728a80a6723772762c80846523e40e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes%20of%2086th%20slbc.pdf",
@@ -1482,7 +1870,9 @@
       "snapshotTimestamp": "20250212080745",
       "snapshotUrl": "https://web.archive.org/web/20250212080745id_/http://www.slbcuttarakhand.com/documents/Minutes%20of%2086th%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/Minutes_of_86th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 881333,
+      "sha256": "8b43575e1952c20f26ad2197c5a2608201edea63bebd99c6d7b42eaa49377e8f",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/75%20slbc%20book.pdf",
@@ -1490,7 +1880,10 @@
       "snapshotTimestamp": "20250213211448",
       "snapshotUrl": "https://web.archive.org/web/20250213211448id_/http://slbcuttarakhand.com/documents/75%20SLBC%20BOOK.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/75_SLBC_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "a38d5992acc5a675b27bcbdf161910cefce0dddba63ae5b639b135996940ba29",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/81_slbc_book.pdf",
@@ -1498,7 +1891,10 @@
       "snapshotTimestamp": "20250213212429",
       "snapshotUrl": "https://web.archive.org/web/20250213212429id_/http://slbcuttarakhand.com/documents/81_SLBC_Book.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/81_SLBC_Book.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "1e7adac576d463458bdcc5cb4e7e98d5f74191152b5ea970e405f8def5a8b8f1",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/60thslbcbook.pdf",
@@ -1506,7 +1902,10 @@
       "snapshotTimestamp": "20250213213945",
       "snapshotUrl": "https://web.archive.org/web/20250213213945id_/http://slbcuttarakhand.com/documents/60thslbcbook.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/60thslbcbook.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "095d5003badbfdb37bf3555fa4ff5003d72adf9dd9382a7e40550312a57f2acf",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/complete%20book%20-%20new%20with%20numbers.pdf",
@@ -1514,7 +1913,10 @@
       "snapshotTimestamp": "20250213215059",
       "snapshotUrl": "https://web.archive.org/web/20250213215059id_/http://slbcuttarakhand.com/documents/complete%20book%20-%20new%20with%20numbers.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/complete_book_-_new_with_numbers.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "45b857d8ecd46ab8eca45b26f1708b4b983eff00e7e6d32a192b3b814e61c838",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/slbc_85_final_book.pdf",
@@ -1522,7 +1924,10 @@
       "snapshotTimestamp": "20250213215318",
       "snapshotUrl": "https://web.archive.org/web/20250213215318id_/http://slbcuttarakhand.com/documents/slbc_85_final_book.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/slbc_85_final_book.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "9c254c2a2e7496617af3bcff271dbed7cfd13af077c1fb6c08726a841b58d531",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/slbc%2083.pdf",
@@ -1530,7 +1935,10 @@
       "snapshotTimestamp": "20250213215607",
       "snapshotUrl": "https://web.archive.org/web/20250213215607id_/http://slbcuttarakhand.com/documents/SLBC%2083.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/SLBC_83.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "b12a46206c377c9afafc8666bf2c6d46dd40505e228af43668100451b5007c8e",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/slbc%20book%2090th%20slbc.pdf",
@@ -1538,7 +1946,10 @@
       "snapshotTimestamp": "20250213220013",
       "snapshotUrl": "https://web.archive.org/web/20250213220013id_/http://slbcuttarakhand.com/documents/SLBC%20BOOK%2090TH%20SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/SLBC_BOOK_90TH_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "ebd1d0161226d8de79034bd22eaf73a198b37338619d09f9a11b687f20db2aa7",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/uttarakhand_list%20of%20clusters%20update.pdf",
@@ -1546,7 +1957,9 @@
       "snapshotTimestamp": "20250213220054",
       "snapshotUrl": "https://web.archive.org/web/20250213220054id_/http://slbcuttarakhand.com/documents/Uttarakhand_List%20of%20Clusters%20Update.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/Uttarakhand_List_of_Clusters_Update.pdf",
-      "status": "planned"
+      "sizeBytes": 214290,
+      "sha256": "d72c9e7fb408d8c22b01bfedd5c9185dd27570e1874b347ff83b876e5b9e8180",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes%2063rd%20%20slbc%20dated%2030.11.2017.pdf",
@@ -1554,7 +1967,9 @@
       "snapshotTimestamp": "20250213221256",
       "snapshotUrl": "https://web.archive.org/web/20250213221256id_/http://slbcuttarakhand.com/documents/Minutes%2063rd%20%20SLBC%20dated%2030.11.2017.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/Minutes_63rd_SLBC_dated_30.11.2017.pdf",
-      "status": "planned"
+      "sizeBytes": 502830,
+      "sha256": "76f37628e82ad6f6f890d7de8ba5f91c55d075d14bbc0ac1efb63329a72a463e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/71st_slbc_book.pdf",
@@ -1562,7 +1977,10 @@
       "snapshotTimestamp": "20250213221950",
       "snapshotUrl": "https://web.archive.org/web/20250213221950id_/http://slbcuttarakhand.com/documents/71st_SLBC_Book.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/71st_SLBC_Book.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "f1986e6781cb8134c59379f90965ad66c1f87b6c547eed034c8f457f14aafdd6",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/77%20slbc%20book.pdf",
@@ -1570,7 +1988,10 @@
       "snapshotTimestamp": "20250213224205",
       "snapshotUrl": "https://web.archive.org/web/20250213224205id_/http://slbcuttarakhand.com/documents/77%20SLBC%20BOOK.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/77_SLBC_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "019302e3918df25041907848ed71f3a221a744eda67a754a82db17313701cd05",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/58%20th%20slbc%20book.pdf",
@@ -1578,7 +1999,10 @@
       "snapshotTimestamp": "20250213224237",
       "snapshotUrl": "https://web.archive.org/web/20250213224237id_/http://slbcuttarakhand.com/documents/58%20th%20slbc%20book.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/58_th_slbc_book.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "27f9d5cbf5aa4d91c9131550d6795090b0adf0c7616a472e19028efd0dd8cb71",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/69_th_slbc_book.pdf",
@@ -1586,7 +2010,10 @@
       "snapshotTimestamp": "20250213225011",
       "snapshotUrl": "https://web.archive.org/web/20250213225011id_/http://slbcuttarakhand.com/documents/69_th_SLBC_BOOK.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/69_th_SLBC_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "6f86591eadb7d1240ff3e2b02a0cd1414978243d7df62932f538cfe98f001a7a",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/72%20slbc%20book.pdf",
@@ -1594,7 +2021,10 @@
       "snapshotTimestamp": "20250213225049",
       "snapshotUrl": "https://web.archive.org/web/20250213225049id_/http://slbcuttarakhand.com/documents/72%20SLBC%20BOOK.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/72_SLBC_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "2632dc1eab591b11924f663d2905a52b3633f9a2dcba8c51aab44ea1f3488a12",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/67%20th%20slbc%20book.pdf",
@@ -1602,7 +2032,10 @@
       "snapshotTimestamp": "20250213230027",
       "snapshotUrl": "https://web.archive.org/web/20250213230027id_/http://slbcuttarakhand.com/documents/67%20th%20SLBC%20BOOK.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/67_th_SLBC_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "e2506d0a855652a8009de16e0ec10cb2f02181fc7fcd67a06f541ae650cfc497",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/70th_slbc_book.pdf",
@@ -1610,7 +2043,10 @@
       "snapshotTimestamp": "20250213230602",
       "snapshotUrl": "https://web.archive.org/web/20250213230602id_/http://slbcuttarakhand.com/documents/70th_SLBC_BOOK.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/70th_SLBC_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "d95769cd9aab3fa63757b900520b1033dce0a29c5e6c94b0acb474d02cd7e014",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/slbc_84%20_final_book.pdf",
@@ -1618,7 +2054,10 @@
       "snapshotTimestamp": "20250213231647",
       "snapshotUrl": "https://web.archive.org/web/20250213231647id_/http://slbcuttarakhand.com/documents/SLBC_84%20_FINAL_BOOK.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/SLBC_84__FINAL_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "94eddc13d106ff1c3de1541dd4c8c73a34f644f09f1c22af72ea7d8dc6bdb68f",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/61stslbcbook.pdf",
@@ -1626,7 +2065,10 @@
       "snapshotTimestamp": "20250213231853",
       "snapshotUrl": "https://web.archive.org/web/20250213231853id_/http://slbcuttarakhand.com/documents/61stSLBCBOOK.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/61stSLBCBOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "588ef57c95fd9e0965e9e092aad6ed74505eb60238b61d0e4fa31a8c49094e79",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/new%20mse-cdp%20guidelines.pdf",
@@ -1634,7 +2076,10 @@
       "snapshotTimestamp": "20250213232832",
       "snapshotUrl": "https://web.archive.org/web/20250213232832id_/http://slbcuttarakhand.com/documents/New%20MSE-CDP%20Guidelines.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/New_MSE-CDP_Guidelines.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "ef2dd0430bd25dde8082e6279fb2c25884bddb573c111c81ee979eefd1d92efb",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/uk-govt.pdf",
@@ -1642,7 +2087,9 @@
       "snapshotTimestamp": "20250316162016",
       "snapshotUrl": "https://web.archive.org/web/20250316162016id_/http://www.slbcuttarakhand.com/documents/uk-govt.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/uk-govt.pdf",
-      "status": "planned"
+      "sizeBytes": 247157,
+      "sha256": "db4b6ebe17d74e7d36dd98a29ffa53eb8a208347c604d9faa7b3c36ef2873fc9",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/haridwar.pdf",
@@ -1650,7 +2097,9 @@
       "snapshotTimestamp": "20250418153029",
       "snapshotUrl": "https://web.archive.org/web/20250418153029id_/http://slbcuttarakhand.com/documents/Haridwar.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/Haridwar.pdf",
-      "status": "planned"
+      "sizeBytes": 1433415,
+      "sha256": "bfbd539cd5fb91b95b18cc6039861efda6c5f6ed6713a07e732a88db8544f83b",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/pmfby/pmfby_kharif_2016_proposal_form_bank.pdf",
@@ -1658,7 +2107,9 @@
       "snapshotTimestamp": "20250418153349",
       "snapshotUrl": "https://web.archive.org/web/20250418153349id_/http://slbcuttarakhand.com/PMFBY/PMFBY_Kharif_2016_Proposal_Form_Bank.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/PMFBY_Kharif_2016_Proposal_Form_Bank.pdf",
-      "status": "planned"
+      "sizeBytes": 212306,
+      "sha256": "86dddd8fb0da6fb879e05e5d414253036eefb5ea5ff16d2667b505119209688e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/pmfby/pmfby_claim_intimation_form.pdf",
@@ -1666,7 +2117,9 @@
       "snapshotTimestamp": "20250418164659",
       "snapshotUrl": "https://web.archive.org/web/20250418164659id_/http://slbcuttarakhand.com/PMFBY/PMFBY_Claim_Intimation_Form.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/PMFBY_Claim_Intimation_Form.pdf",
-      "status": "planned"
+      "sizeBytes": 295097,
+      "sha256": "9cf780583f74068bb05eb50486d6252210c4fdef1ee73f3aae9b95c041116cb2",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda_68th_slbc_meeting.pdf",
@@ -1674,7 +2127,9 @@
       "snapshotTimestamp": "20250421070153",
       "snapshotUrl": "https://web.archive.org/web/20250421070153id_/http://www.slbcuttarakhand.com/documents/Agenda_68th_SLBC_Meeting.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/Agenda_68th_SLBC_Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 904165,
+      "sha256": "f8cd894a36e67d58d9634d542220ab8971b0ed5bdb0a6c476502d874c0d1f6b0",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/agenda_book_39.pdf",
@@ -1682,7 +2137,9 @@
       "snapshotTimestamp": "20250421072717",
       "snapshotUrl": "https://web.archive.org/web/20250421072717id_/http://www.slbcuttarakhand.com/meetings/agenda_book_39.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/agenda_book_39.pdf",
-      "status": "planned"
+      "sizeBytes": 3116024,
+      "sha256": "af86ff53aa9684fd9b6544924e71010cebc151eed68e59773b317e00366d2ed1",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/part2.pdf",
@@ -1690,7 +2147,9 @@
       "snapshotTimestamp": "20250421073811",
       "snapshotUrl": "https://web.archive.org/web/20250421073811id_/http://www.slbcuttarakhand.com/documents/part2.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/part2.pdf",
-      "status": "planned"
+      "sizeBytes": 1034938,
+      "sha256": "81adf6b158a8e6fec5251b689716b1f9fb98c19f8fcd03344cc7a23c7bf11455",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/79%20slbc%20book.pdf",
@@ -1698,7 +2157,10 @@
       "snapshotTimestamp": "20250421075424",
       "snapshotUrl": "https://web.archive.org/web/20250421075424id_/http://www.slbcuttarakhand.com/documents/79%20SLBC%20BOOK.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/79_SLBC_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 5242880,
+      "sha256": "e9f1435df9f8cefadda5d024f9bedcf45a65f3fdd7ddd07cde63cfc9ee2de1f6",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/59_th_slbc_book.pdf",
@@ -1706,7 +2168,10 @@
       "snapshotTimestamp": "20250421081108",
       "snapshotUrl": "https://web.archive.org/web/20250421081108id_/http://www.slbcuttarakhand.com/documents/59_th_slbc_book.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/59_th_slbc_book.pdf",
-      "status": "planned"
+      "sizeBytes": 5242880,
+      "sha256": "87cc72cf2c5eeb43ae123bf5067ace96e9a4f31181d01d1198f513ab7b0620fc",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda88.pdf",
@@ -1714,7 +2179,9 @@
       "snapshotTimestamp": "20250421081344",
       "snapshotUrl": "https://web.archive.org/web/20250421081344id_/http://www.slbcuttarakhand.com/documents/Agenda88.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/Agenda88.pdf",
-      "status": "planned"
+      "sizeBytes": 1328668,
+      "sha256": "2679268472323eeecf3eee06672364dfcb15dc9fb5db5a7e209c38a1829b5960",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda%20%2066th%20slbc%20meeting.pdf",
@@ -1722,7 +2189,9 @@
       "snapshotTimestamp": "20250421081808",
       "snapshotUrl": "https://web.archive.org/web/20250421081808id_/http://www.slbcuttarakhand.com/documents/Agenda%20%2066th%20SLBC%20Meeting.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/Agenda_66th_SLBC_Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 1094495,
+      "sha256": "49d05bc62149df5ff2c95cb6ee7c3e751f8b6ca6478b3e28ccfb4a08526c61f7",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda_70th_slbc.pdf",
@@ -1730,7 +2199,9 @@
       "snapshotTimestamp": "20250421084313",
       "snapshotUrl": "https://web.archive.org/web/20250421084313id_/http://www.slbcuttarakhand.com/documents/Agenda_70th_SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/Agenda_70th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 974165,
+      "sha256": "9ccc73978e6f73298b54cec7d4a6e1606b12efa338e846efac5bd2ff3c29a63f",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/85th%20%20slbc%20agenda.pdf",
@@ -1738,7 +2209,9 @@
       "snapshotTimestamp": "20250429092325",
       "snapshotUrl": "https://web.archive.org/web/20250429092325id_/http://www.slbcuttarakhand.com/documents/85th%20%20SLBC%20Agenda.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/85th_SLBC_Agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1002964,
+      "sha256": "a07e9cc7def13f40844af1a744e5f00b8c969d4d3ca1ea8197516cb901ec179d",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/83rd%20slbc%20minutes.pdf",
@@ -1746,7 +2219,9 @@
       "snapshotTimestamp": "20250503035423",
       "snapshotUrl": "https://web.archive.org/web/20250503035423id_/http://www.slbcuttarakhand.com/documents/83rd%20SLBC%20Minutes.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/83rd_SLBC_Minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 736112,
+      "sha256": "7b98dd831a8f976353ff992a7c53b3c1df3749a0091a1944c50553ed41eb9be7",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/minutes%20%20slbc%20meeting%20dt.%20%20040122.pdf",
@@ -1754,7 +2229,9 @@
       "snapshotTimestamp": "20250507072344",
       "snapshotUrl": "https://web.archive.org/web/20250507072344id_/http://www.slbcuttarakhand.com/documents/MINUTES%20%20SLBC%20Meeting%20dt.%20%20040122.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/MINUTES_SLBC_Meeting_dt._040122.pdf",
-      "status": "planned"
+      "sizeBytes": 278506,
+      "sha256": "c0bd7048afe0d77b1df934e64d500bd570e6b75c82eb10edd17c94d98b5a438c",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/document%2070.pdf",
@@ -1762,7 +2239,9 @@
       "snapshotTimestamp": "20250507073324",
       "snapshotUrl": "https://web.archive.org/web/20250507073324id_/http://slbcuttarakhand.com/documents/Document%2070.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/Document_70.pdf",
-      "status": "planned"
+      "sizeBytes": 712045,
+      "sha256": "58939480f0052d1ebb7418eeb0dd21598cc2835222152de73e01e189abd35c12",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/80%20slbc%20book%20final.pdf",
@@ -1770,7 +2249,9 @@
       "snapshotTimestamp": "20250507081238",
       "snapshotUrl": "https://web.archive.org/web/20250507081238id_/http://slbcuttarakhand.com/documents/80%20SLBC%20book%20Final.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/80_SLBC_book_Final.pdf",
-      "status": "planned"
+      "sizeBytes": 9571082,
+      "sha256": "09160d005b02a856eeaa8d2ca5b4b7cc7bbb3405b88f706375230daa072c3790",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/agenda_69th_slbc.pdf",
@@ -1778,7 +2259,9 @@
       "snapshotTimestamp": "20250508035840",
       "snapshotUrl": "https://web.archive.org/web/20250508035840id_/http://slbcuttarakhand.com/documents/Agenda_69th_SLBC.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/Agenda_69th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 978398,
+      "sha256": "adf6fa96318bc43661bb822a718e1dfa764917d0ae2a9155e430a32037613402",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/meri_yojna_book_central_govt.pdf",
@@ -1786,7 +2269,10 @@
       "snapshotTimestamp": "20250518225950",
       "snapshotUrl": "https://web.archive.org/web/20250518225950id_/http://slbcuttarakhand.com/documents/MERI_YOJNA_BOOK_CENTRAL_GOVT.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/MERI_YOJNA_BOOK_CENTRAL_GOVT.pdf",
-      "status": "planned"
+      "sizeBytes": 5242880,
+      "sha256": "e435a79fe883de0947a7df545f13981e612f75c028df56766783e1e4190c1ce5",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/scan_20160829_123313983.pdf",
@@ -1794,7 +2280,9 @@
       "snapshotTimestamp": "20250619053550",
       "snapshotUrl": "https://web.archive.org/web/20250619053550id_/http://slbcuttarakhand.com/documents/SCAN_20160829_123313983.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/SCAN_20160829_123313983.pdf",
-      "status": "planned"
+      "sizeBytes": 1592609,
+      "sha256": "ace3442e0eeeb66b77d483d5e9cfc0946cbfe5b064e368b14a333470b08883d2",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/rbi_circular/rbi_circular_29_dec_2010.pdf",
@@ -1802,7 +2290,9 @@
       "snapshotTimestamp": "20250619055653",
       "snapshotUrl": "https://web.archive.org/web/20250619055653id_/http://slbcuttarakhand.com/rbi_circular/rbi_circular_29_dec_2010.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/rbi_circular_29_dec_2010.pdf",
-      "status": "planned"
+      "sizeBytes": 26977,
+      "sha256": "8ee2fa2b27201ca0f76ae4a991d97a13e434c8ab57f7e4338756e70e25fd3754",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/special%20slbcmeeting%20minutes%20dated%2019.09.2016.pdf",
@@ -1810,7 +2300,9 @@
       "snapshotTimestamp": "20250619062216",
       "snapshotUrl": "https://web.archive.org/web/20250619062216id_/http://slbcuttarakhand.com/documents/Special%20SLBCmeeting%20minutes%20dated%2019.09.2016.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/Special_SLBCmeeting_minutes_dated_19.09.2016.pdf",
-      "status": "planned"
+      "sizeBytes": 255965,
+      "sha256": "6484ed2f1d58220a65627fc5b10406563935828239c05cd5549f63c58390ab23",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/apy%20formation%20day%20letter.pdf",
@@ -1818,7 +2310,9 @@
       "snapshotTimestamp": "20250619063905",
       "snapshotUrl": "https://web.archive.org/web/20250619063905id_/http://slbcuttarakhand.com/documents/APY%20Formation%20Day%20Letter.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/APY_Formation_Day_Letter.pdf",
-      "status": "planned"
+      "sizeBytes": 86897,
+      "sha256": "04ab2f3b2435a3646159a9046917cc49d046c8a49e51911308b7c7883493f963",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/pmjjby/final_rules_pmjjby.pdf",
@@ -1826,7 +2320,9 @@
       "snapshotTimestamp": "20250619064649",
       "snapshotUrl": "https://web.archive.org/web/20250619064649id_/http://slbcuttarakhand.com/PMJJBY/final_rules_PMJJBY.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/final_rules_PMJJBY.pdf",
-      "status": "planned"
+      "sizeBytes": 229493,
+      "sha256": "d8fe0046301d5d2fa21ecd6285db9923fa7bd2fdffbfba35f4853240e2f0735a",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/pmjjby/faqs_pmjjby.pdf",
@@ -1834,7 +2330,9 @@
       "snapshotTimestamp": "20250619073747",
       "snapshotUrl": "https://web.archive.org/web/20250619073747id_/http://slbcuttarakhand.com/PMJJBY/FAQs_PMJJBY.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/FAQs_PMJJBY.pdf",
-      "status": "planned"
+      "sizeBytes": 42262,
+      "sha256": "174d2615e82d709b0726038d42b5510099f94d042229db408dd1d43e33946b02",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/pmjjby/final_claim_form_pmjjby.pdf",
@@ -1842,7 +2340,9 @@
       "snapshotTimestamp": "20250619074615",
       "snapshotUrl": "https://web.archive.org/web/20250619074615id_/http://slbcuttarakhand.com/PMJJBY/final_claim_form_PMJJBY.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/final_claim_form_PMJJBY.pdf",
-      "status": "planned"
+      "sizeBytes": 359283,
+      "sha256": "8aef56187f19e655a10d9ce72d00cca3827fccdc418bee317b255401198c7f81",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/78%20th%20slbc%20book.pdf",
@@ -1850,7 +2350,9 @@
       "snapshotTimestamp": "20250803015605",
       "snapshotUrl": "https://web.archive.org/web/20250803015605id_/http://slbcuttarakhand.com/documents/78%20TH%20SLBC%20BOOK.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/78_TH_SLBC_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 9289263,
+      "sha256": "4a0480db14ec8518eb231cbd9ada5a6c36c95761bc777eedc18037f07190caef",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/bageshwar.pdf",
@@ -1858,7 +2360,9 @@
       "snapshotTimestamp": "20250804212118",
       "snapshotUrl": "https://web.archive.org/web/20250804212118id_/http://slbcuttarakhand.com/documents/Bageshwar.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/Bageshwar.pdf",
-      "status": "planned"
+      "sizeBytes": 5857474,
+      "sha256": "5d1a07ff7950db3fe57cfee088585856f761ffd159a8630406451d0f0f7c516d",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/82%20slbc%20book%20pdf%20june%202022.pdf",
@@ -1866,7 +2370,9 @@
       "snapshotTimestamp": "20250804222329",
       "snapshotUrl": "https://web.archive.org/web/20250804222329id_/http://slbcuttarakhand.com/documents/82%20SLBC%20BOOK%20PDF%20JUNE%202022.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/82_SLBC_BOOK_PDF_JUNE_2022.pdf",
-      "status": "planned"
+      "sizeBytes": 8044192,
+      "sha256": "3ab041eacdc90a32d7513fe5e3dee960f9e7493e5b35b2ffc0a4c5a22daba15a",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/uttarkashi.pdf",
@@ -1874,7 +2380,9 @@
       "snapshotTimestamp": "20250805075723",
       "snapshotUrl": "https://web.archive.org/web/20250805075723id_/http://slbcuttarakhand.com/documents/uttarkashi.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/uttarkashi.pdf",
-      "status": "planned"
+      "sizeBytes": 3637234,
+      "sha256": "5c6de2691aa07a5683ef1fe05c6712c7dd90caac44341abe10596305934f31f9",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/slbc%2089%20final%20book_march2024.pdf",
@@ -1882,7 +2390,9 @@
       "snapshotTimestamp": "20250806004420",
       "snapshotUrl": "https://web.archive.org/web/20250806004420id_/http://slbcuttarakhand.com/documents/SLBC%2089%20FINAL%20BOOK_March2024.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/SLBC_89_FINAL_BOOK_March2024.pdf",
-      "status": "planned"
+      "sizeBytes": 7798598,
+      "sha256": "1beda67b34a5a3bf4fdd824690c0e127a61f1dd0935177b75033d708b76f7445",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/documents/champawat.pdf",
@@ -1890,7 +2400,9 @@
       "snapshotTimestamp": "20250808134108",
       "snapshotUrl": "https://web.archive.org/web/20250808134108id_/http://slbcuttarakhand.com/documents/CHAMPAWAT.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/CHAMPAWAT.pdf",
-      "status": "planned"
+      "sizeBytes": 746787,
+      "sha256": "51fb87266b9387deaab575374160aea4bdbd95941e0d03bec7d1f1f150221b76",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcuttarakhand.com/meetings/agenda_book_52.pdf",
@@ -1898,7 +2410,9 @@
       "snapshotTimestamp": "20250809103131",
       "snapshotUrl": "https://web.archive.org/web/20250809103131id_/http://www.slbcuttarakhand.com/meetings/agenda_book_52.pdf",
       "localPath": "slbc-data/uttarakhand/wayback/2025/agenda_book_52.pdf",
-      "status": "planned"
+      "sizeBytes": 5427543,
+      "sha256": "a2e483b1960531c55fd5005287a1b9ad9e1de6ed9b4fe88c3329b72fc40b372f",
+      "status": "cached"
     }
   ]
 }

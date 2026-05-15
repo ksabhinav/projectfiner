@@ -4,11 +4,11 @@
   "extensions": [
     "pdf"
   ],
-  "generatedAt": "2026-05-15T06:06:20Z",
+  "generatedAt": "2026-05-15T06:55:02Z",
   "counts": {
-    "planned": 134,
+    "planned": 0,
     "downloaded": 0,
-    "cached": 0,
+    "cached": 134,
     "errored": 0
   },
   "files": [
@@ -18,7 +18,9 @@
       "snapshotTimestamp": "20080827175307",
       "snapshotUrl": "https://web.archive.org/web/20080827175307id_/http://www.slbcup.com/Hindi_Loan_Waiver_Guidelines.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2008/Hindi_Loan_Waiver_Guidelines.pdf",
-      "status": "planned"
+      "sizeBytes": 117649,
+      "sha256": "30a735744b07e34a09cdeb8898eece30f3115a3d7646e8acf0de1e195242fa33",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/images/rbi1.pdf",
@@ -26,7 +28,9 @@
       "snapshotTimestamp": "20121113164134",
       "snapshotUrl": "https://web.archive.org/web/20121113164134id_/http://www.slbcup.com/images/RBI1.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2012/RBI1.pdf",
-      "status": "planned"
+      "sizeBytes": 189509,
+      "sha256": "a0f0c8b6b6042b2a294ba8f73d9665ce3c6a6ff77a0ddd79945ebfb7fde643fc",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/images/rbi2.pdf",
@@ -34,7 +38,9 @@
       "snapshotTimestamp": "20121113164140",
       "snapshotUrl": "https://web.archive.org/web/20121113164140id_/http://www.slbcup.com/images/RBI2.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2012/RBI2.pdf",
-      "status": "planned"
+      "sizeBytes": 132403,
+      "sha256": "944e580bdbc13a98fab03f92f064ac944460d995f5c27d4e8149240691aa7608",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/images/rbi5.pdf",
@@ -42,7 +48,9 @@
       "snapshotTimestamp": "20121113164150",
       "snapshotUrl": "https://web.archive.org/web/20121113164150id_/http://www.slbcup.com/images/RBI5.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2012/RBI5.pdf",
-      "status": "planned"
+      "sizeBytes": 155672,
+      "sha256": "adcb8749eb9a9febfe296bb374dde64ae1d91b69ed5e324cf303ed73ae404a28",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/images/rbi3.pdf",
@@ -50,7 +58,9 @@
       "snapshotTimestamp": "20121113164201",
       "snapshotUrl": "https://web.archive.org/web/20121113164201id_/http://www.slbcup.com/images/RBI3.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2012/RBI3.pdf",
-      "status": "planned"
+      "sizeBytes": 214987,
+      "sha256": "436f589b50bba821b2d541969ed61a0b1db030ee7cd92c218c3128f37b72ab72",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/images/rbi4.pdf",
@@ -58,7 +68,9 @@
       "snapshotTimestamp": "20121113164209",
       "snapshotUrl": "https://web.archive.org/web/20121113164209id_/http://www.slbcup.com/images/RBI4.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2012/RBI4.pdf",
-      "status": "planned"
+      "sizeBytes": 169401,
+      "sha256": "21a8565c4bdda63a5a223df14145cf386a86c10c1d1f5198e3ffe06b3f1b8f5b",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/images/speech_of_rd_for_slbc_24.8.2012_for_website.pdf",
@@ -66,7 +78,9 @@
       "snapshotTimestamp": "20121113164213",
       "snapshotUrl": "https://web.archive.org/web/20121113164213id_/http://www.slbcup.com/images/Speech_of_RD_for_SLBC_24.8.2012_for_Website.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2012/Speech_of_RD_for_SLBC_24.8.2012_for_Website.pdf",
-      "status": "planned"
+      "sizeBytes": 462066,
+      "sha256": "a01bb16383fbaeffeb23624884b7cd5181b54af4b12a97e8d2a28431e422fcc3",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/images/speech_of_rd_for_slbc__19112012_for_slbc_website.pdf",
@@ -74,7 +88,9 @@
       "snapshotTimestamp": "20131208032828",
       "snapshotUrl": "https://web.archive.org/web/20131208032828id_/http://slbcup.com/images/Speech_of_RD_for_SLBC__19112012_for_SLBC_website.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2013/Speech_of_RD_for_SLBC__19112012_for_SLBC_website.pdf",
-      "status": "planned"
+      "sizeBytes": 453806,
+      "sha256": "4e3fcb3af448765924a0d154fe77c47e7489cea593b94f1fd731351b883835c5",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/pmfby.pdf",
@@ -82,7 +98,9 @@
       "snapshotTimestamp": "20170705012215",
       "snapshotUrl": "https://web.archive.org/web/20170705012215id_/http://slbcup.com/PMFBY.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2017/PMFBY.pdf",
-      "status": "planned"
+      "sizeBytes": 443925,
+      "sha256": "0ee17a4c78809c389ddf62651dbfa09cbba62ab0a724b4d4cb7523aad89aa31f",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/pmay.pdf",
@@ -90,7 +108,9 @@
       "snapshotTimestamp": "20170705030419",
       "snapshotUrl": "https://web.archive.org/web/20170705030419id_/http://slbcup.com/PMAY.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2017/PMAY.pdf",
-      "status": "planned"
+      "sizeBytes": 944995,
+      "sha256": "df8c88cb94cb75ff3f8419e1aeb38988a1e7f321cf4c7f6630fca0497effbcd1",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/go__up.pdf",
@@ -98,7 +118,9 @@
       "snapshotTimestamp": "20170705033230",
       "snapshotUrl": "https://web.archive.org/web/20170705033230id_/http://slbcup.com/font/GO__UP.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2017/GO__UP.pdf",
-      "status": "planned"
+      "sizeBytes": 390863,
+      "sha256": "641e5a65d5db243e0fb6706efca26d3fd587bd5231c68fc5dbf8522802205263",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc%20booklet%20sept16.pdf",
@@ -106,7 +128,9 @@
       "snapshotTimestamp": "20190912235310",
       "snapshotUrl": "https://web.archive.org/web/20190912235310id_/http://slbcup.com/Agenda/SLBC%20Booklet%20Sept16.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/SLBC_Booklet_Sept16.pdf",
-      "status": "planned"
+      "sizeBytes": 60718363,
+      "sha256": "e2d69e5ea2d8197ee2f1f93bfc5260c72f0749c4722db0ef040659b9a2a2d23a",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/minutes_of_slbc-_meeting_dt.01.12.2014.pdf",
@@ -114,7 +138,9 @@
       "snapshotTimestamp": "20190913002503",
       "snapshotUrl": "https://web.archive.org/web/20190913002503id_/http://slbcup.com/Agenda/Minutes_of_SLBC-_Meeting_dt.01.12.2014.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/Minutes_of_SLBC-_Meeting_dt.01.12.2014.pdf",
-      "status": "planned"
+      "sizeBytes": 738864,
+      "sha256": "58356d31118fab49cd99432cc19df9df7238f1996287ee3622b53f1fe8e0b925",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/mudra_yojana_-15.5.15.pdf",
@@ -122,7 +148,9 @@
       "snapshotTimestamp": "20190913004724",
       "snapshotUrl": "https://web.archive.org/web/20190913004724id_/http://slbcup.com/font/Mudra_yojana_-15.5.15.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/Mudra_yojana_-15.5.15.pdf",
-      "status": "planned"
+      "sizeBytes": 1478962,
+      "sha256": "09ccf816c5e012e266c91daf05975da1f00694d52b39ee6fa4bafb8e59c98bea",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/pmjjby/pmjjby_claim_form_eng.pdf",
@@ -130,7 +158,9 @@
       "snapshotTimestamp": "20190913022847",
       "snapshotUrl": "https://web.archive.org/web/20190913022847id_/http://slbcup.com/font/PMJJBY/PMJJBY_Claim_Form_Eng.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/PMJJBY_Claim_Form_Eng.pdf",
-      "status": "planned"
+      "sizeBytes": 210629,
+      "sha256": "075b8d93a95e4161271232d393267d4f9360963a5afd06ee90739dd95bf6ccf9",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/pmsby/final_pmsby_consent_form_hindi.pdf",
@@ -138,7 +168,9 @@
       "snapshotTimestamp": "20190913022858",
       "snapshotUrl": "https://web.archive.org/web/20190913022858id_/http://slbcup.com/font/PMSBY/Final_PMSBY_consent_form_hindi.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/Final_PMSBY_consent_form_hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 195750,
+      "sha256": "b68d11295c61b140954a21fee274ca0986249c38609e5e79a278773d4021472f",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/pmjjby/pmjjby_rules_hindi.pdf",
@@ -146,7 +178,9 @@
       "snapshotTimestamp": "20190913023410",
       "snapshotUrl": "https://web.archive.org/web/20190913023410id_/http://slbcup.com/font/PMJJBY/PMJJBY_Rules_Hindi.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/PMJJBY_Rules_Hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 192529,
+      "sha256": "924793ad1665f15d56c374d98d559af091e28982e26f9792a73f8ef03f1c22e7",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/pmjjby/pmjjby_faqs_hindi.pdf",
@@ -154,7 +188,9 @@
       "snapshotTimestamp": "20190913024101",
       "snapshotUrl": "https://web.archive.org/web/20190913024101id_/http://slbcup.com/font/PMJJBY/PMJJBY_FAQs_hindi.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/PMJJBY_FAQs_hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 320807,
+      "sha256": "233c9e6dbd3774f4178a2c23b813bbabaa26999bee95e1ca1954cfe5331e779d",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/pmsby/pmsby_claim_form_hindi.pdf",
@@ -162,7 +198,9 @@
       "snapshotTimestamp": "20190913043710",
       "snapshotUrl": "https://web.archive.org/web/20190913043710id_/http://slbcup.com/font/PMSBY/PMSBY_Claim_Form_Hindi.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/PMSBY_Claim_Form_Hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 351558,
+      "sha256": "4bf28404a1f821ec810f91d126ad90b458f069ebd30c0bf0363c742510de45dc",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/pmsby/pmsby_claim_form_eng.pdf",
@@ -170,7 +208,9 @@
       "snapshotTimestamp": "20190913044342",
       "snapshotUrl": "https://web.archive.org/web/20190913044342id_/http://slbcup.com/font/PMSBY/PMSBY_Claim_Form_Eng.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/PMSBY_Claim_Form_Eng.pdf",
-      "status": "planned"
+      "sizeBytes": 105843,
+      "sha256": "fa9e424adcd13feb6f1dd9060e6601225a1a1e50d4510ef86db68a9c1824091c",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/pmsby/pmsby_faqs_hindi.pdf",
@@ -178,7 +218,9 @@
       "snapshotTimestamp": "20190913054805",
       "snapshotUrl": "https://web.archive.org/web/20190913054805id_/http://slbcup.com/font/PMSBY/PMSBY_FAQs_Hindi.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/PMSBY_FAQs_Hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 282577,
+      "sha256": "aa549e81090dce37f6d8492f859129e03b24a0943ab4e5c9d9150cbd318a6d4b",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/pmjjby/pmjjby_claim_form_hindi.pdf",
@@ -186,7 +228,9 @@
       "snapshotTimestamp": "20190913055824",
       "snapshotUrl": "https://web.archive.org/web/20190913055824id_/http://slbcup.com/font/PMJJBY/PMJJBY_Claim_Form_Hindi.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/PMJJBY_Claim_Form_Hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 359283,
+      "sha256": "8aef56187f19e655a10d9ce72d00cca3827fccdc418bee317b255401198c7f81",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/pmsby/pmsby_rules_hindi.pdf",
@@ -194,7 +238,9 @@
       "snapshotTimestamp": "20190913060300",
       "snapshotUrl": "https://web.archive.org/web/20190913060300id_/http://slbcup.com/font/PMSBY/PMSBY_Rules_Hindi.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/PMSBY_Rules_Hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 304277,
+      "sha256": "c0a0373e913c522201a7224cc2bdc48e7ded0cf2b2473ca6ec8881b5093a3f88",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/pmjjby/pmjjby_consent_form_hindi.pdf",
@@ -202,7 +248,9 @@
       "snapshotTimestamp": "20190913065249",
       "snapshotUrl": "https://web.archive.org/web/20190913065249id_/http://slbcup.com/font/PMJJBY/PMJJBY_Consent_form_Hindi.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/PMJJBY_Consent_form_Hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 434103,
+      "sha256": "8ddf8b5f0f19065ee516d257ab4e6cb5416f8e61b60e7ebcf6366bb7d0c53107",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/pmjdy%20brochure%20hindi.pdf",
@@ -210,7 +258,9 @@
       "snapshotTimestamp": "20190913070219",
       "snapshotUrl": "https://web.archive.org/web/20190913070219id_/http://slbcup.com/font/PMJDY%20Brochure%20Hindi.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/PMJDY_Brochure_Hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 5863529,
+      "sha256": "850e47cf6ddcc2cdb0648f264881dc0bd5914042087c0cf8a5e88354cfc0a5b8",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/pmjdy%20account%20opening%20form%20hindi.pdf",
@@ -218,7 +268,9 @@
       "snapshotTimestamp": "20190913070847",
       "snapshotUrl": "https://web.archive.org/web/20190913070847id_/http://slbcup.com/font/PMJDY%20Account%20Opening%20Form%20hindi.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/PMJDY_Account_Opening_Form_hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 935481,
+      "sha256": "d3be5138f2e82081cdaf8cac904874e20d502f9152b45dfc173437e94dd6db48",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/apy/preparatory.pdf",
@@ -226,7 +278,9 @@
       "snapshotTimestamp": "20190913072745",
       "snapshotUrl": "https://web.archive.org/web/20190913072745id_/http://slbcup.com/font/APY/Preparatory.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/Preparatory.pdf",
-      "status": "planned"
+      "sizeBytes": 2043098,
+      "sha256": "934a05318764949c8727b74d30cb482f1ebb4389d97b44bdb70b0254a069ccda",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/nrlm/formation_of_sub-committe_on_nrlm.pdf",
@@ -234,7 +288,9 @@
       "snapshotTimestamp": "20190913072905",
       "snapshotUrl": "https://web.archive.org/web/20190913072905id_/http://slbcup.com/NRLM/Formation_of_Sub-Committe_on_NRLM.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/Formation_of_Sub-Committe_on_NRLM.pdf",
-      "status": "planned"
+      "sizeBytes": 508783,
+      "sha256": "b3bfac844571eb3b64a6135f2c690e44c0eefb57595e61a3ce28075f7b3888d5",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/nrlm/formation_of_sub-committe_on_crop_insurance.pdf",
@@ -242,7 +298,9 @@
       "snapshotTimestamp": "20190913073844",
       "snapshotUrl": "https://web.archive.org/web/20190913073844id_/http://slbcup.com/NRLM/Formation_of_Sub-Committe_on_Crop_Insurance.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/Formation_of_Sub-Committe_on_Crop_Insurance.pdf",
-      "status": "planned"
+      "sizeBytes": 343902,
+      "sha256": "9d361ab85476abddb914d21c046edd2b6dd9d1a9ed83be9b0696f23ad12908dd",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/guidelines_life_insurnace_cover_under_pmjdy.pdf",
@@ -250,7 +308,9 @@
       "snapshotTimestamp": "20190913075206",
       "snapshotUrl": "https://web.archive.org/web/20190913075206id_/http://slbcup.com/font/Guidelines_Life_Insurnace_Cover_under_PMJDY.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/Guidelines_Life_Insurnace_Cover_under_PMJDY.pdf",
-      "status": "planned"
+      "sizeBytes": 2714662,
+      "sha256": "b95347246e317b96513566d5e949f0b6da48b64669490a4d311c371467338563",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/others.pdf",
@@ -258,7 +318,9 @@
       "snapshotTimestamp": "20190913075413",
       "snapshotUrl": "https://web.archive.org/web/20190913075413id_/http://slbcup.com/font/Others.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/Others.pdf",
-      "status": "planned"
+      "sizeBytes": 222635,
+      "sha256": "a20a7831a6460c7f3bd9166277f77a5e01f45c1d656a7a1689ad43e86d8ec351",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/apy/atal_pension_yojana-scheme.pdf",
@@ -266,7 +328,9 @@
       "snapshotTimestamp": "20190913075459",
       "snapshotUrl": "https://web.archive.org/web/20190913075459id_/http://slbcup.com/font/APY/Atal_Pension_Yojana-Scheme.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/Atal_Pension_Yojana-Scheme.pdf",
-      "status": "planned"
+      "sizeBytes": 244273,
+      "sha256": "7b825d8745b57e50f9e1fcc6178a3d1ceb3715f5c6f14ffa9ddaba74379691cd",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/recovery/formation_of_sub-_committe_on_recovery.pdf",
@@ -274,7 +338,9 @@
       "snapshotTimestamp": "20190913080642",
       "snapshotUrl": "https://web.archive.org/web/20190913080642id_/http://slbcup.com/Recovery/Formation_of_Sub-_Committe_on_Recovery.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/Formation_of_Sub-_Committe_on_Recovery.pdf",
-      "status": "planned"
+      "sizeBytes": 114356,
+      "sha256": "8ccf62b19463a4bf82b2660247d6c019832a95dfb19a049966bd48f111f095e0",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/contact%20of%20govt.%20authorities.pdf",
@@ -282,7 +348,9 @@
       "snapshotTimestamp": "20190913080648",
       "snapshotUrl": "https://web.archive.org/web/20190913080648id_/http://slbcup.com/font/Contact%20of%20Govt.%20Authorities.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/Contact_of_Govt._Authorities.pdf",
-      "status": "planned"
+      "sizeBytes": 530361,
+      "sha256": "1b6d0ec71c18a5f8620a71c3181bcb4940d705bcbc99f7b1aa6e3a8be027c1eb",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/apy/apy_faqs.pdf",
@@ -290,7 +358,9 @@
       "snapshotTimestamp": "20190913080931",
       "snapshotUrl": "https://web.archive.org/web/20190913080931id_/http://slbcup.com/font/APY/APY_FAQs.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/APY_FAQs.pdf",
-      "status": "planned"
+      "sizeBytes": 497357,
+      "sha256": "79120201df1047fe9dc71eae7847a933c59927b70ed4d12780e9a8058b5470d2",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/state%20heads%20of%20banks%20in%20up.pdf",
@@ -298,7 +368,9 @@
       "snapshotTimestamp": "20190913081147",
       "snapshotUrl": "https://web.archive.org/web/20190913081147id_/http://slbcup.com/font/State%20Heads%20of%20Banks%20in%20UP.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/State_Heads_of_Banks_in_UP.pdf",
-      "status": "planned"
+      "sizeBytes": 243685,
+      "sha256": "6775bb6497ad1fd74ab40a1e488ba87a8a8ac6b8508e40539096764eb4f3ff3d",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/hindi%20faq.pdf",
@@ -306,7 +378,9 @@
       "snapshotTimestamp": "20190913081443",
       "snapshotUrl": "https://web.archive.org/web/20190913081443id_/http://slbcup.com/font/Hindi%20FAQ.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/Hindi_FAQ.pdf",
-      "status": "planned"
+      "sizeBytes": 134632,
+      "sha256": "47572d8640e31781f987480241137181694b8ac559b0dc28f9ffa09f88d61ad0",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/recovery/formation_of_sub_committee_on_wcc.pdf",
@@ -314,7 +388,9 @@
       "snapshotTimestamp": "20190913081445",
       "snapshotUrl": "https://web.archive.org/web/20190913081445id_/http://slbcup.com/Recovery/Formation_of_Sub_committee_on_WCC.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/Formation_of_Sub_committee_on_WCC.pdf",
-      "status": "planned"
+      "sizeBytes": 666624,
+      "sha256": "9727e36555aad67e18e653088caba06cffdbae994f5ed32eb1a581a99b5a97d0",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/faqs_-_pmjdy.pdf",
@@ -322,7 +398,9 @@
       "snapshotTimestamp": "20190913081921",
       "snapshotUrl": "https://web.archive.org/web/20190913081921id_/http://slbcup.com/font/FAQs_-_PMJDY.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/FAQs_-_PMJDY.pdf",
-      "status": "planned"
+      "sizeBytes": 53019,
+      "sha256": "5093be5a439f23dc91e681bcc81022cc08423d2f620d98a778ac602953716f85",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/recovery/formation_of_sub-committee_on_rseti.pdf",
@@ -330,7 +408,9 @@
       "snapshotTimestamp": "20190913082020",
       "snapshotUrl": "https://web.archive.org/web/20190913082020id_/http://slbcup.com/Recovery/Formation_of_Sub-Committee_on_RSETI.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/Formation_of_Sub-Committee_on_RSETI.pdf",
-      "status": "planned"
+      "sizeBytes": 352804,
+      "sha256": "0fee84cc19ab7f6cb646a29fefb9bcdbb5a5c3352249956b894b298e2eeee8b2",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/apy/flyer.pdf",
@@ -338,7 +418,9 @@
       "snapshotTimestamp": "20190913082022",
       "snapshotUrl": "https://web.archive.org/web/20190913082022id_/http://slbcup.com/font/APY/Flyer.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/Flyer.pdf",
-      "status": "planned"
+      "sizeBytes": 545633,
+      "sha256": "1ea8605b350e537d03b6d883b8e69d8324a9ffd8ca1030966f7c5e0407b1d69f",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/apy/subscriber%20registration%20form-apy%5b1%5d.pdf",
@@ -346,7 +428,9 @@
       "snapshotTimestamp": "20190913082737",
       "snapshotUrl": "https://web.archive.org/web/20190913082737id_/http://slbcup.com/font/APY/subscriber%20registration%20form-APy%5B1%5D.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/subscriber_registration_form-APy_1_.pdf",
-      "status": "planned"
+      "sizeBytes": 342450,
+      "sha256": "7476016f333baaf340b3b6797ea0f4475148e0170fea226171cead7962d1f947",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/addressbanks.pdf",
@@ -354,7 +438,9 @@
       "snapshotTimestamp": "20190913082828",
       "snapshotUrl": "https://web.archive.org/web/20190913082828id_/http://slbcup.com/font/AddressBanks.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/AddressBanks.pdf",
-      "status": "planned"
+      "sizeBytes": 114543,
+      "sha256": "6b0f26fce594810c6b5cbd81d15cf216c8ea08d1abe4009724ada1c3af4be504",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/rupay-insurance-program.pdf",
@@ -362,7 +448,9 @@
       "snapshotTimestamp": "20190913083953",
       "snapshotUrl": "https://web.archive.org/web/20190913083953id_/http://slbcup.com/font/RuPay-Insurance-Program.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2019/RuPay-Insurance-Program.pdf",
-      "status": "planned"
+      "sizeBytes": 2280559,
+      "sha256": "9083c6b6f3c32cc3370b586ca68eeb4505d2fa6dda1b21549f462f7c4e14a937",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/pages/download/annual%20credit%20plan%202019-20.pdf",
@@ -370,7 +458,9 @@
       "snapshotTimestamp": "20220709034655",
       "snapshotUrl": "https://web.archive.org/web/20220709034655id_/http://slbcup.com/Pages/Download/Annual%20Credit%20Plan%202019-20.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2022/Annual_Credit_Plan_2019-20.pdf",
-      "status": "planned"
+      "sizeBytes": 189638540,
+      "sha256": "6dbea83b43de7e228dff8c22d341c6e8a3ca8106352d888a9125865eab23c39c",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/pages/download/acp_target2022_23.pdf",
@@ -378,7 +468,9 @@
       "snapshotTimestamp": "20221221231754",
       "snapshotUrl": "https://web.archive.org/web/20221221231754id_/http://www.slbcup.com/Pages/Download/ACP_Target2022_23.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2022/ACP_Target2022_23.pdf",
-      "status": "planned"
+      "sizeBytes": 3667176,
+      "sha256": "b74cd97f38d0f4aabdf0096c599a2224e5e27367c4ec4c4b379a799a163edf98",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/pages/download/acp_target2023_24.pdf",
@@ -386,7 +478,9 @@
       "snapshotTimestamp": "20240407043009",
       "snapshotUrl": "https://web.archive.org/web/20240407043009id_/http://slbcup.com/Pages/Download/ACP_Target2023_24.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/ACP_Target2023_24.pdf",
-      "status": "planned"
+      "sizeBytes": 67414794,
+      "sha256": "3345e19fbcbb7102fe0a2e8244024339725f22aa3961cffb99b4e71d9082f7b1",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/file/list%20of%20cfc%20under%20mse-cdp%20scheme-1.pdf",
@@ -394,7 +488,9 @@
       "snapshotTimestamp": "20240714072501",
       "snapshotUrl": "https://web.archive.org/web/20240714072501id_/http://slbcup.com/File/list%20of%20CFC%20under%20MSE-CDP%20scheme-1.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/list_of_CFC_under_MSE-CDP_scheme-1.pdf",
-      "status": "planned"
+      "sizeBytes": 92274,
+      "sha256": "82e732a9a8a56131061d75d227e2a734fef66eb586543b5417ae816bdd14c70f",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/annexure_i_msme_clusters.pdf",
@@ -402,7 +498,10 @@
       "snapshotTimestamp": "20241107091822",
       "snapshotUrl": "https://web.archive.org/web/20241107091822id_/http://www.slbcup.com/Agenda/annexure_i_msme_clusters.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/annexure_i_msme_clusters.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "4dd20a1789879941ad5bf1ccc3d97cd4f09f3ad94a3fab938958ff5944a89bb5",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcup.com/font/list_oftop__50_rc.pdf",
@@ -410,7 +509,10 @@
       "snapshotTimestamp": "20241107094150",
       "snapshotUrl": "https://web.archive.org/web/20241107094150id_/http://www.slbcup.com/font/List_oftop__50_RC.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/List_oftop__50_RC.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "d60d9af563f3002091fa8f77a6d7b106b50c46cdde6b1aa1716f98348b822bdf",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcup.com/pages/download/acp_booklet_2024-25.pdf",
@@ -418,7 +520,10 @@
       "snapshotTimestamp": "20241107104747",
       "snapshotUrl": "https://web.archive.org/web/20241107104747id_/http://www.slbcup.com/Pages/Download/ACP_Booklet_2024-25.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/ACP_Booklet_2024-25.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "beb09c67f5481f4654ba02376b5a21687c862aad1e2e170715aa17843ac0ebeb",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc%20booklet%20march%202022.pdf",
@@ -426,7 +531,9 @@
       "snapshotTimestamp": "20241119041352",
       "snapshotUrl": "https://web.archive.org/web/20241119041352id_/http://www.slbcup.com/Agenda/SLBC%20Booklet%20March%202022.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Booklet_March_2022.pdf",
-      "status": "planned"
+      "sizeBytes": 42681302,
+      "sha256": "34950006227e4bf30f760fcef32fea58f6eca243a30d87decdaf931908371c6c",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/minutes_march_2022.pdf",
@@ -434,7 +541,9 @@
       "snapshotTimestamp": "20241119041415",
       "snapshotUrl": "https://web.archive.org/web/20241119041415id_/http://www.slbcup.com/Agenda/Minutes_March_2022.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Minutes_March_2022.pdf",
-      "status": "planned"
+      "sizeBytes": 4443085,
+      "sha256": "92f07a34871cc5d58e48f66429641de79df1f2cca5cc24521aaf53aab6414913",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc_%20book_%20for_march_16.pdf",
@@ -442,7 +551,9 @@
       "snapshotTimestamp": "20241119041449",
       "snapshotUrl": "https://web.archive.org/web/20241119041449id_/http://www.slbcup.com/Agenda/SLBC_%20Book_%20for_March_16.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC__Book__for_March_16.pdf",
-      "status": "planned"
+      "sizeBytes": 23870996,
+      "sha256": "66f866fd38b144ebd71b5f9fefbbc7b98fa8fa8e6b5ccded48ff26ef1d7c2612",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc%20booklet%20sept%202021.pdf",
@@ -450,7 +561,9 @@
       "snapshotTimestamp": "20241119041637",
       "snapshotUrl": "https://web.archive.org/web/20241119041637id_/http://www.slbcup.com/Agenda/SLBC%20BOOKLET%20SEPT%202021.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_BOOKLET_SEPT_2021.pdf",
-      "status": "planned"
+      "sizeBytes": 68751555,
+      "sha256": "6c318088e9add61bb8c6040df546cf2f8a69d8ac5476ef0684f7784151840745",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc%20agenda%20booklet%20-%20march%202019.pdf",
@@ -458,7 +571,9 @@
       "snapshotTimestamp": "20241119041802",
       "snapshotUrl": "https://web.archive.org/web/20241119041802id_/http://www.slbcup.com/Agenda/SLBC%20Agenda%20Booklet%20-%20March%202019.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Agenda_Booklet_-_March_2019.pdf",
-      "status": "planned"
+      "sizeBytes": 102079659,
+      "sha256": "04946021f204ff626083c1deace26725d53241468545ba360fda5e97a4c6dad0",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/agenda%20book%20dec%202022.pdf",
@@ -466,7 +581,9 @@
       "snapshotTimestamp": "20241119041806",
       "snapshotUrl": "https://web.archive.org/web/20241119041806id_/http://www.slbcup.com/Agenda/Agenda%20Book%20Dec%202022.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Agenda_Book_Dec_2022.pdf",
-      "status": "planned"
+      "sizeBytes": 50677516,
+      "sha256": "09695f7760c17140ff55ccb2fd1ac6510756a9f78d125bd0bff23491562b9b46",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/minutes%20-%20march%202023.pdf",
@@ -474,7 +591,9 @@
       "snapshotTimestamp": "20241119041824",
       "snapshotUrl": "https://web.archive.org/web/20241119041824id_/http://www.slbcup.com/Agenda/Minutes%20-%20March%202023.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Minutes_-_March_2023.pdf",
-      "status": "planned"
+      "sizeBytes": 2394973,
+      "sha256": "af842c6c1d08889157bd77baf5af68fe3203539d92a59b3ea462ddac148dbec7",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/june_2019_agenda.pdf",
@@ -482,7 +601,9 @@
       "snapshotTimestamp": "20241119041925",
       "snapshotUrl": "https://web.archive.org/web/20241119041925id_/http://www.slbcup.com/Agenda/June_2019_Agenda.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/June_2019_Agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 91264860,
+      "sha256": "7bed2c952c2fdb832e519bd76185921877a056b4e7e41c574e9fac007ab6df61",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc%20booklet%20march%202020.pdf",
@@ -490,7 +611,9 @@
       "snapshotTimestamp": "20241119042021",
       "snapshotUrl": "https://web.archive.org/web/20241119042021id_/http://www.slbcup.com/Agenda/SLBC%20Booklet%20March%202020.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Booklet_March_2020.pdf",
-      "status": "planned"
+      "sizeBytes": 94626863,
+      "sha256": "7827f56e278dda23ec28ff7400749ca8a0af6725f492d81066bc67194c1fff67",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/209.pdf",
@@ -498,7 +621,9 @@
       "snapshotTimestamp": "20241119042132",
       "snapshotUrl": "https://web.archive.org/web/20241119042132id_/http://www.slbcup.com/Agenda/209.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/209.pdf",
-      "status": "planned"
+      "sizeBytes": 3375104,
+      "sha256": "e42a96c5b00f6aaff2cd3b3796c93408a05722833d8bb05628fbaa99cb5a339b",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/442.pdf",
@@ -506,7 +631,9 @@
       "snapshotTimestamp": "20241119042151",
       "snapshotUrl": "https://web.archive.org/web/20241119042151id_/http://www.slbcup.com/Agenda/442.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/442.pdf",
-      "status": "planned"
+      "sizeBytes": 9464791,
+      "sha256": "8e4ca4beeacad7e32ef5ca1ff721c41d27380cf4d85d2c7bb4e7347dc5846e1d",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/509.pdf",
@@ -514,7 +641,9 @@
       "snapshotTimestamp": "20241119042154",
       "snapshotUrl": "https://web.archive.org/web/20241119042154id_/http://www.slbcup.com/Agenda/509.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/509.pdf",
-      "status": "planned"
+      "sizeBytes": 1884139,
+      "sha256": "af22b1a3709132d9690f1985ace48a3841f62a3ecd1602556d3beae882982d8f",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc%20agenda%20book%20june%202023.pdf",
@@ -522,7 +651,9 @@
       "snapshotTimestamp": "20241119042620",
       "snapshotUrl": "https://web.archive.org/web/20241119042620id_/http://www.slbcup.com/Agenda/SLBC%20Agenda%20Book%20June%202023.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Agenda_Book_June_2023.pdf",
-      "status": "planned"
+      "sizeBytes": 44205496,
+      "sha256": "0fb5463b28c2f87ca7802645a68743ecb473c5c7b6cc3bf09371f44fb63d0ec8",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc_booklet_sept_19_original.pdf",
@@ -530,7 +661,9 @@
       "snapshotTimestamp": "20241119042821",
       "snapshotUrl": "https://web.archive.org/web/20241119042821id_/http://www.slbcup.com/Agenda/SLBC_Booklet_Sept_19_original.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Booklet_Sept_19_original.pdf",
-      "status": "planned"
+      "sizeBytes": 91916514,
+      "sha256": "d669068eeba82d3a5df70650a9abd73bc27999fd7943dd63a776f1c9bdc02ac1",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/agenda_march_2013.pdf",
@@ -538,7 +671,9 @@
       "snapshotTimestamp": "20241119042931",
       "snapshotUrl": "https://web.archive.org/web/20241119042931id_/http://www.slbcup.com/Agenda/Agenda_March_2013.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Agenda_March_2013.pdf",
-      "status": "planned"
+      "sizeBytes": 204467,
+      "sha256": "027813600720db459db65b91920788903f8cdaec8ae78c61f24df685a2620212",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/228.pdf",
@@ -546,7 +681,9 @@
       "snapshotTimestamp": "20241119043016",
       "snapshotUrl": "https://web.archive.org/web/20241119043016id_/http://www.slbcup.com/Agenda/228.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/228.pdf",
-      "status": "planned"
+      "sizeBytes": 1606868,
+      "sha256": "7774faa0b7b6fdf9c010c0fd9010b11e3cb040ec4b340f5a0f391da103971da1",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/agenda%20booklet%20dec%202020.pdf",
@@ -554,7 +691,9 @@
       "snapshotTimestamp": "20241119043044",
       "snapshotUrl": "https://web.archive.org/web/20241119043044id_/http://www.slbcup.com/Agenda/Agenda%20Booklet%20Dec%202020.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Agenda_Booklet_Dec_2020.pdf",
-      "status": "planned"
+      "sizeBytes": 91002911,
+      "sha256": "43d8ee144b5f6f62732401079c1d282d494096d323d178721cf3eb619202344c",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc_booklet_june_2017.pdf",
@@ -562,7 +701,9 @@
       "snapshotTimestamp": "20241119043202",
       "snapshotUrl": "https://web.archive.org/web/20241119043202id_/http://www.slbcup.com/Agenda/SLBC_Booklet_June_2017.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Booklet_June_2017.pdf",
-      "status": "planned"
+      "sizeBytes": 10226941,
+      "sha256": "d3c0870ead5da626321808827f8cc1dcab15c9a273931e94355d0a38abd6a916",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/agendadec2023booklet.pdf",
@@ -570,7 +711,9 @@
       "snapshotTimestamp": "20241119043437",
       "snapshotUrl": "https://web.archive.org/web/20241119043437id_/http://www.slbcup.com/Agenda/AgendaDec2023Booklet.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/AgendaDec2023Booklet.pdf",
-      "status": "planned"
+      "sizeBytes": 151737764,
+      "sha256": "f50b2447f2910319acfa3566d13d540a5415e558db81f799e61625eb2489d0ab",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/minutes_sept_22.pdf",
@@ -578,7 +721,9 @@
       "snapshotTimestamp": "20241119043440",
       "snapshotUrl": "https://web.archive.org/web/20241119043440id_/http://www.slbcup.com/Agenda/minutes_Sept_22.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/minutes_Sept_22.pdf",
-      "status": "planned"
+      "sizeBytes": 1605670,
+      "sha256": "a840abc4ab3fe8c6c786bc8615d95f1c6bf97ce021fa11b4c06fa44dcb52f311",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/mom%20sep%2020.pdf",
@@ -586,7 +731,9 @@
       "snapshotTimestamp": "20241119043441",
       "snapshotUrl": "https://web.archive.org/web/20241119043441id_/http://www.slbcup.com/Agenda/mom%20sep%2020.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/mom_sep_20.pdf",
-      "status": "planned"
+      "sizeBytes": 3789497,
+      "sha256": "7a16904f64e390fbcce18d20e017c9cb40a013fa23539e723031dc33fcdc520a",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/agenda_booklet_dec_2018.pdf",
@@ -594,7 +741,9 @@
       "snapshotTimestamp": "20241119043504",
       "snapshotUrl": "https://web.archive.org/web/20241119043504id_/http://www.slbcup.com/Agenda/Agenda_Booklet_Dec_2018.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Agenda_Booklet_Dec_2018.pdf",
-      "status": "planned"
+      "sizeBytes": 11905297,
+      "sha256": "6e3aab70d828773f235cf0430014ddc606b75b3c6f23194b83a9d3e15aa1c408",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/340.pdf",
@@ -602,7 +751,9 @@
       "snapshotTimestamp": "20241119043520",
       "snapshotUrl": "https://web.archive.org/web/20241119043520id_/http://www.slbcup.com/Agenda/340.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/340.pdf",
-      "status": "planned"
+      "sizeBytes": 2350351,
+      "sha256": "0911e317157c48bb791a027d3d2a32b3efb9f2222972f45fe4768b047d554718",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc%20%20agenda%20booklet%20sept%202017.pdf",
@@ -610,7 +761,9 @@
       "snapshotTimestamp": "20241119043548",
       "snapshotUrl": "https://web.archive.org/web/20241119043548id_/http://www.slbcup.com/Agenda/SlbC%20%20Agenda%20BOOKlet%20sept%202017.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SlbC_Agenda_BOOKlet_sept_2017.pdf",
-      "status": "planned"
+      "sizeBytes": 10085982,
+      "sha256": "5973dbc19b097f295721fc0bfc15b5be20aeb72d87a1e4ff86afc99a65894625",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/agend_march2015.pdf",
@@ -618,7 +771,9 @@
       "snapshotTimestamp": "20241119043639",
       "snapshotUrl": "https://web.archive.org/web/20241119043639id_/http://www.slbcup.com/Agenda/Agend_March2015.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Agend_March2015.pdf",
-      "status": "planned"
+      "sizeBytes": 21639767,
+      "sha256": "628243a719314cce11ffa62758bb58d24763a9d334034b0523b2a578cfc90ecf",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/minutes_june_2023_revised.pdf",
@@ -626,7 +781,9 @@
       "snapshotTimestamp": "20241119043824",
       "snapshotUrl": "https://web.archive.org/web/20241119043824id_/http://www.slbcup.com/Agenda/Minutes_June_2023_Revised.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Minutes_June_2023_Revised.pdf",
-      "status": "planned"
+      "sizeBytes": 2168768,
+      "sha256": "995675f5cbcf233f65409364420e49b8fc3134c66ac8cbb5e4c9284acbdb4308",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc%20agenda%20book%20september%202023.pdf",
@@ -634,7 +791,9 @@
       "snapshotTimestamp": "20241119044153",
       "snapshotUrl": "https://web.archive.org/web/20241119044153id_/http://www.slbcup.com/Agenda/SLBC%20Agenda%20Book%20September%202023.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Agenda_Book_September_2023.pdf",
-      "status": "planned"
+      "sizeBytes": 43444219,
+      "sha256": "62180040c19186cd91fd6d47b9592153e20e657a81fffbd2fa0fa814c8980599",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/minutes_june_2013_.pdf",
@@ -642,7 +801,9 @@
       "snapshotTimestamp": "20241119044159",
       "snapshotUrl": "https://web.archive.org/web/20241119044159id_/http://www.slbcup.com/Agenda/Minutes_June_2013_.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Minutes_June_2013_.pdf",
-      "status": "planned"
+      "sizeBytes": 853660,
+      "sha256": "d691ea3673bc95e00710b2a51b5249ab86bf6541c5f78597bf62956a1f282593",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbcdecmeeting88.pdf",
@@ -650,7 +811,9 @@
       "snapshotTimestamp": "20241119044305",
       "snapshotUrl": "https://web.archive.org/web/20241119044305id_/http://www.slbcup.com/Agenda/SLBCDecMeeting88.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBCDecMeeting88.pdf",
-      "status": "planned"
+      "sizeBytes": 1377729,
+      "sha256": "b9aa8156d6a04ccc2fd71b34be86dbc6a6b55343e2f915e9b5727db7b42220eb",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc_meeting_dated_14.06.2018-__agenda_booklet.pdf",
@@ -658,7 +821,9 @@
       "snapshotTimestamp": "20241119044410",
       "snapshotUrl": "https://web.archive.org/web/20241119044410id_/http://www.slbcup.com/Agenda/SLBC_Meeting_dated_14.06.2018-__Agenda_Booklet.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Meeting_dated_14.06.2018-__Agenda_Booklet.pdf",
-      "status": "planned"
+      "sizeBytes": 12318759,
+      "sha256": "194dc00974abae6a6c856627334225a9bc7a3cde18715a93091d9c23fd988104",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc%20booklet-%20june%202020.pdf",
@@ -666,7 +831,9 @@
       "snapshotTimestamp": "20241119044442",
       "snapshotUrl": "https://web.archive.org/web/20241119044442id_/http://www.slbcup.com/Agenda/SLBC%20BOOKLET-%20JUNE%202020.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_BOOKLET-_JUNE_2020.pdf",
-      "status": "planned"
+      "sizeBytes": 97028467,
+      "sha256": "80452b5e9fa5504c4bf58a895929eebbe3a2c3537d0b1b15804e669a252a9017",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/agenda_book_sept2022.pdf",
@@ -674,7 +841,9 @@
       "snapshotTimestamp": "20241119044755",
       "snapshotUrl": "https://web.archive.org/web/20241119044755id_/http://www.slbcup.com/Agenda/Agenda_Book_Sept2022.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Agenda_Book_Sept2022.pdf",
-      "status": "planned"
+      "sizeBytes": 46840157,
+      "sha256": "540cf46b5243d8791a22e15063806a0a179cc7321a69e6e3ecb8764df38619f1",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc_minuts_for_september_2015.pdf",
@@ -682,7 +851,9 @@
       "snapshotTimestamp": "20241119045143",
       "snapshotUrl": "https://web.archive.org/web/20241119045143id_/http://www.slbcup.com/Agenda/SLBC_Minuts_for_September_2015.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Minuts_for_September_2015.pdf",
-      "status": "planned"
+      "sizeBytes": 2046096,
+      "sha256": "3d46c463918f7bc9836f7ed43eb9b7f725faafd4ecc74d708ba2f8a7ffd8a022",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc_agenda_for_september_2015.pdf",
@@ -690,7 +861,9 @@
       "snapshotTimestamp": "20241119045200",
       "snapshotUrl": "https://web.archive.org/web/20241119045200id_/http://www.slbcup.com/Agenda/SLBC_Agenda_for_September_2015.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Agenda_for_September_2015.pdf",
-      "status": "planned"
+      "sizeBytes": 16760490,
+      "sha256": "5b41ae37f5367bc1ca480c71c51ce93dfe2c1a9fd2bada9ca38f640aa8995328",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/agenda_book_june2022.pdf",
@@ -698,7 +871,9 @@
       "snapshotTimestamp": "20241119045233",
       "snapshotUrl": "https://web.archive.org/web/20241119045233id_/http://www.slbcup.com/Agenda/Agenda_Book_June2022.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Agenda_Book_June2022.pdf",
-      "status": "planned"
+      "sizeBytes": 39747481,
+      "sha256": "55ea5939467a46faf53f63bd98f0095165a0f2f31f85e8356fda8de1cbfa2a97",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc_mar_24_booklet_complete.pdf",
@@ -706,7 +881,9 @@
       "snapshotTimestamp": "20241119045302",
       "snapshotUrl": "https://web.archive.org/web/20241119045302id_/http://www.slbcup.com/Agenda/SLBC_Mar_24_Booklet_Complete.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Mar_24_Booklet_Complete.pdf",
-      "status": "planned"
+      "sizeBytes": 104570104,
+      "sha256": "425e9f3168a75d59eb3ce8848787d4f8bea755b399a0c0b4a68ad2c7bf8fde52",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc%20agenda%20booklet%20june%202024.pdf",
@@ -714,7 +891,9 @@
       "snapshotTimestamp": "20241119050413",
       "snapshotUrl": "https://web.archive.org/web/20241119050413id_/http://www.slbcup.com/Agenda/SLBC%20Agenda%20Booklet%20June%202024.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Agenda_Booklet_June_2024.pdf",
-      "status": "planned"
+      "sizeBytes": 27555160,
+      "sha256": "7b982df12395dfb1a7103d23246f8cb4d94eee232ab17bb1d42b51486152b6bb",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/meetingmarchfordec.pdf",
@@ -722,7 +901,9 @@
       "snapshotTimestamp": "20241119050748",
       "snapshotUrl": "https://web.archive.org/web/20241119050748id_/http://www.slbcup.com/Agenda/MeetingMarchforDec.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/MeetingMarchforDec.pdf",
-      "status": "planned"
+      "sizeBytes": 5554092,
+      "sha256": "447a62426373895ea4048c21c11d14f6978145fc6745f18e47413a204be3c0c9",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc%20(u.p)%20agenda%20book%20december%202021.pdf",
@@ -730,7 +911,9 @@
       "snapshotTimestamp": "20241119050816",
       "snapshotUrl": "https://web.archive.org/web/20241119050816id_/http://www.slbcup.com/Agenda/SLBC%20(U.P)%20Agenda%20Book%20December%202021.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_U.P_Agenda_Book_December_2021.pdf",
-      "status": "planned"
+      "sizeBytes": 42408578,
+      "sha256": "870b7077b6dc7ea99bbb8da22365ec1417f13f06962f13706584945aa55481be",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/minutes_of_slbc_meeting_dated_10.09.2014.pdf",
@@ -738,7 +921,9 @@
       "snapshotTimestamp": "20241119050916",
       "snapshotUrl": "https://web.archive.org/web/20241119050916id_/http://www.slbcup.com/Agenda/Minutes_of_SLBC_Meeting_dated_10.09.2014.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Minutes_of_SLBC_Meeting_dated_10.09.2014.pdf",
-      "status": "planned"
+      "sizeBytes": 2619269,
+      "sha256": "96e989dd2430d31f574dac82e40c47bca90941eaa12d2ec0757f6aef8b011d17",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/minutes-21.02.2014.pdf",
@@ -746,7 +931,9 @@
       "snapshotTimestamp": "20241119050957",
       "snapshotUrl": "https://web.archive.org/web/20241119050957id_/http://www.slbcup.com/Agenda/Minutes-21.02.2014.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Minutes-21.02.2014.pdf",
-      "status": "planned"
+      "sizeBytes": 6474529,
+      "sha256": "ac5181da51e362952926341b23571523e0c352b382645e7231183a83ee237a71",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/429.pdf",
@@ -754,7 +941,9 @@
       "snapshotTimestamp": "20241119051133",
       "snapshotUrl": "https://web.archive.org/web/20241119051133id_/http://www.slbcup.com/Agenda/429.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/429.pdf",
-      "status": "planned"
+      "sizeBytes": 1456993,
+      "sha256": "d9abee462309cc443b928c3812269f6dfda35d482f713085342f247e6deb6466",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/345.pdf",
@@ -762,7 +951,9 @@
       "snapshotTimestamp": "20241119051606",
       "snapshotUrl": "https://web.archive.org/web/20241119051606id_/http://www.slbcup.com/Agenda/345.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/345.pdf",
-      "status": "planned"
+      "sizeBytes": 1154242,
+      "sha256": "66c15a61b53500d3569f139bc0a929d1c4954c9877836631c126c9af9aa46b33",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/minutes_jun_22.pdf",
@@ -770,7 +961,9 @@
       "snapshotTimestamp": "20241119051645",
       "snapshotUrl": "https://web.archive.org/web/20241119051645id_/http://www.slbcup.com/Agenda/minutes_Jun_22.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/minutes_Jun_22.pdf",
-      "status": "planned"
+      "sizeBytes": 3941047,
+      "sha256": "c4d9109918388e5db057242114fbc85f2f34fd079aaff64978ec49bf5f1659cf",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc_agenda_booklet_dec_2016-complete.pdf",
@@ -778,7 +971,9 @@
       "snapshotTimestamp": "20241119051833",
       "snapshotUrl": "https://web.archive.org/web/20241119051833id_/http://www.slbcup.com/Agenda/SLBC_Agenda_booklet_dec_2016-complete.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Agenda_booklet_dec_2016-complete.pdf",
-      "status": "planned"
+      "sizeBytes": 11056836,
+      "sha256": "62fd0bbcf160cfdb44b3922c8c6056173e39f80eb793195cb7265a9cbaa3f4d4",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/minutes_slbc_meeting_dt_28_05_24.pdf",
@@ -786,7 +981,9 @@
       "snapshotTimestamp": "20241119052059",
       "snapshotUrl": "https://web.archive.org/web/20241119052059id_/http://www.slbcup.com/Agenda/Minutes_SLBC_Meeting_Dt_28_05_24.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Minutes_SLBC_Meeting_Dt_28_05_24.pdf",
-      "status": "planned"
+      "sizeBytes": 4052073,
+      "sha256": "7a8e6a839c56d0f686dd11ca3c0bea420a82ea162a5f886ceac56d892efef17e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc_booklet_dec_19_original.pdf",
@@ -794,7 +991,9 @@
       "snapshotTimestamp": "20241119052838",
       "snapshotUrl": "https://web.archive.org/web/20241119052838id_/http://www.slbcup.com/Agenda/SLBC_Booklet_DEC_19_original.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Booklet_DEC_19_original.pdf",
-      "status": "planned"
+      "sizeBytes": 11821663,
+      "sha256": "9344755dc28ad738beca0da4d23278e154a8e419225e8c6faadbfd2b8de39ba2",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/196mindec2015.pdf",
@@ -802,7 +1001,9 @@
       "snapshotTimestamp": "20241119053427",
       "snapshotUrl": "https://web.archive.org/web/20241119053427id_/http://www.slbcup.com/Agenda/196MinDec2015.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/196MinDec2015.pdf",
-      "status": "planned"
+      "sizeBytes": 1859385,
+      "sha256": "757f1337950f160f864d534cd93f14b0ba65908966ae0253be2a82f98bac91b4",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc_booklet_june_2016.pdf",
@@ -810,7 +1011,9 @@
       "snapshotTimestamp": "20241119053821",
       "snapshotUrl": "https://web.archive.org/web/20241119053821id_/http://www.slbcup.com/Agenda/SLBC_BOOKLET_June_2016.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_BOOKLET_June_2016.pdf",
-      "status": "planned"
+      "sizeBytes": 19121852,
+      "sha256": "bd07093416646f0bf51e1ee8bcb092982469c7e54bcaa2cb7293b77ac755536e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/242.pdf",
@@ -818,7 +1021,9 @@
       "snapshotTimestamp": "20241119054503",
       "snapshotUrl": "https://web.archive.org/web/20241119054503id_/http://www.slbcup.com/Agenda/242.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/242.pdf",
-      "status": "planned"
+      "sizeBytes": 4982870,
+      "sha256": "5dff01101a2ceebe1f107c59d1ab4803481f5634055caafbd1e62c9cbf3bb6b9",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/agenda%20book%20june%202021.pdf",
@@ -826,7 +1031,9 @@
       "snapshotTimestamp": "20241119054922",
       "snapshotUrl": "https://web.archive.org/web/20241119054922id_/http://www.slbcup.com/Agenda/Agenda%20Book%20June%202021.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Agenda_Book_June_2021.pdf",
-      "status": "planned"
+      "sizeBytes": 63186750,
+      "sha256": "dec84b9fdea6d9079355f0dd515612d558714625d75e7623cdadcf9619c016a1",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/final_book_slbc_march_2023.pdf",
@@ -834,7 +1041,9 @@
       "snapshotTimestamp": "20241119054951",
       "snapshotUrl": "https://web.archive.org/web/20241119054951id_/http://www.slbcup.com/Agenda/Final_Book_SLBC_March_2023.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Final_Book_SLBC_March_2023.pdf",
-      "status": "planned"
+      "sizeBytes": 47816224,
+      "sha256": "2a34a7bce57574250110807ba61d129accd5d078f27cb291357fa1d355e110e2",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc23aug2013.pdf",
@@ -842,7 +1051,9 @@
       "snapshotTimestamp": "20241119055050",
       "snapshotUrl": "https://web.archive.org/web/20241119055050id_/http://www.slbcup.com/Agenda/SLBC23aug2013.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC23aug2013.pdf",
-      "status": "planned"
+      "sizeBytes": 21741519,
+      "sha256": "0cd9c59c661e0c55cb02d75274ac9855a22c419860d5d1800f598fe2afc77d48",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/2.pdf",
@@ -850,7 +1061,9 @@
       "snapshotTimestamp": "20241119055452",
       "snapshotUrl": "https://web.archive.org/web/20241119055452id_/http://www.slbcup.com/Agenda/2.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/2.pdf",
-      "status": "planned"
+      "sizeBytes": 1413698,
+      "sha256": "0213ff9092861437f14fa39ddd95db9ea999db5de77e2ee2d4b6cf035752dd8e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/328june2016.pdf",
@@ -858,7 +1071,9 @@
       "snapshotTimestamp": "20241119055616",
       "snapshotUrl": "https://web.archive.org/web/20241119055616id_/http://www.slbcup.com/Agenda/328June2016.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/328June2016.pdf",
-      "status": "planned"
+      "sizeBytes": 2197535,
+      "sha256": "4885112a0f18175d33e5f68f5858bd3d6b8a5039d15017371c1006292e8b288b",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/minutes_of_slbc_meeting_dated_30.03.2020.pdf",
@@ -866,7 +1081,9 @@
       "snapshotTimestamp": "20241119055626",
       "snapshotUrl": "https://web.archive.org/web/20241119055626id_/http://www.slbcup.com/Agenda/Minutes_of_SLBC_Meeting_dated_30.03.2020.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Minutes_of_SLBC_Meeting_dated_30.03.2020.pdf",
-      "status": "planned"
+      "sizeBytes": 6700804,
+      "sha256": "2cdb03a635f56aec3149671133b6a461bad868e5216fe26ad9c9971833651719",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbcagendabooksept2013.pdf",
@@ -874,7 +1091,9 @@
       "snapshotTimestamp": "20241119060629",
       "snapshotUrl": "https://web.archive.org/web/20241119060629id_/http://www.slbcup.com/Agenda/SLBCAgendaBookSept2013.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBCAgendaBookSept2013.pdf",
-      "status": "planned"
+      "sizeBytes": 589815,
+      "sha256": "e508439182084bc26b7c2a53cd11df3ac7ef01c8cb0ab780e7320ae19d81972e",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc%20booklet%20sept'%202020.pdf",
@@ -882,7 +1101,9 @@
       "snapshotTimestamp": "20241119060855",
       "snapshotUrl": "https://web.archive.org/web/20241119060855id_/http://www.slbcup.com/Agenda/SLBC%20BOOKLET%20SEPT'%202020.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_BOOKLET_SEPT_2020.pdf",
-      "status": "planned"
+      "sizeBytes": 86707781,
+      "sha256": "01556a779c53c4bc574e0b2a8242b57aec3c39be2f299358d7a4689611865bfa",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/booklet.pdf",
@@ -890,7 +1111,9 @@
       "snapshotTimestamp": "20241119061403",
       "snapshotUrl": "https://web.archive.org/web/20241119061403id_/http://www.slbcup.com/Agenda/Booklet.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Booklet.pdf",
-      "status": "planned"
+      "sizeBytes": 62287129,
+      "sha256": "33752809b96929aa64eed344a8546c7b4418385771362326415d2011d6e0e8db",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/miniutedec2023.pdf",
@@ -898,7 +1121,9 @@
       "snapshotTimestamp": "20241119061514",
       "snapshotUrl": "https://web.archive.org/web/20241119061514id_/http://www.slbcup.com/Agenda/MiniuteDec2023.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/MiniuteDec2023.pdf",
-      "status": "planned"
+      "sizeBytes": 1549918,
+      "sha256": "b8627121f7b6f6a7209f01ba3987547a723ca8a56f2f7eac8807f308fddd0303",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/minutes23052013.pdf",
@@ -906,7 +1131,9 @@
       "snapshotTimestamp": "20241119061537",
       "snapshotUrl": "https://web.archive.org/web/20241119061537id_/http://www.slbcup.com/Agenda/minutes23052013.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/minutes23052013.pdf",
-      "status": "planned"
+      "sizeBytes": 3952284,
+      "sha256": "55a75e12b5deaf61019e7f2f388b5d87f3ea229dcd565c881a1be5c966309c4f",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/471.pdf",
@@ -914,7 +1141,9 @@
       "snapshotTimestamp": "20241119062025",
       "snapshotUrl": "https://web.archive.org/web/20241119062025id_/http://www.slbcup.com/Agenda/471.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/471.pdf",
-      "status": "planned"
+      "sizeBytes": 540553,
+      "sha256": "4b06a56fb6dbb18463650638c3c9061e66591d44b97584c580b97ae4da242b76",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc_minutes_march2014.pdf",
@@ -922,7 +1151,9 @@
       "snapshotTimestamp": "20241119062338",
       "snapshotUrl": "https://web.archive.org/web/20241119062338id_/http://www.slbcup.com/Agenda/SLBC_Minutes_March2014.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Minutes_March2014.pdf",
-      "status": "planned"
+      "sizeBytes": 1997301,
+      "sha256": "b40a936d84ccd220c6c0f67fa4705223631add68cadc637d59bd87951104b3eb",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbcbookletforqtrdec17.pdf",
@@ -930,7 +1161,9 @@
       "snapshotTimestamp": "20241119062447",
       "snapshotUrl": "https://web.archive.org/web/20241119062447id_/http://www.slbcup.com/Agenda/SLBCBookletforQtrDec17.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBCBookletforQtrDec17.pdf",
-      "status": "planned"
+      "sizeBytes": 9238329,
+      "sha256": "3765997525c621c26d248251e3a74b463d88ab57e0ca31c2244d1a0aedbba52d",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbcagendabookletfordec'15.pdf",
@@ -938,7 +1171,9 @@
       "snapshotTimestamp": "20241119062507",
       "snapshotUrl": "https://web.archive.org/web/20241119062507id_/http://www.slbcup.com/Agenda/SLBCAGENDABOOKLETFORDEC'15.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBCAGENDABOOKLETFORDEC_15.pdf",
-      "status": "planned"
+      "sizeBytes": 16535353,
+      "sha256": "4b250325dbb93750e3dc2543d72fa128da396e1018c07e78f81d48c8abd82fd1",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/march2018meeting.pdf",
@@ -946,7 +1181,9 @@
       "snapshotTimestamp": "20241119062607",
       "snapshotUrl": "https://web.archive.org/web/20241119062607id_/http://www.slbcup.com/Agenda/March2018Meeting.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/March2018Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 180222,
+      "sha256": "8f8b7563bf234e55f34ee9d368fb58c9675a3a5a8f067b15df53c2b31059cd9d",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbcmeetingjune2018.pdf",
@@ -954,7 +1191,9 @@
       "snapshotTimestamp": "20241119063603",
       "snapshotUrl": "https://web.archive.org/web/20241119063603id_/http://www.slbcup.com/Agenda/slbcMeetingJune2018.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/slbcMeetingJune2018.pdf",
-      "status": "planned"
+      "sizeBytes": 1336585,
+      "sha256": "3b82027fac92c3fbc8ecaefce2e34b1074c24264ee0b6ca7ab764c5c522903da",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/64.pdf",
@@ -962,7 +1201,9 @@
       "snapshotTimestamp": "20241119063919",
       "snapshotUrl": "https://web.archive.org/web/20241119063919id_/http://www.slbcup.com/Agenda/64.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/64.pdf",
-      "status": "planned"
+      "sizeBytes": 6375000,
+      "sha256": "0abec5b056f9ce6aac40b9bd5137c537a6348a81c71f840c6b9f58411180d56c",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/mom%20march%2021.pdf",
@@ -970,7 +1211,9 @@
       "snapshotTimestamp": "20241119064723",
       "snapshotUrl": "https://web.archive.org/web/20241119064723id_/http://www.slbcup.com/Agenda/mom%20march%2021.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/mom_march_21.pdf",
-      "status": "planned"
+      "sizeBytes": 5092405,
+      "sha256": "d1ccd19bf117f996b32964334cceec31eac34b3172226799ea434afefa81bfed",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/minutes_dec_22.pdf",
@@ -978,7 +1221,9 @@
       "snapshotTimestamp": "20241119065351",
       "snapshotUrl": "https://web.archive.org/web/20241119065351id_/http://www.slbcup.com/Agenda/minutes_Dec_22.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/minutes_Dec_22.pdf",
-      "status": "planned"
+      "sizeBytes": 1658637,
+      "sha256": "22cc64a8f8a1e4228ca33597af6004e74eb683a9ae6fad5ef53a0bad42f1445f",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/minutes_of_the_slbc_meeting_for_quarter_endeed_sept_18.pdf",
@@ -986,7 +1231,9 @@
       "snapshotTimestamp": "20241119065418",
       "snapshotUrl": "https://web.archive.org/web/20241119065418id_/http://www.slbcup.com/Agenda/Minutes_of_the_SLBC_Meeting_for_quarter_endeed_Sept_18.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/Minutes_of_the_SLBC_Meeting_for_quarter_endeed_Sept_18.pdf",
-      "status": "planned"
+      "sizeBytes": 9307961,
+      "sha256": "35d924aed29a6c9bd6cc8d1e5ce0f2a9ca3fc4d818ba0efe24109e99d3c98670",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/16.pdf",
@@ -994,7 +1241,9 @@
       "snapshotTimestamp": "20241119065521",
       "snapshotUrl": "https://web.archive.org/web/20241119065521id_/http://www.slbcup.com/Agenda/16.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/16.pdf",
-      "status": "planned"
+      "sizeBytes": 2359909,
+      "sha256": "920d9676a2642fce031cbe4357769f046fb61dad94dea9600f91c85a7786f493",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc_22.05.2014.pdf",
@@ -1002,7 +1251,9 @@
       "snapshotTimestamp": "20241119070145",
       "snapshotUrl": "https://web.archive.org/web/20241119070145id_/http://www.slbcup.com/Agenda/SLBC_22.05.2014.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_22.05.2014.pdf",
-      "status": "planned"
+      "sizeBytes": 54861429,
+      "sha256": "dbd64872203302060d3c41e45f4f8b03fd089cec82d6ddbc6287faa7b13d8519",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc_booklet_%20for_%20june_%202015.pdf",
@@ -1010,7 +1261,9 @@
       "snapshotTimestamp": "20241119071525",
       "snapshotUrl": "https://web.archive.org/web/20241119071525id_/http://www.slbcup.com/Agenda/SLBC_Booklet_%20for_%20June_%202015.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Booklet__for__June__2015.pdf",
-      "status": "planned"
+      "sizeBytes": 15993256,
+      "sha256": "efa009ba29808f5672fee26fcd7e311efc71dd3096b3e7d748c15142c1a5489d",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbcdecembermeeting.pdf",
@@ -1018,7 +1271,9 @@
       "snapshotTimestamp": "20241119072029",
       "snapshotUrl": "https://web.archive.org/web/20241119072029id_/http://www.slbcup.com/Agenda/SLBCDecemberMeeting.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBCDecemberMeeting.pdf",
-      "status": "planned"
+      "sizeBytes": 319339,
+      "sha256": "c5eb718a97f5b170c3632216c5576a794deffd46d0a7fa757c0409521858a7d4",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc_agenda_sept_18.pdf",
@@ -1026,7 +1281,9 @@
       "snapshotTimestamp": "20241119073427",
       "snapshotUrl": "https://web.archive.org/web/20241119073427id_/http://www.slbcup.com/Agenda/SLBC_Agenda_Sept_18.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Agenda_Sept_18.pdf",
-      "status": "planned"
+      "sizeBytes": 9877119,
+      "sha256": "f671970bad588ef2efc26f53b2fac3e97ab68ec0dc676dfc7c8fdb388d72b3b7",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc%20booklet%20march%202017.pdf",
@@ -1034,7 +1291,9 @@
       "snapshotTimestamp": "20241119073806",
       "snapshotUrl": "https://web.archive.org/web/20241119073806id_/http://www.slbcup.com/Agenda/SLBC%20Booklet%20March%202017.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Booklet_March_2017.pdf",
-      "status": "planned"
+      "sizeBytes": 11338397,
+      "sha256": "25db08b2b795411017653d7f7e50b4b215eca8b022aa092e2a59fc992e817e4a",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbcbookletdec14.pdf",
@@ -1042,7 +1301,9 @@
       "snapshotTimestamp": "20241119075315",
       "snapshotUrl": "https://web.archive.org/web/20241119075315id_/http://www.slbcup.com/Agenda/SLBCBOOKLETDec14.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBCBOOKLETDec14.pdf",
-      "status": "planned"
+      "sizeBytes": 49469182,
+      "sha256": "71c5cff8e17f0f15d787f14f73d6cc236089ec288b2d14058e26ec90af79353f",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/98.pdf",
@@ -1050,7 +1311,9 @@
       "snapshotTimestamp": "20241119081046",
       "snapshotUrl": "https://web.archive.org/web/20241119081046id_/http://www.slbcup.com/Agenda/98.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/98.pdf",
-      "status": "planned"
+      "sizeBytes": 13351076,
+      "sha256": "c03c050721ed69b98d10a1dbbe25078aac07063c4a69f29d48aa1b21739cfc58",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc_booklet_june_2018.pdf",
@@ -1058,7 +1321,9 @@
       "snapshotTimestamp": "20241120043239",
       "snapshotUrl": "https://web.archive.org/web/20241120043239id_/http://www.slbcup.com/Agenda/SLBC_Booklet_June_2018.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/SLBC_Booklet_June_2018.pdf",
-      "status": "planned"
+      "sizeBytes": 10833103,
+      "sha256": "8818cffde79a416f4310a1e802d758e141105ea2e73cc9f1d0426a5de76f0996",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/font/msme%201.pdf",
@@ -1066,7 +1331,9 @@
       "snapshotTimestamp": "20241204020908",
       "snapshotUrl": "https://web.archive.org/web/20241204020908id_/http://www.slbcup.com/font/msme%201.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2024/msme_1.pdf",
-      "status": "planned"
+      "sizeBytes": 175506,
+      "sha256": "7a92680ba0e2ecf41297c9f6f0c24c58fa647a5523bc057411d15fcf66bee830",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/agenda/slbc%20agenda%20booklet%20march%202021.pdf",
@@ -1074,7 +1341,9 @@
       "snapshotTimestamp": "20250429175535",
       "snapshotUrl": "https://web.archive.org/web/20250429175535id_/http://www.slbcup.com/Agenda/SLBC%20Agenda%20Booklet%20March%202021.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2025/SLBC_Agenda_Booklet_March_2021.pdf",
-      "status": "planned"
+      "sizeBytes": 44252482,
+      "sha256": "c6971be75cb3ba4c44ff0e0aa975e4e39dbc65da80e7e7aa2f3ea56377281320",
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcup.com/file/acp_target2022_23.pdf",
@@ -1082,7 +1351,9 @@
       "snapshotTimestamp": "20250802210840",
       "snapshotUrl": "https://web.archive.org/web/20250802210840id_/http://www.slbcup.com/File/ACP_Target2022_23.pdf",
       "localPath": "slbc-data/uttar-pradesh/wayback/2025/ACP_Target2022_23.pdf",
-      "status": "planned"
+      "sizeBytes": 3667176,
+      "sha256": "b74cd97f38d0f4aabdf0096c599a2224e5e27367c4ec4c4b379a799a163edf98",
+      "status": "cached"
     }
   ]
 }
