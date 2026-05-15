@@ -22,6 +22,7 @@ import json
 import os
 import re
 import sys
+from pathlib import Path
 from collections import defaultdict
 
 
@@ -577,6 +578,32 @@ def main():
         files, districts = regenerate_indicator(ind, INDICATORS[ind], state_data,
                                                  preserve_phonepe=True)
         print(f'{ind:30s}: {files:3d} files, {districts:6d} district-rows')
+
+    # Rebuild manifest.json from whatever quarter files exist on disk so
+    # build_district_pages.py picks up new historical periods we just wrote.
+    # Walks every public/indicators/<ind>/*.json (skipping manifest.json + nested
+    # 'static.json' / non-quarter filenames) and emits the union.
+    import re as _re
+    out_dir = Path(__file__).resolve().parent.parent / 'public/indicators'
+    qre = _re.compile(r'^\d{4}-\d{2}\.json$')
+    quarter_set: set[str] = set()
+    indicator_dirs: list[str] = []
+    for entry in sorted(out_dir.iterdir()):
+        if not entry.is_dir():
+            continue
+        indicator_dirs.append(entry.name)
+        for f in entry.iterdir():
+            if f.is_file() and qre.match(f.name):
+                quarter_set.add(f.stem)
+    quarters_sorted = sorted(quarter_set, reverse=True)
+    manifest = {
+        'indicators': indicator_dirs,
+        'quarters': quarters_sorted,
+        'latest_quarter': quarters_sorted[0] if quarters_sorted else None,
+    }
+    (out_dir / 'manifest.json').write_text(json.dumps(manifest, separators=(',', ':')))
+    print(f'\nmanifest updated: {len(indicator_dirs)} indicators, '
+          f'{len(quarters_sorted)} quarters ({quarters_sorted[-1]} → {quarters_sorted[0]})')
 
 
 if __name__ == '__main__':

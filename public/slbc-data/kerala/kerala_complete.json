@@ -3,6 +3,807 @@
   "state": "Kerala",
   "amount_unit": "Rs. Lakhs",
   "quarters": {
+    "2010-10": {
+      "period": "October 2010",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "deposit",
+            "advances",
+            "cd_ratio"
+          ],
+          "num_districts": 13,
+          "districts": [
+            {
+              "district": "Alappuzha",
+              "deposit": "1016708.02",
+              "advances": "591099.00",
+              "cd_ratio": "58.14"
+            },
+            {
+              "district": "Ernakulam",
+              "deposit": "3159124.00",
+              "advances": "3147829.00",
+              "cd_ratio": "99.64"
+            },
+            {
+              "district": "Idukki",
+              "deposit": "166618.00",
+              "advances": "212418.00",
+              "cd_ratio": "127.49"
+            },
+            {
+              "district": "Kannur",
+              "deposit": "922936.00",
+              "advances": "587398.00",
+              "cd_ratio": "63.64"
+            },
+            {
+              "district": "Kasaragod",
+              "deposit": "365996.00",
+              "advances": "337431.00",
+              "cd_ratio": "92.20"
+            },
+            {
+              "district": "Kollam",
+              "deposit": "958714.56",
+              "advances": "596481.91",
+              "cd_ratio": "62.22"
+            },
+            {
+              "district": "Kottayam",
+              "deposit": "1219434.94",
+              "advances": "732180.84",
+              "cd_ratio": "60.04"
+            },
+            {
+              "district": "Malappuram",
+              "deposit": "816947.00",
+              "advances": "534753.00",
+              "cd_ratio": "65.46"
+            },
+            {
+              "district": "Palakkad",
+              "deposit": "1101480.24",
+              "advances": "810809.01",
+              "cd_ratio": "73.61"
+            },
+            {
+              "district": "Pathanamthitta",
+              "deposit": "1390998.53",
+              "advances": "558867.10",
+              "cd_ratio": "40.18"
+            },
+            {
+              "district": "Thiruvananthapuram",
+              "deposit": "2733231.00",
+              "advances": "1726935.00",
+              "cd_ratio": "63.18"
+            },
+            {
+              "district": "Thrissur",
+              "deposit": "2129115.00",
+              "advances": "1321900.00",
+              "cd_ratio": "62.09"
+            },
+            {
+              "district": "Wayanad",
+              "deposit": "135229.00",
+              "advances": "163332.00",
+              "cd_ratio": "120.78"
+            }
+          ]
+        }
+      }
+    },
+    "2010-12": {
+      "period": "December 2010",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "deposit",
+            "advances",
+            "cd_ratio"
+          ],
+          "num_districts": 13,
+          "districts": [
+            {
+              "district": "Alappuzha",
+              "deposit": "1062615.00",
+              "advances": "653525.00",
+              "cd_ratio": "61.50"
+            },
+            {
+              "district": "Ernakulam",
+              "deposit": "3301099.00",
+              "advances": "3590422.00",
+              "cd_ratio": "108.76"
+            },
+            {
+              "district": "Idukki",
+              "deposit": "232875.36",
+              "advances": "361716.50",
+              "cd_ratio": "155.33"
+            },
+            {
+              "district": "Kannur",
+              "deposit": "940019.00",
+              "advances": "675563.00",
+              "cd_ratio": "71.87"
+            },
+            {
+              "district": "Kasaragod",
+              "deposit": "255097.00",
+              "advances": "220981.00",
+              "cd_ratio": "86.63"
+            },
+            {
+              "district": "Kollam",
+              "deposit": "1007064.76",
+              "advances": "633782.90",
+              "cd_ratio": "62.93"
+            },
+            {
+              "district": "Kottayam",
+              "deposit": "1413219.74",
+              "advances": "866502.24",
+              "cd_ratio": "61.31"
+            },
+            {
+              "district": "Malappuram",
+              "deposit": "814701.00",
+              "advances": "646632.00",
+              "cd_ratio": "79.37"
+            },
+            {
+              "district": "Palakkad",
+              "deposit": "1165739.27",
+              "advances": "905924.10",
+              "cd_ratio": "77.71"
+            },
+            {
+              "district": "Pathanamthitta",
+              "deposit": "1433437.84",
+              "advances": "602597.26",
+              "cd_ratio": "42.04"
+            },
+            {
+              "district": "Thiruvananthapuram",
+              "deposit": "2889130.00",
+              "advances": "2028681.00",
+              "cd_ratio": "70.22"
+            },
+            {
+              "district": "Thrissur",
+              "deposit": "2178667.00",
+              "advances": "1417230.00",
+              "cd_ratio": "65.05"
+            },
+            {
+              "district": "Wayanad",
+              "deposit": "145746.00",
+              "advances": "189238.00",
+              "cd_ratio": "129.84"
+            }
+          ]
+        }
+      }
+    },
+    "2011-03": {
+      "period": "March 2011",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "deposit",
+            "advances",
+            "cd_ratio"
+          ],
+          "num_districts": 13,
+          "districts": [
+            {
+              "district": "Alappuzha",
+              "deposit": "1104211",
+              "advances": "689876",
+              "cd_ratio": "62.48"
+            },
+            {
+              "district": "Ernakulam",
+              "deposit": "3399354",
+              "advances": "3862156",
+              "cd_ratio": "113.61"
+            },
+            {
+              "district": "Idukki",
+              "deposit": "261815",
+              "advances": "344001",
+              "cd_ratio": "131.39"
+            },
+            {
+              "district": "Kannur",
+              "deposit": "866744",
+              "advances": "708539",
+              "cd_ratio": "81.75"
+            },
+            {
+              "district": "Kasaragod",
+              "deposit": "385712",
+              "advances": "363510",
+              "cd_ratio": "94.24"
+            },
+            {
+              "district": "Kollam",
+              "deposit": "1055240",
+              "advances": "678244",
+              "cd_ratio": "64.27"
+            },
+            {
+              "district": "Kottayam",
+              "deposit": "1509416",
+              "advances": "923920",
+              "cd_ratio": "61.21"
+            },
+            {
+              "district": "Malappuram",
+              "deposit": "849184",
+              "advances": "699260",
+              "cd_ratio": "82.34"
+            },
+            {
+              "district": "Palakkad",
+              "deposit": "1227873",
+              "advances": "969690",
+              "cd_ratio": "78.97"
+            },
+            {
+              "district": "Pathanamthitta",
+              "deposit": "1516283",
+              "advances": "646660",
+              "cd_ratio": "42.65"
+            },
+            {
+              "district": "Thiruvananthapuram",
+              "deposit": "3093944",
+              "advances": "2319458",
+              "cd_ratio": "74.97"
+            },
+            {
+              "district": "Thrissur",
+              "deposit": "2318244",
+              "advances": "1506329",
+              "cd_ratio": "64.98"
+            },
+            {
+              "district": "Wayanad",
+              "deposit": "164530",
+              "advances": "210642",
+              "cd_ratio": "128.02"
+            }
+          ]
+        }
+      }
+    },
+    "2011-09": {
+      "period": "September 2011",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "deposit",
+            "advances",
+            "cd_ratio"
+          ],
+          "num_districts": 13,
+          "districts": [
+            {
+              "district": "Alappuzha",
+              "deposit": "1127541",
+              "advances": "708813",
+              "cd_ratio": "62.86"
+            },
+            {
+              "district": "Ernakulam",
+              "deposit": "3721786",
+              "advances": "4888313",
+              "cd_ratio": "131.34"
+            },
+            {
+              "district": "Idukki",
+              "deposit": "255392",
+              "advances": "337161",
+              "cd_ratio": "132.02"
+            },
+            {
+              "district": "Kannur",
+              "deposit": "1004802",
+              "advances": "804595",
+              "cd_ratio": "80.07"
+            },
+            {
+              "district": "Kasaragod",
+              "deposit": "435601",
+              "advances": "422178",
+              "cd_ratio": "96.92"
+            },
+            {
+              "district": "Kollam",
+              "deposit": "1050927",
+              "advances": "750585",
+              "cd_ratio": "71.42"
+            },
+            {
+              "district": "Kottayam",
+              "deposit": "1461360",
+              "advances": "916747",
+              "cd_ratio": "62.73"
+            },
+            {
+              "district": "Malappuram",
+              "deposit": "829694",
+              "advances": "1409526",
+              "cd_ratio": "169.89"
+            },
+            {
+              "district": "Palakkad",
+              "deposit": "1233761",
+              "advances": "970322",
+              "cd_ratio": "78.65"
+            },
+            {
+              "district": "Pathanamthitta",
+              "deposit": "1541647",
+              "advances": "660574",
+              "cd_ratio": "42.85"
+            },
+            {
+              "district": "Thiruvananthapuram",
+              "deposit": "3232744",
+              "advances": "2670360",
+              "cd_ratio": "82.60"
+            },
+            {
+              "district": "Thrissur",
+              "deposit": "2411465",
+              "advances": "1574916",
+              "cd_ratio": "65.31"
+            },
+            {
+              "district": "Wayanad",
+              "deposit": "164530",
+              "advances": "212302",
+              "cd_ratio": "129.04"
+            }
+          ]
+        }
+      }
+    },
+    "2012-04": {
+      "period": "April 2012",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "deposit",
+            "advances",
+            "cd_ratio"
+          ],
+          "num_districts": 13,
+          "districts": [
+            {
+              "district": "Alappuzha",
+              "deposit": "1316466",
+              "advances": "824620",
+              "cd_ratio": "62.64"
+            },
+            {
+              "district": "Ernakulam",
+              "deposit": "4014432",
+              "advances": "4674966",
+              "cd_ratio": "116.45"
+            },
+            {
+              "district": "Idukki",
+              "deposit": "324441",
+              "advances": "433035",
+              "cd_ratio": "133.47"
+            },
+            {
+              "district": "Kannur",
+              "deposit": "1198669",
+              "advances": "839819",
+              "cd_ratio": "70.06"
+            },
+            {
+              "district": "Kasaragod",
+              "deposit": "509357",
+              "advances": "495096",
+              "cd_ratio": "97.20"
+            },
+            {
+              "district": "Kollam",
+              "deposit": "1274087",
+              "advances": "916749",
+              "cd_ratio": "71.95"
+            },
+            {
+              "district": "Kottayam",
+              "deposit": "1754112",
+              "advances": "1148265",
+              "cd_ratio": "65.46"
+            },
+            {
+              "district": "Malappuram",
+              "deposit": "1021853",
+              "advances": "717300",
+              "cd_ratio": "70.20"
+            },
+            {
+              "district": "Palakkad",
+              "deposit": "1375591",
+              "advances": "1098162",
+              "cd_ratio": "79.83"
+            },
+            {
+              "district": "Pathanamthitta",
+              "deposit": "1796162",
+              "advances": "801090",
+              "cd_ratio": "44.60"
+            },
+            {
+              "district": "Thiruvananthapuram",
+              "deposit": "3843843",
+              "advances": "2550530",
+              "cd_ratio": "66.35"
+            },
+            {
+              "district": "Thrissur",
+              "deposit": "2783047",
+              "advances": "1913459",
+              "cd_ratio": "68.75"
+            },
+            {
+              "district": "Wayanad",
+              "deposit": "193576",
+              "advances": "244080",
+              "cd_ratio": "126.09"
+            }
+          ]
+        }
+      }
+    },
+    "2012-09": {
+      "period": "September 2012",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "deposit",
+            "advances",
+            "cd_ratio"
+          ],
+          "num_districts": 13,
+          "districts": [
+            {
+              "district": "Alappuzha",
+              "deposit": "1393032",
+              "advances": "827769",
+              "cd_ratio": "59.42"
+            },
+            {
+              "district": "Ernakulam",
+              "deposit": "4391185",
+              "advances": "4569543",
+              "cd_ratio": "104.16"
+            },
+            {
+              "district": "Idukki",
+              "deposit": "324722",
+              "advances": "435063",
+              "cd_ratio": "133.98"
+            },
+            {
+              "district": "Kannur",
+              "deposit": "1247524",
+              "advances": "853944",
+              "cd_ratio": "68.45"
+            },
+            {
+              "district": "Kasaragod",
+              "deposit": "549916",
+              "advances": "522929",
+              "cd_ratio": "95.09"
+            },
+            {
+              "district": "Kollam",
+              "deposit": "1280845",
+              "advances": "981708",
+              "cd_ratio": "76.65"
+            },
+            {
+              "district": "Kottayam",
+              "deposit": "1788963",
+              "advances": "1116599",
+              "cd_ratio": "62.42"
+            },
+            {
+              "district": "Malappuram",
+              "deposit": "1130493",
+              "advances": "742527",
+              "cd_ratio": "65.68"
+            },
+            {
+              "district": "Palakkad",
+              "deposit": "1488867",
+              "advances": "1166170",
+              "cd_ratio": "78.33"
+            },
+            {
+              "district": "Pathanamthitta",
+              "deposit": "2167517",
+              "advances": "958824",
+              "cd_ratio": "44.24"
+            },
+            {
+              "district": "Thiruvananthapuram",
+              "deposit": "3974087",
+              "advances": "2798781",
+              "cd_ratio": "70.43"
+            },
+            {
+              "district": "Thrissur",
+              "deposit": "2916182",
+              "advances": "1935621",
+              "cd_ratio": "66.38"
+            },
+            {
+              "district": "Wayanad",
+              "deposit": "191196",
+              "advances": "249659",
+              "cd_ratio": "130.58"
+            }
+          ]
+        }
+      }
+    },
+    "2013-01": {
+      "period": "January 2013",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "deposit",
+            "advances",
+            "cd_ratio"
+          ],
+          "num_districts": 13,
+          "districts": [
+            {
+              "district": "Alappuzha",
+              "deposit": "1413785",
+              "advances": "880339",
+              "cd_ratio": "62.27"
+            },
+            {
+              "district": "Ernakulam",
+              "deposit": "4490758",
+              "advances": "4637468",
+              "cd_ratio": "103.27"
+            },
+            {
+              "district": "Idukki",
+              "deposit": "328871",
+              "advances": "476947",
+              "cd_ratio": "145.03"
+            },
+            {
+              "district": "Kannur",
+              "deposit": "1290467",
+              "advances": "982664",
+              "cd_ratio": "76.15"
+            },
+            {
+              "district": "Kasaragod",
+              "deposit": "561693",
+              "advances": "538537",
+              "cd_ratio": "95.88"
+            },
+            {
+              "district": "Kollam",
+              "deposit": "13553313",
+              "advances": "1006056",
+              "cd_ratio": "74.34"
+            },
+            {
+              "district": "Kottayam",
+              "deposit": "1829987",
+              "advances": "1188252",
+              "cd_ratio": "64.93"
+            },
+            {
+              "district": "Malappuram",
+              "deposit": "1155174",
+              "advances": "770634",
+              "cd_ratio": "66.71"
+            },
+            {
+              "district": "Palakkad",
+              "deposit": "1532185",
+              "advances": "1212045",
+              "cd_ratio": "79.11"
+            },
+            {
+              "district": "Pathanamthitta",
+              "deposit": "1968915",
+              "advances": "887799",
+              "cd_ratio": "45.09"
+            },
+            {
+              "district": "Thiruvananthapuram",
+              "deposit": "9892982",
+              "advances": "2760849",
+              "cd_ratio": "70.92"
+            },
+            {
+              "district": "Thrissur",
+              "deposit": "3199474",
+              "advances": "2123687",
+              "cd_ratio": "66.38"
+            },
+            {
+              "district": "Wayanad",
+              "deposit": "211533",
+              "advances": "282558",
+              "cd_ratio": "133.58"
+            }
+          ]
+        }
+      }
+    },
+    "2013-03": {
+      "period": "March 2013",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "deposit",
+            "advances",
+            "cd_ratio"
+          ],
+          "num_districts": 7,
+          "districts": [
+            {
+              "district": "Alappuzha",
+              "deposit": "1461989",
+              "advances": "928996",
+              "cd_ratio": "63.54"
+            },
+            {
+              "district": "Ernakulam",
+              "deposit": "4650534",
+              "advances": "4867374",
+              "cd_ratio": "104.66"
+            },
+            {
+              "district": "Idukki",
+              "deposit": "329779",
+              "advances": "493292",
+              "cd_ratio": "149.58"
+            },
+            {
+              "district": "Kollam",
+              "deposit": "1381518",
+              "advances": "1004511",
+              "cd_ratio": "72.71"
+            },
+            {
+              "district": "Kottayam",
+              "deposit": "1837872",
+              "advances": "1249310",
+              "cd_ratio": "67.98"
+            },
+            {
+              "district": "Pathanamthitta",
+              "deposit": "2035326",
+              "advances": "929972",
+              "cd_ratio": "45.69"
+            },
+            {
+              "district": "Thiruvananthapuram",
+              "deposit": "3959710",
+              "advances": "2836870",
+              "cd_ratio": "71.64"
+            }
+          ]
+        }
+      }
+    },
+    "2013-09": {
+      "period": "September 2013",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "deposit",
+            "advances",
+            "cd_ratio"
+          ],
+          "num_districts": 13,
+          "districts": [
+            {
+              "district": "Alappuzha",
+              "deposit": "1604830",
+              "advances": "1020850",
+              "cd_ratio": "63.61"
+            },
+            {
+              "district": "Ernakulam",
+              "deposit": "5159758",
+              "advances": "5174894",
+              "cd_ratio": "100.29"
+            },
+            {
+              "district": "Idukki",
+              "deposit": "364790",
+              "advances": "519447",
+              "cd_ratio": "142.40"
+            },
+            {
+              "district": "Kannur",
+              "deposit": "1465499",
+              "advances": "1005292",
+              "cd_ratio": "68.60"
+            },
+            {
+              "district": "Kollam",
+              "deposit": "1487284",
+              "advances": "1130996",
+              "cd_ratio": "76.04"
+            },
+            {
+              "district": "Kottayam",
+              "deposit": "1984730",
+              "advances": "1333207",
+              "cd_ratio": "67.17"
+            },
+            {
+              "district": "Kozhikode",
+              "deposit": "1901552",
+              "advances": "1454119",
+              "cd_ratio": "76.47"
+            },
+            {
+              "district": "Malappuram",
+              "deposit": "1221951",
+              "advances": "904454",
+              "cd_ratio": "74.02"
+            },
+            {
+              "district": "Palakkad",
+              "deposit": "1675591",
+              "advances": "1355895",
+              "cd_ratio": "80.92"
+            },
+            {
+              "district": "Pathanamthitta",
+              "deposit": "291990",
+              "advances": "179330",
+              "cd_ratio": "61.42"
+            },
+            {
+              "district": "Thiruvananthapuram",
+              "deposit": "4146696",
+              "advances": "2994160",
+              "cd_ratio": "72.21"
+            },
+            {
+              "district": "Thrissur",
+              "deposit": "3575281",
+              "advances": "2508211",
+              "cd_ratio": "70.15"
+            },
+            {
+              "district": "Wayanad",
+              "deposit": "240067",
+              "advances": "315136",
+              "cd_ratio": "131.27"
+            }
+          ]
+        }
+      }
+    },
     "2020-03": {
       "period": "March 2020",
       "as_on_date": "31-03-2020",

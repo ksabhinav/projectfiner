@@ -3,6 +3,828 @@
   "state": "kerala",
   "periods": [
     {
+      "period": "October 2010",
+      "districts": [
+        {
+          "district": "Alappuzha",
+          "period": "October 2010",
+          "credit_deposit_ratio__deposit": "1016708.02",
+          "credit_deposit_ratio__advances": "591099.00",
+          "credit_deposit_ratio__cd_ratio": "58.14"
+        },
+        {
+          "district": "Ernakulam",
+          "period": "October 2010",
+          "credit_deposit_ratio__deposit": "3159124.00",
+          "credit_deposit_ratio__advances": "3147829.00",
+          "credit_deposit_ratio__cd_ratio": "99.64"
+        },
+        {
+          "district": "Idukki",
+          "period": "October 2010",
+          "credit_deposit_ratio__deposit": "166618.00",
+          "credit_deposit_ratio__advances": "212418.00",
+          "credit_deposit_ratio__cd_ratio": "127.49"
+        },
+        {
+          "district": "Kannur",
+          "period": "October 2010",
+          "credit_deposit_ratio__deposit": "922936.00",
+          "credit_deposit_ratio__advances": "587398.00",
+          "credit_deposit_ratio__cd_ratio": "63.64"
+        },
+        {
+          "district": "Kasaragod",
+          "period": "October 2010",
+          "credit_deposit_ratio__deposit": "365996.00",
+          "credit_deposit_ratio__advances": "337431.00",
+          "credit_deposit_ratio__cd_ratio": "92.20"
+        },
+        {
+          "district": "Kollam",
+          "period": "October 2010",
+          "credit_deposit_ratio__deposit": "958714.56",
+          "credit_deposit_ratio__advances": "596481.91",
+          "credit_deposit_ratio__cd_ratio": "62.22"
+        },
+        {
+          "district": "Kottayam",
+          "period": "October 2010",
+          "credit_deposit_ratio__deposit": "1219434.94",
+          "credit_deposit_ratio__advances": "732180.84",
+          "credit_deposit_ratio__cd_ratio": "60.04"
+        },
+        {
+          "district": "Malappuram",
+          "period": "October 2010",
+          "credit_deposit_ratio__deposit": "816947.00",
+          "credit_deposit_ratio__advances": "534753.00",
+          "credit_deposit_ratio__cd_ratio": "65.46"
+        },
+        {
+          "district": "Palakkad",
+          "period": "October 2010",
+          "credit_deposit_ratio__deposit": "1101480.24",
+          "credit_deposit_ratio__advances": "810809.01",
+          "credit_deposit_ratio__cd_ratio": "73.61"
+        },
+        {
+          "district": "Pathanamthitta",
+          "period": "October 2010",
+          "credit_deposit_ratio__deposit": "1390998.53",
+          "credit_deposit_ratio__advances": "558867.10",
+          "credit_deposit_ratio__cd_ratio": "40.18"
+        },
+        {
+          "district": "Thiruvananthapuram",
+          "period": "October 2010",
+          "credit_deposit_ratio__deposit": "2733231.00",
+          "credit_deposit_ratio__advances": "1726935.00",
+          "credit_deposit_ratio__cd_ratio": "63.18"
+        },
+        {
+          "district": "Thrissur",
+          "period": "October 2010",
+          "credit_deposit_ratio__deposit": "2129115.00",
+          "credit_deposit_ratio__advances": "1321900.00",
+          "credit_deposit_ratio__cd_ratio": "62.09"
+        },
+        {
+          "district": "Wayanad",
+          "period": "October 2010",
+          "credit_deposit_ratio__deposit": "135229.00",
+          "credit_deposit_ratio__advances": "163332.00",
+          "credit_deposit_ratio__cd_ratio": "120.78"
+        }
+      ]
+    },
+    {
+      "period": "December 2010",
+      "districts": [
+        {
+          "district": "Alappuzha",
+          "period": "December 2010",
+          "credit_deposit_ratio__deposit": "1062615.00",
+          "credit_deposit_ratio__advances": "653525.00",
+          "credit_deposit_ratio__cd_ratio": "61.50"
+        },
+        {
+          "district": "Ernakulam",
+          "period": "December 2010",
+          "credit_deposit_ratio__deposit": "3301099.00",
+          "credit_deposit_ratio__advances": "3590422.00",
+          "credit_deposit_ratio__cd_ratio": "108.76"
+        },
+        {
+          "district": "Idukki",
+          "period": "December 2010",
+          "credit_deposit_ratio__deposit": "232875.36",
+          "credit_deposit_ratio__advances": "361716.50",
+          "credit_deposit_ratio__cd_ratio": "155.33"
+        },
+        {
+          "district": "Kannur",
+          "period": "December 2010",
+          "credit_deposit_ratio__deposit": "940019.00",
+          "credit_deposit_ratio__advances": "675563.00",
+          "credit_deposit_ratio__cd_ratio": "71.87"
+        },
+        {
+          "district": "Kasaragod",
+          "period": "December 2010",
+          "credit_deposit_ratio__deposit": "255097.00",
+          "credit_deposit_ratio__advances": "220981.00",
+          "credit_deposit_ratio__cd_ratio": "86.63"
+        },
+        {
+          "district": "Kollam",
+          "period": "December 2010",
+          "credit_deposit_ratio__deposit": "1007064.76",
+          "credit_deposit_ratio__advances": "633782.90",
+          "credit_deposit_ratio__cd_ratio": "62.93"
+        },
+        {
+          "district": "Kottayam",
+          "period": "December 2010",
+          "credit_deposit_ratio__deposit": "1413219.74",
+          "credit_deposit_ratio__advances": "866502.24",
+          "credit_deposit_ratio__cd_ratio": "61.31"
+        },
+        {
+          "district": "Malappuram",
+          "period": "December 2010",
+          "credit_deposit_ratio__deposit": "814701.00",
+          "credit_deposit_ratio__advances": "646632.00",
+          "credit_deposit_ratio__cd_ratio": "79.37"
+        },
+        {
+          "district": "Palakkad",
+          "period": "December 2010",
+          "credit_deposit_ratio__deposit": "1165739.27",
+          "credit_deposit_ratio__advances": "905924.10",
+          "credit_deposit_ratio__cd_ratio": "77.71"
+        },
+        {
+          "district": "Pathanamthitta",
+          "period": "December 2010",
+          "credit_deposit_ratio__deposit": "1433437.84",
+          "credit_deposit_ratio__advances": "602597.26",
+          "credit_deposit_ratio__cd_ratio": "42.04"
+        },
+        {
+          "district": "Thiruvananthapuram",
+          "period": "December 2010",
+          "credit_deposit_ratio__deposit": "2889130.00",
+          "credit_deposit_ratio__advances": "2028681.00",
+          "credit_deposit_ratio__cd_ratio": "70.22"
+        },
+        {
+          "district": "Thrissur",
+          "period": "December 2010",
+          "credit_deposit_ratio__deposit": "2178667.00",
+          "credit_deposit_ratio__advances": "1417230.00",
+          "credit_deposit_ratio__cd_ratio": "65.05"
+        },
+        {
+          "district": "Wayanad",
+          "period": "December 2010",
+          "credit_deposit_ratio__deposit": "145746.00",
+          "credit_deposit_ratio__advances": "189238.00",
+          "credit_deposit_ratio__cd_ratio": "129.84"
+        }
+      ]
+    },
+    {
+      "period": "March 2011",
+      "districts": [
+        {
+          "district": "Alappuzha",
+          "period": "March 2011",
+          "credit_deposit_ratio__deposit": "1104211",
+          "credit_deposit_ratio__advances": "689876",
+          "credit_deposit_ratio__cd_ratio": "62.48"
+        },
+        {
+          "district": "Ernakulam",
+          "period": "March 2011",
+          "credit_deposit_ratio__deposit": "3399354",
+          "credit_deposit_ratio__advances": "3862156",
+          "credit_deposit_ratio__cd_ratio": "113.61"
+        },
+        {
+          "district": "Idukki",
+          "period": "March 2011",
+          "credit_deposit_ratio__deposit": "261815",
+          "credit_deposit_ratio__advances": "344001",
+          "credit_deposit_ratio__cd_ratio": "131.39"
+        },
+        {
+          "district": "Kannur",
+          "period": "March 2011",
+          "credit_deposit_ratio__deposit": "866744",
+          "credit_deposit_ratio__advances": "708539",
+          "credit_deposit_ratio__cd_ratio": "81.75"
+        },
+        {
+          "district": "Kasaragod",
+          "period": "March 2011",
+          "credit_deposit_ratio__deposit": "385712",
+          "credit_deposit_ratio__advances": "363510",
+          "credit_deposit_ratio__cd_ratio": "94.24"
+        },
+        {
+          "district": "Kollam",
+          "period": "March 2011",
+          "credit_deposit_ratio__deposit": "1055240",
+          "credit_deposit_ratio__advances": "678244",
+          "credit_deposit_ratio__cd_ratio": "64.27"
+        },
+        {
+          "district": "Kottayam",
+          "period": "March 2011",
+          "credit_deposit_ratio__deposit": "1509416",
+          "credit_deposit_ratio__advances": "923920",
+          "credit_deposit_ratio__cd_ratio": "61.21"
+        },
+        {
+          "district": "Malappuram",
+          "period": "March 2011",
+          "credit_deposit_ratio__deposit": "849184",
+          "credit_deposit_ratio__advances": "699260",
+          "credit_deposit_ratio__cd_ratio": "82.34"
+        },
+        {
+          "district": "Palakkad",
+          "period": "March 2011",
+          "credit_deposit_ratio__deposit": "1227873",
+          "credit_deposit_ratio__advances": "969690",
+          "credit_deposit_ratio__cd_ratio": "78.97"
+        },
+        {
+          "district": "Pathanamthitta",
+          "period": "March 2011",
+          "credit_deposit_ratio__deposit": "1516283",
+          "credit_deposit_ratio__advances": "646660",
+          "credit_deposit_ratio__cd_ratio": "42.65"
+        },
+        {
+          "district": "Thiruvananthapuram",
+          "period": "March 2011",
+          "credit_deposit_ratio__deposit": "3093944",
+          "credit_deposit_ratio__advances": "2319458",
+          "credit_deposit_ratio__cd_ratio": "74.97"
+        },
+        {
+          "district": "Thrissur",
+          "period": "March 2011",
+          "credit_deposit_ratio__deposit": "2318244",
+          "credit_deposit_ratio__advances": "1506329",
+          "credit_deposit_ratio__cd_ratio": "64.98"
+        },
+        {
+          "district": "Wayanad",
+          "period": "March 2011",
+          "credit_deposit_ratio__deposit": "164530",
+          "credit_deposit_ratio__advances": "210642",
+          "credit_deposit_ratio__cd_ratio": "128.02"
+        }
+      ]
+    },
+    {
+      "period": "September 2011",
+      "districts": [
+        {
+          "district": "Alappuzha",
+          "period": "September 2011",
+          "credit_deposit_ratio__deposit": "1127541",
+          "credit_deposit_ratio__advances": "708813",
+          "credit_deposit_ratio__cd_ratio": "62.86"
+        },
+        {
+          "district": "Ernakulam",
+          "period": "September 2011",
+          "credit_deposit_ratio__deposit": "3721786",
+          "credit_deposit_ratio__advances": "4888313",
+          "credit_deposit_ratio__cd_ratio": "131.34"
+        },
+        {
+          "district": "Idukki",
+          "period": "September 2011",
+          "credit_deposit_ratio__deposit": "255392",
+          "credit_deposit_ratio__advances": "337161",
+          "credit_deposit_ratio__cd_ratio": "132.02"
+        },
+        {
+          "district": "Kannur",
+          "period": "September 2011",
+          "credit_deposit_ratio__deposit": "1004802",
+          "credit_deposit_ratio__advances": "804595",
+          "credit_deposit_ratio__cd_ratio": "80.07"
+        },
+        {
+          "district": "Kasaragod",
+          "period": "September 2011",
+          "credit_deposit_ratio__deposit": "435601",
+          "credit_deposit_ratio__advances": "422178",
+          "credit_deposit_ratio__cd_ratio": "96.92"
+        },
+        {
+          "district": "Kollam",
+          "period": "September 2011",
+          "credit_deposit_ratio__deposit": "1050927",
+          "credit_deposit_ratio__advances": "750585",
+          "credit_deposit_ratio__cd_ratio": "71.42"
+        },
+        {
+          "district": "Kottayam",
+          "period": "September 2011",
+          "credit_deposit_ratio__deposit": "1461360",
+          "credit_deposit_ratio__advances": "916747",
+          "credit_deposit_ratio__cd_ratio": "62.73"
+        },
+        {
+          "district": "Malappuram",
+          "period": "September 2011",
+          "credit_deposit_ratio__deposit": "829694",
+          "credit_deposit_ratio__advances": "1409526",
+          "credit_deposit_ratio__cd_ratio": "169.89"
+        },
+        {
+          "district": "Palakkad",
+          "period": "September 2011",
+          "credit_deposit_ratio__deposit": "1233761",
+          "credit_deposit_ratio__advances": "970322",
+          "credit_deposit_ratio__cd_ratio": "78.65"
+        },
+        {
+          "district": "Pathanamthitta",
+          "period": "September 2011",
+          "credit_deposit_ratio__deposit": "1541647",
+          "credit_deposit_ratio__advances": "660574",
+          "credit_deposit_ratio__cd_ratio": "42.85"
+        },
+        {
+          "district": "Thiruvananthapuram",
+          "period": "September 2011",
+          "credit_deposit_ratio__deposit": "3232744",
+          "credit_deposit_ratio__advances": "2670360",
+          "credit_deposit_ratio__cd_ratio": "82.60"
+        },
+        {
+          "district": "Thrissur",
+          "period": "September 2011",
+          "credit_deposit_ratio__deposit": "2411465",
+          "credit_deposit_ratio__advances": "1574916",
+          "credit_deposit_ratio__cd_ratio": "65.31"
+        },
+        {
+          "district": "Wayanad",
+          "period": "September 2011",
+          "credit_deposit_ratio__deposit": "164530",
+          "credit_deposit_ratio__advances": "212302",
+          "credit_deposit_ratio__cd_ratio": "129.04"
+        }
+      ]
+    },
+    {
+      "period": "April 2012",
+      "districts": [
+        {
+          "district": "Alappuzha",
+          "period": "April 2012",
+          "credit_deposit_ratio__deposit": "1316466",
+          "credit_deposit_ratio__advances": "824620",
+          "credit_deposit_ratio__cd_ratio": "62.64"
+        },
+        {
+          "district": "Ernakulam",
+          "period": "April 2012",
+          "credit_deposit_ratio__deposit": "4014432",
+          "credit_deposit_ratio__advances": "4674966",
+          "credit_deposit_ratio__cd_ratio": "116.45"
+        },
+        {
+          "district": "Idukki",
+          "period": "April 2012",
+          "credit_deposit_ratio__deposit": "324441",
+          "credit_deposit_ratio__advances": "433035",
+          "credit_deposit_ratio__cd_ratio": "133.47"
+        },
+        {
+          "district": "Kannur",
+          "period": "April 2012",
+          "credit_deposit_ratio__deposit": "1198669",
+          "credit_deposit_ratio__advances": "839819",
+          "credit_deposit_ratio__cd_ratio": "70.06"
+        },
+        {
+          "district": "Kasaragod",
+          "period": "April 2012",
+          "credit_deposit_ratio__deposit": "509357",
+          "credit_deposit_ratio__advances": "495096",
+          "credit_deposit_ratio__cd_ratio": "97.20"
+        },
+        {
+          "district": "Kollam",
+          "period": "April 2012",
+          "credit_deposit_ratio__deposit": "1274087",
+          "credit_deposit_ratio__advances": "916749",
+          "credit_deposit_ratio__cd_ratio": "71.95"
+        },
+        {
+          "district": "Kottayam",
+          "period": "April 2012",
+          "credit_deposit_ratio__deposit": "1754112",
+          "credit_deposit_ratio__advances": "1148265",
+          "credit_deposit_ratio__cd_ratio": "65.46"
+        },
+        {
+          "district": "Malappuram",
+          "period": "April 2012",
+          "credit_deposit_ratio__deposit": "1021853",
+          "credit_deposit_ratio__advances": "717300",
+          "credit_deposit_ratio__cd_ratio": "70.20"
+        },
+        {
+          "district": "Palakkad",
+          "period": "April 2012",
+          "credit_deposit_ratio__deposit": "1375591",
+          "credit_deposit_ratio__advances": "1098162",
+          "credit_deposit_ratio__cd_ratio": "79.83"
+        },
+        {
+          "district": "Pathanamthitta",
+          "period": "April 2012",
+          "credit_deposit_ratio__deposit": "1796162",
+          "credit_deposit_ratio__advances": "801090",
+          "credit_deposit_ratio__cd_ratio": "44.60"
+        },
+        {
+          "district": "Thiruvananthapuram",
+          "period": "April 2012",
+          "credit_deposit_ratio__deposit": "3843843",
+          "credit_deposit_ratio__advances": "2550530",
+          "credit_deposit_ratio__cd_ratio": "66.35"
+        },
+        {
+          "district": "Thrissur",
+          "period": "April 2012",
+          "credit_deposit_ratio__deposit": "2783047",
+          "credit_deposit_ratio__advances": "1913459",
+          "credit_deposit_ratio__cd_ratio": "68.75"
+        },
+        {
+          "district": "Wayanad",
+          "period": "April 2012",
+          "credit_deposit_ratio__deposit": "193576",
+          "credit_deposit_ratio__advances": "244080",
+          "credit_deposit_ratio__cd_ratio": "126.09"
+        }
+      ]
+    },
+    {
+      "period": "September 2012",
+      "districts": [
+        {
+          "district": "Alappuzha",
+          "period": "September 2012",
+          "credit_deposit_ratio__deposit": "1393032",
+          "credit_deposit_ratio__advances": "827769",
+          "credit_deposit_ratio__cd_ratio": "59.42"
+        },
+        {
+          "district": "Ernakulam",
+          "period": "September 2012",
+          "credit_deposit_ratio__deposit": "4391185",
+          "credit_deposit_ratio__advances": "4569543",
+          "credit_deposit_ratio__cd_ratio": "104.16"
+        },
+        {
+          "district": "Idukki",
+          "period": "September 2012",
+          "credit_deposit_ratio__deposit": "324722",
+          "credit_deposit_ratio__advances": "435063",
+          "credit_deposit_ratio__cd_ratio": "133.98"
+        },
+        {
+          "district": "Kannur",
+          "period": "September 2012",
+          "credit_deposit_ratio__deposit": "1247524",
+          "credit_deposit_ratio__advances": "853944",
+          "credit_deposit_ratio__cd_ratio": "68.45"
+        },
+        {
+          "district": "Kasaragod",
+          "period": "September 2012",
+          "credit_deposit_ratio__deposit": "549916",
+          "credit_deposit_ratio__advances": "522929",
+          "credit_deposit_ratio__cd_ratio": "95.09"
+        },
+        {
+          "district": "Kollam",
+          "period": "September 2012",
+          "credit_deposit_ratio__deposit": "1280845",
+          "credit_deposit_ratio__advances": "981708",
+          "credit_deposit_ratio__cd_ratio": "76.65"
+        },
+        {
+          "district": "Kottayam",
+          "period": "September 2012",
+          "credit_deposit_ratio__deposit": "1788963",
+          "credit_deposit_ratio__advances": "1116599",
+          "credit_deposit_ratio__cd_ratio": "62.42"
+        },
+        {
+          "district": "Malappuram",
+          "period": "September 2012",
+          "credit_deposit_ratio__deposit": "1130493",
+          "credit_deposit_ratio__advances": "742527",
+          "credit_deposit_ratio__cd_ratio": "65.68"
+        },
+        {
+          "district": "Palakkad",
+          "period": "September 2012",
+          "credit_deposit_ratio__deposit": "1488867",
+          "credit_deposit_ratio__advances": "1166170",
+          "credit_deposit_ratio__cd_ratio": "78.33"
+        },
+        {
+          "district": "Pathanamthitta",
+          "period": "September 2012",
+          "credit_deposit_ratio__deposit": "2167517",
+          "credit_deposit_ratio__advances": "958824",
+          "credit_deposit_ratio__cd_ratio": "44.24"
+        },
+        {
+          "district": "Thiruvananthapuram",
+          "period": "September 2012",
+          "credit_deposit_ratio__deposit": "3974087",
+          "credit_deposit_ratio__advances": "2798781",
+          "credit_deposit_ratio__cd_ratio": "70.43"
+        },
+        {
+          "district": "Thrissur",
+          "period": "September 2012",
+          "credit_deposit_ratio__deposit": "2916182",
+          "credit_deposit_ratio__advances": "1935621",
+          "credit_deposit_ratio__cd_ratio": "66.38"
+        },
+        {
+          "district": "Wayanad",
+          "period": "September 2012",
+          "credit_deposit_ratio__deposit": "191196",
+          "credit_deposit_ratio__advances": "249659",
+          "credit_deposit_ratio__cd_ratio": "130.58"
+        }
+      ]
+    },
+    {
+      "period": "January 2013",
+      "districts": [
+        {
+          "district": "Alappuzha",
+          "period": "January 2013",
+          "credit_deposit_ratio__deposit": "1413785",
+          "credit_deposit_ratio__advances": "880339",
+          "credit_deposit_ratio__cd_ratio": "62.27"
+        },
+        {
+          "district": "Ernakulam",
+          "period": "January 2013",
+          "credit_deposit_ratio__deposit": "4490758",
+          "credit_deposit_ratio__advances": "4637468",
+          "credit_deposit_ratio__cd_ratio": "103.27"
+        },
+        {
+          "district": "Idukki",
+          "period": "January 2013",
+          "credit_deposit_ratio__deposit": "328871",
+          "credit_deposit_ratio__advances": "476947",
+          "credit_deposit_ratio__cd_ratio": "145.03"
+        },
+        {
+          "district": "Kannur",
+          "period": "January 2013",
+          "credit_deposit_ratio__deposit": "1290467",
+          "credit_deposit_ratio__advances": "982664",
+          "credit_deposit_ratio__cd_ratio": "76.15"
+        },
+        {
+          "district": "Kasaragod",
+          "period": "January 2013",
+          "credit_deposit_ratio__deposit": "561693",
+          "credit_deposit_ratio__advances": "538537",
+          "credit_deposit_ratio__cd_ratio": "95.88"
+        },
+        {
+          "district": "Kollam",
+          "period": "January 2013",
+          "credit_deposit_ratio__deposit": "13553313",
+          "credit_deposit_ratio__advances": "1006056",
+          "credit_deposit_ratio__cd_ratio": "74.34"
+        },
+        {
+          "district": "Kottayam",
+          "period": "January 2013",
+          "credit_deposit_ratio__deposit": "1829987",
+          "credit_deposit_ratio__advances": "1188252",
+          "credit_deposit_ratio__cd_ratio": "64.93"
+        },
+        {
+          "district": "Malappuram",
+          "period": "January 2013",
+          "credit_deposit_ratio__deposit": "1155174",
+          "credit_deposit_ratio__advances": "770634",
+          "credit_deposit_ratio__cd_ratio": "66.71"
+        },
+        {
+          "district": "Palakkad",
+          "period": "January 2013",
+          "credit_deposit_ratio__deposit": "1532185",
+          "credit_deposit_ratio__advances": "1212045",
+          "credit_deposit_ratio__cd_ratio": "79.11"
+        },
+        {
+          "district": "Pathanamthitta",
+          "period": "January 2013",
+          "credit_deposit_ratio__deposit": "1968915",
+          "credit_deposit_ratio__advances": "887799",
+          "credit_deposit_ratio__cd_ratio": "45.09"
+        },
+        {
+          "district": "Thiruvananthapuram",
+          "period": "January 2013",
+          "credit_deposit_ratio__deposit": "9892982",
+          "credit_deposit_ratio__advances": "2760849",
+          "credit_deposit_ratio__cd_ratio": "70.92"
+        },
+        {
+          "district": "Thrissur",
+          "period": "January 2013",
+          "credit_deposit_ratio__deposit": "3199474",
+          "credit_deposit_ratio__advances": "2123687",
+          "credit_deposit_ratio__cd_ratio": "66.38"
+        },
+        {
+          "district": "Wayanad",
+          "period": "January 2013",
+          "credit_deposit_ratio__deposit": "211533",
+          "credit_deposit_ratio__advances": "282558",
+          "credit_deposit_ratio__cd_ratio": "133.58"
+        }
+      ]
+    },
+    {
+      "period": "March 2013",
+      "districts": [
+        {
+          "district": "Alappuzha",
+          "period": "March 2013",
+          "credit_deposit_ratio__deposit": "1461989",
+          "credit_deposit_ratio__advances": "928996",
+          "credit_deposit_ratio__cd_ratio": "63.54"
+        },
+        {
+          "district": "Ernakulam",
+          "period": "March 2013",
+          "credit_deposit_ratio__deposit": "4650534",
+          "credit_deposit_ratio__advances": "4867374",
+          "credit_deposit_ratio__cd_ratio": "104.66"
+        },
+        {
+          "district": "Idukki",
+          "period": "March 2013",
+          "credit_deposit_ratio__deposit": "329779",
+          "credit_deposit_ratio__advances": "493292",
+          "credit_deposit_ratio__cd_ratio": "149.58"
+        },
+        {
+          "district": "Kollam",
+          "period": "March 2013",
+          "credit_deposit_ratio__deposit": "1381518",
+          "credit_deposit_ratio__advances": "1004511",
+          "credit_deposit_ratio__cd_ratio": "72.71"
+        },
+        {
+          "district": "Kottayam",
+          "period": "March 2013",
+          "credit_deposit_ratio__deposit": "1837872",
+          "credit_deposit_ratio__advances": "1249310",
+          "credit_deposit_ratio__cd_ratio": "67.98"
+        },
+        {
+          "district": "Pathanamthitta",
+          "period": "March 2013",
+          "credit_deposit_ratio__deposit": "2035326",
+          "credit_deposit_ratio__advances": "929972",
+          "credit_deposit_ratio__cd_ratio": "45.69"
+        },
+        {
+          "district": "Thiruvananthapuram",
+          "period": "March 2013",
+          "credit_deposit_ratio__deposit": "3959710",
+          "credit_deposit_ratio__advances": "2836870",
+          "credit_deposit_ratio__cd_ratio": "71.64"
+        }
+      ]
+    },
+    {
+      "period": "September 2013",
+      "districts": [
+        {
+          "district": "Alappuzha",
+          "period": "September 2013",
+          "credit_deposit_ratio__deposit": "1604830",
+          "credit_deposit_ratio__advances": "1020850",
+          "credit_deposit_ratio__cd_ratio": "63.61"
+        },
+        {
+          "district": "Ernakulam",
+          "period": "September 2013",
+          "credit_deposit_ratio__deposit": "5159758",
+          "credit_deposit_ratio__advances": "5174894",
+          "credit_deposit_ratio__cd_ratio": "100.29"
+        },
+        {
+          "district": "Idukki",
+          "period": "September 2013",
+          "credit_deposit_ratio__deposit": "364790",
+          "credit_deposit_ratio__advances": "519447",
+          "credit_deposit_ratio__cd_ratio": "142.40"
+        },
+        {
+          "district": "Kannur",
+          "period": "September 2013",
+          "credit_deposit_ratio__deposit": "1465499",
+          "credit_deposit_ratio__advances": "1005292",
+          "credit_deposit_ratio__cd_ratio": "68.60"
+        },
+        {
+          "district": "Kollam",
+          "period": "September 2013",
+          "credit_deposit_ratio__deposit": "1487284",
+          "credit_deposit_ratio__advances": "1130996",
+          "credit_deposit_ratio__cd_ratio": "76.04"
+        },
+        {
+          "district": "Kottayam",
+          "period": "September 2013",
+          "credit_deposit_ratio__deposit": "1984730",
+          "credit_deposit_ratio__advances": "1333207",
+          "credit_deposit_ratio__cd_ratio": "67.17"
+        },
+        {
+          "district": "Kozhikode",
+          "period": "September 2013",
+          "credit_deposit_ratio__deposit": "1901552",
+          "credit_deposit_ratio__advances": "1454119",
+          "credit_deposit_ratio__cd_ratio": "76.47"
+        },
+        {
+          "district": "Malappuram",
+          "period": "September 2013",
+          "credit_deposit_ratio__deposit": "1221951",
+          "credit_deposit_ratio__advances": "904454",
+          "credit_deposit_ratio__cd_ratio": "74.02"
+        },
+        {
+          "district": "Palakkad",
+          "period": "September 2013",
+          "credit_deposit_ratio__deposit": "1675591",
+          "credit_deposit_ratio__advances": "1355895",
+          "credit_deposit_ratio__cd_ratio": "80.92"
+        },
+        {
+          "district": "Pathanamthitta",
+          "period": "September 2013",
+          "credit_deposit_ratio__deposit": "291990",
+          "credit_deposit_ratio__advances": "179330",
+          "credit_deposit_ratio__cd_ratio": "61.42"
+        },
+        {
+          "district": "Thiruvananthapuram",
+          "period": "September 2013",
+          "credit_deposit_ratio__deposit": "4146696",
+          "credit_deposit_ratio__advances": "2994160",
+          "credit_deposit_ratio__cd_ratio": "72.21"
+        },
+        {
+          "district": "Thrissur",
+          "period": "September 2013",
+          "credit_deposit_ratio__deposit": "3575281",
+          "credit_deposit_ratio__advances": "2508211",
+          "credit_deposit_ratio__cd_ratio": "70.15"
+        },
+        {
+          "district": "Wayanad",
+          "period": "September 2013",
+          "credit_deposit_ratio__deposit": "240067",
+          "credit_deposit_ratio__advances": "315136",
+          "credit_deposit_ratio__cd_ratio": "131.27"
+        }
+      ]
+    },
+    {
       "period": "March 2020",
       "districts": [
         {

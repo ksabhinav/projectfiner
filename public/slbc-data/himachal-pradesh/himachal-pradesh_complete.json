@@ -1,5 +1,344 @@
 {
   "quarters": {
+    "2013-06": {
+      "period": "June 2013",
+      "tables": {
+        "branch_network": {
+          "fields": [
+            "branches_total"
+          ],
+          "num_districts": 11,
+          "districts": [
+            {
+              "district": "Bilaspur",
+              "branches_total": "97"
+            },
+            {
+              "district": "Chamba",
+              "branches_total": "91"
+            },
+            {
+              "district": "Hamirpur",
+              "branches_total": "125"
+            },
+            {
+              "district": "Kangra",
+              "branches_total": "337"
+            },
+            {
+              "district": "Kinnaur",
+              "branches_total": "40"
+            },
+            {
+              "district": "Kullu",
+              "branches_total": "107"
+            },
+            {
+              "district": "Mandi",
+              "branches_total": "202"
+            },
+            {
+              "district": "Shimla",
+              "branches_total": "256"
+            },
+            {
+              "district": "Sirmaur",
+              "branches_total": "105"
+            },
+            {
+              "district": "Solan",
+              "branches_total": "183"
+            },
+            {
+              "district": "Una",
+              "branches_total": "118"
+            }
+          ]
+        },
+        "credit_deposit_ratio": {
+          "fields": [
+            "no_of_branches"
+          ],
+          "num_districts": 11,
+          "districts": [
+            {
+              "district": "Bilaspur",
+              "no_of_branches": "97"
+            },
+            {
+              "district": "Chamba",
+              "no_of_branches": "91"
+            },
+            {
+              "district": "Hamirpur",
+              "no_of_branches": "125"
+            },
+            {
+              "district": "Kangra",
+              "no_of_branches": "337"
+            },
+            {
+              "district": "Kinnaur",
+              "no_of_branches": "40"
+            },
+            {
+              "district": "Kullu",
+              "no_of_branches": "107"
+            },
+            {
+              "district": "Mandi",
+              "no_of_branches": "202"
+            },
+            {
+              "district": "Shimla",
+              "no_of_branches": "256"
+            },
+            {
+              "district": "Sirmaur",
+              "no_of_branches": "105"
+            },
+            {
+              "district": "Solan",
+              "no_of_branches": "183"
+            },
+            {
+              "district": "Una",
+              "no_of_branches": "118"
+            }
+          ]
+        }
+      }
+    },
+    "2020-03": {
+      "period": "March 2020",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "cd_ratio"
+          ],
+          "num_districts": 11,
+          "districts": [
+            {
+              "district": "Bilaspur",
+              "cd_ratio": "27.35"
+            },
+            {
+              "district": "Chamba",
+              "cd_ratio": "26.56"
+            },
+            {
+              "district": "Hamirpur",
+              "cd_ratio": "21.17"
+            },
+            {
+              "district": "Kangra",
+              "cd_ratio": "24.5"
+            },
+            {
+              "district": "Kinnaur",
+              "cd_ratio": "43.24"
+            },
+            {
+              "district": "Kullu",
+              "cd_ratio": "40.34"
+            },
+            {
+              "district": "Mandi",
+              "cd_ratio": "23.78"
+            },
+            {
+              "district": "Shimla",
+              "cd_ratio": "44.88"
+            },
+            {
+              "district": "Sirmaur",
+              "cd_ratio": "62.49"
+            },
+            {
+              "district": "Solan",
+              "cd_ratio": "64.48"
+            },
+            {
+              "district": "Una",
+              "cd_ratio": "33.26"
+            }
+          ]
+        }
+      }
+    },
+    "2023-11": {
+      "period": "November 2023",
+      "tables": {
+        "branch_network": {
+          "fields": [
+            "branches_total"
+          ],
+          "num_districts": 12,
+          "districts": [
+            {
+              "district": "Bilaspur",
+              "branches_total": "133"
+            },
+            {
+              "district": "Chamba",
+              "branches_total": "128"
+            },
+            {
+              "district": "Hamirpur",
+              "branches_total": "173"
+            },
+            {
+              "district": "Kangra",
+              "branches_total": "426"
+            },
+            {
+              "district": "Kinnaur",
+              "branches_total": "55"
+            },
+            {
+              "district": "Kullu",
+              "branches_total": "138"
+            },
+            {
+              "district": "Lahaul & Spiti",
+              "branches_total": "26"
+            },
+            {
+              "district": "Mandi",
+              "branches_total": "262"
+            },
+            {
+              "district": "Shimla",
+              "branches_total": "369"
+            },
+            {
+              "district": "Sirmaur",
+              "branches_total": "152"
+            },
+            {
+              "district": "Solan",
+              "branches_total": "274"
+            },
+            {
+              "district": "Una",
+              "branches_total": "156"
+            }
+          ]
+        },
+        "credit_deposit_ratio": {
+          "fields": [
+            "no_of_branches"
+          ],
+          "num_districts": 12,
+          "districts": [
+            {
+              "district": "Bilaspur",
+              "no_of_branches": "133"
+            },
+            {
+              "district": "Chamba",
+              "no_of_branches": "128"
+            },
+            {
+              "district": "Hamirpur",
+              "no_of_branches": "173"
+            },
+            {
+              "district": "Kangra",
+              "no_of_branches": "426"
+            },
+            {
+              "district": "Kinnaur",
+              "no_of_branches": "55"
+            },
+            {
+              "district": "Kullu",
+              "no_of_branches": "138"
+            },
+            {
+              "district": "Lahaul & Spiti",
+              "no_of_branches": "26"
+            },
+            {
+              "district": "Mandi",
+              "no_of_branches": "262"
+            },
+            {
+              "district": "Shimla",
+              "no_of_branches": "369"
+            },
+            {
+              "district": "Sirmaur",
+              "no_of_branches": "152"
+            },
+            {
+              "district": "Solan",
+              "no_of_branches": "274"
+            },
+            {
+              "district": "Una",
+              "no_of_branches": "156"
+            }
+          ]
+        },
+        "atm_network": {
+          "fields": [
+            "atm_total"
+          ],
+          "num_districts": 12,
+          "districts": [
+            {
+              "district": "Bilaspur",
+              "atm_total": "95"
+            },
+            {
+              "district": "Chamba",
+              "atm_total": "80"
+            },
+            {
+              "district": "Hamirpur",
+              "atm_total": "161"
+            },
+            {
+              "district": "Kangra",
+              "atm_total": "430"
+            },
+            {
+              "district": "Kinnaur",
+              "atm_total": "37"
+            },
+            {
+              "district": "Kullu",
+              "atm_total": "131"
+            },
+            {
+              "district": "Lahaul & Spiti",
+              "atm_total": "15"
+            },
+            {
+              "district": "Mandi",
+              "atm_total": "214"
+            },
+            {
+              "district": "Shimla",
+              "atm_total": "343"
+            },
+            {
+              "district": "Sirmaur",
+              "atm_total": "140"
+            },
+            {
+              "district": "Solan",
+              "atm_total": "374"
+            },
+            {
+              "district": "Una",
+              "atm_total": "150"
+            }
+          ]
+        }
+      }
+    },
     "dec_2025": {
       "period": "December 2025",
       "tables": {
