@@ -1,0 +1,1604 @@
+{
+  "state": "himachal-pradesh",
+  "host": "slbchp.com",
+  "extensions": [
+    "pdf"
+  ],
+  "generatedAt": "2026-05-15T04:08:48Z",
+  "counts": {
+    "planned": 0,
+    "downloaded": 157,
+    "cached": 0,
+    "errored": 2
+  },
+  "files": [
+    {
+      "canonicalUrl": "slbchp.com/123rd.pdf",
+      "originalUrl": "http://www.slbchp.com:80/123rd.pdf",
+      "snapshotTimestamp": "20120417001510",
+      "snapshotUrl": "https://web.archive.org/web/20120417001510id_/http://www.slbchp.com:80/123rd.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2012/123rd.pdf",
+      "sizeBytes": 4108792,
+      "sha256": "4ef6d7bee121bb169f664953a3b76e0a77d9c66981bdabe2d192a81175c25082",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/bankwise_network.pdf",
+      "originalUrl": "http://www.slbchp.com:80/Files/BANKWISE_network.pdf",
+      "snapshotTimestamp": "20160803204443",
+      "snapshotUrl": "https://web.archive.org/web/20160803204443id_/http://www.slbchp.com:80/Files/BANKWISE_network.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2016/BANKWISE_network.pdf",
+      "sizeBytes": 155688,
+      "sha256": "4655cec523170187f273b0cf3693df4b7f2428deb3c94bbf7b48999687b90d82",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp201415.pdf",
+      "originalUrl": "http://www.slbchp.com:80/Files/acp201415.pdf",
+      "snapshotTimestamp": "20160806144044",
+      "snapshotUrl": "https://web.archive.org/web/20160806144044id_/http://www.slbchp.com:80/Files/acp201415.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2016/acp201415.pdf",
+      "sizeBytes": 252895,
+      "sha256": "9490c2bcfef7fe240981fc94520dceabddf50f9689bc2461f81791fca784d6a0",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/rseti.pdf",
+      "originalUrl": "http://www.slbchp.com:80/Files/RSETI.pdf",
+      "snapshotTimestamp": "20160806144151",
+      "snapshotUrl": "https://web.archive.org/web/20160806144151id_/http://www.slbchp.com:80/Files/RSETI.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2016/RSETI.pdf",
+      "sizeBytes": 18461,
+      "sha256": "302e1ceb008a2cb89818b97c6f75cdb8462a3aee8c507dee2ab920db69ba7b5a",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/meeting.pdf",
+      "originalUrl": "http://www.slbchp.com:80/Files/meeting.pdf",
+      "snapshotTimestamp": "20160806144158",
+      "snapshotUrl": "https://web.archive.org/web/20160806144158id_/http://www.slbchp.com:80/Files/meeting.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2016/meeting.pdf",
+      "sizeBytes": 232689,
+      "sha256": "5b90c6c9b0c1e7a387700dd23255de912a9e4924d6c19766625e3dd34c32e5bc",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/flcc.pdf",
+      "originalUrl": "http://www.slbchp.com:80/Files/flcc.pdf",
+      "snapshotTimestamp": "20160806144536",
+      "snapshotUrl": "https://web.archive.org/web/20160806144536id_/http://www.slbchp.com:80/Files/flcc.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2016/flcc.pdf",
+      "sizeBytes": 204542,
+      "sha256": "6893a3ecbd9489673678899d6ad77e362d49b2a091ea6bb4b92d1324d19cae64",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/ldmcontact.pdf",
+      "originalUrl": "http://www.slbchp.com:80/Files/ldmcontact.pdf",
+      "snapshotTimestamp": "20160806150154",
+      "snapshotUrl": "https://web.archive.org/web/20160806150154id_/http://www.slbchp.com:80/Files/ldmcontact.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2016/ldmcontact.pdf",
+      "sizeBytes": 71407,
+      "sha256": "c8f665b1be28b3fe7a4312d2e89e8860fa0eb914346ee90592edc485357051fe",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/rbi.pdf",
+      "originalUrl": "http://slbchp.com/Files/rbi.pdf",
+      "snapshotTimestamp": "20170427121734",
+      "snapshotUrl": "https://web.archive.org/web/20170427121734id_/http://slbchp.com/Files/rbi.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2017/rbi.pdf",
+      "sizeBytes": 292866,
+      "sha256": "10840cce706d16a8338751e8fb587450fa3d095ea245c230d51b67952d5bfeea",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/pmsby.pdf",
+      "originalUrl": "http://slbchp.com/Files/pmsby.pdf",
+      "snapshotTimestamp": "20170427124500",
+      "snapshotUrl": "https://web.archive.org/web/20170427124500id_/http://slbchp.com/Files/pmsby.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2017/pmsby.pdf",
+      "sizeBytes": 253616,
+      "sha256": "a3f0c717e19635c44cefb7e92dc9ea0712a1fc01eaf5e21a438400d1bdc2f5b0",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/pmjdy.pdf",
+      "originalUrl": "http://slbchp.com/Files/PMJDY.pdf",
+      "snapshotTimestamp": "20170427193523",
+      "snapshotUrl": "https://web.archive.org/web/20170427193523id_/http://slbchp.com/Files/PMJDY.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2017/PMJDY.pdf",
+      "sizeBytes": 223913,
+      "sha256": "b88286a16ea7f373275a2ada9437d5755bf0c09b78b3fbee5ba6b32ae6fa7d8c",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/loan%20application%20form%20hindi.pdf",
+      "originalUrl": "http://slbchp.com/Files/Loan%20application%20form%20hindi.pdf",
+      "snapshotTimestamp": "20170428021024",
+      "snapshotUrl": "https://web.archive.org/web/20170428021024id_/http://slbchp.com/Files/Loan%20application%20form%20hindi.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2017/Loan_application_form_hindi.pdf",
+      "sizeBytes": 466498,
+      "sha256": "c3582134e1a8797b2206f4758e1dbd788aaccfea24e13d5f0a292c631f587837",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/pmay%20guidelines.pdf",
+      "originalUrl": "http://slbchp.com/Files/PMAY%20GUIDELINES.pdf",
+      "snapshotTimestamp": "20170428090013",
+      "snapshotUrl": "https://web.archive.org/web/20170428090013id_/http://slbchp.com/Files/PMAY%20GUIDELINES.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2017/PMAY_GUIDELINES.pdf",
+      "sizeBytes": 2616873,
+      "sha256": "592d45460eb5f74ab2163d6a263a3e0f40e54f0a38d78b73853590b25dbb4595",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/cdr.pdf",
+      "originalUrl": "http://www.slbchp.com:80/Files/CDR.pdf",
+      "snapshotTimestamp": "20180820091435",
+      "snapshotUrl": "https://web.archive.org/web/20180820091435id_/http://www.slbchp.com:80/Files/CDR.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2018/CDR.pdf",
+      "sizeBytes": 229143,
+      "sha256": "ec3e06a87756ff9561dcd2dfcc78408033459a5d8204c6628b4c759e2a7d2459",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/shg.pdf",
+      "originalUrl": "http://www.slbchp.com:80/Files/SHG.pdf",
+      "snapshotTimestamp": "20180820091446",
+      "snapshotUrl": "https://web.archive.org/web/20180820091446id_/http://www.slbchp.com:80/Files/SHG.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2018/SHG.pdf",
+      "sizeBytes": 203181,
+      "sha256": "8d7f0aef0862559ad57342539db51338c7373f17284b512c8d460d9c894f6e09",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/uncovered.pdf",
+      "originalUrl": "http://slbchp.com/uncovered.pdf",
+      "snapshotTimestamp": "20180822044656",
+      "snapshotUrl": "https://web.archive.org/web/20180822044656id_/http://slbchp.com/uncovered.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2018/uncovered.pdf",
+      "sizeBytes": 421155,
+      "sha256": "1aff665510cd7d48c0a6ca989b79395cc455b69607cd555617319ab6dae8b19c",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp_plan_2017-18.pdf",
+      "originalUrl": "http://slbchp.com:80/Files/ACP_PLAN_2017-18.pdf",
+      "snapshotTimestamp": "20181221080635",
+      "snapshotUrl": "https://web.archive.org/web/20181221080635id_/http://slbchp.com:80/Files/ACP_PLAN_2017-18.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2018/ACP_PLAN_2017-18.pdf",
+      "sizeBytes": 743119,
+      "sha256": "0afb2a281200a62afa620d05b2337e7c307643ee0b6bc0efb3ffde7139b744af",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/rsetis_hp_contact_details.pdf",
+      "originalUrl": "http://slbchp.com:80/Files/RSETIS_HP_contact_details.pdf",
+      "snapshotTimestamp": "20181221080748",
+      "snapshotUrl": "https://web.archive.org/web/20181221080748id_/http://slbchp.com:80/Files/RSETIS_HP_contact_details.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2018/RSETIS_HP_contact_details.pdf",
+      "sizeBytes": 15511,
+      "sha256": "f9baa8bc7111188e1dc4ab8357eec0654fe14001f75e2110b277b86479bcce72",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/calender.pdf",
+      "originalUrl": "http://slbchp.com:80/Files/calender.pdf",
+      "snapshotTimestamp": "20181221080754",
+      "snapshotUrl": "https://web.archive.org/web/20181221080754id_/http://slbchp.com:80/Files/calender.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2018/calender.pdf",
+      "sizeBytes": 355062,
+      "sha256": "e5e35382beb75d6c62ab7c935bf99e9eeff8f37a44c42db9d6e1983fa49f6c82",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/recovery_act.pdf",
+      "originalUrl": "http://slbchp.com:80/Files/recovery_act.pdf",
+      "snapshotTimestamp": "20181221081249",
+      "snapshotUrl": "https://web.archive.org/web/20181221081249id_/http://slbchp.com:80/Files/recovery_act.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2018/recovery_act.pdf",
+      "sizeBytes": 183192,
+      "sha256": "bd4a0580dca6c7067fe18b726775171cddfdd5370748a598a22af141b37f5909",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/service_area/kullu.pdf",
+      "originalUrl": "http://www.slbchp.com:80/Files/service_area/kullu.pdf",
+      "snapshotTimestamp": "20190819092136",
+      "snapshotUrl": "https://web.archive.org/web/20190819092136id_/http://www.slbchp.com:80/Files/service_area/kullu.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/kullu.pdf",
+      "sizeBytes": 2205187,
+      "sha256": "d97e28cb122a6c20bf97c21ffb6a74f3fcdbb18443de35339b6663375305a5ee",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/consolidated%20acp%20-%20nps.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/ACP/Consolidated%20ACP%20-%20NPS.pdf",
+      "snapshotTimestamp": "20191015075220",
+      "snapshotUrl": "https://web.archive.org/web/20191015075220id_/http://www.slbchp.com/Files/ACP/Consolidated%20ACP%20-%20NPS.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/Consolidated_ACP_-_NPS.pdf",
+      "sizeBytes": 120563,
+      "sha256": "eb9fba954f84918232fc46b0e2c83c2562cdc21281cb17fa292269cce808ea04",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/scheme/master%20cir%20-%20minority%20community%20-%2002.07.2018.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/Scheme/Master%20Cir%20-%20Minority%20Community%20-%2002.07.2018.PDF",
+      "snapshotTimestamp": "20191015075220",
+      "snapshotUrl": "https://web.archive.org/web/20191015075220id_/http://www.slbchp.com/Files/Scheme/Master%20Cir%20-%20Minority%20Community%20-%2002.07.2018.PDF",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/Master_Cir_-_Minority_Community_-_02.07.2018.PDF",
+      "sizeBytes": 524209,
+      "sha256": "a7e81798d12adc57d6c346195b6e77ffde448583dcbe86bf35b032d09cecd5b2",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/consolidated%20acp%20-%20ops.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/ACP/Consolidated%20ACP%20-%20OPS.pdf",
+      "snapshotTimestamp": "20191015075227",
+      "snapshotUrl": "https://web.archive.org/web/20191015075227id_/http://www.slbchp.com/Files/ACP/Consolidated%20ACP%20-%20OPS.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/Consolidated_ACP_-_OPS.pdf",
+      "sizeBytes": 129280,
+      "sha256": "c10164140eb65b629bc60036f2c4a7799338fb7ae033455838f07b2763401744",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/2019/slbc-meetings.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/2019/SLBC-Meetings.pdf",
+      "snapshotTimestamp": "20191015075240",
+      "snapshotUrl": "https://web.archive.org/web/20191015075240id_/http://www.slbchp.com/Files/2019/SLBC-Meetings.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/SLBC-Meetings.pdf",
+      "sizeBytes": 69611,
+      "sha256": "84c2b415a75862527df8b309d9ea1e1ce781ddf20d69a60a690f889e9e8bacf5",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/consolidated%20acp%20-%20distt-wise.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/ACP/Consolidated%20ACP%20-%20Distt-wise.pdf",
+      "snapshotTimestamp": "20191015075253",
+      "snapshotUrl": "https://web.archive.org/web/20191015075253id_/http://www.slbchp.com/Files/ACP/Consolidated%20ACP%20-%20Distt-wise.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/Consolidated_ACP_-_Distt-wise.pdf",
+      "sizeBytes": 30381,
+      "sha256": "b12a26cdc691684e51078597ee30c2559369aab0f2ecb07b6393b5c6a687c804",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/shg%20data.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/SHG%20Data.pdf",
+      "snapshotTimestamp": "20191015075313",
+      "snapshotUrl": "https://web.archive.org/web/20191015075313id_/http://www.slbchp.com/Files/SHG%20Data.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/SHG_Data.pdf",
+      "sizeBytes": 29256,
+      "sha256": "1c2cf8090030d8c34af3062b89c3889fce47ed9558c8b799ecc1b9fcd88a3a08",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/holydays/list%20of%20holidays%202019.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/Holydays/List%20of%20holidays%202019.pdf",
+      "snapshotTimestamp": "20191015075320",
+      "snapshotUrl": "https://web.archive.org/web/20191015075320id_/http://www.slbchp.com/Files/Holydays/List%20of%20holidays%202019.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/List_of_holidays_2019.pdf",
+      "sizeBytes": 337548,
+      "sha256": "359f329cecc87477863a105ba00ae7955ceb4882d1dcd31ab5e13a274ac0c11f",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/consolidated%20acp%20msme.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/ACP/Consolidated%20ACP%20MSME.pdf",
+      "snapshotTimestamp": "20191015075327",
+      "snapshotUrl": "https://web.archive.org/web/20191015075327id_/http://www.slbchp.com/Files/ACP/Consolidated%20ACP%20MSME.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/Consolidated_ACP_MSME.pdf",
+      "sizeBytes": 124403,
+      "sha256": "a175a8b4bb4085f6e5e2f0518911d5937c2d02271e28f4510891b160cf5b86e3",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/2019/contact_ldms.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/2019/Contact_LDMs.pdf",
+      "snapshotTimestamp": "20191015075342",
+      "snapshotUrl": "https://web.archive.org/web/20191015075342id_/http://www.slbchp.com/Files/2019/Contact_LDMs.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/Contact_LDMs.pdf",
+      "sizeBytes": 23930,
+      "sha256": "21864bd84299ae39078223bb321da2ebbc229a549c40d84cef1509b572572009",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/acp%202018-19%20achievements.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/ACP/ACP%202018-19%20Achievements.pdf",
+      "snapshotTimestamp": "20191015075405",
+      "snapshotUrl": "https://web.archive.org/web/20191015075405id_/http://www.slbchp.com/Files/ACP/ACP%202018-19%20Achievements.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/ACP_2018-19_Achievements.pdf",
+      "sizeBytes": 29931,
+      "sha256": "46b0b1954ca8ea1c295779d080de23099fd5451078129cde3153dde91eebbca8",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/pmegp-nrlm%20targets%20fy%202019-20.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/ACP/PMEGP-NRLM%20Targets%20FY%202019-20.pdf",
+      "snapshotTimestamp": "20191015075431",
+      "snapshotUrl": "https://web.archive.org/web/20191015075431id_/http://www.slbchp.com/Files/ACP/PMEGP-NRLM%20Targets%20FY%202019-20.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/PMEGP-NRLM_Targets_FY_2019-20.pdf",
+      "sizeBytes": 291568,
+      "sha256": "d0d7b5146d83fc36ebe524ceb2a592b076a1d8a7b36132c38920b6fdbfd281bd",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/flc%20contact%20details.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/FLC%20Contact%20Details.pdf",
+      "snapshotTimestamp": "20191015075438",
+      "snapshotUrl": "https://web.archive.org/web/20191015075438id_/http://www.slbchp.com/Files/FLC%20Contact%20Details.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/FLC_Contact_Details.pdf",
+      "sizeBytes": 107727,
+      "sha256": "5694a2a1e6de00967eba8fe7a1525630a1243eb683334065aa124cebcac13f7e",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/2019/rsetis.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/2019/RSETIS.pdf",
+      "snapshotTimestamp": "20191015075452",
+      "snapshotUrl": "https://web.archive.org/web/20191015075452id_/http://www.slbchp.com/Files/2019/RSETIS.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/RSETIS.pdf",
+      "sizeBytes": 25664,
+      "sha256": "b9e82e8ebdce32f9b1a8c0253f2eb893c7f3918795442c9c66ba24767fa8a05b",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/acp%202019-20%20summary.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/ACP/ACP%202019-20%20Summary.pdf",
+      "snapshotTimestamp": "20191015075518",
+      "snapshotUrl": "https://web.archive.org/web/20191015075518id_/http://www.slbchp.com/Files/ACP/ACP%202019-20%20Summary.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/ACP_2019-20_Summary.pdf",
+      "sizeBytes": 34706,
+      "sha256": "9e184b051cd27ab23182d00cac2685892983c600d7025b75f70383d41fe41788",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/consolidated%20acp%20-%20agr.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/ACP/Consolidated%20ACP%20-%20AGR.pdf",
+      "snapshotTimestamp": "20191015075534",
+      "snapshotUrl": "https://web.archive.org/web/20191015075534id_/http://www.slbchp.com/Files/ACP/Consolidated%20ACP%20-%20AGR.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/Consolidated_ACP_-_AGR.pdf",
+      "sizeBytes": 112002,
+      "sha256": "85981df67e0c8478ff32a1ead557e5163766d37a1a5b02ac16a41e6eaf35ba8a",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/2019/cd%20ratio.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/2019/CD%20Ratio.pdf",
+      "snapshotTimestamp": "20191015075540",
+      "snapshotUrl": "https://web.archive.org/web/20191015075540id_/http://www.slbchp.com/Files/2019/CD%20Ratio.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/CD_Ratio.pdf",
+      "sizeBytes": 22910,
+      "sha256": "42561c5b23ad907f10c6b964fb7f80d5f6450c44865f1d202f70f54d90f1d532",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/key%20indicaters%20-%2031.03.2019.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/ACP/Key%20Indicaters%20-%2031.03.2019.pdf",
+      "snapshotTimestamp": "20191015075630",
+      "snapshotUrl": "https://web.archive.org/web/20191015075630id_/http://www.slbchp.com/Files/ACP/Key%20Indicaters%20-%2031.03.2019.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/Key_Indicaters_-_31.03.2019.pdf",
+      "sizeBytes": 32198,
+      "sha256": "5e43e32947b0863d9b227bbe9fa52060c8dc810bc4a656e46bc096e1c2bad6d6",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/scheme/2019/contacts.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/Scheme/2019/CONTACTS.pdf",
+      "snapshotTimestamp": "20191015075656",
+      "snapshotUrl": "https://web.archive.org/web/20191015075656id_/http://www.slbchp.com/Files/Scheme/2019/CONTACTS.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/CONTACTS.pdf",
+      "sizeBytes": 82324,
+      "sha256": "d4ef9103fd2bbf59181975e456d9a61cec91bb4e62ca332212e3b638fe599f7e",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/common%20loan%20application%20form%20under%20pradhan%20mantri%20mudra%20yojana.pdf",
+      "originalUrl": "http://www.slbchp.com:80/Files/Common%20loan%20Application%20form%20Under%20Pradhan%20Mantri%20MUDRA%20Yojana.pdf",
+      "snapshotTimestamp": "20191101050008",
+      "snapshotUrl": "https://web.archive.org/web/20191101050008id_/http://www.slbchp.com:80/Files/Common%20loan%20Application%20form%20Under%20Pradhan%20Mantri%20MUDRA%20Yojana.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2019/Common_loan_Application_form_Under_Pradhan_Mantri_MUDRA_Yojana.pdf",
+      "sizeBytes": 432919,
+      "sha256": "d19ae59ea24c64dfe9fdeb8c21144824f8f32d9cb05a08a69eaf99f2f272db25",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/holiday%20list%202021.pdf",
+      "originalUrl": "http://slbchp.com/Files/Holiday%20List%202021.pdf",
+      "snapshotTimestamp": "20210730174207",
+      "snapshotUrl": "https://web.archive.org/web/20210730174207id_/http://slbchp.com/Files/Holiday%20List%202021.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2021/Holiday_List_2021.pdf",
+      "sizeBytes": 1048576,
+      "sha256": "a14cca9625495ab03dc26749765e5b02ee0bcdf9ab90b399e5c3367e4c433d55",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/calendar%20of%20slbc%20meetings%202020-21.pdf",
+      "originalUrl": "http://slbchp.com/Files/Calendar%20of%20SLBC%20Meetings%202020-21.pdf",
+      "snapshotTimestamp": "20220411073443",
+      "snapshotUrl": "https://web.archive.org/web/20220411073443id_/http://slbchp.com/Files/Calendar%20of%20SLBC%20Meetings%202020-21.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2022/Calendar_of_SLBC_Meetings_2020-21.pdf",
+      "sizeBytes": 348240,
+      "sha256": "5234abde9d2b1176b2a8a501868c6757d2e94893a505179e84e158513ed0d968",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/branch_atm_network_sept2022.pdf",
+      "originalUrl": "http://slbchp.com/Files/Branch_ATM_Network_sept2022.pdf",
+      "snapshotTimestamp": "20240325151833",
+      "snapshotUrl": "https://web.archive.org/web/20240325151833id_/http://slbchp.com/Files/Branch_ATM_Network_sept2022.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Branch_ATM_Network_sept2022.pdf",
+      "sizeBytes": 47992,
+      "sha256": "e5e2299d646e142b044fbfe1b5c1a37b0c930ded33efb79703ccb6a8e2eb5dbd",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp_plan_2018-19.pdf",
+      "originalUrl": "http://slbchp.com/Files/ACP_PLAN_2018-19.pdf",
+      "snapshotTimestamp": "20240325162534",
+      "snapshotUrl": "https://web.archive.org/web/20240325162534id_/http://slbchp.com/Files/ACP_PLAN_2018-19.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/ACP_PLAN_2018-19.pdf",
+      "sizeBytes": 743119,
+      "sha256": "0afb2a281200a62afa620d05b2337e7c307643ee0b6bc0efb3ffde7139b744af",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp_2022_23_note.pdf",
+      "originalUrl": "http://slbchp.com/Files/ACP_2022_23_NOTE.pdf",
+      "snapshotTimestamp": "20240325171516",
+      "snapshotUrl": "https://web.archive.org/web/20240325171516id_/http://slbchp.com/Files/ACP_2022_23_NOTE.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/ACP_2022_23_NOTE.pdf",
+      "sizeBytes": 456748,
+      "sha256": "40fe3fac05644941193d3bc89dae5c10fedf4ffe4a766d6e0ce5a7127ebbc555",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/banking_info_stateprofile.pdf",
+      "originalUrl": "http://slbchp.com/Files/ACP/Banking_info_StateProfile.pdf",
+      "snapshotTimestamp": "20240325191126",
+      "snapshotUrl": "https://web.archive.org/web/20240325191126id_/http://slbchp.com/Files/ACP/Banking_info_StateProfile.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Banking_info_StateProfile.pdf",
+      "sizeBytes": 68204,
+      "sha256": "81c89e584b65ff087b21a674b8a4649460e28b9aafa1106ffcf07f7f1fe2a8d1",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/outreach.pdf",
+      "originalUrl": "http://slbchp.com/Files/ACP/Outreach.pdf",
+      "snapshotTimestamp": "20240325193413",
+      "snapshotUrl": "https://web.archive.org/web/20240325193413id_/http://slbchp.com/Files/ACP/Outreach.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Outreach.pdf",
+      "sizeBytes": 35367,
+      "sha256": "b25528e98d1ebf54ebe22e9863cbf3df7ae93ce4c4425652d50cb073631fa7f3",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/new-guidelines.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/New-Guidelines.pdf",
+      "snapshotTimestamp": "20240622092153",
+      "snapshotUrl": "https://web.archive.org/web/20240622092153id_/http://www.slbchp.com/Files/New-Guidelines.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/New-Guidelines.pdf",
+      "sizeBytes": 1048576,
+      "sha256": "081dd9c0e782230e389e56672e7c6783a20d92ef96eb0452325a2d4efd9dcf01",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/acp_ach_dec_2023.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/ACP/acp_Ach_Dec_2023.pdf",
+      "snapshotTimestamp": "20240622095635",
+      "snapshotUrl": "https://web.archive.org/web/20240622095635id_/http://www.slbchp.com/Files/ACP/acp_Ach_Dec_2023.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/acp_Ach_Dec_2023.pdf",
+      "sizeBytes": 78820,
+      "sha256": "e05223d83a654895dc74d2c525130343d1871dfb8d44d99d1c91e705907e150e",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/cd_ratio_dec2023.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/CD_ratio_dec2023.pdf",
+      "snapshotTimestamp": "20240622101610",
+      "snapshotUrl": "https://web.archive.org/web/20240622101610id_/http://www.slbchp.com/Files/CD_ratio_dec2023.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/CD_ratio_dec2023.pdf",
+      "sizeBytes": 21108,
+      "sha256": "fc63fd85f5fcdd6ceeb4b25a7eea89707870988b39a9a4f9b2ca3125b27a6d90",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/scale/notification%20of%20scale%20of%20finance%20for%20fy%202024-25.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/Scale/Notification%20of%20Scale%20of%20Finance%20for%20FY%202024-25.pdf",
+      "snapshotTimestamp": "20240622101807",
+      "snapshotUrl": "https://web.archive.org/web/20240622101807id_/http://www.slbchp.com/Files/Scale/Notification%20of%20Scale%20of%20Finance%20for%20FY%202024-25.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Notification_of_Scale_of_Finance_for_FY_2024-25.pdf",
+      "sizeBytes": 907020,
+      "sha256": "5e3e9fb17ec81a1ece8d5b74eb9790552fd3ec90af897bc86caf3e87eefc0d2b",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/scale/scale%20of%20finance%202024-25.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/Scale/Scale%20of%20Finance%202024-25.pdf",
+      "snapshotTimestamp": "20240622103046",
+      "snapshotUrl": "https://web.archive.org/web/20240622103046id_/http://www.slbchp.com/Files/Scale/Scale%20of%20Finance%202024-25.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Scale_of_Finance_2024-25.pdf",
+      "sizeBytes": 1048576,
+      "sha256": "85a4266cb5775ecd5a9dda0ebd2d2de03a67caa3b1eb20cdce7b9afd2ef1970a",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/slbc-meetings.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/SLBC-Meetings.pdf",
+      "snapshotTimestamp": "20240622103224",
+      "snapshotUrl": "https://web.archive.org/web/20240622103224id_/http://www.slbchp.com/Files/SLBC-Meetings.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/SLBC-Meetings.pdf",
+      "sizeBytes": 32231,
+      "sha256": "93a59384250e90d03faec508e399b13aeaa402d7c7e222cb640989aaed21d881",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/scheme/master%20cir%20-%20kcc%20-%2002.07.2018.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/Scheme/Master%20Cir%20-%20KCC%20-%2002.07.2018.PDF",
+      "snapshotTimestamp": "20240713172243",
+      "snapshotUrl": "https://web.archive.org/web/20240713172243id_/http://www.slbchp.com/Files/Scheme/Master%20Cir%20-%20KCC%20-%2002.07.2018.PDF",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Master_Cir_-_KCC_-_02.07.2018.PDF",
+      "sizeBytes": 204454,
+      "sha256": "c73c9bb60570a070ceff6f89efae6f9e5bbfc7e724aa44bb7d8a156f0ee1a9f5",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/scheme/master%20cir%20-%20lead%20bank%20scheme%20-%2002.07.2018.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/Scheme/Master%20Cir%20-%20Lead%20Bank%20Scheme%20-%2002.07.2018.PDF",
+      "snapshotTimestamp": "20240719213426",
+      "snapshotUrl": "https://web.archive.org/web/20240719213426id_/http://www.slbchp.com/Files/Scheme/Master%20Cir%20-%20Lead%20Bank%20Scheme%20-%2002.07.2018.PDF",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Master_Cir_-_Lead_Bank_Scheme_-_02.07.2018.PDF",
+      "sizeBytes": 685581,
+      "sha256": "4755ccbdb7f954d9d54056993854104642f243864659b1b8d37db7e84312d445",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/scheme/master%20cir%20-%20nrlm%20-%2002.07.2018.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/Scheme/Master%20Cir%20-%20NRLM%20-%2002.07.2018.PDF",
+      "snapshotTimestamp": "20240727020617",
+      "snapshotUrl": "https://web.archive.org/web/20240727020617id_/http://www.slbchp.com/Files/Scheme/Master%20Cir%20-%20NRLM%20-%2002.07.2018.PDF",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Master_Cir_-_NRLM_-_02.07.2018.PDF",
+      "sizeBytes": 413268,
+      "sha256": "88c9c65e4cf3986211f526731928e23220d5eb45c9cff154133a61ccc0334071",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/scheme/master%20cir%20-%20lead%20bank%20scheme%20-%2001.07.2020.pdf",
+      "originalUrl": "http://slbchp.com/Files/Scheme/Master%20Cir%20-%20Lead%20Bank%20Scheme%20-%2001.07.2020.pdf",
+      "snapshotTimestamp": "20240801150341",
+      "snapshotUrl": "https://web.archive.org/web/20240801150341id_/http://slbchp.com/Files/Scheme/Master%20Cir%20-%20Lead%20Bank%20Scheme%20-%2001.07.2020.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Master_Cir_-_Lead_Bank_Scheme_-_01.07.2020.pdf",
+      "sizeBytes": 1103669,
+      "sha256": "d282aa14b5e8cdebca8011e443616939e6cc9cdde2a03e49d33e6a9a64fb0e5b",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/scheme/master%20cir%20-%20nrlm-26.11.2019.pdf",
+      "originalUrl": "http://slbchp.com/Files/Scheme/Master%20Cir%20-%20NRLM-26.11.2019.pdf",
+      "snapshotTimestamp": "20240801152247",
+      "snapshotUrl": "https://web.archive.org/web/20240801152247id_/http://slbchp.com/Files/Scheme/Master%20Cir%20-%20NRLM-26.11.2019.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Master_Cir_-_NRLM-26.11.2019.pdf",
+      "sizeBytes": 526786,
+      "sha256": "020a019a31615bdfe44333255fe65ca0e1051d21a7547e29146092582bd023e0",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/scheme/mmsy%20main%20cir%20and%20modifications.pdf",
+      "originalUrl": "http://slbchp.com/Files/Scheme/MMSY%20Main%20Cir%20and%20Modifications.pdf",
+      "snapshotTimestamp": "20240801154329",
+      "snapshotUrl": "https://web.archive.org/web/20240801154329id_/http://slbchp.com/Files/Scheme/MMSY%20Main%20Cir%20and%20Modifications.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/MMSY_Main_Cir_and_Modifications.pdf",
+      "sizeBytes": 3165271,
+      "sha256": "05f0e069ee720444fdd0a79a47b21372f39eb613623ee3c94af628cf6a16ccf5",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/scheme/master%20cir%20-%20minority%20communities-01.07.2019.pdf",
+      "originalUrl": "http://slbchp.com/Files/Scheme/Master%20Cir%20-%20Minority%20Communities-01.07.2019.pdf",
+      "snapshotTimestamp": "20240801182043",
+      "snapshotUrl": "https://web.archive.org/web/20240801182043id_/http://slbchp.com/Files/Scheme/Master%20Cir%20-%20Minority%20Communities-01.07.2019.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Master_Cir_-_Minority_Communities-01.07.2019.pdf",
+      "sizeBytes": 713240,
+      "sha256": "5c0c5d4a8d6922ca7ccd0bfa8988f77225eba25836ab70d0dcb579e59c822e2c",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/scheme/master%20cir%20-%20kcc%20for%20animal%20husbandry%20and%20fisheries%20-%2004.02.2019.pdf",
+      "originalUrl": "http://slbchp.com/Files/Scheme/Master%20Cir%20-%20KCC%20for%20Animal%20Husbandry%20and%20Fisheries%20-%2004.02.2019.pdf",
+      "snapshotTimestamp": "20240801182918",
+      "snapshotUrl": "https://web.archive.org/web/20240801182918id_/http://slbchp.com/Files/Scheme/Master%20Cir%20-%20KCC%20for%20Animal%20Husbandry%20and%20Fisheries%20-%2004.02.2019.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Master_Cir_-_KCC_for_Animal_Husbandry_and_Fisheries_-_04.02.2019.pdf",
+      "sizeBytes": 379378,
+      "sha256": "2f92d37f9e89ab0844fe69d60886bbd03f99967dc9d4a77492e6b1574b8edbc7",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/scheme/master%20cir%20-%20nulm%20-%2006.12.2018.pdf",
+      "originalUrl": "http://slbchp.com/Files/Scheme/Master%20Cir%20-%20NULM%20-%2006.12.2018.pdf",
+      "snapshotTimestamp": "20240801191206",
+      "snapshotUrl": "https://web.archive.org/web/20240801191206id_/http://slbchp.com/Files/Scheme/Master%20Cir%20-%20NULM%20-%2006.12.2018.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Master_Cir_-_NULM_-_06.12.2018.pdf",
+      "sizeBytes": 566634,
+      "sha256": "4dec3d1219180fef777d3b193b1a4e6630912e377c9726fd42216b93b2ccaa44",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/scale/scale%20of%20finance%20for%20financial%20year%202023-24.pdf",
+      "originalUrl": "http://slbchp.com/Files/Scale/Scale%20of%20Finance%20For%20Financial%20Year%202023-24.pdf",
+      "snapshotTimestamp": "20240801202728",
+      "snapshotUrl": "https://web.archive.org/web/20240801202728id_/http://slbchp.com/Files/Scale/Scale%20of%20Finance%20For%20Financial%20Year%202023-24.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Scale_of_Finance_For_Financial_Year_2023-24.pdf",
+      "sizeBytes": 7388626,
+      "sha256": "de5404b039921da97b5b5b0621e1ad0869e19e608e655f6635c71b9771fa8822",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/acp_ach_sept2022.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/ACP/ACP_Ach_Sept2022.pdf",
+      "snapshotTimestamp": "20240802064825",
+      "snapshotUrl": "https://web.archive.org/web/20240802064825id_/http://www.slbchp.com/Files/ACP/ACP_Ach_Sept2022.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/ACP_Ach_Sept2022.pdf",
+      "sizeBytes": 72046,
+      "sha256": "90f1560c06cf685f13f34d7cb0a3506b97a415fbc22f9cf2c68468f77ee9076f",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/scheme/pmay%20guidelines.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/Scheme/PMAY%20GUIDELINES.pdf",
+      "snapshotTimestamp": "20240802221324",
+      "snapshotUrl": "https://web.archive.org/web/20240802221324id_/http://www.slbchp.com/Files/Scheme/PMAY%20GUIDELINES.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/PMAY_GUIDELINES.pdf",
+      "sizeBytes": 2616873,
+      "sha256": "592d45460eb5f74ab2163d6a263a3e0f40e54f0a38d78b73853590b25dbb4595",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/nrlm%20targets%202021-22.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/ACP/NRLM%20Targets%202021-22.pdf",
+      "snapshotTimestamp": "20240803052744",
+      "snapshotUrl": "https://web.archive.org/web/20240803052744id_/http://www.slbchp.com/Files/ACP/NRLM%20Targets%202021-22.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/NRLM_Targets_2021-22.pdf",
+      "sizeBytes": 283539,
+      "sha256": "eaf5ff61035314b3eb75ed973020b7aaf1cd4f7c89f4c862a3bee0dbf91ad602",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/nulm%20targets%202020-21.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/NULM%20Targets%202020-21.pdf",
+      "snapshotTimestamp": "20240803060548",
+      "snapshotUrl": "https://web.archive.org/web/20240803060548id_/http://www.slbchp.com/Files/NULM%20Targets%202020-21.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/NULM_Targets_2020-21.pdf",
+      "sizeBytes": 408150,
+      "sha256": "67cdf43f83495f785442bb5a32349fcb75d1e5b223799dd5c0cb9c9c6e13d21d",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/gyandeep%20education%20yojna.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/Gyandeep%20Education%20Yojna.pdf",
+      "snapshotTimestamp": "20240803081803",
+      "snapshotUrl": "https://web.archive.org/web/20240803081803id_/http://www.slbchp.com/Files/Gyandeep%20Education%20Yojna.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Gyandeep_Education_Yojna.pdf",
+      "sizeBytes": 1749131,
+      "sha256": "a1bf2729b3cd602073e174a167c1b745c8577dd0f4fa20123f661c8460db79f5",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/holidays%20-%202022.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/Holidays%20-%202022.pdf",
+      "snapshotTimestamp": "20240803122343",
+      "snapshotUrl": "https://web.archive.org/web/20240803122343id_/http://www.slbchp.com/Files/Holidays%20-%202022.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Holidays_-_2022.pdf",
+      "sizeBytes": 2606269,
+      "sha256": "e13fd0f883181a1e6cd5e5fb4886ff38e53a5a4864a41c7fe1541634c6e5384e",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/mmsy%20targets%202020-21.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/MMSY%20Targets%202020-21.pdf",
+      "snapshotTimestamp": "20240803172622",
+      "snapshotUrl": "https://web.archive.org/web/20240803172622id_/http://www.slbchp.com/Files/MMSY%20Targets%202020-21.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/MMSY_Targets_2020-21.pdf",
+      "sizeBytes": 384888,
+      "sha256": "83a3f334781ee490a1d9502275871c4800951cd474660b51e4afe34d5a06c42a",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/cd_ratio_sept2022.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/CD_ratio_Sept2022.pdf",
+      "snapshotTimestamp": "20240803193403",
+      "snapshotUrl": "https://web.archive.org/web/20240803193403id_/http://www.slbchp.com/Files/CD_ratio_Sept2022.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/CD_ratio_Sept2022.pdf",
+      "sizeBytes": 414615,
+      "sha256": "2b5fc1e694138bfcc78326d0f4c535d3add1bd9c1ea2790ab9dbb778fcc7668c",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/mukhya%20mantri%20swavlamban%20yojna.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/Mukhya%20Mantri%20Swavlamban%20Yojna.pdf",
+      "snapshotTimestamp": "20240804114937",
+      "snapshotUrl": "https://web.archive.org/web/20240804114937id_/http://www.slbchp.com/Files/Mukhya%20Mantri%20Swavlamban%20Yojna.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Mukhya_Mantri_Swavlamban_Yojna.pdf",
+      "sizeBytes": 2059313,
+      "sha256": "22ff2873f0880c73c9d7bf627b3fbd72c74e3e0727fba5554ae626119d3990d7",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/scheme/master%20cir%20-%20priority%20sector%20lending-04.09.02020.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/Scheme/Master%20Cir%20-%20Priority%20Sector%20Lending-04.09.02020.pdf",
+      "snapshotTimestamp": "20240805105051",
+      "snapshotUrl": "https://web.archive.org/web/20240805105051id_/http://www.slbchp.com/Files/Scheme/Master%20Cir%20-%20Priority%20Sector%20Lending-04.09.02020.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/Master_Cir_-_Priority_Sector_Lending-04.09.02020.pdf",
+      "sizeBytes": 777978,
+      "sha256": "7540c94d549a19d82ab667d2a9f405273da48874280fba6fa9e84386e6170ba5",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp%20targets%20for%202021-22.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/ACP%20Targets%20for%202021-22.pdf",
+      "snapshotTimestamp": "20240805182820",
+      "snapshotUrl": "https://web.archive.org/web/20240805182820id_/http://www.slbchp.com/Files/ACP%20Targets%20for%202021-22.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/ACP_Targets_for_2021-22.pdf",
+      "sizeBytes": 1778503,
+      "sha256": "8709f5f70627b7f2acca11b4de08076ebbeb4de484f228d20f9501ea70a21f89",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/rgsy-2023.pdf",
+      "originalUrl": "http://slbchp.com/Files/RGSY-2023.pdf",
+      "snapshotTimestamp": "20241126003037",
+      "snapshotUrl": "https://web.archive.org/web/20241126003037id_/http://slbchp.com/Files/RGSY-2023.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/RGSY-2023.pdf",
+      "sizeBytes": 2487170,
+      "sha256": "a3404b5c1d38992309e2319fae016407db31b47f7ad028462bbb8b4a204aa940",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/172th%20slbc%20meeting%20agenda.pdf",
+      "originalUrl": "http://slbchp.com/Files/agenda/172th%20SLBC%20Meeting%20Agenda.pdf",
+      "snapshotTimestamp": "20241205035025",
+      "snapshotUrl": "https://web.archive.org/web/20241205035025id_/http://slbchp.com/Files/agenda/172th%20SLBC%20Meeting%20Agenda.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2024/172th_SLBC_Meeting_Agenda.pdf",
+      "sizeBytes": 1048576,
+      "sha256": "67676088429f51d6124ff77bd446ed933d765e5646333b722b6ef2e402416d66",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/contact_ldms.pdf",
+      "originalUrl": "http://slbchp.com/Files/agenda/Contact_LDMs.pdf",
+      "snapshotTimestamp": "20250228132828",
+      "snapshotUrl": "https://web.archive.org/web/20250228132828id_/http://slbchp.com/Files/agenda/Contact_LDMs.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Contact_LDMs.pdf",
+      "sizeBytes": 24034,
+      "sha256": "3c8d7b1750864c80520750263748bae2a3dd7b737052c047e96a1a3ac4c5a171",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/129th%20slbc%20agenda%20final.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/129TH%20SLBC%20AGENDA%20FINAL.pdf",
+      "snapshotTimestamp": "20250411191646",
+      "snapshotUrl": "https://web.archive.org/web/20250411191646id_/http://www.slbchp.com/Files/agenda/129TH%20SLBC%20AGENDA%20FINAL.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/129TH_SLBC_AGENDA_FINAL.pdf",
+      "sizeBytes": 813255,
+      "sha256": "c6906356f2c74505e693723a0ac34d2354ef2346cacd50c1e5fc290c2453371e",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/152%20slbc-minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/152%20SLBC-Minutes.pdf",
+      "snapshotTimestamp": "20250411191650",
+      "snapshotUrl": "https://web.archive.org/web/20250411191650id_/http://www.slbchp.com/Files/agenda/152%20SLBC-Minutes.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/152_SLBC-Minutes.pdf",
+      "sizeBytes": 542314,
+      "sha256": "72f68f0ce886b0241adb60c95e6a64c792d62266e717d71040e447579577c081",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/167th%20slbc%20meeting%20agenda%20combined.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/167th%20SLBC%20Meeting%20Agenda%20combined.pdf",
+      "snapshotTimestamp": "20250411191651",
+      "snapshotUrl": "https://web.archive.org/web/20250411191651id_/http://www.slbchp.com/Files/agenda/167th%20SLBC%20Meeting%20Agenda%20combined.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/167th_SLBC_Meeting_Agenda_combined.pdf",
+      "sizeBytes": 2367281,
+      "sha256": "c88ec15c733845a31a477345f2bf9c1a9cd5c9dccbd7f6d9bf38ecf1e6e09d44",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/175th%20slbc%20meeting%20agenda.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/175th%20SLBC%20Meeting%20Agenda.pdf",
+      "snapshotTimestamp": "20250411191651",
+      "snapshotUrl": "https://web.archive.org/web/20250411191651id_/http://www.slbchp.com/Files/agenda/175th%20SLBC%20Meeting%20Agenda.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/175th_SLBC_Meeting_Agenda.pdf",
+      "sizeBytes": 1543787,
+      "sha256": "6ea519b95e571274abb237c029f7dca934aed3592aed256374aa8d823018a3e0",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda%20note/151%20slbc-agenda%20note.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/Agenda%20Note/151%20SLBC-Agenda%20note.pdf",
+      "snapshotTimestamp": "20250411191652",
+      "snapshotUrl": "https://web.archive.org/web/20250411191652id_/http://www.slbchp.com/Files/Agenda%20Note/151%20SLBC-Agenda%20note.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/151_SLBC-Agenda_note.pdf",
+      "sizeBytes": 1140076,
+      "sha256": "deb9b25254acd7daf66e22bf01cf18e1257e8e7efe5705a1460600455e240b52",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/171st%20slbc%20meeting%20agenda.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/171st%20SLBC%20Meeting%20Agenda.pdf",
+      "snapshotTimestamp": "20250411191652",
+      "snapshotUrl": "https://web.archive.org/web/20250411191652id_/http://www.slbchp.com/Files/agenda/171st%20SLBC%20Meeting%20Agenda.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/171st_SLBC_Meeting_Agenda.pdf",
+      "sizeBytes": 2352556,
+      "sha256": "51a8f6955f8c4915c363da40deb7747c5d2e4bdba1225f32c2e5dd02e7b5ca42",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/minutes%20of%20171st%20slbc%20meeting.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/Minutes%20of%20171st%20SLBC%20Meeting.pdf",
+      "snapshotTimestamp": "20250411191658",
+      "snapshotUrl": "https://web.archive.org/web/20250411191658id_/http://www.slbchp.com/Files/agenda/Minutes%20of%20171st%20SLBC%20Meeting.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_171st_SLBC_Meeting.pdf",
+      "sizeBytes": 903529,
+      "sha256": "6c5b4ae142970e44d543f1d2a05fd3996d3983581f243c16272fd7e05a92ccf7",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/166th%20slbc%20meeting%20agenda.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/166th%20SLBC%20Meeting%20Agenda.pdf",
+      "snapshotTimestamp": "20250411191659",
+      "snapshotUrl": "https://web.archive.org/web/20250411191659id_/http://www.slbchp.com/Files/agenda/166th%20SLBC%20Meeting%20Agenda.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/166th_SLBC_Meeting_Agenda.pdf",
+      "sizeBytes": 1695680,
+      "sha256": "f2d76a7a8f11ad35ae9a9a530034affa7da13158f4c98d752aa29c88d6b118f7",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/minutes%20of%20164th%20slbc%20meeting.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/Minutes%20of%20164th%20SLBC%20Meeting.pdf",
+      "snapshotTimestamp": "20250411191701",
+      "snapshotUrl": "https://web.archive.org/web/20250411191701id_/http://www.slbchp.com/Files/agenda/Minutes%20of%20164th%20SLBC%20Meeting.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_164th_SLBC_Meeting.pdf",
+      "sizeBytes": 679270,
+      "sha256": "06b1c9072ffd4ed24511d6d38b62697694b2399f5de3c76afe7cebeb5621cc01",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/174th%20slbc%20meeting%20agenda.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/174th%20SLBC%20Meeting%20Agenda.pdf",
+      "snapshotTimestamp": "20250411191705",
+      "snapshotUrl": "https://web.archive.org/web/20250411191705id_/http://www.slbchp.com/Files/agenda/174th%20SLBC%20Meeting%20Agenda.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/174th_SLBC_Meeting_Agenda.pdf",
+      "sizeBytes": 2358206,
+      "sha256": "3163b8c2858fd8e888066db3d6a8b619362a8c451ee2eac0367727d3940369df",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/minutes%20of%20175th%20slbc%20meeting.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/Minutes%20of%20175th%20SLBC%20Meeting.pdf",
+      "snapshotTimestamp": "20250411191707",
+      "snapshotUrl": "https://web.archive.org/web/20250411191707id_/http://www.slbchp.com/Files/agenda/Minutes%20of%20175th%20SLBC%20Meeting.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_175th_SLBC_Meeting.pdf",
+      "sizeBytes": 453683,
+      "sha256": "aac452df013f70ed80c002f04feb9d8379a452b5e84581ca8fd03aed80277c66",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/minutes/153rd%20slbc%20minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/minutes/153rd%20SLBC%20Minutes.pdf",
+      "snapshotTimestamp": "20250411191708",
+      "snapshotUrl": "https://web.archive.org/web/20250411191708id_/http://www.slbchp.com/Files/minutes/153rd%20SLBC%20Minutes.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/153rd_SLBC_Minutes.pdf",
+      "sizeBytes": 180224,
+      "sha256": "1231cb5f9ceb80f44692ce70774ccf41fcb41658d8406a5c0a8a6dab5fc3f690",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/minutes%20of%20170th%20slbc%20meeting.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/Minutes%20of%20170th%20SLBC%20Meeting.pdf",
+      "snapshotTimestamp": "20250411191709",
+      "snapshotUrl": "https://web.archive.org/web/20250411191709id_/http://www.slbchp.com/Files/agenda/Minutes%20of%20170th%20SLBC%20Meeting.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_170th_SLBC_Meeting.pdf",
+      "sizeBytes": 871554,
+      "sha256": "837175ac98b8b2a19f63fd48b6722de2b8572fb0745701679e0c999990fe86f2",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/150slbc-minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/150SLBC-Minutes.pdf",
+      "snapshotTimestamp": "20250411191712",
+      "snapshotUrl": "https://web.archive.org/web/20250411191712id_/http://www.slbchp.com/Files/150SLBC-Minutes.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/150SLBC-Minutes.pdf",
+      "sizeBytes": 758168,
+      "sha256": "db43fb75bcdf9963a4ecdeb4b0000571d1c37ced208abe88c3987d503cfd0ea7",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/minutes%20of%20165th%20slbc%20meeting.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/Minutes%20of%20165th%20SLBC%20Meeting.pdf",
+      "snapshotTimestamp": "20250411191712",
+      "snapshotUrl": "https://web.archive.org/web/20250411191712id_/http://www.slbchp.com/Files/agenda/Minutes%20of%20165th%20SLBC%20Meeting.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_165th_SLBC_Meeting.pdf",
+      "sizeBytes": 764192,
+      "sha256": "fd69e93f1f78c42c882a5a062587dce6cd8579080cbb7aeca9a27fe8d191d488",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/minutes%20of%20161st%20slbc%20meeting.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/Minutes%20of%20161st%20SLBC%20Meeting.pdf",
+      "snapshotTimestamp": "20250411191713",
+      "snapshotUrl": "https://web.archive.org/web/20250411191713id_/http://www.slbchp.com/Files/agenda/Minutes%20of%20161st%20SLBC%20Meeting.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_161st_SLBC_Meeting.pdf",
+      "sizeBytes": 747390,
+      "sha256": "83cd156d2cd01c80411921334990e8c9505122c0b223eba55a76a29837782e09",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/146minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/146minutes.pdf",
+      "snapshotTimestamp": "20250411191716",
+      "snapshotUrl": "https://web.archive.org/web/20250411191716id_/http://www.slbchp.com/Files/agenda/146minutes.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/146minutes.pdf",
+      "sizeBytes": 425050,
+      "sha256": "dd50eb2a6b28bb6906e09a44330ceb2d877ae79351ed4d0b61848cd77d575f66",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/minutes/minutes%20of%20158th%20slbc%20meeting.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/minutes/Minutes%20of%20158th%20SLBC%20Meeting.pdf",
+      "snapshotTimestamp": "20250411191719",
+      "snapshotUrl": "https://web.archive.org/web/20250411191719id_/http://www.slbchp.com/Files/minutes/Minutes%20of%20158th%20SLBC%20Meeting.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_158th_SLBC_Meeting.pdf",
+      "sizeBytes": 678154,
+      "sha256": "ace79441e6394fa1c23f60d0c690033472514ff5ed599cc2b2ff072f45eb08db",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/130th%20slbc%20agenda%20final.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/130TH%20SLBC%20AGENDA%20FINAL.pdf",
+      "snapshotTimestamp": "20250411191724",
+      "snapshotUrl": "https://web.archive.org/web/20250411191724id_/http://www.slbchp.com/Files/agenda/130TH%20SLBC%20AGENDA%20FINAL.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/130TH_SLBC_AGENDA_FINAL.pdf",
+      "sizeBytes": 999933,
+      "sha256": "fa2ba682176b2728f9a354beb0b9f7bc74f06f0b48df6d458fb35e41b47eb92e",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/142minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/142minutes.pdf",
+      "snapshotTimestamp": "20250411191735",
+      "snapshotUrl": "https://web.archive.org/web/20250411191735id_/http://www.slbchp.com/Files/agenda/142minutes.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/142minutes.pdf",
+      "sizeBytes": 507904,
+      "sha256": "d3899c9e0ad2973a77efde650c1f5697b708d11ee8a3bb7836433bd7fac34bc4",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/minutes/special%20slbc%20minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/minutes/Special%20SLBC%20Minutes.pdf",
+      "snapshotTimestamp": "20250411191735",
+      "snapshotUrl": "https://web.archive.org/web/20250411191735id_/http://www.slbchp.com/Files/minutes/Special%20SLBC%20Minutes.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Special_SLBC_Minutes.pdf",
+      "sizeBytes": 537149,
+      "sha256": "80d1603b30f023771bd9176baab0ab6e071b1286010998fe267b0cd86e3bfeb9",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/140th%20slbc%20minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/140th%20SLBC%20Minutes.pdf",
+      "snapshotTimestamp": "20250411191748",
+      "snapshotUrl": "https://web.archive.org/web/20250411191748id_/http://www.slbchp.com/Files/agenda/140th%20SLBC%20Minutes.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/140th_SLBC_Minutes.pdf",
+      "sizeBytes": 729026,
+      "sha256": "042e0955463a0a1f45a995ecea147577f0b9edeecf6f992e602c36b9091e9db3",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/142agenda.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/142agenda.pdf",
+      "snapshotTimestamp": "20250411191753",
+      "snapshotUrl": "https://web.archive.org/web/20250411191753id_/http://www.slbchp.com/Files/agenda/142agenda.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/142agenda.pdf",
+      "sizeBytes": 1640549,
+      "sha256": "bbbc24b8cc5bee57eae51dda7176aa33db1b65af72ea2a7b338d4a450002886e",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/minutes/130th%20slbc%20minutes%20final.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/minutes/130TH%20SLBC%20MINUTES%20FINAL.pdf",
+      "snapshotTimestamp": "20250411191802",
+      "snapshotUrl": "https://web.archive.org/web/20250411191802id_/http://www.slbchp.com/Files/minutes/130TH%20SLBC%20MINUTES%20FINAL.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/130TH_SLBC_MINUTES_FINAL.pdf",
+      "sizeBytes": 581774,
+      "sha256": "db4c3fba43166d4573afdba36f7c022b027f3033b99ed90dd5b7ef0ce081c9f8",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/164th%20slbc%20meeting%20agenda%20final.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/164th%20SLBC%20Meeting%20Agenda%20Final.pdf",
+      "snapshotTimestamp": "20250411191805",
+      "snapshotUrl": "https://web.archive.org/web/20250411191805id_/http://www.slbchp.com/Files/agenda/164th%20SLBC%20Meeting%20Agenda%20Final.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/164th_SLBC_Meeting_Agenda_Final.pdf",
+      "sizeBytes": 1978466,
+      "sha256": "5d32658b9562e0b057572f0b246793c41ada3c0b62059921bcc0ad0825c1af90",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/138slbc_minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/138SLBC_Minutes.pdf",
+      "snapshotTimestamp": "20250411191820",
+      "snapshotUrl": "https://web.archive.org/web/20250411191820id_/http://www.slbchp.com/Files/agenda/138SLBC_Minutes.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/138SLBC_Minutes.pdf",
+      "sizeBytes": 705874,
+      "sha256": "2588292bfae41f8aae3b160626ae317822b7cd089d34e04c6379a3d856c90f95",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/143minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/143minutes.pdf",
+      "snapshotTimestamp": "20250411191827",
+      "snapshotUrl": "https://web.archive.org/web/20250411191827id_/http://www.slbchp.com/Files/agenda/143minutes.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/143minutes.pdf",
+      "sizeBytes": 997839,
+      "sha256": "52a37f45ad68275f7c14387410459742d5274317a379f4c7d02eacaf4fdb98e0",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/134%20slbc%20minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/134%20SLBC%20MINUTES.PDF",
+      "snapshotTimestamp": "20250411191830",
+      "snapshotUrl": "https://web.archive.org/web/20250411191830id_/http://www.slbchp.com/Files/agenda/134%20SLBC%20MINUTES.PDF",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/134_SLBC_MINUTES.PDF",
+      "sizeBytes": 397526,
+      "sha256": "95f030a5514c3d0c92972ca3f5b3f121ccdf9824b6284a6b7ea303fd947cefd8",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/minutes_of_169th_slbc_meeting.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/Minutes_of_169th_SLBC_Meeting.pdf",
+      "snapshotTimestamp": "20250411191838",
+      "snapshotUrl": "https://web.archive.org/web/20250411191838id_/http://www.slbchp.com/Files/agenda/Minutes_of_169th_SLBC_Meeting.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_169th_SLBC_Meeting.pdf",
+      "sizeBytes": 899438,
+      "sha256": "41cddcc8b4782bc118fc1cab5a1700d88789b1ce69d37dfc434824bc87fa3b83",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/minutes/151%20slbc-minutes-final.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/minutes/151%20SLBC-Minutes-Final.pdf",
+      "snapshotTimestamp": "20250411191840",
+      "snapshotUrl": "https://web.archive.org/web/20250411191840id_/http://www.slbchp.com/Files/minutes/151%20SLBC-Minutes-Final.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/151_SLBC-Minutes-Final.pdf",
+      "sizeBytes": 285197,
+      "sha256": "2e3dfc23d5433cde3b08a0b379580c59d1d3d22056e655f90b72935bde92abf1",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/minutes%20of%20173rd%20slbc%20meeting.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/Minutes%20of%20173rd%20SLBC%20Meeting.pdf",
+      "snapshotTimestamp": "20250411191841",
+      "snapshotUrl": "https://web.archive.org/web/20250411191841id_/http://www.slbchp.com/Files/agenda/Minutes%20of%20173rd%20SLBC%20Meeting.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_173rd_SLBC_Meeting.pdf",
+      "sizeBytes": 917232,
+      "sha256": "d8186ac7e14ad3d70bdb612e5f15f7d5ba1c9f168204a269730c326c239bd512",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/141th%20slbc%20minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/141th%20SLBC%20Minutes.pdf",
+      "snapshotTimestamp": "20250411191848",
+      "snapshotUrl": "https://web.archive.org/web/20250411191848id_/http://www.slbchp.com/Files/agenda/141th%20SLBC%20Minutes.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/141th_SLBC_Minutes.pdf",
+      "sizeBytes": 65536,
+      "sha256": "22659c678a2336ee86c7d4b3d117deb3079595b703b09b25362e0b744ea1f0bb",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/149minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/149minutes.pdf",
+      "snapshotTimestamp": "20250411191850",
+      "snapshotUrl": "https://web.archive.org/web/20250411191850id_/http://www.slbchp.com/Files/agenda/149minutes.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/149minutes.pdf",
+      "sizeBytes": 808242,
+      "sha256": "b79d6f9cadb609789095eeaacdd0b383a1bbeea6b39570352f8fefc0c82496b8",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/170th%20slbc%20meeting%20agenda.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/170th%20SLBC%20Meeting%20Agenda.pdf",
+      "snapshotTimestamp": "20250411191902",
+      "snapshotUrl": "https://web.archive.org/web/20250411191902id_/http://www.slbchp.com/Files/agenda/170th%20SLBC%20Meeting%20Agenda.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/170th_SLBC_Meeting_Agenda.pdf",
+      "sizeBytes": 2221388,
+      "sha256": "a400adcfc6752c5bb011ddabafaaf4cf7db41f303f7f4e0e038ee144643ae08c",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/minutes%20of%20174th%20slbc%20meeting.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/Minutes%20of%20174th%20SLBC%20Meeting.pdf",
+      "snapshotTimestamp": "20250411191916",
+      "snapshotUrl": "https://web.archive.org/web/20250411191916id_/http://www.slbchp.com/Files/agenda/Minutes%20of%20174th%20SLBC%20Meeting.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_174th_SLBC_Meeting.pdf",
+      "sizeBytes": 914621,
+      "sha256": "fd8ac40f30cc48846a1dddf08078677b53a48b4da365999aee6fea8239c643ef",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/minutes/minutes%20of%20157th%20slbc%20meeting.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/minutes/Minutes%20of%20157th%20SLBC%20Meeting.pdf",
+      "snapshotTimestamp": "20250411191930",
+      "snapshotUrl": "https://web.archive.org/web/20250411191930id_/http://www.slbchp.com/Files/minutes/Minutes%20of%20157th%20SLBC%20Meeting.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_157th_SLBC_Meeting.pdf",
+      "sizeBytes": 783093,
+      "sha256": "af6b7ae69d751bc3932c7f353be4037f1f4444d8bbcbf1863c8db04bf4e27541",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/144minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/144minutes.pdf",
+      "snapshotTimestamp": "20250411191931",
+      "snapshotUrl": "https://web.archive.org/web/20250411191931id_/http://www.slbchp.com/Files/agenda/144minutes.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/144minutes.pdf",
+      "sizeBytes": 837731,
+      "sha256": "e562f5bf30638981e0ae35ee06f21fce2c1577c0c4da8387fc2ed4ce0ba2b466",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/173rd%20slbc%20meeting%20agenda.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/173rd%20SLBC%20Meeting%20Agenda.pdf",
+      "snapshotTimestamp": "20250411191940",
+      "snapshotUrl": "https://web.archive.org/web/20250411191940id_/http://www.slbchp.com/Files/agenda/173rd%20SLBC%20Meeting%20Agenda.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/173rd_SLBC_Meeting_Agenda.pdf",
+      "sizeBytes": 2327846,
+      "sha256": "009bf0f03a7452f4f5e9e710472cea0455896f32e69c8735b8c7f611b2c3a532",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/minutes%20of%20167th%20slbc%20meeting.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/Minutes%20of%20167th%20SLBC%20Meeting.pdf",
+      "snapshotTimestamp": "20250411191955",
+      "snapshotUrl": "https://web.archive.org/web/20250411191955id_/http://www.slbchp.com/Files/agenda/Minutes%20of%20167th%20SLBC%20Meeting.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_167th_SLBC_Meeting.pdf",
+      "sizeBytes": 630997,
+      "sha256": "7899d4afd829d4e5bd73e7a76a29d2fd17370b330fd49ed09e0643183a4e6372",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/minutes/revised%20154th%20slbc%20minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/minutes/Revised%20154th%20SLBC%20Minutes.pdf",
+      "snapshotTimestamp": "20250411192013",
+      "snapshotUrl": "https://web.archive.org/web/20250411192013id_/http://www.slbchp.com/Files/minutes/Revised%20154th%20SLBC%20Minutes.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Revised_154th_SLBC_Minutes.pdf",
+      "sizeBytes": 627191,
+      "sha256": "460595bcb04b6f5de79e967db78554a6fef1dfd96ac51480ec77df231c97aee9",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/168th%20slbc%20meeting%20agenda.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/168th%20SLBC%20Meeting%20Agenda.pdf",
+      "snapshotTimestamp": "20250411192029",
+      "snapshotUrl": "https://web.archive.org/web/20250411192029id_/http://www.slbchp.com/Files/agenda/168th%20SLBC%20Meeting%20Agenda.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/168th_SLBC_Meeting_Agenda.pdf",
+      "sizeBytes": 2194011,
+      "sha256": "241206244811fa58d06fb41dfe6927e42fdbd2f62673f3586d36b269703dca4f",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/minutes/132nd%20slbc%20minutes%20final.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/minutes/132ND%20SLBC%20MINUTES%20FINAL.pdf",
+      "snapshotTimestamp": "20250411192118",
+      "snapshotUrl": "https://web.archive.org/web/20250411192118id_/http://www.slbchp.com/Files/minutes/132ND%20SLBC%20MINUTES%20FINAL.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/132ND_SLBC_MINUTES_FINAL.pdf",
+      "sizeBytes": 159986,
+      "sha256": "31052efa7aa4896e32180e8c28ba31e004b4a296022de17200c317e7750e7172",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/minutes/129th%20slbc%20minutes%20final.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/minutes/129TH%20SLBC%20MINUTES%20FINAL.pdf",
+      "snapshotTimestamp": "20250411192136",
+      "snapshotUrl": "https://web.archive.org/web/20250411192136id_/http://www.slbchp.com/Files/minutes/129TH%20SLBC%20MINUTES%20FINAL.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/129TH_SLBC_MINUTES_FINAL.pdf",
+      "sizeBytes": 517293,
+      "sha256": "3a81ab1a2f3717ede0d318323ba573b23b5373a1548628f158da55d8d94c4c6b",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/148minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/148minutes.pdf",
+      "snapshotTimestamp": "20250411192153",
+      "snapshotUrl": "https://web.archive.org/web/20250411192153id_/http://www.slbchp.com/Files/agenda/148minutes.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/148minutes.pdf",
+      "sizeBytes": 662594,
+      "sha256": "331d8c780d37ab06f09e32e971b1291d246bf2a4fb5ca12a4d3de84d2110d971",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/139slbc_minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/139SLBC_Minutes.pdf",
+      "snapshotTimestamp": "20250411192204",
+      "snapshotUrl": "https://web.archive.org/web/20250411192204id_/http://www.slbchp.com/Files/agenda/139SLBC_Minutes.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/139SLBC_Minutes.pdf",
+      "sizeBytes": 799610,
+      "sha256": "4f81df1952f0235919a4671e15358d085ec99f2c0a18109bc5a733286b344e72",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/minutes%20of%20162nd%20slbc%20meeting%20final.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/Minutes%20of%20162nd%20SLBC%20Meeting%20Final.pdf",
+      "snapshotTimestamp": "20250411192216",
+      "snapshotUrl": "https://web.archive.org/web/20250411192216id_/http://www.slbchp.com/Files/agenda/Minutes%20of%20162nd%20SLBC%20Meeting%20Final.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_162nd_SLBC_Meeting_Final.pdf",
+      "sizeBytes": 779009,
+      "sha256": "f1aec582e63cae6233f35f03dd940626233fbccdf090b0d6b599dc7035d0de63",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/minutes%20of%20163rd%20slbc%20meeting.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/Minutes%20of%20163rd%20SLBC%20Meeting.pdf",
+      "snapshotTimestamp": "20250411192233",
+      "snapshotUrl": "https://web.archive.org/web/20250411192233id_/http://www.slbchp.com/Files/agenda/Minutes%20of%20163rd%20SLBC%20Meeting.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_163rd_SLBC_Meeting.pdf",
+      "sizeBytes": 761759,
+      "sha256": "300521e9802947e6286364ea50cb9c66b90f0c397041436c0474471611d20781",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/pmkvy%204.0%20guidelines.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/PMKVY%204.0%20Guidelines.pdf",
+      "snapshotTimestamp": "20250411192249",
+      "snapshotUrl": "https://web.archive.org/web/20250411192249id_/http://www.slbchp.com/Files/PMKVY%204.0%20Guidelines.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/PMKVY_4.0_Guidelines.pdf",
+      "sizeBytes": 1281595,
+      "sha256": "ab048f598c35c8db912a38c0bda29b7830e53f5bbf89e3a8436455f1a396f82c",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/minutes%20of%20168th%20slbc%20meeting.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/Minutes%20of%20168th%20SLBC%20Meeting.pdf",
+      "snapshotTimestamp": "20250411192404",
+      "snapshotUrl": "https://web.archive.org/web/20250411192404id_/http://www.slbchp.com/Files/agenda/Minutes%20of%20168th%20SLBC%20Meeting.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_168th_SLBC_Meeting.pdf",
+      "sizeBytes": 638943,
+      "sha256": "a4987b773c1e562a0a84150dacfc194d4dca6b3b4a5b9bdfc6042faed979d82a",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/165th%20slbc%20agenda.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/165th%20SLBC%20Agenda.pdf",
+      "snapshotTimestamp": "20250411192413",
+      "snapshotUrl": "https://web.archive.org/web/20250411192413id_/http://www.slbchp.com/Files/agenda/165th%20SLBC%20Agenda.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/165th_SLBC_Agenda.pdf",
+      "sizeBytes": 1876301,
+      "sha256": "bf0f705040e83ca77bae02601338b4da64f42c3ae2a4067c15251990f3d32dbc",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/minutes/156th%20slbc%20minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/minutes/156th%20SLBC%20Minutes.pdf",
+      "snapshotTimestamp": "20250411192507",
+      "snapshotUrl": "https://web.archive.org/web/20250411192507id_/http://www.slbchp.com/Files/minutes/156th%20SLBC%20Minutes.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/156th_SLBC_Minutes.pdf",
+      "sizeBytes": 623975,
+      "sha256": "fc1e342d39c48f3ccfa94f785ede9bbf74878b4ceca6fbab1b88038618772dfb",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/minutes%20of%20160th%20slbc%20meeting%20final.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/Minutes%20of%20160th%20SLBC%20Meeting%20Final.pdf",
+      "snapshotTimestamp": "20250411192525",
+      "snapshotUrl": "https://web.archive.org/web/20250411192525id_/http://www.slbchp.com/Files/agenda/Minutes%20of%20160th%20SLBC%20Meeting%20Final.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_160th_SLBC_Meeting_Final.pdf",
+      "sizeBytes": 666975,
+      "sha256": "691be4874fb661ca3e7e1b5dd69de846427c55380ae3272ff1ff967f5f9b894e",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/150thslbc%20agenda/150slbc-agenda%20note%20index.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/150thslbc%20Agenda/150SLBC-Agenda%20note%20Index.pdf",
+      "snapshotTimestamp": "20250411192540",
+      "snapshotUrl": "https://web.archive.org/web/20250411192540id_/http://www.slbchp.com/Files/150thslbc%20Agenda/150SLBC-Agenda%20note%20Index.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/150SLBC-Agenda_note_Index.pdf",
+      "sizeBytes": 789324,
+      "sha256": "971433476ddad5d4d977cf47c44b17bcd2dba58e88b0224c9779d24507f69250",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/136%20slbc%20minutes.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/136%20SLBC%20MINUTES.PDF",
+      "snapshotTimestamp": "20250411192548",
+      "snapshotUrl": "https://web.archive.org/web/20250411192548id_/http://www.slbchp.com/Files/agenda/136%20SLBC%20MINUTES.PDF",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/136_SLBC_MINUTES.PDF",
+      "sizeBytes": 883016,
+      "sha256": "005d26f49946d365966db566cbe20849c99813f1ecab4188597ebf250d77d193",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/minutes%20of%20166th%20slbc%20meeting.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/Minutes%20of%20166th%20SLBC%20Meeting.pdf",
+      "snapshotTimestamp": "20250411192603",
+      "snapshotUrl": "https://web.archive.org/web/20250411192603id_/http://www.slbchp.com/Files/agenda/Minutes%20of%20166th%20SLBC%20Meeting.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_166th_SLBC_Meeting.pdf",
+      "sizeBytes": 718807,
+      "sha256": "c5b9230b8f407841a8773042d3c4abbc5517cd8370de97f38a538e23d79711cc",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/131st%20slbc%20agenda%20final.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/agenda/131ST%20SLBC%20AGENDA%20FINAL.pdf",
+      "snapshotTimestamp": "20250412191933",
+      "snapshotUrl": "https://web.archive.org/web/20250412191933id_/http://www.slbchp.com/Files/agenda/131ST%20SLBC%20AGENDA%20FINAL.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/131ST_SLBC_AGENDA_FINAL.pdf",
+      "status": "error",
+      "error": "curl exit 28: curl: (28) Operation timed out after 609006 milliseconds with 538271 out of 1032675 bytes received"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/calendar%20of%20slbc%20meetings%202022-23.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/Calendar%20of%20SLBC%20Meetings%202022-23.pdf",
+      "snapshotTimestamp": "20250507055140",
+      "snapshotUrl": "https://web.archive.org/web/20250507055140id_/http://www.slbchp.com/Files/Calendar%20of%20SLBC%20Meetings%202022-23.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Calendar_of_SLBC_Meetings_2022-23.pdf",
+      "sizeBytes": 350124,
+      "sha256": "29254b295102fc96edf12290a61d780d3527215c85d886d15e225ece3f177e46",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/acp%20achievements%202019-20.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/ACP/ACP%20Achievements%202019-20.pdf",
+      "snapshotTimestamp": "20250507062413",
+      "snapshotUrl": "https://web.archive.org/web/20250507062413id_/http://www.slbchp.com/Files/ACP/ACP%20Achievements%202019-20.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/ACP_Achievements_2019-20.pdf",
+      "sizeBytes": 68857,
+      "sha256": "e49bb84a1d0c11f9b27717cce4dba8770b4d0b1daee49817faa05c30ef0037c2",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/scheme/master%20cir%20-%20shg%20linkage%20-%2001.07.2020.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/Scheme/Master%20Cir%20-%20SHG%20Linkage%20-%2001.07.2020.pdf",
+      "snapshotTimestamp": "20250507063500",
+      "snapshotUrl": "https://web.archive.org/web/20250507063500id_/http://www.slbchp.com/Files/Scheme/Master%20Cir%20-%20SHG%20Linkage%20-%2001.07.2020.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Master_Cir_-_SHG_Linkage_-_01.07.2020.pdf",
+      "sizeBytes": 191813,
+      "sha256": "90f954c248fde7521ae07b14a1cafc0eb65e7aaf664a9a685e3ecb7b5994e341",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/slbc%20members%20contacts.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/SLBC%20Members%20Contacts.pdf",
+      "snapshotTimestamp": "20250507073412",
+      "snapshotUrl": "https://web.archive.org/web/20250507073412id_/http://www.slbchp.com/Files/SLBC%20Members%20Contacts.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/SLBC_Members_Contacts.pdf",
+      "sizeBytes": 65054,
+      "sha256": "647345f859bed3dad7f7f9c6de71101de108524c9f83ecbb4f052340b94d7f02",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp%202020-21.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/ACP%202020-21.pdf",
+      "snapshotTimestamp": "20250507093614",
+      "snapshotUrl": "https://web.archive.org/web/20250507093614id_/http://www.slbchp.com/Files/ACP%202020-21.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/ACP_2020-21.pdf",
+      "sizeBytes": 991204,
+      "sha256": "fbc368c0843785422e3cd91204fb3500c38d651acd946c45fa074ffed506c137",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/key%20indicators%20-%2031.03.2020.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/ACP/Key%20Indicators%20-%2031.03.2020.pdf",
+      "snapshotTimestamp": "20250507175358",
+      "snapshotUrl": "https://web.archive.org/web/20250507175358id_/http://www.slbchp.com/Files/ACP/Key%20Indicators%20-%2031.03.2020.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Key_Indicators_-_31.03.2020.pdf",
+      "sizeBytes": 86449,
+      "sha256": "e4356d91d60d0b62a912a99655680620578847489d1a8b77d2a50521e72744fb",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/rsetis%20contact%20details.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/RSETIS%20Contact%20Details.pdf",
+      "snapshotTimestamp": "20250507235457",
+      "snapshotUrl": "https://web.archive.org/web/20250507235457id_/http://www.slbchp.com/Files/RSETIS%20Contact%20Details.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/RSETIS_Contact_Details.pdf",
+      "sizeBytes": 39306,
+      "sha256": "00c5e7f1f96c9f4558e24f8f749e911427d67bd6946fbcb5ce18314f1b93bef6",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/bank%20wise%20pmegp%20targets.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/ACP/BANK%20WISE%20PMEGP%20TARGETS.pdf",
+      "snapshotTimestamp": "20250508011739",
+      "snapshotUrl": "https://web.archive.org/web/20250508011739id_/http://www.slbchp.com/Files/ACP/BANK%20WISE%20PMEGP%20TARGETS.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/BANK_WISE_PMEGP_TARGETS.pdf",
+      "sizeBytes": 51644,
+      "sha256": "1cc4ed7f9de97aa0b47e2fc1167f9cf59a96cf0fa88be1bc626585b278a8cd8d",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/ldms%20contact%20detail.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/LDMs%20Contact%20Detail.pdf",
+      "snapshotTimestamp": "20250508013427",
+      "snapshotUrl": "https://web.archive.org/web/20250508013427id_/http://www.slbchp.com/Files/LDMs%20Contact%20Detail.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/LDMs_Contact_Detail.pdf",
+      "sizeBytes": 42285,
+      "sha256": "567d7bcbec6e8874a2f112caf25383aaac836ce0b153fe4e965d1e13504c8517",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/flc%20detail.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/FLC%20Detail.pdf",
+      "snapshotTimestamp": "20250508015053",
+      "snapshotUrl": "https://web.archive.org/web/20250508015053id_/http://www.slbchp.com/Files/FLC%20Detail.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/FLC_Detail.pdf",
+      "sizeBytes": 39472,
+      "sha256": "b96a7f2ae286a32f4673e83983e5de8aa815933aad2b5661c9398dac76b691d7",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/cd%20ratio%202019-20.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/CD%20Ratio%202019-20.pdf",
+      "snapshotTimestamp": "20250508022404",
+      "snapshotUrl": "https://web.archive.org/web/20250508022404id_/http://www.slbchp.com/Files/CD%20Ratio%202019-20.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/CD_Ratio_2019-20.pdf",
+      "sizeBytes": 57011,
+      "sha256": "5c42a73d6c7025bc91b105c364012439d8572eb68afaa63c84746ea920fb1818",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda%20note/161st%20slbc%20meeting%20agenda%20note.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/Agenda%20Note/161st%20SLBC%20Meeting%20Agenda%20Note.pdf",
+      "snapshotTimestamp": "20250508022742",
+      "snapshotUrl": "https://web.archive.org/web/20250508022742id_/http://www.slbchp.com/Files/Agenda%20Note/161st%20SLBC%20Meeting%20Agenda%20Note.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/161st_SLBC_Meeting_Agenda_Note.pdf",
+      "status": "error",
+      "error": "curl exit 28: curl: (28) Operation timed out after 617923 milliseconds with 636434 out of 3693508 bytes received"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/shg%20credit%20linkage%2030.06.2020.pdf",
+      "originalUrl": "http://www.slbchp.com/Files/SHG%20Credit%20Linkage%2030.06.2020.pdf",
+      "snapshotTimestamp": "20250508024852",
+      "snapshotUrl": "https://web.archive.org/web/20250508024852id_/http://www.slbchp.com/Files/SHG%20Credit%20Linkage%2030.06.2020.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/SHG_Credit_Linkage_30.06.2020.pdf",
+      "sizeBytes": 74693,
+      "sha256": "d5f5d083d8944bc639cdbf3ddd06c84876f13516c3106fea030eb53ff156a87f",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/acp%202019-20%20note%20.pdf",
+      "originalUrl": "http://slbchp.com/Files/ACP/ACP%202019-20%20Note%20.pdf",
+      "snapshotTimestamp": "20250722110016",
+      "snapshotUrl": "https://web.archive.org/web/20250722110016id_/http://slbchp.com/Files/ACP/ACP%202019-20%20Note%20.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/ACP_2019-20_Note_.pdf",
+      "sizeBytes": 1140850,
+      "sha256": "08420be00f1b40ff742345f4ea60d78ca1368f7f1199c0903ab2f187db7bcf3f",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/acp/nrlm%20targets%202020-21.pdf",
+      "originalUrl": "http://slbchp.com/Files/ACP/NRLM%20Targets%202020-21.pdf",
+      "snapshotTimestamp": "20250726083213",
+      "snapshotUrl": "https://web.archive.org/web/20250726083213id_/http://slbchp.com/Files/ACP/NRLM%20Targets%202020-21.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/NRLM_Targets_2020-21.pdf",
+      "sizeBytes": 464821,
+      "sha256": "c2ed98853ab3264b39024f12aa831692f9a61428cac16d7b92ac2b6bc09b4175",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/minutes%20of%20159th%20slbc%20meeting.pdf",
+      "originalUrl": "http://slbchp.com/Files/agenda/Minutes%20of%20159th%20SLBC%20Meeting.pdf",
+      "snapshotTimestamp": "20250803232156",
+      "snapshotUrl": "https://web.archive.org/web/20250803232156id_/http://slbchp.com/Files/agenda/Minutes%20of%20159th%20SLBC%20Meeting.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Minutes_of_159th_SLBC_Meeting.pdf",
+      "sizeBytes": 525009,
+      "sha256": "7853b2850c169979f185920f0ca2f6a87fbaa0a3d8ab7398429c71119461ff77",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/agenda/134%20slbc%20agenda.pdf",
+      "originalUrl": "http://slbchp.com/Files/agenda/134%20SLBC%20AGENDA.PDF",
+      "snapshotTimestamp": "20250804152951",
+      "snapshotUrl": "https://web.archive.org/web/20250804152951id_/http://slbchp.com/Files/agenda/134%20SLBC%20AGENDA.PDF",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/134_SLBC_AGENDA.PDF",
+      "sizeBytes": 1433863,
+      "sha256": "c8bac7ac76d549bdc549b665c99f580cd1f6b63025e75a3e9191c4b5302d49f4",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/notification_12_09_2023.pdf",
+      "originalUrl": "https://slbchp.com/Files/Notification_12_09_2023.pdf",
+      "snapshotTimestamp": "20251207065826",
+      "snapshotUrl": "https://web.archive.org/web/20251207065826id_/https://slbchp.com/Files/Notification_12_09_2023.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/Notification_12_09_2023.pdf",
+      "sizeBytes": 885215,
+      "sha256": "8a3c4137a0ffe3fa1ddf45b21b34dc55e7dcf3f8dd2809c9998f937e61165a48",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/lead%20bank%20scheme/lbs%20mis.pdf",
+      "originalUrl": "http://slbchp.com/Files/Lead%20Bank%20Scheme/LBS%20MIS.pdf",
+      "snapshotTimestamp": "20251207235141",
+      "snapshotUrl": "https://web.archive.org/web/20251207235141id_/http://slbchp.com/Files/Lead%20Bank%20Scheme/LBS%20MIS.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2025/LBS_MIS.pdf",
+      "sizeBytes": 1632445,
+      "sha256": "dada0c7c7a109b15e29ed493a40ea24a559eb33b1bfb2d6b6fcf86f99356d0e5",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/2019/uniform%20banking%20hours.pdf",
+      "originalUrl": "https://slbchp.com/Files/2019/uniform%20banking%20hours.pdf",
+      "snapshotTimestamp": "20260102235423",
+      "snapshotUrl": "https://web.archive.org/web/20260102235423id_/https://slbchp.com/Files/2019/uniform%20banking%20hours.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2026/uniform_banking_hours.pdf",
+      "sizeBytes": 393645,
+      "sha256": "05f982069ede6573aaa5359b3db9da5556e4db8a878f3f7ba9b557094dbb5eb2",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/lead%20bank%20scheme/ldms%20contact%20list.pdf",
+      "originalUrl": "https://slbchp.com/Files/Lead%20Bank%20Scheme/LDMs%20contact%20list.pdf",
+      "snapshotTimestamp": "20260102235717",
+      "snapshotUrl": "https://web.archive.org/web/20260102235717id_/https://slbchp.com/Files/Lead%20Bank%20Scheme/LDMs%20contact%20list.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2026/LDMs_contact_list.pdf",
+      "sizeBytes": 54873,
+      "sha256": "39cd11f8fc544a16131dddaabe10f325d88f78389391eb4f010634d5eb307281",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/lead%20bank%20scheme/cd%20ratio.pdf",
+      "originalUrl": "http://slbchp.com/Files/Lead%20Bank%20Scheme/CD%20Ratio.pdf",
+      "snapshotTimestamp": "20260103022808",
+      "snapshotUrl": "https://web.archive.org/web/20260103022808id_/http://slbchp.com/Files/Lead%20Bank%20Scheme/CD%20Ratio.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2026/CD_Ratio.pdf",
+      "sizeBytes": 57261,
+      "sha256": "10cfff2c72f8c52c323f01058350cb6978792f432fb206cd020b9cd7f17b5dd7",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/district_wise_branches.pdf",
+      "originalUrl": "https://slbchp.com/Files/District_wise_branches.pdf",
+      "snapshotTimestamp": "20260103055954",
+      "snapshotUrl": "https://web.archive.org/web/20260103055954id_/https://slbchp.com/Files/District_wise_branches.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2026/District_wise_branches.pdf",
+      "sizeBytes": 964275,
+      "sha256": "419bf5698d0374ad4e3ec56b767d2810d3e1cca9c6c5120ca0916ad53cf01789",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/meetings/details%20of%20meetings%20held.pdf",
+      "originalUrl": "http://slbchp.com/Files/Meetings/Details%20of%20Meetings%20held.pdf",
+      "snapshotTimestamp": "20260104095015",
+      "snapshotUrl": "https://web.archive.org/web/20260104095015id_/http://slbchp.com/Files/Meetings/Details%20of%20Meetings%20held.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2026/Details_of_Meetings_held.pdf",
+      "sizeBytes": 280752,
+      "sha256": "64dabf398d747c86008c879b763f6a634a52a036313463a38af27f457e58b903",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/circular%20-%20nbfc%20-%20natural%20calamities.pdf",
+      "originalUrl": "https://slbchp.com/Files/Circular%20-%20NBFC%20-%20Natural%20Calamities.pdf",
+      "snapshotTimestamp": "20260104181459",
+      "snapshotUrl": "https://web.archive.org/web/20260104181459id_/https://slbchp.com/Files/Circular%20-%20NBFC%20-%20Natural%20Calamities.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2026/Circular_-_NBFC_-_Natural_Calamities.pdf",
+      "sizeBytes": 276618,
+      "sha256": "06ed00ba8bc79bfaaf015c21233b088cc93d78e0e6065aae73bcbc4aa862815e",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/2019/bc%20model.pdf",
+      "originalUrl": "https://slbchp.com/Files/2019/BC%20Model.pdf",
+      "snapshotTimestamp": "20260105003350",
+      "snapshotUrl": "https://web.archive.org/web/20260105003350id_/https://slbchp.com/Files/2019/BC%20Model.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2026/BC_Model.pdf",
+      "sizeBytes": 311395,
+      "sha256": "6b3b29029a1a4c570924ba450388c1aab5ffe571bd691bf3ab0f9af8ab727c87",
+      "status": "downloaded"
+    },
+    {
+      "canonicalUrl": "slbchp.com/files/holiday%202025-26.pdf",
+      "originalUrl": "https://slbchp.com/Files/Holiday%202025-26.pdf",
+      "snapshotTimestamp": "20260105051529",
+      "snapshotUrl": "https://web.archive.org/web/20260105051529id_/https://slbchp.com/Files/Holiday%202025-26.pdf",
+      "localPath": "slbc-data/himachal-pradesh/wayback/2026/Holiday_2025-26.pdf",
+      "sizeBytes": 2489762,
+      "sha256": "a04bf5c1b82c2530d8409abe4ac139572377e90d5241b2218ecefe12afab207a",
+      "status": "downloaded"
+    }
+  ]
+}
