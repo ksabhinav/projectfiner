@@ -233,6 +233,10 @@ def main():
 
     candidates = []
     for entry in manifest['files']:
+        # Skip files Wayback truncated at capture — they're usually unparseable
+        # past the first few pages (see CLAUDE.md gotcha #87).
+        if entry.get('status') == 'truncated':
+            continue
         local = ROOT / entry.get('localPath', '')
         if not local.exists():
             continue

@@ -173,6 +173,9 @@ def main():
 
     cands = []
     for e in manifest['files']:
+        # Skip Wayback-capture-truncated files (gotcha #87).
+        if e.get('status') == 'truncated':
+            continue
         local = ROOT / e.get('localPath', '')
         if not local.exists():
             continue
