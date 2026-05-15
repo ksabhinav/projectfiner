@@ -44,6 +44,8 @@ from extract_wayback_uttar_pradesh import UP_DISTRICT_CANON, canon_district  # n
 
 
 # Header signatures that identify which table type we're scanning.
+# Each entry is a list of regex patterns that ALL must match in the page's
+# top 600 chars for the page to be classified as that table.
 TABLE_SIGNATURES = {
     'atms_per_district': [
         re.compile(r'district[-\s]*wise\s*atms', re.IGNORECASE),
@@ -53,6 +55,52 @@ TABLE_SIGNATURES = {
         re.compile(r'district\s*wise\s*BCs', re.IGNORECASE),
         re.compile(r'no\.?\s*of\s*BCs', re.IGNORECASE),
     ],
+    # 14-col table: SR, DIST, RURAL, URBAN, MALE, FEMALE, TOTAL, ACTIVE,
+    #               ZERO_BAL, DEPOSITS, RUPAY_ISSUED, AADHAAR_SEEDED,
+    #               %AADHAAR, %RUPAY
+    'pmjdy_per_district': [
+        re.compile(r'district[-\s]*wise\s*pmjdy\s*report', re.IGNORECASE),
+    ],
+    # 5-col: SR, DIST, PMJJBY, PMSBY, TOTAL (Jansuraksha enrolment)
+    'jansuraksha_per_district': [
+        re.compile(r'district\s*wise\s*jansuraksha', re.IGNORECASE),
+    ],
+    # 7-col PMJJBY claims breakdown
+    'pmjjby_claims_per_district': [
+        re.compile(r'district[-\s]*wise\s*pmjjby\s*claim', re.IGNORECASE),
+    ],
+    # 7-col PMSBY claims breakdown
+    'pmsby_claims_per_district': [
+        re.compile(r'district[-\s]*wise\s*pmsby\s*claim', re.IGNORECASE),
+    ],
+}
+
+# Row-parse regex per table type. Group 1 = sr_no; Group 2 = district;
+# Group 3...N = numeric columns. We constrain by column count so a noisy
+# adjacent paragraph doesn't accidentally match.
+ROW_PATTERNS = {
+    # 3-col tables: sr, dist, single-number
+    'atms_per_district':           re.compile(r'^(\d{1,2})\s+(.+?)\s+(\d[\d,]*)$'),
+    'bcs_per_district':            re.compile(r'^(\d{1,2})\s+(.+?)\s+(\d[\d,]*)$'),
+    # PMJDY 14-col: sr, dist, then 12 numerics. Any column may be decimal —
+    # deposits is in Cr (414.61), % cols are decimal, but the order varies
+    # by booklet so we allow optional .nn on every numeric capture.
+    'pmjdy_per_district':          re.compile(
+        r'^(\d{1,2})\s+(.+?)\s+' +
+        r'(\d[\d,]*\.?\d*)\s+' * 11 +
+        r'(\d[\d,]*\.?\d*)$'
+    ),
+    # Jansuraksha 5-col: sr, dist, pmjjby, pmsby, total
+    'jansuraksha_per_district':    re.compile(
+        r'^(\d{1,2})\s+(.+?)\s+(\d[\d,~]*)\s+(\d[\d,~]*)\s+(\d[\d,]*)$'
+    ),
+    # PMJJBY claims 7-col: sr, dist, paid, with_process, rejected, pending_insurer, total, claim_paid_amt
+    'pmjjby_claims_per_district':  re.compile(
+        r'^(\d{1,2})\s+(.+?)\s+(\d[\d,]*)\s+(\d[\d,]*)\s+(\d[\d,]*)\s+(\d[\d,]*)\s+(\d[\d,]*)\s+(\d[\d,]*)$'
+    ),
+    'pmsby_claims_per_district':   re.compile(
+        r'^(\d{1,2})\s+(.+?)\s+(\d[\d,]*)\s+(\d[\d,]*)\s+(\d[\d,]*)\s+(\d[\d,]*)?\s*(\d[\d,]*)?\s*(\d[\d,]*)?$'
+    ),
 }
 
 
@@ -67,31 +115,38 @@ def detect_table_signal(page_text: str) -> str | None:
     return None
 
 
-def parse_district_rows(page_text: str) -> list[tuple[str, str]]:
-    """Pull (district, value) pairs out of a 3-column tabular text block.
+def parse_district_rows(page_text: str, table_type: str) -> list[dict]:
+    """Pull a list of {district, values: [...]} from a tabular text block.
 
-    Expected line: `<sr> <district_words> <number>` where district can be
-    1–3 words and the trailing number is the only numeric on the line.
+    Each table_type has its own regex (ROW_PATTERNS) describing the
+    expected column count + signature. The returned `values` list has
+    the same number of elements as numeric capture groups in the regex.
     """
-    out: list[tuple[str, str]] = []
+    pattern = ROW_PATTERNS.get(table_type)
+    if pattern is None:
+        return []
+    out: list[dict] = []
     for line in page_text.splitlines():
-        # Tolerate OCR-mangled spaces, tabs, multiple spaces
         line = re.sub(r'\s+', ' ', line.strip())
         if not line:
             continue
-        # Must start with a small integer (sr no, 1–75)
-        m = re.match(r'^(\d{1,2})\s+(.+?)\s+(\d[\d,]*)$', line)
+        m = pattern.match(line)
         if not m:
             continue
         sr = int(m.group(1))
         if sr < 1 or sr > 80:
             continue
         district_text = m.group(2)
-        value = m.group(3).replace(',', '')
         canon = canon_district(district_text)
         if not canon:
             continue
-        out.append((canon, value))
+        # Capture groups 3..N are numeric columns. Strip commas + tilde noise.
+        values = []
+        for i in range(3, m.lastindex + 1):
+            v = m.group(i) or ''
+            v = v.replace(',', '').replace('~', '').strip()
+            values.append(v if v else None)
+        out.append({'district': canon, 'values': values})
     return out
 
 
@@ -137,15 +192,19 @@ def process_one(pdf_path: Path) -> dict | None:
             sig = detect_table_signal(text)
             if not sig:
                 continue
-            rows = parse_district_rows(text)
-            unique_districts = list(dict.fromkeys(d for d, _ in rows))
-            if len(unique_districts) < 25:  # need at least 25/75 districts to trust
+            rows = parse_district_rows(text, sig)
+            unique_districts = list(dict.fromkeys(r['district'] for r in rows))
+            # ATM/BC tables are usually complete; PMJDY/Jansuraksha may have
+            # a few rows split across pages. Threshold is 25/75 across the
+            # board; if a table type is consistently missing, the page just
+            # gets skipped.
+            if len(unique_districts) < 25:
                 continue
             tables.append({
                 'tableType': sig,
                 'pageIndex': pi,
                 'districts': unique_districts,
-                'rows': [{'district': d, 'value': v} for d, v in rows],
+                'rows': rows,
             })
     if not tables:
         return None
