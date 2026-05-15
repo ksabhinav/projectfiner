@@ -76,7 +76,10 @@ def load_raw(name):
 
 
 # (period_label, period_key) — sortable
+# All "branches_atm_5col" sources share the same shape:
+#   S.No. | District | NUMBER OF BRANCHES | NUMBER OF ATMs | LEAD BANK
 BATCHES = [
+    # Original batch (March 2020 CD ratio, June 2013 branches)
     {
         'period_label': 'March 2020',
         'period_key': '2020-03',
@@ -84,16 +87,68 @@ BATCHES = [
         'map': 'cd_ratio_2020',
     },
     {
-        'period_label': 'November 2023',
-        'period_key': '2023-11',
-        'source': '170th_SLBC_Meeting_Agenda',
-        'map': 'branches_atm_2023',
-    },
-    {
         'period_label': 'June 2013',
         'period_key': '2013-06',
         'source': '129TH_SLBC_AGENDA_FINAL',
-        'map': 'branches_2013',
+        'map': 'branches_7col_2013',
+    },
+    # Sep 2013 (130th) — 8-col PSB/RRB/Pvt/Coop/Total breakdown, take Total (col 6)
+    {
+        'period_label': 'September 2013',
+        'period_key': '2013-09',
+        'source': '130TH_SLBC_AGENDA_FINAL',
+        'map': 'branches_7col_2013',
+    },
+    # Sep 2014 (134th) — 10-col with branches + ATM Totals.
+    {
+        'period_label': 'September 2014',
+        'period_key': '2014-09',
+        'source': '134_SLBC_AGENDA',
+        'map': 'branches_atm_134',
+    },
+    # Sep 2018 (150th) — 9-col branches + ATMs
+    {
+        'period_label': 'September 2018',
+        'period_key': '2018-09',
+        'source': '150SLBC-Agenda_note_Index',
+        'map': 'branches_atm_5col',
+    },
+    # 167th–175th (Apr 2023 → Mar 2025): all 5-col {SL, DIST, BR, ATM, LEAD}
+    {
+        'period_label': 'April 2023',
+        'period_key': '2023-04',
+        'source': '167th_SLBC_Meeting_Agenda_combined',
+        'map': 'branches_atm_5col',
+    },
+    {
+        'period_label': 'November 2023',
+        'period_key': '2023-11',
+        'source': '170th_SLBC_Meeting_Agenda',
+        'map': 'branches_atm_5col',
+    },
+    {
+        'period_label': 'February 2024',
+        'period_key': '2024-02',
+        'source': '171st_SLBC_Meeting_Agenda',
+        'map': 'branches_atm_5col',
+    },
+    {
+        'period_label': 'August 2024',
+        'period_key': '2024-08',
+        'source': '173rd_SLBC_Meeting_Agenda',
+        'map': 'branches_atm_5col',
+    },
+    {
+        'period_label': 'November 2024',
+        'period_key': '2024-11',
+        'source': '174th_SLBC_Meeting_Agenda',
+        'map': 'branches_atm_5col',
+    },
+    {
+        'period_label': 'March 2025',
+        'period_key': '2025-03',
+        'source': '175th_SLBC_Meeting_Agenda',
+        'map': 'branches_atm_5col',
     },
 ]
 
@@ -112,13 +167,12 @@ def map_cd_ratio_2020(raw):
     return out
 
 
-def map_branches_atm_2023(raw):
-    """170th SLBC Meeting Agenda: cols S.No, DIST, BRANCHES, ATMs, LEAD BANK"""
+def map_branches_atm_5col(raw):
+    """5-col agenda: SL, DISTRICT, NUMBER OF BRANCHES, NUMBER OF ATMs, LEAD BANK"""
     out = {}
     for r in find_data_rows(raw['rows'], raw['districtColumn']):
         d = canon_district(r[raw['districtColumn']])
         if not d: continue
-        # cols: 0=SL, 1=DIST, 2=BRANCHES, 3=ATMs, 4=LEAD
         br = parse_num(r[2]) if len(r) > 2 else None
         at = parse_num(r[3]) if len(r) > 3 else None
         if br:
@@ -129,13 +183,13 @@ def map_branches_atm_2023(raw):
     return out
 
 
-def map_branches_2013(raw):
-    """129th SLBC Agenda: cols S.No, DIST, PSBs, RRBs, Pvt, Coop, Total"""
+def map_branches_7col_2013(raw):
+    """129th/130th SLBC: SL, DIST, PSBs, RRBs, Pvt, Coop, Total, Lead.
+       Total is col 6."""
     out = {}
     for r in find_data_rows(raw['rows'], raw['districtColumn']):
         d = canon_district(r[raw['districtColumn']])
         if not d: continue
-        # cols: 0=SL, 1=DIST, 2=PSB, 3=RRB, 4=Pvt, 5=Coop, 6=Total, 7=Lead
         total = parse_num(r[6]) if len(r) > 6 else None
         if total:
             out.setdefault(d, {}).setdefault('branch_network', {})['branches_total'] = total
@@ -143,10 +197,30 @@ def map_branches_2013(raw):
     return out
 
 
+def map_branches_atm_134(raw):
+    """134th SLBC agenda (Sep 2014): 10 cols
+       SL, DIST, [BR-PSB, BR-RRB, BR-Pvt, BR-Coop, BR-Total],
+                [ATM-PSB, ATM-RRB, ATM-Total?]
+       Pulls branch total (col 6) + ATM total (col 9)."""
+    out = {}
+    for r in find_data_rows(raw['rows'], raw['districtColumn']):
+        d = canon_district(r[raw['districtColumn']])
+        if not d: continue
+        br = parse_num(r[6]) if len(r) > 6 else None
+        at = parse_num(r[9]) if len(r) > 9 else None
+        if br:
+            out.setdefault(d, {}).setdefault('branch_network', {})['branches_total'] = br
+            out[d].setdefault('credit_deposit_ratio', {})['no_of_branches'] = br
+        if at:
+            out.setdefault(d, {}).setdefault('atm_network', {})['atm_total'] = at
+    return out
+
+
 MAPPERS = {
     'cd_ratio_2020': map_cd_ratio_2020,
-    'branches_atm_2023': map_branches_atm_2023,
-    'branches_2013': map_branches_2013,
+    'branches_atm_5col': map_branches_atm_5col,
+    'branches_atm_134': map_branches_atm_134,
+    'branches_7col_2013': map_branches_7col_2013,
 }
 
 
