@@ -581,29 +581,41 @@ def main():
 
     # Rebuild manifest.json from whatever quarter files exist on disk so
     # build_district_pages.py picks up new historical periods we just wrote.
-    # Walks every public/indicators/<ind>/*.json (skipping manifest.json + nested
-    # 'static.json' / non-quarter filenames) and emits the union.
+    # Also emits `quarters_by_indicator` so the homepage time slider can
+    # filter to only the quarters that have data for the currently-selected
+    # indicator (avoids the "drag back to 2010 → all grey" UX gap).
     import re as _re
     out_dir = Path(__file__).resolve().parent.parent / 'public/indicators'
     qre = _re.compile(r'^\d{4}-\d{2}\.json$')
     quarter_set: set[str] = set()
     indicator_dirs: list[str] = []
+    quarters_by_indicator: dict[str, list[str]] = {}
     for entry in sorted(out_dir.iterdir()):
         if not entry.is_dir():
             continue
         indicator_dirs.append(entry.name)
+        ind_quarters: list[str] = []
         for f in entry.iterdir():
             if f.is_file() and qre.match(f.name):
                 quarter_set.add(f.stem)
+                ind_quarters.append(f.stem)
+        # Latest-first like the global list
+        quarters_by_indicator[entry.name] = sorted(ind_quarters, reverse=True)
     quarters_sorted = sorted(quarter_set, reverse=True)
     manifest = {
         'indicators': indicator_dirs,
         'quarters': quarters_sorted,
+        'quarters_by_indicator': quarters_by_indicator,
         'latest_quarter': quarters_sorted[0] if quarters_sorted else None,
     }
     (out_dir / 'manifest.json').write_text(json.dumps(manifest, separators=(',', ':')))
     print(f'\nmanifest updated: {len(indicator_dirs)} indicators, '
           f'{len(quarters_sorted)} quarters ({quarters_sorted[-1]} → {quarters_sorted[0]})')
+    # Print the smallest and biggest quarter-coverage indicators as a sanity check
+    coverage = sorted(((len(q), name) for name, q in quarters_by_indicator.items()))
+    if coverage:
+        print(f'  thinnest: {coverage[0][1]} ({coverage[0][0]} quarters)')
+        print(f'  thickest: {coverage[-1][1]} ({coverage[-1][0]} quarters)')
 
 
 if __name__ == '__main__':

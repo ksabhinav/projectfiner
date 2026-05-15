@@ -1605,9 +1605,17 @@ const base = import.meta.env.BASE_URL;
         populateSlider();
         // If the default indicator has its own timePoints (e.g. digital_transactions
         // capped at Mar 2024), use those instead of the global manifest quarters.
+        // Otherwise, filter to the per-indicator quarter list from the manifest
+        // (avoids "drag back to 2010 → all grey" UX for indicators that don't
+        // span the full historical range).
         var initInd = INDICATORS[currentIndicator];
         if (initInd && initInd.timePoints && initInd.timePoints.length) {
           switchSliderToTimePoints(initInd.timePoints);
+        } else if (manifestData
+                && manifestData.quarters_by_indicator
+                && manifestData.quarters_by_indicator[currentIndicator]
+                && manifestData.quarters_by_indicator[currentIndicator].length) {
+          switchSliderToTimePoints(manifestData.quarters_by_indicator[currentIndicator]);
         }
         updateTimelineColor();
 
@@ -1799,9 +1807,23 @@ const base = import.meta.env.BASE_URL;
       if (ind && ind.timePoints) {
         // Indicator has its own time points — swap slider to those
         switchSliderToTimePoints(ind.timePoints);
-      } else if (prevInd && prevInd.timePoints) {
-        // Coming from a per-indicator time points indicator — restore global quarters
-        restoreSliderToManifest();
+      } else {
+        // Filter the global slider to only the quarters that have data
+        // for this indicator (per manifest.quarters_by_indicator). Falls
+        // back to the global manifest quarters if the per-indicator list
+        // is missing or empty.
+        var perInd = manifestData
+          && manifestData.quarters_by_indicator
+          && manifestData.quarters_by_indicator[currentIndicator];
+        if (perInd && perInd.length) {
+          switchSliderToTimePoints(perInd);
+        } else if (prevInd && prevInd.timePoints) {
+          // No per-indicator quarters known; restore the global set so the
+          // user can still scrub (will mostly show "no data" but they can move).
+          restoreSliderToManifest();
+        } else {
+          restoreSliderToManifest();
+        }
       }
 
       if (slbcLoaded) {
