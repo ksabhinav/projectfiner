@@ -1,0 +1,679 @@
+{
+  "originalUrl": "http://www.slbcup.com/Agenda/Agenda%20Booklet%20Dec%202020.pdf",
+  "snapshotTimestamp": "20241119043044",
+  "sourcePdf": "slbc-data/uttar-pradesh/wayback/2024/Agenda_Booklet_Dec_2020.pdf",
+  "inferredPeriod": "2020-12",
+  "tables": [
+    {
+      "tableType": "atms_per_district",
+      "pageIndex": 6,
+      "districts": [
+        "Agra",
+        "Aligarh",
+        "Ambedkar Nagar",
+        "Amethi",
+        "Amroha",
+        "Auraiya",
+        "Ayodhya",
+        "Azamgarh",
+        "Baghpat",
+        "Ballia",
+        "Balrampur",
+        "Banda",
+        "Barabanki",
+        "Bareilly",
+        "Bhadohi",
+        "Budaun",
+        "Chandauli",
+        "Chitrakoot",
+        "Deoria",
+        "Etah",
+        "Etawah",
+        "Farrukhabad",
+        "Fatehpur",
+        "Firozabad",
+        "Ghaziabad",
+        "Ghazipur",
+        "Gonda",
+        "Gorakhpur",
+        "Hamirpur",
+        "Hapur",
+        "Hardoi",
+        "Hathras",
+        "Jalaun",
+        "Jaunpur",
+        "Jhansi",
+        "Kannauj",
+        "Kanpur Dehat",
+        "Kanpur Nagar",
+        "Kaushambi",
+        "Kushinagar",
+        "Kheri",
+        "Lalitpur",
+        "Lucknow",
+        "Maharajganj",
+        "Mahoba",
+        "Mainpuri",
+        "Mathura",
+        "Meerut",
+        "Mirzapur",
+        "Moradabad",
+        "Muzaffarnagar",
+        "Pilibhit",
+        "Pratapgarh",
+        "Prayagraj",
+        "Rae Bareli",
+        "Rampur",
+        "Sant Kabir Nagar",
+        "Shahjahanpur",
+        "Shamli",
+        "Shravasti",
+        "Siddharth Nagar",
+        "Sitapur",
+        "Sonbhadra",
+        "Sultanpur",
+        "Unnao"
+      ],
+      "rows": [
+        {
+          "district": "Agra",
+          "value": "710"
+        },
+        {
+          "district": "Aligarh",
+          "value": "312"
+        },
+        {
+          "district": "Ambedkar Nagar",
+          "value": "137"
+        },
+        {
+          "district": "Amethi",
+          "value": "117"
+        },
+        {
+          "district": "Amroha",
+          "value": "112"
+        },
+        {
+          "district": "Auraiya",
+          "value": "81"
+        },
+        {
+          "district": "Ayodhya",
+          "value": "222"
+        },
+        {
+          "district": "Azamgarh",
+          "value": "274"
+        },
+        {
+          "district": "Baghpat",
+          "value": "119"
+        },
+        {
+          "district": "Ballia",
+          "value": "173"
+        },
+        {
+          "district": "Balrampur",
+          "value": "66"
+        },
+        {
+          "district": "Banda",
+          "value": "73"
+        },
+        {
+          "district": "Barabanki",
+          "value": "151"
+        },
+        {
+          "district": "Bareilly",
+          "value": "505"
+        },
+        {
+          "district": "Bhadohi",
+          "value": "123"
+        },
+        {
+          "district": "Budaun",
+          "value": "140"
+        },
+        {
+          "district": "Chandauli",
+          "value": "136"
+        },
+        {
+          "district": "Chitrakoot",
+          "value": "40"
+        },
+        {
+          "district": "Deoria",
+          "value": "190"
+        },
+        {
+          "district": "Etah",
+          "value": "71"
+        },
+        {
+          "district": "Etawah",
+          "value": "121"
+        },
+        {
+          "district": "Farrukhabad",
+          "value": "94"
+        },
+        {
+          "district": "Fatehpur",
+          "value": "121"
+        },
+        {
+          "district": "Firozabad",
+          "value": "169"
+        },
+        {
+          "district": "Ghaziabad",
+          "value": "1080"
+        },
+        {
+          "district": "Ghazipur",
+          "value": "201"
+        },
+        {
+          "district": "Gonda",
+          "value": "130"
+        },
+        {
+          "district": "Gorakhpur",
+          "value": "535"
+        },
+        {
+          "district": "Hamirpur",
+          "value": "44"
+        },
+        {
+          "district": "Hapur",
+          "value": "112"
+        },
+        {
+          "district": "Hardoi",
+          "value": "151"
+        },
+        {
+          "district": "Hathras",
+          "value": "89"
+        },
+        {
+          "district": "Jalaun",
+          "value": "68"
+        },
+        {
+          "district": "Jaunpur",
+          "value": "358"
+        },
+        {
+          "district": "Jhansi",
+          "value": "233"
+        },
+        {
+          "district": "Kannauj",
+          "value": "74"
+        },
+        {
+          "district": "Kanpur Dehat",
+          "value": "81"
+        },
+        {
+          "district": "Kanpur Nagar",
+          "value": "1013"
+        },
+        {
+          "district": "Kaushambi",
+          "value": "87"
+        },
+        {
+          "district": "Kushinagar",
+          "value": "167"
+        },
+        {
+          "district": "Kheri",
+          "value": "171"
+        },
+        {
+          "district": "Lalitpur",
+          "value": "56"
+        },
+        {
+          "district": "Lucknow",
+          "value": "1933"
+        },
+        {
+          "district": "Maharajganj",
+          "value": "109"
+        },
+        {
+          "district": "Mahoba",
+          "value": "34"
+        },
+        {
+          "district": "Mainpuri",
+          "value": "80"
+        },
+        {
+          "district": "Mathura",
+          "value": "341"
+        },
+        {
+          "district": "Meerut",
+          "value": "675"
+        },
+        {
+          "district": "Mirzapur",
+          "value": "160"
+        },
+        {
+          "district": "Moradabad",
+          "value": "326"
+        },
+        {
+          "district": "Muzaffarnagar",
+          "value": "216"
+        },
+        {
+          "district": "Pilibhit",
+          "value": "135"
+        },
+        {
+          "district": "Pratapgarh",
+          "value": "160"
+        },
+        {
+          "district": "Prayagraj",
+          "value": "736"
+        },
+        {
+          "district": "Rae Bareli",
+          "value": "216"
+        },
+        {
+          "district": "Rampur",
+          "value": "175"
+        },
+        {
+          "district": "Sant Kabir Nagar",
+          "value": "69"
+        },
+        {
+          "district": "Shahjahanpur",
+          "value": "208"
+        },
+        {
+          "district": "Shamli",
+          "value": "50"
+        },
+        {
+          "district": "Shravasti",
+          "value": "37"
+        },
+        {
+          "district": "Siddharth Nagar",
+          "value": "87"
+        },
+        {
+          "district": "Sitapur",
+          "value": "183"
+        },
+        {
+          "district": "Sonbhadra",
+          "value": "160"
+        },
+        {
+          "district": "Sultanpur",
+          "value": "152"
+        },
+        {
+          "district": "Unnao",
+          "value": "165"
+        }
+      ]
+    },
+    {
+      "tableType": "bcs_per_district",
+      "pageIndex": 33,
+      "districts": [
+        "Agra",
+        "Aligarh",
+        "Ambedkar Nagar",
+        "Amethi",
+        "Amroha",
+        "Auraiya",
+        "Ayodhya",
+        "Azamgarh",
+        "Baghpat",
+        "Ballia",
+        "Balrampur",
+        "Banda",
+        "Barabanki",
+        "Bareilly",
+        "Basti",
+        "Bhadohi",
+        "Budaun",
+        "Chandauli",
+        "Chitrakoot",
+        "Deoria",
+        "Etah",
+        "Etawah",
+        "Farrukhabad",
+        "Fatehpur",
+        "Firozabad",
+        "Ghazipur",
+        "Gonda",
+        "Gorakhpur",
+        "Hamirpur",
+        "Hapur",
+        "Hardoi",
+        "Hathras",
+        "Jalaun",
+        "Jaunpur",
+        "Jhansi",
+        "Kannauj",
+        "Kanpur Dehat",
+        "Kanpur Nagar",
+        "Kushinagar",
+        "Kheri",
+        "Lalitpur",
+        "Lucknow",
+        "Maharajganj",
+        "Mahoba",
+        "Mainpuri",
+        "Mathura",
+        "Meerut",
+        "Mirzapur",
+        "Moradabad",
+        "Muzaffarnagar",
+        "Pilibhit",
+        "Pratapgarh",
+        "Prayagraj",
+        "Rae Bareli",
+        "Rampur",
+        "Saharanpur",
+        "Sambhal",
+        "Sant Kabir Nagar",
+        "Shahjahanpur",
+        "Shravasti",
+        "Siddharth Nagar",
+        "Sitapur",
+        "Sonbhadra",
+        "Sultanpur",
+        "Unnao",
+        "Varanasi"
+      ],
+      "rows": [
+        {
+          "district": "Agra",
+          "value": "1114"
+        },
+        {
+          "district": "Aligarh",
+          "value": "1159"
+        },
+        {
+          "district": "Ambedkar Nagar",
+          "value": "1014"
+        },
+        {
+          "district": "Amethi",
+          "value": "738"
+        },
+        {
+          "district": "Amroha",
+          "value": "411"
+        },
+        {
+          "district": "Auraiya",
+          "value": "488"
+        },
+        {
+          "district": "Ayodhya",
+          "value": "947"
+        },
+        {
+          "district": "Azamgarh",
+          "value": "2506"
+        },
+        {
+          "district": "Baghpat",
+          "value": "385"
+        },
+        {
+          "district": "Ballia",
+          "value": "1058"
+        },
+        {
+          "district": "Balrampur",
+          "value": "825"
+        },
+        {
+          "district": "Banda",
+          "value": "678"
+        },
+        {
+          "district": "Barabanki",
+          "value": "902"
+        },
+        {
+          "district": "Bareilly",
+          "value": "986"
+        },
+        {
+          "district": "Basti",
+          "value": "1025"
+        },
+        {
+          "district": "Bhadohi",
+          "value": "745"
+        },
+        {
+          "district": "Budaun",
+          "value": "1009"
+        },
+        {
+          "district": "Chandauli",
+          "value": "807"
+        },
+        {
+          "district": "Chitrakoot",
+          "value": "341"
+        },
+        {
+          "district": "Deoria",
+          "value": "1279"
+        },
+        {
+          "district": "Etah",
+          "value": "794"
+        },
+        {
+          "district": "Etawah",
+          "value": "442"
+        },
+        {
+          "district": "Farrukhabad",
+          "value": "449"
+        },
+        {
+          "district": "Fatehpur",
+          "value": "694"
+        },
+        {
+          "district": "Firozabad",
+          "value": "695"
+        },
+        {
+          "district": "Ghazipur",
+          "value": "1692"
+        },
+        {
+          "district": "Gonda",
+          "value": "1094"
+        },
+        {
+          "district": "Gorakhpur",
+          "value": "1505"
+        },
+        {
+          "district": "Hamirpur",
+          "value": "315"
+        },
+        {
+          "district": "Hapur",
+          "value": "270"
+        },
+        {
+          "district": "Hardoi",
+          "value": "974"
+        },
+        {
+          "district": "Hathras",
+          "value": "479"
+        },
+        {
+          "district": "Jalaun",
+          "value": "520"
+        },
+        {
+          "district": "Jaunpur",
+          "value": "2431"
+        },
+        {
+          "district": "Jhansi",
+          "value": "481"
+        },
+        {
+          "district": "Kannauj",
+          "value": "531"
+        },
+        {
+          "district": "Kanpur Dehat",
+          "value": "512"
+        },
+        {
+          "district": "Kanpur Nagar",
+          "value": "939"
+        },
+        {
+          "district": "Kushinagar",
+          "value": "1327"
+        },
+        {
+          "district": "Kheri",
+          "value": "1043"
+        },
+        {
+          "district": "Lalitpur",
+          "value": "360"
+        },
+        {
+          "district": "Lucknow",
+          "value": "2386"
+        },
+        {
+          "district": "Maharajganj",
+          "value": "1048"
+        },
+        {
+          "district": "Mahoba",
+          "value": "267"
+        },
+        {
+          "district": "Mainpuri",
+          "value": "607"
+        },
+        {
+          "district": "Mathura",
+          "value": "669"
+        },
+        {
+          "district": "Meerut",
+          "value": "845"
+        },
+        {
+          "district": "Mirzapur",
+          "value": "1019"
+        },
+        {
+          "district": "Moradabad",
+          "value": "625"
+        },
+        {
+          "district": "Muzaffarnagar",
+          "value": "681"
+        },
+        {
+          "district": "Pilibhit",
+          "value": "497"
+        },
+        {
+          "district": "Pratapgarh",
+          "value": "1043"
+        },
+        {
+          "district": "Prayagraj",
+          "value": "1830"
+        },
+        {
+          "district": "Rae Bareli",
+          "value": "641"
+        },
+        {
+          "district": "Rampur",
+          "value": "406"
+        },
+        {
+          "district": "Saharanpur",
+          "value": "902"
+        },
+        {
+          "district": "Sambhal",
+          "value": "615"
+        },
+        {
+          "district": "Sant Kabir Nagar",
+          "value": "645"
+        },
+        {
+          "district": "Shahjahanpur",
+          "value": "931"
+        },
+        {
+          "district": "Shravasti",
+          "value": "346"
+        },
+        {
+          "district": "Siddharth Nagar",
+          "value": "900"
+        },
+        {
+          "district": "Sitapur",
+          "value": "968"
+        },
+        {
+          "district": "Sonbhadra",
+          "value": "722"
+        },
+        {
+          "district": "Sultanpur",
+          "value": "489"
+        },
+        {
+          "district": "Unnao",
+          "value": "864"
+        },
+        {
+          "district": "Varanasi",
+          "value": "1188"
+        }
+      ]
+    }
+  ]
+}
