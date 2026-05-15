@@ -4,10 +4,10 @@
   "extensions": [
     "pdf"
   ],
-  "generatedAt": "2026-05-14T19:10:25Z",
+  "generatedAt": "2026-05-15T05:56:17Z",
   "counts": {
-    "planned": 198,
-    "downloaded": 0,
+    "planned": 0,
+    "downloaded": 198,
     "cached": 0,
     "errored": 0
   },
@@ -18,7 +18,9 @@
       "snapshotTimestamp": "20160125132453",
       "snapshotUrl": "https://web.archive.org/web/20160125132453id_/http://slbcbihar.com/documents/FLCC_councellor_appointment_form_II.pdf",
       "localPath": "slbc-data/bihar/wayback/2016/FLCC_councellor_appointment_form_II.pdf",
-      "status": "planned"
+      "sizeBytes": 1118240,
+      "sha256": "4496dcbd3a56d20283a7e769191fa45c6ca09666344a0abab248ae165a20dee3",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/animated_booklet_in_hindi-pmjdy.pdf",
@@ -26,7 +28,9 @@
       "snapshotTimestamp": "20160503192341",
       "snapshotUrl": "https://web.archive.org/web/20160503192341id_/http://slbcbihar.com/documents/Animated_Booklet_in_Hindi-PMJDY.pdf",
       "localPath": "slbc-data/bihar/wayback/2016/Animated_Booklet_in_Hindi-PMJDY.pdf",
-      "status": "planned"
+      "sizeBytes": 4325376,
+      "sha256": "9d3895a8614c56fd84c5fd4b76270aca8d4d45fbc9dbc02dfefb50b876cd2cd2",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/rupay-insurance-program.pdf",
@@ -34,7 +38,9 @@
       "snapshotTimestamp": "20160503193809",
       "snapshotUrl": "https://web.archive.org/web/20160503193809id_/http://slbcbihar.com/documents/RuPay-Insurance-Program.pdf",
       "localPath": "slbc-data/bihar/wayback/2016/RuPay-Insurance-Program.pdf",
-      "status": "planned"
+      "sizeBytes": 2280559,
+      "sha256": "9083c6b6f3c32cc3370b586ca68eeb4505d2fa6dda1b21549f462f7c4e14a937",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/pmjdy_brochure_hindi.pdf",
@@ -42,7 +48,9 @@
       "snapshotTimestamp": "20160503193843",
       "snapshotUrl": "https://web.archive.org/web/20160503193843id_/http://slbcbihar.com/documents/PMJDY_Brochure_Hindi.pdf",
       "localPath": "slbc-data/bihar/wayback/2016/PMJDY_Brochure_Hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 5863529,
+      "sha256": "850e47cf6ddcc2cdb0648f264881dc0bd5914042087c0cf8a5e88354cfc0a5b8",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/hindi_faq.pdf",
@@ -50,7 +58,9 @@
       "snapshotTimestamp": "20160503194103",
       "snapshotUrl": "https://web.archive.org/web/20160503194103id_/http://slbcbihar.com/documents/Hindi_FAQ.pdf",
       "localPath": "slbc-data/bihar/wayback/2016/Hindi_FAQ.pdf",
-      "status": "planned"
+      "sizeBytes": 134632,
+      "sha256": "47572d8640e31781f987480241137181694b8ac559b0dc28f9ffa09f88d61ad0",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/pmjdy_brochure_english.pdf",
@@ -58,7 +68,9 @@
       "snapshotTimestamp": "20160504013636",
       "snapshotUrl": "https://web.archive.org/web/20160504013636id_/http://slbcbihar.com/documents/PMJDY_BROCHURE_ENGLISH.pdf",
       "localPath": "slbc-data/bihar/wayback/2016/PMJDY_BROCHURE_ENGLISH.pdf",
-      "status": "planned"
+      "sizeBytes": 4921553,
+      "sha256": "4a74530833e97fb28262ebfdc46752cffa69030eb1dcb2bec500ffc44768a9fc",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/pmjdy_status-account_opening_bankanddistrictwise-26.01.2015.pdf",
@@ -66,7 +78,9 @@
       "snapshotTimestamp": "20160504013711",
       "snapshotUrl": "https://web.archive.org/web/20160504013711id_/http://slbcbihar.com/documents/PMJDY_STATUS-ACCOUNT_OPENING_BANKandDISTRICTWISE-26.01.2015.pdf",
       "localPath": "slbc-data/bihar/wayback/2016/PMJDY_STATUS-ACCOUNT_OPENING_BANKandDISTRICTWISE-26.01.2015.pdf",
-      "status": "planned"
+      "sizeBytes": 77056,
+      "sha256": "839f7641a7b764c3b02dd533e99c58f4cfabd63b01e5dc483e07695772d6343f",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/english_faq.pdf",
@@ -74,7 +88,9 @@
       "snapshotTimestamp": "20160504073912",
       "snapshotUrl": "https://web.archive.org/web/20160504073912id_/http://slbcbihar.com/documents/ENGLISH_FAQ.pdf",
       "localPath": "slbc-data/bihar/wayback/2016/ENGLISH_FAQ.pdf",
-      "status": "planned"
+      "sizeBytes": 53019,
+      "sha256": "5093be5a439f23dc91e681bcc81022cc08423d2f620d98a778ac602953716f85",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/dlcc-dlrc%20calender%202016-17.pdf",
@@ -82,7 +98,9 @@
       "snapshotTimestamp": "20160504074715",
       "snapshotUrl": "https://web.archive.org/web/20160504074715id_/http://slbcbihar.com/DLCC-DLRC%20CALENDER%202016-17.pdf",
       "localPath": "slbc-data/bihar/wayback/2016/DLCC-DLRC_CALENDER_2016-17.pdf",
-      "status": "planned"
+      "sizeBytes": 64544,
+      "sha256": "4ce3b2d2fed07c58f73c14ddcacd44e5eefb68c2a866734e91e720974c20fad1",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/30000_lic.pdf",
@@ -90,7 +108,9 @@
       "snapshotTimestamp": "20160504075037",
       "snapshotUrl": "https://web.archive.org/web/20160504075037id_/http://slbcbihar.com/documents/30000_lic.pdf",
       "localPath": "slbc-data/bihar/wayback/2016/30000_lic.pdf",
-      "status": "planned"
+      "sizeBytes": 2714662,
+      "sha256": "b95347246e317b96513566d5e949f0b6da48b64669490a4d311c371467338563",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/pmjjby/final_claim_form_pmjjby.pdf",
@@ -98,7 +118,9 @@
       "snapshotTimestamp": "20160504140622",
       "snapshotUrl": "https://web.archive.org/web/20160504140622id_/http://slbcbihar.com/PMJJBY/final_claim_form_PMJJBY.pdf",
       "localPath": "slbc-data/bihar/wayback/2016/final_claim_form_PMJJBY.pdf",
-      "status": "planned"
+      "sizeBytes": 359283,
+      "sha256": "8aef56187f19e655a10d9ce72d00cca3827fccdc418bee317b255401198c7f81",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/pmmy.pdf",
@@ -106,7 +128,9 @@
       "snapshotTimestamp": "20180729022215",
       "snapshotUrl": "https://web.archive.org/web/20180729022215id_/http://www.slbcbihar.com:80/documents/PMMY.pdf",
       "localPath": "slbc-data/bihar/wayback/2018/PMMY.pdf",
-      "status": "planned"
+      "sizeBytes": 1479157,
+      "sha256": "b53cf1a7dddd826835d82f43de5d4d04d7fe4e3f309330c8d6a6dff0bfd949dd",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/final%20urc%20allottment%20after%20pca%202.pdf",
@@ -114,7 +138,9 @@
       "snapshotTimestamp": "20180817024549",
       "snapshotUrl": "https://web.archive.org/web/20180817024549id_/http://slbcbihar.com/documents/FINAL%20URC%20ALLOTTMENT%20AFTER%20PCA%202.pdf",
       "localPath": "slbc-data/bihar/wayback/2018/FINAL_URC_ALLOTTMENT_AFTER_PCA_2.pdf",
-      "status": "planned"
+      "sizeBytes": 1035487,
+      "sha256": "291e86e1ff05a094cee8db5e75f2365256c3fee8bebc3cbd7301b6b78a3d4e88",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/urc%20list%202%20allocation.pdf",
@@ -122,7 +148,9 @@
       "snapshotTimestamp": "20180817041045",
       "snapshotUrl": "https://web.archive.org/web/20180817041045id_/http://slbcbihar.com/documents/URC%20LIST%202%20ALLOCATION.pdf",
       "localPath": "slbc-data/bihar/wayback/2018/URC_LIST_2_ALLOCATION.pdf",
-      "status": "planned"
+      "sizeBytes": 670954,
+      "sha256": "7adc98e8fe231cfb117417b4d79266bf14f6d456cbaca387f22801cedf276cc3",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/slbc-36-minutes-of-meeting.pdf",
@@ -130,7 +158,9 @@
       "snapshotTimestamp": "20181110132052",
       "snapshotUrl": "https://web.archive.org/web/20181110132052id_/http://www.slbcbihar.com/documents/SLBC-36-Minutes-of-Meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2018/SLBC-36-Minutes-of-Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 305795,
+      "sha256": "e7edb8900e1d6a01ba74c60778205a39f8cf8ae618273794a7162e2e2be229ee",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/slbc-39-minutes-of-meeting.pdf",
@@ -138,7 +168,9 @@
       "snapshotTimestamp": "20181110132120",
       "snapshotUrl": "https://web.archive.org/web/20181110132120id_/http://www.slbcbihar.com/documents/SLBC-39-Minutes-of-Meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2018/SLBC-39-Minutes-of-Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 332662,
+      "sha256": "1929d59291dcaa48278f1cf15324288e5a1aefb97987a1a3f5c5d887cbd4d904",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/pmsby/final_rules_pmsby.pdf",
@@ -146,7 +178,9 @@
       "snapshotTimestamp": "20200922032424",
       "snapshotUrl": "https://web.archive.org/web/20200922032424id_/http://slbcbihar.com/PMSBY/final_rules_PMSBY.pdf",
       "localPath": "slbc-data/bihar/wayback/2020/final_rules_PMSBY.pdf",
-      "status": "planned"
+      "sizeBytes": 330987,
+      "sha256": "b84a3bcc6eef49078ed05c7c490f6b3b52f3f5fb613b4016968ee8206a565d41",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/pmsby/final_claim_form_pmsby.pdf",
@@ -154,7 +188,9 @@
       "snapshotTimestamp": "20200922040603",
       "snapshotUrl": "https://web.archive.org/web/20200922040603id_/http://slbcbihar.com/PMSBY/final_claim_form_PMSBY.pdf",
       "localPath": "slbc-data/bihar/wayback/2020/final_claim_form_PMSBY.pdf",
-      "status": "planned"
+      "sizeBytes": 351558,
+      "sha256": "4bf28404a1f821ec810f91d126ad90b458f069ebd30c0bf0363c742510de45dc",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/pmsby/faqs_on_pmsby.pdf",
@@ -162,7 +198,9 @@
       "snapshotTimestamp": "20200922043047",
       "snapshotUrl": "https://web.archive.org/web/20200922043047id_/http://slbcbihar.com/PMSBY/FAQs_on_PMSBY.pdf",
       "localPath": "slbc-data/bihar/wayback/2020/FAQs_on_PMSBY.pdf",
-      "status": "planned"
+      "sizeBytes": 341500,
+      "sha256": "22beeb3f382dd1b4f5dfe50f1f3f00d6ae29fed4fe48a6afacbbefa4ef54d510",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/pmjjby/final_pmjjby_consent_form.pdf",
@@ -170,7 +208,9 @@
       "snapshotTimestamp": "20200922050150",
       "snapshotUrl": "https://web.archive.org/web/20200922050150id_/http://slbcbihar.com/PMJJBY/Final_PMJJBY_consent_form.pdf",
       "localPath": "slbc-data/bihar/wayback/2020/Final_PMJJBY_consent_form.pdf",
-      "status": "planned"
+      "sizeBytes": 678716,
+      "sha256": "c064c5c836f508ca4cec46edcb1ff4ae782ee753efd2e1e4af8447b2195f283d",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/pmjjby/final_rules_pmjjby.pdf",
@@ -178,7 +218,9 @@
       "snapshotTimestamp": "20200922050835",
       "snapshotUrl": "https://web.archive.org/web/20200922050835id_/http://slbcbihar.com/PMJJBY/final_rules_PMJJBY.pdf",
       "localPath": "slbc-data/bihar/wayback/2020/final_rules_PMJJBY.pdf",
-      "status": "planned"
+      "sizeBytes": 229493,
+      "sha256": "d8fe0046301d5d2fa21ecd6285db9923fa7bd2fdffbfba35f4853240e2f0735a",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/pmsby/final_pmsby_consent_form.pdf",
@@ -186,7 +228,9 @@
       "snapshotTimestamp": "20200922052913",
       "snapshotUrl": "https://web.archive.org/web/20200922052913id_/http://slbcbihar.com/PMSBY/Final_PMSBY_consent_form.pdf",
       "localPath": "slbc-data/bihar/wayback/2020/Final_PMSBY_consent_form.pdf",
-      "status": "planned"
+      "sizeBytes": 262023,
+      "sha256": "d21a50f26b6c39cc9f972328df7c69dd4036f1774b557ceb8404a68ffaeda209",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/pmjjby/faqs_pmjjby.pdf",
@@ -194,7 +238,9 @@
       "snapshotTimestamp": "20200922053842",
       "snapshotUrl": "https://web.archive.org/web/20200922053842id_/http://slbcbihar.com/PMJJBY/FAQs_PMJJBY.pdf",
       "localPath": "slbc-data/bihar/wayback/2020/FAQs_PMJJBY.pdf",
-      "status": "planned"
+      "sizeBytes": 243064,
+      "sha256": "50b766cc2a21ab962fd558ee421538af6a8c5f22ef2171f4438bc751a67fb125",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/scale%20of%20finance%20(letter%20no.205%20dt.%2018.12.2020).pdf",
@@ -202,7 +248,10 @@
       "snapshotTimestamp": "20210122170016",
       "snapshotUrl": "https://web.archive.org/web/20210122170016id_/http://slbcbihar.com/documents/Scale%20of%20Finance%20(Letter%20no.205%20dt.%2018.12.2020).pdf",
       "localPath": "slbc-data/bihar/wayback/2021/Scale_of_Finance_Letter_no.205_dt._18.12.2020_.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "53485e0290b1c472b7ff5da773dc4bbc1b33f8ab096a0ab93dd647d1cefa3117",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/nabard%20book_unit%20cost%20_%20133%20(1).pdf",
@@ -210,7 +259,10 @@
       "snapshotTimestamp": "20210514114247",
       "snapshotUrl": "https://web.archive.org/web/20210514114247id_/http://slbcbihar.com/documents/nabard%20book_UNIT%20Cost%20_%20133%20(1).pdf",
       "localPath": "slbc-data/bihar/wayback/2021/nabard_book_UNIT_Cost___133_1_.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "ce6a03ed0ed4e082883c724ca6745b321b5858acf455f5115a4141e1b638805a",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/draft_financial_inclusion_plan.pdf",
@@ -218,7 +270,9 @@
       "snapshotTimestamp": "20210611052746",
       "snapshotUrl": "https://web.archive.org/web/20210611052746id_/http://www.slbcbihar.com/DOCUMENTS/DRAFT_FINANCIAL_INCLUSION_PLAN.PDF",
       "localPath": "slbc-data/bihar/wayback/2021/DRAFT_FINANCIAL_INCLUSION_PLAN.PDF",
-      "status": "planned"
+      "sizeBytes": 1071629,
+      "sha256": "09232fae12442f01569dff2fb913e007f3347261845dbd4186158ed70666d361",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/a%20agri%20proceding%2002%2011%202017.pdf",
@@ -226,7 +280,9 @@
       "snapshotTimestamp": "20220701065156",
       "snapshotUrl": "https://web.archive.org/web/20220701065156id_/https://slbcbihar.com/documents/A%20Agri%20Proceding%2002%2011%202017.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/A_Agri_Proceding_02_11_2017.pdf",
-      "status": "planned"
+      "sizeBytes": 983900,
+      "sha256": "433e9f005f8ba28f6c9cf5119bcc747c4b614bfab5b21cd79486a44923edfe59",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/cdbw31032016.pdf",
@@ -234,7 +290,9 @@
       "snapshotTimestamp": "20220701070349",
       "snapshotUrl": "https://web.archive.org/web/20220701070349id_/https://slbcbihar.com/documents/CDBW31032016.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/CDBW31032016.pdf",
-      "status": "planned"
+      "sizeBytes": 116215,
+      "sha256": "5cfbdcd3fbaa86285a967c699a0b2f2bd7e03ff04b4298ee50800272d0586f56",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/mudraloan-salientfeatures-english.pdf",
@@ -242,7 +300,9 @@
       "snapshotTimestamp": "20220701071235",
       "snapshotUrl": "https://web.archive.org/web/20220701071235id_/https://slbcbihar.com/documents/MudraLoan-SalientFeatures-English.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/MudraLoan-SalientFeatures-English.pdf",
-      "status": "planned"
+      "sizeBytes": 245963,
+      "sha256": "1f3b575f4bbf707eddd587251f604adea3ecd780294f312d06163e8ee110283d",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/28th%20sub-committee%20meeting%20on%20shg%20rseti.pdf",
@@ -250,7 +310,9 @@
       "snapshotTimestamp": "20220701071755",
       "snapshotUrl": "https://web.archive.org/web/20220701071755id_/https://slbcbihar.com/documents/28th%20sub-committee%20meeting%20on%20SHG%20RSETI.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/28th_sub-committee_meeting_on_SHG_RSETI.pdf",
-      "status": "planned"
+      "sizeBytes": 189907,
+      "sha256": "aed2912a36ea0c700be3a808b79f328caaf2d5e267f8df5b2e33c3527e708e4d",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes%2031st%20%20sub-committee%20meeting%20on%20shg%20rseti.pdf",
@@ -258,7 +320,9 @@
       "snapshotTimestamp": "20220701071837",
       "snapshotUrl": "https://web.archive.org/web/20220701071837id_/https://slbcbihar.com/documents/MINUTES%2031st%20%20sub-committee%20meeting%20on%20SHG%20RSETI.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/MINUTES_31st_sub-committee_meeting_on_SHG_RSETI.pdf",
-      "status": "planned"
+      "sizeBytes": 494813,
+      "sha256": "8a32b51d621293feb583db896c6651a7271ffa262fb05b97829abaa6cc0807f9",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/branchnetworkatm_posdw.pdf",
@@ -266,7 +330,9 @@
       "snapshotTimestamp": "20220701072033",
       "snapshotUrl": "https://web.archive.org/web/20220701072033id_/https://slbcbihar.com/documents/BranchNetworkATM_POSDW.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/BranchNetworkATM_POSDW.pdf",
-      "status": "planned"
+      "sizeBytes": 135103,
+      "sha256": "a1adaef27d514ba95d5b51f75fd486d4ef6e13f9f40f735ef88d373ad53d8b75",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/agri%2005.03.2021.pdf",
@@ -274,7 +340,9 @@
       "snapshotTimestamp": "20220701072116",
       "snapshotUrl": "https://web.archive.org/web/20220701072116id_/https://slbcbihar.com/documents/Agri%2005.03.2021.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/Agri_05.03.2021.pdf",
-      "status": "planned"
+      "sizeBytes": 404531,
+      "sha256": "76b9f4085c92221a407c6a4255d2b5c66b43aca32911c8911d1ee829c091aadf",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes%20of%20kcc%20proceding%2021.11.2017.pdf",
@@ -282,7 +350,9 @@
       "snapshotTimestamp": "20220701072443",
       "snapshotUrl": "https://web.archive.org/web/20220701072443id_/https://slbcbihar.com/documents/MINUTES%20Of%20KCC%20Proceding%2021.11.2017.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/MINUTES_Of_KCC_Proceding_21.11.2017.pdf",
-      "status": "planned"
+      "sizeBytes": 269400,
+      "sha256": "e1d16ea3b355e315a4d02fa7d52799c4f0fcfa4af2bfb20ffe4857b020fb4d9a",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes_of_meeting_on_agriculture_dt._29.01.2015.pdf",
@@ -290,7 +360,10 @@
       "snapshotTimestamp": "20220701072601",
       "snapshotUrl": "https://web.archive.org/web/20220701072601id_/https://slbcbihar.com/documents/Minutes_of_meeting_on_Agriculture_dt._29.01.2015.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/Minutes_of_meeting_on_Agriculture_dt._29.01.2015.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "208caedf36ffe0c100d6ab97f490e0c023ac42c66fa038241abfa2f5dbff07e3",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/industry%2018.02.2022.pdf",
@@ -298,7 +371,10 @@
       "snapshotTimestamp": "20220701072834",
       "snapshotUrl": "https://web.archive.org/web/20220701072834id_/https://slbcbihar.com/documents/Industry%2018.02.2022.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/Industry_18.02.2022.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "d85b3815d5a36843a3261ef232d35195b1354eba1d33f42806209a2962441c56",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/final-scheme%20(2).pdf",
@@ -306,7 +382,9 @@
       "snapshotTimestamp": "20220701073145",
       "snapshotUrl": "https://web.archive.org/web/20220701073145id_/https://slbcbihar.com/documents/Final-Scheme%20(2).pdf",
       "localPath": "slbc-data/bihar/wayback/2022/Final-Scheme_2_.pdf",
-      "status": "planned"
+      "sizeBytes": 520944,
+      "sha256": "79332830b92d1c10b2c892760b41556961b4a167d0d32e331c0af819a212d5f0",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/sltc.pdf",
@@ -314,7 +392,10 @@
       "snapshotTimestamp": "20220701073653",
       "snapshotUrl": "https://web.archive.org/web/20220701073653id_/https://slbcbihar.com/documents/sltc.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/sltc.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "20d39aa7c8458742f8f38aa7931060e3b6932fe85a0467d12d323a6defb8e3d2",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/agri%20proceding%20(19%2012%202017).pdf",
@@ -322,7 +403,9 @@
       "snapshotTimestamp": "20220701074525",
       "snapshotUrl": "https://web.archive.org/web/20220701074525id_/https://slbcbihar.com/documents/Agri%20Proceding%20(19%2012%202017).pdf",
       "localPath": "slbc-data/bihar/wayback/2022/Agri_Proceding_19_12_2017_.pdf",
-      "status": "planned"
+      "sizeBytes": 748862,
+      "sha256": "368ac9bdae8a3f059e50f537e6e43507cd7ce45008d20550e27c7b02140468d8",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/apy/%e0%a4%b8%e0%a4%bf%e0%a4%9f%e0%a5%80%e0%a4%9c%e0%a4%a8%20%e0%a4%9a%e0%a4%be%e0%a4%b0%e0%a5%8d%e0%a4%9f%e0%a4%b0.pdf",
@@ -330,7 +413,9 @@
       "snapshotTimestamp": "20220701074717",
       "snapshotUrl": "https://web.archive.org/web/20220701074717id_/https://slbcbihar.com/APY/%E0%A4%B8%E0%A4%BF%E0%A4%9F%E0%A5%80%E0%A4%9C%E0%A4%A8%20%E0%A4%9A%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%9F%E0%A4%B0.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/सिटीजन_चार्टर.pdf",
-      "status": "planned"
+      "sizeBytes": 243940,
+      "sha256": "d1f5099e0c75883bd4644f78d5db5d81ebcb99ac83aca28d6d50a9c062f3d376",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes%20of%2027th%20sub%20committee%20meeting%20on%20rseti%20%20shg.pdf",
@@ -338,7 +423,9 @@
       "snapshotTimestamp": "20220701074756",
       "snapshotUrl": "https://web.archive.org/web/20220701074756id_/https://slbcbihar.com/documents/MINUTES%20OF%2027th%20SUB%20COMMITTEE%20MEETING%20ON%20RSETI%20%20SHG.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/MINUTES_OF_27th_SUB_COMMITTEE_MEETING_ON_RSETI_SHG.pdf",
-      "status": "planned"
+      "sizeBytes": 313740,
+      "sha256": "651ca1cb7cdbd5cc8017dbbda3c66511237f90631e296176e48ce7df633adbcc",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/industry%20proceeding-indu-4786-dtd-14-11-17.pdf",
@@ -346,7 +433,10 @@
       "snapshotTimestamp": "20220701074919",
       "snapshotUrl": "https://web.archive.org/web/20220701074919id_/https://slbcbihar.com/documents/INDUSTRY%20Proceeding-indu-4786-dtd-14-11-17.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/INDUSTRY_Proceeding-indu-4786-dtd-14-11-17.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "fc0c9d6685f5eed1fc3a8d869298afbf19b5d7e2df476148c8ee6351c8e1d7bc",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/apy/%e0%a4%af%e0%a5%8b%e0%a4%9c%e0%a4%a8%e0%a4%be%20%e0%a4%95%e0%a4%be%20%e0%a4%b5%e0%a4%bf%e0%a4%b5%e0%a4%b0%e0%a4%a3.pdf",
@@ -354,7 +444,9 @@
       "snapshotTimestamp": "20220701075046",
       "snapshotUrl": "https://web.archive.org/web/20220701075046id_/https://slbcbihar.com/APY/%E0%A4%AF%E0%A5%8B%E0%A4%9C%E0%A4%A8%E0%A4%BE%20%E0%A4%95%E0%A4%BE%20%E0%A4%B5%E0%A4%BF%E0%A4%B5%E0%A4%B0%E0%A4%A3.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/योजना_का_विवरण.pdf",
-      "status": "planned"
+      "sizeBytes": 1043136,
+      "sha256": "001fbc1d8ed961934b364842a3a84d484d7eabdbc3d3d26c120bb59adaf8aec5",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/bcbcadw31032016.pdf",
@@ -362,7 +454,9 @@
       "snapshotTimestamp": "20220701075125",
       "snapshotUrl": "https://web.archive.org/web/20220701075125id_/https://slbcbihar.com/documents/BCBCADW31032016.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/BCBCADW31032016.pdf",
-      "status": "planned"
+      "sizeBytes": 123925,
+      "sha256": "dff1e5bb6a9076febd408ec33707c58a51393523a5a7ad3c10069c9c3aad9362",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes_of_25th__sub_committee_meeting_on_br.op___it_enabled_fi_on_24.07.2015.pdf",
@@ -370,7 +464,9 @@
       "snapshotTimestamp": "20220701075241",
       "snapshotUrl": "https://web.archive.org/web/20220701075241id_/https://slbcbihar.com/documents/Minutes_of_25th__sub_committee_meeting_on_br.op___it_enabled_FI_ON_24.07.2015.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/Minutes_of_25th__sub_committee_meeting_on_br.op___it_enabled_FI_ON_24.07.2015.pdf",
-      "status": "planned"
+      "sizeBytes": 154755,
+      "sha256": "0b0a45399c26c03c25df312508623d7c554120ac3f513840b432cd40473d0e8b",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes_of_22nd_steering-comm_shg_and_rseti_dt._25.06.2014.pdf",
@@ -378,7 +474,9 @@
       "snapshotTimestamp": "20220701075654",
       "snapshotUrl": "https://web.archive.org/web/20220701075654id_/https://slbcbihar.com/documents/Minutes_of_22nd_Steering-Comm_shg_and_rseti_dt._25.06.2014.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/Minutes_of_22nd_Steering-Comm_shg_and_rseti_dt._25.06.2014.pdf",
-      "status": "planned"
+      "sizeBytes": 179262,
+      "sha256": "b11a5860322051b536e68dfbfb4f0d1106b404614ab0435dabe3c761b36a75d5",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes%20of%2031st%20%20sub%20committee%20meeting%20on%20br.op%20it%20enabled%20fi.pdf",
@@ -386,7 +484,9 @@
       "snapshotTimestamp": "20220701080107",
       "snapshotUrl": "https://web.archive.org/web/20220701080107id_/https://slbcbihar.com/documents/Minutes%20of%2031st%20%20sub%20committee%20meeting%20on%20br.op%20it%20enabled%20FI.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/Minutes_of_31st_sub_committee_meeting_on_br.op_it_enabled_FI.pdf",
-      "status": "planned"
+      "sizeBytes": 368430,
+      "sha256": "a4ad47230d3804228577a83355feacc7ac02fd7a70ae065f8eece993b336a240",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/branchnetworkatm_pos.pdf",
@@ -394,7 +494,9 @@
       "snapshotTimestamp": "20220701080145",
       "snapshotUrl": "https://web.archive.org/web/20220701080145id_/https://slbcbihar.com/documents/BranchNetworkATM_POS.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/BranchNetworkATM_POS.pdf",
-      "status": "planned"
+      "sizeBytes": 138429,
+      "sha256": "37ae116871cdfd9a1d151b5d5e5d78d56525cbb7e79a6845903199693e5671b9",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes_agr_sub_committee_meeting_on_18.08-2015.pdf",
@@ -402,7 +504,10 @@
       "snapshotTimestamp": "20220701080335",
       "snapshotUrl": "https://web.archive.org/web/20220701080335id_/https://slbcbihar.com/documents/MINUTES_AGR_SUB_COMMITTEE_MEETING_On_18.08-2015.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/MINUTES_AGR_SUB_COMMITTEE_MEETING_On_18.08-2015.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "5c6bc9e954abc111bac6472fe3b705887c708a621af201833e370068ea466328",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes%20of%2027th%20%20sub%20committee%20meeting.pdf",
@@ -410,7 +515,9 @@
       "snapshotTimestamp": "20220701080637",
       "snapshotUrl": "https://web.archive.org/web/20220701080637id_/https://slbcbihar.com/documents/Minutes%20of%2027th%20%20sub%20committee%20meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/Minutes_of_27th_sub_committee_meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 45596,
+      "sha256": "bc2c387fda749b00011a47038241a599bffa3ec90188f24c4391507c1ded10ec",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/indicative%20unit%20cost%202022-23.pdf",
@@ -418,7 +525,9 @@
       "snapshotTimestamp": "20220701081853",
       "snapshotUrl": "https://web.archive.org/web/20220701081853id_/https://slbcbihar.com/documents/Indicative%20Unit%20Cost%202022-23.PDF",
       "localPath": "slbc-data/bihar/wayback/2022/Indicative_Unit_Cost_2022-23.PDF",
-      "status": "planned"
+      "sizeBytes": 608060,
+      "sha256": "db15c562308e6eea975b23d757271138ab5cdf2bff4d4f5c9f0e6392b09c24a4",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/continuation_of_pmjdy.pdf",
@@ -426,7 +535,9 @@
       "snapshotTimestamp": "20220701082234",
       "snapshotUrl": "https://web.archive.org/web/20220701082234id_/https://slbcbihar.com/documents/Continuation_of_PMJDY.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/Continuation_of_PMJDY.pdf",
-      "status": "planned"
+      "sizeBytes": 175457,
+      "sha256": "aeac74be87e07956cafe485eb05aa26d4b6300d7e4af956518632eeea8f3b1b8",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/slbc%20sub-committee-1(agri.)%20proceeding%2014.05.2018.pdf",
@@ -434,7 +545,10 @@
       "snapshotTimestamp": "20220701082303",
       "snapshotUrl": "https://web.archive.org/web/20220701082303id_/https://slbcbihar.com/documents/SLBC%20Sub-Committee-1(Agri.)%20Proceeding%2014.05.2018.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/SLBC_Sub-Committee-1_Agri._Proceeding_14.05.2018.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "4bacd671dde97ca4a117eac1d053e7e17846bbc3bc58b4b54fd75876a42f9c02",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes%20of%2028th%20%20sub%20committee%20brop.pdf",
@@ -442,7 +556,9 @@
       "snapshotTimestamp": "20220701082331",
       "snapshotUrl": "https://web.archive.org/web/20220701082331id_/https://slbcbihar.com/documents/Minutes%20of%2028th%20%20sub%20committee%20BrOp.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/Minutes_of_28th_sub_committee_BrOp.pdf",
-      "status": "planned"
+      "sizeBytes": 23378,
+      "sha256": "515ad5d905dc1b2f9acdc690b73438e86aa76ba4d09cc135e1d04c9028b535cf",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/bcbcabankwise31032016.pdf",
@@ -450,7 +566,9 @@
       "snapshotTimestamp": "20220701083644",
       "snapshotUrl": "https://web.archive.org/web/20220701083644id_/https://slbcbihar.com/documents/BCBCABankwise31032016.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/BCBCABankwise31032016.pdf",
-      "status": "planned"
+      "sizeBytes": 126886,
+      "sha256": "4582a6a18b1031fa8ee2d8bf322b4ab3e86484f538eceb0dd5fb15dfdddd9a1d",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/letter%20no.%202910%20dt10.08.2021.pdf",
@@ -458,7 +576,9 @@
       "snapshotTimestamp": "20220701083721",
       "snapshotUrl": "https://web.archive.org/web/20220701083721id_/https://slbcbihar.com/documents/Letter%20no.%202910%20dt10.08.2021.PDF",
       "localPath": "slbc-data/bihar/wayback/2022/Letter_no._2910_dt10.08.2021.PDF",
-      "status": "planned"
+      "sizeBytes": 790917,
+      "sha256": "64744f4f75f8dd2f247c22502a2a60ec6be412a61f48cfc74553d00c0d818598",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/cddw31032016.pdf",
@@ -466,7 +586,9 @@
       "snapshotTimestamp": "20220701084043",
       "snapshotUrl": "https://web.archive.org/web/20220701084043id_/https://slbcbihar.com/documents/CDDW31032016.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/CDDW31032016.pdf",
-      "status": "planned"
+      "sizeBytes": 126434,
+      "sha256": "ec055836441ccfce72472acae022df0bc266bf2c233b7dd78489bf4677a4e85b",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes_of_6th_meeting_on_industry_dt._04.02.2015.pdf",
@@ -474,7 +596,9 @@
       "snapshotTimestamp": "20220701084122",
       "snapshotUrl": "https://web.archive.org/web/20220701084122id_/https://slbcbihar.com/documents/Minutes_of_6TH_meeting_on_Industry_dt._04.02.2015.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/Minutes_of_6TH_meeting_on_Industry_dt._04.02.2015.pdf",
-      "status": "planned"
+      "sizeBytes": 255884,
+      "sha256": "d6f555d6e8a9952efcb2689a190211829e8e74e74936c5c76d07ec04934728f2",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/industry%20meeting%2001.02.2018.pdf",
@@ -482,7 +606,9 @@
       "snapshotTimestamp": "20220701084514",
       "snapshotUrl": "https://web.archive.org/web/20220701084514id_/https://slbcbihar.com/documents/INDUSTRY%20MEETING%2001.02.2018.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/INDUSTRY_MEETING_01.02.2018.pdf",
-      "status": "planned"
+      "sizeBytes": 499668,
+      "sha256": "0dc56734e994851f8b663334c3448f9c7d4630cc60492c3422ce9711e829922c",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes_of_23rd_steering_comm._shg_and_rseti_dt._23.12.2014.pdf",
@@ -490,7 +616,9 @@
       "snapshotTimestamp": "20220701084552",
       "snapshotUrl": "https://web.archive.org/web/20220701084552id_/https://slbcbihar.com/documents/Minutes_of_23rd_Steering_Comm._SHG_and_RSETI_dt._23.12.2014.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/Minutes_of_23rd_Steering_Comm._SHG_and_RSETI_dt._23.12.2014.pdf",
-      "status": "planned"
+      "sizeBytes": 116696,
+      "sha256": "a79862235d956abd5b0be880ef3e8df54cf98b1443bd76945bd0360d3243f3d7",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes%20and%20action%20points.pdf",
@@ -498,7 +626,9 @@
       "snapshotTimestamp": "20220701084706",
       "snapshotUrl": "https://web.archive.org/web/20220701084706id_/https://slbcbihar.com/documents/MINUTES%20And%20ACTION%20POINTS.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/MINUTES_And_ACTION_POINTS.pdf",
-      "status": "planned"
+      "sizeBytes": 460140,
+      "sha256": "f425ea8014fc1fa839c3f8200117081112b27d453e0b95f01d3b243604f0893d",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/sltc22062022.pdf",
@@ -506,7 +636,10 @@
       "snapshotTimestamp": "20220701084741",
       "snapshotUrl": "https://web.archive.org/web/20220701084741id_/https://slbcbihar.com/documents/sltc22062022.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/sltc22062022.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "e7e23752f3a5ac41f027f0ef5af0a846e5f0b316aa136932d1fb93d4626be6a5",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/agri%20procedding%2026%2008%202016.pdf",
@@ -514,7 +647,10 @@
       "snapshotTimestamp": "20220701084928",
       "snapshotUrl": "https://web.archive.org/web/20220701084928id_/https://slbcbihar.com/documents/AGRI%20Procedding%2026%2008%202016.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/AGRI_Procedding_26_08_2016.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "55238b99cd463706c258348417caff7ea8a7651f351894cffa579a0966884014",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/apy/%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%b6%e0%a5%8d%e0%a4%a8_%e0%a4%89%e0%a4%a4%e0%a5%8d%e0%a4%a4%e0%a4%b0.pdf",
@@ -522,7 +658,10 @@
       "snapshotTimestamp": "20220701085111",
       "snapshotUrl": "https://web.archive.org/web/20220701085111id_/https://slbcbihar.com/APY/%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B6%E0%A5%8D%E0%A4%A8_%E0%A4%89%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%B0.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/प्रश्न_उत्तर.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "b412d29e58bdb7ceb6cc168c093ca1bf4850d4f0c67879dd238884e0da7e585d",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/agri%20proceding%20(28.03.2017).pdf",
@@ -530,7 +669,9 @@
       "snapshotTimestamp": "20220701085241",
       "snapshotUrl": "https://web.archive.org/web/20220701085241id_/https://slbcbihar.com/documents/AGRI%20Proceding%20(28.03.2017).pdf",
       "localPath": "slbc-data/bihar/wayback/2022/AGRI_Proceding_28.03.2017_.pdf",
-      "status": "planned"
+      "sizeBytes": 656638,
+      "sha256": "b276275192528a241391883251aa7fda85e6aa79a79c6f1c01a35b1ac1259c85",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/agr%20stamp05232016_0000.pdf",
@@ -538,7 +679,10 @@
       "snapshotTimestamp": "20220701085247",
       "snapshotUrl": "https://web.archive.org/web/20220701085247id_/https://slbcbihar.com/documents/AGR%20STAMP05232016_0000.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/AGR_STAMP05232016_0000.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "99301cf0d512356388bf18ebd1d2b8c10b7e6f9e3ef1631e448e0f205c30aa1c",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/title_and_index_mission_document_on_fi_08072014.pdf",
@@ -546,7 +690,9 @@
       "snapshotTimestamp": "20220701085253",
       "snapshotUrl": "https://web.archive.org/web/20220701085253id_/https://slbcbihar.com/documents/Title_and_Index_Mission_Document_on_FI_08072014.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/Title_and_Index_Mission_Document_on_FI_08072014.pdf",
-      "status": "planned"
+      "sizeBytes": 561004,
+      "sha256": "339b95f82196cbb11858b34052b532319e14007d089a9f6decebdf554a96dcab",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/pmjdy%20booklet%20hindi.pdf",
@@ -554,7 +700,10 @@
       "snapshotTimestamp": "20220701085259",
       "snapshotUrl": "https://web.archive.org/web/20220701085259id_/https://slbcbihar.com/documents/PMJDY%20Booklet%20Hindi.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/PMJDY_Booklet_Hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "9e9488862289cef0044461c89c0fcfd306f1de77d8f698de8b33ebefb4a215b6",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/agri_procceding___21.04.2015_.pdf",
@@ -562,7 +711,9 @@
       "snapshotTimestamp": "20220701085305",
       "snapshotUrl": "https://web.archive.org/web/20220701085305id_/https://slbcbihar.com/documents/Agri_Procceding___21.04.2015_.pdf",
       "localPath": "slbc-data/bihar/wayback/2022/Agri_Procceding___21.04.2015_.pdf",
-      "status": "planned"
+      "sizeBytes": 934903,
+      "sha256": "acfc4139cf2c7b814f5d2497f1b8847463351fc2f4a83e1ba4760771b4d4093d",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/how_and_where_to_get_mudra_loan.pdf",
@@ -570,7 +721,9 @@
       "snapshotTimestamp": "20230923000118",
       "snapshotUrl": "https://web.archive.org/web/20230923000118id_/https://slbcbihar.com/documents/How_and_Where_to_get_MUDRA_loan.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/How_and_Where_to_get_MUDRA_loan.pdf",
-      "status": "planned"
+      "sizeBytes": 57421,
+      "sha256": "f603fce66c4a1d0adf40bd5dcd2a45c7fb267cae4f3d79a7f986a4707b286d7d",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/booklet%20on%20mudra%20english.pdf",
@@ -578,7 +731,10 @@
       "snapshotTimestamp": "20230923002616",
       "snapshotUrl": "https://web.archive.org/web/20230923002616id_/https://slbcbihar.com/documents/Booklet%20on%20Mudra%20English.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/Booklet_on_Mudra_English.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "04559bf6d301d5ba3e8f6122c44a995d04c8e5b30232c5a53082f77b4c1ebc48",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/9.credit%20enhancement%20guarantee%20scheme%20for%20the%20scheduled%20castes%20(scs)%20(2014-15)09082019.pdf",
@@ -586,7 +742,9 @@
       "snapshotTimestamp": "20231205011333",
       "snapshotUrl": "https://web.archive.org/web/20231205011333id_/https://slbcbihar.com/documents/9.Credit%20Enhancement%20Guarantee%20Scheme%20for%20the%20Scheduled%20Castes%20(SCs)%20(2014-15)09082019.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/9.Credit_Enhancement_Guarantee_Scheme_for_the_Scheduled_Castes_SCs_2014-15_09082019.pdf",
-      "status": "planned"
+      "sizeBytes": 743191,
+      "sha256": "65161d5252438ef507ac9ef5b9bc35b090b34a05a1dda4b34b6fc05b623f81b2",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/a%20final%2064th%20slbc%20agenda%20book.pdf",
@@ -594,7 +752,10 @@
       "snapshotTimestamp": "20231205011448",
       "snapshotUrl": "https://web.archive.org/web/20231205011448id_/https://slbcbihar.com/Meeting/A%20FINAL%2064TH%20SLBC%20AGENDA%20BOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/A_FINAL_64TH_SLBC_AGENDA_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "3541e858b2fabeacf32016a564ec1cfffab98997b8fd5ea005e8d52c31b74ec6",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/83rd_and_84th_joint_meeting.pdf",
@@ -602,7 +763,10 @@
       "snapshotTimestamp": "20231205012307",
       "snapshotUrl": "https://web.archive.org/web/20231205012307id_/https://slbcbihar.com/documents/83rd_and_84th_Joint_Meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/83rd_and_84th_Joint_Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "8a635fc4752ac66cace09b02b44f12d101eb9b8b0b949bd993516d9f62a9a0f4",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/a_51st_slbc_agenda_book.pdf",
@@ -610,7 +774,9 @@
       "snapshotTimestamp": "20231205012413",
       "snapshotUrl": "https://web.archive.org/web/20231205012413id_/https://slbcbihar.com/documents/A_51ST_SLBC_AGENDA_BOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/A_51ST_SLBC_AGENDA_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 895347,
+      "sha256": "442c73cc1a3860a83c31487d21ad48afb3d5d9d296783a3896126085225d70ed",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/minutes_of_54th_slbc_meeting.pdf",
@@ -618,7 +784,9 @@
       "snapshotTimestamp": "20231205012514",
       "snapshotUrl": "https://web.archive.org/web/20231205012514id_/https://slbcbihar.com/Meeting/minutes_of_54th_slbc_Meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/minutes_of_54th_slbc_Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 221344,
+      "sha256": "9b81f67b2d84cd1a08e98a74c3890fbc996bfcfa3e8547769ab9470e560fb5f2",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes%20of%2083rd%20and%2084th%20joint%20meeting%20held%20on%2004.03.2023.pdf",
@@ -626,7 +794,10 @@
       "snapshotTimestamp": "20231205012800",
       "snapshotUrl": "https://web.archive.org/web/20231205012800id_/https://slbcbihar.com/documents/Minutes%20of%2083rd%20and%2084th%20Joint%20Meeting%20Held%20on%2004.03.2023.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/Minutes_of_83rd_and_84th_Joint_Meeting_Held_on_04.03.2023.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "38668fa9ee0429b61b9283040900863ee74da5014ebcdf7155dcdc144cd4de8b",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/a_52nd_slbc_agenda_book.pdf",
@@ -634,7 +805,9 @@
       "snapshotTimestamp": "20231205012845",
       "snapshotUrl": "https://web.archive.org/web/20231205012845id_/https://slbcbihar.com/Meeting/A_52ND_SLBC_AGENDA_BOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/A_52ND_SLBC_AGENDA_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 780338,
+      "sha256": "caca5e27c98cb6c86d426e7962d16d2535427a42bb469f996a1a44b60ac4bbf1",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/agenda-of-46-slbc-meeting.pdf",
@@ -642,7 +815,9 @@
       "snapshotTimestamp": "20231205013235",
       "snapshotUrl": "https://web.archive.org/web/20231205013235id_/https://slbcbihar.com/documents/Agenda-of-46-SLBC-Meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/Agenda-of-46-SLBC-Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 903375,
+      "sha256": "216acf07c88a897eafcb11da1a63b9003fdd626a0b9c7cdd75c310974f53e196",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/62ndslbcagendabook.pdf",
@@ -650,7 +825,9 @@
       "snapshotTimestamp": "20231205013445",
       "snapshotUrl": "https://web.archive.org/web/20231205013445id_/https://slbcbihar.com/Meeting/62ndSLBCAGENDABOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/62ndSLBCAGENDABOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 989938,
+      "sha256": "6ad89f48b2244cb8ee309f6e4dccb5034c99ed8b9ce7ad457a404475de347eb6",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/a_final_49th__slbc_agenda_book_final.pdf",
@@ -658,7 +835,9 @@
       "snapshotTimestamp": "20231205013650",
       "snapshotUrl": "https://web.archive.org/web/20231205013650id_/https://slbcbihar.com/documents/A_FINAL_49TH__SLBC_AGENDA_BOOK_FINAL.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/A_FINAL_49TH__SLBC_AGENDA_BOOK_FINAL.pdf",
-      "status": "planned"
+      "sizeBytes": 773877,
+      "sha256": "36c86ec736f3daf0ceeb637689e6f60efa26540244fee5d6b3682ac7da674a86",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/a_54th_slbc_agenda_book.pdf",
@@ -666,7 +845,9 @@
       "snapshotTimestamp": "20231205014248",
       "snapshotUrl": "https://web.archive.org/web/20231205014248id_/https://slbcbihar.com/Meeting/A_54th_SLBC_AGENDA_BOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/A_54th_SLBC_AGENDA_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 668773,
+      "sha256": "7227363c187f33f64c00289ec58f1e22f8f9f62fccbfd14f8bd8647916212d19",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/minutes_of_53nd_slbc_meeting.pdf",
@@ -674,7 +855,9 @@
       "snapshotTimestamp": "20231205014414",
       "snapshotUrl": "https://web.archive.org/web/20231205014414id_/https://slbcbihar.com/Meeting/minutes_of_53nd_slbc_Meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/minutes_of_53nd_slbc_Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 381032,
+      "sha256": "c9dd84115d48bb60d7c03c7bab0750d9e2ef93bf93385b67e3af1007dab4b33e",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/data%20sheet.pdf",
@@ -682,7 +865,10 @@
       "snapshotTimestamp": "20231205015030",
       "snapshotUrl": "https://web.archive.org/web/20231205015030id_/https://slbcbihar.com/Meeting/DATA%20SHEET.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/DATA_SHEET.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "5ccb5474a9bd788040e6f3bcf40c02d641a16f83713520c103e85341a6e11f4e",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/57th%20slbc%20agenda%20book.pdf",
@@ -690,7 +876,10 @@
       "snapshotTimestamp": "20231205015149",
       "snapshotUrl": "https://web.archive.org/web/20231205015149id_/https://slbcbihar.com/Meeting/57TH%20SLBC%20AGENDA%20BOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/57TH_SLBC_AGENDA_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "4a7f056fdc51eddd8f54dc03652cc01afacd4033cd29c60ebcc49899c18aabb9",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/63rd%20slbc%20agenda%20book.pdf",
@@ -698,7 +887,10 @@
       "snapshotTimestamp": "20231205015345",
       "snapshotUrl": "https://web.archive.org/web/20231205015345id_/https://slbcbihar.com/Meeting/63RD%20SLBC%20AGENDA%20BOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/63RD_SLBC_AGENDA_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "87fb4b84454e0e791fb061ebc3845a60e7ee54942ab1c0317ea3c09b9172f318",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/minutes_of_52nd_slbc_meeting.pdf",
@@ -706,7 +898,9 @@
       "snapshotTimestamp": "20231205015859",
       "snapshotUrl": "https://web.archive.org/web/20231205015859id_/https://slbcbihar.com/Meeting/minutes_of_52nd_slbc_Meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/minutes_of_52nd_slbc_Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 340223,
+      "sha256": "36c5a040e87ac00818e1d9dba903437caf9c95844d01bd0bfb9c10c8220ae92d",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/final_64th%20slbc%20minutes.pdf",
@@ -714,7 +908,9 @@
       "snapshotTimestamp": "20231205015939",
       "snapshotUrl": "https://web.archive.org/web/20231205015939id_/https://slbcbihar.com/Meeting/Final_64th%20SLBC%20Minutes.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/Final_64th_SLBC_Minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 951128,
+      "sha256": "62eed8fedd056fcac8ad8eccb5a1009d43e042c13eaf561f6c0805f08172e994",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/59th%20slbc%20agenda%20book.pdf",
@@ -722,7 +918,9 @@
       "snapshotTimestamp": "20231205020100",
       "snapshotUrl": "https://web.archive.org/web/20231205020100id_/https://slbcbihar.com/Meeting/59TH%20SLBC%20AGENDA%20BOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/59TH_SLBC_AGENDA_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 762788,
+      "sha256": "cea381d7859ddbce40b8553fc4963af2020879c4512af66e32a2d7fa7b921786",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/a_53rd_slbc_agenda_book.pdf",
@@ -730,7 +928,9 @@
       "snapshotTimestamp": "20231205020349",
       "snapshotUrl": "https://web.archive.org/web/20231205020349id_/https://slbcbihar.com/Meeting/A_53rd_SLBC_AGENDA_BOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/A_53rd_SLBC_AGENDA_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 749470,
+      "sha256": "08e660620f6ae2ee57c8fef1555e02ca3a90c432841c2c997888539a57cdde4c",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/67th%20slbc%20agenda%20book.pdf",
@@ -738,7 +938,10 @@
       "snapshotTimestamp": "20231205020440",
       "snapshotUrl": "https://web.archive.org/web/20231205020440id_/https://slbcbihar.com/Meeting/67TH%20SLBC%20AGENDA%20BOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/67TH_SLBC_AGENDA_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "f49297a369321989d32b4ac5410a8fbe0427f5a1b15405cd7fb15936d3abc35b",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/85rd_and_86th_joint_meeting.pdf",
@@ -746,7 +949,10 @@
       "snapshotTimestamp": "20231205020520",
       "snapshotUrl": "https://web.archive.org/web/20231205020520id_/https://slbcbihar.com/documents/85rd_and_86th_Joint_Meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/85rd_and_86th_Joint_Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "0b832c8ff9a7091a8e0082d747048877736b1e9de354b8868aa1d8dec3e04411",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/nofrillbankwise31032016.pdf",
@@ -754,7 +960,9 @@
       "snapshotTimestamp": "20231205020742",
       "snapshotUrl": "https://web.archive.org/web/20231205020742id_/https://slbcbihar.com/documents/NoFrillBankwise31032016.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/NoFrillBankwise31032016.pdf",
-      "status": "planned"
+      "sizeBytes": 142045,
+      "sha256": "5ddbef2b77ebaa0a8c33c82f87f93f2d190b3598179d1ed579d89f6074cda2e9",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/ammended%20minutes%20of%2059th%20slbc%20meeting.pdf",
@@ -762,7 +970,9 @@
       "snapshotTimestamp": "20231205020857",
       "snapshotUrl": "https://web.archive.org/web/20231205020857id_/https://slbcbihar.com/Meeting/Ammended%20Minutes%20of%2059th%20SLBC%20meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/Ammended_Minutes_of_59th_SLBC_meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 338095,
+      "sha256": "79b50e68e5ffb0157f5862a2e9157b0c1ba837c04429fbbbba164094f505b9a3",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/agenda-of-45-slbc-meeting.pdf",
@@ -770,7 +980,9 @@
       "snapshotTimestamp": "20231205020934",
       "snapshotUrl": "https://web.archive.org/web/20231205020934id_/https://slbcbihar.com/documents/Agenda-of-45-SLBC-Meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/Agenda-of-45-SLBC-Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 820415,
+      "sha256": "18528e66a9d1cb696baaa97010962f1111b5dcd0959425a82538b0f37f7e8dd2",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/minutes%20of%2055th%20slbc%20meeting.pdf",
@@ -778,7 +990,9 @@
       "snapshotTimestamp": "20231205021012",
       "snapshotUrl": "https://web.archive.org/web/20231205021012id_/https://slbcbihar.com/Meeting/MINUTES%20OF%2055th%20SLBC%20Meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/MINUTES_OF_55th_SLBC_Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 324125,
+      "sha256": "e9884d253e00ea954f0f79f7c3fac8b0ac3b1329fc7c9d9a3df1efcec1c1f089",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/slbc%20mitting%20book.pdf",
@@ -786,7 +1000,10 @@
       "snapshotTimestamp": "20231205021208",
       "snapshotUrl": "https://web.archive.org/web/20231205021208id_/https://slbcbihar.com/documents/slbc%20mitting%20book.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/slbc_mitting_book.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "f44cc26f2e07b181c318fb52fe6cfd8037b7bae790f9db8f21bb1c6b96ea4dee",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/pmjdy_eng_1___2_.pdf",
@@ -794,7 +1011,10 @@
       "snapshotTimestamp": "20231205021322",
       "snapshotUrl": "https://web.archive.org/web/20231205021322id_/https://slbcbihar.com/documents/PMJDY_Eng_1___2_.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/PMJDY_Eng_1___2_.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "24f7cd8c8ed90e108a4836532d9bc2a56da395ee4b1422ff76ab97775efd9542",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/11.youth%20empowerment.pdf",
@@ -802,7 +1022,10 @@
       "snapshotTimestamp": "20231205021507",
       "snapshotUrl": "https://web.archive.org/web/20231205021507id_/https://slbcbihar.com/documents/11.Youth%20Empowerment.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/11.Youth_Empowerment.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "d44f0383ecd2e28f80fe8857a0f74ce92d287a9e288aa68791786baae3ab43c8",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/a_55th_slbc_agenda_book.pdf",
@@ -810,7 +1033,9 @@
       "snapshotTimestamp": "20231205021802",
       "snapshotUrl": "https://web.archive.org/web/20231205021802id_/https://slbcbihar.com/Meeting/A_55th_SLBC_AGENDA_BOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/A_55th_SLBC_AGENDA_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 746524,
+      "sha256": "975fd08c3f14fdcff64abefb292b84a2f86e32ac6212058e17ee45cc422cd480",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/nofrilldistrictwise31032016.pdf",
@@ -818,7 +1043,9 @@
       "snapshotTimestamp": "20231205022044",
       "snapshotUrl": "https://web.archive.org/web/20231205022044id_/https://slbcbihar.com/documents/NoFrillDistrictwise31032016.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/NoFrillDistrictwise31032016.pdf",
-      "status": "planned"
+      "sizeBytes": 139009,
+      "sha256": "87c60f90f0fc59b620033c10260b5150df846cf2c9f26e50b7664500bbc557b8",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/a%20minutes%20of%20the%2065th%20slbc%20meeting%20dt%2025.08.2018.pdf",
@@ -826,7 +1053,9 @@
       "snapshotTimestamp": "20231205022117",
       "snapshotUrl": "https://web.archive.org/web/20231205022117id_/https://slbcbihar.com/Meeting/A%20Minutes%20of%20the%2065th%20SLBC%20Meeting%20dt%2025.08.2018.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/A_Minutes_of_the_65th_SLBC_Meeting_dt_25.08.2018.pdf",
-      "status": "planned"
+      "sizeBytes": 844442,
+      "sha256": "7dc672554909de5a952110eef150c5ffaec1bdd2ebc5ad659462a8f375f4d1a1",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/81stslbcbookletfinal.pdf",
@@ -834,7 +1063,10 @@
       "snapshotTimestamp": "20231205022150",
       "snapshotUrl": "https://web.archive.org/web/20231205022150id_/https://slbcbihar.com/documents/81stSLBCBookletFinal.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/81stSLBCBookletFinal.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "1fefbe99451dc163f1a11eb81d67ad39dbb35dbf3fb9af06e8a14e0cca250f55",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/61stslbcagendabook.pdf",
@@ -842,7 +1074,9 @@
       "snapshotTimestamp": "20231205022929",
       "snapshotUrl": "https://web.archive.org/web/20231205022929id_/https://slbcbihar.com/Meeting/61STSLBCAGENDABOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/61STSLBCAGENDABOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1025248,
+      "sha256": "77129b16856e71386840e1ee560e4a961139a7b6ba46814ec3c9d9f22c231f51",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/minutes62ndslbc.pdf",
@@ -850,7 +1084,9 @@
       "snapshotTimestamp": "20231205022954",
       "snapshotUrl": "https://web.archive.org/web/20231205022954id_/https://slbcbihar.com/Meeting/MINUTES62ndSLBC.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/MINUTES62ndSLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 530095,
+      "sha256": "4dde29bdf1f408756ebc910b03233ff8e6e0e642957a2788ca48e237711267cd",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/69th%20%20minutes%20slbc_edited%20final.pdf",
@@ -858,7 +1094,10 @@
       "snapshotTimestamp": "20231205023217",
       "snapshotUrl": "https://web.archive.org/web/20231205023217id_/https://slbcbihar.com/Meeting/69th%20%20MINUTES%20SLBC_edited%20Final.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/69th_MINUTES_SLBC_edited_Final.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "553c8b66f167af489b412fa90122de2e1c37bb579de37a6ae2e816aa35bcddf7",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/80thslbcagenda.pdf",
@@ -866,7 +1105,10 @@
       "snapshotTimestamp": "20231205023611",
       "snapshotUrl": "https://web.archive.org/web/20231205023611id_/https://slbcbihar.com/documents/80thSLBCAgenda.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/80thSLBCAgenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "e827aa7f75ceb96332195c7f66f0033df89fcaf19473cb3ee93500c9bc3e8db0",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/final_minutes_of_50th_slbc_review_meeting.pdf",
@@ -874,7 +1116,9 @@
       "snapshotTimestamp": "20231205023655",
       "snapshotUrl": "https://web.archive.org/web/20231205023655id_/https://slbcbihar.com/documents/Final_Minutes_of_50th_SLBC_review_meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/Final_Minutes_of_50th_SLBC_review_meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 533861,
+      "sha256": "f8eb054792c2f56c35365d9fcd6687cbc0336216c2b20dc340be1121b67251af",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/agenda-of-74th-slbc-meeting.pdf",
@@ -882,7 +1126,10 @@
       "snapshotTimestamp": "20231205023722",
       "snapshotUrl": "https://web.archive.org/web/20231205023722id_/https://slbcbihar.com/documents/Agenda-of-74th-SLBC-Meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/Agenda-of-74th-SLBC-Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "4177f3a40ffcb5ce0ca6ca0d763436d158130c9deb0ac85076b576d6d75cc8f7",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/agenda-of-44-slbc-meeting.pdf",
@@ -890,7 +1137,9 @@
       "snapshotTimestamp": "20231205024125",
       "snapshotUrl": "https://web.archive.org/web/20231205024125id_/https://slbcbihar.com/documents/Agenda-of-44-SLBC-Meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/Agenda-of-44-SLBC-Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 667742,
+      "sha256": "3d22d38f70f837fdfb11c3190a2dd9198dd850c758b2afc455b7448916a8f3ae",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/60thslbcagendabook.pdf",
@@ -898,7 +1147,9 @@
       "snapshotTimestamp": "20231205024208",
       "snapshotUrl": "https://web.archive.org/web/20231205024208id_/https://slbcbihar.com/Meeting/60THSLBCAGENDABOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/60THSLBCAGENDABOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 756806,
+      "sha256": "a9f59d818563cd011ebf7ad6a6f9771964a44567b91350838083a9d06e783103",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/79th%20scan.pdf",
@@ -906,7 +1157,10 @@
       "snapshotTimestamp": "20231205024616",
       "snapshotUrl": "https://web.archive.org/web/20231205024616id_/https://slbcbihar.com/documents/79th%20Scan.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/79th_Scan.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "0dc099f5b8b34197e1f280d581b5d9fae185f33e85f60c3c465f6b43055b14c7",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/agenda-of-48-slbc-meeting.pdf",
@@ -914,7 +1168,9 @@
       "snapshotTimestamp": "20231205024652",
       "snapshotUrl": "https://web.archive.org/web/20231205024652id_/https://slbcbihar.com/documents/Agenda-of-48-SLBC-Meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/Agenda-of-48-SLBC-Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 436437,
+      "sha256": "a2f0045f8100ad02a414114e20ca1ae56c1fb1fa5a9fa720584eb84ab9ef37bf",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/slbc73rd.pdf",
@@ -922,7 +1178,10 @@
       "snapshotTimestamp": "20231205024738",
       "snapshotUrl": "https://web.archive.org/web/20231205024738id_/https://slbcbihar.com/documents/slbc73rd.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/slbc73rd.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "c136e0eb4efeb12a618cf00bde301bdd38adca1fefba3ba741a8b914305be1f1",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/slbc72.pdf",
@@ -930,7 +1189,10 @@
       "snapshotTimestamp": "20231205024817",
       "snapshotUrl": "https://web.archive.org/web/20231205024817id_/https://slbcbihar.com/documents/SLBC72.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/SLBC72.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "2378449a37e2830b81db4a3c649756d857e28cc96d343790d054ade5626fa88b",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/a_final_50th__slbc_agenda_book.pdf",
@@ -938,7 +1200,9 @@
       "snapshotTimestamp": "20231205024858",
       "snapshotUrl": "https://web.archive.org/web/20231205024858id_/https://slbcbihar.com/documents/A_FINAL_50TH__SLBC_AGENDA_BOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/A_FINAL_50TH__SLBC_AGENDA_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 806340,
+      "sha256": "e8b5bb84d713cb2692192df7cf52bc74549b61ae9aa70c7b846d6a1f3ebe0fec",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/ammended%20minutes_63rd___slbc_200218_in_words.pdf",
@@ -946,7 +1210,9 @@
       "snapshotTimestamp": "20231205025210",
       "snapshotUrl": "https://web.archive.org/web/20231205025210id_/https://slbcbihar.com/Meeting/AMMENDED%20MINUTES_63rd___SLBC_200218_in_words.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/AMMENDED_MINUTES_63rd___SLBC_200218_in_words.pdf",
-      "status": "planned"
+      "sizeBytes": 948843,
+      "sha256": "3fc7eb03bcb2e7c88189d0be26cf5a5c5c973efa3cb4cae3e2469b347a6ff6bf",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/82_slbc_minutes_final.pdf",
@@ -954,7 +1220,10 @@
       "snapshotTimestamp": "20231205025248",
       "snapshotUrl": "https://web.archive.org/web/20231205025248id_/https://slbcbihar.com/documents/82_SLBC_MINUTES_Final.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/82_SLBC_MINUTES_Final.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "30803856b5373bd6c478d9f415039204c9e112dccc14ff744fd2d167b7ac4a87",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/final%20minutes%2068th%20%20slbc.pdf",
@@ -962,7 +1231,9 @@
       "snapshotTimestamp": "20231205025338",
       "snapshotUrl": "https://web.archive.org/web/20231205025338id_/https://slbcbihar.com/Meeting/FINAL%20MINUTES%2068th%20%20SLBC.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/FINAL_MINUTES_68th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 840068,
+      "sha256": "029dfaa20f8d97841df5bad9ed09037a2163e64425bad837dc44e0f9907e82be",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/finalminutesof58thslbc%20meeting16112016.pdf",
@@ -970,7 +1241,9 @@
       "snapshotTimestamp": "20231205025429",
       "snapshotUrl": "https://web.archive.org/web/20231205025429id_/https://slbcbihar.com/Meeting/FinalMinutesof58thSLBC%20meeting16112016.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/FinalMinutesof58thSLBC_meeting16112016.pdf",
-      "status": "planned"
+      "sizeBytes": 320948,
+      "sha256": "bce0ce71998d21335b1f1ea20817bbb2f6d46c71edf497ea82049d56c2bf4ece",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/56th%20slbc%20agenda%20book.pdf",
@@ -978,7 +1251,9 @@
       "snapshotTimestamp": "20231205025515",
       "snapshotUrl": "https://web.archive.org/web/20231205025515id_/https://slbcbihar.com/Meeting/56TH%20SLBC%20AGENDA%20BOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/56TH_SLBC_AGENDA_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 888087,
+      "sha256": "b00827b74eaaef6a38f9891a13bd8c638125b4060a3273639ae6b8ccb5807d46",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/book%20for%2068%20slbc.pdf",
@@ -986,7 +1261,10 @@
       "snapshotTimestamp": "20231205025746",
       "snapshotUrl": "https://web.archive.org/web/20231205025746id_/https://slbcbihar.com/Meeting/BOOK%20FOR%2068%20SLBC.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/BOOK_FOR_68_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "69d20ee9a0b7538587025ecdee3a36959cd18b07c47dc7e6eacd884c3d871877",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/minutes%20and%20action%20points%20of%2040th%20slbc%20meeting%20dated%2016.05.2012.pdf",
@@ -994,7 +1272,10 @@
       "snapshotTimestamp": "20231205025825",
       "snapshotUrl": "https://web.archive.org/web/20231205025825id_/https://slbcbihar.com/Meeting/MINUTES%20AND%20ACTION%20POINTS%20OF%2040TH%20SLBC%20MEETING%20DATED%2016.05.2012.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/MINUTES_AND_ACTION_POINTS_OF_40TH_SLBC_MEETING_DATED_16.05.2012.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "5dab37bd0453ccc6c25638da0c3c92b4d3611c88d8352ba228e8a3e6167feaa2",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/minutes%20of%2056th%20slbc%20meeting.pdf",
@@ -1002,7 +1283,9 @@
       "snapshotTimestamp": "20231205030020",
       "snapshotUrl": "https://web.archive.org/web/20231205030020id_/https://slbcbihar.com/Meeting/MINUTES%20OF%2056th%20SLBC%20MEETING.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/MINUTES_OF_56th_SLBC_MEETING.pdf",
-      "status": "planned"
+      "sizeBytes": 374124,
+      "sha256": "396a9da0a2e43ecbe1efb7ba49864a7837321627b0bbda8f02a7c09c105bd623",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/lho.pdf",
@@ -1010,7 +1293,10 @@
       "snapshotTimestamp": "20231205030101",
       "snapshotUrl": "https://web.archive.org/web/20231205030101id_/https://slbcbihar.com/documents/LHO.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/LHO.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "64204f201bff52d0358b456ee5a9e4b2925d6c9bcb22d49e1794110228f42d28",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/a%20final%2065th%20slbc%20agenda%20book.pdf",
@@ -1018,7 +1304,10 @@
       "snapshotTimestamp": "20231205030143",
       "snapshotUrl": "https://web.archive.org/web/20231205030143id_/https://slbcbihar.com/Meeting/A%20FINAL%2065TH%20SLBC%20AGENDA%20BOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/A_FINAL_65TH_SLBC_AGENDA_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "f0ea203cb449ed1daa8106ce4a520f6f964f14a745c7f0523c49a0afc0c05230",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes_45th_slbc_final.pdf",
@@ -1026,7 +1315,9 @@
       "snapshotTimestamp": "20231205030300",
       "snapshotUrl": "https://web.archive.org/web/20231205030300id_/https://slbcbihar.com/documents/MINUTES_45TH_SLBC_FINAL.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/MINUTES_45TH_SLBC_FINAL.pdf",
-      "status": "planned"
+      "sizeBytes": 779274,
+      "sha256": "a558272fb2ef67044799c5fdfc3abb6aed45889978ff1e774a3577493436144c",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/58th%20slbc%20agenda%20book.pdf",
@@ -1034,7 +1325,9 @@
       "snapshotTimestamp": "20231205030339",
       "snapshotUrl": "https://web.archive.org/web/20231205030339id_/https://slbcbihar.com/Meeting/58TH%20SLBC%20AGENDA%20BOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/58TH_SLBC_AGENDA_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 820314,
+      "sha256": "48ad92c27eeca3c609bcee983aafab5d230e89092a09bfeb264a792b020943cb",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/final%20minutes%20of%2057th%20slbc%20meeting.pdf",
@@ -1042,7 +1335,9 @@
       "snapshotTimestamp": "20231205030416",
       "snapshotUrl": "https://web.archive.org/web/20231205030416id_/https://slbcbihar.com/Meeting/Final%20Minutes%20of%2057th%20SLBC%20meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/Final_Minutes_of_57th_SLBC_meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 344823,
+      "sha256": "09b4a5bdb0abcbb79d431565967e634f85e93dd39c39ea294261f2bfb3cff7ee",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/71%20th%20slbc%20agenda%20book.pdf",
@@ -1050,7 +1345,10 @@
       "snapshotTimestamp": "20231205030455",
       "snapshotUrl": "https://web.archive.org/web/20231205030455id_/https://slbcbihar.com/documents/71%20TH%20SLBC%20AGENDA%20BOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/71_TH_SLBC_AGENDA_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "94c96442edbfbf22b05248c56055d640b7f8ec15097d12fbd17c9e0470ba51f5",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/82ndfinalslbcbook.pdf",
@@ -1058,7 +1356,10 @@
       "snapshotTimestamp": "20231205030615",
       "snapshotUrl": "https://web.archive.org/web/20231205030615id_/https://slbcbihar.com/documents/82ndFinalSLBCBOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/82ndFinalSLBCBOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "2bba1e309e06833795ad904d926b0c4b5b046a7e98fb3f314b97700f059b175f",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes_46th_slbc_final.pdf",
@@ -1066,7 +1367,9 @@
       "snapshotTimestamp": "20231205030653",
       "snapshotUrl": "https://web.archive.org/web/20231205030653id_/https://slbcbihar.com/documents/MINUTES_46TH_SLBC_FINAL.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/MINUTES_46TH_SLBC_FINAL.pdf",
-      "status": "planned"
+      "sizeBytes": 778893,
+      "sha256": "6854084b1d7e8ba2d12c74640352cb898c0297de5cc0c3df8796e8213094b433",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/69th%20slbc%20meeting%20agenda%20book.pdf",
@@ -1074,7 +1377,10 @@
       "snapshotTimestamp": "20231205030732",
       "snapshotUrl": "https://web.archive.org/web/20231205030732id_/https://slbcbihar.com/Meeting/69TH%20SLBC%20MEETING%20AGENDA%20BOOK.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/69TH_SLBC_MEETING_AGENDA_BOOK.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "38d785f3e4d7c2be1fd0377da4b03604b2b84915ea957541451950c1e060f0b8",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/a_final_minutes_of_51st_slbc_meeting.pdf",
@@ -1082,7 +1388,9 @@
       "snapshotTimestamp": "20231205031111",
       "snapshotUrl": "https://web.archive.org/web/20231205031111id_/https://slbcbihar.com/documents/A_Final_Minutes_of_51st_SLBC_Meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/A_Final_Minutes_of_51st_SLBC_Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 419640,
+      "sha256": "3a73a508537ee1a432ca10fceaaa838d7cba69e5c46033f3cb3728a8716089b5",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/10.pmegpscheme.pdf",
@@ -1090,7 +1398,9 @@
       "snapshotTimestamp": "20231205031145",
       "snapshotUrl": "https://web.archive.org/web/20231205031145id_/https://slbcbihar.com/documents/10.PMEGPscheme.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/10.PMEGPscheme.pdf",
-      "status": "planned"
+      "sizeBytes": 177313,
+      "sha256": "1459297547129cf3104d636bdd8dec62f14bee7c71739ef82460958ccaac950b",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes_48th_slbc_final.pdf",
@@ -1098,7 +1408,9 @@
       "snapshotTimestamp": "20231205031410",
       "snapshotUrl": "https://web.archive.org/web/20231205031410id_/https://slbcbihar.com/documents/MINUTES_48TH_SLBC_FINAL.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/MINUTES_48TH_SLBC_FINAL.pdf",
-      "status": "planned"
+      "sizeBytes": 271736,
+      "sha256": "9ac592a7eabb8494311f9b203a5283eaa588d91c7b71e22db8b1fd8a8b9d1a5f",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/66th%20slbc%20agenda%20book%20.pdf",
@@ -1106,7 +1418,10 @@
       "snapshotTimestamp": "20231205031447",
       "snapshotUrl": "https://web.archive.org/web/20231205031447id_/https://slbcbihar.com/Meeting/66TH%20SLBC%20AGENDA%20BOOK%20.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/66TH_SLBC_AGENDA_BOOK_.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "9848d74ad828c262d281aa09033757dd0481b3d5ad006f748a4e0d5cfce1cfc7",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes_47th_slbc_final%20.pdf",
@@ -1114,7 +1429,9 @@
       "snapshotTimestamp": "20231205031524",
       "snapshotUrl": "https://web.archive.org/web/20231205031524id_/https://slbcbihar.com/documents/MINUTES_47TH_SLBC_FINAL%20.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/MINUTES_47TH_SLBC_FINAL_.pdf",
-      "status": "planned"
+      "sizeBytes": 586292,
+      "sha256": "8d657145fb9da5b4642dc7eedb5c2fa270c6a10df5753d2092cd238fcebf000f",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/agenda-of-47-slbc-meeting.pdf",
@@ -1122,7 +1439,9 @@
       "snapshotTimestamp": "20231205031614",
       "snapshotUrl": "https://web.archive.org/web/20231205031614id_/https://slbcbihar.com/documents/Agenda-of-47-SLBC-Meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/Agenda-of-47-SLBC-Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 795650,
+      "sha256": "a0dd1b395789ee9080c841f9b48ef9865172039d199b15dc09ae772ee500c2e7",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/slbc%20scan.pdf",
@@ -1130,7 +1449,10 @@
       "snapshotTimestamp": "20231205031659",
       "snapshotUrl": "https://web.archive.org/web/20231205031659id_/https://slbcbihar.com/documents/SLBC%20SCAN.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/SLBC_SCAN.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "3ccd508ddf316d73c2ff1f76b554533b950d5e3bbf14cb14cc5b76fda9ba82c7",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes_49th_slbc_final.pdf",
@@ -1138,7 +1460,9 @@
       "snapshotTimestamp": "20231205031742",
       "snapshotUrl": "https://web.archive.org/web/20231205031742id_/https://slbcbihar.com/documents/MINUTES_49TH_SLBC_FINAL.pdf",
       "localPath": "slbc-data/bihar/wayback/2023/MINUTES_49TH_SLBC_FINAL.pdf",
-      "status": "planned"
+      "sizeBytes": 494568,
+      "sha256": "c4ad97a5f169fffe583ddcfb01abd55bab11fd1d63ad6f39d08e325e91cfe872",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/acpdw31032016.pdf",
@@ -1146,7 +1470,9 @@
       "snapshotTimestamp": "20240620131312",
       "snapshotUrl": "https://web.archive.org/web/20240620131312id_/https://slbcbihar.com/documents/ACPDW31032016.pdf",
       "localPath": "slbc-data/bihar/wayback/2024/ACPDW31032016.pdf",
-      "status": "planned"
+      "sizeBytes": 166134,
+      "sha256": "320a2cd89d59b69342a32bf0389001d7d6b8bf76e9207e5a576a7138b3bf50ac",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/acpbw31032016.pdf",
@@ -1154,7 +1480,9 @@
       "snapshotTimestamp": "20240620132623",
       "snapshotUrl": "https://web.archive.org/web/20240620132623id_/https://slbcbihar.com/documents/ACPBW31032016.pdf",
       "localPath": "slbc-data/bihar/wayback/2024/ACPBW31032016.pdf",
-      "status": "planned"
+      "sizeBytes": 170737,
+      "sha256": "155021c19ee2d173b6808f4aa3d321e6a83736c1d1409feec36053be03c50446",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/meeting/approved%20minutes%2066th%20slbc.pdf",
@@ -1162,7 +1490,9 @@
       "snapshotTimestamp": "20240808095838",
       "snapshotUrl": "https://web.archive.org/web/20240808095838id_/https://slbcbihar.com/Meeting/Approved%20Minutes%2066th%20SLBC.pdf",
       "localPath": "slbc-data/bihar/wayback/2024/Approved_Minutes_66th_SLBC.pdf",
-      "status": "planned"
+      "sizeBytes": 18190325,
+      "sha256": "65408316bef14012bfe9b468744711c7455d82d846dfd92dad418efdc1d8b75a",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/scale_of_finance_2023_24.pdf",
@@ -1170,7 +1500,9 @@
       "snapshotTimestamp": "20240808123714",
       "snapshotUrl": "https://web.archive.org/web/20240808123714id_/https://slbcbihar.com/documents/Scale_of_Finance_2023_24.pdf",
       "localPath": "slbc-data/bihar/wayback/2024/Scale_of_Finance_2023_24.pdf",
-      "status": "planned"
+      "sizeBytes": 23734619,
+      "sha256": "d22a0fe9e976753ec6e3c94aeebdbc423e28173cd27922356f2cf33ecb680d44",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/bihar%20unit%20cost%20booklet%20-2023-24.pdf",
@@ -1178,7 +1510,9 @@
       "snapshotTimestamp": "20240809120755",
       "snapshotUrl": "https://web.archive.org/web/20240809120755id_/https://slbcbihar.com/documents/Bihar%20Unit%20Cost%20Booklet%20-2023-24.PDF",
       "localPath": "slbc-data/bihar/wayback/2024/Bihar_Unit_Cost_Booklet_-2023-24.PDF",
-      "status": "planned"
+      "sizeBytes": 18703910,
+      "sha256": "4bf6fb875f5f55befa81bb08d2e2d6f7dbb98170e4b49a16792ddf1d3745b93f",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/agriculture%20section.pdf",
@@ -1186,7 +1520,9 @@
       "snapshotTimestamp": "20241125112056",
       "snapshotUrl": "https://web.archive.org/web/20241125112056id_/https://slbcbihar.com/documents/AGRICULTURE%20SECTION.pdf",
       "localPath": "slbc-data/bihar/wayback/2024/AGRICULTURE_SECTION.pdf",
-      "status": "planned"
+      "sizeBytes": 265075,
+      "sha256": "5631e68fad4eed5af2173dec14979fc2ba61612d9e83dd436f67646383c4186d",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/rseti%20march%202016%20final.pdf",
@@ -1194,7 +1530,9 @@
       "snapshotTimestamp": "20241203021421",
       "snapshotUrl": "https://web.archive.org/web/20241203021421id_/https://slbcbihar.com/documents/RSETI%20MARCH%202016%20FINAL.pdf",
       "localPath": "slbc-data/bihar/wayback/2024/RSETI_MARCH_2016_FINAL.pdf",
-      "status": "planned"
+      "sizeBytes": 58182,
+      "sha256": "c48b8e30051913667b581f3f2d4ebba2dc3331ad353b33d3803b103320d3c1b9",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/flcbyruralbranchesdw.pdf",
@@ -1202,7 +1540,9 @@
       "snapshotTimestamp": "20241210135009",
       "snapshotUrl": "https://web.archive.org/web/20241210135009id_/https://slbcbihar.com/documents/FLCByRuralBranchesDW.pdf",
       "localPath": "slbc-data/bihar/wayback/2024/FLCByRuralBranchesDW.pdf",
-      "status": "planned"
+      "sizeBytes": 124432,
+      "sha256": "ef783399d874f772c22b491653a627717c0d43afa245642a9384cd4f5098c4a2",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/flcpage1.pdf",
@@ -1210,7 +1550,9 @@
       "snapshotTimestamp": "20241210152908",
       "snapshotUrl": "https://web.archive.org/web/20241210152908id_/https://slbcbihar.com/documents/FLCpage1.pdf",
       "localPath": "slbc-data/bihar/wayback/2024/FLCpage1.pdf",
-      "status": "planned"
+      "sizeBytes": 163748,
+      "sha256": "a5c47846298a1c18eb96400047dea7512ea16ef2b48b63f062c09dc1761daef5",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/member%20banks%20website.pdf",
@@ -1218,7 +1560,9 @@
       "snapshotTimestamp": "20250119135605",
       "snapshotUrl": "https://web.archive.org/web/20250119135605id_/https://slbcbihar.com/documents/Member%20Banks%20Website.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Member_Banks_Website.pdf",
-      "status": "planned"
+      "sizeBytes": 250380,
+      "sha256": "d4fed5d9238706e4cd979ee49ca87a15179ab04413865110571900d0b8a8901b",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/loan%20apply%20link%20for%20banks.pdf",
@@ -1226,7 +1570,9 @@
       "snapshotTimestamp": "20250125122137",
       "snapshotUrl": "https://web.archive.org/web/20250125122137id_/https://www.slbcbihar.com/documents/Loan%20Apply%20Link%20for%20banks.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Loan_Apply_Link_for_banks.pdf",
-      "status": "planned"
+      "sizeBytes": 58113,
+      "sha256": "68c5e61892afba4a8484a119733e57ec09f06b09ad5eec0a6bcbdcbdfc500164",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/nulm%20pm%20svanidhi%20socio-economic%20guidelines.pdf",
@@ -1234,7 +1580,9 @@
       "snapshotTimestamp": "20250125122159",
       "snapshotUrl": "https://web.archive.org/web/20250125122159id_/https://www.slbcbihar.com/documents/NULM%20PM%20SVANidhi%20Socio-Economic%20Guidelines.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/NULM_PM_SVANidhi_Socio-Economic_Guidelines.pdf",
-      "status": "planned"
+      "sizeBytes": 5452255,
+      "sha256": "4bdf6608943c48f952128e8eea80ac2240a69c499bbf42b537c848b02d520c06",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/crop%20season_19_5_2023.pdf",
@@ -1242,7 +1590,9 @@
       "snapshotTimestamp": "20250125122406",
       "snapshotUrl": "https://web.archive.org/web/20250125122406id_/https://www.slbcbihar.com/documents/Crop%20Season_19_5_2023.PDF",
       "localPath": "slbc-data/bihar/wayback/2025/Crop_Season_19_5_2023.PDF",
-      "status": "planned"
+      "sizeBytes": 16587628,
+      "sha256": "852f5aa15cb2591731d2d4de1a607f2e8f62567c6aaa118557a6bccda31ec868",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/els-acknowlegement-receipt.pdf",
@@ -1250,7 +1600,9 @@
       "snapshotTimestamp": "20250214065951",
       "snapshotUrl": "https://web.archive.org/web/20250214065951id_/https://slbcbihar.com/documents/ELS-Acknowlegement-Receipt.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/ELS-Acknowlegement-Receipt.pdf",
-      "status": "planned"
+      "sizeBytes": 149732,
+      "sha256": "ebaed8a7f1ce1b19dc92b31919d700d43854a6a11deb61998bbcb95529ee3a91",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/kcc-application-form.pdf",
@@ -1258,7 +1610,9 @@
       "snapshotTimestamp": "20250214071519",
       "snapshotUrl": "https://web.archive.org/web/20250214071519id_/https://slbcbihar.com/documents/KCC-Application-Form.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/KCC-Application-Form.pdf",
-      "status": "planned"
+      "sizeBytes": 236656,
+      "sha256": "ef9c7d175293d0482e41c95124b3bf18ee5258faac714fbae876bdc438e9664a",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/el-scheme-2013.pdf",
@@ -1266,7 +1620,9 @@
       "snapshotTimestamp": "20250214080610",
       "snapshotUrl": "https://web.archive.org/web/20250214080610id_/https://slbcbihar.com/documents/EL-Scheme-2013.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/EL-Scheme-2013.pdf",
-      "status": "planned"
+      "sizeBytes": 230403,
+      "sha256": "8b5803f95ef1f5cfde1e8527d696a80c314e34b524f2f65ac22031ccb022f1a6",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/final_shg_account_opening_form_(hindi).pdf",
@@ -1274,7 +1630,9 @@
       "snapshotTimestamp": "20250214082017",
       "snapshotUrl": "https://web.archive.org/web/20250214082017id_/https://slbcbihar.com/documents/Final_SHG_Account_Opening_Form_(Hindi).pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Final_SHG_Account_Opening_Form__Hindi_.pdf",
-      "status": "planned"
+      "sizeBytes": 344419,
+      "sha256": "484573ca25ad35e95a710fc5de8a1f3e64a2049921d22d89c07a5b35fc644402",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/common__credit_linkage_format_for_shg_first_dose_.pdf",
@@ -1282,7 +1640,10 @@
       "snapshotTimestamp": "20250214082318",
       "snapshotUrl": "https://web.archive.org/web/20250214082318id_/https://slbcbihar.com/documents/Common__Credit_linkage_format_for_SHG_First_Dose_.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Common__Credit_linkage_format_for_SHG_First_Dose_.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "6a5fe1ac9a361d79f6f0104adbbe6dd8724f4fbe50d33f975fc8bd7b41040273",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/slbc_calender_2015-16.pdf",
@@ -1290,7 +1651,9 @@
       "snapshotTimestamp": "20250315094816",
       "snapshotUrl": "https://web.archive.org/web/20250315094816id_/https://slbcbihar.com/documents/SLBC_CALENDER_2015-16.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/SLBC_CALENDER_2015-16.pdf",
-      "status": "planned"
+      "sizeBytes": 32459,
+      "sha256": "750de06ed60fe0709d3e5719c563bd48204592f9d8bcddccdb095f8d961681c6",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/slbc_calender_2016-17.pdf",
@@ -1298,7 +1661,9 @@
       "snapshotTimestamp": "20250315110658",
       "snapshotUrl": "https://web.archive.org/web/20250315110658id_/https://slbcbihar.com/documents/SLBC_CALENDER_2016-17.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/SLBC_CALENDER_2016-17.pdf",
-      "status": "planned"
+      "sizeBytes": 32342,
+      "sha256": "018a1332ec9bb0e8c40eb05a6a383fa91fae5c3026641684ba08767d0137c7ce",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/slbc%20calender%202025.pdf",
@@ -1306,7 +1671,9 @@
       "snapshotTimestamp": "20250315114206",
       "snapshotUrl": "https://web.archive.org/web/20250315114206id_/https://slbcbihar.com/documents/SLBC%20CALENDER%202025.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/SLBC_CALENDER_2025.pdf",
-      "status": "planned"
+      "sizeBytes": 39421,
+      "sha256": "c55f6681f84ad15dfda43fbf9812dbc087f502d208ccc9af81c833e19202e3f9",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/slbc%20sub-committee-ii(animal%20hus.)%20proceeding%2014.05.2018%20(1).pdf",
@@ -1314,7 +1681,9 @@
       "snapshotTimestamp": "20250515021553",
       "snapshotUrl": "https://web.archive.org/web/20250515021553id_/https://slbcbihar.com/documents/SLBC%20Sub-Committee-II(Animal%20Hus.)%20Proceeding%2014.05.2018%20(1).pdf",
       "localPath": "slbc-data/bihar/wayback/2025/SLBC_Sub-Committee-II_Animal_Hus._Proceeding_14.05.2018_1_.pdf",
-      "status": "planned"
+      "sizeBytes": 620458,
+      "sha256": "fab1284a46b6deccac1702084872a52f5c9b42c1a58602c43b4a117a84a3237e",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes_of_25th_sub_committee_meeting_of_slbc_on_shg___rseti_24.07.2015.pdf",
@@ -1322,7 +1691,9 @@
       "snapshotTimestamp": "20250515021910",
       "snapshotUrl": "https://web.archive.org/web/20250515021910id_/https://slbcbihar.com/documents/MINUTES_OF_25th_SUB_COMMITTEE_MEETING_OF_SLBC_ON_SHG___RSETI_24.07.2015.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/MINUTES_OF_25th_SUB_COMMITTEE_MEETING_OF_SLBC_ON_SHG___RSETI_24.07.2015.pdf",
-      "status": "planned"
+      "sizeBytes": 268955,
+      "sha256": "22c5138776fa1078a51a3dafa05affaae0669b603ee46a1b5a1e0383d51ed930",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes%20industry%2005.10.2016.pdf",
@@ -1330,7 +1701,9 @@
       "snapshotTimestamp": "20250515023724",
       "snapshotUrl": "https://web.archive.org/web/20250515023724id_/https://slbcbihar.com/documents/MINUTES%20INDUSTRY%2005.10.2016.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/MINUTES_INDUSTRY_05.10.2016.pdf",
-      "status": "planned"
+      "sizeBytes": 216544,
+      "sha256": "350c7d16eb5495d200ccceb2f6fa5d704b8a1259ac92b59bd230ac4cf6a81c74",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes_22nd_steering_comm._br._opening_and_fi_dt._25.06.2014.pdf",
@@ -1338,7 +1711,9 @@
       "snapshotTimestamp": "20250515025009",
       "snapshotUrl": "https://web.archive.org/web/20250515025009id_/https://slbcbihar.com/documents/Minutes_22nd_Steering_Comm._Br._opening_and_FI_dt._25.06.2014.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Minutes_22nd_Steering_Comm._Br._opening_and_FI_dt._25.06.2014.pdf",
-      "status": "planned"
+      "sizeBytes": 103714,
+      "sha256": "b68d62fc8745ca0bc67f724298213a98e06121cc6933a381ecc3213e84f6a4e4",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes_of_5th_meeting_on_industry_dt._11.11.14.pdf",
@@ -1346,7 +1721,9 @@
       "snapshotTimestamp": "20250515025339",
       "snapshotUrl": "https://web.archive.org/web/20250515025339id_/https://slbcbihar.com/documents/Minutes_of_5TH_meeting_on_Industry_dt._11.11.14.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Minutes_of_5TH_meeting_on_Industry_dt._11.11.14.pdf",
-      "status": "planned"
+      "sizeBytes": 98462,
+      "sha256": "8fe4fa590d03f121cdf0b8eaf810621354c856db275cc00d4f1f50dfbe0bd8a8",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/agri%20proceding%2002.08.2017%20meeting.pdf",
@@ -1354,7 +1731,9 @@
       "snapshotTimestamp": "20250515025413",
       "snapshotUrl": "https://web.archive.org/web/20250515025413id_/https://slbcbihar.com/documents/AGRI%20Proceding%2002.08.2017%20Meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/AGRI_Proceding_02.08.2017_Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 970321,
+      "sha256": "8878ec6731adb0cc6ab7304ce770290ee004cf1a1aa1e403c51ee92ea424295c",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/agri_proceding_(25.11.2015).pdf",
@@ -1362,7 +1741,9 @@
       "snapshotTimestamp": "20250515025751",
       "snapshotUrl": "https://web.archive.org/web/20250515025751id_/https://slbcbihar.com/AGRI_Proceding_(25.11.2015).pdf",
       "localPath": "slbc-data/bihar/wayback/2025/AGRI_Proceding__25.11.2015_.pdf",
-      "status": "planned"
+      "sizeBytes": 1312958,
+      "sha256": "b4d22a7f6c214be0d55413ddd9ede15c240a94353ab2a4bab2adad346dac2732",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes_23_rd_steering_comm._br._opening_and_fi_dt._23.12.2014.pdf",
@@ -1370,7 +1751,9 @@
       "snapshotTimestamp": "20250515031902",
       "snapshotUrl": "https://web.archive.org/web/20250515031902id_/https://slbcbihar.com/documents/MINUTES_23_rd_Steering_Comm._Br._opening_and_FI_dt._23.12.2014.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/MINUTES_23_rd_Steering_Comm._Br._opening_and_FI_dt._23.12.2014.pdf",
-      "status": "planned"
+      "sizeBytes": 100611,
+      "sha256": "c05f8511770e7b480ec60012f4229906c811d436d5a68832180550ffde2ab3e6",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes_of_meeting_on_agriculture_dt._19.11.2014.pdf",
@@ -1378,7 +1761,9 @@
       "snapshotTimestamp": "20250515033110",
       "snapshotUrl": "https://web.archive.org/web/20250515033110id_/https://slbcbihar.com/documents/Minutes_of_meeting_on_Agriculture_dt._19.11.2014.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Minutes_of_meeting_on_Agriculture_dt._19.11.2014.pdf",
-      "status": "planned"
+      "sizeBytes": 1149668,
+      "sha256": "e2f62c3fd1f314c2653843bf9b58deb3e27e416bab78c07d60d22e1823de017f",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/industries%2014.07.2021.pdf",
@@ -1386,7 +1771,9 @@
       "snapshotTimestamp": "20250515034549",
       "snapshotUrl": "https://web.archive.org/web/20250515034549id_/https://slbcbihar.com/documents/Industries%2014.07.2021.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Industries_14.07.2021.pdf",
-      "status": "planned"
+      "sizeBytes": 988064,
+      "sha256": "a6a77be11b3f736c20772bdefcfd5b63484941a1cece02b69e8b0bf538246dd3",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/a_final_minutes_of_24th_sub_committee_meeting_on_shg___rseti23032015.pdf",
@@ -1394,7 +1781,9 @@
       "snapshotTimestamp": "20250515034722",
       "snapshotUrl": "https://web.archive.org/web/20250515034722id_/https://slbcbihar.com/documents/A_Final_Minutes_of_24th_sub_committee_meeting_on_SHG___RSETI23032015.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/A_Final_Minutes_of_24th_sub_committee_meeting_on_SHG___RSETI23032015.pdf",
-      "status": "planned"
+      "sizeBytes": 135397,
+      "sha256": "7f1c57028476d32b0fc5b8d52d84778ab3e481a390185e57be2d38564faae661",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/a_minutes_of_24rd_sub_committee_meeting_on_br_opening__it_enabled_fi.pdf",
@@ -1402,7 +1791,9 @@
       "snapshotTimestamp": "20250515035809",
       "snapshotUrl": "https://web.archive.org/web/20250515035809id_/https://slbcbihar.com/documents/A_Minutes_of_24rd_sub_committee_meeting_on_Br_opening__IT_enabled_FI.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/A_Minutes_of_24rd_sub_committee_meeting_on_Br_opening__IT_enabled_FI.pdf",
-      "status": "planned"
+      "sizeBytes": 205989,
+      "sha256": "dcf0a626d1cb8aa5c18ee5ae25e4ee35fe8000eb16d9d1ce92373821e293af9e",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/agri%20proceding%2023.01.2018%20meeting.pdf",
@@ -1410,7 +1801,9 @@
       "snapshotTimestamp": "20250515035836",
       "snapshotUrl": "https://web.archive.org/web/20250515035836id_/https://slbcbihar.com/documents/AGRI%20Proceding%2023.01.2018%20Meeting.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/AGRI_Proceding_23.01.2018_Meeting.pdf",
-      "status": "planned"
+      "sizeBytes": 1445339,
+      "sha256": "d7e12592bddbdd7ed2c756b892e15d330e7ef9786c53d54190840432c993c97f",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/minutes_of_7th_slbc_sub-committee_meeting_on_industry_dt12.05.2015.pdf",
@@ -1418,7 +1811,9 @@
       "snapshotTimestamp": "20250515040038",
       "snapshotUrl": "https://web.archive.org/web/20250515040038id_/https://slbcbihar.com/documents/Minutes_of_7TH_slbc_sub-committee_meeting_on_Industry_dt12.05.2015.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Minutes_of_7TH_slbc_sub-committee_meeting_on_Industry_dt12.05.2015.pdf",
-      "status": "planned"
+      "sizeBytes": 59197,
+      "sha256": "d543b245284969fda9c94837b689460ecc4080b6e1646cd0666aa42164ae3968",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/agri%20proceding%20(31.052016).pdf",
@@ -1426,7 +1821,9 @@
       "snapshotTimestamp": "20250515040333",
       "snapshotUrl": "https://web.archive.org/web/20250515040333id_/https://slbcbihar.com/documents/AGRI%20Proceding%20(31.052016).pdf",
       "localPath": "slbc-data/bihar/wayback/2025/AGRI_Proceding_31.052016_.pdf",
-      "status": "planned"
+      "sizeBytes": 1420989,
+      "sha256": "d597aabffc4bbc2ac870b57e738967a439f5df41ddebe7d8bb29634239a830b8",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/apy/subscriber_registration_form-apy.pdf",
@@ -1434,7 +1831,9 @@
       "snapshotTimestamp": "20250621100445",
       "snapshotUrl": "https://web.archive.org/web/20250621100445id_/https://slbcbihar.com/APY/subscriber_registration_form-APY.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/subscriber_registration_form-APY.pdf",
-      "status": "planned"
+      "sizeBytes": 274735,
+      "sha256": "bb005c64d0ca444598232346694a96bd9f48c08bc5b4af75056d59390d216fd3",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/apy/apy%20flyer_hindi%2024.07.2023.pdf",
@@ -1442,7 +1841,9 @@
       "snapshotTimestamp": "20250621101128",
       "snapshotUrl": "https://web.archive.org/web/20250621101128id_/https://slbcbihar.com/APY/APY%20Flyer_Hindi%2024.07.2023.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/APY_Flyer_Hindi_24.07.2023.pdf",
-      "status": "planned"
+      "sizeBytes": 1167948,
+      "sha256": "9e11f9ee4f2e98141e015b3a6c3a469fbaf771729d02d59a7014b4f0b4cd5fce",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/apy/apy_brochure.pdf",
@@ -1450,7 +1851,9 @@
       "snapshotTimestamp": "20250621101936",
       "snapshotUrl": "https://web.archive.org/web/20250621101936id_/https://slbcbihar.com/APY/APY_Brochure.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/APY_Brochure.pdf",
-      "status": "planned"
+      "sizeBytes": 381768,
+      "sha256": "61a09b7665a4d8555ed7a1db370d8bfe95b7dc55d423ed5060109f6daea9a7ad",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/apy/existing%20subscribers%20hindi%20final%20sib.pdf",
@@ -1458,7 +1861,9 @@
       "snapshotTimestamp": "20250621102145",
       "snapshotUrl": "https://web.archive.org/web/20250621102145id_/https://slbcbihar.com/APY/Existing%20Subscribers%20Hindi%20final%20SIB.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Existing_Subscribers_Hindi_final_SIB.pdf",
-      "status": "planned"
+      "sizeBytes": 1231053,
+      "sha256": "5921dbe873c95cdf232a4a75db480ba93f7f23f9cda36d33e73405e1c2891d04",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/apy/final%20apy%20prospective%20sib%20(hindi).pdf",
@@ -1466,7 +1871,9 @@
       "snapshotTimestamp": "20250621103150",
       "snapshotUrl": "https://web.archive.org/web/20250621103150id_/https://slbcbihar.com/APY/Final%20APY%20Prospective%20SIB%20(Hindi).pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Final_APY_Prospective_SIB_Hindi_.pdf",
-      "status": "planned"
+      "sizeBytes": 1030149,
+      "sha256": "4b9ed4a81f48bf9d39a19b51ef45f61b75a7d0f12b3d4166e247704e17dc7f5b",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/apy/atal_pension_yojana-scheme.pdf",
@@ -1474,7 +1881,9 @@
       "snapshotTimestamp": "20250621103224",
       "snapshotUrl": "https://web.archive.org/web/20250621103224id_/https://slbcbihar.com/APY/Atal_Pension_Yojana-Scheme.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Atal_Pension_Yojana-Scheme.pdf",
-      "status": "planned"
+      "sizeBytes": 221182,
+      "sha256": "6bc64f63bd6031700e5e2947799673372b5b36acb72c661fe7982bcaef821b7d",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/si-01-07-01-2014.pdf",
@@ -1482,7 +1891,10 @@
       "snapshotTimestamp": "20250621104305",
       "snapshotUrl": "https://web.archive.org/web/20250621104305id_/https://slbcbihar.com/documents/SI-01-07-01-2014.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/SI-01-07-01-2014.pdf",
-      "status": "planned"
+      "sizeBytes": 5242880,
+      "sha256": "b2f99769358ad40914ad336bed03d15be8e083b133a57b181b8b47bd751c2667",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcbihar.com/apy/existing%20subscribers%20english%20final%20sib.pdf",
@@ -1490,7 +1902,9 @@
       "snapshotTimestamp": "20250621105941",
       "snapshotUrl": "https://web.archive.org/web/20250621105941id_/https://slbcbihar.com/APY/Existing%20Subscribers%20English%20final%20SIB.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Existing_Subscribers_English_final_SIB.pdf",
-      "status": "planned"
+      "sizeBytes": 798579,
+      "sha256": "6a2c0108dfe1ee6e3abf313eca81bc4f525218f065281276b5e1c143da5ca031",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/shg%20bank31032016.pdf",
@@ -1498,7 +1912,9 @@
       "snapshotTimestamp": "20250621110341",
       "snapshotUrl": "https://web.archive.org/web/20250621110341id_/https://slbcbihar.com/documents/SHG%20BANK31032016.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/SHG_BANK31032016.pdf",
-      "status": "planned"
+      "sizeBytes": 115842,
+      "sha256": "e7f693d869e229e1bab1321ec774982dbc51bde68749ba048be8af4db3c4c6aa",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/pmegpscheme.pdf",
@@ -1506,7 +1922,9 @@
       "snapshotTimestamp": "20250621110731",
       "snapshotUrl": "https://web.archive.org/web/20250621110731id_/https://slbcbihar.com/documents/PMEGPscheme.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/PMEGPscheme.pdf",
-      "status": "planned"
+      "sizeBytes": 246945,
+      "sha256": "7645217492064a2e0805828cef63a47ef811a25cc86da46b52132c529f9a56bd",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/apy/flyer.pdf",
@@ -1514,7 +1932,9 @@
       "snapshotTimestamp": "20250621111842",
       "snapshotUrl": "https://web.archive.org/web/20250621111842id_/https://slbcbihar.com/APY/Flyer.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Flyer.pdf",
-      "status": "planned"
+      "sizeBytes": 473633,
+      "sha256": "9571c52d80195e92acba2f65ef7841a5f93caa7084d1885d2a070d3ce9c9251d",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/apy/final%20apy%20faqs%20english%2028.08.2023.pdf",
@@ -1522,7 +1942,9 @@
       "snapshotTimestamp": "20250621112706",
       "snapshotUrl": "https://web.archive.org/web/20250621112706id_/https://slbcbihar.com/APY/Final%20APY%20FAQs%20English%2028.08.2023.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Final_APY_FAQs_English_28.08.2023.pdf",
-      "status": "planned"
+      "sizeBytes": 976319,
+      "sha256": "3a3032fe593971b9057cf49e71b134b0cd6b2624f44296dddeea3a110ea630fc",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/karayanayan_anudesh_2014-15_new.pdf",
@@ -1530,7 +1952,9 @@
       "snapshotTimestamp": "20250621112806",
       "snapshotUrl": "https://web.archive.org/web/20250621112806id_/https://slbcbihar.com/documents/karayanayan_Anudesh_2014-15_New.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/karayanayan_Anudesh_2014-15_New.pdf",
-      "status": "planned"
+      "sizeBytes": 2034133,
+      "sha256": "cc2efbd22a02a2200db1f655e455ad928c5cfca600d69a7571ea106d2eaaa7ed",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/apy/final%20apy%20prospective%20sib%20(english).pdf",
@@ -1538,7 +1962,9 @@
       "snapshotTimestamp": "20250621114707",
       "snapshotUrl": "https://web.archive.org/web/20250621114707id_/https://slbcbihar.com/APY/Final%20APY%20Prospective%20SIB%20(English).pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Final_APY_Prospective_SIB_English_.pdf",
-      "status": "planned"
+      "sizeBytes": 194662,
+      "sha256": "4f352b8ae5579f4c4fe2e576b9c1850c7228e01e9c64e44b0babe8db101f97d2",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/apy/apy%20flyer_english%20(20.07.2023).pdf",
@@ -1546,7 +1972,9 @@
       "snapshotTimestamp": "20250621115046",
       "snapshotUrl": "https://web.archive.org/web/20250621115046id_/https://slbcbihar.com/APY/APY%20Flyer_English%20(20.07.2023).pdf",
       "localPath": "slbc-data/bihar/wayback/2025/APY_Flyer_English_20.07.2023_.pdf",
-      "status": "planned"
+      "sizeBytes": 1104889,
+      "sha256": "7d8a5f227711bf9519c4cc33bc94aa78650dff3dfb4f6dc629cf138aa283d840",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/apy/final%20apy%20faqs%20hindi%2028.08.2023.pdf",
@@ -1554,7 +1982,9 @@
       "snapshotTimestamp": "20250621115112",
       "snapshotUrl": "https://web.archive.org/web/20250621115112id_/https://slbcbihar.com/APY/Final%20APY%20FAQs%20Hindi%2028.08.2023.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Final_APY_FAQs_Hindi_28.08.2023.pdf",
-      "status": "planned"
+      "sizeBytes": 1244337,
+      "sha256": "f46e4cdc4481f48ca11979e4480288209f2adce139ffc4279be627fcaeff10b9",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/apy/apy_training_module_for_trainers.pdf",
@@ -1562,7 +1992,9 @@
       "snapshotTimestamp": "20250621115231",
       "snapshotUrl": "https://web.archive.org/web/20250621115231id_/https://slbcbihar.com/APY/APY_Training_Module_for_Trainers.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/APY_Training_Module_for_Trainers.pdf",
-      "status": "planned"
+      "sizeBytes": 2151799,
+      "sha256": "6ca3a588de00f286f8b4466212aedb8308a37df661e351b85b4e9a7a98ab247c",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/apy/apy_faqs.pdf",
@@ -1570,7 +2002,9 @@
       "snapshotTimestamp": "20250621115354",
       "snapshotUrl": "https://web.archive.org/web/20250621115354id_/https://slbcbihar.com/APY/APY_FAQs.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/APY_FAQs.pdf",
-      "status": "planned"
+      "sizeBytes": 258669,
+      "sha256": "569f09db62f39f40ee79e932d79e9ed720801d73258a1f470cd860f8c3fa0b43",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/60180813309f2-updated%20guidelines%20of%20pmay-u.pdf",
@@ -1578,7 +2012,9 @@
       "snapshotTimestamp": "20250805073153",
       "snapshotUrl": "https://web.archive.org/web/20250805073153id_/https://slbcbihar.com/documents/60180813309f2-Updated%20guidelines%20of%20PMAY-U.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/60180813309f2-Updated_guidelines_of_PMAY-U.pdf",
-      "status": "planned"
+      "sizeBytes": 5279301,
+      "sha256": "7ace7a949b98aecda3dc264995814d632777432cc369762b0831de5346ec8576",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/hindi_pm%20swanidhi.pdf",
@@ -1586,7 +2022,9 @@
       "snapshotTimestamp": "20250806002050",
       "snapshotUrl": "https://web.archive.org/web/20250806002050id_/https://slbcbihar.com/documents/Hindi_PM%20SWANidhi.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/Hindi_PM_SWANidhi.pdf",
-      "status": "planned"
+      "sizeBytes": 7844743,
+      "sha256": "dd6c74214ea2888abf9db64621f4a64d6deb82f0daee6901c755c44f15570900",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcbihar.com/documents/slbc%20bihar%20%20minutes%20of%2088th%20and%2089th%20joint%20meeting%20held%20on%20%2014.06.2024.pdf",
@@ -1594,7 +2032,9 @@
       "snapshotTimestamp": "20251231155739",
       "snapshotUrl": "https://web.archive.org/web/20251231155739id_/https://slbcbihar.com/documents/SLBC%20BIHAR%20%20MINUTES%20OF%2088TH%20AND%2089TH%20JOINT%20MEETING%20HELD%20ON%20%2014.06.2024.pdf",
       "localPath": "slbc-data/bihar/wayback/2025/SLBC_BIHAR_MINUTES_OF_88TH_AND_89TH_JOINT_MEETING_HELD_ON_14.06.2024.pdf",
-      "status": "planned"
+      "sizeBytes": 412781,
+      "sha256": "9cb1c749d50d8cc9d47bfc00445fa13ed3c95b8e179e7196e2bff21177493241",
+      "status": "downloaded"
     }
   ]
 }
