@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-14T18:48:42Z",
+  "generatedAt": "2026-05-16T06:41:10Z",
   "states": {
     "andhra-pradesh": {
       "stateUrl": "https://web.archive.org/web/2025*/slbcap.nic.in",
@@ -14,13 +14,19 @@
         {
           "url": "https://web.archive.org/web/2025*/slbcap.nic.in",
           "host": "slbcap.nic.in",
-          "snapshotCount": 0,
-          "oldestDate": null,
-          "newestDate": null,
+          "snapshotCount": 122,
+          "oldestDate": "2010-07-24",
+          "newestDate": "2026-03-16",
           "snapshotCalendar": "https://web.archive.org/web/*/slbcap.nic.in",
-          "newestUrl": null
+          "newestUrl": "https://web.archive.org/web/20260316001803/https://www.slbcap.nic.in/"
         }
-      ]
+      ],
+      "deepestArchive": {
+        "host": "slbcap.nic.in",
+        "snapshotCount": 122,
+        "snapshotCalendar": "https://web.archive.org/web/*/slbcap.nic.in",
+        "oldestDate": "2010-07-24"
+      }
     },
     "arunachal-pradesh": {
       "stateUrl": "https://onlineslbcne.nic.in",
@@ -67,19 +73,13 @@
         {
           "url": "https://www.slbcbihar.com/SlBCHeldMeeting.aspx",
           "host": "www.slbcbihar.com",
-          "snapshotCount": 52,
-          "oldestDate": "2015-06-02",
-          "newestDate": "2025-06-21",
+          "snapshotCount": 0,
+          "oldestDate": null,
+          "newestDate": null,
           "snapshotCalendar": "https://web.archive.org/web/*/www.slbcbihar.com",
-          "newestUrl": "https://web.archive.org/web/20250621105127/https://slbcbihar.com/SlBCHeldMeeting.aspx"
+          "newestUrl": null
         }
-      ],
-      "deepestArchive": {
-        "host": "www.slbcbihar.com",
-        "snapshotCount": 52,
-        "snapshotCalendar": "https://web.archive.org/web/*/www.slbcbihar.com",
-        "oldestDate": "2015-06-02"
-      }
+      ]
     },
     "chhattisgarh": {
       "stateUrl": "https://slbcchhattisgarh.com",
@@ -125,18 +125,29 @@
     "goa": {
       "stateUrl": "https://slbcgoa.com",
       "snapshotCalendar": "https://web.archive.org/web/*/slbcgoa.com",
-      "latest": null,
+      "latest": {
+        "timestamp": "20251206111053",
+        "date": "2025-12-06",
+        "url": "https://web.archive.org/web/20251206111053/https://slbcgoa.com/",
+        "variantUrl": "https://slbcgoa.com"
+      },
       "variants": [
         {
           "url": "https://slbcgoa.com",
           "host": "slbcgoa.com",
-          "snapshotCount": 0,
-          "oldestDate": null,
-          "newestDate": null,
+          "snapshotCount": 130,
+          "oldestDate": "2013-04-15",
+          "newestDate": "2025-12-06",
           "snapshotCalendar": "https://web.archive.org/web/*/slbcgoa.com",
-          "newestUrl": null
+          "newestUrl": "https://web.archive.org/web/20251206111053/https://slbcgoa.com/"
         }
-      ]
+      ],
+      "deepestArchive": {
+        "host": "slbcgoa.com",
+        "snapshotCount": 130,
+        "snapshotCalendar": "https://web.archive.org/web/*/slbcgoa.com",
+        "oldestDate": "2013-04-15"
+      }
     },
     "gujarat": {
       "stateUrl": "https://slbcgujarat.in",
@@ -192,35 +203,40 @@
         {
           "url": "https://slbchp.com",
           "host": "slbchp.com",
-          "snapshotCount": 104,
-          "oldestDate": "2008-11-21",
-          "newestDate": "2026-01-02",
+          "snapshotCount": 0,
+          "oldestDate": null,
+          "newestDate": null,
           "snapshotCalendar": "https://web.archive.org/web/*/slbchp.com",
-          "newestUrl": "https://web.archive.org/web/20260102235458/https://slbchp.com/"
+          "newestUrl": null
         }
-      ],
-      "deepestArchive": {
-        "host": "slbchp.com",
-        "snapshotCount": 104,
-        "snapshotCalendar": "https://web.archive.org/web/*/slbchp.com",
-        "oldestDate": "2008-11-21"
-      }
+      ]
     },
     "jammu-kashmir": {
       "stateUrl": "https://www.jkslbc.com",
       "snapshotCalendar": "https://web.archive.org/web/*/www.jkslbc.com",
-      "latest": null,
+      "latest": {
+        "timestamp": "20260314055110",
+        "date": "2026-03-14",
+        "url": "https://web.archive.org/web/20260314055110/http://jkslbc.com/",
+        "variantUrl": "https://www.jkslbc.com"
+      },
       "variants": [
         {
           "url": "https://www.jkslbc.com",
           "host": "www.jkslbc.com",
-          "snapshotCount": 0,
-          "oldestDate": null,
-          "newestDate": null,
+          "snapshotCount": 177,
+          "oldestDate": "2008-12-24",
+          "newestDate": "2026-03-14",
           "snapshotCalendar": "https://web.archive.org/web/*/www.jkslbc.com",
-          "newestUrl": null
+          "newestUrl": "https://web.archive.org/web/20260314055110/http://jkslbc.com/"
         }
-      ]
+      ],
+      "deepestArchive": {
+        "host": "www.jkslbc.com",
+        "snapshotCount": 177,
+        "snapshotCalendar": "https://web.archive.org/web/*/www.jkslbc.com",
+        "oldestDate": "2008-12-24"
+      }
     },
     "jharkhand": {
       "stateUrl": "https://onlineslbcne.nic.in",
@@ -267,19 +283,13 @@
         {
           "url": "https://slbckerala.com",
           "host": "slbckerala.com",
-          "snapshotCount": 123,
-          "oldestDate": "2008-06-07",
-          "newestDate": "2023-10-04",
+          "snapshotCount": 0,
+          "oldestDate": null,
+          "newestDate": null,
           "snapshotCalendar": "https://web.archive.org/web/*/slbckerala.com",
-          "newestUrl": "https://web.archive.org/web/20231004052645/https://slbckerala.com/"
+          "newestUrl": null
         }
-      ],
-      "deepestArchive": {
-        "host": "slbckerala.com",
-        "snapshotCount": 123,
-        "snapshotCalendar": "https://web.archive.org/web/*/slbckerala.com",
-        "oldestDate": "2008-06-07"
-      }
+      ]
     },
     "ladakh": {
       "stateUrl": "https://utlbcladakh.com",
@@ -294,19 +304,13 @@
         {
           "url": "https://utlbcladakh.com",
           "host": "utlbcladakh.com",
-          "snapshotCount": 21,
-          "oldestDate": "2021-12-29",
-          "newestDate": "2026-01-05",
+          "snapshotCount": 0,
+          "oldestDate": null,
+          "newestDate": null,
           "snapshotCalendar": "https://web.archive.org/web/*/utlbcladakh.com",
-          "newestUrl": "https://web.archive.org/web/20260105043527/https://utlbcladakh.com/"
+          "newestUrl": null
         }
-      ],
-      "deepestArchive": {
-        "host": "utlbcladakh.com",
-        "snapshotCount": 21,
-        "snapshotCalendar": "https://web.archive.org/web/*/utlbcladakh.com",
-        "oldestDate": "2021-12-29"
-      }
+      ]
     },
     "madhya-pradesh": {
       "stateUrl": "https://www.slbcmadhyapradesh.in/slbc-meeting.aspx",
@@ -327,7 +331,12 @@
     "maharashtra": {
       "stateUrl": "https://bankofmaharashtra.in",
       "snapshotCalendar": "https://web.archive.org/web/*/bankofmaharashtra.in",
-      "latest": null,
+      "latest": {
+        "timestamp": "20260514172532",
+        "date": "2026-05-14",
+        "url": "https://web.archive.org/web/20260514172532/https://bankofmaharashtra.bank.in/",
+        "variantUrl": "https://bankofmaharashtra.bank.in"
+      },
       "variants": [
         {
           "url": "https://bankofmaharashtra.in",
@@ -341,13 +350,19 @@
         {
           "url": "https://bankofmaharashtra.bank.in",
           "host": "bankofmaharashtra.bank.in",
-          "snapshotCount": 0,
-          "oldestDate": null,
-          "newestDate": null,
+          "snapshotCount": 15,
+          "oldestDate": "2025-12-07",
+          "newestDate": "2026-05-14",
           "snapshotCalendar": "https://web.archive.org/web/*/bankofmaharashtra.bank.in",
-          "newestUrl": null
+          "newestUrl": "https://web.archive.org/web/20260514172532/https://bankofmaharashtra.bank.in/"
         }
-      ]
+      ],
+      "deepestArchive": {
+        "host": "bankofmaharashtra.bank.in",
+        "snapshotCount": 15,
+        "snapshotCalendar": "https://web.archive.org/web/*/bankofmaharashtra.bank.in",
+        "oldestDate": "2025-12-07"
+      }
     },
     "manipur": {
       "stateUrl": "https://onlineslbcne.nic.in",
@@ -599,19 +614,13 @@
         {
           "url": "https://slbcup.com",
           "host": "slbcup.com",
-          "snapshotCount": 85,
-          "oldestDate": "2008-04-18",
-          "newestDate": "2025-07-13",
+          "snapshotCount": 0,
+          "oldestDate": null,
+          "newestDate": null,
           "snapshotCalendar": "https://web.archive.org/web/*/slbcup.com",
-          "newestUrl": "https://web.archive.org/web/20250713101151/http://slbcup.com/"
+          "newestUrl": null
         }
-      ],
-      "deepestArchive": {
-        "host": "slbcup.com",
-        "snapshotCount": 85,
-        "snapshotCalendar": "https://web.archive.org/web/*/slbcup.com",
-        "oldestDate": "2008-04-18"
-      }
+      ]
     }
   }
 }
