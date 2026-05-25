@@ -1,21 +1,31 @@
-# Project FINER — Financial Inclusion in the North East Region
+# Project FINER — Financial Inclusion data platform
 # https://projectfiner.com
 
 User-agent: *
 Allow: /
 
-# Don't crawl the per-quarter indicator JSON files (heavy data payloads, not
-# meant to be search-indexed individually). The HTML pages link them as data
-# assets, not crawl targets.
+# Allow the HTML pages under /slbc-data/ — these are real content (per-state
+# download pages with district directories, OG cards, source citations).
+# But block the heavy data files (CSV/JSON/XLSX) that those pages link as
+# downloads — Google's crawl budget shouldn't go to multi-MB JSON payloads.
+Allow: /slbc-data/$
+Allow: /slbc-data/meeting-minutes/
+Allow: /slbc-data/*/download/
+Disallow: /slbc-data/
+
+# Heavy data dirs — crawl budget should go to indexable HTML, not raw JSON
 Disallow: /indicators/
+Disallow: /districts/
 Disallow: /digital-payments/
 Disallow: /DPSCs/
 Disallow: /MFDs/
 Disallow: /banking-outlets/
-Disallow: /slbc-data/
+Disallow: /sources/
+Disallow: /data/
 
-# Allow the OG image so previews work in chat apps + search snippets.
+# Allow OG images so previews work in chat apps + search snippets.
 Allow: /og-image.png
 Allow: /og-image.jpg
+Allow: /og/
 
 Sitemap: https://projectfiner.com/sitemap.xml
