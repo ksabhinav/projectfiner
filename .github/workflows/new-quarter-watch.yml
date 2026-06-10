@@ -1,0 +1,122 @@
+# Weekly new-quarter detector.
+#
+# Checks each SLBC state portal for newly published meeting documents
+# (scripts/check_new_quarters.py) and opens/updates a GitHub issue when
+# something changed — new doc links (likely a new quarterly meeting) or
+# removed links (jkslbc.com-style in-place overwrites, see CLAUDE.md #73).
+#
+# This kills the failure mode where a state silently falls 4 quarters
+# behind (Jun 2026 staleness queue: Uttarakhand 24 months, AP 18 months,
+# Karnataka ~1 year).
+#
+# Two jobs, mirroring wayback-daily.yml conventions:
+#   1. check        — runs the checker with --update, opens/comments the
+#                     data-refresh issue when the alert report exists.
+#   2. commit-snapshot — always runs after check; commits the refreshed
+#                     public/sources/portal-snapshots.json back to main
+#                     with the bot identity (same as refresh-manifest).
+#
+# Unreachable portals never alert (transient — tracked via
+# consecutiveFailures in the snapshot). The checker is stdlib-only.
+
+name: New-quarter watch
+
+on:
+  schedule:
+    # Monday 04:00 UTC = 09:30 IST. Weekly is enough — SLBC portals
+    # publish quarterly; a week of detection latency is fine.
+    - cron: '0 4 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Check SLBC portals for new documents
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run new-quarter checker
+        # --update refreshes the snapshot in the workspace (uploaded as an
+        # artifact below and committed by the commit-snapshot job).
+        # --report-md only creates the file when there are new/removed
+        # links — the issue step keys off its existence.
+        run: python3 scripts/check_new_quarters.py --update --report-md portal-diff-report.md
+
+      - name: Upload refreshed snapshot
+        # Hand the exact snapshot this run diffed against to the commit
+        # job, so the committed baseline matches the issue we filed (no
+        # second fetch, no race).
+        uses: actions/upload-artifact@v4
+        with:
+          name: portal-snapshot
+          path: public/sources/portal-snapshots.json
+
+      - name: Open or update data-refresh issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ ! -s portal-diff-report.md ]; then
+            echo "no new or removed documents — no issue needed"
+            exit 0
+          fi
+          # Ensure the label exists (idempotent).
+          gh label create data-refresh --force \
+            --color D93F0B \
+            --description "Upstream SLBC portal published or removed documents"
+          # Title comes from the report's H1: "New SLBC documents detected: <states>"
+          TITLE=$(head -1 portal-diff-report.md | sed 's/^# //')
+          # Dedupe: if an open data-refresh issue exists, comment on it
+          # instead of opening a new one.
+          EXISTING=$(gh issue list --label data-refresh --state open \
+            --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            echo "commenting on existing issue #$EXISTING"
+            gh issue comment "$EXISTING" --body-file portal-diff-report.md
+          else
+            echo "opening new issue: $TITLE"
+            gh issue create --title "$TITLE" \
+              --body-file portal-diff-report.md \
+              --label data-refresh
+          fi
+
+  commit-snapshot:
+    # Commit the refreshed snapshot back to main so next week's run diffs
+    # against this week's baseline. Same bot identity/conventions as
+    # wayback-daily.yml's refresh-manifest job.
+    name: Commit refreshed portal snapshot
+    runs-on: ubuntu-latest
+    needs: check
+    if: always() && needs.check.result != 'cancelled'
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download refreshed snapshot
+        uses: actions/download-artifact@v4
+        # If the check job died before uploading, there's nothing to
+        # commit — the diff check below handles the no-op.
+        continue-on-error: true
+        with:
+          name: portal-snapshot
+          path: public/sources/
+
+      - name: Commit snapshot if changed
+        run: |
+          set -euo pipefail
+          if git diff --quiet public/sources/portal-snapshots.json; then
+            echo "no snapshot changes"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/sources/portal-snapshots.json
+          git commit -m "chore(quarter-watch): refresh portal snapshot [skip ci]"
+          git push
