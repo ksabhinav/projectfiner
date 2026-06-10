@@ -8,6 +8,18 @@ Reports: CDR, PMJDY, KCC, SHG, Digital, Aadhaar, PMEGP, NRLM
 Quarters: FY2022 Q1 through FY2026 Q3 (June 2021 through December 2025)
 
 Output: ne_blockwise_scrape.json
+
+SERVER REVAMP NOTE (June 2026): onlineslbcne.nic.in now binds the selected
+state SERVER-SIDE per client IP (GET /<CODE>), not via a session cookie — see
+scrape_onlineslbc.py + CLAUDE.md gotcha #34 for the full reference. This script
+already (a) visits /<CODE> to bind and (b) uses the LIVE blockwise endpoints
+(blockwisecdr.php, blockwisepmjdy.php, …) and submits the form natively (no
+form.action override), so it survived the revamp. Hardened June 2026 to also
+VERIFY the binding via the form page's "Go Back" link
+(<a href="ME"><b>Go Back</b></a>) before each submit and re-select the state if
+another client on the same IP flipped it. Never run two states concurrently
+from the same IP. NOTE: blockwise data is finer-grained than the district-level
+data the main FINER pipeline ingests — this is an auxiliary scraper.
 """
 
 import json
@@ -163,11 +175,43 @@ def parse_table(page):
     return headers, blocks
 
 
-def scrape_report(page, report_page, quarter, fy_year):
+def active_state_on_page(page):
+    """Read the server-side active state from the form page's "Go Back" link
+    (<a href="ME"><b>Go Back</b></a>). Returns the 2-letter code or None."""
+    try:
+        return page.evaluate(
+            """() => {
+                for (const a of document.querySelectorAll('a')) {
+                    const h = (a.getAttribute('href') || '').trim();
+                    if (/^[A-Z]{2}$/.test(h) &&
+                        (a.textContent || '').trim().toLowerCase().includes('go back')) {
+                        return h;
+                    }
+                }
+                return null;
+            }"""
+        )
+    except Exception:
+        return None
+
+
+def scrape_report(page, state_code, report_page, quarter, fy_year):
     """Scrape a single blockwise report for one quarter. Returns (headers, blocks) or (None, None)."""
     try:
-        page.goto(f"{BASE_URL}/{report_page}", wait_until="networkidle", timeout=30000)
-        time.sleep(1)
+        # Open the report form, verifying the per-IP state binding. If another
+        # client on our IP flipped it, re-select /<CODE> once and re-fetch.
+        for attempt in range(2):
+            page.goto(f"{BASE_URL}/{report_page}", wait_until="networkidle", timeout=30000)
+            time.sleep(1)
+            if active_state_on_page(page) == state_code:
+                break
+            if attempt == 0:
+                page.goto(f"{BASE_URL}/{state_code}", wait_until="networkidle", timeout=30000)
+                time.sleep(1)
+            else:
+                print(f"    binding failed (server has "
+                      f"{active_state_on_page(page)!r}, want {state_code!r})")
+                return None, None
 
         # Select quarter
         try:
@@ -254,7 +298,7 @@ def main():
                         if q["period"] in all_data[state_code][report["key"]]:
                             continue
 
-                        headers, blocks = scrape_report(page, report["page"], q["quarter"], q["fy_year"])
+                        headers, blocks = scrape_report(page, state_code, report["page"], q["quarter"], q["fy_year"])
 
                         if headers and blocks:
                             all_data[state_code][report["key"]][q["period"]] = {
