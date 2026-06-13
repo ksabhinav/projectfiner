@@ -4,6 +4,652 @@
   "description": "Madhya Pradesh SLBC quarterly district-level financial inclusion data.",
   "amount_unit": "Rs. Lakhs",
   "quarters": {
+    "2016-12": {
+      "period": "December 2016",
+      "as_on_date": "31-12-2016",
+      "fy": "2016-17",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Agar Malwa": {
+              "District": "Agar Malwa",
+              "total_deposit": "56800",
+              "total_advance": "100500",
+              "cd_ratio": "176.93"
+            },
+            "Alirajpur": {
+              "District": "Alirajpur",
+              "total_deposit": "91000",
+              "total_advance": "42200",
+              "cd_ratio": "46.36"
+            },
+            "Anuppur": {
+              "District": "Anuppur",
+              "total_deposit": "247700",
+              "total_advance": "584700",
+              "cd_ratio": "236.09"
+            },
+            "Ashoknagar": {
+              "District": "Ashoknagar",
+              "total_deposit": "140900",
+              "total_advance": "134500",
+              "cd_ratio": "95.47"
+            },
+            "Balaghat": {
+              "District": "Balaghat",
+              "total_deposit": "301100",
+              "total_advance": "154800",
+              "cd_ratio": "51.41"
+            },
+            "Barwani": {
+              "District": "Barwani",
+              "total_deposit": "145900",
+              "total_advance": "162400",
+              "cd_ratio": "111.3"
+            },
+            "Betul": {
+              "District": "Betul",
+              "total_deposit": "434400",
+              "total_advance": "214600",
+              "cd_ratio": "49.41"
+            },
+            "Bhind": {
+              "District": "Bhind",
+              "total_deposit": "282600",
+              "total_advance": "140300",
+              "cd_ratio": "49.65"
+            },
+            "Bhopal": {
+              "District": "Bhopal",
+              "total_deposit": "5972100",
+              "total_advance": "4102400",
+              "cd_ratio": "68.69"
+            },
+            "Burhanpur": {
+              "District": "Burhanpur",
+              "total_deposit": "216200",
+              "total_advance": "190000",
+              "cd_ratio": "87.9"
+            },
+            "Chhatarpur": {
+              "District": "Chhatarpur",
+              "total_deposit": "429600",
+              "total_advance": "190500",
+              "cd_ratio": "44.34"
+            },
+            "Chhindwara": {
+              "District": "Chhindwara",
+              "total_deposit": "659300",
+              "total_advance": "362200",
+              "cd_ratio": "54.94"
+            },
+            "Damoh": {
+              "District": "Damoh",
+              "total_deposit": "235800",
+              "total_advance": "136700",
+              "cd_ratio": "57.99"
+            },
+            "Datia": {
+              "District": "Datia",
+              "total_deposit": "156200",
+              "total_advance": "122400",
+              "cd_ratio": "78.38"
+            },
+            "Dewas": {
+              "District": "Dewas",
+              "total_deposit": "373300",
+              "total_advance": "363200",
+              "cd_ratio": "97.31"
+            },
+            "Dhar": {
+              "District": "Dhar",
+              "total_deposit": "523600",
+              "total_advance": "483000",
+              "cd_ratio": "92.24"
+            },
+            "Dindori": {
+              "District": "Dindori",
+              "total_deposit": "77400",
+              "total_advance": "31500",
+              "cd_ratio": "40.72"
+            },
+            "East Nimar": {
+              "District": "East Nimar",
+              "total_deposit": "275700",
+              "total_advance": "305400",
+              "cd_ratio": "110.77"
+            },
+            "Guna": {
+              "District": "Guna",
+              "total_deposit": "252100",
+              "total_advance": "214800",
+              "cd_ratio": "85.19"
+            },
+            "Gwalior": {
+              "District": "Gwalior",
+              "total_deposit": "1526500",
+              "total_advance": "623200",
+              "cd_ratio": "40.82"
+            },
+            "Harda": {
+              "District": "Harda",
+              "total_deposit": "136300",
+              "total_advance": "204000",
+              "cd_ratio": "149.65"
+            },
+            "Indore": {
+              "District": "Indore",
+              "total_deposit": "4218800",
+              "total_advance": "4552200",
+              "cd_ratio": "107.9"
+            },
+            "Jabalpur": {
+              "District": "Jabalpur",
+              "total_deposit": "1925700",
+              "total_advance": "814800",
+              "cd_ratio": "42.31"
+            },
+            "Jhabua": {
+              "District": "Jhabua",
+              "total_deposit": "148100",
+              "total_advance": "126800",
+              "cd_ratio": "85.61"
+            },
+            "Katni": {
+              "District": "Katni",
+              "total_deposit": "359500",
+              "total_advance": "200700",
+              "cd_ratio": "55.81"
+            },
+            "Khargone": {
+              "District": "Khargone",
+              "total_deposit": "483600",
+              "total_advance": "371900",
+              "cd_ratio": "76.9"
+            },
+            "Mandla": {
+              "District": "Mandla",
+              "total_deposit": "228500",
+              "total_advance": "107600",
+              "cd_ratio": "47.09"
+            },
+            "Mandsaur": {
+              "District": "Mandsaur",
+              "total_deposit": "299800",
+              "total_advance": "255500",
+              "cd_ratio": "85.21"
+            },
+            "Morena": {
+              "District": "Morena",
+              "total_deposit": "306200",
+              "total_advance": "209300",
+              "cd_ratio": "68.35"
+            },
+            "Narmadapuram": {
+              "District": "Narmadapuram",
+              "total_deposit": "486400",
+              "total_advance": "493400",
+              "cd_ratio": "101.45"
+            },
+            "Narsinghpur": {
+              "District": "Narsinghpur",
+              "total_deposit": "221500",
+              "total_advance": "217700",
+              "cd_ratio": "98.25"
+            },
+            "Neemuch": {
+              "District": "Neemuch",
+              "total_deposit": "240900",
+              "total_advance": "185200",
+              "cd_ratio": "76.84"
+            },
+            "Panna": {
+              "District": "Panna",
+              "total_deposit": "177700",
+              "total_advance": "78700",
+              "cd_ratio": "44.28"
+            },
+            "Raisen": {
+              "District": "Raisen",
+              "total_deposit": "239100",
+              "total_advance": "374100",
+              "cd_ratio": "156.44"
+            },
+            "Rajgarh": {
+              "District": "Rajgarh",
+              "total_deposit": "224200",
+              "total_advance": "296500",
+              "cd_ratio": "132.25"
+            },
+            "Ratlam": {
+              "District": "Ratlam",
+              "total_deposit": "458400",
+              "total_advance": "328600",
+              "cd_ratio": "71.68"
+            },
+            "Rewa": {
+              "District": "Rewa",
+              "total_deposit": "741800",
+              "total_advance": "398500",
+              "cd_ratio": "53.72"
+            },
+            "Sagar": {
+              "District": "Sagar",
+              "total_deposit": "793800",
+              "total_advance": "357500",
+              "cd_ratio": "45.04"
+            },
+            "Satna": {
+              "District": "Satna",
+              "total_deposit": "635800",
+              "total_advance": "284300",
+              "cd_ratio": "44.72"
+            },
+            "Sehore": {
+              "District": "Sehore",
+              "total_deposit": "254700",
+              "total_advance": "360200",
+              "cd_ratio": "141.42"
+            },
+            "Seoni": {
+              "District": "Seoni",
+              "total_deposit": "249500",
+              "total_advance": "162000",
+              "cd_ratio": "64.9"
+            },
+            "Shahdol": {
+              "District": "Shahdol",
+              "total_deposit": "325800",
+              "total_advance": "90200",
+              "cd_ratio": "27.7"
+            },
+            "Shajapur": {
+              "District": "Shajapur",
+              "total_deposit": "176900",
+              "total_advance": "275000",
+              "cd_ratio": "155.45"
+            },
+            "Sheopur": {
+              "District": "Sheopur",
+              "total_deposit": "71900",
+              "total_advance": "83200",
+              "cd_ratio": "115.69"
+            },
+            "Shivpuri": {
+              "District": "Shivpuri",
+              "total_deposit": "293100",
+              "total_advance": "167400",
+              "cd_ratio": "57.11"
+            },
+            "Sidhi": {
+              "District": "Sidhi",
+              "total_deposit": "212700",
+              "total_advance": "244500",
+              "cd_ratio": "114.94"
+            },
+            "Singrauli": {
+              "District": "Singrauli",
+              "total_deposit": "477000",
+              "total_advance": "776200",
+              "cd_ratio": "162.71"
+            },
+            "Tikamgarh": {
+              "District": "Tikamgarh",
+              "total_deposit": "271800",
+              "total_advance": "116600",
+              "cd_ratio": "42.9"
+            },
+            "Ujjain": {
+              "District": "Ujjain",
+              "total_deposit": "901200",
+              "total_advance": "773100",
+              "cd_ratio": "85.79"
+            },
+            "Umaria": {
+              "District": "Umaria",
+              "total_deposit": "148800",
+              "total_advance": "49500",
+              "cd_ratio": "33.29"
+            },
+            "Vidisha": {
+              "District": "Vidisha",
+              "total_deposit": "327600",
+              "total_advance": "414800",
+              "cd_ratio": "126.64"
+            }
+          }
+        }
+      }
+    },
+    "2017-03": {
+      "period": "March 2017",
+      "as_on_date": "31-03-2017",
+      "fy": "2016-17",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Agar Malwa": {
+              "District": "Agar Malwa",
+              "total_deposit": "74351",
+              "total_advance": "120960",
+              "cd_ratio": "162.69"
+            },
+            "Alirajpur": {
+              "District": "Alirajpur",
+              "total_deposit": "98653",
+              "total_advance": "42452",
+              "cd_ratio": "43.03"
+            },
+            "Anuppur": {
+              "District": "Anuppur",
+              "total_deposit": "295322",
+              "total_advance": "587183",
+              "cd_ratio": "198.83"
+            },
+            "Ashoknagar": {
+              "District": "Ashoknagar",
+              "total_deposit": "152447",
+              "total_advance": "152473",
+              "cd_ratio": "100.02"
+            },
+            "Balaghat": {
+              "District": "Balaghat",
+              "total_deposit": "310826",
+              "total_advance": "132953",
+              "cd_ratio": "42.77"
+            },
+            "Barwani": {
+              "District": "Barwani",
+              "total_deposit": "249863",
+              "total_advance": "279976",
+              "cd_ratio": "112.05"
+            },
+            "Betul": {
+              "District": "Betul",
+              "total_deposit": "486527",
+              "total_advance": "226753",
+              "cd_ratio": "46.61"
+            },
+            "Bhind": {
+              "District": "Bhind",
+              "total_deposit": "322590",
+              "total_advance": "139176",
+              "cd_ratio": "43.14"
+            },
+            "Bhopal": {
+              "District": "Bhopal",
+              "total_deposit": "6450147",
+              "total_advance": "3611823",
+              "cd_ratio": "56"
+            },
+            "Burhanpur": {
+              "District": "Burhanpur",
+              "total_deposit": "238862",
+              "total_advance": "205491",
+              "cd_ratio": "86.03"
+            },
+            "Chhatarpur": {
+              "District": "Chhatarpur",
+              "total_deposit": "450152",
+              "total_advance": "194139",
+              "cd_ratio": "43.13"
+            },
+            "Chhindwara": {
+              "District": "Chhindwara",
+              "total_deposit": "742352",
+              "total_advance": "374036",
+              "cd_ratio": "50.39"
+            },
+            "Damoh": {
+              "District": "Damoh",
+              "total_deposit": "265965",
+              "total_advance": "143409",
+              "cd_ratio": "53.92"
+            },
+            "Datia": {
+              "District": "Datia",
+              "total_deposit": "175220",
+              "total_advance": "131996",
+              "cd_ratio": "75.33"
+            },
+            "Dewas": {
+              "District": "Dewas",
+              "total_deposit": "397101",
+              "total_advance": "399328",
+              "cd_ratio": "100.56"
+            },
+            "Dhar": {
+              "District": "Dhar",
+              "total_deposit": "450744",
+              "total_advance": "355862",
+              "cd_ratio": "78.95"
+            },
+            "Dindori": {
+              "District": "Dindori",
+              "total_deposit": "88528",
+              "total_advance": "35073",
+              "cd_ratio": "39.62"
+            },
+            "East Nimar": {
+              "District": "East Nimar",
+              "total_deposit": "503127",
+              "total_advance": "470422",
+              "cd_ratio": "93.5"
+            },
+            "Guna": {
+              "District": "Guna",
+              "total_deposit": "282756",
+              "total_advance": "216712",
+              "cd_ratio": "76.64"
+            },
+            "Gwalior": {
+              "District": "Gwalior",
+              "total_deposit": "1710891",
+              "total_advance": "740786",
+              "cd_ratio": "43.3"
+            },
+            "Harda": {
+              "District": "Harda",
+              "total_deposit": "158480",
+              "total_advance": "201189",
+              "cd_ratio": "126.95"
+            },
+            "Indore": {
+              "District": "Indore",
+              "total_deposit": "4821976",
+              "total_advance": "4630317",
+              "cd_ratio": "96.03"
+            },
+            "Jabalpur": {
+              "District": "Jabalpur",
+              "total_deposit": "2495033",
+              "total_advance": "999102",
+              "cd_ratio": "40.04"
+            },
+            "Jhabua": {
+              "District": "Jhabua",
+              "total_deposit": "189645",
+              "total_advance": "141124",
+              "cd_ratio": "74.41"
+            },
+            "Katni": {
+              "District": "Katni",
+              "total_deposit": "409599",
+              "total_advance": "204528",
+              "cd_ratio": "49.93"
+            },
+            "Khargone": {
+              "District": "Khargone",
+              "total_deposit": "385861",
+              "total_advance": "484743",
+              "cd_ratio": "125.63"
+            },
+            "Mandla": {
+              "District": "Mandla",
+              "total_deposit": "252113",
+              "total_advance": "88897",
+              "cd_ratio": "35.26"
+            },
+            "Mandsaur": {
+              "District": "Mandsaur",
+              "total_deposit": "384667",
+              "total_advance": "286583",
+              "cd_ratio": "74.5"
+            },
+            "Morena": {
+              "District": "Morena",
+              "total_deposit": "371512",
+              "total_advance": "225651",
+              "cd_ratio": "60.74"
+            },
+            "Narmadapuram": {
+              "District": "Narmadapuram",
+              "total_deposit": "524275",
+              "total_advance": "480740",
+              "cd_ratio": "91.7"
+            },
+            "Narsinghpur": {
+              "District": "Narsinghpur",
+              "total_deposit": "267345",
+              "total_advance": "248688",
+              "cd_ratio": "93.02"
+            },
+            "Neemuch": {
+              "District": "Neemuch",
+              "total_deposit": "291014",
+              "total_advance": "174938",
+              "cd_ratio": "60.11"
+            },
+            "Panna": {
+              "District": "Panna",
+              "total_deposit": "211217",
+              "total_advance": "82768",
+              "cd_ratio": "39.19"
+            },
+            "Raisen": {
+              "District": "Raisen",
+              "total_deposit": "279933",
+              "total_advance": "379169",
+              "cd_ratio": "135.45"
+            },
+            "Rajgarh": {
+              "District": "Rajgarh",
+              "total_deposit": "269535",
+              "total_advance": "302334",
+              "cd_ratio": "112.17"
+            },
+            "Ratlam": {
+              "District": "Ratlam",
+              "total_deposit": "602194",
+              "total_advance": "400265",
+              "cd_ratio": "66.47"
+            },
+            "Rewa": {
+              "District": "Rewa",
+              "total_deposit": "728674",
+              "total_advance": "409851",
+              "cd_ratio": "56.25"
+            },
+            "Sagar": {
+              "District": "Sagar",
+              "total_deposit": "776249",
+              "total_advance": "397844",
+              "cd_ratio": "51.25"
+            },
+            "Satna": {
+              "District": "Satna",
+              "total_deposit": "766773",
+              "total_advance": "280341",
+              "cd_ratio": "36.56"
+            },
+            "Sehore": {
+              "District": "Sehore",
+              "total_deposit": "296900",
+              "total_advance": "344326",
+              "cd_ratio": "115.97"
+            },
+            "Seoni": {
+              "District": "Seoni",
+              "total_deposit": "294464",
+              "total_advance": "165838",
+              "cd_ratio": "56.32"
+            },
+            "Shahdol": {
+              "District": "Shahdol",
+              "total_deposit": "338375",
+              "total_advance": "106972",
+              "cd_ratio": "31.61"
+            },
+            "Shajapur": {
+              "District": "Shajapur",
+              "total_deposit": "199279",
+              "total_advance": "240632",
+              "cd_ratio": "120.75"
+            },
+            "Sheopur": {
+              "District": "Sheopur",
+              "total_deposit": "89209",
+              "total_advance": "82737",
+              "cd_ratio": "92.75"
+            },
+            "Shivpuri": {
+              "District": "Shivpuri",
+              "total_deposit": "339844",
+              "total_advance": "178571",
+              "cd_ratio": "52.55"
+            },
+            "Sidhi": {
+              "District": "Sidhi",
+              "total_deposit": "232181",
+              "total_advance": "243265",
+              "cd_ratio": "104.77"
+            },
+            "Singrauli": {
+              "District": "Singrauli",
+              "total_deposit": "508723",
+              "total_advance": "664405",
+              "cd_ratio": "130.6"
+            },
+            "Tikamgarh": {
+              "District": "Tikamgarh",
+              "total_deposit": "306949",
+              "total_advance": "111753",
+              "cd_ratio": "36.41"
+            },
+            "Ujjain": {
+              "District": "Ujjain",
+              "total_deposit": "730662",
+              "total_advance": "489016",
+              "cd_ratio": "66.93"
+            },
+            "Umaria": {
+              "District": "Umaria",
+              "total_deposit": "175088",
+              "total_advance": "41725",
+              "cd_ratio": "23.83"
+            },
+            "Vidisha": {
+              "District": "Vidisha",
+              "total_deposit": "375475",
+              "total_advance": "417375",
+              "cd_ratio": "111.16"
+            }
+          }
+        }
+      }
+    },
     "2020-03": {
       "period": "March 2020",
       "as_on_date": "",
@@ -334,6 +980,664 @@
         }
       }
     },
+    "2021-12": {
+      "period": "December 2021",
+      "as_on_date": "31-12-2021",
+      "fy": "2021-22",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Agar Malwa": {
+              "District": "Agar Malwa",
+              "total_deposit": "94100",
+              "total_advance": "253700",
+              "cd_ratio": "269.68"
+            },
+            "Alirajpur": {
+              "District": "Alirajpur",
+              "total_deposit": "133500",
+              "total_advance": "77400",
+              "cd_ratio": "57.99"
+            },
+            "Anuppur": {
+              "District": "Anuppur",
+              "total_deposit": "420600",
+              "total_advance": "106400",
+              "cd_ratio": "25.29"
+            },
+            "Ashoknagar": {
+              "District": "Ashoknagar",
+              "total_deposit": "207400",
+              "total_advance": "247700",
+              "cd_ratio": "119.45"
+            },
+            "Balaghat": {
+              "District": "Balaghat",
+              "total_deposit": "544100",
+              "total_advance": "308400",
+              "cd_ratio": "56.68"
+            },
+            "Barwani": {
+              "District": "Barwani",
+              "total_deposit": "293500",
+              "total_advance": "396800",
+              "cd_ratio": "135.2"
+            },
+            "Betul": {
+              "District": "Betul",
+              "total_deposit": "753200",
+              "total_advance": "436200",
+              "cd_ratio": "57.91"
+            },
+            "Bhind": {
+              "District": "Bhind",
+              "total_deposit": "452300",
+              "total_advance": "201500",
+              "cd_ratio": "44.55"
+            },
+            "Bhopal": {
+              "District": "Bhopal",
+              "total_deposit": "12074800",
+              "total_advance": "7145200",
+              "cd_ratio": "59.18"
+            },
+            "Burhanpur": {
+              "District": "Burhanpur",
+              "total_deposit": "252800",
+              "total_advance": "269800",
+              "cd_ratio": "106.69"
+            },
+            "Chhatarpur": {
+              "District": "Chhatarpur",
+              "total_deposit": "703300",
+              "total_advance": "339200",
+              "cd_ratio": "48.24"
+            },
+            "Chhindwara": {
+              "District": "Chhindwara",
+              "total_deposit": "1039300",
+              "total_advance": "728300",
+              "cd_ratio": "70.08"
+            },
+            "Damoh": {
+              "District": "Damoh",
+              "total_deposit": "398900",
+              "total_advance": "254400",
+              "cd_ratio": "63.79"
+            },
+            "Datia": {
+              "District": "Datia",
+              "total_deposit": "263400",
+              "total_advance": "193300",
+              "cd_ratio": "73.37"
+            },
+            "Dewas": {
+              "District": "Dewas",
+              "total_deposit": "579100",
+              "total_advance": "810500",
+              "cd_ratio": "139.96"
+            },
+            "Dhar": {
+              "District": "Dhar",
+              "total_deposit": "757300",
+              "total_advance": "964900",
+              "cd_ratio": "127.41"
+            },
+            "Dindori": {
+              "District": "Dindori",
+              "total_deposit": "149200",
+              "total_advance": "66400",
+              "cd_ratio": "44.51"
+            },
+            "East Nimar": {
+              "District": "East Nimar",
+              "total_deposit": "380400",
+              "total_advance": "546400",
+              "cd_ratio": "143.63"
+            },
+            "Guna": {
+              "District": "Guna",
+              "total_deposit": "414300",
+              "total_advance": "434900",
+              "cd_ratio": "104.98"
+            },
+            "Gwalior": {
+              "District": "Gwalior",
+              "total_deposit": "2573400",
+              "total_advance": "1389900",
+              "cd_ratio": "54.01"
+            },
+            "Harda": {
+              "District": "Harda",
+              "total_deposit": "235100",
+              "total_advance": "345800",
+              "cd_ratio": "147.09"
+            },
+            "Indore": {
+              "District": "Indore",
+              "total_deposit": "9015400",
+              "total_advance": "6950100",
+              "cd_ratio": "77.09"
+            },
+            "Jabalpur": {
+              "District": "Jabalpur",
+              "total_deposit": "3325000",
+              "total_advance": "2359700",
+              "cd_ratio": "70.97"
+            },
+            "Jhabua": {
+              "District": "Jhabua",
+              "total_deposit": "234500",
+              "total_advance": "220400",
+              "cd_ratio": "94"
+            },
+            "Katni": {
+              "District": "Katni",
+              "total_deposit": "630800",
+              "total_advance": "350900",
+              "cd_ratio": "55.63"
+            },
+            "Khargone": {
+              "District": "Khargone",
+              "total_deposit": "598300",
+              "total_advance": "968400",
+              "cd_ratio": "161.86"
+            },
+            "Mandla": {
+              "District": "Mandla",
+              "total_deposit": "365000",
+              "total_advance": "156600",
+              "cd_ratio": "42.91"
+            },
+            "Mandsaur": {
+              "District": "Mandsaur",
+              "total_deposit": "498600",
+              "total_advance": "622000",
+              "cd_ratio": "124.75"
+            },
+            "Morena": {
+              "District": "Morena",
+              "total_deposit": "509800",
+              "total_advance": "318400",
+              "cd_ratio": "62.46"
+            },
+            "Narmadapuram": {
+              "District": "Narmadapuram",
+              "total_deposit": "843800",
+              "total_advance": "801700",
+              "cd_ratio": "95.01"
+            },
+            "Narsinghpur": {
+              "District": "Narsinghpur",
+              "total_deposit": "485200",
+              "total_advance": "488700",
+              "cd_ratio": "100.71"
+            },
+            "Neemuch": {
+              "District": "Neemuch",
+              "total_deposit": "427500",
+              "total_advance": "380400",
+              "cd_ratio": "88.98"
+            },
+            "Niwari": {
+              "District": "Niwari",
+              "total_deposit": "103200",
+              "total_advance": "28300",
+              "cd_ratio": "27.46"
+            },
+            "Panna": {
+              "District": "Panna",
+              "total_deposit": "289100",
+              "total_advance": "136200",
+              "cd_ratio": "47.11"
+            },
+            "Raisen": {
+              "District": "Raisen",
+              "total_deposit": "405400",
+              "total_advance": "710300",
+              "cd_ratio": "175.22"
+            },
+            "Rajgarh": {
+              "District": "Rajgarh",
+              "total_deposit": "282100",
+              "total_advance": "580800",
+              "cd_ratio": "205.89"
+            },
+            "Ratlam": {
+              "District": "Ratlam",
+              "total_deposit": "714400",
+              "total_advance": "803600",
+              "cd_ratio": "112.48"
+            },
+            "Rewa": {
+              "District": "Rewa",
+              "total_deposit": "1302300",
+              "total_advance": "465200",
+              "cd_ratio": "35.72"
+            },
+            "Sagar": {
+              "District": "Sagar",
+              "total_deposit": "1187000",
+              "total_advance": "681800",
+              "cd_ratio": "57.44"
+            },
+            "Satna": {
+              "District": "Satna",
+              "total_deposit": "1152700",
+              "total_advance": "531700",
+              "cd_ratio": "46.12"
+            },
+            "Sehore": {
+              "District": "Sehore",
+              "total_deposit": "422300",
+              "total_advance": "689100",
+              "cd_ratio": "163.17"
+            },
+            "Seoni": {
+              "District": "Seoni",
+              "total_deposit": "452500",
+              "total_advance": "315800",
+              "cd_ratio": "69.79"
+            },
+            "Shahdol": {
+              "District": "Shahdol",
+              "total_deposit": "479300",
+              "total_advance": "153400",
+              "cd_ratio": "32"
+            },
+            "Shajapur": {
+              "District": "Shajapur",
+              "total_deposit": "255100",
+              "total_advance": "525100",
+              "cd_ratio": "205.81"
+            },
+            "Sheopur": {
+              "District": "Sheopur",
+              "total_deposit": "136600",
+              "total_advance": "128200",
+              "cd_ratio": "93.88"
+            },
+            "Shivpuri": {
+              "District": "Shivpuri",
+              "total_deposit": "468000",
+              "total_advance": "304500",
+              "cd_ratio": "65.07"
+            },
+            "Sidhi": {
+              "District": "Sidhi",
+              "total_deposit": "392200",
+              "total_advance": "120900",
+              "cd_ratio": "30.83"
+            },
+            "Singrauli": {
+              "District": "Singrauli",
+              "total_deposit": "1247600",
+              "total_advance": "177400",
+              "cd_ratio": "14.22"
+            },
+            "Tikamgarh": {
+              "District": "Tikamgarh",
+              "total_deposit": "352900",
+              "total_advance": "160400",
+              "cd_ratio": "45.45"
+            },
+            "Ujjain": {
+              "District": "Ujjain",
+              "total_deposit": "1207000",
+              "total_advance": "1520800",
+              "cd_ratio": "126"
+            },
+            "Umaria": {
+              "District": "Umaria",
+              "total_deposit": "271000",
+              "total_advance": "73900",
+              "cd_ratio": "27.29"
+            },
+            "Vidisha": {
+              "District": "Vidisha",
+              "total_deposit": "555900",
+              "total_advance": "662600",
+              "cd_ratio": "119.2"
+            }
+          }
+        }
+      }
+    },
+    "2023-03": {
+      "period": "March 2023",
+      "as_on_date": "31-03-2023",
+      "fy": "2022-23",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Agar Malwa": {
+              "District": "Agar Malwa",
+              "total_deposit": "149801",
+              "total_advance": "306068",
+              "cd_ratio": "204.32"
+            },
+            "Alirajpur": {
+              "District": "Alirajpur",
+              "total_deposit": "161140",
+              "total_advance": "102555",
+              "cd_ratio": "63.64"
+            },
+            "Anuppur": {
+              "District": "Anuppur",
+              "total_deposit": "472984",
+              "total_advance": "127589",
+              "cd_ratio": "26.98"
+            },
+            "Ashoknagar": {
+              "District": "Ashoknagar",
+              "total_deposit": "245286",
+              "total_advance": "300074",
+              "cd_ratio": "122.34"
+            },
+            "Balaghat": {
+              "District": "Balaghat",
+              "total_deposit": "622692",
+              "total_advance": "391873",
+              "cd_ratio": "62.93"
+            },
+            "Barwani": {
+              "District": "Barwani",
+              "total_deposit": "423384",
+              "total_advance": "496830",
+              "cd_ratio": "117.35"
+            },
+            "Betul": {
+              "District": "Betul",
+              "total_deposit": "871950",
+              "total_advance": "512790",
+              "cd_ratio": "58.81"
+            },
+            "Bhind": {
+              "District": "Bhind",
+              "total_deposit": "500425",
+              "total_advance": "257775",
+              "cd_ratio": "51.51"
+            },
+            "Bhopal": {
+              "District": "Bhopal",
+              "total_deposit": "12792039",
+              "total_advance": "8903793",
+              "cd_ratio": "69.6"
+            },
+            "Burhanpur": {
+              "District": "Burhanpur",
+              "total_deposit": "370004",
+              "total_advance": "314662",
+              "cd_ratio": "85.04"
+            },
+            "Chhatarpur": {
+              "District": "Chhatarpur",
+              "total_deposit": "796203",
+              "total_advance": "407990",
+              "cd_ratio": "51.24"
+            },
+            "Chhindwara": {
+              "District": "Chhindwara",
+              "total_deposit": "1186748",
+              "total_advance": "872833",
+              "cd_ratio": "73.55"
+            },
+            "Damoh": {
+              "District": "Damoh",
+              "total_deposit": "448638",
+              "total_advance": "293768",
+              "cd_ratio": "65.48"
+            },
+            "Datia": {
+              "District": "Datia",
+              "total_deposit": "303875",
+              "total_advance": "226028",
+              "cd_ratio": "74.38"
+            },
+            "Dewas": {
+              "District": "Dewas",
+              "total_deposit": "800811",
+              "total_advance": "963274",
+              "cd_ratio": "120.29"
+            },
+            "Dhar": {
+              "District": "Dhar",
+              "total_deposit": "1042672",
+              "total_advance": "1109013",
+              "cd_ratio": "106.36"
+            },
+            "Dindori": {
+              "District": "Dindori",
+              "total_deposit": "173296",
+              "total_advance": "81882",
+              "cd_ratio": "47.25"
+            },
+            "East Nimar": {
+              "District": "East Nimar",
+              "total_deposit": "575326",
+              "total_advance": "624630",
+              "cd_ratio": "108.57"
+            },
+            "Guna": {
+              "District": "Guna",
+              "total_deposit": "482638",
+              "total_advance": "513986",
+              "cd_ratio": "106.5"
+            },
+            "Gwalior": {
+              "District": "Gwalior",
+              "total_deposit": "3001009",
+              "total_advance": "1688442",
+              "cd_ratio": "56.26"
+            },
+            "Harda": {
+              "District": "Harda",
+              "total_deposit": "300752",
+              "total_advance": "408546",
+              "cd_ratio": "135.84"
+            },
+            "Indore": {
+              "District": "Indore",
+              "total_deposit": "9219924",
+              "total_advance": "8176762",
+              "cd_ratio": "88.69"
+            },
+            "Jabalpur": {
+              "District": "Jabalpur",
+              "total_deposit": "3965187",
+              "total_advance": "2738419",
+              "cd_ratio": "69.06"
+            },
+            "Jhabua": {
+              "District": "Jhabua",
+              "total_deposit": "260891",
+              "total_advance": "283919",
+              "cd_ratio": "108.83"
+            },
+            "Katni": {
+              "District": "Katni",
+              "total_deposit": "715996",
+              "total_advance": "451389",
+              "cd_ratio": "63.04"
+            },
+            "Khargone": {
+              "District": "Khargone",
+              "total_deposit": "875808",
+              "total_advance": "1086086",
+              "cd_ratio": "124.01"
+            },
+            "Mandla": {
+              "District": "Mandla",
+              "total_deposit": "432235",
+              "total_advance": "197997",
+              "cd_ratio": "45.81"
+            },
+            "Mandsaur": {
+              "District": "Mandsaur",
+              "total_deposit": "637326",
+              "total_advance": "753353",
+              "cd_ratio": "118.21"
+            },
+            "Morena": {
+              "District": "Morena",
+              "total_deposit": "570101",
+              "total_advance": "446440",
+              "cd_ratio": "78.31"
+            },
+            "Narmadapuram": {
+              "District": "Narmadapuram",
+              "total_deposit": "983502",
+              "total_advance": "926988",
+              "cd_ratio": "94.25"
+            },
+            "Narsinghpur": {
+              "District": "Narsinghpur",
+              "total_deposit": "563534",
+              "total_advance": "559041",
+              "cd_ratio": "99.2"
+            },
+            "Neemuch": {
+              "District": "Neemuch",
+              "total_deposit": "465617",
+              "total_advance": "452067",
+              "cd_ratio": "97.09"
+            },
+            "Niwari": {
+              "District": "Niwari",
+              "total_deposit": "123524",
+              "total_advance": "40768",
+              "cd_ratio": "33"
+            },
+            "Panna": {
+              "District": "Panna",
+              "total_deposit": "334712",
+              "total_advance": "162194",
+              "cd_ratio": "48.46"
+            },
+            "Raisen": {
+              "District": "Raisen",
+              "total_deposit": "510256",
+              "total_advance": "806155",
+              "cd_ratio": "157.99"
+            },
+            "Rajgarh": {
+              "District": "Rajgarh",
+              "total_deposit": "420668",
+              "total_advance": "703020",
+              "cd_ratio": "167.12"
+            },
+            "Ratlam": {
+              "District": "Ratlam",
+              "total_deposit": "807534",
+              "total_advance": "999046",
+              "cd_ratio": "123.72"
+            },
+            "Rewa": {
+              "District": "Rewa",
+              "total_deposit": "1458512",
+              "total_advance": "577604",
+              "cd_ratio": "39.6"
+            },
+            "Sagar": {
+              "District": "Sagar",
+              "total_deposit": "1408420",
+              "total_advance": "824889",
+              "cd_ratio": "58.57"
+            },
+            "Satna": {
+              "District": "Satna",
+              "total_deposit": "1349189",
+              "total_advance": "661458",
+              "cd_ratio": "49.03"
+            },
+            "Sehore": {
+              "District": "Sehore",
+              "total_deposit": "612288",
+              "total_advance": "794071",
+              "cd_ratio": "129.69"
+            },
+            "Seoni": {
+              "District": "Seoni",
+              "total_deposit": "534147",
+              "total_advance": "385542",
+              "cd_ratio": "72.18"
+            },
+            "Shahdol": {
+              "District": "Shahdol",
+              "total_deposit": "557907",
+              "total_advance": "219805",
+              "cd_ratio": "39.4"
+            },
+            "Shajapur": {
+              "District": "Shajapur",
+              "total_deposit": "331346",
+              "total_advance": "606243",
+              "cd_ratio": "182.96"
+            },
+            "Sheopur": {
+              "District": "Sheopur",
+              "total_deposit": "157577",
+              "total_advance": "149248",
+              "cd_ratio": "94.71"
+            },
+            "Shivpuri": {
+              "District": "Shivpuri",
+              "total_deposit": "554585",
+              "total_advance": "379777",
+              "cd_ratio": "68.48"
+            },
+            "Sidhi": {
+              "District": "Sidhi",
+              "total_deposit": "441758",
+              "total_advance": "156895",
+              "cd_ratio": "35.52"
+            },
+            "Singrauli": {
+              "District": "Singrauli",
+              "total_deposit": "1359062",
+              "total_advance": "248875",
+              "cd_ratio": "18.31"
+            },
+            "Tikamgarh": {
+              "District": "Tikamgarh",
+              "total_deposit": "393874",
+              "total_advance": "187873",
+              "cd_ratio": "47.7"
+            },
+            "Ujjain": {
+              "District": "Ujjain",
+              "total_deposit": "1693012",
+              "total_advance": "1784956",
+              "cd_ratio": "105.43"
+            },
+            "Umaria": {
+              "District": "Umaria",
+              "total_deposit": "302421",
+              "total_advance": "92360",
+              "cd_ratio": "30.54"
+            },
+            "Vidisha": {
+              "District": "Vidisha",
+              "total_deposit": "648486",
+              "total_advance": "761922",
+              "cd_ratio": "117.49"
+            }
+          }
+        }
+      }
+    },
     "2023-09": {
       "period": "September 2023",
       "as_on_date": "",
@@ -657,6 +1961,335 @@
               "cd_ratio": "113.46",
               "total_advance": "806864.95",
               "total_deposit": "711148.29"
+            }
+          }
+        }
+      }
+    },
+    "2023-12": {
+      "period": "December 2023",
+      "as_on_date": "31-12-2023",
+      "fy": "2023-24",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Agar Malwa": {
+              "District": "Agar Malwa",
+              "total_deposit": "157577",
+              "total_advance": "344453",
+              "cd_ratio": "218.59"
+            },
+            "Alirajpur": {
+              "District": "Alirajpur",
+              "total_deposit": "166941",
+              "total_advance": "108039",
+              "cd_ratio": "64.72"
+            },
+            "Anuppur": {
+              "District": "Anuppur",
+              "total_deposit": "514120",
+              "total_advance": "142859",
+              "cd_ratio": "27.79"
+            },
+            "Ashoknagar": {
+              "District": "Ashoknagar",
+              "total_deposit": "263705",
+              "total_advance": "329755",
+              "cd_ratio": "125.05"
+            },
+            "Balaghat": {
+              "District": "Balaghat",
+              "total_deposit": "664655",
+              "total_advance": "447265",
+              "cd_ratio": "67.29"
+            },
+            "Barwani": {
+              "District": "Barwani",
+              "total_deposit": "436372",
+              "total_advance": "514255",
+              "cd_ratio": "117.85"
+            },
+            "Betul": {
+              "District": "Betul",
+              "total_deposit": "927228",
+              "total_advance": "605851",
+              "cd_ratio": "65.34"
+            },
+            "Bhind": {
+              "District": "Bhind",
+              "total_deposit": "545655",
+              "total_advance": "291913",
+              "cd_ratio": "53.5"
+            },
+            "Bhopal": {
+              "District": "Bhopal",
+              "total_deposit": "13906447",
+              "total_advance": "9757119",
+              "cd_ratio": "70.16"
+            },
+            "Burhanpur": {
+              "District": "Burhanpur",
+              "total_deposit": "401907",
+              "total_advance": "339853",
+              "cd_ratio": "84.56"
+            },
+            "Chhatarpur": {
+              "District": "Chhatarpur",
+              "total_deposit": "859016",
+              "total_advance": "461309",
+              "cd_ratio": "53.7"
+            },
+            "Chhindwara": {
+              "District": "Chhindwara",
+              "total_deposit": "1240839",
+              "total_advance": "980025",
+              "cd_ratio": "78.98"
+            },
+            "Damoh": {
+              "District": "Damoh",
+              "total_deposit": "481620",
+              "total_advance": "338084",
+              "cd_ratio": "70.2"
+            },
+            "Datia": {
+              "District": "Datia",
+              "total_deposit": "334479",
+              "total_advance": "245130",
+              "cd_ratio": "73.29"
+            },
+            "Dewas": {
+              "District": "Dewas",
+              "total_deposit": "889010",
+              "total_advance": "1116613",
+              "cd_ratio": "125.6"
+            },
+            "Dhar": {
+              "District": "Dhar",
+              "total_deposit": "1112599",
+              "total_advance": "1280950",
+              "cd_ratio": "115.13"
+            },
+            "Dindori": {
+              "District": "Dindori",
+              "total_deposit": "175624",
+              "total_advance": "89324",
+              "cd_ratio": "50.86"
+            },
+            "East Nimar": {
+              "District": "East Nimar",
+              "total_deposit": "607502",
+              "total_advance": "686648",
+              "cd_ratio": "113.03"
+            },
+            "Guna": {
+              "District": "Guna",
+              "total_deposit": "657838",
+              "total_advance": "570657",
+              "cd_ratio": "86.75"
+            },
+            "Gwalior": {
+              "District": "Gwalior",
+              "total_deposit": "3272802",
+              "total_advance": "1986408",
+              "cd_ratio": "60.69"
+            },
+            "Harda": {
+              "District": "Harda",
+              "total_deposit": "336445",
+              "total_advance": "441617",
+              "cd_ratio": "131.26"
+            },
+            "Indore": {
+              "District": "Indore",
+              "total_deposit": "10007632",
+              "total_advance": "9677708",
+              "cd_ratio": "96.7"
+            },
+            "Jabalpur": {
+              "District": "Jabalpur",
+              "total_deposit": "4132857",
+              "total_advance": "2940788",
+              "cd_ratio": "71.16"
+            },
+            "Jhabua": {
+              "District": "Jhabua",
+              "total_deposit": "270260",
+              "total_advance": "322624",
+              "cd_ratio": "119.38"
+            },
+            "Katni": {
+              "District": "Katni",
+              "total_deposit": "779170",
+              "total_advance": "496250",
+              "cd_ratio": "63.69"
+            },
+            "Khargone": {
+              "District": "Khargone",
+              "total_deposit": "874513",
+              "total_advance": "1148846",
+              "cd_ratio": "131.37"
+            },
+            "Mandla": {
+              "District": "Mandla",
+              "total_deposit": "452680",
+              "total_advance": "223500",
+              "cd_ratio": "49.37"
+            },
+            "Mandsaur": {
+              "District": "Mandsaur",
+              "total_deposit": "625742",
+              "total_advance": "827119",
+              "cd_ratio": "132.18"
+            },
+            "Morena": {
+              "District": "Morena",
+              "total_deposit": "627355",
+              "total_advance": "496609",
+              "cd_ratio": "79.16"
+            },
+            "Narmadapuram": {
+              "District": "Narmadapuram",
+              "total_deposit": "1089988",
+              "total_advance": "1010978",
+              "cd_ratio": "92.75"
+            },
+            "Narsinghpur": {
+              "District": "Narsinghpur",
+              "total_deposit": "603316",
+              "total_advance": "617637",
+              "cd_ratio": "102.37"
+            },
+            "Neemuch": {
+              "District": "Neemuch",
+              "total_deposit": "493818",
+              "total_advance": "521533",
+              "cd_ratio": "105.61"
+            },
+            "Niwari": {
+              "District": "Niwari",
+              "total_deposit": "155596",
+              "total_advance": "51034",
+              "cd_ratio": "32.8"
+            },
+            "Panna": {
+              "District": "Panna",
+              "total_deposit": "366823",
+              "total_advance": "171222",
+              "cd_ratio": "46.68"
+            },
+            "Raisen": {
+              "District": "Raisen",
+              "total_deposit": "580425",
+              "total_advance": "856996",
+              "cd_ratio": "147.65"
+            },
+            "Rajgarh": {
+              "District": "Rajgarh",
+              "total_deposit": "458997",
+              "total_advance": "777904",
+              "cd_ratio": "169.48"
+            },
+            "Ratlam": {
+              "District": "Ratlam",
+              "total_deposit": "862624",
+              "total_advance": "1115959",
+              "cd_ratio": "129.37"
+            },
+            "Rewa": {
+              "District": "Rewa",
+              "total_deposit": "1585721",
+              "total_advance": "674366",
+              "cd_ratio": "42.53"
+            },
+            "Sagar": {
+              "District": "Sagar",
+              "total_deposit": "1516378",
+              "total_advance": "906865",
+              "cd_ratio": "59.8"
+            },
+            "Satna": {
+              "District": "Satna",
+              "total_deposit": "1447224",
+              "total_advance": "736633",
+              "cd_ratio": "50.9"
+            },
+            "Sehore": {
+              "District": "Sehore",
+              "total_deposit": "708715",
+              "total_advance": "866129",
+              "cd_ratio": "122.21"
+            },
+            "Seoni": {
+              "District": "Seoni",
+              "total_deposit": "556364",
+              "total_advance": "458831",
+              "cd_ratio": "82.47"
+            },
+            "Shahdol": {
+              "District": "Shahdol",
+              "total_deposit": "591679",
+              "total_advance": "265919",
+              "cd_ratio": "44.94"
+            },
+            "Shajapur": {
+              "District": "Shajapur",
+              "total_deposit": "368520",
+              "total_advance": "662568",
+              "cd_ratio": "179.79"
+            },
+            "Sheopur": {
+              "District": "Sheopur",
+              "total_deposit": "170381",
+              "total_advance": "164243",
+              "cd_ratio": "96.4"
+            },
+            "Shivpuri": {
+              "District": "Shivpuri",
+              "total_deposit": "589989",
+              "total_advance": "415560",
+              "cd_ratio": "70.44"
+            },
+            "Sidhi": {
+              "District": "Sidhi",
+              "total_deposit": "474167",
+              "total_advance": "190591",
+              "cd_ratio": "40.19"
+            },
+            "Singrauli": {
+              "District": "Singrauli",
+              "total_deposit": "1422314",
+              "total_advance": "276369",
+              "cd_ratio": "19.43"
+            },
+            "Tikamgarh": {
+              "District": "Tikamgarh",
+              "total_deposit": "404821",
+              "total_advance": "198600",
+              "cd_ratio": "49.06"
+            },
+            "Ujjain": {
+              "District": "Ujjain",
+              "total_deposit": "1825906",
+              "total_advance": "2006554",
+              "cd_ratio": "109.89"
+            },
+            "Umaria": {
+              "District": "Umaria",
+              "total_deposit": "321186",
+              "total_advance": "105254",
+              "cd_ratio": "32.77"
+            },
+            "Vidisha": {
+              "District": "Vidisha",
+              "total_deposit": "703169",
+              "total_advance": "837506",
+              "cd_ratio": "119.1"
             }
           }
         }
@@ -1331,6 +2964,1394 @@
               "cd_ratio": "117.6",
               "total_advance": "884054.86",
               "total_deposit": "751740.24"
+            }
+          }
+        }
+      }
+    },
+    "2024-09": {
+      "period": "September 2024",
+      "as_on_date": "30-09-2024",
+      "fy": "2024-25",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Agar Malwa": {
+              "District": "Agar Malwa",
+              "total_deposit": "172605",
+              "total_advance": "384488",
+              "cd_ratio": "222.76"
+            },
+            "Alirajpur": {
+              "District": "Alirajpur",
+              "total_deposit": "177812",
+              "total_advance": "117244",
+              "cd_ratio": "65.94"
+            },
+            "Anuppur": {
+              "District": "Anuppur",
+              "total_deposit": "544427",
+              "total_advance": "157881",
+              "cd_ratio": "29"
+            },
+            "Ashoknagar": {
+              "District": "Ashoknagar",
+              "total_deposit": "284845",
+              "total_advance": "367425",
+              "cd_ratio": "128.99"
+            },
+            "Balaghat": {
+              "District": "Balaghat",
+              "total_deposit": "738429",
+              "total_advance": "498985",
+              "cd_ratio": "67.57"
+            },
+            "Barwani": {
+              "District": "Barwani",
+              "total_deposit": "472591",
+              "total_advance": "523453",
+              "cd_ratio": "110.76"
+            },
+            "Betul": {
+              "District": "Betul",
+              "total_deposit": "978058",
+              "total_advance": "654853",
+              "cd_ratio": "66.95"
+            },
+            "Bhind": {
+              "District": "Bhind",
+              "total_deposit": "587506",
+              "total_advance": "328867",
+              "cd_ratio": "55.98"
+            },
+            "Bhopal": {
+              "District": "Bhopal",
+              "total_deposit": "14395215",
+              "total_advance": "10741960",
+              "cd_ratio": "74.62"
+            },
+            "Burhanpur": {
+              "District": "Burhanpur",
+              "total_deposit": "444770",
+              "total_advance": "365113",
+              "cd_ratio": "82.09"
+            },
+            "Chhatarpur": {
+              "District": "Chhatarpur",
+              "total_deposit": "950313",
+              "total_advance": "500303",
+              "cd_ratio": "52.65"
+            },
+            "Chhindwara": {
+              "District": "Chhindwara",
+              "total_deposit": "1108845",
+              "total_advance": "886920",
+              "cd_ratio": "79.99"
+            },
+            "Damoh": {
+              "District": "Damoh",
+              "total_deposit": "521409",
+              "total_advance": "364982",
+              "cd_ratio": "70"
+            },
+            "Datia": {
+              "District": "Datia",
+              "total_deposit": "357345",
+              "total_advance": "267875",
+              "cd_ratio": "74.96"
+            },
+            "Dewas": {
+              "District": "Dewas",
+              "total_deposit": "965397",
+              "total_advance": "1227360",
+              "cd_ratio": "127.14"
+            },
+            "Dhar": {
+              "District": "Dhar",
+              "total_deposit": "1204541",
+              "total_advance": "1401186",
+              "cd_ratio": "116.33"
+            },
+            "Dindori": {
+              "District": "Dindori",
+              "total_deposit": "194573",
+              "total_advance": "98501",
+              "cd_ratio": "50.62"
+            },
+            "East Nimar": {
+              "District": "East Nimar",
+              "total_deposit": "649459",
+              "total_advance": "730977",
+              "cd_ratio": "112.55"
+            },
+            "Guna": {
+              "District": "Guna",
+              "total_deposit": "541769",
+              "total_advance": "627038",
+              "cd_ratio": "115.74"
+            },
+            "Gwalior": {
+              "District": "Gwalior",
+              "total_deposit": "3516166",
+              "total_advance": "2199984",
+              "cd_ratio": "62.57"
+            },
+            "Harda": {
+              "District": "Harda",
+              "total_deposit": "375570",
+              "total_advance": "468696",
+              "cd_ratio": "124.8"
+            },
+            "Indore": {
+              "District": "Indore",
+              "total_deposit": "10879134",
+              "total_advance": "10681597",
+              "cd_ratio": "98.18"
+            },
+            "Jabalpur": {
+              "District": "Jabalpur",
+              "total_deposit": "4457185",
+              "total_advance": "3190400",
+              "cd_ratio": "71.58"
+            },
+            "Jhabua": {
+              "District": "Jhabua",
+              "total_deposit": "292648",
+              "total_advance": "362971",
+              "cd_ratio": "124.03"
+            },
+            "Katni": {
+              "District": "Katni",
+              "total_deposit": "835709",
+              "total_advance": "557069",
+              "cd_ratio": "66.66"
+            },
+            "Khargone": {
+              "District": "Khargone",
+              "total_deposit": "925463",
+              "total_advance": "1263568",
+              "cd_ratio": "136.53"
+            },
+            "Maihar": {
+              "District": "Maihar",
+              "total_deposit": "336230",
+              "total_advance": "186499",
+              "cd_ratio": "55.47"
+            },
+            "Mandla": {
+              "District": "Mandla",
+              "total_deposit": "487905",
+              "total_advance": "240466",
+              "cd_ratio": "49.29"
+            },
+            "Mandsaur": {
+              "District": "Mandsaur",
+              "total_deposit": "656000",
+              "total_advance": "905161",
+              "cd_ratio": "137.98"
+            },
+            "Mauganj": {
+              "District": "Mauganj",
+              "total_deposit": "216334",
+              "total_advance": "55860",
+              "cd_ratio": "25.82"
+            },
+            "Morena": {
+              "District": "Morena",
+              "total_deposit": "669518",
+              "total_advance": "550080",
+              "cd_ratio": "82.16"
+            },
+            "Narmadapuram": {
+              "District": "Narmadapuram",
+              "total_deposit": "1190991",
+              "total_advance": "1056924",
+              "cd_ratio": "88.74"
+            },
+            "Narsinghpur": {
+              "District": "Narsinghpur",
+              "total_deposit": "668168",
+              "total_advance": "655916",
+              "cd_ratio": "98.17"
+            },
+            "Neemuch": {
+              "District": "Neemuch",
+              "total_deposit": "530523",
+              "total_advance": "564110",
+              "cd_ratio": "106.33"
+            },
+            "Niwari": {
+              "District": "Niwari",
+              "total_deposit": "182665",
+              "total_advance": "59477",
+              "cd_ratio": "32.56"
+            },
+            "Pandhurna": {
+              "District": "Pandhurna",
+              "total_deposit": "206226",
+              "total_advance": "162682",
+              "cd_ratio": "78.89"
+            },
+            "Panna": {
+              "District": "Panna",
+              "total_deposit": "404213",
+              "total_advance": "178794",
+              "cd_ratio": "44.23"
+            },
+            "Raisen": {
+              "District": "Raisen",
+              "total_deposit": "617306",
+              "total_advance": "916473",
+              "cd_ratio": "148.46"
+            },
+            "Rajgarh": {
+              "District": "Rajgarh",
+              "total_deposit": "492976",
+              "total_advance": "858997",
+              "cd_ratio": "174.25"
+            },
+            "Ratlam": {
+              "District": "Ratlam",
+              "total_deposit": "921652",
+              "total_advance": "1202909",
+              "cd_ratio": "130.52"
+            },
+            "Rewa": {
+              "District": "Rewa",
+              "total_deposit": "1509565",
+              "total_advance": "703560",
+              "cd_ratio": "46.61"
+            },
+            "Sagar": {
+              "District": "Sagar",
+              "total_deposit": "1684475",
+              "total_advance": "1008144",
+              "cd_ratio": "59.85"
+            },
+            "Satna": {
+              "District": "Satna",
+              "total_deposit": "1308295",
+              "total_advance": "618060",
+              "cd_ratio": "47.24"
+            },
+            "Sehore": {
+              "District": "Sehore",
+              "total_deposit": "803606",
+              "total_advance": "948779",
+              "cd_ratio": "118.07"
+            },
+            "Seoni": {
+              "District": "Seoni",
+              "total_deposit": "593490",
+              "total_advance": "498974",
+              "cd_ratio": "84.07"
+            },
+            "Shahdol": {
+              "District": "Shahdol",
+              "total_deposit": "644921",
+              "total_advance": "293300",
+              "cd_ratio": "45.48"
+            },
+            "Shajapur": {
+              "District": "Shajapur",
+              "total_deposit": "397731",
+              "total_advance": "728865",
+              "cd_ratio": "183.26"
+            },
+            "Sheopur": {
+              "District": "Sheopur",
+              "total_deposit": "182248",
+              "total_advance": "181295",
+              "cd_ratio": "99.48"
+            },
+            "Shivpuri": {
+              "District": "Shivpuri",
+              "total_deposit": "631952",
+              "total_advance": "455701",
+              "cd_ratio": "72.11"
+            },
+            "Sidhi": {
+              "District": "Sidhi",
+              "total_deposit": "510914",
+              "total_advance": "213325",
+              "cd_ratio": "41.75"
+            },
+            "Singrauli": {
+              "District": "Singrauli",
+              "total_deposit": "1651605",
+              "total_advance": "298729",
+              "cd_ratio": "18.09"
+            },
+            "Tikamgarh": {
+              "District": "Tikamgarh",
+              "total_deposit": "427367",
+              "total_advance": "214465",
+              "cd_ratio": "50.18"
+            },
+            "Ujjain": {
+              "District": "Ujjain",
+              "total_deposit": "1978952",
+              "total_advance": "2210486",
+              "cd_ratio": "111.7"
+            },
+            "Umaria": {
+              "District": "Umaria",
+              "total_deposit": "345685",
+              "total_advance": "116779",
+              "cd_ratio": "33.78"
+            },
+            "Vidisha": {
+              "District": "Vidisha",
+              "total_deposit": "751700",
+              "total_advance": "920690",
+              "cd_ratio": "122.48"
+            }
+          }
+        }
+      }
+    },
+    "2024-12": {
+      "period": "December 2024",
+      "as_on_date": "31-12-2024",
+      "fy": "2024-25",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Agar Malwa": {
+              "District": "Agar Malwa",
+              "total_deposit": "174025",
+              "total_advance": "395878",
+              "cd_ratio": "227.48"
+            },
+            "Alirajpur": {
+              "District": "Alirajpur",
+              "total_deposit": "179894",
+              "total_advance": "117131",
+              "cd_ratio": "65.11"
+            },
+            "Anuppur": {
+              "District": "Anuppur",
+              "total_deposit": "553472",
+              "total_advance": "164485",
+              "cd_ratio": "29.72"
+            },
+            "Ashoknagar": {
+              "District": "Ashoknagar",
+              "total_deposit": "295241",
+              "total_advance": "375904",
+              "cd_ratio": "127.32"
+            },
+            "Balaghat": {
+              "District": "Balaghat",
+              "total_deposit": "727284",
+              "total_advance": "517131",
+              "cd_ratio": "71.1"
+            },
+            "Barwani": {
+              "District": "Barwani",
+              "total_deposit": "479421",
+              "total_advance": "561838",
+              "cd_ratio": "117.19"
+            },
+            "Betul": {
+              "District": "Betul",
+              "total_deposit": "1000272",
+              "total_advance": "686729",
+              "cd_ratio": "68.65"
+            },
+            "Bhind": {
+              "District": "Bhind",
+              "total_deposit": "594515",
+              "total_advance": "346061",
+              "cd_ratio": "58.21"
+            },
+            "Bhopal": {
+              "District": "Bhopal",
+              "total_deposit": "14212353",
+              "total_advance": "11120633",
+              "cd_ratio": "78.25"
+            },
+            "Burhanpur": {
+              "District": "Burhanpur",
+              "total_deposit": "433792",
+              "total_advance": "373567",
+              "cd_ratio": "86.12"
+            },
+            "Chhatarpur": {
+              "District": "Chhatarpur",
+              "total_deposit": "969373",
+              "total_advance": "517467",
+              "cd_ratio": "53.38"
+            },
+            "Chhindwara": {
+              "District": "Chhindwara",
+              "total_deposit": "1147896",
+              "total_advance": "910009",
+              "cd_ratio": "79.28"
+            },
+            "Damoh": {
+              "District": "Damoh",
+              "total_deposit": "531226",
+              "total_advance": "372452",
+              "cd_ratio": "70.11"
+            },
+            "Datia": {
+              "District": "Datia",
+              "total_deposit": "363055",
+              "total_advance": "279870",
+              "cd_ratio": "77.09"
+            },
+            "Dewas": {
+              "District": "Dewas",
+              "total_deposit": "946784",
+              "total_advance": "1261982",
+              "cd_ratio": "133.29"
+            },
+            "Dhar": {
+              "District": "Dhar",
+              "total_deposit": "1227144",
+              "total_advance": "1455420",
+              "cd_ratio": "118.6"
+            },
+            "Dindori": {
+              "District": "Dindori",
+              "total_deposit": "201159",
+              "total_advance": "103804",
+              "cd_ratio": "51.6"
+            },
+            "East Nimar": {
+              "District": "East Nimar",
+              "total_deposit": "659849",
+              "total_advance": "752904",
+              "cd_ratio": "114.1"
+            },
+            "Guna": {
+              "District": "Guna",
+              "total_deposit": "552634",
+              "total_advance": "639470",
+              "cd_ratio": "115.71"
+            },
+            "Gwalior": {
+              "District": "Gwalior",
+              "total_deposit": "3533665",
+              "total_advance": "2305778",
+              "cd_ratio": "65.25"
+            },
+            "Harda": {
+              "District": "Harda",
+              "total_deposit": "373723",
+              "total_advance": "486813",
+              "cd_ratio": "130.26"
+            },
+            "Indore": {
+              "District": "Indore",
+              "total_deposit": "10859262",
+              "total_advance": "11089032",
+              "cd_ratio": "102.12"
+            },
+            "Jabalpur": {
+              "District": "Jabalpur",
+              "total_deposit": "4460868",
+              "total_advance": "3261586",
+              "cd_ratio": "73.12"
+            },
+            "Jhabua": {
+              "District": "Jhabua",
+              "total_deposit": "296948",
+              "total_advance": "375644",
+              "cd_ratio": "126.5"
+            },
+            "Katni": {
+              "District": "Katni",
+              "total_deposit": "855158",
+              "total_advance": "567482",
+              "cd_ratio": "66.36"
+            },
+            "Khargone": {
+              "District": "Khargone",
+              "total_deposit": "952892",
+              "total_advance": "1288490",
+              "cd_ratio": "135.22"
+            },
+            "Maihar": {
+              "District": "Maihar",
+              "total_deposit": "341906",
+              "total_advance": "190948",
+              "cd_ratio": "55.85"
+            },
+            "Mandla": {
+              "District": "Mandla",
+              "total_deposit": "515860",
+              "total_advance": "254419",
+              "cd_ratio": "49.32"
+            },
+            "Mandsaur": {
+              "District": "Mandsaur",
+              "total_deposit": "680213",
+              "total_advance": "925045",
+              "cd_ratio": "135.99"
+            },
+            "Mauganj": {
+              "District": "Mauganj",
+              "total_deposit": "221722",
+              "total_advance": "54250",
+              "cd_ratio": "24.47"
+            },
+            "Morena": {
+              "District": "Morena",
+              "total_deposit": "676950",
+              "total_advance": "578760",
+              "cd_ratio": "85.5"
+            },
+            "Narmadapuram": {
+              "District": "Narmadapuram",
+              "total_deposit": "1187553",
+              "total_advance": "1117719",
+              "cd_ratio": "94.12"
+            },
+            "Narsinghpur": {
+              "District": "Narsinghpur",
+              "total_deposit": "687222",
+              "total_advance": "683753",
+              "cd_ratio": "99.5"
+            },
+            "Neemuch": {
+              "District": "Neemuch",
+              "total_deposit": "539638",
+              "total_advance": "582154",
+              "cd_ratio": "107.88"
+            },
+            "Niwari": {
+              "District": "Niwari",
+              "total_deposit": "186117",
+              "total_advance": "61110",
+              "cd_ratio": "32.83"
+            },
+            "Pandhurna": {
+              "District": "Pandhurna",
+              "total_deposit": "236075",
+              "total_advance": "183424",
+              "cd_ratio": "77.7"
+            },
+            "Panna": {
+              "District": "Panna",
+              "total_deposit": "414504",
+              "total_advance": "185725",
+              "cd_ratio": "44.81"
+            },
+            "Raisen": {
+              "District": "Raisen",
+              "total_deposit": "617115",
+              "total_advance": "930998",
+              "cd_ratio": "150.86"
+            },
+            "Rajgarh": {
+              "District": "Rajgarh",
+              "total_deposit": "503692",
+              "total_advance": "892260",
+              "cd_ratio": "177.14"
+            },
+            "Ratlam": {
+              "District": "Ratlam",
+              "total_deposit": "926221",
+              "total_advance": "1250586",
+              "cd_ratio": "135.02"
+            },
+            "Rewa": {
+              "District": "Rewa",
+              "total_deposit": "1542481",
+              "total_advance": "754798",
+              "cd_ratio": "48.93"
+            },
+            "Sagar": {
+              "District": "Sagar",
+              "total_deposit": "1721188",
+              "total_advance": "1040227",
+              "cd_ratio": "60.44"
+            },
+            "Satna": {
+              "District": "Satna",
+              "total_deposit": "1261543",
+              "total_advance": "639529",
+              "cd_ratio": "50.69"
+            },
+            "Sehore": {
+              "District": "Sehore",
+              "total_deposit": "782028",
+              "total_advance": "976376",
+              "cd_ratio": "124.85"
+            },
+            "Seoni": {
+              "District": "Seoni",
+              "total_deposit": "617208",
+              "total_advance": "522130",
+              "cd_ratio": "84.6"
+            },
+            "Shahdol": {
+              "District": "Shahdol",
+              "total_deposit": "661453",
+              "total_advance": "305770",
+              "cd_ratio": "46.23"
+            },
+            "Shajapur": {
+              "District": "Shajapur",
+              "total_deposit": "403455",
+              "total_advance": "749119",
+              "cd_ratio": "185.68"
+            },
+            "Sheopur": {
+              "District": "Sheopur",
+              "total_deposit": "180806",
+              "total_advance": "191006",
+              "cd_ratio": "105.64"
+            },
+            "Shivpuri": {
+              "District": "Shivpuri",
+              "total_deposit": "643549",
+              "total_advance": "469838",
+              "cd_ratio": "73.01"
+            },
+            "Sidhi": {
+              "District": "Sidhi",
+              "total_deposit": "522981",
+              "total_advance": "217416",
+              "cd_ratio": "41.57"
+            },
+            "Singrauli": {
+              "District": "Singrauli",
+              "total_deposit": "1621851",
+              "total_advance": "305653",
+              "cd_ratio": "18.85"
+            },
+            "Tikamgarh": {
+              "District": "Tikamgarh",
+              "total_deposit": "436604",
+              "total_advance": "223149",
+              "cd_ratio": "51.11"
+            },
+            "Ujjain": {
+              "District": "Ujjain",
+              "total_deposit": "1983281",
+              "total_advance": "2269337",
+              "cd_ratio": "114.42"
+            },
+            "Umaria": {
+              "District": "Umaria",
+              "total_deposit": "351078",
+              "total_advance": "123039",
+              "cd_ratio": "35.05"
+            },
+            "Vidisha": {
+              "District": "Vidisha",
+              "total_deposit": "757499",
+              "total_advance": "947232",
+              "cd_ratio": "125.05"
+            }
+          }
+        }
+      }
+    },
+    "2025-03": {
+      "period": "March 2025",
+      "as_on_date": "31-03-2025",
+      "fy": "2024-25",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Agar Malwa": {
+              "District": "Agar Malwa",
+              "total_deposit": "189822",
+              "total_advance": "409296",
+              "cd_ratio": "215.62"
+            },
+            "Alirajpur": {
+              "District": "Alirajpur",
+              "total_deposit": "191917",
+              "total_advance": "116490",
+              "cd_ratio": "60.7"
+            },
+            "Anuppur": {
+              "District": "Anuppur",
+              "total_deposit": "582601",
+              "total_advance": "168653",
+              "cd_ratio": "28.95"
+            },
+            "Ashoknagar": {
+              "District": "Ashoknagar",
+              "total_deposit": "313828",
+              "total_advance": "395092",
+              "cd_ratio": "125.89"
+            },
+            "Balaghat": {
+              "District": "Balaghat",
+              "total_deposit": "772365",
+              "total_advance": "509759",
+              "cd_ratio": "66"
+            },
+            "Barwani": {
+              "District": "Barwani",
+              "total_deposit": "505918",
+              "total_advance": "595206",
+              "cd_ratio": "117.65"
+            },
+            "Betul": {
+              "District": "Betul",
+              "total_deposit": "1050498",
+              "total_advance": "688834",
+              "cd_ratio": "65.57"
+            },
+            "Bhind": {
+              "District": "Bhind",
+              "total_deposit": "610579",
+              "total_advance": "362274",
+              "cd_ratio": "59.33"
+            },
+            "Bhopal": {
+              "District": "Bhopal",
+              "total_deposit": "14974253",
+              "total_advance": "11498598",
+              "cd_ratio": "76.79"
+            },
+            "Burhanpur": {
+              "District": "Burhanpur",
+              "total_deposit": "441419",
+              "total_advance": "378571",
+              "cd_ratio": "85.76"
+            },
+            "Chhatarpur": {
+              "District": "Chhatarpur",
+              "total_deposit": "1030853",
+              "total_advance": "535119",
+              "cd_ratio": "51.91"
+            },
+            "Chhindwara": {
+              "District": "Chhindwara",
+              "total_deposit": "1197036",
+              "total_advance": "924498",
+              "cd_ratio": "77.23"
+            },
+            "Damoh": {
+              "District": "Damoh",
+              "total_deposit": "550579",
+              "total_advance": "367994",
+              "cd_ratio": "66.84"
+            },
+            "Datia": {
+              "District": "Datia",
+              "total_deposit": "382760",
+              "total_advance": "287764",
+              "cd_ratio": "75.18"
+            },
+            "Dewas": {
+              "District": "Dewas",
+              "total_deposit": "986135",
+              "total_advance": "1288572",
+              "cd_ratio": "130.67"
+            },
+            "Dhar": {
+              "District": "Dhar",
+              "total_deposit": "1278700",
+              "total_advance": "1472961",
+              "cd_ratio": "115.19"
+            },
+            "Dindori": {
+              "District": "Dindori",
+              "total_deposit": "213454",
+              "total_advance": "102966",
+              "cd_ratio": "48.24"
+            },
+            "East Nimar": {
+              "District": "East Nimar",
+              "total_deposit": "701571",
+              "total_advance": "776270",
+              "cd_ratio": "110.65"
+            },
+            "Guna": {
+              "District": "Guna",
+              "total_deposit": "573946",
+              "total_advance": "671473",
+              "cd_ratio": "116.99"
+            },
+            "Gwalior": {
+              "District": "Gwalior",
+              "total_deposit": "3627709",
+              "total_advance": "2431550",
+              "cd_ratio": "67.03"
+            },
+            "Harda": {
+              "District": "Harda",
+              "total_deposit": "367181",
+              "total_advance": "507604",
+              "cd_ratio": "138.24"
+            },
+            "Indore": {
+              "District": "Indore",
+              "total_deposit": "11303431",
+              "total_advance": "11434376",
+              "cd_ratio": "101.16"
+            },
+            "Jabalpur": {
+              "District": "Jabalpur",
+              "total_deposit": "4717583",
+              "total_advance": "3276318",
+              "cd_ratio": "69.45"
+            },
+            "Jhabua": {
+              "District": "Jhabua",
+              "total_deposit": "317922",
+              "total_advance": "378973",
+              "cd_ratio": "119.2"
+            },
+            "Katni": {
+              "District": "Katni",
+              "total_deposit": "864797",
+              "total_advance": "597415",
+              "cd_ratio": "69.08"
+            },
+            "Khargone": {
+              "District": "Khargone",
+              "total_deposit": "1072975",
+              "total_advance": "1360541",
+              "cd_ratio": "126.8"
+            },
+            "Maihar": {
+              "District": "Maihar",
+              "total_deposit": "367726",
+              "total_advance": "195990",
+              "cd_ratio": "53.3"
+            },
+            "Mandla": {
+              "District": "Mandla",
+              "total_deposit": "539478",
+              "total_advance": "254943",
+              "cd_ratio": "47.26"
+            },
+            "Mandsaur": {
+              "District": "Mandsaur",
+              "total_deposit": "726034",
+              "total_advance": "928150",
+              "cd_ratio": "127.84"
+            },
+            "Mauganj": {
+              "District": "Mauganj",
+              "total_deposit": "238271",
+              "total_advance": "55748",
+              "cd_ratio": "23.4"
+            },
+            "Morena": {
+              "District": "Morena",
+              "total_deposit": "702467",
+              "total_advance": "605785",
+              "cd_ratio": "86.24"
+            },
+            "Narmadapuram": {
+              "District": "Narmadapuram",
+              "total_deposit": "1187899",
+              "total_advance": "1175921",
+              "cd_ratio": "98.99"
+            },
+            "Narsinghpur": {
+              "District": "Narsinghpur",
+              "total_deposit": "720926",
+              "total_advance": "695910",
+              "cd_ratio": "96.53"
+            },
+            "Neemuch": {
+              "District": "Neemuch",
+              "total_deposit": "570941",
+              "total_advance": "587628",
+              "cd_ratio": "102.92"
+            },
+            "Niwari": {
+              "District": "Niwari",
+              "total_deposit": "196879",
+              "total_advance": "63822",
+              "cd_ratio": "32.42"
+            },
+            "Pandhurna": {
+              "District": "Pandhurna",
+              "total_deposit": "239311",
+              "total_advance": "174877",
+              "cd_ratio": "73.08"
+            },
+            "Panna": {
+              "District": "Panna",
+              "total_deposit": "448116",
+              "total_advance": "189305",
+              "cd_ratio": "42.24"
+            },
+            "Raisen": {
+              "District": "Raisen",
+              "total_deposit": "644451",
+              "total_advance": "964337",
+              "cd_ratio": "149.64"
+            },
+            "Rajgarh": {
+              "District": "Rajgarh",
+              "total_deposit": "540581",
+              "total_advance": "925671",
+              "cd_ratio": "171.24"
+            },
+            "Ratlam": {
+              "District": "Ratlam",
+              "total_deposit": "963783",
+              "total_advance": "1269561",
+              "cd_ratio": "131.73"
+            },
+            "Rewa": {
+              "District": "Rewa",
+              "total_deposit": "1625968",
+              "total_advance": "781131",
+              "cd_ratio": "48.04"
+            },
+            "Sagar": {
+              "District": "Sagar",
+              "total_deposit": "1797274",
+              "total_advance": "1088588",
+              "cd_ratio": "60.57"
+            },
+            "Satna": {
+              "District": "Satna",
+              "total_deposit": "1316204",
+              "total_advance": "659124",
+              "cd_ratio": "50.08"
+            },
+            "Sehore": {
+              "District": "Sehore",
+              "total_deposit": "810819",
+              "total_advance": "1007444",
+              "cd_ratio": "124.25"
+            },
+            "Seoni": {
+              "District": "Seoni",
+              "total_deposit": "657208",
+              "total_advance": "529529",
+              "cd_ratio": "80.57"
+            },
+            "Shahdol": {
+              "District": "Shahdol",
+              "total_deposit": "697336",
+              "total_advance": "314066",
+              "cd_ratio": "45.04"
+            },
+            "Shajapur": {
+              "District": "Shajapur",
+              "total_deposit": "422573",
+              "total_advance": "770007",
+              "cd_ratio": "182.22"
+            },
+            "Sheopur": {
+              "District": "Sheopur",
+              "total_deposit": "195746",
+              "total_advance": "193431",
+              "cd_ratio": "98.82"
+            },
+            "Shivpuri": {
+              "District": "Shivpuri",
+              "total_deposit": "679566",
+              "total_advance": "494988",
+              "cd_ratio": "72.84"
+            },
+            "Sidhi": {
+              "District": "Sidhi",
+              "total_deposit": "561484",
+              "total_advance": "226418",
+              "cd_ratio": "40.32"
+            },
+            "Singrauli": {
+              "District": "Singrauli",
+              "total_deposit": "2031290",
+              "total_advance": "312420",
+              "cd_ratio": "15.38"
+            },
+            "Tikamgarh": {
+              "District": "Tikamgarh",
+              "total_deposit": "463155",
+              "total_advance": "229900",
+              "cd_ratio": "49.64"
+            },
+            "Ujjain": {
+              "District": "Ujjain",
+              "total_deposit": "2104261",
+              "total_advance": "2346660",
+              "cd_ratio": "111.52"
+            },
+            "Umaria": {
+              "District": "Umaria",
+              "total_deposit": "370644",
+              "total_advance": "125615",
+              "cd_ratio": "33.89"
+            },
+            "Vidisha": {
+              "District": "Vidisha",
+              "total_deposit": "793391",
+              "total_advance": "951281",
+              "cd_ratio": "119.9"
+            }
+          }
+        }
+      }
+    },
+    "2025-06": {
+      "period": "June 2025",
+      "as_on_date": "30-06-2025",
+      "fy": "2025-26",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "District",
+            "total_deposit",
+            "total_advance",
+            "cd_ratio"
+          ],
+          "districts": {
+            "Agar Malwa": {
+              "District": "Agar Malwa",
+              "total_deposit": "189955",
+              "total_advance": "407900",
+              "cd_ratio": "215.62"
+            },
+            "Alirajpur": {
+              "District": "Alirajpur",
+              "total_deposit": "192305",
+              "total_advance": "119578",
+              "cd_ratio": "60.7"
+            },
+            "Anuppur": {
+              "District": "Anuppur",
+              "total_deposit": "574104",
+              "total_advance": "169839",
+              "cd_ratio": "28.95"
+            },
+            "Ashoknagar": {
+              "District": "Ashoknagar",
+              "total_deposit": "318447",
+              "total_advance": "397313",
+              "cd_ratio": "125.89"
+            },
+            "Balaghat": {
+              "District": "Balaghat",
+              "total_deposit": "776265",
+              "total_advance": "528903",
+              "cd_ratio": "66"
+            },
+            "Barwani": {
+              "District": "Barwani",
+              "total_deposit": "507430",
+              "total_advance": "582451",
+              "cd_ratio": "114.78"
+            },
+            "Betul": {
+              "District": "Betul",
+              "total_deposit": "1063352",
+              "total_advance": "710688",
+              "cd_ratio": "65.57"
+            },
+            "Bhind": {
+              "District": "Bhind",
+              "total_deposit": "626937",
+              "total_advance": "369508",
+              "cd_ratio": "59.33"
+            },
+            "Bhopal": {
+              "District": "Bhopal",
+              "total_deposit": "14881453",
+              "total_advance": "11485620",
+              "cd_ratio": "76.79"
+            },
+            "Burhanpur": {
+              "District": "Burhanpur",
+              "total_deposit": "443005",
+              "total_advance": "377772",
+              "cd_ratio": "85.76"
+            },
+            "Chhatarpur": {
+              "District": "Chhatarpur",
+              "total_deposit": "1041593",
+              "total_advance": "535412",
+              "cd_ratio": "51.4"
+            },
+            "Chhindwara": {
+              "District": "Chhindwara",
+              "total_deposit": "1205167",
+              "total_advance": "980354",
+              "cd_ratio": "81.35"
+            },
+            "Damoh": {
+              "District": "Damoh",
+              "total_deposit": "557742",
+              "total_advance": "381159",
+              "cd_ratio": "68.34"
+            },
+            "Datia": {
+              "District": "Datia",
+              "total_deposit": "389223",
+              "total_advance": "292045",
+              "cd_ratio": "75.18"
+            },
+            "Dewas": {
+              "District": "Dewas",
+              "total_deposit": "1002861",
+              "total_advance": "1316885",
+              "cd_ratio": "130.67"
+            },
+            "Dhar": {
+              "District": "Dhar",
+              "total_deposit": "1293602",
+              "total_advance": "1521666",
+              "cd_ratio": "115.19"
+            },
+            "Dindori": {
+              "District": "Dindori",
+              "total_deposit": "212004",
+              "total_advance": "107327",
+              "cd_ratio": "48.24"
+            },
+            "East Nimar": {
+              "District": "East Nimar",
+              "total_deposit": "703580",
+              "total_advance": "777440",
+              "cd_ratio": "110.5"
+            },
+            "Guna": {
+              "District": "Guna",
+              "total_deposit": "590510",
+              "total_advance": "686841",
+              "cd_ratio": "116.31"
+            },
+            "Gwalior": {
+              "District": "Gwalior",
+              "total_deposit": "3715841",
+              "total_advance": "2454786",
+              "cd_ratio": "67.03"
+            },
+            "Harda": {
+              "District": "Harda",
+              "total_deposit": "371221",
+              "total_advance": "511189",
+              "cd_ratio": "138.24"
+            },
+            "Indore": {
+              "District": "Indore",
+              "total_deposit": "11487802",
+              "total_advance": "11501509",
+              "cd_ratio": "101.16"
+            },
+            "Jabalpur": {
+              "District": "Jabalpur",
+              "total_deposit": "4724558",
+              "total_advance": "3280023",
+              "cd_ratio": "69.45"
+            },
+            "Jhabua": {
+              "District": "Jhabua",
+              "total_deposit": "310663",
+              "total_advance": "378898",
+              "cd_ratio": "119.2"
+            },
+            "Katni": {
+              "District": "Katni",
+              "total_deposit": "873512",
+              "total_advance": "604367",
+              "cd_ratio": "69.08"
+            },
+            "Khargone": {
+              "District": "Khargone",
+              "total_deposit": "1007183",
+              "total_advance": "1315583",
+              "cd_ratio": "126.8"
+            },
+            "Maihar": {
+              "District": "Maihar",
+              "total_deposit": "380152",
+              "total_advance": "200633",
+              "cd_ratio": "53.3"
+            },
+            "Mandla": {
+              "District": "Mandla",
+              "total_deposit": "538655",
+              "total_advance": "262585",
+              "cd_ratio": "47.26"
+            },
+            "Mandsaur": {
+              "District": "Mandsaur",
+              "total_deposit": "725870",
+              "total_advance": "945829",
+              "cd_ratio": "127.84"
+            },
+            "Mauganj": {
+              "District": "Mauganj",
+              "total_deposit": "238692",
+              "total_advance": "56491",
+              "cd_ratio": "23.4"
+            },
+            "Morena": {
+              "District": "Morena",
+              "total_deposit": "703327",
+              "total_advance": "622943",
+              "cd_ratio": "86.24"
+            },
+            "Narmadapuram": {
+              "District": "Narmadapuram",
+              "total_deposit": "1217223",
+              "total_advance": "1178232",
+              "cd_ratio": "98.99"
+            },
+            "Narsinghpur": {
+              "District": "Narsinghpur",
+              "total_deposit": "704868",
+              "total_advance": "711632",
+              "cd_ratio": "96.53"
+            },
+            "Neemuch": {
+              "District": "Neemuch",
+              "total_deposit": "574620",
+              "total_advance": "616121",
+              "cd_ratio": "102.92"
+            },
+            "Niwari": {
+              "District": "Niwari",
+              "total_deposit": "195879",
+              "total_advance": "63899",
+              "cd_ratio": "32.42"
+            },
+            "Pandhurna": {
+              "District": "Pandhurna",
+              "total_deposit": "254923",
+              "total_advance": "191533",
+              "cd_ratio": "73.08"
+            },
+            "Panna": {
+              "District": "Panna",
+              "total_deposit": "452689",
+              "total_advance": "191076",
+              "cd_ratio": "42.24"
+            },
+            "Raisen": {
+              "District": "Raisen",
+              "total_deposit": "655367",
+              "total_advance": "955238",
+              "cd_ratio": "149.64"
+            },
+            "Rajgarh": {
+              "District": "Rajgarh",
+              "total_deposit": "546343",
+              "total_advance": "918987",
+              "cd_ratio": "168.21"
+            },
+            "Ratlam": {
+              "District": "Ratlam",
+              "total_deposit": "960113",
+              "total_advance": "1295884",
+              "cd_ratio": "131.73"
+            },
+            "Rewa": {
+              "District": "Rewa",
+              "total_deposit": "1628627",
+              "total_advance": "799211",
+              "cd_ratio": "48.04"
+            },
+            "Sagar": {
+              "District": "Sagar",
+              "total_deposit": "1744669",
+              "total_advance": "1068402",
+              "cd_ratio": "60.57"
+            },
+            "Satna": {
+              "District": "Satna",
+              "total_deposit": "1328974",
+              "total_advance": "668482",
+              "cd_ratio": "50.08"
+            },
+            "Sehore": {
+              "District": "Sehore",
+              "total_deposit": "852346",
+              "total_advance": "997551",
+              "cd_ratio": "117.04"
+            },
+            "Seoni": {
+              "District": "Seoni",
+              "total_deposit": "663890",
+              "total_advance": "535910",
+              "cd_ratio": "80.57"
+            },
+            "Shahdol": {
+              "District": "Shahdol",
+              "total_deposit": "693265",
+              "total_advance": "315485",
+              "cd_ratio": "45.04"
+            },
+            "Shajapur": {
+              "District": "Shajapur",
+              "total_deposit": "435557",
+              "total_advance": "769442",
+              "cd_ratio": "182.22"
+            },
+            "Sheopur": {
+              "District": "Sheopur",
+              "total_deposit": "198576",
+              "total_advance": "203076",
+              "cd_ratio": "98.82"
+            },
+            "Shivpuri": {
+              "District": "Shivpuri",
+              "total_deposit": "675243",
+              "total_advance": "499755",
+              "cd_ratio": "72.84"
+            },
+            "Sidhi": {
+              "District": "Sidhi",
+              "total_deposit": "558677",
+              "total_advance": "226187",
+              "cd_ratio": "40.32"
+            },
+            "Singrauli": {
+              "District": "Singrauli",
+              "total_deposit": "2063575",
+              "total_advance": "312751",
+              "cd_ratio": "15.16"
+            },
+            "Tikamgarh": {
+              "District": "Tikamgarh",
+              "total_deposit": "457481",
+              "total_advance": "230088",
+              "cd_ratio": "49.64"
+            },
+            "Ujjain": {
+              "District": "Ujjain",
+              "total_deposit": "2129366",
+              "total_advance": "2362900",
+              "cd_ratio": "111.52"
+            },
+            "Umaria": {
+              "District": "Umaria",
+              "total_deposit": "366504",
+              "total_advance": "124939",
+              "cd_ratio": "33.89"
+            },
+            "Vidisha": {
+              "District": "Vidisha",
+              "total_deposit": "821029",
+              "total_advance": "961091",
+              "cd_ratio": "117.06"
             }
           }
         }
