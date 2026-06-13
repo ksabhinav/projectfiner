@@ -19393,6 +19393,209 @@
           "num_districts": 28
         }
       }
+    },
+    "2026-03": {
+      "period": "March 2026",
+      "as_on_date": "31-03-2026",
+      "fy": "2025-26",
+      "tables": {
+        "credit_deposit_ratio": {
+          "fields": [
+            "cd_ratio",
+            "total_deposit",
+            "total_advance",
+            "total_branch"
+          ],
+          "districts": {
+            "Bagalkote": {
+              "cd_ratio": "101.92",
+              "total_deposit": "19763.81",
+              "total_advance": "20142.36",
+              "total_branch": "346"
+            },
+            "Ballari": {
+              "cd_ratio": "88.36",
+              "total_deposit": "21858.2",
+              "total_advance": "19312.86",
+              "total_branch": "233"
+            },
+            "Belgaum": {
+              "cd_ratio": "77.07",
+              "total_deposit": "59516.7",
+              "total_advance": "45867.7",
+              "total_branch": "764"
+            },
+            "Bengaluru Rural": {
+              "cd_ratio": "107.37",
+              "total_deposit": "22237.24",
+              "total_advance": "23877",
+              "total_branch": "270"
+            },
+            "Bengaluru South": {
+              "cd_ratio": "84.1",
+              "total_deposit": "19319.33",
+              "total_advance": "16248.3",
+              "total_branch": "205"
+            },
+            "Bengaluru Urban": {
+              "cd_ratio": "70.11",
+              "total_deposit": "1298264.08",
+              "total_advance": "910216.79",
+              "total_branch": "3029"
+            },
+            "Bidar": {
+              "cd_ratio": "99.66",
+              "total_deposit": "11516.75",
+              "total_advance": "11477.22",
+              "total_branch": "230"
+            },
+            "Chamarajanagar": {
+              "cd_ratio": "141.54",
+              "total_deposit": "5721.9",
+              "total_advance": "8098.55",
+              "total_branch": "156"
+            },
+            "Chikkaballapura": {
+              "cd_ratio": "121.32",
+              "total_deposit": "9081.44",
+              "total_advance": "11017.81",
+              "total_branch": "181"
+            },
+            "Chikkamagaluru": {
+              "cd_ratio": "90.61",
+              "total_deposit": "18043.09",
+              "total_advance": "16348.1",
+              "total_branch": "308"
+            },
+            "Chitradurga": {
+              "cd_ratio": "118.15",
+              "total_deposit": "12475.52",
+              "total_advance": "14740.02",
+              "total_branch": "267"
+            },
+            "Dakshina Kannada": {
+              "cd_ratio": "69.4",
+              "total_deposit": "85873.5",
+              "total_advance": "59596.8",
+              "total_branch": "670"
+            },
+            "Davangere": {
+              "cd_ratio": "144.83",
+              "total_deposit": "14963.3",
+              "total_advance": "21671.71",
+              "total_branch": "271"
+            },
+            "Dharwad": {
+              "cd_ratio": "82.72",
+              "total_deposit": "43997.3",
+              "total_advance": "36393.3",
+              "total_branch": "394"
+            },
+            "Gadag": {
+              "cd_ratio": "98.07",
+              "total_deposit": "9319.03",
+              "total_advance": "9139.4",
+              "total_branch": "196"
+            },
+            "Hassan": {
+              "cd_ratio": "119.42",
+              "total_deposit": "20337.52",
+              "total_advance": "24286.8",
+              "total_branch": "396"
+            },
+            "Haveri": {
+              "cd_ratio": "153.77",
+              "total_deposit": "10501.87",
+              "total_advance": "16148.37",
+              "total_branch": "260"
+            },
+            "Kalaburagi": {
+              "cd_ratio": "74.33",
+              "total_deposit": "27274.81",
+              "total_advance": "20272.16",
+              "total_branch": "319"
+            },
+            "Kodagu": {
+              "cd_ratio": "73.84",
+              "total_deposit": "14150.46",
+              "total_advance": "10448.11",
+              "total_branch": "195"
+            },
+            "Kolar": {
+              "cd_ratio": "120.05",
+              "total_deposit": "12375.84",
+              "total_advance": "14857.42",
+              "total_branch": "224"
+            },
+            "Koppal": {
+              "cd_ratio": "103.22",
+              "total_deposit": "9213.37",
+              "total_advance": "9509.89",
+              "total_branch": "183"
+            },
+            "Mandya": {
+              "cd_ratio": "143.85",
+              "total_deposit": "14717.31",
+              "total_advance": "21170.56",
+              "total_branch": "352"
+            },
+            "Mysuru": {
+              "cd_ratio": "84.93",
+              "total_deposit": "68608.72",
+              "total_advance": "58269.97",
+              "total_branch": "628"
+            },
+            "Raichur": {
+              "cd_ratio": "121.84",
+              "total_deposit": "14187.95",
+              "total_advance": "17287.3",
+              "total_branch": "283"
+            },
+            "Shivamogga": {
+              "cd_ratio": "96.13",
+              "total_deposit": "26690.61",
+              "total_advance": "25658.06",
+              "total_branch": "368"
+            },
+            "Tumakuru": {
+              "cd_ratio": "106.69",
+              "total_deposit": "25808.66",
+              "total_advance": "27536.47",
+              "total_branch": "432"
+            },
+            "Udupi": {
+              "cd_ratio": "48.99",
+              "total_deposit": "47441.87",
+              "total_advance": "23241.56",
+              "total_branch": "438"
+            },
+            "Uttara Kannada": {
+              "cd_ratio": "46.29",
+              "total_deposit": "27064.56",
+              "total_advance": "12527.76",
+              "total_branch": "360"
+            },
+            "Vijayanagar": {
+              "cd_ratio": "96.7",
+              "total_deposit": "11309.87",
+              "total_advance": "10936.66",
+              "total_branch": "189"
+            },
+            "Vijayapura": {
+              "cd_ratio": "96.05",
+              "total_deposit": "22007.19",
+              "total_advance": "21138.85",
+              "total_branch": "335"
+            },
+            "Yadgir": {
+              "cd_ratio": "128.76",
+              "total_deposit": "5502.59",
+              "total_advance": "7085.01",
+              "total_branch": "126"
+            }
+          }
+        }
+      }
     }
   }
 }

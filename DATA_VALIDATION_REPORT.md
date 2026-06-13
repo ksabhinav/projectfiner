@@ -1,6 +1,6 @@
 # Project FINER - Data Validation Report
 
-Generated: 2026-06-13 18:54:03
+Generated: 2026-06-13 19:22:34
 
 States processed: 1
 Total issues: **1** (Critical: 0, Warning: 1, Info: 0)
@@ -9,14 +9,14 @@ Total issues: **1** (Critical: 0, Warning: 1, Info: 0)
 
 | State | period_gap | Total |
 | --- | --- | --- |
-| madhya-pradesh | 1 | 1 |
+| karnataka | 1 | 1 |
 
 ## Detailed Findings
 
 
-### Madhya Pradesh
+### Karnataka
 
 
 #### Period Gap (1 issues)
 
-- [WARNING] **ALL** | `-` @ ALL: Missing 22 quarter(s): June 2017, September 2017, December 2017, March 2018, June 2018, September 2018, December 2018, March 2019, June 2019, September 2019 ...and 12 more
+- [WARNING] **ALL** | `-` @ ALL: Missing 2 quarter(s): September 2025, December 2025
