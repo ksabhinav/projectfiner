@@ -1,0 +1,4156 @@
+{
+  "generatedAt": "2026-06-09T19:25:54+00:00",
+  "portals": {
+    "https://web.archive.org/web/2025*/slbcap.nic.in": {
+      "states": [
+        "andhra-pradesh"
+      ],
+      "skip": true,
+      "notes": [
+        "slbcap.nic.in dead (DNS unresolvable); AP sourced from Wayback backfill only"
+      ],
+      "consecutiveFailures": 0,
+      "lastSuccess": null,
+      "contentHash": null,
+      "docLinks": []
+    },
+    "https://onlineslbcne.nic.in": {
+      "states": [
+        "arunachal-pradesh",
+        "assam",
+        "jharkhand",
+        "manipur",
+        "meghalaya",
+        "mizoram",
+        "nagaland",
+        "odisha",
+        "sikkim"
+      ],
+      "skip": false,
+      "notes": [
+        "form-driven portal (quarter/year POST) — homepage hash is the only static signal"
+      ],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "c5b4cddace9b380eb51ef0acb4a0fb5286a825c5cc8f35df4b5269946545aef5",
+      "docLinks": [
+        {
+          "url": "http://slbcne.nic.in/intro.pdf",
+          "text": "About Us"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://www.slbcbihar.com/SlBCHeldMeeting.aspx": {
+      "states": [
+        "bihar"
+      ],
+      "skip": false,
+      "notes": [
+        "broken SSL chain — verification disabled"
+      ],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "db0c3f23ea460a76608c6e7aba4767c6b65027e76f59fd05b8f4e57b992c3e71",
+      "docLinks": [
+        {
+          "url": "https://www.slbcbihar.com/Meeting/56TH SLBC AGENDA BOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/57TH SLBC AGENDA BOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/58TH SLBC AGENDA BOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/59TH SLBC AGENDA BOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/60THSLBCAGENDABOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/61STSLBCAGENDABOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/62ndSLBCAGENDABOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/63RD%20SLBC%20AGENDA%20BOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/66TH%20SLBC%20AGENDA%20BOOK%20.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/67TH SLBC AGENDA BOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/69TH SLBC MEETING AGENDA BOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/A%20FINAL%2064TH%20SLBC%20AGENDA%20BOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/A%20FINAL%2065TH%20SLBC%20AGENDA%20BOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/A%20Minutes%20of%20the%2065th%20SLBC%20Meeting%20dt%2025.08.2018.pdf",
+          "text": "Minutes of 65th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/AMMENDED%20MINUTES_63rd___SLBC_200218_in_words.pdf",
+          "text": "Minutes of 63rd SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/A_52ND_SLBC_AGENDA_BOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/A_53rd_SLBC_AGENDA_BOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/A_54th_SLBC_AGENDA_BOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/A_55th_SLBC_AGENDA_BOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/Ammended Minutes of 59th SLBC meeting.pdf",
+          "text": "Minutes of 59th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/Approved Minutes 66th SLBC.pdf",
+          "text": "Minutes of 66th SLBC"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/BOOK FOR 68 SLBC.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/DATA SHEET.pdf",
+          "text": "DATA SHEET"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/FINAL MINUTES 60th SLBC.doc",
+          "text": "Minutes of 60th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/Final%20Minutes%20of%2057th%20SLBC%20meeting.pdf",
+          "text": "Minutes of 57th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/FinalMinutesof58thSLBC meeting16112016.pdf",
+          "text": "Minutes of 58th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/Final_64th%20SLBC%20Minutes.pdf",
+          "text": "Minutes of 64th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/MINUTES AND ACTION POINTS OF 40TH SLBC MEETING DATED 16.05.2012.pdf",
+          "text": "Minutes of 40th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/MINUTES OF 55th SLBC Meeting.pdf",
+          "text": "Minutes of 55th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/MINUTES OF 56th SLBC MEETING.pdf",
+          "text": "Minutes of 56th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/MINUTES62ndSLBC.pdf",
+          "text": "Minutes of 62nd SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/minutes_of_52nd_slbc_Meeting.pdf",
+          "text": "Minutes of 52nd SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/minutes_of_53nd_slbc_Meeting.pdf",
+          "text": "Minutes of 53rd SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Meeting/minutes_of_54th_slbc_Meeting.pdf",
+          "text": "Minutes of 54th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/Report/List of unbanked revenue centre in Bihar.xlsx",
+          "text": "Unbanked revenue Centres"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/71 TH SLBC AGENDA BOOK.pdf",
+          "text": "Agenda & Minutes of 71st SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/79th Scan.pdf",
+          "text": "Agenda Book of the 79th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/80thSLBCAgenda.pdf",
+          "text": "Agenda Book of the 80th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/81stSLBCBookletFinal.pdf",
+          "text": "Agenda Book of the 81st SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/82_SLBC_MINUTES_Final.pdf",
+          "text": "Minutes of 82nd SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/82ndFinalSLBCBOOK.pdf",
+          "text": "Agenda Book of the 82nd SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/83rd_and_84th_Joint_Meeting.pdf",
+          "text": "83rd and 84th Joint Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/85_86_MINUTES.pdf",
+          "text": "Minutes of 85th and 86th Joint Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/85rd_and_86th_Joint_Meeting.pdf",
+          "text": "85th & 86th Joint Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/87th Agenda Book Scan.pdf",
+          "text": "Agenda book of the 87th SLBC meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/93rd SLBC Agenda Book March 25.pdf",
+          "text": "Agenda book of the 93rd Meeting held on - 03.06.2025"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/94th SLBC Agenda Reference Book.pdf",
+          "text": "Agenda book of the 94th Meeting held on - 24.09.2025"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/95th SLBC Agenda Reference Book.pdf",
+          "text": "Agenda book of the 95th Meeting held on - 22.01.2026"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/A_51ST_SLBC_AGENDA_BOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/A_FINAL_49TH__SLBC_AGENDA_BOOK_FINAL.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/A_FINAL_50TH__SLBC_AGENDA_BOOK.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/A_Final_Minutes_of_51st_SLBC_Meeting.pdf",
+          "text": "Minutes of 51th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/Agenda-of-44-SLBC-Meeting.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/Agenda-of-45-SLBC-Meeting.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/Agenda-of-46-SLBC-Meeting.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/Agenda-of-47-SLBC-Meeting.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/Agenda-of-48-SLBC-Meeting.pdf",
+          "text": "Agenda"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/Agenda-of-74th-SLBC-Meeting.pdf",
+          "text": "Agenda Book of the 74th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/All Banks File.xlsx",
+          "text": "Panchayat Wise Branch Detail"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/Final_Minutes_of_50th_SLBC_review_meeting.pdf",
+          "text": "Minutes of 50th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/LHO.pdf",
+          "text": "Agenda Book of the 75th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/Loan Apply Link for banks.pdf",
+          "text": "Loan apply link of banks"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/MINUTES OF 87TH SLBC MEETING.pdf",
+          "text": "Minutes of 87th Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/MINUTES_44TH_SLBC_FINAL.pdf",
+          "text": "Minutes of 44th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/MINUTES_45TH_SLBC_FINAL.pdf",
+          "text": "Minutes of 45th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/MINUTES_46TH_SLBC_FINAL.pdf",
+          "text": "Minutes of 46th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/MINUTES_47TH_SLBC_FINAL .pdf",
+          "text": "Minutes of 47th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/MINUTES_48TH_SLBC_FINAL.pdf",
+          "text": "Minutes of 48th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/MINUTES_49TH_SLBC_FINAL.pdf",
+          "text": "Minutes of 49th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/Minutes 90th, 91st, 92nd Joint SLBC meeting  dated 17.02.25.pdf",
+          "text": "Minutes of 90th , 91st and 92nd Joint Meeting held on 17.02.2025"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/Minutes of 83rd and 84th Joint Meeting Held on 04.03.2023.pdf",
+          "text": "Minutes of 83rd and 84th Joint Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/Minutes of the 93RD SLBC Bihar Meeting held on 03.06.2025.. .pdf",
+          "text": "Minutes of the 93rd Meeting held on - 03.06.2025"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/Minutes of the 94th  Meeting held on 24.09.2025.pdf",
+          "text": "Minutes of the 94th Meeting held on - 24.09.2025"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/Minutes of the 95th SLBC Meeting _v2.O Approved.pdf",
+          "text": "Minutes of the 95th Meeting held on - 22.01.2026"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/PGWISE REPORTS.zip",
+          "text": "DATA SHEET"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/SLBC BIHAR  MINUTES OF 88TH AND 89TH JOINT MEETING HELD ON  14.06.2024.pdf",
+          "text": "Minutes of 88th and 89th Joint Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/SLBC SCAN.pdf",
+          "text": "Agenda Book of the 76th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/SLBC72.pdf",
+          "text": "Agenda Book of the 72nd SLBC Review Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/Villages_Panchayats_ 16-10-2020.xlsx",
+          "text": "Villages & Panchayats"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/december-23.pdf",
+          "text": "Agenda book 88th and 89th Joint Meeting Book 2"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/march-24.pdf",
+          "text": "Agenda book 88th and 89th Joint Meeting Book 1"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/slbc mitting book.pdf",
+          "text": "Agenda Book of the 78th SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/slbc73rd.pdf",
+          "text": "Agenda Book of the 73rd SLBC Review Meeting"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://slbcchhattisgarh.com": {
+      "states": [
+        "chhattisgarh"
+      ],
+      "skip": false,
+      "notes": [],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "91a1fbacd70ffd29f13de064ec905e9dde7b6c5bdae0b8760da71621e28c42f7",
+      "docLinks": [
+        {
+          "url": "http://slbcchhattisgarh.com/download/central-sponsers/English_SVANidhi.pdf",
+          "text": "PM Svanidhi"
+        },
+        {
+          "url": "http://slbcchhattisgarh.com/download/central-sponsers/PM%20SWANIDHI.pdf",
+          "text": "पीएम स्वनिधि"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/102654-lic-bboklet-14-10-2025.pdf",
+          "text": ""
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/2026/nsfi-2025-30-english.pdf",
+          "text": "National Strategy For Financial Inclusion 2025-30"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/2026/nsfi-2025-30-hindi.pdf",
+          "text": "वित्तीय समावेशन हेतु राष्ट्रीय रणनीति 2025-30"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/banking_network/bcdata.xlsx",
+          "text": "Banking Outlets Other Modes Details"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/banking_network/specialised-msme-branches.xlsx",
+          "text": "Specialised MSME Branches"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/education/mmusrbuy for bank ppt.pdf",
+          "text": "मुख्यमंत्री उच्चशिक्षा ऋणब्याज अनुदान योजना"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/lead_district_managers.pdf",
+          "text": "Lead Bank District Wise"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/meetings/100/100-data-table.zip",
+          "text": "100th (Sep 2025) SLBC Data Table"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/meetings/100/100th-agenda.pdf",
+          "text": "100th (September 2025) Agenda"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/meetings/100/100th-minutes.pdf",
+          "text": "100th (September 2025) Minutes"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/meetings/100/100th-slbc-booklet.zip",
+          "text": "100th (September 2025) SLBC Booklet"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/meetings/101/101-data-table.zip",
+          "text": "101th (Dec 2025) SLBC Data Table"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/meetings/101/101st-minutes.pdf",
+          "text": "101st (December 2025) Minutes"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/meetings/101/101th-agenda.pdf",
+          "text": "101th (Dec 2025) SLBC Agenda"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/meetings/101/101th-slbc-booklet.zip",
+          "text": "101th (Dec 2025) SLBC Booklet"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/meetings/102/102-data-table.zip",
+          "text": "102nd (Mar 2026) SLBC Data Table"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/meetings/98/98-data-table.zip",
+          "text": "98th (Mar 2025) SLBC Data Table"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/meetings/98/98th-agenda.pdf",
+          "text": "98th (Mar 2025) SLBC Agenda"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/meetings/98/98th-minutes.pdf",
+          "text": "98th (Mar 2025) SLBC Minutes"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/meetings/99/99-data-table.zip",
+          "text": "99th (June 2025) SLBC Data Table"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/meetings/99/99th-agenda.pdf",
+          "text": "99th (June 2025) Agenda"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/meetings/99/99th-minutes.pdf",
+          "text": "99th (June 2025) Minutes"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/meetings/slbc_calendar_2025-26.pdf",
+          "text": "Calendar of Meetings"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/rbi-circular/flc-1.pdf",
+          "text": ""
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/rbi-circular/flc-2.pdf",
+          "text": ""
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/rbi-circular/flc-3.pdf",
+          "text": ""
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/sof/scale-of-finance-2025-26.pdf",
+          "text": "Scale of Finance 2025-26"
+        },
+        {
+          "url": "https://slbcchhattisgarh.com/download/sof/scale-of-finance-2026-27.pdf",
+          "text": "Scale of Finance 2026-27"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://slbcdelhi.pnb.bank.in": {
+      "states": [
+        "delhi"
+      ],
+      "skip": false,
+      "notes": [],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "8a25d9986757301e27e15dd6255ddde5a008bcd799062950bc29af056950ff46",
+      "docLinks": [
+        {
+          "url": "https://slbcdelhi.pnb.bank.in/webroot/upload/media/20250416152737_Image.pdf",
+          "text": "Scale of Finance FY 2025-26"
+        },
+        {
+          "url": "https://slbcdelhi.pnb.bank.in/webroot/upload/media/20251226113844_Image.pdf",
+          "text": "Delhi Gazette dated 25.12.2025 regarding Reorganisation of Districts"
+        },
+        {
+          "url": "https://slbcdelhi.pnb.bank.in/webroot/upload/media/up-dated-Contact-Details-Member-Banks-LDM-180625.xlsx",
+          "text": "Important contacts"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://slbcgoa.com": {
+      "states": [
+        "goa"
+      ],
+      "skip": false,
+      "notes": [],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "24b0d676cb2f266568b626dfe061b15c3d80c3424c73f5b48e7bfba57a74cd54",
+      "docLinks": [
+        {
+          "url": "https://slbcgoa.com/Meeting/126th SLBC Minutes.pdf",
+          "text": "126th SLBC : MINUTES"
+        },
+        {
+          "url": "https://slbcgoa.com/Meeting/127th SLBC MEETING AGENDA.pdf",
+          "text": "127th SLBC MEETING : AGENDA"
+        },
+        {
+          "url": "https://slbcgoa.com/Meeting/128TH SLBC MINUTES (goa).pdf",
+          "text": "128th SLBC : MINUTES"
+        },
+        {
+          "url": "https://slbcgoa.com/Meeting/129th SLBC Minutes.pdf",
+          "text": "129th SLBC : MINUTES"
+        },
+        {
+          "url": "https://slbcgoa.com/Meeting/130th SLBC Minutes.pdf",
+          "text": "130th SLBC : MINUTES"
+        },
+        {
+          "url": "https://slbcgoa.com/Meeting/131st SLBC MINUTES.pdf",
+          "text": "131st SLBC : MINUTES"
+        },
+        {
+          "url": "https://slbcgoa.com/Meeting/132d SLBC AGENDA.pdf",
+          "text": "132nd SLBC MEETING : AGENDA"
+        },
+        {
+          "url": "https://slbcgoa.com/Meeting/132nd SLBC Minutes.pdf",
+          "text": "132nd SLBC : MINUTES"
+        },
+        {
+          "url": "https://slbcgoa.com/Meeting/133rd SLBC Minutes.pdf",
+          "text": "133rd SLBC : MINUTES"
+        },
+        {
+          "url": "https://slbcgoa.com/Meeting/AGENDA 131st SLBC MEETING.pdf",
+          "text": "131st SLBC MEETING : AGENDA"
+        },
+        {
+          "url": "https://slbcgoa.com/Meeting/AGENDA OF 126th SLBC MEETING.pdf",
+          "text": "126th SLBC MEETING : AGENDA"
+        },
+        {
+          "url": "https://slbcgoa.com/Meeting/AGENDA OF 128th SLBC MEETING (goa).pdf",
+          "text": "128th SLBC MEETING : AGENDA"
+        },
+        {
+          "url": "https://slbcgoa.com/Meeting/AGENDA OF 130th SLBC MEETING.pdf",
+          "text": "130th SLBC MEETING : AGENDA"
+        },
+        {
+          "url": "https://slbcgoa.com/Meeting/Agenda  Background Papers.pdf",
+          "text": "129th SLBC MEETING : AGENDA"
+        },
+        {
+          "url": "https://slbcgoa.com/Meeting/Agenda & Background Papers for 133rd SLBC Meeting.pdf",
+          "text": "133rd SLBC MEETING : AGENDA"
+        },
+        {
+          "url": "https://slbcgoa.com/Meeting/minutes 127.pdf",
+          "text": "127th SLBC : MINUTES"
+        },
+        {
+          "url": "https://slbcgoa.com/documents/Automated E-Stamping system - Bank Guarantees-Procedural Guidelines.pdf",
+          "text": "Procedural Guidelines of Automated e-Stamping System (AES)"
+        },
+        {
+          "url": "https://slbcgoa.com/documents/Fraudulent_activities_in_the_name_of_Pradhan_Mantri_Jan_Dhan_Yojana_(PMJDY).zip",
+          "text": "FRAUDULENT ACTIVITIES IN THE NAME OF PRADHAN MANTRI JAN DHAN YOJANA (PMJDY)"
+        },
+        {
+          "url": "https://slbcgoa.com/documents/GOA STATE LIST OF UNBANKED VILLAGES.pdf",
+          "text": "UNBANKED VILLAGES"
+        },
+        {
+          "url": "https://slbcgoa.com/documents/GOASTATE SSA ALLOCATION as on 17.12.2016.xlsx",
+          "text": "GOA STATE-VILLAGE SSA COVERAGE"
+        },
+        {
+          "url": "https://slbcgoa.com/documents/Goa_CSP_contact_details.pdf",
+          "text": "Goa State - CSP Contact Details"
+        },
+        {
+          "url": "https://slbcgoa.com/documents/msme care centre.pdf",
+          "text": "msme care centres"
+        },
+        {
+          "url": "https://slbcgoa.com/documents/nfsi/NSFI 2025-30 english.pdf",
+          "text": "NSFI 2025-30 (English)"
+        },
+        {
+          "url": "https://slbcgoa.com/documents/nfsi/NSFI 2025-30 konkani.pdf",
+          "text": "NSFI 2025-30 (Konkani)"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://slbcgujarat.in": {
+      "states": [
+        "gujarat"
+      ],
+      "skip": false,
+      "notes": [],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "9aa546729e0b3689c75de7e1272650f340c0c3a52c3149e45edfe866940f5c16",
+      "docLinks": [
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2018/08/FAME-Booklet-English.pdf",
+          "text": "Financial Literacy Materials"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2018/12/AMI-Guidelines-wef-22.10.18-to-banks.pdf",
+          "text": "New Agricultural Marketing Infrastructure (AMI)-Operational Guidelines"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2019/12/Assistance-to-MSME-GR-01-04-2017-08112017.pdf",
+          "text": "GR- Scheme for Assistance to MSMEs"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2019/12/MSME_GAZETTE_ENGLISH.pdf",
+          "text": "Gazette- Relaxation to obtain clearance for MSME upto 03 Years"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2020/02/KCC-Simplified-loan-application-proforma_Gujarati-1.docx",
+          "text": "LOAN APPLICATION FORM FOR AGRICULTURAL CREDIT FOR PM-KISAN BENEFICIARIES -Gujarati"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2020/02/Simplified-loan-application-proforma_English-1.docx",
+          "text": "LOAN APPLICATION FORM FOR AGRICULTURAL CREDIT FOR PM-KISAN BENEFICIARIES -ENGLISH"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2021/01/Incentive-Schemes-of-GoG-for-MSMEs-2020.pdf",
+          "text": "Incentive-Schemes-of-GoG-for-MSMEs-2020"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2021/11/Industry-Policy-2020.pdf",
+          "text": "Gujarat Industrial Policy 2020"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2021/12/FIF-A-differentiated-approach.pdf",
+          "text": "Financial Inclusion Fund- NABARD ( Continued for FY 2021-22)"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2023/09/MSME-Compendium_Final.pdf",
+          "text": "2. Compendium of Scheme & Guidelines for MSME Sector"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2024/06/MSME-Branch-list-March-2024.xlsx",
+          "text": "Specialised MSME Branches"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2024/12/2025-Holiday-Notification-English.pdf",
+          "text": "Holiday List Gujarat- 2025"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2025/03/Bank-Branch-details-as-on-12.03.2025.xlsx",
+          "text": "Banking outlets-Branches-details"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2025/05/Annx-II-III-2.pdf",
+          "text": "District wise Crop wise Activity wise SOF 2025-26"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2025/05/Banking-at-a-Glance-185-SLBC-March-2025.pdf",
+          "text": "Banking at a glance- Gujarat"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2025/07/Annx.-T-ACP-Target.xlsx",
+          "text": "ACP-Targets"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2025/08/Govt-Schemes-Pocket-Book.pdf",
+          "text": "3. Government Sponsored Social Security Schemes Reference Booklet"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2025/09/NABARD-Gujarat-RO-Contact-details-of-DDMs-1.pdf",
+          "text": "District Development Managers District wise"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2025/09/URC-List-31.08.2025.xlsx",
+          "text": "1. List of Unbanked Rural Centres (not having banking outlets of Public Sector Banks, Private Banks, RRBs and DCCBs) -Gujarat"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2026/02/Annexure-II-SACP-Districtwise.xlsx",
+          "text": "ACP-Achievements"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2026/02/Annexure-III-CD-Ratio-Districtwise_Revised.xlsx",
+          "text": "CD Ratio"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2026/02/Annexure-IV-Banking-Network-Summary-Website.xlsx",
+          "text": "Banking Network Summary"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2026/02/Annexure-V-SHG.xlsx",
+          "text": "SHG bank linkage"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2026/02/Annexure-VI-FLC-details-December-2025.xlsx",
+          "text": "FLCs"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2026/02/Annexure-VII-RSETI-Contact-Address-detail.xlsx",
+          "text": "RSETIs"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2026/03/National-Strategy-for-Financial-Inclusion-NSFI-2025-30-Gujarati-Translation.pdf",
+          "text": "4. National Strategy for Financial Inclusion (NSFI) 2025-30 - Gujarati Translation"
+        },
+        {
+          "url": "https://slbcgujarat.in/wp-content/uploads/2026/06/Allocation-of-34-Districts-of-Gujarat-State-and-03-Districts-of-UT-of-DNH-and-DD-w.e.f-11.05.26.pdf",
+          "text": "Lead District Officer-RBI"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://slbcharyana.pnb.bank.in": {
+      "states": [
+        "haryana"
+      ],
+      "skip": false,
+      "notes": [],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "7c523bc5e349d0a295e4902b3eba49bb6f921b18c7baf5f3ebf2d13779bf1e4b",
+      "docLinks": [
+        {
+          "url": "https://slbcharyana.pnb.bank.in/ovugnort/2021/11/BANKING-NETWORK-2.pdf",
+          "text": "Banking Network"
+        },
+        {
+          "url": "https://slbcharyana.pnb.bank.in/ovugnort/2025/05/SoF-2025-26-1.pdf",
+          "text": "Notification of PMFBY for Kharif 2024 & Rabi 2025 in Cluster II & III"
+        },
+        {
+          "url": "https://slbcharyana.pnb.bank.in/ovugnort/2026/05/20260511181502.pdf",
+          "text": "Agenda for SLBC Haryana 176th Meeting to be held on May 18, 2026"
+        },
+        {
+          "url": "https://slbcharyana.pnb.bank.in/ovugnort/2026/05/Agenda-&-Annexure-176th-SLBC-Meeting.zip",
+          "text": "Agenda Annexures 176th Meeting to be held on May 18, 2026"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://slbchp.com": {
+      "states": [
+        "himachal-pradesh"
+      ],
+      "skip": false,
+      "notes": [],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "110c02c88b17cb42ab4fda6cd9d4315885327ef5e272b9f06d4bb314fb6fa414",
+      "docLinks": [
+        {
+          "url": "https://slbchp.com/Files/2019/BC Model.pdf",
+          "text": "BC Model"
+        },
+        {
+          "url": "https://slbchp.com/Files/2019/uniform banking hours.pdf",
+          "text": "Banking Hours"
+        },
+        {
+          "url": "https://slbchp.com/Files/ACP 2019-20.pdf",
+          "text": "ACP 2019-20"
+        },
+        {
+          "url": "https://slbchp.com/Files/ACP 2020-21.pdf",
+          "text": "ACP 2020-21"
+        },
+        {
+          "url": "https://slbchp.com/Files/ACP Targets for 2021-22.pdf",
+          "text": "ACP 2021-22"
+        },
+        {
+          "url": "https://slbchp.com/Files/ACP/Banking Data 31.03.2025.pdf",
+          "text": "Banking"
+        },
+        {
+          "url": "https://slbchp.com/Files/ACP/Outreach.pdf",
+          "text": "Banking Outlets-Branches Details"
+        },
+        {
+          "url": "https://slbchp.com/Files/ACP_2022_23_NOTE.pdf",
+          "text": "ACP 2022-23"
+        },
+        {
+          "url": "https://slbchp.com/Files/ACP_PLAN_2018-19.pdf",
+          "text": "ACP 2018-19"
+        },
+        {
+          "url": "https://slbchp.com/Files/Banking Network/Bank branches.xlsx",
+          "text": "Branch and ATM Detail"
+        },
+        {
+          "url": "https://slbchp.com/Files/Circular - NBFC - Natural Calamities.pdf",
+          "text": "Guidelines for Relief Measures by NBFCs in areas affected by Natural Calamities"
+        },
+        {
+          "url": "https://slbchp.com/Files/DETAIL OF BLOCKS IN HP.xlsx",
+          "text": "LIST OF BLOCK CODES"
+        },
+        {
+          "url": "https://slbchp.com/Files/District_wise_branches.pdf",
+          "text": "District-wise Bank Branches"
+        },
+        {
+          "url": "https://slbchp.com/Files/Financial Inclusion/FLC_details.xlsx",
+          "text": "FLCs"
+        },
+        {
+          "url": "https://slbchp.com/Files/Financial Inclusion/Rseti_Contact_Details.xlsx",
+          "text": "RSETIs"
+        },
+        {
+          "url": "https://slbchp.com/Files/Financial Inclusion/SHG Credit Linkage.xlsx",
+          "text": "SHG Bank Linkage"
+        },
+        {
+          "url": "https://slbchp.com/Files/Fraudulent activities in the name of Pradhan Mantri Jan Dhan Yojana (PMJDY)2020.zip",
+          "text": "- Fraudulent activities in the name of Pradhan Mantri Jan Dhan Yojana (PMJDY)"
+        },
+        {
+          "url": "https://slbchp.com/Files/Gyandeep Education Yojna.pdf",
+          "text": "Gyandeep Education Yojana"
+        },
+        {
+          "url": "https://slbchp.com/Files/HP 3 (1).xlsx",
+          "text": "- List of unbanked villages as on 31.01.2024"
+        },
+        {
+          "url": "https://slbchp.com/Files/HP_Holidays-2026.pdf",
+          "text": "List Of Holidays"
+        },
+        {
+          "url": "https://slbchp.com/Files/Lead Bank Scheme/ACP Achievement.xlsx",
+          "text": "ACP Achievements"
+        },
+        {
+          "url": "https://slbchp.com/Files/Lead Bank Scheme/ACP Target.zip",
+          "text": "ACP 2025-26"
+        },
+        {
+          "url": "https://slbchp.com/Files/Lead Bank Scheme/ACP_Target_Bank_District_Wise_Revised-Fy_2026 -27.xlsx",
+          "text": "ACP Target 2026-27"
+        },
+        {
+          "url": "https://slbchp.com/Files/Lead Bank Scheme/CD Ratio.pdf",
+          "text": "CD Ratio"
+        },
+        {
+          "url": "https://slbchp.com/Files/Lead Bank Scheme/LBS MIS.pdf",
+          "text": "Lead Bank Scheme(RBI)"
+        },
+        {
+          "url": "https://slbchp.com/Files/Lead Bank Scheme/LDM contact list.pdf",
+          "text": "LDMs Contact Details"
+        },
+        {
+          "url": "https://slbchp.com/Files/Lead Bank Scheme/Notification of Scale of Finance for FY 2026-2027.pdf",
+          "text": "Scale Of Finance For FY 2026-27"
+        },
+        {
+          "url": "https://slbchp.com/Files/Lead Bank Scheme/SCALE OF FINANCE 2025-26.pdf",
+          "text": "Scale Of Finance For FY 2025-26"
+        },
+        {
+          "url": "https://slbchp.com/Files/Meetings/CQR-DEC-2025.zip",
+          "text": "CQR - Dec -2025"
+        },
+        {
+          "url": "https://slbchp.com/Files/Meetings/Details of Meetings held.pdf",
+          "text": "Details of Meeting held"
+        },
+        {
+          "url": "https://slbchp.com/Files/Member Details.xlsx",
+          "text": "SLBC Members"
+        },
+        {
+          "url": "https://slbchp.com/Files/National-Strategy-for-Financial-Inclusion-2025-30.pdf",
+          "text": "National Strategy for Financial Inclusion-2025-30"
+        },
+        {
+          "url": "https://slbchp.com/Files/New-Guidelines.pdf",
+          "text": "New-Guidelines MSE-CDP"
+        },
+        {
+          "url": "https://slbchp.com/Files/Notification_12_09_2023.pdf",
+          "text": "Notification of State Goverment of Natural Calamities 2023"
+        },
+        {
+          "url": "https://slbchp.com/Files/PMKVY 4.0 Guidelines.pdf",
+          "text": "PRADHAN MANTRI KAUSHAL VIKAS YOJANA"
+        },
+        {
+          "url": "https://slbchp.com/Files/RBI MASTER- DAY-NRLM-01042025.pdf",
+          "text": "RBI MASTER- DAY-NRLM"
+        },
+        {
+          "url": "https://slbchp.com/Files/RBI MASTER-SC-ST-16062025.pdf",
+          "text": "RBI MASTER-SC-ST"
+        },
+        {
+          "url": "https://slbchp.com/Files/RBI Master -SHG-01042025.pdf",
+          "text": "RBI Master -SHG"
+        },
+        {
+          "url": "https://slbchp.com/Files/RBI Master- Priority Sector_28042025 (2).pdf",
+          "text": "RBI Master- Priority Sector"
+        },
+        {
+          "url": "https://slbchp.com/Files/RBI-Master-LEAD Bank Scheme_01042025.pdf",
+          "text": "RBI-Master-LEAD Bank Scheme"
+        },
+        {
+          "url": "https://slbchp.com/Files/RBI_MSME DIRECTION-JUN 24-Updated.pdf",
+          "text": "RBI_MSME DIRECTION-JUN 24"
+        },
+        {
+          "url": "https://slbchp.com/Files/RGSY-2023.pdf",
+          "text": "Rajiv Gandhi Swarozgaar Yojana-2023"
+        },
+        {
+          "url": "https://slbchp.com/Files/SLBC-HP_ Calender -2026.pdf",
+          "text": "Calender of Meetings"
+        },
+        {
+          "url": "https://slbchp.com/Files/SLBC-HP_MSME Clusters Data_Mar 2026.xls",
+          "text": "MSME CLUSTER DATA -MAR 26"
+        },
+        {
+          "url": "https://slbchp.com/Files/Scale/Notification of Scale of Finance for FY 2024-25.pdf",
+          "text": "Scale Of Finance for FY 2024-25"
+        },
+        {
+          "url": "https://slbchp.com/Files/Scale/final STATE OCUS PAPER 2026_27.pdf",
+          "text": "State Focus Paper 2026-27"
+        },
+        {
+          "url": "https://slbchp.com/Files/Scheme/MMSY Main Cir and Modifications.pdf",
+          "text": "Mukhya Mantri Swavlamban Yojna."
+        },
+        {
+          "url": "https://slbchp.com/Files/Scheme/Master Cir - KCC - 02.07.2018.PDF",
+          "text": "Master Circular- Kisan Credit Card (KCC) Scheme"
+        },
+        {
+          "url": "https://slbchp.com/Files/Scheme/Master Cir - KCC for Animal Husbandry and Fisheries - 04.02.2019.pdf",
+          "text": "Master Circulars – KCC for Animal Husbandry And Fisheries."
+        },
+        {
+          "url": "https://slbchp.com/Files/Scheme/Master Cir - Minority Communities-01.07.2019.pdf",
+          "text": "Master Circular- Credit Facilities to Minority Communities"
+        },
+        {
+          "url": "https://slbchp.com/Files/Scheme/Master Cir - NRLM - 02.07.2018.PDF",
+          "text": "Deendayal Antyodaya Yojana"
+        },
+        {
+          "url": "https://slbchp.com/Files/Scheme/Master Cir - NULM - 06.12.2018.pdf",
+          "text": "Master Circular- NULM"
+        },
+        {
+          "url": "https://slbchp.com/Files/Scheme/PMAY GUIDELINES.pdf",
+          "text": "Pradhan Mantri Awas Yojana"
+        },
+        {
+          "url": "https://slbchp.com/Files/Scheme/Svanidhi.pdf",
+          "text": "PM Sva-Nidhi Scheme Circular."
+        },
+        {
+          "url": "https://slbchp.com/Files/State Order on Damage and Losses_DMC_01092025.pdf",
+          "text": "Notification of State Goverment of Natural Calamities- Relief Measures- 2025"
+        },
+        {
+          "url": "https://slbchp.com/Files/TotalDPRFunctionalUPTO.xlsx",
+          "text": "Total DPR Functional"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://www.jkslbc.com": {
+      "states": [
+        "jammu-kashmir"
+      ],
+      "skip": false,
+      "notes": [],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "648a82e472e6adde4ec992c1534ee752cde94a32daad167e9187af60299d4bad",
+      "docLinks": [
+        {
+          "url": "https://www.jkslbc.com/pdf/CGSP/31122025/1. SURYA GHAR.xlsx",
+          "text": "PM SURYA GHAR"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/CGSP/31122025/2. PMV.xlsx",
+          "text": "PM VISHWAKARMA"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/CGSP/31122025/3. PM SVANIdhi.xlsx",
+          "text": "PM SVANIDHI"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/Calenders/2025/17TH UTLBC Meeting 29-11-25.xlsx",
+          "text": "SLBC/UTLBC-Meetings held"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FLM/English/DIARY.pdf",
+          "text": "Dairy"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FLM/English/GUIDE.pdf",
+          "text": "Poster"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FLM/English/POSTER.pdf",
+          "text": "Guide"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FLM/FLCC/English/FLMaterial.pdf",
+          "text": "FL Material"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FLM/Hindi/DIARYE310113_FH.pdf",
+          "text": "Dairy"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FLM/Hindi/GUIDE310113_FH.pdf",
+          "text": "Guide"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FLM/Hindi/POST310113_FH.pdf",
+          "text": "Poster"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FLM/ITI/English/MCQS Workbook.pdf",
+          "text": "MCQS Workbook"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FLM/urdu/Diary- Urdu.pdf",
+          "text": "Dairy"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FLM/urdu/Guide-Urdu.pdf",
+          "text": "Guide"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FLM/urdu/Posters -Urdu.pdf",
+          "text": "Poster"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FinancialInclusion/2024/List Tier 5 URCs....xlsx",
+          "text": "URCs (Tier 5)"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FinancialInclusion/2024/Tier- 6 URCs as on March 31 2024.xlsx",
+          "text": "URCs (Tier 6)"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FinancialInclusion/2025/DEC2025/01 BANKING NETWORK SUMMARY.xlsx",
+          "text": "Banking Network–Summary"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FinancialInclusion/2025/DEC2025/01. SHG.xlsx",
+          "text": "Bank-SHG Linkage"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FinancialInclusion/2025/DEC2025/02 BRANCHES.xlsx",
+          "text": "Banking Outlets- Branches details"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FinancialInclusion/2025/DEC2025/03 BC  DETAILS AS ON 31.12.2025.xlsx",
+          "text": "BC DETAILS 31-12-2025"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FinancialInclusion/2025/DEC2025/04 ATMs.xlsx",
+          "text": "Banking Outlets-ATM details"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FinancialInclusion/2026/Calendar.pdf",
+          "text": "Calendar of Meetings"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FinancialInclusion/2026/MAR2026/02. DATABASE-FLCC MAR 2026.xlsx",
+          "text": "FLCCs DATABASE"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FinancialInclusion/2026/MAR2026/03. SPECIAL CAMPS.xlsx",
+          "text": "Special Camps (Going Digital) by FLCs"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FinancialInclusion/2026/MAR2026/04. TARGET CAMPS.xlsx",
+          "text": "Target Group Camps by FLCs"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/FinancialInclusion/2026/MAR2026/05 RSETIs.xlsx",
+          "text": "Performance of RSETIs"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/LeadBankScheme/2025/DEC2025/01. LDMS DETAILS LATEST.xlsx",
+          "text": "Lead Banks-Districtwise"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/LeadBankScheme/2025/DEC2025/02. REVISED ACP TARGET 2025-26- BANKWISE.xlsx",
+          "text": "ACP target 2025-26 (Bankwise)-Revised"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/LeadBankScheme/2025/DEC2025/03. REVISED ACP TARGET 2025-26- DISTRICTWISE.xlsx",
+          "text": "ACP Target 2025-26 (DistrictWise)-Revised"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/LeadBankScheme/2025/DEC2025/05 ACP ACH DISTWISE DEC 2025.xlsx",
+          "text": "ACP Achievements Districtwise, December 2025"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/LeadBankScheme/2025/DEC2025/06 ACP ACH BANKWISE DEC 2025.xlsx",
+          "text": "ACP Achievements Bankwise, December 2025"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/LeadBankScheme/2025/DEC2025/07. CD RATIO DISTWISE DEC25.xlsx",
+          "text": "CD Ratio (District-wise), December 2025"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/LeadBankScheme/2025/DEC2025/08. CD RATIO BANKWISE DEC25.xlsx",
+          "text": "CD Ratio (Bank-wise), December 2025"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/LeadBankScheme/2025/SEP2025/04. Consolidated ACP Ach.xlsx",
+          "text": "ACHIEVEMENTS VIZ-A-VIZ TARGETS-Consolidated"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/SGSP/31122025/1. HADP.xlsx",
+          "text": "Holistic Agriculture Development Program (HADP)"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/SGSP/31122025/2. PMWMY.xlsx",
+          "text": "PRADHAN MANTRI WEAVERS MUDRA YOJANA"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/SGSP/31122025/3. CCSAW.xlsx",
+          "text": "CREDIT CARD SCHEME (CCS) FOR ARTISANS & WEAVERS (HANDICRAFTS & HANDLOOM)"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/SGSP/31122025/4. JKREGP.xlsx",
+          "text": "J&K Rural Employment Generation Programme (JKREGP)"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/Schemes/50KCCWAIVERLIST-II.xlsx",
+          "text": "List of KCC Waiver Beneficiaries-II"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/Schemes/BENEFICIARIESKCC_0217.xlsx",
+          "text": "List of KCC Waiver Beneficiaries-I"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/Schemes/INTT-SUB-SCH-BENEFECIARIES-19012018.xlsx",
+          "text": "List of beneficiaries under Interest Subvention Assistance"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/Schemes/LEFTOUTLISTFORSLBCSITE1807.xlsx",
+          "text": "KCC left-out Beneficiaries"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/Schemes/NSFI 2025-30 Urdu Version.pdf",
+          "text": "NSFI 2025-30 Urdu Version"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/UT Profile- UT of J&K- 2024-25.pdf",
+          "text": "UT Profile"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/forms/CROPPINGSEASON09072021.pdf",
+          "text": "CROPPING SEASON/ DURATION FOR THE VARIOUS CROPS & OTHER ALLIED AGRICULTURE ACTIVITIES COVERED UNDER KCC (AHF)"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/forms/KCC application form modified -12062020.pdf",
+          "text": "KCC Application Form (REVISED)"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/slbcInformationPage/CoverageOfHouseholdsUnderPMJDY.pdf",
+          "text": "Urdu"
+        },
+        {
+          "url": "https://www.jkslbc.com/pdf/slbcInformationPage/Other Convenor List.pdf",
+          "text": "Other SLBC Convenors"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://slbckarnataka.com": {
+      "states": [
+        "karnataka"
+      ],
+      "skip": false,
+      "notes": [],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "f7e88dd1c6dc2b12e3e87dc2707825c743a8a55d67738e06d6900b6e549ccf4c",
+      "docLinks": [
+        {
+          "url": "https://slbckarnataka.com/UserFiles/APY_Citizens_Choice.pdf",
+          "text": "APY citizen's choice campaign from 1st June, 2026 – 31st July, 2026."
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/Contact Details of MSE-CDP.pdf",
+          "text": "Contact Details of MSE- CDP"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/Credit extended to MSME clusters Karnataka.pdf",
+          "text": "Credit extended to MSME clusters in Karnataka"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/Progress report of MSE CDP scheme in Karnataka.pdf",
+          "text": "Progress report of MSE-CDP scheme in Karnataka"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/SFURTI Cluster.pdf",
+          "text": "SFURTI Cluster"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/nsdc/CGFSD_Modified_Notification.pdf",
+          "text": "CGFSD Modified Notification"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/nsdc/FAQs_on_CGFSD.pdf",
+          "text": "FAQs on CGFSD"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/nsdc/LIST_OF_REGISTERED_MLIs.pdf",
+          "text": "List of registered MLIs"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/nsdc/Original Scheme Notification.pdf",
+          "text": "Original Notification"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/2025-26 Crop Seasonality.xlsx",
+          "text": "Crop Seasonality"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/ACP Karnataka State 2021-22 Distric wise and Bank wise.xlsx",
+          "text": "2021-22"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/ACP Target VS. Achievement March 2026.xlsx",
+          "text": "ACP Achievements"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/ACPTarget_Revised_FY2024_2025.xlsx",
+          "text": "2024-25"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/ACP_DistrictWiseBankwise_2020-21.xlsx",
+          "text": "2020-21"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/ACP_Target_Bank_District_Wise_31 districts_in actuals.xlsx",
+          "text": "2022-23"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/ACP_Target_Bank_wise_in_crores_fy2324.xlsx",
+          "text": "2023-24"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/ACP_target_FY2025-26.xlsx",
+          "text": "ACP Targets"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/ANX-IX SUMMARY DEC 2024.xlsx",
+          "text": "ANX-IX-SUMMARY-Dec 2024"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/ANX-IX-SUMMARY  SEP  2024.xlsx",
+          "text": "ANX-IX-SUMMARY-SEP 2024"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/ANX-IX-SUMMARY-DEC 2023.xlsx",
+          "text": "ANX-IX-SUMMARY-DEC 2023"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/ANX-IX-SUMMARY-JUN 2023.xlsx",
+          "text": "ANX-IX-SUMMARY-JUN 2023"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/ANX-IX-SUMMARY-MAR 2024.xlsx",
+          "text": "ANX-IX-SUMMARY-JUN 2024"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/ANX-IX-SUMMARY-SEP 2023.xlsx",
+          "text": "ANX-IX-SUMMARY-SEPT 2023"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/BC AS ON 31.03.2026.xlsx",
+          "text": "Banking outlets-BCs Details"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/BRANCH DETAILS BANK Wise-new.xlsx",
+          "text": "Banking outlets-Branch details"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/Banking Network-Summary.xlsx",
+          "text": "ANX-IX-SUMMARY-Mar 2025"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/Branch network summary Dec 2025.xlsx",
+          "text": "Branch network summary Dec 2025"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/Branch network summary June 2025.xlsx",
+          "text": "Branch network summary June 2025"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/Branch network summary Sep 2025.xlsx",
+          "text": "Branch network summary Sep 2025"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/CDRatio_Mar26.xlsx",
+          "text": "CD-Ratio"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/GOK notification1 195 talukas.pdf",
+          "text": "1. Notification1 - 195 talukas"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/GOK notification2 21 talukas.pdf",
+          "text": "2. Notification2 - 21 talukas"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/Guideline for Funding Support to MSEs.pdf",
+          "text": "Guidelines for Funding Support to MSEs under RAMP Programme for Karnataka"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/Kharif.zip",
+          "text": "PMFBY"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/NSFI document 2025-30- English.pdf",
+          "text": "NSFI document 2025-30- English"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/NSFI document 2025-30-Kannada.pdf",
+          "text": "NSFI document 2025-30- Kannada"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/Notification 3-7 taluks.pdf",
+          "text": "3. Notification 3- 7 talukas"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/PMFBY 2025-26.zip",
+          "text": "PMFBY 2025-26"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/PMFME Guidelines.pdf",
+          "text": "PMFME"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/RWBCIS 2025-26.zip",
+          "text": "RWBCIS 2025-26"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/StateGovtschemedetails.pdf",
+          "text": "Govt. Sponsored Schemes Implemented Through Banks"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/Tier-5 villages.pdf",
+          "text": "Unbanked Rural Centers"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/UC Booklet Karnataka Print.pdf",
+          "text": "2025-26"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/UNIT COST 2021-22-DDM.pdf",
+          "text": "2021-22"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/Unit Cost Booklet 2023-24.pdf",
+          "text": "2023-24"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/Unit Cost-2024-25.pdf",
+          "text": "2024-25"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/WBCIS_GO.zip",
+          "text": "RWBCIS"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/annex II-9.xlsx",
+          "text": "ANEEX-II-9"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/other than URCs.pdf",
+          "text": "Other than Unbanked Rural Centers"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/rabi-2025-26.zip",
+          "text": "Rabi 2025-26"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/sof-2026-27.zip",
+          "text": "SOF-2026-2027"
+        },
+        {
+          "url": "https://slbckarnataka.com/attachments/PM JANMAN.pdf",
+          "text": "PM-JANMAN"
+        },
+        {
+          "url": "https://slbckarnataka.com/attachments/PM KUSUM.pdf",
+          "text": "PM-KUSUM"
+        },
+        {
+          "url": "https://slbckarnataka.com/scheemes/PM-SURYA GHAR.pdf",
+          "text": "PM-SURYA GHAR"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://slbckerala.com": {
+      "states": [
+        "kerala"
+      ],
+      "skip": false,
+      "notes": [],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "d136f0fefa9f386173a5ce338d91e5b6ff83f051f2db4fd5ba325ed79c8c7619",
+      "docLinks": [
+        {
+          "url": "https://slbckerala.com/pdf/BeAware_Booklet_on_Modus_Operandi_of_Financial_Fraudsters_Malayalam.pdf",
+          "text": "BeAware Booklet on Modus Operandi of Financial Fraudsters Malayalam"
+        },
+        {
+          "url": "https://slbckerala.com/pdf/Brochure_on_Integrated_Ombudsman_Scheme.pdf",
+          "text": "Brochure on Integrated Ombudsman Scheme"
+        },
+        {
+          "url": "https://slbckerala.com/pdf/CMs_Helping_Hand_Loan_Scheme_CMHLS_for_SHGs.pdf",
+          "text": "'CM's Helping Hand Loan Scheme(CMHLS) for SHGs"
+        },
+        {
+          "url": "https://slbckerala.com/pdf/Cyberfraud_SOP.pdf",
+          "text": "Cyber Fraud â€“ SOP"
+        },
+        {
+          "url": "https://slbckerala.com/pdf/FLCs_DATA_DEC_2025.xlsx",
+          "text": "FLCs"
+        },
+        {
+          "url": "https://slbckerala.com/pdf/Govt_Notification_on_PMFBY_2020-21-22.pdf",
+          "text": "Govt Notification on PMFBY 2020-21-22"
+        },
+        {
+          "url": "https://slbckerala.com/pdf/IndustrialClusters_Kerala.pdf",
+          "text": "Industrial Clusters in Kerala"
+        },
+        {
+          "url": "https://slbckerala.com/pdf/KCC_Application.pdf",
+          "text": "Get KCC Application here"
+        },
+        {
+          "url": "https://slbckerala.com/pdf/Notificatiion_on_PMFBY_2020-21-22.pdf",
+          "text": "Notificatiion on PMFBY 2020-21-22"
+        },
+        {
+          "url": "https://slbckerala.com/pdf/Notification_on_RWBCIS_2020-21-22.pdf",
+          "text": "Notificatiion on RWBCIS 2020-21-22"
+        },
+        {
+          "url": "https://slbckerala.com/pdf/SOP_Bank_Functioning_COVID.pdf",
+          "text": "SOP Bank Functioning COVID"
+        },
+        {
+          "url": "https://slbckerala.com/pdf/SoF_Kerala_2024_25.pdf",
+          "text": "Scale of finance 2024-25"
+        },
+        {
+          "url": "https://slbckerala.com/pdf/SoF_Kerala_2025_26.pdf",
+          "text": "Scale of finance 2025-26"
+        },
+        {
+          "url": "https://slbckerala.com/pdf/UnitCostforInvestmentActivities2021_22.pdf",
+          "text": "Unit Cost for Investment Activities 2021-22"
+        },
+        {
+          "url": "https://slbckerala.com/pdf/Unit_Cost_2024_25_Final.pdf",
+          "text": "Unit Cost for Investment Activities 2024-25"
+        },
+        {
+          "url": "https://slbckerala.com/pdf/Unit_Cost_for_investment_activities_2020-21.pdf",
+          "text": "Unit Cost for investment activities 2020-21"
+        },
+        {
+          "url": "https://slbckerala.com/pdf/Unit_cost_for_Investment_Activities_2022-2023.pdf",
+          "text": "Unit cost for Investment Activities 2022- 23"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://utlbcladakh.com": {
+      "states": [
+        "ladakh"
+      ],
+      "skip": false,
+      "notes": [],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "bfdd0bc5e77ffe1f97e89360e900ce9d8d6f6060200cd0f0324ad65e7b54f7a5",
+      "docLinks": [
+        {
+          "url": "https://utlbcladakh.com/document/13 List of Tier 6 URCs Villages of UT Ladakh - as on 20.03.2024.xlsx",
+          "text": "Uncovered Villages- URCs (Tier6)"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/2 SEP I & G Under NULM.docx",
+          "text": "SEP under NULM"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/3 Kisan Credit Card (KCC).docx",
+          "text": "Kisan Credit Card (KCC)"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/4 Stand Up India.docx",
+          "text": "STANDUP MITRA SITE LINK"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/5 MUDRA.docx",
+          "text": "Pradhan Mantri Mudra Yojana"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/7 guideline_for_weavers_mudra_scheme.pdf",
+          "text": "Guideline for Mudra Scheme"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/Bank wise District wise No of Branch, ATM, BC, CSP and IPPB Outlets of UT Ladakh 31.03.2024.xlsx",
+          "text": "Branch And ATM Network"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/Financial Inclusion-FLCs.xlsx",
+          "text": "FLCS"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/Financial Inclusion-PMEGP.xlsx",
+          "text": "PMEGP 2025-26"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/Financial Inclusion-PMJDY as on 31.03.2026.xlsx",
+          "text": "PMJDY detail"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/Financial Inclusion-SHG Bank linkage (Annex II-13).xlsx",
+          "text": "SHG bank linkage"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/GPMappingDetails15_07_2025 12_28_24.xls",
+          "text": "Social Security Schemes"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/GovtPMSuryaBijli.docx",
+          "text": "PM Surya Ghar: Muft Bijli Yojana"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/Knowledge centre- List of Holidays for the Calendar Year, 2026.pdf",
+          "text": "List of Holidays-2026"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/LADAKH_ACPDisbursement_New-Fy_2025 -26_December_20260323102302.xlsx",
+          "text": "ACP Achievement Dec 2025"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/Lead Bank Scheme- ACP Target 2025-26 (Annex. II-7).xlsx",
+          "text": "ACP Target 2025-26"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/Lead Bank Scheme- CD RATIO as on 31.03.2026.xlsx",
+          "text": "CD Ratio March-2026"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/Lead Bank Scheme-Lead Bank Distrcit wise (Annex. II-5).xlsx",
+          "text": "Lead Bank District wise"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/NSFI 2025-30 Bhoti Version.pdf",
+          "text": "NSFI-Bhoti: 2025-30"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/NSFI 2025-30 Urdu Version.pdf",
+          "text": "NSFI-Urdu: 2025-30"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/PMFME.docx",
+          "text": "PM Formalisation of Micro Food Processing Enterprises (PMFME) Scheme"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/RSETI_l.xlsx",
+          "text": "RSETIs"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/SLBC Objectives.pdf",
+          "text": "UTLBC Objectives"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/SOF Kargil District 2026-27.pdf",
+          "text": "Scale of Finance -kargil -2026-27"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/SOF Leh district 2026-27.pdf",
+          "text": "Scale of Finance -Leh -2026-27"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/Stae Profile-Banking- Banking wise BC CSP.xlsx",
+          "text": "Bank Wise BC-CSP"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/State Profile- Banking- Banking Network-Summary and Key Static- summary.xlsx",
+          "text": "Banking Network-Summary and Key Static-Summary"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/State Profile- Banking- Banking outlets-Branch details.xlsx",
+          "text": "Banking outlets- Branch Details"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/State profile- Banking- No of branches, ATMs, BC CSP & IPPB outlets.xlsx",
+          "text": "No of Branches, ATM, BC CSP and IPPB outlets"
+        },
+        {
+          "url": "https://utlbcladakh.com/document/Updated -UT Profile of Ladakh (2024-2025) final.docx",
+          "text": "UT Profile"
+        },
+        {
+          "url": "https://www.rbi.org.in/commonman/Upload/English/PressRelease/PDFs/PR1402MPC_22122021.pdf",
+          "text": "Read more..."
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://www.slbcmadhyapradesh.in/slbc-meeting.aspx": {
+      "states": [
+        "madhya-pradesh"
+      ],
+      "skip": false,
+      "notes": [],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "ac71610da2afa5a8492da318d8f806f1255250862eeece2510f06e9c69fe35c8",
+      "docLinks": [
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/09e81f04-9222-4c10-a8f8-bf15919cc0e9-ACP 2025-26 COMPRESSED.pdf",
+          "text": "ACP 2025-26"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/187th_agenda_final.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/191_SLBC_Agenda_Note.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/197th-final-agenda-2026-03-26.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/1fa3ed7d-85d6-4a9f-af23-0d37c253f87f-Approved%20Minutes%20173174%20SLBC%20meeting.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/3ff77f19-d07c-414b-a920-411e365210d5-SLBC meeting Final Agenda_compressed.pdf",
+          "text": "Agenda 197th SLBC meeting"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/4ad30658-bd5a-4f00-b66b-74d1ed55b860-186th SLBC Agenda with data table.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/4b575e82-3c8d-4f5b-8fe9-b221c1a327ec-Spl SLBC FI Agenda.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/516c249f-3c97-4aed-acf4-53ddd2baea54-SLBC Data Table Mar23.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/Agenda-194.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/Agenda_195_And_196_SLBC_Meeting_11_12_2025.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/Approved-Minutes-197th-SLBC-meeting.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/Final_Agenda_189-190_SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/Final_Agenda_192-193_SLBC_Meeting.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/Slbc-Data-Table-March-25.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/Slbc-data-dec25-final-2026-03-26.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/Slbc_data_sep_25_Final.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/Special_SLBC_Agenda_16.10.2024.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/cfffbf41-25eb-4dc9-a58e-71d202922865-SLBC%20175-Agenda-Final.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/e32edce2-cd20-40b8-b4d7-93168776bbf9-160th_SLBC_Meeting_Final.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/f967f216-bac7-4377-a158-79c732cacde8-SLBC_Data_Mar-20- FINAL.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/fa47b764-38f8-4cf1-b3f2-e3897c43c93d-175-SLBC-Minutes-Final.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/slbc_data_March'24_final.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/slbc_data_june_24_final.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/slbc_data_sep'23.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/slbc_datatable_dec24.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/162 SLBC Data_Final_1.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/162 _163_SLBC_Minutes_Final_09052017.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/163 SLBC Data_Final_1.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/164SLBCData_13092017.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/180SLBCAgendaFinal_compressed.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/182_Agenda.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/182_MINUTES.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/184_Minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/184th_slbc_agenda_final_mp_compressed.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/185_ppt_slbc_final.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/185_slbc_data_table_draft.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/185th_slbc_mom.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/195th-and-196th-SLBC-Meeting-Minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/2024-12-21-Ex-357.pdf",
+          "text": "Holiday-2025"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/37ab0f1b-705a-4bc1-8c81-d087c473b822-SLBC Data_Mar_18_Final.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/ACP_Disbursment.pdf",
+          "text": "ACP Achievements"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/ANNUALCREDITPLAN2025-26.pdf",
+          "text": "ACP Targets"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Agenda181SLBCfinal.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/AgendaSLBC178_179_meeting.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Agenda_162_163_Final.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Agenda_165_June_17_13092017.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Agenda_169_SLBC_Final.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Agenda_172_SLBC-Final.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Agenda_FI_SLBC_Final.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Agenda_SLBC_167_Final08022018.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Agenda_SLBC_173_174_Final.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Agenda_SLBC_176_177meeting.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Agenda_Spl SLBC-Final.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Agriculture.pdf",
+          "text": "Agriculture"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Approved_Minutes_of_Meeting.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Banking-Outlet-District-wise.pdf",
+          "text": "Banking outlets-District Wise"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Banking-network-summary.pdf",
+          "text": "Banking Network-Summary"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/BankingOulet-Bankwise-district-wise.pdf",
+          "text": "Banking outlets-Bank Wise"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/CMHelpline.pdf",
+          "text": "CM Helpline"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/DataTable180SLBC30_06_2021.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/DataTableSLBC31_12_21Final.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Data_June_169_Final.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Data_Mar-19_172_Final.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Data_Sep-19_174_Final.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Data_table_for_SLBC_176_177_meeting_Data_Sep_2020_Final.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Data_table_of_SLBC_178_179_meeting_data_March_2021.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Economy.pdf",
+          "text": "Economy"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/FBG2012-13.pdf",
+          "text": "Hindi-English Banking Glossary"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Final_Minutes_SLBC_176_177meeting.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Final_Minutes_SLBC_178_179_meeting.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Help_Document.pdf",
+          "text": "Help Document"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Industry.pdf",
+          "text": "Industries"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Infrastructure.pdf",
+          "text": "Infrastructure"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Key-Banking-Parameter.pdf",
+          "text": "Banking"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/MPMSMEDevelopmentPolicy_12022017.pdf",
+          "text": "MP MSME Development Policy"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/MPMSMEPromotionSchemes_ 12022017.pdf",
+          "text": "MP MSME Promotion Scheme"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Minutes-167-28022018.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Minutes_164165_SLBC05122017.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Minutes_169_SLBC_Final.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Minutes_172_SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Minutes_181_SLBC_28_Mar_22.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Minutes_186th_Meeting.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Minutes_of_the_spl_SLBC_Meeting_on_17th_July_2023.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/Minutes_special SLBC-09.02.19.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC Data_Dec_17_Final08022018.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC Data_June_17_14092017.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda130SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda131SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda132SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda133SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda134SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda135SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda136SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda137SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda138SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda139SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda140SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda141SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda142SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda143SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda144SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda145SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda146SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda147SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda148SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda149SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda150SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda151SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda152SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda153SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda154SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda155SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda156SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda157SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda158SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda159SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda160SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda161SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/AgendaSplSLBCApril2015.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda_Spl_SLBC06082014.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/Agenda/Agenda_spl_SLBC24122014.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC142Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC143Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC144Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC145Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC146Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC148Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC150Tables.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC151Tables.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC152Tables.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC156Tables.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC157Tables.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC158Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC159Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC160Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC161Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC_130_Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC_131_Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC_132_Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC_133_Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC_134_Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC_135_Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC_136_Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC_137_Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/data_table/SLBC_138_Tables.xls",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC130_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC131_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC132_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC133_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC134_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC135_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC136_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC137_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC138_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC139_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC140_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC141_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC142_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC143_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC144_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC145_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC146_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC147_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC148_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC149_minutes2.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC150_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC151_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC152_Minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC153_Minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC154_Minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC155_Minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC156_Minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC157_Minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC158_Minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SLBC159_Minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/SPLSLBC_minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/Spl_SLBC06082014_Minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC meeting held/minutes/Spl_SLBC24122014_Minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC%20meeting%20held/data_table/Progress.zip",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC%20meeting%20held/data_table/SLBC139.zip",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC%20meeting%20held/data_table/SLBC140.zip",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC%20meeting%20held/data_table/SLBC147.zip",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC%20meeting%20held/data_table/SLBC149.zip",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC%20meeting%20held/data_table/SLBC153.zip",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC%20meeting%20held/data_table/SLBC154.zip",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC%20meeting%20held/data_table/SLBC155.zip",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC%20meeting%20held/data_table/SPL_SLBC26022014.zip",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBCMinutes_192-193.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBCMinutes_194.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC_DATA_TABLE_31_03_22.xlsx",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SLBC_Minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/SecurityFeaturesOfAgenuineNote123.pdf",
+          "text": "Security Feature of a Genuine Note"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/StampScheduleExemption02122017.pdf",
+          "text": "Stamp schedule in M.P. & Exemption"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/cd-ratio.pdf",
+          "text": "CD Ratio"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/f550d29b-61e9-4c71-822d-c836ca7893d5-Agenda_SLBC_168_DIF.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/minutes_187th_and_188th meeting.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/docs/slbc_data_table_final30_09_2022.xlsx",
+          "text": "View"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://bankofmaharashtra.bank.in": {
+      "states": [
+        "maharashtra"
+      ],
+      "skip": false,
+      "notes": [
+        "apex .in domain unreachable from runners — watching the .bank.in alias"
+      ],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "1be10cf3f389d1287efd8c7a721a218c98586bfb93da40cd4ae9efbe26413b30",
+      "docLinks": [
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/042bb82b-69d5-4ba7-84b7-50884fe38fe3.pdf",
+          "text": "LC/BG Confirmation"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/08f38785-048b-404f-a529-e0291c9c8469.pdf",
+          "text": "Purity Adjustment Method"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/0e5373da-9bd6-4966-85ce-af05afacc01c.pdf",
+          "text": "Marginal Cost of Funds Based Lending Rate (MCLR) and Repo Rate Linked Lending Rate (RLLR) 30.09.2025"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/114b9fc5-a30f-4843-9ea4-9d9694a0a792.pdf",
+          "text": "Marginal Cost of Funds Based Lending Rate (MCLR) and Repo Rate Linked Lending Rate (RLLR) July-25"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/19607218-065b-4306-b649-b80d93bec1c6.pdf",
+          "text": "Compromise/OTS Scheme for NPA in MSME Sector"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/2f7ada2a-1433-482a-bde3-d096d788b632.pdf",
+          "text": "Important instructions for De-Mat account holders"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/31f9a602-352d-430c-978b-fbc1e8c0d0bb.pdf",
+          "text": "Notice for Helpline Number for Women in distress"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/3247225c-2d2b-4bd9-8f86-0376f450e2d4.pdf",
+          "text": "Marginal Cost of Funds Based Lending Rate (MCLR) and Repo Rate Linked Lending Rate (RLLR) 27.02.2026"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/4bf754d2-6a72-4aaa-85b7-d2f6584e500e.pdf",
+          "text": "Notification for Enhancing Security of Debit Card Transactions"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/5774ae10-852f-4df3-9fff-c11cbc6a58b5.pdf",
+          "text": "Introduction of Continuous Clearing and Settlement on Realisation in the Cheque Truncation System"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/636517082180163319_life-certificate-format-for-staff-pensioner.pdf",
+          "text": "Life Certificate Format for Staff Pensioner"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/67414941-5560-4cb4-b360-fd5c549c07f9.pdf",
+          "text": "Services for Customers with Disabilities"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/6ac4b699-2ba1-4068-8c68-75805d3509cd.pdf",
+          "text": "Marginal Cost of Funds Based Lending Rate (MCLR) and Repo Rate Linked Lending Rate (RLLR) 30.11.2025 & 08.12.2025"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/6b6e8ffe-7e23-4c10-8ca5-bc41d401a0f0.pdf",
+          "text": "FAQ For Commercial Loan"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/6e7e1e27-a2a2-432e-8f30-00794a46cf8a.pdf",
+          "text": "Marginal Cost of Funds Based Lending Rate (MCLR) and Repo Rate Linked Lending Rate (RLLR) 31.03.2026 & 27.02.2026"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/71f3a14e-d60e-4959-879c-21cfe9e2a382.pdf",
+          "text": "Marginal Cost of Funds Based Lending Rate (MCLR) and Repo Rate Linked Lending Rate (RLLR) 31.12.2025 & 08.12.2025"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/7d0d2341-9770-4b1f-ba62-7385d95490e0.pdf",
+          "text": "Frequently Asked Questions - Rs-2000 Denomination Bank notes"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/7e147c2a-846d-4b32-b899-358759a68c9b.pdf",
+          "text": "Press Release - Financial Results of the Bank for the Quarter ended 31.12.2025"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/96d23457-31a0-48db-87a7-d38896a9a20c.pdf",
+          "text": "Marginal Cost of Funds Based Lending Rate (MCLR) and Repo Rate Linked Lending Rate (RLLR) 31.01.2026 & 08.12.2025"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/9cee7c3f-3a77-4c13-bba9-cf270b5ec18d.pdf",
+          "text": "Recruitment of Assistant Managers and Managers in Indian Bank's Association (IBA)"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/9f603210-420b-4eac-b710-34b4213c4df2.pdf",
+          "text": "Fee for Title Search"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/a24aa9d8-5ee4-49d8-b4be-4b03d36d3c86.pdf",
+          "text": "ABBFF Guidelines"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/a37ca057-bb1d-4912-9d71-a498cb5aa980.pdf",
+          "text": "Marginal Cost of Funds Based Lending Rate (MCLR) and Repo Rate Linked Lending Rate (RLLR) 30.05.2026 & 27.02.2026"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/a38c3ed9-77ad-4759-976a-abcb25929364.pdf",
+          "text": "IMPORTANT NOTIFICATION FOR EMI BASED PERSONAL LOAN BORROWERS (INCLUDING HOUSING, VEHICLE, EDUCATION LOAN ETC.) : Click Here"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/a9fa6eed-aec3-49ee-8a7c-0802fbf5556c.pdf",
+          "text": "Marginal Cost of Funds Based Lending Rate (MCLR) and Repo Rate Linked Lending Rate (RLLR) 31.10.2025"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/ad58218a-3abd-4293-a1b3-bdc772d6c59e.pdf",
+          "text": "In terms of point no. 2.1(h), under chapter-Il of Comprehensive Guidelines on Complaint Handling Mechanism of CVC, Vigilance Department of the Bank does not entertain or take cognizance of complaints received on email IDs."
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/ad8576af-0d4a-4c19-be65-4af65241b2ac.pdf",
+          "text": "Marginal Cost of Funds Based Lending Rate (MCLR) and Repo Rate Linked Lending Rate (RLLR)"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/b4fb310c-9dd7-4740-babf-3faff837d773.pdf",
+          "text": "Digital Balance Confirmation Portal (DBCP)"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/be95a5f5-477b-4bac-b39e-df655342b865.pdf",
+          "text": "Your Money ,Your Right - Booklet"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/bff931dd-7613-4cb0-ab74-ea752fa779e1.pdf",
+          "text": "Bank of Maharashtra launches WhatsApp Banking Service"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/c129b067-7bba-40ed-bb36-0fc48404a53d.pdf",
+          "text": "Sheduled Maintainance Activity 25.04.2026"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/c1f1a378-1ff3-462d-818d-d800b3e4b67e.pdf",
+          "text": "Marginal Cost of Funds Based Lending Rate (MCLR) and Repo Rate Linked Lending Rate (RLLR) 30.04.2026 & 27.02.2026"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/c4d684d2-592b-4da7-aa3d-e959a6eb9e07.pdf",
+          "text": "Press Release - Financial Results of the Bank for the Quarter and Year ended 31.03.2026"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/ca4a1958-d834-4774-b43f-d8d1574ce1ce.pdf",
+          "text": "Independent External monitors (IEMs)"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/ccda8ac0-2369-431c-bb85-3c0e18d1c45c.pdf",
+          "text": "Fraudulent Activities in the name of Pradhan Mantri Jan Dan Yojna (PMJDY)"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/d07b9c4a-04c8-43cf-8fdb-8a160716e8a4.pdf",
+          "text": "Assets in possession under SARFAESI Action"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/dadf44cf-4ad5-4d89-b8cd-2690d67bc657.pdf",
+          "text": "To safeguard the rights of locker holder, IBA has provided the revised Model Safe Deposit Locker Agreement. You are requested to contact your Bank of Maharashtra branch for execution of New locker agreement or supplementary agreement for your locker before 31.12.2023"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/e06244f8-4e99-4e88-9d61-bfc531faebcb.pdf",
+          "text": "FAQ on Commercial Loan"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/ea026a24-9fe4-45e1-856e-de6f3ab25ae4.pdf",
+          "text": "MSME Disclosure on msme Accounts"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/faaf6b95-c605-456b-adc7-40510127dfdb.pdf",
+          "text": "PIDPI"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/fdd159e0-941d-49c6-a408-e4ce90dc2ca0.pdf",
+          "text": "Press Release - Financial Results of the Bank for the Quarter and half year ended 30.09.2025"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/fe299cc8-4d41-46d0-b242-b8d1357ccea5.pdf",
+          "text": "Citizen Charter"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://slbcpunjab.pnb.bank.in": {
+      "states": [
+        "punjab"
+      ],
+      "skip": false,
+      "notes": [],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "2ecd043e1d8fb1e04a06b64730c35da648466b89f06bb89d943054840e8ef389",
+      "docLinks": [
+        {
+          "url": "https://slbcpunjab.pnb.bank.in/wp-content/uploads/2022/03/RBI-Lead-Bank-Scheme.pdf",
+          "text": "Lead Bank Scheme"
+        },
+        {
+          "url": "https://slbcpunjab.pnb.bank.in/wp-content/uploads/2025/01/URC.xlsx",
+          "text": "Unbanked Rural Centers"
+        },
+        {
+          "url": "https://slbcpunjab.pnb.bank.in/wp-content/uploads/2025/05/Annexure-29-District-wise-Targets.xlsx",
+          "text": "District wise Targets"
+        },
+        {
+          "url": "https://slbcpunjab.pnb.bank.in/wp-content/uploads/2025/05/Annexure-30-Bankwise-Targets.xlsx",
+          "text": "Bankwise Targets"
+        },
+        {
+          "url": "https://slbcpunjab.pnb.bank.in/wp-content/uploads/2025/05/Bankwise-Targets.xlsx",
+          "text": "ACP Targets"
+        },
+        {
+          "url": "https://slbcpunjab.pnb.bank.in/wp-content/uploads/2025/05/CLUSTER-DETALIS-updated.pdf",
+          "text": "MSME CLUSTERS"
+        },
+        {
+          "url": "https://slbcpunjab.pnb.bank.in/wp-content/uploads/2025/05/LBS-MIS-25.pdf",
+          "text": "RBI Lead Banking Scheme"
+        },
+        {
+          "url": "https://slbcpunjab.pnb.bank.in/wp-content/uploads/2025/05/SLBC-HARYANA-001-ANNEXURE-29-SHG.xlsx",
+          "text": "SHG Bankwise March 2025"
+        },
+        {
+          "url": "https://slbcpunjab.pnb.bank.in/wp-content/uploads/2025/08/Annexure-1-ACP-Bank-wise.xlsx",
+          "text": "Bank wise"
+        },
+        {
+          "url": "https://slbcpunjab.pnb.bank.in/wp-content/uploads/2025/08/Annexure-1.1-ACP-Districtwise.xlsx",
+          "text": "District Wise"
+        },
+        {
+          "url": "https://slbcpunjab.pnb.bank.in/wp-content/uploads/2025/08/Annexure-16-BASIC-BANKING-DATA-JUNE25.xlsx",
+          "text": "CD Ratio Bank wise"
+        },
+        {
+          "url": "https://slbcpunjab.pnb.bank.in/wp-content/uploads/2025/08/BASIC-DATA-AND-NATIONAL-3.xlsx",
+          "text": "CD Ratio District wise"
+        },
+        {
+          "url": "https://slbcpunjab.pnb.bank.in/wp-content/uploads/2025/09/BC-Details-June25.xlsx",
+          "text": "BCAs"
+        },
+        {
+          "url": "https://slbcpunjab.pnb.bank.in/wp-content/uploads/2025/12/updated-LDMS-291225.xlsx",
+          "text": "Lead Banks District Wise"
+        },
+        {
+          "url": "https://slbcpunjab.pnb.bank.in/wp-content/uploads/2026/06/PIB-release-dated-29.5.2026.pdf",
+          "text": "Unclaimed Financil Assets"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://slbcrajasthan.in": {
+      "states": [
+        "rajasthan"
+      ],
+      "skip": false,
+      "notes": [],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "2df54edd83ab577c0e5655eab53d3dc13adeb8a749ab3f184f6c37073491ed11",
+      "docLinks": [
+        {
+          "url": "https://slbcrajasthan.in/SLBC Rajasthan GSS Booklet (1).pdf",
+          "text": "Central and Rajasthan Government Sponsored Schemes"
+        },
+        {
+          "url": "https://slbcrajasthan.in/Uploads/FAME booklet 2024.pdf",
+          "text": "> Financial Literacy Materials"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/BRUPY Scheme.pdf",
+          "text": "BRUPY Scheme"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/CM SAVANIDHI.pdf",
+          "text": "CM SVANidhi"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/MNSUPY.pdf",
+          "text": "MNSUPY"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/Animal Husbandry 2025-26.pdf",
+          "text": "Animal Husbandry 2025-26"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/Crop Loan SOF 2025-26.pdf",
+          "text": "Crop Loan SOF 2025-26"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/Fisheries 2025-26.pdf",
+          "text": "Fisheries 2025-26"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/Highlight of PMMY.docx",
+          "text": "Highlights of the PMMY Scheme"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/Identified MSMEs cluster list.pdf",
+          "text": "MSME CLUSTER LIST"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/NSFI Policy 2025-30 English.pdf",
+          "text": "NSFI 2025-30 English"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/NSFI Policy 2025-30 Hindi.pdf",
+          "text": "NSFI 2025-30 Hindi"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/Unbanked Rural Centers.xlsx",
+          "text": "Unbanked Rural Centers (URC)"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/journey.pdf",
+          "text": "Journey Together"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/n/APY 31.03.2026.xlsx",
+          "text": "Progress under Atal Pension Yojna"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/n/Annex. II-9 Banking Network Summary Mar 2026.xlsx",
+          "text": "Summary of Banking Network"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/n/Database_on_FLC.xlsx",
+          "text": "FLCS"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/n/Distric ACP Summary.xlsx",
+          "text": "ACP Progress Summary"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/n/District wise CD Ratio.xlsx",
+          "text": "CD Ratio"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/n/KCC Outstanding.xlsx",
+          "text": "Progress under Kisan Credit Cards (KCCS)"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/n/Mudra 31.03.2026.xlsx",
+          "text": "Daily Disbursement Progress under PMMY"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/n/PMJDY Annexure 31.03.2026.xlsx",
+          "text": "Pradhan Mantri Jan Dhan Yojana (PMJDY)"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/n/State Profile.docx",
+          "text": "State Profile"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/n/Website updation on 31.03.2026.docx",
+          "text": "Key Banking Parameters"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/weblinks.pdf",
+          "text": "Web Links"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://slbctn.com": {
+      "states": [
+        "tamil-nadu"
+      ],
+      "skip": false,
+      "notes": [],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "c15cd9cc6d49b411ae1b5b67c693d2685a1c10dc20b39d85a7c5f86c9b240d7c",
+      "docLinks": [
+        {
+          "url": "https://slbctn.com/Uploads/ACPTarget-Fy_2025 -26_Bank Wise District Wise.xlsx",
+          "text": "ACP-Targets"
+        },
+        {
+          "url": "https://slbctn.com/Uploads/FAME booklet 2024.pdf",
+          "text": "> Financial Literacy Materials"
+        },
+        {
+          "url": "https://slbctn.com/Uploads/Financial_Inclusion/BC Details.xlsx",
+          "text": "Banking-BCs-Details"
+        },
+        {
+          "url": "https://slbctn.com/Uploads/Financial_Inclusion/Banking Outlert.xlsx",
+          "text": "Banking Outlets-Branches-Details"
+        },
+        {
+          "url": "https://slbctn.com/Uploads/Financial_Inclusion/EXTENSION TIME FRAME-Hydrlogical Drought-05.03.2025 (10).pdf",
+          "text": "Hydrological Drought"
+        },
+        {
+          "url": "https://slbctn.com/Uploads/Financial_Inclusion/MSME CLUSTER DATA AS ON SEP 25.xlsx",
+          "text": "MSME CLUSTER DATA Sept-2025"
+        },
+        {
+          "url": "https://slbctn.com/Uploads/Financial_Inclusion/MSME CLUSTER FINANCING 31.12.2025.xlsx",
+          "text": "MSME CLUSTER DATA Dec-2025"
+        },
+        {
+          "url": "https://slbctn.com/Uploads/Financial_Inclusion/URC_21-01-2025.xlsx",
+          "text": "Unbanked Rural Centres"
+        },
+        {
+          "url": "https://slbctn.com/Uploads/TAMIL NADU RSETIs ADDRESS AND CONTACT DETAILS.xlsx",
+          "text": "RSETI CONTACT DETAILS"
+        },
+        {
+          "url": "https://slbctn.com/Uploads/TAMILNADU_FLCs_ADDRESS_AND_CONTACT_DETAILS.xls",
+          "text": "FLC CONTACT DETAILS"
+        },
+        {
+          "url": "https://slbctn.com/Uploads/TN-FI CAMP-GPMappingDetails.xls",
+          "text": "FI CAMPAIGB GP MAPPED"
+        },
+        {
+          "url": "https://slbctn.com/UserFiles/DownLoad/Banking%20OTHER%20MODES%20(2)-BnOtherModes.xlsx",
+          "text": "Banking-Other modes-Details"
+        },
+        {
+          "url": "https://slbctn.com/UserFiles/DownLoad/FLC%20CAMPS%20Dec%202025-FLC-FLC.xlsx",
+          "text": "FLC"
+        },
+        {
+          "url": "https://slbctn.com/UserFiles/DownLoad/MSME-Specialised%20Branches%20(2)-splmsmeBr.xlsx",
+          "text": "Specialised MSME branches"
+        },
+        {
+          "url": "https://slbctn.com/UserFiles/DownLoad/NSFI%20Data_Dec%202025-SDR-RSETI-RSETI.xlsx",
+          "text": "RSETI"
+        },
+        {
+          "url": "https://slbctn.com/UserFiles/DownLoad/SHG%20-%2031.12.2025-SHG.xlsx",
+          "text": "SHG"
+        },
+        {
+          "url": "https://slbctn.com/UserFiles/DownLoad/UnTesting-UBVil.xlsx",
+          "text": "Unbanked Villages"
+        },
+        {
+          "url": "https://slbctn.com/UserFiles/DownLoad/go%20(1)-fencyc.zip",
+          "text": "Fengal Cyclone"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://telanganaslbc.com/reports.aspx": {
+      "states": [
+        "telangana"
+      ],
+      "skip": false,
+      "notes": [
+        "watching CQR reports page (the per-quarter annexure feed)"
+      ],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "c718c2fa118f2a1e79015a5c8ecfbb9339b3e8cf3aa5a00a296dc6320eb5f405",
+      "docLinks": [
+        {
+          "url": "https://telanganaslbc.com/wp-content/2025-26.pdf",
+          "text": "Annual Credit Plan For The Year 2025-26"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/Contact Details of LDMs.xlsx",
+          "text": "LDM Details"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/14 CQR Annex December 23.pdf",
+          "text": "Dec 2023"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/14 CQR Annex September 23.pdf",
+          "text": "Sept 2023"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/14 CQR Annexures March 2024.pdf",
+          "text": "Mar 2024"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/19 PMMY AS 30.09.2022.xlsx",
+          "text": "30.09.2022"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/19 PMMY AS ON 30.09.2023.xlsx",
+          "text": "30.09.2023"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/19 PMMY AS ON 31.03.2024.xlsx",
+          "text": "31.03.2024"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/19 PMMY AS ON 31.12.2023.xlsx",
+          "text": "31.12.2023"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/20 BANWISE SSS AS ON 30.09.2022.xlsx",
+          "text": "30.09.2022"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/20 BANWISE SSS AS ON 30.09.2023.xlsx",
+          "text": "30.09.2023"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/20 BANWISE SSS AS ON 31.03.2024.xlsx",
+          "text": "31.03.2024"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/20 BANWISE SSS AS ON 31.12.2023.xlsx",
+          "text": "31.12.2023"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/06/Telangana-Unbanked-villages-30112017.xls",
+          "text": "List of Centres as per FIP for coverage of villages with population above 5000 with a banking outlet as on 30.11.2017"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/16th-Meeting-Annexures.pdf",
+          "text": "June 2017 Annexures"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/300416-TELANGANA.pdf",
+          "text": "30.04.2016"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/ANNEXURE-65.pdf",
+          "text": "March 2016"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/ANNEXURE-73-79.pdf",
+          "text": "September 2016"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/Annex-72-78.pdf",
+          "text": "December 2016"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/Annexure-77-83.pdf",
+          "text": "June 2016"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/BankWise-Mudra-31032017.pdf",
+          "text": "31.03.2017"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/CQR-0318.pdf",
+          "text": "March 2018"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/CQR-0618.pdf",
+          "text": "June 2018"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/CQR-0917.pdf",
+          "text": "September 2017"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/CQR-0918.pdf",
+          "text": "September 2018"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/CQR-ANNEX-0318.pdf",
+          "text": "March 2018 Annexures"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/CQR-ANNEX-0618.pdf",
+          "text": "June 2018 Annexures"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/CQR-ANNEX-1217-R.pdf",
+          "text": "December 2017 Annexures"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/CQR_0317.pdf",
+          "text": "March 2017"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/March-2016-ANNEXURE-1-44.pdf",
+          "text": "March 2016 Annexure"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/March-2017-Annexure-1-44.pdf",
+          "text": "March 2017 Annexures"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/Mudra report 31032018.pdf",
+          "text": "31.03.2018"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/Mudra report 31032019.pdf",
+          "text": "31.03.2019"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/Mudra report 31032020.pdf",
+          "text": "31.03.2020"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/PMMY-Sanctions-251015.pdf",
+          "text": "25.10.2015"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/Performance-Report_2015-16.pdf",
+          "text": "31.03.2016"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/REPORTS.pdf",
+          "text": "December 2015"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/SSS 31032018.pdf",
+          "text": "31.03.2018"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/SSS 31032019.pdf",
+          "text": "31.03.2019"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/SSS 31032020.pdf",
+          "text": "31.03.2020"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/08/SSS-31032017.pdf",
+          "text": "31.03.2017"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/11/SSS-report-as-on-31.10.2015.pdf",
+          "text": "31.10.2015"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2015/11/statewise_SLBC_Telangana_310815.pdf",
+          "text": "31.08.2015"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2019/01/Report/CQR-0319.pdf",
+          "text": "March 2019"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2019/01/Report/CQR-0619-report1.pdf",
+          "text": "June 2019"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2019/01/Report/CQR-0919 report.pdf",
+          "text": "September 2019"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2019/01/Report/CQR-1218.pdf",
+          "text": "December 2018"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2019/01/Report/CQR-1219-.pdf",
+          "text": "December 2019"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2019/01/Report/Dec 2015 Annex.pdf",
+          "text": "December 2015 Annexures"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2019/01/Report/Dec 2016 Annex.pdf",
+          "text": "December 2016 Annexures"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2019/01/Report/June 2016 ANNEXURE.pdf",
+          "text": "June 2016 Annexures"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2019/01/Report/Sept 2016 ANNEXURE.pdf",
+          "text": "September 2016 Annexures"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2019/01/Report/Sept 2017 Annex.pdf",
+          "text": "September 2017 Annexures"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2020/CQR-032020-.pdf",
+          "text": "March 2020"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2020/CQR-122020.pdf",
+          "text": "Dec 2020"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2020/PMMY Bank wise-31.12.2020.pdf",
+          "text": "31.12.2020"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2020/TELANGANA SSS AS ON 31.12.2020.pdf",
+          "text": "31.12.2020"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2023/ACP 2023-24.rar",
+          "text": "Annual Credit Plan For The Year 2023-24"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2024/ACP ANNEXURE FY 2024-25.rar",
+          "text": "Annual Credit Plan For The Year 2024-25"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2025/14 CQR ANNEXURES March 2025.pdf",
+          "text": "Mar 2025"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2025/19 PMMY AS ON 31.03.2025.xlsx",
+          "text": "31.03.2025"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2025/19 PMMY AS ON 31.12.2024.xlsx",
+          "text": "31.12.2024"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2025/20 BANWISE SSS AS ON 31.03.2025.xlsx",
+          "text": "31.03.2025"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2025/20 BANWISE SSS AS ON 31.12.2024.xlsx",
+          "text": "31.12.2024"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/20251/1/14.pdf",
+          "text": "Sep 2025"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/20251/1/19.xlsx",
+          "text": "30.09.2025"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/20251/1/20.xlsx",
+          "text": "30.09.2025"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/20251/1/22.xlsx",
+          "text": "DATA ON MSME CLUSTERS AS ON 30.09.2025"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/20251/14.pdf",
+          "text": "June 2025"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/20251/19.xlsx",
+          "text": "30.06.2025"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/20251/20.xlsx",
+          "text": "30.06.2025"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2026/1 BANKWISE MSME ADVANCES AS ON 31.03.2026.xlsx",
+          "text": "MSME"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2026/14 CQR Annexures Dec2025.pdf",
+          "text": "Dec 2025"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2026/14 CQR Annexures Mar2026.pdf",
+          "text": "March 2026"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2026/19 PMMY AS ON 31.03.2026.xlsx",
+          "text": "31.03.2026"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2026/19 PMMY AS ON 31.12.2025.xlsx",
+          "text": "31.12.2025"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2026/20 BANWISE SSS AS ON 31.03.2026.xlsx",
+          "text": "31.03.2026"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2026/20 BANWISE SSS AS ON 31.12.2025.xlsx",
+          "text": "31.12.2025"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2026/22 MSME Cluster Progress Data as on 31.03.2026.xlsx",
+          "text": "DATA ON MSME CLUSTERS AS ON 31.03.2026"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2026/22 MSME Cluster Progress Data as on 31.12.2025.xlsx",
+          "text": "DATA ON MSME CLUSTERS AS ON 31.12.2025"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2026/ACP Book FY 2026-27.pdf",
+          "text": "Annual Credit Plan For The Year 2026-27"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2026/Rehabilitation Nursing DEC 2025.pdf",
+          "text": "REHABILITATION OF SICK UNITS"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/22 MSME Cluster Progress Data as on 30.06.2025.xlsx",
+          "text": "DATA ON MSME CLUSTERS AS ON 30.06.2025"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/BANWISE SSS AS ON 31.03.2023.xlsx",
+          "text": "31.03.2023"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/BANWISE SSS AS ON 31.06.2023.xlsx",
+          "text": "30.06.2023"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/BANWISE SSS AS ON 31.12.2022.xlsx",
+          "text": "31.12.2022"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/Bank wise PMMY as on 31.03.2021.pdf",
+          "text": "31.03.2021"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/Bankwise PMMY as on 30.06.2022.xlsx",
+          "text": "30.06.2022"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/Bankwise SSS as on 30.06.2022.xlsx",
+          "text": "30.06.2022"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/Bankwise_PMMY_31_03_2022.xlsx",
+          "text": "31.03.2022"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/Bankwise_SSS__31_03_22.xlsx",
+          "text": "31.03.2022"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/CGFSD Original Scheme Notification.pdf",
+          "text": "CGFSD Original Scheme Notification"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/CGFSD_Modified_Notification.pdf",
+          "text": "CGFSD Modified Notification"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/CMSTEI  - TRICOR.pdf",
+          "text": "CMSTEI - TRICOR"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/CQR Annex DEC22.pdf",
+          "text": "Dec 2022"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/CQR Annex June 23.pdf",
+          "text": "June 2023"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/CQR Annex March23.pdf",
+          "text": "March 2023"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/CQR-032021.pdf",
+          "text": "March 2021"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/CQR-032022.pdf",
+          "text": "March 2022"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/CQR-062020---.pdf",
+          "text": "June 2020"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/CQR-062021.pdf",
+          "text": "June 2021"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/CQR-092020.pdf",
+          "text": "Sept 2020"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/CQR-092021.pdf",
+          "text": "Sept 2021"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/CQR-122021.pdf",
+          "text": "Dec 2021"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/CQR-ANNEX-062022.pdf",
+          "text": "June 2022"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/CQR_Annex_092022.pdf",
+          "text": "Sept 2022"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/D2024/14 CQR ANNEXURES December 2024.pdf",
+          "text": "Dec 2024"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/FAQs_on_CGFSD.pdf",
+          "text": "FAQs on CGFSD"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/Industrial policy.zip",
+          "text": "Industrial Infrastructure"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/J2024/14 CQR ANNEXURES JUNE 2024.pdf",
+          "text": "June 2024"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/J2024/14 CQR ANNEXURES September 2024.pdf",
+          "text": "Sept 2024"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/J2024/19 PMMY AS ON 30.06.2024.xlsx",
+          "text": "30.06.2024"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/J2024/19 PMMY AS ON 30.09.2024.xlsx",
+          "text": "30.09.2024"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/J2024/20 BANWISE SSS AS ON 30.06.2024.xlsx",
+          "text": "30.06.2024"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/J2024/20 BANWISE SSS AS ON 30.09.2024.xlsx",
+          "text": "30.09.2024"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/LIST_OF_REGISTERED_MLIs.pdf",
+          "text": "List of Registered MLI"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/PMMY AS ON 30.06.2023.xlsx",
+          "text": "30.06.2023"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/PMMY AS ON 31.03.2023.xlsx",
+          "text": "31.03.2023"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/PMMY AS ON 31.12.2022.xlsx",
+          "text": "31.12.2022"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/PMMY BankWise 30.06.2021.pdf",
+          "text": "30.06.2021"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/Power plants in Telangana.pdf",
+          "text": "Power plants"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/Pradhan Mantri Mudra Yojana.pdf",
+          "text": "30.09.2021"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/Pradhan Mantri Mudra Yojana31122021.pdf",
+          "text": "31.12.2021"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/Railway stations in Telangana.xlsx",
+          "text": "Railways"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/Roads.pdf",
+          "text": "Roads"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/SSS as on 31.03.2021.pdf",
+          "text": "31.03.2021"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/SSS- 30.09.2020.pdf",
+          "text": "30.09.2020"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/SSS-30.06.2021.pdf",
+          "text": "30.06.2021"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/Scheme Details.pdf",
+          "text": "Scheme Details"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/Social Security Schemes report (PMSBY, PMJJBY and APY)-30.09.2021.pdf",
+          "text": "30.09.2021"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/Social Security Schemes.pdf",
+          "text": "31.12.2021"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/Transportation.pdf",
+          "text": "Transportation"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://slbctripura.pnb.bank.in/Back_Paper_Quarterly.asp": {
+      "states": [
+        "tripura"
+      ],
+      "skip": false,
+      "notes": [
+        "self-signed certificate — verification disabled"
+      ],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "fb73dec5b34273758cd2dce92972513ee769b5ca9cf0c00c319e4fcfab91e892",
+      "docLinks": [
+        {
+          "url": "http://slbctripura.com/pdf/131st_Tripura_SLBC-Minutes_Hindi.pdf",
+          "text": "Minutes - Hindi"
+        },
+        {
+          "url": "http://slbctripura.com/pdf/Minutes_130th_SLBC_Tripura_Hindi.pdf",
+          "text": "Minutes - Hindi"
+        },
+        {
+          "url": "https://pdf/MinutesSpecialMeeting_27042020.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/104_oct.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/105_oct.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/106_oct.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/107_oct.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/108_oct.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/108thSLBCTripuraAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/109_oct.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/109thSLBCTripuraAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/110_oct.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/110thSLBCTripuraAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/111_jan.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/111thSLBCTripuraAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/112_mar.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/112thSLBCTripuraAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/113thSLBCTripuraAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/114thSLBCAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/114th_SLBC_TripuraProceedingsMeeting.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/115thSLBCAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/116_tripura_proceeding.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/116thSLBCAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/117th-SLBC-Proceedings-Final.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/117thSLBCAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/118_Proceedings_Final.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/118thSLBCAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/119thSLBCAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/120thSLBCAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/121_Tripura_SLBC_Minutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/121stSLBCAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/122ndSLBCAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/123rdSLBCAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/124-SLBCTripuraMinutes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/124thSLBCAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/125thSLBCTripuraAgenda.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/126thTripuraSLBCAgenda.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/127thSlbcTripuraAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/128thSLBC_TripuraAgendaNotes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/129th_SLBC_Agenda_Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/130th_SLBC_Agenda_Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/131st_SLBC_Tripura_Agenda_Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/132nd_SLBC_Tripura_Agenda_Notes_Final_March 2020.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/133rd_Agenda_Notes_SLBC_FullCombined.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/134th_SLBC_Tripura_Agenda_Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/135th_SLBC_Tripura_Agenda_Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/136th_SLBC_Tripura_Agenda_Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/137th_Agenda_Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/138th_SLBC_Agenda_Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/139th-SLBC-Agenda-Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/139th-SLBC-Tripura-Proceedings.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/140th-SLBC-Agenda-Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/140th-SLBC-Tripura-Proceedings.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/141st-SLBC-Agenda-Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/141st-SLBC-Tripura-Proceedings.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/142nd-SLBC-Tripura-Agenda-Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/142nd-SLBC-Tripura-Proceedings.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/143rd-SLBC-Tripura-Agenda-Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/143rd-SLBC-Tripura-Proceedings.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/144th-SLBC-Tripura-Agenda-Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/145th SLBC minutes.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/145th- SLBC -Tripura- Agenda- Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/146th SLBC Tripura Agenda Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/147th SLBC Agenda Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/148th SLBC Agenda Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/149th Agenda Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/150th SLBC Agenda Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/150th SLBC Website Update/Mini Dairy.pdf",
+          "text": "Mini Dairy"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/151st SLBC Agenda Notes_compressed.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/152nd SLBC Agenda Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/153rd SLBC Agenda Notes.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/153rd SLBC Website Update/Housing.pdf",
+          "text": "Housing"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/153rd SLBC Website Update/KCC.pdf",
+          "text": "Kisan Credit Card"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/153rd SLBC Website Update/SHG.pdf",
+          "text": "Self Help Groups (SHG)"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/153rd SLBC Website Update/Swavalamban.pdf",
+          "text": "Swabalamban"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/154th Agenda Note Final.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/154th SLBC Website Update/Housing.pdf",
+          "text": "Housing"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/154th SLBC Website Update/KCC.pdf",
+          "text": "Kisan Credit Card"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/154th SLBC Website Update/SHG.pdf",
+          "text": "Self Help Groups (SHG)"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/154th SLBC Website Update/Swavalamban.pdf",
+          "text": "Swabalamban Self Employment Programme sponsored by Govt. of Tripura"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Minutes of the 147th SLBC Meeting of Tripura (1).pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Minutes131stSLBC_MeetingTripura_20022020-Eng.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Minutes_132nd_SLBC_Meeting_24062020_English.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Procedings_122nd_SLBC_Tripra.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Procedings_123rd_SLBC_Tripra.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Proceedings of 148th & 149th SLBC.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Proceedings of 149th SLBC.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Proceedings of the 133rd SLBC Tripura dated 30.12.2020.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Proceedings of the 134th SLBC Tripura dated 30.03.2021.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Proceedings of the 135th SLBC Tripura dated 17.06.2021.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Proceedings of the 136th SLBC Tripura dated 29.09.2021.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Proceedings of the 137th SLBC Tripura dated 24.12.2021.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Proceedings of the 138th SLBC Tripura dated 31.01.2022.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Proceedings of the 144th SLBC Tripura.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Proceedings of the 146th SLBC Tripura.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Proceedings of the 150th SLBC.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Proceedings of the 151st SLBC.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Proceedings of the 152nd SLBC.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Proceedings of the 153rd SLBC.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Proceedings of the 154th SLBC.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Proceedings_120th_Tripura_SLBC.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/SCCFY_31_12_2012.pdf",
+          "text": "Swarozgar Credit Card"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/SHGSGSYfy_31_12_2012.pdf",
+          "text": "SGSY"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/SLBC_Minutes_Tripura_126.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/SLBC_Minutes_Tripura_127.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/SLBC_Minutes_Tripura_128.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/SLBC_Minutes_Tripura_129.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/SLBC_Minutes_Tripura_130.pdf",
+          "text": "Minutes - English"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Special_SLBCMeeting08_08.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf_041215.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf_119_Minutes_Final.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf_160715.pdf",
+          "text": "View"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://slbcuttarakhand.com": {
+      "states": [
+        "uttarakhand"
+      ],
+      "skip": false,
+      "notes": [],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "cfbd4640a2bfea4dac348422ace2cac0409f41140bd34f31e4971ceef51a78f4",
+      "docLinks": [
+        {
+          "url": "http://www.slbcuttarakhand.com/documents/82 ACTION POINTS JUNE 2022-25.08.2022.pdf",
+          "text": "ATR 82th SLBC Meeting (25-08-2021)"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/2149_SSA_SLBC_SITE_New.xls",
+          "text": "ROADMAP FOR PROVIDING BANKING SERVICES IN ALL THE VILLAGES BELOW 2000 ( 2149 SSA)"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/62 UNCOVERED VILLAGES STATUS.xlsx",
+          "text": "Bankwise Allocation information of Uncovered villages"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/94th_SLBC_BOOKLET.pdf",
+          "text": "94th SLBC Book"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/95th book final.pdf",
+          "text": "95th SLBC BOOKLET"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/ACP BOOK 2021-22.pdf",
+          "text": "Bank's Annual Credit Plan 2021-22"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/AGENDA88.pdf",
+          "text": "Agenda of 88th SLBC Meeting (12-03-2024)"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/ATR -Special SLBC Meeting dt. 051020.pdf",
+          "text": "ATR Special SLBC Meeting (5 Oct,2020)"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/DFS LETTER.pdf",
+          "text": "DFS LETTER REGARDING FRAUDULENT ACTIVITIES IN THE NAME OF PRADHAN MANTRI JAN DHAN YOJANA ( PMJDY)"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/Document 70.pdf",
+          "text": "Loan application form of Kisaan Bhagidari Prathmikta Humaari campaign"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/Earmarking_Categorisation_of_Stand_up_India_Loans.pdf",
+          "text": "Stand Up India Loans"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/Govt Officials.pdf",
+          "text": "Govt. of Uttarakhand"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/JAN_DARSHAK_APP_NEW.xls",
+          "text": "BANKING FACILITIES PROVIDED AS PER JAN DHAN DARSHAK APP"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/List of SSAs (1181)not having connectivity.xls",
+          "text": "Telecom Connectivity"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/MERI_YOJNA_BOOK_CENTRAL_GOVT.pdf",
+          "text": "Meri Yojna"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/MSY 2.0.pdf",
+          "text": "MSY 2.0"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/Minutes87thSLBCdated.pdf",
+          "text": "87th SLBC meeting"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/NSFI 2025-30 English.pdf",
+          "text": "NSFI 2025-30 English"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/NSFI 2025-30 Hindi.pdf",
+          "text": "NSFI 2025-30 Hindi"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/Nodal officer of MUDRA.xls",
+          "text": "Nodal officer of MUDRA"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/SLBC_87_FINAL.pdf",
+          "text": "87th SLBC BOOKLET"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/final slbc 88.pdf",
+          "text": "88th SLBC BOOKLET"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/shashan list.doc",
+          "text": "Govt. of Uttarakhand"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/documents/slbc_86_complete_book.pdf",
+          "text": "86th SLBC meeting book"
+        },
+        {
+          "url": "https://slbcuttarakhand.com/other_document/MEDICINAL_PLANTS.pdf",
+          "text": ""
+        },
+        {
+          "url": "https://slbcuttarakhand.com/other_document/Master file IFSC code.xlsx",
+          "text": "IFSC Code of All Banks in Uttrakhand"
+        }
+      ],
+      "lowSignal": false
+    },
+    "https://slbcwb.com": {
+      "states": [
+        "west-bengal"
+      ],
+      "skip": true,
+      "notes": [
+        "slbcwb.com DNS dead as of 2026-06-10 — portal may have moved, needs manual follow-up"
+      ],
+      "consecutiveFailures": 0,
+      "lastSuccess": null,
+      "contentHash": null,
+      "docLinks": []
+    },
+    "http://slbcup.com": {
+      "states": [
+        "uttar-pradesh"
+      ],
+      "skip": false,
+      "notes": [
+        "HTTPS handshake broken — watching plain-HTTP homepage"
+      ],
+      "consecutiveFailures": 0,
+      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "contentHash": "7fbe48f72174998c5d4740ce00b2e1801fbdff37d06c895838352b6184ff18b6",
+      "docLinks": [
+        {
+          "url": "http://slbcup.com/File/Annex II Dec 23 Lead Banks.xls",
+          "text": "लीड बैंक - वित्तीय साक्षरता केन्द्रों की सूचना"
+        },
+        {
+          "url": "http://slbcup.com/File/Annex II Dec 23 RRBs.xls",
+          "text": "आरआरबी बैंक - वित्तीय साक्षरता केन्द्रों की सूचना"
+        },
+        {
+          "url": "http://slbcup.com/File/NSFI 2025-30 document.pdf",
+          "text": "NSFI Document 2025-30"
+        },
+        {
+          "url": "http://slbcup.com/Pages/Download/ACP_Booklet_2024-25.pdf",
+          "text": "वार्षिक ऋण योजनान्तर्गत लक्ष्य"
+        },
+        {
+          "url": "http://slbcup.com/font/BANK WISE TRANSACTIONS AT BC POINTS.XLSX",
+          "text": "B.C केंद्रों का वित्तीय संव्यवहार का विवरण"
+        },
+        {
+          "url": "http://slbcup.com/font/FINAL_URBAN_WARD_ALLOCATIONS.xlsx",
+          "text": "शहरी क्षेत्रों हेतु वार्ड का बैंकवार/ जनपदवार आवंटन"
+        },
+        {
+          "url": "http://slbcup.com/font/RSETI_December2022.xlsx",
+          "text": "जनपदवार आरसेटी की सूचना"
+        },
+        {
+          "url": "http://slbcup.com/font/Reallocation of Urban Wards.xlsx",
+          "text": "वित्त मंत्रालय, वित्तीय सेवायें विभाग, भारत सरकार द्वारा जारी निर्देशों के क्रम में शहरी एवं अर्धशहरी क्षेत्रों के वार्ड का निजी बैंको के मध्य पुर्नआवंटन"
+        },
+        {
+          "url": "http://slbcup.com/font/SLBC Formats March 2021.xls",
+          "text": "प्रारूप एसएलबीसी-बैंकों"
+        },
+        {
+          "url": "http://slbcup.com/font/SSA.xls",
+          "text": "सब सर्विस एरिया का बैंकवार/ जनपदवार आवंटन"
+        },
+        {
+          "url": "http://slbcup.com/font/Schedule of Camps UP.xlsx",
+          "text": "जनसुरक्षा अभियान के लिए ग्राम पंचायत - बैंकवार शिविर विवरण - 01.07.2025 से 30.09.2025"
+        }
+      ],
+      "lowSignal": false
+    }
+  }
+}

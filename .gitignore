@@ -6,6 +6,8 @@ data/rag/
 api/index_data/
 .vercel
 db/finer.db
+db/finer.db-wal
+db/finer.db-shm
 .wrangler/
 __pycache__/
 *.pyc

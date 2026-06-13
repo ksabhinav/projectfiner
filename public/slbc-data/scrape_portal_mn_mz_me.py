@@ -1,11 +1,25 @@
 #!/usr/bin/env python3
 """
 Targeted scraper for Manipur, Mizoram, Meghalaya district-level data
-from onlineslbcne.nic.in. Uses the same approach as SLBC NE Scraper v5
-but with auto-detected form actions.
+from onlineslbcne.nic.in. Uses auto-detected form actions.
+
+Updated June 2026 for the server revamp (see scrape_onlineslbc.py docstring +
+CLAUDE.md gotcha #34). The canonical reference is scrape_onlineslbc.py; this
+script already visited /<CODE> before scraping (so the per-IP server-side state
+binding mostly worked), but it now ALSO verifies the binding via the form
+page's "Go Back" link (<a href="ME"><b>Go Back</b></a>) before every POST and
+re-selects the state if another client on the same IP flipped it. Its REPORTS
+endpoints were checked against the live form list and use the current page
+names (districtwiseCdrdata.php, districtwiseKccCard.php, districtwiseSBY.php,
+districtwiseNrlmdata.php, districtwisePmegpdata.php, etc.).
+
+CAVEATS (unchanged from the revamp): POST exactly quarter, year, token, View —
+any extra field bounces to error.php; a POST with no state bound to your IP
+returns <script>alert('Invalid Data')</script>; never scrape two states
+concurrently from the same IP (the binding clobbers).
 """
 
-import sys, time, json, csv, os, warnings
+import sys, time, json, csv, os, re, warnings
 from itertools import product
 
 import requests
@@ -166,6 +180,22 @@ def is_id_col(header):
     return any(kw in h for kw in ID_KEYWORDS)
 
 
+def active_state(soup):
+    """Server-side active state from the form page's "Go Back" link
+    (<a href="ME"><b>Go Back</b></a>). Since the May 2026 revamp this reveals
+    which state is bound to our IP. Returns the 2-letter code or None."""
+    for a in soup.find_all("a"):
+        href = (a.get("href") or "").strip()
+        if re.fullmatch(r"[A-Z]{2}", href) and "go back" in a.get_text(strip=True).lower():
+            return href
+    return None
+
+
+def select_state(state_code):
+    """Bind a state to our IP server-side by GETting /<CODE>."""
+    return get_page(f"{BASE_URL}/{state_code}") is not None
+
+
 def rows_to_long(rows, state_code, state_name, report_key, report_name, quarter, year):
     """Convert table rows to long-format dicts."""
     if len(rows) < 2:
@@ -219,9 +249,22 @@ def fetch_report(form_endpoint, state_code, quarter_label, year_label):
     q_val = QUARTER_MAP[quarter_label]
     y_val = YEAR_MAP[year_label]
 
-    soup = get_page(form_url)
-    if soup is None:
-        return []
+    # Fetch the form, verifying the server-side state binding. Re-select once
+    # if another client on our IP flipped it (per-IP binding, see docstring).
+    soup = None
+    for attempt in range(2):
+        soup = get_page(form_url)
+        if soup is None:
+            return []
+        if active_state(soup) == state_code:
+            break
+        if attempt == 0:
+            select_state(state_code)
+            time.sleep(0.5)
+        else:
+            print(f"  binding failed (server has {active_state(soup)!r}, "
+                  f"want {state_code!r}) — skipping", file=sys.stderr)
+            return []
 
     # Auto-detect form action
     form = soup.find("form")
@@ -244,8 +287,9 @@ def fetch_report(form_endpoint, state_code, quarter_label, year_label):
     if result_soup is None:
         return []
 
-    # Check for error
-    if "error.php" in str(result_soup):
+    # Check for error / unbound-state alert
+    result_str = str(result_soup)
+    if "error.php" in result_str or "alert('Invalid Data')" in result_str:
         return []
 
     rows = extract_table(result_soup)

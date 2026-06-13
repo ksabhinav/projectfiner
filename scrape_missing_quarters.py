@@ -2,13 +2,24 @@
 """
 Targeted scraper for onlineslbcne.nic.in — fetches ONLY missing quarters.
 
-Targets:
+Targets (edit build_targets() per run — the list below reflects the May 2026
+backlog and is stale once those quarters land):
 - Assam, Meghalaya, Manipur, Mizoram: December 2025 (FY2026 Q3)
 - Nagaland: June 2025, September 2025, December 2025 + backfill FY2022-FY2025
 - Arunachal Pradesh: June 2025, September 2025, December 2025 + backfill FY2024-FY2025
 - Sikkim: backfill FY2022-FY2026
 
 Then integrates into existing _fi_timeseries.json files.
+
+UPDATED June 2026 for the server revamp (see scrape_onlineslbc.py docstring +
+CLAUDE.md gotcha #34 for full details):
+- State selection is no longer cookie-based; GET /<CODE> binds the state
+  SERVER-SIDE per client IP. The form page's "Go Back" link reveals the
+  active binding and is verified before every POST.
+- REPORTS remapped to the live form pages (old endpoints like
+  districtwiseCDr.php return all-zero tables).
+- POST exactly quarter, year, token, View — extra fields bounce to error.php.
+- Do NOT scrape two states concurrently from the same IP.
 """
 
 import urllib.request
@@ -49,15 +60,17 @@ STATE_SLUGS = {
 
 QUARTERS = {1: 'June', 2: 'September', 3: 'December', 4: 'March'}
 
-# Key FI reports
+# Key FI reports — remapped June 2026 to the live form pages (old endpoints
+# like districtwiseCDr.php / districtwisekcc.php now return all-zero tables).
+# Action URLs are auto-detected from each form's action attribute.
 REPORTS = [
-    ('districtwiseCDr.php', 'distwiseDepAdvReport.php', 'credit_deposit_ratio'),
-    ('districtwisekcc.php', None, 'kcc'),
-    ('districtwisenrlm.php', None, 'nrlm'),
-    ('districtwisemudra.php', None, 'mudra'),
-    ('districtwiseminority.php', None, 'minority'),
-    ('districtwisepmegp.php', None, 'pmegp'),
-    ('sssdistrictwise.php', None, 'social_security'),
+    ('districtwiseCdrdata.php', None, 'credit_deposit_ratio'),   # was districtwiseCDr.php
+    ('districtwiseKccCard.php', None, 'kcc'),                    # was districtwisekcc.php
+    ('districtwiseNrlmdata.php', None, 'nrlm'),                  # was districtwisenrlm.php
+    ('districtwisePMMYDisb.php', None, 'mudra'),                 # was districtwisemudra.php
+    ('districtwiseMinorityDisb.php', None, 'minority'),          # was districtwiseminority.php
+    ('districtwisePmegpdata.php', None, 'pmegp'),                # was districtwisepmegp.php
+    ('districtwiseSBY.php', None, 'social_security'),            # was sssdistrictwise.php
 ]
 
 # ── Define EXACTLY which (year, quarter) combos to fetch per state ──
@@ -161,24 +174,26 @@ def extract_token(html):
     return match.group(1) if match else None
 
 
+def extract_active_state(html):
+    """Server-side active state from the form page's "Go Back" link
+    (<a href="ME"><b>Go Back</b></a>). Since the May 2026 revamp this reveals
+    which state is bound to our IP. Returns the 2-letter code or None."""
+    match = re.search(r'<a href="([A-Z]{2})">\s*<b>\s*Go Back', html)
+    return match.group(1) if match else None
+
+
 # ── HTTP Client ────────────────────────────────────────────────
 
-def create_opener(state_code):
+def create_opener():
+    """SSL opener. Cookies kept only for future-proofing — the server sets
+    none; state is bound server-side per IP via select_state()."""
     ctx = ssl.create_default_context()
     ctx.check_hostname = False
     ctx.verify_mode = ssl.CERT_NONE
 
-    cj = http.cookiejar.CookieJar()
-    cj.set_cookie(http.cookiejar.Cookie(
-        version=0, name='state', value=state_code, port=None, port_specified=False,
-        domain='onlineslbcne.nic.in', domain_specified=True, domain_initial_dot=False,
-        path='/', path_specified=True, secure=False, expires=None, discard=True,
-        comment=None, comment_url=None, rest={}, rfc2109=False
-    ))
-
     opener = urllib.request.build_opener(
         urllib.request.HTTPSHandler(context=ctx),
-        urllib.request.HTTPCookieProcessor(cj)
+        urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar())
     )
     opener.addheaders = [
         ('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'),
@@ -188,13 +203,34 @@ def create_opener(state_code):
     return opener
 
 
-def fetch_report(opener, form_url, action_url, quarter, year):
-    """Fetch a single report."""
+def select_state(opener, state_code):
+    """Bind a state to our IP server-side by GETting /<CODE>. Replaces the
+    pre-May-2026 `state` cookie. Returns True on HTTP 200."""
     try:
-        resp1 = opener.open(BASE_URL + form_url, timeout=30)
-        html1 = resp1.read().decode('utf-8', errors='replace')
-    except Exception as e:
-        return None, f'Form fetch error: {e}'
+        resp = opener.open(BASE_URL + state_code, timeout=30)
+        resp.read()
+        return resp.status == 200
+    except Exception:
+        return False
+
+
+def fetch_report(opener, state_code, form_url, action_url, quarter, year):
+    """Fetch a single report. Verifies the server-side state binding before
+    POSTing and re-selects once if another client on our IP flipped it."""
+    html1 = None
+    for attempt in range(2):
+        try:
+            resp1 = opener.open(BASE_URL + form_url, timeout=30)
+            html1 = resp1.read().decode('utf-8', errors='replace')
+        except Exception as e:
+            return None, f'Form fetch error: {e}'
+        if extract_active_state(html1) == state_code:
+            break
+        if attempt == 0:
+            select_state(opener, state_code)
+            time.sleep(0.5)
+        else:
+            return None, f'State binding failed (server has {extract_active_state(html1)!r}, want {state_code!r})'
 
     token = extract_token(html1)
     if not token:
@@ -225,6 +261,9 @@ def fetch_report(opener, form_url, action_url, quarter, year):
 
     if 'window.location.href="error.php"' in html2:
         return None, 'Redirected to error page'
+
+    if "alert('Invalid Data')" in html2:
+        return None, 'Invalid Data (state not bound server-side?)'
 
     tables = parse_tables(html2)
     if not tables:
@@ -329,12 +368,10 @@ def scrape_targeted():
         print(f'  {state_name} ({state_code}) — {len(state_targets)} quarter(s) to check')
         print(f'{"="*60}')
 
-        # Set state
-        opener = create_opener(state_code)
-        try:
-            opener.open(BASE_URL + f'selectState.php?state={state_code}', timeout=15)
-        except Exception as e:
-            print(f'  Warning: selectState failed: {e}')
+        # Bind state server-side (per-IP) by GETting /<CODE>
+        opener = create_opener()
+        if not select_state(opener, state_code):
+            print(f'  Warning: select_state failed (GET /{state_code})')
 
         state_dir = os.path.join(OUTPUT_DIR, state_slug)
         os.makedirs(state_dir, exist_ok=True)
@@ -364,7 +401,7 @@ def scrape_targeted():
                     continue
 
                 period = period_label(year, quarter)
-                table, error = fetch_report(opener, form_url, action_url, quarter, year)
+                table, error = fetch_report(opener, state_code, form_url, action_url, quarter, year)
 
                 if error:
                     if 'All zeros' in error:

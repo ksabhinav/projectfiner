@@ -1,5 +1,28 @@
 #!/usr/bin/env python3
 """
+⚠️  DEPRECATED (June 2026) — DO NOT RUN AS-IS. Use scrape_onlineslbc.py instead.
+
+This Playwright script produced `ne_full_scrape.json` but predates the
+onlineslbcne.nic.in server revamp and uses the dead mechanism:
+  - its first form page is the OLD `districtwiseCDr.php` (decommissioned — now
+    returns an all-zero Grand-Total table), and
+  - it overrides `form.action` to the OLD `*report.php` action pages
+    (districtwiseCdrreport.php, districtwiseNrlmdatareport.php, …) via
+    `document.querySelector('form').action = …`.
+Although it does GET /<CODE> (so the per-IP state binding part works), the dead
+form/action pairs mean it silently emits empty/all-zero data.
+
+It is also now REDUNDANT: the canonical **scrape_onlineslbc.py** (repo root,
+urllib, no Playwright) does the full district-level scrape across 36 live
+report pages with the correct per-IP binding + Go-Back verification — see its
+docstring + select_state()/extract_active_state() and CLAUDE.md gotcha #34. For
+targeted missing-quarter top-ups use scrape_missing_quarters.py (also ported).
+The one-off MN contamination patch slbc-data/rescrape_mn.py is likewise
+deprecated. The blockwise auxiliary scraper slbc-data/scrape_ne_blockwise.py
+was hardened (live endpoints + Go-Back verification) and still works.
+
+Kept only for historical reference.
+──────────────────────────────────────────────────────────────────────────────
 Scrape ALL district-wise reports from onlineslbcne.nic.in for all 6 NE states
 using Playwright (sync API).
 

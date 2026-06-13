@@ -4,12 +4,12 @@
   "extensions": [
     "pdf"
   ],
-  "generatedAt": "2026-05-15T10:40:35Z",
+  "generatedAt": "2026-06-09T19:21:51Z",
   "counts": {
-    "planned": 350,
-    "downloaded": 0,
-    "cached": 0,
-    "errored": 0
+    "planned": 0,
+    "downloaded": 245,
+    "cached": 102,
+    "errored": 3
   },
   "files": [
     {
@@ -18,7 +18,9 @@
       "snapshotTimestamp": "20120907053824",
       "snapshotUrl": "https://web.archive.org/web/20120907053824id_/http://slbcchhattisgarh.com:80/download/VILLAGE-WISE%20&%20BANK-WISE%20FIP%2009102010.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2012/VILLAGE-WISE_BANK-WISE_FIP_09102010.pdf",
-      "status": "planned"
+      "sizeBytes": 62438,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/rbi-circular/sjsry.pdf",
@@ -26,7 +28,9 @@
       "snapshotTimestamp": "20121020235746",
       "snapshotUrl": "https://web.archive.org/web/20121020235746id_/http://slbcchhattisgarh.com:80/rbi-circular/sjsry.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2012/sjsry.pdf",
-      "status": "planned"
+      "sizeBytes": 64214,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/rseti.pdf",
@@ -34,7 +38,8 @@
       "snapshotTimestamp": "20131208120413",
       "snapshotUrl": "https://web.archive.org/web/20131208120413id_/http://slbcchhattisgarh.com/download/rseti.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2013/rseti.pdf",
-      "status": "planned"
+      "status": "error",
+      "error": "http 404"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/central-sponsers/dri.pdf",
@@ -42,7 +47,9 @@
       "snapshotTimestamp": "20140211175808",
       "snapshotUrl": "https://web.archive.org/web/20140211175808id_/http://slbcchhattisgarh.com:80/central-sponsers/DRI.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2014/DRI.pdf",
-      "status": "planned"
+      "sizeBytes": 159004,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/meetings/47/47_slbc_minutes.pdf",
@@ -50,7 +57,9 @@
       "snapshotTimestamp": "20140327083815",
       "snapshotUrl": "https://web.archive.org/web/20140327083815id_/http://slbcchhattisgarh.com:80/meetings/47/47_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2014/47_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 455643,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/list_lead_bank_manager.pdf",
@@ -58,7 +67,9 @@
       "snapshotTimestamp": "20150105142856",
       "snapshotUrl": "https://web.archive.org/web/20150105142856id_/http://slbcchhattisgarh.com:80/download/list_lead_bank_manager.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2015/list_lead_bank_manager.pdf",
-      "status": "planned"
+      "sizeBytes": 17896,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/member_bank_contact.pdf",
@@ -66,7 +77,9 @@
       "snapshotTimestamp": "20150224235019",
       "snapshotUrl": "https://web.archive.org/web/20150224235019id_/http://slbcchhattisgarh.com/download/member_bank_contact.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2015/member_bank_contact.pdf",
-      "status": "planned"
+      "sizeBytes": 91597,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy_facility/final%20pmsby%20consent%20form-only-sbi.pdf",
@@ -74,7 +87,9 @@
       "snapshotTimestamp": "20150529031259",
       "snapshotUrl": "https://web.archive.org/web/20150529031259id_/http://www.slbcchhattisgarh.com:80/download/pmjdy_facility/Final%20PMSBY%20consent%20form-only-SBI.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2015/Final_PMSBY_consent_form-only-SBI.pdf",
-      "status": "planned"
+      "sizeBytes": 154567,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/pmsby_hindi_form.pdf",
@@ -82,7 +97,9 @@
       "snapshotTimestamp": "20151129053421",
       "snapshotUrl": "https://web.archive.org/web/20151129053421id_/http://slbcchhattisgarh.com:80/download/pmjdy/PMSBY_hindi_form.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2015/PMSBY_hindi_form.pdf",
-      "status": "planned"
+      "sizeBytes": 217768,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/letter_no_983_dtd_17_11_15.pdf",
@@ -90,7 +107,9 @@
       "snapshotTimestamp": "20160124095650",
       "snapshotUrl": "https://web.archive.org/web/20160124095650id_/http://slbcchhattisgarh.com//download/Letter_no_983_dtd_17_11_15.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2016/Letter_no_983_dtd_17_11_15.pdf",
-      "status": "planned"
+      "sizeBytes": 6459621,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/calander%20_ammended.pdf",
@@ -98,7 +117,9 @@
       "snapshotTimestamp": "20160124120131",
       "snapshotUrl": "https://web.archive.org/web/20160124120131id_/http://slbcchhattisgarh.com/download/meetings/CALANDER%20_ammended.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2016/CALANDER__ammended.pdf",
-      "status": "planned"
+      "sizeBytes": 20141,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/60/60_slbc_minutes.pdf",
@@ -106,7 +127,9 @@
       "snapshotTimestamp": "20160404191147",
       "snapshotUrl": "https://web.archive.org/web/20160404191147id_/http://slbcchhattisgarh.com//download/meetings/60/60_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2016/60_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 7113768,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/slbc_calander_2016.pdf",
@@ -114,7 +137,9 @@
       "snapshotTimestamp": "20161030031456",
       "snapshotUrl": "https://web.archive.org/web/20161030031456id_/http://slbcchhattisgarh.com/download/meetings/slbc_calander_2016.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2016/slbc_calander_2016.pdf",
-      "status": "planned"
+      "sizeBytes": 192219,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/63/63_slbc_minutes.pdf",
@@ -122,7 +147,9 @@
       "snapshotTimestamp": "20161030032103",
       "snapshotUrl": "https://web.archive.org/web/20161030032103id_/http://slbcchhattisgarh.com//download/meetings/63/63_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2016/63_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 207280,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/51/51st-agenda.pdf",
@@ -130,7 +157,8 @@
       "snapshotTimestamp": "20170401142404",
       "snapshotUrl": "https://web.archive.org/web/20170401142404id_/http://slbcchhattisgarh.com//download/meetings/51/51st-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/51st-agenda.pdf",
-      "status": "planned"
+      "status": "error",
+      "error": "http 404"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/57/57th-agenda.pdf",
@@ -138,7 +166,8 @@
       "snapshotTimestamp": "20170401161701",
       "snapshotUrl": "https://web.archive.org/web/20170401161701id_/http://slbcchhattisgarh.com//download/meetings/57/57th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/57th-agenda.pdf",
-      "status": "planned"
+      "status": "error",
+      "error": "http 404"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/59/59th-agenda.pdf",
@@ -146,7 +175,9 @@
       "snapshotTimestamp": "20170401174139",
       "snapshotUrl": "https://web.archive.org/web/20170401174139id_/http://slbcchhattisgarh.com//download/meetings/59/59th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/59th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 161317,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/minutes%2017_12_14_special.pdf",
@@ -154,7 +185,9 @@
       "snapshotTimestamp": "20170401184832",
       "snapshotUrl": "https://web.archive.org/web/20170401184832id_/http://slbcchhattisgarh.com//download/meetings/Minutes%2017_12_14_special.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/Minutes_17_12_14_special.pdf",
-      "status": "planned"
+      "sizeBytes": 4870822,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/rbi-circular/12_7_2014/master%20circular%20lead%20bank%20scheme%20july%201-2014.pdf",
@@ -162,7 +195,9 @@
       "snapshotTimestamp": "20170402132405",
       "snapshotUrl": "https://web.archive.org/web/20170402132405id_/http://slbcchhattisgarh.com/download/rbi-circular/12_7_2014/Master%20Circular%20Lead%20Bank%20Scheme%20July%201-2014.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/Master_Circular_Lead_Bank_Scheme_July_1-2014.pdf",
-      "status": "planned"
+      "sizeBytes": 963806,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/55/55th-agenda.pdf",
@@ -170,7 +205,9 @@
       "snapshotTimestamp": "20170402132413",
       "snapshotUrl": "https://web.archive.org/web/20170402132413id_/http://slbcchhattisgarh.com//download/meetings/55/55th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/55th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 259557,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/53/53rd-agenda.pdf",
@@ -178,7 +215,9 @@
       "snapshotTimestamp": "20170402132452",
       "snapshotUrl": "https://web.archive.org/web/20170402132452id_/http://slbcchhattisgarh.com//download/meetings/53/53rd-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/53rd-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 387754,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/cd_ratio_march_2016.pdf",
@@ -186,7 +225,9 @@
       "snapshotTimestamp": "20170402133002",
       "snapshotUrl": "https://web.archive.org/web/20170402133002id_/http://slbcchhattisgarh.com/download/cd_ratio_march_2016.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/cd_ratio_march_2016.pdf",
-      "status": "planned"
+      "sizeBytes": 10977,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/52/52nd-agenda.pdf",
@@ -194,7 +235,9 @@
       "snapshotTimestamp": "20170402133009",
       "snapshotUrl": "https://web.archive.org/web/20170402133009id_/http://slbcchhattisgarh.com//download/meetings/52/52nd-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/52nd-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 150520,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/53/53_slbc_minutes.pdf",
@@ -202,7 +245,9 @@
       "snapshotTimestamp": "20170402133238",
       "snapshotUrl": "https://web.archive.org/web/20170402133238id_/http://slbcchhattisgarh.com//download/meetings/53/53_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/53_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 404315,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/57/57_slbc_minutes.pdf",
@@ -210,7 +255,9 @@
       "snapshotTimestamp": "20170402133516",
       "snapshotUrl": "https://web.archive.org/web/20170402133516id_/http://slbcchhattisgarh.com//download/meetings/57/57_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/57_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 622326,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/55/55th%20slbc%20annexures.pdf",
@@ -218,7 +265,9 @@
       "snapshotTimestamp": "20170402134017",
       "snapshotUrl": "https://web.archive.org/web/20170402134017id_/http://slbcchhattisgarh.com//download/meetings/55/55th%20SLBC%20Annexures.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/55th_SLBC_Annexures.pdf",
-      "status": "planned"
+      "sizeBytes": 4768963,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/surakshabandhan/suraksha_bandhan_instructions.pdf",
@@ -226,7 +275,9 @@
       "snapshotTimestamp": "20170402135648",
       "snapshotUrl": "https://web.archive.org/web/20170402135648id_/http://slbcchhattisgarh.com/download/surakshabandhan/suraksha_bandhan_instructions.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/suraksha_bandhan_instructions.pdf",
-      "status": "planned"
+      "sizeBytes": 1499801,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/slbc-returns/slbc-submission-monthly-msme-data.pdf",
@@ -234,7 +285,9 @@
       "snapshotTimestamp": "20170402135721",
       "snapshotUrl": "https://web.archive.org/web/20170402135721id_/http://slbcchhattisgarh.com/download/slbc-returns/slbc-submission-monthly-msme-data.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/slbc-submission-monthly-msme-data.pdf",
-      "status": "planned"
+      "sizeBytes": 12466,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/54/atr%2054th%20slbc%20minutes%20of%20meeting.pdf",
@@ -242,7 +295,9 @@
       "snapshotTimestamp": "20170402135730",
       "snapshotUrl": "https://web.archive.org/web/20170402135730id_/http://slbcchhattisgarh.com//download/meetings/54/ATR%2054TH%20SLBC%20MINUTES%20OF%20MEETING.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/ATR_54TH_SLBC_MINUTES_OF_MEETING.pdf",
-      "status": "planned"
+      "sizeBytes": 90559,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/pmjdy_overdraft_facility.pdf",
@@ -250,7 +305,9 @@
       "snapshotTimestamp": "20170402135751",
       "snapshotUrl": "https://web.archive.org/web/20170402135751id_/http://slbcchhattisgarh.com/download/pmjdy/PMJDY_overdraft_facility.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/PMJDY_overdraft_facility.pdf",
-      "status": "planned"
+      "sizeBytes": 298938,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/55/55_slbc_minutes.pdf",
@@ -258,7 +315,9 @@
       "snapshotTimestamp": "20170402135813",
       "snapshotUrl": "https://web.archive.org/web/20170402135813id_/http://slbcchhattisgarh.com//download/meetings/55/55_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/55_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 25069,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/59/59_slbc_minutes.pdf",
@@ -266,7 +325,9 @@
       "snapshotTimestamp": "20170402135845",
       "snapshotUrl": "https://web.archive.org/web/20170402135845id_/http://slbcchhattisgarh.com//download/meetings/59/59_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/59_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 1006237,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/lead_bank_scheme/list%20of%20unbanked%20tier%205%20villages.pdf",
@@ -274,7 +335,9 @@
       "snapshotTimestamp": "20171011044923",
       "snapshotUrl": "https://web.archive.org/web/20171011044923id_/http://slbcchhattisgarh.com:80/download/lead_bank_scheme/LIST%20OF%20UNBANKED%20TIER%205%20VILLAGES.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/LIST_OF_UNBANKED_TIER_5_VILLAGES.pdf",
-      "status": "planned"
+      "sizeBytes": 10841,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/slbc_calendar_2017.pdf",
@@ -282,7 +345,9 @@
       "snapshotTimestamp": "20171011044935",
       "snapshotUrl": "https://web.archive.org/web/20171011044935id_/http://slbcchhattisgarh.com:80/download/meetings/slbc_calendar_2017.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/slbc_calendar_2017.pdf",
-      "status": "planned"
+      "sizeBytes": 107495,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/59/annexure_a1_atr.pdf",
@@ -290,7 +355,9 @@
       "snapshotTimestamp": "20171011045032",
       "snapshotUrl": "https://web.archive.org/web/20171011045032id_/http://slbcchhattisgarh.com:80/download/meetings/59/Annexure_A1_ATR.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/Annexure_A1_ATR.pdf",
-      "status": "planned"
+      "sizeBytes": 111644,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/65/65th-agenda.pdf",
@@ -298,7 +365,9 @@
       "snapshotTimestamp": "20171208211844",
       "snapshotUrl": "https://web.archive.org/web/20171208211844id_/http://slbcchhattisgarh.com:80/download/meetings/65/65th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/65th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1241301,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/60/60_slbc_minutes.pdf",
@@ -306,7 +375,9 @@
       "snapshotTimestamp": "20171209032116",
       "snapshotUrl": "https://web.archive.org/web/20171209032116id_/http://slbcchhattisgarh.com:80/download/meetings/60/60_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/60_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 7113768,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/62/62nd-agenda.pdf",
@@ -314,7 +385,9 @@
       "snapshotTimestamp": "20171209032134",
       "snapshotUrl": "https://web.archive.org/web/20171209032134id_/http://slbcchhattisgarh.com:80/download/meetings/62/62nd-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/62nd-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 563435,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/60/60th-agenda.pdf",
@@ -322,7 +395,9 @@
       "snapshotTimestamp": "20171209032224",
       "snapshotUrl": "https://web.archive.org/web/20171209032224id_/http://slbcchhattisgarh.com:80/download/meetings/60/60th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/60th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 338828,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/63/63_slbc_minutes.pdf",
@@ -330,7 +405,9 @@
       "snapshotTimestamp": "20171209032242",
       "snapshotUrl": "https://web.archive.org/web/20171209032242id_/http://slbcchhattisgarh.com:80/download/meetings/63/63_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2017/63_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 207280,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/67/67_slbc_minutes.pdf",
@@ -338,7 +415,9 @@
       "snapshotTimestamp": "20180324231113",
       "snapshotUrl": "https://web.archive.org/web/20180324231113id_/http://slbcchhattisgarh.com:80/download/meetings/67/67_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/67_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 836104,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/67/67th-agenda.pdf",
@@ -346,7 +425,9 @@
       "snapshotTimestamp": "20180324231454",
       "snapshotUrl": "https://web.archive.org/web/20180324231454id_/http://slbcchhattisgarh.com:80/download/meetings/67/67th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/67th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1307829,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/sof/5.pdf",
@@ -354,7 +435,9 @@
       "snapshotTimestamp": "20180712195506",
       "snapshotUrl": "https://web.archive.org/web/20180712195506id_/http://slbcchhattisgarh.com:80/download/sof/5.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/5.pdf",
-      "status": "planned"
+      "sizeBytes": 10591,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/rbi-circular/rbi%20master%20circular%20lead%20bank%202017.pdf",
@@ -362,7 +445,9 @@
       "snapshotTimestamp": "20180820082446",
       "snapshotUrl": "https://web.archive.org/web/20180820082446id_/http://slbcchhattisgarh.com//download/rbi-circular/RBI%20MASTER%20CIRCULAR%20LEAD%20BANK%202017.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/RBI_MASTER_CIRCULAR_LEAD_BANK_2017.pdf",
-      "status": "planned"
+      "sizeBytes": 603016,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/rwbcis%20notification%20rabi%202017-18.pdf",
@@ -370,7 +455,9 @@
       "snapshotTimestamp": "20180820083346",
       "snapshotUrl": "https://web.archive.org/web/20180820083346id_/http://slbcchhattisgarh.com//download/pfb/RWBCIS%20Notification%20Rabi%202017-18.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/RWBCIS_Notification_Rabi_2017-18.pdf",
-      "status": "planned"
+      "sizeBytes": 5570573,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/69/69th-agenda.pdf",
@@ -378,7 +465,9 @@
       "snapshotTimestamp": "20180820090912",
       "snapshotUrl": "https://web.archive.org/web/20180820090912id_/http://slbcchhattisgarh.com//download/meetings/69/69th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/69th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1418980,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%205163%20dt%2007-07-18.pdf",
@@ -386,7 +475,9 @@
       "snapshotTimestamp": "20180820091310",
       "snapshotUrl": "https://web.archive.org/web/20180820091310id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%205163%20Dt%2007-07-18.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/PMFBY_Notification_5163_Dt_07-07-18.pdf",
-      "status": "planned"
+      "sizeBytes": 5451233,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/68/68th-agenda.pdf",
@@ -394,7 +485,9 @@
       "snapshotTimestamp": "20180820091325",
       "snapshotUrl": "https://web.archive.org/web/20180820091325id_/http://slbcchhattisgarh.com//download/meetings/68/68th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/68th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1417703,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20rabi%202017-18.pdf",
@@ -402,7 +495,9 @@
       "snapshotTimestamp": "20180820091613",
       "snapshotUrl": "https://web.archive.org/web/20180820091613id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20RABI%202017-18.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/PMFBY_Notification_RABI_2017-18.pdf",
-      "status": "planned"
+      "sizeBytes": 1864984,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/68/68th-minutes.pdf",
@@ -410,7 +505,9 @@
       "snapshotTimestamp": "20180820095122",
       "snapshotUrl": "https://web.archive.org/web/20180820095122id_/http://slbcchhattisgarh.com//download/meetings/68/68th-minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/68th-minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 976410,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/circular/drought%202017.pdf",
@@ -418,7 +515,9 @@
       "snapshotTimestamp": "20180820095650",
       "snapshotUrl": "https://web.archive.org/web/20180820095650id_/http://slbcchhattisgarh.com//download/circular/Drought%202017.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/Drought_2017.pdf",
-      "status": "planned"
+      "sizeBytes": 692170,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20date%2029-12-2017.pdf",
@@ -426,7 +525,9 @@
       "snapshotTimestamp": "20180820101115",
       "snapshotUrl": "https://web.archive.org/web/20180820101115id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20date%2029-12-2017.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/PMFBY_Notification_date_29-12-2017.pdf",
-      "status": "planned"
+      "sizeBytes": 12332588,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%209717%20dt%2030-12-2017.pdf",
@@ -434,7 +535,9 @@
       "snapshotTimestamp": "20180820101823",
       "snapshotUrl": "https://web.archive.org/web/20180820101823id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%209717%20Dt%2030-12-2017.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/PMFBY_Notification_9717_Dt_30-12-2017.pdf",
-      "status": "planned"
+      "sizeBytes": 1693451,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/69/69th-minutes.pdf",
@@ -442,7 +545,9 @@
       "snapshotTimestamp": "20180820113026",
       "snapshotUrl": "https://web.archive.org/web/20180820113026id_/http://slbcchhattisgarh.com//download/meetings/69/69th-minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/69th-minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 9694802,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/sof/4.pdf",
@@ -450,7 +555,9 @@
       "snapshotTimestamp": "20181105033030",
       "snapshotUrl": "https://web.archive.org/web/20181105033030id_/http://slbcchhattisgarh.com:80/download/sof/4.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/4.pdf",
-      "status": "planned"
+      "sizeBytes": 11836,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/sof/7.pdf",
@@ -458,7 +565,9 @@
       "snapshotTimestamp": "20181105033035",
       "snapshotUrl": "https://web.archive.org/web/20181105033035id_/http://slbcchhattisgarh.com:80/download/sof/7.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/7.pdf",
-      "status": "planned"
+      "sizeBytes": 7484,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/sof/8.pdf",
@@ -466,7 +575,9 @@
       "snapshotTimestamp": "20181105033040",
       "snapshotUrl": "https://web.archive.org/web/20181105033040id_/http://slbcchhattisgarh.com:80/download/sof/8.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/8.pdf",
-      "status": "planned"
+      "sizeBytes": 7344,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/sof/1.pdf",
@@ -474,7 +585,9 @@
       "snapshotTimestamp": "20181105033241",
       "snapshotUrl": "https://web.archive.org/web/20181105033241id_/http://slbcchhattisgarh.com:80/download/sof/1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/1.pdf",
-      "status": "planned"
+      "sizeBytes": 7077,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/sof/6.pdf",
@@ -482,7 +595,9 @@
       "snapshotTimestamp": "20181105033248",
       "snapshotUrl": "https://web.archive.org/web/20181105033248id_/http://slbcchhattisgarh.com:80/download/sof/6.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2018/6.pdf",
-      "status": "planned"
+      "sizeBytes": 6899,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/sof/2.pdf",
@@ -490,7 +605,9 @@
       "snapshotTimestamp": "20190214115931",
       "snapshotUrl": "https://web.archive.org/web/20190214115931id_/http://slbcchhattisgarh.com:80/download/sof/2.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/2.pdf",
-      "status": "planned"
+      "sizeBytes": 7304,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/sof/scale_of_finance.pdf",
@@ -498,7 +615,9 @@
       "snapshotTimestamp": "20190214163527",
       "snapshotUrl": "https://web.archive.org/web/20190214163527id_/http://slbcchhattisgarh.com:80/download/sof/scale_of_finance.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/scale_of_finance.pdf",
-      "status": "planned"
+      "sizeBytes": 1250066,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/list%20of%20controllers.pdf",
@@ -506,7 +625,9 @@
       "snapshotTimestamp": "20190214163531",
       "snapshotUrl": "https://web.archive.org/web/20190214163531id_/http://slbcchhattisgarh.com:80/download/LIST%20OF%20CONTROLLERS.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/LIST_OF_CONTROLLERS.pdf",
-      "status": "planned"
+      "sizeBytes": 17061,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/slbc_calendar_2018.pdf",
@@ -514,7 +635,9 @@
       "snapshotTimestamp": "20190214163623",
       "snapshotUrl": "https://web.archive.org/web/20190214163623id_/http://slbcchhattisgarh.com:80/download/meetings/slbc_calendar_2018.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/slbc_calendar_2018.pdf",
-      "status": "planned"
+      "sizeBytes": 99387,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/resti/list_of_rsetis.pdf",
@@ -522,7 +645,9 @@
       "snapshotTimestamp": "20190713142347",
       "snapshotUrl": "https://web.archive.org/web/20190713142347id_/http://slbcchhattisgarh.com:80/download/resti/list_of_rsetis.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/list_of_rsetis.pdf",
-      "status": "planned"
+      "sizeBytes": 16468,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/ldm_districwise.pdf",
@@ -530,7 +655,9 @@
       "snapshotTimestamp": "20190718014915",
       "snapshotUrl": "https://web.archive.org/web/20190718014915id_/http://slbcchhattisgarh.com:80/download/ldm_districwise.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/ldm_districwise.pdf",
-      "status": "planned"
+      "sizeBytes": 53006,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/unit-cost/proceedings%20slucc%20meeting%201st%20june%202018.pdf",
@@ -538,7 +665,9 @@
       "snapshotTimestamp": "20190718163652",
       "snapshotUrl": "https://web.archive.org/web/20190718163652id_/http://slbcchhattisgarh.com:80/download/unit-cost/Proceedings%20SLUCC%20meeting%201st%20June%202018.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Proceedings_SLUCC_meeting_1st_June_2018.pdf",
-      "status": "planned"
+      "sizeBytes": 593746,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/rbi-circular/rbi%20master%20circular%20lead%20bank%202017.pdf",
@@ -546,7 +675,9 @@
       "snapshotTimestamp": "20190718165858",
       "snapshotUrl": "https://web.archive.org/web/20190718165858id_/http://slbcchhattisgarh.com:80/download/rbi-circular/RBI%20MASTER%20CIRCULAR%20LEAD%20BANK%202017.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/RBI_MASTER_CIRCULAR_LEAD_BANK_2017.pdf",
-      "status": "planned"
+      "sizeBytes": 603016,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pfb/pmfby%20notification%20rabi%202017-18.pdf",
@@ -554,7 +685,9 @@
       "snapshotTimestamp": "20190718170059",
       "snapshotUrl": "https://web.archive.org/web/20190718170059id_/http://slbcchhattisgarh.com:80/download/pfb/PMFBY%20Notification%20RABI%202017-18.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/PMFBY_Notification_RABI_2017-18.pdf",
-      "status": "planned"
+      "sizeBytes": 1864984,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pfb/rwbcis%20notification%20rabi%202017-18.pdf",
@@ -562,7 +695,9 @@
       "snapshotTimestamp": "20190718170125",
       "snapshotUrl": "https://web.archive.org/web/20190718170125id_/http://slbcchhattisgarh.com:80/download/pfb/RWBCIS%20Notification%20Rabi%202017-18.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/RWBCIS_Notification_Rabi_2017-18.pdf",
-      "status": "planned"
+      "sizeBytes": 5570573,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/letter_no_983_dtd_17_11_15.pdf",
@@ -570,7 +705,9 @@
       "snapshotTimestamp": "20190718170426",
       "snapshotUrl": "https://web.archive.org/web/20190718170426id_/http://slbcchhattisgarh.com:80/download/Letter_no_983_dtd_17_11_15.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Letter_no_983_dtd_17_11_15.pdf",
-      "status": "planned"
+      "sizeBytes": 6459621,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pfb/15573.pdf",
@@ -578,7 +715,9 @@
       "snapshotTimestamp": "20190722202709",
       "snapshotUrl": "https://web.archive.org/web/20190722202709id_/http://slbcchhattisgarh.com/download/pfb/15573.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/15573.pdf",
-      "status": "planned"
+      "sizeBytes": 1674729,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pfb/rabi%20crop%20notification%2005%20dec%2016.pdf",
@@ -586,7 +725,9 @@
       "snapshotTimestamp": "20190722203250",
       "snapshotUrl": "https://web.archive.org/web/20190722203250id_/http://slbcchhattisgarh.com/download/pfb/RABI%20CROP%20NOTIFICATION%2005%20DEC%2016.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/RABI_CROP_NOTIFICATION_05_DEC_16.pdf",
-      "status": "planned"
+      "sizeBytes": 1958853,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pfb/revised%20notification%20pmfby%2009%20jan%2017.pdf",
@@ -594,7 +735,9 @@
       "snapshotTimestamp": "20190722203404",
       "snapshotUrl": "https://web.archive.org/web/20190722203404id_/http://slbcchhattisgarh.com/download/pfb/REVISED%20Notification%20PMFBY%2009%20JAN%2017.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/REVISED_Notification_PMFBY_09_JAN_17.pdf",
-      "status": "planned"
+      "sizeBytes": 1687914,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/70/70th%20data%20table.pdf",
@@ -602,7 +745,9 @@
       "snapshotTimestamp": "20190722204532",
       "snapshotUrl": "https://web.archive.org/web/20190722204532id_/http://slbcchhattisgarh.com//download/meetings/70/70TH%20DATA%20TABLE.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/70TH_DATA_TABLE.pdf",
-      "status": "planned"
+      "sizeBytes": 1118036,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/63/output_table_1.pdf",
@@ -610,7 +755,9 @@
       "snapshotTimestamp": "20190722205125",
       "snapshotUrl": "https://web.archive.org/web/20190722205125id_/http://slbcchhattisgarh.com//download/meetings/63/output_table_1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/output_table_1.pdf",
-      "status": "planned"
+      "sizeBytes": 101856,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/sof/3.pdf",
@@ -618,7 +765,9 @@
       "snapshotTimestamp": "20190722205227",
       "snapshotUrl": "https://web.archive.org/web/20190722205227id_/http://slbcchhattisgarh.com/download/sof/3.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/3.pdf",
-      "status": "planned"
+      "sizeBytes": 6779,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/67/67th%20data%20table.pdf",
@@ -626,7 +775,9 @@
       "snapshotTimestamp": "20190722205231",
       "snapshotUrl": "https://web.archive.org/web/20190722205231id_/http://slbcchhattisgarh.com//download/meetings/67/67TH%20DATA%20TABLE.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/67TH_DATA_TABLE.pdf",
-      "status": "planned"
+      "sizeBytes": 94422,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/65/output_table_1.pdf",
@@ -634,7 +785,9 @@
       "snapshotTimestamp": "20190722205246",
       "snapshotUrl": "https://web.archive.org/web/20190722205246id_/http://slbcchhattisgarh.com//download/meetings/65/output_table_1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/output_table_1.pdf",
-      "status": "planned"
+      "sizeBytes": 101856,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/68/68th%20data%20table.pdf",
@@ -642,7 +795,9 @@
       "snapshotTimestamp": "20190722205337",
       "snapshotUrl": "https://web.archive.org/web/20190722205337id_/http://slbcchhattisgarh.com//download/meetings/68/68TH%20DATA%20TABLE.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/68TH_DATA_TABLE.pdf",
-      "status": "planned"
+      "sizeBytes": 145239,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/65/65_slbc_minutes.pdf",
@@ -650,7 +805,9 @@
       "snapshotTimestamp": "20190722205831",
       "snapshotUrl": "https://web.archive.org/web/20190722205831id_/http://slbcchhattisgarh.com//download/meetings/65/65_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/65_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 683564,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/jashpur.pdf",
@@ -658,7 +815,9 @@
       "snapshotTimestamp": "20190722210004",
       "snapshotUrl": "https://web.archive.org/web/20190722210004id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Jashpur.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Jashpur.pdf",
-      "status": "planned"
+      "sizeBytes": 5619347,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/bijapur.pdf",
@@ -666,7 +825,9 @@
       "snapshotTimestamp": "20190722210017",
       "snapshotUrl": "https://web.archive.org/web/20190722210017id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Bijapur.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Bijapur.pdf",
-      "status": "planned"
+      "sizeBytes": 2453763,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/raipur%20annexure-1.pdf",
@@ -674,7 +835,9 @@
       "snapshotTimestamp": "20190722210040",
       "snapshotUrl": "https://web.archive.org/web/20190722210040id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Raipur%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Raipur_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 5939017,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/mahasamund%20annexure-1.pdf",
@@ -682,7 +845,9 @@
       "snapshotTimestamp": "20190722210122",
       "snapshotUrl": "https://web.archive.org/web/20190722210122id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Mahasamund%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Mahasamund_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 2812460,
+      "sha256": "9725bf579d87cda2802f0497293c1b7840e8331dac712fd0ac4b45d0eb447386",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/bilaspur%20annexure-1.pdf",
@@ -690,7 +855,9 @@
       "snapshotTimestamp": "20190722210143",
       "snapshotUrl": "https://web.archive.org/web/20190722210143id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Bilaspur%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Bilaspur_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 3939162,
+      "sha256": "72342e527d31ea5fa7e9b80353d06ed51f1393f1c0c1d892bb2f1add74d6e497",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/kbirdham.pdf",
@@ -698,7 +865,9 @@
       "snapshotTimestamp": "20190722210158",
       "snapshotUrl": "https://web.archive.org/web/20190722210158id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/KBIRDHAM.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/KBIRDHAM.pdf",
-      "status": "planned"
+      "sizeBytes": 5823346,
+      "sha256": "182bcdffd7f038cd18a301e7de099c18a9b4ca53d5df25433df927a25e6c2321",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/kondagaon%20annexure-1.pdf",
@@ -706,7 +875,9 @@
       "snapshotTimestamp": "20190722210158",
       "snapshotUrl": "https://web.archive.org/web/20190722210158id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Kondagaon%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Kondagaon_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 5362813,
+      "sha256": "05f40a8dab83c7685e7395145d5c97173a54ce0295367c8a63a58fc6f473ab34",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/gariyaband%20annexure-1.pdf",
@@ -714,7 +885,9 @@
       "snapshotTimestamp": "20190722210236",
       "snapshotUrl": "https://web.archive.org/web/20190722210236id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Gariyaband%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Gariyaband_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 6058156,
+      "sha256": "28a00a6b770352d7ef099a7e0803f0559584d63b3ef6faa9a8ffd8934ebd768e",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/balodabajar%20annexure-1.pdf",
@@ -722,7 +895,9 @@
       "snapshotTimestamp": "20190722210237",
       "snapshotUrl": "https://web.archive.org/web/20190722210237id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Balodabajar%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Balodabajar_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 8623902,
+      "sha256": "dd99fd56b38cc7d4e3e9bcb92ac2ed50cefca412052f375386ea39529435025e",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/dantewada%20annexure-1.pdf",
@@ -730,7 +905,9 @@
       "snapshotTimestamp": "20190722210255",
       "snapshotUrl": "https://web.archive.org/web/20190722210255id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Dantewada%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Dantewada_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 1610026,
+      "sha256": "fd30955fc4023b51b524231da0244f6fa9aba6671aca14c403f7449b79c94305",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/korea%20annexure-1.pdf",
@@ -738,7 +915,9 @@
       "snapshotTimestamp": "20190722210327",
       "snapshotUrl": "https://web.archive.org/web/20190722210327id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Korea%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Korea_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 3692984,
+      "sha256": "e14f92ceeecf8ebaa159f9b95ee975e4671951d471aca918683918d2d42bf334",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/lbs-feb-2009.pdf",
@@ -746,7 +925,9 @@
       "snapshotTimestamp": "20190722210400",
       "snapshotUrl": "https://web.archive.org/web/20190722210400id_/http://slbcchhattisgarh.com/download/lbs-feb-2009.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/lbs-feb-2009.pdf",
-      "status": "planned"
+      "sizeBytes": 116011,
+      "sha256": "472821b6e7bda4708ba389e669b1b6f424a920a09ef78a0ebe4e5b68b1c642b2",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/dhamtari%20anneuxre-1.pdf",
@@ -754,7 +935,9 @@
       "snapshotTimestamp": "20190722210406",
       "snapshotUrl": "https://web.archive.org/web/20190722210406id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Dhamtari%20Anneuxre-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Dhamtari_Anneuxre-1.pdf",
-      "status": "planned"
+      "sizeBytes": 1693751,
+      "sha256": "b7fac9ef69fe3c64619897f901d00a90a72bb0d3a007fde99153b3923ad208b4",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/bastar%20annexure-1.pdf",
@@ -762,7 +945,9 @@
       "snapshotTimestamp": "20190722210435",
       "snapshotUrl": "https://web.archive.org/web/20190722210435id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Bastar%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Bastar_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 1522003,
+      "sha256": "bc41d27ac5823230130921f94b0d51c84ea7f01b61fa64c54d0832f600200aa1",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/annex-2.pdf",
@@ -770,7 +955,9 @@
       "snapshotTimestamp": "20190722210506",
       "snapshotUrl": "https://web.archive.org/web/20190722210506id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Annex-2.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Annex-2.pdf",
-      "status": "planned"
+      "sizeBytes": 339592,
+      "sha256": "63e20af81c190373c6e5af1aa60756ae967917462dc32ae3678d26652b80a66a",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/balod%20annexure-1.pdf",
@@ -778,7 +965,9 @@
       "snapshotTimestamp": "20190722210534",
       "snapshotUrl": "https://web.archive.org/web/20190722210534id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Balod%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Balod_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 6551378,
+      "sha256": "a4f7eedd97e5a99982136ff7bc8689181088d9b6f0c3d3510d72135d5833c3ec",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/janjgir%20champa_.pdf",
@@ -786,7 +975,9 @@
       "snapshotTimestamp": "20190722210538",
       "snapshotUrl": "https://web.archive.org/web/20190722210538id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Janjgir%20Champa_.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Janjgir_Champa_.pdf",
-      "status": "planned"
+      "sizeBytes": 7922176,
+      "sha256": "c078d8a3ce7da18373d1ab720fc18cca3729078f3755d383e02a5dcc562e51ec",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/durg%20annexure-1.pdf",
@@ -794,7 +985,9 @@
       "snapshotTimestamp": "20190722210539",
       "snapshotUrl": "https://web.archive.org/web/20190722210539id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Durg%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Durg_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 3958925,
+      "sha256": "8b8d4fbf97b2b95dd318b2fb8473c0304e19d775f6db01ad7cf76b145f094895",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/kanker%20annexure-1.pdf",
@@ -802,7 +995,9 @@
       "snapshotTimestamp": "20190722210556",
       "snapshotUrl": "https://web.archive.org/web/20190722210556id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Kanker%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Kanker_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 6818607,
+      "sha256": "50b4cbc0ceab5162233d9cbec336842f57a4f48646ef95452d17995634ffa17a",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/rbi-circular/12_7_2014/master%20circular%20-%20lending%20to%20msme%20sector%20july%2001-2014.pdf",
@@ -810,7 +1005,9 @@
       "snapshotTimestamp": "20190722210608",
       "snapshotUrl": "https://web.archive.org/web/20190722210608id_/http://slbcchhattisgarh.com/download/rbi-circular/12_7_2014/Master%20Circular%20-%20Lending%20to%20MSME%20Sector%20July%2001-2014.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Master_Circular_-_Lending_to_MSME_Sector_July_01-2014.pdf",
-      "status": "planned"
+      "sizeBytes": 331563,
+      "sha256": "22a1cd813c7735d21c4fe7e2f0c9e55d24c43b914ecafbaa1483197dbd7e3cd9",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/pmfby%20notification%205163%20dt%2007.07.18.pdf",
@@ -818,7 +1015,9 @@
       "snapshotTimestamp": "20190722210610",
       "snapshotUrl": "https://web.archive.org/web/20190722210610id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/PMFBY%20Notification%205163%20Dt%2007.07.18.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/PMFBY_Notification_5163_Dt_07.07.18.pdf",
-      "status": "planned"
+      "sizeBytes": 5451233,
+      "sha256": "b16e57d69bc4474f7c71976dddddea2915e3081df219b6d509ff0dd762c9098d",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/mungeli.pdf",
@@ -826,7 +1025,9 @@
       "snapshotTimestamp": "20190722210703",
       "snapshotUrl": "https://web.archive.org/web/20190722210703id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Mungeli.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Mungeli.pdf",
-      "status": "planned"
+      "sizeBytes": 5261059,
+      "sha256": "86b64194bf980650c1dd5dbb7776f43ddae873c8485a399a12e5430580c59a8f",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/surguja%20annexure-1.pdf",
@@ -834,7 +1035,9 @@
       "snapshotTimestamp": "20190722210704",
       "snapshotUrl": "https://web.archive.org/web/20190722210704id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Surguja%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Surguja_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 6657398,
+      "sha256": "6ee77721aca3fe9541a9ee1e98f8833e23dfb0d9c2921b9ecfd40fe8c3428a4c",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/sukma%20annexure-1.pdf",
@@ -842,7 +1045,9 @@
       "snapshotTimestamp": "20190722210710",
       "snapshotUrl": "https://web.archive.org/web/20190722210710id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Sukma%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Sukma_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 586289,
+      "sha256": "b63c4fee61d644af120dd025f88b4b9a8166a70c3f9b1a70e55d8508167185f9",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/bemetara%20anxeure-1%20.pdf",
@@ -850,7 +1055,9 @@
       "snapshotTimestamp": "20190722210718",
       "snapshotUrl": "https://web.archive.org/web/20190722210718id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Bemetara%20Anxeure-1%20.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Bemetara_Anxeure-1_.pdf",
-      "status": "planned"
+      "sizeBytes": 4991541,
+      "sha256": "be2ce43804dfcb1a8dce5187e4c71cccd66c0c14fa5330990294e1f7e294f05e",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/koraba%20annexure-1.pdf",
@@ -858,7 +1065,9 @@
       "snapshotTimestamp": "20190722210725",
       "snapshotUrl": "https://web.archive.org/web/20190722210725id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Koraba%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Koraba_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 5996331,
+      "sha256": "63e0438eeced1db0cd28ee54c51238293ef2bd14fb5b5b8040a4398838c45e17",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/annex-3.pdf",
@@ -866,7 +1075,9 @@
       "snapshotTimestamp": "20190722210743",
       "snapshotUrl": "https://web.archive.org/web/20190722210743id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Annex-3.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Annex-3.pdf",
-      "status": "planned"
+      "sizeBytes": 181003,
+      "sha256": "50630ee8c628bb4ec94c68f66708dbcc2d3c7d88e6d6ea4cf3dbba2a5ef88618",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/rajnandgaon%20annexure-1.pdf",
@@ -874,7 +1085,9 @@
       "snapshotTimestamp": "20190722210813",
       "snapshotUrl": "https://web.archive.org/web/20190722210813id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Rajnandgaon%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Rajnandgaon_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 11153803,
+      "sha256": "54c8ad3e18252a28bb84d45a4d5b50cdc9a225961843a2a5d565b5eac4da4ac5",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/raigarh%20annexurre-1.pdf",
@@ -882,7 +1095,9 @@
       "snapshotTimestamp": "20190722210814",
       "snapshotUrl": "https://web.archive.org/web/20190722210814id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Raigarh%20Annexurre-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Raigarh_Annexurre-1.pdf",
-      "status": "planned"
+      "sizeBytes": 6842655,
+      "sha256": "9080894e44e6a10c971ab172a150abbbc1e336d4d6210aab8107af68102f1ce6",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/surajpur%20annexure-1.pdf",
@@ -890,7 +1105,9 @@
       "snapshotTimestamp": "20190722210814",
       "snapshotUrl": "https://web.archive.org/web/20190722210814id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Surajpur%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Surajpur_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 7239032,
+      "sha256": "a828313157171ef9c6b656d2cbc38dd511f6fdc46bafd04daedf4d1ab2ca696f",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/annex-4.pdf",
@@ -898,7 +1115,9 @@
       "snapshotTimestamp": "20190722210820",
       "snapshotUrl": "https://web.archive.org/web/20190722210820id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Annex-4.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Annex-4.pdf",
-      "status": "planned"
+      "sizeBytes": 286512,
+      "sha256": "9af476d84efb4cd2f5efee672bc17aeed73230c619aa36dde7dcc4b13ffa0e09",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/balrampur(1).pdf",
@@ -906,7 +1125,9 @@
       "snapshotTimestamp": "20190722210823",
       "snapshotUrl": "https://web.archive.org/web/20190722210823id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Balrampur(1).pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Balrampur_1_.pdf",
-      "status": "planned"
+      "sizeBytes": 3437027,
+      "sha256": "d2496a4d46d7ac9e16d1bf9e243757b8a4822ec706dba2004dafdd773ec4f644",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/annex-2%20(2).pdf",
@@ -914,7 +1135,9 @@
       "snapshotTimestamp": "20190722210901",
       "snapshotUrl": "https://web.archive.org/web/20190722210901id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Annex-2%20(2).pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Annex-2_2_.pdf",
-      "status": "planned"
+      "sizeBytes": 983606,
+      "sha256": "f006558439372eb0fcccc59d2347df7caddc924584bbbf00fbd97b61b1ec3772",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/pmfby%20notification%20annexure/narayanpur%20annexure-1.pdf",
@@ -922,7 +1145,9 @@
       "snapshotTimestamp": "20190722210908",
       "snapshotUrl": "https://web.archive.org/web/20190722210908id_/http://slbcchhattisgarh.com//download/pfb/PMFBY%20Notification%20Annexure/Narayanpur%20Annexure-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Narayanpur_Annexure-1.pdf",
-      "status": "planned"
+      "sizeBytes": 1696528,
+      "sha256": "054389404b15e37da88e35ee6e032c20ede063bddab5522627bce6c7e5007166",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/address_member_banks.pdf",
@@ -930,7 +1155,9 @@
       "snapshotTimestamp": "20191221211730",
       "snapshotUrl": "https://web.archive.org/web/20191221211730id_/http://slbcchhattisgarh.com:80/download/address_member_banks.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/address_member_banks.pdf",
-      "status": "planned"
+      "sizeBytes": 31479,
+      "sha256": "9dfbffbcff06babe5d2fa48e52b14455d4170e3fc52d1a91b97c262ca2576347",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/cg-election-poster-2018-1.pdf",
@@ -938,7 +1165,9 @@
       "snapshotTimestamp": "20191221211735",
       "snapshotUrl": "https://web.archive.org/web/20191221211735id_/http://slbcchhattisgarh.com:80/download/cg-election-poster-2018-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/cg-election-poster-2018-1.pdf",
-      "status": "planned"
+      "sizeBytes": 2748493,
+      "sha256": "1dc9255aad90a889e6bf664ec2e6a5570b57c5e2096c8955c8c5e8759286d168",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/cg-election-poster-2018.pdf",
@@ -946,7 +1175,9 @@
       "snapshotTimestamp": "20191221211741",
       "snapshotUrl": "https://web.archive.org/web/20191221211741id_/http://slbcchhattisgarh.com:80/download/cg-election-poster-2018.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/cg-election-poster-2018.pdf",
-      "status": "planned"
+      "sizeBytes": 3152806,
+      "sha256": "887aabd4570a74c4fa9bca47bb8bfc4c5c3348b9cc9a869e4b2be3ef44e1b65b",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/circular/drought%202017.pdf",
@@ -954,7 +1185,9 @@
       "snapshotTimestamp": "20191221211746",
       "snapshotUrl": "https://web.archive.org/web/20191221211746id_/http://slbcchhattisgarh.com:80/download/circular/Drought%202017.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/Drought_2017.pdf",
-      "status": "planned"
+      "sizeBytes": 692170,
+      "sha256": "06d6716b981c68ba0431baa97552ba09bce81ede0f5ba5698931fcf6884e9af0",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/circular/rbi%20drought%20master%20circular%202017.pdf",
@@ -962,7 +1195,9 @@
       "snapshotTimestamp": "20191221212159",
       "snapshotUrl": "https://web.archive.org/web/20191221212159id_/http://slbcchhattisgarh.com:80/download/circular/rbi%20drought%20master%20circular%202017.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/rbi_drought_master_circular_2017.pdf",
-      "status": "planned"
+      "sizeBytes": 139666,
+      "sha256": "47b9d332c3f444018396276dd9698f7339aa342c7c8c7fea6ad1adfca02514fc",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/slbc_calendar_2019.pdf",
@@ -970,7 +1205,9 @@
       "snapshotTimestamp": "20191221212214",
       "snapshotUrl": "https://web.archive.org/web/20191221212214id_/http://slbcchhattisgarh.com:80/download/meetings/slbc_calendar_2019.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/slbc_calendar_2019.pdf",
-      "status": "planned"
+      "sizeBytes": 14406,
+      "sha256": "aecf27da10cd2a3c306b0b2d38b432c31234058c2b294ce9f8c7403920499b1b",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pfb/pmfby%20kharif%202017%20notification%20no.%204211%20dt%2024.05.17.pdf",
@@ -978,7 +1215,9 @@
       "snapshotTimestamp": "20191221212220",
       "snapshotUrl": "https://web.archive.org/web/20191221212220id_/http://slbcchhattisgarh.com:80/download/pfb/PMFBY%20Kharif%202017%20notification%20no.%204211%20dt%2024.05.17.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/PMFBY_Kharif_2017_notification_no._4211_dt_24.05.17.pdf",
-      "status": "planned"
+      "sizeBytes": 5774932,
+      "sha256": "18413d5bf1c615ede50e9f346d2dd0756e8b65159248f2d199ffcdc9dee0e9f7",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pfb/pmfby%20notification%205163%20dt%2007-07-18.pdf",
@@ -986,7 +1225,9 @@
       "snapshotTimestamp": "20191221212225",
       "snapshotUrl": "https://web.archive.org/web/20191221212225id_/http://slbcchhattisgarh.com:80/download/pfb/PMFBY%20Notification%205163%20Dt%2007-07-18.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/PMFBY_Notification_5163_Dt_07-07-18.pdf",
-      "status": "planned"
+      "sizeBytes": 5451233,
+      "sha256": "b16e57d69bc4474f7c71976dddddea2915e3081df219b6d509ff0dd762c9098d",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pfb/pmfby%20notification%208645%20dt%2021.11.2017.pdf",
@@ -994,7 +1235,9 @@
       "snapshotTimestamp": "20191221212229",
       "snapshotUrl": "https://web.archive.org/web/20191221212229id_/http://slbcchhattisgarh.com:80/download/pfb/PMFBY%20Notification%208645%20dt%2021.11.2017.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/PMFBY_Notification_8645_dt_21.11.2017.pdf",
-      "status": "planned"
+      "sizeBytes": 5015233,
+      "sha256": "34a48c47a5c666696e0e6ca5a9048a07ddf6419e1e82155e7a800a0081e283d9",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pfb/pmfby%20notification%209717%20dt%2030-12-2017.pdf",
@@ -1002,7 +1245,9 @@
       "snapshotTimestamp": "20191221212235",
       "snapshotUrl": "https://web.archive.org/web/20191221212235id_/http://slbcchhattisgarh.com:80/download/pfb/PMFBY%20Notification%209717%20Dt%2030-12-2017.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/PMFBY_Notification_9717_Dt_30-12-2017.pdf",
-      "status": "planned"
+      "sizeBytes": 1693451,
+      "sha256": "9709c07010681c309ddfe22677740ed33528b331d669322907d92d58e59048fe",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/slbc_members_bank.pdf",
@@ -1010,7 +1255,9 @@
       "snapshotTimestamp": "20191221212239",
       "snapshotUrl": "https://web.archive.org/web/20191221212239id_/http://slbcchhattisgarh.com:80/download/slbc_members_bank.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/slbc_members_bank.pdf",
-      "status": "planned"
+      "sizeBytes": 498558,
+      "sha256": "f2da30b8b7699480d9810d3ab65a6035af3ac087ce7de2981e8eb0d47415643c",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/csp_list/list_csp_bank_of_baroda.pdf",
@@ -1018,7 +1265,9 @@
       "snapshotTimestamp": "20191221232442",
       "snapshotUrl": "https://web.archive.org/web/20191221232442id_/http://slbcchhattisgarh.com:80/download/pmjdy/csp_list/list_csp_bank_of_baroda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/list_csp_bank_of_baroda.pdf",
-      "status": "planned"
+      "sizeBytes": 110675,
+      "sha256": "d538e4de2382a72b9896a995d1f922a519df1340802006857798c7b8bbfb33d8",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/csp_list/list_csp_bank_of_india.pdf",
@@ -1026,7 +1275,9 @@
       "snapshotTimestamp": "20191221232450",
       "snapshotUrl": "https://web.archive.org/web/20191221232450id_/http://slbcchhattisgarh.com:80/download/pmjdy/csp_list/list_csp_bank_of_india.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/list_csp_bank_of_india.pdf",
-      "status": "planned"
+      "sizeBytes": 449381,
+      "sha256": "13297a51705474db176445adcb77555785416c3c26f3df6ff15d9a66c35d70a4",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/csp_list/list_csp_central_bank_of_india.pdf",
@@ -1034,7 +1285,9 @@
       "snapshotTimestamp": "20191221232455",
       "snapshotUrl": "https://web.archive.org/web/20191221232455id_/http://slbcchhattisgarh.com:80/download/pmjdy/csp_list/list_csp_central_bank_of_india.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/list_csp_central_bank_of_india.pdf",
-      "status": "planned"
+      "sizeBytes": 79379,
+      "sha256": "6fd82815c770ee8602c47972009aac6628367e0934f937b1425f77158fe9e8d9",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/csp_list/list_csp_chhattisgarh_rajya_gramin_bank.pdf",
@@ -1042,7 +1295,9 @@
       "snapshotTimestamp": "20191221232501",
       "snapshotUrl": "https://web.archive.org/web/20191221232501id_/http://slbcchhattisgarh.com:80/download/pmjdy/csp_list/list_csp_chhattisgarh_rajya_gramin_bank.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/list_csp_chhattisgarh_rajya_gramin_bank.pdf",
-      "status": "planned"
+      "sizeBytes": 2796082,
+      "sha256": "3596e950071ec09282ad4bea8f2d3cd1b9dc2a39a336492c0189fdf3b38bf1c0",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/csp_list/list_csp_corporation_bank.pdf",
@@ -1050,7 +1305,9 @@
       "snapshotTimestamp": "20191221232508",
       "snapshotUrl": "https://web.archive.org/web/20191221232508id_/http://slbcchhattisgarh.com:80/download/pmjdy/csp_list/list_csp_corporation_bank.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/list_csp_corporation_bank.pdf",
-      "status": "planned"
+      "sizeBytes": 38896,
+      "sha256": "7fd0cf98fc42d2fff718ea252f44116014b981877210fb7e05c451d8dc586769",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/csp_list/list_csp_indian_overseas_bank.pdf",
@@ -1058,7 +1315,9 @@
       "snapshotTimestamp": "20191221232514",
       "snapshotUrl": "https://web.archive.org/web/20191221232514id_/http://slbcchhattisgarh.com:80/download/pmjdy/csp_list/list_csp_indian_overseas_bank.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/list_csp_indian_overseas_bank.pdf",
-      "status": "planned"
+      "sizeBytes": 463452,
+      "sha256": "09259ee2c70cf6acc716630c3babfc7e1dab3a52c31248d0e7ecb370c60eb8ac",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/csp_list/list_csp_pnb.pdf",
@@ -1066,7 +1325,9 @@
       "snapshotTimestamp": "20191221232535",
       "snapshotUrl": "https://web.archive.org/web/20191221232535id_/http://slbcchhattisgarh.com:80/download/pmjdy/csp_list/list_csp_pnb.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/list_csp_pnb.pdf",
-      "status": "planned"
+      "sizeBytes": 83672,
+      "sha256": "c84113567d7ea2f31817d7df18558bda81ea56d22770b3728248511f79ea546b",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/csp_list/list_csp_sbi.pdf",
@@ -1074,7 +1335,9 @@
       "snapshotTimestamp": "20191221232546",
       "snapshotUrl": "https://web.archive.org/web/20191221232546id_/http://slbcchhattisgarh.com:80/download/pmjdy/csp_list/list_csp_sbi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/list_csp_sbi.pdf",
-      "status": "planned"
+      "sizeBytes": 106202,
+      "sha256": "db9f013ccf4c2e0fb4e04d838e8c5f5f2cd42b45171a48afa3a5cafd3e1e8bc3",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/csp_list/list_csp_syndicatebank.pdf",
@@ -1082,7 +1345,9 @@
       "snapshotTimestamp": "20191221233206",
       "snapshotUrl": "https://web.archive.org/web/20191221233206id_/http://slbcchhattisgarh.com:80/download/pmjdy/csp_list/list_csp_syndicatebank.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/list_csp_syndicatebank.pdf",
-      "status": "planned"
+      "sizeBytes": 82403,
+      "sha256": "74bf11d694c2762ed53f9494163a282d060808dc36ed6b8a1e888847e1dbd49b",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/csp_list/list_csp_axis.pdf",
@@ -1090,7 +1355,9 @@
       "snapshotTimestamp": "20191221233410",
       "snapshotUrl": "https://web.archive.org/web/20191221233410id_/http://slbcchhattisgarh.com:80/download/pmjdy/csp_list/list_csp_axis.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/list_csp_axis.pdf",
-      "status": "planned"
+      "sizeBytes": 471188,
+      "sha256": "3dd5141e1076c1c51e7a99c483075847c73091781856639433df4639d1303849",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/csp_list/list_csp_canara_bank.pdf",
@@ -1098,7 +1365,9 @@
       "snapshotTimestamp": "20191221233731",
       "snapshotUrl": "https://web.archive.org/web/20191221233731id_/http://slbcchhattisgarh.com:80/download/pmjdy/csp_list/list_csp_canara_bank.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/list_csp_canara_bank.pdf",
-      "status": "planned"
+      "sizeBytes": 90310,
+      "sha256": "3ed232ec5930eb36d5b09d2a64fd8d19c36f31eca3ca349c5ff8b420cf35852e",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/csp_list/list_csp_denabank.pdf",
@@ -1106,7 +1375,9 @@
       "snapshotTimestamp": "20191221233739",
       "snapshotUrl": "https://web.archive.org/web/20191221233739id_/http://slbcchhattisgarh.com:80/download/pmjdy/csp_list/list_csp_denabank.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/list_csp_denabank.pdf",
-      "status": "planned"
+      "sizeBytes": 84761,
+      "sha256": "f7c50240b7c906610969a1dca10c81b390915c422abcd03ea5bcad1c4460250a",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/csp_list/list_csp_icici.pdf",
@@ -1114,7 +1385,9 @@
       "snapshotTimestamp": "20191221233754",
       "snapshotUrl": "https://web.archive.org/web/20191221233754id_/http://slbcchhattisgarh.com:80/download/pmjdy/csp_list/list_csp_icici.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/list_csp_icici.pdf",
-      "status": "planned"
+      "sizeBytes": 43129,
+      "sha256": "d171f03cb187be83120131e6689bb79d86cc11dbd76663b4545ebf789744a79a",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/csp_list/list_csp_unionbank.pdf",
@@ -1122,7 +1395,9 @@
       "snapshotTimestamp": "20191221233836",
       "snapshotUrl": "https://web.archive.org/web/20191221233836id_/http://slbcchhattisgarh.com:80/download/pmjdy/csp_list/list_csp_unionbank.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2019/list_csp_unionbank.pdf",
-      "status": "planned"
+      "sizeBytes": 66330,
+      "sha256": "5417137c699ef4a639d20b98cf29c63beb3217dc4d191e34af06ef3a1b99706a",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/cd_ratio_dec_2018.pdf",
@@ -1130,7 +1405,9 @@
       "snapshotTimestamp": "20200125132729",
       "snapshotUrl": "https://web.archive.org/web/20200125132729id_/http://slbcchhattisgarh.com:80/download/cd_ratio_dec_2018.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2020/cd_ratio_dec_2018.pdf",
-      "status": "planned"
+      "sizeBytes": 8530,
+      "sha256": "507dc7b874c5dad6033420fcf342604fffbd28154b61a78bd7e28858a8ee6b64",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/mudra/mudra%20hindi%20shishu.pdf",
@@ -1138,7 +1415,9 @@
       "snapshotTimestamp": "20200125133311",
       "snapshotUrl": "https://web.archive.org/web/20200125133311id_/http://slbcchhattisgarh.com:80/download/mudra/MUDRA%20HINDI%20SHISHU.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2020/MUDRA_HINDI_SHISHU.pdf",
-      "status": "planned"
+      "sizeBytes": 125538,
+      "sha256": "555ce0dbf5dbbccda65c72f8ec444e21a10dcd7178679b71915e979114109c8e",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/mudra/mudra%20loan%20application%20form(1).pdf",
@@ -1146,7 +1425,9 @@
       "snapshotTimestamp": "20200125133355",
       "snapshotUrl": "https://web.archive.org/web/20200125133355id_/http://slbcchhattisgarh.com:80/download/mudra/MUDRA%20LOAN%20APPLICATION%20FORM(1).pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2020/MUDRA_LOAN_APPLICATION_FORM_1_.pdf",
-      "status": "planned"
+      "sizeBytes": 139518,
+      "sha256": "c5a1c60bf1ea5d2f7a2296549e81f3e1a37e1ff2b04ee71d0cbeeaf0a1a7d87c",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/slbc_calendar_2021.pdf",
@@ -1154,7 +1435,9 @@
       "snapshotTimestamp": "20220325100454",
       "snapshotUrl": "https://web.archive.org/web/20220325100454id_/http://slbcchhattisgarh.com/download/meetings/slbc_calendar_2021.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2022/slbc_calendar_2021.pdf",
-      "status": "planned"
+      "sizeBytes": 7414,
+      "sha256": "d8fea0e8ac661ff4271bcd6649b6c5dcca93fe2bc10497ea8c639c56c9220c5a",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/85/85th_minutes.pdf",
@@ -1162,7 +1445,10 @@
       "snapshotTimestamp": "20220625163502",
       "snapshotUrl": "https://web.archive.org/web/20220625163502id_/http://slbcchhattisgarh.com/download/meetings/85/85th_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2022/85th_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "3989cb5e1cbe538d31a3d54962c247912d09ee6b83b185d39bcd85e3d40afb8c",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/rbi-circular/rbi%20master%20circular%20kcc%20scheme%20for%20fisheries%20&%20animal%20husbandry.pdf",
@@ -1170,7 +1456,9 @@
       "snapshotTimestamp": "20220625170447",
       "snapshotUrl": "https://web.archive.org/web/20220625170447id_/http://slbcchhattisgarh.com/download/rbi-circular/RBI%20Master%20Circular%20KCC%20Scheme%20for%20Fisheries%20&%20Animal%20Husbandry.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2022/RBI_Master_Circular_KCC_Scheme_for_Fisheries_Animal_Husbandry.pdf",
-      "status": "planned"
+      "sizeBytes": 223117,
+      "sha256": "9d719533f8dbbe5cfb3a870543d13c200b972389ee5afee9ed8938b9a88ea500",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/81/79_80_81_minutes.pdf",
@@ -1178,7 +1466,10 @@
       "snapshotTimestamp": "20220625170814",
       "snapshotUrl": "https://web.archive.org/web/20220625170814id_/http://slbcchhattisgarh.com/download/meetings/81/79_80_81_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2022/79_80_81_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "3ba63b69ed4b45ce67696216a633a82f4e5cdb3eda35834f3691ee5c77069047",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/82/82nd-agenda.pdf",
@@ -1186,7 +1477,10 @@
       "snapshotTimestamp": "20220625171727",
       "snapshotUrl": "https://web.archive.org/web/20220625171727id_/http://slbcchhattisgarh.com/download/meetings/82/82nd-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2022/82nd-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "4305530fec309ca4f6dc476091db9461d9451451f9c9c08f86507defdefa60fd",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/81/81st-agenda.pdf",
@@ -1194,7 +1488,9 @@
       "snapshotTimestamp": "20220625174403",
       "snapshotUrl": "https://web.archive.org/web/20220625174403id_/http://slbcchhattisgarh.com/download/meetings/81/81st-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2022/81st-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1020678,
+      "sha256": "4f4157ff06dd987bd09f1ac867071edfad48006047c388be9be2824b79dd7ec3",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/79/79th-agenda.pdf",
@@ -1202,7 +1498,9 @@
       "snapshotTimestamp": "20220625175242",
       "snapshotUrl": "https://web.archive.org/web/20220625175242id_/http://slbcchhattisgarh.com/download/meetings/79/79th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2022/79th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 364905,
+      "sha256": "b7ed95d38ec8cb87567289f022b6b6899a365379e92dab4df1f99aae50690ceb",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/83/82_83_minutes.pdf",
@@ -1210,7 +1508,10 @@
       "snapshotTimestamp": "20220625175402",
       "snapshotUrl": "https://web.archive.org/web/20220625175402id_/http://slbcchhattisgarh.com/download/meetings/83/82_83_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2022/82_83_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "a987a438f5a1cf08569d5c3d4dd9f7529dc8a5d64bc85736a66a48f5f5fe44d8",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/rbi-circular/rbi%20circular%20on%20interest%20subvention%20for%20kcc%20to%20fisheries%20&%20animal%20husbandaries.pdf",
@@ -1218,7 +1519,9 @@
       "snapshotTimestamp": "20221209121338",
       "snapshotUrl": "https://web.archive.org/web/20221209121338id_/http://slbcchhattisgarh.com/download/rbi-circular/RBI%20Circular%20on%20Interest%20Subvention%20for%20KCC%20to%20Fisheries%20&%20Animal%20Husbandaries.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2022/RBI_Circular_on_Interest_Subvention_for_KCC_to_Fisheries_Animal_Husbandaries.pdf",
-      "status": "planned"
+      "sizeBytes": 327563,
+      "sha256": "5040416dfc44dd82a677f6a3811b79f8f1c9ac543433bb0bd8e7b814c87bb8b4",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/slbc_calendar_2022.pdf",
@@ -1226,7 +1529,9 @@
       "snapshotTimestamp": "20230104024856",
       "snapshotUrl": "https://web.archive.org/web/20230104024856id_/http://slbcchhattisgarh.com/download/meetings/slbc_calendar_2022.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/slbc_calendar_2022.pdf",
-      "status": "planned"
+      "sizeBytes": 64361,
+      "sha256": "9eb48cb101bac1b38be86a3084b8b8088f6008e97346bf5a9e8457120e5e6563",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/acp/acp%20target%202018-19-annexure%20i.pdf",
@@ -1234,7 +1539,9 @@
       "snapshotTimestamp": "20230104024857",
       "snapshotUrl": "https://web.archive.org/web/20230104024857id_/http://slbcchhattisgarh.com/download/acp/ACP%20TARGET%202018-19-Annexure%20I.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/ACP_TARGET_2018-19-Annexure_I.pdf",
-      "status": "planned"
+      "sizeBytes": 104621,
+      "sha256": "35a6b09dc00a1bcc411c4aceac351ed4d243836f2d9e99500b86708b2b9c1cf9",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/central-sponsers/english_svanidhi.pdf",
@@ -1242,7 +1549,9 @@
       "snapshotTimestamp": "20230104024858",
       "snapshotUrl": "https://web.archive.org/web/20230104024858id_/http://slbcchhattisgarh.com/download/central-sponsers/English_SVANidhi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/English_SVANidhi.pdf",
-      "status": "planned"
+      "sizeBytes": 4828943,
+      "sha256": "6265b34e64f8d88a2d3e5eb092fcb0ee32c34df95ab4bc321eab799198b379b6",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/acp_target_2016_17.pdf",
@@ -1250,7 +1559,9 @@
       "snapshotTimestamp": "20230104024859",
       "snapshotUrl": "https://web.archive.org/web/20230104024859id_/http://slbcchhattisgarh.com/download/acp_target_2016_17.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/acp_target_2016_17.pdf",
-      "status": "planned"
+      "sizeBytes": 404447,
+      "sha256": "cade904949da030766b0b0cd566bac6db9e5a1fd087e1d75a98a0420643abf66",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/lead_district_managers.pdf",
@@ -1258,7 +1569,9 @@
       "snapshotTimestamp": "20230104024905",
       "snapshotUrl": "https://web.archive.org/web/20230104024905id_/http://slbcchhattisgarh.com/download/lead_district_managers.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/lead_district_managers.pdf",
-      "status": "planned"
+      "sizeBytes": 69125,
+      "sha256": "9279863ee78026768b4da12dfb432eaa5e3881fa5a47c6eed5bffa95984074be",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/central-sponsers/pm%20swanidhi.pdf",
@@ -1266,7 +1579,9 @@
       "snapshotTimestamp": "20230104024909",
       "snapshotUrl": "https://web.archive.org/web/20230104024909id_/http://slbcchhattisgarh.com/download/central-sponsers/PM%20SWANIDHI.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/PM_SWANIDHI.pdf",
-      "status": "planned"
+      "sizeBytes": 7844743,
+      "sha256": "dd6c74214ea2888abf9db64621f4a64d6deb82f0daee6901c755c44f15570900",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/education/mmusrbuy%20for%20bank%20ppt.pdf",
@@ -1274,7 +1589,9 @@
       "snapshotTimestamp": "20230104024910",
       "snapshotUrl": "https://web.archive.org/web/20230104024910id_/http://slbcchhattisgarh.com/download/education/mmusrbuy%20for%20bank%20ppt.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/mmusrbuy_for_bank_ppt.pdf",
-      "status": "planned"
+      "sizeBytes": 330261,
+      "sha256": "8f3995c9f119ac413528dcbe50aeca7397990aee404d3b4b3a8c30ff06b3fa00",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/acp/chhattisgarh_plan_2016_17.pdf",
@@ -1282,7 +1599,9 @@
       "snapshotTimestamp": "20230104024913",
       "snapshotUrl": "https://web.archive.org/web/20230104024913id_/http://slbcchhattisgarh.com/download/acp/chhattisgarh_plan_2016_17.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/chhattisgarh_plan_2016_17.pdf",
-      "status": "planned"
+      "sizeBytes": 487728,
+      "sha256": "09d6bf86036617f38613d0b2bbf2dc3b552c607468a3f0c54994b75af7b2be42",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/80/80th-agenda.pdf",
@@ -1290,7 +1609,9 @@
       "snapshotTimestamp": "20230104024938",
       "snapshotUrl": "https://web.archive.org/web/20230104024938id_/http://slbcchhattisgarh.com//download/meetings/80/80th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/80th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 995797,
+      "sha256": "a874cedcb910090f740315456aff4270d9cd3b9d90334c1e0399aca907646bf6",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/86/86th_minutes.pdf",
@@ -1298,7 +1619,9 @@
       "snapshotTimestamp": "20230104024938",
       "snapshotUrl": "https://web.archive.org/web/20230104024938id_/http://slbcchhattisgarh.com//download/meetings/86/86th_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/86th_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 283869,
+      "sha256": "80fa73971a8b9ec1bed5e3e5bc3c9f88d3cc6089cffa38d9423693d0dae8d6ea",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/85/85th_minutes.pdf",
@@ -1306,7 +1629,9 @@
       "snapshotTimestamp": "20230104024944",
       "snapshotUrl": "https://web.archive.org/web/20230104024944id_/http://slbcchhattisgarh.com//download/meetings/85/85th_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/85th_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 5555136,
+      "sha256": "dffd1cda0bd3065d399aeaa6edfc6f1e70cb0ab0282a247219857341303f31ca",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/81/81st-agenda.pdf",
@@ -1314,7 +1639,9 @@
       "snapshotTimestamp": "20230104024946",
       "snapshotUrl": "https://web.archive.org/web/20230104024946id_/http://slbcchhattisgarh.com//download/meetings/81/81st-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/81st-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1020678,
+      "sha256": "4f4157ff06dd987bd09f1ac867071edfad48006047c388be9be2824b79dd7ec3",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/83/83rd-agenda.pdf",
@@ -1322,7 +1649,9 @@
       "snapshotTimestamp": "20230104024948",
       "snapshotUrl": "https://web.archive.org/web/20230104024948id_/http://slbcchhattisgarh.com//download/meetings/83/83rd-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/83rd-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1337284,
+      "sha256": "82e786d6aab2494bedcfaa9d5da4af84601e5aad03d77038dc4a04b6b59849b3",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/79/79th-agenda.pdf",
@@ -1330,7 +1659,9 @@
       "snapshotTimestamp": "20230104024949",
       "snapshotUrl": "https://web.archive.org/web/20230104024949id_/http://slbcchhattisgarh.com//download/meetings/79/79th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/79th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 364905,
+      "sha256": "b7ed95d38ec8cb87567289f022b6b6899a365379e92dab4df1f99aae50690ceb",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/87/87th_minutes.pdf",
@@ -1338,7 +1669,9 @@
       "snapshotTimestamp": "20230104024957",
       "snapshotUrl": "https://web.archive.org/web/20230104024957id_/http://slbcchhattisgarh.com//download/meetings/87/87th_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/87th_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 79665,
+      "sha256": "66bdcfab07ef13b0a33d9c45c273d511ce6bf239aa83e395cdddc2fb500ca0eb",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/87/87th-agenda.pdf",
@@ -1346,7 +1679,9 @@
       "snapshotTimestamp": "20230104025000",
       "snapshotUrl": "https://web.archive.org/web/20230104025000id_/http://slbcchhattisgarh.com//download/meetings/87/87th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/87th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1178114,
+      "sha256": "b78203d9b9bc91bc9c16b7c6803f8ccbc5f548414c0210fe0809d2bfca675de3",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/circular-doubling%20of%20farmers%20income%20by%202022%20%e2%80%93%20seminar%20on.pdf",
@@ -1354,7 +1689,9 @@
       "snapshotTimestamp": "20230104025003",
       "snapshotUrl": "https://web.archive.org/web/20230104025003id_/http://slbcchhattisgarh.com//download/Circular-Doubling%20of%20Farmers%20Income%20by%202022%20%E2%80%93%20Seminar%20on.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/Circular-Doubling_of_Farmers_Income_by_2022_–_Seminar_on.pdf",
-      "status": "planned"
+      "sizeBytes": 554318,
+      "sha256": "c9b66ca064b6865c294bfeeb086c14f15c2b7a72c8a68081bcee13d2c032ea42",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/81/79_80_81_minutes.pdf",
@@ -1362,7 +1699,9 @@
       "snapshotTimestamp": "20230104025017",
       "snapshotUrl": "https://web.archive.org/web/20230104025017id_/http://slbcchhattisgarh.com//download/meetings/81/79_80_81_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/79_80_81_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 8434407,
+      "sha256": "33799e88d05163514f96d1086d02952cd7cce7999a61018ff1b5b8bc953cdc90",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/83/82_83_minutes.pdf",
@@ -1370,7 +1709,9 @@
       "snapshotTimestamp": "20230104025017",
       "snapshotUrl": "https://web.archive.org/web/20230104025017id_/http://slbcchhattisgarh.com//download/meetings/83/82_83_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/82_83_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 5156993,
+      "sha256": "fa3173b543e717e62fc08633e9688af83c9d7ccc5f7f14d653f5fda170a16e94",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/82/82nd-agenda.pdf",
@@ -1378,7 +1719,9 @@
       "snapshotTimestamp": "20230104025020",
       "snapshotUrl": "https://web.archive.org/web/20230104025020id_/http://slbcchhattisgarh.com//download/meetings/82/82nd-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/82nd-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1213309,
+      "sha256": "920ef86075d08b5aae3b2328633ebb6ae4cfe474f703fde52cf359081a8c8846",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/sof/sof-2021-22.pdf",
@@ -1386,7 +1729,9 @@
       "snapshotTimestamp": "20230104025106",
       "snapshotUrl": "https://web.archive.org/web/20230104025106id_/http://slbcchhattisgarh.com//download/sof/sof-2021-22.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/sof-2021-22.pdf",
-      "status": "planned"
+      "sizeBytes": 4256163,
+      "sha256": "0db884071dd439e314e4aee0c9481d7769ad5038bd03a271a14f6fdda627b133",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/85/85th-agenda.pdf",
@@ -1394,7 +1739,9 @@
       "snapshotTimestamp": "20230104025138",
       "snapshotUrl": "https://web.archive.org/web/20230104025138id_/http://slbcchhattisgarh.com//download/meetings/85/85th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/85th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1271726,
+      "sha256": "c2ffffb72cd37d1882e273cb9331c7a38d90f4554b32c82b2d7c9ae7f288f183",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/84/84th-agenda.pdf",
@@ -1402,7 +1749,9 @@
       "snapshotTimestamp": "20230104025219",
       "snapshotUrl": "https://web.archive.org/web/20230104025219id_/http://slbcchhattisgarh.com//download/meetings/84/84th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/84th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1261441,
+      "sha256": "f822eb143e4d66b1a6f8d3b1ef607e5071f8fe156aa37aa7e41f2f69f1f9eff5",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/86/86th-agenda.pdf",
@@ -1410,7 +1759,9 @@
       "snapshotTimestamp": "20230104025243",
       "snapshotUrl": "https://web.archive.org/web/20230104025243id_/http://slbcchhattisgarh.com//download/meetings/86/86th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/86th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1223832,
+      "sha256": "d4398ee48c1e92615b2d9037846113d5986eb1228ab5b8a1e9c5f7064e9a4a14",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/rbi-circular/rbi%20master%20circular%20kcc%20scheme%20for%20fisheries%20&%20animal%20husbandry.pdf",
@@ -1418,7 +1769,9 @@
       "snapshotTimestamp": "20230104025450",
       "snapshotUrl": "https://web.archive.org/web/20230104025450id_/http://slbcchhattisgarh.com//download/rbi-circular/RBI%20Master%20Circular%20KCC%20Scheme%20for%20Fisheries%20&%20Animal%20Husbandry.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/RBI_Master_Circular_KCC_Scheme_for_Fisheries_Animal_Husbandry.pdf",
-      "status": "planned"
+      "sizeBytes": 223117,
+      "sha256": "9d719533f8dbbe5cfb3a870543d13c200b972389ee5afee9ed8938b9a88ea500",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/71/71st-minutes.pdf",
@@ -1426,7 +1779,10 @@
       "snapshotTimestamp": "20230325102638",
       "snapshotUrl": "https://web.archive.org/web/20230325102638id_/http://slbcchhattisgarh.com/download/meetings/71/71st-minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/71st-minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "b3cdf408841251b30d7a5fbd8e114840d36c08ec890bd83537ff4e4d7cf2b29f",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/76/76th-agenda.pdf",
@@ -1434,7 +1790,9 @@
       "snapshotTimestamp": "20230325105340",
       "snapshotUrl": "https://web.archive.org/web/20230325105340id_/http://slbcchhattisgarh.com/download/meetings/76/76th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/76th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 619116,
+      "sha256": "80fc17d14cbaed315c62b09d94d6ff83380137b5bc5c968d42b12463946d11c5",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/50/50th-agenda.pdf",
@@ -1442,7 +1800,9 @@
       "snapshotTimestamp": "20230325112918",
       "snapshotUrl": "https://web.archive.org/web/20230325112918id_/http://slbcchhattisgarh.com/download/meetings/50/50th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/50th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 928961,
+      "sha256": "39278141114c167953542819848f6bd4f3b2cfa375977374748797472bf875f5",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/89/89th_minutes.pdf",
@@ -1450,7 +1810,9 @@
       "snapshotTimestamp": "20231208120322",
       "snapshotUrl": "https://web.archive.org/web/20231208120322id_/http://slbcchhattisgarh.com/download/meetings/89/89th_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2023/89th_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 416280,
+      "sha256": "1ed99137ba8f4c7c2790798acaf8cb73d976cf0a20be3f40acb6299b729fdd0b",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/91/91st-minutes.pdf",
@@ -1458,7 +1820,9 @@
       "snapshotTimestamp": "20240216155837",
       "snapshotUrl": "https://web.archive.org/web/20240216155837id_/http://slbcchhattisgarh.com/download/meetings/91/91st-minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/91st-minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 327707,
+      "sha256": "9c7e36dd8b67dda8659715c86d8d23da1dc6cc96ef5120a6ca3a80095e333eeb",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/88/88th_minutes.pdf",
@@ -1466,7 +1830,9 @@
       "snapshotTimestamp": "20240218140840",
       "snapshotUrl": "https://web.archive.org/web/20240218140840id_/http://slbcchhattisgarh.com/download/meetings/88/88th_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/88th_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 109231,
+      "sha256": "93911000594f6a70beca0e8d1192caad5ab83a50710cf2340646d4b40d63a1a2",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/91/91st-agenda.pdf",
@@ -1474,7 +1840,9 @@
       "snapshotTimestamp": "20240221144335",
       "snapshotUrl": "https://web.archive.org/web/20240221144335id_/http://slbcchhattisgarh.com/download/meetings/91/91st-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/91st-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1090869,
+      "sha256": "57b4865760518d9a32025375297332c3270edc1649bfa769d59c33756b7fef0c",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/90/90th-agenda.pdf",
@@ -1482,7 +1850,9 @@
       "snapshotTimestamp": "20240227204355",
       "snapshotUrl": "https://web.archive.org/web/20240227204355id_/http://slbcchhattisgarh.com/download/meetings/90/90th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/90th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1132273,
+      "sha256": "8396cd02537b8a47d7e43fe07c4c7bb2dbc8a84487f4814db1a60f7c99ee31c2",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/rbi-circular/flc-3.pdf",
@@ -1490,7 +1860,10 @@
       "snapshotTimestamp": "20240304003344",
       "snapshotUrl": "https://web.archive.org/web/20240304003344id_/http://slbcchhattisgarh.com/download/rbi-circular/flc-3.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/flc-3.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "c9c6856f117a90ac22766f81d3b13b499b64c4c17caf3e741e32380ba360b216",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/fame_hindi.pdf",
@@ -1498,7 +1871,10 @@
       "snapshotTimestamp": "20240304014734",
       "snapshotUrl": "https://web.archive.org/web/20240304014734id_/http://slbcchhattisgarh.com/download/fame_hindi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/fame_hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "a3d9b8d7865c97e198025c9112b794a5aa8391666d6e40a134e907578f42364d",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/rbi-circular/flc-1.pdf",
@@ -1506,7 +1882,10 @@
       "snapshotTimestamp": "20240304022827",
       "snapshotUrl": "https://web.archive.org/web/20240304022827id_/http://slbcchhattisgarh.com/download/rbi-circular/flc-1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/flc-1.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "7ed2f1335a678258e2b7b46930e84080d048b2adaa5e2c6d45afc249a67ac54b",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/83/83rd-agenda.pdf",
@@ -1514,7 +1893,10 @@
       "snapshotTimestamp": "20240304023617",
       "snapshotUrl": "https://web.archive.org/web/20240304023617id_/http://slbcchhattisgarh.com/download/meetings/83/83rd-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/83rd-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "3a8cce255bd55faaab4b93f20d30680ffe6a1a20261cf161384eff16223a84e5",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/rbi-circular/flc-2.pdf",
@@ -1522,7 +1904,10 @@
       "snapshotTimestamp": "20240304025055",
       "snapshotUrl": "https://web.archive.org/web/20240304025055id_/http://slbcchhattisgarh.com/download/rbi-circular/flc-2.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/flc-2.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "5a12ae0a605465aea5ce6456c1a0477f340d5a44f6a366c1effd977c49889961",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/89/89th-agenda.pdf",
@@ -1530,7 +1915,9 @@
       "snapshotTimestamp": "20240329133530",
       "snapshotUrl": "https://web.archive.org/web/20240329133530id_/http://slbcchhattisgarh.com/download/meetings/89/89th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/89th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 207160,
+      "sha256": "15053218d2d59c77e5b59238f426d3e30998445fa9b55a6d779cebd125dd2c18",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/90/90th_minutes.pdf",
@@ -1538,7 +1925,9 @@
       "snapshotTimestamp": "20240330224214",
       "snapshotUrl": "https://web.archive.org/web/20240330224214id_/http://slbcchhattisgarh.com/download/meetings/90/90th_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/90th_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 518717,
+      "sha256": "11325af5f1faa100c0abfbb58f9dd6748909277323fd7600be7f472280c066cb",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/87/87th-agenda.pdf",
@@ -1546,7 +1935,9 @@
       "snapshotTimestamp": "20240405203305",
       "snapshotUrl": "https://web.archive.org/web/20240405203305id_/http://slbcchhattisgarh.com/download/meetings/87/87th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/87th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1178114,
+      "sha256": "b78203d9b9bc91bc9c16b7c6803f8ccbc5f548414c0210fe0809d2bfca675de3",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/mudra/application-form-for-pmmy.pdf",
@@ -1554,7 +1945,9 @@
       "snapshotTimestamp": "20240423123522",
       "snapshotUrl": "https://web.archive.org/web/20240423123522id_/http://slbcchhattisgarh.com/download/mudra/Application-Form-for-pmmy.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/Application-Form-for-pmmy.pdf",
-      "status": "planned"
+      "sizeBytes": 790584,
+      "sha256": "dc3b9ea7ac3877c55a1a45d482348340bb1349ca94f0bb423099595d6b82d77a",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/sof/scale-of-finance-2024-25-rcs-and-other-copy.pdf",
@@ -1562,7 +1955,9 @@
       "snapshotTimestamp": "20240517190937",
       "snapshotUrl": "https://web.archive.org/web/20240517190937id_/http://slbcchhattisgarh.com/download/sof/scale-of-finance-2024-25-rcs-and-other-copy.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/scale-of-finance-2024-25-rcs-and-other-copy.pdf",
-      "status": "planned"
+      "sizeBytes": 5173787,
+      "sha256": "80a60db58506fee7fe09d1de27284c68f531144d7ced609dac4530335156f15f",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/csml-bank-offer-12-03-2024-final.pdf",
@@ -1570,7 +1965,9 @@
       "snapshotTimestamp": "20240517223659",
       "snapshotUrl": "https://web.archive.org/web/20240517223659id_/http://slbcchhattisgarh.com/download/csml-bank-offer-12-03-2024-final.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/csml-bank-offer-12-03-2024-final.pdf",
-      "status": "planned"
+      "sizeBytes": 417440,
+      "sha256": "c5f995a7b099c91041f15a1060a482f2b07ab7cf1ec1f4da3b40519ebfb482da",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/74/73-74-minutes.pdf",
@@ -1578,7 +1975,9 @@
       "snapshotTimestamp": "20240607020432",
       "snapshotUrl": "https://web.archive.org/web/20240607020432id_/http://slbcchhattisgarh.com//download/meetings/74/73-74-minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/73-74-minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 1352124,
+      "sha256": "04ebba86b345e815d3c6e64eaca95bdd811d83b6fb6d5d7b63ed5340b173b260",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/74/74th-agenda.pdf",
@@ -1586,7 +1985,9 @@
       "snapshotTimestamp": "20240607020854",
       "snapshotUrl": "https://web.archive.org/web/20240607020854id_/http://slbcchhattisgarh.com//download/meetings/74/74th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/74th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 665205,
+      "sha256": "724d182e01c67e81afe9529bc8934ac6f9e7d47b068877f2f9d9209fd3f07759",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/54/54th-agenda.pdf",
@@ -1594,7 +1995,9 @@
       "snapshotTimestamp": "20240607020926",
       "snapshotUrl": "https://web.archive.org/web/20240607020926id_/http://slbcchhattisgarh.com//download/meetings/54/54th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/54th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 243875,
+      "sha256": "6e4d81f25e197a4e6b4b12bdebe55499a8931127691a78db54205e2a39df2657",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/final_pmsby_consent_form_english_only_sbi.pdf",
@@ -1602,7 +2005,9 @@
       "snapshotTimestamp": "20240607022127",
       "snapshotUrl": "https://web.archive.org/web/20240607022127id_/http://slbcchhattisgarh.com/download/pmjdy/final_pmsby_consent_form_english_only_SBI.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/final_pmsby_consent_form_english_only_SBI.pdf",
-      "status": "planned"
+      "sizeBytes": 154567,
+      "sha256": "f65b8ea403fe695f417203a35286c0239b64d024b277c11c6f363aa56b7e5c59",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/apy_subscriber_registration_form_hindi.pdf",
@@ -1610,7 +2015,9 @@
       "snapshotTimestamp": "20240607023106",
       "snapshotUrl": "https://web.archive.org/web/20240607023106id_/http://slbcchhattisgarh.com/download/pmjdy/APY_subscriber_registration_form_hindi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/APY_subscriber_registration_form_hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 274735,
+      "sha256": "bb005c64d0ca444598232346694a96bd9f48c08bc5b4af75056d59390d216fd3",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/banking_network/rbi-population-banking-outlet-list.pdf",
@@ -1618,7 +2025,9 @@
       "snapshotTimestamp": "20240607023338",
       "snapshotUrl": "https://web.archive.org/web/20240607023338id_/http://slbcchhattisgarh.com/download/banking_network/rbi-population-banking-outlet-list.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/rbi-population-banking-outlet-list.pdf",
-      "status": "planned"
+      "sizeBytes": 323859,
+      "sha256": "cabd0fa19c9a932d5dd9f2d09802cc9c61607e7fe52bd427a193ed329ef32bc1",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/62/62nd-agenda.pdf",
@@ -1626,7 +2035,9 @@
       "snapshotTimestamp": "20240607024748",
       "snapshotUrl": "https://web.archive.org/web/20240607024748id_/http://slbcchhattisgarh.com//download/meetings/62/62nd-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/62nd-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 563435,
+      "sha256": "aeae9d37c7dd55ca6aa0b05c57f689a73eb576aa8cd9b37aceda0e387ad81ec9",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/apy_scheme_hindi.pdf",
@@ -1634,7 +2045,9 @@
       "snapshotTimestamp": "20240607025654",
       "snapshotUrl": "https://web.archive.org/web/20240607025654id_/http://slbcchhattisgarh.com/download/pmjdy/APY_scheme_hindi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/APY_scheme_hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 170631,
+      "sha256": "a9001ea578090d96f74ce6a84141212c2166c90899c3b37493e04f34c02bd9e1",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/66/output_table_1.pdf",
@@ -1642,7 +2055,9 @@
       "snapshotTimestamp": "20240607030247",
       "snapshotUrl": "https://web.archive.org/web/20240607030247id_/http://slbcchhattisgarh.com//download/meetings/66/output_table_1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/output_table_1.pdf",
-      "status": "planned"
+      "sizeBytes": 158561,
+      "sha256": "a3a91c69a481491f0745bbffd3a750a03145556b69b1d68955e9991b66a916d0",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/50/50th-agenda.pdf",
@@ -1650,7 +2065,9 @@
       "snapshotTimestamp": "20240607030830",
       "snapshotUrl": "https://web.archive.org/web/20240607030830id_/http://slbcchhattisgarh.com//download/meetings/50/50th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/50th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 928961,
+      "sha256": "39278141114c167953542819848f6bd4f3b2cfa375977374748797472bf875f5",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/86/86th_minutes.pdf",
@@ -1658,7 +2075,9 @@
       "snapshotTimestamp": "20240607031149",
       "snapshotUrl": "https://web.archive.org/web/20240607031149id_/http://slbcchhattisgarh.com/download/meetings/86/86th_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/86th_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 283869,
+      "sha256": "80fa73971a8b9ec1bed5e3e5bc3c9f88d3cc6089cffa38d9423693d0dae8d6ea",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/72/72nd-minutes.pdf",
@@ -1666,7 +2085,9 @@
       "snapshotTimestamp": "20240607032156",
       "snapshotUrl": "https://web.archive.org/web/20240607032156id_/http://slbcchhattisgarh.com//download/meetings/72/72nd-minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/72nd-minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 1354901,
+      "sha256": "22ed5fec37bae3652222e7f086f7885706f13ac9e6dcf956bb1a1066e360aa98",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/sof/scale_of_finance_2018.pdf",
@@ -1674,7 +2095,9 @@
       "snapshotTimestamp": "20240607033335",
       "snapshotUrl": "https://web.archive.org/web/20240607033335id_/http://slbcchhattisgarh.com/download/sof/scale_of_finance_2018.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/scale_of_finance_2018.pdf",
-      "status": "planned"
+      "sizeBytes": 125673,
+      "sha256": "8120ca60fb23f290b50e7f37c2150da0581564b4a9b8c537c0aad8536342223f",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/70/70th-minutes.pdf",
@@ -1682,7 +2105,9 @@
       "snapshotTimestamp": "20240607034627",
       "snapshotUrl": "https://web.archive.org/web/20240607034627id_/http://slbcchhattisgarh.com//download/meetings/70/70th-minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/70th-minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 11687236,
+      "sha256": "a57dd062749f8ff23049edc4b9e1d8bdeb4902017437b23209bb975795af7d28",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/resti/rseti-mpr-june-2022.pdf",
@@ -1690,7 +2115,9 @@
       "snapshotTimestamp": "20240607035851",
       "snapshotUrl": "https://web.archive.org/web/20240607035851id_/http://slbcchhattisgarh.com/download/resti/rseti-mpr-june-2022.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/rseti-mpr-june-2022.pdf",
-      "status": "planned"
+      "sizeBytes": 13376,
+      "sha256": "a0035f52c62fc0ff8748889a390dbba661d93ab0dd7dfbc78c9bf0aef1089c79",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/resti/rseti-fy-20-21-sep-21.pdf",
@@ -1698,7 +2125,9 @@
       "snapshotTimestamp": "20240607035904",
       "snapshotUrl": "https://web.archive.org/web/20240607035904id_/http://slbcchhattisgarh.com/download/resti/rseti-FY-20-21-sep-21.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/rseti-FY-20-21-sep-21.pdf",
-      "status": "planned"
+      "sizeBytes": 60676,
+      "sha256": "fd7219ada29f93cfa77b3ba7b7cd5a5bc7ca206262f661e919a5122d0d605f72",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/pfb/07082019184211.pdf",
@@ -1706,7 +2135,9 @@
       "snapshotTimestamp": "20240607042642",
       "snapshotUrl": "https://web.archive.org/web/20240607042642id_/http://slbcchhattisgarh.com//download/pfb/07082019184211.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/07082019184211.pdf",
-      "status": "planned"
+      "sizeBytes": 4624203,
+      "sha256": "662d7b0c2c27f81aefd4014829cea50a45a6877eaf3af234dc5672fd5887abee",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/apy_brochure_hindi.pdf",
@@ -1714,7 +2145,9 @@
       "snapshotTimestamp": "20240607042717",
       "snapshotUrl": "https://web.archive.org/web/20240607042717id_/http://slbcchhattisgarh.com/download/pmjdy/APY_Brochure_Hindi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/APY_Brochure_Hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 86650,
+      "sha256": "fc981b4f9d19d5d5d8365b91c9c3fdf29a804f4c4f4b07de651a500a8a014005",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/78/78th-ppt.pdf",
@@ -1722,7 +2155,9 @@
       "snapshotTimestamp": "20240607043711",
       "snapshotUrl": "https://web.archive.org/web/20240607043711id_/http://slbcchhattisgarh.com//download/meetings/78/78th-ppt.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/78th-ppt.pdf",
-      "status": "planned"
+      "sizeBytes": 948667,
+      "sha256": "1d1480eb1e2d2b0d569a2c55a82b5a1a4361978b147244d9b16d27ae27caf754",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/resti/resti_report.pdf",
@@ -1730,7 +2165,9 @@
       "snapshotTimestamp": "20240607044610",
       "snapshotUrl": "https://web.archive.org/web/20240607044610id_/http://slbcchhattisgarh.com/download/resti/resti_report.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/resti_report.pdf",
-      "status": "planned"
+      "sizeBytes": 89104,
+      "sha256": "b22c5c37c895e2167132b4f4ae18e9fe59d5b2283bb1d6b5f2a7c387752f3293",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/list_of_nodal_officers_lic.pdf",
@@ -1738,7 +2175,9 @@
       "snapshotTimestamp": "20240607051358",
       "snapshotUrl": "https://web.archive.org/web/20240607051358id_/http://slbcchhattisgarh.com/download/pmjdy/list_of_nodal_officers_LIC.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/list_of_nodal_officers_LIC.pdf",
-      "status": "planned"
+      "sizeBytes": 84111,
+      "sha256": "c84987f882dfe4fa60289ee908f3f0644047932f37ff30d0257b268c09c838ad",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/final_claim_form_pmsby_hindi.pdf",
@@ -1746,7 +2185,9 @@
       "snapshotTimestamp": "20240607053800",
       "snapshotUrl": "https://web.archive.org/web/20240607053800id_/http://slbcchhattisgarh.com/download/pmjdy/final_claim_form_PMSBY_hindi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/final_claim_form_PMSBY_hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 351540,
+      "sha256": "c0469f9e19355fdf7e0eb4bfe99c44a2f75d3b63c6a2772e4b0e4c8c24dbdfda",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/pmsby_consent_form_chhattisgarhi.pdf",
@@ -1754,7 +2195,9 @@
       "snapshotTimestamp": "20240607053823",
       "snapshotUrl": "https://web.archive.org/web/20240607053823id_/http://slbcchhattisgarh.com/download/pmjdy/PMSBY_consent_form_chhattisgarhi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/PMSBY_consent_form_chhattisgarhi.pdf",
-      "status": "planned"
+      "sizeBytes": 235242,
+      "sha256": "b1195277bb7742a99435ab43bdb84de6d2d81e2dc30c55e5f5ea258a753b825a",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/62/62_slbc_minutes.pdf",
@@ -1762,7 +2205,9 @@
       "snapshotTimestamp": "20240607054918",
       "snapshotUrl": "https://web.archive.org/web/20240607054918id_/http://slbcchhattisgarh.com//download/meetings/62/62_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/62_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 88054,
+      "sha256": "bc85108862cc81f28f4c1c708927607e833904090cd823833b1ccbad91c0fb7c",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/76/76th-agenda.pdf",
@@ -1770,7 +2215,9 @@
       "snapshotTimestamp": "20240607061719",
       "snapshotUrl": "https://web.archive.org/web/20240607061719id_/http://slbcchhattisgarh.com//download/meetings/76/76th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/76th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 619116,
+      "sha256": "80fc17d14cbaed315c62b09d94d6ff83380137b5bc5c968d42b12463946d11c5",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/71/71st-agenda.pdf",
@@ -1778,7 +2225,9 @@
       "snapshotTimestamp": "20240607070611",
       "snapshotUrl": "https://web.archive.org/web/20240607070611id_/http://slbcchhattisgarh.com//download/meetings/71/71st-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/71st-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1280275,
+      "sha256": "19a4185a3ee7b584f3e0d64d00453f73c2496467c177798992f6af74f5a571d3",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/central-sponsers/pmegp.pdf",
@@ -1786,7 +2235,9 @@
       "snapshotTimestamp": "20240607082428",
       "snapshotUrl": "https://web.archive.org/web/20240607082428id_/http://slbcchhattisgarh.com/download/central-sponsers/PMEGP.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/PMEGP.pdf",
-      "status": "planned"
+      "sizeBytes": 145390,
+      "sha256": "3d43613c9b5c7c3e1e188a951ff7a110d61b1cb05e56cafdb3b7a4b5d8e97bc0",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/banking_network/unbanked_villages/proposed-new-branches-demand-25-07-2022.pdf",
@@ -1794,7 +2245,9 @@
       "snapshotTimestamp": "20240607084112",
       "snapshotUrl": "https://web.archive.org/web/20240607084112id_/http://slbcchhattisgarh.com/download/banking_network/unbanked_villages/proposed-new-branches-demand-25-07-2022.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/proposed-new-branches-demand-25-07-2022.pdf",
-      "status": "planned"
+      "sizeBytes": 116545,
+      "sha256": "7a259ea4ab6db713644a2e18e34034ca663186feb3c4a6b999f62a67e68484c2",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/72/72nd-agenda.pdf",
@@ -1802,7 +2255,9 @@
       "snapshotTimestamp": "20240607085723",
       "snapshotUrl": "https://web.archive.org/web/20240607085723id_/http://slbcchhattisgarh.com//download/meetings/72/72nd-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/72nd-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1154320,
+      "sha256": "ae9f422f90b8d0753a9a2b32951725356faa296f05c4de9951d899a4b0b64f9d",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/rbi-circular/rbi%20cir,27.11.09%20reg.coverage%20of%20unbanked%20villages%20with%20more%20than%202000%20population.pdf",
@@ -1810,7 +2265,9 @@
       "snapshotTimestamp": "20240607101851",
       "snapshotUrl": "https://web.archive.org/web/20240607101851id_/http://slbcchhattisgarh.com/download/rbi-circular/RBI%20Cir,27.11.09%20reg.coverage%20of%20unbanked%20villages%20with%20more%20than%202000%20population.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/RBI_Cir_27.11.09_reg.coverage_of_unbanked_villages_with_more_than_2000_population.pdf",
-      "status": "planned"
+      "sizeBytes": 70381,
+      "sha256": "580f895543a9c50468eb3a8ce99b1c73de2d2a0c68ba3281dd2ed1c94f71bdb2",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/66/66th-agenda.pdf",
@@ -1818,7 +2275,9 @@
       "snapshotTimestamp": "20240607102624",
       "snapshotUrl": "https://web.archive.org/web/20240607102624id_/http://slbcchhattisgarh.com//download/meetings/66/66th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/66th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1372418,
+      "sha256": "70772e5c45e662fc40e70394ad99558e647669fe9fef51198bdbfda83a14cff9",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/final_rules_pmsby.pdf",
@@ -1826,7 +2285,9 @@
       "snapshotTimestamp": "20240607105651",
       "snapshotUrl": "https://web.archive.org/web/20240607105651id_/http://slbcchhattisgarh.com/download/pmjdy/final_rules_PMSBY.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/final_rules_PMSBY.pdf",
-      "status": "planned"
+      "sizeBytes": 80014,
+      "sha256": "26e28ec5f7cb158732eb688308af04b536c6a154e8faa106e3cf41ce54283897",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/82/82_83_minutes.pdf",
@@ -1834,7 +2295,9 @@
       "snapshotTimestamp": "20240607115200",
       "snapshotUrl": "https://web.archive.org/web/20240607115200id_/http://slbcchhattisgarh.com//download/meetings/82/82_83_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/82_83_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 5156993,
+      "sha256": "fa3173b543e717e62fc08633e9688af83c9d7ccc5f7f14d653f5fda170a16e94",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/84/84th_minutes.pdf",
@@ -1842,7 +2305,9 @@
       "snapshotTimestamp": "20240607115343",
       "snapshotUrl": "https://web.archive.org/web/20240607115343id_/http://slbcchhattisgarh.com//download/meetings/84/84th_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/84th_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 30899,
+      "sha256": "630d443f65cf6f6deae603980a97a0f222cd39a2457141a982203d5d7b39a01f",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/74/74_output_table.pdf",
@@ -1850,7 +2315,9 @@
       "snapshotTimestamp": "20240607121633",
       "snapshotUrl": "https://web.archive.org/web/20240607121633id_/http://slbcchhattisgarh.com//download/meetings/74/74_output_table.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/74_output_table.pdf",
-      "status": "planned"
+      "sizeBytes": 180791,
+      "sha256": "ea56d8b351bfe745d8196051171b0c029e34bde513e6274b8015393f4be3f09d",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/70/70th-agenda.pdf",
@@ -1858,7 +2325,9 @@
       "snapshotTimestamp": "20240607130240",
       "snapshotUrl": "https://web.archive.org/web/20240607130240id_/http://slbcchhattisgarh.com//download/meetings/70/70th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/70th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1427262,
+      "sha256": "8a2b58ac6c8ce869937ebf1449e9fac92cc1e329c4352a3bdecec13b4a830c43",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/pmjdy_guide_30k_lic.pdf",
@@ -1866,7 +2335,9 @@
       "snapshotTimestamp": "20240607131610",
       "snapshotUrl": "https://web.archive.org/web/20240607131610id_/http://slbcchhattisgarh.com/download/pmjdy/PMJDY_guide_30k_lic.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/PMJDY_guide_30k_lic.pdf",
-      "status": "planned"
+      "sizeBytes": 101673,
+      "sha256": "5b9a6c2b8ce895376fb55529429fc4f8c21a8bd5be1d874ac32ced9929986631",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/sof_horticulture_19_20.pdf",
@@ -1874,7 +2345,9 @@
       "snapshotTimestamp": "20240607190506",
       "snapshotUrl": "https://web.archive.org/web/20240607190506id_/http://slbcchhattisgarh.com//download/sof_horticulture_19_20.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/sof_horticulture_19_20.pdf",
-      "status": "planned"
+      "sizeBytes": 910319,
+      "sha256": "41af6ad9a803ecae4bc21cfd2bde410cd57342495c8aefeeeba26958f2c0880b",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/acp/acp-2019-20-bank-wise-target.pdf",
@@ -1882,7 +2355,9 @@
       "snapshotTimestamp": "20240607203742",
       "snapshotUrl": "https://web.archive.org/web/20240607203742id_/http://slbcchhattisgarh.com//download/acp/acp-2019-20-bank-wise-target.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/acp-2019-20-bank-wise-target.pdf",
-      "status": "planned"
+      "sizeBytes": 548040,
+      "sha256": "e10fc551c943ff023029e365a1949f276a2dc10b72075e0b74b60896e2ff0148",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/resti/rseti-mpr-march-2022.pdf",
@@ -1890,7 +2365,9 @@
       "snapshotTimestamp": "20240607215602",
       "snapshotUrl": "https://web.archive.org/web/20240607215602id_/http://slbcchhattisgarh.com/download/resti/rseti-mpr-march-2022.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/rseti-mpr-march-2022.pdf",
-      "status": "planned"
+      "sizeBytes": 60579,
+      "sha256": "7b7af35a15c4e1efd1db95ec9a4616f3128b56420d626c94131da73fec0e5c7c",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/apy_flyer_hindi.pdf",
@@ -1898,7 +2375,9 @@
       "snapshotTimestamp": "20240607220456",
       "snapshotUrl": "https://web.archive.org/web/20240607220456id_/http://slbcchhattisgarh.com/download/pmjdy/APY_flyer_hindi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/APY_flyer_hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 112292,
+      "sha256": "62cb3d810ede5dce9324c717054361c89bd65e86c625061ddbc03740d266afd8",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/unit-cost/unit_cost_pumpset.pdf",
@@ -1906,7 +2385,9 @@
       "snapshotTimestamp": "20240607234306",
       "snapshotUrl": "https://web.archive.org/web/20240607234306id_/http://slbcchhattisgarh.com/download/unit-cost/unit_cost_pumpset.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/unit_cost_pumpset.pdf",
-      "status": "planned"
+      "sizeBytes": 57422,
+      "sha256": "8a6fc614f4178308ca56b92f42ed17e83e30a5e1c4538ec18365701856af9625",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/66/66_slbc_minutes.pdf",
@@ -1914,7 +2395,9 @@
       "snapshotTimestamp": "20240607235833",
       "snapshotUrl": "https://web.archive.org/web/20240607235833id_/http://slbcchhattisgarh.com//download/meetings/66/66_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/66_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 943394,
+      "sha256": "05787fa4b8b5d38579dc2ac0c392965ebe7bebea7138aaa554cc007cd178d92c",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/50/50_slbc_minutes.pdf",
@@ -1922,7 +2405,9 @@
       "snapshotTimestamp": "20240608014558",
       "snapshotUrl": "https://web.archive.org/web/20240608014558id_/http://slbcchhattisgarh.com//download/meetings/50/50_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/50_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 40328,
+      "sha256": "d3f63054ab37c7cfe216e590bdf59ab4d51b8bac91f33fa23a7e5d533a7dc0ec",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/central-sponsers/nrlm.pdf",
@@ -1930,7 +2415,9 @@
       "snapshotTimestamp": "20240608030829",
       "snapshotUrl": "https://web.archive.org/web/20240608030829id_/http://slbcchhattisgarh.com/download/central-sponsers/nrlm.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/nrlm.pdf",
-      "status": "planned"
+      "sizeBytes": 3612727,
+      "sha256": "95678591cbae8a6b88f573af54d216fe2e0967e5c3ec4d7e55f4937d2e30b2a7",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/apy_registration_form_hindi.pdf",
@@ -1938,7 +2425,9 @@
       "snapshotTimestamp": "20240608042719",
       "snapshotUrl": "https://web.archive.org/web/20240608042719id_/http://slbcchhattisgarh.com/download/pmjdy/APY_registration_form_hindi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/APY_registration_form_hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 81509,
+      "sha256": "4eaf1463a1ae4b55e989ed54d6c6fc5a6d853123615513622b6ff9eff64c6460",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/58/58th-agenda.pdf",
@@ -1946,7 +2435,9 @@
       "snapshotTimestamp": "20240608043306",
       "snapshotUrl": "https://web.archive.org/web/20240608043306id_/http://slbcchhattisgarh.com//download/meetings/58/58th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/58th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 166676,
+      "sha256": "d72e823a6b81e6a47a4f345ffd2b7a2e0849567143ddd99d86253a7466091a00",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/apy_faqs_hindi.pdf",
@@ -1954,7 +2445,9 @@
       "snapshotTimestamp": "20240608051519",
       "snapshotUrl": "https://web.archive.org/web/20240608051519id_/http://slbcchhattisgarh.com/download/pmjdy/apy_faqs_hindi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/apy_faqs_hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 131786,
+      "sha256": "2419ede6b73fd3a40e16dce286e8e98270128fd7bc97481b8c29bcc1ac599d35",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/final_pmsby_consent_form_hindi_only_sbi.pdf",
@@ -1962,7 +2455,9 @@
       "snapshotTimestamp": "20240608062808",
       "snapshotUrl": "https://web.archive.org/web/20240608062808id_/http://slbcchhattisgarh.com/download/pmjdy/final_pmsby_consent_form_hindi_only_SBI.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/final_pmsby_consent_form_hindi_only_SBI.pdf",
-      "status": "planned"
+      "sizeBytes": 171620,
+      "sha256": "081a5b5ed3a32c20f0a81f08bf1882cb1459f7bcb4c3be959941676a696fbf08",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/final_pmsby_consent_form_hindi.pdf",
@@ -1970,7 +2465,9 @@
       "snapshotTimestamp": "20240608205108",
       "snapshotUrl": "https://web.archive.org/web/20240608205108id_/http://slbcchhattisgarh.com/download/pmjdy/final_PMSBY_consent_form_hindi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/final_PMSBY_consent_form_hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 195750,
+      "sha256": "b68d11295c61b140954a21fee274ca0986249c38609e5e79a278773d4021472f",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/78/78th-minutes.pdf",
@@ -1978,7 +2475,9 @@
       "snapshotTimestamp": "20240608213918",
       "snapshotUrl": "https://web.archive.org/web/20240608213918id_/http://slbcchhattisgarh.com//download/meetings/78/78th-minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/78th-minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 181701,
+      "sha256": "c70840fb09b6a044c2a0e067dbd9fb6e85fa10356742e6e393543271e23f0b18",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/71/71st-minutes.pdf",
@@ -1986,7 +2485,9 @@
       "snapshotTimestamp": "20240608220418",
       "snapshotUrl": "https://web.archive.org/web/20240608220418id_/http://slbcchhattisgarh.com//download/meetings/71/71st-minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/71st-minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 1795292,
+      "sha256": "193aa93e96f9a66fefe871d30ecda3cf75a891aaac2e552c14686354ce4b9fbb",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/54/54_slbc_minutes.pdf",
@@ -1994,7 +2495,9 @@
       "snapshotTimestamp": "20240608220731",
       "snapshotUrl": "https://web.archive.org/web/20240608220731id_/http://slbcchhattisgarh.com//download/meetings/54/54_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/54_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 91006,
+      "sha256": "0c3f995d7f50492691d3f2a9dd16ab7140fbd57bbd1abcfb37f14a85b7dd5f22",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/rbi-circular/nacaler250315_2.pdf",
@@ -2002,7 +2505,9 @@
       "snapshotTimestamp": "20240608221925",
       "snapshotUrl": "https://web.archive.org/web/20240608221925id_/http://slbcchhattisgarh.com/download/rbi-circular/NACALER250315_2.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/NACALER250315_2.pdf",
-      "status": "planned"
+      "sizeBytes": 383212,
+      "sha256": "559c2cf9cf63f936af6ff4c5acb09bf9d50c1829489f765dbb0849f3c152517e",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/final_pmsby_consent_form.pdf",
@@ -2010,7 +2515,9 @@
       "snapshotTimestamp": "20240608222806",
       "snapshotUrl": "https://web.archive.org/web/20240608222806id_/http://slbcchhattisgarh.com/download/pmjdy/final_PMSBY_consent_form.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/final_PMSBY_consent_form.pdf",
-      "status": "planned"
+      "sizeBytes": 28304,
+      "sha256": "d1d4643703984ab506bd05d1b891b230b76172b6808ee5e5749552a9300ddf6d",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/final_rules_pmsby_hindi.pdf",
@@ -2018,7 +2525,9 @@
       "snapshotTimestamp": "20240608234322",
       "snapshotUrl": "https://web.archive.org/web/20240608234322id_/http://slbcchhattisgarh.com/download/pmjdy/final_rules_PMSBY_hindi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/final_rules_PMSBY_hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 330987,
+      "sha256": "b84a3bcc6eef49078ed05c7c490f6b3b52f3f5fb613b4016968ee8206a565d41",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/central-sponsers/nulm.pdf",
@@ -2026,7 +2535,9 @@
       "snapshotTimestamp": "20240609002143",
       "snapshotUrl": "https://web.archive.org/web/20240609002143id_/http://slbcchhattisgarh.com/download/central-sponsers/nulm.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/nulm.pdf",
-      "status": "planned"
+      "sizeBytes": 55051,
+      "sha256": "88a0be8fecb461868426e007804aea65d1562f1f6b358bcca3ceb3004b4764c4",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/pmjdy-od-pdf-new.pdf",
@@ -2034,7 +2545,9 @@
       "snapshotTimestamp": "20240609045041",
       "snapshotUrl": "https://web.archive.org/web/20240609045041id_/http://slbcchhattisgarh.com/download/pmjdy/pmjdy-od-pdf-new.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/pmjdy-od-pdf-new.pdf",
-      "status": "planned"
+      "sizeBytes": 238069,
+      "sha256": "14b1c6aa11d9ef15c866fdc0b8450a73ea9426b5bcd51ea28c22561c8696737c",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/76/76th-minutes.pdf",
@@ -2042,7 +2555,9 @@
       "snapshotTimestamp": "20240609060739",
       "snapshotUrl": "https://web.archive.org/web/20240609060739id_/http://slbcchhattisgarh.com//download/meetings/76/76th-minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/76th-minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 1396758,
+      "sha256": "e7386db202e0b68393aecf704db276d1304fe276d57545ec985ea5334ad54f89",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/resti/rseti-fy-20-21.pdf",
@@ -2050,7 +2565,9 @@
       "snapshotTimestamp": "20240609061403",
       "snapshotUrl": "https://web.archive.org/web/20240609061403id_/http://slbcchhattisgarh.com/download/resti/rseti-FY-20-21.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/rseti-FY-20-21.pdf",
-      "status": "planned"
+      "sizeBytes": 12766,
+      "sha256": "611927a295bfbc977a7cf6ab518d345fc0c5917cdc2275c7aad21f7b483a7b99",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/central-sponsers/dri.pdf",
@@ -2058,7 +2575,9 @@
       "snapshotTimestamp": "20240609080545",
       "snapshotUrl": "https://web.archive.org/web/20240609080545id_/http://slbcchhattisgarh.com/download/central-sponsers/DRI.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/DRI.pdf",
-      "status": "planned"
+      "sizeBytes": 159004,
+      "sha256": "2cdc5db6c1f740e4fc8e07054cbe9ca7d01092b3d5516dbe199318641a284d13",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/final_claim_form_pmsby.pdf",
@@ -2066,7 +2585,9 @@
       "snapshotTimestamp": "20240609090429",
       "snapshotUrl": "https://web.archive.org/web/20240609090429id_/http://slbcchhattisgarh.com/download/pmjdy/final_claim_form_PMSBY.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/final_claim_form_PMSBY.pdf",
-      "status": "planned"
+      "sizeBytes": 105843,
+      "sha256": "fa9e424adcd13feb6f1dd9060e6601225a1a1e50d4510ef86db68a9c1824091c",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/apy_subscriber_registration_form.pdf",
@@ -2074,7 +2595,9 @@
       "snapshotTimestamp": "20240609144013",
       "snapshotUrl": "https://web.archive.org/web/20240609144013id_/http://slbcchhattisgarh.com/download/pmjdy/APY_subscriber_registration_form.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/APY_subscriber_registration_form.pdf",
-      "status": "planned"
+      "sizeBytes": 346755,
+      "sha256": "38dc73b55f86e02d3ea2e38d28669aa7bff2e0244fd25bc4b35dc32f54b5752e",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/faqs_pmsby_hindi.pdf",
@@ -2082,7 +2605,9 @@
       "snapshotTimestamp": "20240609151329",
       "snapshotUrl": "https://web.archive.org/web/20240609151329id_/http://slbcchhattisgarh.com/download/pmjdy/faqs_PMSBY_hindi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/faqs_PMSBY_hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 341500,
+      "sha256": "22beeb3f382dd1b4f5dfe50f1f3f00d6ae29fed4fe48a6afacbbefa4ef54d510",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/78/78th-agenda.pdf",
@@ -2090,7 +2615,9 @@
       "snapshotTimestamp": "20240609165757",
       "snapshotUrl": "https://web.archive.org/web/20240609165757id_/http://slbcchhattisgarh.com//download/meetings/78/78th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/78th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 712449,
+      "sha256": "0020502532e71be4f2b6788d574538c54d92baaac510fe1404b49a0115a28028",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/sof/scale%20of%20finance%202020-21.pdf",
@@ -2098,7 +2625,9 @@
       "snapshotTimestamp": "20240612174305",
       "snapshotUrl": "https://web.archive.org/web/20240612174305id_/http://slbcchhattisgarh.com/download/sof/Scale%20of%20Finance%202020-21.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/Scale_of_Finance_2020-21.pdf",
-      "status": "planned"
+      "sizeBytes": 3853569,
+      "sha256": "2fe621076d4e5b2c80cd7e4357b76c697c96477305328200e86acb964fd0676d",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/sof/sof-2023-24.pdf",
@@ -2106,7 +2635,9 @@
       "snapshotTimestamp": "20240613192556",
       "snapshotUrl": "https://web.archive.org/web/20240613192556id_/http://slbcchhattisgarh.com/download/sof/sof-2023-24.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/sof-2023-24.pdf",
-      "status": "planned"
+      "sizeBytes": 1982432,
+      "sha256": "6038ff270f14e7190de5b9cab4069310af70e45d41bb6b23adf657ed308e5621",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/ips_claim_poster.pdf",
@@ -2114,7 +2645,9 @@
       "snapshotTimestamp": "20240619094556",
       "snapshotUrl": "https://web.archive.org/web/20240619094556id_/http://slbcchhattisgarh.com/download/pmjdy/ips_claim_poster.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/ips_claim_poster.pdf",
-      "status": "planned"
+      "sizeBytes": 1562383,
+      "sha256": "719a3e7d4f2c372e4df24b700233b7da4ab9be3649e07407be902d41e273b1cf",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/ips_hindi_leaflet.pdf",
@@ -2122,7 +2655,9 @@
       "snapshotTimestamp": "20240619100854",
       "snapshotUrl": "https://web.archive.org/web/20240619100854id_/http://slbcchhattisgarh.com/download/pmjdy/ips_hindi_leaflet.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/ips_hindi_leaflet.pdf",
-      "status": "planned"
+      "sizeBytes": 265577,
+      "sha256": "97801e94ce3801c85351dbb8d2f90ca3a7409ae6661716d7fa7fbedb95077e82",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/crop_insurance/rabi_crop_insurance_2016.pdf",
@@ -2130,7 +2665,9 @@
       "snapshotTimestamp": "20240619114828",
       "snapshotUrl": "https://web.archive.org/web/20240619114828id_/http://slbcchhattisgarh.com/download/crop_insurance/RABI_CROP_INSURANCE_2016.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/RABI_CROP_INSURANCE_2016.pdf",
-      "status": "planned"
+      "sizeBytes": 339935,
+      "sha256": "dcd11ad5f07576167450ff2c8e01213f22cd726f80b44ae6bed6cdbf7c6e92fc",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/cd-ratio/cd-ratio-bank-wise-june-21.pdf",
@@ -2138,7 +2675,9 @@
       "snapshotTimestamp": "20240629043635",
       "snapshotUrl": "https://web.archive.org/web/20240629043635id_/http://slbcchhattisgarh.com/download/cd-ratio/cd-ratio-bank-wise-june-21.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/cd-ratio-bank-wise-june-21.pdf",
-      "status": "planned"
+      "sizeBytes": 34481,
+      "sha256": "cec49bdb028a8224f67be5272168c23aef7fd0fb84993ab6de9f0a40de4474b9",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/88/88th-agenda.pdf",
@@ -2146,7 +2685,9 @@
       "snapshotTimestamp": "20240629050758",
       "snapshotUrl": "https://web.archive.org/web/20240629050758id_/http://slbcchhattisgarh.com//download/meetings/88/88th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/88th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1110742,
+      "sha256": "74a2a9ecc99753536787c372ef0ecbbe96812c121d27714c5552473a9629edf7",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/cd-ratio/cd-ratio-district-wise-june-2022.pdf",
@@ -2154,7 +2695,9 @@
       "snapshotTimestamp": "20240629051326",
       "snapshotUrl": "https://web.archive.org/web/20240629051326id_/http://slbcchhattisgarh.com/download/cd-ratio/cd-ratio-district-wise-june-2022.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/cd-ratio-district-wise-june-2022.pdf",
-      "status": "planned"
+      "sizeBytes": 32228,
+      "sha256": "29aff1136304c2070cf29a5d3208a29d286483c0dfde48eba11c725dfc82a558",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/cd-ratio/cd-ratio-district-wise-sep-21.pdf",
@@ -2162,7 +2705,9 @@
       "snapshotTimestamp": "20240629053940",
       "snapshotUrl": "https://web.archive.org/web/20240629053940id_/http://slbcchhattisgarh.com/download/cd-ratio/cd-ratio-district-wise-sep-21.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/cd-ratio-district-wise-sep-21.pdf",
-      "status": "planned"
+      "sizeBytes": 28294,
+      "sha256": "17ed1b1f84d514ee520a0cf68b25f2bf6f43878cab9634677670f62c8aff17bb",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/cd-ratio-sept-2020.pdf",
@@ -2170,7 +2715,9 @@
       "snapshotTimestamp": "20240629063337",
       "snapshotUrl": "https://web.archive.org/web/20240629063337id_/http://slbcchhattisgarh.com/download/cd-ratio-sept-2020.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/cd-ratio-sept-2020.pdf",
-      "status": "planned"
+      "sizeBytes": 8764,
+      "sha256": "d346b4f19327a5ad97bba6938ae3b7899b905bdd169e6b3fb2b3ee3f093570e6",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/cd-ratio/cd-ratio-bank-wise-sep-21.pdf",
@@ -2178,7 +2725,9 @@
       "snapshotTimestamp": "20240629065545",
       "snapshotUrl": "https://web.archive.org/web/20240629065545id_/http://slbcchhattisgarh.com/download/cd-ratio/cd-ratio-bank-wise-sep-21.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/cd-ratio-bank-wise-sep-21.pdf",
-      "status": "planned"
+      "sizeBytes": 34475,
+      "sha256": "46c9c03aae1644248f43c8263633a901d6fc24888b7395fc52ea29bddb3461de",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/agriinsurance/agri%20insurance%20notification%2009%20sept%202015.pdf",
@@ -2186,7 +2735,9 @@
       "snapshotTimestamp": "20240629071914",
       "snapshotUrl": "https://web.archive.org/web/20240629071914id_/http://slbcchhattisgarh.com/download/agriinsurance/AGRI%20INSURANCE%20NOTIFICATION%2009%20SEPT%202015.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/AGRI_INSURANCE_NOTIFICATION_09_SEPT_2015.pdf",
-      "status": "planned"
+      "sizeBytes": 629634,
+      "sha256": "b03685d3df736357e8831663d5d3df03afb2201f6b06f56a83b6518d4ba120ee",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/cd-ration-march-2020.pdf",
@@ -2194,7 +2745,9 @@
       "snapshotTimestamp": "20240629082927",
       "snapshotUrl": "https://web.archive.org/web/20240629082927id_/http://slbcchhattisgarh.com/download/cd-ration-march-2020.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/cd-ration-march-2020.pdf",
-      "status": "planned"
+      "sizeBytes": 44308,
+      "sha256": "36cf4edfce4f95655ca2feae69e2716ab85cf71eceb8f03e534e5f40fffb82c0",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/cd-ratio-dec-2020.pdf",
@@ -2202,7 +2755,9 @@
       "snapshotTimestamp": "20240629104049",
       "snapshotUrl": "https://web.archive.org/web/20240629104049id_/http://slbcchhattisgarh.com/download/cd-ratio-dec-2020.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/cd-ratio-dec-2020.pdf",
-      "status": "planned"
+      "sizeBytes": 10312,
+      "sha256": "f6ee4d70d16e7f18dcc3f885516f72d8240594c18c981e16b9c820980bae6e09",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/cd-ratio/cd-ratio-district-wise-june-21.pdf",
@@ -2210,7 +2765,9 @@
       "snapshotTimestamp": "20240629120809",
       "snapshotUrl": "https://web.archive.org/web/20240629120809id_/http://slbcchhattisgarh.com/download/cd-ratio/cd-ratio-district-wise-june-21.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/cd-ratio-district-wise-june-21.pdf",
-      "status": "planned"
+      "sizeBytes": 28313,
+      "sha256": "a0df19fb6a75cb210416fe04382e7a602787fa66aa61ab1197e66000685e8d99",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/cd-ratio/cd-ratio-bank-wise-march-2022.pdf",
@@ -2218,7 +2775,9 @@
       "snapshotTimestamp": "20240629185656",
       "snapshotUrl": "https://web.archive.org/web/20240629185656id_/http://slbcchhattisgarh.com/download/cd-ratio/cd-ratio-bank-wise-march-2022.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/cd-ratio-bank-wise-march-2022.pdf",
-      "status": "planned"
+      "sizeBytes": 31583,
+      "sha256": "bce7096995594c255d17f4bff8df935861235320e2281ce213c88d104fecd7d0",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/agriinsurance/agri%20insurance%20notification%2025%20aug.pdf",
@@ -2226,7 +2785,9 @@
       "snapshotTimestamp": "20240629222342",
       "snapshotUrl": "https://web.archive.org/web/20240629222342id_/http://slbcchhattisgarh.com/download/agriinsurance/AGRI%20INSURANCE%20NOTIFICATION%2025%20AUG.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/AGRI_INSURANCE_NOTIFICATION_25_AUG.pdf",
-      "status": "planned"
+      "sizeBytes": 834156,
+      "sha256": "46c22599ab5259d5ffd8abed1f4ee6d895150a64b22cca5d4fcf7bd57364d887",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/cd-ratio/cd-ratio-district-wise-march-2022.pdf",
@@ -2234,7 +2795,9 @@
       "snapshotTimestamp": "20240630002837",
       "snapshotUrl": "https://web.archive.org/web/20240630002837id_/http://slbcchhattisgarh.com/download/cd-ratio/cd-ratio-district-wise-march-2022.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/cd-ratio-district-wise-march-2022.pdf",
-      "status": "planned"
+      "sizeBytes": 28289,
+      "sha256": "ba330a4181cc22a339aee19e78e761b1321e70267dfc26d6c968fc2b350a0fb5",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/cd-ratio-march-2021-districtwise.pdf",
@@ -2242,7 +2805,9 @@
       "snapshotTimestamp": "20240630075604",
       "snapshotUrl": "https://web.archive.org/web/20240630075604id_/http://slbcchhattisgarh.com/download/cd-ratio-march-2021-districtwise.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/cd-ratio-march-2021-districtwise.pdf",
-      "status": "planned"
+      "sizeBytes": 8548,
+      "sha256": "fc847712fb09db2f1efb029a5d7bfe318bb319ba5f3085123944649d4ac91436",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/cd-ratio/cd-ratio-district-wise-dec-21.pdf",
@@ -2250,7 +2815,9 @@
       "snapshotTimestamp": "20240630203633",
       "snapshotUrl": "https://web.archive.org/web/20240630203633id_/http://slbcchhattisgarh.com/download/cd-ratio/cd-ratio-district-wise-dec-21.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/cd-ratio-district-wise-dec-21.pdf",
-      "status": "planned"
+      "sizeBytes": 28311,
+      "sha256": "1f0eb75a8a43b6d0b0599721ca60624ef8e929e1eca708d9f58ca7ab76c7677e",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/87/87th_minutes.pdf",
@@ -2258,7 +2825,9 @@
       "snapshotTimestamp": "20240701081651",
       "snapshotUrl": "https://web.archive.org/web/20240701081651id_/http://slbcchhattisgarh.com/download/meetings/87/87th_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/87th_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 79665,
+      "sha256": "66bdcfab07ef13b0a33d9c45c273d511ce6bf239aa83e395cdddc2fb500ca0eb",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/cd-ration-march-2019.pdf",
@@ -2266,7 +2835,9 @@
       "snapshotTimestamp": "20240701161223",
       "snapshotUrl": "https://web.archive.org/web/20240701161223id_/http://slbcchhattisgarh.com/download/cd-ration-march-2019.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/cd-ration-march-2019.pdf",
-      "status": "planned"
+      "sizeBytes": 48694,
+      "sha256": "4d766fe97fa25f7acab75816f9ad37519e18511c63cbfe52113c8db76d64c9c2",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/74/74_output_table.pdf",
@@ -2274,7 +2845,9 @@
       "snapshotTimestamp": "20240702200824",
       "snapshotUrl": "https://web.archive.org/web/20240702200824id_/http://slbcchhattisgarh.com/download/meetings/74/74_output_table.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/74_output_table.pdf",
-      "status": "planned"
+      "sizeBytes": 180791,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/66/66_slbc_minutes.pdf",
@@ -2282,7 +2855,9 @@
       "snapshotTimestamp": "20240703054027",
       "snapshotUrl": "https://web.archive.org/web/20240703054027id_/http://slbcchhattisgarh.com/download/meetings/66/66_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/66_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 943394,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/50/50_slbc_minutes.pdf",
@@ -2290,7 +2865,9 @@
       "snapshotTimestamp": "20240703055343",
       "snapshotUrl": "https://web.archive.org/web/20240703055343id_/http://slbcchhattisgarh.com/download/meetings/50/50_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/50_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 40328,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/88/88th-agenda.pdf",
@@ -2298,7 +2875,9 @@
       "snapshotTimestamp": "20240703055850",
       "snapshotUrl": "https://web.archive.org/web/20240703055850id_/http://slbcchhattisgarh.com/download/meetings/88/88th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/88th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1110742,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/72/72nd%20data%20table.pdf",
@@ -2306,7 +2885,9 @@
       "snapshotTimestamp": "20240703063143",
       "snapshotUrl": "https://web.archive.org/web/20240703063143id_/http://slbcchhattisgarh.com/download/meetings/72/72nd%20DATA%20TABLE.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/72nd_DATA_TABLE.pdf",
-      "status": "planned"
+      "sizeBytes": 1291004,
+      "sha256": "14a2e6cb28c6697524aa2d02960e92d35365b6898de9f331509a3d522acaf296",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/banking_network/banking%20network%20summary.pdf",
@@ -2314,7 +2895,9 @@
       "snapshotTimestamp": "20240703091715",
       "snapshotUrl": "https://web.archive.org/web/20240703091715id_/http://slbcchhattisgarh.com/download/banking_network/Banking%20Network%20summary.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/Banking_Network_summary.pdf",
-      "status": "planned"
+      "sizeBytes": 49047,
+      "sha256": "784c0484a8ae34f222661790b4cda5ecc8a6748c56148e8e598dc2db9c34a839",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/66/output_table_1.pdf",
@@ -2322,7 +2905,9 @@
       "snapshotTimestamp": "20240703100151",
       "snapshotUrl": "https://web.archive.org/web/20240703100151id_/http://slbcchhattisgarh.com/download/meetings/66/output_table_1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/output_table_1.pdf",
-      "status": "planned"
+      "sizeBytes": 158561,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/66/66th-agenda.pdf",
@@ -2330,7 +2915,9 @@
       "snapshotTimestamp": "20240703101440",
       "snapshotUrl": "https://web.archive.org/web/20240703101440id_/http://slbcchhattisgarh.com/download/meetings/66/66th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/66th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1372418,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/70/70th-agenda.pdf",
@@ -2338,7 +2925,9 @@
       "snapshotTimestamp": "20240703110859",
       "snapshotUrl": "https://web.archive.org/web/20240703110859id_/http://slbcchhattisgarh.com/download/meetings/70/70th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/70th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1427262,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/82/82_83_minutes.pdf",
@@ -2346,7 +2935,9 @@
       "snapshotTimestamp": "20240703135752",
       "snapshotUrl": "https://web.archive.org/web/20240703135752id_/http://slbcchhattisgarh.com/download/meetings/82/82_83_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/82_83_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 5156993,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/70/70th-minutes.pdf",
@@ -2354,7 +2945,9 @@
       "snapshotTimestamp": "20240703145826",
       "snapshotUrl": "https://web.archive.org/web/20240703145826id_/http://slbcchhattisgarh.com/download/meetings/70/70th-minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/70th-minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 11687236,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/banking_network/atm%20network.pdf",
@@ -2362,7 +2955,9 @@
       "snapshotTimestamp": "20240703150912",
       "snapshotUrl": "https://web.archive.org/web/20240703150912id_/http://slbcchhattisgarh.com/download/banking_network/ATM%20NETWORK.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/ATM_NETWORK.pdf",
-      "status": "planned"
+      "sizeBytes": 48807,
+      "sha256": "744de5dd6229c75a7c04a94476b037de6f406b95e7ba6f899223bc03c03264a7",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/54/54th-agenda.pdf",
@@ -2370,7 +2965,9 @@
       "snapshotTimestamp": "20240703203641",
       "snapshotUrl": "https://web.archive.org/web/20240703203641id_/http://slbcchhattisgarh.com/download/meetings/54/54th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/54th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 243875,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/62/62_slbc_minutes.pdf",
@@ -2378,7 +2975,9 @@
       "snapshotTimestamp": "20240704052916",
       "snapshotUrl": "https://web.archive.org/web/20240704052916id_/http://slbcchhattisgarh.com/download/meetings/62/62_slbc_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/62_slbc_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 88054,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/74/74th-agenda.pdf",
@@ -2386,7 +2985,9 @@
       "snapshotTimestamp": "20240704061205",
       "snapshotUrl": "https://web.archive.org/web/20240704061205id_/http://slbcchhattisgarh.com/download/meetings/74/74th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/74th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 665205,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/70/70th%20data%20table.pdf",
@@ -2394,7 +2995,9 @@
       "snapshotTimestamp": "20240704132638",
       "snapshotUrl": "https://web.archive.org/web/20240704132638id_/http://slbcchhattisgarh.com/download/meetings/70/70TH%20DATA%20TABLE.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/70TH_DATA_TABLE.pdf",
-      "status": "planned"
+      "sizeBytes": 1118036,
+      "sha256": "c0693730f0ffa0f1211728a66ffbba9bde71b38794db40064488a377b312af90",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/72/72nd-agenda.pdf",
@@ -2402,7 +3005,9 @@
       "snapshotTimestamp": "20240705082051",
       "snapshotUrl": "https://web.archive.org/web/20240705082051id_/http://slbcchhattisgarh.com/download/meetings/72/72nd-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/72nd-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1154320,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/banking_network/number%20of%20bank%20branches%20as%20on%2031.12.2018.pdf",
@@ -2410,7 +3015,9 @@
       "snapshotTimestamp": "20240705083015",
       "snapshotUrl": "https://web.archive.org/web/20240705083015id_/http://slbcchhattisgarh.com/download/banking_network/Number%20of%20Bank%20Branches%20as%20on%2031.12.2018.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/Number_of_Bank_Branches_as_on_31.12.2018.pdf",
-      "status": "planned"
+      "sizeBytes": 8922,
+      "sha256": "cbc4e1cea4469887745c987442193762f90b3d0fb135c73dab80849e02e18fc0",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/71/71st-agenda.pdf",
@@ -2418,7 +3025,9 @@
       "snapshotTimestamp": "20240706022053",
       "snapshotUrl": "https://web.archive.org/web/20240706022053id_/http://slbcchhattisgarh.com/download/meetings/71/71st-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/71st-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1280275,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/84/84th-agenda.pdf",
@@ -2426,7 +3035,9 @@
       "snapshotTimestamp": "20240711234751",
       "snapshotUrl": "https://web.archive.org/web/20240711234751id_/http://slbcchhattisgarh.com/download/meetings/84/84th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/84th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1261441,
+      "sha256": "f822eb143e4d66b1a6f8d3b1ef607e5071f8fe156aa37aa7e41f2f69f1f9eff5",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/85/85th-agenda.pdf",
@@ -2434,7 +3045,9 @@
       "snapshotTimestamp": "20240713222331",
       "snapshotUrl": "https://web.archive.org/web/20240713222331id_/http://slbcchhattisgarh.com/download/meetings/85/85th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/85th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1271726,
+      "sha256": "c2ffffb72cd37d1882e273cb9331c7a38d90f4554b32c82b2d7c9ae7f288f183",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/91/91st-minutes.pdf",
@@ -2442,7 +3055,9 @@
       "snapshotTimestamp": "20240714064142",
       "snapshotUrl": "https://web.archive.org/web/20240714064142id_/http://slbcchhattisgarh.com//download/meetings/91/91st-minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/91st-minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 327707,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/80/80th-agenda.pdf",
@@ -2450,7 +3065,9 @@
       "snapshotTimestamp": "20240714064245",
       "snapshotUrl": "https://web.archive.org/web/20240714064245id_/http://slbcchhattisgarh.com/download/meetings/80/80th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/80th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 995797,
+      "sha256": "a874cedcb910090f740315456aff4270d9cd3b9d90334c1e0399aca907646bf6",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/90/90th-agenda.pdf",
@@ -2458,7 +3075,9 @@
       "snapshotTimestamp": "20240714065411",
       "snapshotUrl": "https://web.archive.org/web/20240714065411id_/http://slbcchhattisgarh.com//download/meetings/90/90th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/90th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1132273,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/circular-doubling%20of%20farmers%20income%20by%202022%20%e2%80%93%20seminar%20on.pdf",
@@ -2466,7 +3085,9 @@
       "snapshotTimestamp": "20240714065553",
       "snapshotUrl": "https://web.archive.org/web/20240714065553id_/http://slbcchhattisgarh.com/download/Circular-Doubling%20of%20Farmers%20Income%20by%202022%20%E2%80%93%20Seminar%20on.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/Circular-Doubling_of_Farmers_Income_by_2022_–_Seminar_on.pdf",
-      "status": "planned"
+      "sizeBytes": 554318,
+      "sha256": "c9b66ca064b6865c294bfeeb086c14f15c2b7a72c8a68081bcee13d2c032ea42",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/sof/sof-2021-22.pdf",
@@ -2474,7 +3095,9 @@
       "snapshotTimestamp": "20240714071704",
       "snapshotUrl": "https://web.archive.org/web/20240714071704id_/http://slbcchhattisgarh.com/download/sof/sof-2021-22.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/sof-2021-22.pdf",
-      "status": "planned"
+      "sizeBytes": 4256163,
+      "sha256": "0db884071dd439e314e4aee0c9481d7769ad5038bd03a271a14f6fdda627b133",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/slbc_calendar_2023.pdf",
@@ -2482,7 +3105,9 @@
       "snapshotTimestamp": "20240714072000",
       "snapshotUrl": "https://web.archive.org/web/20240714072000id_/http://slbcchhattisgarh.com/download/meetings/slbc_calendar_2023.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/slbc_calendar_2023.pdf",
-      "status": "planned"
+      "sizeBytes": 65237,
+      "sha256": "0036a56f13020baf6c808487cff122433f2059dafce871d1d1b2560498abe70b",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/89/89th-agenda.pdf",
@@ -2490,7 +3115,9 @@
       "snapshotTimestamp": "20240714082411",
       "snapshotUrl": "https://web.archive.org/web/20240714082411id_/http://slbcchhattisgarh.com//download/meetings/89/89th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/89th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 207160,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/90/90th_minutes.pdf",
@@ -2498,7 +3125,9 @@
       "snapshotTimestamp": "20240714082411",
       "snapshotUrl": "https://web.archive.org/web/20240714082411id_/http://slbcchhattisgarh.com//download/meetings/90/90th_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/90th_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 518717,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/89/89th_minutes.pdf",
@@ -2506,7 +3135,9 @@
       "snapshotTimestamp": "20240714172454",
       "snapshotUrl": "https://web.archive.org/web/20240714172454id_/http://slbcchhattisgarh.com//download/meetings/89/89th_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/89th_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 416280,
+      "sha256": "1ed99137ba8f4c7c2790798acaf8cb73d976cf0a20be3f40acb6299b729fdd0b",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/88/88th_minutes.pdf",
@@ -2514,7 +3145,9 @@
       "snapshotTimestamp": "20240714211036",
       "snapshotUrl": "https://web.archive.org/web/20240714211036id_/http://slbcchhattisgarh.com//download/meetings/88/88th_minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/88th_minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 109231,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/meetings/91/91st-agenda.pdf",
@@ -2522,7 +3155,9 @@
       "snapshotTimestamp": "20240715003842",
       "snapshotUrl": "https://web.archive.org/web/20240715003842id_/http://slbcchhattisgarh.com//download/meetings/91/91st-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/91st-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1090869,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/86/86th-agenda.pdf",
@@ -2530,7 +3165,9 @@
       "snapshotTimestamp": "20240721074157",
       "snapshotUrl": "https://web.archive.org/web/20240721074157id_/http://slbcchhattisgarh.com/download/meetings/86/86th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/86th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 1223832,
+      "sha256": "d4398ee48c1e92615b2d9037846113d5986eb1228ab5b8a1e9c5f7064e9a4a14",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/sof/sof-2023-24.pdf",
@@ -2538,7 +3175,9 @@
       "snapshotTimestamp": "20240801140713",
       "snapshotUrl": "https://web.archive.org/web/20240801140713id_/http://slbcchhattisgarh.com//download/sof/sof-2023-24.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/sof-2023-24.pdf",
-      "status": "planned"
+      "sizeBytes": 1982432,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/ips_hindi_poster_1.pdf",
@@ -2546,7 +3185,9 @@
       "snapshotTimestamp": "20240807112227",
       "snapshotUrl": "https://web.archive.org/web/20240807112227id_/http://slbcchhattisgarh.com/download/pmjdy/ips_hindi_poster_1.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/ips_hindi_poster_1.pdf",
-      "status": "planned"
+      "sizeBytes": 1875777,
+      "sha256": "490c4e5067ca891bbbbb00cd3a2659f1fbb87fb6b9367ba945cdf43348a11e49",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/ips_hindi_poster.pdf",
@@ -2554,7 +3195,9 @@
       "snapshotTimestamp": "20240808035241",
       "snapshotUrl": "https://web.archive.org/web/20240808035241id_/http://slbcchhattisgarh.com/download/pmjdy/ips_hindi_poster.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/ips_hindi_poster.pdf",
-      "status": "planned"
+      "sizeBytes": 1875777,
+      "sha256": "25b3357989afdfa9de351ee17360a25e319d4e338c38e14f3061161d3c014678",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com//download/sof/scale-of-finance-2024-25-rcs-and-other-copy.pdf",
@@ -2562,7 +3205,9 @@
       "snapshotTimestamp": "20240814033902",
       "snapshotUrl": "https://web.archive.org/web/20240814033902id_/http://slbcchhattisgarh.com//download/sof/scale-of-finance-2024-25-rcs-and-other-copy.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/scale-of-finance-2024-25-rcs-and-other-copy.pdf",
-      "status": "planned"
+      "sizeBytes": 5173787,
+      "sha256": null,
+      "status": "cached"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/rbi-circular/lead-bank-scheme-2023.pdf",
@@ -2570,7 +3215,9 @@
       "snapshotTimestamp": "20240921075743",
       "snapshotUrl": "https://web.archive.org/web/20240921075743id_/http://slbcchhattisgarh.com/download/rbi-circular/lead-bank-scheme-2023.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/lead-bank-scheme-2023.pdf",
-      "status": "planned"
+      "sizeBytes": 2318814,
+      "sha256": "6d0ed456a21441c62c582b12ed6f01675da95a641d8bc02166e0857c476c0fb0",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/slbc_calendar_2024.pdf",
@@ -2578,7 +3225,9 @@
       "snapshotTimestamp": "20240925152523",
       "snapshotUrl": "https://web.archive.org/web/20240925152523id_/http://slbcchhattisgarh.com/download/meetings/slbc_calendar_2024.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/slbc_calendar_2024.pdf",
-      "status": "planned"
+      "sizeBytes": 64817,
+      "sha256": "117a771d21887212452e67643f9c79f02be767f23f4aea4d3e08f826be980179",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/92/92-93-94-minutes.pdf",
@@ -2586,7 +3235,10 @@
       "snapshotTimestamp": "20241204050118",
       "snapshotUrl": "https://web.archive.org/web/20241204050118id_/http://slbcchhattisgarh.com/download/meetings/92/92-93-94-minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/92-93-94-minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 1048576,
+      "sha256": "d905a249a7dfb0243625cbc4761e99822ded8b59683a18cb191abd58a2058c57",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/92/92-93-94-agenda.pdf",
@@ -2594,7 +3246,9 @@
       "snapshotTimestamp": "20241204054014",
       "snapshotUrl": "https://web.archive.org/web/20241204054014id_/http://slbcchhattisgarh.com/download/meetings/92/92-93-94-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2024/92-93-94-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 285048,
+      "sha256": "b233b59f01add7bece2dfe703c66f2262635bbf5e32e86aaa9a042b5752a07a1",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/pmjjby_hindi_form.pdf",
@@ -2602,7 +3256,9 @@
       "snapshotTimestamp": "20250212061751",
       "snapshotUrl": "https://web.archive.org/web/20250212061751id_/http://slbcchhattisgarh.com/download/pmjdy/pmjjby_hindi_form.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2025/pmjjby_hindi_form.pdf",
-      "status": "planned"
+      "sizeBytes": 213329,
+      "sha256": "0f21bf29113d03303371c5ea3ef13e2bf19021e0328aa48ee9c8d22d29511ff9",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/faqs_pmjjby_hindi.pdf",
@@ -2610,7 +3266,9 @@
       "snapshotTimestamp": "20250212065750",
       "snapshotUrl": "https://web.archive.org/web/20250212065750id_/http://slbcchhattisgarh.com/download/pmjdy/faqs_PMJJBY_hindi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2025/faqs_PMJJBY_hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 243064,
+      "sha256": "50b766cc2a21ab962fd558ee421538af6a8c5f22ef2171f4438bc751a67fb125",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/pmjjby_consent_form_chhattisgarhi.pdf",
@@ -2618,7 +3276,9 @@
       "snapshotTimestamp": "20250212070808",
       "snapshotUrl": "https://web.archive.org/web/20250212070808id_/http://slbcchhattisgarh.com/download/pmjdy/PMJJBY_consent_form_chhattisgarhi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2025/PMJJBY_consent_form_chhattisgarhi.pdf",
-      "status": "planned"
+      "sizeBytes": 507180,
+      "sha256": "7afed8bc92ad019668d2057cad56e7558169d85028069bd9a00fc709562f14a4",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/final_pmjjby_consent_form.pdf",
@@ -2626,7 +3286,9 @@
       "snapshotTimestamp": "20250212070909",
       "snapshotUrl": "https://web.archive.org/web/20250212070909id_/http://slbcchhattisgarh.com/download/pmjdy/final_PMJJBY_consent_form.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2025/final_PMJJBY_consent_form.pdf",
-      "status": "planned"
+      "sizeBytes": 65343,
+      "sha256": "e15806b7d9df924a3a394fdb5814056d3d324c0a91855910076b7b0159e1511c",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/final_claim_form_pmjjby_hindi.pdf",
@@ -2634,7 +3296,9 @@
       "snapshotTimestamp": "20250212074655",
       "snapshotUrl": "https://web.archive.org/web/20250212074655id_/http://slbcchhattisgarh.com/download/pmjdy/final_claim_form_PMJJBY_hindi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2025/final_claim_form_PMJJBY_hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 359283,
+      "sha256": "8aef56187f19e655a10d9ce72d00cca3827fccdc418bee317b255401198c7f81",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/final_pmjjby_consent_form_hindi.pdf",
@@ -2642,7 +3306,9 @@
       "snapshotTimestamp": "20250212075025",
       "snapshotUrl": "https://web.archive.org/web/20250212075025id_/http://slbcchhattisgarh.com/download/pmjdy/final_PMJJBY_consent_form_hindi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2025/final_PMJJBY_consent_form_hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 434103,
+      "sha256": "8ddf8b5f0f19065ee516d257ab4e6cb5416f8e61b60e7ebcf6366bb7d0c53107",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/final_pmjjby_consent_form_hindi_only_sbi.pdf",
@@ -2650,7 +3316,9 @@
       "snapshotTimestamp": "20250212075552",
       "snapshotUrl": "https://web.archive.org/web/20250212075552id_/http://slbcchhattisgarh.com/download/pmjdy/final_pmjjby_consent_form_hindi_only_SBI.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2025/final_pmjjby_consent_form_hindi_only_SBI.pdf",
-      "status": "planned"
+      "sizeBytes": 156372,
+      "sha256": "5cd0ebbd0ba9838be5564f0f8ec26e60f05a749f80d64ccb48da19aa282a7015",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/final_rules_pmjjby_hindi.pdf",
@@ -2658,7 +3326,9 @@
       "snapshotTimestamp": "20250212075944",
       "snapshotUrl": "https://web.archive.org/web/20250212075944id_/http://slbcchhattisgarh.com/download/pmjdy/final_rules_PMJJBY_hindi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2025/final_rules_PMJJBY_hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 229663,
+      "sha256": "e6b320176a54acbd30aa08fe2b58ca0d92bfcafc216eb672c8f1f46b9be17c08",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/final_claim_form_pmjjby.pdf",
@@ -2666,7 +3336,9 @@
       "snapshotTimestamp": "20250212081502",
       "snapshotUrl": "https://web.archive.org/web/20250212081502id_/http://slbcchhattisgarh.com/download/pmjdy/final_claim_form_PMJJBY.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2025/final_claim_form_PMJJBY.pdf",
-      "status": "planned"
+      "sizeBytes": 210629,
+      "sha256": "075b8d93a95e4161271232d393267d4f9360963a5afd06ee90739dd95bf6ccf9",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/final_rules_pmjjby.pdf",
@@ -2674,7 +3346,9 @@
       "snapshotTimestamp": "20250212083129",
       "snapshotUrl": "https://web.archive.org/web/20250212083129id_/http://slbcchhattisgarh.com/download/pmjdy/final_rules_PMJJBY.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2025/final_rules_PMJJBY.pdf",
-      "status": "planned"
+      "sizeBytes": 80579,
+      "sha256": "b40c922b5489548f542596df9950d55287296c8c38917cdc5298ebb287fb686e",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pmjdy/final_pmjjby_consent%20form_english_only_sbi.pdf",
@@ -2682,7 +3356,9 @@
       "snapshotTimestamp": "20250212084042",
       "snapshotUrl": "https://web.archive.org/web/20250212084042id_/http://slbcchhattisgarh.com/download/pmjdy/final_pmjjby_consent%20form_english_only_SBI.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2025/final_pmjjby_consent_form_english_only_SBI.pdf",
-      "status": "planned"
+      "sizeBytes": 139887,
+      "sha256": "a841dfe9fd5758ad2209fa2b545ba29b0693e8754de89c13bbaf481c643668fc",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/pfb/pmfby%20notitification%202020.pdf",
@@ -2690,7 +3366,9 @@
       "snapshotTimestamp": "20250502004050",
       "snapshotUrl": "https://web.archive.org/web/20250502004050id_/http://slbcchhattisgarh.com/download/pfb/PMFBY%20NOTITIFICATION%202020.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2025/PMFBY_NOTITIFICATION_2020.pdf",
-      "status": "planned"
+      "sizeBytes": 4212554,
+      "sha256": "0766d503527db75f1f73c67c1b7b1ad740c2e8337058991c2d3ff21d764ec249",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/95/95-96-agenda.pdf",
@@ -2698,7 +3376,9 @@
       "snapshotTimestamp": "20250612174606",
       "snapshotUrl": "https://web.archive.org/web/20250612174606id_/http://slbcchhattisgarh.com/download/meetings/95/95-96-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2025/95-96-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 3746908,
+      "sha256": "85f36846ca92fe120bf4eacaa27a00dc9e5e4ebd10d6754480d39e8961cc97e8",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/sof/scale-of-finance-2025-26.pdf",
@@ -2706,7 +3386,10 @@
       "snapshotTimestamp": "20250612180955",
       "snapshotUrl": "https://web.archive.org/web/20250612180955id_/http://slbcchhattisgarh.com/download/sof/scale-of-finance-2025-26.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2025/scale-of-finance-2025-26.pdf",
-      "status": "planned"
+      "sizeBytes": 5242880,
+      "sha256": "5e98f3200739bce24de9c2d26e1d6c73aa81c2530b95b7146a1b5cc33e706c0c",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/95/95-96-minutes.pdf",
@@ -2714,7 +3397,9 @@
       "snapshotTimestamp": "20250612183125",
       "snapshotUrl": "https://web.archive.org/web/20250612183125id_/http://slbcchhattisgarh.com/download/meetings/95/95-96-minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2025/95-96-minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 917508,
+      "sha256": "3144656adccd984b50a4beeace82ddc4c47a555982f6080f5db1811133243aaf",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/slbc_calendar_2025-26.pdf",
@@ -2722,7 +3407,9 @@
       "snapshotTimestamp": "20250612190137",
       "snapshotUrl": "https://web.archive.org/web/20250612190137id_/http://slbcchhattisgarh.com/download/meetings/slbc_calendar_2025-26.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2025/slbc_calendar_2025-26.pdf",
-      "status": "planned"
+      "sizeBytes": 63459,
+      "sha256": "fb69d89bb815eb5226481d1954b1ad3f7a27209e2ade4fdb860b6044c5ded795",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/rbi-circular/sjsry.pdf",
@@ -2730,7 +3417,9 @@
       "snapshotTimestamp": "20260102134804",
       "snapshotUrl": "https://web.archive.org/web/20260102134804id_/http://slbcchhattisgarh.com/download/rbi-circular/sjsry.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2026/sjsry.pdf",
-      "status": "planned"
+      "sizeBytes": 64214,
+      "sha256": "cf61d4c65f70bc8567405a3a11b1c6cd1bfee318cfde72a1e5adadf06c860f1f",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/98/98th-minutes.pdf",
@@ -2738,7 +3427,10 @@
       "snapshotTimestamp": "20260216102631",
       "snapshotUrl": "https://web.archive.org/web/20260216102631id_/http://slbcchhattisgarh.com/download/meetings/98/98th-minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2026/98th-minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 5242880,
+      "sha256": "dbec19f053a73e703ea631706c6e17857fdb9496dee3254d4367628d1eeb54e9",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/sof/scale-of-finance-2026-27.pdf",
@@ -2746,7 +3438,10 @@
       "snapshotTimestamp": "20260216103212",
       "snapshotUrl": "https://web.archive.org/web/20260216103212id_/http://slbcchhattisgarh.com/download/sof/scale-of-finance-2026-27.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2026/scale-of-finance-2026-27.pdf",
-      "status": "planned"
+      "sizeBytes": 5242880,
+      "sha256": "c8a04fa53b3cbe9ca99bff9c8ea4ed5ea4ff6dfa87ebf0eb3a89ce3cf108527c",
+      "status": "truncated",
+      "note": "Wayback truncated at capture; full file unrecoverable from this snapshot"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/98/98th-agenda.pdf",
@@ -2754,7 +3449,9 @@
       "snapshotTimestamp": "20260216104703",
       "snapshotUrl": "https://web.archive.org/web/20260216104703id_/http://slbcchhattisgarh.com/download/meetings/98/98th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2026/98th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 4550509,
+      "sha256": "2c47e608058bf28714e86d293aeb1bbc8442697f39b125b56436ceef762483e7",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/102654-lic-bboklet-14-10-2025.pdf",
@@ -2762,7 +3459,9 @@
       "snapshotTimestamp": "20260216110301",
       "snapshotUrl": "https://web.archive.org/web/20260216110301id_/http://slbcchhattisgarh.com/download/102654-lic-bboklet-14-10-2025.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2026/102654-lic-bboklet-14-10-2025.pdf",
-      "status": "planned"
+      "sizeBytes": 2506680,
+      "sha256": "bad6cd00bc1857220cc5cc9a41e2b14dd4b03e7d769e9c7851160832b3ac6392",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/99/99th-minutes.pdf",
@@ -2770,7 +3469,9 @@
       "snapshotTimestamp": "20260216112308",
       "snapshotUrl": "https://web.archive.org/web/20260216112308id_/http://slbcchhattisgarh.com/download/meetings/99/99th-minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2026/99th-minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 930198,
+      "sha256": "618ac352b42267f8174154cc77aa7e711af543ba86684016f6406a16a4baf2f4",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/100/100th-minutes.pdf",
@@ -2778,7 +3479,9 @@
       "snapshotTimestamp": "20260216113415",
       "snapshotUrl": "https://web.archive.org/web/20260216113415id_/http://slbcchhattisgarh.com/download/meetings/100/100th-minutes.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2026/100th-minutes.pdf",
-      "status": "planned"
+      "sizeBytes": 2060879,
+      "sha256": "023105fea3164d40b0d4a6f45b4d7b3c6f70fcdba146927a5e7499d20294fe53",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/2026/nsfi-2025-30-english.pdf",
@@ -2786,7 +3489,9 @@
       "snapshotTimestamp": "20260216113948",
       "snapshotUrl": "https://web.archive.org/web/20260216113948id_/http://slbcchhattisgarh.com/download/2026/nsfi-2025-30-english.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2026/nsfi-2025-30-english.pdf",
-      "status": "planned"
+      "sizeBytes": 2102725,
+      "sha256": "9e5425c5483076b71c1c34e0688a4baab58ba7e9b15b12290da62ff88dd5966f",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/99/99th-agenda.pdf",
@@ -2794,7 +3499,9 @@
       "snapshotTimestamp": "20260216114345",
       "snapshotUrl": "https://web.archive.org/web/20260216114345id_/http://slbcchhattisgarh.com/download/meetings/99/99th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2026/99th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 26106,
+      "sha256": "c98c0645b83fc4a6b6237dec082793dbef991c43287aafbfc509eb630ada5660",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/meetings/100/100th-agenda.pdf",
@@ -2802,7 +3509,9 @@
       "snapshotTimestamp": "20260216115742",
       "snapshotUrl": "https://web.archive.org/web/20260216115742id_/http://slbcchhattisgarh.com/download/meetings/100/100th-agenda.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2026/100th-agenda.pdf",
-      "status": "planned"
+      "sizeBytes": 284862,
+      "sha256": "d70ee4126eec729464ed0796bf88da5242bb3b4756953524699b62b7551f0814",
+      "status": "downloaded"
     },
     {
       "canonicalUrl": "slbcchhattisgarh.com/download/2026/nsfi-2025-30-hindi.pdf",
@@ -2810,7 +3519,9 @@
       "snapshotTimestamp": "20260216115923",
       "snapshotUrl": "https://web.archive.org/web/20260216115923id_/http://slbcchhattisgarh.com/download/2026/nsfi-2025-30-hindi.pdf",
       "localPath": "slbc-data/chhattisgarh/wayback/2026/nsfi-2025-30-hindi.pdf",
-      "status": "planned"
+      "sizeBytes": 2347632,
+      "sha256": "31737dbecf509a13e875968a8720bbc94b990a6a048cd9686fea0ec796ea0cba",
+      "status": "downloaded"
     }
   ]
 }

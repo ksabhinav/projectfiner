@@ -1,5 +1,25 @@
 #!/usr/bin/env python3
 """
+⚠️  DEPRECATED (June 2026) — DO NOT RUN AS-IS.
+
+This was a ONE-OFF Playwright remediation that re-scraped a handful of
+contaminated MN reports back into a local `ne_full_scrape.json` (March 2026
+snapshot). It predates the onlineslbcne.nic.in server revamp and uses the dead
+mechanism:
+  - it overrides `form.action` to the OLD `*report.php` action pages
+    (districtwiseAadhaarreport.php, districtwiseNrlmdatareport.php, …), which
+    are decommissioned and now return all-zero / "No Data" tables, and
+  - it assumes the legacy per-session state model rather than the per-IP
+    server-side binding (GET /<CODE>, verify via the "Go Back" link).
+
+If you need to (re)scrape NE portal data, use the canonical, fixed scraper
+**scrape_onlineslbc.py** (repo root) — see its docstring + select_state() /
+extract_active_state() and CLAUDE.md gotcha #34. For targeted missing-quarter
+top-ups, scrape_missing_quarters.py was ported to the same mechanism.
+
+Kept only for historical reference to what the original contamination fix did.
+
+──────────────────────────────────────────────────────────────────────────────
 Re-scrape contaminated MN (Manipur) reports.
 The original scrape picked up AS or NL data for some reports due to session issues.
 
