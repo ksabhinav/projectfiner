@@ -15,12 +15,18 @@ into:
   public/slbc-data/telangana/telangana_fi_slim.json        (rebuilt)
 
 SCOPE (decided 2026-06-13, see CLAUDE.md Telangana section / chat):
-  * ONLY the `credit_deposit_ratio` category — total_deposit / total_advance
-    / cd_ratio. The live data (extract_telangana_cqr.py) starts at Dec 2022;
-    this backfills the 24 quarters Dec 2016 → Sep 2022 that are missing.
-  * branch_network is NOT backfilled — the Wayback "No. of Branches" column
-    runs 2-3x below the live Format-C counts and may be a different metric;
-    held pending source-PDF review.
+  * `credit_deposit_ratio` — total_deposit / total_advance / cd_ratio. The
+    live data (extract_telangana_cqr.py) starts at Dec 2022; this backfills
+    the 24 quarters Dec 2016 → Sep 2022 that are missing.
+  * `branch_network` — branch_rural / branch_semi_urban / branch_urban /
+    total_branch, for the 21 quarters that carry branch columns (Sep 2017 →
+    Sep 2022; the 3 narrow Dec2016/Mar2017/Jun2017 CD tables have none).
+    Confirmed reliable: the state totals reconcile and grow smoothly
+    (5,369 in 2017 → 5,705 in 2021-12 → live 6,030 in 2022-12), and the last
+    Wayback quarter (Mar 2022) matches live (Dec 2022) within +-10% for 31 of
+    32 districts. The Format-A "Metro" branch column is folded into
+    branch_urban (verified: live treats metro branches as urban — Hyderabad
+    live urban 1090 ~= Wayback urban 113 + metro 1015).
   * The pre-Oct-2016 reorg era (Dec 2015 → Sep 2016, the old 10 composite
     districts where "Adilabad" covered what are now 4 districts) is SKIPPED —
     those boundaries don't align with the live 33-district structure.
@@ -182,19 +188,64 @@ def get_table(name: str, ti: int) -> dict:
 WARN: list[str] = []
 
 
+def _resolve_district(r, dcol):
+    d = normalize_district(r[dcol]) if dcol < len(r) else None
+    if not d:
+        for c in r:
+            d = normalize_district(c)
+            if d:
+                break
+    return d
+
+
+def map_branch(tb, pk, *, spec, source):
+    """Build {district: {branch_network: {...}}}.
+
+    spec dict: kind 'wide' (Format-A: rural,semi,urban,metro,total at fixed
+    cols; branch_urban = urban + metro) or 'annex2' (Format-C ANNEXURE-2:
+    rural,semi,urban,total)."""
+    out = {}
+    dcol = tb.get('districtColumn', 1)
+    for r in tb.get('rows', []):
+        d = _resolve_district(r, dcol)
+        if not d:
+            continue
+        def g(i):
+            v = parse_num(r[i]) if i is not None and i < len(r) else None
+            return float(v) if v is not None else None
+        rural, semi = g(spec['r']), g(spec['su'])
+        if spec['kind'] == 'wide':
+            u, metro = g(spec['u']), g(spec.get('metro'))
+            urban = None if u is None and metro is None else (u or 0) + (metro or 0)
+        else:
+            urban = g(spec['u'])
+        total = g(spec['t'])
+        rec = {}
+        if rural is not None:
+            rec['branch_rural'] = fmt(rural)
+        if semi is not None:
+            rec['branch_semi_urban'] = fmt(semi)
+        if urban is not None:
+            rec['branch_urban'] = fmt(urban)
+        if total is not None:
+            rec['total_branch'] = fmt(total)
+        # sanity: rural+semi+urban should ~= total (within 2 branches)
+        if total is not None and None not in (rural, semi, urban):
+            if abs((rural + semi + urban) - total) > 2:
+                WARN.append(f'{pk} {source} {d}: branch split '
+                            f'{rural:.0f}+{semi:.0f}+{urban:.0f} != total {total:.0f}')
+        if rec:
+            out.setdefault(d, {})['branch_network'] = rec
+    return out
+
+
 def map_cd(tb, pk, *, dep_idx, adv_idx, cd_idx, factor, source):
     """Build {district: {credit_deposit_ratio: {total_deposit, total_advance,
     cd_ratio}}} from one table. Self-validating (see module docstring)."""
     out = {}
     dcol = tb.get('districtColumn', 1)
     for r in tb.get('rows', []):
-        # locate district from the declared column, else scan the row
-        d = normalize_district(r[dcol]) if dcol < len(r) else None
-        if not d:
-            for c in r:
-                d = normalize_district(c)
-                if d:
-                    break
+        d = _resolve_district(r, dcol)
         if not d:
             continue
         dep = parse_num(r[dep_idx]) if dep_idx < len(r) else None
@@ -240,34 +291,43 @@ def map_cd(tb, pk, *, dep_idx, adv_idx, cd_idx, factor, source):
 # ---------------------------------------------------------------------------
 LAC = 0.01
 CR = 1.0
+# branch specs: WIDE = same combined table, cols r2/su3/u4/metro5/t6 (urban
+# folds in metro); A2 = separate ANNEXURE-2 branch table, cols r2/su3/u4/t5.
+BR_WIDE = dict(kind='wide', r=2, su=3, u=4, metro=5, t=6)
+def BR_A2(source, ti=0):
+    return dict(kind='annex2', source=source, ti=ti, r=2, su=3, u=4, t=5)
+
 BATCHES = [
-    # --- narrow width-5 (Dep|Adv|CD%), lacs --------------------------------
+    # --- narrow width-5 (Dep|Adv|CD%), lacs; NO branch columns -------------
     dict(period='2016-12', source='Dec_2016_Annex', ti=1, dep=2, adv=3, cd=4, factor=LAC),
     dict(period='2017-03', source='March-2017-Annexure-1-44', ti=1, dep=2, adv=3, cd=4, factor=LAC),
     dict(period='2017-06', source='16th-Meeting-Annexures', ti=1, dep=2, adv=3, cd=4, factor=LAC),
-    # --- wide width-10 (Branches | Dep@7 Adv@8 CD@9), lacs -----------------
-    dict(period='2017-09', source='Sept_2017_Annex', ti=0, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2017-12', source='CQR-ANNEX-1217-R', ti=0, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2018-03', source='CQR-0318', ti=6, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2018-06', source='CQR-ANNEX-0618', ti=0, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2018-09', source='CQR-ANNEX-0918-1', ti=0, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2018-12', source='Dec_2018_Annex_1-44', ti=0, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2019-03', source='CQR-ANNEX-0319', ti=0, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2019-06', source='CQR-ANNEX-0619', ti=0, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2019-09', source='CQR-ANNEX-0919', ti=0, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2019-12', source='CQR-ANNEX-1219', ti=0, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2020-03', source='CQR-ANNEX-032020', ti=0, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2020-06', source='CQR-ANNEX-062020', ti=0, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2020-09', source='CQR-092020', ti=7, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2020-12', source='CQR-122020', ti=7, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2021-03', source='CQR-032021', ti=7, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2021-06', source='CQR-062021', ti=7, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2021-09', source='CQR-092021', ti=7, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2021-12', source='CQR-122021', ti=7, dep=7, adv=8, cd=9, factor=LAC),
-    dict(period='2022-03', source='CQR-ANNEX-032022', ti=0, dep=7, adv=8, cd=9, factor=LAC),
-    # --- annex4 width-12 (Dep total@6 Adv total@10 CD@11), already Crores --
-    dict(period='2022-06', source='CQR-ANNEX-062022', ti=1, dep=6, adv=10, cd=11, factor=CR),
-    dict(period='2022-09', source='CQR_Annex_092022', ti=1, dep=6, adv=10, cd=11, factor=CR),
+    # --- wide width-10 (Br R/SU/U/Metro/Total | Dep@7 Adv@8 CD@9), lacs ----
+    dict(period='2017-09', source='Sept_2017_Annex', ti=0, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2017-12', source='CQR-ANNEX-1217-R', ti=0, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2018-03', source='CQR-0318', ti=6, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2018-06', source='CQR-ANNEX-0618', ti=0, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2018-09', source='CQR-ANNEX-0918-1', ti=0, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2018-12', source='Dec_2018_Annex_1-44', ti=0, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2019-03', source='CQR-ANNEX-0319', ti=0, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2019-06', source='CQR-ANNEX-0619', ti=0, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2019-09', source='CQR-ANNEX-0919', ti=0, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2019-12', source='CQR-ANNEX-1219', ti=0, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2020-03', source='CQR-ANNEX-032020', ti=0, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2020-06', source='CQR-ANNEX-062020', ti=0, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2020-09', source='CQR-092020', ti=7, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2020-12', source='CQR-122020', ti=7, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2021-03', source='CQR-032021', ti=7, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2021-06', source='CQR-062021', ti=7, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2021-09', source='CQR-092021', ti=7, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2021-12', source='CQR-122021', ti=7, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    dict(period='2022-03', source='CQR-ANNEX-032022', ti=0, dep=7, adv=8, cd=9, factor=LAC, branch=BR_WIDE),
+    # --- annex4 width-12 (Dep total@6 Adv total@10 CD@11), Crores; branch
+    #     from the separate ANNEXURE-2 table (rural/semi/urban/total) -------
+    dict(period='2022-06', source='CQR-ANNEX-062022', ti=1, dep=6, adv=10, cd=11, factor=CR,
+         branch=BR_A2('CQR-ANNEX-062022', 0)),
+    dict(period='2022-09', source='CQR_Annex_092022', ti=1, dep=6, adv=10, cd=11, factor=CR,
+         branch=BR_A2('CQR_Annex_092022', 0)),
 ]
 
 MONTH_NAMES = {1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May',
@@ -337,11 +397,20 @@ def main():
         tb = get_table(b['source'], b['ti'])
         res = map_cd(tb, b['period'], dep_idx=b['dep'], adv_idx=b['adv'],
                      cd_idx=b['cd'], factor=b['factor'], source=b['source'])
+        nbr = 0
+        spec = b.get('branch')
+        if spec:
+            btb = (get_table(spec['source'], spec['ti'])
+                   if spec['kind'] == 'annex2' else tb)
+            bres = map_branch(btb, b['period'], spec=spec, source=b['source'])
+            nbr = len(bres)
+            for d, cats in bres.items():
+                res.setdefault(d, {}).update(cats)
         by_period[b['period']] = res
-        title = (tb.get('title') or '')[:46]
+        title = (tb.get('title') or '')[:40]
         flag = '' if len(res) >= 15 else '  <-- LOW DISTRICT COUNT'
-        print(f"  {b['period']}  {b['source'][:26]:26s}#{b['ti']} "
-              f"-> {len(res):2d} dist  [{title}]{flag}")
+        print(f"  {b['period']}  {b['source'][:24]:24s}#{b['ti']} "
+              f"-> {len(res):2d} CD, {nbr:2d} branch  [{title}]{flag}")
 
     if WARN:
         print(f'\n--- {len(WARN)} sanity warnings ---')
