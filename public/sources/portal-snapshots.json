@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T19:25:54+00:00",
+  "generatedAt": "2026-06-15T10:25:19+00:00",
   "portals": {
     "https://web.archive.org/web/2025*/slbcap.nic.in": {
       "states": [
@@ -31,8 +31,8 @@
         "form-driven portal (quarter/year POST) — homepage hash is the only static signal"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
-      "contentHash": "c5b4cddace9b380eb51ef0acb4a0fb5286a825c5cc8f35df4b5269946545aef5",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "contentHash": "144ff094f1512a9c8a7e1d8b6c8d75290db3d7246f0b0423042a9a08869f9006",
       "docLinks": [
         {
           "url": "http://slbcne.nic.in/intro.pdf",
@@ -50,8 +50,8 @@
         "broken SSL chain — verification disabled"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
-      "contentHash": "db0c3f23ea460a76608c6e7aba4767c6b65027e76f59fd05b8f4e57b992c3e71",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "contentHash": "8760096d7cae28386df2ce2d1d53554999d8384924bf903db46685c46358bff9",
       "docLinks": [
         {
           "url": "https://www.slbcbihar.com/Meeting/56TH SLBC AGENDA BOOK.pdf",
@@ -395,7 +395,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
       "contentHash": "91a1fbacd70ffd29f13de064ec905e9dde7b6c5bdae0b8760da71621e28c42f7",
       "docLinks": [
         {
@@ -528,7 +528,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
       "contentHash": "8a25d9986757301e27e15dd6255ddde5a008bcd799062950bc29af056950ff46",
       "docLinks": [
         {
@@ -553,7 +553,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
       "contentHash": "24b0d676cb2f266568b626dfe061b15c3d80c3424c73f5b48e7bfba57a74cd54",
       "docLinks": [
         {
@@ -662,8 +662,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
-      "contentHash": "9aa546729e0b3689c75de7e1272650f340c0c3a52c3149e45edfe866940f5c16",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "contentHash": "66ec909e04d04a9e20d226d337c9ec41ea65d4ed1afba235ff9a31c94e1b6a07",
       "docLinks": [
         {
           "url": "https://slbcgujarat.in/wp-content/uploads/2018/08/FAME-Booklet-English.pdf",
@@ -782,7 +782,7 @@
       ],
       "skip": false,
       "notes": [],
-      "consecutiveFailures": 0,
+      "consecutiveFailures": 1,
       "lastSuccess": "2026-06-09T19:25:54+00:00",
       "contentHash": "7c523bc5e349d0a295e4902b3eba49bb6f921b18c7baf5f3ebf2d13779bf1e4b",
       "docLinks": [
@@ -803,6 +803,7 @@
           "text": "Agenda Annexures 176th Meeting to be held on May 18, 2026"
         }
       ],
+      "lastError": "urllib: <urlopen error timed out> / curl: curl exit 28: curl: (28) Connection timed out after 20002 milliseconds",
       "lowSignal": false
     },
     "https://slbchp.com": {
@@ -812,7 +813,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
       "contentHash": "110c02c88b17cb42ab4fda6cd9d4315885327ef5e272b9f06d4bb314fb6fa414",
       "docLinks": [
         {
@@ -1049,7 +1050,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
       "contentHash": "648a82e472e6adde4ec992c1534ee752cde94a32daad167e9187af60299d4bad",
       "docLinks": [
         {
@@ -1258,8 +1259,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
-      "contentHash": "f7e88dd1c6dc2b12e3e87dc2707825c743a8a55d67738e06d6900b6e549ccf4c",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "contentHash": "12d931675740a65366cdbb377e1464d38e650a2aa943336be01b7779a3046565",
       "docLinks": [
         {
           "url": "https://slbckarnataka.com/UserFiles/APY_Citizens_Choice.pdf",
@@ -1487,8 +1488,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
-      "contentHash": "d136f0fefa9f386173a5ce338d91e5b6ff83f051f2db4fd5ba325ed79c8c7619",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "contentHash": "e53a2fb2fe6a97d1dd1282acb69eb715228b55c176d185f4085e0d1c88e23729",
       "docLinks": [
         {
           "url": "https://slbckerala.com/pdf/BeAware_Booklet_on_Modus_Operandi_of_Financial_Fraudsters_Malayalam.pdf",
@@ -1568,8 +1569,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
-      "contentHash": "bfdd0bc5e77ffe1f97e89360e900ce9d8d6f6060200cd0f0324ad65e7b54f7a5",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "contentHash": "8f74eb618a8ffad61984330b001ab573483478f60758458324136b0c986e6256",
       "docLinks": [
         {
           "url": "https://utlbcladakh.com/document/13 List of Tier 6 URCs Villages of UT Ladakh - as on 20.03.2024.xlsx",
@@ -1705,8 +1706,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
-      "contentHash": "ac71610da2afa5a8492da318d8f806f1255250862eeece2510f06e9c69fe35c8",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "contentHash": "9520b43b77980bc62ce5ca0d80de1dc4aba108e5d61e4f247afcc441e2bd0bb3",
       "docLinks": [
         {
           "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/09e81f04-9222-4c10-a8f8-bf15919cc0e9-ACP 2025-26 COMPRESSED.pdf",
@@ -1729,10 +1730,6 @@
           "text": "View"
         },
         {
-          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/3ff77f19-d07c-414b-a920-411e365210d5-SLBC meeting Final Agenda_compressed.pdf",
-          "text": "Agenda 197th SLBC meeting"
-        },
-        {
           "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/4ad30658-bd5a-4f00-b66b-74d1ed55b860-186th SLBC Agenda with data table.pdf",
           "text": "View"
         },
@@ -1743,6 +1740,10 @@
         {
           "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/516c249f-3c97-4aed-acf4-53ddd2baea54-SLBC Data Table Mar23.pdf",
           "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/6957a79a-791f-4224-84c4-25a14fc302aa-198th SLBC Agenda Final.pdf",
+          "text": "Agenda 198th SLBC meeting"
         },
         {
           "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/Agenda-194.pdf",
@@ -2512,8 +2513,8 @@
         "apex .in domain unreachable from runners — watching the .bank.in alias"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
-      "contentHash": "1be10cf3f389d1287efd8c7a721a218c98586bfb93da40cd4ae9efbe26413b30",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "contentHash": "ddfddb9989f457b310f959b8feb854c32274e51868426fdd35757fe5c661987b",
       "docLinks": [
         {
           "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/042bb82b-69d5-4ba7-84b7-50884fe38fe3.pdf",
@@ -2692,7 +2693,7 @@
       ],
       "skip": false,
       "notes": [],
-      "consecutiveFailures": 0,
+      "consecutiveFailures": 1,
       "lastSuccess": "2026-06-09T19:25:54+00:00",
       "contentHash": "2ecd043e1d8fb1e04a06b64730c35da648466b89f06bb89d943054840e8ef389",
       "docLinks": [
@@ -2757,6 +2758,7 @@
           "text": "Unclaimed Financil Assets"
         }
       ],
+      "lastError": "urllib: <urlopen error timed out> / curl: curl exit 28: curl: (28) Connection timed out after 20000 milliseconds",
       "lowSignal": false
     },
     "https://slbcrajasthan.in": {
@@ -2766,8 +2768,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
-      "contentHash": "2df54edd83ab577c0e5655eab53d3dc13adeb8a749ab3f184f6c37073491ed11",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "contentHash": "3f33b55fd0b7ee79c8ae6dfa084b7070d6a49f06adc7b8466b09ba4aecf06b19",
       "docLinks": [
         {
           "url": "https://slbcrajasthan.in/SLBC Rajasthan GSS Booklet (1).pdf",
@@ -2879,8 +2881,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
-      "contentHash": "c15cd9cc6d49b411ae1b5b67c693d2685a1c10dc20b39d85a7c5f86c9b240d7c",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "contentHash": "9475ef6153410d8494ebbf886388fdda75b19f016210370b11f875b528a2969c",
       "docLinks": [
         {
           "url": "https://slbctn.com/Uploads/ACPTarget-Fy_2025 -26_Bank Wise District Wise.xlsx",
@@ -2899,16 +2901,8 @@
           "text": "Banking Outlets-Branches-Details"
         },
         {
-          "url": "https://slbctn.com/Uploads/Financial_Inclusion/EXTENSION TIME FRAME-Hydrlogical Drought-05.03.2025 (10).pdf",
+          "url": "https://slbctn.com/Uploads/Financial_Inclusion/EXTENSION TIME FRAME-Hydrlogical Drought-05.03.2025(10).pdf",
           "text": "Hydrological Drought"
-        },
-        {
-          "url": "https://slbctn.com/Uploads/Financial_Inclusion/MSME CLUSTER DATA AS ON SEP 25.xlsx",
-          "text": "MSME CLUSTER DATA Sept-2025"
-        },
-        {
-          "url": "https://slbctn.com/Uploads/Financial_Inclusion/MSME CLUSTER FINANCING 31.12.2025.xlsx",
-          "text": "MSME CLUSTER DATA Dec-2025"
         },
         {
           "url": "https://slbctn.com/Uploads/Financial_Inclusion/URC_21-01-2025.xlsx",
@@ -2931,7 +2925,7 @@
           "text": "Banking-Other modes-Details"
         },
         {
-          "url": "https://slbctn.com/UserFiles/DownLoad/FLC%20CAMPS%20Dec%202025-FLC-FLC.xlsx",
+          "url": "https://slbctn.com/UserFiles/DownLoad/FLC%20CAMPS%20MARCH%202026.xlsx",
           "text": "FLC"
         },
         {
@@ -2939,11 +2933,11 @@
           "text": "Specialised MSME branches"
         },
         {
-          "url": "https://slbctn.com/UserFiles/DownLoad/NSFI%20Data_Dec%202025-SDR-RSETI-RSETI.xlsx",
+          "url": "https://slbctn.com/UserFiles/DownLoad/NSFI%20Data%20-2025-26-SDR.xlsx",
           "text": "RSETI"
         },
         {
-          "url": "https://slbctn.com/UserFiles/DownLoad/SHG%20-%2031.12.2025-SHG.xlsx",
+          "url": "https://slbctn.com/UserFiles/DownLoad/SHG%20MARCH%202026.xlsx",
           "text": "SHG"
         },
         {
@@ -2966,7 +2960,7 @@
         "watching CQR reports page (the per-quarter annexure feed)"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
       "contentHash": "c718c2fa118f2a1e79015a5c8ecfbb9339b3e8cf3aa5a00a296dc6320eb5f405",
       "docLinks": [
         {
@@ -3509,8 +3503,8 @@
         "self-signed certificate — verification disabled"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
-      "contentHash": "fb73dec5b34273758cd2dce92972513ee769b5ca9cf0c00c319e4fcfab91e892",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "contentHash": "ac1a4dbf33cfddbd8b9ec4043476c8961b95edca61266f110e6832a27a82aad3",
       "docLinks": [
         {
           "url": "http://slbctripura.com/pdf/131st_Tripura_SLBC-Minutes_Hindi.pdf",
@@ -3817,19 +3811,23 @@
           "text": "View"
         },
         {
-          "url": "https://slbctripura.pnb.bank.in/pdf/154th SLBC Website Update/Housing.pdf",
+          "url": "https://slbctripura.pnb.bank.in/pdf/155th SLBC Agenda Note Final.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/155th SLBC Website Update/Housing.pdf",
           "text": "Housing"
         },
         {
-          "url": "https://slbctripura.pnb.bank.in/pdf/154th SLBC Website Update/KCC.pdf",
+          "url": "https://slbctripura.pnb.bank.in/pdf/155th SLBC Website Update/KCC.pdf",
           "text": "Kisan Credit Card"
         },
         {
-          "url": "https://slbctripura.pnb.bank.in/pdf/154th SLBC Website Update/SHG.pdf",
+          "url": "https://slbctripura.pnb.bank.in/pdf/155th SLBC Website Update/SHG.pdf",
           "text": "Self Help Groups (SHG)"
         },
         {
-          "url": "https://slbctripura.pnb.bank.in/pdf/154th SLBC Website Update/Swavalamban.pdf",
+          "url": "https://slbctripura.pnb.bank.in/pdf/155th SLBC Website Update/Swavalamban.pdf",
           "text": "Swabalamban Self Employment Programme sponsored by Govt. of Tripura"
         },
         {
@@ -3851,6 +3849,10 @@
         {
           "url": "https://slbctripura.pnb.bank.in/pdf/Procedings_123rd_SLBC_Tripra.pdf",
           "text": "View"
+        },
+        {
+          "url": "https://slbctripura.pnb.bank.in/pdf/Proceeding of 155th SLBC.pdf",
+          "text": "Minutes - English"
         },
         {
           "url": "https://slbctripura.pnb.bank.in/pdf/Proceedings of 148th & 149th SLBC.pdf",
@@ -3970,7 +3972,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
       "contentHash": "cfbd4640a2bfea4dac348422ace2cac0409f41140bd34f31e4971ceef51a78f4",
       "docLinks": [
         {
@@ -4102,8 +4104,8 @@
         "HTTPS handshake broken — watching plain-HTTP homepage"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-09T19:25:54+00:00",
-      "contentHash": "7fbe48f72174998c5d4740ce00b2e1801fbdff37d06c895838352b6184ff18b6",
+      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "contentHash": "b2ad210de0f0626549e680abd85cb42bf1d417e7965ec085c3862fd3f9b5df42",
       "docLinks": [
         {
           "url": "http://slbcup.com/File/Annex II Dec 23 Lead Banks.xls",
