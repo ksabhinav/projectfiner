@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T10:25:19+00:00",
+  "generatedAt": "2026-06-22T09:50:06+00:00",
   "portals": {
     "https://web.archive.org/web/2025*/slbcap.nic.in": {
       "states": [
@@ -31,8 +31,8 @@
         "form-driven portal (quarter/year POST) — homepage hash is the only static signal"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
-      "contentHash": "144ff094f1512a9c8a7e1d8b6c8d75290db3d7246f0b0423042a9a08869f9006",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "contentHash": "6abedf77b04893534266a5df9a0dba6b4f28f93dffa0858715bce44364a99b9f",
       "docLinks": [
         {
           "url": "http://slbcne.nic.in/intro.pdf",
@@ -50,7 +50,7 @@
         "broken SSL chain — verification disabled"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
       "contentHash": "8760096d7cae28386df2ce2d1d53554999d8384924bf903db46685c46358bff9",
       "docLinks": [
         {
@@ -395,7 +395,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
       "contentHash": "91a1fbacd70ffd29f13de064ec905e9dde7b6c5bdae0b8760da71621e28c42f7",
       "docLinks": [
         {
@@ -528,7 +528,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
       "contentHash": "8a25d9986757301e27e15dd6255ddde5a008bcd799062950bc29af056950ff46",
       "docLinks": [
         {
@@ -553,7 +553,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
       "contentHash": "24b0d676cb2f266568b626dfe061b15c3d80c3424c73f5b48e7bfba57a74cd54",
       "docLinks": [
         {
@@ -662,8 +662,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
-      "contentHash": "66ec909e04d04a9e20d226d337c9ec41ea65d4ed1afba235ff9a31c94e1b6a07",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "contentHash": "6e513ceac590ab2082544edb6c33e07847b9f18cb5fd35f7a8831b8cb267de0c",
       "docLinks": [
         {
           "url": "https://slbcgujarat.in/wp-content/uploads/2018/08/FAME-Booklet-English.pdf",
@@ -782,7 +782,7 @@
       ],
       "skip": false,
       "notes": [],
-      "consecutiveFailures": 1,
+      "consecutiveFailures": 2,
       "lastSuccess": "2026-06-09T19:25:54+00:00",
       "contentHash": "7c523bc5e349d0a295e4902b3eba49bb6f921b18c7baf5f3ebf2d13779bf1e4b",
       "docLinks": [
@@ -813,7 +813,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
       "contentHash": "110c02c88b17cb42ab4fda6cd9d4315885327ef5e272b9f06d4bb314fb6fa414",
       "docLinks": [
         {
@@ -1050,7 +1050,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
       "contentHash": "648a82e472e6adde4ec992c1534ee752cde94a32daad167e9187af60299d4bad",
       "docLinks": [
         {
@@ -1259,8 +1259,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
-      "contentHash": "12d931675740a65366cdbb377e1464d38e650a2aa943336be01b7779a3046565",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "contentHash": "a0091f5f797711600b925da2c5314853d85f8973fba47c44c004b8ef69d7d797",
       "docLinks": [
         {
           "url": "https://slbckarnataka.com/UserFiles/APY_Citizens_Choice.pdf",
@@ -1303,6 +1303,10 @@
           "text": "Crop Seasonality"
         },
         {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/ACP Agriculture Subsector Target 2026-27.xlsx",
+          "text": "Agriculture Sub Sector Target FY 2026-27"
+        },
+        {
           "url": "https://slbckarnataka.com/UserFiles/slbc/ACP Karnataka State 2021-22 Distric wise and Bank wise.xlsx",
           "text": "2021-22"
         },
@@ -1328,6 +1332,10 @@
         },
         {
           "url": "https://slbckarnataka.com/UserFiles/slbc/ACP_target_FY2025-26.xlsx",
+          "text": "ACP Targets"
+        },
+        {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/ACP_target_FY2026-27.xlsx",
           "text": "ACP Targets"
         },
         {
@@ -1415,6 +1423,10 @@
           "text": "PMFBY 2025-26"
         },
         {
+          "url": "https://slbckarnataka.com/UserFiles/slbc/PMFBY and RWBCIS 2026-27.zip",
+          "text": "PMFBY and RWBCIS 2026-27"
+        },
+        {
           "url": "https://slbckarnataka.com/UserFiles/slbc/PMFME Guidelines.pdf",
           "text": "PMFME"
         },
@@ -1488,8 +1500,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
-      "contentHash": "e53a2fb2fe6a97d1dd1282acb69eb715228b55c176d185f4085e0d1c88e23729",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "contentHash": "6a30b0e123defca8b569bbe16e25b7c5d8f450322dba2a64ca852f71a649d510",
       "docLinks": [
         {
           "url": "https://slbckerala.com/pdf/BeAware_Booklet_on_Modus_Operandi_of_Financial_Fraudsters_Malayalam.pdf",
@@ -1569,7 +1581,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
       "contentHash": "8f74eb618a8ffad61984330b001ab573483478f60758458324136b0c986e6256",
       "docLinks": [
         {
@@ -1706,8 +1718,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
-      "contentHash": "9520b43b77980bc62ce5ca0d80de1dc4aba108e5d61e4f247afcc441e2bd0bb3",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "contentHash": "36883d7c750b04d1b19aba860b3cd7e67efa0b9bcf7cb549f56f416f8415d20e",
       "docLinks": [
         {
           "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/09e81f04-9222-4c10-a8f8-bf15919cc0e9-ACP 2025-26 COMPRESSED.pdf",
@@ -2513,8 +2525,8 @@
         "apex .in domain unreachable from runners — watching the .bank.in alias"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
-      "contentHash": "ddfddb9989f457b310f959b8feb854c32274e51868426fdd35757fe5c661987b",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "contentHash": "9256562635b83ff7ada20cd21ae010e4ea727458b067a52b0fada2c894c293c4",
       "docLinks": [
         {
           "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/042bb82b-69d5-4ba7-84b7-50884fe38fe3.pdf",
@@ -2637,10 +2649,6 @@
           "text": "Bank of Maharashtra launches WhatsApp Banking Service"
         },
         {
-          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/c129b067-7bba-40ed-bb36-0fc48404a53d.pdf",
-          "text": "Sheduled Maintainance Activity 25.04.2026"
-        },
-        {
           "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/c1f1a378-1ff3-462d-818d-d800b3e4b67e.pdf",
           "text": "Marginal Cost of Funds Based Lending Rate (MCLR) and Repo Rate Linked Lending Rate (RLLR) 30.04.2026 & 27.02.2026"
         },
@@ -2659,6 +2667,10 @@
         {
           "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/d07b9c4a-04c8-43cf-8fdb-8a160716e8a4.pdf",
           "text": "Assets in possession under SARFAESI Action"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/d8d2990a-c8de-4109-bfd2-be63e25a4916.pdf",
+          "text": "Marginal Cost of Funds Based Lending Rate (MCLR) and Repo Rate Linked Lending Rate (RLLR) 17.06.2026"
         },
         {
           "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/dadf44cf-4ad5-4d89-b8cd-2690d67bc657.pdf",
@@ -2693,7 +2705,7 @@
       ],
       "skip": false,
       "notes": [],
-      "consecutiveFailures": 1,
+      "consecutiveFailures": 2,
       "lastSuccess": "2026-06-09T19:25:54+00:00",
       "contentHash": "2ecd043e1d8fb1e04a06b64730c35da648466b89f06bb89d943054840e8ef389",
       "docLinks": [
@@ -2768,7 +2780,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
       "contentHash": "3f33b55fd0b7ee79c8ae6dfa084b7070d6a49f06adc7b8466b09ba4aecf06b19",
       "docLinks": [
         {
@@ -2881,8 +2893,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
-      "contentHash": "9475ef6153410d8494ebbf886388fdda75b19f016210370b11f875b528a2969c",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "contentHash": "a246808fef65e71baf27b7a153c61b9daa1dc6ce84cddaf415fae28fb03d108d",
       "docLinks": [
         {
           "url": "https://slbctn.com/Uploads/ACPTarget-Fy_2025 -26_Bank Wise District Wise.xlsx",
@@ -2960,7 +2972,7 @@
         "watching CQR reports page (the per-quarter annexure feed)"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
       "contentHash": "c718c2fa118f2a1e79015a5c8ecfbb9339b3e8cf3aa5a00a296dc6320eb5f405",
       "docLinks": [
         {
@@ -3503,8 +3515,8 @@
         "self-signed certificate — verification disabled"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
-      "contentHash": "ac1a4dbf33cfddbd8b9ec4043476c8961b95edca61266f110e6832a27a82aad3",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "contentHash": "7a2c3590f742fa7d543a5b6623974f9c6dea950acd37b1905810925e2e823742",
       "docLinks": [
         {
           "url": "http://slbctripura.com/pdf/131st_Tripura_SLBC-Minutes_Hindi.pdf",
@@ -3972,7 +3984,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
       "contentHash": "cfbd4640a2bfea4dac348422ace2cac0409f41140bd34f31e4971ceef51a78f4",
       "docLinks": [
         {
@@ -4104,8 +4116,8 @@
         "HTTPS handshake broken — watching plain-HTTP homepage"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-15T10:25:19+00:00",
-      "contentHash": "b2ad210de0f0626549e680abd85cb42bf1d417e7965ec085c3862fd3f9b5df42",
+      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "contentHash": "6e4f0f2895e9e093da73d06c5fd26c3ae4bb9e0cf92caf74b3dced79791c54e3",
       "docLinks": [
         {
           "url": "http://slbcup.com/File/Annex II Dec 23 Lead Banks.xls",
@@ -4118,10 +4130,6 @@
         {
           "url": "http://slbcup.com/File/NSFI 2025-30 document.pdf",
           "text": "NSFI Document 2025-30"
-        },
-        {
-          "url": "http://slbcup.com/Pages/Download/ACP_Booklet_2024-25.pdf",
-          "text": "वार्षिक ऋण योजनान्तर्गत लक्ष्य"
         },
         {
           "url": "http://slbcup.com/font/BANK WISE TRANSACTIONS AT BC POINTS.XLSX",
