@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T09:50:06+00:00",
+  "generatedAt": "2026-06-29T08:59:52+00:00",
   "portals": {
     "https://web.archive.org/web/2025*/slbcap.nic.in": {
       "states": [
@@ -31,8 +31,8 @@
         "form-driven portal (quarter/year POST) — homepage hash is the only static signal"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
-      "contentHash": "6abedf77b04893534266a5df9a0dba6b4f28f93dffa0858715bce44364a99b9f",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "contentHash": "ffcd4528dcd0139a3dab179bf84d5d3d7f44ac3122ccb81614b4e301ab600653",
       "docLinks": [
         {
           "url": "http://slbcne.nic.in/intro.pdf",
@@ -50,8 +50,8 @@
         "broken SSL chain — verification disabled"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
-      "contentHash": "8760096d7cae28386df2ce2d1d53554999d8384924bf903db46685c46358bff9",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "contentHash": "0088c0f229c15010f0a9aec1be8c7c29c85a7499cce318940d1409a70e103c6b",
       "docLinks": [
         {
           "url": "https://www.slbcbihar.com/Meeting/56TH SLBC AGENDA BOOK.pdf",
@@ -196,6 +196,10 @@
         {
           "url": "https://www.slbcbihar.com/documents/71 TH SLBC AGENDA BOOK.pdf",
           "text": "Agenda & Minutes of 71st SLBC Meeting"
+        },
+        {
+          "url": "https://www.slbcbihar.com/documents/71st Data Sheet.pdf",
+          "text": "DATA SHEET"
         },
         {
           "url": "https://www.slbcbihar.com/documents/79th Scan.pdf",
@@ -350,10 +354,6 @@
           "text": "Minutes of the 95th Meeting held on - 22.01.2026"
         },
         {
-          "url": "https://www.slbcbihar.com/documents/PGWISE REPORTS.zip",
-          "text": "DATA SHEET"
-        },
-        {
           "url": "https://www.slbcbihar.com/documents/SLBC BIHAR  MINUTES OF 88TH AND 89TH JOINT MEETING HELD ON  14.06.2024.pdf",
           "text": "Minutes of 88th and 89th Joint Meeting"
         },
@@ -395,7 +395,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
       "contentHash": "91a1fbacd70ffd29f13de064ec905e9dde7b6c5bdae0b8760da71621e28c42f7",
       "docLinks": [
         {
@@ -528,7 +528,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
       "contentHash": "8a25d9986757301e27e15dd6255ddde5a008bcd799062950bc29af056950ff46",
       "docLinks": [
         {
@@ -553,7 +553,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
       "contentHash": "24b0d676cb2f266568b626dfe061b15c3d80c3424c73f5b48e7bfba57a74cd54",
       "docLinks": [
         {
@@ -662,8 +662,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
-      "contentHash": "6e513ceac590ab2082544edb6c33e07847b9f18cb5fd35f7a8831b8cb267de0c",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "contentHash": "12aa91df3422fc3b2206123458c6be8f9fbf2faecbbed952502e68dc4c94f06c",
       "docLinks": [
         {
           "url": "https://slbcgujarat.in/wp-content/uploads/2018/08/FAME-Booklet-English.pdf",
@@ -782,7 +782,7 @@
       ],
       "skip": false,
       "notes": [],
-      "consecutiveFailures": 2,
+      "consecutiveFailures": 3,
       "lastSuccess": "2026-06-09T19:25:54+00:00",
       "contentHash": "7c523bc5e349d0a295e4902b3eba49bb6f921b18c7baf5f3ebf2d13779bf1e4b",
       "docLinks": [
@@ -803,7 +803,7 @@
           "text": "Agenda Annexures 176th Meeting to be held on May 18, 2026"
         }
       ],
-      "lastError": "urllib: <urlopen error timed out> / curl: curl exit 28: curl: (28) Connection timed out after 20002 milliseconds",
+      "lastError": "urllib: <urlopen error timed out> / curl: curl exit 28: curl: (28) Connection timed out after 20001 milliseconds",
       "lowSignal": false
     },
     "https://slbchp.com": {
@@ -813,7 +813,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
       "contentHash": "110c02c88b17cb42ab4fda6cd9d4315885327ef5e272b9f06d4bb314fb6fa414",
       "docLinks": [
         {
@@ -1050,7 +1050,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
       "contentHash": "648a82e472e6adde4ec992c1534ee752cde94a32daad167e9187af60299d4bad",
       "docLinks": [
         {
@@ -1259,8 +1259,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
-      "contentHash": "a0091f5f797711600b925da2c5314853d85f8973fba47c44c004b8ef69d7d797",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "contentHash": "ffa837418617d8087b284f4986cc5f4dd6ff80ec6a048a19eb54684597f3b916",
       "docLinks": [
         {
           "url": "https://slbckarnataka.com/UserFiles/APY_Citizens_Choice.pdf",
@@ -1500,8 +1500,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
-      "contentHash": "6a30b0e123defca8b569bbe16e25b7c5d8f450322dba2a64ca852f71a649d510",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "contentHash": "7a2e4c9ffb504028bd2b2b5ba8c415fc9632e45d4bd7571877ad53251c6ea67e",
       "docLinks": [
         {
           "url": "https://slbckerala.com/pdf/BeAware_Booklet_on_Modus_Operandi_of_Financial_Fraudsters_Malayalam.pdf",
@@ -1517,7 +1517,7 @@
         },
         {
           "url": "https://slbckerala.com/pdf/Cyberfraud_SOP.pdf",
-          "text": "Cyber Fraud â€“ SOP"
+          "text": "Cyber Fraud - SOP"
         },
         {
           "url": "https://slbckerala.com/pdf/FLCs_DATA_DEC_2025.xlsx",
@@ -1581,7 +1581,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
       "contentHash": "8f74eb618a8ffad61984330b001ab573483478f60758458324136b0c986e6256",
       "docLinks": [
         {
@@ -1718,8 +1718,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
-      "contentHash": "36883d7c750b04d1b19aba860b3cd7e67efa0b9bcf7cb549f56f416f8415d20e",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "contentHash": "6f86ad3015db50c0a1c072bc82a1e8f16c404b31088e3f8266366b8097613623",
       "docLinks": [
         {
           "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/09e81f04-9222-4c10-a8f8-bf15919cc0e9-ACP 2025-26 COMPRESSED.pdf",
@@ -2525,8 +2525,8 @@
         "apex .in domain unreachable from runners — watching the .bank.in alias"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
-      "contentHash": "9256562635b83ff7ada20cd21ae010e4ea727458b067a52b0fada2c894c293c4",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "contentHash": "c0ff6e813387534073d1124cde51b0002dd86c2076389b7b8e7cbc86a45852b0",
       "docLinks": [
         {
           "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/042bb82b-69d5-4ba7-84b7-50884fe38fe3.pdf",
@@ -2705,7 +2705,7 @@
       ],
       "skip": false,
       "notes": [],
-      "consecutiveFailures": 2,
+      "consecutiveFailures": 3,
       "lastSuccess": "2026-06-09T19:25:54+00:00",
       "contentHash": "2ecd043e1d8fb1e04a06b64730c35da648466b89f06bb89d943054840e8ef389",
       "docLinks": [
@@ -2770,7 +2770,7 @@
           "text": "Unclaimed Financil Assets"
         }
       ],
-      "lastError": "urllib: <urlopen error timed out> / curl: curl exit 28: curl: (28) Connection timed out after 20000 milliseconds",
+      "lastError": "urllib: <urlopen error timed out> / curl: curl exit 28: curl: (28) Connection timed out after 20002 milliseconds",
       "lowSignal": false
     },
     "https://slbcrajasthan.in": {
@@ -2780,7 +2780,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
       "contentHash": "3f33b55fd0b7ee79c8ae6dfa084b7070d6a49f06adc7b8466b09ba4aecf06b19",
       "docLinks": [
         {
@@ -2893,8 +2893,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
-      "contentHash": "a246808fef65e71baf27b7a153c61b9daa1dc6ce84cddaf415fae28fb03d108d",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "contentHash": "acee0db5406df786327f0dcab8f5a2e641fc40052289b253a0a79f0ec3973070",
       "docLinks": [
         {
           "url": "https://slbctn.com/Uploads/ACPTarget-Fy_2025 -26_Bank Wise District Wise.xlsx",
@@ -2972,7 +2972,7 @@
         "watching CQR reports page (the per-quarter annexure feed)"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
       "contentHash": "c718c2fa118f2a1e79015a5c8ecfbb9339b3e8cf3aa5a00a296dc6320eb5f405",
       "docLinks": [
         {
@@ -3515,7 +3515,7 @@
         "self-signed certificate — verification disabled"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
       "contentHash": "7a2c3590f742fa7d543a5b6623974f9c6dea950acd37b1905810925e2e823742",
       "docLinks": [
         {
@@ -3984,7 +3984,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
       "contentHash": "cfbd4640a2bfea4dac348422ace2cac0409f41140bd34f31e4971ceef51a78f4",
       "docLinks": [
         {
@@ -4116,7 +4116,7 @@
         "HTTPS handshake broken — watching plain-HTTP homepage"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-22T09:50:06+00:00",
+      "lastSuccess": "2026-06-29T08:59:52+00:00",
       "contentHash": "6e4f0f2895e9e093da73d06c5fd26c3ae4bb9e0cf92caf74b3dced79791c54e3",
       "docLinks": [
         {
