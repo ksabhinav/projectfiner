@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T08:59:52+00:00",
+  "generatedAt": "2026-07-06T05:31:55+00:00",
   "portals": {
     "https://web.archive.org/web/2025*/slbcap.nic.in": {
       "states": [
@@ -31,8 +31,8 @@
         "form-driven portal (quarter/year POST) — homepage hash is the only static signal"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
-      "contentHash": "ffcd4528dcd0139a3dab179bf84d5d3d7f44ac3122ccb81614b4e301ab600653",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
+      "contentHash": "8e6a23411b05d4bb782f497eeb225457bd487b48c681d281097005e9a6b4d472",
       "docLinks": [
         {
           "url": "http://slbcne.nic.in/intro.pdf",
@@ -50,7 +50,7 @@
         "broken SSL chain — verification disabled"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
       "contentHash": "0088c0f229c15010f0a9aec1be8c7c29c85a7499cce318940d1409a70e103c6b",
       "docLinks": [
         {
@@ -395,8 +395,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
-      "contentHash": "91a1fbacd70ffd29f13de064ec905e9dde7b6c5bdae0b8760da71621e28c42f7",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
+      "contentHash": "f937f29dcd0a3028cd50291b72c0604d67838324cf00441254d9b58f28df6ba5",
       "docLinks": [
         {
           "url": "http://slbcchhattisgarh.com/download/central-sponsers/English_SVANidhi.pdf",
@@ -499,6 +499,10 @@
           "text": "Calendar of Meetings"
         },
         {
+          "url": "https://slbcchhattisgarh.com/download/msme-cluster-chhattisgarh-sfurti.xls",
+          "text": "MSME CLUSTER - SFURTI"
+        },
+        {
           "url": "https://slbcchhattisgarh.com/download/rbi-circular/flc-1.pdf",
           "text": ""
         },
@@ -528,7 +532,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
       "contentHash": "8a25d9986757301e27e15dd6255ddde5a008bcd799062950bc29af056950ff46",
       "docLinks": [
         {
@@ -553,7 +557,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
       "contentHash": "24b0d676cb2f266568b626dfe061b15c3d80c3424c73f5b48e7bfba57a74cd54",
       "docLinks": [
         {
@@ -662,8 +666,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
-      "contentHash": "12aa91df3422fc3b2206123458c6be8f9fbf2faecbbed952502e68dc4c94f06c",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
+      "contentHash": "dd6553697ce118e2ad6549f4d3ca64e70b7ef304cd135af5eb4665cae5140534",
       "docLinks": [
         {
           "url": "https://slbcgujarat.in/wp-content/uploads/2018/08/FAME-Booklet-English.pdf",
@@ -782,7 +786,7 @@
       ],
       "skip": false,
       "notes": [],
-      "consecutiveFailures": 3,
+      "consecutiveFailures": 4,
       "lastSuccess": "2026-06-09T19:25:54+00:00",
       "contentHash": "7c523bc5e349d0a295e4902b3eba49bb6f921b18c7baf5f3ebf2d13779bf1e4b",
       "docLinks": [
@@ -813,7 +817,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
       "contentHash": "110c02c88b17cb42ab4fda6cd9d4315885327ef5e272b9f06d4bb314fb6fa414",
       "docLinks": [
         {
@@ -1050,7 +1054,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
       "contentHash": "648a82e472e6adde4ec992c1534ee752cde94a32daad167e9187af60299d4bad",
       "docLinks": [
         {
@@ -1259,8 +1263,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
-      "contentHash": "ffa837418617d8087b284f4986cc5f4dd6ff80ec6a048a19eb54684597f3b916",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
+      "contentHash": "910806e97be5fb2b3b1ef38d22dc8209e6bec33caacdb30e9b01fb6527b3f2c1",
       "docLinks": [
         {
           "url": "https://slbckarnataka.com/UserFiles/APY_Citizens_Choice.pdf",
@@ -1500,9 +1504,13 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
-      "contentHash": "7a2e4c9ffb504028bd2b2b5ba8c415fc9632e45d4bd7571877ad53251c6ea67e",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
+      "contentHash": "a8f52d5e220016e4cc2fd1bff66bca0f0e291d6efeacd78bd737b660307d6abb",
       "docLinks": [
+        {
+          "url": "https://slbckerala.com/excel/FLCsDATA_MAR_2026.xlsx",
+          "text": "FLCs"
+        },
         {
           "url": "https://slbckerala.com/pdf/BeAware_Booklet_on_Modus_Operandi_of_Financial_Fraudsters_Malayalam.pdf",
           "text": "BeAware Booklet on Modus Operandi of Financial Fraudsters Malayalam"
@@ -1518,10 +1526,6 @@
         {
           "url": "https://slbckerala.com/pdf/Cyberfraud_SOP.pdf",
           "text": "Cyber Fraud - SOP"
-        },
-        {
-          "url": "https://slbckerala.com/pdf/FLCs_DATA_DEC_2025.xlsx",
-          "text": "FLCs"
         },
         {
           "url": "https://slbckerala.com/pdf/Govt_Notification_on_PMFBY_2020-21-22.pdf",
@@ -1581,7 +1585,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
       "contentHash": "8f74eb618a8ffad61984330b001ab573483478f60758458324136b0c986e6256",
       "docLinks": [
         {
@@ -1718,12 +1722,12 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
-      "contentHash": "6f86ad3015db50c0a1c072bc82a1e8f16c404b31088e3f8266366b8097613623",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
+      "contentHash": "6348d3cb5690a289ec5608626861189e62248a7d0c1ada9aac83f8a4a452678a",
       "docLinks": [
         {
-          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/09e81f04-9222-4c10-a8f8-bf15919cc0e9-ACP 2025-26 COMPRESSED.pdf",
-          "text": "ACP 2025-26"
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/0ec5bd25-752c-4bbf-bb46-5be5d60d0696-ACP 2026-27.pdf",
+          "text": "ACP 2026-27"
         },
         {
           "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/187th_agenda_final.pdf",
@@ -1735,6 +1739,10 @@
         },
         {
           "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/197th-final-agenda-2026-03-26.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/198th-SLBC-Agenda-Final.pdf",
           "text": "View"
         },
         {
@@ -1782,6 +1790,10 @@
           "text": "View"
         },
         {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/Slbc-data-Mar26-Final.xlsx",
+          "text": "View"
+        },
+        {
           "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/Slbc-data-dec25-final-2026-03-26.xlsx",
           "text": "View"
         },
@@ -1791,6 +1803,10 @@
         },
         {
           "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/Special_SLBC_Agenda_16.10.2024.pdf",
+          "text": "View"
+        },
+        {
+          "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/approved-minutes-198th.pdf",
           "text": "View"
         },
         {
@@ -2525,8 +2541,8 @@
         "apex .in domain unreachable from runners — watching the .bank.in alias"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
-      "contentHash": "c0ff6e813387534073d1124cde51b0002dd86c2076389b7b8e7cbc86a45852b0",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
+      "contentHash": "932ad496e70435a2d2534e093f46e12358dcfe5dcdbf759af693d5e68869265a",
       "docLinks": [
         {
           "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/042bb82b-69d5-4ba7-84b7-50884fe38fe3.pdf",
@@ -2705,7 +2721,7 @@
       ],
       "skip": false,
       "notes": [],
-      "consecutiveFailures": 3,
+      "consecutiveFailures": 4,
       "lastSuccess": "2026-06-09T19:25:54+00:00",
       "contentHash": "2ecd043e1d8fb1e04a06b64730c35da648466b89f06bb89d943054840e8ef389",
       "docLinks": [
@@ -2780,7 +2796,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
       "contentHash": "3f33b55fd0b7ee79c8ae6dfa084b7070d6a49f06adc7b8466b09ba4aecf06b19",
       "docLinks": [
         {
@@ -2893,8 +2909,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
-      "contentHash": "acee0db5406df786327f0dcab8f5a2e641fc40052289b253a0a79f0ec3973070",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
+      "contentHash": "9d68aaffaaf135e0a97c6add3bf1374aa69292e66d68619049bfc28af9ad160a",
       "docLinks": [
         {
           "url": "https://slbctn.com/Uploads/ACPTarget-Fy_2025 -26_Bank Wise District Wise.xlsx",
@@ -2972,7 +2988,7 @@
         "watching CQR reports page (the per-quarter annexure feed)"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
       "contentHash": "c718c2fa118f2a1e79015a5c8ecfbb9339b3e8cf3aa5a00a296dc6320eb5f405",
       "docLinks": [
         {
@@ -3515,7 +3531,7 @@
         "self-signed certificate — verification disabled"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
       "contentHash": "7a2c3590f742fa7d543a5b6623974f9c6dea950acd37b1905810925e2e823742",
       "docLinks": [
         {
@@ -3984,7 +4000,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
       "contentHash": "cfbd4640a2bfea4dac348422ace2cac0409f41140bd34f31e4971ceef51a78f4",
       "docLinks": [
         {
@@ -4116,51 +4132,10 @@
         "HTTPS handshake broken — watching plain-HTTP homepage"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-06-29T08:59:52+00:00",
-      "contentHash": "6e4f0f2895e9e093da73d06c5fd26c3ae4bb9e0cf92caf74b3dced79791c54e3",
-      "docLinks": [
-        {
-          "url": "http://slbcup.com/File/Annex II Dec 23 Lead Banks.xls",
-          "text": "लीड बैंक - वित्तीय साक्षरता केन्द्रों की सूचना"
-        },
-        {
-          "url": "http://slbcup.com/File/Annex II Dec 23 RRBs.xls",
-          "text": "आरआरबी बैंक - वित्तीय साक्षरता केन्द्रों की सूचना"
-        },
-        {
-          "url": "http://slbcup.com/File/NSFI 2025-30 document.pdf",
-          "text": "NSFI Document 2025-30"
-        },
-        {
-          "url": "http://slbcup.com/font/BANK WISE TRANSACTIONS AT BC POINTS.XLSX",
-          "text": "B.C केंद्रों का वित्तीय संव्यवहार का विवरण"
-        },
-        {
-          "url": "http://slbcup.com/font/FINAL_URBAN_WARD_ALLOCATIONS.xlsx",
-          "text": "शहरी क्षेत्रों हेतु वार्ड का बैंकवार/ जनपदवार आवंटन"
-        },
-        {
-          "url": "http://slbcup.com/font/RSETI_December2022.xlsx",
-          "text": "जनपदवार आरसेटी की सूचना"
-        },
-        {
-          "url": "http://slbcup.com/font/Reallocation of Urban Wards.xlsx",
-          "text": "वित्त मंत्रालय, वित्तीय सेवायें विभाग, भारत सरकार द्वारा जारी निर्देशों के क्रम में शहरी एवं अर्धशहरी क्षेत्रों के वार्ड का निजी बैंको के मध्य पुर्नआवंटन"
-        },
-        {
-          "url": "http://slbcup.com/font/SLBC Formats March 2021.xls",
-          "text": "प्रारूप एसएलबीसी-बैंकों"
-        },
-        {
-          "url": "http://slbcup.com/font/SSA.xls",
-          "text": "सब सर्विस एरिया का बैंकवार/ जनपदवार आवंटन"
-        },
-        {
-          "url": "http://slbcup.com/font/Schedule of Camps UP.xlsx",
-          "text": "जनसुरक्षा अभियान के लिए ग्राम पंचायत - बैंकवार शिविर विवरण - 01.07.2025 से 30.09.2025"
-        }
-      ],
-      "lowSignal": false
+      "lastSuccess": "2026-07-06T05:31:55+00:00",
+      "contentHash": "c3b3c260bb3bda5000502d2461474d12440c7c8ede9b4b660276d538c9d1c7f3",
+      "docLinks": [],
+      "lowSignal": true
     }
   }
 }
