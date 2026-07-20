@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T06:53:55+00:00",
+  "generatedAt": "2026-07-20T06:46:19+00:00",
   "portals": {
     "https://web.archive.org/web/2025*/slbcap.nic.in": {
       "states": [
@@ -31,8 +31,8 @@
         "form-driven portal (quarter/year POST) — homepage hash is the only static signal"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
-      "contentHash": "24f395128088f4ff4b58c40b899652675d219ce8cde46fdbcd134da97fb5e962",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
+      "contentHash": "2cea0bf98988ba40908b3b6d6be75c4cba923c27de7f6393d497f8f2cf29b57f",
       "docLinks": [
         {
           "url": "http://slbcne.nic.in/intro.pdf",
@@ -50,7 +50,7 @@
         "broken SSL chain — verification disabled"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
       "contentHash": "0088c0f229c15010f0a9aec1be8c7c29c85a7499cce318940d1409a70e103c6b",
       "docLinks": [
         {
@@ -395,7 +395,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
       "contentHash": "a328cd832eed59405a5c608c7ee13723bb6d811935aa25f01988523edd44fea9",
       "docLinks": [
         {
@@ -536,7 +536,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
       "contentHash": "8a25d9986757301e27e15dd6255ddde5a008bcd799062950bc29af056950ff46",
       "docLinks": [
         {
@@ -561,7 +561,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
       "contentHash": "24b0d676cb2f266568b626dfe061b15c3d80c3424c73f5b48e7bfba57a74cd54",
       "docLinks": [
         {
@@ -670,8 +670,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
-      "contentHash": "25ee9ab55eee98c31bbdc9a899e495d3e562ba9192b98f713fda4abe71125906",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
+      "contentHash": "b0d12e37ba4c57a730b73982fdb11409dc072ee3d4a54d12b8d272b040f366fc",
       "docLinks": [
         {
           "url": "https://slbcgujarat.in/wp-content/uploads/2018/08/FAME-Booklet-English.pdf",
@@ -790,7 +790,7 @@
       ],
       "skip": false,
       "notes": [],
-      "consecutiveFailures": 5,
+      "consecutiveFailures": 6,
       "lastSuccess": "2026-06-09T19:25:54+00:00",
       "contentHash": "7c523bc5e349d0a295e4902b3eba49bb6f921b18c7baf5f3ebf2d13779bf1e4b",
       "docLinks": [
@@ -811,7 +811,7 @@
           "text": "Agenda Annexures 176th Meeting to be held on May 18, 2026"
         }
       ],
-      "lastError": "urllib: <urlopen error timed out> / curl: curl exit 28: curl: (28) Connection timed out after 20002 milliseconds",
+      "lastError": "urllib: <urlopen error timed out> / curl: curl exit 28: curl: (28) Connection timed out after 20001 milliseconds",
       "lowSignal": false
     },
     "https://slbchp.com": {
@@ -821,7 +821,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
       "contentHash": "02eb80617067bfaf11f23a3414c17a7c223506f14394e81081c2783bc6c39848",
       "docLinks": [
         {
@@ -1058,7 +1058,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
       "contentHash": "648a82e472e6adde4ec992c1534ee752cde94a32daad167e9187af60299d4bad",
       "docLinks": [
         {
@@ -1267,8 +1267,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
-      "contentHash": "bd4feadac5f6e559ed0258d557f2f45166ad40d815780c42f4d64c4c1a484ad2",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
+      "contentHash": "417e27706fcd9e3ce34920ccf419b590c5e88ef8e77a4e48a6a0bb0fba15c32f",
       "docLinks": [
         {
           "url": "https://slbckarnataka.com/UserFiles/APY_Citizens_Choice.pdf",
@@ -1512,8 +1512,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
-      "contentHash": "4a86856054c55ecbf76a9ecaed602bceeba93846e8e3da1e5f919bf35c0f9728",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
+      "contentHash": "d8d15a5679f45731bd1c871a1de6914ef5d356b336612d82d4463728b6e5be89",
       "docLinks": [
         {
           "url": "https://slbckerala.com/excel/FLCsDATA_MAR_2026.xlsx",
@@ -1593,7 +1593,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
       "contentHash": "8f74eb618a8ffad61984330b001ab573483478f60758458324136b0c986e6256",
       "docLinks": [
         {
@@ -1730,8 +1730,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
-      "contentHash": "1dd61de8ee9e036273408dca73c0247625394c839e55b7a7857ffa46935e3f4d",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
+      "contentHash": "4d819f141cc1401222bb6004f3a85992ed97e34d545625560551ce47d067a8a6",
       "docLinks": [
         {
           "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/0ec5bd25-752c-4bbf-bb46-5be5d60d0696-ACP 2026-27.pdf",
@@ -2549,8 +2549,8 @@
         "apex .in domain unreachable from runners — watching the .bank.in alias"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
-      "contentHash": "f2fc48bf6f352b107061f74d1a3d4947e6639b55060ceb0699b8689cc5930a61",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
+      "contentHash": "8c5191e240d7b15a2ea64917c6eb05830c2c9fe0872d6b329d779fc4fdcb2c9a",
       "docLinks": [
         {
           "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/042bb82b-69d5-4ba7-84b7-50884fe38fe3.pdf",
@@ -2641,6 +2641,10 @@
           "text": "Fee for Title Search"
         },
         {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/List_of_properties.pdf",
+          "text": "Assets in possession under SARFAESI Action"
+        },
+        {
           "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/a24aa9d8-5ee4-49d8-b4be-4b03d36d3c86.pdf",
           "text": "ABBFF Guidelines"
         },
@@ -2697,10 +2701,6 @@
           "text": "Fraudulent Activities in the name of Pradhan Mantri Jan Dan Yojna (PMJDY)"
         },
         {
-          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/d07b9c4a-04c8-43cf-8fdb-8a160716e8a4.pdf",
-          "text": "Assets in possession under SARFAESI Action"
-        },
-        {
           "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/d8d2990a-c8de-4109-bfd2-be63e25a4916.pdf",
           "text": "Marginal Cost of Funds Based Lending Rate (MCLR) and Repo Rate Linked Lending Rate (RLLR) 17.06.2026"
         },
@@ -2737,7 +2737,7 @@
       ],
       "skip": false,
       "notes": [],
-      "consecutiveFailures": 5,
+      "consecutiveFailures": 6,
       "lastSuccess": "2026-06-09T19:25:54+00:00",
       "contentHash": "2ecd043e1d8fb1e04a06b64730c35da648466b89f06bb89d943054840e8ef389",
       "docLinks": [
@@ -2802,7 +2802,7 @@
           "text": "Unclaimed Financil Assets"
         }
       ],
-      "lastError": "urllib: <urlopen error timed out> / curl: curl exit 28: curl: (28) Connection timed out after 20001 milliseconds",
+      "lastError": "urllib: <urlopen error timed out> / curl: curl exit 28: curl: (28) Connection timed out after 20002 milliseconds",
       "lowSignal": false
     },
     "https://slbcrajasthan.in": {
@@ -2812,7 +2812,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
       "contentHash": "2a7c01565d9cd4169de733866b42e5b94cfc0f6c32900735b324517c98c8af88",
       "docLinks": [
         {
@@ -2925,8 +2925,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
-      "contentHash": "0b805470245bbe273afe507a02224cad475c8942b1792baf305a2dd3ccb8c6b4",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
+      "contentHash": "37d30001972f85be282abb758e211549038ac8e80913bbaeeb7dae4c44b3018f",
       "docLinks": [
         {
           "url": "https://slbctn.com/Uploads/ACPTarget-Fy_2025 -26_Bank Wise District Wise.xlsx",
@@ -3004,7 +3004,7 @@
         "watching CQR reports page (the per-quarter annexure feed)"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
       "contentHash": "c718c2fa118f2a1e79015a5c8ecfbb9339b3e8cf3aa5a00a296dc6320eb5f405",
       "docLinks": [
         {
@@ -3547,7 +3547,7 @@
         "self-signed certificate — verification disabled"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
       "contentHash": "7a2c3590f742fa7d543a5b6623974f9c6dea950acd37b1905810925e2e823742",
       "docLinks": [
         {
@@ -4016,7 +4016,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
       "contentHash": "cfbd4640a2bfea4dac348422ace2cac0409f41140bd34f31e4971ceef51a78f4",
       "docLinks": [
         {
@@ -4148,7 +4148,7 @@
         "HTTPS handshake broken — watching plain-HTTP homepage"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-13T06:53:55+00:00",
+      "lastSuccess": "2026-07-20T06:46:19+00:00",
       "contentHash": "55b7d3808366d64c1b7e17fb4abb520bcc2c10436615cedb607768e2fad762a3",
       "docLinks": [
         {
