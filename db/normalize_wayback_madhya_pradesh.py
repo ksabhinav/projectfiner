@@ -306,6 +306,13 @@ def main():
         print('(dry) 2025-06 Indore:', by_period.get('2025-06', {}).get('Indore'))
         return
 
+    write_outputs(by_period)
+
+
+def write_outputs(by_period):
+    """Merge {period_key: {district: {category: {field: value}}}} into the four
+    canonical MP outputs. Shared with db/add_mp_quarter_xlsx.py (live quarters)
+    so the Wayback backfill and the per-quarter XLSX path can't drift apart."""
     # ---- timeseries (live wins) -----------------------------------------
     fi = json.loads(TIMESERIES_PATH.read_text())
     existing = {p['period']: p for p in fi['periods']}
