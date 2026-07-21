@@ -80,6 +80,8 @@ MEETING_QUARTERS_EXT = {
     87:  ('2022-06', 'June 2022',      '30-06-2022'),
     88:  ('2022-09', 'September 2022', '30-09-2022'),
     89:  ('2022-12', 'December 2022',  '31-12-2022'),
+    # Newer meetings published after v1's map was written (101 = Dec 2025).
+    102: ('2026-03', 'March 2026',    '31-03-2026'),
 }
 MEETING_QUARTERS = {**MEETING_QUARTERS_EXT, **MEETING_QUARTERS_V1}
 
