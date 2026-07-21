@@ -23,7 +23,9 @@ annexures for). Older quarters are PDF-only; a future pdfplumber
 pipeline can backfill, mirroring slbc-data/uttarakhand/.
 """
 
+import argparse
 import csv
+import glob
 import json
 import os
 import re
@@ -63,9 +65,89 @@ DISTRICT_ALIASES = {
     "GRAND TOTAL": None,
 }
 
+# Set per-run from --quarter (default = the original Dec 2025 bundle).
 QUARTER_LABEL = "December 2025"   # what FINER stores
 QUARTER_CODE = "2025-12"
 SOURCE_FILE_TAG = "himachal-pradesh"
+
+MONTH_NAMES = {1: "January", 2: "February", 3: "March", 4: "April", 5: "May",
+               6: "June", 7: "July", 8: "August", 9: "September",
+               10: "October", 11: "November", 12: "December"}
+MONTH_NUM = {v: k for k, v in MONTH_NAMES.items()}
+
+# Per-quarter column overrides.
+#
+# The CQR annexures are not column-stable across quarters. Mar 2026's ANNEX-52
+# inserted a "Target" No./Amt pair ahead of every "Disbursements" block, so the
+# Dec 2025 indices land on the (all-zero) target columns and shift every
+# disbursement field one block left — which silently reported total NRLM
+# disbursements as the women-SHG figure (a 60-760x jump the validator caught).
+# Mapping verified by value continuity against Dec 2025: (5, 6.86)->(5, 6.97),
+# (2, 12)->(2, 12), 2->2, and the NULM tail 6/0.97/6/6/6.56/26 -> 8/1.96/8/
+# 7/6.68/27.
+#
+# Field NAMES are kept as-is for series continuity even though Dec 2025's
+# "nrlm_women_shg"/"nrlm_individual" keys actually hold NULM-SEP(I)/(G) blocks
+# — renaming them is a separate correction, not this quarter's job.
+ANNEXURE_OVERRIDES = {
+    "2026-03": {
+        "ANNEX-52": {
+            "category": "nrlm",
+            "data_start_row": 6,
+            "cols": {
+                5: "nrlm_shg_disbursement_no",
+                6: "nrlm_shg_disbursement_amt",
+                9: "nrlm_women_shg_disbursement_no",
+                10: "nrlm_women_shg_disbursement_amt",
+                13: "nrlm_individual_disbursement_no",
+                14: "nrlm_individual_disbursement_amt",
+                15: "nrlm_beneficiaries_no",
+                16: "nulm_shg_disbursement_no",
+                17: "nulm_shg_disbursement_amt",
+                18: "nulm_beneficiaries_no",
+                19: "nulm_women_shg_disbursement_no",
+                20: "nulm_women_shg_disbursement_amt",
+                21: "nulm_women_beneficiaries_no",
+            },
+        },
+    },
+}
+
+F_TS = "himachal-pradesh_fi_timeseries.json"
+F_COMPLETE = "himachal-pradesh_complete.json"
+F_SLIM = "himachal-pradesh_fi_slim.json"
+F_CSV = "himachal-pradesh_fi_timeseries.csv"
+
+
+def load_json(path, default):
+    """Existing output, or `default` on a first run."""
+    if not os.path.exists(path):
+        return json.loads(json.dumps(default))
+    with open(path) as fh:
+        return json.load(fh)
+
+
+def period_sort_key(p):
+    """'March 2026' -> ('2026', 3). Sorting the label lexically would put
+    September ahead of December."""
+    m = re.match(r"([A-Za-z]+)\s+(\d{4})", p.get("period", ""))
+    if not m:
+        return ("0000", 0)
+    return (m.group(2), MONTH_NUM.get(m.group(1), 0))
+
+
+def quarter_sort_key(item):
+    """complete.json keys are YYYY-MM, except one legacy 'dec_2025' written by
+    an earlier run of this script. Sort that alongside its YYYY-MM peers."""
+    key = item[0]
+    if re.fullmatch(r"\d{4}-\d{2}", key):
+        return key
+    m = re.match(r"([a-z]+)_(\d{4})", key)
+    if m:
+        for num, name in MONTH_NAMES.items():
+            if name.lower().startswith(m.group(1)):
+                return f"{m.group(2)}-{num:02d}"
+    return key
 
 
 # ----------------------------------------------------------------------------
@@ -523,35 +605,35 @@ ANNEXURES = {
 # Map each ANNEX key to (file, sheet_name_in_workbook).
 # In the Dec 2025 agenda bundle the sheets are reshuffled relative to their
 # numeric order (e.g. ANNEX-58, ANNEX-60 ship inside the 1-20 file).
-XLSX_FILES = {
-    "ANNEX-02":  ("CQR-ANNEXURES1To20 Dec 25.xlsx",   "ANNEX-02"),
-    "ANNEX-04":  ("CQR-ANNEXURES1To20 Dec 25.xlsx",   "ANNEX-04"),
-    "ANNEX-06":  ("CQR-ANNEXURES1To20 Dec 25.xlsx",   "ANNEX-06"),
-    "ANNEX-12":  ("CQR-ANNEXURES1To20 Dec 25.xlsx",   "ANNEX-12"),
-    "ANNEX-14":  ("CQR-ANNEXURES1To20 Dec 25.xlsx",   "ANNEX-14"),
-    "ANNEX-16":  ("CQR-ANNEXURES1To20 Dec 25.xlsx",   "ANNEX-16"),
-    "ANNEX-18":  ("CQR-ANNEXURES1To20 Dec 25.xlsx",   "ANNEX-18"),
-    "ANNEX-20":  ("CQR-ANNEXURES1To20 Dec 25.xlsx",   "ANNEX-20"),
-    "ANNEX-58":  ("CQR-ANNEXURES1To20 Dec 25.xlsx",   "ANNEX-58"),
-    "ANNEX-60":  ("CQR-ANNEXURES1To20 Dec 25.xlsx",   "ANNEX-60"),
-    "ANNEX-22":  ("CQR-ANNEXURES21To32 Dec 25.xlsx",  "ANNEX-22"),
-    "ANNEX-26":  ("CQR-ANNEXURES21To32 Dec 25.xlsx",  "ANNEX-26"),
-    "ANNEX-30":  ("CQR-ANNEXURES21To32 Dec 25.xlsx",  "ANNEX-30"),
-    "ANNEX-32A": ("CQR-ANNEXURES21To32 Dec 25.xlsx",  "ANNEX-32A"),
-    "ANNEX-37":  ("CQR-ANNEXURES33TO50 Dec 25.xlsx",  "ANNEX-37"),
-    "ANNEX-37A": ("CQR-ANNEXURES33TO50 Dec 25.xlsx",  "ANNEX-37A"),
-    "ANNEX-37B": ("CQR-ANNEXURES33TO50 Dec 25.xlsx",  "ANNEX-37B"),
-    "ANNEX-38":  ("CQR-ANNEXURES33TO50 Dec 25.xlsx",  "ANNEX-38"),
-    "ANNEX-50":  ("CQR-ANNEXURES33TO50 Dec 25.xlsx",  "ANNEX-50"),
-    "ANNEX-44":  ("CQR-ANNEXURES51To74 Dec 25.xlsx",  "ANNEX-44"),
-    "ANNEX-45":  ("CQR-ANNEXURES51To74 Dec 25.xlsx",  "ANNEX-45"),
-    "ANNEX-46":  ("CQR-ANNEXURES51To74 Dec 25.xlsx",  "ANNEX-46"),
-    "ANNEX-50A": ("CQR-ANNEXURES51To74 Dec 25.xlsx",  "ANNEX-49A"),
-    "ANNEX-52":  ("CQR-ANNEXURES51To74 Dec 25.xlsx",  "ANNEX-52"),
-    "ANNEX-56":  ("CQR-ANNEXURES51To74 Dec 25.xlsx",  "ANNEX-56"),
-    "ANNEX-62":  ("CQR-ANNEXURES51To74 Dec 25.xlsx",  "ANNEX-62"),
-    "ANNEX-64":  ("CQR-ANNEXURES51To74 Dec 25.xlsx",  "ANNEX-64"),
-    "ANNEX-66":  ("CQR-ANNEXURES51To74 Dec 25.xlsx",  "ANNEX-66"),
+ANNEX_SHEETS = {
+    "ANNEX-02"  : "ANNEX-02",
+    "ANNEX-04"  : "ANNEX-04",
+    "ANNEX-06"  : "ANNEX-06",
+    "ANNEX-12"  : "ANNEX-12",
+    "ANNEX-14"  : "ANNEX-14",
+    "ANNEX-16"  : "ANNEX-16",
+    "ANNEX-18"  : "ANNEX-18",
+    "ANNEX-20"  : "ANNEX-20",
+    "ANNEX-58"  : "ANNEX-58",
+    "ANNEX-60"  : "ANNEX-60",
+    "ANNEX-22"  : "ANNEX-22",
+    "ANNEX-26"  : "ANNEX-26",
+    "ANNEX-30"  : "ANNEX-30",
+    "ANNEX-32A" : "ANNEX-32A",
+    "ANNEX-37"  : "ANNEX-37",
+    "ANNEX-37A" : "ANNEX-37A",
+    "ANNEX-37B" : "ANNEX-37B",
+    "ANNEX-38"  : "ANNEX-38",
+    "ANNEX-50"  : "ANNEX-50",
+    "ANNEX-44"  : "ANNEX-44",
+    "ANNEX-45"  : "ANNEX-45",
+    "ANNEX-46"  : "ANNEX-46",
+    "ANNEX-50A" : "ANNEX-49A",
+    "ANNEX-52"  : "ANNEX-52",
+    "ANNEX-56"  : "ANNEX-56",
+    "ANNEX-62"  : "ANNEX-62",
+    "ANNEX-64"  : "ANNEX-64",
+    "ANNEX-66"  : "ANNEX-66",
 }
 
 
@@ -611,18 +693,61 @@ def extract_annex(wb, sheet_name, spec):
     return out
 
 
+def build_sheet_index(raw_dir):
+    """sheet name -> file path, scanning every XLSX in the bundle.
+
+    The CQR bundles do NOT keep a stable annexure->file assignment between
+    quarters: ANNEX-58/60 shipped in the "1To20" workbook for Dec 2025 but in
+    "51To74" for Mar 2026, and ANNEX-49A moved from "51To74" to "33TO50".
+    Resolving by sheet name instead of filename survives that drift (and the
+    per-quarter " Dec 25" / " (2)" filename suffixes).
+    """
+    index = {}
+    for path in sorted(glob.glob(os.path.join(raw_dir, "*.xlsx"))):
+        if os.path.basename(path).startswith("~$"):
+            continue          # Excel lock file
+        wb = openpyxl.load_workbook(path, read_only=True)
+        for sheet in wb.sheetnames:
+            # First file wins; only ANNEX-67/68 are duplicated and neither is
+            # mapped in ANNEXURES, so this is unambiguous for what we read.
+            index.setdefault(sheet, path)
+        wb.close()
+    return index
+
+
 def main():
-    if not os.path.exists(RAW_DIR):
-        print(f"ERROR: raw dir not found: {RAW_DIR}", file=sys.stderr)
+    global QUARTER_LABEL, QUARTER_CODE
+
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--raw-dir", default=RAW_DIR,
+                    help="directory holding the quarter's 4 CQR XLSX files")
+    ap.add_argument("--quarter", default=QUARTER_CODE,
+                    help="quarter key, YYYY-MM (e.g. 2026-03)")
+    args = ap.parse_args()
+
+    raw_dir = args.raw_dir
+    QUARTER_CODE = args.quarter
+    if not re.fullmatch(r"\d{4}-\d{2}", QUARTER_CODE):
+        print(f"ERROR: --quarter must be YYYY-MM, got {QUARTER_CODE!r}",
+              file=sys.stderr)
         sys.exit(1)
+    QUARTER_LABEL = f"{MONTH_NAMES[int(QUARTER_CODE[5:])]} {QUARTER_CODE[:4]}"
+
+    if not os.path.exists(raw_dir):
+        print(f"ERROR: raw dir not found: {raw_dir}", file=sys.stderr)
+        sys.exit(1)
+
+    sheet_index = build_sheet_index(raw_dir)
+    print(f"{raw_dir}\n  -> {QUARTER_LABEL} ({QUARTER_CODE}), "
+          f"{len(sheet_index)} sheets across "
+          f"{len(set(sheet_index.values()))} workbooks")
 
     # Open each XLSX once
     wb_cache = {}
-    def get_wb(fname):
-        if fname not in wb_cache:
-            path = os.path.join(RAW_DIR, fname)
-            wb_cache[fname] = openpyxl.load_workbook(path, data_only=True)
-        return wb_cache[fname]
+    def get_wb(path):
+        if path not in wb_cache:
+            wb_cache[path] = openpyxl.load_workbook(path, data_only=True)
+        return wb_cache[path]
 
     # district -> {field_key: value}
     district_recs = {d: {"district": d, "period": QUARTER_LABEL}
@@ -631,18 +756,23 @@ def main():
     # complete.json style: quarters -> tables -> category -> {fields, districts}
     tables_by_cat = {}
 
+    overrides = ANNEXURE_OVERRIDES.get(QUARTER_CODE, {})
+    if overrides:
+        print(f"  applying {len(overrides)} column override(s) for "
+              f"{QUARTER_CODE}: {', '.join(sorted(overrides))}")
+
     annex_summary = []
     for annex_key, spec in ANNEXURES.items():
-        mapping = XLSX_FILES.get(annex_key)
-        if not mapping:
-            print(f"  skip {annex_key}: no XLSX mapping")
+        spec = overrides.get(annex_key, spec)
+        sheet_name = ANNEX_SHEETS.get(annex_key)
+        if not sheet_name:
+            print(f"  skip {annex_key}: no sheet mapping")
             continue
-        fname, sheet_name = mapping
-        try:
-            wb = get_wb(fname)
-        except FileNotFoundError:
-            print(f"  skip {annex_key}: missing {fname}")
+        path = sheet_index.get(sheet_name)
+        if not path:
+            print(f"  skip {annex_key}: sheet {sheet_name} not in bundle")
             continue
+        wb = get_wb(path)
         data = extract_annex(wb, sheet_name, spec)
         if not data:
             print(f"  WARN {annex_key}: no rows extracted (sheet missing?)")
@@ -663,54 +793,97 @@ def main():
         annex_summary.append((annex_key, cat, len(data),
                               len(spec["cols"])))
 
-    # Build timeseries JSON (periods → districts)
-    timeseries = {
-        "periods": [
-            {
-                "period": QUARTER_LABEL,
-                "districts": [district_recs[d] for d in CANONICAL_DISTRICTS],
-            }
-        ]
-    }
+    # ---- derive CD ratio when the source leaves it blank -------------------
+    # HP's ANNEX-06 prints deposits, advances AND the C.D RATIO columns, but
+    # the Mar 2026 bundle ships those four columns empty. Deposits/advances
+    # are present and continuous, so compute the ratio rather than shipping a
+    # quarter that is invisible on the CD-ratio choropleth. Same convention as
+    # db/normalize_wayback_madhya_pradesh.py's map_cd, incl. the sanity bound
+    # (see CLAUDE.md gotcha #51 — outside 5-400% it's a unit mismatch, not a
+    # real ratio, and no data beats nonsense).
+    CD = "credit_deposit_ratio__"
+    derived = []
+    for d, rec in district_recs.items():
+        if rec.get(CD + "overall_cd_ratio") is not None:
+            continue
+        try:
+            dep = float(rec[CD + "total_deposit"])
+            adv = float(rec[CD + "total_advance"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        if dep <= 0:
+            continue
+        val = adv / dep * 100.0
+        if not (5 <= val <= 400):
+            print(f"  WARN {d}: derived CD {val:.2f}% out of bounds, skipped")
+            continue
+        rec[CD + "overall_cd_ratio"] = round(val, 2)
+        tbl = tables_by_cat.get("credit_deposit_ratio")
+        if tbl is not None:
+            tbl["districts"].setdefault(d, {})["overall_cd_ratio"] = round(val, 2)
+            if "overall_cd_ratio" not in tbl["fields"]:
+                tbl["fields"].append("overall_cd_ratio")
+        derived.append(d)
+    if derived:
+        print(f"  derived overall_cd_ratio for {len(derived)}/"
+              f"{len(CANONICAL_DISTRICTS)} districts (source columns blank)")
 
-    # Build complete JSON
-    complete = {
-        "quarters": {
-            "dec_2025": {
-                "period": QUARTER_LABEL,
-                "tables": tables_by_cat,
-            }
-        }
-    }
+    # ---- merge this quarter into the existing outputs ---------------------
+    # HP's timeseries/complete carry 11 further quarters recovered by
+    # db/normalize_wayback_hp.py. This script used to write single-quarter
+    # files, so re-running it wiped that history — always upsert, never
+    # replace wholesale.
+    timeseries = load_json(os.path.join(PUBLIC_OUT, F_TS), {"periods": []})
+    periods = [p for p in timeseries.get("periods", [])
+               if p.get("period") != QUARTER_LABEL]
+    periods.append({
+        "period": QUARTER_LABEL,
+        "districts": [district_recs[d] for d in CANONICAL_DISTRICTS],
+    })
+    periods.sort(key=period_sort_key)
+    timeseries["periods"] = periods
 
-    # Build slim JSON (7 indicator-category prefixes)
+    complete = load_json(os.path.join(PUBLIC_OUT, F_COMPLETE), {"quarters": {}})
+    quarters = complete.setdefault("quarters", {})
+    # Drop any legacy alias of this quarter first — an earlier version of this
+    # script keyed Dec 2025 as "dec_2025", so a plain assignment to "2025-12"
+    # would leave the same quarter in the file twice.
+    for stale in [k for k in quarters
+                  if k != QUARTER_CODE
+                  and quarter_sort_key((k, None)) == QUARTER_CODE]:
+        print(f"  dropping legacy duplicate quarter key {stale!r}")
+        del quarters[stale]
+    quarters[QUARTER_CODE] = {"period": QUARTER_LABEL, "tables": tables_by_cat}
+    complete["quarters"] = dict(sorted(quarters.items(), key=quarter_sort_key))
+
+    # Slim = the merged timeseries restricted to the 7 homepage categories.
+    # Rebuilt from the full series (not just this quarter) because the
+    # committed slim had drifted to a single period while the timeseries held
+    # twelve.
     SLIM_PREFIXES = (
         "credit_deposit_ratio__", "pmjdy__", "branch_network__",
         "kcc__", "shg__", "digital_transactions__",
         "aadhaar_authentication__",
     )
-    slim_recs = []
-    for d in CANONICAL_DISTRICTS:
-        rec = {"district": d, "period": QUARTER_LABEL}
-        for k, v in district_recs[d].items():
-            if k in ("district", "period"):
-                continue
-            if k.startswith(SLIM_PREFIXES):
-                rec[k] = v
-        slim_recs.append(rec)
-    slim = {"periods": [{"period": QUARTER_LABEL, "districts": slim_recs}]}
+    slim_periods = []
+    for p in timeseries["periods"]:
+        recs = []
+        for d in p["districts"]:
+            rec = {"district": d["district"], "period": d["period"]}
+            rec.update({k: v for k, v in d.items()
+                        if k not in ("district", "period")
+                        and k.startswith(SLIM_PREFIXES)})
+            recs.append(rec)
+        slim_periods.append({"period": p["period"], "districts": recs})
+    slim = {"periods": slim_periods}
 
-    # Build wide CSV
-    all_field_keys = []
+    # Wide CSV, rebuilt across every period in the merged timeseries (it is
+    # the Downloads-page artefact, so it must not shrink to one quarter).
     seen = set()
-    for d in CANONICAL_DISTRICTS:
-        for k in district_recs[d].keys():
-            if k in ("district", "period"):
-                continue
-            if k not in seen:
-                seen.add(k)
-                all_field_keys.append(k)
-    all_field_keys.sort()
+    for p in timeseries["periods"]:
+        for d in p["districts"]:
+            seen.update(k for k in d if k not in ("district", "period"))
+    all_field_keys = sorted(seen)
     csv_headers = ["district", "period"] + all_field_keys
 
     # Write outputs
@@ -718,20 +891,19 @@ def main():
     os.makedirs(PUBLIC_OUT, exist_ok=True)
 
     for outdir in (LOCAL_OUT, PUBLIC_OUT):
-        with open(os.path.join(outdir, "himachal-pradesh_fi_timeseries.json"), "w") as f:
+        with open(os.path.join(outdir, F_TS), "w") as f:
             json.dump(timeseries, f, indent=2, ensure_ascii=False)
-        with open(os.path.join(outdir, "himachal-pradesh_complete.json"), "w") as f:
+        with open(os.path.join(outdir, F_COMPLETE), "w") as f:
             json.dump(complete, f, indent=2, ensure_ascii=False)
-        with open(os.path.join(outdir, "himachal-pradesh_fi_slim.json"), "w") as f:
+        with open(os.path.join(outdir, F_SLIM), "w") as f:
             json.dump(slim, f, indent=2, ensure_ascii=False)
-        with open(os.path.join(outdir, "himachal-pradesh_fi_timeseries.csv"), "w", newline="") as f:
+        with open(os.path.join(outdir, F_CSV), "w", newline="") as f:
             w = csv.writer(f)
             w.writerow(csv_headers)
-            for d in CANONICAL_DISTRICTS:
-                row = [d, QUARTER_LABEL] + [
-                    district_recs[d].get(k, "") for k in all_field_keys
-                ]
-                w.writerow(row)
+            for p in timeseries["periods"]:
+                for d in p["districts"]:
+                    w.writerow([d["district"], d["period"]]
+                               + [d.get(k, "") for k in all_field_keys])
 
     # Summary
     total_cells = sum(
