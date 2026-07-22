@@ -109,14 +109,48 @@ def load_state_data(state_slug):
     return None
 
 
+def numeric_value(v):
+    """Coerce a cell to float, or None if it isn't a number.
+
+    Every state except Goa serialises its values as STRINGS ("2613.61") —
+    the extractors emit formatted text, not JSON numbers. An earlier
+    isinstance(v, (int, float)) guard therefore skipped 29 of 31 states
+    entirely, so the validators below silently inspected almost nothing.
+    Coerce instead of type-checking.
+    """
+    if v is None or isinstance(v, bool):
+        return None
+    if isinstance(v, (int, float)):
+        return None if math.isnan(v) else float(v)
+    if isinstance(v, str):
+        s = v.strip().replace(",", "").replace("%", "").replace("₹", "")
+        if not s or s.upper() in {"NA", "N/A", "-", "—", "NIL", "NONE"}:
+            return None
+        try:
+            f = float(s)
+        except ValueError:
+            return None
+        return None if math.isnan(f) else f
+    return None
+
+
 def get_data_fields(district_dict):
     """Return field names that are actual data (not metadata)."""
     return [k for k in district_dict.keys()
-            if k not in METADATA_FIELDS and isinstance(district_dict.get(k), (int, float))]
+            if k not in METADATA_FIELDS and numeric_value(district_dict.get(k)) is not None]
 
 
 def is_ratio_field(field_name):
-    return any(p in field_name.lower() for p in RATIO_FIELD_PATTERNS)
+    """True only if the METRIC is a ratio — not if its category merely says so.
+
+    Fields are "<category>__<metric>". Matching the whole string meant every
+    field under credit_deposit_ratio__ (total_deposit, total_advance, the
+    project's most important monetary values) contained "ratio" and was
+    exempted from the 10x-jump check — which is why the known Bihar and UP
+    100x unit seams were never flagged. Inspect the metric half only.
+    """
+    metric = field_name.split("__", 1)[-1].lower()
+    return any(p in metric for p in RATIO_FIELD_PATTERNS)
 
 
 def get_category(field_name):
@@ -157,7 +191,8 @@ def check_10x_jumps(state, periods_data, issues):
             dist = d.get("district", "Unknown")
             for field in get_data_fields(d):
                 val = d[field]
-                if val is not None and isinstance(val, (int, float)) and not math.isnan(val):
+                val = numeric_value(val)
+                if val is not None:
                     dist_field_ts[(dist, field)].append((period_str, val))
 
     for (dist, field), ts in dist_field_ts.items():
@@ -192,7 +227,8 @@ def check_column_shifts(state, periods_data, issues):
             for field in get_data_fields(d):
                 cat = get_category(field)
                 val = d[field]
-                if val is not None and isinstance(val, (int, float)) and not math.isnan(val):
+                val = numeric_value(val)
+                if val is not None:
                     dist_cat_ts[dist][cat][(p_idx, field)] = val
 
     for dist, cats in dist_cat_ts.items():
@@ -246,7 +282,8 @@ def check_count_amount_confusion(state, periods_data, issues):
         for d in districts:
             for field in get_data_fields(d):
                 val = d[field]
-                if val is not None and isinstance(val, (int, float)) and not math.isnan(val):
+                val = numeric_value(val)
+                if val is not None:
                     field_values[field].append(val)
 
     for field, values in field_values.items():
@@ -322,7 +359,8 @@ def check_duplicate_fields(state, periods_data, issues):
             dist = d.get("district", "Unknown")
             for field in get_data_fields(d):
                 val = d[field]
-                if val is not None and isinstance(val, (int, float)) and not math.isnan(val):
+                val = numeric_value(val)
+                if val is not None:
                     field_vectors[field][(dist, p_idx)] = val
 
     # Group fields by category
@@ -367,7 +405,8 @@ def check_outliers(state, periods_data, issues):
             dist = d.get("district", "Unknown")
             for field in get_data_fields(d):
                 val = d[field]
-                if val is not None and isinstance(val, (int, float)) and not math.isnan(val):
+                val = numeric_value(val)
+                if val is not None:
                     dist_field_ts[(dist, field)].append((period_str, val))
 
     for (dist, field), ts in dist_field_ts.items():
@@ -587,6 +626,13 @@ def main():
                         help="Validate a single state (slug, e.g. 'assam' or 'west-bengal')")
     parser.add_argument("--verbose", action="store_true",
                         help="Show detailed progress output")
+    parser.add_argument("--baseline", type=str, default=None,
+                        help="Path to a JSON baseline of accepted critical issues. "
+                             "Exit 1 only for criticals NOT in the baseline, so CI "
+                             "gates on regressions instead of pre-existing debt.")
+    parser.add_argument("--write-baseline", type=str, default=None,
+                        help="Write the current critical issues to this path and exit 0. "
+                             "Re-run after triaging a finding as faithful-to-source.")
     args = parser.parse_args()
 
     if not SLBC_DIR.exists():
@@ -615,6 +661,63 @@ def main():
         all_issues.extend(issues)
 
     has_critical = generate_report(all_issues, states)
+
+    # Stable identity for an issue: everything except the human-readable
+    # message, which embeds values that legitimately change each quarter.
+    def issue_key(i):
+        return "|".join(str(x) for x in
+                        (i.state, i.issue_type, i.district, i.field, i.period))
+
+    criticals = [i for i in all_issues if i.severity == Issue.CRITICAL]
+
+    # Counts per (state, issue_type) rather than a list of every issue key:
+    # the full set is ~29k entries / 2.2 MB, too noisy to review in a diff.
+    # Counts stay small, read clearly in review, and catch the regression that
+    # actually matters — a bad extraction run adding issues.
+    def count_map(items):
+        c = defaultdict(int)
+        for i in items:
+            c[f"{i.state}|{i.issue_type}"] += 1
+        return dict(sorted(c.items()))
+
+    current = count_map(criticals)
+
+    if args.write_baseline:
+        payload = {
+            "_comment": "Per-(state, issue_type) counts of critical issues accepted as "
+                        "known debt. `--baseline` fails when any count RISES, so new "
+                        "breakage is caught while pre-existing findings don't block "
+                        "deploys. Lower a number whenever you fix something; "
+                        "regenerate wholesale with --write-baseline.",
+            "total_critical": len(criticals),
+            "counts": current,
+        }
+        Path(args.write_baseline).write_text(json.dumps(payload, indent=2) + "\n")
+        print(f"\nWrote baseline: {args.write_baseline} "
+              f"({len(criticals)} criticals across {len(current)} state/type buckets)\n")
+        sys.exit(0)
+
+    if args.baseline:
+        bp = Path(args.baseline)
+        if not bp.exists():
+            print(f"ERROR: baseline not found: {bp}", file=sys.stderr)
+            sys.exit(2)
+        base = json.loads(bp.read_text()).get("counts", {})
+        risen = {k: (base.get(k, 0), v) for k, v in current.items() if v > base.get(k, 0)}
+        fixed = {k: (b, current.get(k, 0)) for k, b in base.items() if current.get(k, 0) < b}
+        print(f"\nBaseline: {sum(base.values())} accepted, {len(criticals)} critical now.")
+        if fixed:
+            print(f"  {len(fixed)} bucket(s) improved — lower them in the baseline:")
+            for k, (b, c) in sorted(fixed.items())[:10]:
+                print(f"    {k}: {b} -> {c}")
+        if risen:
+            print(f"\nResult: {len(risen)} bucket(s) REGRESSED. Exit code 1.\n")
+            for k, (b, c) in sorted(risen.items()):
+                print(f"    {k}: {b} -> {c}  (+{c - b})")
+            print("\n  See DATA_VALIDATION_REPORT.md for detail.\n")
+            sys.exit(1)
+        print("\nResult: No regressions. Exit code 0.\n")
+        sys.exit(0)
 
     if has_critical:
         print("\nResult: CRITICAL issues found. Exit code 1.\n")
