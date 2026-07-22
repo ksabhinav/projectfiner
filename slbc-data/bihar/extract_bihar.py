@@ -444,22 +444,34 @@ def save_quarterly_csvs(tables, quarter_key, output_dir):
 
 
 def save_complete_json(tables, quarter_key, period_name, as_on_date, output_dir):
-    """Save as complete.json matching the Project FINER format."""
-    fy = get_fy(quarter_key)
+    """Upsert this quarter into complete.json, preserving all other quarters.
 
-    complete = {
-        "source": "SLBC Bihar",
-        "state": "Bihar",
-        "description": "Complete district-wise banking & financial inclusion data",
-        "amount_unit": "Rs. Crore",
-        "quarters": {
-            quarter_key: {
-                "period": period_name,
-                "as_on_date": as_on_date,
-                "fy": fy,
-                "tables": {}
-            }
+    This used to build a single-quarter dict and write it wholesale, so running
+    `extract_bihar.py <one.pdf>` collapsed bihar_complete.json from 8 quarters
+    to 1 — destroying the Wayback-recovered 2016-03 quarter plus 6 live ones.
+    Load the existing file first and merge (this quarter wins on conflict).
+    """
+    fy = get_fy(quarter_key)
+    json_path = os.path.join(output_dir, 'bihar_complete.json')
+
+    if os.path.exists(json_path):
+        with open(json_path) as f:
+            complete = json.load(f)
+        complete.setdefault("quarters", {})
+    else:
+        complete = {
+            "source": "SLBC Bihar",
+            "state": "Bihar",
+            "description": "Complete district-wise banking & financial inclusion data",
+            "amount_unit": "Rs. Crore",
+            "quarters": {},
         }
+
+    quarter = {
+        "period": period_name,
+        "as_on_date": as_on_date,
+        "fy": fy,
+        "tables": {},
     }
 
     for table in tables:
@@ -484,13 +496,19 @@ def save_complete_json(tables, quarter_key, period_name, as_on_date, output_dir)
                 row[f'Col_{i+1}'] = v
             table_data["districts"][district] = row
 
-        complete["quarters"][quarter_key]["tables"][category] = table_data
+        quarter["tables"][category] = table_data
 
-    json_path = os.path.join(output_dir, 'bihar_complete.json')
+    existed = quarter_key in complete["quarters"]
+    complete["quarters"][quarter_key] = quarter
+    # Keep quarters chronologically ordered (keys are YYYY-MM).
+    complete["quarters"] = dict(sorted(complete["quarters"].items()))
+
     with open(json_path, 'w') as f:
         json.dump(complete, f, indent=2)
 
-    print(f"Saved complete.json to {json_path}")
+    action = "updated" if existed else "added"
+    print(f"Saved complete.json to {json_path} "
+          f"({action} {quarter_key}; {len(complete['quarters'])} quarters total)")
 
 
 def extract_with_proper_headers(pdf_path, tables):

@@ -4,7 +4,7 @@ Extract district-wise data from Kerala SLBC annexure PDFs.
 Produces kerala_complete.json in the project's standard format.
 """
 
-import os, json, re, glob
+import os, sys, json, re, glob
 import pdfplumber
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -225,13 +225,26 @@ def main():
 
     print(f"Found {len(pdfs)} PDFs")
 
-    # Build complete JSON
-    data = {
-        "source": "SLBC Kerala (State Level Bankers' Committee, Kerala)",
-        "state": "Kerala",
-        "amount_unit": "Rs. Lakhs",
-        "quarters": {},
-    }
+    # Load-then-upsert. This extractor only sees the local kerala/pdfs/ dir,
+    # but kerala_complete.json also holds 9 historical quarters (2010-2013)
+    # recovered from Wayback via extract_wayback_kerala.py, which have NO local
+    # PDF. Building from scratch and overwriting dropped all nine on every run.
+    # Seed from the existing file so PDF-derived quarters upsert on top of the
+    # Wayback history instead of erasing it.
+    if os.path.exists(OUT_JSON):
+        with open(OUT_JSON, encoding='utf-8') as f:
+            data = json.load(f)
+        data.setdefault("quarters", {})
+        preexisting = set(data["quarters"])
+        print(f"Loaded {len(preexisting)} existing quarters from {OUT_JSON}")
+    else:
+        data = {
+            "source": "SLBC Kerala (State Level Bankers' Committee, Kerala)",
+            "state": "Kerala",
+            "amount_unit": "Rs. Lakhs",
+            "quarters": {},
+        }
+        preexisting = set()
 
     for pdf_path in pdfs:
         fname = os.path.basename(pdf_path)
@@ -257,12 +270,23 @@ def main():
     # Sort quarters
     data["quarters"] = dict(sorted(data["quarters"].items()))
 
+    # Guard: never let a run shrink the file. If the local PDF set regressed
+    # (missing dir, renamed files) we'd otherwise wipe good history.
+    if preexisting - set(data["quarters"]):
+        lost = sorted(preexisting - set(data["quarters"]))
+        print(f"\nABORT: refusing to write — {len(lost)} quarter(s) would be "
+              f"dropped: {lost}", file=sys.stderr)
+        print("Check kerala/pdfs/ before re-running.", file=sys.stderr)
+        sys.exit(2)
+
     # Write JSON
     with open(OUT_JSON, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
     total_cats = sum(len(q["tables"]) for q in data["quarters"].values())
-    print(f"\nDone! {len(data['quarters'])} quarters, {total_cats} category-quarter combos")
+    added = set(data["quarters"]) - preexisting
+    print(f"\nDone! {len(data['quarters'])} quarters "
+          f"({len(added)} new), {total_cats} category-quarter combos")
     print(f"Output: {OUT_JSON}")
 
 
