@@ -3,8 +3,11 @@
 # Usage: ./run_validation.sh [state_slug]
 # Exit code: 0 if no critical issues, 1 if critical issues found
 
-set -e
-cd "$(dirname "$0")"
+# NOTE: deliberately no `set -e`. validate_data.py exits 1 when it finds
+# critical issues — that is its designed signal, not a script failure. Under
+# `set -e` the script died on that exit and the warning below never printed,
+# so the one guard rail in the repo swallowed its own alarm.
+cd "$(dirname "$0")" || exit 2
 
 if [ -n "$1" ]; then
     echo "Validating $1..."

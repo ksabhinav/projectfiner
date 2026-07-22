@@ -11,6 +11,7 @@ Affected:
   - Assam: flc_report
 """
 
+import sys
 import json
 import csv
 import re
@@ -778,6 +779,29 @@ def regenerate_timeseries(data, state_dir, state_slug):
 # ── Main ─────────────────────────────────────────────────────────────
 
 def main():
+    # ─────────────────────────────────────────────────────────────────────
+    # ⚠️  COMPLETED ONE-SHOT MIGRATION — DO NOT RE-RUN.
+    #
+    # This ran once to recover date-embedded historical values that
+    # fix_date_fields.py had dropped from Tripura and Assam. Its "pre-fix
+    # baseline" is loaded from the RELATIVE git ref HEAD~2 (load_old_json),
+    # which pointed at the right snapshot only on the day it was written.
+    # HEAD~2 now resolves to an unrelated commit, so re-running reads
+    # arbitrary data, redistributes from it, and overwrites tripura_complete
+    # .json + assam_complete.json (plus their quarterly CSVs) with garbage —
+    # silently, no error. The fix is already baked into the committed data.
+    #
+    # Kept for provenance only. To run against a specific historical snapshot
+    # anyway, pass --i-understand-this-overwrites-data AND pin the baseline
+    # via BASELINE_REF below instead of trusting HEAD~2.
+    # ─────────────────────────────────────────────────────────────────────
+    if "--i-understand-this-overwrites-data" not in sys.argv:
+        print("REFUSING TO RUN: completed one-shot migration.", file=sys.stderr)
+        print("Its HEAD~2 baseline is now an unrelated commit; re-running would "
+              "overwrite Tripura/Assam data with garbage.", file=sys.stderr)
+        print("See the banner in main() if you truly need to re-run.", file=sys.stderr)
+        sys.exit(2)
+
     print("=" * 70)
     print("REDISTRIBUTE DATE-EMBEDDED HISTORICAL VALUES")
     print("=" * 70)
