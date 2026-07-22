@@ -1046,8 +1046,13 @@ const base = import.meta.env.BASE_URL;
         }
 
         var entry = { value: val, metrics: allVals, units: allUnits, district: rec.district, state: rec.state };
-        // Check if data is from a fallback quarter
-        if (currentIndicatorData.quarter && currentIndicatorData.quarter !== currentQuarter) {
+        // Fallback disclosure. Per-record `_fromQuarter` (set by the
+        // merge-and-tag loader when a district's own quarter had no data and
+        // it was filled from an earlier one) wins; otherwise fall back to the
+        // whole-file quarter mismatch (static/legacy paths).
+        if (rec._fromQuarter && rec._fromQuarter !== currentQuarter) {
+          entry.fallbackQuarter = rec._fromQuarter;
+        } else if (currentIndicatorData.quarter && currentIndicatorData.quarter !== currentQuarter) {
           entry.fallbackQuarter = currentIndicatorData.quarter;
         }
         // State-qualified key (primary, prevents cross-state name collisions
@@ -1686,47 +1691,74 @@ const base = import.meta.env.BASE_URL;
         .then(function(r) { return r.ok ? r.json() : null; })
         .then(function(data) {
           if (data && data.districts && data.districts.length >= 300) {
-            // Good data — use it
+            // Dense quarter — use as-is.
             indicatorCache[cacheKey] = data;
             currentIndicatorData = data;
             return;
           }
-          // Sparse or missing — try falling back through earlier quarters
+          // Sparse or missing. Old behaviour discarded the whole file and
+          // swapped in an earlier quarter, which (a) hid fresh states that DID
+          // report this quarter — e.g. Karnataka/Ladakh Mar 2026 vanished when
+          // it fell back to Dec 2025, which lacks them — and (b) mislabelled
+          // every shown district as the requested quarter with no disclosure.
+          // Instead: keep the requested quarter's districts (real values, no
+          // tag) and fill ONLY the missing ones from nearest later quarters,
+          // tagging each filled record with the quarter it came from so the
+          // tooltip discloses it per-district.
+          var base = (data && data.districts)
+            ? data : { indicator: indicator, quarter: quarter, districts: [] };
+
           if (!manifestData || !manifestData.quarters) {
-            currentIndicatorData = data || null;
+            base.quarter = quarter;
+            currentIndicatorData = base;
             return;
           }
+
+          function idKey(rec) {
+            var ss = normStateSlug(rec.state);
+            return (ss ? ss + '|' : '') + normDist(rec.district);
+          }
+          var merged = base.districts.slice();
+          var seen = {};
+          for (var i = 0; i < merged.length; i++) seen[idKey(merged[i])] = true;
+
           var qIdx = manifestData.quarters.indexOf(quarter);
           if (qIdx < 0) qIdx = 0;
-          // Widened from 5 to 12 — digital_transactions (PhonePe) only ships
-          // through Mar 2024, so the fallback chain needs ~7 quarters to reach
-          // it from a Dec 2025 selection.
+          // 12-quarter window: digital_transactions (PhonePe) only ships
+          // through Mar 2024, so filling from a Dec 2025 selection needs reach.
           var tryQuarters = manifestData.quarters.slice(qIdx + 1, qIdx + 13);
 
           return tryQuarters.reduce(function(chain, fallbackQ) {
-            return chain.then(function(found) {
-              if (found) return found;
+            return chain.then(function() {
+              if (merged.length >= 300) return;   // enough coverage — stop fetching
               var fbKey = indicator + '/' + fallbackQ;
-              if (indicatorCache[fbKey]) return indicatorCache[fbKey];
-              return fetch(_B + 'indicators/' + indicator + '/' + fallbackQ + '.json')
-                .then(function(r) { return r.ok ? r.json() : null; })
-                .then(function(fbData) {
-                  if (fbData && fbData.districts && fbData.districts.length >= 300) {
-                    indicatorCache[fbKey] = fbData;
-                    return fbData;
-                  }
-                  return null;
-                })
-                .catch(function() { return null; });
+              var getFb = indicatorCache[fbKey]
+                ? Promise.resolve(indicatorCache[fbKey])
+                : fetch(_B + 'indicators/' + indicator + '/' + fallbackQ + '.json')
+                    .then(function(r) { return r.ok ? r.json() : null; })
+                    .then(function(fb) {
+                      if (fb && fb.districts) indicatorCache[fbKey] = fb;
+                      return fb;
+                    })
+                    .catch(function() { return null; });
+              return getFb.then(function(fb) {
+                if (!fb || !fb.districts) return;
+                for (var j = 0; j < fb.districts.length; j++) {
+                  var rec = fb.districts[j];
+                  var k = idKey(rec);
+                  if (seen[k]) continue;   // requested quarter (or nearer fallback) wins
+                  seen[k] = true;
+                  var tagged = {};
+                  for (var p in rec) if (Object.prototype.hasOwnProperty.call(rec, p)) tagged[p] = rec[p];
+                  tagged._fromQuarter = fallbackQ;
+                  merged.push(tagged);
+                }
+              });
             });
-          }, Promise.resolve(null)).then(function(best) {
-            if (best) {
-              currentIndicatorData = best;
-            } else {
-              // Use whatever we got for the original quarter (even if sparse)
-              if (data) indicatorCache[cacheKey] = data;
-              currentIndicatorData = data || null;
-            }
+          }, Promise.resolve()).then(function() {
+            var out = { indicator: indicator, quarter: quarter, districts: merged };
+            indicatorCache[cacheKey] = out;
+            currentIndicatorData = out;
           });
         })
         .catch(function() { currentIndicatorData = null; });
