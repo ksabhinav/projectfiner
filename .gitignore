@@ -56,3 +56,6 @@ scraped_data_fy26/
 
 # Local build/dev artifacts
 .cache/
+
+# Audit: regenerated download-panel output (reproducible via audit/generate_panels.py)
+audit/panels/
