@@ -1,0 +1,32 @@
+state,name,live_portal,n_aliases,wayback_snapshots_best,wayback_oldest,n_extractor_urls,coverage
+andhra-pradesh,Andhra Pradesh,,0,120,2010-07-24,0,archive_only
+arunachal-pradesh,Arunachal Pradesh,https://onlineslbcne.nic.in,0,71,2015-09-25,0,ok
+assam,Assam,https://onlineslbcne.nic.in,0,71,2015-09-25,0,ok
+bihar,Bihar,https://www.slbcbihar.com/SlBCHeldMeeting.aspx,0,51,2015-06-02,0,ok
+chhattisgarh,Chhattisgarh,https://slbcchhattisgarh.com,0,71,2011-02-02,2,ok
+delhi,NCT of Delhi,https://slbcdelhi.pnb.bank.in,1,0,,1,live_only_fragile
+goa,Goa,https://slbcgoa.com,0,125,2013-04-15,0,ok
+gujarat,Gujarat,https://slbcgujarat.in,0,43,2022-01-22,1,ok
+haryana,Haryana,https://slbcharyana.pnb.bank.in,1,1,2024-12-12,1,live_only_fragile
+himachal-pradesh,Himachal Pradesh,https://slbchp.com,0,0,,1,live_only_fragile
+jammu-kashmir,Jammu & Kashmir,https://www.jkslbc.com,0,0,,1,live_only_fragile
+jharkhand,Jharkhand,https://onlineslbcne.nic.in,0,71,2015-09-25,0,ok
+karnataka,Karnataka,https://slbckarnataka.com,0,0,,0,live_only_fragile
+kerala,Kerala,https://slbckerala.com,0,120,2008-06-07,0,ok
+ladakh,Ladakh,https://utlbcladakh.com,0,20,2021-12-29,0,ok
+madhya-pradesh,Madhya Pradesh,https://www.slbcmadhyapradesh.in/slbc-meeting.aspx,0,0,,2,live_only_fragile
+maharashtra,Maharashtra,https://bankofmaharashtra.in,1,0,,1,live_only_fragile
+manipur,Manipur,https://onlineslbcne.nic.in,0,71,2015-09-25,0,ok
+meghalaya,Meghalaya,https://onlineslbcne.nic.in,0,71,2015-09-25,0,ok
+mizoram,Mizoram,https://onlineslbcne.nic.in,0,71,2015-09-25,0,ok
+nagaland,Nagaland,https://onlineslbcne.nic.in,0,71,2015-09-25,0,ok
+odisha,Odisha,https://onlineslbcne.nic.in,0,71,2015-09-25,0,ok
+punjab,Punjab,https://slbcpunjab.pnb.bank.in,1,0,,1,live_only_fragile
+rajasthan,Rajasthan,https://slbcrajasthan.in,0,0,,1,live_only_fragile
+sikkim,Sikkim,https://onlineslbcne.nic.in,0,71,2015-09-25,0,ok
+tamil-nadu,Tamil Nadu,https://slbctn.com,0,0,,0,live_only_fragile
+telangana,Telangana,https://telanganaslbc.com,0,0,,0,live_only_fragile
+tripura,Tripura,https://slbctripura.pnb.bank.in/Back_Paper_Quarterly.asp,1,0,,0,live_only_fragile
+uttar-pradesh,Uttar Pradesh,https://slbcup.com,0,0,,0,live_only_fragile
+uttarakhand,Uttarakhand,https://slbcuttarakhand.com,0,0,,0,live_only_fragile
+west-bengal,West Bengal,https://slbcwb.com,0,0,,0,live_only_fragile

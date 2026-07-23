@@ -59,3 +59,7 @@ scraped_data_fy26/
 
 # Audit: regenerated download-panel output (reproducible via audit/generate_panels.py)
 audit/panels/
+
+# Phase-1 source corpus: heavy PDFs/xlsx are local-only.
+# The provenance manifest lives in audit/source_manifest.csv (tracked).
+sources/

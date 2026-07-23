@@ -1,0 +1,114 @@
+state,name,kind,url_or_host,evidence
+andhra-pradesh,Andhra Pradesh,wayback_wildcard,https://web.archive.org/web/2025*/slbcap.nic.in,indicator-sources.ts
+andhra-pradesh,Andhra Pradesh,wayback_latest,https://web.archive.org/web/20260316001803/https://www.slbcap.nic.in/,wayback.json:latest 2026-03-16
+andhra-pradesh,Andhra Pradesh,wayback_cdx_host,slbcap.nic.in,snapshots=120 span=2010-07-24..2026-03-16
+arunachal-pradesh,Arunachal Pradesh,live_portal,https://onlineslbcne.nic.in,indicator-sources.ts
+arunachal-pradesh,Arunachal Pradesh,wayback_latest,https://web.archive.org/web/20250502091613/https://onlineslbcne.nic.in/,wayback.json:latest 2025-05-02
+arunachal-pradesh,Arunachal Pradesh,wayback_cdx_host,onlineslbcne.nic.in,snapshots=71 span=2015-09-25..2025-05-02
+assam,Assam,live_portal,https://onlineslbcne.nic.in,indicator-sources.ts
+assam,Assam,wayback_latest,https://web.archive.org/web/20250502091613/https://onlineslbcne.nic.in/,wayback.json:latest 2025-05-02
+assam,Assam,wayback_cdx_host,onlineslbcne.nic.in,snapshots=71 span=2015-09-25..2025-05-02
+bihar,Bihar,live_portal,https://www.slbcbihar.com/SlBCHeldMeeting.aspx,indicator-sources.ts
+bihar,Bihar,wayback_latest,https://web.archive.org/web/20250621105127/https://slbcbihar.com/SlBCHeldMeeting.aspx,wayback.json:latest 2025-06-21
+bihar,Bihar,wayback_cdx_host,www.slbcbihar.com,snapshots=51 span=2015-06-02..2025-06-21
+chhattisgarh,Chhattisgarh,live_portal,https://slbcchhattisgarh.com,indicator-sources.ts
+chhattisgarh,Chhattisgarh,wayback_latest,https://web.archive.org/web/20260513185521/https://slbcchhattisgarh.com/,wayback.json:latest 2026-05-13
+chhattisgarh,Chhattisgarh,wayback_cdx_host,slbcchhattisgarh.com,snapshots=71 span=2011-02-02..2026-05-13
+chhattisgarh,Chhattisgarh,extractor_url,http://slbcchhattisgarh.com/,slbc-data/<state>/*.py
+chhattisgarh,Chhattisgarh,extractor_url,https://slbcchhattisgarh.com,slbc-data/<state>/*.py
+delhi,NCT of Delhi,live_portal,https://slbcdelhi.pnb.bank.in,indicator-sources.ts
+delhi,NCT of Delhi,live_alias,https://slbcdelhi.pnb.in,indicator-sources.ts:aliasUrls
+delhi,NCT of Delhi,wayback_latest,https://web.archive.org/web/20260709121156/https://slbcdelhi.pnb.bank.in/,wayback.json:latest 2026-07-09
+delhi,NCT of Delhi,wayback_cdx_host,slbcdelhi.pnb.bank.in,snapshots=0 span=None..None
+delhi,NCT of Delhi,wayback_cdx_host,slbcdelhi.pnb.in,snapshots=0 span=None..None
+delhi,NCT of Delhi,extractor_url,https://slbcdelhi.pnb.bank.in/,slbc-data/<state>/*.py
+goa,Goa,live_portal,https://slbcgoa.com,indicator-sources.ts
+goa,Goa,wayback_latest,https://web.archive.org/web/20251206111053/https://slbcgoa.com/,wayback.json:latest 2025-12-06
+goa,Goa,wayback_cdx_host,slbcgoa.com,snapshots=125 span=2013-04-15..2025-12-06
+gujarat,Gujarat,live_portal,https://slbcgujarat.in,indicator-sources.ts
+gujarat,Gujarat,wayback_latest,https://web.archive.org/web/20260515080332/https://slbcgujarat.in/,wayback.json:latest 2026-05-15
+gujarat,Gujarat,wayback_cdx_host,slbcgujarat.in,snapshots=43 span=2022-01-22..2026-05-15
+gujarat,Gujarat,extractor_url,https://slbcgujarat.in/slbc_meettings_held/,slbc-data/<state>/*.py
+haryana,Haryana,live_portal,https://slbcharyana.pnb.bank.in,indicator-sources.ts
+haryana,Haryana,live_alias,https://slbcharyana.pnb.in,indicator-sources.ts:aliasUrls
+haryana,Haryana,wayback_latest,https://web.archive.org/web/20241212043644/https://slbcharyana.pnb.in,wayback.json:latest 2024-12-12
+haryana,Haryana,wayback_cdx_host,slbcharyana.pnb.bank.in,snapshots=0 span=None..None
+haryana,Haryana,wayback_cdx_host,slbcharyana.pnb.in,snapshots=1 span=2024-12-12..2024-12-12
+haryana,Haryana,extractor_url,https://slbcharyana.pnb.bank.in/slbc-meeting-held/,slbc-data/<state>/*.py
+himachal-pradesh,Himachal Pradesh,live_portal,https://slbchp.com,indicator-sources.ts
+himachal-pradesh,Himachal Pradesh,wayback_latest,https://web.archive.org/web/20260102235458/https://slbchp.com/,wayback.json:latest 2026-01-02
+himachal-pradesh,Himachal Pradesh,wayback_cdx_host,slbchp.com,snapshots=0 span=None..None
+himachal-pradesh,Himachal Pradesh,extractor_url,https://slbchp.com/Slbcmeetingspage/agenda-minutes.aspx,slbc-data/<state>/*.py
+jammu-kashmir,Jammu & Kashmir,live_portal,https://www.jkslbc.com,indicator-sources.ts
+jammu-kashmir,Jammu & Kashmir,wayback_latest,https://web.archive.org/web/20260508090215/http://jkslbc.com/,wayback.json:latest 2026-05-08
+jammu-kashmir,Jammu & Kashmir,wayback_cdx_host,www.jkslbc.com,snapshots=0 span=None..None
+jammu-kashmir,Jammu & Kashmir,extractor_url,https://www.jkslbc.com/,slbc-data/<state>/*.py
+jharkhand,Jharkhand,live_portal,https://onlineslbcne.nic.in,indicator-sources.ts
+jharkhand,Jharkhand,wayback_latest,https://web.archive.org/web/20250502091613/https://onlineslbcne.nic.in/,wayback.json:latest 2025-05-02
+jharkhand,Jharkhand,wayback_cdx_host,onlineslbcne.nic.in,snapshots=71 span=2015-09-25..2025-05-02
+karnataka,Karnataka,live_portal,https://slbckarnataka.com,indicator-sources.ts
+karnataka,Karnataka,wayback_latest,https://web.archive.org/web/20260516022349/https://slbckarnataka.com/,wayback.json:latest 2026-05-16
+karnataka,Karnataka,wayback_cdx_host,slbckarnataka.com,snapshots=0 span=None..None
+kerala,Kerala,live_portal,https://slbckerala.com,indicator-sources.ts
+kerala,Kerala,wayback_latest,https://web.archive.org/web/20231004052645/https://slbckerala.com/,wayback.json:latest 2023-10-04
+kerala,Kerala,wayback_cdx_host,slbckerala.com,snapshots=120 span=2008-06-07..2023-10-04
+ladakh,Ladakh,live_portal,https://utlbcladakh.com,indicator-sources.ts
+ladakh,Ladakh,wayback_latest,https://web.archive.org/web/20260105043527/https://utlbcladakh.com/,wayback.json:latest 2026-01-05
+ladakh,Ladakh,wayback_cdx_host,utlbcladakh.com,snapshots=20 span=2021-12-29..2026-01-05
+madhya-pradesh,Madhya Pradesh,live_portal,https://www.slbcmadhyapradesh.in/slbc-meeting.aspx,indicator-sources.ts
+madhya-pradesh,Madhya Pradesh,wayback_latest,https://web.archive.org/web/20260312045906/https://slbcmadhyapradesh.in/slbc-meeting.aspx,wayback.json:latest 2026-03-12
+madhya-pradesh,Madhya Pradesh,wayback_cdx_host,www.slbcmadhyapradesh.in,snapshots=0 span=None..None
+madhya-pradesh,Madhya Pradesh,extractor_url,https://www.slbcmadhyapradesh.in/,slbc-data/<state>/*.py
+madhya-pradesh,Madhya Pradesh,extractor_url,https://www.slbcmadhyapradesh.in/slbc-meeting.aspx,slbc-data/<state>/*.py
+maharashtra,Maharashtra,live_portal,https://bankofmaharashtra.in,indicator-sources.ts
+maharashtra,Maharashtra,live_alias,https://bankofmaharashtra.bank.in,indicator-sources.ts:aliasUrls
+maharashtra,Maharashtra,wayback_latest,https://web.archive.org/web/20260514172532/https://bankofmaharashtra.bank.in/,wayback.json:latest 2026-05-14
+maharashtra,Maharashtra,wayback_cdx_host,bankofmaharashtra.in,snapshots=0 span=None..None
+maharashtra,Maharashtra,wayback_cdx_host,bankofmaharashtra.bank.in,snapshots=0 span=None..None
+maharashtra,Maharashtra,extractor_url,https://bankofmaharashtra.bank.in/slbc-meetings,slbc-data/<state>/*.py
+manipur,Manipur,live_portal,https://onlineslbcne.nic.in,indicator-sources.ts
+manipur,Manipur,wayback_latest,https://web.archive.org/web/20250502091613/https://onlineslbcne.nic.in/,wayback.json:latest 2025-05-02
+manipur,Manipur,wayback_cdx_host,onlineslbcne.nic.in,snapshots=71 span=2015-09-25..2025-05-02
+meghalaya,Meghalaya,live_portal,https://onlineslbcne.nic.in,indicator-sources.ts
+meghalaya,Meghalaya,wayback_latest,https://web.archive.org/web/20250502091613/https://onlineslbcne.nic.in/,wayback.json:latest 2025-05-02
+meghalaya,Meghalaya,wayback_cdx_host,onlineslbcne.nic.in,snapshots=71 span=2015-09-25..2025-05-02
+mizoram,Mizoram,live_portal,https://onlineslbcne.nic.in,indicator-sources.ts
+mizoram,Mizoram,wayback_latest,https://web.archive.org/web/20250502091613/https://onlineslbcne.nic.in/,wayback.json:latest 2025-05-02
+mizoram,Mizoram,wayback_cdx_host,onlineslbcne.nic.in,snapshots=71 span=2015-09-25..2025-05-02
+nagaland,Nagaland,live_portal,https://onlineslbcne.nic.in,indicator-sources.ts
+nagaland,Nagaland,wayback_latest,https://web.archive.org/web/20250502091613/https://onlineslbcne.nic.in/,wayback.json:latest 2025-05-02
+nagaland,Nagaland,wayback_cdx_host,onlineslbcne.nic.in,snapshots=71 span=2015-09-25..2025-05-02
+odisha,Odisha,live_portal,https://onlineslbcne.nic.in,indicator-sources.ts
+odisha,Odisha,wayback_latest,https://web.archive.org/web/20250502091613/https://onlineslbcne.nic.in/,wayback.json:latest 2025-05-02
+odisha,Odisha,wayback_cdx_host,onlineslbcne.nic.in,snapshots=71 span=2015-09-25..2025-05-02
+punjab,Punjab,live_portal,https://slbcpunjab.pnb.bank.in,indicator-sources.ts
+punjab,Punjab,live_alias,https://slbcpunjab.pnb.in,indicator-sources.ts:aliasUrls
+punjab,Punjab,wayback_latest,https://web.archive.org/web/20250504133347/https://slbcpunjab.pnb.in/,wayback.json:latest 2025-05-04
+punjab,Punjab,wayback_cdx_host,slbcpunjab.pnb.bank.in,snapshots=0 span=None..None
+punjab,Punjab,wayback_cdx_host,slbcpunjab.pnb.in,snapshots=0 span=None..None
+punjab,Punjab,extractor_url,https://slbcpunjab.pnb.bank.in/slbc-agenda/,slbc-data/<state>/*.py
+rajasthan,Rajasthan,live_portal,https://slbcrajasthan.in,indicator-sources.ts
+rajasthan,Rajasthan,wayback_latest,https://web.archive.org/web/20260512114613/https://slbcrajasthan.in/,wayback.json:latest 2026-05-12
+rajasthan,Rajasthan,wayback_cdx_host,slbcrajasthan.in,snapshots=0 span=None..None
+rajasthan,Rajasthan,extractor_url,https://slbcrajasthan.in/Annexture.aspx,slbc-data/<state>/*.py
+sikkim,Sikkim,live_portal,https://onlineslbcne.nic.in,indicator-sources.ts
+sikkim,Sikkim,wayback_latest,https://web.archive.org/web/20250502091613/https://onlineslbcne.nic.in/,wayback.json:latest 2025-05-02
+sikkim,Sikkim,wayback_cdx_host,onlineslbcne.nic.in,snapshots=71 span=2015-09-25..2025-05-02
+tamil-nadu,Tamil Nadu,live_portal,https://slbctn.com,indicator-sources.ts
+tamil-nadu,Tamil Nadu,wayback_latest,https://web.archive.org/web/20260105070120/https://www.slbctn.com/,wayback.json:latest 2026-01-05
+tamil-nadu,Tamil Nadu,wayback_cdx_host,slbctn.com,snapshots=0 span=None..None
+telangana,Telangana,live_portal,https://telanganaslbc.com,indicator-sources.ts
+telangana,Telangana,wayback_latest,https://web.archive.org/web/20251206195243/https://telanganaslbc.com/,wayback.json:latest 2025-12-06
+telangana,Telangana,wayback_cdx_host,telanganaslbc.com,snapshots=0 span=None..None
+tripura,Tripura,live_portal,https://slbctripura.pnb.bank.in/Back_Paper_Quarterly.asp,indicator-sources.ts
+tripura,Tripura,live_alias,https://slbctripura.pnb.in,indicator-sources.ts:aliasUrls
+tripura,Tripura,wayback_cdx_host,slbctripura.pnb.bank.in,snapshots=0 span=None..None
+tripura,Tripura,wayback_cdx_host,slbctripura.pnb.in,snapshots=0 span=None..None
+uttar-pradesh,Uttar Pradesh,live_portal,https://slbcup.com,indicator-sources.ts
+uttar-pradesh,Uttar Pradesh,wayback_latest,https://web.archive.org/web/20250619113729/http://slbcup.com/,wayback.json:latest 2025-06-19
+uttar-pradesh,Uttar Pradesh,wayback_cdx_host,slbcup.com,snapshots=0 span=None..None
+uttarakhand,Uttarakhand,live_portal,https://slbcuttarakhand.com,indicator-sources.ts
+uttarakhand,Uttarakhand,wayback_latest,https://web.archive.org/web/20250713204038/http://slbcuttarakhand.com/,wayback.json:latest 2025-07-13
+uttarakhand,Uttarakhand,wayback_cdx_host,slbcuttarakhand.com,snapshots=0 span=None..None
+west-bengal,West Bengal,live_portal,https://slbcwb.com,indicator-sources.ts
+west-bengal,West Bengal,wayback_cdx_host,slbcwb.com,snapshots=0 span=None..None
