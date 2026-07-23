@@ -1,0 +1,32 @@
+state,money_scale,unit_source,confidence,anchor,anchor_median,dep_per_branch,conflict_vs_lakh,n_money_cols,n_count_cols,n_percent_cols,n_other_cols,note
+andhra-pradesh,crore,deposit_per_branch,high,credit_deposit_ratio.total_deposit,24415.8,50.2,YES,11,6,1,29,deposit/branch=50 (branch median 486)
+arunachal-pradesh,lakh,deposit_per_branch,high,credit_deposit_ratio.total_deposit,39369.3,6561.5,,14,0,1,443,"deposit/branch=6,562 (branch median 6)"
+assam,lakh,deposit_per_branch,high,credit_deposit_ratio.total_deposit,266024.6,3912.1,,2,0,2,1047,"deposit/branch=3,912 (branch median 68)"
+bihar,crore,deposit_per_branch,high,credit_deposit_ratio.deposits,11014.9,63.9,YES,335,643,4,205,deposit/branch=64 (branch median 172)
+chhattisgarh,crore,deposit_per_branch,high,credit_deposit_ratio.total_deposit,3608.7,42.5,YES,16,32,18,0,deposit/branch=42 (branch median 85)
+delhi,lakh,deposit_per_branch,high,credit_deposit_ratio.total_deposit,10570278.4,27313.4,,2,2,1,0,"deposit/branch=27,313 (branch median 387)"
+goa,UNKNOWN,unknown,none,,,,,0,1,0,0,no CD-ratio deposit/advance anchor — needs caption tier
+gujarat,lakh,deposit_per_branch,high,credit_deposit_ratio.total_deposit,1315357.5,7494.9,,63,66,30,28,"deposit/branch=7,495 (branch median 176)"
+haryana,lakh,deposit_magnitude,medium,credit_deposit_ratio.total_deposit,1234138.3,,,5,17,1,4,no branch anchor; magnitude cannot separate small-lakh from big-crore — confirm via caption
+himachal-pradesh,lakh,deposit_per_branch,high,credit_deposit_ratio.total_deposit,1385931.8,9691.8,,104,141,14,0,"deposit/branch=9,692 (branch median 143)"
+jammu-kashmir,lakh,deposit_per_branch,high,credit_deposit_ratio.total_deposit,422440.7,4642.2,,3,1,1,0,"deposit/branch=4,642 (branch median 91)"
+jharkhand,lakh,deposit_per_branch,high,credit_deposit_ratio.deposit,472179.5,6468.2,,172,632,75,199,"deposit/branch=6,468 (branch median 73)"
+karnataka,crore,deposit_per_branch,high,credit_deposit_ratio.total_deposit,16656.4,54.3,YES,10,4,1,574,deposit/branch=54 (branch median 307)
+kerala,lakh,deposit_magnitude,medium,credit_deposit_ratio.deposit,1316466.0,,,8,0,1,72,no branch anchor; magnitude cannot separate small-lakh from big-crore — confirm via caption
+ladakh,lakh,deposit_per_branch,high,credit_deposit_ratio.total_deposit,568216.5,10331.2,,2,1,1,2,"deposit/branch=10,331 (branch median 55)"
+madhya-pradesh,lakh,deposit_magnitude,medium,credit_deposit_ratio.total_deposit,558292.0,,,2,0,1,1,no branch anchor; magnitude cannot separate small-lakh from big-crore — confirm via caption
+maharashtra,lakh,deposit_per_branch,high,credit_deposit_ratio.total_deposit,2064400.0,6313.1,,0,0,0,127,"deposit/branch=6,313 (branch median 327)"
+manipur,lakh,deposit_per_branch,high,credit_deposit_ratio.total_deposit,16638.3,2773.0,,6,1,1,883,"deposit/branch=2,773 (branch median 6)"
+meghalaya,lakh,deposit_magnitude,low,credit_deposit_ratio.total_deposit,66658.4,,,1,0,0,773,no branch anchor; magnitude cannot separate small-lakh from big-crore — confirm via caption
+mizoram,lakh,deposit_magnitude,low,credit_deposit_ratio.total_deposit,45394.0,,,5,0,1,734,no branch anchor; magnitude cannot separate small-lakh from big-crore — confirm via caption
+nagaland,lakh,deposit_per_branch,high,credit_deposit_ratio.total_deposit,24685.4,3085.7,,0,0,2,328,"deposit/branch=3,086 (branch median 8)"
+odisha,UNKNOWN,unknown,none,,,,,115,261,74,236,no CD-ratio deposit/advance anchor — needs caption tier
+punjab,UNKNOWN,unknown,none,,,,,8,0,4,0,no CD-ratio deposit/advance anchor — needs caption tier
+rajasthan,lakh,deposit_magnitude,medium,credit_deposit_ratio.total_deposit,921998.0,,,70,46,16,46,no branch anchor; magnitude cannot separate small-lakh from big-crore — confirm via caption
+sikkim,UNKNOWN,unknown,none,,,,,0,0,0,11,no CD-ratio deposit/advance anchor — needs caption tier
+tamil-nadu,crore,deposit_magnitude,low,cd_ratio.deposit,17218.5,,YES,28,6,0,1207,no branch anchor; magnitude cannot separate small-lakh from big-crore — confirm via caption
+telangana,crore,deposit_per_branch,high,credit_deposit_ratio.total_deposit,3966.3,33.3,YES,13,5,1,53,deposit/branch=33 (branch median 119)
+tripura,lakh,deposit_per_branch,high,credit_deposit_ratio.total_deposit,184135.8,3068.9,,37,52,18,76,"deposit/branch=3,069 (branch median 60)"
+uttar-pradesh,crore,deposit_magnitude,low,credit_deposit_ratio.total_deposit,9194.3,,YES,22,35,7,37,no branch anchor; magnitude cannot separate small-lakh from big-crore — confirm via caption
+uttarakhand,lakh,deposit_per_branch,high,credit_deposit_ratio.total_deposit,491250.0,3387.9,,124,248,28,52,"deposit/branch=3,388 (branch median 145)"
+west-bengal,crore,deposit_magnitude,low,credit_deposit_ratio.advance,10741.9,,YES,231,727,79,443,no branch anchor; magnitude cannot separate small-lakh from big-crore — confirm via caption
