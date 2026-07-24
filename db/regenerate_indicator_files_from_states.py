@@ -313,9 +313,20 @@ INDICATORS = {
              'fallbacks': ['total_current_year_sui_disb_no', 'sui_npa_no', 'sanctioned_no',
                            'total_no_of_a_cs']},
             {'field': 'sui_o_s_amt',
-             'fallbacks': ['total_current_year_sui_disb_amt', 'sanctioned_amt',
-                           'disbursement_amt', 'disbursed_amt', 'sumof_female_amt',
-                           'sum_of_female_amt', 'current_year_sum_of_female_amt']},
+             # Odisha stand_up_india TOTAL-group disbursement. Before
+             # duplicate-header disambiguation the bare `disbursement_amt`
+             # collapsed to the last sub-group (women), so the map showed
+             # women-only, not the total. These name the recovered total; the
+             # bare `disburse*_amt` spellings occur when the OCR typo made the
+             # total column unique (so it never got the total_no_of_a_cs prefix).
+             'fallbacks': ['total_current_year_sui_disb_amt',
+                           'total_no_of_a_cs_disbursement_amt',
+                           'total_no_of_a_cs_disburse_ment_amt',
+                           'total_no_of_a_cs_disburseme_nt_amt',
+                           'disbursemen_t_amt', 'disburseme_nt_amt',
+                           'sanctioned_amt', 'disbursement_amt', 'disbursed_amt',
+                           'sumof_female_amt', 'sum_of_female_amt',
+                           'current_year_sum_of_female_amt']},
             {'field': 'sui_npa_pct', 'fallbacks': []},
         ],
     },
@@ -409,8 +420,14 @@ INDICATORS = {
             {'field': 'total_mudra_disb_amt',
              'fallbacks': ['total_mudra_o_s_amt', 'total_o_s_amt',
                            'mudra_total_disbursed', 'mudra_total_sanctioned',
-                           'pmmy_total_amt', 'disbursement_amt',
-                           'amount']},
+                           'pmmy_total_amt',
+                           # Odisha mudra total after duplicate-header
+                           # disambiguation (was the collapsed bare
+                           # `disbursement_amt`). Both spellings occur because
+                           # OCR splits "disbursement" differently per quarter.
+                           'total_no_of_a_cs_disbursement_amt',
+                           'total_no_of_a_cs_disburse_ment_amt',
+                           'disbursement_amt', 'amount']},
         ],
     },
 }
