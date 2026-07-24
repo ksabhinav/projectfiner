@@ -20,6 +20,7 @@ here is analysis/scaffolding — it does not touch published data.
 | `verify.py` | **Phase 3** — reconciliation (ratio / area-sum / achievement%), stratified sampler, error-rate stats, and the dual-extraction `diff_tables()` core. Writes `reconciliation.csv`, backfills recon columns into `registry.csv`, and emits per-table sample worklists. |
 | `triage.py` | Classifies every reconciliation failure into a root cause (header_collapse / parse_misalign / garbage_ratio_field / unit_mismatch / marginal_definitional) with a fix + priority. Writes `triage.csv` + `triage_rows.csv`. |
 | `repair_odisha_acp.py` | **Repair** — recovers the collapsed Odisha ACP per-subcategory a/pct from the quarterly CSVs (gated, lossless) and rewrites complete.json / timeseries.json / timeseries.csv. Cut reconciliation failures 540 → 129. |
+| `repair_headers.py` | **Generalised repair** — same gated procedure for any state × any dup-header categories; auto-detects fixed columns. Used for Bihar + Jharkhand ACP. |
 | `triage.csv` / `triage_rows.csv` | Per-cause rollup and per-cell classification of the 540 reconciliation failures. |
 | `test_verify.py` | Pure-logic tests for the verification harness. No PDFs. |
 | `reconciliation.csv` | Per (table, check) internal-consistency results with fail rate, Wilson UB, and example failures. |
@@ -177,10 +178,19 @@ current data exactly (proof it adds columns without altering any value).
 Guarantees verified: non-ACP content deep-equal before/after (0 diffs in
 complete.json and every non-ACP CSV cell); 239 rows preserved; slim.json
 untouched. The recovered data is not just present but correct — every
-subcategory's `a/target*100 == pct` now holds. The same mechanism extends to the
-remaining Odisha dup-header categories and to Bihar/Jharkhand ACP (tracked
-follow-up). Note: `complete.json` self-declares `amount_unit: "Rs. Crore (ACP,
-advances)…"`, independently confirming the crore classification from Phase 2.
+subcategory's `a/target*100 == pct` now holds. Note: `complete.json` self-declares
+`amount_unit: "Rs. Crore (ACP, advances)…"`, independently confirming the crore
+classification from Phase 2.
+
+**Bihar + Jharkhand ACP** (`repair_headers.py`, the generalised tool): same
+gated, lossless procedure. Bihar `acp_target_achievement` recovered ~1,332
+previously-collapsed cells; Jharkhand's 9 ACP categories (`amt`/`_no`/
+`achv_pct_amt` dup pattern) recovered ~20,252 across 133 new columns. Verified
+identically: non-ACP tables deep-equal (0 diffs), all rows preserved, gates all
+pass, reconciliation unchanged at 129 (these tables use no a/pct check, so the
+recovery adds data without adding checks). Remaining dup-header categories in
+these states (mudra, stand_up_india, branch_network area-splits, …) are the next
+tranche of the same mechanism.
 
 **80% (431/540) were recoverable without re-extraction.** The dominant cause was
 the header collapse — proven, not guessed: in every Odisha ACP table the
