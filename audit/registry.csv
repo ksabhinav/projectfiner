@@ -595,10 +595,10 @@ nagaland__social_security,nagaland,social_security,nagaland_social_security.csv,
 nagaland__sui,nagaland,sui,nagaland_sui.csv,A/raw,1,1,100.0,March 2025,100,50,50,,NO_TREND;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 nagaland__uncategorized,nagaland,uncategorized,nagaland_uncategorized.csv,A/raw,6,2,26.3,March 2025,100,0,25,,SPARSE;NO_TREND;TARGET_ONLY;NO_UNITS,REDUNDANT_COL;HEADER_STYLE;ORPHAN_COL,n/a,no-money-cols,,,,,0,0,
 odisha__acp_district_agri,odisha,acp_district_agri,odisha_acp_district_agri.csv,hybrid,7,6,100.0,December 2025,100,75,75,,NO_UNITS,ORPHAN_COL,unknown,needs-caption,,,,,0,0,
-odisha__acp_district_agri_allied,odisha,acp_district_agri_allied,odisha_acp_district_agri_allied.csv,hybrid,7,6,93.7,December 2025,100,100,75,,,ORPHAN_COL,unknown,needs-caption,,,,,210,208,99.0
-odisha__acp_district_ancillary,odisha,acp_district_ancillary,odisha_acp_district_ancillary.csv,hybrid,7,6,100.0,December 2025,100,100,75,,,ORPHAN_COL,unknown,needs-caption,,,,,210,203,96.7
-odisha__acp_district_msme,odisha,acp_district_msme,odisha_acp_district_msme.csv,hybrid,7,6,100.0,December 2025,100,100,75,,,ORPHAN_COL,unknown,needs-caption,,,,,210,0,0.0
-odisha__acp_district_total,odisha,acp_district_total,odisha_acp_district_total.csv,hybrid,7,6,100.0,December 2025,100,75,75,,TARGET_ONLY,ORPHAN_COL,unknown,needs-caption,,,,,210,0,0.0
+odisha__acp_district_agri_allied,odisha,acp_district_agri_allied,odisha_acp_district_agri_allied.csv,hybrid,7,6,93.7,December 2025,100,100,75,,,ORPHAN_COL,unknown,needs-caption,,,,,0,0,
+odisha__acp_district_ancillary,odisha,acp_district_ancillary,odisha_acp_district_ancillary.csv,hybrid,7,6,100.0,December 2025,100,100,75,,,ORPHAN_COL,unknown,needs-caption,,,,,0,0,
+odisha__acp_district_msme,odisha,acp_district_msme,odisha_acp_district_msme.csv,hybrid,7,6,100.0,December 2025,100,100,75,,,ORPHAN_COL,unknown,needs-caption,,,,,0,0,
+odisha__acp_district_total,odisha,acp_district_total,odisha_acp_district_total.csv,hybrid,7,6,100.0,December 2025,100,75,75,,TARGET_ONLY,ORPHAN_COL,unknown,needs-caption,,,,,0,0,
 odisha__apy,odisha,apy,odisha_apy.csv,hybrid,2,1,47.6,March 2025,100,25,75,,SPARSE;NO_TREND;NO_UNITS,NULL_COL,n/a,no-money-cols,,,,,0,0,
 odisha__bharatnet,odisha,bharatnet,odisha_bharatnet.csv,hybrid,7,6,45.8,December 2025,100,50,100,,SPARSE;NO_UNITS,,n/a,no-money-cols,,,,,0,0,
 odisha__bharatnet_p2,odisha,bharatnet_p2,odisha_bharatnet_p2.csv,hybrid,7,6,35.3,December 2025,100,50,100,,SPARSE;NO_UNITS,,n/a,no-money-cols,,,,,0,0,

@@ -19,6 +19,7 @@ here is analysis/scaffolding — it does not touch published data.
 | `source_coverage.csv` | **Toward artifact 1.5** — per-state source rollup + coverage bucket (ok / archive_only / live_only_fragile / ORPHAN). |
 | `verify.py` | **Phase 3** — reconciliation (ratio / area-sum / achievement%), stratified sampler, error-rate stats, and the dual-extraction `diff_tables()` core. Writes `reconciliation.csv`, backfills recon columns into `registry.csv`, and emits per-table sample worklists. |
 | `triage.py` | Classifies every reconciliation failure into a root cause (header_collapse / parse_misalign / garbage_ratio_field / unit_mismatch / marginal_definitional) with a fix + priority. Writes `triage.csv` + `triage_rows.csv`. |
+| `repair_odisha_acp.py` | **Repair** — recovers the collapsed Odisha ACP per-subcategory a/pct from the quarterly CSVs (gated, lossless) and rewrites complete.json / timeseries.json / timeseries.csv. Cut reconciliation failures 540 → 129. |
 | `triage.csv` / `triage_rows.csv` | Per-cause rollup and per-cell classification of the 540 reconciliation failures. |
 | `test_verify.py` | Pure-logic tests for the verification harness. No PDFs. |
 | `reconciliation.csv` | Per (table, check) internal-consistency results with fail rate, Wilson UB, and example failures. |
@@ -158,7 +159,30 @@ the second reading. What runs **now**:
 | **unit_mismatch** | 20 | chhattisgarh, jharkhand, up, uttarakhand | yes | per-row crore→lakh (Phase 2) | MEDIUM |
 | **garbage_ratio_field** | 17 | chhattisgarh, up | partial | derive ratio from adv/dep, sanity-bounded | MEDIUM |
 
-**80% (431/540) are recoverable without re-extraction.** The dominant cause is
+### Repair applied — Odisha ACP (`repair_odisha_acp.py`)
+
+The 411 header_collapse cells are **fixed**. `repair_odisha_acp.py` reads the
+quarterly CSVs, disambiguates the duplicate `a`/`pct` headers, and surgically
+rewrites the 5 ACP tables in `complete.json` / `timeseries.json` / `timeseries.csv`
+— gated so it only proceeds where a naive re-collapse of the CSV reproduces the
+current data exactly (proof it adds columns without altering any value).
+
+| Metric | Before | After |
+|---|---|---|
+| Reconciliation failures (all states) | 540 | **129** |
+| Odisha failures | 411 | **0** |
+| Reconcilable cells | 10,174 | **12,341** |
+| Per-subcategory ACP triplets reconciling | — | **6942 / 6942 (100%)** |
+
+Guarantees verified: non-ACP content deep-equal before/after (0 diffs in
+complete.json and every non-ACP CSV cell); 239 rows preserved; slim.json
+untouched. The recovered data is not just present but correct — every
+subcategory's `a/target*100 == pct` now holds. The same mechanism extends to the
+remaining Odisha dup-header categories and to Bihar/Jharkhand ACP (tracked
+follow-up). Note: `complete.json` self-declares `amount_unit: "Rs. Crore (ACP,
+advances)…"`, independently confirming the crore classification from Phase 2.
+
+**80% (431/540) were recoverable without re-extraction.** The dominant cause was
 the header collapse — proven, not guessed: in every Odisha ACP table the
 surviving `a`/`pct` reconcile exactly with the *last* `_t` column, so they're the
 grand-total pair the collapse kept while dropping the per-subcategory ones. The

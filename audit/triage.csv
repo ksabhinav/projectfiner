@@ -1,6 +1,4 @@
 table_id,check,cause,n_cells,recoverable,priority,fix
-odisha__acp_district_agri_allied,achievement_pct,header_collapse,208,recoverable,HIGH,disambiguate headers -> re-derive complete.json/timeseries
-odisha__acp_district_ancillary,achievement_pct,header_collapse,203,recoverable,HIGH,disambiguate headers -> re-derive complete.json/timeseries
 jharkhand__credit_deposit_ratio,ratio,parse_misalign,35,needs_reextract,HIGH,re-extract table + verify against source PDF (dual extract)
 chhattisgarh__credit_deposit_ratio,ratio,garbage_ratio_field,16,partial,MEDIUM,derive CD ratio from adv/dep (sanity-bounded) or re-extract quarter
 uttarakhand__credit_deposit_ratio,ratio,unit_mismatch,13,recoverable,MEDIUM,apply per-row crore->lakh normalisation (Phase 2 units)
