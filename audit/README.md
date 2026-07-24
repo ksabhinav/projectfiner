@@ -3,6 +3,9 @@
 Tooling, results, and program plan for the data-integrity workstream. Everything
 here is analysis/scaffolding — it does not touch published data.
 
+**Next actions run off-container** (this box's egress can't reach the SLBC/Wayback
+hosts). See **`RUNBOOK.md`** for the harvest → captions → verification sequence.
+
 ## Files
 
 | File | What it is |
