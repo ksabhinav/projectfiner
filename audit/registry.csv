@@ -1,7 +1,7 @@
 table_id,state,indicator,file,codepath,quarters_present,usable_run,fill_pct,last_quarter,int_score,use_score,arr_score,integrity_flags,useful_flags,arrange_flags,unit_declared,unit_source,tier,verify_n,error_rate_ub95,disposition,recon_checks,recon_fails,recon_fail_rate
 andhra-pradesh__annual_credit_plan,andhra-pradesh,annual_credit_plan,andhra-pradesh_annual_credit_plan.csv,hybrid,3,1,42.4,December 2021,100,25,25,,SPARSE;NO_TREND;STALE,ORPHAN_COL;DATE_FORMAT;FY_NULL,crore (high),deposit_per_branch,,,,,0,0,
 andhra-pradesh__branch_network,andhra-pradesh,branch_network,andhra-pradesh_branch_network.csv,hybrid,3,1,81.7,December 2021,75,25,50,TRANSIENT_GAP,NO_TREND;STALE;NO_UNITS,DATE_FORMAT;FY_NULL,n/a,no-money-cols,,,,,0,0,
-andhra-pradesh__credit_deposit_ratio,andhra-pradesh,credit_deposit_ratio,andhra-pradesh_credit_deposit_ratio.csv,hybrid,20,8,39.5,June 2024,75,25,50,TRANSIENT_GAP,SPARSE;STALE;NO_UNITS,DATE_FORMAT;FY_NULL,crore (high),deposit_per_branch,,,,,0,0,
+andhra-pradesh__credit_deposit_ratio,andhra-pradesh,credit_deposit_ratio,andhra-pradesh_credit_deposit_ratio.csv,hybrid,20,8,39.5,June 2024,75,25,50,TRANSIENT_GAP,SPARSE;STALE;NO_UNITS,DATE_FORMAT;FY_NULL,crore (high),deposit_per_branch,,,,,29,0,0.0
 andhra-pradesh__priority_sector,andhra-pradesh,priority_sector,andhra-pradesh_priority_sector.csv,hybrid,3,1,53.2,December 2021,100,50,50,,NO_TREND;STALE,DATE_FORMAT;FY_NULL,crore (high),deposit_per_branch,,,,,0,0,
 andhra-pradesh__shg,andhra-pradesh,shg,andhra-pradesh_shg.csv,hybrid,1,1,100.0,June 2019,100,25,50,,NO_TREND;STALE;NO_UNITS,DATE_FORMAT;FY_NULL,crore (high),deposit_per_branch,,,,,0,0,
 arunachal-pradesh__aadhaar_authentication,arunachal-pradesh,aadhaar_authentication,arunachal-pradesh_aadhaar_authentication.csv,A/raw,13,5,100.0,March 2025,100,75,50,,NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
@@ -17,7 +17,7 @@ arunachal-pradesh__anky_anby,arunachal-pradesh,anky_anby,arunachal-pradesh_anky_
 arunachal-pradesh__anppy_anmpy,arunachal-pradesh,anppy_anmpy,arunachal-pradesh_anppy_anmpy.csv,A/raw,4,3,49.8,March 2025,100,25,50,,SPARSE;NO_TREND;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 arunachal-pradesh__atmanirbhar_street_vendors,arunachal-pradesh,atmanirbhar_street_vendors,arunachal-pradesh_atmanirbhar_street_vendors.csv,A/raw,1,1,79.1,March 2021,100,50,25,,NO_TREND;STALE,REDUNDANT_COL;HEADER_STYLE;ORPHAN_COL,lakh (high),deposit_per_branch,,,,,0,0,
 arunachal-pradesh__branch_network,arunachal-pradesh,branch_network,arunachal-pradesh_branch_network.csv,A/raw,13,5,39.5,March 2025,100,50,50,,SPARSE;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,69,0,0.0
-arunachal-pradesh__credit_deposit_ratio,arunachal-pradesh,credit_deposit_ratio,arunachal-pradesh_credit_deposit_ratio.csv,A/raw,15,5,63.1,March 2025,75,100,50,TRANSIENT_GAP,,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
+arunachal-pradesh__credit_deposit_ratio,arunachal-pradesh,credit_deposit_ratio,arunachal-pradesh_credit_deposit_ratio.csv,A/raw,15,5,63.1,March 2025,75,100,50,TRANSIENT_GAP,,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,982,0,0.0
 arunachal-pradesh__digital_transactions,arunachal-pradesh,digital_transactions,arunachal-pradesh_digital_transactions.csv,A/raw,13,5,100.0,March 2025,100,75,50,,NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 arunachal-pradesh__education_loan,arunachal-pradesh,education_loan,arunachal-pradesh_education_loan.csv,A/raw,13,5,100.0,March 2025,100,75,50,,NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 arunachal-pradesh__fi_kcc,arunachal-pradesh,fi_kcc,arunachal-pradesh_fi_kcc.csv,A/raw,13,5,100.0,March 2025,100,100,50,,,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
@@ -60,7 +60,7 @@ assam__acp_target_achievement,assam,acp_target_achievement,assam_acp_target_achi
 assam__agri_npa,assam,agri_npa,assam_agri_npa.csv,A/raw,26,13,52.0,September 2025,75,75,25,TRANSIENT_GAP,NO_UNITS,REDUNDANT_COL;HEADER_STYLE;ORPHAN_COL,n/a,no-money-cols,,,,,0,0,
 assam__agri_outstanding,assam,agri_outstanding,assam_agri_outstanding.csv,A/raw,21,13,82.4,September 2025,75,75,50,TRANSIENT_GAP,NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 assam__branch_network,assam,branch_network,assam_branch_network.csv,A/raw,2,1,51.2,March 2024,100,0,50,,NO_TREND;PARTIAL_DISTRICTS;STALE;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
-assam__credit_deposit_ratio,assam,credit_deposit_ratio,assam_credit_deposit_ratio.csv,A/raw,19,7,46.8,September 2025,75,50,50,TRANSIENT_GAP,SPARSE;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,224,0,0.0
+assam__credit_deposit_ratio,assam,credit_deposit_ratio,assam_credit_deposit_ratio.csv,A/raw,19,7,46.8,September 2025,75,50,50,TRANSIENT_GAP,SPARSE;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,616,0,0.0
 assam__crop_insurance,assam,crop_insurance,assam_crop_insurance.csv,A/raw,19,7,40.6,September 2025,75,75,50,TRANSIENT_GAP,SPARSE,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 assam__dcc_meetings,assam,dcc_meetings,assam_dcc_meetings.csv,A/raw,12,7,27.9,September 2025,100,50,50,,SPARSE;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 assam__digital_transactions,assam,digital_transactions,assam_digital_transactions.csv,A/raw,21,13,97.8,September 2025,75,75,50,TRANSIENT_GAP,NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
@@ -140,8 +140,8 @@ bihar__branch_network,bihar,branch_network,bihar_branch_network.csv,hybrid,6,4,1
 bihar__branch_network_2,bihar,branch_network_2,bihar_branch_network_2.csv,hybrid,1,1,100.0,December 2024,100,25,50,,NO_TREND;TARGET_ONLY;NO_UNITS,DATE_FORMAT;FY_NULL,n/a,no-money-cols,,,,,0,0,
 bihar__business_correspondents,bihar,business_correspondents,bihar_business_correspondents.csv,hybrid,6,4,94.4,September 2025,100,50,50,,TARGET_ONLY;NO_UNITS,DATE_FORMAT;FY_NULL,n/a,no-money-cols,,,,,0,0,
 bihar__business_correspondents_2,bihar,business_correspondents_2,bihar_business_correspondents_2.csv,hybrid,1,1,100.0,December 2024,100,25,50,,NO_TREND;TARGET_ONLY;NO_UNITS,DATE_FORMAT;FY_NULL,n/a,no-money-cols,,,,,0,0,
-bihar__credit_deposit_ratio,bihar,credit_deposit_ratio,bihar_credit_deposit_ratio.csv,hybrid,7,5,57.1,December 2025,100,75,50,,NO_UNITS,DATE_FORMAT;FY_NULL,crore (high),deposit_per_branch,,,,,76,0,0.0
-bihar__credit_deposit_ratio_2,bihar,credit_deposit_ratio_2,bihar_credit_deposit_ratio_2.csv,hybrid,2,1,61.1,December 2024,100,50,50,,NO_TREND;NO_UNITS,DATE_FORMAT;FY_NULL,crore (high),deposit_per_branch,,,,,0,0,
+bihar__credit_deposit_ratio,bihar,credit_deposit_ratio,bihar_credit_deposit_ratio.csv,hybrid,7,5,57.1,December 2025,100,75,50,,NO_UNITS,DATE_FORMAT;FY_NULL,crore (high),deposit_per_branch,,,,,266,0,0.0
+bihar__credit_deposit_ratio_2,bihar,credit_deposit_ratio_2,bihar_credit_deposit_ratio_2.csv,hybrid,2,1,61.1,December 2024,100,50,50,,NO_TREND;NO_UNITS,DATE_FORMAT;FY_NULL,crore (high),deposit_per_branch,,,,,38,0,0.0
 bihar__crop_loan,bihar,crop_loan,bihar_crop_loan.csv,hybrid,1,1,100.0,September 2025,100,75,25,,NO_TREND,ORPHAN_COL;DATE_FORMAT;FY_NULL,crore (high),deposit_per_branch,,,,,0,0,
 bihar__dairy,bihar,dairy,bihar_dairy.csv,hybrid,4,4,100.0,September 2025,100,100,25,,,ORPHAN_COL;DATE_FORMAT;FY_NULL,crore (high),deposit_per_branch,,,,,0,0,
 bihar__dairy_2,bihar,dairy_2,bihar_dairy_2.csv,hybrid,1,1,100.0,December 2024,100,75,25,,NO_TREND,ORPHAN_COL;DATE_FORMAT;FY_NULL,crore (high),deposit_per_branch,,,,,0,0,
@@ -255,7 +255,7 @@ haryana__shg,haryana,shg,haryana_shg.csv,B/slug,2,1,100.0,December 2025,100,50,5
 himachal-pradesh__annual_credit_plan,himachal-pradesh,annual_credit_plan,himachal-pradesh_annual_credit_plan.csv,B/slug,1,1,100.0,December 2025,100,50,50,,NO_TREND;NO_UNITS,DATE_FORMAT;FY_NULL,lakh (high),deposit_per_branch,,,,,0,0,
 himachal-pradesh__atm_network,himachal-pradesh,atm_network,himachal-pradesh_atm_network.csv,hybrid,7,1,100.0,March 2025,100,25,50,,NO_TREND;TARGET_ONLY;NO_UNITS,DATE_FORMAT;FY_NULL,n/a,no-money-cols,,,,,0,0,
 himachal-pradesh__branch_network,himachal-pradesh,branch_network,himachal-pradesh_branch_network.csv,hybrid,11,2,16.1,December 2025,100,25,50,,SPARSE;NO_TREND;NO_UNITS,DATE_FORMAT;FY_NULL,n/a,no-money-cols,,,,,0,0,
-himachal-pradesh__credit_deposit_ratio,himachal-pradesh,credit_deposit_ratio,himachal-pradesh_credit_deposit_ratio.csv,hybrid,12,2,13.9,December 2025,100,25,50,,SPARSE;NO_TREND;NO_UNITS,DATE_FORMAT;FY_NULL,lakh (high),deposit_per_branch,,,,,0,0,
+himachal-pradesh__credit_deposit_ratio,himachal-pradesh,credit_deposit_ratio,himachal-pradesh_credit_deposit_ratio.csv,hybrid,12,2,13.9,December 2025,100,25,50,,SPARSE;NO_TREND;NO_UNITS,DATE_FORMAT;FY_NULL,lakh (high),deposit_per_branch,,,,,12,0,0.0
 himachal-pradesh__kcc,himachal-pradesh,kcc,himachal-pradesh_kcc.csv,B/slug,1,1,100.0,December 2025,100,50,50,,NO_TREND;NO_UNITS,DATE_FORMAT;FY_NULL,lakh (high),deposit_per_branch,,,,,0,0,
 himachal-pradesh__minority_loans,himachal-pradesh,minority_loans,himachal-pradesh_minority_loans.csv,B/slug,1,1,100.0,December 2025,100,50,50,,NO_TREND;NO_UNITS,DATE_FORMAT;FY_NULL,lakh (high),deposit_per_branch,,,,,0,0,
 himachal-pradesh__mudra,himachal-pradesh,mudra,himachal-pradesh_mudra.csv,B/slug,1,1,100.0,December 2025,100,75,50,,NO_TREND,DATE_FORMAT;FY_NULL,lakh (high),deposit_per_branch,,,,,0,0,
@@ -286,7 +286,7 @@ jharkhand__agri_npa_p2,jharkhand,agri_npa_p2,jharkhand_agri_npa_p2.csv,hybrid,9,
 jharkhand__agri_outstanding,jharkhand,agri_outstanding,jharkhand_agri_outstanding.csv,hybrid,10,10,47.4,September 2025,100,50,50,,SPARSE;NO_UNITS,ORPHAN_COL;NULL_COL,lakh (high),deposit_per_branch,,,,,0,0,
 jharkhand__branch_network,jharkhand,branch_network,jharkhand_branch_network.csv,hybrid,7,6,30.8,September 2025,75,50,100,NEGATIVE,SPARSE;NO_UNITS,,n/a,no-money-cols,,,,,0,0,
 jharkhand__business_correspondents,jharkhand,business_correspondents,jharkhand_business_correspondents.csv,hybrid,10,10,67.1,September 2025,100,75,100,,NO_UNITS,,n/a,no-money-cols,,,,,0,0,
-jharkhand__credit_deposit_ratio,jharkhand,credit_deposit_ratio,jharkhand_credit_deposit_ratio.csv,hybrid,10,10,24.6,September 2025,75,75,75,NEGATIVE,SPARSE,NULL_COL,lakh (high),deposit_per_branch,,,,,168,48,28.6
+jharkhand__credit_deposit_ratio,jharkhand,credit_deposit_ratio,jharkhand_credit_deposit_ratio.csv,hybrid,10,10,24.6,September 2025,75,75,75,NEGATIVE,SPARSE,NULL_COL,lakh (high),deposit_per_branch,,,,,204,51,25.0
 jharkhand__doubling_farmers_income,jharkhand,doubling_farmers_income,jharkhand_doubling_farmers_income.csv,hybrid,6,4,37.9,September 2025,75,50,100,NEGATIVE,SPARSE;PARTIAL_DISTRICTS,,n/a,no-money-cols,,,,,0,0,
 jharkhand__doubling_farmers_income_p2,jharkhand,doubling_farmers_income_p2,jharkhand_doubling_farmers_income_p2.csv,hybrid,3,1,38.2,June 2025,75,25,100,NEGATIVE,SPARSE;NO_TREND;PARTIAL_DISTRICTS,,lakh (high),deposit_per_branch,,,,,0,0,
 jharkhand__doubling_farmers_income_p3,jharkhand,doubling_farmers_income_p3,jharkhand_doubling_farmers_income_p3.csv,hybrid,2,1,47.6,June 2025,75,25,75,NEGATIVE,SPARSE;NO_TREND;PARTIAL_DISTRICTS,NULL_COL,lakh (high),deposit_per_branch,,,,,0,0,
@@ -367,7 +367,7 @@ karnataka__anx_9,karnataka,anx_9,karnataka_anx_9.csv,A/raw,1,1,100.0,March 2020,
 karnataka__apy,karnataka,apy,karnataka_apy.csv,A/raw,6,4,21.3,June 2025,100,50,25,,SPARSE;NO_UNITS,REDUNDANT_COL;HEADER_STYLE;HEADER_NEWLINE,n/a,no-money-cols,,,,,0,0,
 karnataka__atm_network,karnataka,atm_network,karnataka_atm_network.csv,A/raw,6,6,100.0,March 2025,100,75,50,,NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 karnataka__branch_network,karnataka,branch_network,karnataka_branch_network.csv,A/raw,6,6,100.0,March 2025,100,75,50,,NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
-karnataka__cd_ratio,karnataka,cd_ratio,karnataka_cd_ratio.csv,A/raw,7,4,45.7,June 2025,100,50,50,,SPARSE;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,crore (high),deposit_per_branch,,,,,0,0,
+karnataka__cd_ratio,karnataka,cd_ratio,karnataka_cd_ratio.csv,A/raw,7,4,45.7,June 2025,100,50,50,,SPARSE;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,crore (high),deposit_per_branch,,,,,58,0,0.0
 karnataka__credit_deposit_ratio,karnataka,credit_deposit_ratio,karnataka_credit_deposit_ratio.csv,hybrid,1,1,100.0,March 2026,100,50,100,,NO_TREND;NO_UNITS,,crore (high),deposit_per_branch,,,,,31,0,0.0
 karnataka__deaf,karnataka,deaf,karnataka_deaf.csv,A/raw,2,2,96.2,March 2025,100,50,50,,NO_TREND;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 karnataka__pmegp,karnataka,pmegp,karnataka_pmegp.csv,A/raw,5,4,21.9,March 2025,100,50,50,,SPARSE;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
@@ -391,7 +391,7 @@ maharashtra__aif,maharashtra,aif,maharashtra_aif.csv,A/raw,2,1,99.2,December 202
 maharashtra__apamvm,maharashtra,apamvm,maharashtra_apamvm.csv,A/raw,3,3,61.3,December 2025,100,25,50,,NO_TREND;TARGET_ONLY;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 maharashtra__apy,maharashtra,apy,maharashtra_apy.csv,A/raw,3,3,100.0,December 2025,100,25,50,,NO_TREND;TARGET_ONLY;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 maharashtra__bca,maharashtra,bca,maharashtra_bca.csv,A/raw,3,3,100.0,December 2025,100,50,50,,NO_TREND;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
-maharashtra__cd_ratio_detailed,maharashtra,cd_ratio_detailed,maharashtra_cd_ratio_detailed.csv,A/raw,2,2,93.9,December 2025,100,50,50,,NO_TREND;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,64,0,0.0
+maharashtra__cd_ratio_detailed,maharashtra,cd_ratio_detailed,maharashtra_cd_ratio_detailed.csv,A/raw,2,2,93.9,December 2025,100,50,50,,NO_TREND;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,100,0,0.0
 maharashtra__credit_deposit_ratio,maharashtra,credit_deposit_ratio,maharashtra_credit_deposit_ratio.csv,A/raw,3,3,100.0,December 2025,100,50,50,,NO_TREND;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,108,0,0.0
 maharashtra__education_loan,maharashtra,education_loan,maharashtra_education_loan.csv,A/raw,2,2,100.0,December 2025,100,50,50,,NO_TREND;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 maharashtra__kcc,maharashtra,kcc,maharashtra_kcc.csv,A/raw,1,1,100.0,September 2025,100,50,50,,NO_TREND;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
@@ -421,7 +421,7 @@ manipur__agri_npa,manipur,agri_npa,manipur_agri_npa.csv,A/raw,23,23,100.0,Decemb
 manipur__agri_outstanding,manipur,agri_outstanding,manipur_agri_outstanding.csv,A/raw,24,23,100.0,December 2025,100,75,50,,NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 manipur__branch_network,manipur,branch_network,manipur_branch_network.csv,A/raw,26,23,37.0,December 2025,75,50,50,TRANSIENT_GAP,SPARSE;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 manipur__cdr_details,manipur,cdr_details,manipur_cdr_details.csv,A/raw,24,23,93.2,December 2025,100,75,50,,NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,726,0,0.0
-manipur__credit_deposit_ratio,manipur,credit_deposit_ratio,manipur_credit_deposit_ratio.csv,A/raw,37,23,24.3,December 2025,75,50,25,TRANSIENT_GAP,SPARSE;NO_UNITS,REDUNDANT_COL;HEADER_STYLE;ORPHAN_COL,n/a,no-money-cols,,,,,0,0,
+manipur__credit_deposit_ratio,manipur,credit_deposit_ratio,manipur_credit_deposit_ratio.csv,A/raw,37,23,24.3,December 2025,75,50,25,TRANSIENT_GAP,SPARSE;NO_UNITS,REDUNDANT_COL;HEADER_STYLE;ORPHAN_COL,n/a,no-money-cols,,,,,1110,0,0.0
 manipur__crops,manipur,crops,manipur_crops.csv,A/raw,22,22,100.0,December 2025,75,100,50,TRANSIENT_GAP,,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 manipur__dcc_meetings,manipur,dcc_meetings,manipur_dcc_meetings.csv,A/raw,18,15,45.7,June 2020,100,25,50,,SPARSE;STALE;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 manipur__digital_transactions,manipur,digital_transactions,manipur_digital_transactions.csv,A/raw,23,23,100.0,December 2025,100,75,50,,NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
@@ -573,7 +573,7 @@ nagaland__aadhaar_authentication,nagaland,aadhaar_authentication,nagaland_aadhaa
 nagaland__agri_npa,nagaland,agri_npa,nagaland_agri_npa.csv,A/raw,3,1,51.1,March 2025,100,50,25,,NO_TREND;NO_UNITS,REDUNDANT_COL;HEADER_STYLE;ORPHAN_COL,n/a,no-money-cols,,,,,0,0,
 nagaland__agri_outstanding,nagaland,agri_outstanding,nagaland_agri_outstanding.csv,A/raw,2,1,100.0,March 2025,100,50,50,,NO_TREND;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 nagaland__branch_network,nagaland,branch_network,nagaland_branch_network.csv,A/raw,1,1,100.0,March 2025,100,50,50,,NO_TREND;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
-nagaland__credit_deposit_ratio,nagaland,credit_deposit_ratio,nagaland_credit_deposit_ratio.csv,A/raw,3,1,48.1,March 2025,100,25,50,,SPARSE;NO_TREND;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,22,0,0.0
+nagaland__credit_deposit_ratio,nagaland,credit_deposit_ratio,nagaland_credit_deposit_ratio.csv,A/raw,3,1,48.1,March 2025,100,25,50,,SPARSE;NO_TREND;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,70,0,0.0
 nagaland__crop_insurance,nagaland,crop_insurance,nagaland_crop_insurance.csv,A/raw,1,1,100.0,March 2019,100,25,50,,NO_TREND;PARTIAL_DISTRICTS;STALE,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 nagaland__dcc_meetings,nagaland,dcc_meetings,nagaland_dcc_meetings.csv,A/raw,1,1,97.2,June 2021,100,0,50,,NO_TREND;PARTIAL_DISTRICTS;STALE;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
 nagaland__digital_transactions,nagaland,digital_transactions,nagaland_digital_transactions.csv,A/raw,2,1,57.0,March 2025,100,50,50,,NO_TREND;NO_UNITS,REDUNDANT_COL;HEADER_STYLE,n/a,no-money-cols,,,,,0,0,
@@ -672,7 +672,7 @@ tamil-nadu__acp_target_achievement,tamil-nadu,acp_target_achievement,tamil-nadu_
 tamil-nadu__agriculture,tamil-nadu,agriculture,tamil-nadu_agriculture.csv,A/raw,10,1,8.8,December 2025,75,50,0,TRANSIENT_GAP,SPARSE;NO_TREND,REDUNDANT_COL;HEADER_STYLE;HEADER_NEWLINE;ORPHAN_COL;NULL_COL,crore (low),deposit_magnitude,,,,,0,0,
 tamil-nadu__apy,tamil-nadu,apy,tamil-nadu_apy.csv,A/raw,8,2,15.6,December 2025,75,25,25,TRANSIENT_GAP,SPARSE;NO_TREND;NO_UNITS,REDUNDANT_COL;HEADER_STYLE;HEADER_NEWLINE,n/a,no-money-cols,,,,,0,0,
 tamil-nadu__branch_network,tamil-nadu,branch_network,tamil-nadu_branch_network.csv,A/raw,8,6,1.7,December 2025,100,75,25,,SPARSE,REDUNDANT_COL;HEADER_STYLE;NULL_COL,n/a,no-money-cols,,,,,0,0,
-tamil-nadu__cd_ratio,tamil-nadu,cd_ratio,tamil-nadu_cd_ratio.csv,A/raw,8,7,16.0,December 2025,100,75,25,,SPARSE,REDUNDANT_COL;HEADER_STYLE;NULL_COL,crore (low),deposit_magnitude,,,,,266,0,0.0
+tamil-nadu__cd_ratio,tamil-nadu,cd_ratio,tamil-nadu_cd_ratio.csv,A/raw,8,7,16.0,December 2025,100,75,25,,SPARSE,REDUNDANT_COL;HEADER_STYLE;NULL_COL,crore (low),deposit_magnitude,,,,,76,0,0.0
 tamil-nadu__cgtmse,tamil-nadu,cgtmse,tamil-nadu_cgtmse.csv,A/raw,4,1,6.9,June 2025,100,50,0,,SPARSE;NO_TREND,REDUNDANT_COL;HEADER_STYLE;HEADER_NEWLINE;NULL_COL,n/a,no-money-cols,,,,,0,0,
 tamil-nadu__cm_araise,tamil-nadu,cm_araise,tamil-nadu_cm_araise.csv,A/raw,1,1,100.0,December 2024,100,50,25,,NO_TREND;NO_UNITS,REDUNDANT_COL;HEADER_STYLE;ORPHAN_COL,n/a,no-money-cols,,,,,0,0,
 tamil-nadu__education_loan,tamil-nadu,education_loan,tamil-nadu_education_loan.csv,A/raw,10,2,14.2,December 2025,75,50,0,TRANSIENT_GAP,SPARSE;NO_TREND,REDUNDANT_COL;HEADER_STYLE;HEADER_NEWLINE;ORPHAN_COL;NULL_COL,crore (low),deposit_magnitude,,,,,0,0,
@@ -738,7 +738,7 @@ telangana__non_priority_sector,telangana,non_priority_sector,telangana_non_prior
 telangana__priority_sector,telangana,priority_sector,telangana_priority_sector.csv,hybrid,11,10,99.5,December 2025,100,100,50,,,DATE_FORMAT;FY_NULL,crore (high),deposit_per_branch,,,,,0,0,
 tripura__bank_yet_to,tripura,bank_yet_to,tripura_bank_yet_to.csv,hybrid,1,1,100.0,December 2023,100,25,50,,NO_TREND;STALE;NO_UNITS,DATE_FORMAT;FY_NULL,n/a,no-money-cols,,,,,0,0,
 tripura__branch_network,tripura,branch_network,tripura_branch_network.csv,hybrid,14,3,14.9,December 2025,75,50,50,TRANSIENT_GAP,SPARSE;NO_TREND,DATE_FORMAT;FY_NULL,n/a,no-money-cols,,,,,0,0,
-tripura__credit_deposit_ratio,tripura,credit_deposit_ratio,tripura_credit_deposit_ratio.csv,hybrid,35,33,75.4,December 2025,25,100,50,DUP_HEADER;TRANSIENT_GAP;DUP_KEY,,DATE_FORMAT;FY_NULL,lakh (high),deposit_per_branch,,,,,0,0,
+tripura__credit_deposit_ratio,tripura,credit_deposit_ratio,tripura_credit_deposit_ratio.csv,hybrid,35,33,75.4,December 2025,25,100,50,DUP_HEADER;TRANSIENT_GAP;DUP_KEY,,DATE_FORMAT;FY_NULL,lakh (high),deposit_per_branch,,,,,240,11,4.6
 tripura__digital_transactions,tripura,digital_transactions,tripura_digital_transactions.csv,hybrid,11,6,42.1,December 2025,100,50,50,,SPARSE;NO_UNITS,DATE_FORMAT;FY_NULL,n/a,no-money-cols,,,,,0,0,
 tripura__financial_literacy,tripura,financial_literacy,tripura_financial_literacy.csv,hybrid,5,2,42.5,June 2025,100,50,50,,SPARSE;NO_TREND,DATE_FORMAT;FY_NULL,n/a,no-money-cols,,,,,0,0,
 tripura__kcc,tripura,kcc,tripura_kcc.csv,hybrid,7,3,40.7,December 2025,100,50,50,,SPARSE;NO_TREND,DATE_FORMAT;FY_NULL,lakh (high),deposit_per_branch,,,,,0,0,
@@ -768,7 +768,7 @@ uttar-pradesh__social_security_pmsby,uttar-pradesh,social_security_pmsby,uttar-p
 uttar-pradesh__stand_up_india,uttar-pradesh,stand_up_india,uttar-pradesh_stand_up_india.csv,hybrid,8,3,90.4,December 2025,75,50,50,TRANSIENT_GAP,NO_TREND;NO_UNITS,DATE_FORMAT;FY_NULL,crore (low),deposit_magnitude,,,,,0,0,
 uttarakhand__banks_namely_punjab,uttarakhand,banks_namely_punjab,uttarakhand_banks_namely_punjab.csv,hybrid,4,2,93.8,June 2021,100,25,50,,NO_TREND;STALE;NO_UNITS,DATE_FORMAT;FY_NULL,n/a,no-money-cols,,,,,0,0,
 uttarakhand__branch_network,uttarakhand,branch_network,uttarakhand_branch_network.csv,hybrid,8,2,62.5,December 2023,100,50,50,,NO_TREND;STALE,DATE_FORMAT;FY_NULL,n/a,no-money-cols,,,,,0,0,
-uttarakhand__credit_deposit_ratio,uttarakhand,credit_deposit_ratio,uttarakhand_credit_deposit_ratio.csv,hybrid,10,4,19.2,December 2023,50,50,50,TRANSIENT_GAP;HEADER_ATE_ROW,SPARSE;STALE,DATE_FORMAT;FY_NULL,lakh (high),deposit_per_branch,,,,,0,0,
+uttarakhand__credit_deposit_ratio,uttarakhand,credit_deposit_ratio,uttarakhand_credit_deposit_ratio.csv,hybrid,10,4,19.2,December 2023,50,50,50,TRANSIENT_GAP;HEADER_ATE_ROW,SPARSE;STALE,DATE_FORMAT;FY_NULL,lakh (high),deposit_per_branch,,,,,26,13,50.0
 uttarakhand__date_of_dlrc,uttarakhand,date_of_dlrc,uttarakhand_date_of_dlrc.csv,hybrid,1,1,100.0,December 2023,100,25,50,,NO_TREND;STALE;NO_UNITS,DATE_FORMAT;FY_NULL,n/a,no-money-cols,,,,,0,0,
 uttarakhand__digital_transactions,uttarakhand,digital_transactions,uttarakhand_digital_transactions.csv,hybrid,9,2,11.9,December 2023,75,25,50,TRANSIENT_GAP,SPARSE;NO_TREND;STALE,DATE_FORMAT;FY_NULL,lakh (high),deposit_per_branch,,,,,0,0,
 uttarakhand__financial_literacy,uttarakhand,financial_literacy,uttarakhand_financial_literacy.csv,hybrid,11,2,20.4,December 2023,100,0,50,,SPARSE;NO_TREND;STALE;NO_UNITS,DATE_FORMAT;FY_NULL,n/a,no-money-cols,,,,,0,0,

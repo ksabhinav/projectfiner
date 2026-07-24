@@ -119,9 +119,12 @@ def reconcile_state(complete, slug):
     agg = {}   # (cat, check) -> [n, fail, examples]
     roles_cache = {}
     for period, cat, dname, row, fields in _iter_rows(complete):
-        roles = roles_cache.get(cat)
+        # key on the field set, not the category: a category's columns vary
+        # across quarters, so caching by name alone misses/adds checks.
+        fkey = tuple(fields)
+        roles = roles_cache.get(fkey)
         if roles is None:
-            roles = roles_cache[cat] = find_roles(fields)
+            roles = roles_cache[fkey] = find_roles(fields)
         for check, ok, detail in reconcile_row(row, roles):
             k = (cat, check)
             a = agg.setdefault(k, [0, 0, []])

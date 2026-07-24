@@ -1,0 +1,19 @@
+table_id,check,cause,n_cells,recoverable,priority,fix
+odisha__acp_district_agri_allied,achievement_pct,header_collapse,208,recoverable,HIGH,disambiguate headers -> re-derive complete.json/timeseries
+odisha__acp_district_ancillary,achievement_pct,header_collapse,203,recoverable,HIGH,disambiguate headers -> re-derive complete.json/timeseries
+jharkhand__credit_deposit_ratio,ratio,parse_misalign,35,needs_reextract,HIGH,re-extract table + verify against source PDF (dual extract)
+chhattisgarh__credit_deposit_ratio,ratio,garbage_ratio_field,16,partial,MEDIUM,derive CD ratio from adv/dep (sanity-bounded) or re-extract quarter
+uttarakhand__credit_deposit_ratio,ratio,unit_mismatch,13,recoverable,MEDIUM,apply per-row crore->lakh normalisation (Phase 2 units)
+jharkhand__credit_deposit_ratio,ratio,marginal_definitional,12,accept?,LOW,adjudicate vs source; likely a definitional CD-ratio difference
+tripura__credit_deposit_ratio,ratio,marginal_definitional,11,accept?,LOW,adjudicate vs source; likely a definitional CD-ratio difference
+delhi__credit_deposit_ratio,ratio,parse_misalign,9,needs_reextract,HIGH,re-extract table + verify against source PDF (dual extract)
+chhattisgarh__credit_deposit_ratio,ratio,parse_misalign,8,needs_reextract,HIGH,re-extract table + verify against source PDF (dual extract)
+uttar-pradesh__credit_deposit_ratio,ratio,parse_misalign,7,needs_reextract,HIGH,re-extract table + verify against source PDF (dual extract)
+haryana__credit_deposit_ratio,ratio,marginal_definitional,5,accept?,LOW,adjudicate vs source; likely a definitional CD-ratio difference
+jharkhand__credit_deposit_ratio,ratio,unit_mismatch,4,recoverable,MEDIUM,apply per-row crore->lakh normalisation (Phase 2 units)
+delhi__credit_deposit_ratio,ratio,marginal_definitional,2,accept?,LOW,adjudicate vs source; likely a definitional CD-ratio difference
+kerala__credit_deposit_ratio,ratio,parse_misalign,2,needs_reextract,HIGH,re-extract table + verify against source PDF (dual extract)
+uttar-pradesh__credit_deposit_ratio,ratio,unit_mismatch,2,recoverable,MEDIUM,apply per-row crore->lakh normalisation (Phase 2 units)
+chhattisgarh__credit_deposit_ratio,ratio,unit_mismatch,1,recoverable,MEDIUM,apply per-row crore->lakh normalisation (Phase 2 units)
+chhattisgarh__credit_deposit_ratio,ratio,marginal_definitional,1,accept?,LOW,adjudicate vs source; likely a definitional CD-ratio difference
+uttar-pradesh__credit_deposit_ratio,ratio,garbage_ratio_field,1,partial,MEDIUM,derive CD ratio from adv/dep (sanity-bounded) or re-extract quarter

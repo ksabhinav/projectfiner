@@ -1,23 +1,34 @@
 table_id,state,category,check,n_checked,n_fail,fail_rate,err_ub95,examples
+andhra-pradesh__credit_deposit_ratio,andhra-pradesh,credit_deposit_ratio,ratio,29,0,0.0,11.7,
 arunachal-pradesh__branch_network,arunachal-pradesh,branch_network,adv_area_sum,23,0,0.0,14.3,
 arunachal-pradesh__branch_network,arunachal-pradesh,branch_network,dep_area_sum,23,0,0.0,14.3,
 arunachal-pradesh__branch_network,arunachal-pradesh,branch_network,ratio,23,0,0.0,14.3,
-assam__credit_deposit_ratio,assam,credit_deposit_ratio,ratio,224,0,0.0,1.7,
-bihar__credit_deposit_ratio,bihar,credit_deposit_ratio,ratio,76,0,0.0,4.8,
+arunachal-pradesh__credit_deposit_ratio,arunachal-pradesh,credit_deposit_ratio,adv_area_sum,319,0,0.0,1.2,
+arunachal-pradesh__credit_deposit_ratio,arunachal-pradesh,credit_deposit_ratio,dep_area_sum,319,0,0.0,1.2,
+arunachal-pradesh__credit_deposit_ratio,arunachal-pradesh,credit_deposit_ratio,ratio,344,0,0.0,1.1,
+assam__credit_deposit_ratio,assam,credit_deposit_ratio,ratio,616,0,0.0,0.6,
+bihar__credit_deposit_ratio,bihar,credit_deposit_ratio,ratio,266,0,0.0,1.4,
+bihar__credit_deposit_ratio_2,bihar,credit_deposit_ratio_2,ratio,38,0,0.0,9.2,
 chhattisgarh__credit_deposit_ratio,chhattisgarh,credit_deposit_ratio,ratio,451,26,5.8,8.3,Balod December 2022: adv/dep=143.8 vs cdr=1.0 | Baloda Bazar December 2022: adv/dep=383.3 vs cdr=1.0 | Balrampur December 2022: adv/dep=93.8 vs cdr=0.0
 delhi__credit_deposit_ratio,delhi,credit_deposit_ratio,ratio,143,11,7.7,13.2,Central September 2023: adv/dep=97.4 vs cdr=86.3 | East September 2023: adv/dep=91.3 vs cdr=36.8 | New Delhi September 2023: adv/dep=54.9 vs cdr=215.9
 gujarat__credit_deposit_ratio,gujarat,credit_deposit_ratio,ratio,1134,0,0.0,0.3,
 haryana__credit_deposit_ratio,haryana,credit_deposit_ratio,ratio,806,5,0.6,1.4,Bhiwani December 2014: adv/dep=81.3 vs cdr=71.9 | Bhiwani March 2015: adv/dep=117.9 vs cdr=111.7 | Bhiwani June 2015: adv/dep=117.9 vs cdr=111.7
+himachal-pradesh__credit_deposit_ratio,himachal-pradesh,credit_deposit_ratio,ratio,12,0,0.0,24.3,
 jammu-kashmir__credit_deposit_ratio,jammu-kashmir,credit_deposit_ratio,ratio,120,0,0.0,3.1,
-jharkhand__credit_deposit_ratio,jharkhand,credit_deposit_ratio,ratio,168,48,28.6,35.8,Bokaro September 2024: adv/dep=26.2 vs cdr=38.0 | Chatra September 2024: adv/dep=1.2 vs cdr=32.4 | Deoghar September 2024: adv/dep=25.5 vs cdr=39.4
+jharkhand__credit_deposit_ratio,jharkhand,credit_deposit_ratio,ratio,204,51,25.0,31.4,Bokaro September 2024: adv/dep=59.0 vs cdr=38.0 | Dhanbad September 2024: adv/dep=41.4 vs cdr=37.7 | East Singhbhum September 2024: adv/dep=72.2 vs cdr=56.3
+karnataka__cd_ratio,karnataka,cd_ratio,ratio,58,0,0.0,6.2,
 karnataka__credit_deposit_ratio,karnataka,credit_deposit_ratio,ratio,31,0,0.0,11.0,
 kerala__credit_deposit_ratio,kerala,credit_deposit_ratio,ratio,111,2,1.8,6.3,Kollam January 2013: adv/dep=7.4 vs cdr=74.3 | Thiruvananthapuram January 2013: adv/dep=27.9 vs cdr=70.9
 ladakh__credit_deposit_ratio,ladakh,credit_deposit_ratio,ratio,2,0,0.0,65.8,
 madhya-pradesh__credit_deposit_ratio,madhya-pradesh,credit_deposit_ratio,ratio,794,0,0.0,0.5,
 maharashtra__cd_ratio_detailed,maharashtra,cd_ratio_detailed,dep_area_sum,64,0,0.0,5.7,
+maharashtra__cd_ratio_detailed,maharashtra,cd_ratio_detailed,ratio,36,0,0.0,9.6,
 maharashtra__credit_deposit_ratio,maharashtra,credit_deposit_ratio,ratio,108,0,0.0,3.4,
 manipur__cdr_details,manipur,cdr_details,adv_area_sum,358,0,0.0,1.1,
 manipur__cdr_details,manipur,cdr_details,dep_area_sum,368,0,0.0,1.0,
+manipur__credit_deposit_ratio,manipur,credit_deposit_ratio,adv_area_sum,358,0,0.0,1.1,
+manipur__credit_deposit_ratio,manipur,credit_deposit_ratio,dep_area_sum,368,0,0.0,1.0,
+manipur__credit_deposit_ratio,manipur,credit_deposit_ratio,ratio,384,0,0.0,1.0,
 meghalaya__cdr_details,meghalaya,cdr_details,adv_area_sum,268,0,0.0,1.4,
 meghalaya__cdr_details,meghalaya,cdr_details,dep_area_sum,268,0,0.0,1.4,
 meghalaya__credit_deposit_ratio,meghalaya,credit_deposit_ratio,adv_area_sum,268,0,0.0,1.4,
@@ -28,12 +39,16 @@ mizoram__cdr_details,mizoram,cdr_details,dep_area_sum,253,0,0.0,1.5,
 mizoram__credit_deposit_ratio,mizoram,credit_deposit_ratio,adv_area_sum,253,0,0.0,1.5,
 mizoram__credit_deposit_ratio,mizoram,credit_deposit_ratio,dep_area_sum,253,0,0.0,1.5,
 mizoram__credit_deposit_ratio,mizoram,credit_deposit_ratio,ratio,253,0,0.0,1.5,
-nagaland__credit_deposit_ratio,nagaland,credit_deposit_ratio,ratio,22,0,0.0,14.9,
+nagaland__credit_deposit_ratio,nagaland,credit_deposit_ratio,adv_area_sum,16,0,0.0,19.4,
+nagaland__credit_deposit_ratio,nagaland,credit_deposit_ratio,dep_area_sum,16,0,0.0,19.4,
+nagaland__credit_deposit_ratio,nagaland,credit_deposit_ratio,ratio,38,0,0.0,9.2,
 odisha__acp_district_agri_allied,odisha,acp_district_agri_allied,achievement_pct,210,208,99.0,99.7,Angul March 2024: a/t=2.1 vs pct=75.5 | Balasore March 2024: a/t=3.0 vs pct=424.0 | Bargarh March 2024: a/t=0.7 vs pct=53.8
 odisha__acp_district_ancillary,odisha,acp_district_ancillary,achievement_pct,210,203,96.7,98.4,Angul March 2024: a/t=1243.7 vs pct=116.5 | Balasore March 2024: a/t=625.3 vs pct=117.8 | Bargarh March 2024: a/t=834.2 vs pct=150.1
 odisha__acp_district_msme,odisha,acp_district_msme,achievement_pct,210,0,0.0,1.8,
 odisha__acp_district_total,odisha,acp_district_total,achievement_pct,210,0,0.0,1.8,
 rajasthan__credit_deposit_ratio,rajasthan,credit_deposit_ratio,ratio,178,0,0.0,2.1,
-tamil-nadu__cd_ratio,tamil-nadu,cd_ratio,ratio,266,0,0.0,1.4,
+tamil-nadu__cd_ratio,tamil-nadu,cd_ratio,ratio,76,0,0.0,4.8,
 telangana__credit_deposit_ratio,telangana,credit_deposit_ratio,ratio,1092,0,0.0,0.4,
+tripura__credit_deposit_ratio,tripura,credit_deposit_ratio,ratio,240,11,4.6,8.0,Unakoti June 2023: adv/dep=58.5 vs cdr=66.0 | South Tripura June 2023: adv/dep=66.5 vs cdr=61.0 | Gomati June 2023: adv/dep=66.7 vs cdr=63.0
 uttar-pradesh__credit_deposit_ratio,uttar-pradesh,credit_deposit_ratio,ratio,144,10,6.9,12.3,Pilibhit September 2022: adv/dep=1.6 vs cdr=4603.2 | Fatehpur December 2022: adv/dep=0.5 vs cdr=46.3 | Mau December 2022: adv/dep=1.0 vs cdr=34.0
+uttarakhand__credit_deposit_ratio,uttarakhand,credit_deposit_ratio,ratio,26,13,50.0,67.9,Dehradun March 2021: adv/dep=0.4 vs cdr=38.0 | Uttarkashi March 2021: adv/dep=0.4 vs cdr=44.0 | Haridwar March 2021: adv/dep=0.8 vs cdr=75.0

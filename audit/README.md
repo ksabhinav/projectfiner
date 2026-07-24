@@ -18,6 +18,8 @@ here is analysis/scaffolding — it does not touch published data.
 | `source_catalogue.csv` | Every located source, one row each (state, kind, url/host, evidence). |
 | `source_coverage.csv` | **Toward artifact 1.5** — per-state source rollup + coverage bucket (ok / archive_only / live_only_fragile / ORPHAN). |
 | `verify.py` | **Phase 3** — reconciliation (ratio / area-sum / achievement%), stratified sampler, error-rate stats, and the dual-extraction `diff_tables()` core. Writes `reconciliation.csv`, backfills recon columns into `registry.csv`, and emits per-table sample worklists. |
+| `triage.py` | Classifies every reconciliation failure into a root cause (header_collapse / parse_misalign / garbage_ratio_field / unit_mismatch / marginal_definitional) with a fix + priority. Writes `triage.csv` + `triage_rows.csv`. |
+| `triage.csv` / `triage_rows.csv` | Per-cause rollup and per-cell classification of the 540 reconciliation failures. |
 | `test_verify.py` | Pure-logic tests for the verification harness. No PDFs. |
 | `reconciliation.csv` | Per (table, check) internal-consistency results with fail rate, Wilson UB, and example failures. |
 | `unit_resolver.py` | **Phase 2** — resolves each column's unit by caption → magnitude → doctrine. Writes `units.yaml` + `unit_findings.csv` and backfills unit columns into `registry.csv`. |
@@ -134,16 +136,38 @@ the second reading. What runs **now**:
 
 - **Reconciliation** — internal-consistency checks needing no source: `advance/
   deposit == CD ratio`, `rural+semi_urban+urban == total`, `achievement/target
-  == pct`. Across **10,174 checkable cells, 513 fail (5.0%)**. Hotspots:
+  == pct`. Across **10,174 checkable cells, 540 fail (5.3%)**. Hotspots:
   odisha ACP `achievement_pct` (99% / 97% in agri_allied / ancillary — the
-  collapsed a/pct latched onto the wrong target), jharkhand CD ratio (28.6%),
+  collapsed a/pct latched onto the wrong target), jharkhand CD ratio (25%),
   delhi (7.7%), uttar-pradesh (6.9%, incl. a 4603% garbage ratio — gotcha #51),
-  chhattisgarh (5.8%). Most states reconcile at 0%.
+  chhattisgarh (5.8%). Most states reconcile at 0%. (Run `triage.py` to sort
+  these by root cause — see below.)
 - **Stratified sampler** — the cells a human/second-extractor checks against the
   page image, over-sampling where parsers break (quarter boundaries, total rows,
   highest-magnitude cells, merged-header-adjacent orphans). Tier A/B/C = 60/30/10.
 - **Error-rate stats** — Wilson + rule-of-three upper bound, so "0 errors in 60"
   becomes a defensible "<5%".
+
+### Triage of the 540 failures (`triage.py`)
+
+| Root cause | Cells | Tables | Recoverable? | Fix | Priority |
+|---|---|---|---|---|---|
+| **header_collapse** | 411 | odisha agri_allied, ancillary | yes | disambiguate → re-derive | HIGH |
+| **parse_misalign** | 61 | jharkhand, delhi, chhattisgarh, up, kerala CD ratio | needs re-extract | re-extract + source verify | HIGH |
+| **marginal_definitional** | 31 | haryana, tripura, delhi, jharkhand, chhattisgarh | accept? | adjudicate vs source | LOW |
+| **unit_mismatch** | 20 | chhattisgarh, jharkhand, up, uttarakhand | yes | per-row crore→lakh (Phase 2) | MEDIUM |
+| **garbage_ratio_field** | 17 | chhattisgarh, up | partial | derive ratio from adv/dep, sanity-bounded | MEDIUM |
+
+**80% (431/540) are recoverable without re-extraction.** The dominant cause is
+the header collapse — proven, not guessed: in every Odisha ACP table the
+surviving `a`/`pct` reconcile exactly with the *last* `_t` column, so they're the
+grand-total pair the collapse kept while dropping the per-subcategory ones. The
+same `disambiguate.py` fix recovers them from the quarterly CSVs. Only 61 cells
+(parse_misalign) genuinely need re-extraction + the dual-extraction check.
+
+Note: reconciliation and triage totals were reconciled at 540 after fixing a
+role-cache bug in `reconcile_state` (it keyed on category name, but a category's
+columns vary across quarters, so it missed Tripura/Uttarakhand failures).
 
 **Caveat that must travel with this:** reconciliation catches *inconsistency*,
 not *incorrectness* — a row can reconcile and still be wrong (both amounts scaled
