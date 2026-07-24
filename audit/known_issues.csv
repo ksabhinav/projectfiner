@@ -1,0 +1,130 @@
+table_id,state,quarter,district,deposit,advance,cd_ratio_reported,cd_ratio_raw_advdep,cause,severity,disposition,action
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Balod,32.0,46.0,1.0,143.8,garbage_row,HIGH,quarantine,whole-row re-extract (deposit/advance also implausible)
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Baloda Bazar,18.0,69.0,1.0,383.3,garbage_row,HIGH,quarantine,whole-row re-extract (deposit/advance also implausible)
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Balrampur,16.0,15.0,0.0,93.8,garbage_row,HIGH,quarantine,whole-row re-extract (deposit/advance also implausible)
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Bastar,17.0,4.0,84.0,23.5,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Bemetara,20.0,32.0,1.0,160.0,garbage_row,HIGH,quarantine,whole-row re-extract (deposit/advance also implausible)
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Bijapur,8.0,10.0,0.0,125.0,garbage_row,HIGH,quarantine,whole-row re-extract (deposit/advance also implausible)
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Bilaspur,25.0,30.0,259.0,120.0,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Dantewada,6.0,42.0,0.0,700.0,garbage_row,HIGH,quarantine,whole-row re-extract (deposit/advance also implausible)
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Dhamtari,18.0,23.0,46.0,127.8,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Durg,47.0,28.0,370.0,59.6,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Gariaband,18.0,23.0,0.0,127.8,garbage_row,HIGH,quarantine,whole-row re-extract (deposit/advance also implausible)
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Jashpur,9.0,45.0,2.0,500.0,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Kabirdham,14.0,53.0,1.0,378.6,garbage_row,HIGH,quarantine,whole-row re-extract (deposit/advance also implausible)
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Kanker,19.0,50.0,1.0,263.2,garbage_row,HIGH,quarantine,whole-row re-extract (deposit/advance also implausible)
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Kondagaon,4.0,32.0,0.0,800.0,garbage_row,HIGH,quarantine,whole-row re-extract (deposit/advance also implausible)
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Korea,10.0,59.0,2.0,590.0,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Mahasamund,24.0,67.0,0.0,279.2,garbage_row,HIGH,quarantine,whole-row re-extract (deposit/advance also implausible)
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Mungeli,6.0,26.0,7.0,433.3,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Narayanpur,1.0,19.0,0.0,1900.0,garbage_row,HIGH,quarantine,whole-row re-extract (deposit/advance also implausible)
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Raigarh,32.0,64.0,90.0,200.0,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Raipur,67.0,66.0,617.0,98.5,garbage_row,HIGH,quarantine,whole-row re-extract (deposit/advance also implausible)
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Sukma,3.0,10.0,0.0,333.3,garbage_row,HIGH,quarantine,whole-row re-extract (deposit/advance also implausible)
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Surajpur,11.0,35.0,2.0,318.2,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Surguja,18.0,1.0,78.0,5.6,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+delhi__credit_deposit_ratio,delhi,September 2023,East,2398600.0,2191100.0,36.83,91.3,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+delhi__credit_deposit_ratio,delhi,September 2023,New Delhi,98204700.0,53950700.0,215.87,54.9,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+delhi__credit_deposit_ratio,delhi,September 2023,North,2170000.0,1878300.0,44.55,86.6,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+delhi__credit_deposit_ratio,delhi,September 2023,North West,3275400.0,3931700.0,45.86,120.0,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+delhi__credit_deposit_ratio,delhi,September 2023,Shahdara,1331100.0,1406600.0,38.3,105.7,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+delhi__credit_deposit_ratio,delhi,September 2023,South,5279600.0,3829100.0,30.01,72.5,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+delhi__credit_deposit_ratio,delhi,September 2023,South East,9030900.0,4932900.0,82.48,54.6,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+delhi__credit_deposit_ratio,delhi,September 2023,South West,3082200.0,2554500.0,33.09,82.9,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+delhi__credit_deposit_ratio,delhi,September 2023,West,3896400.0,3900100.0,38.24,100.1,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,September 2024,Bokaro,2416092.0,1424459.0,38.02,59.0,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,September 2024,West Singhbhum,3669555.0,857425.0,12.56,23.4,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,December 2024,Bokaro,2435596.0,1456429.0,38.21,59.8,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,December 2024,West Singhbhum,3796760.0,887853.0,12.85,23.4,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,Bokaro,1507741.0,1477676.0,38.41,98.0,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,Chatra,1313.0,161226.0,31.28,12279.2,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,Deoghar,727976.0,461488.0,40.31,63.4,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,East Singhbhum,3574332.0,3163311.0,56.53,88.5,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,Garhwa,2035.0,182765.0,43.06,8981.1,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,Giridih,406190.0,536320.0,45.16,132.0,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,Godda,1876.0,402676.0,35.24,21464.6,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,Gumla,3176.0,145251.0,32.6,4573.4,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,Hazaribagh,861338.0,692785.0,45.16,80.4,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,Khunti,4757.0,109301.0,41.26,2297.7,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,Koderma,3166.0,240804.0,43.94,7605.9,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,Ramgarh,497.0,485337.0,42.37,97653.3,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,Seraikela-Kharsawan,287355.0,553699.0,67.5,192.7,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,West Singhbhum,107539.0,923442.0,13.49,858.7,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,Bokaro,1551801.0,1521472.0,36.87,98.0,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,Chatra,1447.0,171741.0,32.14,11868.8,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,Deoghar,775471.0,492925.0,40.28,63.6,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,East Singhbhum,3504769.0,3190067.0,52.03,91.0,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,Garhwa,2220.0,190942.0,44.08,8601.0,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,Giridih,439331.0,566789.0,45.08,129.0,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,Godda,2150.0,349137.0,36.84,16238.9,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,Gumla,3174.0,154371.0,32.96,4863.6,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,Hazaribagh,911784.0,737339.0,45.55,80.9,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,Khunti,5237.0,116118.0,41.31,2217.3,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,Koderma,2973.0,317886.0,44.57,10692.4,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,Ramgarh,522.0,492128.0,40.95,94277.4,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,Seraikela-Kharsawan,306956.0,534941.0,67.88,174.3,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,West Singhbhum,113086.0,1304537.0,21.56,1153.6,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+kerala__credit_deposit_ratio,kerala,January 2013,Kollam,13553313.0,1006056.0,74.34,7.4,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+kerala__credit_deposit_ratio,kerala,January 2013,Thiruvananthapuram,9892982.0,2760849.0,70.92,27.9,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+uttar-pradesh__credit_deposit_ratio,uttar-pradesh,September 2022,Pilibhit,3213.0,50.0,4603.22,1.6,garbage_row,HIGH,quarantine,whole-row re-extract (deposit/advance also implausible)
+uttar-pradesh__credit_deposit_ratio,uttar-pradesh,December 2022,Mau,3466.2,34.0,34.01,1.0,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+uttar-pradesh__credit_deposit_ratio,uttar-pradesh,December 2022,Sant Kabeer Nagar,5037.7,40.8,40.79,0.8,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+uttar-pradesh__credit_deposit_ratio,uttar-pradesh,December 2022,Ambedkar Nagar,3711.1,47.1,47.13,1.3,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+uttar-pradesh__credit_deposit_ratio,uttar-pradesh,December 2022,Saharanpur,18888.8,61.6,61.64,0.3,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+uttar-pradesh__credit_deposit_ratio,uttar-pradesh,December 2022,Kasganj,2503.4,74.0,74.03,3.0,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+uttar-pradesh__credit_deposit_ratio,uttar-pradesh,December 2022,Hamirpur,2285.5,56.5,56.52,2.5,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+uttar-pradesh__credit_deposit_ratio,uttar-pradesh,December 2022,Lucknow,216765.1,42.0,41.99,0.0,parse_misalign,HIGH,quarantine,re-extract table + dual-verify vs source PDF
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Janjgir-Champa,45.0,93.0,2.0,206.7,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+chhattisgarh__credit_deposit_ratio,chhattisgarh,December 2022,Korba,18.0,19.0,128.0,105.6,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+delhi__credit_deposit_ratio,delhi,September 2023,Central,17880200.0,17413300.0,86.34,97.4,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+delhi__credit_deposit_ratio,delhi,September 2023,North East,781400.0,496400.0,67.58,63.5,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+haryana__credit_deposit_ratio,haryana,December 2014,Bhiwani,578710.0,470320.0,71.9,81.3,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+haryana__credit_deposit_ratio,haryana,March 2015,Bhiwani,567157.0,668680.0,111.7,117.9,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+haryana__credit_deposit_ratio,haryana,June 2015,Bhiwani,567157.0,668680.0,111.7,117.9,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+haryana__credit_deposit_ratio,haryana,December 2015,Bhiwani,606364.0,488262.0,72.97,80.5,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+haryana__credit_deposit_ratio,haryana,June 2016,Bhiwani,656400.0,543800.0,76.18,82.8,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+jharkhand__credit_deposit_ratio,jharkhand,September 2024,Dhanbad,4190075.0,1735101.0,37.67,41.4,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+jharkhand__credit_deposit_ratio,jharkhand,September 2024,East Singhbhum,4329548.0,3124308.0,56.27,72.2,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+jharkhand__credit_deposit_ratio,jharkhand,September 2024,Garhwa,377255.0,202586.0,46.26,53.7,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+jharkhand__credit_deposit_ratio,jharkhand,September 2024,Godda,534975.0,276314.0,38.57,51.6,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+jharkhand__credit_deposit_ratio,jharkhand,September 2024,Ramgarh,990129.0,449247.0,40.96,45.4,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+jharkhand__credit_deposit_ratio,jharkhand,December 2024,Dhanbad,4296034.0,1775099.0,37.56,41.3,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+jharkhand__credit_deposit_ratio,jharkhand,December 2024,East Singhbhum,4302839.0,3169319.0,57.97,73.7,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+jharkhand__credit_deposit_ratio,jharkhand,December 2024,Garhwa,392453.0,202684.0,44.69,51.6,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+jharkhand__credit_deposit_ratio,jharkhand,December 2024,Godda,573697.0,281900.0,37.1,49.1,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+jharkhand__credit_deposit_ratio,jharkhand,December 2024,Palamu,896032.0,378387.0,39.7,42.2,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+jharkhand__credit_deposit_ratio,jharkhand,December 2024,Ramgarh,993114.0,469482.0,42.73,47.3,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,Dhanbad,3333117.0,1828025.0,38.62,54.8,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,Dumka,6535.0,241026.0,35.89,3688.2,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,Lohardaga,2348.0,109720.0,45.09,4672.9,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+jharkhand__credit_deposit_ratio,jharkhand,March 2025,Ranchi,8826321.0,4852323.0,47.46,55.0,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,Dhanbad,3539089.0,2018625.0,38.4,57.0,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,Dumka,6550.0,254593.0,35.78,3886.9,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,Lohardaga,2508.0,113084.0,44.3,4508.9,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+jharkhand__credit_deposit_ratio,jharkhand,September 2025,Ranchi,8723686.0,4890931.0,48.01,56.1,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+tripura__credit_deposit_ratio,tripura,June 2023,Unakoti,136859.4,80040.1,66.0,58.5,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+tripura__credit_deposit_ratio,tripura,June 2023,South Tripura,241979.1,160868.6,61.0,66.5,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+tripura__credit_deposit_ratio,tripura,June 2023,Gomati,247118.4,164719.6,63.0,66.7,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+tripura__credit_deposit_ratio,tripura,June 2023,Sepahijala,222289.4,131906.4,68.0,59.3,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+tripura__credit_deposit_ratio,tripura,June 2023,Khowai,173507.0,113512.7,59.0,65.4,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+tripura__credit_deposit_ratio,tripura,September 2023,Unakoti,135640.1,94060.1,58.0,69.3,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+tripura__credit_deposit_ratio,tripura,September 2023,Gomati,248462.9,175978.4,67.0,70.8,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+tripura__credit_deposit_ratio,tripura,September 2023,West Tripura,2405638.4,1025568.9,50.0,42.6,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+tripura__credit_deposit_ratio,tripura,September 2023,Sepahijala,225454.3,152610.2,59.0,67.7,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+tripura__credit_deposit_ratio,tripura,December 2023,South Tripura,268164.1,169419.9,67.0,63.2,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+tripura__credit_deposit_ratio,tripura,December 2023,Sepahijala,243560.4,156395.3,68.0,64.2,definitional,LOW,accept-review,confirm CD-ratio definition vs source; likely accept as published
+uttar-pradesh__credit_deposit_ratio,uttar-pradesh,December 2022,Fatehpur,8797.7,46.3,46.34,0.5,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+uttar-pradesh__credit_deposit_ratio,uttar-pradesh,December 2022,Basti,9427.6,41.2,41.16,0.4,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+uttarakhand__credit_deposit_ratio,uttarakhand,March 2021,Dehradun,6417800.0,24215.0,38.0,0.4,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+uttarakhand__credit_deposit_ratio,uttarakhand,March 2021,Uttarkashi,257800.0,1123.0,44.0,0.4,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+uttarakhand__credit_deposit_ratio,uttarakhand,March 2021,Haridwar,2241600.0,16875.0,75.0,0.8,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+uttarakhand__credit_deposit_ratio,uttarakhand,March 2021,Tehri Garhwal,584500.0,1820.0,31.0,0.3,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+uttarakhand__credit_deposit_ratio,uttarakhand,March 2021,Pauri Garhwal,1003800.0,2458.0,24.0,0.2,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+uttarakhand__credit_deposit_ratio,uttarakhand,March 2021,Chamoli,384700.0,2731.0,71.0,0.7,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+uttarakhand__credit_deposit_ratio,uttarakhand,March 2021,Rudraprayag,219500.0,545.0,25.0,0.2,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+uttarakhand__credit_deposit_ratio,uttarakhand,March 2021,Almora,618500.0,1459.0,24.0,0.2,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+uttarakhand__credit_deposit_ratio,uttarakhand,March 2021,Bageshwar,200200.0,520.0,26.0,0.3,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+uttarakhand__credit_deposit_ratio,uttarakhand,March 2021,Pithoragarh,484000.0,2026.0,42.0,0.4,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+uttarakhand__credit_deposit_ratio,uttarakhand,March 2021,Champawat,250600.0,732.0,29.0,0.3,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+uttarakhand__credit_deposit_ratio,uttarakhand,March 2021,Nainital,1755300.0,7352.0,42.0,0.4,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off
+uttarakhand__credit_deposit_ratio,uttarakhand,March 2021,Udham Singh Nagar,1567400.0,15370.0,98.0,1.0,unit_mismatch,MEDIUM,quarantine,source check: which of deposit/advance is x100 off

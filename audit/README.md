@@ -24,6 +24,8 @@ here is analysis/scaffolding — it does not touch published data.
 | `triage.csv` / `triage_rows.csv` | Per-cause rollup and per-cell classification of the 540 reconciliation failures. |
 | `test_verify.py` | Pure-logic tests for the verification harness. No PDFs. |
 | `reconciliation.csv` | Per (table, check) internal-consistency results with fail rate, Wilson UB, and example failures. |
+| `flag_cd_ratio_issues.py` | **Quarantine register** — classifies the 129 CD-ratio reconciliation failures by root cause/severity/action into `known_issues.csv` and flags `cd_ratio_defects` per table in `registry.csv`. No data changed. |
+| `known_issues.csv` | The CD-ratio quarantine register: every failing cell with deposit/advance/reported-vs-raw ratio, cause, severity, disposition, action. |
 | `unit_resolver.py` | **Phase 2** — resolves each column's unit by caption → magnitude → doctrine. Writes `units.yaml` + `unit_findings.csv` and backfills unit columns into `registry.csv`. |
 | `test_unit_resolver.py` | Tests for the resolver's PDF-independent tiers (caption parsing, kind classifier, magnitude). Run anywhere. |
 | `units.yaml` | **Artifact 1.2** — per state: `default_money_scale`, source, confidence, `to_canonical_factor`; per column: `kind` (money/count/percent) + unit. |
@@ -227,6 +229,37 @@ same `disambiguate.py` fix recovers them from the quarterly CSVs. Only 61 cells
 Note: reconciliation and triage totals were reconciled at 540 after fixing a
 role-cache bug in `reconcile_state` (it keyed on category name, but a category's
 columns vary across quarters, so it missed Tripura/Uttarakhand failures).
+
+### The 129 CD-ratio failures — quarantined, not fixed (`flag_cd_ratio_issues.py`)
+
+These are categorically different from the header collapse. The collapse hid data
+that was present (recoverable losslessly). These are **source extraction errors —
+the correct value isn't in the artifacts**, so they cannot be responsibly
+auto-fixed. Deriving `cd_ratio = adv/dep` fails because the amounts are misparsed
+too (e.g. Chhattisgarh Dec 2022 districts report `deposit=16`, `advance=15` — off
+by ~100× from the state's crore-scale median). So this step registers, it doesn't repair.
+
+| Cause | Cells | Severity | Disposition |
+|---|---|---|---|
+| parse_misalign | 60 | HIGH | quarantine → re-extract + dual-verify |
+| garbage_row | 15 | HIGH | quarantine → whole-row re-extract |
+| unit_mismatch | 20 | MEDIUM | quarantine → source: which side is ×100 off |
+| definitional | 34 | LOW | accept/review — likely not a defect |
+
+**95 genuine defects** (need the Phase-1 corpus + Phase-3 dual extraction) concentrated
+in jharkhand (36), chhattisgarh (25, mostly the Dec 2022 quarter), uttarakhand (13,
+per-row unit), delhi (9), up (10), kerala (2). Flagged as `cd_ratio_defects` per
+table in `registry.csv`.
+
+**34 reclassified as definitional, not defects:** small (<50%) consistent CD-ratio
+gaps across 5 states. SLBCs compute CD ratio on different advance bases (RIDF /
+investment inclusion), so the *reported* figure is likely the official one and our
+raw `adv/dep` is the wrong benchmark. Reconciliation was strict by design; triage
+corrects the interpretation.
+
+This closes the internal-consistency phase honestly: the header-collapse damage is
+recovered, and the residual real defects are the ones that genuinely need ground
+truth — which is blocked on running the harvester off-container.
 
 **Caveat that must travel with this:** reconciliation catches *inconsistency*,
 not *incorrectness* — a row can reconcile and still be wrong (both amounts scaled
