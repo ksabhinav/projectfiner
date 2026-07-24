@@ -17,6 +17,9 @@ here is analysis/scaffolding — it does not touch published data.
 | `test_harvest.py` | Pure-logic tests for the harvester (hashing, stub/truncation detection, CDX parse, filenames). No network. |
 | `source_catalogue.csv` | Every located source, one row each (state, kind, url/host, evidence). |
 | `source_coverage.csv` | **Toward artifact 1.5** — per-state source rollup + coverage bucket (ok / archive_only / live_only_fragile / ORPHAN). |
+| `verify.py` | **Phase 3** — reconciliation (ratio / area-sum / achievement%), stratified sampler, error-rate stats, and the dual-extraction `diff_tables()` core. Writes `reconciliation.csv`, backfills recon columns into `registry.csv`, and emits per-table sample worklists. |
+| `test_verify.py` | Pure-logic tests for the verification harness. No PDFs. |
+| `reconciliation.csv` | Per (table, check) internal-consistency results with fail rate, Wilson UB, and example failures. |
 | `unit_resolver.py` | **Phase 2** — resolves each column's unit by caption → magnitude → doctrine. Writes `units.yaml` + `unit_findings.csv` and backfills unit columns into `registry.csv`. |
 | `test_unit_resolver.py` | Tests for the resolver's PDF-independent tiers (caption parsing, kind classifier, magnitude). Run anywhere. |
 | `units.yaml` | **Artifact 1.2** — per state: `default_money_scale`, source, confidence, `to_canonical_factor`; per column: `kind` (money/count/percent) + unit. |
@@ -115,6 +118,39 @@ deposit anchor and need the caption tier. **Every cross-state map/ranking built 
 the 8 crore states is silently wrong by 100× until normalised.** Confidence is
 `high` only where the size-invariant ratio applies; `low` means magnitude alone
 can't separate a small state in lakh from a large one in crore — confirm via caption.
+
+## Verification (Phase 3)
+
+```bash
+python3 audit/verify.py                                  # reconcile all tables
+python3 audit/verify.py --sample odisha:acp_district_msme --tier A   # worklist
+python3 audit/test_verify.py                             # no PDFs
+```
+
+True verification is *dual independent extraction* — read each table a second
+time with a structurally different parser (or a VLM) and diff. That needs the
+Phase-1 corpus, so `diff_tables()` is the built + tested pluggable core awaiting
+the second reading. What runs **now**:
+
+- **Reconciliation** — internal-consistency checks needing no source: `advance/
+  deposit == CD ratio`, `rural+semi_urban+urban == total`, `achievement/target
+  == pct`. Across **10,174 checkable cells, 513 fail (5.0%)**. Hotspots:
+  odisha ACP `achievement_pct` (99% / 97% in agri_allied / ancillary — the
+  collapsed a/pct latched onto the wrong target), jharkhand CD ratio (28.6%),
+  delhi (7.7%), uttar-pradesh (6.9%, incl. a 4603% garbage ratio — gotcha #51),
+  chhattisgarh (5.8%). Most states reconcile at 0%.
+- **Stratified sampler** — the cells a human/second-extractor checks against the
+  page image, over-sampling where parsers break (quarter boundaries, total rows,
+  highest-magnitude cells, merged-header-adjacent orphans). Tier A/B/C = 60/30/10.
+- **Error-rate stats** — Wilson + rule-of-three upper bound, so "0 errors in 60"
+  becomes a defensible "<5%".
+
+**Caveat that must travel with this:** reconciliation catches *inconsistency*,
+not *incorrectness* — a row can reconcile and still be wrong (both amounts scaled
+identically), and a rare failure can be a legitimate source quirk. A 99% or 29%
+fail rate is systematic extraction error; a 0.6% rate needs source adjudication.
+Nothing here is yet checked against a source document — that is dual extraction,
+pending the corpus.
 
 ## Known auditor notes
 
