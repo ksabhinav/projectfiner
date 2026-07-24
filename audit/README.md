@@ -20,7 +20,7 @@ here is analysis/scaffolding — it does not touch published data.
 | `verify.py` | **Phase 3** — reconciliation (ratio / area-sum / achievement%), stratified sampler, error-rate stats, and the dual-extraction `diff_tables()` core. Writes `reconciliation.csv`, backfills recon columns into `registry.csv`, and emits per-table sample worklists. |
 | `triage.py` | Classifies every reconciliation failure into a root cause (header_collapse / parse_misalign / garbage_ratio_field / unit_mismatch / marginal_definitional) with a fix + priority. Writes `triage.csv` + `triage_rows.csv`. |
 | `repair_odisha_acp.py` | **Repair** — recovers the collapsed Odisha ACP per-subcategory a/pct from the quarterly CSVs (gated, lossless) and rewrites complete.json / timeseries.json / timeseries.csv. Cut reconciliation failures 540 → 129. |
-| `repair_headers.py` | **Generalised repair** — same gated procedure for any state × any dup-header categories; auto-detects fixed columns. Used for Bihar + Jharkhand ACP. |
+| `repair_headers.py` | **Generalised repair** — same gated procedure for any state × any dup-header categories (`--cats "*ALLDUPS*"` sweeps all collapsed tables); auto-detects fixed columns; keep-last disambiguation preserves canonical field names. |
 | `triage.csv` / `triage_rows.csv` | Per-cause rollup and per-cell classification of the 540 reconciliation failures. |
 | `test_verify.py` | Pure-logic tests for the verification harness. No PDFs. |
 | `reconciliation.csv` | Per (table, check) internal-consistency results with fail rate, Wilson UB, and example failures. |
@@ -191,6 +191,31 @@ pass, reconciliation unchanged at 129 (these tables use no a/pct check, so the
 recovery adds data without adding checks). Remaining dup-header categories in
 these states (mudra, stand_up_india, branch_network area-splits, …) are the next
 tranche of the same mechanism.
+
+**Full dup-header sweep** (`repair_headers.py <state> --cats "*ALLDUPS*"`): every
+remaining collapsed category across Odisha (21), Bihar (86) and Jharkhand (41) —
+**~95,000 previously-dropped cells recovered** (odisha ~7.7k, bihar ~40.8k,
+jharkhand ~46.7k). This tranche includes homepage-linked categories
+(credit_deposit_ratio, branch_network, pmjdy, kcc, shg…), so it uses a
+**keep-last** disambiguation: where a *canonical* field is itself duplicated
+(e.g. Jharkhand `cd_ratio` repeats across area splits), the last occurrence keeps
+its original name — matching the incumbent collapse — and only the earlier,
+previously-dropped occurrences are recovered under new names. That preserves
+every field the indicator regenerator / reconciliation / frontend look up by
+name, so the sweep is purely additive.
+
+Verified: reconciliation **unchanged at 129** (proof the canonical `cd_ratio` and
+peers survived — a full-rename variant instead dropped it to 78 by making 51
+Jharkhand checks unrunnable, and was reverted); 0 canonical fields lost; 0
+untouched-category diffs (only actually-collapsed quarters are rebuilt); all rows
+preserved. Example recovery: Jharkhand `cd_ratio` = 36.23 kept, with the
+area-split `semi_urban_deposit_cd_ratio` = 28.33 restored alongside.
+
+> **Downstream note:** the recovered columns live in `complete.json` /
+> `_fi_timeseries.*` (analysis + downloads). `slim.json` and `indicators/*.json`
+> are separately generated and were not regenerated here — they keep working via
+> the preserved canonical fields; re-running `db/regenerate_indicator_files_from_states.py`
+> would additionally surface any recovered columns that map to an indicator.
 
 **80% (431/540) were recoverable without re-extraction.** The dominant cause was
 the header collapse — proven, not guessed: in every Odisha ACP table the

@@ -24,7 +24,7 @@ import csv, json, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from disambiguate import disambiguate_headers
+from disambiguate import disambiguate_headers_keep_last as disambiguate_headers
 
 ROOT = os.path.join(HERE, "..", "public", "slbc-data")
 
@@ -38,6 +38,15 @@ def load(slug, name):
 
 
 def target_cats(complete, needle):
+    if needle == "*ALLDUPS*":
+        # unrepaired collapse: complete.json fields list carries duplicates
+        cats = set()
+        for q in complete["quarters"].values():
+            for c, tbl in (q.get("tables") or {}).items():
+                f = tbl.get("fields") or []
+                if len(f) != len(set(f)):
+                    cats.add(c)
+        return sorted(cats)
     cats = set()
     for q in complete["quarters"].values():
         cats.update(c for c in (q.get("tables") or {}) if needle in c.lower())
@@ -45,19 +54,25 @@ def target_cats(complete, needle):
 
 
 def build_recovered(slug, cats):
+    """Include a category only if EVERY quarter with data passes the gate, so a
+    category is never left half-repaired. Returns tables, lookup, per-cat report."""
     complete = load(slug, f"{slug}_complete.json")
-    tables, lookup, gates, recovered = {}, {}, [], 0
+    tables, lookup, report, recovered = {}, {}, [], 0
     for cat in cats:
-        tables[cat] = {}
+        staged, ok_all, nq, bad_q = {}, True, 0, []
         for qk, q in complete["quarters"].items():
             cur = (q.get("tables") or {}).get(cat)
             csvp = os.path.join(base(slug), "quarterly", qk, f"{cat}.csv")
             if not cur or not os.path.exists(csvp):
                 continue
+            cf = cur.get("fields") or []
+            if len(cf) == len(set(cf)):          # this quarter isn't collapsed — leave it
+                continue
             with open(csvp, newline="") as fh:
                 rows = list(csv.reader(fh))
             if not rows:
                 continue
+            nq += 1
             hdr, body = rows[0], rows[1:]
             dis = disambiguate_headers(hdr)
             cur_d = cur.get("districts") or {}
@@ -71,22 +86,30 @@ def build_recovered(slug, cats):
                 for k, v in cj.items():
                     if str(collapsed.get(k, "")).strip() != str(v).strip():
                         miss += 1
-            gates.append((cat, qk, len(body), miss, len(dis) - 1, len(cur_d and next(iter(cur_d.values()), {}))))
             if miss:
+                ok_all = False
+                bad_q.append((qk, miss))
                 continue
+            old_nf = len(cur_d and next(iter(cur_d.values()), {}))
+            staged[qk] = (dis, body, q.get("period", qk), len(dis) - 1 - old_nf)
+        if nq == 0:
+            continue
+        if not ok_all:
+            report.append((cat, "SKIP", nq, bad_q))
+            continue
+        tables[cat] = {}
+        for qk, (dis, body, period, dnew) in staged.items():
             fields = dis[1:]
             dists = {}
-            period = q.get("period", qk)
             for r in body:
                 rowd = dict(zip(dis, r))
                 dists[r[0]] = {f: rowd.get(f, "") for f in fields}
                 for f in fields:
                     lookup.setdefault((period, r[0]), {})[f"{cat}__{f}"] = rowd.get(f, "")
-            # recovered = new fields beyond the collapsed set, x districts
-            old_nf = len(cur_d and next(iter(cur_d.values()), {}))
-            recovered += max(0, len(fields) - old_nf) * len(dists)
+            recovered += max(0, dnew) * len(dists)
             tables[cat][qk] = {"fields": fields, "districts": dists}
-    return complete, tables, lookup, gates, recovered
+        report.append((cat, "ok", nq, len(tables[cat])))
+    return complete, tables, lookup, report, recovered
 
 
 def apply_repair(slug, cats, complete, tables, lookup):
@@ -130,27 +153,27 @@ def apply_repair(slug, cats, complete, tables, lookup):
 def main(slug, needle, apply):
     complete = load(slug, f"{slug}_complete.json")
     cats = target_cats(complete, needle)
+    label = "all collapsed" if needle == "*ALLDUPS*" else f"matching '{needle}'"
     if not cats:
-        sys.exit(f"no categories matching '{needle}' in {slug}")
-    complete, tables, lookup, gates, recovered = build_recovered(slug, cats)
-    bad = [g for g in gates if g[3]]
-    print(f"{slug}: {len(cats)} categories matching '{needle}'")
-    print(f"{'category':32}{'q_ok':>6}{'gate':>7}")
-    for cat in cats:
-        gs = [g for g in gates if g[0] == cat]
-        okq = sum(1 for g in gs if not g[3])
-        print(f"{cat:32}{okq:>6}{'  OK' if not any(g[3] for g in gs) else '  FAIL':>7}")
-    if bad:
-        print("\nGATE FAILURES (skipped):")
-        for c, q, n, m, *_ in bad:
-            print(f"  {c} {q}: {m} mismatches / {n} rows")
+        print(f"{slug}: no categories {label} — nothing to do (already repaired?)")
+        return
+    complete, tables, lookup, report, recovered = build_recovered(slug, cats)
+    repaired = [c for c, s, *_ in report if s == "ok"]
+    skipped = [(c, extra) for c, s, n, extra in report if s == "SKIP"]
+    print(f"{slug}: {len(cats)} categories {label}  ->  {len(repaired)} repairable, {len(skipped)} gate-skipped")
+    for c, s, n, extra in report:
+        if s == "ok":
+            print(f"  ok    {c:34} {extra}/{n} quarters")
+    for c, extra in skipped:
+        print(f"  SKIP  {c:34} gate mismatch in {[q for q, _ in extra]}")
     print(f"\nrecovered ~{recovered} previously-collapsed cells across {len(lookup)} district-quarters")
     if not apply:
         print("(dry run — nothing written. add --apply)")
         return
-    if bad:
-        sys.exit("refusing to apply: gate failures present")
-    nr, nc = apply_repair(slug, cats, complete, tables, lookup)
+    if not tables:
+        print("nothing repairable to apply.")
+        return
+    nr, nc = apply_repair(slug, repaired, complete, tables, lookup)
     print(f"APPLIED. {slug} timeseries.csv now {nr} rows x {nc} cols; complete.json + timeseries.json rewritten.")
 
 
