@@ -1,0 +1,95 @@
+{
+  "canonical_anchors": {
+    "andhra-pradesh": [
+      "cd_ratio",
+      "total_deposit"
+    ],
+    "bihar": [
+      "cd_ratio",
+      "deposit",
+      "deposits"
+    ],
+    "chhattisgarh": [
+      "overall_cd_ratio",
+      "total_deposit"
+    ],
+    "delhi": [
+      "cd_ratio",
+      "total_deposit"
+    ],
+    "gujarat": [
+      "overall_cd_ratio",
+      "total_deposit"
+    ],
+    "haryana": [
+      "overall_cd_ratio",
+      "total_deposit"
+    ],
+    "himachal-pradesh": [
+      "cd_ratio",
+      "overall_cd_ratio",
+      "total_deposit"
+    ],
+    "jammu-kashmir": [
+      "cd_ratio",
+      "total_deposit"
+    ],
+    "jharkhand": [
+      "cd_ratio",
+      "deposit",
+      "total_deposit"
+    ],
+    "karnataka": [
+      "cd_ratio",
+      "total_deposit"
+    ],
+    "kerala": [
+      "cd_ratio",
+      "deposit"
+    ],
+    "ladakh": [
+      "cd_ratio",
+      "total_deposit"
+    ],
+    "madhya-pradesh": [
+      "cd_ratio",
+      "total_deposit"
+    ],
+    "odisha": [
+      "cd_ratio",
+      "total_deposit"
+    ],
+    "rajasthan": [
+      "overall_cd_ratio",
+      "total_deposit"
+    ],
+    "telangana": [
+      "cd_ratio",
+      "total_deposit"
+    ],
+    "tripura": [
+      "cd_ratio",
+      "total_deposit"
+    ],
+    "uttar-pradesh": [
+      "cd_ratio",
+      "total_deposit"
+    ],
+    "uttarakhand": [
+      "total_deposit"
+    ],
+    "west-bengal": [
+      "cd_ratio",
+      "total_deposit"
+    ]
+  },
+  "dup_district_keys": {},
+  "dup_field_tables": {
+    "karnataka": 26,
+    "kerala": 69,
+    "tamil-nadu": 106,
+    "tamilnadu": 106,
+    "west-bengal": 283
+  },
+  "reconciliation_failures": 129
+}

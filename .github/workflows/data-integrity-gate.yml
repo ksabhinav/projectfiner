@@ -1,0 +1,32 @@
+name: Data integrity gate
+
+# Fails a PR that regresses data integrity: re-introduces the header collapse,
+# raises reconciliation failures above baseline, drops a canonical field, or
+# creates duplicate (quarter, district) rows. Baseline: audit/gate_baseline.json
+# (re-pin with `python3 audit/gate.py --update-baseline` when a change is intended).
+
+on:
+  pull_request:
+    paths:
+      - 'public/slbc-data/**'
+      - 'audit/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit self-tests
+        run: |
+          python3 audit/test_verify.py
+          python3 audit/test_unit_resolver.py
+          python3 audit/test_harvest.py
+      - name: Integrity gate
+        run: python3 audit/gate.py

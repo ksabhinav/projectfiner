@@ -27,6 +27,8 @@ hosts). See **`RUNBOOK.md`** for the harvest → captions → verification seque
 | `triage.csv` / `triage_rows.csv` | Per-cause rollup and per-cell classification of the 540 reconciliation failures. |
 | `test_verify.py` | Pure-logic tests for the verification harness. No PDFs. |
 | `reconciliation.csv` | Per (table, check) internal-consistency results with fail rate, Wilson UB, and example failures. |
+| `gate.py` | **Pre-publish gate (Phase 6)** — fails on any integrity regression (new collapse, reconciliation above baseline, lost canonical field, duplicate keys) vs `gate_baseline.json`. Wired into CI (`.github/workflows/data-integrity-gate.yml`). |
+| `gate_baseline.json` | Pinned current-good metrics the gate compares against. Re-pin with `gate.py --update-baseline` after an intended change. |
 | `flag_cd_ratio_issues.py` | **Quarantine register** — classifies the 129 CD-ratio reconciliation failures by root cause/severity/action into `known_issues.csv` and flags `cd_ratio_defects` per table in `registry.csv`. No data changed. |
 | `known_issues.csv` | The CD-ratio quarantine register: every failing cell with deposit/advance/reported-vs-raw ratio, cause, severity, disposition, action. |
 | `unit_resolver.py` | **Phase 2** — resolves each column's unit by caption → magnitude → doctrine. Writes `units.yaml` + `unit_findings.csv` and backfills unit columns into `registry.csv`. |
@@ -270,6 +272,32 @@ identically), and a rare failure can be a legitimate source quirk. A 99% or 29%
 fail rate is systematic extraction error; a 0.6% rate needs source adjudication.
 Nothing here is yet checked against a source document — that is dual extraction,
 pending the corpus.
+
+## Pre-publish gate (Phase 6)
+
+```bash
+python3 audit/gate.py                    # check; exit 1 on regression
+python3 audit/gate.py --update-baseline  # re-pin after an intended change
+```
+
+Runs in CI on every PR touching `public/slbc-data/**` or `audit/**`. Pins the
+three repaired states at **0** duplicate-field tables, so the ~117k-cell header
+recovery cannot silently regress, and holds reconciliation at **≤129**.
+
+**Residual collapse the gate tracks but does not fix** (recorded in the baseline):
+
+| State | Dup-field tables | Recoverable from artifacts? |
+|---|---|---|
+| west-bengal | 283 | No — quarterly CSVs are already clean; the dup is in `complete.json` only, so the lost occurrences (if any) aren't in the artifacts |
+| tamil-nadu | 106 | No — no `quarterly/` dir; needs source re-extraction |
+| kerala | 69 | No — no `quarterly/` dir |
+| karnataka | 26 | No — no `quarterly/` dir |
+| tamilnadu | 106 | Stray **duplicate master file** (`tamilnadu_complete.json` beside `tamil-nadu_…`); the site loads the hyphenated one — hygiene deletion candidate |
+
+These are collapse of the same kind, but unlike Odisha/Bihar/Jharkhand there's no
+positional recovery source in the repo — they can only be repaired by re-extracting
+from the source PDFs (Phase 1 corpus, see `RUNBOOK.md`). The gate pins them at their
+current counts so they can only improve, never worsen.
 
 ## Known auditor notes
 
