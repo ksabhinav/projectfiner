@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T07:30:59+00:00",
+  "generatedAt": "2026-08-03T07:00:01+00:00",
   "portals": {
     "https://web.archive.org/web/2025*/slbcap.nic.in": {
       "states": [
@@ -31,8 +31,8 @@
         "form-driven portal (quarter/year POST) — homepage hash is the only static signal"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
-      "contentHash": "0d5dc254ac1770eaf6e9de8ef88ecfe9e5379434090560dd54701bdc844106be",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
+      "contentHash": "5a92a49ece34341ff17fe311c81a502cab4a8a903c9cf6fb2a05308023ae7d2d",
       "docLinks": [
         {
           "url": "http://slbcne.nic.in/intro.pdf",
@@ -50,7 +50,7 @@
         "broken SSL chain — verification disabled"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
       "contentHash": "0088c0f229c15010f0a9aec1be8c7c29c85a7499cce318940d1409a70e103c6b",
       "docLinks": [
         {
@@ -395,7 +395,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
       "contentHash": "a328cd832eed59405a5c608c7ee13723bb6d811935aa25f01988523edd44fea9",
       "docLinks": [
         {
@@ -536,7 +536,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
       "contentHash": "8a25d9986757301e27e15dd6255ddde5a008bcd799062950bc29af056950ff46",
       "docLinks": [
         {
@@ -561,7 +561,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
       "contentHash": "24b0d676cb2f266568b626dfe061b15c3d80c3424c73f5b48e7bfba57a74cd54",
       "docLinks": [
         {
@@ -670,8 +670,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
-      "contentHash": "641a90f30a4d84335e03c6f4362199e62510e467f2c693dca86e48c2b85647ad",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
+      "contentHash": "4b4e644ac8c7ce285b4a50f937d333dfb7700b421e1b57f94c03cb819248578a",
       "docLinks": [
         {
           "url": "https://slbcgujarat.in/wp-content/uploads/2018/08/FAME-Booklet-English.pdf",
@@ -790,7 +790,7 @@
       ],
       "skip": false,
       "notes": [],
-      "consecutiveFailures": 7,
+      "consecutiveFailures": 8,
       "lastSuccess": "2026-06-09T19:25:54+00:00",
       "contentHash": "7c523bc5e349d0a295e4902b3eba49bb6f921b18c7baf5f3ebf2d13779bf1e4b",
       "docLinks": [
@@ -811,7 +811,7 @@
           "text": "Agenda Annexures 176th Meeting to be held on May 18, 2026"
         }
       ],
-      "lastError": "urllib: <urlopen error timed out> / curl: curl exit 28: curl: (28) Connection timed out after 20001 milliseconds",
+      "lastError": "urllib: <urlopen error timed out> / curl: curl exit 28: curl: (28) Connection timed out after 20002 milliseconds",
       "lowSignal": false
     },
     "https://slbchp.com": {
@@ -821,8 +821,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
-      "contentHash": "02eb80617067bfaf11f23a3414c17a7c223506f14394e81081c2783bc6c39848",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
+      "contentHash": "839e6bfa0d6aa00c8e50ad42cbac1296a9141d1703a1ae1b17cff68ddbb7db1b",
       "docLinks": [
         {
           "url": "https://slbchp.com/Files/2019/BC Model.pdf",
@@ -997,6 +997,10 @@
           "text": "Calender of Meetings"
         },
         {
+          "url": "https://slbchp.com/Files/SLBC-HP_MSME Clusters Data_Jun 2026.xls",
+          "text": "MSME CLUSTER DATA -JUN 26"
+        },
+        {
           "url": "https://slbchp.com/Files/SLBC-HP_MSME Clusters Data_Mar 2026.xls",
           "text": "MSME CLUSTER DATA -MAR 26"
         },
@@ -1058,7 +1062,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
       "contentHash": "648a82e472e6adde4ec992c1534ee752cde94a32daad167e9187af60299d4bad",
       "docLinks": [
         {
@@ -1267,8 +1271,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
-      "contentHash": "4ade9ba4b50ba7e0c2048d231d5e1ce5b47a908a7d5c9d709ed983a7114c2845",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
+      "contentHash": "47f5c98aea329bc0d35f7d34ae48007e7de536282709812212b13871dc9f5b16",
       "docLinks": [
         {
           "url": "https://slbckarnataka.com/UserFiles/APY_Citizens_Choice.pdf",
@@ -1512,8 +1516,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
-      "contentHash": "c864da4be7a5789407201c72a32e3b6e567bf63a660175d9363d4f2ccd9c3b4e",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
+      "contentHash": "415b2d8704800ff222cab55fd18561e8b743bd565066ce1616dc23c2f20bd2e6",
       "docLinks": [
         {
           "url": "https://slbckerala.com/excel/FLCsDATA_MAR_2026.xlsx",
@@ -1593,7 +1597,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
       "contentHash": "8f74eb618a8ffad61984330b001ab573483478f60758458324136b0c986e6256",
       "docLinks": [
         {
@@ -1730,8 +1734,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
-      "contentHash": "f2eb32c785a016eb5fe52a5b5cfbd2cf8861149940c4a6a15db2c20a69c37114",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
+      "contentHash": "acb451fbc6000205367a04e9cf052c829c98c08c63843505f70370660ca13257",
       "docLinks": [
         {
           "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/0ec5bd25-752c-4bbf-bb46-5be5d60d0696-ACP 2026-27.pdf",
@@ -2549,8 +2553,8 @@
         "apex .in domain unreachable from runners — watching the .bank.in alias"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
-      "contentHash": "a42b84f699e97ba408b971406cb06a8b631d3890c1c091c06648e948b5fabf97",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
+      "contentHash": "eccb24c72ef5c36c36173efdc75036d335f856265616425b6df9d0d1bc152c17",
       "docLinks": [
         {
           "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/042bb82b-69d5-4ba7-84b7-50884fe38fe3.pdf",
@@ -2571,6 +2575,14 @@
         {
           "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/19607218-065b-4306-b649-b80d93bec1c6.pdf",
           "text": "Compromise/OTS Scheme for NPA in MSME Sector"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/1d78040a-4d92-44ad-9e60-d615b57903a9.pdf",
+          "text": "Requests for Proposal (RFP) from International Legal Counsels for Preparation of Offering Circular of the Bank’s MTN Programme Through Bank of Maharashtra, IFSC Banking Unit, GIFT City"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/26596296-fe8a-4c8a-ad01-7f6c082d2ee8.pdf",
+          "text": "Selection of Joint Lead Managers for the proposed International USD bonds issuance under Medium Term Note program (MTN)"
         },
         {
           "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/2f7ada2a-1433-482a-bde3-d096d788b632.pdf",
@@ -2645,10 +2657,6 @@
           "text": "Fee for Title Search"
         },
         {
-          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/List_of_properties.pdf",
-          "text": "Assets in possession under SARFAESI Action"
-        },
-        {
           "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/a24aa9d8-5ee4-49d8-b4be-4b03d36d3c86.pdf",
           "text": "ABBFF Guidelines"
         },
@@ -2671,6 +2679,10 @@
         {
           "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/ad8576af-0d4a-4c19-be65-4af65241b2ac.pdf",
           "text": "Marginal Cost of Funds Based Lending Rate (MCLR) and Repo Rate Linked Lending Rate (RLLR)"
+        },
+        {
+          "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/afb97606-9d02-4e14-beb9-65bf08f71a7a.pdf",
+          "text": "Assets in possession under SARFAESI Action"
         },
         {
           "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/b4fb310c-9dd7-4740-babf-3faff837d773.pdf",
@@ -2745,7 +2757,7 @@
       ],
       "skip": false,
       "notes": [],
-      "consecutiveFailures": 7,
+      "consecutiveFailures": 8,
       "lastSuccess": "2026-06-09T19:25:54+00:00",
       "contentHash": "2ecd043e1d8fb1e04a06b64730c35da648466b89f06bb89d943054840e8ef389",
       "docLinks": [
@@ -2820,7 +2832,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
       "contentHash": "2a7c01565d9cd4169de733866b42e5b94cfc0f6c32900735b324517c98c8af88",
       "docLinks": [
         {
@@ -2933,8 +2945,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
-      "contentHash": "a9b3f20194f410b568a99b5b976ee349c74bc0413f4401a84fa65fb11f2c4323",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
+      "contentHash": "01da9e63a7d225a7ab915bffed86146e269a223f68497172e30d98a11d17166e",
       "docLinks": [
         {
           "url": "https://slbctn.com/Uploads/ACP TARGET FY 2026-27 BW DW.xlsx",
@@ -2963,6 +2975,10 @@
         {
           "url": "https://slbctn.com/Uploads/Financial_Inclusion/List of 13 centres -NO Fixed BC-NO BRANCH-Tier-3-4.xlsx",
           "text": "Unbanked Tier 3 & 4 Centres"
+        },
+        {
+          "url": "https://slbctn.com/Uploads/Financial_Inclusion/TIER-6.xlsx",
+          "text": "Unbanked Tier 6 Centres"
         },
         {
           "url": "https://slbctn.com/Uploads/Financial_Inclusion/URC_21-01-2025.xlsx",
@@ -3020,7 +3036,7 @@
         "watching CQR reports page (the per-quarter annexure feed)"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
       "contentHash": "c718c2fa118f2a1e79015a5c8ecfbb9339b3e8cf3aa5a00a296dc6320eb5f405",
       "docLinks": [
         {
@@ -3563,7 +3579,7 @@
         "self-signed certificate — verification disabled"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
       "contentHash": "7a2c3590f742fa7d543a5b6623974f9c6dea950acd37b1905810925e2e823742",
       "docLinks": [
         {
@@ -4032,8 +4048,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
-      "contentHash": "cfbd4640a2bfea4dac348422ace2cac0409f41140bd34f31e4971ceef51a78f4",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
+      "contentHash": "2772d90a614a4e213f2b4296f88634a42d415ca3a674874facf303f589a5b30f",
       "docLinks": [
         {
           "url": "http://www.slbcuttarakhand.com/documents/82 ACTION POINTS JUNE 2022-25.08.2022.pdf",
@@ -4164,7 +4180,7 @@
         "HTTPS handshake broken — watching plain-HTTP homepage"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-07-27T07:30:59+00:00",
+      "lastSuccess": "2026-08-03T07:00:01+00:00",
       "contentHash": "55b7d3808366d64c1b7e17fb4abb520bcc2c10436615cedb607768e2fad762a3",
       "docLinks": [
         {
