@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "updated": "2026-08-06",
+  "rules": [
+    {"state":"himachal-pradesh","district":"Bilaspur","quarter":"2026-03","category":"shg","field":"jlg_disbursement_amt","reason":"Critical quarter-over-quarter drop pending source verification"},
+    {"state":"himachal-pradesh","district":"Bilaspur","quarter":"2026-03","category":"shg","field":"jlg_outstanding_no","reason":"Critical quarter-over-quarter drop pending source verification"},
+    {"state":"himachal-pradesh","district":"Bilaspur","quarter":"2026-03","category":"shg","field":"jlg_outstanding_amt","reason":"Critical quarter-over-quarter drop pending source verification"},
+    {"state":"himachal-pradesh","district":"Chamba","quarter":"2026-03","category":"standup_india","field":"st_sanctioned_amt","reason":"Critical quarter-over-quarter drop pending source verification"},
+    {"state":"himachal-pradesh","district":"Hamirpur","quarter":"2026-03","category":"kcc","field":"kcc_fish_issued_during_quarter_amt","reason":"Critical quarter-over-quarter drop pending source verification"},
+    {"state":"himachal-pradesh","district":"Kullu","quarter":"2026-03","category":"kcc","field":"kcc_fish_issued_during_quarter_amt","reason":"Critical quarter-over-quarter jump pending source verification"},
+    {"state":"himachal-pradesh","district":"Lahul and Spiti","quarter":"2026-03","category":"shg","field":"current_fy_savings_linked_amt","reason":"Critical quarter-over-quarter jump pending source verification"},
+    {"state":"himachal-pradesh","district":"Lahul and Spiti","quarter":"2026-03","category":"shg","field":"jlg_disbursement_no","reason":"Critical quarter-over-quarter jump pending source verification"},
+    {"state":"himachal-pradesh","district":"Mandi","quarter":"2026-03","category":"kcc","field":"kcc_fish_issued_during_quarter_amt","reason":"Critical quarter-over-quarter drop pending source verification"},
+    {"state":"himachal-pradesh","district":"Shimla","quarter":"2026-03","category":"kcc","field":"kcc_fish_outstanding_amt","reason":"Critical quarter-over-quarter drop pending source verification"},
+    {"state":"himachal-pradesh","district":"Sirmaur","quarter":"2026-03","category":"kcc","field":"kcc_fish_issued_during_quarter_amt","reason":"Critical quarter-over-quarter drop pending source verification"},
+    {"state":"himachal-pradesh","district":"Sirmaur","quarter":"2026-03","category":"kcc","field":"kcc_fish_outstanding_amt","reason":"Critical quarter-over-quarter drop pending source verification"},
+    {"state":"himachal-pradesh","district":"Una","quarter":"2026-03","category":"shg","field":"savings_linked_amt","reason":"Critical quarter-over-quarter drop pending source verification"},
+    {"state":"himachal-pradesh","district":"Kullu","quarter":"2026-03","category":"branch_network","field":"*","reason":"Possible column shift; category withheld pending source verification"}
+  ]
+}

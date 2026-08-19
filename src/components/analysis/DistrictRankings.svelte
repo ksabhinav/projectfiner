@@ -60,6 +60,7 @@
 
   // Loaded data: map of slug -> complete JSON
   let stateDataMap: Record<string, any> = $state({});
+  let quarantineRules: any[] = $state([]);
 
   // Current working data (single state or merged)
   let masterData: any = $state(null);
@@ -129,6 +130,37 @@
     raw: string;
   }
 
+  function slugify(value: string): string {
+    return String(value || '').toLowerCase().replace(/&/g, 'and')
+      .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  }
+
+  function normalizeQuarter(value: string): string {
+    const s = String(value || '').trim().toLowerCase().replace(/_/g, ' ');
+    if (/^\d{4}-\d{2}$/.test(s)) return s;
+    const months: Record<string, string> = {
+      january: '01', march: '03', june: '06', september: '09', december: '12',
+      jan: '01', mar: '03', jun: '06', sep: '09', sept: '09', dec: '12'
+    };
+    const parts = s.split(/\s+/);
+    return parts.length === 2 && months[parts[0]] && /^\d{4}$/.test(parts[1])
+      ? `${parts[1]}-${months[parts[0]]}` : s;
+  }
+
+  function quarantineFor(dist: string, vals: any): any | null {
+    const state = vals.__stateSlug || slugify(vals.__state || selectedState);
+    const district = dist.replace(/ \(.*\)$/, '').trim().toLowerCase();
+    const period = masterData?.quarters?.[selectedQuarter]?.period || selectedQuarter;
+    const quarter = normalizeQuarter(period);
+    return quarantineRules.find(rule =>
+      rule.state === state &&
+      String(rule.district).toLowerCase() === district &&
+      rule.quarter === quarter &&
+      rule.category === selectedCategory &&
+      (rule.field === '*' || rule.field === selectedField)
+    ) || null;
+  }
+
   let rankingRows: RankRow[] = $derived.by(() => {
     if (!masterData || !selectedCategory || !selectedQuarter || !selectedField) return [];
 
@@ -140,6 +172,7 @@
     const rows: RankRow[] = [];
 
     for (const [dist, vals] of Object.entries(distData as Record<string, any>)) {
+      if (quarantineFor(dist, vals)) continue;
       const raw = String(vals[selectedField] || '').replace(/,/g, '');
       const value = parseFloat(raw);
       if (!isNaN(value)) {
@@ -153,6 +186,17 @@
     }
 
     return rows;
+  });
+
+  let quarantinedCount = $derived.by(() => {
+    if (!masterData || !selectedCategory || !selectedQuarter || !selectedField) return 0;
+    const tbl = masterData.quarters?.[selectedQuarter]?.tables?.[selectedCategory];
+    const distData = tbl?.districts || tbl?.data || {};
+    let count = 0;
+    for (const [dist, vals] of Object.entries(distData as Record<string, any>)) {
+      if (quarantineFor(dist, vals)) count++;
+    }
+    return count;
   });
 
   // Sort rows
@@ -272,7 +316,7 @@
           const distData = tbl.districts || tbl.data || {};
           for (const [dist, vals] of Object.entries(distData as Record<string, any>)) {
             const key = `${dist} (${res.name})`;
-            mt.districts[key] = { ...vals, __state: res.name };
+            mt.districts[key] = { ...vals, __state: res.name, __stateSlug: res.slug };
           }
         }
       }
@@ -387,6 +431,10 @@
 
   onMount(async () => {
     hydrateFromUrl();
+    try {
+      const qualityRes = await fetch(`${baseUrl}data-quality/quarantines.json`);
+      if (qualityRes.ok) quarantineRules = (await qualityRes.json()).rules || [];
+    } catch {/* fail open if quality metadata is temporarily unavailable */}
     await loadData();
     loading = false;
   });
@@ -480,6 +528,12 @@
           <span class="result-count">{sortedRows.length} districts</span>
           <span class="metric-label">{prettyField(selectedField)}</span>
         </div>
+        {#if quarantinedCount > 0}
+          <div class="quality-notice" role="status">
+            {quarantinedCount} critical {quarantinedCount === 1 ? 'value is' : 'values are'}
+            withheld pending source verification.
+          </div>
+        {/if}
         <div class="table-scroll">
           <table class="ranking-table">
             <thead>
@@ -558,6 +612,18 @@
     color: var(--label);
     text-align: center;
     padding: 60px;
+  }
+
+  .quality-notice {
+    margin: 0 0 12px;
+    padding: 9px 12px;
+    border: 1px solid rgba(184, 74, 46, 0.35);
+    border-radius: 6px;
+    background: rgba(184, 74, 46, 0.07);
+    color: #8e331e;
+    font-family: var(--font-sans);
+    font-size: 11px;
+    line-height: 1.45;
   }
   .error-msg { color: #c44830; }
 
