@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { onFiner, getFinerState } from '../../lib/map-bridge';
   import { fmtNum } from '../../lib/format-utils';
-  import { getSourceCitation } from '../../lib/indicator-sources';
+  import { getSourceCitation, isSlbcIndicator } from '../../lib/indicator-sources';
 
   interface Props {}
   let {}: Props = $props();
@@ -18,6 +18,7 @@
   let stateFilter = $state(''); // current state focus, '' = All India
   let currentIndicator = $state('');
   let currentQuarter = $state('');
+  let validationSummary: any = $state(null);
 
   function syncFromGlobal() {
     const s = getFinerState();
@@ -41,6 +42,24 @@
     return s.split(' ').map(w => w[0] + w.slice(1).toLowerCase()).join(' ');
   }
   let scopeLabel = $derived(stateFilter ? titleCase(stateFilter) : 'All India');
+  let quality = $derived.by(() => {
+    if (!isSlbcIndicator(currentIndicator)) {
+      return { label: 'Not covered', detail: 'This source is outside the SLBC validation pipeline' };
+    }
+    if (!validationSummary || validationSummary.status === 'not_run') {
+      return { label: 'Validation pending', detail: 'No published validation run' };
+    }
+    const slug = stateFilter.toLowerCase().replace(/&/g, 'and')
+      .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    const counts = slug ? validationSummary.states?.[slug] : validationSummary.totals;
+    if (!counts) return { label: 'Not covered', detail: 'No validation result for this scope' };
+    if (counts.critical > 0) return { label: `${counts.critical} critical`, detail: 'Known critical findings remain' };
+    if (counts.warning > 0) return { label: `${counts.warning} warnings`, detail: 'Automated checks found warnings' };
+    return { label: 'No issues detected', detail: 'Automated checks completed' };
+  });
+  let validatedAt = $derived(validationSummary?.generated_at
+    ? new Date(validationSummary.generated_at).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })
+    : 'Pending');
 
   // Build a single CSS gradient string from the ramp stops for the bar
   let rampGradient = $derived.by(() => {
@@ -60,6 +79,10 @@
 
   onMount(() => {
     syncFromGlobal();
+    fetch(`${baseUrl}/data-quality/validation-summary.json`)
+      .then(r => r.ok ? r.json() : null)
+      .then(data => { if (data) validationSummary = data; })
+      .catch(() => {});
 
     // The choropleth pipeline fires camelCase events (finer:indicatorChange,
     // finer:quarterChange, finer:stateFilterChange) — listen directly so the
@@ -116,6 +139,12 @@
       {#if citation.attribution}
         <div class="legend-attribution">{citation.attribution}</div>
       {/if}
+      <dl class="provenance-grid" title={quality.detail}>
+        <div><dt>Reported</dt><dd>{currentQuarter || 'Static snapshot'}</dd></div>
+        <div><dt>Unit</dt><dd>{legendUnit === '₹' ? '₹ lakhs' : (legendUnit || 'Count')}</dd></div>
+        <div><dt>Validated</dt><dd>{validatedAt}</dd></div>
+        <div><dt>Status</dt><dd>{quality.label}</dd></div>
+      </dl>
     </div>
   </div>
 {/if}
@@ -212,6 +241,31 @@
     font-size: 10px;
     color: var(--mist, #6E665E);
     line-height: 1.45;
+  }
+  .provenance-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 12px;
+    margin: 9px 0 0;
+    padding-top: 8px;
+    border-top: 1px solid var(--rule-soft, #E8E2D5);
+  }
+  .provenance-grid div { min-width: 0; }
+  .provenance-grid dt {
+    font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+    font-size: 8px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mist, #6E665E);
+  }
+  .provenance-grid dd {
+    margin: 2px 0 0;
+    font-family: var(--font-ui, 'Inter', sans-serif);
+    font-size: 9px;
+    color: var(--ink-soft, #3D332A);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
 
