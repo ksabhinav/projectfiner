@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T04:44:03+00:00",
+  "generatedAt": "2026-08-31T10:33:47+00:00",
   "portals": {
     "https://web.archive.org/web/2025*/slbcap.nic.in": {
       "states": [
@@ -31,8 +31,8 @@
         "form-driven portal (quarter/year POST) — homepage hash is the only static signal"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
-      "contentHash": "c145152f42ffea4de342ca75f4165d2303683acaabea507b904fb237923362cd",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
+      "contentHash": "c7bf48dd7c6f33dcc3bfed8ac3e21953021f409177e952d83513fd5d9a5ce07e",
       "docLinks": [
         {
           "url": "http://slbcne.nic.in/intro.pdf",
@@ -50,7 +50,7 @@
         "broken SSL chain — verification disabled"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
       "contentHash": "745abdb5d32e7810c6b4d6c928221c2222e26e7d233968a71349fb2c5df8d486",
       "docLinks": [
         {
@@ -395,7 +395,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
       "contentHash": "a8113630e6de2f027a934313991a44c3617e873af07b01418663b0f2c89baf03",
       "docLinks": [
         {
@@ -552,8 +552,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
-      "contentHash": "8a25d9986757301e27e15dd6255ddde5a008bcd799062950bc29af056950ff46",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
+      "contentHash": "d03ebe75c68479f470b1d216a29023c2afe50dd8db5c6eedc00c307fb179a087",
       "docLinks": [
         {
           "url": "https://slbcdelhi.pnb.bank.in/webroot/upload/media/20250416152737_Image.pdf",
@@ -577,7 +577,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
       "contentHash": "4ff4cf9f56e3f862b834ab14b2a21404e2d55124e538c498778349517460d54c",
       "docLinks": [
         {
@@ -694,8 +694,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
-      "contentHash": "e42b7793ae106f65002bd4e592890b3bf1044f5e36bfe11aff95438017a2d748",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
+      "contentHash": "63cdf7805671915c87f43de06541a84fb1a489cce12046bd7df2c5ab65327ccf",
       "docLinks": [
         {
           "url": "https://slbcgujarat.in/wp-content/uploads/2018/08/FAME-Booklet-English.pdf",
@@ -814,7 +814,7 @@
       ],
       "skip": false,
       "notes": [],
-      "consecutiveFailures": 11,
+      "consecutiveFailures": 12,
       "lastSuccess": "2026-06-09T19:25:54+00:00",
       "contentHash": "7c523bc5e349d0a295e4902b3eba49bb6f921b18c7baf5f3ebf2d13779bf1e4b",
       "docLinks": [
@@ -835,7 +835,7 @@
           "text": "Agenda Annexures 176th Meeting to be held on May 18, 2026"
         }
       ],
-      "lastError": "urllib: <urlopen error timed out> / curl: curl exit 28: curl: (28) Connection timed out after 20001 milliseconds",
+      "lastError": "urllib: <urlopen error timed out> / curl: curl exit 28: curl: (28) Connection timed out after 20002 milliseconds",
       "lowSignal": false
     },
     "https://slbchp.com": {
@@ -845,7 +845,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
       "contentHash": "839e6bfa0d6aa00c8e50ad42cbac1296a9141d1703a1ae1b17cff68ddbb7db1b",
       "docLinks": [
         {
@@ -1086,8 +1086,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
-      "contentHash": "648a82e472e6adde4ec992c1534ee752cde94a32daad167e9187af60299d4bad",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
+      "contentHash": "5167fdced63b582ba3159189da74c45a44eb088f455572192306402789aa7d4e",
       "docLinks": [
         {
           "url": "https://www.jkslbc.com/pdf/CGSP/31122025/1. SURYA GHAR.xlsx",
@@ -1295,8 +1295,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
-      "contentHash": "3e8bd6bb316a85a6bb9556415378cc34140e90a6a5ca0d5b45fd72e45bed868b",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
+      "contentHash": "83d5041e74f4d44e5376aeaab5fcd66230be95c67b29c54a2d88617868dac71d",
       "docLinks": [
         {
           "url": "https://slbckarnataka.com/UserFiles/APY_Citizens_Choice.pdf",
@@ -1540,8 +1540,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
-      "contentHash": "80922e1792ad0e4ffb6d9f6432ab0e5a30a87912606958a0aa1a74833a961b9e",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
+      "contentHash": "e8238d94c9c4c1da59fd37610e503326fda6d8220093f5de2356904eef29f303",
       "docLinks": [
         {
           "url": "https://slbckerala.com/excel/FLCsDATA_MAR_2026.xlsx",
@@ -1621,7 +1621,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
       "contentHash": "8f74eb618a8ffad61984330b001ab573483478f60758458324136b0c986e6256",
       "docLinks": [
         {
@@ -1758,8 +1758,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
-      "contentHash": "614214a985df6062e745a0c301354a977d6b41834688847d11efd8361299d4c3",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
+      "contentHash": "7cac10fc2aef6c6cc3c3007263374fc96587b06ec5658e07fad919f32a963f74",
       "docLinks": [
         {
           "url": "https://www.slbcmadhyapradesh.in/MIS/upload_doc/0ec5bd25-752c-4bbf-bb46-5be5d60d0696-ACP 2026-27.pdf",
@@ -2577,8 +2577,8 @@
         "apex .in domain unreachable from runners — watching the .bank.in alias"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
-      "contentHash": "5c9d17278065fd92630c883cf9b8f2f7273cdc63b6b9d0b13c524c43b0b8bf90",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
+      "contentHash": "3fe2d8cf961c5d6733f028025bfeeb8d4957bfdf9e5f5ef63e45b9fb89d37acb",
       "docLinks": [
         {
           "url": "https://bankofmaharashtra.bank.in/writereaddata/documentlibrary/042bb82b-69d5-4ba7-84b7-50884fe38fe3.pdf",
@@ -2777,7 +2777,7 @@
       ],
       "skip": false,
       "notes": [],
-      "consecutiveFailures": 11,
+      "consecutiveFailures": 12,
       "lastSuccess": "2026-06-09T19:25:54+00:00",
       "contentHash": "2ecd043e1d8fb1e04a06b64730c35da648466b89f06bb89d943054840e8ef389",
       "docLinks": [
@@ -2842,7 +2842,7 @@
           "text": "Unclaimed Financil Assets"
         }
       ],
-      "lastError": "urllib: <urlopen error timed out> / curl: curl exit 28: curl: (28) Connection timed out after 20002 milliseconds",
+      "lastError": "urllib: <urlopen error timed out> / curl: curl exit 28: curl: (28) Connection timed out after 20001 milliseconds",
       "lowSignal": false
     },
     "https://slbcrajasthan.in": {
@@ -2852,8 +2852,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
-      "contentHash": "2a7c01565d9cd4169de733866b42e5b94cfc0f6c32900735b324517c98c8af88",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
+      "contentHash": "c9e0d3f4e9311010c673e9bee284437c5a4c14df6da1faae18d0990be974f993",
       "docLinks": [
         {
           "url": "https://slbcrajasthan.in/SLBC Rajasthan GSS Booklet (1).pdf",
@@ -2896,6 +2896,42 @@
           "text": "MSME CLUSTER LIST"
         },
         {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/June2026/APY Annexue 30.06.2026.xlsx",
+          "text": "Progress under Atal Pension Yojna"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/June2026/Annex. II-9 Banking Network Summary June 2026.xlsx",
+          "text": "Summary of Banking Network"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/June2026/District ACP Summary.xlsx",
+          "text": "ACP Progress Summary"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/June2026/District CD Ratio.xlsx",
+          "text": "CD Ratio"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/June2026/KCC Outstanding.xlsx",
+          "text": "Progress under Kisan Credit Cards (KCCS)"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/June2026/Mudra.xlsx",
+          "text": "Daily Disbursement Progress under PMMY"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/June2026/PMJDY Annexure 30.06.2026.xlsx",
+          "text": "Pradhan Mantri Jan Dhan Yojana (PMJDY)"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/June2026/Unbanked Rural Centers 21415.xlsx",
+          "text": "Unbanked Rural Centers (URC)"
+        },
+        {
+          "url": "https://slbcrajasthan.in/wp-content/uploads/June2026/Website updation on 31.03.2026.docx",
+          "text": "Key Banking Parameters"
+        },
+        {
           "url": "https://slbcrajasthan.in/wp-content/uploads/NSFI Policy 2025-30 English.pdf",
           "text": "NSFI 2025-30 English"
         },
@@ -2904,52 +2940,16 @@
           "text": "NSFI 2025-30 Hindi"
         },
         {
-          "url": "https://slbcrajasthan.in/wp-content/uploads/Unbanked Rural Centers 21415 Locations.xlsx",
-          "text": "Unbanked Rural Centers (URC)"
-        },
-        {
           "url": "https://slbcrajasthan.in/wp-content/uploads/journey.pdf",
           "text": "Journey Together"
-        },
-        {
-          "url": "https://slbcrajasthan.in/wp-content/uploads/n/APY 31.03.2026.xlsx",
-          "text": "Progress under Atal Pension Yojna"
-        },
-        {
-          "url": "https://slbcrajasthan.in/wp-content/uploads/n/Annex. II-9 Banking Network Summary Mar 2026.xlsx",
-          "text": "Summary of Banking Network"
         },
         {
           "url": "https://slbcrajasthan.in/wp-content/uploads/n/Database_on_FLC.xlsx",
           "text": "FLCS"
         },
         {
-          "url": "https://slbcrajasthan.in/wp-content/uploads/n/Distric ACP Summary.xlsx",
-          "text": "ACP Progress Summary"
-        },
-        {
-          "url": "https://slbcrajasthan.in/wp-content/uploads/n/District wise CD Ratio.xlsx",
-          "text": "CD Ratio"
-        },
-        {
-          "url": "https://slbcrajasthan.in/wp-content/uploads/n/KCC Outstanding.xlsx",
-          "text": "Progress under Kisan Credit Cards (KCCS)"
-        },
-        {
-          "url": "https://slbcrajasthan.in/wp-content/uploads/n/Mudra 31.03.2026.xlsx",
-          "text": "Daily Disbursement Progress under PMMY"
-        },
-        {
-          "url": "https://slbcrajasthan.in/wp-content/uploads/n/PMJDY Annexure 31.03.2026.xlsx",
-          "text": "Pradhan Mantri Jan Dhan Yojana (PMJDY)"
-        },
-        {
           "url": "https://slbcrajasthan.in/wp-content/uploads/n/State Profile.docx",
           "text": "State Profile"
-        },
-        {
-          "url": "https://slbcrajasthan.in/wp-content/uploads/n/Website updation on 31.03.2026.docx",
-          "text": "Key Banking Parameters"
         },
         {
           "url": "https://slbcrajasthan.in/wp-content/uploads/weblinks.pdf",
@@ -2965,8 +2965,8 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
-      "contentHash": "5f6d6d34efd446be847f5c3fecf63b765b21b90ded30f13c8148bdb00ef07f0d",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
+      "contentHash": "f3de1e3431471dc991277954d3e24a1f73ee01b2da88020d206f71d33cda25c6",
       "docLinks": [
         {
           "url": "https://slbctn.com/Uploads/ACP TARGET FY 2026-27 BW DW.xlsx",
@@ -3056,8 +3056,8 @@
         "watching CQR reports page (the per-quarter annexure feed)"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
-      "contentHash": "c718c2fa118f2a1e79015a5c8ecfbb9339b3e8cf3aa5a00a296dc6320eb5f405",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
+      "contentHash": "59aab8e0c9ab19abdd223081d16e101e2aaa11474e93ec94baa6fb1f38ef5233",
       "docLinks": [
         {
           "url": "https://telanganaslbc.com/wp-content/2025-26.pdf",
@@ -3344,7 +3344,7 @@
           "text": "30.06.2025"
         },
         {
-          "url": "https://telanganaslbc.com/wp-content/uploads/2026/1 BANKWISE MSME ADVANCES AS ON 31.03.2026.xlsx",
+          "url": "https://telanganaslbc.com/wp-content/uploads/2026/1 BANKWISE MSME ADVANCES AS ON 30.06.2026.xlsx",
           "text": "MSME"
         },
         {
@@ -3352,8 +3352,16 @@
           "text": "Dec 2025"
         },
         {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2026/14 CQR Annexures June 2026.pdf",
+          "text": "Jun 2026"
+        },
+        {
           "url": "https://telanganaslbc.com/wp-content/uploads/2026/14 CQR Annexures Mar2026.pdf",
           "text": "March 2026"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2026/19 PMMY AS ON 30.06.2026.xlsx",
+          "text": "30.06.2026"
         },
         {
           "url": "https://telanganaslbc.com/wp-content/uploads/2026/19 PMMY AS ON 31.03.2026.xlsx",
@@ -3364,12 +3372,20 @@
           "text": "31.12.2025"
         },
         {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2026/20 BANWISE SSS AS ON 30.06.2026.xlsx",
+          "text": "30.06.2026"
+        },
+        {
           "url": "https://telanganaslbc.com/wp-content/uploads/2026/20 BANWISE SSS AS ON 31.03.2026.xlsx",
           "text": "31.03.2026"
         },
         {
           "url": "https://telanganaslbc.com/wp-content/uploads/2026/20 BANWISE SSS AS ON 31.12.2025.xlsx",
           "text": "31.12.2025"
+        },
+        {
+          "url": "https://telanganaslbc.com/wp-content/uploads/2026/22 MSME Cluster Progress Data as on 30.06.2026.xlsx",
+          "text": "DATA ON MSME CLUSTERS AS ON 30.06.2026"
         },
         {
           "url": "https://telanganaslbc.com/wp-content/uploads/2026/22 MSME Cluster Progress Data as on 31.03.2026.xlsx",
@@ -3599,7 +3615,7 @@
         "self-signed certificate — verification disabled"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
       "contentHash": "7a2c3590f742fa7d543a5b6623974f9c6dea950acd37b1905810925e2e823742",
       "docLinks": [
         {
@@ -4068,7 +4084,7 @@
       "skip": false,
       "notes": [],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
       "contentHash": "2772d90a614a4e213f2b4296f88634a42d415ca3a674874facf303f589a5b30f",
       "docLinks": [
         {
@@ -4200,7 +4216,7 @@
         "HTTPS handshake broken — watching plain-HTTP homepage"
       ],
       "consecutiveFailures": 0,
-      "lastSuccess": "2026-08-24T04:44:03+00:00",
+      "lastSuccess": "2026-08-31T10:33:47+00:00",
       "contentHash": "ab554692884038cc9766f1c1a0bc0ab0db0ecf4725eef7e9dfd85490b14e667d",
       "docLinks": [
         {
