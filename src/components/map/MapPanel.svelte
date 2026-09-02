@@ -244,7 +244,7 @@
   <div id="panel-head">
     <h1>Project <em>FINER</em></h1>
     <p class="panel-sub">Financial Inclusion Across India</p>
-    <p class="panel-stats">800+ Districts &middot; 36 States &middot; 20 Indicators</p>
+    <p class="panel-stats">District-level coverage &middot; 36 States &amp; UTs &middot; 20 Indicators</p>
     <p class="panel-hint">Double-click a district to focus</p>
   </div>
 

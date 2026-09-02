@@ -22,7 +22,8 @@ CREATE TABLE IF NOT EXISTS districts (
     name            TEXT NOT NULL,
     state_lgd_code  INTEGER NOT NULL REFERENCES states(lgd_code),
     census_2011_code TEXT,
-    UNIQUE(name, state_lgd_code)
+    UNIQUE(name, state_lgd_code),
+    UNIQUE(state_lgd_code, lgd_code)
 );
 
 CREATE TABLE IF NOT EXISTS district_aliases (
@@ -61,13 +62,42 @@ CREATE TABLE IF NOT EXISTS slbc_data (
     field_id        INTEGER NOT NULL REFERENCES slbc_fields(id),
     value_text      TEXT,
     value_numeric   REAL,
-    source_file     TEXT
+    source_file     TEXT,
+    FOREIGN KEY (state_lgd_code, district_lgd)
+        REFERENCES districts(state_lgd_code, lgd_code)
 );
 
 CREATE INDEX IF NOT EXISTS idx_slbc_state_period ON slbc_data(state_lgd_code, period_id);
 CREATE INDEX IF NOT EXISTS idx_slbc_district_period ON slbc_data(district_lgd, period_id);
 CREATE INDEX IF NOT EXISTS idx_slbc_field ON slbc_data(field_id);
 CREATE UNIQUE INDEX IF NOT EXISTS idx_slbc_unique ON slbc_data(district_lgd, period_id, field_id);
+
+-- CREATE TABLE IF NOT EXISTS does not retrofit a foreign key into an existing
+-- finer.db. These triggers apply the same state/district invariant to both new
+-- and existing databases whenever init_schema.py is run.
+CREATE TRIGGER IF NOT EXISTS slbc_state_district_insert
+BEFORE INSERT ON slbc_data
+FOR EACH ROW
+WHEN NOT EXISTS (
+    SELECT 1 FROM districts d
+    WHERE d.lgd_code = NEW.district_lgd
+      AND d.state_lgd_code = NEW.state_lgd_code
+)
+BEGIN
+    SELECT RAISE(ABORT, 'slbc_data district does not belong to state');
+END;
+
+CREATE TRIGGER IF NOT EXISTS slbc_state_district_update
+BEFORE UPDATE OF state_lgd_code, district_lgd ON slbc_data
+FOR EACH ROW
+WHEN NOT EXISTS (
+    SELECT 1 FROM districts d
+    WHERE d.lgd_code = NEW.district_lgd
+      AND d.state_lgd_code = NEW.state_lgd_code
+)
+BEGIN
+    SELECT RAISE(ABORT, 'slbc_data district does not belong to state');
+END;
 
 -- ============================================================
 -- PHONEPE UPI DATA
