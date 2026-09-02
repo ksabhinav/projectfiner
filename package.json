@@ -13,6 +13,7 @@
     "astro": "astro",
     "test:js": "node --test tests/*.test.mjs",
     "test:python": "python3 -m unittest discover -s tests -p 'test_*.py'",
+    "check:release-manifest": "python3 db/build_release_manifest.py --check",
     "test": "npm run test:js && npm run test:python"
   },
   "dependencies": {

@@ -1,0 +1,2461 @@
+{
+  "capitalMarkets": [
+    {
+      "distributions": [
+        {
+          "bytes": 4439113,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "path": "DPSCs/cdsl_dp_centres.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "584ad2f174543a11aaf39a97ad614ca1beda30bc79dc4df6a15ac730d72666c2",
+          "sourceIds": [
+            "capital-cdsl"
+          ],
+          "url": "/DPSCs/cdsl_dp_centres.json"
+        }
+      ],
+      "districtMapped": false,
+      "fields": [
+        "Name",
+        "Address",
+        "DP ID",
+        "Pincode",
+        "Email",
+        "Website",
+        "State",
+        "City"
+      ],
+      "filename": "cdsl_dp_service_centres",
+      "geographyLevel": "location",
+      "id": "cdsl",
+      "label": "CDSL",
+      "license": null,
+      "qualityTier": "raw-experimental",
+      "recordCount": 20612,
+      "recordLabel": "service centres",
+      "rightsStatus": "not-reviewed",
+      "snapshotDate": null,
+      "sourceIds": [
+        "capital-cdsl"
+      ],
+      "title": "Depository participant service centres"
+    },
+    {
+      "distributions": [
+        {
+          "bytes": 1122471,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "path": "MFDs/mfd_corporate.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "d271493446486c27064f946eb253d78ff0ac7aaadd2a4f31ef2937ddef74e653",
+          "sourceIds": [
+            "capital-mfdc"
+          ],
+          "url": "/MFDs/mfd_corporate.json"
+        }
+      ],
+      "districtMapped": false,
+      "fields": [
+        "Name",
+        "ARN",
+        "Pincode",
+        "State",
+        "Location",
+        "City"
+      ],
+      "filename": "mfd_corporate",
+      "geographyLevel": "location",
+      "id": "mfdc",
+      "label": "AMFI",
+      "license": null,
+      "qualityTier": "raw-experimental",
+      "recordCount": 10760,
+      "recordLabel": "distributors",
+      "rightsStatus": "not-reviewed",
+      "snapshotDate": null,
+      "sourceIds": [
+        "capital-mfdc"
+      ],
+      "title": "Mutual fund distributors — corporate"
+    },
+    {
+      "distributions": [
+        {
+          "bytes": 17969963,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "path": "MFDs/mfd_individual.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "7e9fe753d82a1f30d5303348d08f2f3b747689e511312f24e1620d6989e1062f",
+          "sourceIds": [
+            "capital-mfdi"
+          ],
+          "url": "/MFDs/mfd_individual.json"
+        }
+      ],
+      "districtMapped": false,
+      "fields": [
+        "Name",
+        "ARN",
+        "Pincode",
+        "State",
+        "Location",
+        "City"
+      ],
+      "filename": "mfd_individual",
+      "geographyLevel": "location",
+      "id": "mfdi",
+      "label": "AMFI",
+      "license": null,
+      "qualityTier": "raw-experimental",
+      "recordCount": 187254,
+      "recordLabel": "distributors",
+      "rightsStatus": "not-reviewed",
+      "snapshotDate": null,
+      "sourceIds": [
+        "capital-mfdi"
+      ],
+      "title": "Mutual fund distributors — individual"
+    },
+    {
+      "distributions": [
+        {
+          "bytes": 15732524,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "path": "DPSCs/nsdl_dp_centres.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "67dd353da323fd570e0a720cc810870d8a899122c41f525908dc8b538ef54e7c",
+          "sourceIds": [
+            "capital-nsdl"
+          ],
+          "url": "/DPSCs/nsdl_dp_centres.json"
+        }
+      ],
+      "districtMapped": false,
+      "fields": [
+        "Name",
+        "Address",
+        "DP ID",
+        "Pincode",
+        "Email",
+        "Website",
+        "Type",
+        "State",
+        "City"
+      ],
+      "filename": "nsdl_dp_service_centres",
+      "geographyLevel": "location",
+      "id": "nsdl",
+      "label": "NSDL",
+      "license": null,
+      "qualityTier": "raw-experimental",
+      "recordCount": 57005,
+      "recordLabel": "service centres",
+      "rightsStatus": "not-reviewed",
+      "snapshotDate": null,
+      "sourceIds": [
+        "capital-nsdl"
+      ],
+      "title": "Depository participant service centres"
+    }
+  ],
+  "generatedBy": "db/build_release_manifest.py",
+  "projectDataLicense": null,
+  "qualityTier": "raw-experimental",
+  "releaseId": "finer-45f6aa9bf854",
+  "releaseStatus": "research-preview",
+  "rightsNotice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+  "rightsReviewStatus": "not-legally-reviewed",
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "aliasUrls": [],
+      "attribution": "Source: Central Depository Services (India) Limited (https://www.cdslindia.com/).",
+      "id": "capital-cdsl",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "Central Depository Services (India) Limited",
+      "rightsStatus": "not-reviewed",
+      "scope": "Depository participant service centres",
+      "termsUrl": null,
+      "url": "https://www.cdslindia.com/"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: Association of Mutual Funds in India (https://www.amfiindia.com/).",
+      "id": "capital-mfdc",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "Association of Mutual Funds in India",
+      "rightsStatus": "not-reviewed",
+      "scope": "Mutual fund distributors — corporate",
+      "termsUrl": null,
+      "url": "https://www.amfiindia.com/"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: Association of Mutual Funds in India (https://www.amfiindia.com/).",
+      "id": "capital-mfdi",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "Association of Mutual Funds in India",
+      "rightsStatus": "not-reviewed",
+      "scope": "Mutual fund distributors — individual",
+      "termsUrl": null,
+      "url": "https://www.amfiindia.com/"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: National Securities Depository Limited (https://www.nsdl.co.in/).",
+      "id": "capital-nsdl",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "National Securities Depository Limited",
+      "rightsStatus": "not-reviewed",
+      "scope": "Depository participant service centres",
+      "termsUrl": null,
+      "url": "https://www.nsdl.co.in/"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Andhra Pradesh (https://web.archive.org/web/2025*/slbcap.nic.in).",
+      "id": "slbc-andhra-pradesh",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Andhra Pradesh",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Andhra Pradesh",
+      "termsUrl": null,
+      "url": "https://web.archive.org/web/2025*/slbcap.nic.in"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Arunachal Pradesh (https://onlineslbcne.nic.in).",
+      "id": "slbc-arunachal-pradesh",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Arunachal Pradesh",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Arunachal Pradesh",
+      "termsUrl": null,
+      "url": "https://onlineslbcne.nic.in"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Assam (https://onlineslbcne.nic.in).",
+      "id": "slbc-assam",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Assam",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Assam",
+      "termsUrl": null,
+      "url": "https://onlineslbcne.nic.in"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Bihar (https://www.slbcbihar.com/SlBCHeldMeeting.aspx).",
+      "id": "slbc-bihar",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Bihar",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Bihar",
+      "termsUrl": null,
+      "url": "https://www.slbcbihar.com/SlBCHeldMeeting.aspx"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Chhattisgarh (https://slbcchhattisgarh.com).",
+      "id": "slbc-chhattisgarh",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Chhattisgarh",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Chhattisgarh",
+      "termsUrl": null,
+      "url": "https://slbcchhattisgarh.com"
+    },
+    {
+      "aliasUrls": [
+        "https://slbcdelhi.pnb.in"
+      ],
+      "attribution": "Source: SLBC Delhi (https://slbcdelhi.pnb.bank.in).",
+      "id": "slbc-delhi",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Delhi",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for NCT of Delhi",
+      "termsUrl": null,
+      "url": "https://slbcdelhi.pnb.bank.in"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Goa (https://slbcgoa.com).",
+      "id": "slbc-goa",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Goa",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Goa",
+      "termsUrl": null,
+      "url": "https://slbcgoa.com"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Gujarat (https://slbcgujarat.in).",
+      "id": "slbc-gujarat",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Gujarat",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Gujarat",
+      "termsUrl": null,
+      "url": "https://slbcgujarat.in"
+    },
+    {
+      "aliasUrls": [
+        "https://slbcharyana.pnb.in"
+      ],
+      "attribution": "Source: SLBC Haryana (https://slbcharyana.pnb.bank.in).",
+      "id": "slbc-haryana",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Haryana",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Haryana",
+      "termsUrl": null,
+      "url": "https://slbcharyana.pnb.bank.in"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Himachal Pradesh (https://slbchp.com).",
+      "id": "slbc-himachal-pradesh",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Himachal Pradesh",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Himachal Pradesh",
+      "termsUrl": null,
+      "url": "https://slbchp.com"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: J&K SLBC (https://www.jkslbc.com).",
+      "id": "slbc-jammu-kashmir",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "J&K SLBC",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Jammu & Kashmir",
+      "termsUrl": null,
+      "url": "https://www.jkslbc.com"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Jharkhand (https://onlineslbcne.nic.in).",
+      "id": "slbc-jharkhand",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Jharkhand",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Jharkhand",
+      "termsUrl": null,
+      "url": "https://onlineslbcne.nic.in"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Karnataka (https://slbckarnataka.com).",
+      "id": "slbc-karnataka",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Karnataka",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Karnataka",
+      "termsUrl": null,
+      "url": "https://slbckarnataka.com"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Kerala (https://slbckerala.com).",
+      "id": "slbc-kerala",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Kerala",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Kerala",
+      "termsUrl": null,
+      "url": "https://slbckerala.com"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: UTLBC Ladakh (https://utlbcladakh.com).",
+      "id": "slbc-ladakh",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "UTLBC Ladakh",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Ladakh",
+      "termsUrl": null,
+      "url": "https://utlbcladakh.com"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Madhya Pradesh (https://www.slbcmadhyapradesh.in/slbc-meeting.aspx).",
+      "id": "slbc-madhya-pradesh",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Madhya Pradesh",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Madhya Pradesh",
+      "termsUrl": null,
+      "url": "https://www.slbcmadhyapradesh.in/slbc-meeting.aspx"
+    },
+    {
+      "aliasUrls": [
+        "https://bankofmaharashtra.bank.in"
+      ],
+      "attribution": "Source: SLBC Maharashtra (https://bankofmaharashtra.in).",
+      "id": "slbc-maharashtra",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Maharashtra",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Maharashtra",
+      "termsUrl": null,
+      "url": "https://bankofmaharashtra.in"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Manipur (https://onlineslbcne.nic.in).",
+      "id": "slbc-manipur",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Manipur",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Manipur",
+      "termsUrl": null,
+      "url": "https://onlineslbcne.nic.in"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Meghalaya (https://onlineslbcne.nic.in).",
+      "id": "slbc-meghalaya",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Meghalaya",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Meghalaya",
+      "termsUrl": null,
+      "url": "https://onlineslbcne.nic.in"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Mizoram (https://onlineslbcne.nic.in).",
+      "id": "slbc-mizoram",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Mizoram",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Mizoram",
+      "termsUrl": null,
+      "url": "https://onlineslbcne.nic.in"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Nagaland (https://onlineslbcne.nic.in).",
+      "id": "slbc-nagaland",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Nagaland",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Nagaland",
+      "termsUrl": null,
+      "url": "https://onlineslbcne.nic.in"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Odisha (https://onlineslbcne.nic.in).",
+      "id": "slbc-odisha",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Odisha",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Odisha",
+      "termsUrl": null,
+      "url": "https://onlineslbcne.nic.in"
+    },
+    {
+      "aliasUrls": [
+        "https://slbcpunjab.pnb.in"
+      ],
+      "attribution": "Source: SLBC Punjab (https://slbcpunjab.pnb.bank.in).",
+      "id": "slbc-punjab",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Punjab",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Punjab",
+      "termsUrl": null,
+      "url": "https://slbcpunjab.pnb.bank.in"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Rajasthan (https://slbcrajasthan.in).",
+      "id": "slbc-rajasthan",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Rajasthan",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Rajasthan",
+      "termsUrl": null,
+      "url": "https://slbcrajasthan.in"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Sikkim (https://onlineslbcne.nic.in).",
+      "id": "slbc-sikkim",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Sikkim",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Sikkim",
+      "termsUrl": null,
+      "url": "https://onlineslbcne.nic.in"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Tamil Nadu (https://slbctn.com).",
+      "id": "slbc-tamil-nadu",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Tamil Nadu",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Tamil Nadu",
+      "termsUrl": null,
+      "url": "https://slbctn.com"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Telangana (https://telanganaslbc.com).",
+      "id": "slbc-telangana",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Telangana",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Telangana",
+      "termsUrl": null,
+      "url": "https://telanganaslbc.com"
+    },
+    {
+      "aliasUrls": [
+        "https://slbctripura.pnb.in"
+      ],
+      "attribution": "Source: SLBC Tripura (https://slbctripura.pnb.bank.in/Back_Paper_Quarterly.asp).",
+      "id": "slbc-tripura",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Tripura",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Tripura",
+      "termsUrl": null,
+      "url": "https://slbctripura.pnb.bank.in/Back_Paper_Quarterly.asp"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Uttar Pradesh (https://slbcup.com).",
+      "id": "slbc-uttar-pradesh",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Uttar Pradesh",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Uttar Pradesh",
+      "termsUrl": null,
+      "url": "https://slbcup.com"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC Uttarakhand (https://slbcuttarakhand.com).",
+      "id": "slbc-uttarakhand",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC Uttarakhand",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for Uttarakhand",
+      "termsUrl": null,
+      "url": "https://slbcuttarakhand.com"
+    },
+    {
+      "aliasUrls": [],
+      "attribution": "Source: SLBC West Bengal (https://slbcwb.com).",
+      "id": "slbc-west-bengal",
+      "license": null,
+      "notice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
+      "permittedUse": "Unknown; consult the publisher's current terms before reuse.",
+      "publisher": "SLBC West Bengal",
+      "rightsStatus": "not-reviewed",
+      "scope": "SLBC/UTLBC source material for West Bengal",
+      "termsUrl": null,
+      "url": "https://slbcwb.com"
+    }
+  ],
+  "states": [
+    {
+      "coverage": {
+        "categoryCount": 5,
+        "districtCount": 26,
+        "earliestPeriod": "2018-06",
+        "latestPeriod": "2024-06",
+        "nestedRecordCount": 470,
+        "periodCount": 20,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 74955,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 470,
+          "path": "slbc-data/andhra-pradesh/andhra-pradesh_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "a8cac5b0c91303521b743e7dfa97b4fa663edb474bc08af9a5df51914187d3c7",
+          "sourceIds": [
+            "slbc-andhra-pradesh"
+          ],
+          "url": "/slbc-data/andhra-pradesh/andhra-pradesh_complete.json"
+        },
+        {
+          "bytes": 33901,
+          "columnCount": 49,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/andhra-pradesh/andhra-pradesh_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 352,
+          "schemaVersion": "raw-v1",
+          "sha256": "9774445b7c5d433b16109614fd56dd24d5f9e57b661f06ab4f1c0c2afbb72981",
+          "sourceIds": [
+            "slbc-andhra-pradesh"
+          ],
+          "url": "/slbc-data/andhra-pradesh/andhra-pradesh_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Andhra Pradesh",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "andhra-pradesh",
+      "sourceIds": [
+        "slbc-andhra-pradesh"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 46,
+        "districtCount": 26,
+        "earliestPeriod": "2018-03",
+        "latestPeriod": "2025-03",
+        "nestedRecordCount": 12817,
+        "periodCount": 18,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 4703754,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 12817,
+          "path": "slbc-data/arunachal-pradesh/arunachal-pradesh_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "84c43f3a125b34fd7a64bc204bf8c7ab0358d770ca1a5d69fc6816ecb60b8a06",
+          "sourceIds": [
+            "slbc-arunachal-pradesh"
+          ],
+          "url": "/slbc-data/arunachal-pradesh/arunachal-pradesh_complete.json"
+        },
+        {
+          "bytes": 687046,
+          "columnCount": 467,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/arunachal-pradesh/arunachal-pradesh_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 611,
+          "schemaVersion": "raw-v1",
+          "sha256": "133c6993d53d218a5ce09ceb028767ff5fe7bf463702775346b0d02625a9785c",
+          "sourceIds": [
+            "slbc-arunachal-pradesh"
+          ],
+          "url": "/slbc-data/arunachal-pradesh/arunachal-pradesh_fi_timeseries.csv"
+        }
+      ],
+      "group": "north-east",
+      "license": null,
+      "name": "Arunachal Pradesh",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "arunachal-pradesh",
+      "sourceIds": [
+        "slbc-arunachal-pradesh"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 51,
+        "districtCount": 35,
+        "earliestPeriod": "2018-06",
+        "latestPeriod": "2025-09",
+        "nestedRecordCount": 30540,
+        "periodCount": 30,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 20290324,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 30540,
+          "path": "slbc-data/assam/assam_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "c728a63f9f676460b8207b78e4bd56e32c8b3fe9ca84878c34c41311a5108423",
+          "sourceIds": [
+            "slbc-assam"
+          ],
+          "url": "/slbc-data/assam/assam_complete.json"
+        },
+        {
+          "bytes": 3025072,
+          "columnCount": 1027,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/assam/assam_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 1095,
+          "schemaVersion": "raw-v1",
+          "sha256": "a651df64dbc16001dba638f9d90c2c6156ae1770d0a1486b43f7885aaf379d57",
+          "sourceIds": [
+            "slbc-assam"
+          ],
+          "url": "/slbc-data/assam/assam_fi_timeseries.csv"
+        }
+      ],
+      "group": "north-east",
+      "license": null,
+      "name": "Assam",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "assam",
+      "sourceIds": [
+        "slbc-assam"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 125,
+        "districtCount": 41,
+        "earliestPeriod": "2016-03",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 12309,
+        "periodCount": 8,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 4616789,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 12309,
+          "path": "slbc-data/bihar/bihar_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "130e41b4ef65e77246157b5f930ce8669d2964e7731c8df857bc29af4e908b70",
+          "sourceIds": [
+            "slbc-bihar"
+          ],
+          "url": "/slbc-data/bihar/bihar_complete.json"
+        },
+        {
+          "bytes": 1065323,
+          "columnCount": 1779,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/bihar/bihar_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 304,
+          "schemaVersion": "raw-v1",
+          "sha256": "22c712925099b71454e7656d3174987cf7906b20bd1f4d71f928b3dbad1fb3a1",
+          "sourceIds": [
+            "slbc-bihar"
+          ],
+          "url": "/slbc-data/bihar/bihar_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Bihar",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "bihar",
+      "sourceIds": [
+        "slbc-bihar"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 4,
+        "districtCount": 33,
+        "earliestPeriod": "2022-09",
+        "latestPeriod": "2026-03",
+        "nestedRecordCount": 1940,
+        "periodCount": 15,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 1539073,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 1940,
+          "path": "slbc-data/chhattisgarh/chhattisgarh_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "d839335fc352423c99774eefa9c3c5a90d480c1a84c52ab85e436853f4b974a7",
+          "sourceIds": [
+            "slbc-chhattisgarh"
+          ],
+          "url": "/slbc-data/chhattisgarh/chhattisgarh_complete.json"
+        },
+        {
+          "bytes": 172535,
+          "columnCount": 70,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/chhattisgarh/chhattisgarh_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 485,
+          "schemaVersion": "raw-v1",
+          "sha256": "bedcd100ae60cf795722866672bddd52dc2f3d6beba8a8b62fa8764c374c1794",
+          "sourceIds": [
+            "slbc-chhattisgarh"
+          ],
+          "url": "/slbc-data/chhattisgarh/chhattisgarh_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Chhattisgarh",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "chhattisgarh",
+      "sourceIds": [
+        "slbc-chhattisgarh"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 2,
+        "districtCount": 11,
+        "earliestPeriod": "2022-12",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 286,
+        "periodCount": 13,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 45017,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 286,
+          "path": "slbc-data/delhi/delhi_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "f2b92d45cfc7a90a983e8e3de35e548d18bfa39a4f4c8fc5461c196bb6a655c4",
+          "sourceIds": [
+            "slbc-delhi"
+          ],
+          "url": "/slbc-data/delhi/delhi_complete.json"
+        },
+        {
+          "bytes": 8015,
+          "columnCount": 6,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/delhi/delhi_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 143,
+          "schemaVersion": "raw-v1",
+          "sha256": "2eb91b3985e37b0ce26af393b77721e0c01765a819bdfdac63d00c57f2784806",
+          "sourceIds": [
+            "slbc-delhi"
+          ],
+          "url": "/slbc-data/delhi/delhi_fi_timeseries.csv"
+        }
+      ],
+      "group": "ut",
+      "license": null,
+      "name": "NCT of Delhi",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "delhi",
+      "sourceIds": [
+        "slbc-delhi"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 1,
+        "districtCount": 2,
+        "earliestPeriod": "2020-06",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 46,
+        "periodCount": 23,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 8719,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 46,
+          "path": "slbc-data/goa/goa_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "48e018e45463d7597e6ad1bc3ef735ecdf7046c25078af03d3b74f2718c89c78",
+          "sourceIds": [
+            "slbc-goa"
+          ],
+          "url": "/slbc-data/goa/goa_complete.json"
+        },
+        {
+          "bytes": 1314,
+          "columnCount": 3,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/goa/goa_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 46,
+          "schemaVersion": "raw-v1",
+          "sha256": "a134ed2faa69083c82fbf8dea0a78818e0c92a840ab88d1feef458114edd4425",
+          "sourceIds": [
+            "slbc-goa"
+          ],
+          "url": "/slbc-data/goa/goa_fi_timeseries.csv"
+        }
+      ],
+      "group": "ut",
+      "license": null,
+      "name": "Goa",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "goa",
+      "sourceIds": [
+        "slbc-goa"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 13,
+        "districtCount": 33,
+        "earliestPeriod": "2017-03",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 6201,
+        "periodCount": 36,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 5164586,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 6201,
+          "path": "slbc-data/gujarat/gujarat_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "0c38968fc30f6c42aba1727ceb1ecd8f0cf1e4f723fbb383ba01adcd2adbfd10",
+          "sourceIds": [
+            "slbc-gujarat"
+          ],
+          "url": "/slbc-data/gujarat/gujarat_complete.json"
+        },
+        {
+          "bytes": 760496,
+          "columnCount": 189,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/gujarat/gujarat_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 1144,
+          "schemaVersion": "raw-v1",
+          "sha256": "f2e46345ed9e69e2223346f2512654186afbb6cfdc078ef4025d68164f7baa6a",
+          "sourceIds": [
+            "slbc-gujarat"
+          ],
+          "url": "/slbc-data/gujarat/gujarat_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Gujarat",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "gujarat",
+      "sourceIds": [
+        "slbc-gujarat"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 6,
+        "districtCount": 22,
+        "earliestPeriod": "2014-12",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 1700,
+        "periodCount": 37,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 360041,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 1700,
+          "path": "slbc-data/haryana/haryana_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "bb550602d7159ee292de4c2ae3fed87020671e080957aef7efa93d5ec9a10b87",
+          "sourceIds": [
+            "slbc-haryana"
+          ],
+          "url": "/slbc-data/haryana/haryana_complete.json"
+        },
+        {
+          "bytes": 86342,
+          "columnCount": 29,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/haryana/haryana_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 806,
+          "schemaVersion": "raw-v1",
+          "sha256": "e60d94f39bf3c43398bd588ca8c876346cd68773c5ef3c44f9c1a15b26525e2b",
+          "sourceIds": [
+            "slbc-haryana"
+          ],
+          "url": "/slbc-data/haryana/haryana_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Haryana",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "haryana",
+      "sourceIds": [
+        "slbc-haryana"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 16,
+        "districtCount": 13,
+        "earliestPeriod": "2013-06",
+        "latestPeriod": "2026-03",
+        "nestedRecordCount": 686,
+        "periodCount": 13,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 348938,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 686,
+          "path": "slbc-data/himachal-pradesh/himachal-pradesh_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "50af6e31e7e865d26dd52acffc9fcbb55a32c78138ffd9941398f744664d9a6c",
+          "sourceIds": [
+            "slbc-himachal-pradesh"
+          ],
+          "url": "/slbc-data/himachal-pradesh/himachal-pradesh_complete.json"
+        },
+        {
+          "bytes": 91489,
+          "columnCount": 261,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/himachal-pradesh/himachal-pradesh_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 151,
+          "schemaVersion": "raw-v1",
+          "sha256": "b7598f1eaf5675b679bb0379e4d96bc2fda3e7cecec3d084a8bb83a1a9b06035",
+          "sourceIds": [
+            "slbc-himachal-pradesh"
+          ],
+          "url": "/slbc-data/himachal-pradesh/himachal-pradesh_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Himachal Pradesh",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "himachal-pradesh",
+      "sourceIds": [
+        "slbc-himachal-pradesh"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 2,
+        "districtCount": 20,
+        "earliestPeriod": "2022-09",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 240,
+        "periodCount": 6,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 34376,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 240,
+          "path": "slbc-data/jammu-kashmir/jammu-kashmir_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "6425d9c067bc428249c633b9b904a509b239be8b924da33a71247bd963f8e60f",
+          "sourceIds": [
+            "slbc-jammu-kashmir"
+          ],
+          "url": "/slbc-data/jammu-kashmir/jammu-kashmir_complete.json"
+        },
+        {
+          "bytes": 7154,
+          "columnCount": 7,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/jammu-kashmir/jammu-kashmir_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 120,
+          "schemaVersion": "raw-v1",
+          "sha256": "8f884c48d80ca71572e18433e65bc47283c60e529b4b58887ba93fb4f80a917b",
+          "sourceIds": [
+            "slbc-jammu-kashmir"
+          ],
+          "url": "/slbc-data/jammu-kashmir/jammu-kashmir_fi_timeseries.csv"
+        }
+      ],
+      "group": "ut",
+      "license": null,
+      "name": "Jammu & Kashmir",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "jammu-kashmir",
+      "sourceIds": [
+        "slbc-jammu-kashmir"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 64,
+        "districtCount": 24,
+        "earliestPeriod": "2023-06",
+        "latestPeriod": "2025-09",
+        "nestedRecordCount": 11060,
+        "periodCount": 10,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 5184551,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 11060,
+          "path": "slbc-data/jharkhand/jharkhand_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "3d2210ab66a1bb92a7d0814738fa5e79061b304137812db706a1202df43345ec",
+          "sourceIds": [
+            "slbc-jharkhand"
+          ],
+          "url": "/slbc-data/jharkhand/jharkhand_complete.json"
+        },
+        {
+          "bytes": 684897,
+          "columnCount": 1082,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/jharkhand/jharkhand_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 240,
+          "schemaVersion": "raw-v1",
+          "sha256": "1439b364e3ed09d473b3f05006e4d56792a9bdad5a22c2b510763b9bb3df0c8e",
+          "sourceIds": [
+            "slbc-jharkhand"
+          ],
+          "url": "/slbc-data/jharkhand/jharkhand_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Jharkhand",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "jharkhand",
+      "sourceIds": [
+        "slbc-jharkhand"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 41,
+        "districtCount": 34,
+        "earliestPeriod": "2020-03",
+        "latestPeriod": "2026-03",
+        "nestedRecordCount": 1653,
+        "periodCount": 11,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 627567,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 1653,
+          "path": "slbc-data/karnataka/karnataka_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "2eeb46697c2b385cc12c6004650c7a3f79986a45f970f1eb13ef67a74d851cf7",
+          "sourceIds": [
+            "slbc-karnataka"
+          ],
+          "url": "/slbc-data/karnataka/karnataka_complete.json"
+        },
+        {
+          "bytes": 85253,
+          "columnCount": 189,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 6,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/karnataka/karnataka_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 224,
+          "schemaVersion": "raw-v1",
+          "sha256": "e09c861595620804c61d2bfeae53283a03d75593b08d979ebc696c57dae6865b",
+          "sourceIds": [
+            "slbc-karnataka"
+          ],
+          "url": "/slbc-data/karnataka/karnataka_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Karnataka",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "karnataka",
+      "sourceIds": [
+        "slbc-karnataka"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 8,
+        "districtCount": 16,
+        "earliestPeriod": "2010-10",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 1359,
+        "periodCount": 32,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 294590,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 1359,
+          "path": "slbc-data/kerala/kerala_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "79dbe699af100d4bbefdc6186f3912bb901998fda3becde1ae0939e41484393f",
+          "sourceIds": [
+            "slbc-kerala"
+          ],
+          "url": "/slbc-data/kerala/kerala_complete.json"
+        },
+        {
+          "bytes": 30452,
+          "columnCount": 42,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/kerala/kerala_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 276,
+          "schemaVersion": "raw-v1",
+          "sha256": "b9c16cd5d3e92181de8be48fea065e514305e3a424d463754ae492a59635ad6d",
+          "sourceIds": [
+            "slbc-kerala"
+          ],
+          "url": "/slbc-data/kerala/kerala_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Kerala",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "kerala",
+      "sourceIds": [
+        "slbc-kerala"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 2,
+        "districtCount": 2,
+        "earliestPeriod": "2026-03",
+        "latestPeriod": "2026-03",
+        "nestedRecordCount": 4,
+        "periodCount": 1,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 1371,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 4,
+          "path": "slbc-data/ladakh/ladakh_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "1109e7a9f0464129e138e10987848d99b6d9568ec30b0407e04d657cb438dd69",
+          "sourceIds": [
+            "slbc-ladakh"
+          ],
+          "url": "/slbc-data/ladakh/ladakh_complete.json"
+        },
+        {
+          "bytes": 245,
+          "columnCount": 6,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/ladakh/ladakh_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 2,
+          "schemaVersion": "raw-v1",
+          "sha256": "5b5afa39b83b33a8b1b71f923b02849c385ab66ac168deeb315b8f272d9428bc",
+          "sourceIds": [
+            "slbc-ladakh"
+          ],
+          "url": "/slbc-data/ladakh/ladakh_fi_timeseries.csv"
+        }
+      ],
+      "group": "ut",
+      "license": null,
+      "name": "Ladakh",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "ladakh",
+      "sourceIds": [
+        "slbc-ladakh"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 1,
+        "districtCount": 55,
+        "earliestPeriod": "2016-12",
+        "latestPeriod": "2026-03",
+        "nestedRecordCount": 854,
+        "periodCount": 16,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 172621,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 854,
+          "path": "slbc-data/madhya-pradesh/madhya-pradesh_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "8a9f31c5982f3002a450dda49fcd2a35e7469a7f4e34a4287dafe24932b2f619",
+          "sourceIds": [
+            "slbc-madhya-pradesh"
+          ],
+          "url": "/slbc-data/madhya-pradesh/madhya-pradesh_complete.json"
+        },
+        {
+          "bytes": 36965,
+          "columnCount": 5,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/madhya-pradesh/madhya-pradesh_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 854,
+          "schemaVersion": "raw-v1",
+          "sha256": "f67332ffc22dc1aa3a46a32a789e88aaf679f4c334a24f69735ba930aa4a6a2c",
+          "sourceIds": [
+            "slbc-madhya-pradesh"
+          ],
+          "url": "/slbc-data/madhya-pradesh/madhya-pradesh_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Madhya Pradesh",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "madhya-pradesh",
+      "sourceIds": [
+        "slbc-madhya-pradesh"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 19,
+        "districtCount": 36,
+        "earliestPeriod": "2025-06",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 1742,
+        "periodCount": 3,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 565739,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 1742,
+          "path": "slbc-data/maharashtra/maharashtra_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "e1523b123beac9ef148b62cc28f8da8096473f95f37e49adc0f7031399baa059",
+          "sourceIds": [
+            "slbc-maharashtra"
+          ],
+          "url": "/slbc-data/maharashtra/maharashtra_complete.json"
+        },
+        {
+          "bytes": 63593,
+          "columnCount": 106,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/maharashtra/maharashtra_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 108,
+          "schemaVersion": "raw-v1",
+          "sha256": "b1bd81102cbe91b36b97dcd5c36bd5e73b6424cabba63a3e441e9bd245652074",
+          "sourceIds": [
+            "slbc-maharashtra"
+          ],
+          "url": "/slbc-data/maharashtra/maharashtra_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Maharashtra",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "maharashtra",
+      "sourceIds": [
+        "slbc-maharashtra"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 54,
+        "districtCount": 16,
+        "earliestPeriod": "2015-06",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 18778,
+        "periodCount": 40,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 11468598,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 18778,
+          "path": "slbc-data/manipur/manipur_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "90eae811344f5b10da7465e1cc449ed7d2ac29b6087285f4fb57ceff19a14598",
+          "sourceIds": [
+            "slbc-manipur"
+          ],
+          "url": "/slbc-data/manipur/manipur_complete.json"
+        },
+        {
+          "bytes": 1049459,
+          "columnCount": 1019,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/manipur/manipur_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 619,
+          "schemaVersion": "raw-v1",
+          "sha256": "983265e65cdf896966d3a5c4590454ca1aeed39da16303772c976e5475b9c314",
+          "sourceIds": [
+            "slbc-manipur"
+          ],
+          "url": "/slbc-data/manipur/manipur_fi_timeseries.csv"
+        }
+      ],
+      "group": "north-east",
+      "license": null,
+      "name": "Manipur",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "manipur",
+      "sourceIds": [
+        "slbc-manipur"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 58,
+        "districtCount": 12,
+        "earliestPeriod": "2019-06",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 12927,
+        "periodCount": 26,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 8545576,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 12927,
+          "path": "slbc-data/meghalaya/meghalaya_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "dfcd59d1afc23d59e41639be81d29859c4183445b7ed1c0f2c310047f853823e",
+          "sourceIds": [
+            "slbc-meghalaya"
+          ],
+          "url": "/slbc-data/meghalaya/meghalaya_complete.json"
+        },
+        {
+          "bytes": 698440,
+          "columnCount": 1250,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/meghalaya/meghalaya_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 268,
+          "schemaVersion": "raw-v1",
+          "sha256": "b7e2533edc80036a1e29b458ac34fddaf6f8267b3bcb8eee5a58c00118f66165",
+          "sourceIds": [
+            "slbc-meghalaya"
+          ],
+          "url": "/slbc-data/meghalaya/meghalaya_fi_timeseries.csv"
+        }
+      ],
+      "group": "north-east",
+      "license": null,
+      "name": "Meghalaya",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "meghalaya",
+      "sourceIds": [
+        "slbc-meghalaya"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 53,
+        "districtCount": 11,
+        "earliestPeriod": "2015-03",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 11798,
+        "periodCount": 30,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 7563370,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 11798,
+          "path": "slbc-data/mizoram/mizoram_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "a735c9da24a8535b3224892398a02496d2f677d05fd4e24decf99f458ad28cb3",
+          "sourceIds": [
+            "slbc-mizoram"
+          ],
+          "url": "/slbc-data/mizoram/mizoram_complete.json"
+        },
+        {
+          "bytes": 335155,
+          "columnCount": 555,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/mizoram/mizoram_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 301,
+          "schemaVersion": "raw-v1",
+          "sha256": "6afe5a23d9cbbfcd21e82aa721b7b6509e4a77fe3d6377b611565c27b541b139",
+          "sourceIds": [
+            "slbc-mizoram"
+          ],
+          "url": "/slbc-data/mizoram/mizoram_fi_timeseries.csv"
+        }
+      ],
+      "group": "north-east",
+      "license": null,
+      "name": "Mizoram",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "mizoram",
+      "sourceIds": [
+        "slbc-mizoram"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 25,
+        "districtCount": 16,
+        "earliestPeriod": "2019-03",
+        "latestPeriod": "2025-03",
+        "nestedRecordCount": 736,
+        "periodCount": 7,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 345807,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 736,
+          "path": "slbc-data/nagaland/nagaland_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "1045f1f7a1f033e51c571be401bd9dded357a82640047395c695400f38a99c57",
+          "sourceIds": [
+            "slbc-nagaland"
+          ],
+          "url": "/slbc-data/nagaland/nagaland_complete.json"
+        },
+        {
+          "bytes": 299451,
+          "columnCount": 369,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/nagaland/nagaland_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 352,
+          "schemaVersion": "raw-v1",
+          "sha256": "39cca7ea074f07470bd65fcb9c3caddb84e2bde76a86cca568aabdfa33cf809a",
+          "sourceIds": [
+            "slbc-nagaland"
+          ],
+          "url": "/slbc-data/nagaland/nagaland_fi_timeseries.csv"
+        }
+      ],
+      "group": "north-east",
+      "license": null,
+      "name": "Nagaland",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "nagaland",
+      "sourceIds": [
+        "slbc-nagaland"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 50,
+        "districtCount": 30,
+        "earliestPeriod": "2023-12",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 4918,
+        "periodCount": 8,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 2328698,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 4918,
+          "path": "slbc-data/odisha/odisha_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "d67ab062b11665be98a94a704f0538ed0351994d356847dc19948e69ae8556d5",
+          "sourceIds": [
+            "slbc-odisha"
+          ],
+          "url": "/slbc-data/odisha/odisha_complete.json"
+        },
+        {
+          "bytes": 373979,
+          "columnCount": 690,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/odisha/odisha_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 239,
+          "schemaVersion": "raw-v1",
+          "sha256": "f8d8d88c9dfd917ad2499dd5894c1bda5410f437a85ec5fceeeb66a972f3a3ce",
+          "sourceIds": [
+            "slbc-odisha"
+          ],
+          "url": "/slbc-data/odisha/odisha_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Odisha",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "odisha",
+      "sourceIds": [
+        "slbc-odisha"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 1,
+        "districtCount": 23,
+        "earliestPeriod": "2020-09",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 434,
+        "periodCount": 19,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 399346,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 434,
+          "path": "slbc-data/punjab/punjab_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "f99c41fb94c4dc1815f43d17e94e2ec2936bed8004a16c607b614f05652f973e",
+          "sourceIds": [
+            "slbc-punjab"
+          ],
+          "url": "/slbc-data/punjab/punjab_complete.json"
+        },
+        {
+          "bytes": 89829,
+          "columnCount": 14,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/punjab/punjab_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 434,
+          "schemaVersion": "raw-v1",
+          "sha256": "d767c7a477ef7fbb7af703cbf0d72f7bd37ad08aafec967f35c4c240a46fd463",
+          "sourceIds": [
+            "slbc-punjab"
+          ],
+          "url": "/slbc-data/punjab/punjab_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Punjab",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "punjab",
+      "sourceIds": [
+        "slbc-punjab"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 18,
+        "districtCount": 41,
+        "earliestPeriod": "2013-12",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 2573,
+        "periodCount": 33,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 1223431,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 2573,
+          "path": "slbc-data/rajasthan/rajasthan_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "d9bd820099d440270e9d02e70d3e2e7fe6570195d6df45eafc6c7be6f36c018b",
+          "sourceIds": [
+            "slbc-rajasthan"
+          ],
+          "url": "/slbc-data/rajasthan/rajasthan_complete.json"
+        },
+        {
+          "bytes": 324486,
+          "columnCount": 180,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/rajasthan/rajasthan_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 1057,
+          "schemaVersion": "raw-v1",
+          "sha256": "8ab6ba2b104fe144de8831e8f88b806e005417f565629a3cabb0ab7842b18570",
+          "sourceIds": [
+            "slbc-rajasthan"
+          ],
+          "url": "/slbc-data/rajasthan/rajasthan_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Rajasthan",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "rajasthan",
+      "sourceIds": [
+        "slbc-rajasthan"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 3,
+        "districtCount": 6,
+        "earliestPeriod": "2023-09",
+        "latestPeriod": "2025-03",
+        "nestedRecordCount": 71,
+        "periodCount": 4,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 20465,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 71,
+          "path": "slbc-data/sikkim/sikkim_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "2bdc0eb2d0d2d762a8cf987165352673b846c2adf8ba2194f931cce8af0e0550",
+          "sourceIds": [
+            "slbc-sikkim"
+          ],
+          "url": "/slbc-data/sikkim/sikkim_complete.json"
+        },
+        {
+          "bytes": 1940,
+          "columnCount": 10,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/sikkim/sikkim_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 24,
+          "schemaVersion": "raw-v1",
+          "sha256": "603eb56ea108fa6c5b03bc6dcbe9cc29e485192ddaee376dfab1814feb8d2fa3",
+          "sourceIds": [
+            "slbc-sikkim"
+          ],
+          "url": "/slbc-data/sikkim/sikkim_fi_timeseries.csv"
+        }
+      ],
+      "group": "north-east",
+      "license": null,
+      "name": "Sikkim",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "sikkim",
+      "sourceIds": [
+        "slbc-sikkim"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 33,
+        "districtCount": 38,
+        "earliestPeriod": "2023-09",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 5701,
+        "periodCount": 10,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 2046747,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 5701,
+          "path": "slbc-data/tamil-nadu/tamil-nadu_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "a9f8232b31853284aee8067dac581854241b18630e1a1ca491e88d17fabe7557",
+          "sourceIds": [
+            "slbc-tamil-nadu"
+          ],
+          "url": "/slbc-data/tamil-nadu/tamil-nadu_complete.json"
+        },
+        {
+          "bytes": 373713,
+          "columnCount": 612,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/tamil-nadu/tamil-nadu_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 360,
+          "schemaVersion": "raw-v1",
+          "sha256": "ddb609f0a7ff9c75912cd85f9470dab23e9c160bfb8d44af3367154dc4892427",
+          "sourceIds": [
+            "slbc-tamil-nadu"
+          ],
+          "url": "/slbc-data/tamil-nadu/tamil-nadu_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Tamil Nadu",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "tamil-nadu",
+      "sourceIds": [
+        "slbc-tamil-nadu"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 4,
+        "districtCount": 33,
+        "earliestPeriod": "2016-12",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 2890,
+        "periodCount": 37,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 1247131,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 2890,
+          "path": "slbc-data/telangana/telangana_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "fc7d8d1de0acb44bcb02475cb49881654a13da5b11cd78c6b8dc374e3ef5991a",
+          "sourceIds": [
+            "slbc-telangana"
+          ],
+          "url": "/slbc-data/telangana/telangana_complete.json"
+        },
+        {
+          "bytes": 273399,
+          "columnCount": 74,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/telangana/telangana_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 1159,
+          "schemaVersion": "raw-v1",
+          "sha256": "8cd2ee0e9b1a19fd2e82f16eb29ab6888e0c6d048bba8c5443683da14cbc6b3b",
+          "sourceIds": [
+            "slbc-telangana"
+          ],
+          "url": "/slbc-data/telangana/telangana_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Telangana",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "telangana",
+      "sourceIds": [
+        "slbc-telangana"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 13,
+        "districtCount": 8,
+        "earliestPeriod": "2017-03",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 802,
+        "periodCount": 35,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 321409,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 802,
+          "path": "slbc-data/tripura/tripura_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "a95695cdcae19c7df2858f012c7e7347f0f0c60a7faafe9d24f9a43bbe40de03",
+          "sourceIds": [
+            "slbc-tripura"
+          ],
+          "url": "/slbc-data/tripura/tripura_complete.json"
+        },
+        {
+          "bytes": 90838,
+          "columnCount": 187,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/tripura/tripura_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 280,
+          "schemaVersion": "raw-v1",
+          "sha256": "ece073a20330905c8529eba2d6bea7fefcd71f12f38dcbb5195a8eeb5b7a7b82",
+          "sourceIds": [
+            "slbc-tripura"
+          ],
+          "url": "/slbc-data/tripura/tripura_fi_timeseries.csv"
+        }
+      ],
+      "group": "north-east",
+      "license": null,
+      "name": "Tripura",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "tripura",
+      "sourceIds": [
+        "slbc-tripura"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 17,
+        "districtCount": 77,
+        "earliestPeriod": "2018-12",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 4713,
+        "periodCount": 26,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 1048869,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 4713,
+          "path": "slbc-data/uttar-pradesh/uttar-pradesh_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "36b1c0e21191c0075828db1c58c3f072bcc7d9e2fbb54bf4ae89fbe8bb92f059",
+          "sourceIds": [
+            "slbc-uttar-pradesh"
+          ],
+          "url": "/slbc-data/uttar-pradesh/uttar-pradesh_complete.json"
+        },
+        {
+          "bytes": 397680,
+          "columnCount": 91,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/uttar-pradesh/uttar-pradesh_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 1811,
+          "schemaVersion": "raw-v1",
+          "sha256": "e1c7dea5a02d278b0f88e97c0fa11475cbbeaf59e2143f4af4fb2aab6532d88f",
+          "sourceIds": [
+            "slbc-uttar-pradesh"
+          ],
+          "url": "/slbc-data/uttar-pradesh/uttar-pradesh_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Uttar Pradesh",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "uttar-pradesh",
+      "sourceIds": [
+        "slbc-uttar-pradesh"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 21,
+        "districtCount": 13,
+        "earliestPeriod": "2019-03",
+        "latestPeriod": "2023-12",
+        "nestedRecordCount": 1175,
+        "periodCount": 14,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 725969,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 1175,
+          "path": "slbc-data/uttarakhand/uttarakhand_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "eb3e35182d7e9fcc15a521ef1b726305ea98ad959f0c99e90568a293549a76b9",
+          "sourceIds": [
+            "slbc-uttarakhand"
+          ],
+          "url": "/slbc-data/uttarakhand/uttarakhand_complete.json"
+        },
+        {
+          "bytes": 164022,
+          "columnCount": 452,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/uttarakhand/uttarakhand_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 182,
+          "schemaVersion": "raw-v1",
+          "sha256": "c68b7f5295b061b1328a95e3780566238b343e3d781479e52cd7948a4606112f",
+          "sourceIds": [
+            "slbc-uttarakhand"
+          ],
+          "url": "/slbc-data/uttarakhand/uttarakhand_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "Uttarakhand",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "uttarakhand",
+      "sourceIds": [
+        "slbc-uttarakhand"
+      ]
+    },
+    {
+      "coverage": {
+        "categoryCount": 49,
+        "districtCount": 23,
+        "earliestPeriod": "2015-12",
+        "latestPeriod": "2025-12",
+        "nestedRecordCount": 11608,
+        "periodCount": 39,
+        "unparsedPeriods": []
+      },
+      "distributions": [
+        {
+          "bytes": 4338986,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "nestedRecordCount": 11608,
+          "path": "slbc-data/west-bengal/west-bengal_complete.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "schemaVersion": "raw-v1",
+          "sha256": "9b3ec6e77e728e5eeee38e43e4d333efcd2f26d3a20f44520e30cbe88469d6c3",
+          "sourceIds": [
+            "slbc-west-bengal"
+          ],
+          "url": "/slbc-data/west-bengal/west-bengal_complete.json"
+        },
+        {
+          "bytes": 1679827,
+          "columnCount": 1406,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "slbc-data/west-bengal/west-bengal_fi_timeseries.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "rowCount": 879,
+          "schemaVersion": "raw-v1",
+          "sha256": "ef2be4b0c1fb31b6211dfbfcccfd9bace5086f11f2b172f47164676047036f3d",
+          "sourceIds": [
+            "slbc-west-bengal"
+          ],
+          "url": "/slbc-data/west-bengal/west-bengal_fi_timeseries.csv"
+        }
+      ],
+      "group": "other",
+      "license": null,
+      "name": "West Bengal",
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "slug": "west-bengal",
+      "sourceIds": [
+        "slbc-west-bengal"
+      ]
+    }
+  ],
+  "summary": {
+    "capitalMarketRegistryCount": 4,
+    "distributionCount": 66,
+    "stateCount": 31
+  }
+}

@@ -8,6 +8,8 @@
 // own portal/PDF source). For pan-India sources (RBI DBIE, NRLM MIS, PhonePe
 // Pulse, NFHS, SHRUG, UIDAI) the citation is fixed.
 
+import releaseSources from '../../db/release_sources.json';
+
 export interface SourceCitation {
   /** Short one-line label, e.g. "SLBC Bihar · Sep 2025" */
   label: string;
@@ -33,42 +35,15 @@ export interface SourceCitation {
 // We snapshot both `url` and every `aliasUrls` entry in the daily Wayback
 // cron and surface whichever has the freshest CDX snapshot on the district
 // pages. See CLAUDE.md for the per-state migration status.
-const SLBC_STATE_URLS: Record<string, { name: string; url: string; aliasUrls?: string[] }> = {
-  'andhra-pradesh':     { name: 'Andhra Pradesh',  url: 'https://web.archive.org/web/2025*/slbcap.nic.in' },
-  'arunachal-pradesh':  { name: 'Arunachal Pradesh', url: 'https://onlineslbcne.nic.in' },
-  'assam':              { name: 'Assam',           url: 'https://onlineslbcne.nic.in' },
-  'bihar':              { name: 'Bihar',           url: 'https://www.slbcbihar.com/SlBCHeldMeeting.aspx' },
-  'chhattisgarh':       { name: 'Chhattisgarh',    url: 'https://slbcchhattisgarh.com' }, // Dedicated SLBC CG site, Excel data-tables per meeting
-  'delhi':              { name: 'NCT of Delhi',    url: 'https://slbcdelhi.pnb.bank.in', aliasUrls: ['https://slbcdelhi.pnb.in'] }, // Convenor: Punjab National Bank (since April 2020)
-  'goa':                { name: 'Goa',             url: 'https://slbcgoa.com' }, // Convenor: State Bank of India; only branch_network is district-wise
-  'gujarat':            { name: 'Gujarat',         url: 'https://slbcgujarat.in' },
-  'haryana':            { name: 'Haryana',         url: 'https://slbcharyana.pnb.bank.in', aliasUrls: ['https://slbcharyana.pnb.in'] },
-  'himachal-pradesh':   { name: 'Himachal Pradesh', url: 'https://slbchp.com' }, // Convenor: Punjab National Bank, Shimla
-  'jammu-kashmir':      { name: 'Jammu & Kashmir', url: 'https://www.jkslbc.com' },
-  'jharkhand':          { name: 'Jharkhand',       url: 'https://onlineslbcne.nic.in' },
-  'karnataka':          { name: 'Karnataka',       url: 'https://slbckarnataka.com' },
-  'kerala':             { name: 'Kerala',          url: 'https://slbckerala.com' },
-  'ladakh':             { name: 'Ladakh',          url: 'https://utlbcladakh.com' },
-  'madhya-pradesh':     { name: 'Madhya Pradesh',  url: 'https://www.slbcmadhyapradesh.in/slbc-meeting.aspx' },
-  // Bank of Maharashtra: content lives on bankofmaharashtra.in. The .bank.in
-  // domain is the RBI-mandated alias and may eventually receive the content
-  // migration; archived for forward-compat.
-  'maharashtra':        { name: 'Maharashtra',     url: 'https://bankofmaharashtra.in', aliasUrls: ['https://bankofmaharashtra.bank.in'] },
-  'manipur':            { name: 'Manipur',         url: 'https://onlineslbcne.nic.in' },
-  'meghalaya':          { name: 'Meghalaya',       url: 'https://onlineslbcne.nic.in' },
-  'mizoram':            { name: 'Mizoram',         url: 'https://onlineslbcne.nic.in' },
-  'nagaland':           { name: 'Nagaland',        url: 'https://onlineslbcne.nic.in' },
-  'odisha':             { name: 'Odisha',          url: 'https://onlineslbcne.nic.in' }, // sourced through NE-style extraction
-  'punjab':             { name: 'Punjab',          url: 'https://slbcpunjab.pnb.bank.in', aliasUrls: ['https://slbcpunjab.pnb.in'] }, // Convenor: Punjab National Bank, Chandigarh. District-wise data is priority-sector ACP only.
-  'rajasthan':          { name: 'Rajasthan',       url: 'https://slbcrajasthan.in' },
-  'sikkim':             { name: 'Sikkim',          url: 'https://onlineslbcne.nic.in' },
-  'tamil-nadu':         { name: 'Tamil Nadu',      url: 'https://slbctn.com' },
-  'telangana':          { name: 'Telangana',       url: 'https://telanganaslbc.com' },
-  'tripura':            { name: 'Tripura',         url: 'https://slbctripura.pnb.bank.in/Back_Paper_Quarterly.asp', aliasUrls: ['https://slbctripura.pnb.in'] },
-  'uttarakhand':        { name: 'Uttarakhand',     url: 'https://slbcuttarakhand.com' },
-  'west-bengal':        { name: 'West Bengal',     url: 'https://slbcwb.com' },
-  'uttar-pradesh':      { name: 'Uttar Pradesh',   url: 'https://slbcup.com' },
-};
+const SLBC_STATE_URLS: Record<string, { name: string; url: string; aliasUrls?: string[] }> =
+  Object.fromEntries(Object.entries(releaseSources.states).map(([slug, source]) => [
+    slug,
+    {
+      name: source.name,
+      url: source.url,
+      aliasUrls: 'aliasUrls' in source ? source.aliasUrls : undefined,
+    },
+  ]));
 
 // All indicators served from SLBC quarterly extraction
 const SLBC_INDICATORS = new Set<string>([

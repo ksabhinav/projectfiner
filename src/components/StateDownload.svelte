@@ -12,10 +12,17 @@
   const base = import.meta.env.BASE_URL;
 
   let masterData: any = $state(null);
+  let releaseManifest: any = $state(null);
+  let releaseMetadata: any = $state(null);
   let loading = $state(true);
   let error = $state('');
   let activeTab: 'indicator' | 'quarter' = $state('indicator');
   let downloading: Record<string, boolean> = $state({});
+
+  let releaseSource: any = $derived.by(() => {
+    const sourceId = releaseMetadata?.sourceIds?.[0];
+    return releaseManifest?.sources?.find((source: any) => source.id === sourceId);
+  });
 
   // Convert any quarter key to sortable YYYY-MM format for ordering
   function qkeyToSortable(qkey: string): string {
@@ -83,9 +90,16 @@
 
   async function loadMaster() {
     try {
-      const res = await fetch(`${base}slbc-data/${stateSlug}/${stateSlug}_complete.json`);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      masterData = await res.json();
+      const [dataResponse, manifestResponse] = await Promise.all([
+        fetch(`${base}slbc-data/${stateSlug}/${stateSlug}_complete.json`),
+        fetch(`${base}release-manifest.json`),
+      ]);
+      if (!dataResponse.ok) throw new Error(`Dataset HTTP ${dataResponse.status}`);
+      if (!manifestResponse.ok) throw new Error(`Manifest HTTP ${manifestResponse.status}`);
+      masterData = await dataResponse.json();
+      releaseManifest = await manifestResponse.json();
+      releaseMetadata = releaseManifest.states?.find((state: any) => state.slug === stateSlug);
+      if (!releaseMetadata) throw new Error('State is missing from release manifest');
     } catch (e: any) {
       error = 'Failed to load data. Please try again.';
     }
@@ -116,7 +130,7 @@
       const text = await res.text();
 
       if (fmt === 'csv') {
-        const blob = new Blob(['\ufeff' + text], { type: 'text/csv;charset=utf-8;' });
+        const blob = new Blob([text], { type: 'text/csv;charset=utf-8;' });
         saveBlob(blob, `${stateSlug}_fi_timeseries.csv`);
       } else {
         const XLSX = await import('xlsx');
@@ -161,7 +175,7 @@
 
       if (fmt === 'csv') {
         const csv = buildCsvString(headers, rows);
-        const blob = new Blob(['\ufeff' + csv], { type: 'text/csv;charset=utf-8;' });
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
         saveBlob(blob, `${stateSlug}_${cat}.csv`);
       } else {
         const XLSX = await import('xlsx');
@@ -200,7 +214,7 @@
           }
         }
         const csv = buildCsvString(headers, rows);
-        const blob = new Blob(['\ufeff' + csv], { type: 'text/csv;charset=utf-8;' });
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
         saveBlob(blob, `${stateSlug}_${qkey}.csv`);
       } else {
         const XLSX = await import('xlsx');
@@ -242,12 +256,31 @@
 <!-- District directory: links to /district/<state>/<district> landing pages -->
 <DistrictDirectory stateSlug={stateSlug} stateName={stateName} />
 
+{#if releaseMetadata}
+  <aside class="release-notice">
+    <div class="release-heading"><span>Raw / experimental</span> {releaseManifest.releaseId}</div>
+    <p>
+      {releaseMetadata.coverage.periodCount} periods · {releaseMetadata.coverage.districtCount} source labels · {releaseMetadata.coverage.categoryCount} categories.
+      Counts describe the source-derived files and are not a certification of comparable district coverage.
+    </p>
+    <p>
+      Source: <a href={releaseSource?.url} target="_blank" rel="noopener">{releaseSource?.publisher}</a>.
+      Rights have not been reviewed; public availability does not establish reuse permission.
+      <a href={`${base}data-rights/`}>Details</a>
+    </p>
+  </aside>
+{/if}
+
 <!-- Full dataset downloads -->
 <div class="sd-section-eye">Full dataset</div>
 <a class="dataset">
   <div class="dataset-eye">SLBC {stateName}</div>
   <div class="dataset-name">Complete Time-Series</div>
-  <div class="dataset-meta">All quarters × all districts × all indicators · wide-format · one row per district per quarter</div>
+  <div class="dataset-meta">
+    {releaseMetadata
+      ? `${releaseMetadata.coverage.periodCount} periods × ${releaseMetadata.coverage.districtCount} source labels × ${releaseMetadata.coverage.categoryCount} categories`
+      : 'Coverage metadata loading'} · wide-format CSV
+  </div>
   <div class="dataset-actions">
     <button class="dl-btn primary" class:downloading={downloading['ts-csv']} onclick={() => downloadTimeseries('csv')}>CSV</button>
     <button class="dl-btn" class:downloading={downloading['ts-xlsx']} onclick={() => downloadTimeseries('xlsx')}>XLSX</button>
@@ -299,6 +332,36 @@
 
 <style>
   /* ── Atlas state-download styling ── */
+
+  .release-notice {
+    margin: 22px 0 28px;
+    padding: 14px 16px;
+    border: 1px solid var(--rule, #D9D2C5);
+    border-left: 3px solid var(--gold, #8B6914);
+    background: var(--paper-deep, #ECE5D6);
+    color: var(--ink-soft, #3D332A);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+  .release-heading {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink, #1B140E);
+  }
+  .release-heading span {
+    display: inline-block;
+    margin-right: 7px;
+    padding: 2px 6px;
+    border-radius: 2px;
+    background: var(--gold, #8B6914);
+    color: white;
+    font-weight: 700;
+  }
+  .release-notice p { margin: 7px 0 0; }
+  .release-notice a { color: var(--vermillion-d, #8E331E); }
 
   /* Section eyebrow with trailing rule */
   .sd-section-eye {

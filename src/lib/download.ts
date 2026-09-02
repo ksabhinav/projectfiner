@@ -15,7 +15,7 @@ export function rowsToCsv(rows: string[][]): string {
 
 export function downloadCsv(rows: string[][], filename: string) {
   const csv = rowsToCsv(rows);
-  const blob = new Blob(['\ufeff' + csv], { type: 'text/csv;charset=utf-8;' });
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
   saveBlob(blob, filename);
 }
 

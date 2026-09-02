@@ -2,10 +2,21 @@
   import { CAPITAL_MARKETS_SOURCES, FILE_ICON_SVG } from '../lib/constants';
   import { downloadCsv, downloadXlsx } from '../lib/download';
 
+  interface Props {
+    datasets: any[];
+    sources: any[];
+  }
+
+  let { datasets, sources }: Props = $props();
+
   const base = import.meta.env.BASE_URL;
   const cache: Record<string, any[]> = {};
 
   let downloading: Record<string, boolean> = $state({});
+
+  function sourceFor(dataset: any) {
+    return sources.find(source => source.id === dataset.sourceIds[0]);
+  }
 
   async function download(id: string, fmt: 'csv' | 'xlsx') {
     const src = CAPITAL_MARKETS_SOURCES[id as keyof typeof CAPITAL_MARKETS_SOURCES];
@@ -44,16 +55,16 @@
 {/snippet}
 
 <div class="dl-grid">
-  {#each [
-    { id: 'cdsl', eye: 'CDSL', title: 'Depository participants',          count: '20,612 service centres',  source: 'CDSL website, as on 14 March 2026',  fields: ['Name','Address','DP ID','Pincode','Email','Website','State','City'] },
-    { id: 'nsdl', eye: 'NSDL', title: 'Depository participants',          count: '57,005 service centres',  source: 'NSDL website, as on 14 March 2026',  fields: ['Name','Address','DP ID','Pincode','Email','Website','Type','State','City'] },
-    { id: 'mfdi', eye: 'AMFI', title: 'MF Distributors — Individual',     count: '187,254 distributors',    source: 'AMFI website, as on 14 March 2026',  fields: ['Name','ARN','Pincode','State','Location','City'] },
-    { id: 'mfdc', eye: 'AMFI', title: 'MF Distributors — Corporate',      count: '10,760 distributors',     source: 'AMFI website, as on 14 March 2026',  fields: ['Name','ARN','Pincode','State','Location','City'] },
-  ] as ds}
+  {#each datasets as ds}
+    {@const source = sourceFor(ds)}
     <div class="dl-card">
-      <div class="dl-card-eye">{ds.eye}</div>
+      <div class="dl-card-eye">{ds.label} · raw registry</div>
       <div class="dl-card-name">{ds.title}</div>
-      <div class="dl-card-meta">{ds.count}<br>{ds.source}</div>
+      <div class="dl-card-meta">
+        {ds.recordCount.toLocaleString('en-IN')} {ds.recordLabel}<br>
+        Location-level · not district-mapped<br>
+        {source?.publisher || 'Source publisher'} · snapshot date not embedded
+      </div>
       <div class="dl-card-actions">
         <button class="dl-btn primary" class:downloading={downloading[`${ds.id}-csv`]} onclick={() => download(ds.id, 'csv')}>
           CSV
@@ -61,6 +72,7 @@
         <button class="dl-btn" class:downloading={downloading[`${ds.id}-xlsx`]} onclick={() => download(ds.id, 'xlsx')}>
           XLSX
         </button>
+        <a class="rights-link" href={`${base}data-rights/`}>Rights</a>
       </div>
     </div>
   {/each}
@@ -142,6 +154,16 @@
   }
   .dl-btn:hover { transform: translateY(-1px); }
   .dl-btn.downloading { opacity: 0.5; cursor: wait; }
+  .rights-link {
+    align-self: center;
+    margin-left: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--peacock, #1E4960);
+  }
 
   @media (max-width: 760px) {
     .dl-grid { grid-template-columns: 1fr; gap: 10px; }
