@@ -34,6 +34,7 @@ Then:
 from __future__ import annotations
 import argparse
 import calendar
+import csv
 import json
 import re
 import sys
@@ -90,6 +91,30 @@ def num(v):
 
 def fmt(x):
     return f'{x:.2f}'.rstrip('0').rstrip('.')
+
+
+def write_timeseries_csv(fi, path=CSV_PATH):
+    """Rebuild the wide export with standards-compliant CSV quoting."""
+    allf, seen = [], set()
+    for period in fi['periods']:
+        for row in period['districts']:
+            for key in row:
+                if key not in ('district', 'period') and key not in seen:
+                    allf.append(key)
+                    seen.add(key)
+    allf.sort()
+
+    with path.open('w', encoding='utf-8', newline='') as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=['district', 'period', *allf],
+            extrasaction='ignore',
+            lineterminator='\n',
+        )
+        writer.writeheader()
+        for period in fi['periods']:
+            writer.writerows(period['districts'])
+    return sum(len(period['districts']) for period in fi['periods'])
 
 
 def parse_dw_cdratio(xlsx_path):
@@ -194,20 +219,8 @@ def main():
     print(f'wrote {SLIM_PATH.relative_to(ROOT)} ({len(slim["periods"])} periods)')
 
     # ---- CSV (rebuild wide) ---------------------------------------------
-    allf, seen = [], set()
-    for p in fi['periods']:
-        for row in p['districts']:
-            for k in row:
-                if k not in ('district', 'period') and k not in seen:
-                    allf.append(k); seen.add(k)
-    allf.sort()
-    lines = ['district,period,' + ','.join(allf)]
-    for p in fi['periods']:
-        for row in p['districts']:
-            lines.append(f"{row['district']},{row['period']}," +
-                         ','.join(str(row.get(f, '')) for f in allf))
-    CSV_PATH.write_text('\n'.join(lines) + '\n')
-    print(f'wrote {CSV_PATH.relative_to(ROOT)} ({len(lines) - 1} rows)')
+    row_count = write_timeseries_csv(fi)
+    print(f'wrote {CSV_PATH.relative_to(ROOT)} ({row_count} rows)')
 
 
 if __name__ == '__main__':

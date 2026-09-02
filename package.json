@@ -14,6 +14,7 @@
     "test:js": "node --test tests/*.test.mjs",
     "test:python": "python3 -m unittest discover -s tests -p 'test_*.py'",
     "check:release-manifest": "python3 db/build_release_manifest.py --check",
+    "check:release-data": "python3 db/validate_release_data.py",
     "test": "npm run test:js && npm run test:python"
   },
   "dependencies": {
