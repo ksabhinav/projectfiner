@@ -701,7 +701,9 @@ def save_quarterly_csvs(tables, quarter_key, output_dir):
         if not districts:
             continue
 
-        snake_headers = [to_snake_case(h) for h in headers]
+        # Same disambiguation as build_complete_json, so the quarterly CSV is
+        # self-describing and future runs stay consistent with complete.json.
+        snake_headers = disambiguate_headers([to_snake_case(h) for h in headers])
         csv_path = os.path.join(quarter_dir, f"{category}.csv")
 
         with open(csv_path, 'w', newline='') as f:
@@ -746,6 +748,61 @@ def process_single_pdf(pdf_path, output_dir):
     return (quarter_key, period_name, as_on_date, tables)
 
 
+# Trailing segments on an anchor column that name a sub-measure rather than the
+# category itself — stripped when forming the base for a repeated sub-column, so
+# `branches_rural` -> base `branches` -> `branches_semi_urban` (and the base
+# matches the fallback names db/regenerate_indicator_files_from_states.py expects).
+_ANCHOR_SUFFIX_WORDS = {'t', 'a', 'no', 'amt', 'pct', 'rural', 'urban'}
+
+
+def disambiguate_headers(headers):
+    """Make a header list unique WITHOUT losing columns.
+
+    SLBC merged-header tables repeat sub-column labels (`a`/`pct` for
+    target/achievement/%, or `semi_urban`/`urban` under branches/BC/ATMs). Those
+    bare repeats used to collapse in build_complete_json's per-district dict —
+    every duplicate key overwrote the last, keeping only the final (grand-total)
+    value and silently dropping every per-subcategory value (~20k cells for
+    Odisha alone). Bind each repeat to the base of its nearest preceding UNIQUE
+    column instead: [branches_rural, semi_urban, urban, total_branches, ...] ->
+    [branches_rural, branches_semi_urban, branches_urban, total_branches, ...].
+    Lossless, and the derived names match the indicator regenerator's fallbacks.
+    """
+    from collections import Counter
+    cnt = Counter(h for h in headers if h)
+    seen = Counter()
+    out, used = [], set()
+    for i, h in enumerate(headers):
+        if not h or cnt[h] == 1:
+            out.append(h)
+            used.add(h)
+            continue
+        seen[h] += 1
+        anchor = None
+        for j in range(i - 1, -1, -1):
+            if headers[j] and cnt[headers[j]] == 1:
+                anchor = headers[j]
+                break
+        if anchor:
+            segs = anchor.split('_')
+            base = ('_'.join(segs[:-1])
+                    if len(segs) > 1 and segs[-1] in _ANCHOR_SUFFIX_WORDS else anchor)
+            name = f'{base}_{h}'
+        else:
+            # No category column to bind to (e.g. Odisha's sarfaesi CSV, which is
+            # two side-by-side tables merged by the extractor). Suffix by
+            # occurrence so NO bare name survives with a silently-flipped
+            # meaning — both values are recovered under h_1, h_2, ...
+            name = f'{h}_{seen[h]}'
+        cand, k = name, 2
+        while cand in used:
+            cand = f'{name}_{k}'
+            k += 1
+        out.append(cand)
+        used.add(cand)
+    return out
+
+
 def build_complete_json(all_quarters, output_dir):
     """Build and save odisha_complete.json from all extracted quarters."""
     complete = {
@@ -774,7 +831,9 @@ def build_complete_json(all_quarters, output_dir):
             category = table['category']
             districts = table['districts']
             headers = table['headers']
-            snake_headers = [to_snake_case(h) for h in headers]
+            # Disambiguate BEFORE keying the per-district dict, or repeated
+            # sub-column names collapse and drop every value but the last.
+            snake_headers = disambiguate_headers([to_snake_case(h) for h in headers])
 
             table_data = {
                 "fields": snake_headers,
