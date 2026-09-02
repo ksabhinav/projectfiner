@@ -5,13 +5,13 @@
    * Listens for `finer:show-finding` (fired by FindingButton).
    * Loads findings from {base}findings.json.
    *
-   * Three actions:
+   * Two actions:
    *   - Open in map  → fires camelCase events the inline JS listens to
    *                     (finer:indicatorChange + finer:quarterChange + finer:stateFilterChange)
-   *   - Read note    → /fact/<slug-or-id> (page need not exist yet — graceful 404)
    *   - Another →    → next finding
    */
-  import { onMount } from 'svelte';
+  import { onMount, tick } from 'svelte';
+  import { formatEmphasis } from '../../lib/safe-markup.js';
 
   interface Finding {
     id: string;
@@ -27,7 +27,6 @@
     metricIdx?: number;       // optional — defaults to 0
     quarter: string;          // e.g. 'Sep 2025' or '2025-09'
     scope: string;            // e.g. 'Bihar' or 'All India'
-    notePath?: string;
   }
 
   // Light fallback if findings.json fails to load
@@ -45,13 +44,14 @@
       indicator: 'kcc',
       quarter: '2025-09',
       scope: 'BIHAR',
-      notePath: 'bihar-kcc-paradox',
     },
   ];
 
   let findings = $state<Finding[]>(SAMPLE);
   let isOpen = $state(false);
   let currentIdx = $state(0);
+  let closeButton: HTMLButtonElement;
+  let previouslyFocused: HTMLElement | null = null;
   const current = $derived(findings[currentIdx % findings.length]);
 
   const base = (import.meta.env.BASE_URL || '/');
@@ -83,9 +83,16 @@
       })
       .catch(() => {});
 
-    function show() { isOpen = true; }
+    async function show() {
+      previouslyFocused = document.activeElement instanceof HTMLElement
+        ? document.activeElement
+        : null;
+      isOpen = true;
+      await tick();
+      closeButton?.focus();
+    }
     function close(e: KeyboardEvent) {
-      if (e.key === 'Escape' && isOpen) isOpen = false;
+      if (e.key === 'Escape' && isOpen) closeDialog();
     }
     window.addEventListener('finer:show-finding', show);
     window.addEventListener('keydown', close);
@@ -97,6 +104,12 @@
 
   function next() {
     currentIdx = (currentIdx + 1) % findings.length;
+  }
+
+  function closeDialog() {
+    isOpen = false;
+    previouslyFocused?.focus();
+    previouslyFocused = null;
   }
 
   function applyToMap() {
@@ -113,13 +126,7 @@
     window.dispatchEvent(new CustomEvent('finer:stateFilterChange', {
       detail: { state: stNorm },
     }));
-    isOpen = false;
-  }
-
-  function readNote() {
-    if (!current) return;
-    const slug = current.notePath || current.id;
-    window.location.href = `${base}fact/${slug}`;
+    closeDialog();
   }
 
   const today = new Date().toLocaleDateString('en-IN', {
@@ -130,10 +137,11 @@
 {#if isOpen}
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
-  <div class="backdrop" onclick={() => (isOpen = false)} role="presentation"></div>
+  <div class="backdrop" onclick={closeDialog} role="presentation"></div>
 
   <div class="card" role="dialog" aria-modal="true" aria-labelledby="finding-headline">
     <div class="strip"></div>
+    <button bind:this={closeButton} class="close-btn" type="button" onclick={closeDialog} aria-label="Close finding">×</button>
 
     <div class="meta">
       <span class="id">FINDING {current.id} / {findings.length.toString().padStart(3, '0')}</span>
@@ -143,7 +151,7 @@
     <div class="body">
       <div class="eye">{current.eyebrow}</div>
 
-      <h2 id="finding-headline" class="head">{@html current.headline}</h2>
+      <h2 id="finding-headline" class="head">{@html formatEmphasis(current.headline)}</h2>
 
       <div class="stat-row">
         <div class="stat">
@@ -155,13 +163,12 @@
         </div>
       </div>
 
-      <div class="lede">{@html current.lede}</div>
+      <div class="lede">{@html formatEmphasis(current.lede)}</div>
 
       <div class="source">{current.source}</div>
 
       <div class="actions">
         <button class="btn primary" onclick={applyToMap}>Open in map</button>
-        <button class="btn ghost" onclick={readNote}>Read the note</button>
         <button class="btn next" onclick={next}>Another →</button>
       </div>
     </div>
@@ -197,8 +204,27 @@
     height: 6px;
     background: linear-gradient(90deg, #B84A2E, #D4A24A);
   }
+  .close-btn {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #3D332A;
+    font: 24px/1 Georgia, serif;
+    cursor: pointer;
+  }
+  .close-btn:hover,
+  .close-btn:focus-visible {
+    background: #ECE5D6;
+    outline: 2px solid #B84A2E;
+    outline-offset: 2px;
+  }
   .meta {
-    padding: 14px 28px 0;
+    padding: 14px 58px 0 28px;
     display: flex; justify-content: space-between;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;

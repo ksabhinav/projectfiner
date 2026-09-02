@@ -1,5 +1,6 @@
 <script>
   import { onMount, tick } from 'svelte';
+  import { formatMarkdown } from '../lib/safe-markup.js';
 
   let question = $state('');
   let loading = $state(false);
@@ -8,27 +9,6 @@
   let messagesEl;
 
   const API_URL = 'https://projectfiner-api.vercel.app/api/ask';
-
-  function md(text) {
-    if (!text) return '';
-    return text
-      .replace(/^### (.+)$/gm, '<h4>$1</h4>')
-      .replace(/^## (.+)$/gm, '<h3>$1</h3>')
-      .replace(/^# (.+)$/gm, '<h3>$1</h3>')
-      .replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
-      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-      .replace(/\*(.+?)\*/g, '<em>$1</em>')
-      .replace(/^[\-\*] (.+)$/gm, '<li>$1</li>')
-      .replace(/^\d+\. (.+)$/gm, '<li>$1</li>')
-      .replace(/((?:<li>.*<\/li>\n?)+)/g, '<ul>$1</ul>')
-      .replace(/\n{2,}/g, '</p><p>')
-      .replace(/\n/g, '<br>')
-      .replace(/^/, '<p>')
-      .replace(/$/, '</p>')
-      .replace(/<p><(h[34]|ul)/g, '<$1')
-      .replace(/<\/(h[34]|ul)><\/p>/g, '</$1>')
-      .replace(/<p><\/p>/g, '');
-  }
 
   const SUGGESTIONS = [
     'KCC cards in Meghalaya by district?',
@@ -102,7 +82,7 @@
 
 <div class="chat">
   <!-- Messages area -->
-  <div class="thread" bind:this={messagesEl}>
+  <div class="thread" bind:this={messagesEl} aria-live="polite" aria-busy={loading}>
     {#if messages.length === 0}
       <div class="empty-state">
         <div class="empty-icon">
@@ -128,7 +108,7 @@
           <div class="bubble-row ai-row">
             <div class="avatar">F</div>
             <div class="bubble ai-bubble">
-              <div class="ai-text prose">{@html md(msg.text)}</div>
+              <div class="ai-text prose">{@html formatMarkdown(msg.text)}</div>
               {#if msg.sources?.length}
                 <div class="src-bar">
                   {#each msg.sources as src}
@@ -168,6 +148,7 @@
       bind:value={question}
       onkeydown={handleKeydown}
       placeholder="Message..."
+      aria-label="Ask FINER a question"
       disabled={loading}
       maxlength="500"
     />
@@ -178,6 +159,9 @@
       </svg>
     </button>
   </form>
+  <p class="privacy-note">
+    Questions are sent to Groq to generate answers. Do not include personal or confidential information.
+  </p>
 </div>
 
 <style>
@@ -492,6 +476,14 @@
     cursor: not-allowed;
   }
   .send-btn svg { width: 16px; height: 16px; }
+
+  .privacy-note {
+    margin: 6px 2px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    line-height: 1.4;
+    color: var(--mist, #6E665E);
+  }
 
   @media (max-width: 640px) {
     .chat { height: calc(100dvh - 160px); min-height: 320px; }

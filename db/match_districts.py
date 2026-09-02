@@ -9,7 +9,7 @@ Usage:
 
 import sqlite3
 import re
-from functools import lru_cache
+from collections import defaultdict
 
 
 class DistrictMatcher:
@@ -22,19 +22,19 @@ class DistrictMatcher:
     def _build_caches(self):
         """Build lookup caches from districts and aliases tables."""
         # Exact name → lgd_code (by state)
-        self._by_name = {}  # (norm_name, state_lgd) → lgd_code
-        self._by_name_any = {}  # norm_name → lgd_code (cross-state, for when state unknown)
+        self._by_name = defaultdict(set)  # (norm_name, state_lgd) → {lgd_code}
+        self._by_name_any = defaultdict(set)  # norm_name → {lgd_code}
 
         for lgd, name, state_lgd in self.db.execute(
             "SELECT lgd_code, name, state_lgd_code FROM districts"
         ):
             key = (self._norm(name), state_lgd)
-            self._by_name[key] = lgd
-            self._by_name_any[self._norm(name)] = lgd
+            self._by_name[key].add(lgd)
+            self._by_name_any[self._norm(name)].add(lgd)
 
         # Alias → lgd_code
-        self._by_alias = {}  # (norm_alias, state_lgd) → lgd_code
-        self._by_alias_any = {}  # norm_alias → lgd_code
+        self._by_alias = defaultdict(set)  # (norm_alias, state_lgd) → {lgd_code}
+        self._by_alias_any = defaultdict(set)  # norm_alias → {lgd_code}
 
         for alias, district_lgd in self.db.execute(
             "SELECT alias, district_lgd FROM district_aliases"
@@ -43,8 +43,8 @@ class DistrictMatcher:
                 "SELECT state_lgd_code FROM districts WHERE lgd_code=?", (district_lgd,)
             ).fetchone()
             if state_lgd:
-                self._by_alias[(self._norm(alias), state_lgd[0])] = district_lgd
-            self._by_alias_any[self._norm(alias)] = district_lgd
+                self._by_alias[(self._norm(alias), state_lgd[0])].add(district_lgd)
+            self._by_alias_any[self._norm(alias)].add(district_lgd)
 
         # State slug → state_lgd
         self._state_slug_to_lgd = {}
@@ -60,7 +60,17 @@ class DistrictMatcher:
 
     def state_lgd_from_slug(self, slug):
         """Convert state slug to LGD code."""
-        return self._state_slug_to_lgd.get(slug)
+        if not slug:
+            return None
+        return self._state_slug_to_lgd.get(str(slug).strip().lower())
+
+    @staticmethod
+    def _unique(codes):
+        """Return the only candidate, or None when absent/ambiguous."""
+        return next(iter(codes)) if len(codes) == 1 else None
+
+    def _record_unmatched(self, name, state_lgd, state_slug, source):
+        self.unmatched.append((name, state_lgd if state_lgd is not None else state_slug, source))
 
     def resolve(self, name, state_lgd=None, state_slug=None, source=None):
         """Resolve a district name to its LGD code.
@@ -76,47 +86,48 @@ class DistrictMatcher:
         if not name or not str(name).strip():
             return None
 
-        if state_slug and not state_lgd:
+        state_was_supplied = state_lgd is not None or bool(str(state_slug or '').strip())
+        if state_slug and state_lgd is None:
             state_lgd = self.state_lgd_from_slug(state_slug)
 
         norm = self._norm(name)
         if not norm:
             return None
 
-        # 1. Exact canonical name (with state)
-        if state_lgd:
-            result = self._by_name.get((norm, state_lgd))
-            if result:
-                return result
-
-        # 2. Alias match (with state)
-        if state_lgd:
-            result = self._by_alias.get((norm, state_lgd))
-            if result:
-                return result
-
-        # 3. Try stripping common suffixes
+        candidates = [norm]
         for suffix in ['DISTRICT', 'DIST', 'DT']:
-            stripped = norm.rstrip(suffix) if norm.endswith(suffix) else norm
-            if stripped != norm:
-                if state_lgd:
-                    result = self._by_name.get((stripped, state_lgd))
-                    if result:
-                        return result
-                    result = self._by_alias.get((stripped, state_lgd))
-                    if result:
-                        return result
+            if norm.endswith(suffix) and len(norm) > len(suffix):
+                candidates.append(norm[:-len(suffix)])
+                break
 
-        # 4. Cross-state fallback (no state constraint)
-        result = self._by_name_any.get(norm)
-        if result:
-            return result
-        result = self._by_alias_any.get(norm)
-        if result:
+        # Prefer state-scoped canonical names and aliases. Treat multiple matches
+        # as ambiguous rather than silently selecting whichever row loaded last.
+        if state_lgd is not None:
+            scoped_matches = set()
+            for candidate in candidates:
+                scoped_matches.update(self._by_name.get((candidate, state_lgd), set()))
+                scoped_matches.update(self._by_alias.get((candidate, state_lgd), set()))
+            result = self._unique(scoped_matches)
+            if result is not None:
+                return result
+
+        # A supplied state is a hard boundary. Never "rescue" a failed match by
+        # assigning an identically named district from another state.
+        if state_was_supplied:
+            self._record_unmatched(name, state_lgd, state_slug, source)
+            return None
+
+        # When state is genuinely unknown, resolve only globally unique names.
+        cross_state_matches = set()
+        for candidate in candidates:
+            cross_state_matches.update(self._by_name_any.get(candidate, set()))
+            cross_state_matches.update(self._by_alias_any.get(candidate, set()))
+        result = self._unique(cross_state_matches)
+        if result is not None:
             return result
 
         # Unmatched
-        self.unmatched.append((name, state_lgd or state_slug, source))
+        self._record_unmatched(name, state_lgd, state_slug, source)
         return None
 
     def add_alias(self, district_lgd, alias, source='import'):
@@ -135,8 +146,8 @@ class DistrictMatcher:
                 "SELECT state_lgd_code FROM districts WHERE lgd_code=?", (district_lgd,)
             ).fetchone()
             if state_lgd:
-                self._by_alias[(norm, state_lgd[0])] = district_lgd
-            self._by_alias_any[norm] = district_lgd
+                self._by_alias[(norm, state_lgd[0])].add(district_lgd)
+            self._by_alias_any[norm].add(district_lgd)
         except Exception:
             pass
 

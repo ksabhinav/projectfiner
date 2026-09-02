@@ -4,17 +4,17 @@ import Header from '../../components/Header.astro';
 import AskChat from '../../components/AskChat.svelte';
 ---
 
-<BaseLayout title="Ask | Project FINER" description="Ask FINER about district-level financial inclusion data — every reply cites its sources.">
+<BaseLayout title="Ask | Project FINER" description="Ask FINER about district-level financial inclusion data using retrieved SLBC excerpts.">
   <Header activeNav="ask" />
 
   <div class="ask-page">
     <div class="ask-head">
-      <div class="ask-eye">RAG over SLBC bookers · 22 states · 39 quarters</div>
+      <div class="ask-eye">Experimental · source-grounded answers</div>
       <h1 class="ask-title">
         Ask <span class="em">FINER</span>.
       </h1>
       <p class="ask-dek">
-        Natural-language questions about district-level financial inclusion. Every reply cites the SLBC meeting it draws from. The model reads ~26,000 chunks of source material — meeting agendas, indicator tables, trend summaries — to answer.
+        Natural-language questions about district-level financial inclusion. Answers use retrieved SLBC excerpts and include source labels when available. Verify important figures against the original material.
       </p>
     </div>
 
