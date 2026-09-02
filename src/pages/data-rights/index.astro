@@ -1,0 +1,122 @@
+---
+import { readFileSync } from 'node:fs';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+
+const base = import.meta.env.BASE_URL;
+const manifest = JSON.parse(readFileSync(
+  new URL('../../../public/release-manifest.json', import.meta.url), 'utf8',
+));
+const sources = manifest.sources;
+---
+
+<BaseLayout
+  title="Data rights and reuse | Project FINER"
+  description="Source-by-source rights status for Project FINER downloads. No blanket data licence is asserted for source-derived material."
+>
+  <Header />
+  <main class="rights-page">
+    <p class="eyebrow">Data governance · release {manifest.releaseId}</p>
+    <h1>Data rights and reuse</h1>
+    <p class="lede">
+      FINER makes source-derived files publicly downloadable. Public availability is not, by itself,
+      permission to copy, modify, redistribute or use data commercially.
+    </p>
+
+    <section class="notice">
+      <strong>No blanket data licence is asserted.</strong>
+      FINER has not completed a legal review of the upstream terms listed below. Each download carries
+      its source ID, rights status and a null licence field in the
+      <a href={`${base}release-manifest.json`}>machine-readable release manifest</a>.
+    </section>
+
+    <h2>How to use the current release</h2>
+    <ul>
+      <li>Treat all files as <strong>raw / experimental</strong>, not certified analysis-ready data.</li>
+      <li>Cite FINER and the named upstream publisher.</li>
+      <li>Check the publisher's current terms before reuse, redistribution or commercial use.</li>
+      <li>Do not infer that FINER's transformations override restrictions on source content.</li>
+    </ul>
+
+    <h2>Source-by-source rights matrix</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Source ID</th>
+            <th>Publisher and scope</th>
+            <th>Licence asserted</th>
+            <th>Rights status</th>
+            <th>Reuse guidance</th>
+          </tr>
+        </thead>
+        <tbody>
+          {sources.map((source: any) => (
+            <tr>
+              <td><code>{source.id}</code></td>
+              <td>
+                <a href={source.url} target="_blank" rel="noopener">{source.publisher}</a>
+                <small>{source.scope}</small>
+              </td>
+              <td>None asserted</td>
+              <td><span class="status">Not reviewed</span></td>
+              <td>{source.permittedUse}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <p class="footer-note">
+      This page reports the project's current metadata and is not legal advice. A project code licence
+      and any licence for FINER-created structure or metadata require a separate maintainer decision;
+      they would not automatically relicense third-party source content.
+    </p>
+  </main>
+</BaseLayout>
+
+<style>
+  .rights-page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 42px 32px 72px;
+    color: var(--ink, #1B140E);
+  }
+  .eyebrow {
+    margin: 0 0 10px;
+    font: 700 10px/1.4 'Inter', sans-serif;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--vermillion, #B84A2E);
+  }
+  h1, h2 { font-family: 'Fraunces', Georgia, serif; }
+  h1 { margin: 0; font-size: clamp(38px, 6vw, 58px); font-weight: 380; letter-spacing: -0.03em; }
+  h2 { margin: 38px 0 12px; font-size: 25px; font-weight: 430; }
+  .lede {
+    max-width: 760px;
+    margin: 14px 0 24px;
+    font: 18px/1.55 'Source Serif 4', Georgia, serif;
+    color: var(--ink-soft, #3D332A);
+  }
+  .notice {
+    max-width: 820px;
+    padding: 16px 18px;
+    border: 1px solid var(--rule, #D9D2C5);
+    border-left: 3px solid var(--gold, #8B6914);
+    background: var(--paper-deep, #ECE5D6);
+    font: 14px/1.55 'Source Serif 4', Georgia, serif;
+  }
+  .notice strong { display: block; margin-bottom: 4px; }
+  a { color: var(--vermillion-d, #8E331E); }
+  ul { max-width: 780px; padding-left: 22px; font: 15px/1.65 'Source Serif 4', Georgia, serif; }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--rule, #D9D2C5); }
+  table { width: 100%; border-collapse: collapse; min-width: 880px; background: var(--paper, #F4EFE6); }
+  th, td { padding: 11px 12px; border-bottom: 1px solid var(--rule, #D9D2C5); text-align: left; vertical-align: top; }
+  th { font: 700 9px/1.4 'Inter', sans-serif; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mist, #6E665E); }
+  td { font: 12.5px/1.45 'Source Serif 4', Georgia, serif; }
+  td code { font: 10px/1.4 'IBM Plex Mono', monospace; }
+  td small { display: block; margin-top: 3px; color: var(--mist, #6E665E); }
+  .status { white-space: nowrap; font: 700 9px/1.4 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gold, #8B6914); }
+  .footer-note { max-width: 800px; margin-top: 24px; color: var(--mist, #6E665E); font: 13px/1.55 'Source Serif 4', Georgia, serif; }
+  @media (max-width: 700px) { .rights-page { padding: 30px 18px 56px; } }
+</style>
