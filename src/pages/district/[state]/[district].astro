@@ -14,6 +14,7 @@
  */
 import PageLayout from '../../../layouts/PageLayout.astro';
 import DistrictPage from '../../../components/DistrictPage.svelte';
+import { mergeDistrictData } from '../../../lib/district-page-data.js';
 import indexJson from '../../../../public/districts/index.json';
 // Wayback Machine snapshot manifest — one entry per state.
 // Built by db/build_wayback_manifest.py and refreshed by the daily
@@ -29,24 +30,35 @@ export async function getStaticPaths() {
   const path = await import('node:path');
   const root = path.resolve('public/districts');
 
-  const paths = await Promise.all(
+  const canonicalPaths = await Promise.all(
     indexJson.districts.map(async (d: any) => {
-      const raw = await fs.readFile(
-        path.join(root, d.state, `${d.districtSlug}.json`),
-        'utf-8',
-      );
-      const data = JSON.parse(raw);
+      const dataFiles = d.dataFiles || [d.districtSlug];
+      const payloads = await Promise.all(dataFiles.map(async (dataFile: string) => {
+        const raw = await fs.readFile(
+          path.join(root, d.state, `${dataFile}.json`),
+          'utf-8',
+        );
+        return JSON.parse(raw);
+      }));
+      const data = mergeDistrictData(d, payloads);
       const wayback = (waybackManifest as any).states?.[d.state] ?? null;
       return {
         params: { state: d.state, district: d.districtSlug },
-        props: { data, wayback },
+        props: { data, wayback, redirectTo: null },
       };
     }),
   );
-  return paths;
+  const redirectPaths = ((indexJson as any).redirects || []).map((redirect: any) => ({
+    params: { state: redirect.state, district: redirect.districtSlug },
+    props: { data: null, wayback: null, redirectTo: redirect.to },
+  }));
+  return [...canonicalPaths, ...redirectPaths];
 }
 
-const { data, wayback } = Astro.props;
+const { data, wayback, redirectTo } = Astro.props;
+if (redirectTo) {
+  return Astro.redirect(redirectTo, 301);
+}
 const base = import.meta.env.BASE_URL;
 
 const stateLabel = data.stateLabel;
@@ -59,7 +71,7 @@ const latestLabel = latestQuarter
 // Page-level SEO copy. The first 155 chars become the Google snippet.
 const description = `${districtName}, ${stateLabel} — financial inclusion data across ${
   Object.keys(data.indicators).length
-} indicators: credit-deposit ratio, PMJDY, KCC, SHG, branches and more. Updated ${latestLabel}. Free & open dataset from Project FINER.`;
+} indicators: credit-deposit ratio, PMJDY, KCC, SHG, branches and more. Updated ${latestLabel}. Public research preview from Project FINER.`;
 
 // Headline metrics shown in the subtitle: pull a few popular ones if present.
 const headlinePairs: Array<{ label: string; value: string; unit: string }> = [];
@@ -79,14 +91,13 @@ for (const k of showcase) {
 // each district as a discoverable dataset of its own.
 const SITE = 'https://projectfiner.com';
 const pageUrl = `${SITE}/district/${data.state}/${data.districtSlug}/`;
-const distributionUrl = `${SITE}/districts/${data.state}/${data.districtSlug}.json`;
 const datasetLd = {
   '@context': 'https://schema.org',
   '@type': 'Dataset',
   name: `${districtName} (${stateLabel}) — Financial Inclusion Indicators`,
   description,
   url: pageUrl,
-  identifier: pageUrl,
+  identifier: `urn:lgd:district:${data.lgdCode}`,
   keywords: [
     'financial inclusion', 'India', districtName, stateLabel,
     'PMJDY', 'KCC', 'SHG', 'credit-deposit ratio', 'SLBC',
@@ -94,6 +105,7 @@ const datasetLd = {
   spatialCoverage: {
     '@type': 'Place',
     name: `${districtName}, ${stateLabel}, India`,
+    identifier: `urn:lgd:district:${data.lgdCode}`,
   },
   temporalCoverage: latestQuarter
     ? `2015-03/${latestQuarter}`
@@ -113,17 +125,11 @@ const datasetLd = {
   distribution: [
     {
       '@type': 'DataDownload',
-      encodingFormat: 'application/json',
-      contentUrl: distributionUrl,
-    },
-    {
-      '@type': 'DataDownload',
       encodingFormat: 'text/csv',
       contentUrl: `${SITE}/slbc-data/${data.state}/${data.state}_fi_timeseries.csv`,
     },
   ],
   isAccessibleForFree: true,
-  license: 'https://github.com/ksabhinav/projectfiner/blob/main/LICENSE',
 };
 
 const subtitleHtml = [

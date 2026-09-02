@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "description": "Reviewed aliases used to resolve legacy district-page labels to state-scoped LGD identities.",
+  "aliases": [
+    { "state": "andaman-nicobar", "alias": "Nicobar", "district_lgd": 603, "reason": "spelling_variant" },
+    { "state": "andaman-nicobar", "alias": "South Andaman", "district_lgd": 602, "reason": "spelling_variant" },
+    { "state": "bihar", "alias": "Kaimur", "district_lgd": 200, "reason": "short_name" },
+    { "state": "bihar", "alias": "Pashchimi Champaran", "district_lgd": 211, "reason": "spelling_variant" },
+    { "state": "haryana", "alias": "Charkhi Dadri", "district_lgd": 701, "reason": "spelling_variant" },
+    { "state": "haryana", "alias": "Mewat", "district_lgd": 604, "reason": "former_name" },
+    { "state": "himachal-pradesh", "alias": "Lahaul & Spiti", "district_lgd": 21, "reason": "spelling_variant" },
+    { "state": "himachal-pradesh", "alias": "Lahaul And Spiti", "district_lgd": 21, "reason": "spelling_variant" },
+    { "state": "jammu-kashmir", "alias": "Bandipore", "district_lgd": 623, "reason": "spelling_variant" },
+    { "state": "madhya-pradesh", "alias": "Hoshangabad", "district_lgd": 409, "reason": "former_name" },
+    { "state": "punjab", "alias": "Firozepur", "district_lgd": 31, "reason": "spelling_variant" },
+    { "state": "sikkim", "alias": "East Sikkim", "district_lgd": 225, "reason": "former_name" },
+    { "state": "sikkim", "alias": "North Sikkim", "district_lgd": 226, "reason": "former_name" },
+    { "state": "sikkim", "alias": "South Sikkim", "district_lgd": 227, "reason": "former_name" },
+    { "state": "sikkim", "alias": "West Sikkim", "district_lgd": 228, "reason": "former_name" },
+    { "state": "tamil-nadu", "alias": "Kallakkurichi", "district_lgd": 729, "reason": "spelling_variant" },
+    { "state": "west-bengal", "alias": "Purba Medinipur", "district_lgd": 317, "reason": "alternate_name" },
+    { "state": "west-bengal", "alias": "Uttar Dinajpur", "district_lgd": 311, "reason": "alternate_name" }
+  ]
+}

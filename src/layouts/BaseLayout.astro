@@ -6,7 +6,7 @@ interface Props {
       Defaults to the current page's pathname when omitted. */
   path?: string;
   /** Per-page Schema.org JSON-LD object(s). Rendered after the site-wide
-      Organization/Dataset/WebSite blocks. Pass a single object or an array.
+      Organization/WebSite blocks. Pass a single object or an array.
       Used by per-district pages to inject a Dataset-per-district. */
   extraJsonLd?: Record<string, unknown> | Record<string, unknown>[];
   /** Absolute or site-relative URL of the OG card for this page. Falls back
@@ -15,7 +15,7 @@ interface Props {
   ogImage?: string;
 }
 
-const defaultDescription = 'Project FINER — open, interactive maps and downloadable datasets covering financial inclusion across India. District-level data on 20+ indicators across 800+ districts: PMJDY, KCC, SHG, MUDRA, RBI banking outlets, capital markets, UPI digital payments, NFHS health insurance, and more.';
+const defaultDescription = 'Project FINER is a public research preview of district-level financial-inclusion data assembled from SLBC and other source datasets. Coverage, periods and comparability vary by indicator and state.';
 const { title, description = defaultDescription, path, extraJsonLd, ogImage } = Astro.props;
 const extraJsonLdArray = Array.isArray(extraJsonLd) ? extraJsonLd : (extraJsonLd ? [extraJsonLd] : []);
 
@@ -28,8 +28,8 @@ const SITE = 'https://projectfiner.com';
 const pagePath = path ?? Astro.url.pathname;
 const canonicalUrl = SITE + (pagePath.endsWith('/') ? pagePath : pagePath + '/');
 
-// JSON-LD structured data — tells Google "this is a dataset platform run by Project FINER".
-// Rendered once per page from BaseLayout so every page is described.
+// Site-wide identity metadata. Dataset metadata belongs on the pages that can
+// describe their actual coverage and provenance without implying blanket rights.
 const orgLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -40,30 +40,12 @@ const orgLd = {
   email: 'mail@projectfiner.com',
   sameAs: ['https://github.com/ksabhinav/projectfiner'],
 };
-const datasetLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Dataset',
-  name: 'Project FINER — Financial Inclusion in India',
-  description: 'District-level financial inclusion data for India: SLBC banking indicators, RBI DBIE banking outlets, NRLM SHGs, PhonePe UPI, NFHS health insurance, UIDAI Aadhaar enrolment, SHRUG-derived wealth and infrastructure layers. 800+ districts, 20+ indicators, quarterly time series back to 2015.',
-  url: SITE,
-  keywords: ['financial inclusion', 'India', 'PMJDY', 'Jan Dhan', 'KCC', 'SHG', 'MUDRA', 'UPI', 'SLBC', 'banking', 'choropleth', 'district', 'NFHS', 'RBI'],
-  spatialCoverage: 'India',
-  temporalCoverage: '2015-03/..',
-  creator: { '@type': 'Organization', name: 'Project FINER', url: SITE },
-  license: 'https://github.com/ksabhinav/projectfiner/blob/main/LICENSE',
-  isAccessibleForFree: true,
-};
 const webSiteLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Project FINER',
   url: SITE,
   description: defaultDescription,
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: { '@type': 'EntryPoint', urlTemplate: `${SITE}/ask/?q={search_term_string}` },
-    'query-input': 'required name=search_term_string',
-  },
 };
 ---
 
@@ -103,9 +85,8 @@ const webSiteLd = {
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={resolvedOgImage} />
 
-  <!-- JSON-LD structured data — Organization + Dataset + WebSite SearchAction -->
+  <!-- JSON-LD structured data — Organization + WebSite -->
   <script type="application/ld+json" set:html={JSON.stringify(orgLd)} />
-  <script type="application/ld+json" set:html={JSON.stringify(datasetLd)} />
   <script type="application/ld+json" set:html={JSON.stringify(webSiteLd)} />
   {extraJsonLdArray.map((ld) => (
     <script type="application/ld+json" set:html={JSON.stringify(ld)} />
