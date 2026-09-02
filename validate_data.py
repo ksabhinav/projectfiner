@@ -10,13 +10,14 @@ Usage:
 """
 
 import argparse
+import hashlib
 import json
 import math
 import os
 import re
 import sys
 from collections import defaultdict
-from datetime import datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
@@ -177,6 +178,119 @@ class Issue:
 
     def __repr__(self):
         return f"[{self.severity.upper()}] {self.state}/{self.district} | {self.field} @ {self.period}: {self.message}"
+
+
+def issue_key(issue):
+    """Stable observation-level identity, excluding changeable message text."""
+    return "\x1f".join(str(value) for value in (
+        issue.state,
+        issue.issue_type,
+        issue.district,
+        issue.field,
+        issue.period,
+    ))
+
+
+def issue_fingerprint(issue):
+    """SHA-256 identity used by the reviewed waiver ledger."""
+    return hashlib.sha256(issue_key(issue).encode("utf-8")).hexdigest()
+
+
+def build_waiver_ledger(criticals, created_on, expires_on):
+    fingerprints = sorted(issue_fingerprint(issue) for issue in criticals)
+    return {
+        "_comment": (
+            "Exact observation-level fingerprints of legacy critical findings. "
+            "A new fingerprint always fails CI, even when another finding is fixed. "
+            "Remove resolved fingerprints during review; never regenerate wholesale."
+        ),
+        "schema_version": 1,
+        "fingerprint_algorithm": "sha256-v1",
+        "waiver": {
+            "id": f"FINER-LEGACY-CRITICAL-{created_on.isoformat()}",
+            "reason": "Legacy critical findings present when exact-identity gating was introduced.",
+            "created_on": created_on.isoformat(),
+            "expires_on": expires_on.isoformat(),
+        },
+        "total_waived": len(fingerprints),
+        "fingerprints": fingerprints,
+    }
+
+
+def write_waiver_ledger(path, ledger):
+    """Write fingerprints in 16 reviewable shards instead of one 2 MB JSON file."""
+    path.mkdir(parents=True, exist_ok=True)
+    shard_names = [f"{prefix}.txt" for prefix in "0123456789abcdef"]
+    fingerprints = ledger["fingerprints"]
+    manifest = {key: value for key, value in ledger.items() if key != "fingerprints"}
+    manifest["shards"] = shard_names
+    (path / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+    for shard_name in shard_names:
+        prefix = shard_name[0]
+        values = [value for value in fingerprints if value.startswith(prefix)]
+        (path / shard_name).write_text("\n".join(values) + ("\n" if values else ""))
+
+
+def load_waiver_ledger(path):
+    """Load a sharded waiver directory (or a legacy single JSON ledger)."""
+    if path.is_file():
+        return json.loads(path.read_text())
+    manifest = json.loads((path / "manifest.json").read_text())
+    shard_names = manifest.get("shards")
+    if not isinstance(shard_names, list) or not shard_names:
+        raise ValueError("waiver manifest shards must be a non-empty array")
+    fingerprints = []
+    for shard_name in shard_names:
+        if not isinstance(shard_name, str) or not re.fullmatch(r"[0-9a-f]\.txt", shard_name):
+            raise ValueError(f"invalid waiver shard name: {shard_name!r}")
+        fingerprints.extend((path / shard_name).read_text().splitlines())
+    manifest["fingerprints"] = fingerprints
+    return manifest
+
+
+def evaluate_waiver_ledger(criticals, ledger, today=None):
+    """Return (unwaived issues, resolved fingerprints, ledger errors)."""
+    errors = []
+    today = today or date.today()
+    if not isinstance(ledger, dict):
+        return list(criticals), [], ["waiver ledger root must be an object"]
+    if ledger.get("schema_version") != 1:
+        errors.append("waiver ledger schema_version must be 1")
+    if ledger.get("fingerprint_algorithm") != "sha256-v1":
+        errors.append("waiver ledger fingerprint_algorithm must be sha256-v1")
+
+    fingerprints = ledger.get("fingerprints")
+    if not isinstance(fingerprints, list) or not all(isinstance(item, str) for item in fingerprints):
+        errors.append("waiver ledger fingerprints must be an array of strings")
+        fingerprints = []
+    elif fingerprints != sorted(set(fingerprints)):
+        errors.append("waiver ledger fingerprints must be sorted and unique")
+    elif not all(re.fullmatch(r"[0-9a-f]{64}", item) for item in fingerprints):
+        errors.append("waiver ledger fingerprints must be lowercase SHA-256 hex strings")
+    if ledger.get("total_waived") != len(fingerprints):
+        errors.append("waiver ledger total_waived does not match fingerprints")
+
+    waiver = ledger.get("waiver")
+    if not isinstance(waiver, dict):
+        errors.append("waiver ledger waiver must be an object")
+        waiver = {}
+    for field in ("id", "reason", "created_on"):
+        if not isinstance(waiver.get(field), str) or not waiver[field].strip():
+            errors.append(f"waiver ledger {field} must be a non-empty string")
+    expiry_text = waiver.get("expires_on")
+    try:
+        expiry = date.fromisoformat(expiry_text)
+    except (TypeError, ValueError):
+        errors.append("waiver ledger expires_on must be an ISO date")
+    else:
+        if today > expiry:
+            errors.append(f"waiver ledger expired on {expiry.isoformat()}")
+
+    current = {issue_fingerprint(issue): issue for issue in criticals}
+    waived = set(fingerprints)
+    unwaived = [current[key] for key in sorted(current.keys() - waived)]
+    resolved = sorted(waived - current.keys())
+    return unwaived, resolved, errors
 
 
 # ── Validators ─────────────────────────────────────────────────────────────────
@@ -626,13 +740,14 @@ def main():
                         help="Validate a single state (slug, e.g. 'assam' or 'west-bengal')")
     parser.add_argument("--verbose", action="store_true",
                         help="Show detailed progress output")
-    parser.add_argument("--baseline", type=str, default=None,
-                        help="Path to a JSON baseline of accepted critical issues. "
-                             "Exit 1 only for criticals NOT in the baseline, so CI "
-                             "gates on regressions instead of pre-existing debt.")
-    parser.add_argument("--write-baseline", type=str, default=None,
-                        help="Write the current critical issues to this path and exit 0. "
-                             "Re-run after triaging a finding as faithful-to-source.")
+    parser.add_argument("--waivers", type=str, default=None,
+                        help="Path to the reviewed observation-level critical waiver ledger. "
+                             "Every new fingerprint fails independently.")
+    parser.add_argument("--write-waivers", type=str, default=None,
+                        help="Bootstrap an exact waiver ledger from current critical issues. "
+                             "Use once; do not overwrite a reviewed ledger wholesale.")
+    parser.add_argument("--waiver-days", type=int, default=90,
+                        help="Validity period used only with --write-waivers (default: 90).")
     args = parser.parse_args()
 
     if not SLBC_DIR.exists():
@@ -662,61 +777,53 @@ def main():
 
     has_critical = generate_report(all_issues, states)
 
-    # Stable identity for an issue: everything except the human-readable
-    # message, which embeds values that legitimately change each quarter.
-    def issue_key(i):
-        return "|".join(str(x) for x in
-                        (i.state, i.issue_type, i.district, i.field, i.period))
-
     criticals = [i for i in all_issues if i.severity == Issue.CRITICAL]
 
-    # Counts per (state, issue_type) rather than a list of every issue key:
-    # the full set is ~29k entries / 2.2 MB, too noisy to review in a diff.
-    # Counts stay small, read clearly in review, and catch the regression that
-    # actually matters — a bad extraction run adding issues.
-    def count_map(items):
-        c = defaultdict(int)
-        for i in items:
-            c[f"{i.state}|{i.issue_type}"] += 1
-        return dict(sorted(c.items()))
-
-    current = count_map(criticals)
-
-    if args.write_baseline:
-        payload = {
-            "_comment": "Per-(state, issue_type) counts of critical issues accepted as "
-                        "known debt. `--baseline` fails when any count RISES, so new "
-                        "breakage is caught while pre-existing findings don't block "
-                        "deploys. Lower a number whenever you fix something; "
-                        "regenerate wholesale with --write-baseline.",
-            "total_critical": len(criticals),
-            "counts": current,
-        }
-        Path(args.write_baseline).write_text(json.dumps(payload, indent=2) + "\n")
-        print(f"\nWrote baseline: {args.write_baseline} "
-              f"({len(criticals)} criticals across {len(current)} state/type buckets)\n")
+    if args.write_waivers:
+        if args.waiver_days < 1:
+            print("ERROR: --waiver-days must be positive", file=sys.stderr)
+            sys.exit(2)
+        created_on = date.today()
+        ledger = build_waiver_ledger(
+            criticals,
+            created_on=created_on,
+            expires_on=created_on + timedelta(days=args.waiver_days),
+        )
+        write_waiver_ledger(Path(args.write_waivers), ledger)
+        print(f"\nWrote waiver ledger: {args.write_waivers} "
+              f"({len(criticals)} exact fingerprints; expires "
+              f"{ledger['waiver']['expires_on']})\n")
         sys.exit(0)
 
-    if args.baseline:
-        bp = Path(args.baseline)
-        if not bp.exists():
-            print(f"ERROR: baseline not found: {bp}", file=sys.stderr)
+    if args.waivers:
+        waiver_path = Path(args.waivers)
+        if not waiver_path.exists():
+            print(f"ERROR: waiver ledger not found: {waiver_path}", file=sys.stderr)
             sys.exit(2)
-        base = json.loads(bp.read_text()).get("counts", {})
-        risen = {k: (base.get(k, 0), v) for k, v in current.items() if v > base.get(k, 0)}
-        fixed = {k: (b, current.get(k, 0)) for k, b in base.items() if current.get(k, 0) < b}
-        print(f"\nBaseline: {sum(base.values())} accepted, {len(criticals)} critical now.")
-        if fixed:
-            print(f"  {len(fixed)} bucket(s) improved — lower them in the baseline:")
-            for k, (b, c) in sorted(fixed.items())[:10]:
-                print(f"    {k}: {b} -> {c}")
-        if risen:
-            print(f"\nResult: {len(risen)} bucket(s) REGRESSED. Exit code 1.\n")
-            for k, (b, c) in sorted(risen.items()):
-                print(f"    {k}: {b} -> {c}  (+{c - b})")
-            print("\n  See DATA_VALIDATION_REPORT.md for detail.\n")
+        try:
+            ledger = load_waiver_ledger(waiver_path)
+        except (OSError, ValueError, json.JSONDecodeError) as exc:
+            print(f"ERROR: invalid waiver ledger: {exc}", file=sys.stderr)
+            sys.exit(2)
+        unwaived, resolved, ledger_errors = evaluate_waiver_ledger(criticals, ledger)
+        print(f"\nWaivers: {ledger.get('total_waived', 0)} exact fingerprints; "
+              f"{len(criticals)} critical now.")
+        if resolved:
+            print(f"  {len(resolved)} waived finding(s) are resolved; remove their fingerprints in review.")
+        if ledger_errors:
+            print("\nResult: invalid waiver ledger. Exit code 1.")
+            for error in ledger_errors:
+                print(f"  - {error}")
             sys.exit(1)
-        print("\nResult: No regressions. Exit code 0.\n")
+        if unwaived:
+            print(f"\nResult: {len(unwaived)} NEW unwaived critical finding(s). Exit code 1.\n")
+            for issue in unwaived[:20]:
+                print(f"  {issue_fingerprint(issue)}  {issue}")
+            if len(unwaived) > 20:
+                print(f"  ...and {len(unwaived) - 20} more")
+            print("\n  Fix the findings or add individually reviewed fingerprints with an expiry.\n")
+            sys.exit(1)
+        print("\nResult: No new critical fingerprints. Exit code 0.\n")
         sys.exit(0)
 
     if has_critical:
