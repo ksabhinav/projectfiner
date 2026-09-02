@@ -1,5 +1,5 @@
 """
-RAG endpoint: BM25 search over SLBC NE meeting documents + Claude for answering.
+RAG endpoint: BM25 search over SLBC meeting documents + Llama via Groq.
 
 POST /api/ask
 Request:  { "question": "What KCC targets were set for Assam in 2024?" }
@@ -11,17 +11,49 @@ import re
 import json
 import urllib.request
 from http.server import BaseHTTPRequestHandler
+from threading import Lock
 
-# ── Load index at cold start (from Cloudflare R2) ────────────
+MAX_BODY_BYTES = 4096
+DEFAULT_ALLOWED_ORIGINS = {
+    "https://projectfiner.com",
+    "https://www.projectfiner.com",
+}
 
-R2_BASE = "https://data.projectfiner.com/rag"
+
+def _allowed_origins():
+    """Return production origins plus optional comma-separated deployment overrides."""
+    configured = {
+        origin.strip().rstrip("/")
+        for origin in os.environ.get("ALLOWED_ORIGINS", "").split(",")
+        if origin.strip()
+    }
+    return DEFAULT_ALLOWED_ORIGINS | configured
+
+# ── Load index lazily from Cloudflare R2 ─────────────────────
+
+R2_BASE = os.environ.get("RAG_INDEX_BASE", "https://data.projectfiner.com/rag").rstrip("/")
+CHUNKS = None
+BM25 = None
+_INDEX_LOCK = Lock()
 
 def _fetch_json(url):
     with urllib.request.urlopen(url, timeout=30) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
-CHUNKS = _fetch_json(f"{R2_BASE}/chunks.json")
-BM25   = _fetch_json(f"{R2_BASE}/bm25_params.json")
+
+def _load_index():
+    """Load both index files atomically so a transient R2 error does not break import."""
+    global CHUNKS, BM25
+    if CHUNKS is not None and BM25 is not None:
+        return
+
+    with _INDEX_LOCK:
+        if CHUNKS is not None and BM25 is not None:
+            return
+        chunks = _fetch_json(f"{R2_BASE}/chunks.json")
+        bm25 = _fetch_json(f"{R2_BASE}/bm25_params.json")
+        CHUNKS = chunks
+        BM25 = bm25
 
 
 # ── BM25 Search ──────────────────────────────────────────────
@@ -31,6 +63,7 @@ def tokenize(text):
 
 
 def bm25_search(query, top_k=8, state_filter=None):
+    _load_index()
     query_tokens = tokenize(query)
     idf = BM25["idf"]
     doc_tfs = BM25["doc_tfs"]
@@ -194,16 +227,50 @@ def detect_state_in_query(question):
 
 class handler(BaseHTTPRequestHandler):
     def do_POST(self):
-        content_length = int(self.headers.get("Content-Length", 0))
+        if not self._origin_is_allowed():
+            self._respond(403, {"error": "Origin not allowed"})
+            return
+
+        if os.environ.get("ASK_API_ENABLED", "true").lower() not in {"1", "true", "yes"}:
+            self._respond(503, {"error": "Answer service is temporarily unavailable"})
+            return
+
+        content_type = self.headers.get("Content-Type", "").split(";", 1)[0].strip().lower()
+        if content_type != "application/json":
+            self._respond(415, {"error": "Content-Type must be application/json"})
+            return
+
+        try:
+            content_length = int(self.headers.get("Content-Length", ""))
+        except (TypeError, ValueError):
+            self._respond(411, {"error": "Valid Content-Length required"})
+            return
+
+        if content_length <= 0:
+            self._respond(400, {"error": "Request body is required"})
+            return
+        if content_length > MAX_BODY_BYTES:
+            self._respond(413, {"error": "Request body too large"})
+            return
+
         body = self.rfile.read(content_length)
 
         try:
             data = json.loads(body)
-        except json.JSONDecodeError:
+        except (json.JSONDecodeError, UnicodeDecodeError):
             self._respond(400, {"error": "Invalid JSON"})
             return
 
-        question = data.get("question", "").strip()
+        if not isinstance(data, dict):
+            self._respond(400, {"error": "JSON body must be an object"})
+            return
+
+        question_value = data.get("question", "")
+        if not isinstance(question_value, str):
+            self._respond(400, {"error": "'question' must be a string"})
+            return
+
+        question = question_value.strip()
         if not question:
             self._respond(400, {"error": "Missing 'question' field"})
             return
@@ -213,7 +280,11 @@ class handler(BaseHTTPRequestHandler):
             return
 
         # Optional state filter — explicit or auto-detected from query
-        state_filter = data.get("state", "").strip() or None
+        state_value = data.get("state", "")
+        if state_value is not None and not isinstance(state_value, str):
+            self._respond(400, {"error": "'state' must be a string"})
+            return
+        state_filter = (state_value or "").strip() or None
         if not state_filter:
             state_filter = detect_state_in_query(question)
 
@@ -276,7 +347,8 @@ class handler(BaseHTTPRequestHandler):
         try:
             answer = ask_llama(question, context_chunks)
         except Exception as e:
-            self._respond(500, {"error": f"Groq API error: {str(e)}"})
+            print(f"Groq request failed ({type(e).__name__}): {e}")
+            self._respond(502, {"error": "Answer service is temporarily unavailable"})
             return
 
         sources = [
@@ -294,15 +366,33 @@ class handler(BaseHTTPRequestHandler):
         self._respond(200, {"answer": answer, "sources": sources})
 
     def do_OPTIONS(self):
-        self.send_response(200)
-        self.send_header("Access-Control-Allow-Origin", "*")
+        if not self._origin_is_allowed():
+            self._respond(403, {"error": "Origin not allowed"})
+            return
+
+        self.send_response(204)
+        self._send_cors_headers()
         self.send_header("Access-Control-Allow-Methods", "POST, OPTIONS")
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Max-Age", "86400")
+        self.send_header("Cache-Control", "no-store")
         self.end_headers()
+
+    def _origin_is_allowed(self):
+        origin = self.headers.get("Origin")
+        return not origin or origin.rstrip("/") in _allowed_origins()
+
+    def _send_cors_headers(self):
+        origin = self.headers.get("Origin")
+        if origin and origin.rstrip("/") in _allowed_origins():
+            self.send_header("Access-Control-Allow-Origin", origin.rstrip("/"))
+            self.send_header("Vary", "Origin")
 
     def _respond(self, status, data):
         self.send_response(status)
-        self.send_header("Content-Type", "application/json")
-        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Cache-Control", "no-store")
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self._send_cors_headers()
         self.end_headers()
-        self.wfile.write(json.dumps(data).encode())
+        self.wfile.write(json.dumps(data).encode("utf-8"))

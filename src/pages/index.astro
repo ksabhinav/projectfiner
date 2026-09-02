@@ -199,6 +199,15 @@ const base = import.meta.env.BASE_URL;
     var NE_FOCUS_STATES = ['ASSAM','MANIPUR','MIZORAM','NAGALAND','TRIPURA','SIKKIM'];
     var NE_FOCUS_BOUNDS = L.latLngBounds(L.latLng(21.5, 88), L.latLng(29.5, 97.5));
 
+    function escapeHtml(value) {
+      return String(value == null ? '' : value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
     window.addEventListener('finer:stateFilterChange', function(e) {
       bankingStateFilter = e.detail.state;
       // syncUrl() (defined further down) writes state + indicator + metric +
@@ -1173,8 +1182,8 @@ const base = import.meta.env.BASE_URL;
               // for the active metric, mono meta line at foot.
               var tip = '<div class="dist-tooltip">'
                 + '<div class="dtt-head">'
-                + '<div class="dtt-name">' + p.DISTRICT + '</div>'
-                + '<div class="dtt-state">' + p.STATE_UT + '</div>'
+                + '<div class="dtt-name">' + escapeHtml(p.DISTRICT) + '</div>'
+                + '<div class="dtt-state">' + escapeHtml(p.STATE_UT) + '</div>'
                 + '</div>';
               if (data) {
                 // Find the active metric value
@@ -1188,10 +1197,10 @@ const base = import.meta.env.BASE_URL;
                 var bigNum = unitMatch ? unitMatch[1].trim() : activeFmt;
                 var bigUnit = unitMatch ? unitMatch[2].trim() : '';
                 tip += '<div class="dtt-stat-block">'
-                  + '<div class="dtt-stat">' + bigNum
-                  + (bigUnit ? '<span class="dtt-stat-unit">' + bigUnit + '</span>' : '')
+                  + '<div class="dtt-stat">' + escapeHtml(bigNum)
+                  + (bigUnit ? '<span class="dtt-stat-unit">' + escapeHtml(bigUnit) + '</span>' : '')
                   + '</div>'
-                  + '<div class="dtt-stat-label">' + activeLabel + '</div>'
+                  + '<div class="dtt-stat-label">' + escapeHtml(activeLabel) + '</div>'
                   + '</div>';
                 // Other metrics as a tight list
                 var otherCount = 0;
@@ -1202,8 +1211,8 @@ const base = import.meta.env.BASE_URL;
                   var u = data.units ? data.units[label] : '';
                   var formatted = val !== null && val !== undefined ? fmtWithUnit(val, u) : '—';
                   others += '<div class="dtt-row">'
-                    + '<span class="dtt-label">' + label + '</span>'
-                    + '<span class="dtt-val">' + formatted + '</span>'
+                    + '<span class="dtt-label">' + escapeHtml(label) + '</span>'
+                    + '<span class="dtt-val">' + escapeHtml(formatted) + '</span>'
                     + '</div>';
                   otherCount++;
                   if (otherCount >= 4) break;
@@ -1213,18 +1222,18 @@ const base = import.meta.env.BASE_URL;
                 var sourceQ = data.fallbackQuarter || currentQuarter;
                 var indKey = (window.__FINER && window.__FINER.indicator) ? window.__FINER.indicator.replace(/_/g, ' ') : 'SLBC';
                 tip += '<div class="dtt-meta">'
-                  + '<span>' + indKey.toUpperCase() + '</span>'
-                  + '<span>' + fmtQuarter(sourceQ).toUpperCase() + '</span>'
+                  + '<span>' + escapeHtml(indKey.toUpperCase()) + '</span>'
+                  + '<span>' + escapeHtml(fmtQuarter(sourceQ).toUpperCase()) + '</span>'
                   + '</div>';
                 if (data.fallbackQuarter) {
-                  tip += '<div class="dtt-fallback">' + fmtQuarter(data.fallbackQuarter) + ' (latest available)</div>';
+                  tip += '<div class="dtt-fallback">' + escapeHtml(fmtQuarter(data.fallbackQuarter)) + ' (latest available)</div>';
                 }
                 if (data.inheritedFrom) {
                   // New (post-2020) district whose SLBC source still reports
                   // under the pre-reorg parent. Disclose the inheritance so
                   // the colour isn't misread as the carved district's own data.
                   tip += '<div class="dtt-fallback">Reported under '
-                    + data.inheritedFrom + ' (pre-reorg SLBC structure)</div>';
+                    + escapeHtml(data.inheritedFrom) + ' (pre-reorg SLBC structure)</div>';
                 }
               } else {
                 tip += '<div class="dtt-empty">No data available</div>';
@@ -1269,8 +1278,8 @@ const base = import.meta.env.BASE_URL;
 
       var u = metric.unit || '';
       var unitLabel = u === '₹' ? ' (₹ Lakhs)' : u === '%' ? ' (%)' : '';
-      var html = '<strong>' + ind.title + '</strong><br>'
-        + '<span style="font-size:9px;color:#888078">' + fmtQuarter(currentQuarter) + unitLabel + '</span><br>'
+      var html = '<strong>' + escapeHtml(ind.title) + '</strong><br>'
+        + '<span style="font-size:9px;color:#888078">' + escapeHtml(fmtQuarter(currentQuarter)) + escapeHtml(unitLabel) + '</span><br>'
         + '<span style="color:#3d7a8e">' + withData + '</span> districts with data<br>'
         + 'Avg: <strong>' + fmtWithUnit(avg, u) + '</strong><br>'
         + 'Min: ' + fmtWithUnit(min, u) + ' · Max: ' + fmtWithUnit(max, u);
@@ -2051,9 +2060,9 @@ const base = import.meta.env.BASE_URL;
             (v >= 1000 ? Math.round(v).toLocaleString() : v.toFixed(2)) : 'N/A';
           var metricLabel = metricSel ? metricSel.options[metricSel.selectedIndex].text : metric;
           layer.bindTooltip(
-            '<strong>' + props.SUB_DIST + '</strong><br>' +
-            '<span style="font-size:9px;color:#888">' + props.DISTRICT + ', ' + props.STATE_UT + '</span><br>' +
-            '<span style="font-size:11px">' + metricLabel + ': <b>' + vStr + '</b></span>',
+            '<strong>' + escapeHtml(props.SUB_DIST) + '</strong><br>' +
+            '<span style="font-size:9px;color:#888">' + escapeHtml(props.DISTRICT) + ', ' + escapeHtml(props.STATE_UT) + '</span><br>' +
+            '<span style="font-size:11px">' + escapeHtml(metricLabel) + ': <b>' + escapeHtml(vStr) + '</b></span>',
             { sticky: true, className: 'choro-tip' }
           );
         }

@@ -296,6 +296,14 @@ const base = import.meta.env.BASE_URL;
   function norm(s) {
     return (s || '').toUpperCase().replace(/-/g, ' ').replace(/\./g, '').replace(/\s+/g, ' ').trim();
   }
+  function escapeHtml(value) {
+    return String(value == null ? '' : value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
   function pearson(xs, ys) {
     const n = xs.length;
     if (n < 3) return null;
@@ -485,8 +493,8 @@ const base = import.meta.env.BASE_URL;
     const pills = [
       `<span class="stat-pill strong">${points.length} districts</span>`,
       r !== null ? `<span class="stat-pill">Pearson r = ${r >= 0 ? '+' : ''}${r.toFixed(2)}</span>` : '',
-      `<span class="stat-pill">${xMetObj.label} (${xScale})</span>`,
-      `<span class="stat-pill">${yMetObj.label} (${yScale})</span>`,
+      `<span class="stat-pill">${escapeHtml(xMetObj.label)} (${escapeHtml(xScale)})</span>`,
+      `<span class="stat-pill">${escapeHtml(yMetObj.label)} (${escapeHtml(yScale)})</span>`,
     ].filter(Boolean).join(' ');
     document.getElementById('stats').innerHTML = pills;
 
@@ -496,7 +504,7 @@ const base = import.meta.env.BASE_URL;
       y: points.map(p => p.y),
       mode: 'markers', type: 'scatter',
       marker: { size: 7, color: '#b8603e', opacity: 0.55, line: { width: 0 } },
-      text: points.map(p => `<b>${p.district}</b>, ${p.state}<br>${xMetObj.label}: ${fmtVal(p.x)}<br>${yMetObj.label}: ${fmtVal(p.y)}`),
+      text: points.map(p => `<b>${escapeHtml(p.district)}</b>, ${escapeHtml(p.state)}<br>${escapeHtml(xMetObj.label)}: ${fmtVal(p.x)}<br>${escapeHtml(yMetObj.label)}: ${fmtVal(p.y)}`),
       hovertemplate: '%{text}<extra></extra>',
     };
     const layout = {
@@ -512,10 +520,10 @@ const base = import.meta.env.BASE_URL;
     // Top / bottom 5
     const topY = points.slice().sort((a,b) => b.y - a.y).slice(0, 6);
     const botY = points.slice().sort((a,b) => a.y - b.y).slice(0, 6);
-    const fmtRow = p => `<li><span class="dn">${p.district} <em>${p.state}</em></span><span class="v">${fmtVal(p.y)}</span></li>`;
+    const fmtRow = p => `<li><span class="dn">${escapeHtml(p.district)} <em>${escapeHtml(p.state)}</em></span><span class="v">${fmtVal(p.y)}</span></li>`;
     document.getElementById('topbottom').innerHTML = `
-      <div class="tbcol"><h4>Top by ${yMetObj.label}</h4><ul>${topY.map(fmtRow).join('')}</ul></div>
-      <div class="tbcol"><h4>Bottom by ${yMetObj.label}</h4><ul>${botY.map(fmtRow).join('')}</ul></div>
+      <div class="tbcol"><h4>Top by ${escapeHtml(yMetObj.label)}</h4><ul>${topY.map(fmtRow).join('')}</ul></div>
+      <div class="tbcol"><h4>Bottom by ${escapeHtml(yMetObj.label)}</h4><ul>${botY.map(fmtRow).join('')}</ul></div>
     `;
   }
 
