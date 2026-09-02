@@ -181,7 +181,7 @@
   "generatedBy": "db/build_release_manifest.py",
   "projectDataLicense": null,
   "qualityTier": "raw-experimental",
-  "releaseId": "finer-45f6aa9bf854",
+  "releaseId": "finer-8abd1e60a116",
   "releaseStatus": "research-preview",
   "rightsNotice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
   "rightsReviewStatus": "not-legally-reviewed",
@@ -1379,19 +1379,19 @@
           "url": "/slbc-data/karnataka/karnataka_complete.json"
         },
         {
-          "bytes": 85253,
+          "bytes": 85257,
           "columnCount": 189,
           "encoding": "utf-8",
           "format": "CSV",
-          "irregularRowCount": 6,
+          "irregularRowCount": 0,
           "license": null,
           "mediaType": "text/csv",
           "path": "slbc-data/karnataka/karnataka_fi_timeseries.csv",
           "qualityTier": "raw-experimental",
           "rightsStatus": "not-reviewed",
-          "rowCount": 224,
+          "rowCount": 220,
           "schemaVersion": "raw-v1",
-          "sha256": "e09c861595620804c61d2bfeae53283a03d75593b08d979ebc696c57dae6865b",
+          "sha256": "b0c4c18e9c5f02382eada7631cb2109f8e058110521e8cfd19590911a37ece68",
           "sourceIds": [
             "slbc-karnataka"
           ],

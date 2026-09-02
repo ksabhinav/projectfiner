@@ -36,6 +36,11 @@ jobs:
         # regenerate the baseline with --write-baseline.
         run: python3 validate_data.py --baseline .github/validation-baseline.json
 
+      - name: Validate public release distributions
+        # Structural delivery defects are never baselined: malformed CSV,
+        # invalid JSON, unsafe paths, BOMs, or integrity drift block release.
+        run: python3 db/validate_release_data.py
+
   build:
     needs: validate
     runs-on: ubuntu-latest
