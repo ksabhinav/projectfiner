@@ -617,6 +617,7 @@ const base = import.meta.env.BASE_URL;
     var manifestData = null;     // {indicators: [...], quarters: [...], latest_quarter: '...'}
     var manifestQuarters = [];   // Saved global quarters — restored when leaving per-indicator time points
     var currentIndicatorData = null; // Currently loaded indicator file
+    var quarantineRules = [];       // Critical values withheld from public views
     var currentIndicator = 'digital_transactions';
     var currentMetricIdx = 0;
     var currentQuarter = '';
@@ -815,6 +816,20 @@ const base = import.meta.env.BASE_URL;
         .replace(/&/g, 'and')
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-+|-+$/g, '');
+    }
+
+    function quarantineFor(state, district, quarter, category, fields) {
+      var st = normStateSlug(state);
+      var dn = String(district || '').trim().toLowerCase();
+      var fieldList = Array.isArray(fields) ? fields : [fields];
+      var categoryList = [category].concat(CROSS_CATEGORY_FALLBACKS[category] || []);
+      for (var qi = 0; qi < quarantineRules.length; qi++) {
+        var rule = quarantineRules[qi];
+        if (rule.state === st && String(rule.district || '').toLowerCase() === dn &&
+            rule.quarter === quarter && categoryList.indexOf(rule.category) !== -1 &&
+            (rule.field === '*' || fieldList.indexOf(rule.field) !== -1)) return rule;
+      }
+      return null;
     }
 
     // Districts created post-2020 whose SLBC source still reports against
@@ -1034,6 +1049,9 @@ const base = import.meta.env.BASE_URL;
             val = null;
           }
         }
+        var qualityRule = quarantineFor(rec.state, rec.district, currentQuarter,
+          currentIndicator, tryFields);
+        if (qualityRule) val = null;
 
         // Build all metric values for tooltip
         var allVals = {};
@@ -1052,9 +1070,12 @@ const base = import.meta.env.BASE_URL;
           }
           allVals[m.label] = mval;
           allUnits[m.label] = m.unit || '';
+          if (quarantineFor(rec.state, rec.district, currentQuarter,
+              currentIndicator, mFields)) allVals[m.label] = null;
         }
 
         var entry = { value: val, metrics: allVals, units: allUnits, district: rec.district, state: rec.state };
+        if (qualityRule) entry.qualityWarning = qualityRule.reason;
         // Fallback disclosure. Per-record `_fromQuarter` (set by the
         // merge-and-tag loader when a district's own quarter had no data and
         // it was filled from an earlier one) wins; otherwise fall back to the
@@ -1227,6 +1248,10 @@ const base = import.meta.env.BASE_URL;
                   + '</div>';
                 if (data.fallbackQuarter) {
                   tip += '<div class="dtt-fallback">' + escapeHtml(fmtQuarter(data.fallbackQuarter)) + ' (latest available)</div>';
+                }
+                if (data.qualityWarning) {
+                  tip += '<div class="dtt-fallback">Value withheld: '
+                    + data.qualityWarning + '</div>';
                 }
                 if (data.inheritedFrom) {
                   // New (post-2020) district whose SLBC source still reports
@@ -1588,11 +1613,15 @@ const base = import.meta.env.BASE_URL;
       var distPromise = fetch(_B + 'data/district_boundaries.geojson')
         .then(function(r) { return r.ok ? r.json() : null; })
         .catch(function() { return null; });
+      var qualityPromise = fetch(_B + 'data-quality/quarantines.json')
+        .then(function(r) { return r.ok ? r.json() : null; })
+        .catch(function() { return null; });
 
-      Promise.all([lgdPromise, manifestPromise, distPromise]).then(function(results) {
+      Promise.all([lgdPromise, manifestPromise, distPromise, qualityPromise]).then(function(results) {
         var lgdData = results[0];
         manifestData = results[1];
         if (results[2]) distGeoJSON = results[2];
+        quarantineRules = results[3] && results[3].rules ? results[3].rules : [];
 
         // Build LGD resolver maps
         if (lgdData && lgdData.districts) {
