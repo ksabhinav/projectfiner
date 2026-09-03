@@ -1,0 +1,64 @@
+name: Data correction
+description: Report a suspected data, geography, provenance, metadata, or coverage error.
+title: "Data correction: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve Project FINER. Do not include personal financial information, credentials, confidential material, or security-vulnerability details in this public form.
+  - type: input
+    id: public_location
+    attributes:
+      label: Public file or page
+      description: Paste the Project FINER URL or repository path where the issue appears.
+      placeholder: https://projectfiner.com/...
+    validations:
+      required: true
+  - type: input
+    id: geography
+    attributes:
+      label: State and district
+      description: Include the district LGD code if known.
+      placeholder: Meghalaya — East Garo Hills (LGD 273)
+  - type: input
+    id: period
+    attributes:
+      label: Period
+      placeholder: 2025-09-30
+  - type: input
+    id: indicator
+    attributes:
+      label: Indicator or source field
+      description: Use the canonical indicator ID or exact displayed/source label.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What appears wrong?
+      description: State the current value or behaviour and the expected correction.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Source evidence
+      description: Provide the upstream document URL, page/table, and a short explanation. Do not upload a document you are not permitted to share.
+  - type: dropdown
+    id: breadth
+    attributes:
+      label: Suspected breadth
+      options:
+        - One observation
+        - Several observations in one table or period
+        - A wider extraction, schema, or interface rule
+        - Unknown
+    validations:
+      required: true
+  - type: checkboxes
+    id: public_confirmation
+    attributes:
+      label: Public report confirmation
+      options:
+        - label: I confirm this report contains no personal, confidential, credential, or security-sensitive information.
+          required: true

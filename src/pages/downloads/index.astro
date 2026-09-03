@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import DownloadManager from '../../components/DownloadManager.svelte';
+import Footer from '../../components/Footer.astro';
 import { readFileSync } from 'node:fs';
 const base = import.meta.env.BASE_URL;
 
@@ -30,7 +31,7 @@ const utStates = releaseManifest.states.filter((state: any) => state.group === '
     <aside class="release-notice">
       <div><span>Raw / experimental</span> Release {releaseManifest.releaseId}</div>
       <p>These files are a public research preview, not certified analysis-ready data. Coverage and schemas vary by state; source-label counts can include historical or unresolved geography labels.</p>
-      <p>No blanket data licence is asserted. <a href={`${base}data-rights/`}>Review source rights</a> · <a href={`${base}release-manifest.json`}>Machine-readable manifest</a></p>
+      <p>No blanket data licence is asserted. <a href={`${base}data-rights/`}>Rights</a> · <a href={`${base}methodology/`}>Methodology</a> · <a href={`${base}data-dictionary/`}>Dictionary</a> · <a href={`${base}corrections/`}>Corrections</a> · <a href={`${base}release-manifest.json`}>Manifest</a></p>
     </aside>
 
     <div class="dl-section-eye">SLBC booklets · North-East · 8 states</div>
@@ -88,6 +89,7 @@ const utStates = releaseManifest.states.filter((state: any) => state.group === '
     <div class="dl-section-eye">Capital markets · raw provider registries · not district-mapped</div>
     <DownloadManager datasets={releaseManifest.capitalMarkets} sources={releaseManifest.sources} client:load />
   </div>
+  <Footer />
 </BaseLayout>
 
 <style>
