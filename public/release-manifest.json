@@ -181,7 +181,7 @@
   "generatedBy": "db/build_release_manifest.py",
   "projectDataLicense": null,
   "qualityTier": "raw-experimental",
-  "releaseId": "finer-8abd1e60a116",
+  "releaseId": "finer-ae172034174d",
   "releaseStatus": "research-preview",
   "rightsNotice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
   "rightsReviewStatus": "not-legally-reviewed",
@@ -1744,6 +1744,51 @@
             "slbc-meghalaya"
           ],
           "url": "/slbc-data/meghalaya/meghalaya_fi_timeseries.csv"
+        },
+        {
+          "bytes": 1246752,
+          "certificationStatus": "not-certified",
+          "columnCount": 23,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "indicatorCount": 13,
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "data-contracts/meghalaya-standardized-preview.csv",
+          "productId": "meghalaya-standardized-preview",
+          "productReleaseId": "meghalaya-standardized-preview-v1",
+          "qualityTier": "standardized-preview",
+          "rightsStatus": "not-reviewed",
+          "role": "observations",
+          "rowCount": 3494,
+          "schemaVersion": "observations-v1",
+          "sha256": "710c383e1543a288039fe55edcf20adc8ecf9ef7f89b5dbb4c1013e97a7a9efa",
+          "sourceIds": [
+            "slbc-meghalaya"
+          ],
+          "url": "/data-contracts/meghalaya-standardized-preview.csv"
+        },
+        {
+          "bytes": 6769,
+          "certificationStatus": "not-certified",
+          "encoding": "utf-8",
+          "format": "JSON",
+          "indicatorCount": 13,
+          "license": null,
+          "mediaType": "application/json",
+          "path": "data-contracts/meghalaya-indicator-registry.json",
+          "productId": "meghalaya-standardized-preview",
+          "productReleaseId": "meghalaya-standardized-preview-v1",
+          "qualityTier": "standardized-preview",
+          "rightsStatus": "not-reviewed",
+          "role": "indicator-registry",
+          "schemaVersion": "indicator-registry-v1",
+          "sha256": "e51958cd318f96d6f6746cbdbddd08042a00b25f93e93caea23ff19106d2aa83",
+          "sourceIds": [
+            "slbc-meghalaya"
+          ],
+          "url": "/data-contracts/meghalaya-indicator-registry.json"
         }
       ],
       "group": "north-east",
@@ -2455,7 +2500,7 @@
   ],
   "summary": {
     "capitalMarketRegistryCount": 4,
-    "distributionCount": 66,
+    "distributionCount": 68,
     "stateCount": 31
   }
 }

@@ -21,6 +21,8 @@ ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
 REGISTRY_PATH = ROOT / "db" / "release_sources.json"
 OUTPUT_PATH = PUBLIC / "release-manifest.json"
+MEGHALAYA_PREVIEW_PATH = PUBLIC / "data-contracts" / "meghalaya-standardized-preview.csv"
+MEGHALAYA_REGISTRY_PATH = PUBLIC / "data-contracts" / "meghalaya-indicator-registry.json"
 
 MONTHS = {
     "jan": "01", "january": "01", "feb": "02", "february": "02",
@@ -167,6 +169,23 @@ def attach_distribution_rights(file_metadata: dict, source_id: str) -> dict:
     }
 
 
+def attach_preview_rights(file_metadata: dict, source_id: str, registry: dict,
+                          role: str, schema_version: str) -> dict:
+    return {
+        **file_metadata,
+        "productId": registry["productId"],
+        "productReleaseId": registry["releaseId"],
+        "role": role,
+        "schemaVersion": schema_version,
+        "qualityTier": registry["qualityTier"],
+        "certificationStatus": registry["certificationStatus"],
+        "indicatorCount": len(registry["indicators"]),
+        "sourceIds": [source_id],
+        "license": None,
+        "rightsStatus": "not-reviewed",
+    }
+
+
 def build_manifest(registry_path: Path = REGISTRY_PATH) -> dict:
     registry = json.loads(registry_path.read_text(encoding="utf-8"))
     notice = registry["rightsNotice"]
@@ -187,6 +206,32 @@ def build_manifest(registry_path: Path = REGISTRY_PATH) -> dict:
             f"SLBC/UTLBC source material for {config['name']}",
             config.get("aliasUrls"),
         ))
+        state_distributions = [
+            attach_distribution_rights(complete_file, source_id),
+            attach_distribution_rights(csv_file, source_id),
+        ]
+        if slug == "meghalaya":
+            indicator_registry = json.loads(
+                MEGHALAYA_REGISTRY_PATH.read_text(encoding="utf-8")
+            )
+            if indicator_registry["source"]["id"] != source_id:
+                raise ValueError("Meghalaya preview source does not match release source")
+            preview_file = inspect_csv(MEGHALAYA_PREVIEW_PATH)
+            state_distributions.extend([
+                attach_preview_rights(
+                    preview_file, source_id, indicator_registry,
+                    "observations", indicator_registry["schemaVersion"],
+                ),
+                attach_preview_rights(
+                    base_file_metadata(
+                        MEGHALAYA_REGISTRY_PATH, "application/json", "JSON"
+                    ),
+                    source_id,
+                    indicator_registry,
+                    "indicator-registry",
+                    indicator_registry["registrySchemaVersion"],
+                ),
+            ])
         states.append({
             "slug": slug,
             "name": config["name"],
@@ -196,10 +241,7 @@ def build_manifest(registry_path: Path = REGISTRY_PATH) -> dict:
             "rightsStatus": "not-reviewed",
             "license": None,
             "coverage": coverage,
-            "distributions": [
-                attach_distribution_rights(complete_file, source_id),
-                attach_distribution_rights(csv_file, source_id),
-            ],
+            "distributions": state_distributions,
         })
 
     capital_markets = []

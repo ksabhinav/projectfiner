@@ -24,6 +24,20 @@
     return releaseManifest?.sources?.find((source: any) => source.id === sourceId);
   });
 
+  let standardizedPreview: any = $derived.by(() =>
+    releaseMetadata?.distributions?.find(
+      (distribution: any) => distribution.role === 'observations'
+        && distribution.qualityTier === 'standardized-preview'
+    )
+  );
+
+  let indicatorRegistry: any = $derived.by(() =>
+    releaseMetadata?.distributions?.find(
+      (distribution: any) => distribution.role === 'indicator-registry'
+        && distribution.productId === standardizedPreview?.productId
+    )
+  );
+
   // Convert any quarter key to sortable YYYY-MM format for ordering
   function qkeyToSortable(qkey: string): string {
     if (/^\d{4}-\d{2}$/.test(qkey)) return qkey; // already YYYY-MM
@@ -271,8 +285,28 @@
   </aside>
 {/if}
 
-<!-- Full dataset downloads -->
-<div class="sd-section-eye">Full dataset</div>
+{#if standardizedPreview}
+  <div class="sd-section-eye">Standardized data contract</div>
+  <div class="dataset preview-dataset">
+    <div class="dataset-eye"><span class="preview-badge">Standardized preview</span> Not certified</div>
+    <div class="dataset-name">Meghalaya long-format observations</div>
+    <div class="dataset-meta">
+      {standardizedPreview.rowCount.toLocaleString()} observations · {standardizedPreview.indicatorCount} registered indicators · LGD district IDs · source values retained
+    </div>
+    <p class="preview-note">
+      Directly reported fields only. Unlinked source pages, the 2022 district split, partial coverage, and Aadhaar scope conflicts are carried as row-level quality flags.
+    </p>
+    <div class="dataset-actions">
+      <a class="dl-btn primary" href={`${base}${standardizedPreview.path}`} download>Long CSV</a>
+      {#if indicatorRegistry}
+        <a class="dl-btn" href={`${base}${indicatorRegistry.path}`} download>Data dictionary</a>
+      {/if}
+    </div>
+  </div>
+{/if}
+
+<!-- Raw dataset downloads -->
+<div class="sd-section-eye">Raw / experimental downloads</div>
 <a class="dataset">
   <div class="dataset-eye">SLBC {stateName}</div>
   <div class="dataset-name">Complete Time-Series</div>
@@ -431,6 +465,23 @@
     line-height: 1.6;
   }
   .dataset-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+  .preview-dataset { border-left-color: var(--peacock, #1E4960); }
+  .preview-badge {
+    display: inline-block;
+    margin-right: 7px;
+    padding: 2px 6px;
+    border-radius: 2px;
+    background: var(--peacock, #1E4960);
+    color: white;
+  }
+  .preview-note {
+    max-width: 820px;
+    margin: 0 0 14px;
+    color: var(--ink-soft, #3D332A);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
 
   /* Atlas dl-btn (matches /downloads page) */
   .dl-btn {
@@ -450,6 +501,7 @@
   .dl-btn.primary { background: var(--ink, #1B140E); color: var(--paper, #F4EFE6); }
   .dl-btn:hover { transform: translateY(-1px); }
   .dl-btn.downloading { opacity: 0.5; cursor: wait; }
+  a.dl-btn { display: inline-block; text-decoration: none; }
 
   /* Tabs */
   .tabs {
