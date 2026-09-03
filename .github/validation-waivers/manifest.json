@@ -1,0 +1,30 @@
+{
+  "_comment": "Exact observation-level fingerprints of legacy critical findings. A new fingerprint always fails CI, even when another finding is fixed. Remove resolved fingerprints during review; never regenerate wholesale.",
+  "schema_version": 1,
+  "fingerprint_algorithm": "sha256-v1",
+  "waiver": {
+    "id": "FINER-LEGACY-CRITICAL-2026-09-02",
+    "reason": "Legacy critical findings present when exact-identity gating was introduced.",
+    "created_on": "2026-09-02",
+    "expires_on": "2026-12-01"
+  },
+  "total_waived": 29059,
+  "shards": [
+    "0.txt",
+    "1.txt",
+    "2.txt",
+    "3.txt",
+    "4.txt",
+    "5.txt",
+    "6.txt",
+    "7.txt",
+    "8.txt",
+    "9.txt",
+    "a.txt",
+    "b.txt",
+    "c.txt",
+    "d.txt",
+    "e.txt",
+    "f.txt"
+  ]
+}

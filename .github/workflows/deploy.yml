@@ -29,12 +29,11 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Validate SLBC data against baseline
-        # Fails only on NEW critical issues (counts rising above the accepted
-        # baseline), so pre-existing debt doesn't block deploys while a bad
-        # extraction is caught. Triage a new finding, then either fix it or
-        # regenerate the baseline with --write-baseline.
-        run: python3 validate_data.py --baseline .github/validation-baseline.json
+      - name: Validate SLBC data against exact waivers
+        # Every legacy critical finding has an observation-level fingerprint.
+        # Any new identity fails even if another issue was fixed in the same
+        # state/type bucket; the waiver ledger also has a mandatory expiry.
+        run: python3 validate_data.py --waivers .github/validation-waivers
 
       - name: Validate public release distributions
         # Structural delivery defects are never baselined: malformed CSV,
