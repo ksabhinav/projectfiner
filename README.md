@@ -48,7 +48,7 @@ npm run build
 python3 scripts/validate_built_site.py dist
 ```
 
-The GitHub Pages workflow runs these unit, data-quality, release and built-site gates on pull requests. It also blocks newly introduced high-severity dependencies and produces a dependency SBOM. Deployment runs only after the same quality job succeeds on `main`.
+The GitHub Pages workflow runs these unit, data-quality, release and built-site gates on pull requests. It also blocks critical production dependency advisories and produces a dependency SBOM. Deployment runs only after the same quality job succeeds on `main`.
 
 The legacy validation report is generated output. Do not treat its prose summary as the release contract; CI evaluates observation-level critical fingerprints from the expiring waiver ledger without rewriting the report.
 

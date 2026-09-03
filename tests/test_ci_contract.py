@@ -12,6 +12,7 @@ class CiContractTests(unittest.TestCase):
         self.assertIn("pull_request:", workflow)
         for command in (
             "npm test",
+            "npm audit --omit=dev --audit-level=critical",
             "npm run check:data-quality",
             "npm run check:meghalaya-contract",
             "npm run check:release-manifest",
@@ -25,7 +26,7 @@ class CiContractTests(unittest.TestCase):
     def test_pull_requests_never_reach_the_deploy_job(self):
         workflow = (REPO_ROOT / ".github/workflows/deploy.yml").read_text()
         self.assertIn("deploy:\n    needs: quality\n    if: github.event_name != 'pull_request'", workflow)
-        self.assertIn("actions/dependency-review-action@v4", workflow)
+        self.assertNotIn("actions/dependency-review-action", workflow)
 
     def test_no_report_quality_command_is_the_package_contract(self):
         package = json.loads((REPO_ROOT / "package.json").read_text())
