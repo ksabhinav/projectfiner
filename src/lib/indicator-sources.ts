@@ -53,6 +53,11 @@ const SLBC_INDICATORS = new Set<string>([
   'pmmy_mudra_disbursement', 'priority_sector',
 ]);
 
+/** Whether the indicator is covered by the SLBC validation pipeline. */
+export function isSlbcIndicator(indicator: string): boolean {
+  return SLBC_INDICATORS.has(indicator);
+}
+
 // "March 2025" style label from "2025-03"
 function quarterLabel(q: string): string {
   if (!q || !/^\d{4}-\d{2}$/.test(q)) return q || '';

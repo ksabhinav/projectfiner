@@ -43,6 +43,12 @@ jobs:
           python3 db/build_release_manifest.py --check
           python3 db/validate_release_data.py
 
+      - name: Upload validation provenance
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-provenance
+          path: public/data-quality/validation-summary.json
+
   build:
     needs: validate
     runs-on: ubuntu-latest
@@ -58,6 +64,12 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Download validation provenance
+        uses: actions/download-artifact@v4
+        with:
+          name: validation-provenance
+          path: public/data-quality
 
       - name: Build Astro site
         run: npm run build

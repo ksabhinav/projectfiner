@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import { CATEGORY_INFO, prettyCategoryName, CATEGORY_DESCRIPTIONS } from '../../lib/slbc-categories';
   import { prettyFieldName as sharedPrettyField } from '../../lib/format-utils';
+  import { getSourceCitation } from '../../lib/indicator-sources';
 
   interface Props {
     baseUrl: string;
@@ -60,10 +61,23 @@
 
   // Loaded data: map of slug -> complete JSON
   let stateDataMap: Record<string, any> = $state({});
+  let validationSummary: any = $state(null);
 
   // Current working data (single state or merged)
   let masterData: any = $state(null);
   let isAllStates = $derived(selectedState === 'all');
+
+  function normalizeQuarter(value: string): string {
+    const s = String(value || '').trim().toLowerCase().replace(/_/g, ' ');
+    if (/^\d{4}-\d{2}$/.test(s)) return s;
+    const months: Record<string, string> = {
+      january: '01', march: '03', june: '06', september: '09', december: '12',
+      jan: '01', mar: '03', jun: '06', sep: '09', sept: '09', dec: '12'
+    };
+    const parts = s.split(/\s+/);
+    return parts.length === 2 && months[parts[0]] && /^\d{4}$/.test(parts[1])
+      ? `${parts[1]}-${months[parts[0]]}` : s;
+  }
 
   // Quarter keys
   let quarterKeys: string[] = $derived.by(() => {
@@ -120,6 +134,27 @@
     selectedCategory === 'credit_deposit_ratio' &&
     /ratio|c.*d.*ratio/i.test(selectedField)
   );
+  let reportingPeriod = $derived(normalizeQuarter(
+    masterData?.quarters?.[selectedQuarter]?.period || selectedQuarter
+  ));
+  let citation = $derived(getSourceCitation(
+    selectedCategory, reportingPeriod, isAllStates ? '' : selectedState
+  ));
+  let displayUnit = $derived(isCDRatio ? '%' :
+    /amt|amount|deposit|advance|credit/i.test(selectedField)
+      ? (masterData?.amount_unit || '₹ lakhs') : 'Count / reported value');
+  let validationCounts = $derived(isAllStates
+    ? validationSummary?.totals
+    : validationSummary?.states?.[selectedState]);
+  let validationLabel = $derived(!validationSummary || validationSummary.status === 'not_run'
+    ? 'Validation pending'
+    : !validationCounts ? 'Not covered'
+    : validationCounts.critical > 0 ? `${validationCounts.critical} critical findings`
+    : validationCounts.warning > 0 ? `${validationCounts.warning} warnings`
+    : 'No issues detected');
+  let validatedAt = $derived(validationSummary?.generated_at
+    ? new Date(validationSummary.generated_at).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })
+    : 'Pending');
 
   // Build ranking rows
   interface RankRow {
@@ -387,6 +422,10 @@
 
   onMount(async () => {
     hydrateFromUrl();
+    try {
+      const qualityRes = await fetch(`${baseUrl}data-quality/validation-summary.json`);
+      if (qualityRes.ok) validationSummary = await qualityRes.json();
+    } catch {/* provenance remains visibly pending */}
     await loadData();
     loading = false;
   });
@@ -480,6 +519,22 @@
           <span class="result-count">{sortedRows.length} districts</span>
           <span class="metric-label">{prettyField(selectedField)}</span>
         </div>
+        <div class="provenance-card">
+          <div class="provenance-source">
+            <span>Source</span>
+            {#if citation.url}
+              <a href={citation.url} target="_blank" rel="noopener noreferrer">{citation.label}</a>
+            {:else}
+              <strong>{citation.label}</strong>
+            {/if}
+          </div>
+          <dl>
+            <div><dt>Reporting period</dt><dd>{reportingPeriod || 'Unknown'}</dd></div>
+            <div><dt>Unit</dt><dd>{displayUnit}</dd></div>
+            <div><dt>Last validated</dt><dd>{validatedAt}</dd></div>
+            <div><dt>Validation status</dt><dd>{validationLabel}</dd></div>
+          </dl>
+        </div>
         <div class="table-scroll">
           <table class="ranking-table">
             <thead>
@@ -560,6 +615,44 @@
     padding: 60px;
   }
   .error-msg { color: #c44830; }
+  .provenance-card {
+    margin: 0 0 14px;
+    padding: 12px 14px;
+    border: 1px solid var(--rule, #D9D2C5);
+    border-radius: 7px;
+    background: rgba(244, 239, 230, 0.55);
+  }
+  .provenance-source {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 9px;
+    font-size: 11px;
+  }
+  .provenance-source > span, .provenance-card dt {
+    font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+    font-size: 8px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mist, #6E665E);
+  }
+  .provenance-source a, .provenance-source strong {
+    color: var(--vermillion, #B84A2E);
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .provenance-card dl {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0;
+  }
+  .provenance-card dd {
+    margin: 3px 0 0;
+    font-family: var(--font-ui, 'Inter', sans-serif);
+    font-size: 10px;
+    color: var(--ink-soft, #3D332A);
+  }
 
   /* Controls */
   .controls {
