@@ -591,8 +591,8 @@ def check_period_coverage(state, periods_data, issues):
 
 # ── Report generation ──────────────────────────────────────────────────────────
 
-def generate_report(all_issues, states_processed):
-    """Write DATA_VALIDATION_REPORT.md and print summary table."""
+def generate_report(all_issues, states_processed, report_path=REPORT_PATH):
+    """Print the validation summary and optionally write a Markdown report."""
 
     # Summary counts: state -> issue_type -> count
     summary = defaultdict(lambda: defaultdict(int))
@@ -697,8 +697,11 @@ def generate_report(all_issues, states_processed):
                 lines.append(f"\n*...and {len(items) - 50} more issues of this type (run with --verbose for full output)*\n")
 
     report_text = "\n".join(lines) + "\n"
-    REPORT_PATH.write_text(report_text)
-    print(f"Detailed report written to: {REPORT_PATH}")
+    if report_path is not None:
+        report_path.write_text(report_text)
+        print(f"Detailed report written to: {report_path}")
+    else:
+        print("Detailed report not written (--no-report).")
 
     return severity_counts.get("critical", 0) > 0
 
@@ -748,6 +751,10 @@ def main():
                              "Use once; do not overwrite a reviewed ledger wholesale.")
     parser.add_argument("--waiver-days", type=int, default=90,
                         help="Validity period used only with --write-waivers (default: 90).")
+    parser.add_argument("--report", type=Path, default=REPORT_PATH,
+                        help="Markdown report path (default: DATA_VALIDATION_REPORT.md)")
+    parser.add_argument("--no-report", action="store_true",
+                        help="Do not write the Markdown report (useful for clean CI checks)")
     args = parser.parse_args()
 
     if not SLBC_DIR.exists():
@@ -775,7 +782,8 @@ def main():
         issues = validate_state(state, verbose=args.verbose)
         all_issues.extend(issues)
 
-    has_critical = generate_report(all_issues, states)
+    report_path = None if args.no_report else args.report
+    has_critical = generate_report(all_issues, states, report_path=report_path)
 
     criticals = [i for i in all_issues if i.severity == Issue.CRITICAL]
 

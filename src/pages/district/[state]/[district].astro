@@ -16,6 +16,7 @@ import PageLayout from '../../../layouts/PageLayout.astro';
 import DistrictPage from '../../../components/DistrictPage.svelte';
 import { mergeDistrictData } from '../../../lib/district-page-data.js';
 import indexJson from '../../../../public/districts/index.json';
+import releaseManifest from '../../../../public/release-manifest.json';
 // Wayback Machine snapshot manifest — one entry per state.
 // Built by db/build_wayback_manifest.py and refreshed by the daily
 // wayback-daily.yml workflow. Missing entries gracefully degrade to
@@ -67,6 +68,12 @@ const latestQuarter = data.latestQuarter;
 const latestLabel = latestQuarter
   ? new Date(latestQuarter + '-01').toLocaleString('en-US', { month: 'long', year: 'numeric' })
   : '';
+const stateRelease = (releaseManifest as any).states.find((state: any) => state.slug === data.state);
+const stateCsvDistribution = stateRelease?.distributions.find(
+  (distribution: any) => distribution.mediaType === 'text/csv' && distribution.qualityTier === 'raw-experimental',
+);
+const stateDownloadHref = stateRelease ? `${base}slbc-data/${data.state}/download/` : null;
+const stateCsvHref = stateCsvDistribution ? `${base}${stateCsvDistribution.path}` : null;
 
 // Page-level SEO copy. The first 155 chars become the Google snippet.
 const description = `${districtName}, ${stateLabel} — financial inclusion data across ${
@@ -122,13 +129,11 @@ const datasetLd = {
     name: 'Project FINER',
     url: SITE,
   },
-  distribution: [
-    {
+  ...(stateCsvDistribution ? { distribution: [{
       '@type': 'DataDownload',
       encodingFormat: 'text/csv',
-      contentUrl: `${SITE}/slbc-data/${data.state}/${data.state}_fi_timeseries.csv`,
-    },
-  ],
+      contentUrl: `${SITE}${stateCsvDistribution.url}`,
+    }] } : {}),
   isAccessibleForFree: true,
 };
 
@@ -137,7 +142,9 @@ const subtitleHtml = [
   headlinePairs
     .map((p) => `${p.label}: <strong>${p.value}${p.unit ? p.unit : ''}</strong>`)
     .join(' &middot; '),
-  `<br><a href="${base}slbc-data/${data.state}/download/">All ${stateLabel} data</a> &middot; <a href="${base}">Open map &rarr;</a>`,
+  stateDownloadHref
+    ? `<br><a href="${stateDownloadHref}">All ${stateLabel} data</a> &middot; <a href="${base}">Open map &rarr;</a>`
+    : `<br><a href="${base}">Open map &rarr;</a>`,
 ].filter(Boolean).join(' &middot; ');
 ---
 
@@ -146,12 +153,21 @@ const subtitleHtml = [
   description={description}
   pageTitle={`${districtName}, ${stateLabel}`}
   subtitle={subtitleHtml}
-  backLink={{ href: `${base}slbc-data/${data.state}/download/`, label: `${stateLabel} data` }}
+  backLink={stateDownloadHref
+    ? { href: stateDownloadHref, label: `${stateLabel} data` }
+    : { href: `${base}downloads/`, label: 'Downloads' }}
   extraJsonLd={datasetLd}
   ogImage={`/og/district/${data.state}/${data.districtSlug}.png`}
 >
   <div class="container">
-    <DistrictPage client:load data={data} basePath={base} wayback={wayback} />
+    <DistrictPage
+      client:load
+      data={data}
+      basePath={base}
+      wayback={wayback}
+      stateDownloadHref={stateDownloadHref}
+      stateCsvHref={stateCsvHref}
+    />
   </div>
 </PageLayout>
 

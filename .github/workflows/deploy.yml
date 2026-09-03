@@ -3,6 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 # Least privilege at the top level; the deploy job escalates for itself.
@@ -10,16 +12,14 @@ permissions:
   contents: read
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: pages-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
-  validate:
-    # Gate: data must be regression-free before it can ship. Astro treats
-    # public/**/*.json as static assets, so semantically corrupt data (unit
-    # errors, cross-state contamination, column shifts) builds cleanly and
-    # would deploy. This is the only step that inspects the data itself.
+  quality:
+    name: Test, validate, and build
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,46 +29,72 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Validate SLBC data against exact waivers
-        # Every legacy critical finding has an observation-level fingerprint.
-        # Any new identity fails even if another issue was fixed in the same
-        # state/type bucket; the waiver ledger also has a mandatory expiry.
-        run: python3 validate_data.py --waivers .github/validation-waivers
-
-      - name: Validate public release distributions
-        # Structural delivery defects are never baselined: malformed CSV,
-        # invalid JSON, unsafe paths, BOMs, or integrity drift block release.
-        run: |
-          python3 db/build_meghalaya_standardized.py --check
-          python3 db/build_release_manifest.py --check
-          python3 db/validate_release_data.py
-
-  build:
-    needs: validate
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 22.12.0
           cache: npm
 
       - name: Install dependencies
         run: npm ci
 
+      - name: Run unit and contract tests
+        run: npm test
+
+      - name: Validate SLBC data against exact waivers
+        # Every legacy critical finding has an observation-level fingerprint.
+        # Any new identity fails even if another issue was fixed in the same
+        # state/type bucket; the waiver ledger also has a mandatory expiry.
+        run: npm run check:data-quality
+
+      - name: Validate public release distributions
+        # Structural delivery defects are never baselined: malformed CSV,
+        # invalid JSON, unsafe paths, BOMs, or integrity drift block release.
+        run: |
+          npm run check:meghalaya-contract
+          npm run check:release-manifest
+          npm run check:release-data
+
       - name: Build Astro site
         run: npm run build
 
+      - name: Validate built pages, links, metadata, and sitemap
+        run: npm run check:site
+
+      - name: Generate dependency SBOM
+        run: npm sbom --sbom-format cyclonedx > dependency-sbom.cdx.json
+
+      - name: Upload dependency SBOM
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-sbom-${{ github.sha }}
+          path: dependency-sbom.cdx.json
+          retention-days: 30
+
       - name: Upload artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist/
 
+  dependency-review:
+    name: Review dependency changes
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Block newly introduced high-severity dependencies
+        uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: high
+
   deploy:
-    needs: build
+    needs: quality
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     # Deploy is the only job that needs Pages + OIDC credentials.
     permissions:
