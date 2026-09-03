@@ -51,6 +51,8 @@ Wide files remain available for convenience but are not the canonical schema. Br
 
 District names are resolved within their stated state. Cross-state fallback is prohibited. Canonical pages use the LGD registry, while known legacy name variants redirect to a canonical district page.
 
+The map treats period and boundary fallbacks as data status, not as invisible display logic. Its legend reports the composition of the displayed view by source period, counts suspect and unclassified observations, and excludes values inherited from a pre-reorganisation parent district by default. Readers may opt in to those parent proxies; when enabled they are styled and exported as `proxy`, with the parent district recorded. The map export contains the requested period, actual source period, proxy source, row-level quality status, quality flags and boundary vintage for every displayed observation. The current boundary file has no documented as-of date, so the interface and export state its vintage as `undocumented` rather than implying that it matches the selected observation period.
+
 LGD identity does not by itself make observations comparable through a boundary change. The Meghalaya standardized preview records two source-geography vintages around the creation of Eastern West Khasi Hills in June 2022. West Khasi Hills and Eastern West Khasi Hills rows carry `boundary_not_harmonised`. No historical split or combined harmonised series is currently asserted.
 
 ## 6. Time and measures

@@ -59,6 +59,19 @@ export interface FinerState {
     breaks: number[];
     ramp: string[];
     unit: string;
+    status: {
+      current: number;
+      stale: number;
+      proxy: number;
+      suspect: number;
+      unclassified: number;
+      missing: number;
+      proxyAvailable: number;
+      periods: Array<{ period: string; count: number }>;
+    };
+    rows: Array<Record<string, unknown>>;
+    showProxies: boolean;
+    boundaryVintage: string;
   };
 
   // Focus mode
@@ -73,6 +86,9 @@ export interface FinerState {
     metricLabel: string;
     value: string;
     quarter: string;
+    status: string;
+    proxyFrom: string;
+    qualityStatus: string;
   };
 
   // Layer visibility
@@ -108,7 +124,16 @@ export interface LayerToggleDetail { layer: string; visible: boolean }
 export interface OutletToggleDetail { enabled: boolean }
 export interface SearchDetail { query: string }
 export interface FlyToDetail { lat: number; lng: number; name?: string }
-export interface LegendUpdateDetail { title: string; breaks: number[]; ramp: string[]; unit: string }
+export interface LegendUpdateDetail {
+  title: string;
+  breaks: number[];
+  ramp: string[];
+  unit: string;
+  status: FinerState['legendData']['status'];
+  rows: Array<Record<string, unknown>>;
+  showProxies: boolean;
+  boundaryVintage: string;
+}
 export interface StatsUpdateDetail { banking?: any; capital?: any }
 export interface FocusUpdateDetail {
   active: boolean;
@@ -121,6 +146,9 @@ export interface FocusUpdateDetail {
   metricLabel: string;
   value: string;
   quarter: string;
+  status: string;
+  proxyFrom: string;
+  qualityStatus: string;
 }
 export interface QuartersReadyDetail { quarters: string[] }
 export interface DrilldownDetail { district: string; state: string }
