@@ -69,9 +69,28 @@ class ReleaseManifestTests(unittest.TestCase):
             self.assertEqual(registry["geographyLevel"], "location")
             self.assertIsNone(registry["snapshotDate"])
 
+        meghalaya = next(state for state in states if state["slug"] == "meghalaya")
+        preview = next(
+            item for item in meghalaya["distributions"]
+            if item.get("role") == "observations"
+        )
+        dictionary = next(
+            item for item in meghalaya["distributions"]
+            if item.get("role") == "indicator-registry"
+        )
+        self.assertEqual(self.manifest["summary"]["distributionCount"], 68)
+        self.assertEqual(preview["rowCount"], 3494)
+        self.assertEqual(preview["indicatorCount"], 13)
+        self.assertEqual(preview["qualityTier"], "standardized-preview")
+        self.assertEqual(preview["certificationStatus"], "not-certified")
+        self.assertEqual(dictionary["schemaVersion"], "indicator-registry-v1")
+
     def test_download_ui_consumes_manifest_and_emits_bom_free_csv(self):
         page = (REPO_ROOT / "src/pages/downloads/index.astro").read_text()
         state_component = (REPO_ROOT / "src/components/StateDownload.svelte").read_text()
+        meghalaya_page = (
+            REPO_ROOT / "src/pages/slbc-data/meghalaya/download.astro"
+        ).read_text()
         download_helper = (REPO_ROOT / "src/lib/download.ts").read_text()
         sitemap = (REPO_ROOT / "public/sitemap.xml").read_text()
 
@@ -80,6 +99,10 @@ class ReleaseManifestTests(unittest.TestCase):
         self.assertNotIn("districts × providers", page)
         self.assertIn("data-rights/", page)
         self.assertIn("release-manifest.json", state_component)
+        self.assertIn("Standardized preview", state_component)
+        self.assertIn("Not certified", state_component)
+        self.assertIn("release-manifest.json", meghalaya_page)
+        self.assertIn("preview.rowCount", meghalaya_page)
         self.assertNotIn("\\ufeff", state_component)
         self.assertNotIn("\\ufeff", download_helper)
         self.assertIn("https://projectfiner.com/data-rights/", sitemap)

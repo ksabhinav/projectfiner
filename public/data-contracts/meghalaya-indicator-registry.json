@@ -1,0 +1,181 @@
+{
+  "boundaryPolicy": {
+    "affectedDistricts": [
+      "Eastern West Khasi Hills",
+      "West Khasi Hills"
+    ],
+    "changePeriod": "2022-06-30",
+    "description": "Eastern West Khasi Hills first appears as a separate source district in June 2022. Observations remain as reported and are not back-cast or harmonised across the split.",
+    "postChangeVersion": "meghalaya-source-districts-12-from-2022-06",
+    "preChangeVersion": "meghalaya-source-districts-11-before-2022-06"
+  },
+  "certificationStatus": "not-certified",
+  "description": "A narrow, deterministic long-format preview of directly reported Meghalaya SLBC fields. It standardizes identities, dates, units, and quality flags without changing source values or asserting semantic comparability.",
+  "indicators": [
+    {
+      "definition": "Overall credit-deposit ratio under the source table's reported label.",
+      "indicatorId": "credit_deposit_ratio",
+      "label": "Overall credit-deposit ratio",
+      "sourceField": "Overall CD Ratio",
+      "sourceTable": "credit_deposit_ratio",
+      "unit": "percent",
+      "valueType": "decimal"
+    },
+    {
+      "definition": "Total advances under the source table's reported label.",
+      "indicatorId": "total_advances_lakh",
+      "label": "Total advances",
+      "sourceField": "Total Advances",
+      "sourceTable": "credit_deposit_ratio",
+      "unit": "INR lakh",
+      "valueType": "decimal"
+    },
+    {
+      "definition": "Total deposits under the source table's reported label.",
+      "indicatorId": "total_deposits_lakh",
+      "label": "Total deposits",
+      "sourceField": "Total Deposit",
+      "sourceTable": "credit_deposit_ratio",
+      "unit": "INR lakh",
+      "valueType": "decimal"
+    },
+    {
+      "definition": "Total ATMs under the source table's reported label.",
+      "indicatorId": "atm_count",
+      "label": "ATMs",
+      "sourceField": "Total ATM",
+      "sourceTable": "branch_network",
+      "unit": "count",
+      "valueType": "integer"
+    },
+    {
+      "definition": "Total customer service points under the source table's reported label.",
+      "indicatorId": "csp_count",
+      "label": "Customer service points",
+      "sourceField": "Total CSP",
+      "sourceTable": "branch_network",
+      "unit": "count",
+      "valueType": "integer"
+    },
+    {
+      "definition": "Rural PMJDY accounts under the source table's reported label.",
+      "indicatorId": "pmjdy_rural_accounts",
+      "label": "PMJDY rural accounts",
+      "sourceField": "Rural No",
+      "sourceTable": "pmjdy",
+      "unit": "count",
+      "valueType": "integer"
+    },
+    {
+      "definition": "Urban PMJDY accounts under the source table's reported label.",
+      "indicatorId": "pmjdy_urban_accounts",
+      "label": "PMJDY urban accounts",
+      "sourceField": "Urban No",
+      "sourceTable": "pmjdy",
+      "unit": "count",
+      "valueType": "integer"
+    },
+    {
+      "definition": "Male PMJDY accounts under the source table's reported label.",
+      "indicatorId": "pmjdy_male_accounts",
+      "label": "PMJDY male accounts",
+      "sourceField": "Male No",
+      "sourceTable": "pmjdy",
+      "unit": "count",
+      "valueType": "integer"
+    },
+    {
+      "definition": "Female PMJDY accounts under the source table's reported label.",
+      "indicatorId": "pmjdy_female_accounts",
+      "label": "PMJDY female accounts",
+      "sourceField": "Female No",
+      "sourceTable": "pmjdy",
+      "unit": "count",
+      "valueType": "integer"
+    },
+    {
+      "definition": "Deposits held in PMJDY accounts under the source table's reported label.",
+      "indicatorId": "pmjdy_deposits_lakh",
+      "label": "PMJDY deposits held",
+      "sourceField": "Amt Deposits held in the A/c",
+      "sourceTable": "pmjdy",
+      "unit": "INR lakh",
+      "valueType": "decimal"
+    },
+    {
+      "definition": "Aadhaar-seeded CASA accounts under the source table's reported label.",
+      "indicatorId": "aadhaar_seeded_casa",
+      "label": "Aadhaar-seeded CASA",
+      "sourceField": "Number of Aadhaar seeded CASA",
+      "sourceTable": "aadhaar_authentication",
+      "unit": "count",
+      "valueType": "integer"
+    },
+    {
+      "definition": "Authenticated CASA accounts under the source table's reported label; the relationship to Aadhaar-seeded CASA requires source-semantic review where authenticated exceeds seeded.",
+      "indicatorId": "aadhaar_authenticated_casa",
+      "label": "Authenticated CASA",
+      "sourceField": "Number of Authenticated CASA",
+      "sourceTable": "aadhaar_authentication",
+      "unit": "count",
+      "valueType": "integer"
+    },
+    {
+      "definition": "Operative CASA accounts under the source table's reported label.",
+      "indicatorId": "operative_casa",
+      "label": "Operative CASA",
+      "sourceField": "Number of operative CASA",
+      "sourceTable": "aadhaar_authentication",
+      "unit": "count",
+      "valueType": "integer"
+    }
+  ],
+  "missingValuePolicy": "No selected source cell is missing in this preview. Future missing cells must have an empty value and a controlled missing_reason; zero must never be substituted.",
+  "observationColumns": [
+    "observation_id",
+    "release_id",
+    "schema_version",
+    "state_lgd_code",
+    "district_lgd_code",
+    "district",
+    "boundary_version",
+    "boundary_status",
+    "period",
+    "financial_year",
+    "periodicity",
+    "indicator_id",
+    "value",
+    "unit",
+    "source_value",
+    "source_field_label",
+    "source_id",
+    "source_artifact",
+    "source_table",
+    "source_page",
+    "missing_reason",
+    "quality_status",
+    "quality_flags"
+  ],
+  "productId": "meghalaya-standardized-preview",
+  "qualityFlagDefinitions": {
+    "boundary_not_harmonised": "The district is affected by the 2022 West Khasi Hills boundary change; values remain on the source geography.",
+    "partial_period_coverage": "The source table contains fewer districts than the normal source geography for that period.",
+    "semantic_scope_review_required": "Authenticated CASA exceeds Aadhaar-seeded CASA for the same district-period; source definitions or extraction need review.",
+    "source_document_unlinked": "The consolidated source artifact does not retain a source PDF URL and page reference for this cell."
+  },
+  "qualityStatusValues": [
+    "verified",
+    "suspect",
+    "quarantined"
+  ],
+  "qualityTier": "standardized-preview",
+  "registrySchemaVersion": "indicator-registry-v1",
+  "releaseId": "meghalaya-standardized-preview-v1",
+  "schemaVersion": "observations-v1",
+  "source": {
+    "artifact": "/slbc-data/meghalaya/meghalaya_complete.json",
+    "id": "slbc-meghalaya",
+    "pageReferencesAvailable": false,
+    "publisher": "State Level Bankers' Committee, North East Region"
+  }
+}
