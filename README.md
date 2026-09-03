@@ -40,19 +40,17 @@ Install and verify:
 ```bash
 npm ci
 npm test
+python3 validate_data.py --waivers .github/validation-waivers --no-report
 python3 db/build_meghalaya_standardized.py --check
 python3 db/build_release_manifest.py --check
 python3 db/validate_release_data.py
 npm run build
+python3 scripts/validate_built_site.py dist
 ```
 
-The exact-waiver data gate used by deployment is:
+The GitHub Pages workflow runs these unit, data-quality, release and built-site gates on pull requests. It also blocks critical production dependency advisories and produces a dependency SBOM. Deployment runs only after the same quality job succeeds on `main`.
 
-```bash
-python3 validate_data.py --waivers .github/validation-waivers
-```
-
-The legacy validation report is generated output. Do not treat its prose summary as the release contract; CI evaluates observation-level critical fingerprints from the expiring waiver ledger.
+The legacy validation report is generated output. Do not treat its prose summary as the release contract; CI evaluates observation-level critical fingerprints from the expiring waiver ledger without rewriting the report.
 
 ## Repository map
 

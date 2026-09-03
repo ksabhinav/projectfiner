@@ -17,19 +17,15 @@ Use Node.js 22.12+ and Python 3.12+.
 ```bash
 npm ci
 npm test
+python3 validate_data.py --waivers .github/validation-waivers --no-report
 python3 db/build_meghalaya_standardized.py --check
 python3 db/build_release_manifest.py --check
 python3 db/validate_release_data.py
 npm run build
+python3 scripts/validate_built_site.py dist
 ```
 
-For changes that can affect SLBC observations, also run:
-
-```bash
-python3 validate_data.py --waivers .github/validation-waivers
-```
-
-That command regenerates `DATA_VALIDATION_REPORT.md`; do not commit unrelated report churn.
+The `--no-report` form checks the reviewed fingerprints without rewriting `DATA_VALIDATION_REPORT.md`.
 
 ## Data changes
 

@@ -61,9 +61,18 @@
         Astro page from public/sources/wayback.json. Optional; when absent
         the Sources block falls back to the live URL only. */
     wayback?: WaybackEntry | null;
+    /** Present only when the release manifest declares a state distribution. */
+    stateDownloadHref?: string | null;
+    stateCsvHref?: string | null;
   }
 
-  let { data, basePath, wayback = null }: Props = $props();
+  let {
+    data,
+    basePath,
+    wayback = null,
+    stateDownloadHref = null,
+    stateCsvHref = null,
+  }: Props = $props();
 
   const indicators = Object.entries(data.indicators);
 
@@ -104,7 +113,6 @@
 
   // Raw JSON download for this exact district.
   const rawJsonHref = `${basePath}districts/${data.state}/${data.districtSlug}.json`;
-  const stateCsvHref = `${basePath}slbc-data/${data.state}/${data.state}_fi_timeseries.csv`;
 
   function fmtValue(v: number | string, unit: string): string {
     if (v == null || v === '') return '—';
@@ -224,9 +232,11 @@
   </div>
 
   <div class="actions">
-    <a class="action-link" href="{basePath}slbc-data/{data.state}/download/">
-      Download all {data.stateLabel} data &rarr;
-    </a>
+    {#if stateDownloadHref}
+      <a class="action-link" href={stateDownloadHref}>
+        Download all {data.stateLabel} data &rarr;
+      </a>
+    {/if}
     <a class="action-link secondary" href="{basePath}?state={data.state}">
       View on map &rarr;
     </a>
@@ -299,8 +309,10 @@
     <p class="src-raw">
       Raw data for this district:
       <a class="src-link" href={rawJsonHref}>district JSON</a>
-      &middot;
-      <a class="src-link" href={stateCsvHref}>{data.stateLabel} full CSV</a>
+      {#if stateCsvHref}
+        &middot;
+        <a class="src-link" href={stateCsvHref}>{data.stateLabel} full CSV</a>
+      {/if}
     </p>
   </details>
 

@@ -13,10 +13,12 @@ interface Props {
       to the site-wide /og-image.png when omitted. Per-district pages pass
       /og/district/<state>/<district>.png. */
   ogImage?: string;
+  /** Suppress indexing and the canonical link for error pages. */
+  noindex?: boolean;
 }
 
 const defaultDescription = 'Project FINER is a public research preview of district-level financial-inclusion data assembled from SLBC and other source datasets. Coverage, periods and comparability vary by indicator and state.';
-const { title, description = defaultDescription, path, extraJsonLd, ogImage } = Astro.props;
+const { title, description = defaultDescription, path, extraJsonLd, ogImage, noindex = false } = Astro.props;
 const extraJsonLdArray = Array.isArray(extraJsonLd) ? extraJsonLd : (extraJsonLd ? [extraJsonLd] : []);
 
 const SITE_FOR_OG = 'https://projectfiner.com';
@@ -56,7 +58,8 @@ const webSiteLd = {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
   <title>{title}</title>
-  <link rel="canonical" href={canonicalUrl} />
+  {!noindex && <link rel="canonical" href={canonicalUrl} />}
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
 
   <!-- Atlas favicons —  bump version to force re-fetch when redesigned -->
   <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg?v=2`} />

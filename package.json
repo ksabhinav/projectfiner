@@ -17,6 +17,8 @@
     "check:release-manifest": "python3 db/build_release_manifest.py --check",
     "check:meghalaya-contract": "python3 db/build_meghalaya_standardized.py --check",
     "check:release-data": "python3 db/validate_release_data.py",
+    "check:data-quality": "python3 validate_data.py --waivers .github/validation-waivers --no-report",
+    "check:site": "python3 scripts/validate_built_site.py dist",
     "test": "npm run test:js && npm run test:python"
   },
   "dependencies": {
