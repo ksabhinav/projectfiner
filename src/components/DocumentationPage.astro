@@ -9,10 +9,11 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+const activeNav = Astro.url.pathname.startsWith('/methodology') ? 'methodology' : 'about';
 ---
 
 <BaseLayout title={`${title} | Project FINER`} description={description}>
-  <Header activeNav="about" />
+  <Header activeNav={activeNav} />
   <main class="doc-page">
     <article class="doc-content">
       <slot />

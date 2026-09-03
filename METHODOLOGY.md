@@ -82,7 +82,7 @@ A flag is a disposition, not proof that the upstream value is wrong.
 
 `db/build_release_manifest.py` deterministically inventories every public distribution. The release ID is derived from the canonical manifest payload. Each distribution records its path, byte size, SHA-256 hash, encoding, media type, schema version, quality tier, source IDs and rights status.
 
-The current public URLs are mutable when a new release replaces a file. Consumers who require reproducibility should retain the release manifest and verify the distribution hash. Immutable version URLs remain future work.
+Broad archive URLs remain mutable when a new release replaces a file. The Meghalaya standardized preview is also published under the immutable version ID `meghalaya-standardized-preview-v1`; its descriptor records exact hashes and certification blockers. A changed snapshot requires a new release ID.
 
 ## 9. Validation and waivers
 
@@ -91,7 +91,7 @@ Deployment applies two different controls:
 1. `validate_data.py` detects domain and extraction anomalies. Known critical legacy findings are allowed only by exact fingerprint in an expiring waiver ledger. A new critical identity fails even when aggregate counts do not rise.
 2. `db/validate_release_data.py` validates declared public distributions, including file existence, path safety, UTF-8 encoding, hashes, CSV structure and JSON parsing. Structural release failures cannot be baselined.
 
-The Meghalaya builder and release-manifest builder both have deterministic `--check` modes. Python and JavaScript contract tests cover canonical geography, safe rendering, release metadata and the standardized preview.
+The Meghalaya, release-manifest and versioned-release builders have deterministic `--check` modes. Python and JavaScript contract tests cover canonical geography, safe rendering, release metadata and the standardized preview.
 
 ## 10. Reproduction
 
@@ -101,6 +101,7 @@ From a clean checkout with Node.js 22.12+ and Python 3.12+:
 npm ci
 python3 db/build_meghalaya_standardized.py --check
 python3 db/build_release_manifest.py --check
+python3 db/build_versioned_release.py --check
 python3 db/validate_release_data.py
 npm test
 npm run build

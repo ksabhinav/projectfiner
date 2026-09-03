@@ -59,6 +59,7 @@ jobs:
           npm run check:meghalaya-contract
           npm run check:release-manifest
           npm run check:release-data
+          npm run check:versioned-release
 
       - name: Build Astro site
         run: npm run build

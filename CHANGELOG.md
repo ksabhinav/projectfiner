@@ -4,7 +4,8 @@ Material trust-layer, public-contract and data corrections are recorded here. Th
 
 ## Unreleased
 
-- No unreleased material changes recorded.
+- Published the immutable `meghalaya-standardized-preview-v1` release candidate with checksums and machine-enforced certification blockers.
+- Added canonical release and district discovery pages, and moved experimental Analysis and Ask tools behind the secondary navigation.
 
 ## 3 September 2026 — trust-layer remediation
 

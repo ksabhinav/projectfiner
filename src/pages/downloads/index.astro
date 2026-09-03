@@ -9,6 +9,10 @@ const base = import.meta.env.BASE_URL;
 const releaseManifest = JSON.parse(readFileSync(
   new URL('../../../public/release-manifest.json', import.meta.url), 'utf8',
 ));
+const releaseCatalog = JSON.parse(readFileSync(
+  new URL('../../../public/releases/index.json', import.meta.url), 'utf8',
+));
+const candidate = releaseCatalog.releases[0];
 const stateMeta = (state: any) => {
   const coverage = state.coverage;
   return `${coverage.periodCount} periods · ${coverage.districtCount} source labels · ${coverage.categoryCount} categories`;
@@ -28,13 +32,20 @@ const utStates = releaseManifest.states.filter((state: any) => state.group === '
       <span class="cite">Cite as:</span> <em>"FINER (projectfiner.com), via [original source]."</em>
     </p>
 
+    <a class="candidate" href={`${base}${candidate.landingPage.slice(1)}`}>
+      <div class="candidate-status"><strong>Immutable preview</strong><span>Not certified</span></div>
+      <h2>Meghalaya standardized preview v1</h2>
+      <p>{candidate.observationCount.toLocaleString('en-IN')} observations · 13 indicators · 12 canonical districts · through {candidate.latestPeriod}</p>
+      <p>Versioned files, SHA-256 hashes and machine-enforced certification blockers →</p>
+    </a>
+
     <aside class="release-notice">
       <div><span>Raw / experimental</span> Release {releaseManifest.releaseId}</div>
       <p>These files are a public research preview, not certified analysis-ready data. Coverage and schemas vary by state; source-label counts can include historical or unresolved geography labels.</p>
       <p>No blanket data licence is asserted. <a href={`${base}data-rights/`}>Rights</a> · <a href={`${base}methodology/`}>Methodology</a> · <a href={`${base}data-dictionary/`}>Dictionary</a> · <a href={`${base}corrections/`}>Corrections</a> · <a href={`${base}release-manifest.json`}>Manifest</a></p>
     </aside>
 
-    <div class="dl-section-eye">SLBC booklets · North-East · 8 states</div>
+    <div class="dl-section-eye">Source-derived archive · SLBC booklets · North-East · 8 states</div>
     <div class="dl-grid">
       {neStates.map(state => (
         <a class="dl-card" href={`${base}slbc-data/${state.slug}/download`}>
@@ -48,7 +59,7 @@ const utStates = releaseManifest.states.filter((state: any) => state.group === '
       ))}
     </div>
 
-    <div class="dl-section-eye">SLBC booklets · Other states · {otherStates.length} states</div>
+    <div class="dl-section-eye">Source-derived archive · SLBC booklets · Other states · {otherStates.length} states</div>
     <div class="dl-grid">
       {otherStates.map(state => (
         <a class="dl-card" href={`${base}slbc-data/${state.slug}/download`}>
@@ -172,6 +183,22 @@ const utStates = releaseManifest.states.filter((state: any) => state.group === '
   }
   .release-notice p { margin: 8px 0 0; }
   .release-notice a { color: var(--vermillion-d, #8E331E); }
+  .candidate {
+    display: block;
+    margin: 0 0 18px;
+    padding: 22px;
+    border: 1px solid var(--ink);
+    border-left: 4px solid var(--vermillion);
+    color: var(--ink);
+    background: rgba(255, 255, 255, .45);
+  }
+  .candidate:hover { box-shadow: 0 5px 18px rgba(27, 20, 14, .08); }
+  .candidate h2 { margin: 10px 0 7px; font: 420 25px/1.2 'Fraunces', Georgia, serif; }
+  .candidate p { margin: 5px 0; color: var(--ink-soft); font-size: 14px; }
+  .candidate-status { display: flex; gap: 8px; font: 700 8px/1 'Inter', sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+  .candidate-status strong, .candidate-status span { padding: 5px 7px; border-radius: 2px; }
+  .candidate-status strong { color: var(--paper); background: var(--ink); }
+  .candidate-status span { color: var(--vermillion-d); border: 1px solid var(--vermillion); }
 
   /* Atlas section eyebrow with trailing rule */
   .dl-section-eye {

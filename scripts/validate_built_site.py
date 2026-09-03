@@ -30,8 +30,10 @@ REQUIRED_SITEMAP_ROUTES = {
     "/data-dictionary/",
     "/data-rights/",
     "/downloads/",
+    "/districts/",
     "/methodology/",
     "/privacy/",
+    "/releases/meghalaya-standardized-preview-v1/",
 }
 LEGACY_HTML_PREFIXES = ("/charts/", "/digital-payments/")
 

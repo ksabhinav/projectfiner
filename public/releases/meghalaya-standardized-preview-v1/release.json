@@ -1,0 +1,85 @@
+{
+  "certification": {
+    "blockers": [
+      {
+        "code": "non_verified_observations",
+        "count": 3494,
+        "message": "Every certified observation must have quality_status=verified."
+      },
+      {
+        "code": "missing_source_pages",
+        "count": 3494,
+        "message": "Every observation must link to its source document and page."
+      },
+      {
+        "code": "semantic_scope_review_required",
+        "count": 225,
+        "message": "This unresolved quality flag blocks certification."
+      },
+      {
+        "code": "boundary_not_harmonised",
+        "count": 494,
+        "message": "This unresolved quality flag blocks certification."
+      },
+      {
+        "code": "partial_period_coverage",
+        "count": 10,
+        "message": "This unresolved quality flag blocks certification."
+      },
+      {
+        "code": "source_rights_not_reviewed",
+        "count": 1,
+        "message": "Upstream reuse rights require review before certification."
+      }
+    ],
+    "criteria": [
+      "All observations are verified.",
+      "Every observation links to a source document and page.",
+      "Semantic, boundary and partial-coverage flags are resolved.",
+      "Upstream reuse rights are reviewed."
+    ],
+    "eligible": false
+  },
+  "certificationStatus": "not-certified",
+  "distributions": [
+    {
+      "bytes": 1246752,
+      "mediaType": "text/csv",
+      "path": "releases/meghalaya-standardized-preview-v1/observations.csv",
+      "role": "observations",
+      "sha256": "710c383e1543a288039fe55edcf20adc8ecf9ef7f89b5dbb4c1013e97a7a9efa",
+      "url": "/releases/meghalaya-standardized-preview-v1/observations.csv"
+    },
+    {
+      "bytes": 6769,
+      "mediaType": "application/json",
+      "path": "releases/meghalaya-standardized-preview-v1/indicator-registry.json",
+      "role": "indicator-registry",
+      "sha256": "e51958cd318f96d6f6746cbdbddd08042a00b25f93e93caea23ff19106d2aa83",
+      "url": "/releases/meghalaya-standardized-preview-v1/indicator-registry.json"
+    }
+  ],
+  "generatedBy": "db/build_versioned_release.py",
+  "landingPage": "/releases/meghalaya-standardized-preview-v1/",
+  "productId": "meghalaya-standardized-preview",
+  "qualityTier": "standardized-preview",
+  "releaseId": "meghalaya-standardized-preview-v1",
+  "releaseStatus": "immutable-preview",
+  "schemaVersion": "release-candidate-v1",
+  "summary": {
+    "districtCount": 12,
+    "earliestPeriod": "2019-06-30",
+    "indicatorCount": 13,
+    "latestPeriod": "2025-12-31",
+    "observationCount": 3494,
+    "qualityFlagCounts": {
+      "boundary_not_harmonised": 494,
+      "partial_period_coverage": 10,
+      "semantic_scope_review_required": 225,
+      "source_document_unlinked": 3494
+    },
+    "qualityStatusCounts": {
+      "suspect": 3494
+    }
+  }
+}

@@ -4,11 +4,13 @@ Project FINER (Financial Inclusion in the North East Region) is a public researc
 
 The project is in a **research-preview** stage. Most public files are source-derived **raw / experimental** artifacts with uneven schemas and unresolved quality issues. The Meghalaya long-format product is a **standardized preview**, not a certified dataset. No FINER distribution is currently labelled Gold or certified.
 
-The authoritative machine-readable inventory is [`public/release-manifest.json`](public/release-manifest.json). It records the release ID, coverage, source IDs, rights status, file sizes, schemas and SHA-256 hashes for every public distribution.
+The authoritative broad inventory is [`public/release-manifest.json`](public/release-manifest.json). Immutable product releases are listed in [`public/releases/index.json`](public/releases/index.json). The current candidate, [`meghalaya-standardized-preview-v1`](public/releases/meghalaya-standardized-preview-v1/release.json), records its exact files, hashes and certification blockers.
 
 ## Start here
 
 - [Methodology and release policy](METHODOLOGY.md)
+- [Versioned Meghalaya release candidate](https://projectfiner.com/releases/meghalaya-standardized-preview-v1/)
+- [Canonical district directory](https://projectfiner.com/districts/)
 - [Data dictionary](DATA_DICTIONARY.md)
 - [Data rights and reuse](https://projectfiner.com/data-rights/)
 - [Correction policy](CORRECTIONS.md)
@@ -43,6 +45,7 @@ npm test
 python3 validate_data.py --waivers .github/validation-waivers --no-report
 python3 db/build_meghalaya_standardized.py --check
 python3 db/build_release_manifest.py --check
+python3 db/build_versioned_release.py --check
 python3 db/validate_release_data.py
 npm run build
 python3 scripts/validate_built_site.py dist
@@ -57,6 +60,7 @@ The legacy validation report is generated output. Do not treat its prose summary
 | Path | Purpose |
 |---|---|
 | `public/release-manifest.json` | Content-addressed public release inventory. |
+| `public/releases/` | Immutable product snapshots, release descriptors and catalog. |
 | `public/slbc-data/` | State-level raw source-derived JSON and wide CSV files. |
 | `public/data-contracts/` | Standardized preview artifacts and indicator registries. |
 | `public/district_lgd_codes.json` | Canonical LGD geography registry and aliases. |
@@ -72,7 +76,7 @@ The legacy validation report is generated output. Do not treat its prose summary
 - District boundary changes are not generally harmonised through time.
 - Rights metadata is incomplete and no blanket data licence is asserted.
 - Analytical and Ask interfaces may use broader experimental material than the standardized preview.
-- Public file URLs are mutable between releases even though each manifest entry is hashed.
+- Broad archive URLs remain mutable; versioned product files under `public/releases/` are immutable.
 
 Use the release manifest and row-level quality status when deciding whether material is suitable for analysis.
 
