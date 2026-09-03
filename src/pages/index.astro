@@ -63,7 +63,13 @@ const base = import.meta.env.BASE_URL;
       stateFilter: '',
       sortedQuarters: [],
       stats: {},
-      legendData: { title: '', breaks: [], ramp: [], unit: '' },
+      legendData: {
+        title: '', breaks: [], ramp: [], unit: '',
+        status: { current: 0, stale: 0, proxy: 0, suspect: 0, unclassified: 0, missing: 0, proxyAvailable: 0, periods: [] },
+        rows: [],
+        showProxies: false,
+        boundaryVintage: 'undocumented',
+      },
       focus: { active: false },
       indicators: {},
       manifest: null,
@@ -625,6 +631,9 @@ const base = import.meta.env.BASE_URL;
     var sortedQuarters = [];
     var sliderTimer = null;
     var bankingCentroids = [];
+    // Parent-district inheritance is an exploratory proxy, not an observation
+    // for the carved district. Keep it off until a reader explicitly opts in.
+    var showProxyData = false;
 
     // District name aliases
     var DISTRICT_ALIASES = {
@@ -875,7 +884,7 @@ const base = import.meta.env.BASE_URL;
     // then a STATE-QUALIFIED name match (prevents cross-state collisions on
     // names like Bilaspur HP/CG, Balrampur UP/CG, etc.), then plain name
     // fallback for records that don't carry state.
-    function resolveLookup(feature, lookup) {
+    function resolveLookup(feature, lookup, includeProxy) {
       var props = feature.properties;
       // 0. Try direct LGD code match (for NRLM/RBI data that has lgd field)
       var lgdCode = String(props.DIST_LGD || '').trim();
@@ -908,7 +917,7 @@ const base = import.meta.env.BASE_URL;
         //     Guntur, …). Return the parent's entry with an
         //     `inheritedFrom` tag so the tooltip can disclose.
         var parentInfo = NEW_DISTRICT_PARENTS[dn];
-        if (parentInfo && parentInfo[1] === stateSlug) {
+        if (includeProxy && parentInfo && parentInfo[1] === stateSlug) {
           var parentEntry = lookup.get(stateSlug + '|' + parentInfo[0]);
           if (parentEntry) {
             // Shallow-clone so we don't mutate the cached parent entry
@@ -1054,7 +1063,15 @@ const base = import.meta.env.BASE_URL;
           allUnits[m.label] = m.unit || '';
         }
 
-        var entry = { value: val, metrics: allVals, units: allUnits, district: rec.district, state: rec.state };
+        var entry = {
+          value: val,
+          metrics: allVals,
+          units: allUnits,
+          district: rec.district,
+          state: rec.state,
+          qualityStatus: String(rec.quality_status || rec.qualityStatus || '').toLowerCase(),
+          qualityFlags: rec.quality_flags || rec.qualityFlags || '',
+        };
         // Fallback disclosure. Per-record `_fromQuarter` (set by the
         // merge-and-tag loader when a district's own quarter had no data and
         // it was filled from an earlier one) wins; otherwise fall back to the
@@ -1096,6 +1113,39 @@ const base = import.meta.env.BASE_URL;
       });
     }
 
+    function classifyMapEntry(data) {
+      if (!data || data.value === null || data.value === undefined) return 'missing';
+      if (data.inheritedFrom) return 'proxy';
+      if (data.qualityStatus === 'invalid' || data.qualityStatus === 'suspect') return 'suspect';
+      if (data.fallbackQuarter && data.fallbackQuarter !== currentQuarter) return 'stale';
+      return 'current';
+    }
+
+    function mapEntryStyle(data, val, breaks, ramp) {
+      var status = classifyMapEntry(data);
+      var style = {
+        fillColor: getColor(val, breaks, ramp),
+        fillOpacity: val === null ? 0.5 : 0.78,
+        color: '#c8bfb0',
+        weight: 0.8,
+        opacity: 0.7,
+      };
+      if (status === 'stale') {
+        style.dashArray = '4 3';
+        style.color = '#7A6C5D';
+      } else if (status === 'proxy') {
+        style.dashArray = '2 3';
+        style.fillOpacity = 0.48;
+        style.color = '#8E331E';
+        style.weight = 1.4;
+      } else if (status === 'suspect') {
+        style.dashArray = '1 3';
+        style.color = '#8E331E';
+        style.weight = 1.6;
+      }
+      return style;
+    }
+
     function buildChoropleth_banking() {
       if (choroLayer) { map.removeLayer(choroLayer); choroLayer = null; }
       if (!distGeoJSON || !currentQuarter) return;
@@ -1125,7 +1175,7 @@ const base = import.meta.env.BASE_URL;
       filtered.features.forEach(function(f) {
         var st = f.properties.STATE_UT?.toUpperCase()?.trim();
         if (bankingStateFilter && st !== bankingStateFilter) return;
-        var data = resolveLookup(f, lookup);
+        var data = resolveLookup(f, lookup, showProxyData);
         if (data && data.value !== null) allVals.push(data.value);
       });
       var breaks = computeBreaks(allVals);
@@ -1136,12 +1186,47 @@ const base = import.meta.env.BASE_URL;
         var stTitle = bankingStateFilter.toLowerCase().replace(/\b\w/g, function(c){return c.toUpperCase();});
         legendLabel = legendLabel + ' · ' + stTitle;
       }
-      updateLegend_banking(legendLabel, breaks, ramp);
+      var statusCounts = { current: 0, stale: 0, proxy: 0, suspect: 0, unclassified: 0, missing: 0, proxyAvailable: 0, periods: [] };
+      var periodCounts = {};
+      var exportRows = [];
+      filtered.features.forEach(function(f) {
+        var st = f.properties.STATE_UT?.toUpperCase()?.trim();
+        if (bankingStateFilter && st !== bankingStateFilter) return;
+        var direct = resolveLookup(f, lookup, false);
+        var proxy = direct ? null : resolveLookup(f, lookup, true);
+        if (proxy && proxy.inheritedFrom) statusCounts.proxyAvailable++;
+        var data = direct || (showProxyData ? proxy : null);
+        var status = classifyMapEntry(data);
+        statusCounts[status]++;
+        if (data && data.value !== null && data.value !== undefined) {
+          if (!data.qualityStatus) statusCounts.unclassified++;
+          var sourcePeriod = data.fallbackQuarter || currentQuarter || 'static';
+          periodCounts[sourcePeriod] = (periodCounts[sourcePeriod] || 0) + 1;
+          exportRows.push({
+            district: f.properties.DISTRICT || '',
+            state: f.properties.STATE_UT || '',
+            indicator: currentIndicator,
+            metric: metric.label,
+            value: data.value,
+            requested_period: currentQuarter || 'static',
+            source_period: sourcePeriod,
+            status: status,
+            proxy_from: data.inheritedFrom || '',
+            quality_status: data.qualityStatus || 'unclassified',
+            quality_flags: data.qualityFlags || '',
+            boundary_vintage: 'undocumented',
+          });
+        }
+      });
+      statusCounts.periods = Object.keys(periodCounts)
+        .sort().reverse()
+        .map(function(period) { return { period: period, count: periodCounts[period] }; });
+      updateLegend_banking(legendLabel, breaks, ramp, statusCounts, exportRows);
 
       choroLayer = L.geoJSON(filtered, {
         style: function(feature) {
           var st = feature.properties.STATE_UT?.toUpperCase()?.trim();
-          var data = resolveLookup(feature, lookup);
+          var data = resolveLookup(feature, lookup, showProxyData);
           var val = data ? data.value : null;
           // Non-focus states: render as dim grey context
           if (bankingStateFilter && st !== bankingStateFilter) {
@@ -1153,13 +1238,7 @@ const base = import.meta.env.BASE_URL;
               opacity: 0.45,
             };
           }
-          return {
-            fillColor: getColor(val, breaks, ramp),
-            fillOpacity: val === null ? 0.5 : 0.78,
-            color: '#c8bfb0',
-            weight: 0.8,
-            opacity: 0.7,
-          };
+          return mapEntryStyle(data, val, breaks, ramp);
         },
         onEachFeature: function(feature, layer) {
           var p = feature.properties;
@@ -1173,7 +1252,7 @@ const base = import.meta.env.BASE_URL;
             });
             return;
           }
-          var data = resolveLookup(feature, lookup);
+          var data = resolveLookup(feature, lookup, showProxyData);
 
           layer.on({
             mouseover: function(e) {
@@ -1235,6 +1314,11 @@ const base = import.meta.env.BASE_URL;
                   tip += '<div class="dtt-fallback">Reported under '
                     + escapeHtml(data.inheritedFrom) + ' (pre-reorg SLBC structure)</div>';
                 }
+                if (data.qualityStatus === 'suspect' || data.qualityStatus === 'invalid') {
+                  tip += '<div class="dtt-fallback">Quality status: ' + escapeHtml(data.qualityStatus) + '</div>';
+                } else if (!data.qualityStatus) {
+                  tip += '<div class="dtt-quality-unclassified">Row-level quality status not available</div>';
+                }
               } else {
                 tip += '<div class="dtt-empty">No data available</div>';
               }
@@ -1258,14 +1342,30 @@ const base = import.meta.env.BASE_URL;
       if (focusedDistrict) updateFocusPanel();
     }
 
-    function updateLegend_banking(metricLabel, breaks, ramp) {
+    function updateLegend_banking(metricLabel, breaks, ramp, status, rows) {
       // Dispatch to MapLegend.svelte
       var unit = '';
       if (metricLabel.indexOf('(₹') >= 0) unit = '₹';
       else if (metricLabel.indexOf('(%)') >= 0) unit = '%';
-      window.__FINER.legendData = { title: metricLabel, breaks: breaks, ramp: ramp, unit: unit };
-      window.dispatchEvent(new CustomEvent('finer:legendUpdate', { detail: { title: metricLabel, breaks: breaks, ramp: ramp, unit: unit, indicator: currentIndicator } }));
+      var detail = {
+        title: metricLabel,
+        breaks: breaks,
+        ramp: ramp,
+        unit: unit,
+        indicator: currentIndicator,
+        status: status,
+        rows: rows,
+        showProxies: showProxyData,
+        boundaryVintage: 'undocumented',
+      };
+      window.__FINER.legendData = detail;
+      window.dispatchEvent(new CustomEvent('finer:legendUpdate', { detail: detail }));
     }
+
+    window.addEventListener('finer:proxyVisibilityChange', function(e) {
+      showProxyData = !!(e.detail && e.detail.visible);
+      buildChoropleth_banking();
+    });
 
     function updateStats_banking(lookup, allVals) {
       var total = lookup ? lookup.size : 0;
@@ -1373,7 +1473,7 @@ const base = import.meta.env.BASE_URL;
       var data = null;
       if (fState) {
         data = lookup.get(fState + '|' + focusedDistrict);
-        if (!data) {
+        if (!data && showProxyData) {
           var aliasD = DISTRICT_ALIASES[focusedDistrict];
           if (aliasD) data = lookup.get(fState + '|' + aliasD);
         }
@@ -1418,7 +1518,10 @@ const base = import.meta.env.BASE_URL;
         strokeColor: ramp[4] || '#B84A2E',
         metricLabel: metric.label,
         value: val !== null ? fmtWithUnit(val, metric.unit) : 'No data',
-        quarter: fmtQuarter(currentQuarter),
+        quarter: fmtQuarter(data && data.fallbackQuarter ? data.fallbackQuarter : currentQuarter),
+        status: classifyMapEntry(data),
+        proxyFrom: data && data.inheritedFrom ? data.inheritedFrom : '',
+        qualityStatus: data && data.qualityStatus ? data.qualityStatus : 'unclassified',
       };
       window.__FINER.focus = focusDetail;
       window.dispatchEvent(new CustomEvent('finer:focusUpdate', { detail: focusDetail }));
@@ -1429,7 +1532,7 @@ const base = import.meta.env.BASE_URL;
       focusedState = null;
       focusedSvgPath = '';
       window.__FINER.focus = { active: false };
-      window.dispatchEvent(new CustomEvent('finer:focusUpdate', { detail: { active: false, district: '', state: '', svgPath: '', svgViewBox: '0 0 400 400', fillColor: '', strokeColor: '', metricLabel: '', value: '', quarter: '' } }));
+      window.dispatchEvent(new CustomEvent('finer:focusUpdate', { detail: { active: false, district: '', state: '', svgPath: '', svgViewBox: '0 0 400 400', fillColor: '', strokeColor: '', metricLabel: '', value: '', quarter: '', status: '', proxyFrom: '', qualityStatus: '' } }));
     }
 
     // Focus mode — FocusOverlay.svelte handles its own event listeners (close, ESC, backdrop)
@@ -2290,6 +2393,7 @@ const base = import.meta.env.BASE_URL;
   .dtt-empty{font-style:italic;color:#6E665E;font-size:12px;padding:4px 0}
   .dtt-meta{margin-top:8px;padding-top:8px;border-top:1px solid #D9D2C5;display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:9px;color:#6E665E;letter-spacing:0.06em}
   .dtt-fallback{margin-top:4px;font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-size:10.5px;color:#8E331E}
+  .dtt-quality-unclassified{margin-top:4px;font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-size:10.5px;color:#6E665E}
   .leaflet-tooltip{padding:0!important;border:none!important;background:none!important;box-shadow:none!important}
   .dist-label{background:none!important;border:none!important;box-shadow:none!important;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:9px;font-weight:600;color:#555048;text-transform:uppercase;letter-spacing:0.05em;text-shadow:0 0 5px #fff,0 0 5px #fff,1px 0 4px #fff,-1px 0 4px #fff,0 1px 4px #fff,0 -1px 4px #fff;white-space:nowrap;pointer-events:none;padding:0!important;opacity:0.8}
 

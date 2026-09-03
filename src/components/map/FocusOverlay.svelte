@@ -21,6 +21,9 @@
   let metricLabel = $state('');
   let value = $state('');
   let quarter = $state('');
+  let status = $state('');
+  let proxyFrom = $state('');
+  let qualityStatus = $state('');
 
   function applyUpdate(detail: FocusUpdateDetail) {
     active = detail.active;
@@ -32,6 +35,9 @@
     metricLabel = detail.metricLabel;
     value = detail.value;
     quarter = detail.quarter;
+    status = detail.status;
+    proxyFrom = detail.proxyFrom;
+    qualityStatus = detail.qualityStatus;
   }
 
   function exitFocus() {
@@ -114,7 +120,9 @@
       <div class="focus-meta">
         <span>{quarter}</span>
         <span class="rule"></span>
-        <span>SOURCE · SLBC</span>
+        <span>{status === 'proxy' ? `PROXY · ${proxyFrom}` : status.toUpperCase()}</span>
+        <span class="rule"></span>
+        <span>QUALITY · {qualityStatus.toUpperCase()}</span>
       </div>
     </div>
   </div>

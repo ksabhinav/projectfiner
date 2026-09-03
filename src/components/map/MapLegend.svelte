@@ -3,6 +3,7 @@
   import { onFiner, getFinerState } from '../../lib/map-bridge';
   import { fmtNum } from '../../lib/format-utils';
   import { getSourceCitation } from '../../lib/indicator-sources';
+  import { buildMapViewCsv, mapViewFilename } from '../../lib/map-data-status.js';
 
   interface Props {}
   let {}: Props = $props();
@@ -18,6 +19,10 @@
   let stateFilter = $state(''); // current state focus, '' = All India
   let currentIndicator = $state('');
   let currentQuarter = $state('');
+  let status = $state({ current: 0, stale: 0, proxy: 0, suspect: 0, unclassified: 0, missing: 0, proxyAvailable: 0, periods: [] as Array<{ period: string; count: number }> });
+  let exportRows: Array<Record<string, unknown>> = $state([]);
+  let showProxies = $state(false);
+  let boundaryVintage = $state('undocumented');
 
   function syncFromGlobal() {
     const s = getFinerState();
@@ -30,6 +35,10 @@
       legendBreaks = s.legendData.breaks;
       legendRamp = s.legendData.ramp;
       legendUnit = s.legendData.unit;
+      status = s.legendData.status || status;
+      exportRows = s.legendData.rows || [];
+      showProxies = !!s.legendData.showProxies;
+      boundaryVintage = s.legendData.boundaryVintage || 'undocumented';
     }
   }
 
@@ -76,6 +85,10 @@
         legendBreaks = detail.breaks;
         legendRamp = detail.ramp;
         legendUnit = detail.unit;
+        status = detail.status || status;
+        exportRows = detail.rows || [];
+        showProxies = !!detail.showProxies;
+        boundaryVintage = detail.boundaryVintage || 'undocumented';
         syncFromGlobal();
       }),
       onFiner('stateUpdate', () => {
@@ -90,6 +103,26 @@
 
     return () => unsubs.forEach(fn => fn());
   });
+
+  function toggleProxies(event: Event) {
+    const visible = (event.currentTarget as HTMLInputElement).checked;
+    showProxies = visible;
+    window.dispatchEvent(new CustomEvent('finer:proxyVisibilityChange', { detail: { visible } }));
+  }
+
+  function exportView() {
+    if (!exportRows.length) return;
+    const csv = buildMapViewCsv(exportRows);
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = mapViewFilename(currentIndicator, currentQuarter);
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    URL.revokeObjectURL(url);
+  }
 </script>
 
 {#if legendRamp.length > 0}
@@ -104,6 +137,35 @@
         {#each legendBreaks as brk}
           <span>{formatLabel(brk, legendUnit)}</span>
         {/each}
+      </div>
+      <div class="status-summary" aria-label="Data status for the displayed map">
+        <div class="status-heading">Displayed observations</div>
+        <div class="status-counts">
+          <span><i class="status-mark current"></i>{status.current} selected period</span>
+          <span><i class="status-mark stale"></i>{status.stale} different period</span>
+          <span><i class="status-mark suspect"></i>{status.suspect} suspect</span>
+          <span><i class="status-mark missing"></i>{status.missing} no data</span>
+        </div>
+        {#if status.periods.length > 1}
+          <div class="period-composition">
+            {#each status.periods as item}
+              <span>{item.period}: {item.count}</span>
+            {/each}
+          </div>
+        {/if}
+        {#if status.unclassified > 0}
+          <div class="quality-note">Quality status is not classified for {status.unclassified} displayed observations.</div>
+        {/if}
+        <div class="boundary-note">Boundary vintage: {boundaryVintage}.</div>
+        {#if status.proxyAvailable > 0}
+          <label class="proxy-toggle">
+            <input type="checkbox" checked={showProxies} onchange={toggleProxies} />
+            Show {status.proxyAvailable} inherited parent {status.proxyAvailable === 1 ? 'proxy' : 'proxies'}
+          </label>
+        {/if}
+        <button class="export-button" type="button" onclick={exportView} disabled={!exportRows.length}>
+          Export displayed data + status
+        </button>
       </div>
       <div class="legend-source" title={citation.attribution || citation.label}>
         <span class="legend-source-prefix">Source:</span>
@@ -135,7 +197,7 @@
     padding: 12px 16px;
     box-shadow: 0 4px 20px rgba(27, 20, 14, 0.06);
     border-radius: 6px;
-    width: 280px;
+    width: 310px;
     max-width: 90vw;
   }
 
@@ -175,6 +237,71 @@
     color: var(--ink-soft, #3D332A);
     margin-top: 4px;
   }
+
+  .status-summary {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid var(--rule-soft, #E8E2D5);
+    font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+    font-size: 9px;
+    line-height: 1.45;
+    color: var(--ink-soft, #3D332A);
+  }
+  .status-heading {
+    color: var(--mist, #6E665E);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 5px;
+  }
+  .status-counts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px 8px;
+  }
+  .status-counts span { display: flex; align-items: center; gap: 5px; }
+  .status-mark { width: 9px; height: 9px; display: inline-block; border: 1px solid #7A6C5D; }
+  .status-mark.current { background: var(--vermillion, #B84A2E); border-color: var(--vermillion, #B84A2E); }
+  .status-mark.stale { border-style: dashed; background: #D9D2C5; }
+  .status-mark.suspect { border-style: dotted; border-width: 2px; border-color: #8E331E; }
+  .status-mark.missing { background: #E8E4DC; border-color: #C8BFB0; }
+  .period-composition {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 10px;
+    margin-top: 6px;
+    color: var(--mist, #6E665E);
+  }
+  .quality-note {
+    margin-top: 6px;
+    color: #6E665E;
+    font-family: var(--font-body, 'Source Serif 4', Georgia, serif);
+    font-style: italic;
+    font-size: 10px;
+  }
+  .boundary-note {
+    margin-top: 5px;
+    color: #6E665E;
+  }
+  .proxy-toggle {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-top: 7px;
+    cursor: pointer;
+  }
+  .proxy-toggle input { accent-color: var(--vermillion, #B84A2E); }
+  .export-button {
+    margin-top: 8px;
+    border: 1px solid var(--rule, #D9D2C5);
+    border-radius: 3px;
+    background: transparent;
+    color: var(--vermillion, #B84A2E);
+    padding: 5px 7px;
+    font: inherit;
+    cursor: pointer;
+  }
+  .export-button:hover { border-color: currentColor; }
+  .export-button:disabled { opacity: 0.45; cursor: default; }
 
   /* Live source citation — replaces the old "Adaptive — recomputed" note + Sources link */
   .legend-source {
@@ -218,13 +345,15 @@
   /* ── Mobile ── */
   @media (max-width: 640px) {
     .legend-wrap {
-      display: none;
+      left: 8px;
+      bottom: 66px;
     }
 
     .legend-box {
       padding: 6px 10px;
       border-radius: 8px;
-      max-width: 180px;
+      width: 245px;
+      max-width: calc(100vw - 80px);
     }
 
     .legend-title {
@@ -240,5 +369,8 @@
       font-size: 7px;
       margin-top: 2px;
     }
+    .legend-attribution, .quality-note, .period-composition { display: none; }
+    .legend-source { margin-top: 6px; padding-top: 5px; }
+    .status-summary { margin-top: 6px; padding-top: 5px; }
   }
 </style>
