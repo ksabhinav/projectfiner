@@ -280,7 +280,10 @@
     <p>
       Source: <a href={releaseSource?.url} target="_blank" rel="noopener">{releaseSource?.publisher}</a>.
       Rights have not been reviewed; public availability does not establish reuse permission.
-      <a href={`${base}data-rights/`}>Details</a>
+      <a href={`${base}data-rights/`}>Rights</a> ·
+      <a href={`${base}methodology/`}>Methodology</a> ·
+      <a href={`${base}data-dictionary/`}>Dictionary</a> ·
+      <a href={`${base}corrections/`}>Corrections</a>
     </p>
   </aside>
 {/if}

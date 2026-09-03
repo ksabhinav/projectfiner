@@ -1,7 +1,33 @@
 ---
+import releaseManifest from '../../public/release-manifest.json';
 const year = new Date().getFullYear();
+const base = import.meta.env.BASE_URL;
 ---
 
 <footer class="site-footer">
-  Project FINER &middot; {year}
+  <div>Project FINER &middot; {year} &middot; release <code>{releaseManifest.releaseId}</code></div>
+  <nav aria-label="Project documentation">
+    <a href={`${base}methodology/`}>Methodology</a>
+    <a href={`${base}data-dictionary/`}>Data dictionary</a>
+    <a href={`${base}corrections/`}>Corrections</a>
+    <a href={`${base}data-rights/`}>Rights</a>
+    <a href={`${base}privacy/`}>Privacy</a>
+    <a href={`${base}changelog/`}>Changelog</a>
+  </nav>
 </footer>
+
+<style>
+  .site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 28px;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--rule-soft, #E8E2D5);
+    color: var(--mist, #6E665E);
+  }
+  code { font-family: 'IBM Plex Mono', monospace; }
+  nav { display: flex; gap: 8px 16px; flex-wrap: wrap; }
+  a { color: var(--ink-soft, #3D332A); text-decoration: none; }
+  a:hover { color: var(--vermillion-d, #8E331E); text-decoration: underline; }
+</style>

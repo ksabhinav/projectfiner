@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: >-
+  If you use Project FINER, cite this project and the upstream publisher named
+  by the relevant distribution in the release manifest.
+title: Project FINER
+type: software
+authors:
+  - family-names: Kadyalwar
+    given-names: Abhinav
+repository-code: https://github.com/ksabhinav/projectfiner
+url: https://projectfiner.com
+abstract: >-
+  A public research preview assembling district-level financial-inclusion
+  material from State Level Bankers' Committee publications and related
+  sources in India.
+keywords:
+  - financial inclusion
+  - district data
+  - India
+  - SLBC

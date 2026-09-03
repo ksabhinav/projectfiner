@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<BaseLayout title={`${title} | Project FINER`} description={description}>
+  <Header activeNav="about" />
+  <main class="doc-page">
+    <article class="doc-content">
+      <slot />
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style is:global>
+  .doc-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 46px 40px 80px;
+    color: var(--ink, #1B140E);
+  }
+  .doc-content { max-width: 820px; }
+  .doc-content h1,
+  .doc-content h2,
+  .doc-content h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 420;
+    color: var(--ink, #1B140E);
+  }
+  .doc-content h1 {
+    margin: 0 0 22px;
+    font-size: clamp(36px, 6vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+  .doc-content h2 {
+    margin: 42px 0 13px;
+    padding-top: 12px;
+    border-top: 1px solid var(--rule-soft, #E8E2D5);
+    font-size: 26px;
+  }
+  .doc-content h3 { margin: 28px 0 10px; font-size: 19px; }
+  .doc-content p,
+  .doc-content li {
+    font: 15.5px/1.68 'Source Serif 4', Georgia, serif;
+    color: var(--ink-soft, #3D332A);
+  }
+  .doc-content p { margin: 0 0 15px; }
+  .doc-content ul,
+  .doc-content ol { margin: 0 0 18px; padding-left: 25px; }
+  .doc-content li { margin: 5px 0; }
+  .doc-content a { color: var(--vermillion-d, #8E331E); }
+  .doc-content code {
+    padding: 1px 4px;
+    border-radius: 3px;
+    background: var(--paper-deep, #ECE5D6);
+    font: 0.84em/1.5 'IBM Plex Mono', monospace;
+  }
+  .doc-content pre {
+    margin: 18px 0 24px;
+    padding: 16px;
+    overflow-x: auto;
+    border: 1px solid var(--rule, #D9D2C5);
+    background: var(--ink, #1B140E);
+    color: var(--paper, #F4EFE6);
+  }
+  .doc-content pre code { padding: 0; background: transparent; color: inherit; }
+  .doc-content blockquote {
+    margin: 20px 0;
+    padding: 10px 18px;
+    border-left: 3px solid var(--gold, #8B6914);
+    background: var(--paper-deep, #ECE5D6);
+  }
+  .doc-content blockquote p { margin: 0; font-style: italic; }
+  .doc-content table {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    margin: 18px 0 26px;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font: 12.5px/1.5 'Source Serif 4', Georgia, serif;
+  }
+  .doc-content th,
+  .doc-content td {
+    min-width: 130px;
+    padding: 9px 11px;
+    border: 1px solid var(--rule, #D9D2C5);
+    text-align: left;
+    vertical-align: top;
+  }
+  .doc-content th {
+    background: var(--paper-deep, #ECE5D6);
+    font: 700 9px/1.4 'Inter', sans-serif;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+  @media (max-width: 700px) {
+    .doc-page { padding: 32px 18px 56px; }
+    .doc-content h2 { font-size: 23px; }
+  }
+</style>

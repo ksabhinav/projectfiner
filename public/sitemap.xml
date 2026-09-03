@@ -48,6 +48,31 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://projectfiner.com/methodology/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://projectfiner.com/data-dictionary/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://projectfiner.com/corrections/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://projectfiner.com/privacy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://projectfiner.com/changelog/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
   <!-- Per-state SLBC download pages (one per state directory under src/pages/slbc-data) -->
   <url><loc>https://projectfiner.com/slbc-data/andhra-pradesh/download/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
