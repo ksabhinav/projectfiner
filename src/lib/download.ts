@@ -18,17 +18,3 @@ export function downloadCsv(rows: string[][], filename: string) {
   const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
   saveBlob(blob, filename);
 }
-
-export async function downloadXlsx(
-  sheets: { name: string; rows: string[][] }[],
-  filename: string
-) {
-  const XLSX = await import('xlsx');
-  const wb = XLSX.utils.book_new();
-  for (const sheet of sheets) {
-    const ws = XLSX.utils.aoa_to_sheet(sheet.rows);
-    ws['!cols'] = sheet.rows[0]?.map(h => ({ wch: Math.max(String(h).length + 2, 14) }));
-    XLSX.utils.book_append_sheet(wb, ws, sheet.name.slice(0, 31));
-  }
-  XLSX.writeFile(wb, filename);
-}
