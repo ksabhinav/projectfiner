@@ -1,20 +1,22 @@
 name: Refresh framework lockfile
 
 on:
-  push:
+  pull_request:
     branches:
-      - codex/p1-framework-security
+      - main
 
 permissions:
   contents: write
 
 jobs:
   refresh-lockfile:
-    if: ${{ !contains(github.event.head_commit.message, '[lockfile]') }}
+    if: github.head_ref == 'codex/p1-framework-security'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
       - uses: actions/setup-node@v4
         with:
           node-version: 22.12.0
