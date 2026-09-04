@@ -4,6 +4,7 @@ Material trust-layer, public-contract and data corrections are recorded here. Th
 
 ## Unreleased
 
+- Upgraded Astro, the Astro Svelte integration, Svelte and their transitive Vite toolchain beyond known vulnerable releases.
 - Removed the vulnerable browser-side `xlsx` package and retired generated Excel downloads; CSV remains the canonical download format.
 - Published the immutable `meghalaya-standardized-preview-v1` release candidate with checksums and machine-enforced certification blockers.
 - Added canonical release and district discovery pages, and moved experimental Analysis and Ask tools behind the secondary navigation.
