@@ -17,6 +17,7 @@ class CiContractTests(unittest.TestCase):
             "npm run check:meghalaya-contract",
             "npm run check:release-manifest",
             "npm run check:release-data",
+            "npm run check:versioned-release",
             "npm run build",
             "npm run check:site",
             "npm sbom --sbom-format cyclonedx",

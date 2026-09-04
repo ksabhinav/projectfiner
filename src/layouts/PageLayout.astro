@@ -24,9 +24,11 @@ const { title, pageTitle, subtitle, description, backLink, activeSubNav, hideFoo
 
 // Auto-derive activeNav from the URL so the right pill is highlighted.
 const path = Astro.url?.pathname ?? '';
-let activeNav: 'map' | 'analysis' | 'about' | 'ask' | 'downloads' | undefined;
+let activeNav: 'map' | 'districts' | 'methodology' | 'analysis' | 'about' | 'ask' | 'downloads' | undefined;
 if (path.startsWith('/about'))                                 activeNav = 'about';
 else if (path.startsWith('/ask'))                              activeNav = 'ask';
+else if (path.startsWith('/district'))                         activeNav = 'districts';
+else if (path.startsWith('/methodology'))                      activeNav = 'methodology';
 else if (path.startsWith('/analysis')
       || path.startsWith('/scatter'))                          activeNav = 'analysis';
 else if (path.startsWith('/capital-markets')

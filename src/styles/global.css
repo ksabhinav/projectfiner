@@ -199,11 +199,39 @@ a:hover { color: var(--vermillion-d); }
   color: var(--paper);
   border-color: var(--ink);
 }
+.finer-header .nav-more { position: relative; }
+.finer-header .nav-more summary { cursor: pointer; list-style: none; }
+.finer-header .nav-more summary::-webkit-details-marker { display: none; }
+.finer-header .nav-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 190px;
+  padding: 6px;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  background: var(--paper);
+  box-shadow: 0 12px 28px rgba(27, 20, 14, 0.14);
+}
+.finer-header .nav-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 10px;
+  border-radius: 3px;
+  color: var(--ink);
+  font: 600 10px/1.2 'Inter', sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.finer-header .nav-menu a:hover { background: var(--paper-deep); }
+.finer-header .nav-menu small { color: var(--vermillion-d); font-size: 7px; }
 
 @media (max-width: 760px) {
   .finer-header { padding: 0 16px; }
   .finer-header .nav-cap { padding: 8px 10px; font-size: 9px; }
-  .finer-header .nav .nav-cap:nth-child(n+5) { display: none; }
+  .finer-header .nav > .nav-cap:nth-child(4) { display: none; }
 }
 
 /* When focus mode is active, header + strip + timeline stay above the overlay

@@ -39,6 +39,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://projectfiner.com/districts/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://projectfiner.com/releases/meghalaya-standardized-preview-v1/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://projectfiner.com/data-rights/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

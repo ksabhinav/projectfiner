@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { readFileSync } from 'node:fs';
+
+const index = JSON.parse(readFileSync(new URL('../../../public/districts/index.json', import.meta.url), 'utf8'));
+const base = import.meta.env.BASE_URL;
+const groups = Object.values(index.districts.reduce((result: any, district: any) => {
+  (result[district.state] ??= { slug: district.state, label: district.stateLabel, districts: [] }).districts.push(district);
+  return result;
+}, {})).sort((a: any, b: any) => a.label.localeCompare(b.label));
+---
+
+<BaseLayout title="Districts | Project FINER" description="Browse Project FINER's canonical LGD-identified district pages by state or district name.">
+  <Header activeNav="districts" />
+  <main class="directory">
+    <p class="eyebrow">Canonical geography directory</p>
+    <h1>Browse {index.count.toLocaleString('en-IN')} districts</h1>
+    <p class="dek">Find canonical district pages by current LGD identity. Historical and alternate labels redirect to these pages and are not listed separately.</p>
+    <label for="district-search">Search states or districts</label>
+    <input id="district-search" type="search" placeholder="e.g. Meghalaya or East Khasi Hills" autocomplete="off" />
+    <p id="district-results" class="result-count" aria-live="polite">Showing all {index.count.toLocaleString('en-IN')} districts</p>
+    <div class="states">
+      {groups.map((group: any) => (
+        <details class="state" data-state={group.label.toLowerCase()} open={group.slug === 'meghalaya'}>
+          <summary>{group.label}<span>{group.districts.length}</span></summary>
+          <div class="district-grid">
+            {group.districts.map((district: any) => (
+              <a data-name={`${group.label} ${district.district}`.toLowerCase()} href={`${base}district/${district.state}/${district.districtSlug}/`}>
+                <strong>{district.district}</strong>
+                <small>LGD {district.lgdCode} · {district.indicatorCount} indicators</small>
+              </a>
+            ))}
+          </div>
+        </details>
+      ))}
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<script>
+  const input = document.querySelector<HTMLInputElement>('#district-search');
+  const output = document.querySelector<HTMLElement>('#district-results');
+  const links = [...document.querySelectorAll<HTMLElement>('[data-name]')];
+  const states = [...document.querySelectorAll<HTMLDetailsElement>('.state')];
+  input?.addEventListener('input', () => {
+    const query = input.value.trim().toLowerCase();
+    let visible = 0;
+    links.forEach(link => {
+      const match = !query || link.dataset.name?.includes(query);
+      link.hidden = !match;
+      if (match) visible += 1;
+    });
+    states.forEach(state => {
+      const matches = [...state.querySelectorAll<HTMLElement>('[data-name]')].some(link => !link.hidden);
+      state.hidden = !matches;
+      if (query && matches) state.open = true;
+    });
+    if (output) output.textContent = query ? `${visible.toLocaleString('en-IN')} matching districts` : `Showing all ${visible.toLocaleString('en-IN')} districts`;
+  });
+</script>
+
+<style>
+  .directory { max-width: 1050px; margin: 0 auto; padding: 48px 32px 72px; }
+  .eyebrow, label { color: var(--vermillion); font: 700 10px/1.2 'Inter', sans-serif; letter-spacing: .15em; text-transform: uppercase; }
+  h1 { margin: 8px 0; font: 380 clamp(38px, 6vw, 58px)/1.05 'Fraunces', Georgia, serif; letter-spacing: -.03em; }
+  .dek { max-width: 720px; margin-bottom: 30px; color: var(--ink-soft); font-size: 16px; line-height: 1.55; }
+  label { display: block; margin-bottom: 7px; }
+  input { width: 100%; padding: 13px 15px; border: 1px solid var(--mist-soft); border-radius: 3px; background: white; color: var(--ink); font: 15px 'Source Serif 4', Georgia, serif; }
+  input:focus { outline: 2px solid var(--vermillion); outline-offset: 2px; }
+  .result-count { margin: 8px 0 24px; color: var(--mist); font: 10px/1.4 'IBM Plex Mono', monospace; text-transform: uppercase; }
+  .state { border-top: 1px solid var(--rule); }
+  .state:last-child { border-bottom: 1px solid var(--rule); }
+  summary { cursor: pointer; padding: 15px 4px; font: 500 19px/1.3 'Fraunces', Georgia, serif; }
+  summary span { float: right; color: var(--mist); font: 10px/2 'IBM Plex Mono', monospace; }
+  .district-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 0 0 16px; }
+  .district-grid a { padding: 12px; border: 1px solid var(--rule-soft); color: var(--ink); }
+  .district-grid a:hover { border-color: var(--vermillion); }
+  .district-grid strong, .district-grid small { display: block; }
+  .district-grid strong { font: 500 15px/1.3 'Source Serif 4', Georgia, serif; }
+  .district-grid small { margin-top: 5px; color: var(--mist); font: 8px/1.4 'IBM Plex Mono', monospace; text-transform: uppercase; }
+  [hidden] { display: none !important; }
+  @media (max-width: 700px) { .directory { padding: 34px 18px 54px; } .district-grid { grid-template-columns: 1fr; } }
+</style>

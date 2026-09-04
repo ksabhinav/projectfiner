@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { readFileSync } from 'node:fs';
+
+export function getStaticPaths() {
+  const catalog = JSON.parse(readFileSync(new URL('../../../public/releases/index.json', import.meta.url), 'utf8'));
+  return catalog.releases.map((entry: any) => ({ params: { release: entry.releaseId }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const descriptor = JSON.parse(readFileSync(
+  new URL(`../../../public${entry.descriptor}`, import.meta.url), 'utf8',
+));
+const base = import.meta.env.BASE_URL;
+const label = descriptor.productId === 'meghalaya-standardized-preview'
+  ? 'Meghalaya standardized preview v1'
+  : descriptor.releaseId;
+const blockerLabel = (code: string) => code.replaceAll('_', ' ');
+---
+
+<BaseLayout title={`${label} | Project FINER`} description="Immutable, versioned Meghalaya standardized-preview release candidate with explicit certification blockers and checksums.">
+  <Header activeNav="downloads" />
+  <main class="release-page">
+    <p class="eyebrow">Versioned release candidate</p>
+    <h1>{label}</h1>
+    <div class="status"><strong>Immutable standardized preview</strong><span>Not certified</span></div>
+    <p class="dek">This snapshot is stable and content-addressed for reproducible use. It is not certified: every observation remains suspect until its evidence and review blockers are resolved.</p>
+
+    <dl class="summary">
+      <div><dt>Observations</dt><dd>{descriptor.summary.observationCount.toLocaleString('en-IN')}</dd></div>
+      <div><dt>Indicators</dt><dd>{descriptor.summary.indicatorCount}</dd></div>
+      <div><dt>Districts</dt><dd>{descriptor.summary.districtCount}</dd></div>
+      <div><dt>Coverage</dt><dd>{descriptor.summary.earliestPeriod} – {descriptor.summary.latestPeriod}</dd></div>
+    </dl>
+
+    <section>
+      <h2>Certification blockers</h2>
+      <p>Certification eligibility is machine-enforced. This candidate cannot be labelled certified while any blocker remains.</p>
+      <div class="blockers">
+        {descriptor.certification.blockers.map((blocker: any) => (
+          <article><strong>{blocker.count.toLocaleString('en-IN')}</strong><h3>{blockerLabel(blocker.code)}</h3><p>{blocker.message}</p></article>
+        ))}
+      </div>
+      <h3>Certification requires</h3>
+      <ul>{descriptor.certification.criteria.map((criterion: string) => <li>{criterion}</li>)}</ul>
+    </section>
+
+    <section>
+      <h2>Versioned files</h2>
+      <p>Record the release ID and SHA-256 hash when citing a file.</p>
+      <div class="files">
+        {descriptor.distributions.map((file: any) => (
+          <a href={`${base}${file.url.slice(1)}`} download>
+            <span>{file.role.replaceAll('-', ' ')}</span>
+            <code>{file.sha256}</code>
+          </a>
+        ))}
+        <a href={`${base}${entry.descriptor.slice(1)}`} download><span>release descriptor</span><code>Machine-readable status, blockers and hashes</code></a>
+      </div>
+    </section>
+
+    <aside>Release ID: <code>{descriptor.releaseId}</code> · <a href={`${base}methodology/`}>Methodology</a> · <a href={`${base}data-rights/`}>Rights</a> · <a href={`${base}corrections/`}>Corrections</a></aside>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .release-page { max-width: 1040px; margin: 0 auto; padding: 52px 32px 72px; }
+  .eyebrow { margin: 0 0 8px; color: var(--vermillion); font: 700 10px/1.2 'Inter', sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+  h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; color: var(--ink); }
+  h1 { margin: 0; font-size: clamp(38px, 6vw, 62px); font-weight: 380; letter-spacing: -.035em; }
+  h2 { margin: 42px 0 8px; font-size: 28px; }
+  h3 { margin: 7px 0; font-size: 17px; }
+  p, li { color: var(--ink-soft); line-height: 1.55; }
+  .dek { max-width: 760px; font-size: 17px; }
+  .status { display: flex; gap: 9px; margin: 18px 0; font: 700 9px/1 'Inter', sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+  .status strong, .status span { padding: 7px 9px; border-radius: 3px; }
+  .status strong { background: var(--ink); color: var(--paper); }
+  .status span { border: 1px solid var(--vermillion); color: var(--vermillion-d); }
+  .summary { display: grid; grid-template-columns: repeat(4, 1fr); margin: 32px 0; border: 1px solid var(--rule); }
+  .summary div { padding: 16px; border-right: 1px solid var(--rule); }
+  .summary div:last-child { border: 0; }
+  dt { color: var(--mist); font: 700 9px/1.3 'Inter', sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+  dd { margin: 8px 0 0; font: 430 20px/1.2 'Fraunces', Georgia, serif; }
+  .blockers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 18px; }
+  .blockers article { padding: 16px; border: 1px solid var(--rule); border-left: 3px solid var(--vermillion); }
+  .blockers strong { font: 500 24px/1 'IBM Plex Mono', monospace; }
+  .blockers p { margin: 4px 0 0; font-size: 13px; }
+  .files { border-top: 1px solid var(--rule); }
+  .files a { display: grid; grid-template-columns: 190px 1fr; gap: 18px; padding: 15px 0; border-bottom: 1px solid var(--rule); color: var(--ink); }
+  .files span { font: 700 10px/1.4 'Inter', sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+  .files code, aside code { overflow-wrap: anywhere; font: 10px/1.5 'IBM Plex Mono', monospace; color: var(--mist); }
+  aside { margin-top: 42px; padding: 16px; background: var(--paper-deep); font-size: 13px; }
+  @media (max-width: 700px) { .release-page { padding: 34px 18px 54px; } .summary, .blockers { grid-template-columns: 1fr 1fr; } .summary div { border-bottom: 1px solid var(--rule); } .files a { grid-template-columns: 1fr; gap: 5px; } }
+</style>
