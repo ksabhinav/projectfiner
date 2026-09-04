@@ -30,6 +30,8 @@ The authoritative broad inventory is [`public/release-manifest.json`](public/rel
 
 Public availability is not a grant of reuse rights. Source terms have not been legally reviewed across the release; see the [rights matrix](https://projectfiner.com/data-rights/) and [`LICENSE`](LICENSE).
 
+CSV is the canonical browser-download format. Generated Excel downloads were retired because their browser-side dependency had unresolved high-severity advisories.
+
 ## Local development
 
 Requirements:

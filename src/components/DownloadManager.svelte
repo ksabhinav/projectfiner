@@ -1,6 +1,6 @@
 <script lang="ts">
   import { CAPITAL_MARKETS_SOURCES, FILE_ICON_SVG } from '../lib/constants';
-  import { downloadCsv, downloadXlsx } from '../lib/download';
+  import { downloadCsv } from '../lib/download';
 
   interface Props {
     datasets: any[];
@@ -18,11 +18,11 @@
     return sources.find(source => source.id === dataset.sourceIds[0]);
   }
 
-  async function download(id: string, fmt: 'csv' | 'xlsx') {
+  async function download(id: string) {
     const src = CAPITAL_MARKETS_SOURCES[id as keyof typeof CAPITAL_MARKETS_SOURCES];
     if (!src) return;
 
-    downloading = { ...downloading, [`${id}-${fmt}`]: true };
+    downloading = { ...downloading, [`${id}-csv`]: true };
 
     try {
       if (!cache[id]) {
@@ -35,16 +35,12 @@
         rows.push((src.keys as readonly string[]).map(k => (r as any)[k] || ''));
       }
 
-      if (fmt === 'csv') {
-        downloadCsv(rows, src.filename + '.csv');
-      } else {
-        await downloadXlsx([{ name: 'Data', rows }], src.filename + '.xlsx');
-      }
+      downloadCsv(rows, src.filename + '.csv');
     } catch (e: any) {
       alert('Download failed: ' + e.message);
     }
 
-    downloading = { ...downloading, [`${id}-${fmt}`]: false };
+    downloading = { ...downloading, [`${id}-csv`]: false };
   }
 </script>
 
@@ -66,11 +62,8 @@
         {source?.publisher || 'Source publisher'} · snapshot date not embedded
       </div>
       <div class="dl-card-actions">
-        <button class="dl-btn primary" class:downloading={downloading[`${ds.id}-csv`]} onclick={() => download(ds.id, 'csv')}>
+        <button class="dl-btn primary" class:downloading={downloading[`${ds.id}-csv`]} onclick={() => download(ds.id)}>
           CSV
-        </button>
-        <button class="dl-btn" class:downloading={downloading[`${ds.id}-xlsx`]} onclick={() => download(ds.id, 'xlsx')}>
-          XLSX
         </button>
         <a class="rights-link" href={`${base}data-rights/`}>Rights</a>
       </div>

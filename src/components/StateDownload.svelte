@@ -136,32 +136,23 @@
     URL.revokeObjectURL(a.href);
   }
 
-  async function downloadTimeseries(fmt: 'csv' | 'xlsx') {
-    downloading = { ...downloading, [`ts-${fmt}`]: true };
+  async function downloadTimeseries() {
+    downloading = { ...downloading, 'ts-csv': true };
     try {
       const url = `${base}slbc-data/${stateSlug}/${stateSlug}_fi_timeseries.csv`;
       const res = await fetch(url);
       const text = await res.text();
 
-      if (fmt === 'csv') {
-        const blob = new Blob([text], { type: 'text/csv;charset=utf-8;' });
-        saveBlob(blob, `${stateSlug}_fi_timeseries.csv`);
-      } else {
-        const XLSX = await import('xlsx');
-        const lines = text.split('\n').map(l => l.split(',').map(v => v.replace(/^"|"$/g, '')));
-        const ws = XLSX.utils.aoa_to_sheet(lines);
-        const wb = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(wb, ws, 'Time Series');
-        XLSX.writeFile(wb, `${stateSlug}_fi_timeseries.xlsx`);
-      }
+      const blob = new Blob([text], { type: 'text/csv;charset=utf-8;' });
+      saveBlob(blob, `${stateSlug}_fi_timeseries.csv`);
     } catch (e: any) {
       alert('Download failed: ' + e.message);
     }
-    downloading = { ...downloading, [`ts-${fmt}`]: false };
+    downloading = { ...downloading, 'ts-csv': false };
   }
 
-  async function downloadIndicator(cat: string, fmt: 'csv' | 'xlsx') {
-    downloading = { ...downloading, [`ind-${cat}-${fmt}`]: true };
+  async function downloadIndicator(cat: string) {
+    downloading = { ...downloading, [`ind-${cat}-csv`]: true };
     try {
       const quarters = masterData.quarters;
       const allFields = new Set<string>();
@@ -187,72 +178,43 @@
         }
       }
 
-      if (fmt === 'csv') {
-        const csv = buildCsvString(headers, rows);
-        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-        saveBlob(blob, `${stateSlug}_${cat}.csv`);
-      } else {
-        const XLSX = await import('xlsx');
-        const ws = XLSX.utils.aoa_to_sheet([headers, ...rows]);
-        ws['!cols'] = headers.map(h => ({ wch: Math.max(String(h).length + 2, 12) }));
-        const wb = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(wb, ws, cat.substring(0, 31));
-        XLSX.writeFile(wb, `${stateSlug}_${cat}.xlsx`);
-      }
+      const csv = buildCsvString(headers, rows);
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      saveBlob(blob, `${stateSlug}_${cat}.csv`);
     } catch (e: any) {
       alert('Download failed: ' + e.message);
     }
-    downloading = { ...downloading, [`ind-${cat}-${fmt}`]: false };
+    downloading = { ...downloading, [`ind-${cat}-csv`]: false };
   }
 
-  async function downloadQuarter(qkey: string, fmt: 'csv' | 'xlsx') {
-    downloading = { ...downloading, [`q-${qkey}-${fmt}`]: true };
+  async function downloadQuarter(qkey: string) {
+    downloading = { ...downloading, [`q-${qkey}-csv`]: true };
     try {
       const q = masterData.quarters[qkey];
       if (!q) throw new Error('Quarter not found');
 
-      if (fmt === 'csv') {
-        const allFields = new Set<string>();
-        for (const [, tbl] of Object.entries(q.tables) as [string, any][]) {
-          (tbl.fields || []).forEach((f: string) => allFields.add(f));
-        }
-        const fields = [...allFields];
-        const headers = ['category', 'district', ...fields];
-        const rows: string[][] = [];
-        for (const [cat, tbl] of Object.entries(q.tables) as [string, any][]) {
-          const districts = tbl.districts || tbl.data || {};
-          for (const [dist, vals] of Object.entries(districts)) {
-            const row = [cat, dist];
-            for (const f of fields) row.push((vals as any)[f] || '');
-            rows.push(row);
-          }
-        }
-        const csv = buildCsvString(headers, rows);
-        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-        saveBlob(blob, `${stateSlug}_${qkey}.csv`);
-      } else {
-        const XLSX = await import('xlsx');
-        const wb = XLSX.utils.book_new();
-        for (const [cat, tbl] of Object.entries(q.tables) as [string, any][]) {
-          const districts = tbl.districts || tbl.data || {};
-          const fields = tbl.fields || [];
-          const headers = ['district', ...fields];
-          const rows: string[][] = [];
-          for (const [dist, vals] of Object.entries(districts)) {
-            const row = [dist];
-            for (const f of fields) row.push((vals as any)[f] || '');
-            rows.push(row);
-          }
-          const ws = XLSX.utils.aoa_to_sheet([headers, ...rows]);
-          ws['!cols'] = headers.map((h: string) => ({ wch: Math.max(String(h).length + 2, 12) }));
-          XLSX.utils.book_append_sheet(wb, ws, cat.substring(0, 31));
-        }
-        XLSX.writeFile(wb, `${stateSlug}_${qkey}.xlsx`);
+      const allFields = new Set<string>();
+      for (const [, tbl] of Object.entries(q.tables) as [string, any][]) {
+        (tbl.fields || []).forEach((f: string) => allFields.add(f));
       }
+      const fields = [...allFields];
+      const headers = ['category', 'district', ...fields];
+      const rows: string[][] = [];
+      for (const [cat, tbl] of Object.entries(q.tables) as [string, any][]) {
+        const districts = tbl.districts || tbl.data || {};
+        for (const [dist, vals] of Object.entries(districts)) {
+          const row = [cat, dist];
+          for (const f of fields) row.push((vals as any)[f] || '');
+          rows.push(row);
+        }
+      }
+      const csv = buildCsvString(headers, rows);
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      saveBlob(blob, `${stateSlug}_${qkey}.csv`);
     } catch (e: any) {
       alert('Download failed: ' + e.message);
     }
-    downloading = { ...downloading, [`q-${qkey}-${fmt}`]: false };
+    downloading = { ...downloading, [`q-${qkey}-csv`]: false };
   }
 
   function catQuarterCount(cat: string): number {
@@ -319,8 +281,7 @@
       : 'Coverage metadata loading'} · wide-format CSV
   </div>
   <div class="dataset-actions">
-    <button class="dl-btn primary" class:downloading={downloading['ts-csv']} onclick={() => downloadTimeseries('csv')}>CSV</button>
-    <button class="dl-btn" class:downloading={downloading['ts-xlsx']} onclick={() => downloadTimeseries('xlsx')}>XLSX</button>
+    <button class="dl-btn primary" class:downloading={downloading['ts-csv']} onclick={downloadTimeseries}>CSV</button>
   </div>
 </a>
 
@@ -345,8 +306,7 @@
             <div class="ind-desc">{CATEGORY_INFO[cat] || cat.replace(/_/g, ' ')} · {catQuarterCount(cat)} quarters</div>
           </div>
           <div class="ind-btns">
-            <button class="btn-sm" class:downloading={downloading[`ind-${cat}-csv`]} onclick={() => downloadIndicator(cat, 'csv')}>CSV</button>
-            <button class="btn-sm" class:downloading={downloading[`ind-${cat}-xlsx`]} onclick={() => downloadIndicator(cat, 'xlsx')}>Excel</button>
+            <button class="btn-sm" class:downloading={downloading[`ind-${cat}-csv`]} onclick={() => downloadIndicator(cat)}>CSV</button>
           </div>
         </div>
       </div>
@@ -359,8 +319,7 @@
         <div class="q-label">{qd.label}</div>
         <div class="q-meta">FY {qd.fy} · {qd.numTables} tables</div>
         <div class="q-btns">
-          <button class="btn-sm" class:downloading={downloading[`q-${qd.qkey}-csv`]} onclick={() => downloadQuarter(qd.qkey, 'csv')}>CSV</button>
-          <button class="btn-sm" class:downloading={downloading[`q-${qd.qkey}-xlsx`]} onclick={() => downloadQuarter(qd.qkey, 'xlsx')}>Excel</button>
+          <button class="btn-sm" class:downloading={downloading[`q-${qd.qkey}-csv`]} onclick={() => downloadQuarter(qd.qkey)}>CSV</button>
         </div>
       </div>
     {/each}
