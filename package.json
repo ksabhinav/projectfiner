@@ -8,8 +8,9 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "prepare:vendor": "node scripts/prepare_vendor_assets.mjs",
+    "dev": "npm run prepare:vendor && astro dev",
+    "build": "npm run prepare:vendor && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "test:js": "node --test tests/*.test.mjs",
