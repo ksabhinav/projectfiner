@@ -36,6 +36,14 @@ REQUIRED_SITEMAP_ROUTES = {
     "/releases/meghalaya-standardized-preview-v1/",
 }
 LEGACY_HTML_PREFIXES = ("/charts/", "/digital-payments/")
+REQUIRED_CSP_DIRECTIVES = {
+    "default-src": {"'self'"},
+    "object-src": {"'none'"},
+    "base-uri": {"'self'"},
+    "form-action": {"'self'"},
+    "frame-src": {"'none'"},
+    "upgrade-insecure-requests": set(),
+}
 
 
 @dataclass
@@ -60,6 +68,8 @@ class Page:
     descriptions: list[str] = field(default_factory=list)
     canonicals: list[str] = field(default_factory=list)
     json_ld: list[str] = field(default_factory=list)
+    content_security_policies: list[str] = field(default_factory=list)
+    referrer_policies: list[str] = field(default_factory=list)
     refresh: bool = False
 
 
@@ -95,6 +105,10 @@ class PageParser(HTMLParser):
         if tag == "meta":
             if attrs.get("name", "").lower() == "description":
                 self.page.descriptions.append(attrs.get("content", "").strip())
+            if attrs.get("name", "").lower() == "referrer":
+                self.page.referrer_policies.append(attrs.get("content", "").strip())
+            if attrs.get("http-equiv", "").lower() == "content-security-policy":
+                self.page.content_security_policies.append(attrs.get("content", "").strip())
             if attrs.get("http-equiv", "").lower() == "refresh":
                 self.page.refresh = True
 
@@ -214,6 +228,15 @@ def accessible_control_name(control: Control, page: Page) -> bool:
     return bool(element_id and element_id in page.labels_for)
 
 
+def parse_csp(policy: str) -> dict[str, set[str]]:
+    directives: dict[str, set[str]] = {}
+    for raw_directive in policy.split(";"):
+        parts = raw_directive.strip().split()
+        if parts:
+            directives[parts[0].lower()] = set(parts[1:])
+    return directives
+
+
 def validate_pages(root: Path, pages: dict[str, Page]) -> tuple[list[str], int, int]:
     errors: list[str] = []
     links_checked = 0
@@ -223,6 +246,27 @@ def validate_pages(root: Path, pages: dict[str, Page]) -> tuple[list[str], int, 
     for page in pages.values():
         location = page.route
         uses_site_template = not page.refresh and not location.startswith(LEGACY_HTML_PREFIXES)
+        if not page.refresh:
+            if len(page.content_security_policies) != 1:
+                errors.append(
+                    f"{location}: expected one Content Security Policy, "
+                    f"found {len(page.content_security_policies)}"
+                )
+            else:
+                directives = parse_csp(page.content_security_policies[0])
+                for directive, required_values in REQUIRED_CSP_DIRECTIVES.items():
+                    if directive not in directives:
+                        errors.append(f"{location}: CSP is missing {directive}")
+                    elif not required_values.issubset(directives[directive]):
+                        errors.append(
+                            f"{location}: CSP {directive} is missing "
+                            f"{', '.join(sorted(required_values))}"
+                        )
+            if page.referrer_policies != ["strict-origin-when-cross-origin"]:
+                errors.append(
+                    f"{location}: expected referrer policy "
+                    "'strict-origin-when-cross-origin'"
+                )
         if uses_site_template:
             if not page.html_lang:
                 errors.append(f"{location}: <html> has no language")
