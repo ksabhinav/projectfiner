@@ -23,3 +23,9 @@ Project FINER does not currently operate a bug-bounty programme and cannot promi
 ## Scope notes
 
 The static site, repository code and Project FINER API are in scope. Vulnerabilities solely in an upstream publisher or unrelated third-party service should be reported to that provider. Data-quality corrections are handled under [`CORRECTIONS.md`](CORRECTIONS.md), not this security process.
+
+## Deployment protections
+
+Every published HTML page carries a Content Security Policy and a strict-origin referrer policy. Plotly is copied from the locked npm dependency tree at build time; the remaining Leaflet CDN files are version-pinned and protected by Subresource Integrity.
+
+These document-level controls do not replace HTTP response headers. The GitHub Pages origin cannot configure repository-defined HSTS, `X-Content-Type-Options`, `Permissions-Policy` or CSP `frame-ancestors`. Those controls must be configured and verified at the Cloudflare edge for `projectfiner.com`.
