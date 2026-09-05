@@ -12,6 +12,8 @@ from scripts.validate_built_site import validate_site
 
 PAGE = """<!doctype html>
 <html lang="en"><head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="description" content="Fixture">
 <title>Fixture</title>
 <link rel="canonical" href="https://projectfiner.com{route}">
@@ -83,6 +85,31 @@ class BuiltSiteValidatorTests(unittest.TestCase):
             self.assertIn("has no accessible label", combined)
             self.assertIn("duplicate id", combined)
             self.assertIn("invalid JSON-LD", combined)
+
+    def test_missing_browser_security_metadata_fails(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            write_fixture(root)
+            index = root / "index.html"
+            index.write_text(
+                index.read_text()
+                .replace(
+                    '<meta http-equiv="Content-Security-Policy" '
+                    'content="default-src \'self\'; object-src \'none\'; '
+                    'base-uri \'self\'; form-action \'self\'; '
+                    'frame-src \'none\'; upgrade-insecure-requests">\n',
+                    "",
+                )
+                .replace(
+                    '<meta name="referrer" '
+                    'content="strict-origin-when-cross-origin">\n',
+                    "",
+                )
+            )
+            errors, _ = validate_site(root)
+            combined = "\n".join(errors)
+            self.assertIn("expected one Content Security Policy", combined)
+            self.assertIn("expected referrer policy", combined)
 
 
 if __name__ == "__main__":
