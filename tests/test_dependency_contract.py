@@ -50,6 +50,27 @@ class DependencyContractTests(unittest.TestCase):
                 locked = lock["packages"][f"node_modules/{dependency}"]["version"]
                 self.assertGreaterEqual(version_tuple(locked), version_tuple(minimum))
 
+    def test_browser_libraries_are_self_hosted_or_integrity_pinned(self):
+        browser_pages = "\n".join(
+            path.read_text(encoding="utf-8")
+            for root in (REPO_ROOT / "src", REPO_ROOT / "public")
+            for path in root.rglob("*")
+            if path.suffix in {".astro", ".html", ".svelte"}
+        )
+
+        self.assertNotIn("https://cdn.plot.ly/", browser_pages)
+        self.assertIn('src="/vendor/plotly.min.js"', browser_pages)
+
+        homepage = (REPO_ROOT / "src/pages/index.astro").read_text(encoding="utf-8")
+        self.assertIn(
+            'integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="',
+            homepage,
+        )
+        self.assertIn(
+            'integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="',
+            homepage,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
