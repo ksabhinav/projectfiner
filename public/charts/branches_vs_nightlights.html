@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https://unpkg.com; connect-src 'self' https://projectfiner-api.vercel.app https://ksabhinav.github.io; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'; worker-src 'self' blob:; manifest-src 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Bank branches vs nighttime light · Project FINER</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap">
-  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+  <script src="/vendor/plotly.min.js"></script>
   <style>
     body { font-family: 'Inter', sans-serif; background: #fdfcfa; color: #1a1410; max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
     h1 { font-family: 'Playfair Display', serif; font-size: 28px; margin: 0 0 8px; }
