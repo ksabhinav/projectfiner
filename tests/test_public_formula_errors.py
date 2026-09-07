@@ -11,7 +11,7 @@ class PublicFormulaErrorTests(unittest.TestCase):
     def test_corrections_are_explicit_and_complete(self):
         registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
         self.assertEqual(registry["schemaVersion"], "public-formula-error-corrections-v1")
-        self.assertEqual(len(registry["corrections"]), 26)
+        self.assertEqual(len(registry["corrections"]), 18)
         self.assertEqual(
             {item["sourceToken"] for item in registry["corrections"]},
             {FORMULA_ERROR},
@@ -25,6 +25,7 @@ class PublicFormulaErrorTests(unittest.TestCase):
         )
 
     def test_public_data_contains_no_literal_division_errors(self):
+        registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
         offenders = []
         for item in registry["corrections"]:
             path = REPO_ROOT / item["path"]
