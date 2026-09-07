@@ -17,6 +17,7 @@ def test_status_route_exposes_build_release_and_monitoring_identity():
     assert "project-finer-status-v1" in status_lib
     assert "GITHUB_SHA" in status_lib
     assert "freshnessTargetDays" in status_lib
+    assert "https://projectfiner.com/status/" in (ROOT / "public/sitemap.xml").read_text(encoding="utf-8")
 
 
 def test_release_catalog_supports_the_public_freshness_measure():
