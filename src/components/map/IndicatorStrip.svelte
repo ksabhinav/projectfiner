@@ -17,7 +17,7 @@
    *   - finer:stateFilterChange to track state focus changes from inset map
    */
 
-  import { onMount } from 'svelte';
+  import { onMount, tick } from 'svelte';
   import IndicatorPicker from './IndicatorPicker.svelte';
   import FindingButton from './FindingButton.svelte';
   import {
@@ -35,6 +35,8 @@
   let scopeStateUT = $state<string>('');                    // empty = all India
   let availableQuarters: string[] = $state([]);             // YYYY-MM keys
   let openCell = $state<'what' | 'when' | 'where' | null>(null);
+  let whatButton: HTMLButtonElement | null = $state(null);
+  let whereButton: HTMLButtonElement | null = $state(null);
 
   const STATES_LIST = [
     'All India',
@@ -60,11 +62,29 @@
   function dispatch<T>(name: string, detail: T) {
     window.dispatchEvent(new CustomEvent(name, { detail }));
   }
+  function closeCell(cell = openCell) {
+    openCell = null;
+    queueMicrotask(() => {
+      if (cell === 'what') whatButton?.focus();
+      if (cell === 'where') whereButton?.focus();
+    });
+  }
+  async function toggleCell(cell: 'what' | 'where') {
+    if (openCell === cell) {
+      closeCell(cell);
+      return;
+    }
+    openCell = cell;
+    await tick();
+    if (cell === 'where') {
+      document.querySelector<HTMLElement>('#scope-picker [aria-selected="true"]')?.focus();
+    }
+  }
 
   // === Selectors ===
   function selectIndicator(ind: AtlasIndicator) {
     indicator = ind;
-    openCell = null;
+    closeCell('what');
     // Resolve the underlying indicator key + metric index. Synthetic Atlas
     // entries (e.g. capital_markets_mfdi) carry indicatorKey/metricIdx; for
     // a normal entry these default to the key itself + 0.
@@ -86,13 +106,13 @@
   function selectScope(label: string) {
     scope = label === 'All India' ? 'All India' : titleCaseState(label);
     scopeStateUT = label === 'All India' ? '' : label;
-    openCell = null;
+    closeCell('where');
     dispatch('finer:stateFilterChange', { state: scopeStateUT });
   }
 
   // === Lifecycle ===
   function handleKeydown(e: KeyboardEvent) {
-    if (e.key === 'Escape' && openCell) { openCell = null; e.preventDefault(); }
+    if (e.key === 'Escape' && openCell) { closeCell(); e.preventDefault(); }
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
       e.preventDefault();
       dispatch('finer:open-search', {});
@@ -101,8 +121,25 @@
   function handleOutsideClick(e: MouseEvent) {
     const t = e.target as HTMLElement;
     if (!t.closest('.strip') && !t.closest('.picker-panel') && !t.closest('.simple-panel')) {
-      openCell = null;
+      closeCell();
     }
+  }
+  function handleScopeKeydown(e: KeyboardEvent) {
+    if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(e.key)) return;
+    const options = Array.from(
+      document.querySelectorAll<HTMLButtonElement>('#scope-picker [role="option"]'),
+    );
+    if (!options.length) return;
+    e.preventDefault();
+    const current = Math.max(0, options.indexOf(document.activeElement as HTMLButtonElement));
+    const next = e.key === 'Home'
+      ? 0
+      : e.key === 'End'
+        ? options.length - 1
+        : e.key === 'ArrowDown'
+          ? (current + 1) % options.length
+          : (current - 1 + options.length) % options.length;
+    options[next].focus();
   }
 
   onMount(() => {
@@ -163,11 +200,13 @@
 
 <div id="indicator-strip" class="strip" role="toolbar" aria-label="Map controls">
   <button
+    bind:this={whatButton}
     class="cell what"
     class:active={openCell === 'what'}
-    onclick={() => (openCell = openCell === 'what' ? null : 'what')}
-    aria-haspopup="listbox"
+    onclick={() => toggleCell('what')}
+    aria-haspopup="dialog"
     aria-expanded={openCell === 'what'}
+    aria-controls="indicator-picker"
   >
     <span class="k">What</span>
     <span class="v">{indicator.name}</span>
@@ -177,11 +216,13 @@
 
   <div class="cell-wrap">
     <button
+      bind:this={whereButton}
       class="cell where"
       class:active={openCell === 'where'}
-      onclick={() => (openCell = openCell === 'where' ? null : 'where')}
+      onclick={() => toggleCell('where')}
       aria-haspopup="listbox"
       aria-expanded={openCell === 'where'}
+      aria-controls="scope-picker"
     >
       <span class="k">Where</span>
       <span class="v">{scope}</span>
@@ -203,28 +244,36 @@
   <!-- "A finding" button — backed by public/findings.json (25 curated entries) -->
   <FindingButton />
 
-  <span class="search" role="button" tabindex="0" onclick={() => dispatch('finer:open-search', {})}>
+  <button class="search" type="button" onclick={() => dispatch('finer:open-search', {})}>
     <span class="glass" aria-hidden="true">⌕</span>
     Search 800 districts
     <span class="key">⌘K</span>
-  </span>
+  </button>
 </div>
 
 {#if openCell === 'what'}
   <IndicatorPicker
     selected={indicator}
     onSelect={selectIndicator}
-    onClose={() => (openCell = null)}
+    onClose={() => closeCell('what')}
   />
 {/if}
 
 {#if openCell === 'where'}
-  <div class="simple-panel where">
+  <div
+    id="scope-picker"
+    class="simple-panel where"
+    role="listbox"
+    aria-label="Choose a state or union territory"
+    onkeydown={handleScopeKeydown}
+  >
     {#each STATES_LIST as s}
       <button
         class="picker-item"
         class:active={(s === 'All India' && !scopeStateUT) || s === scopeStateUT}
         onclick={() => selectScope(s)}
+        role="option"
+        aria-selected={(s === 'All India' && !scopeStateUT) || s === scopeStateUT}
       >
         {s === 'All India' ? s : titleCaseState(s)}
       </button>
@@ -357,7 +406,14 @@
     cursor: pointer;
     transition: border-color 160ms ease;
   }
-  .search:hover { border-color: var(--ink, #1B140E); }
+  .search:hover,
+  .search:focus-visible {
+    border-color: var(--ink, #1B140E);
+  }
+  .search:focus-visible {
+    outline: 2px solid var(--vermillion, #B84A2E);
+    outline-offset: 2px;
+  }
   .search .key {
     background: var(--paper, #F4EFE6);
     border: 1px solid var(--rule, #D9D2C5);
