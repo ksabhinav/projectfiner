@@ -4,7 +4,7 @@ Material trust-layer, public-contract and data corrections are recorded here. Th
 
 ## Unreleased
 
-- Replaced 24 public `#DIV/0!` spreadsheet-error tokens with blank missing cells, recorded each correction, and added a regression guard against reintroducing formula errors into public data files.
+- Replaced 26 public `#DIV/0!` spreadsheet-error tokens with blank missing cells, recorded each correction, and added a regression guard against reintroducing formula errors into public data files.
 
 - Replaced the PhonePe Pulse history with the upstream-restated January–March 2018 to April–June 2026 series, pinned its source revision and methodology break, and added district registered-merchant coverage.
 - Published build identity and release-freshness status in human- and machine-readable forms, with a daily synthetic monitor for core routes, deployment drift, and the stated freshness target.
