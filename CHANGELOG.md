@@ -4,6 +4,7 @@ Material trust-layer, public-contract and data corrections are recorded here. Th
 
 ## Unreleased
 
+- Rebuilt the live map toolbar popovers with semantic buttons, valid dialog/listbox structure, explicit selection state, arrow/Home/End navigation, and focus return to their trigger controls.
 - Added focus trapping and focus restoration to the map search, finding, and district-focus dialogs, replacing click-only dismiss layers and suppressed accessibility warnings with semantic controls.
 - Made the live district-ranking filters explicitly labelled, converted sortable table headers to keyboard-operable buttons, and added screen-reader status announcements and table context.
 - Added a document-level Content Security Policy and referrer policy to every published HTML page, self-hosted Plotly from the locked dependency tree, and pinned Leaflet CDN assets with integrity hashes.
