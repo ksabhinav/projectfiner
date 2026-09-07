@@ -14,6 +14,16 @@ DB_PATH = os.path.join(os.path.dirname(__file__), 'finer.db')
 PROJECT = os.path.dirname(os.path.dirname(__file__))
 OUT_FILE = os.path.join(PROJECT, 'public', 'digital-payments', 'phonepe_district_timeseries.json')
 
+PHONEPE_SOURCE_URL = 'https://github.com/PhonePe/pulse'
+PHONEPE_SOURCE_REVISION = '943e6e52a71513d683f804add12d0b61145e8007'
+PHONEPE_LICENSE = 'CDLA-Permissive-2.0'
+PHONEPE_METHODOLOGY = 'phonepe-pulse-restated-amj-2026'
+PHONEPE_COMPARABILITY_WARNING = (
+    'PhonePe restated all periods from January-March 2018. Do not join these '
+    'figures to previously downloaded Pulse series or interpret the restatement '
+    'boundary as growth.'
+)
+
 
 def export_phonepe():
     db = sqlite3.connect(DB_PATH)
@@ -42,9 +52,15 @@ def export_phonepe():
         'schema_version': 3,
         'storage': 'quarterly-partitions',
         'source': 'PhonePe Pulse',
+        'source_url': PHONEPE_SOURCE_URL,
+        'source_revision': PHONEPE_SOURCE_REVISION,
+        'license': PHONEPE_LICENSE,
         'amount_unit': 'Rs. Lakhs',
+        'methodology_version': PHONEPE_METHODOLOGY,
+        'comparability_warning': PHONEPE_COMPARABILITY_WARNING,
         'num_periods': len(periods_dict),
         'num_district_periods': len(rows),
+        'latest_period': None,
         'periods': []
     }
 
@@ -61,6 +77,9 @@ def export_phonepe():
             'num_districts': len(districts),
             'path': f'../indicators/digital_transactions/{period_code}.json',
         })
+
+    if output['periods']:
+        output['latest_period'] = output['periods'][-1]['period_code']
 
     with open(OUT_FILE, 'w') as f:
         json.dump(output, f, separators=(',', ':'))
