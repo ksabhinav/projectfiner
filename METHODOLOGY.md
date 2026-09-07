@@ -38,6 +38,8 @@ The release does not imply that every raw row has been checked against its origi
 
 For the Meghalaya preview, the common source artifact is `public/slbc-data/meghalaya/meghalaya_complete.json`. The selected values are copied only from fields registered in `public/data-contracts/meghalaya-indicator-registry.json`. The source-artifact hash and extraction-run record are in `public/data-contracts/meghalaya-provenance.json`; this improves reproducibility but does not replace exact source-document and page evidence.
 
+The machine-generated `db/meghalaya_source_evidence.json` turns that gap into 94 period/table acquisition units covering all 3,494 observations. Curated evidence is entered only in `db/meghalaya_source_evidence_input.json`; the builder rejects incomplete URL/hash/locator claims and distinguishes captured evidence from independently reviewed evidence. Quarterly PDF booklets are fallback or corroborating material and must not be substituted as provenance for portal-derived values without an explicit equivalence review.
+
 ## 4. Observation model
 
 The canonical direction is one row per:
@@ -101,6 +103,7 @@ From a clean checkout with Node.js 22.12+ and Python 3.12+:
 ```bash
 npm ci
 python3 db/build_meghalaya_standardized.py --check
+python3 db/build_meghalaya_source_evidence.py --check
 python3 db/build_release_manifest.py --check
 python3 db/build_versioned_release.py --check
 python3 db/validate_release_data.py

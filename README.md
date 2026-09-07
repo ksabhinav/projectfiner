@@ -66,7 +66,7 @@ The legacy validation report is generated output. Do not treat its prose summary
 | `public/slbc-data/` | State-level raw source-derived JSON and wide CSV files. |
 | `public/data-contracts/` | Standardized preview artifacts, indicator registries and provenance registries. |
 | `public/district_lgd_codes.json` | Canonical LGD geography registry and aliases. |
-| `db/` | Release builders, extract/import utilities and structural validators. |
+| `db/` | Release builders, extract/import utilities, the Meghalaya source-evidence acquisition ledger and structural validators. |
 | `src/` | Astro/Svelte public interface. |
 | `tests/` | JavaScript and Python contract tests. |
 | `.github/validation-waivers/` | Expiring exact fingerprints for known critical legacy findings. |
