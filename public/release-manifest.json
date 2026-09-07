@@ -181,7 +181,7 @@
   "generatedBy": "db/build_release_manifest.py",
   "projectDataLicense": null,
   "qualityTier": "raw-experimental",
-  "releaseId": "finer-ae172034174d",
+  "releaseId": "finer-f38db4bd00fb",
   "releaseStatus": "research-preview",
   "rightsNotice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
   "rightsReviewStatus": "not-legally-reviewed",
@@ -1746,9 +1746,9 @@
           "url": "/slbc-data/meghalaya/meghalaya_fi_timeseries.csv"
         },
         {
-          "bytes": 1246752,
+          "bytes": 1613663,
           "certificationStatus": "not-certified",
-          "columnCount": 23,
+          "columnCount": 25,
           "encoding": "utf-8",
           "format": "CSV",
           "indicatorCount": 13,
@@ -1757,20 +1757,20 @@
           "mediaType": "text/csv",
           "path": "data-contracts/meghalaya-standardized-preview.csv",
           "productId": "meghalaya-standardized-preview",
-          "productReleaseId": "meghalaya-standardized-preview-v1",
+          "productReleaseId": "meghalaya-standardized-preview-v2",
           "qualityTier": "standardized-preview",
           "rightsStatus": "not-reviewed",
           "role": "observations",
           "rowCount": 3494,
-          "schemaVersion": "observations-v1",
-          "sha256": "710c383e1543a288039fe55edcf20adc8ecf9ef7f89b5dbb4c1013e97a7a9efa",
+          "schemaVersion": "observations-v2",
+          "sha256": "574fea3312df4af2412b648224c9e0ca20c24700a0af3d4da12f7fc0ae29d5ce",
           "sourceIds": [
             "slbc-meghalaya"
           ],
           "url": "/data-contracts/meghalaya-standardized-preview.csv"
         },
         {
-          "bytes": 6769,
+          "bytes": 7571,
           "certificationStatus": "not-certified",
           "encoding": "utf-8",
           "format": "JSON",
@@ -1779,16 +1779,37 @@
           "mediaType": "application/json",
           "path": "data-contracts/meghalaya-indicator-registry.json",
           "productId": "meghalaya-standardized-preview",
-          "productReleaseId": "meghalaya-standardized-preview-v1",
+          "productReleaseId": "meghalaya-standardized-preview-v2",
           "qualityTier": "standardized-preview",
           "rightsStatus": "not-reviewed",
           "role": "indicator-registry",
-          "schemaVersion": "indicator-registry-v1",
-          "sha256": "e51958cd318f96d6f6746cbdbddd08042a00b25f93e93caea23ff19106d2aa83",
+          "schemaVersion": "indicator-registry-v2",
+          "sha256": "ef63beec1e90a342bbbffe744c83b499edbe972b66f6a78bdb67560af28971d3",
           "sourceIds": [
             "slbc-meghalaya"
           ],
           "url": "/data-contracts/meghalaya-indicator-registry.json"
+        },
+        {
+          "bytes": 2548,
+          "certificationStatus": "not-certified",
+          "encoding": "utf-8",
+          "format": "JSON",
+          "indicatorCount": 13,
+          "license": null,
+          "mediaType": "application/json",
+          "path": "data-contracts/meghalaya-provenance.json",
+          "productId": "meghalaya-standardized-preview",
+          "productReleaseId": "meghalaya-standardized-preview-v2",
+          "qualityTier": "standardized-preview",
+          "rightsStatus": "not-reviewed",
+          "role": "provenance-registry",
+          "schemaVersion": "provenance-registry-v1",
+          "sha256": "dc4a4ec87ad096e9c9f4ccaabd745951a2e0f57840c733d61869a0eef45e5c1a",
+          "sourceIds": [
+            "slbc-meghalaya"
+          ],
+          "url": "/data-contracts/meghalaya-provenance.json"
         }
       ],
       "group": "north-east",
@@ -2500,7 +2521,7 @@
   ],
   "summary": {
     "capitalMarketRegistryCount": 4,
-    "distributionCount": 68,
+    "distributionCount": 69,
     "stateCount": 31
   }
 }

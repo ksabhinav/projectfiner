@@ -23,6 +23,7 @@ REGISTRY_PATH = ROOT / "db" / "release_sources.json"
 OUTPUT_PATH = PUBLIC / "release-manifest.json"
 MEGHALAYA_PREVIEW_PATH = PUBLIC / "data-contracts" / "meghalaya-standardized-preview.csv"
 MEGHALAYA_REGISTRY_PATH = PUBLIC / "data-contracts" / "meghalaya-indicator-registry.json"
+MEGHALAYA_PROVENANCE_PATH = PUBLIC / "data-contracts" / "meghalaya-provenance.json"
 
 MONTHS = {
     "jan": "01", "january": "01", "feb": "02", "february": "02",
@@ -217,6 +218,11 @@ def build_manifest(registry_path: Path = REGISTRY_PATH) -> dict:
             if indicator_registry["source"]["id"] != source_id:
                 raise ValueError("Meghalaya preview source does not match release source")
             preview_file = inspect_csv(MEGHALAYA_PREVIEW_PATH)
+            provenance_registry = json.loads(
+                MEGHALAYA_PROVENANCE_PATH.read_text(encoding="utf-8")
+            )
+            if provenance_registry["releaseId"] != indicator_registry["releaseId"]:
+                raise ValueError("Meghalaya provenance release does not match indicator registry")
             state_distributions.extend([
                 attach_preview_rights(
                     preview_file, source_id, indicator_registry,
@@ -230,6 +236,15 @@ def build_manifest(registry_path: Path = REGISTRY_PATH) -> dict:
                     indicator_registry,
                     "indicator-registry",
                     indicator_registry["registrySchemaVersion"],
+                ),
+                attach_preview_rights(
+                    base_file_metadata(
+                        MEGHALAYA_PROVENANCE_PATH, "application/json", "JSON"
+                    ),
+                    source_id,
+                    indicator_registry,
+                    "provenance-registry",
+                    provenance_registry["schemaVersion"],
                 ),
             ])
         states.append({
