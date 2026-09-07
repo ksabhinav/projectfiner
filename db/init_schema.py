@@ -110,7 +110,8 @@ CREATE TABLE IF NOT EXISTS phonepe_data (
     state_slug        TEXT NOT NULL,
     period_id         INTEGER NOT NULL REFERENCES periods(id),
     transaction_count INTEGER,
-    transaction_amount REAL
+    transaction_amount REAL,
+    registered_merchants INTEGER
 );
 
 CREATE INDEX IF NOT EXISTS idx_phonepe_period ON phonepe_data(period_id);

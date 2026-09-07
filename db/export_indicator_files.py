@@ -137,6 +137,8 @@ INDICATORS = {
              'source': 'phonepe', 'fallbacks': []},
             {'field': 'transaction_amount', 'label': 'UPI Transaction Amount (PhonePe)', 'unit': '₹',
              'source': 'phonepe', 'fallbacks': []},
+            {'field': 'registered_merchants', 'label': 'Registered Merchants (PhonePe)', 'unit': '',
+             'source': 'phonepe', 'fallbacks': []},
             # SLBC digital fields
             {'field': 'coverage_sb_pct', 'label': 'SB Digital Coverage %', 'unit': '%',
              'fallbacks': ['coverage_pct', 'achievement', 'pct_coverage', 'pct_coverag_e_h',
@@ -438,22 +440,23 @@ def load_all_slbc_data(db):
 def load_phonepe_data(db):
     """
     Load PhonePe data into:
-      data[quarter_code][(district_name_raw, state_slug)] = {transaction_count, transaction_amount}
+      data[quarter_code][(district_name_raw, state_slug)] = {transaction_count, transaction_amount, registered_merchants}
     """
     print('Loading PhonePe data...')
     cur = db.execute('''
         SELECT p.code, ph.district_name_raw, ph.state_slug,
-               ph.transaction_count, ph.transaction_amount
+               ph.transaction_count, ph.transaction_amount, ph.registered_merchants
         FROM phonepe_data ph
         JOIN periods p ON ph.period_id = p.id
     ''')
 
     data = defaultdict(dict)
     count = 0
-    for quarter, district, state, txn_count, txn_amount in cur:
+    for quarter, district, state, txn_count, txn_amount, merchants in cur:
         data[quarter][(district, state)] = {
             'transaction_count': str(txn_count) if txn_count is not None else None,
             'transaction_amount': str(round(txn_amount, 2)) if txn_amount is not None else None,
+            'registered_merchants': str(merchants) if merchants is not None else None,
         }
         count += 1
 

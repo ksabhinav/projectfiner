@@ -4,6 +4,7 @@ Material trust-layer, public-contract and data corrections are recorded here. Th
 
 ## Unreleased
 
+- Replaced the PhonePe Pulse history with the upstream-restated January–March 2018 to April–June 2026 series, pinned its source revision and methodology break, and added district registered-merchant coverage.
 - Published build identity and release-freshness status in human- and machine-readable forms, with a daily synthetic monitor for core routes, deployment drift, and the stated freshness target.
 - Added a searchable, keyboard-operable district data table as a non-visual equivalent to the choropleth, with values, missingness, source periods, proxy disclosure, and direct district focus.
 - Rebuilt the live map toolbar popovers with semantic buttons, valid dialog/listbox structure, explicit selection state, arrow/Home/End navigation, and focus return to their trigger controls.
