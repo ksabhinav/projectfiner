@@ -19,6 +19,16 @@ from collections import defaultdict
 DB_PATH = os.path.join(os.path.dirname(__file__), 'finer.db')
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, 'public', 'indicators')
+
+PHONEPE_SOURCE_URL = 'https://github.com/PhonePe/pulse'
+PHONEPE_SOURCE_REVISION = '943e6e52a71513d683f804add12d0b61145e8007'
+PHONEPE_LICENSE = 'CDLA-Permissive-2.0'
+PHONEPE_METHODOLOGY = 'phonepe-pulse-restated-amj-2026'
+PHONEPE_COMPARABILITY_WARNING = (
+    'PhonePe restated all periods from January-March 2018. Do not join these '
+    'figures to previously downloaded Pulse series or interpret the restatement '
+    'boundary as growth.'
+)
 BANKING_OUTLETS_PATH = os.path.join(PROJECT_ROOT, 'public', 'banking-outlets', 'district_counts.json')
 
 # ─── Indicator definitions (mirroring index.astro INDICATORS object) ───
@@ -136,6 +146,8 @@ INDICATORS = {
             {'field': 'transaction_count', 'label': 'UPI Transaction Count (PhonePe)', 'unit': '',
              'source': 'phonepe', 'fallbacks': []},
             {'field': 'transaction_amount', 'label': 'UPI Transaction Amount (PhonePe)', 'unit': '₹',
+             'source': 'phonepe', 'fallbacks': []},
+            {'field': 'registered_merchants', 'label': 'Registered Merchants (PhonePe)', 'unit': '',
              'source': 'phonepe', 'fallbacks': []},
             # SLBC digital fields
             {'field': 'coverage_sb_pct', 'label': 'SB Digital Coverage %', 'unit': '%',
@@ -438,22 +450,24 @@ def load_all_slbc_data(db):
 def load_phonepe_data(db):
     """
     Load PhonePe data into:
-      data[quarter_code][(district_name_raw, state_slug)] = {transaction_count, transaction_amount}
+      data[quarter_code][(district_name_raw, state_slug)] =
+      {transaction_count, transaction_amount, registered_merchants}
     """
     print('Loading PhonePe data...')
     cur = db.execute('''
         SELECT p.code, ph.district_name_raw, ph.state_slug,
-               ph.transaction_count, ph.transaction_amount
+               ph.transaction_count, ph.transaction_amount, ph.registered_merchants
         FROM phonepe_data ph
         JOIN periods p ON ph.period_id = p.id
     ''')
 
     data = defaultdict(dict)
     count = 0
-    for quarter, district, state, txn_count, txn_amount in cur:
+    for quarter, district, state, txn_count, txn_amount, merchants in cur:
         data[quarter][(district, state)] = {
             'transaction_count': str(txn_count) if txn_count is not None else None,
             'transaction_amount': str(round(txn_amount, 2)) if txn_amount is not None else None,
+            'registered_merchants': str(merchants) if merchants is not None else None,
         }
         count += 1
 
@@ -605,6 +619,11 @@ def export_slbc_indicator(indicator_key, indicator_def, slbc_data, phonepe_data,
             'label': format_quarter_label(quarter),
             'districts': districts,
         }
+        if indicator_key == 'digital_transactions':
+            out.update({
+                'source_revision': PHONEPE_SOURCE_REVISION,
+                'methodology_version': PHONEPE_METHODOLOGY,
+            })
 
         path = os.path.join(out_dir, f'{quarter}.json')
         with open(path, 'w') as f:
@@ -777,13 +796,26 @@ def export_manifest(slbc_quarters, phonepe_quarters):
             if any(f.endswith('.json') for f in os.listdir(entry_path)):
                 exported_indicators.append(entry)
 
+    path = os.path.join(OUTPUT_DIR, 'manifest.json')
+    existing_manifest = {}
+    if os.path.exists(path):
+        try:
+            with open(path) as f:
+                existing_manifest = json.load(f)
+        except (OSError, json.JSONDecodeError):
+            existing_manifest = {}
+
+    # Preserve the per-indicator availability map used by the frontend. The
+    # PhonePe sync owns this list and the DB exporter must not erase it.
+    quarters_by_indicator = existing_manifest.get('quarters_by_indicator', {})
+    quarters_by_indicator['digital_transactions'] = sorted(set(phonepe_quarters), reverse=True)
+
     manifest = {
         'indicators': exported_indicators,
         'quarters': all_quarters,
+        'quarters_by_indicator': quarters_by_indicator,
         'latest_quarter': all_quarters[0] if all_quarters else None,
     }
-
-    path = os.path.join(OUTPUT_DIR, 'manifest.json')
     with open(path, 'w') as f:
         json.dump(manifest, f, separators=(',', ':'), ensure_ascii=False)
 

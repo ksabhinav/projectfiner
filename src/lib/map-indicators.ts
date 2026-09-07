@@ -272,7 +272,8 @@ export const ATLAS_INDICATORS: AtlasIndicator[] = [
   // ===== Digital ==========================================================
   { key: 'digital_transactions',          name: 'UPI Transactions (PhonePe)',    units: 'no.',  category: 'digital', subgroup: 'headline',  rampKey: 'vermillion' },
   { key: 'upi_transaction_amount',        indicatorKey: 'digital_transactions',    metricIdx: 1, name: 'UPI Amount (PhonePe)',           units: '₹ L', category: 'digital', subgroup: 'headline',  rampKey: 'vermillion' },
-  { key: 'sb_digital_coverage',           indicatorKey: 'digital_transactions',    metricIdx: 2, name: 'SB Digital Coverage',            units: '%',   category: 'digital', subgroup: 'inclusion', rampKey: 'peacock' },
+  { key: 'phonepe_registered_merchants',  indicatorKey: 'digital_transactions',    metricIdx: 2, name: 'Registered Merchants (PhonePe)', units: 'no.', category: 'digital', subgroup: 'headline',  rampKey: 'vermillion' },
+  { key: 'sb_digital_coverage',           indicatorKey: 'digital_transactions',    metricIdx: 3, name: 'SB Digital Coverage',            units: '%',   category: 'digital', subgroup: 'inclusion', rampKey: 'peacock' },
 
   // ===== Capital markets ==================================================
   { key: 'capital_markets_access',        indicatorKey: 'capital_markets_access',  metricIdx: 0, name: 'Capital Markets Access (Total)', units: 'no.', category: 'capital-markets', subgroup: 'headline',  rampKey: 'peacock' },

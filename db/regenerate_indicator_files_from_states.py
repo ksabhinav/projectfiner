@@ -511,16 +511,16 @@ def regenerate_indicator(indicator_key: str, indicator_def: dict,
         # data (transaction_count / transaction_amount). The headline metric
         # for this indicator is "UPI Transaction Count (PhonePe)"; without
         # PhonePe a quarter is misleading even if SLBC digital-coverage fields
-        # exist. PhonePe Pulse currently ships through Mar 2024.
+        # exist. PhonePe Pulse's restated series currently ships through Jun 2026.
         if indicator_key == 'digital_transactions':
             existing_path = os.path.join(out_dir, f'{qcode}.json')
-            phonepe_rows = {}  # (state, district_upper) -> {transaction_count, transaction_amount}
+            phonepe_rows = {}  # (state, district_upper) -> PhonePe metrics
             if os.path.exists(existing_path):
                 with open(existing_path) as f:
                     prev = json.load(f)
                 for r in prev.get('districts', []):
                     txn = {k: v for k, v in r.items()
-                           if k in ('transaction_count', 'transaction_amount')}
+                           if k in ('transaction_count', 'transaction_amount', 'registered_merchants')}
                     if txn:
                         phonepe_rows[(r.get('state'), str(r.get('district','')).upper())] = (r, txn)
             if not phonepe_rows:

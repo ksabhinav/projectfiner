@@ -169,13 +169,13 @@ export const findings: Finding[] = [
   },
   {
     id: 'phonepe-bengaluru',
-    title: "Bengaluru Urban processed ₹15 lakh crore of UPI in a single quarter — more than 30 states' SLBC deposits combined",
-    body: 'In the March 2024 quarter, PhonePe alone routed ₹14.98 lakh crore across 1.35 billion transactions inside Bengaluru Urban district. PhonePe is roughly half the UPI market, so the underlying district volume is closer to ₹30 lakh crore. Pune, Rangareddy (Hyderabad outskirts), Hyderabad city and Jaipur follow, but none exceed half of Bengaluru\'s value. The national PhonePe quarterly total in Mar 2024 was ₹27 lakh crore over 19 billion transactions.',
-    statValue: '₹14.98 L Cr',
-    statLabel: 'Bengaluru Urban UPI · Q4 FY24',
+    title: 'Bengaluru Urban processed ₹22.37 lakh crore on PhonePe in April–June 2026',
+    body: 'In April–June 2026, PhonePe recorded 2.11 billion transactions worth ₹22.37 lakh crore in Bengaluru Urban district, alongside 1.52 million registered merchants. These figures use PhonePe\'s fully restated Pulse release and must not be joined to earlier downloads.',
+    statValue: '₹22.37 L Cr',
+    statLabel: 'Bengaluru Urban · Q1 FY27',
     category: 'Concentration',
     indicator: 'digital_transactions',
-    quarter: '2024-03',
+    quarter: '2026-06',
     tags: ['karnataka', 'upi', 'phonepe', 'concentration'],
     spotlight: [
       { state: 'karnataka', district: 'Bengaluru Urban' },

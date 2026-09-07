@@ -22,6 +22,9 @@ def import_phonepe():
     db = sqlite3.connect(DB_PATH)
     db.execute("PRAGMA journal_mode=WAL")
     db.execute("PRAGMA foreign_keys=ON")
+    columns = {row[1] for row in db.execute("PRAGMA table_info(phonepe_data)")}
+    if "registered_merchants" not in columns:
+        db.execute("ALTER TABLE phonepe_data ADD COLUMN registered_merchants INTEGER")
 
     matcher = DistrictMatcher(DB_PATH)
 
@@ -39,29 +42,46 @@ def import_phonepe():
         if not period_id:
             continue
 
-        for rec in period_obj.get('districts', []):
+        records = period_obj.get('districts')
+        if records is None and period_obj.get('path'):
+            partition_path = os.path.normpath(os.path.join(os.path.dirname(PP_FILE), period_obj['path']))
+            with open(partition_path) as partition_file:
+                partition = json.load(partition_file)
+            records = [
+                {
+                    'district': row.get('district'),
+                    'phonepe_upi__state': row.get('state'),
+                    'phonepe_upi__transaction_count': row.get('transaction_count'),
+                    'phonepe_upi__transaction_amount': row.get('transaction_amount'),
+                    'phonepe_upi__registered_merchants': row.get('registered_merchants'),
+                }
+                for row in partition.get('districts', [])
+            ]
+
+        for rec in records or []:
             district_name = rec.get('district', '')
             state_slug = rec.get('phonepe_upi__state', '')
             count = rec.get('phonepe_upi__transaction_count', 0)
             amount = rec.get('phonepe_upi__transaction_amount', 0)
+            merchants = rec.get('phonepe_upi__registered_merchants')
 
             district_lgd = matcher.resolve(
                 district_name, state_slug=state_slug, source='phonepe'
             )
 
-            batch.append((district_lgd, district_name, state_slug, period_id, count, amount))
+            batch.append((district_lgd, district_name, state_slug, period_id, count, amount, merchants))
             total += 1
 
             if len(batch) >= 5000:
                 db.executemany(
-                    "INSERT INTO phonepe_data (district_lgd, district_name_raw, state_slug, period_id, transaction_count, transaction_amount) VALUES (?, ?, ?, ?, ?, ?)",
+                    "INSERT INTO phonepe_data (district_lgd, district_name_raw, state_slug, period_id, transaction_count, transaction_amount, registered_merchants) VALUES (?, ?, ?, ?, ?, ?, ?)",
                     batch
                 )
                 batch = []
 
     if batch:
         db.executemany(
-            "INSERT INTO phonepe_data (district_lgd, district_name_raw, state_slug, period_id, transaction_count, transaction_amount) VALUES (?, ?, ?, ?, ?, ?)",
+            "INSERT INTO phonepe_data (district_lgd, district_name_raw, state_slug, period_id, transaction_count, transaction_amount, registered_merchants) VALUES (?, ?, ?, ?, ?, ?, ?)",
             batch
         )
 

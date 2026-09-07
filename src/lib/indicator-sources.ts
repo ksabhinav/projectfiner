@@ -84,14 +84,13 @@ export function getSourceCitation(
   const q = quarterLabel(quarter);
 
   // ── PhonePe (digital_transactions has PhonePe UPI as default metric) ────
-  // PhonePe Pulse currently publishes through Mar 2024. Later quarters fall
-  // back automatically; the legend's quarter label will already reflect that
-  // via the existing fallbackQuarter mechanism.
+  // The September 2026 upstream refresh restated the complete series and added
+  // merchant coverage. Earlier FINER snapshots are not comparable.
   if (indicator === 'digital_transactions') {
     return {
       label: `PhonePe Pulse · ${q || 'quarterly UPI'}`,
       url: 'https://github.com/PhonePe/pulse',
-      attribution: 'PhonePe Pulse, district-level UPI transaction data (MIT License). Currently available through Q4 FY24 (Mar 2024); later quarters await an upstream PhonePe Pulse release.',
+      attribution: 'PhonePe Pulse district-level transactions and registered merchants, restated series through Q1 FY27 (Apr–Jun 2026). CDLA-Permissive-2.0. Do not join to earlier Pulse downloads.',
     };
   }
 

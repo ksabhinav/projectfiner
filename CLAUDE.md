@@ -131,7 +131,7 @@ projectfiner/
     │       ├── {state}_fi_timeseries.csv   # Wide-format CSV: all districts × all quarters
     │       ├── quarterly/                  # Folders (YYYY-MM format), CSVs per category
     │       └── raw-csv/                    # Flat CSVs by category
-    ├── digital-payments/                   # PhonePe Pulse UPI data (36 states, FY20–FY25)
+    ├── digital-payments/                   # PhonePe Pulse UPI data (36 states/UTs, 2018 Q1–2026 Q2)
     │   ├── phonepe_district_timeseries.json  # Consolidated: 14,734 district records, 20 quarters
     │   └── phonepe-pulse/{state}/          # Raw per-state quarterly JSON files (720 files)
     ├── banking-outlets/                    # RBI DBIE Banking Outlet data
@@ -154,7 +154,8 @@ projectfiner/
 │   ├── init_schema.py                      # Create 11 tables
 │   ├── import_reference.py                 # States, districts, aliases, periods
 │   ├── import_slbc.py                      # 22 states → slbc_data (1.19M rows)
-│   ├── import_phonepe.py                   # PhonePe → phonepe_data (14.7K rows)
+│   ├── import_phonepe.py                   # PhonePe → phonepe_data
+│   ├── sync_phonepe_pulse.py               # Pinned Pulse checkout → public release files
 │   ├── import_nfhs.py                      # NFHS-5 → nfhs_data (73.6K rows)
 │   ├── import_aadhaar.py                   # Aadhaar → aadhaar_enrollment (1M rows)
 │   ├── match_districts.py                  # Shared district name → LGD code resolver
@@ -1007,7 +1008,7 @@ Config: `db/state_config.json` — per-state metadata (script paths, PDF dirs, s
 python3 db/regenerate_indicator_files_from_states.py                       # all 15 SLBC indicators
 python3 db/regenerate_indicator_files_from_states.py social_security pmegp # specific indicators
 ```
-The script refuses to write `digital_transactions` quarters that lack PhonePe `transaction_count`/`_amount` (so the headline UPI metric never goes silently missing). PhonePe Pulse currently ceilings at Mar 2024.
+The script refuses to write `digital_transactions` quarters that lack PhonePe `transaction_count`/`_amount` (so the headline metric never goes silently missing). The pinned Pulse release runs through Jun 2026.
 
 **Field Mappings**: `db/field_mappings.json` — 84 canonical field definitions mapping 543 state-specific variants across 16 indicators. Includes `reverse_lookup` (189 entries) and `haryana_field_map` (24 entries for Haryana's non-standard format).
 
@@ -1091,19 +1092,19 @@ Then also rebuild the RAG index (see Ask/RAG section). The frontend caches loade
 
 ## PhonePe Pulse UPI Data
 
-**District-level UPI transaction data** for all 36 Indian states/UTs, 20 quarters (FY20-FY25).
+**District-level transaction and registered-merchant data** for all 36 Indian states/UTs, 34 quarters (2018 Q1–2026 Q2).
 
 **Source**: PhonePe Pulse GitHub repo (`github.com/PhonePe/pulse`)
-- Downloaded via `curl` from `raw.githubusercontent.com/PhonePe/pulse/master/data/map/transaction/hover/country/india/state/{state}/{year}/{q}.json`
-- 440 files (22 states × 5 years × 4 quarters), plus 280 more for additional 14 states
+- Synced from pinned upstream commit `943e6e52a71513d683f804add12d0b61145e8007` with `python3 db/sync_phonepe_pulse.py /path/to/pulse --revision 943e6e52a71513d683f804add12d0b61145e8007`
+- Source license: CDLA-Permissive-2.0
 
-**Consolidated file**: `public/digital-payments/phonepe_district_timeseries.json` (2.3 MB)
-- 14,734 district records, 20 quarters, 2 metrics per record (transaction_count, transaction_amount in Rs. Lakhs)
+**Consolidated file**: `public/digital-payments/phonepe_district_timeseries.json`
+- Small partition manifest for 26,616 district-period records across 34 quarter files under `public/indicators/digital_transactions/`; each partition contains transaction count, transaction amount in Rs. Lakhs, and registered merchants where published
 - Merged into `slbcData` on the frontend by matching state + district + period
 
 **On map**: Part of "Digital Transactions" indicator group. Default metric when selecting Digital Transactions.
 
-**Upstream staleness**: PhonePe Pulse currently ships through **Mar 2024** (Q4 FY24) only. Quarters 2024-06 onwards have NO PhonePe data, only SLBC-side digital-coverage fields. The regenerator script refuses to write `digital_transactions` quarter files that lack PhonePe data; selecting Dec 2025 + Digital Transactions falls back automatically to Mar 2024 via the homepage's quarter-fallback chain (window widened to 12 quarters so the 7-quarter gap resolves cleanly). The italic "Data from Mar 2024" hint appears on tooltips. Nothing to do until upstream Pulse refreshes.
+**Methodology break**: The 2026 Pulse release restates the complete series from January–March 2018 and says not to join it to earlier downloads. Always replace the full local series with the pinned sync script; never append only the newest quarter. The current release runs through **Jun 2026** (Q1 FY27).
 
 ## Aadhaar Enrollment Data (UIDAI)
 
@@ -1332,13 +1333,13 @@ No Vercel redeployment needed — the API reads fresh index from R2 on next cold
 55. **SHRUG indicators must NOT use the cross-state shared matcher's fuzzy fallback**: The shared matcher in some Python builders maps new-district names by string similarity. Without the `_shared.PC11_STATE_ALIASES` aliasing, Telangana districts had `census_2011_code` populated but `state_lgd_code=36` while SHRUG records sat under `pc11_state_id="28"` (AP) — the join failed silently. Fixed by registering each FINER district under both its current state's PC11 code AND any predecessor state code (Telangana ← AP "28", Ladakh ← J&K "01"). Use `db/shrug/_shared.py:build_finer_lookup()` for all future SHRUG builders.
 56. **maxBounds `_limitCenter` silently clamps padding bumps**: With `maxBoundsViscosity: 1.0`, increasing fitBounds top-padding only moves content DOWN if there's room above the bound. With desktop maxBounds.north=40°N at fit-zoom ~5.4, the viewport top was at ~41°N (~1° above 40°N max) and got clamped → any topPad increase silently no-op'd. Fix: widen north to 46°N so the +72 strip-padding can actually slide content down to clear J&K/Ladakh's northern fingers from the strip's bottom edge. Mobile kept at 45°N (bumping it added empty whitespace).
 57. **Shareable URLs across map + analysis pages**: `?indicator=&metric=&quarter=&state=` on the homepage; `?state=&category=&quarter=&field=&sort=col:dir` on `/analysis/rankings/`; `?state=&district=&category=` on `/analysis/trends/`. Read on mount, mirrored on every change via `history.replaceState()` (no history-stack pollution). TimelineSlider listens for `finer:quarterChange` so URL hydration of `?quarter=` actually moves the thumb (it didn't, originally — the slider's `quartersReady` handler overwrote the URL-set quarter).
-58. **Snapshot indicators lock the slider via `timePoints`**: `rbi_banking_outlets` (May 2026), `capital_markets_access` (May 2025), `nrlm_shg` (Mar 2026), `rbi_bsr_credit` (Mar 2025), `elevation_terrain` (Feb 2000), `crop_production` (Census 2011), `nfhs_health_insurance` (Mar 2021 + Mar 2016), `aadhaar_enrollment` (3 quarters in 2025), `digital_transactions` (Mar 2024 cap due to PhonePe Pulse). When selected, `switchSliderToTimePoints()` replaces the global slider quarters; `restoreSliderToManifest()` restores them on switch-away.
+58. **Snapshot indicators lock the slider via `timePoints`**: `rbi_banking_outlets` (May 2026), `capital_markets_access` (May 2025), `nrlm_shg` (Mar 2026), `rbi_bsr_credit` (Mar 2025), `elevation_terrain` (Feb 2000), `crop_production` (Census 2011), `nfhs_health_insurance` (Mar 2021 + Mar 2016), and `aadhaar_enrollment` (3 quarters in 2025). When selected, `switchSliderToTimePoints()` replaces the global slider quarters; `restoreSliderToManifest()` restores them on switch-away.
 59. **Mobile timeline is horizontal at the bottom**: TimelineSlider.svelte detects `(max-width: 640px)` via matchMedia. On mobile, position flips from `right: 16px; vertical` to `left/right pinned, bottom: 16px; horizontal`. Mobile MapLegend is `display: none`. Mobile FocusOverlay close button is a vermillion pill anchored bottom-center.
 60. **OG image regeneration**: `python3 scripts/build_og_image.py` renders `public/og-image.svg` → `public/og-image.png` via cairosvg + brew cairo (needs `DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib`). The PNG must stay 1200×630 for proper WhatsApp/Twitter card sizing.
 61. **`db/regenerate_indicator_files_from_states.py` is the canonical no-DB regenerator**: After extending any state's extractor OR adding a new field-name variant, run this script — NOT `db/export_indicator_files.py`. The regenerator pulls from `public/slbc-data/<state>/<state>_fi_timeseries.json` directly and applies a much broader fallback chain (15 SLBC indicators, ~30 quarters each). The DB-based export script still works but its fallback lists are narrower; running it without first updating its `INDICATORS` dict will silently drop states that the regenerator catches.
 62. **DISTRICT_ALIASES maps GeoJSON-name → data-name**: When you add a new alias because data exists but a polygon won't paint, the key is the GeoJSON `DISTRICT` (after `normDist`) and the value is the data-side district name. Reverse direction is wrong and will fail silently. Note this is the polygon-rendering alias and works alongside the state-qualified `resolveLookup` from #52 — both are needed. May 2026 audit additions: LEPA RADA, KAMRUP RURAL, KOCH BIHAR→COOCHBEHAR (one word — WB source uses no space), SOUTH PARGANAS→PARAGANAS SOUTH (word order), Maharashtra renames AHILYANAGAR/CHHATRAPATI SAMBHAJI NAGAR/DHARASHIV → old names AHMEDNAGAR/AURANGABAD/OSMANABAD (SLBC source still uses pre-2023 names), Odisha BALASORE/SUBARNAPUR/JAGATSINGHPUR, Chhattisgarh SARANGARHBILAIGARH, Telangana MEDCHALMALKAJGIRI, Jharkhand EAST SINGHBHUM/SAHIBGANJ. Test: re-run `db/regenerate_indicator_files_from_states.py` then count unpaintable rows — should be 0.
 63. **`?state=<slug>` URL focus race during init**: The init `flyToNE` call in `loadBankingData().then()` (around line 1402 of `index.astro`) was unconditional and wiped any URL-driven state focus that landed milliseconds earlier from the polling block in Section 5 (URL parameter support). Fix is in place: the callback now checks `bankingStateFilter` first and either skips `flyToNE` or re-issues `flyToBounds(stateBounds)` to lock in the URL-driven focus. Don't add another unconditional flyTo in the same chain. See also #57 for the broader shareable-URL story.
-64. **digital_transactions Mar 2024 ceiling — detail**: Extends gotcha #58. PhonePe Pulse hasn't released data past Q4 FY24. Quarters 2024-06 onwards contain only SLBC digital-coverage fields, no PhonePe `transaction_count`/`_amount` — and the default Digital Transactions metric is "UPI Transaction Count (PhonePe)" so those quarters would render fake-empty. The regenerator (#61) refuses to write `digital_transactions/<quarter>.json` for any quarter lacking PhonePe data. Selecting Dec 2025 + Digital Transactions falls back to Mar 2024 via the 12-quarter fallback window in `loadIndicatorData`. Don't manually generate empty digital_transactions files.
+64. **PhonePe is a restated series**: The release through Jun 2026 rewrites every quarter from 2018 Q1. Do not append it to older Pulse downloads or interpret the release boundary as growth. Regenerate the complete series with `sync_phonepe_pulse.py` from the pinned upstream revision.
 65. **`src/lib/indicator-sources.ts` is the canonical SLBC state-URL map**: When a state's SLBC portal moves or you add a state, edit only this file. MapLegend reads it via `getSourceCitation(indicator, quarter, state)`. The about-page sources section and any other SLBC URL list should be kept in sync but the citation map is authoritative for the legend.
 66. **GitHub Pages deploys only on push to `main`**: `.github/workflows/deploy.yml` triggers on `branches: [main]` only. Branch protection on `main` blocks direct pushes — use a PR. The workflow: develop on a feature branch → PR → merge → ~2-3 min until projectfiner.com updates. Don't try `git push origin main` directly; it returns HTTP 403.
 67. **Static sitemap at `public/sitemap.xml` — update manually**: When you add a new page under `src/pages/`, append its URL to `public/sitemap.xml`. Chose static over `@astrojs/sitemap` to avoid `package-lock.json` churn — switching later is a one-line `npm install @astrojs/sitemap` + an `astro.config.mjs` integration entry.
