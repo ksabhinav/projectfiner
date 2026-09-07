@@ -4,12 +4,12 @@ Project FINER (Financial Inclusion in the North East Region) is a public researc
 
 The project is in a **research-preview** stage. Most public files are source-derived **raw / experimental** artifacts with uneven schemas and unresolved quality issues. The Meghalaya long-format product is a **standardized preview**, not a certified dataset. No FINER distribution is currently labelled Gold or certified.
 
-The authoritative broad inventory is [`public/release-manifest.json`](public/release-manifest.json). Immutable product releases are listed in [`public/releases/index.json`](public/releases/index.json). The current candidate, [`meghalaya-standardized-preview-v1`](public/releases/meghalaya-standardized-preview-v1/release.json), records its exact files, hashes and certification blockers.
+The authoritative broad inventory is [`public/release-manifest.json`](public/release-manifest.json). Immutable product releases are listed in [`public/releases/index.json`](public/releases/index.json). The current candidate, [`meghalaya-standardized-preview-v2`](public/releases/meghalaya-standardized-preview-v2/release.json), records its exact files, hashes, row-level artifact provenance and certification blockers; v1 remains in the release catalog.
 
 ## Start here
 
 - [Methodology and release policy](METHODOLOGY.md)
-- [Versioned Meghalaya release candidate](https://projectfiner.com/releases/meghalaya-standardized-preview-v1/)
+- [Versioned Meghalaya release candidate](https://projectfiner.com/releases/meghalaya-standardized-preview-v2/)
 - [Canonical district directory](https://projectfiner.com/districts/)
 - [Data dictionary](DATA_DICTIONARY.md)
 - [Data rights and reuse](https://projectfiner.com/data-rights/)
@@ -64,7 +64,7 @@ The legacy validation report is generated output. Do not treat its prose summary
 | `public/release-manifest.json` | Content-addressed public release inventory. |
 | `public/releases/` | Immutable product snapshots, release descriptors and catalog. |
 | `public/slbc-data/` | State-level raw source-derived JSON and wide CSV files. |
-| `public/data-contracts/` | Standardized preview artifacts and indicator registries. |
+| `public/data-contracts/` | Standardized preview artifacts, indicator registries and provenance registries. |
 | `public/district_lgd_codes.json` | Canonical LGD geography registry and aliases. |
 | `db/` | Release builders, extract/import utilities and structural validators. |
 | `src/` | Astro/Svelte public interface. |
