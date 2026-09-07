@@ -1,0 +1,43 @@
+name: Monitor deployed site
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check core routes and operational contract
+        env:
+          SITE_ORIGIN: https://projectfiner.com
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          for route in / /downloads/ /districts/ /status/ /status.json; do
+            curl --fail --silent --show-error --location --retry 3 --retry-delay 5 --max-time 30 "${SITE_ORIGIN}${route}" >/dev/null
+          done
+          curl --fail --silent --show-error --location --retry 3 --retry-delay 5 --max-time 30 "${SITE_ORIGIN}/status.json" -o status.json
+          python3 - <<'PY'
+          import json
+          import os
+          import urllib.request
+
+          status = json.load(open('status.json', encoding='utf-8'))
+          if status.get('schemaVersion') != 'project-finer-status-v1':
+              raise SystemExit('Live status contract has an unexpected schema version')
+          with urllib.request.urlopen(f"https://api.github.com/repos/{os.environ['REPOSITORY']}/commits/main", timeout=30) as response:
+              main_sha = json.load(response)['sha']
+          deployed_sha = status.get('build', {}).get('commit')
+          if deployed_sha != main_sha:
+              raise SystemExit(f'Deployed commit {deployed_sha!r} does not match main {main_sha!r}')
+          release = status.get('release', {})
+          if release.get('freshnessStatus') != 'within-target':
+              raise SystemExit(f"Release freshness SLO failed: {release!r}")
+          print(f"healthy: commit={deployed_sha} release_age_days={release.get('ageDays')}")
+          PY
