@@ -4,6 +4,7 @@ Material trust-layer, public-contract and data corrections are recorded here. Th
 
 ## Unreleased
 
+- Made the live district-ranking filters explicitly labelled, converted sortable table headers to keyboard-operable buttons, and added screen-reader status announcements and table context.
 - Added a document-level Content Security Policy and referrer policy to every published HTML page, self-hosted Plotly from the locked dependency tree, and pinned Leaflet CDN assets with integrity hashes.
 - Upgraded Astro, the Astro Svelte integration, Svelte and their transitive Vite toolchain beyond known vulnerable releases.
 - Removed the vulnerable browser-side `xlsx` package and retired generated Excel downloads; CSV remains the canonical download format.
