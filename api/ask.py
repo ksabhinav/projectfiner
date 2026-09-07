@@ -10,8 +10,10 @@ import os
 import re
 import json
 import urllib.request
+from collections import defaultdict, deque
 from http.server import BaseHTTPRequestHandler
 from threading import Lock
+from time import monotonic
 
 MAX_BODY_BYTES = 4096
 DEFAULT_ALLOWED_ORIGINS = {
@@ -19,6 +21,112 @@ DEFAULT_ALLOWED_ORIGINS = {
     "https://www.projectfiner.com",
 }
 
+
+# These limits are deliberately conservative defaults. They are process-local
+# defense-in-depth for the separately deployed serverless API; the deployment
+# should also apply provider/edge quotas for a shared global budget.
+MAX_RATE_BUCKETS = 10000
+_CLIENT_REQUESTS = defaultdict(deque)
+_TOTAL_REQUESTS = deque()
+_RATE_LOCK = Lock()
+
+
+def _env_int(name, default, minimum=1, maximum=86400):
+    try:
+        value = int(os.environ.get(name, str(default)))
+    except (TypeError, ValueError):
+        return default
+    return max(minimum, min(value, maximum))
+
+
+def _rate_limit_config():
+    return {
+        "client_limit": _env_int("ASK_MAX_REQUESTS_PER_CLIENT", 10, 1, 1000),
+        "client_window": _env_int("ASK_CLIENT_WINDOW_SECONDS", 60, 1, 86400),
+        "total_limit": _env_int("ASK_MAX_REQUESTS_PER_WINDOW", 500, 1, 10000),
+        "total_window": _env_int("ASK_TOTAL_WINDOW_SECONDS", 86400, 60, 604800),
+    }
+
+
+def _request_client_key(request):
+    headers = getattr(request, "headers", {})
+    forwarded = headers.get("X-Forwarded-For", "")
+    if forwarded:
+        return forwarded.split(",", 1)[0].strip()[:128] or "unknown"
+
+    address = getattr(request, "client_address", None)
+    if address:
+        return str(address[0])[:128]
+    return "unknown"
+
+
+def _seconds_until(timestamp, now):
+    return max(1, int(timestamp - now + 0.999))
+
+
+def _consume_request_budget(client_key, now=None):
+    """Consume one request from the client and process-wide budgets.
+
+    Returns (allowed, retry_after, scope, remaining_for_client). The
+    process-wide cap is a circuit breaker, not a replacement for a shared
+    provider or edge quota in a multi-instance deployment.
+    """
+    config = _rate_limit_config()
+    current = monotonic() if now is None else now
+
+    with _RATE_LOCK:
+        while _TOTAL_REQUESTS and _TOTAL_REQUESTS[0] <= current - config["total_window"]:
+            _TOTAL_REQUESTS.popleft()
+
+        if len(_TOTAL_REQUESTS) >= config["total_limit"]:
+            return (
+                False,
+                _seconds_until(
+                    _TOTAL_REQUESTS[0] + config["total_window"], current
+                ),
+                "global",
+                0,
+            )
+
+        bucket = _CLIENT_REQUESTS.get(client_key)
+        if bucket is not None:
+            while bucket and bucket[0] <= current - config["client_window"]:
+                bucket.popleft()
+            if not bucket:
+                _CLIENT_REQUESTS.pop(client_key, None)
+                bucket = None
+
+        if bucket is None:
+            if len(_CLIENT_REQUESTS) >= MAX_RATE_BUCKETS:
+                return False, config["client_window"], "capacity", 0
+            bucket = deque()
+            _CLIENT_REQUESTS[client_key] = bucket
+
+        if len(bucket) >= config["client_limit"]:
+            return (
+                False,
+                _seconds_until(
+                    bucket[0] + config["client_window"], current
+                ),
+                "client",
+                0,
+            )
+
+        bucket.append(current)
+        _TOTAL_REQUESTS.append(current)
+        return (
+            True,
+            0,
+            "",
+            config["client_limit"] - len(bucket),
+        )
+
+
+def _reset_rate_limit_state():
+    """Reset process-local request state; used by tests and controlled restarts."""
+    with _RATE_LOCK:
+        _CLIENT_REQUESTS.clear()
+        _TOTAL_REQUESTS.clear()
 
 def _allowed_origins():
     """Return production origins plus optional comma-separated deployment overrides."""
@@ -279,6 +387,24 @@ class handler(BaseHTTPRequestHandler):
             self._respond(400, {"error": "Question too long (max 500 chars)"})
             return
 
+        allowed, retry_after, scope, remaining = _consume_request_budget(
+            _request_client_key(self)
+        )
+        if not allowed:
+            if scope == "client":
+                self._respond(
+                    429,
+                    {"error": "Too many requests; try again later."},
+                    {"Retry-After": str(retry_after)},
+                )
+            else:
+                self._respond(
+                    503,
+                    {"error": "Answer service is temporarily unavailable"},
+                    {"Retry-After": str(retry_after)},
+                )
+            return
+
         # Optional state filter — explicit or auto-detected from query
         state_value = data.get("state", "")
         if state_value is not None and not isinstance(state_value, str):
@@ -388,11 +514,13 @@ class handler(BaseHTTPRequestHandler):
             self.send_header("Access-Control-Allow-Origin", origin.rstrip("/"))
             self.send_header("Vary", "Origin")
 
-    def _respond(self, status, data):
+    def _respond(self, status, data, extra_headers=None):
         self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Cache-Control", "no-store")
         self.send_header("X-Content-Type-Options", "nosniff")
+        for name, value in (extra_headers or {}).items():
+            self.send_header(name, str(value))
         self._send_cors_headers()
         self.end_headers()
         self.wfile.write(json.dumps(data).encode("utf-8"))

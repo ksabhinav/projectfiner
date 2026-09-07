@@ -28,4 +28,8 @@ The static site, repository code and Project FINER API are in scope. Vulnerabili
 
 Every published HTML page carries a Content Security Policy and a strict-origin referrer policy. Plotly is copied from the locked npm dependency tree at build time; the remaining Leaflet CDN files are version-pinned and protected by Subresource Integrity.
 
+### Ask API controls
+
+The Ask endpoint has an explicit ASK_API_ENABLED kill switch, an origin allow-list, a request-body cap, bounded per-client request limits and a process-wide circuit breaker. The defaults are 10 requests per client per minute and 500 requests per process per 24-hour window; deployments should set provider/edge quotas for a shared global budget because serverless instances do not share in-memory state. The endpoint returns generic errors and 429 responses with Retry-After rather than exposing upstream exceptions.
+
 These document-level controls do not replace HTTP response headers. The GitHub Pages origin cannot configure repository-defined HSTS, `X-Content-Type-Options`, `Permissions-Policy` or CSP `frame-ancestors`. Those controls must be configured and verified at the Cloudflare edge for `projectfiner.com`.

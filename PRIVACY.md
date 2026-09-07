@@ -14,7 +14,7 @@ The site currently requests web fonts from Google Fonts. Following links to upst
 
 Questions submitted through Ask FINER are sent to the Project FINER API and then to Groq to generate a response. The application code does not intentionally write questions to a project database, but infrastructure and model providers may process or log requests under their own operational and privacy terms.
 
-Do not submit personal financial information, credentials, confidential material, secrets or information about another person. Ask responses are experimental and should not be treated as financial advice or as a certified data query.
+Do not submit personal financial information, credentials, confidential material, secrets or information about another person. Ask responses are experimental and should not be treated as financial advice or as a certified data query. The endpoint applies bounded request controls (10 requests per client per minute and 500 requests per process per 24-hour window by default) and can be disabled with the ASK_API_ENABLED deployment switch. These are defense-in-depth controls; hosting/provider quotas may also apply.
 
 ## Corrections and email
 
