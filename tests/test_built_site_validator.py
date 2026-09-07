@@ -39,11 +39,13 @@ def write_fixture(root: Path, *, index_body: str = '<a href="/about/#top">About<
   <url><loc>https://projectfiner.com/methodology/</loc></url>
   <url><loc>https://projectfiner.com/privacy/</loc></url>
   <url><loc>https://projectfiner.com/releases/meghalaya-standardized-preview-v1/</loc></url>
+  <url><loc>https://projectfiner.com/status/</loc></url>
 </urlset>""")
     for route in (
         "changelog", "corrections", "data-dictionary", "data-rights",
         "downloads", "districts", "methodology", "privacy",
         "releases/meghalaya-standardized-preview-v1",
+        "status",
     ):
         directory = root / route
         directory.mkdir(parents=True)
@@ -57,8 +59,8 @@ class BuiltSiteValidatorTests(unittest.TestCase):
             write_fixture(root)
             errors, stats = validate_site(root)
             self.assertEqual(errors, [])
-            self.assertEqual(stats["pages"], 11)
-            self.assertEqual(stats["sitemap_urls"], 11)
+            self.assertEqual(stats["pages"], 12)
+            self.assertEqual(stats["sitemap_urls"], 12)
 
     def test_missing_internal_link_fails(self):
         with tempfile.TemporaryDirectory() as temporary:
