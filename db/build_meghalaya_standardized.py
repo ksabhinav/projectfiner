@@ -23,6 +23,7 @@ PUBLIC = ROOT / "public"
 SOURCE_PATH = PUBLIC / "slbc-data" / "meghalaya" / "meghalaya_complete.json"
 GEOGRAPHY_PATH = PUBLIC / "district_lgd_codes.json"
 REGISTRY_PATH = PUBLIC / "data-contracts" / "meghalaya-indicator-registry.json"
+PROVENANCE_PATH = PUBLIC / "data-contracts" / "meghalaya-provenance.json"
 OUTPUT_PATH = PUBLIC / "data-contracts" / "meghalaya-standardized-preview.csv"
 
 AADHAAR_TABLE = "aadhaar_authentication"
@@ -93,11 +94,54 @@ def boundary_metadata(period: str, district: str, registry: dict) -> tuple[str, 
     return version, status
 
 
-def build_rows(source: dict, geography: dict, registry: dict) -> list[dict[str, str]]:
+def validate_provenance(registry: dict, provenance: dict, source_hash: str) -> str:
+    registered_source = registry["source"]
+    sources = [
+        item for item in provenance.get("sources", [])
+        if item.get("sourceId") == registered_source["id"]
+    ]
+    if len(sources) != 1:
+        raise ValueError("Provenance registry must contain one matching source")
+    source = sources[0]
+    if source.get("artifactPath") != registered_source["artifact"]:
+        raise ValueError("Provenance source artifact does not match indicator registry")
+    if source.get("artifactSha256") != source_hash:
+        raise ValueError("Provenance source hash does not match the source artifact")
+    if registered_source.get("artifactSha256") != source_hash:
+        raise ValueError("Indicator registry source hash does not match the source artifact")
+
+    runs = [
+        item for item in provenance.get("extractionRuns", [])
+        if item.get("sourceId") == source["sourceId"]
+    ]
+    if len(runs) != 1:
+        raise ValueError("Provenance registry must contain one matching extraction run")
+    run = runs[0]
+    run_id = str(run.get("extractionRunId", "")).strip()
+    if not run_id:
+        raise ValueError("Extraction run must have a non-empty ID")
+    if run.get("sourceArtifactPath") != source["artifactPath"]:
+        raise ValueError("Extraction run artifact does not match the source")
+    if run.get("sourceArtifactSha256") != source_hash:
+        raise ValueError("Extraction run hash does not match the source artifact")
+    if registered_source.get("extractionRunId") != run_id:
+        raise ValueError("Indicator registry extraction run does not match provenance")
+    return run_id
+
+
+def build_rows(
+    source: dict,
+    geography: dict,
+    registry: dict,
+    *,
+    source_artifact_sha256: str,
+    extraction_run_id: str,
+) -> list[dict[str, str]]:
     columns = registry["observationColumns"]
     required_columns = {
         "release_id", "state_lgd_code", "district_lgd_code", "period",
         "indicator_id", "value", "unit", "source_value", "source_id",
+        "source_artifact_sha256", "extraction_run_id",
         "quality_status", "quality_flags",
     }
     if not required_columns.issubset(columns):
@@ -195,6 +239,8 @@ def build_rows(source: dict, geography: dict, registry: dict) -> list[dict[str, 
                         "source_field_label": source_field,
                         "source_id": registry["source"]["id"],
                         "source_artifact": registry["source"]["artifact"],
+                        "source_artifact_sha256": source_artifact_sha256,
+                        "extraction_run_id": extraction_run_id,
                         "source_table": table_name,
                         "source_page": "",
                         "missing_reason": "",
@@ -221,7 +267,17 @@ def serialise_rows(rows: list[dict[str, str]], columns: list[str]) -> str:
 
 def render() -> tuple[str, int]:
     registry = load_json(REGISTRY_PATH)
-    rows = build_rows(load_json(SOURCE_PATH), load_json(GEOGRAPHY_PATH), registry)
+    source_hash = hashlib.sha256(SOURCE_PATH.read_bytes()).hexdigest()
+    extraction_run_id = validate_provenance(
+        registry, load_json(PROVENANCE_PATH), source_hash
+    )
+    rows = build_rows(
+        load_json(SOURCE_PATH),
+        load_json(GEOGRAPHY_PATH),
+        registry,
+        source_artifact_sha256=source_hash,
+        extraction_run_id=extraction_run_id,
+    )
     return serialise_rows(rows, registry["observationColumns"]), len(rows)
 
 

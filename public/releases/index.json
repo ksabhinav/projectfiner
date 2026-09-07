@@ -2,6 +2,17 @@
   "releases": [
     {
       "certificationStatus": "not-certified",
+      "descriptor": "/releases/meghalaya-standardized-preview-v2/release.json",
+      "landingPage": "/releases/meghalaya-standardized-preview-v2/",
+      "latestPeriod": "2025-12-31",
+      "observationCount": 3494,
+      "productId": "meghalaya-standardized-preview",
+      "qualityTier": "standardized-preview",
+      "releaseId": "meghalaya-standardized-preview-v2",
+      "releaseStatus": "immutable-preview"
+    },
+    {
+      "certificationStatus": "not-certified",
       "descriptor": "/releases/meghalaya-standardized-preview-v1/release.json",
       "landingPage": "/releases/meghalaya-standardized-preview-v1/",
       "latestPeriod": "2025-12-31",

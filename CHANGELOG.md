@@ -13,7 +13,7 @@ Material trust-layer, public-contract and data corrections are recorded here. Th
 - Added a document-level Content Security Policy and referrer policy to every published HTML page, self-hosted Plotly from the locked dependency tree, and pinned Leaflet CDN assets with integrity hashes.
 - Upgraded Astro, the Astro Svelte integration, Svelte and their transitive Vite toolchain beyond known vulnerable releases.
 - Removed the vulnerable browser-side `xlsx` package and retired generated Excel downloads; CSV remains the canonical download format.
-- Published the immutable `meghalaya-standardized-preview-v1` release candidate with checksums and machine-enforced certification blockers.
+- Published immutable Meghalaya preview v2 with row-level source-artifact SHA-256 hashes, deterministic extraction-run IDs, an explicit provenance registry, and preserved v1 history; exact PDF/page evidence remains an open certification blocker.
 - Added canonical release and district discovery pages, and moved experimental Analysis and Ask tools behind the secondary navigation.
 
 ## 3 September 2026 — trust-layer remediation
