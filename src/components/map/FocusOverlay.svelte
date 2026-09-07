@@ -6,7 +6,7 @@
    * on the left; stat block on the right with the active metric in saffron.
    * ESC hint at the foot, 'X' close in the top-right.
    */
-  import { onMount } from 'svelte';
+  import { onMount, tick } from 'svelte';
   import { onFiner, dispatchFiner, getFinerState } from '../../lib/map-bridge';
   import type { FocusUpdateDetail } from '../../lib/map-bridge';
 
@@ -24,10 +24,21 @@
   let status = $state('');
   let proxyFrom = $state('');
   let qualityStatus = $state('');
+  let closeButton: HTMLButtonElement | null = $state(null);
+  let previouslyFocused: HTMLElement | null = null;
 
-  function applyUpdate(detail: FocusUpdateDetail) {
+  async function applyUpdate(detail: FocusUpdateDetail) {
+    if (detail.active && !active) {
+      previouslyFocused = document.activeElement instanceof HTMLElement
+        ? document.activeElement
+        : null;
+    }
     active = detail.active;
-    if (!detail.active) return;
+    if (!detail.active) {
+      previouslyFocused?.focus();
+      previouslyFocused = null;
+      return;
+    }
     district = detail.district;
     stateName = detail.state;
     svgPath = detail.svgPath;
@@ -38,11 +49,15 @@
     status = detail.status;
     proxyFrom = detail.proxyFrom;
     qualityStatus = detail.qualityStatus;
+    await tick();
+    closeButton?.focus();
   }
 
   function exitFocus() {
     active = false;
     dispatchFiner('exitFocus');
+    previouslyFocused?.focus();
+    previouslyFocused = null;
   }
 
   function handleBackdropClick(e: MouseEvent) {
@@ -51,7 +66,14 @@
   }
 
   function handleKeydown(e: KeyboardEvent) {
-    if (e.key === 'Escape' && active) exitFocus();
+    if (!active) return;
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      exitFocus();
+    } else if (e.key === 'Tab') {
+      e.preventDefault();
+      closeButton?.focus();
+    }
   }
 
   // Split formatted "73.2%" → number + unit-suffix for typographic styling
@@ -85,10 +107,18 @@
   });
 </script>
 
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-<!-- svelte-ignore a11y_no_static_element_interactions -->
-<div class="district-focus" class:active onclick={handleBackdropClick}>
-  <button class="focus-close" onclick={exitFocus} aria-label="Close focus">×</button>
+<div
+  class="district-focus"
+  class:active
+  onclick={handleBackdropClick}
+  onkeydown={handleKeydown}
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="district-focus-title"
+  aria-hidden={!active}
+  tabindex="-1"
+>
+  <button bind:this={closeButton} class="focus-close" onclick={exitFocus} aria-label="Close district focus">×</button>
 
   <div class="focus-grid">
     <div class="focus-shape-col">
@@ -105,7 +135,7 @@
 
     <div class="focus-info-col">
       <div class="focus-eyebrow">A district profile</div>
-      <h2 class="focus-name">{district}</h2>
+      <h2 id="district-focus-title" class="focus-name">{district}</h2>
       <div class="focus-state">{titleCase(stateName)}</div>
 
       <div class="focus-stats">
