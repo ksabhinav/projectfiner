@@ -34,6 +34,7 @@ REQUIRED_SITEMAP_ROUTES = {
     "/methodology/",
     "/privacy/",
     "/releases/meghalaya-standardized-preview-v1/",
+    "/status/",
 }
 LEGACY_HTML_PREFIXES = ("/charts/", "/digital-payments/")
 REQUIRED_CSP_DIRECTIVES = {

@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import { getBuildStatus } from '../../lib/build-status';
+
+const status = getBuildStatus();
+const shortCommit = status.build.commit === 'unknown' ? 'Unknown' : status.build.commit.slice(0, 12);
+const buildDate = new Intl.DateTimeFormat('en-IN', { dateStyle: 'long', timeStyle: 'short', timeZone: 'UTC' }).format(new Date(status.build.builtAt));
+const releaseDate = status.release.latestPeriod
+  ? new Intl.DateTimeFormat('en-IN', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(status.release.latestPeriod))
+  : 'Not available';
+---
+
+<BaseLayout title="Project status — Project FINER" description="Build identity, release freshness and monitoring status for Project FINER." path="/status/">
+  <Header title="" />
+  <main>
+    <p class="eyebrow">Operational transparency</p>
+    <h1>Project status</h1>
+    <p class="lede">This page identifies the exact version being served and the age of the latest versioned data release.</p>
+
+    <section aria-labelledby="build-heading">
+      <h2 id="build-heading">Deployed build</h2>
+      <dl>
+        <div><dt>Commit</dt><dd>{status.build.commitUrl ? <a href={status.build.commitUrl}>{shortCommit}</a> : shortCommit}</dd></div>
+        <div><dt>Build time</dt><dd><time datetime={status.build.builtAt}>{buildDate} UTC</time></dd></div>
+        <div><dt>Deployment model</dt><dd>Static GitHub Pages site</dd></div>
+      </dl>
+    </section>
+
+    <section aria-labelledby="freshness-heading">
+      <h2 id="freshness-heading">Release freshness</h2>
+      <div class:list={['badge', status.release.freshnessStatus]}>{status.release.freshnessStatus.replace('-', ' ')}</div>
+      <dl>
+        <div><dt>Latest release period</dt><dd>{releaseDate}</dd></div>
+        <div><dt>Age at build</dt><dd>{status.release.ageDays === null ? 'Unknown' : `${status.release.ageDays} days`}</dd></div>
+        <div><dt>Research-preview target</dt><dd>Latest versioned release no more than {status.release.freshnessTargetDays} days old</dd></div>
+      </dl>
+      <p class="note">This target measures the versioned release catalogue, not every exploratory map source. A release being within target does not certify its observations; quality and certification status remain separately disclosed.</p>
+    </section>
+
+    <section aria-labelledby="monitor-heading">
+      <h2 id="monitor-heading">Synthetic monitoring</h2>
+      <p>A scheduled check runs daily and verifies core routes, deployed commit identity and release freshness. GitHub Actions records and alerts on failures.</p>
+      <p><a href={status.monitoring.workflowUrl}>View monitoring runs</a> · <a href="/status.json">Machine-readable status</a></p>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  main { width:min(900px,calc(100% - 40px));margin:0 auto;padding:110px 0 80px;color:var(--ink,#1B140E) }
+  .eyebrow { margin:0 0 12px;color:var(--vermillion,#B84A2E);font:600 10px/1 var(--font-ui,'Inter',sans-serif);letter-spacing:.14em;text-transform:uppercase }
+  h1 { margin:0;font:400 clamp(42px,8vw,78px)/.95 var(--font-display,'Fraunces',Georgia,serif);letter-spacing:-.04em }
+  .lede { max-width:700px;margin:24px 0 48px;color:var(--mist,#6E665E);font:400 20px/1.5 var(--font-body,'Source Serif 4',Georgia,serif) }
+  section { padding:28px 0;border-top:1px solid var(--rule,#D9D2C5) }
+  h2 { margin:0 0 20px;font:400 26px/1.1 var(--font-display,'Fraunces',Georgia,serif) }
+  dl { margin:0 }
+  dl div { display:grid;grid-template-columns:minmax(160px,1fr) 2fr;gap:18px;padding:10px 0;border-top:1px solid var(--rule-soft,#E8E2D5) }
+  dt { color:var(--mist,#6E665E);font:600 10px/1.5 var(--font-ui,'Inter',sans-serif);letter-spacing:.08em;text-transform:uppercase }
+  dd { margin:0;font:400 14px/1.5 var(--font-mono,'IBM Plex Mono',monospace) }
+  a { color:var(--vermillion-d,#8E331E);text-underline-offset:3px }
+  .badge { display:inline-block;margin:-4px 0 18px;padding:6px 9px;border:1px solid currentColor;border-radius:2px;font:700 9px/1 var(--font-ui,'Inter',sans-serif);letter-spacing:.1em;text-transform:uppercase }
+  .within-target { color:#46663A }.overdue { color:#8E331E }.unknown { color:#6E665E }
+  section p { font:400 16px/1.55 var(--font-body,'Source Serif 4',Georgia,serif) }
+  .note { color:var(--mist,#6E665E);font-size:14px }
+  @media(max-width:600px) { main{padding-top:90px} dl div{grid-template-columns:1fr;gap:4px} }
+</style>
