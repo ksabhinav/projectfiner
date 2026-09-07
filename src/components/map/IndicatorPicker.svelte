@@ -5,8 +5,9 @@
    * Opens from the "What" cell of IndicatorStrip. Categories as small pills
    * along the top, indicators in three subgroups with vermillion left-border
    * for the active item.
-   */
+  */
 
+  import { onMount, tick } from 'svelte';
   import {
     ATLAS_INDICATORS,
     ATLAS_CATEGORIES,
@@ -24,6 +25,7 @@
   let { selected, onSelect, onClose }: Props = $props();
 
   let activeCat = $state<AtlasCategory>(selected.category);
+  let panelEl: HTMLDivElement | null = $state(null);
 
   const visible = $derived(atlasIndicatorsByCategory(activeCat));
   const grouped = $derived(
@@ -40,18 +42,51 @@
     for (const ind of ATLAS_INDICATORS) c[ind.category]++;
     return c;
   });
+
+  function handleListKeydown(e: KeyboardEvent) {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      onClose();
+      return;
+    }
+    if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(e.key)) return;
+    const options = Array.from(
+      panelEl?.querySelectorAll<HTMLButtonElement>('[role="option"]') || [],
+    );
+    if (!options.length) return;
+    e.preventDefault();
+    const current = Math.max(0, options.indexOf(document.activeElement as HTMLButtonElement));
+    const next = e.key === 'Home'
+      ? 0
+      : e.key === 'End'
+        ? options.length - 1
+        : e.key === 'ArrowDown'
+          ? (current + 1) % options.length
+          : (current - 1 + options.length) % options.length;
+    options[next].focus();
+  }
+
+  onMount(async () => {
+    await tick();
+    panelEl?.querySelector<HTMLElement>('[aria-selected="true"]')?.focus();
+  });
 </script>
 
-<div class="picker-panel" role="listbox" aria-label="Pick an indicator">
-  <div class="pills">
+<div bind:this={panelEl} id="indicator-picker" class="picker-panel" role="dialog" aria-label="Choose a map indicator">
+  <div class="pills" aria-label="Filter indicators by category">
     {#each ATLAS_CATEGORIES as cat}
-      <button class="pill" class:active={activeCat === cat.id} onclick={() => (activeCat = cat.id)}>
+      <button
+        class="pill"
+        class:active={activeCat === cat.id}
+        onclick={() => (activeCat = cat.id)}
+        aria-pressed={activeCat === cat.id}
+      >
         {cat.label} <span class="ct">{counts[cat.id]}</span>
       </button>
     {/each}
   </div>
 
-  <div class="list">
+  <div class="list" role="listbox" aria-label="Map indicators" onkeydown={handleListKeydown}>
     {#each grouped as group}
       <div class="group-eye">{group.label}</div>
       {#each group.items as ind}
