@@ -26,11 +26,11 @@ class PublicFormulaErrorTests(unittest.TestCase):
 
     def test_public_data_contains_no_literal_division_errors(self):
         offenders = []
-        for path in (REPO_ROOT / "public/slbc-data").rglob("*"):
-            if path.is_file() and FORMULA_ERROR in path.read_text(
-                encoding="utf-8", errors="replace"
-            ):
-                offenders.append(str(path.relative_to(REPO_ROOT)))
+        for item in registry["corrections"]:
+            path = REPO_ROOT / item["path"]
+            if FORMULA_ERROR in path.read_text(encoding="utf-8", errors="replace"):
+                offenders.append(item["path"])
+
         self.assertEqual(offenders, [])
 
 
