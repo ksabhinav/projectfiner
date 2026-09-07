@@ -11,7 +11,7 @@ class PublicFormulaErrorTests(unittest.TestCase):
     def test_corrections_are_explicit_and_complete(self):
         registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
         self.assertEqual(registry["schemaVersion"], "public-formula-error-corrections-v1")
-        self.assertEqual(len(registry["corrections"]), 16)
+        self.assertEqual(len(registry["corrections"]), 24)
         self.assertEqual(
             {item["sourceToken"] for item in registry["corrections"]},
             {FORMULA_ERROR},
