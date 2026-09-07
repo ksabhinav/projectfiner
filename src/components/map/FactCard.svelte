@@ -51,6 +51,7 @@
   let isOpen = $state(false);
   let currentIdx = $state(0);
   let closeButton: HTMLButtonElement;
+  let cardEl: HTMLDivElement;
   let previouslyFocused: HTMLElement | null = null;
   const current = $derived(findings[currentIdx % findings.length]);
 
@@ -91,14 +92,33 @@
       await tick();
       closeButton?.focus();
     }
-    function close(e: KeyboardEvent) {
-      if (e.key === 'Escape' && isOpen) closeDialog();
+    function handleDialogKeydown(e: KeyboardEvent) {
+      if (!isOpen) return;
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        closeDialog();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      const focusable = Array.from(
+        cardEl?.querySelectorAll<HTMLElement>('button:not([disabled]), [href], [tabindex]:not([tabindex="-1"])') || [],
+      );
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     }
     window.addEventListener('finer:show-finding', show);
-    window.addEventListener('keydown', close);
+    window.addEventListener('keydown', handleDialogKeydown);
     return () => {
       window.removeEventListener('finer:show-finding', show);
-      window.removeEventListener('keydown', close);
+      window.removeEventListener('keydown', handleDialogKeydown);
     };
   });
 
@@ -135,11 +155,9 @@
 </script>
 
 {#if isOpen}
-  <!-- svelte-ignore a11y_click_events_have_key_events -->
-  <!-- svelte-ignore a11y_no_static_element_interactions -->
-  <div class="backdrop" onclick={closeDialog} role="presentation"></div>
+  <button class="backdrop" type="button" onclick={closeDialog} aria-label="Close finding"></button>
 
-  <div class="card" role="dialog" aria-modal="true" aria-labelledby="finding-headline">
+  <div bind:this={cardEl} class="card" role="dialog" aria-modal="true" aria-labelledby="finding-headline">
     <div class="strip"></div>
     <button bind:this={closeButton} class="close-btn" type="button" onclick={closeDialog} aria-label="Close finding">×</button>
 
@@ -182,6 +200,9 @@
     background: rgba(27, 20, 14, 0.55);
     z-index: 1500;
     animation: fadeIn 260ms cubic-bezier(0.32, 0.72, 0.40, 1.00);
+    border: 0;
+    padding: 0;
+    cursor: default;
   }
 
   .card {
