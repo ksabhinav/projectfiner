@@ -393,16 +393,16 @@
 </script>
 
 {#if loading}
-  <div class="loading-msg">Loading rankings data...</div>
+  <div class="loading-msg" role="status">Loading rankings data...</div>
 {:else if error}
-  <div class="loading-msg error-msg">{error}</div>
+  <div class="loading-msg error-msg" role="alert">{error}</div>
 {:else}
   <div class="rankings-layout">
     <!-- Controls sidebar -->
     <div class="controls">
       <div class="control-section">
-        <div class="ctrl-label">State</div>
-        <select bind:value={selectedState} class="select">
+        <label class="ctrl-label" for="ranking-state">State</label>
+        <select id="ranking-state" bind:value={selectedState} class="select">
           {#each STATES as st}
             <option value={st.slug}>{st.name}</option>
           {/each}
@@ -413,20 +413,25 @@
       </div>
 
       <div class="control-section">
-        <div class="ctrl-label">Category</div>
-        <select bind:value={selectedCategory} class="select">
+        <label class="ctrl-label" for="ranking-category">Category</label>
+        <select
+          id="ranking-category"
+          bind:value={selectedCategory}
+          class="select"
+          aria-describedby={CATEGORY_DESCRIPTIONS[selectedCategory] ? 'ranking-category-description' : undefined}
+        >
           {#each availableCategories as cat}
             <option value={cat}>{prettyCategoryName(cat)}</option>
           {/each}
         </select>
         {#if CATEGORY_DESCRIPTIONS[selectedCategory]}
-          <div class="cat-desc">{CATEGORY_DESCRIPTIONS[selectedCategory]}</div>
+          <div id="ranking-category-description" class="cat-desc">{CATEGORY_DESCRIPTIONS[selectedCategory]}</div>
         {/if}
       </div>
 
       <div class="control-section">
-        <div class="ctrl-label">Quarter</div>
-        <select bind:value={selectedQuarter} class="select">
+        <label class="ctrl-label" for="ranking-quarter">Quarter</label>
+        <select id="ranking-quarter" bind:value={selectedQuarter} class="select">
           {#each availableQuarters as qkey}
             <option value={qkey}>{quarterLabel(qkey)}</option>
           {/each}
@@ -434,8 +439,8 @@
       </div>
 
       <div class="control-section">
-        <div class="ctrl-label">Metric</div>
-        <select bind:value={selectedField} class="select">
+        <label class="ctrl-label" for="ranking-metric">Metric</label>
+        <select id="ranking-metric" bind:value={selectedField} class="select">
           {#each availableFields as f}
             <option value={f}>{prettyField(f)}</option>
           {/each}
@@ -476,25 +481,43 @@
       {:else if sortedRows.length === 0}
         <div class="loading-msg">No data available for this selection.</div>
       {:else}
-        <div class="table-header-info">
+        <div class="table-header-info" aria-live="polite">
           <span class="result-count">{sortedRows.length} districts</span>
           <span class="metric-label">{prettyField(selectedField)}</span>
         </div>
         <div class="table-scroll">
           <table class="ranking-table">
+            <caption>
+              District rankings for {prettyField(selectedField)}, sorted by {sortCol} {sortDir === 'asc' ? 'ascending' : 'descending'}
+            </caption>
             <thead>
               <tr>
                 <th class="col-rank">#</th>
-                <th class="col-district sortable" onclick={() => toggleSort('district')}>
-                  District{sortArrow('district')}
+                <th
+                  class="col-district sortable"
+                  aria-sort={sortCol === 'district' ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none'}
+                >
+                  <button type="button" class="sort-button" onclick={() => toggleSort('district')}>
+                    District<span aria-hidden="true">{sortArrow('district')}</span>
+                  </button>
                 </th>
                 {#if isAllStates}
-                  <th class="col-state sortable" onclick={() => toggleSort('state')}>
-                    State{sortArrow('state')}
+                  <th
+                    class="col-state sortable"
+                    aria-sort={sortCol === 'state' ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none'}
+                  >
+                    <button type="button" class="sort-button" onclick={() => toggleSort('state')}>
+                      State<span aria-hidden="true">{sortArrow('state')}</span>
+                    </button>
                   </th>
                 {/if}
-                <th class="col-value sortable" onclick={() => toggleSort('value')}>
-                  Value{sortArrow('value')}
+                <th
+                  class="col-value sortable"
+                  aria-sort={sortCol === 'value' ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none'}
+                >
+                  <button type="button" class="sort-button" onclick={() => toggleSort('value')}>
+                    Value<span aria-hidden="true">{sortArrow('value')}</span>
+                  </button>
                 </th>
                 <th class="col-bar">Distribution</th>
                 <th class="col-status">Status</th>
@@ -518,7 +541,7 @@
                   {/if}
                   <td class="col-value mono-value">{formatValue(row.value)}</td>
                   <td class="col-bar">
-                    <div class="bar-track">
+                    <div class="bar-track" aria-hidden="true">
                       <div
                         class="bar-fill"
                         style="width: {barWidth}%; background-color: {status.color};"
@@ -711,6 +734,18 @@
     font-size: 12px;
   }
 
+  .ranking-table caption {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
   .ranking-table thead th {
     font-family: var(--font-sans);
     font-size: 9px;
@@ -725,12 +760,24 @@
     user-select: none;
   }
 
-  .ranking-table thead th.sortable {
+  .sort-button {
+    appearance: none;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
     cursor: pointer;
-    transition: color 0.15s;
   }
-  .ranking-table thead th.sortable:hover {
+  .sort-button:hover,
+  .sort-button:focus-visible {
     color: var(--text);
+  }
+  .sort-button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
   }
 
   .ranking-table tbody td {
