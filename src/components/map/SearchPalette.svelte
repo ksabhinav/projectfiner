@@ -23,6 +23,8 @@
   let districts: DistrictRow[] = $state([]);
   let activeIdx = $state(0);
   let inputEl: HTMLInputElement | null = $state(null);
+  let panelEl: HTMLDivElement | null = $state(null);
+  let previouslyFocused: HTMLElement | null = null;
 
   const base = import.meta.env.BASE_URL || '/';
 
@@ -46,6 +48,9 @@
   }
 
   async function open() {
+    previouslyFocused = document.activeElement instanceof HTMLElement
+      ? document.activeElement
+      : null;
     isOpen = true;
     await tick();
     inputEl?.focus();
@@ -54,6 +59,8 @@
     isOpen = false;
     query = '';
     activeIdx = 0;
+    previouslyFocused?.focus();
+    previouslyFocused = null;
   }
 
   function pick(d: DistrictRow) {
@@ -75,6 +82,24 @@
     }
     if (!isOpen) return;
     if (e.key === 'Escape') { e.preventDefault(); close(); return; }
+    if (e.key === 'Tab') {
+      const focusable = Array.from(
+        panelEl?.querySelectorAll<HTMLElement>(
+          'button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ) || [],
+      );
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+      return;
+    }
     if (e.key === 'ArrowDown') {
       e.preventDefault();
       if (results.length) activeIdx = (activeIdx + 1) % results.length;
@@ -129,11 +154,10 @@
 </script>
 
 {#if isOpen}
-  <!-- svelte-ignore a11y_click_events_have_key_events -->
-  <!-- svelte-ignore a11y_no_static_element_interactions -->
-  <div class="sp-backdrop" onclick={close} role="presentation"></div>
+  <button class="sp-backdrop" type="button" onclick={close} aria-label="Close district search"></button>
 
-  <div class="sp-panel" role="dialog" aria-modal="true" aria-label="Search districts">
+  <div bind:this={panelEl} class="sp-panel" role="dialog" aria-modal="true" aria-labelledby="district-search-title">
+    <h2 id="district-search-title" class="visually-hidden">Search districts</h2>
     <div class="sp-input-wrap">
       <span class="sp-glass" aria-hidden="true">⌕</span>
       <input
@@ -146,15 +170,22 @@
           : 'Search districts…'}
         autocomplete="off"
         spellcheck="false"
+        aria-label="District name"
+        role="combobox"
+        aria-autocomplete="list"
+        aria-controls="district-search-results"
+        aria-expanded={results.length > 0}
+        aria-activedescendant={results[activeIdx] ? `district-search-option-${activeIdx}` : undefined}
       />
-      <span class="sp-esc">ESC</span>
+      <span class="sp-esc" aria-hidden="true">ESC</span>
     </div>
 
     {#if results.length}
-      <div class="sp-results" role="listbox">
+      <div id="district-search-results" class="sp-results" role="listbox" aria-label="Matching districts">
         {#each results as d, i}
-          <!-- svelte-ignore a11y_click_events_have_key_events -->
-          <div
+          <button
+            id={`district-search-option-${i}`}
+            type="button"
             class="sp-row"
             class:active={i === activeIdx}
             onclick={() => pick(d)}
@@ -164,7 +195,7 @@
           >
             <span class="sp-name">{d.name}</span>
             <span class="sp-state">{titleCase(d.state)}</span>
-          </div>
+          </button>
         {/each}
       </div>
     {:else if query.trim().length}
@@ -191,6 +222,9 @@
     background: rgba(27, 20, 14, 0.45);
     z-index: 1600;
     animation: fadeIn 200ms ease;
+    border: 0;
+    padding: 0;
+    cursor: default;
   }
   .sp-panel {
     position: fixed;
@@ -210,6 +244,18 @@
     animation: dropIn 260ms cubic-bezier(0.20, 0.80, 0.20, 1.00);
     display: flex;
     flex-direction: column;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 
   .sp-input-wrap {
@@ -250,12 +296,16 @@
     max-height: 360px;
   }
   .sp-row {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     padding: 10px 18px;
     cursor: pointer;
+    background: transparent;
+    border: 0;
     border-left: 2px solid transparent;
+    text-align: left;
     transition: background 80ms ease, border-color 80ms ease;
   }
   .sp-row:hover, .sp-row.active {
