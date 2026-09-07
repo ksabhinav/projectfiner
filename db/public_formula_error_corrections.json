@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "public-formula-error-corrections-v1",
+  "generatedAt": "2026-09-07",
+  "policy": "Spreadsheet formula-error tokens are not numeric observations. Public exports represent them as blank missing cells; no zero or inferred ratio is substituted. The original token and exact file location are retained here for audit.",
+  "corrections": [
+    {
+      "path": "public/slbc-data/meghalaya/raw-csv/meghalaya_district_fi_profile.csv",
+      "line": 3,
+      "column": 47,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    },
+    {
+      "path": "public/slbc-data/meghalaya/raw-csv/meghalaya_district_fi_profile.csv",
+      "line": 6,
+      "column": 42,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    },
+    {
+      "path": "public/slbc-data/meghalaya/raw-csv/meghalaya_district_fi_profile.csv",
+      "line": 9,
+      "column": 48,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    },
+    {
+      "path": "public/slbc-data/meghalaya/raw-csv/meghalaya_district_fi_profile.csv",
+      "line": 10,
+      "column": 48,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    },
+    {
+      "path": "public/slbc-data/meghalaya/meghalaya_district_fi_profile.json",
+      "line": 71,
+      "column": 15,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    },
+    {
+      "path": "public/slbc-data/meghalaya/meghalaya_district_fi_profile.json",
+      "line": 154,
+      "column": 15,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    },
+    {
+      "path": "public/slbc-data/meghalaya/meghalaya_district_fi_profile.json",
+      "line": 242,
+      "column": 15,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    },
+    {
+      "path": "public/slbc-data/meghalaya/meghalaya_district_fi_profile.json",
+      "line": 268,
+      "column": 15,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    },
+    {
+      "path": "public/slbc-data/meghalaya/quarterly/2025-09/credit_deposit_ratio.csv",
+      "line": 3,
+      "column": 26,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    },
+    {
+      "path": "public/slbc-data/meghalaya/quarterly/2025-09/credit_deposit_ratio.csv",
+      "line": 6,
+      "column": 24,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    },
+    {
+      "path": "public/slbc-data/meghalaya/quarterly/2025-09/credit_deposit_ratio.csv",
+      "line": 9,
+      "column": 29,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    },
+    {
+      "path": "public/slbc-data/meghalaya/quarterly/2025-09/credit_deposit_ratio.csv",
+      "line": 10,
+      "column": 30,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    },
+    {
+      "path": "public/slbc-data/chhattisgarh/quarterly/2024-06/acp_target_achievement.csv",
+      "line": 11,
+      "column": 15,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    },
+    {
+      "path": "public/slbc-data/chhattisgarh/quarterly/2024-06/acp_target_achievement.csv",
+      "line": 11,
+      "column": 33,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    },
+    {
+      "path": "public/slbc-data/chhattisgarh/quarterly/2024-06/acp_target_achievement.csv",
+      "line": 11,
+      "column": 49,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    },
+    {
+      "path": "public/slbc-data/chhattisgarh/quarterly/2024-06/acp_target_achievement.csv",
+      "line": 11,
+      "column": 67,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    },
+    {
+      "path": "public/slbc-data/jharkhand/quarterly/2023-09/acp_disbursement_agri_p2.csv",
+      "line": 16,
+      "column": 20,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    },
+    {
+      "path": "public/slbc-data/jharkhand/quarterly/2023-12/acp_disbursement_agri_p2.csv",
+      "line": 16,
+      "column": 20,
+      "sourceToken": "#DIV/0!",
+      "replacement": null,
+      "reason": "Spreadsheet division-error token is not an observation value; represent it as missing rather than a literal formula error."
+    }
+  ]
+}
