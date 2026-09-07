@@ -45,17 +45,34 @@ class VersionedReleaseTests(unittest.TestCase):
         }
         self.assertEqual(blockers["non_verified_observations"], 3494)
         self.assertEqual(blockers["missing_source_pages"], 3494)
+        self.assertNotIn("missing_source_artifact_hashes", blockers)
+        self.assertNotIn("missing_extraction_run_ids", blockers)
         self.assertEqual(blockers["semantic_scope_review_required"], 225)
         self.assertEqual(blockers["boundary_not_harmonised"], 494)
         self.assertEqual(blockers["partial_period_coverage"], 10)
         self.assertEqual(blockers["source_rights_not_reviewed"], 1)
 
+    def test_provenance_registry_is_part_of_the_immutable_release(self):
+        self.assertEqual(
+            self.descriptor["provenanceRegistry"],
+            f"/releases/{self.release_id}/provenance-registry.json",
+        )
+        self.assertIn("provenance-registry.json", self.files)
+        self.assertEqual(
+            self.files["provenance-registry.json"],
+            (self.release_dir / "provenance-registry.json").read_bytes(),
+        )
+
     def test_catalog_points_to_versioned_landing_page_and_descriptor(self):
         catalog = json.loads(self.catalog_text)
         self.assertEqual(catalog["schemaVersion"], "release-catalog-v1")
-        self.assertEqual(len(catalog["releases"]), 1)
+        self.assertGreaterEqual(len(catalog["releases"]), 2)
         release = catalog["releases"][0]
         self.assertEqual(release["releaseId"], self.release_id)
+        self.assertIn(
+            "meghalaya-standardized-preview-v1",
+            {item["releaseId"] for item in catalog["releases"]},
+        )
         self.assertEqual(release["landingPage"], f"/releases/{self.release_id}/")
         self.assertEqual(
             release["descriptor"], f"/releases/{self.release_id}/release.json"

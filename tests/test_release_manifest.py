@@ -78,12 +78,17 @@ class ReleaseManifestTests(unittest.TestCase):
             item for item in meghalaya["distributions"]
             if item.get("role") == "indicator-registry"
         )
-        self.assertEqual(self.manifest["summary"]["distributionCount"], 68)
+        self.assertEqual(self.manifest["summary"]["distributionCount"], 69)
         self.assertEqual(preview["rowCount"], 3494)
         self.assertEqual(preview["indicatorCount"], 13)
         self.assertEqual(preview["qualityTier"], "standardized-preview")
         self.assertEqual(preview["certificationStatus"], "not-certified")
-        self.assertEqual(dictionary["schemaVersion"], "indicator-registry-v1")
+        self.assertEqual(dictionary["schemaVersion"], "indicator-registry-v2")
+        provenance = next(
+            item for item in meghalaya["distributions"]
+            if item.get("role") == "provenance-registry"
+        )
+        self.assertEqual(provenance["schemaVersion"], "provenance-registry-v1")
 
     def test_download_ui_consumes_manifest_and_emits_bom_free_csv(self):
         page = (REPO_ROOT / "src/pages/downloads/index.astro").read_text()

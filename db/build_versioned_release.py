@@ -21,6 +21,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
 REGISTRY_PATH = PUBLIC / "data-contracts" / "meghalaya-indicator-registry.json"
+PROVENANCE_PATH = PUBLIC / "data-contracts" / "meghalaya-provenance.json"
 OBSERVATIONS_PATH = PUBLIC / "data-contracts" / "meghalaya-standardized-preview.csv"
 RELEASES_ROOT = PUBLIC / "releases"
 CATALOG_PATH = RELEASES_ROOT / "index.json"
@@ -71,6 +72,24 @@ def certification_blockers(
             "count": missing_pages,
             "message": "Every observation must link to its source document and page.",
         })
+    missing_artifact_hashes = sum(
+        not row.get("source_artifact_sha256", "").strip() for row in rows
+    )
+    if missing_artifact_hashes:
+        blockers.append({
+            "code": "missing_source_artifact_hashes",
+            "count": missing_artifact_hashes,
+            "message": "Every observation must link to the exact committed source artifact hash.",
+        })
+    missing_extraction_runs = sum(
+        not row.get("extraction_run_id", "").strip() for row in rows
+    )
+    if missing_extraction_runs:
+        blockers.append({
+            "code": "missing_extraction_run_ids",
+            "count": missing_extraction_runs,
+            "message": "Every observation must link to its deterministic extraction run.",
+        })
     for flag in (
         "semantic_scope_review_required",
         "boundary_not_harmonised",
@@ -93,6 +112,7 @@ def certification_blockers(
 
 def render_release() -> tuple[str, dict[str, bytes], str]:
     registry_bytes = REGISTRY_PATH.read_bytes()
+    provenance_bytes = PROVENANCE_PATH.read_bytes()
     observations_bytes = OBSERVATIONS_PATH.read_bytes()
     registry = json.loads(registry_bytes)
     rows = read_rows(observations_bytes)
@@ -122,6 +142,10 @@ def render_release() -> tuple[str, dict[str, bytes], str]:
             f"{release_dir}/indicator-registry.json", registry_bytes,
             "application/json", "indicator-registry",
         ),
+        distribution(
+            f"{release_dir}/provenance-registry.json", provenance_bytes,
+            "application/json", "provenance-registry",
+        ),
     ]
     descriptor = {
         "schemaVersion": "release-candidate-v1",
@@ -132,6 +156,7 @@ def render_release() -> tuple[str, dict[str, bytes], str]:
         "certificationStatus": "not-certified" if blockers else "certified",
         "generatedBy": "db/build_versioned_release.py",
         "landingPage": f"/releases/{release_id}/",
+        "provenanceRegistry": f"/{release_dir}/provenance-registry.json",
         "summary": {
             "observationCount": len(rows),
             "indicatorCount": len(registry["indicators"]),
@@ -146,6 +171,8 @@ def render_release() -> tuple[str, dict[str, bytes], str]:
             "criteria": [
                 "All observations are verified.",
                 "Every observation links to a source document and page.",
+                "Every observation links to the exact committed source artifact hash.",
+                "Every observation links to a deterministic extraction run.",
                 "Semantic, boundary and partial-coverage flags are resolved.",
                 "Upstream reuse rights are reviewed.",
             ],
@@ -159,21 +186,30 @@ def render_release() -> tuple[str, dict[str, bytes], str]:
     files = {
         "observations.csv": observations_bytes,
         "indicator-registry.json": registry_bytes,
+        "provenance-registry.json": provenance_bytes,
         "release.json": descriptor_bytes,
     }
+    current_catalog_entry = {
+        "productId": descriptor["productId"],
+        "releaseId": release_id,
+        "releaseStatus": descriptor["releaseStatus"],
+        "qualityTier": descriptor["qualityTier"],
+        "certificationStatus": descriptor["certificationStatus"],
+        "landingPage": descriptor["landingPage"],
+        "descriptor": f"/{release_dir}/release.json",
+        "observationCount": descriptor["summary"]["observationCount"],
+        "latestPeriod": descriptor["summary"]["latestPeriod"],
+    }
+    previous_releases = []
+    if CATALOG_PATH.exists():
+        previous_catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
+        previous_releases = [
+            item for item in previous_catalog.get("releases", [])
+            if item.get("releaseId") != release_id
+        ]
     catalog = {
         "schemaVersion": "release-catalog-v1",
-        "releases": [{
-            "productId": descriptor["productId"],
-            "releaseId": release_id,
-            "releaseStatus": descriptor["releaseStatus"],
-            "qualityTier": descriptor["qualityTier"],
-            "certificationStatus": descriptor["certificationStatus"],
-            "landingPage": descriptor["landingPage"],
-            "descriptor": f"/{release_dir}/release.json",
-            "observationCount": descriptor["summary"]["observationCount"],
-            "latestPeriod": descriptor["summary"]["latestPeriod"],
-        }],
+        "releases": [current_catalog_entry, *previous_releases],
     }
     catalog_text = json.dumps(
         catalog, ensure_ascii=False, indent=2, sort_keys=True

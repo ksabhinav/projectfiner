@@ -22,6 +22,7 @@ A standardized preview has a governed row shape and stable identifiers, but unre
 - maps source district labels to Meghalaya LGD codes;
 - preserves the original cell text as `source_value`;
 - records geographic vintage and row-level quality flags;
+- links each row to the exact committed source-artifact SHA-256 and deterministic extraction run;
 - does not derive totals, back-cast boundaries or silently correct ambiguous values;
 - is marked `not-certified`, with all rows `suspect` while source-document and page references are incomplete.
 
@@ -35,7 +36,7 @@ SLBC publications differ substantially across states and periods. Existing state
 
 The release does not imply that every raw row has been checked against its original PDF. Where the source PDF, archive URL or page is unavailable, the limitation must remain visible rather than being replaced with invented provenance.
 
-For the Meghalaya preview, the common source artifact is `public/slbc-data/meghalaya/meghalaya_complete.json`. The selected values are copied only from fields registered in `public/data-contracts/meghalaya-indicator-registry.json`.
+For the Meghalaya preview, the common source artifact is `public/slbc-data/meghalaya/meghalaya_complete.json`. The selected values are copied only from fields registered in `public/data-contracts/meghalaya-indicator-registry.json`. The source-artifact hash and extraction-run record are in `public/data-contracts/meghalaya-provenance.json`; this improves reproducibility but does not replace exact source-document and page evidence.
 
 ## 4. Observation model
 
@@ -43,7 +44,7 @@ The canonical direction is one row per:
 
 > release × geography × period × indicator
 
-The standardized contract uses stable state and district LGD codes, an ISO period, a canonical indicator ID, a typed value and unit, the original source representation, a source ID and machine-readable quality fields. The complete field dictionary is on the [data dictionary page](https://projectfiner.com/data-dictionary/).
+The standardized contract uses stable state and district LGD codes, an ISO period, a canonical indicator ID, a typed value and unit, the original source representation, a source ID, the source-artifact SHA-256, an extraction-run ID and machine-readable quality fields. The complete field dictionary is on the [data dictionary page](https://projectfiner.com/data-dictionary/).
 
 Wide files remain available for convenience but are not the canonical schema. Browser-generated indicator and quarter exports inherit the variability of raw source tables.
 
@@ -82,7 +83,7 @@ A flag is a disposition, not proof that the upstream value is wrong.
 
 `db/build_release_manifest.py` deterministically inventories every public distribution. The release ID is derived from the canonical manifest payload. Each distribution records its path, byte size, SHA-256 hash, encoding, media type, schema version, quality tier, source IDs and rights status.
 
-Broad archive URLs remain mutable when a new release replaces a file. The Meghalaya standardized preview is also published under the immutable version ID `meghalaya-standardized-preview-v1`; its descriptor records exact hashes and certification blockers. A changed snapshot requires a new release ID.
+Broad archive URLs remain mutable when a new release replaces a file. The Meghalaya standardized preview is also published under the immutable version IDs `meghalaya-standardized-preview-v1` and `meghalaya-standardized-preview-v2`; v2 adds row-level source-artifact hashes, extraction-run IDs and an immutable provenance registry. Its descriptor records exact hashes and certification blockers. A changed snapshot requires a new release ID.
 
 ## 9. Validation and waivers
 

@@ -23,6 +23,10 @@ class MeghalayaStandardizedPreviewTests(unittest.TestCase):
             .read_text(encoding="utf-8")
         )
         cls.rows = list(csv.DictReader(io.StringIO(cls.output_path.read_text())))
+        cls.provenance = json.loads(
+            (REPO_ROOT / "public/data-contracts/meghalaya-provenance.json")
+            .read_text(encoding="utf-8")
+        )
 
     def test_committed_preview_is_current(self):
         rendered, row_count = render()
@@ -84,6 +88,24 @@ class MeghalayaStandardizedPreviewTests(unittest.TestCase):
         self.assertEqual(len(partial), 10)
         self.assertEqual({row["period"] for row in partial}, {"2019-06-30", "2019-09-30"})
         self.assertEqual({row["source_table"] for row in partial}, {"pmjdy"})
+
+    def test_provenance_is_artifact_linked_but_pages_unresolved(self):
+        source = self.provenance["sources"][0]
+        self.assertEqual(source["sourceId"], self.registry["source"]["id"])
+        self.assertEqual(source["artifactPath"], self.registry["source"]["artifact"])
+        self.assertEqual(source["artifactSha256"], "dfcd59d1afc23d59e41639be81d29859c4183445b7ed1c0f2c310047f853823e")
+        self.assertFalse(source["pageReferencesAvailable"])
+        run = self.provenance["extractionRuns"][0]
+        self.assertEqual(run["extractionRunId"], "slbc-meghalaya-complete-json-2026-05-11")
+        self.assertEqual(run["sourceArtifactSha256"], source["artifactSha256"])
+        self.assertEqual(
+            {row["source_artifact_sha256"] for row in self.rows},
+            {source["artifactSha256"]},
+        )
+        self.assertEqual(
+            {row["extraction_run_id"] for row in self.rows},
+            {run["extractionRunId"]},
+        )
 
     def test_preview_is_truthfully_non_certified(self):
         self.assertEqual(self.registry["qualityTier"], "standardized-preview")

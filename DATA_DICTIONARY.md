@@ -2,7 +2,7 @@
 
 This dictionary describes FINER's standardized observation contract. It does not retroactively standardize the broad raw/experimental files, whose source-specific headers remain variable.
 
-The machine-readable Meghalaya registry is [`meghalaya-indicator-registry.json`](https://projectfiner.com/data-contracts/meghalaya-indicator-registry.json).
+The machine-readable Meghalaya registry is [`meghalaya-indicator-registry.json`](https://projectfiner.com/data-contracts/meghalaya-indicator-registry.json). The source and extraction-run registry is [`meghalaya-provenance.json`](https://projectfiner.com/data-contracts/meghalaya-provenance.json).
 
 ## Observation fields
 
@@ -26,8 +26,10 @@ The machine-readable Meghalaya registry is [`meghalaya-indicator-registry.json`]
 | `source_field_label` | string | Exact selected field label in the consolidated source artifact. |
 | `source_id` | string | Foreign key to the source entry in the release manifest. |
 | `source_artifact` | path | Consolidated local artifact from which the observation was generated. |
+| `source_artifact_sha256` | hexadecimal string | SHA-256 of the exact committed source artifact used to build the row. |
+| `extraction_run_id` | string | Deterministic extraction-run identifier recorded in the provenance registry. |
 | `source_table` | string | Source table/category key. |
-| `source_page` | string | Source page reference; blank where unavailable. |
+| `source_page` | string | Source page reference; blank where unavailable; blank values remain a certification blocker. |
 | `missing_reason` | enum/string | Controlled reason for an empty value; blank when a value is present. |
 | `quality_status` | enum | `verified`, `suspect` or `quarantined`. |
 | `quality_flags` | pipe-delimited codes | Controlled issue/disposition codes. |

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "provenance-registry-v1",
+  "productId": "meghalaya-standardized-preview",
+  "releaseId": "meghalaya-standardized-preview-v2",
+  "sources": [
+    {
+      "sourceId": "slbc-meghalaya",
+      "publisher": "State Level Bankers' Committee, North East Region",
+      "landingUrl": "https://onlineslbcne.nic.in",
+      "archiveUrl": "https://web.archive.org/web/20250502091613/https://onlineslbcne.nic.in/",
+      "archiveScope": "portal-homepage-only; the underlying data artifact is not archived in this repository",
+      "artifactPath": "/slbc-data/meghalaya/meghalaya_complete.json",
+      "artifactSha256": "dfcd59d1afc23d59e41639be81d29859c4183445b7ed1c0f2c310047f853823e",
+      "artifactBytes": 8545576,
+      "pageReferencesAvailable": false,
+      "rightsReviewStatus": "not-legally-reviewed",
+      "notes": [
+        "The portal is form-driven and the repository preserves a consolidated JSON artifact rather than the original source PDFs.",
+        "The Wayback URL is a portal-homepage snapshot, not a claim that the underlying quarterly data file is archived there."
+      ]
+    }
+  ],
+  "extractionRuns": [
+    {
+      "extractionRunId": "slbc-meghalaya-complete-json-2026-05-11",
+      "sourceId": "slbc-meghalaya",
+      "sourceArtifactPath": "/slbc-data/meghalaya/meghalaya_complete.json",
+      "sourceArtifactSha256": "dfcd59d1afc23d59e41639be81d29859c4183445b7ed1c0f2c310047f853823e",
+      "sourceMetadataLastUpdated": "2026-05-11",
+      "method": "Select only the 13 registered fields from the committed consolidated JSON artifact; parse numeric values without imputation; preserve source text; attach LGD identities, boundary metadata, controlled quality flags, artifact hash and this extraction-run ID.",
+      "builder": "db/build_meghalaya_standardized.py",
+      "reproducible": true,
+      "pageReferencesAvailable": false,
+      "status": "preview"
+    }
+  ],
+  "rowLinkage": {
+    "requiredColumns": [
+      "source_id",
+      "source_artifact",
+      "source_artifact_sha256",
+      "source_table",
+      "source_page",
+      "extraction_run_id"
+    ],
+    "sourceTableStatus": "present",
+    "artifactHashStatus": "present",
+    "extractionRunStatus": "present",
+    "sourcePageStatus": "unresolved"
+  },
+  "knownGaps": [
+    "Exact source-document URLs and page references are unavailable for the selected cells.",
+    "Source reuse rights have not been legally reviewed.",
+    "Aadhaar semantic anomalies, boundary harmonisation and partial-period coverage remain certification blockers."
+  ]
+}
