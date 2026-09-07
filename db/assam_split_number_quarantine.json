@@ -1,0 +1,333 @@
+{
+  "schema_version": "assam-split-number-quarantine-v1",
+  "state": "assam",
+  "source_artifact": "public/slbc-data/assam/assam_fi_timeseries.json",
+  "source_sha": "84dafd2a948a0096cb105520c36ba14ac95f21aa",
+  "disposition": "excluded_from_clean_analytical_views",
+  "records": [
+    {
+      "period": "December 2022",
+      "district": "Baksa",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "6 5.84",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Barpeta",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "5 5.80",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Bongaigaon",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "5 0.97",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Cachar",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "3 2.63",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Charaideo",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "5 7.60",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Darrang",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "5 5.90",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Dhemaji",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "3 2.99",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Dhubri",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "6 4.48",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Dibrugarh",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "3 3.29",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Dima Hasao",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "3 0.32",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Goalpara",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "6 4.00",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Golaghat",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "4 4.07",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Hailakandi",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "3 7.51",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Hojai",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "2 8.34",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Jorhat",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "3 6.13",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Karbi Anglong",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "3 4.44",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Karimganj",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "3 0.27",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Majuli",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "5 3.04",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Nagaon",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "3 5.56",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Nalbari",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "5 4.87",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "Sivasagar",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "2 6.66",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "December 2022",
+      "district": "West Karbi Anglong",
+      "field": "pmegp__pmegp_npa_pct",
+      "raw_value": "1 12.05",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "September 2025",
+      "district": "Baksa",
+      "field": "pmmy_mudra_os_npa__mudra_npa_pct",
+      "raw_value": "1 3.11",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "September 2025",
+      "district": "Chirang",
+      "field": "pmmy_mudra_os_npa__mudra_npa_pct",
+      "raw_value": "1 0.44",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "September 2025",
+      "district": "Darrang",
+      "field": "pmmy_mudra_os_npa__mudra_npa_pct",
+      "raw_value": "1 3.28",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "September 2025",
+      "district": "Dhemaji",
+      "field": "pmmy_mudra_os_npa__mudra_npa_pct",
+      "raw_value": "1 0.62",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "September 2025",
+      "district": "Dibrugarh",
+      "field": "pmmy_mudra_os_npa__mudra_npa_pct",
+      "raw_value": "1 1.51",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "September 2025",
+      "district": "Hailakandi",
+      "field": "pmmy_mudra_os_npa__mudra_npa_pct",
+      "raw_value": "1 1.86",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "September 2025",
+      "district": "Hojai",
+      "field": "pmmy_mudra_os_npa__mudra_npa_pct",
+      "raw_value": "1 3.08",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "September 2025",
+      "district": "Lakhimpur",
+      "field": "pmmy_mudra_os_npa__mudra_npa_pct",
+      "raw_value": "1 3.56",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "September 2025",
+      "district": "Nagaon",
+      "field": "pmmy_mudra_os_npa__mudra_npa_pct",
+      "raw_value": "1 3.44",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "September 2025",
+      "district": "Nalbari",
+      "field": "pmmy_mudra_os_npa__mudra_npa_pct",
+      "raw_value": "1 0.00",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "September 2025",
+      "district": "Sonitpur",
+      "field": "pmmy_mudra_os_npa__mudra_npa_pct",
+      "raw_value": "1 0.70",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "September 2025",
+      "district": "Tamulpur",
+      "field": "pmmy_mudra_os_npa__mudra_npa_pct",
+      "raw_value": "1 0.41",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "September 2025",
+      "district": "Tinsukia",
+      "field": "pmmy_mudra_os_npa__mudra_npa_pct",
+      "raw_value": "1 4.06",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    },
+    {
+      "period": "September 2025",
+      "district": "Udalguri",
+      "field": "pmmy_mudra_os_npa__mudra_npa_pct",
+      "raw_value": "1 5.74",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one percentage cell; source re-extraction is required before analytical use."
+    }
+  ]
+}
