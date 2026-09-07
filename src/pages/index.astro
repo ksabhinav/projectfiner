@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import IndicatorStrip from '../components/map/IndicatorStrip.svelte';
 import MapLegend from '../components/map/MapLegend.svelte';
+import MapDataTable from '../components/map/MapDataTable.svelte';
 import TimelineSlider from '../components/map/TimelineSlider.svelte';
 import FocusOverlay from '../components/map/FocusOverlay.svelte';
 import SearchPalette from '../components/map/SearchPalette.svelte';
@@ -36,6 +37,7 @@ const base = import.meta.env.BASE_URL;
   <!-- State inset removed — Where cell in IndicatorStrip handles state focus. -->
   <IndicatorStrip client:load />
   <MapLegend client:load />
+  <MapDataTable client:load />
 
   <!-- Vertical timeline (Svelte component) -->
   <TimelineSlider client:load />
@@ -1198,25 +1200,26 @@ const base = import.meta.env.BASE_URL;
         var data = direct || (showProxyData ? proxy : null);
         var status = classifyMapEntry(data);
         statusCounts[status]++;
-        if (data && data.value !== null && data.value !== undefined) {
+        var hasValue = data && data.value !== null && data.value !== undefined;
+        var sourcePeriod = hasValue ? (data.fallbackQuarter || currentQuarter || 'static') : '';
+        if (hasValue) {
           if (!data.qualityStatus) statusCounts.unclassified++;
-          var sourcePeriod = data.fallbackQuarter || currentQuarter || 'static';
           periodCounts[sourcePeriod] = (periodCounts[sourcePeriod] || 0) + 1;
-          exportRows.push({
-            district: f.properties.DISTRICT || '',
-            state: f.properties.STATE_UT || '',
-            indicator: currentIndicator,
-            metric: metric.label,
-            value: data.value,
-            requested_period: currentQuarter || 'static',
-            source_period: sourcePeriod,
-            status: status,
-            proxy_from: data.inheritedFrom || '',
-            quality_status: data.qualityStatus || 'unclassified',
-            quality_flags: data.qualityFlags || '',
-            boundary_vintage: 'undocumented',
-          });
         }
+        exportRows.push({
+          district: f.properties.DISTRICT || '',
+          state: f.properties.STATE_UT || '',
+          indicator: currentIndicator,
+          metric: metric.label,
+          value: hasValue ? data.value : '',
+          requested_period: currentQuarter || 'static',
+          source_period: sourcePeriod,
+          status: status,
+          proxy_from: hasValue ? (data.inheritedFrom || '') : '',
+          quality_status: hasValue ? (data.qualityStatus || 'unclassified') : '',
+          quality_flags: hasValue ? (data.qualityFlags || '') : '',
+          boundary_vintage: 'undocumented',
+        });
       });
       statusCounts.periods = Object.keys(periodCounts)
         .sort().reverse()

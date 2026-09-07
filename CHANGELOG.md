@@ -4,6 +4,7 @@ Material trust-layer, public-contract and data corrections are recorded here. Th
 
 ## Unreleased
 
+- Added a searchable, keyboard-operable district data table as a non-visual equivalent to the choropleth, with values, missingness, source periods, proxy disclosure, and direct district focus.
 - Rebuilt the live map toolbar popovers with semantic buttons, valid dialog/listbox structure, explicit selection state, arrow/Home/End navigation, and focus return to their trigger controls.
 - Added focus trapping and focus restoration to the map search, finding, and district-focus dialogs, replacing click-only dismiss layers and suppressed accessibility warnings with semantic controls.
 - Made the live district-ranking filters explicitly labelled, converted sortable table headers to keyboard-operable buttons, and added screen-reader status announcements and table context.
