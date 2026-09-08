@@ -1,0 +1,1940 @@
+{
+  "schema_version": "tamil-nadu-split-number-quarantine-v1",
+  "state": "tamil-nadu",
+  "issue_id": "FINER-003",
+  "source_artifact": "public/slbc-data/tamil-nadu/tamil-nadu_fi_timeseries.json",
+  "source_sha": "1f1e78beed966454397606740eaed7ffe09107f6",
+  "disposition": "excluded_from_clean_analytical_views",
+  "records": [
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Ariyalur",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "1 3405.45",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Ariyalur",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "0 0.32",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Ariyalur",
+      "field": "pmjdy__total",
+      "raw_value": "8 93271",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Ariyalur",
+      "field": "uncategorized__no_of_amo_appli_unt_of_catio_loan_ns_sanct_rejec_ioned_ted",
+      "raw_value": "0 67.53",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Chengalpattu",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "2 51533.06",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Chengalpattu",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "6 30.92",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Chengalpattu",
+      "field": "pmjdy__total",
+      "raw_value": "6 316468",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Chennai",
+      "field": "aabcs__sdy_no",
+      "raw_value": "1799.16 1",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Chennai",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "1 518301.34",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Chennai",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "2 16.32",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Chennai",
+      "field": "pmjdy__total",
+      "raw_value": "7 1043682",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Coimbatore",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "9 109133.58",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Coimbatore",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "5 2.40",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Coimbatore",
+      "field": "pmjdy__total",
+      "raw_value": "7 781674",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Cuddalore",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "7 19601.69",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Cuddalore",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "8 28.06",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Cuddalore",
+      "field": "pmjdy__total",
+      "raw_value": "6 442689",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Dharmapuri",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "5 7013.38",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Dharmapuri",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "9 0.48",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Dharmapuri",
+      "field": "pmjdy__total",
+      "raw_value": "2 326707",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Dindigul",
+      "field": "aabcs__sdy_no",
+      "raw_value": "516.2 1",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Dindigul",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "7 15498.02",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Dindigul",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "2 0.76",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Dindigul",
+      "field": "pmjdy__total",
+      "raw_value": "7 419123",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Dindigul",
+      "field": "uncategorized__no_of_amo_appli_unt_of_catio_loan_ns_sanct_rejec_ioned_ted",
+      "raw_value": "110 29.00",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Erode",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "7 30157.34",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Erode",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "3 0.38",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Erode",
+      "field": "pmjdy__total",
+      "raw_value": "6 534875",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Erode",
+      "field": "uncategorized__no_of_amo_appli_unt_of_catio_loan_ns_sanct_rejec_ioned_ted",
+      "raw_value": "1094 86.00",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Kallakurichi",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "1 5329.59",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Kallakurichi",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "4 0.06",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Kallakurichi",
+      "field": "pmjdy__total",
+      "raw_value": "8 296826",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Kanchipuram",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "7 29841.15",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Kanchipuram",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "1 0.65",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Kanchipuram",
+      "field": "pmjdy__total",
+      "raw_value": "1 277393",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Kanniyakumari",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "5 20413.52",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Kanniyakumari",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "3 236.96",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Kanniyakumari",
+      "field": "pmjdy__total",
+      "raw_value": "3 386597",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Karur",
+      "field": "aabcs__sdy_no",
+      "raw_value": "243.96 1",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Karur",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "8 8490.41",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Karur",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "2 0.36",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Karur",
+      "field": "pmjdy__total",
+      "raw_value": "5 223077",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Karur",
+      "field": "uncategorized__no_of_amo_appli_unt_of_catio_loan_ns_sanct_rejec_ioned_ted",
+      "raw_value": "0 82.00",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Krishnagiri",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "4 15302.71",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Krishnagiri",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "5 0.40",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Krishnagiri",
+      "field": "pmjdy__total",
+      "raw_value": "0 358739",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Madurai",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "4 40844.58",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Madurai",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "7 15.68",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Madurai",
+      "field": "pmjdy__total",
+      "raw_value": "6 556980",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Mayiladuthurai",
+      "field": "aabcs__sdy_no",
+      "raw_value": "958.18 1",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Mayiladuthurai",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "6 6450.31",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Mayiladuthurai",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "1 15.23",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Mayiladuthurai",
+      "field": "pmjdy__total",
+      "raw_value": "4 148193",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Nagapattinam",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "6 4137.89",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Nagapattinam",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "3 49.18",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Nagapattinam",
+      "field": "pmjdy__total",
+      "raw_value": "9 124929",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Namakkal",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "7 18646.24",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Namakkal",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "7 3.82",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Namakkal",
+      "field": "pmjdy__total",
+      "raw_value": "5 433591",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Perambalur",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "5 3910.07",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Perambalur",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "3 11.53",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Perambalur",
+      "field": "pmjdy__total",
+      "raw_value": "5 81431",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Pudukkottai",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "8 8975.38",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Pudukkottai",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "1 16.25",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Pudukkottai",
+      "field": "pmjdy__total",
+      "raw_value": "3 277236",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Ramanathapuram",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "5 7312.32",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Ramanathapuram",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "4 73.88",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Ramanathapuram",
+      "field": "pmjdy__total",
+      "raw_value": "0 382650",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Ranipet",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "1 7273.78",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Ranipet",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "0 0.24",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Ranipet",
+      "field": "pmjdy__total",
+      "raw_value": "7 252745",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Salem",
+      "field": "aabcs__sdy_no",
+      "raw_value": "730.28 2",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Salem",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "3 33347.28",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Salem",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "5 9.72",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Salem",
+      "field": "pmjdy__total",
+      "raw_value": "7 928800",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Salem",
+      "field": "uncategorized__no_of_amo_appli_unt_of_catio_loan_ns_sanct_rejec_ioned_ted",
+      "raw_value": "526 57.00",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Sivaganga",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "9 12306.13",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Sivaganga",
+      "field": "pmjdy__total",
+      "raw_value": "2 262847",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Tenkasi",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "6 8938.74",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Tenkasi",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "9 11.83",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Tenkasi",
+      "field": "pmjdy__total",
+      "raw_value": "4 252357",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Thanjavur",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "8 23195.71",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Thanjavur",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "0 14.04",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Thanjavur",
+      "field": "pmjdy__total",
+      "raw_value": "6 461460",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "The Nilgiris",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "9 7475.2",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "The Nilgiris",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "7 0.04",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "The Nilgiris",
+      "field": "pmjdy__total",
+      "raw_value": "7 144304",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Theni",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "5 7520.59",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Theni",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "9 1.24",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Theni",
+      "field": "pmjdy__total",
+      "raw_value": "4 259975",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Thiruvallur",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "2 51795.8",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Thiruvallur",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "1 96.06",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Thiruvallur",
+      "field": "pmjdy__total",
+      "raw_value": "9 569100",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Thiruvarur",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "6 7633.89",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Thiruvarur",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "9 2.62",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Thiruvarur",
+      "field": "pmjdy__total",
+      "raw_value": "8 224625",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Tiruchirappalli",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "1 41616.94",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Tiruchirappalli",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "0 2.91",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Tiruchirappalli",
+      "field": "pmjdy__total",
+      "raw_value": "2 462381",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Tirunelveli",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "4 18285.1",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Tirunelveli",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "9 35.08",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Tirunelveli",
+      "field": "pmjdy__total",
+      "raw_value": "9 308428",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Tiruppur",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "7 31226.27",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Tiruppur",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "8 0.24",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Tiruppur",
+      "field": "pmjdy__total",
+      "raw_value": "4 617760",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Tiruvannamalai",
+      "field": "aabcs__sdy_no",
+      "raw_value": "2134.73 6",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Tiruvannamalai",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "1 12289.82",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Tiruvannamalai",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "3 10.49",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Tiruvannamalai",
+      "field": "pmjdy__total",
+      "raw_value": "6 462649",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Vellore",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "7 18924.66",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Vellore",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "7 3.08",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Vellore",
+      "field": "pmjdy__total",
+      "raw_value": "0 379219",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Vellore",
+      "field": "uncategorized__no_of_amo_appli_unt_of_catio_loan_ns_sanct_rejec_ioned_ted",
+      "raw_value": "63 89.79",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Villupuram",
+      "field": "aabcs__sdy_no",
+      "raw_value": "1039.03 4",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Villupuram",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "3 9065.88",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Villupuram",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "1 3.42",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Villupuram",
+      "field": "pmjdy__total",
+      "raw_value": "1 419719",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Virudhunagar",
+      "field": "aabcs__sdy_no",
+      "raw_value": "610.39 1",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Virudhunagar",
+      "field": "cd_ratio__o_deposit",
+      "raw_value": "9 19148.56",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Virudhunagar",
+      "field": "kcc_fisheries__f_outstanding_amount_as_n_on_end_of_current_quarter",
+      "raw_value": "2 20.16",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2023",
+      "district": "Virudhunagar",
+      "field": "pmjdy__total",
+      "raw_value": "3 372240",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2024",
+      "district": "Coimbatore",
+      "field": "uncategorized__10",
+      "raw_value": "1 92",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2024",
+      "district": "Cuddalore",
+      "field": "uncategorized__10",
+      "raw_value": "6 7",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2024",
+      "district": "Dindigul",
+      "field": "uncategorized__10",
+      "raw_value": "8 3",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2024",
+      "district": "Erode",
+      "field": "uncategorized__10",
+      "raw_value": "9 3",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2024",
+      "district": "Karur",
+      "field": "uncategorized__10",
+      "raw_value": "8 7",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2024",
+      "district": "Madurai",
+      "field": "uncategorized__10",
+      "raw_value": "4 2",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2024",
+      "district": "Salem",
+      "field": "uncategorized__10",
+      "raw_value": "2 56",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2024",
+      "district": "Tiruchirappalli",
+      "field": "uncategorized__10",
+      "raw_value": "3 4",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2024",
+      "district": "Tirunelveli",
+      "field": "uncategorized__10",
+      "raw_value": "2 9",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2024",
+      "district": "Tiruppur",
+      "field": "uncategorized__10",
+      "raw_value": "1 56",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2024",
+      "district": "Vellore",
+      "field": "uncategorized__10",
+      "raw_value": "1 3",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2024",
+      "district": "Virudhunagar",
+      "field": "uncategorized__10",
+      "raw_value": "1 67",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "September 2024",
+      "district": "Coimbatore",
+      "field": "pmmy_mudra__10",
+      "raw_value": "1 41",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "September 2024",
+      "district": "Dindigul",
+      "field": "pmmy_mudra__10",
+      "raw_value": "7 8",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "September 2024",
+      "district": "Madurai",
+      "field": "pmmy_mudra__10",
+      "raw_value": "1 9",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "September 2024",
+      "district": "Salem",
+      "field": "pmmy_mudra__10",
+      "raw_value": "1 10",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "September 2024",
+      "district": "Thiruvallur",
+      "field": "pmmy_mudra__10",
+      "raw_value": "9 3",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "September 2024",
+      "district": "Tirunelveli",
+      "field": "pmmy_mudra__10",
+      "raw_value": "3 4",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "September 2024",
+      "district": "Tiruppur",
+      "field": "pmmy_mudra__10",
+      "raw_value": "4 53",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "September 2024",
+      "district": "Vellore",
+      "field": "pmmy_mudra__10",
+      "raw_value": "1 70",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "September 2024",
+      "district": "Virudhunagar",
+      "field": "pmmy_mudra__10",
+      "raw_value": "1 12",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2024",
+      "district": "Coimbatore",
+      "field": "pmmy_mudra__10",
+      "raw_value": "1 67",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2024",
+      "district": "Cuddalore",
+      "field": "pmmy_mudra__10",
+      "raw_value": "7 7",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2024",
+      "district": "Dindigul",
+      "field": "pmmy_mudra__10",
+      "raw_value": "9 5",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2024",
+      "district": "Erode",
+      "field": "pmmy_mudra__10",
+      "raw_value": "5 0",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2024",
+      "district": "Karur",
+      "field": "pmmy_mudra__10",
+      "raw_value": "4 3",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2024",
+      "district": "Madurai",
+      "field": "pmmy_mudra__10",
+      "raw_value": "1 9",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2024",
+      "district": "Salem",
+      "field": "pmmy_mudra__10",
+      "raw_value": "1 10",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2024",
+      "district": "Thiruvallur",
+      "field": "pmmy_mudra__10",
+      "raw_value": "9 3",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2024",
+      "district": "Tirunelveli",
+      "field": "pmmy_mudra__10",
+      "raw_value": "3 7",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2024",
+      "district": "Tiruppur",
+      "field": "pmmy_mudra__10",
+      "raw_value": "4 82",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2024",
+      "district": "Vellore",
+      "field": "pmmy_mudra__10",
+      "raw_value": "3 10",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2024",
+      "district": "Virudhunagar",
+      "field": "pmmy_mudra__10",
+      "raw_value": "1 28",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2025",
+      "district": "Coimbatore",
+      "field": "pmmy_mudra__10",
+      "raw_value": "2 06",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2025",
+      "district": "Cuddalore",
+      "field": "pmmy_mudra__10",
+      "raw_value": "1 04",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2025",
+      "district": "Dindigul",
+      "field": "pmmy_mudra__10",
+      "raw_value": "2 64",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2025",
+      "district": "Erode",
+      "field": "pmmy_mudra__10",
+      "raw_value": "8 3",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2025",
+      "district": "Karur",
+      "field": "pmmy_mudra__10",
+      "raw_value": "7 8",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2025",
+      "district": "Madurai",
+      "field": "pmmy_mudra__10",
+      "raw_value": "1 9",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2025",
+      "district": "Salem",
+      "field": "pmmy_mudra__10",
+      "raw_value": "2 90",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2025",
+      "district": "Thiruvallur",
+      "field": "pmmy_mudra__10",
+      "raw_value": "1 23",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2025",
+      "district": "Tirunelveli",
+      "field": "pmmy_mudra__10",
+      "raw_value": "4 1",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2025",
+      "district": "Tiruppur",
+      "field": "pmmy_mudra__10",
+      "raw_value": "5 61",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2025",
+      "district": "Vellore",
+      "field": "pmmy_mudra__10",
+      "raw_value": "4 73",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "March 2025",
+      "district": "Virudhunagar",
+      "field": "pmmy_mudra__10",
+      "raw_value": "1 36",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "June 2025",
+      "district": "Cuddalore",
+      "field": "pmmy_mudra__10",
+      "raw_value": "3 5",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "June 2025",
+      "district": "Tiruppur",
+      "field": "pmmy_mudra__10",
+      "raw_value": "2 3",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "June 2025",
+      "district": "Vellore",
+      "field": "pmmy_mudra__10",
+      "raw_value": "4 6",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "September 2025",
+      "district": "Cuddalore",
+      "field": "pmmy_mudra__10",
+      "raw_value": "3 7",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "September 2025",
+      "district": "Dindigul",
+      "field": "pmmy_mudra__10",
+      "raw_value": "1 9",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "September 2025",
+      "district": "Erode",
+      "field": "pmmy_mudra__10",
+      "raw_value": "2 1",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "September 2025",
+      "district": "Tiruppur",
+      "field": "pmmy_mudra__10",
+      "raw_value": "7 4",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "September 2025",
+      "district": "Vellore",
+      "field": "pmmy_mudra__10",
+      "raw_value": "5 2",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Coimbatore",
+      "field": "pmmy_mudra__10",
+      "raw_value": "1 3",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Cuddalore",
+      "field": "pmmy_mudra__10",
+      "raw_value": "3 5",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Cuddalore",
+      "field": "tahdco__sub",
+      "raw_value": "3 6.00",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Dindigul",
+      "field": "pmmy_mudra__10",
+      "raw_value": "4 4",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Erode",
+      "field": "pmmy_mudra__10",
+      "raw_value": "5 2",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Kanchipuram",
+      "field": "tahdco__1_84_01",
+      "raw_value": "2 5.84",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Kanchipuram",
+      "field": "tahdco__2_64_04",
+      "raw_value": "1 06.65",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Kanchipuram",
+      "field": "tahdco__4_48_05",
+      "raw_value": "1 32.49",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Kanchipuram",
+      "field": "uncategorized__amnt",
+      "raw_value": "1 3.92",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Krishnagiri",
+      "field": "tahdco__sub",
+      "raw_value": "1 2.00",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Namakkal",
+      "field": "tahdco__sub",
+      "raw_value": "4 8.00",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Ranipet",
+      "field": "tahdco__sub",
+      "raw_value": "2 4.00",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Salem",
+      "field": "tahdco__sub",
+      "raw_value": "1 2.00",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Theni",
+      "field": "tahdco__sub",
+      "raw_value": "3 6.00",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Tiruppur",
+      "field": "pmmy_mudra__10",
+      "raw_value": "1 33",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Vellore",
+      "field": "pmmy_mudra__10",
+      "raw_value": "6 1",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Villupuram",
+      "field": "tahdco__sub",
+      "raw_value": "2 4.00",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Villupuram",
+      "field": "uncategorized__no",
+      "raw_value": "3 0",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    },
+    {
+      "issue_id": "FINER-003",
+      "period": "December 2025",
+      "district": "Virudhunagar",
+      "field": "pmmy_mudra__10",
+      "raw_value": "1 0",
+      "quality_status": "quarantined",
+      "quality_flag": "split_numeric_tokens",
+      "reason": "Two numeric tokens occupy one value cell; source re-extraction is required before analytical use."
+    }
+  ]
+}
