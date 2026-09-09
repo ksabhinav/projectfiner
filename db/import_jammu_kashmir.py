@@ -2,7 +2,7 @@
 """Import Jammu & Kashmir SLBC data → slbc_data table.
 
 Reads slbc-data/jammu-kashmir/jammu-kashmir_fi_timeseries.json and writes one
-row per (district, period, field) using INSERT OR REPLACE.
+row per (district, period, field) using an explicit conflict update.
 
 Mirrors the Ladakh import pattern: J&K state_lgd_code = 1.
 Field IDs used (same as Ladakh):
@@ -20,6 +20,9 @@ import json
 import os
 import sqlite3
 import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from import_safety import upsert_slbc_data
 
 HERE = os.path.abspath(os.path.dirname(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, os.pardir))
@@ -79,10 +82,6 @@ def main():
         'credit_deposit_ratio__gross_npa':      get_or_create_field(conn, 'credit_deposit_ratio__gross_npa',      'credit_deposit_ratio', 'gross_npa',      'lakhs'),
     }
 
-    # Wipe any prior J&K rows from the same source file (idempotent)
-    cur.execute('DELETE FROM slbc_data WHERE state_lgd_code = ? AND source_file = ?',
-                (STATE_LGD, SOURCE_FILE))
-
     inserted = 0
     skipped_district = 0
     skipped_period = 0
@@ -103,10 +102,11 @@ def main():
                 if field_key not in row or row[field_key] is None:
                     continue
                 val = row[field_key]
-                cur.execute(
-                    'INSERT OR REPLACE INTO slbc_data(state_lgd_code, district_lgd, period_id, field_id, value_text, value_numeric, source_file) VALUES (?,?,?,?,?,?,?)',
-                    (STATE_LGD, dlgd, period_id, fid, str(val), float(val) if isinstance(val, (int, float)) else None, SOURCE_FILE),
-                )
+                upsert_slbc_data(conn, [(
+                    STATE_LGD, dlgd, period_id, fid, str(val),
+                    float(val) if isinstance(val, (int, float)) else None,
+                    SOURCE_FILE,
+                )])
                 inserted += 1
 
     conn.commit()
