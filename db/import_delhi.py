@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Import Delhi SLBC timeseries into SQLite (slbc_data table).
 
-Uses the same INSERT OR REPLACE pattern as the unified SLBC importer.
+Uses the shared explicit-upsert policy from the unified SLBC importer.
 Source file: public/slbc-data/delhi/delhi_fi_timeseries.json
 
 State LGD code: 7 (NCT of Delhi).
@@ -23,6 +23,7 @@ SRC_JSON = os.path.join(PROJECT, 'public', 'slbc-data', 'delhi', 'delhi_fi_times
 
 sys.path.insert(0, os.path.dirname(__file__))
 from match_districts import DistrictMatcher
+from import_safety import upsert_slbc_data
 
 # Re-use parse_numeric + get_or_create_field + get_period_id from import_slbc.
 from import_slbc import (
@@ -56,9 +57,6 @@ def import_delhi(verbose: bool = True) -> int:
     rows = 0
     batch = []
 
-    # Wipe any pre-existing delhi rows so re-runs are idempotent.
-    db.execute("DELETE FROM slbc_data WHERE source_file=?", (slug,))
-
     for period_obj in data.get("periods", []):
         for district_rec in period_obj.get("districts", []):
             period_label = district_rec.get("period", period_obj.get("period", ""))
@@ -87,23 +85,11 @@ def import_delhi(verbose: bool = True) -> int:
                 rows += 1
 
                 if len(batch) >= 5000:
-                    db.executemany(
-                        "INSERT OR REPLACE INTO slbc_data "
-                        "(state_lgd_code, district_lgd, period_id, field_id, "
-                        "value_text, value_numeric, source_file) "
-                        "VALUES (?, ?, ?, ?, ?, ?, ?)",
-                        batch,
-                    )
+                    upsert_slbc_data(db, batch)
                     batch = []
 
     if batch:
-        db.executemany(
-            "INSERT OR REPLACE INTO slbc_data "
-            "(state_lgd_code, district_lgd, period_id, field_id, "
-            "value_text, value_numeric, source_file) "
-            "VALUES (?, ?, ?, ?, ?, ?, ?)",
-            batch,
-        )
+        upsert_slbc_data(db, batch)
     db.commit()
 
     if verbose:
