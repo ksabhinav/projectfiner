@@ -20,6 +20,7 @@ from import_slbc import (
     get_or_create_field, get_period_id, parse_numeric, normalize_period,
 )
 from match_districts import DistrictMatcher
+from import_safety import upsert_slbc_data
 
 
 def main() -> int:
@@ -46,10 +47,6 @@ def main() -> int:
         state_lgd = row[0]
     print(f"Goa state_lgd_code={state_lgd}")
 
-    # Clear any prior Goa rows (idempotent re-import)
-    db.execute("DELETE FROM slbc_data WHERE state_lgd_code=? AND source_file='goa'", (state_lgd,))
-    db.commit()
-
     rows = 0
     for period_obj in data.get('periods', []):
         period_label = period_obj.get('period', '')
@@ -72,12 +69,9 @@ def main() -> int:
                     continue
                 field_id = get_or_create_field(db, key, field_cache)
                 text, numeric = parse_numeric(val)
-                db.execute(
-                    "INSERT OR REPLACE INTO slbc_data "
-                    "(state_lgd_code, district_lgd, period_id, field_id, value_text, value_numeric, source_file) "
-                    "VALUES (?, ?, ?, ?, ?, ?, ?)",
-                    (state_lgd, district_lgd, period_id, field_id, text, numeric, 'goa'),
-                )
+                upsert_slbc_data(db, [
+                    (state_lgd, district_lgd, period_id, field_id, text, numeric, 'goa')
+                ])
                 rows += 1
     db.commit()
     print(f"Inserted {rows} rows for Goa")
