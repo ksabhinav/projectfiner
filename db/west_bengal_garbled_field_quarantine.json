@@ -1,0 +1,2497 @@
+{
+  "schema_version": "west-bengal-garbled-field-quarantine-v1",
+  "state": "west-bengal",
+  "issue_id": "FINER-010",
+  "source_artifact": "public/slbc-data/west-bengal/west-bengal_fi_timeseries.json",
+  "source_sha": "cbd1a80a4084ca1cb3b112bc900099bad4aeea8b",
+  "detection_summary": {
+    "ocr_split_cumulative_token": 141,
+    "character_by_character_header": 5,
+    "total": 146
+  },
+  "raw_preservation": "Source field names and values remain unchanged in the raw/experimental artifact.",
+  "fields": [
+    {
+      "issue_id": "FINER-010",
+      "field": "jlg__cumulative_no_of_j_l_g_s_c_r_e_d_i_t_l_i_n_ked_as_on_30_09_2017",
+      "category": "jlg",
+      "detection_reason": "character_by_character_header",
+      "non_empty_observation_count": 12,
+      "period_count": 1,
+      "district_count": 12,
+      "example_raw_values": [
+        "8805.0",
+        "954.0",
+        "1591.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "jlg__cumulative_no_of_jlgs_credit_l_i_n_k_e_d_a_s_o_n_31_03_2018",
+      "category": "jlg",
+      "detection_reason": "character_by_character_header",
+      "non_empty_observation_count": 12,
+      "period_count": 1,
+      "district_count": 12,
+      "example_raw_values": [
+        "9050.0",
+        "1006.0",
+        "1636.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_already_availed_loan_for_same_purpose_from_other",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "23.0",
+        "0.0",
+        "86.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_already_availed_loan_for_same_purpose_from_other_banks",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "23.0",
+        "0.0",
+        "70.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_already_having_kcc_with_some_other_bank",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "239.0",
+        "1.0",
+        "267.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_any_other_reason",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 63,
+      "period_count": 7,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "70.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_applica_nt_in_default_npa",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "293.0",
+        "5.0",
+        "1586.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_applicant_in_default_npa",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 45,
+      "period_count": 5,
+      "district_count": 9,
+      "example_raw_values": [
+        "293.0",
+        "5.0",
+        "1589.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_applicat_ion_for_purpose_of_cattle",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_applicati_on_for_purpose_of_cattle",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 45,
+      "period_count": 5,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_appplica_nt_i_not_tracable_ii_unwilling_to_avail_iii",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "59.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_members_of_the_family_applying_for_kcc_against_same",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_members_of_the_family_applying_for_kcc_against_same_milch_animal",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_milch_animal_in_possesio_n_no_space_available",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "268.0",
+        "0.0",
+        "503.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_milch_animal_in_possesio_n_no_space_available_for_cattle_shed",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "268.0",
+        "0.0",
+        "503.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_no_of_applicat_ions_sanctio_ned",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "1504.0",
+        "165.0",
+        "1618.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_no_of_applicati_ons_accepted",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 36,
+      "period_count": 4,
+      "district_count": 9,
+      "example_raw_values": [
+        "2327.0",
+        "171.0",
+        "4575.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_no_of_applicati_ons_received",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 45,
+      "period_count": 5,
+      "district_count": 9,
+      "example_raw_values": [
+        "2327.0",
+        "171.0",
+        "4137.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_no_of_applicati_ons_sanction_ed",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 36,
+      "period_count": 4,
+      "district_count": 9,
+      "example_raw_values": [
+        "1504.0",
+        "165.0",
+        "1952.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_not_a_member_of_pacs",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 54,
+      "period_count": 6,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_second_applicati_on_submitt_ed_for_same_ot_her_reasons",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_second_applicati_on_submitte_d_for_same_ot_her",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_tpa_not_furnishe_d_collectio_n_account_is_in",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "2.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummul_ative_wrong_incomple_te_informati_on_furnishe_d",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "6.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummula_tive_already_availed_loan_for_same_purpose_from_other_banks",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "23.0",
+        "0.0",
+        "22.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummula_tive_already_having_kcc_with_some_other_bank",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 36,
+      "period_count": 4,
+      "district_count": 9,
+      "example_raw_values": [
+        "239.0",
+        "1.0",
+        "227.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummula_tive_any_other_reason",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "70.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummula_tive_applicant_in_default_npa",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 27,
+      "period_count": 3,
+      "district_count": 9,
+      "example_raw_values": [
+        "293.0",
+        "5.0",
+        "1438.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummula_tive_applicati_on_for_purpose_of_cattle",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 27,
+      "period_count": 3,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummula_tive_member_s_of_the_family_applying_for_kcc_against_same_milch",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 8,
+      "period_count": 1,
+      "district_count": 8,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummula_tive_milch_animal_in_possesion_no_space_available_for_cattle_shed",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "268.0",
+        "0.0",
+        "427.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummula_tive_no_of_applicati_ons_accepted",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 27,
+      "period_count": 3,
+      "district_count": 9,
+      "example_raw_values": [
+        "2327.0",
+        "171.0",
+        "3490.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummula_tive_no_of_applicati_ons_received",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 27,
+      "period_count": 3,
+      "district_count": 9,
+      "example_raw_values": [
+        "2327.0",
+        "171.0",
+        "3490.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummula_tive_no_of_applicati_ons_sanction_ed",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "1504.0",
+        "165.0",
+        "1507.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummula_tive_no_of_applicatio_ns_accepted",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "2327.0",
+        "171.0",
+        "4167.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummula_tive_not_a_member_of_pacs",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 36,
+      "period_count": 4,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummula_tive_tpa_not_furnished_collectio_n_account_is_in_other_bank",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 27,
+      "period_count": 3,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummula_tive_tpa_not_furnished_collection_account_is_in_other_bank",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummula_tive_wrong_incomple_te_informati_on_furnished",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 27,
+      "period_count": 3,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "2.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulat_ive_already_availed_loan_for_same_purpose_from_other_banks",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "23.0",
+        "0.0",
+        "70.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulat_ive_already_having_kcc_with_some_other_bank",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "239.0",
+        "1.0",
+        "250.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulat_ive_applicant_in_default_npa",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "293.0",
+        "5.0",
+        "1589.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulat_ive_appplicant_i_not_tracable_ii_unwilling_to_avail_iii_unaware_about_the",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 8,
+      "period_count": 1,
+      "district_count": 8,
+      "example_raw_values": [
+        "0.0",
+        "29.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulat_ive_milch_animal_in_possesion_no_space_available_for_cattle_shed",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "268.0",
+        "0.0",
+        "488.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulat_ive_no_of_applicatio_ns_accepted",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "2327.0",
+        "171.0",
+        "4137.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulat_ive_no_of_applicatio_ns_received",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "2327.0",
+        "171.0",
+        "4167.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulati_ve_already_having_kcc_with_some_other_bank",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "239.0",
+        "1.0",
+        "250.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulati_ve_application_for_purpose_of_cattle",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulati_ve_appplicant_i_not_tracable_ii_unwilling_to_avail_iii_unaware",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 8,
+      "period_count": 1,
+      "district_count": 8,
+      "example_raw_values": [
+        "0.0",
+        "53.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulati_ve_members_of_the_family_applying_for_kcc_against_same_milch_animal",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulati_ve_milch_animal_in_possesion_no_space_available_for_cattle_shed",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "268.0",
+        "0.0",
+        "489.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulati_ve_no_of_applicatio_ns_sanctioned",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "1504.0",
+        "165.0",
+        "1287.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulati_ve_second_application_submitted_for_same_othe_r_reasons",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulati_ve_second_application_submitted_or_same_other_easons",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulati_ve_tpa_not_furnished_collection_account_is_in_other_bank",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulati_ve_wrong_incomplete_information_furnished",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "2.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulati_ve_wrong_incomplete_information_furnished_f_r",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "2.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulativ_e_already_availed_loan_for_same_purpose_from_other_banks",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "23.0",
+        "0.0",
+        "106.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulativ_e_appplicant_i_not_tracable_ii_unwilling_to_avail_iii_unaware_about_the_submission",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "53.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulativ_e_appplicant_i_not_tracable_ii_unwilling_to_avail_iii_unaware_about_the_submission_of_application",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "59.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulativ_e_members_of_the_family_applying_for_kcc_against_same_milch_animal",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 36,
+      "period_count": 4,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulativ_e_milch_animal_in_possesion_n_o_space_available_for_cattle_shed",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "268.0",
+        "0.0",
+        "503.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulativ_e_milch_animal_in_possesion_no_space_available_for_cattle_shed",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "268.0",
+        "0.0",
+        "475.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulativ_e_no_of_applications_accepted",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "2327.0",
+        "171.0",
+        "4206.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulativ_e_second_application_submitted_for_same_other_reasons",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 27,
+      "period_count": 3,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulativ_e_tpa_not_furnished_collection_account_is_in_other_bank",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "2.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_animal_husbandry__sum_of_cummulativ_e_wrong_incomplete_information_furnished",
+      "category": "kcc_animal_husbandry",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "2.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummul_ative_already_availed_loan_for_same_purpose_from_other",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 17,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "7.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummul_ative_already_availed_loan_for_same_purpose_from_other_banks",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "7.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummul_ative_already_having_kcc_with_some_other_bank",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 36,
+      "period_count": 4,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "199.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummul_ative_any_other_reason",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 45,
+      "period_count": 5,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "22.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummul_ative_applicant_in_default_npa",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 45,
+      "period_count": 5,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "1.0",
+        "846.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummul_ative_applicati_on_for_vending",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 54,
+      "period_count": 6,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummul_ative_appplica_nt_i_not_tracable_ii_unwilling_to_avail_iii",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "64.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummul_ative_farmers_do_not_have_vessel",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 45,
+      "period_count": 5,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummul_ative_no_of_applicati_ons_accepted",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 45,
+      "period_count": 5,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "141.0",
+        "1835.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummul_ative_no_of_applicati_ons_received",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 45,
+      "period_count": 5,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "141.0",
+        "1835.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummul_ative_no_of_applicati_ons_sanction_ed",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 45,
+      "period_count": 5,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "140.0",
+        "500.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummul_ative_not_having_permissi_on_licence_for_pond_res",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "155.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummul_ative_not_having_permissi_on_licence_for_pond_res_ervoir",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "155.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummul_ative_second_applicati_on_submitt_ed_for_same_ot_her_reasons",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummul_ative_second_applicati_on_submitte_d_for_same_ot_her",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummul_ative_second_applicati_on_submitte_d_for_same_ot_her_reasons",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummul_ative_wrong_incomple_te_informati_on_furnishe_d",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummula_tive_already_availed_loan_for_same_purpose_from_other_banks",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummula_tive_already_having_kcc_with_some_other_bank",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "195.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummula_tive_any_other_reason",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 54,
+      "period_count": 6,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "20.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummula_tive_applicant_in_default_npa",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 54,
+      "period_count": 6,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "1.0",
+        "819.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummula_tive_applicati_on_for_vending",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 45,
+      "period_count": 5,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummula_tive_farmers_do_not_have_vessel",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 45,
+      "period_count": 5,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummula_tive_no_of_applicati_ons_accepted",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 45,
+      "period_count": 5,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "141.0",
+        "1736.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummula_tive_no_of_applicati_ons_received",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 45,
+      "period_count": 5,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "141.0",
+        "1736.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummula_tive_no_of_applicati_ons_sanction_ed",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 27,
+      "period_count": 3,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "140.0",
+        "497.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummula_tive_no_of_applicatio_ns_accepted",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "141.0",
+        "1839.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummula_tive_not_having_permissi_on_licence_for_pond_res_ervoir",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "150.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummula_tive_not_having_permissio_n_licence_for_pond_res_ervoir",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "150.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummula_tive_wrong_incomple_te_informati_on_furnishe",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 8,
+      "period_count": 1,
+      "district_count": 8,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "1.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummula_tive_wrong_incomple_te_informati_on_furnished",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 27,
+      "period_count": 3,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulat_ive_already_availed_loan_for_same_purpose",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 8,
+      "period_count": 1,
+      "district_count": 8,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulat_ive_already_having_kcc_with_some_other",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 8,
+      "period_count": 1,
+      "district_count": 8,
+      "example_raw_values": [
+        "0.0",
+        "5.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulat_ive_already_having_kcc_with_some_other_bank",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "199.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulat_ive_any_other_reason",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulat_ive_applicant_in_default_npa",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "1.0",
+        "176.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulat_ive_applicatio_n_for_vending",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulat_ive_appplican_t_i_not_tracable_ii_unwilling",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 8,
+      "period_count": 1,
+      "district_count": 8,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulat_ive_appplican_t_i_not_tracable_ii_unwilling_to_avail",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 8,
+      "period_count": 1,
+      "district_count": 8,
+      "example_raw_values": [
+        "0.0",
+        "64.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulat_ive_farmers_do_not_have_vessel",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulat_ive_no_of_applicatio_ns_accepted",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "141.0",
+        "476.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulat_ive_no_of_applicatio_ns_received",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "141.0",
+        "476.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulat_ive_no_of_applicatio_ns_sanctione_d",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "140.0",
+        "295.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulat_ive_not_having_permissio_n_licence_for_pond_rese",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 8,
+      "period_count": 1,
+      "district_count": 8,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulat_ive_second_applicatio_n_submitted_for",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 8,
+      "period_count": 1,
+      "district_count": 8,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulat_ive_wrong_incomplet_e_informati_on",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 8,
+      "period_count": 1,
+      "district_count": 8,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "1.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulat_ive_wrong_incomplet_e_informati_on_furnished",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulati_ve_already_availed_loan_for_same_purpose_from_other_banks",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "7.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulati_ve_already_having_kcc_with_some_other_bank",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "199.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulati_ve_appplicant_i_not_tracable_ii_unwilling_to_avail_iii_unaware",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 8,
+      "period_count": 1,
+      "district_count": 8,
+      "example_raw_values": [
+        "0.0",
+        "55.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulati_ve_appplicant_i_not_tracable_ii_unwilling_to_avail_iii_unaware_about_the_submission_of_application",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "64.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulati_ve_no_of_applicatio_ns_sanctioned",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "140.0",
+        "520.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulati_ve_not_having_permission_licence_for_pond_rese_rvoir",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "155.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulati_ve_not_having_permission_licence_for_pond_reser_voir",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "155.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulati_ve_second_application_submitted_for_same_othe_r_reasons",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulati_ve_second_application_submitted_for_same_other_reasons",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 27,
+      "period_count": 3,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulati_ve_wrong_incomplete_information_furnished",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulativ_e_farmers_do_not_have_vessel",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulativ_e_not_having_permission_licence_for_pond_reserv_oir",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "155.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulativ_e_second_application_submitted_for_same_other_reasons",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "kcc_fishery__sum_of_cummulativ_e_wrong_incomplete_information_furnished",
+      "category": "kcc_fishery",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 18,
+      "period_count": 2,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "pmfme__d_i_s_b_u_rsed_no",
+      "category": "pmfme",
+      "detection_reason": "character_by_character_header",
+      "non_empty_observation_count": 15,
+      "period_count": 1,
+      "district_count": 15,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "1.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "pmfme__p_e_n_ding_no",
+      "category": "pmfme",
+      "detection_reason": "character_by_character_header",
+      "non_empty_observation_count": 15,
+      "period_count": 1,
+      "district_count": 15,
+      "example_raw_values": [
+        "168.0",
+        "1.0",
+        "2.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "pmfme__r_e_j_e_c_t_ed_no",
+      "category": "pmfme",
+      "detection_reason": "character_by_character_header",
+      "non_empty_observation_count": 15,
+      "period_count": 1,
+      "district_count": 15,
+      "example_raw_values": [
+        "118.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "unknown_2__sum_of_cummul_ative_not_a_member_of_pacs",
+      "category": "unknown_2",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "unknown_2__sum_of_cummul_ative_wrong_incomple_te_informati_on_furnishe_d",
+      "category": "unknown_2",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "unknown_2__sum_of_cummula_tive_already_availed_loan_for_same_purpose_from_other_banks",
+      "category": "unknown_2",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "23.0",
+        "0.0",
+        "22.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "unknown_2__sum_of_cummula_tive_already_having_kcc_with_some_other_bank",
+      "category": "unknown_2",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "239.0",
+        "1.0",
+        "227.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "unknown_2__sum_of_cummula_tive_any_other_reason",
+      "category": "unknown_2",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "55.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "unknown_2__sum_of_cummula_tive_applicant_in_default_npa",
+      "category": "unknown_2",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "293.0",
+        "5.0",
+        "1419.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "unknown_2__sum_of_cummula_tive_applicati_on_for_purpose_of_cattle",
+      "category": "unknown_2",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "unknown_2__sum_of_cummula_tive_milch_animal_in_possesio_n_no_space_available_for_cattle_shed",
+      "category": "unknown_2",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "268.0",
+        "0.0",
+        "407.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "unknown_2__sum_of_cummula_tive_no_of_applicati_ons_accepted",
+      "category": "unknown_2",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "2327.0",
+        "171.0",
+        "3353.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "unknown_2__sum_of_cummula_tive_no_of_applicati_ons_received",
+      "category": "unknown_2",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "2327.0",
+        "171.0",
+        "3353.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "unknown_2__sum_of_cummula_tive_no_of_applicati_ons_sanction_ed",
+      "category": "unknown_2",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "1504.0",
+        "165.0",
+        "1194.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "unknown_2__sum_of_cummula_tive_tpa_not_furnished_collection_account_is_in_other_bank",
+      "category": "unknown_2",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "unknown_2__sum_of_cummulat_ive_members_of_the_family_applying_for_kcc_against_same_milch_animal",
+      "category": "unknown_2",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "unknown_2__sum_of_cummulativ_e_appplicant_i_not_tracable_ii_unwilling_to_avail_iii_unaware_about_the_submission_of_application",
+      "category": "unknown_2",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "29.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    },
+    {
+      "issue_id": "FINER-010",
+      "field": "unknown_2__sum_of_cummulativ_e_second_application_submitted_for_same_other_reasons",
+      "category": "unknown_2",
+      "detection_reason": "ocr_split_cumulative_token",
+      "non_empty_observation_count": 9,
+      "period_count": 1,
+      "district_count": 9,
+      "example_raw_values": [
+        "0.0",
+        "0.0",
+        "0.0"
+      ],
+      "quality_status": "quarantined",
+      "quality_flag": "garbled_field_name",
+      "disposition": "exclude_field_from_clean_analytical_views_pending_source_reextraction"
+    }
+  ]
+}
