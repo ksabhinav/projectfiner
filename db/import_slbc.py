@@ -15,6 +15,7 @@ SLBC_DIR = os.path.join(PROJECT, 'public', 'slbc-data')
 # Add db/ to path for match_districts
 sys.path.insert(0, os.path.dirname(__file__))
 from match_districts import DistrictMatcher
+from import_safety import upsert_slbc_data
 
 MONTHS = {'january': '01', 'february': '02', 'march': '03', 'april': '04',
           'may': '05', 'june': '06', 'july': '07', 'august': '08',
@@ -162,10 +163,7 @@ def import_state_timeseries(db, matcher, slug, field_cache, period_cache):
                     rows += 1
 
                     if len(batch) >= 10000:
-                        db.executemany(
-                            "INSERT OR REPLACE INTO slbc_data (state_lgd_code, district_lgd, period_id, field_id, value_text, value_numeric, source_file) VALUES (?, ?, ?, ?, ?, ?, ?)",
-                            batch
-                        )
+                        upsert_slbc_data(db, batch)
                         batch = []
     else:
         # Format B: Haryana — flat dict {DISTRICT_NAME: [{field: value, ...}]}
@@ -196,18 +194,12 @@ def import_state_timeseries(db, matcher, slug, field_cache, period_cache):
                     rows += 1
 
                     if len(batch) >= 10000:
-                        db.executemany(
-                            "INSERT OR REPLACE INTO slbc_data (state_lgd_code, district_lgd, period_id, field_id, value_text, value_numeric, source_file) VALUES (?, ?, ?, ?, ?, ?, ?)",
-                            batch
-                        )
+                        upsert_slbc_data(db, batch)
                         batch = []
 
     # Flush remaining
     if batch:
-        db.executemany(
-            "INSERT OR REPLACE INTO slbc_data (state_lgd_code, district_lgd, period_id, field_id, value_text, value_numeric, source_file) VALUES (?, ?, ?, ?, ?, ?, ?)",
-            batch
-        )
+        upsert_slbc_data(db, batch)
 
     return rows
 
