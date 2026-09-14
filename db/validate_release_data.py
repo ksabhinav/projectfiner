@@ -48,7 +48,12 @@ def strict_json_loads(text: str):
 
 
 def distributions(manifest: dict):
-    for dataset in [*manifest.get("states", []), *manifest.get("capitalMarkets", [])]:
+    datasets = [
+        *manifest.get("states", []),
+        *manifest.get("capitalMarkets", []),
+        *manifest.get("dataContracts", []),
+    ]
+    for dataset in datasets:
         for distribution in dataset.get("distributions", []):
             yield dataset, distribution
 

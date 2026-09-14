@@ -24,6 +24,7 @@ OUTPUT_PATH = PUBLIC / "release-manifest.json"
 MEGHALAYA_PREVIEW_PATH = PUBLIC / "data-contracts" / "meghalaya-standardized-preview.csv"
 MEGHALAYA_REGISTRY_PATH = PUBLIC / "data-contracts" / "meghalaya-indicator-registry.json"
 MEGHALAYA_PROVENANCE_PATH = PUBLIC / "data-contracts" / "meghalaya-provenance.json"
+NORTH_EAST_INVENTORY_PATH = PUBLIC / "data-contracts" / "north-east-indicator-inventory.json"
 
 MONTHS = {
     "jan": "01", "january": "01", "feb": "02", "february": "02",
@@ -290,6 +291,36 @@ def build_manifest(registry_path: Path = REGISTRY_PATH) -> dict:
             )],
         })
 
+    north_east_inventory = json.loads(
+        NORTH_EAST_INVENTORY_PATH.read_text(encoding="utf-8")
+    )
+    inventory_source_ids = [
+        f"slbc-{state['stateSlug']}" for state in north_east_inventory["states"]
+    ]
+    known_source_ids = {source["id"] for source in sources}
+    if not set(inventory_source_ids).issubset(known_source_ids):
+        raise ValueError("North-East inventory names an unknown release source")
+    inventory_distribution = base_file_metadata(
+        NORTH_EAST_INVENTORY_PATH, "application/json", "JSON"
+    )
+    inventory_distribution.update({
+        "role": "standardization-readiness-inventory",
+        "schemaVersion": north_east_inventory["registrySchemaVersion"],
+        "qualityTier": north_east_inventory["qualityTier"],
+        "sourceIds": inventory_source_ids,
+        "license": None,
+        "rightsStatus": "not-reviewed",
+    })
+    data_contracts = [{
+        "id": "north-east-indicator-inventory",
+        "title": "North-East SLBC indicator inventory",
+        "qualityTier": north_east_inventory["qualityTier"],
+        "sourceIds": inventory_source_ids,
+        "rightsStatus": "not-reviewed",
+        "license": None,
+        "distributions": [inventory_distribution],
+    }]
+
     manifest = {
         "schemaVersion": 1,
         "releaseStatus": "research-preview",
@@ -301,12 +332,15 @@ def build_manifest(registry_path: Path = REGISTRY_PATH) -> dict:
         "summary": {
             "stateCount": len(states),
             "capitalMarketRegistryCount": len(capital_markets),
+            "dataContractCount": len(data_contracts),
             "distributionCount": sum(len(state["distributions"]) for state in states)
-            + sum(len(item["distributions"]) for item in capital_markets),
+            + sum(len(item["distributions"]) for item in capital_markets)
+            + sum(len(item["distributions"]) for item in data_contracts),
         },
         "sources": sorted(sources, key=lambda source: source["id"]),
         "states": states,
         "capitalMarkets": capital_markets,
+        "dataContracts": data_contracts,
     }
     canonical = json.dumps(manifest, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     manifest["releaseId"] = f"finer-{hashlib.sha256(canonical.encode()).hexdigest()[:12]}"
