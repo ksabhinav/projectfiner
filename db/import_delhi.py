@@ -23,7 +23,7 @@ SRC_JSON = os.path.join(PROJECT, 'public', 'slbc-data', 'delhi', 'delhi_fi_times
 
 sys.path.insert(0, os.path.dirname(__file__))
 from match_districts import DistrictMatcher
-from import_safety import upsert_slbc_data
+from import_safety import ImportAudit, upsert_slbc_data
 
 # Re-use parse_numeric + get_or_create_field + get_period_id from import_slbc.
 from import_slbc import (
@@ -36,8 +36,10 @@ from import_slbc import (
 
 def import_delhi(verbose: bool = True) -> int:
     if not os.path.exists(SRC_JSON):
-        print(f"ERROR: {SRC_JSON} not found.  Run "
-              f"slbc-data/delhi/extract_delhi.py first.")
+        print(
+            f"ERROR: {SRC_JSON} not found. Run "
+            f"slbc-data/delhi/extract_delhi.py first."
+        )
         return 0
 
     with open(SRC_JSON) as f:
@@ -51,54 +53,105 @@ def import_delhi(verbose: bool = True) -> int:
     matcher = DistrictMatcher(DB_PATH)
     field_cache: dict[str, int] = {}
     period_cache: dict[str, int] = {}
+    audit = ImportAudit("delhi")
 
-    state_lgd = 7  # NCT of Delhi
+    state_lgd = 7
     slug = "delhi"
     rows = 0
     batch = []
 
     for period_obj in data.get("periods", []):
         for district_rec in period_obj.get("districts", []):
-            period_label = district_rec.get("period", period_obj.get("period", ""))
+            period_label = district_rec.get(
+                "period", period_obj.get("period", "")
+            )
             district_name = district_rec.get("district", "")
-            if not period_label or not district_name:
+            if not period_label:
+                audit.reject(
+                    "missing_period",
+                    state_slug=slug,
+                    district_raw=district_name or None,
+                )
+                continue
+            if not district_name:
+                audit.reject(
+                    "missing_district",
+                    state_slug=slug,
+                    period_label=period_label,
+                )
                 continue
 
             period_id = get_period_id(db, period_label, period_cache)
-            district_lgd = matcher.resolve(district_name, state_lgd=state_lgd, source=slug)
-            if not period_id or not district_lgd:
-                if verbose:
-                    print(f"  [skip] period={period_label} district={district_name} "
-                          f"(period_id={period_id}, district_lgd={district_lgd})")
+            if not period_id:
+                audit.reject(
+                    "unresolved_period",
+                    state_slug=slug,
+                    period_label=period_label,
+                    district_raw=district_name,
+                )
+                continue
+            district_lgd = matcher.resolve(
+                district_name, state_lgd=state_lgd, source=slug
+            )
+            if not district_lgd:
+                audit.reject(
+                    "unresolved_district",
+                    state_slug=slug,
+                    period_label=period_label,
+                    district_raw=district_name,
+                )
                 continue
 
+            record_rows = 0
             for key, val in district_rec.items():
                 if key in ("district", "period") or "__" not in key:
                     continue
                 if val is None or str(val).strip() == "":
                     continue
-
                 field_id = get_or_create_field(db, key, field_cache)
                 text, numeric = parse_numeric(val)
-                batch.append((state_lgd, district_lgd, period_id, field_id,
-                              text, numeric, slug))
+                batch.append(
+                    (
+                        state_lgd, district_lgd, period_id, field_id,
+                        text, numeric, slug,
+                    )
+                )
                 rows += 1
-
+                record_rows += 1
                 if len(batch) >= 5000:
                     upsert_slbc_data(db, batch)
                     batch = []
 
+            if record_rows:
+                audit.accept()
+            else:
+                audit.reject(
+                    "no_importable_values",
+                    state_slug=slug,
+                    period_label=period_label,
+                    district_raw=district_name,
+                )
+
     if batch:
         upsert_slbc_data(db, batch)
     db.commit()
+    ledger_path, summary_path = audit.write()
 
     if verbose:
-        cur = db.execute(
+        total = db.execute(
             "SELECT COUNT(*) FROM slbc_data WHERE source_file=?", (slug,)
+        ).fetchone()[0]
+        summary = audit.summary()
+        print(f"Delhi import complete: {rows} rows loaded, total in DB: {total}")
+        print(
+            f"Source records: {summary['records_observed']} observed; "
+            f"{summary['records_accepted']} accepted; "
+            f"{summary['records_rejected']} rejected"
         )
-        total = cur.fetchone()[0]
-        print(f"Delhi import complete: {rows} new rows, total in DB: {total}")
+        print(f"Reject ledger: {ledger_path}")
+        print(f"Audit summary: {summary_path}")
 
+    matcher.close()
     db.close()
     return rows
 

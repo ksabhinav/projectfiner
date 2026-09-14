@@ -22,7 +22,7 @@ import sqlite3
 import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
-from import_safety import upsert_slbc_data
+from import_safety import ImportAudit, upsert_slbc_data
 
 HERE = os.path.abspath(os.path.dirname(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, os.pardir))
@@ -85,19 +85,35 @@ def main():
     inserted = 0
     skipped_district = 0
     skipped_period = 0
-    for period in ts['periods']:
-        label = period['period']
+    audit = ImportAudit("jammu-kashmir")
+
+    for period in ts.get('periods', []):
+        label = period.get('period', '')
         qcode = LABEL_TO_CODE.get(label)
-        if qcode is None or qcode not in periods:
-            skipped_period += 1
-            continue
-        period_id = periods[qcode]
-        for row in period['districts']:
-            dname = row['district']
+        period_id = periods.get(qcode) if qcode else None
+        for row in period.get('districts', []):
+            dname = row.get('district', '')
+            if not period_id:
+                skipped_period += 1
+                audit.reject(
+                    "unresolved_period",
+                    state_slug="jammu-kashmir",
+                    period_label=label or None,
+                    district_raw=dname or None,
+                )
+                continue
             dlgd = districts.get(dname.strip().lower())
             if dlgd is None:
                 skipped_district += 1
+                audit.reject(
+                    "unresolved_district",
+                    state_slug="jammu-kashmir",
+                    period_label=label,
+                    district_raw=dname or None,
+                )
                 continue
+
+            record_rows = 0
             for field_key, fid in field_ids.items():
                 if field_key not in row or row[field_key] is None:
                     continue
@@ -108,9 +124,32 @@ def main():
                     SOURCE_FILE,
                 )])
                 inserted += 1
+                record_rows += 1
+
+            if record_rows:
+                audit.accept()
+            else:
+                audit.reject(
+                    "no_importable_values",
+                    state_slug="jammu-kashmir",
+                    period_label=label,
+                    district_raw=dname,
+                )
 
     conn.commit()
-    print(f'J&K import: {inserted} rows inserted; skipped districts={skipped_district}, periods={skipped_period}')
+    ledger_path, summary_path = audit.write()
+    summary = audit.summary()
+    print(
+        f'J&K import: {inserted} rows loaded; '
+        f'skipped districts={skipped_district}, periods={skipped_period}'
+    )
+    print(
+        f"Source records: {summary['records_observed']} observed; "
+        f"{summary['records_accepted']} accepted; "
+        f"{summary['records_rejected']} rejected"
+    )
+    print(f"Reject ledger: {ledger_path}")
+    print(f"Audit summary: {summary_path}")
 
     # Quick verification
     n = cur.execute('SELECT COUNT(*) FROM slbc_data WHERE state_lgd_code = ?', (STATE_LGD,)).fetchone()[0]

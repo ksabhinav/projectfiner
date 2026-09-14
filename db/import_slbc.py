@@ -15,7 +15,7 @@ SLBC_DIR = os.path.join(PROJECT, 'public', 'slbc-data')
 # Add db/ to path for match_districts
 sys.path.insert(0, os.path.dirname(__file__))
 from match_districts import DistrictMatcher
-from import_safety import upsert_slbc_data
+from import_safety import ImportAudit, upsert_slbc_data
 
 MONTHS = {'january': '01', 'february': '02', 'march': '03', 'april': '04',
           'may': '05', 'june': '06', 'july': '07', 'august': '08',
@@ -117,10 +117,16 @@ def get_period_id(db, label, period_cache):
     return None
 
 
-def import_state_timeseries(db, matcher, slug, field_cache, period_cache):
-    """Import a single state's timeseries JSON."""
+def import_state_timeseries(
+    db, matcher, slug, field_cache, period_cache, audit=None
+):
+    """Import one state's timeseries and account for every source record."""
+    owns_audit = audit is None
+    audit = audit or ImportAudit(slug)
     fpath = os.path.join(SLBC_DIR, slug, f'{slug}_fi_timeseries.json')
     if not os.path.exists(fpath):
+        if owns_audit:
+            audit.write()
         return 0
 
     with open(fpath) as f:
@@ -129,80 +135,108 @@ def import_state_timeseries(db, matcher, slug, field_cache, period_cache):
     state_lgd = matcher.state_lgd_from_slug(slug)
     if not state_lgd:
         print(f"  WARNING: No state LGD code for slug '{slug}'")
+        audit.reject("unresolved_state", state_slug=slug)
+        if owns_audit:
+            audit.write()
         return 0
 
     rows = 0
     batch = []
 
+    def load_record(period_label, district_name, record, excluded_keys):
+        nonlocal rows, batch
+        if not period_label:
+            audit.reject(
+                "missing_period", state_slug=slug, district_raw=district_name or None
+            )
+            return
+        if not district_name:
+            audit.reject(
+                "missing_district", state_slug=slug, period_label=period_label
+            )
+            return
+
+        period_id = get_period_id(db, period_label, period_cache)
+        if not period_id:
+            audit.reject(
+                "unresolved_period",
+                state_slug=slug,
+                period_label=period_label,
+                district_raw=district_name,
+            )
+            return
+        district_lgd = matcher.resolve(
+            district_name, state_lgd=state_lgd, source=slug
+        )
+        if not district_lgd:
+            audit.reject(
+                "unresolved_district",
+                state_slug=slug,
+                period_label=period_label,
+                district_raw=district_name,
+            )
+            return
+
+        record_rows = 0
+        for key, val in record.items():
+            if key in excluded_keys or '__' not in key:
+                continue
+            if val is None or str(val).strip() == '':
+                continue
+            field_id = get_or_create_field(db, key, field_cache)
+            text, numeric = parse_numeric(val)
+            batch.append(
+                (state_lgd, district_lgd, period_id, field_id, text, numeric, slug)
+            )
+            rows += 1
+            record_rows += 1
+            if len(batch) >= 10000:
+                upsert_slbc_data(db, batch)
+                batch = []
+
+        if record_rows:
+            audit.accept()
+        else:
+            audit.reject(
+                "no_importable_values",
+                state_slug=slug,
+                period_label=period_label,
+                district_raw=district_name,
+            )
+
     if 'periods' in data:
-        # Format A: periods → districts (21 states)
+        # Format A: periods -> districts.
         for period_obj in data['periods']:
             for district_rec in period_obj.get('districts', []):
-                period_label = district_rec.get('period', period_obj.get('period', ''))
-                district_name = district_rec.get('district', '')
-
-                if not period_label or not district_name:
-                    continue
-
-                period_id = get_period_id(db, period_label, period_cache)
-                district_lgd = matcher.resolve(district_name, state_lgd=state_lgd, source=slug)
-
-                if not period_id or not district_lgd:
-                    continue
-
-                for key, val in district_rec.items():
-                    if key in ('district', 'period') or '__' not in key:
-                        continue
-                    if val is None or str(val).strip() == '':
-                        continue
-
-                    field_id = get_or_create_field(db, key, field_cache)
-                    text, numeric = parse_numeric(val)
-
-                    batch.append((state_lgd, district_lgd, period_id, field_id, text, numeric, slug))
-                    rows += 1
-
-                    if len(batch) >= 10000:
-                        upsert_slbc_data(db, batch)
-                        batch = []
+                load_record(
+                    district_rec.get('period', period_obj.get('period', '')),
+                    district_rec.get('district', ''),
+                    district_rec,
+                    {'district', 'period'},
+                )
     else:
-        # Format B: Haryana — flat dict {DISTRICT_NAME: [{field: value, ...}]}
+        # Format B: Haryana flat dict {DISTRICT_NAME: [{field: value, ...}]}.
         for district_name, records in data.items():
             if not isinstance(records, list):
+                audit.reject(
+                    "invalid_record_container",
+                    state_slug=slug,
+                    district_raw=district_name,
+                )
                 continue
-            for rec in records:
-                period_label = rec.get('period', rec.get('quarter', ''))
-                if not period_label:
-                    continue
+            for record in records:
+                load_record(
+                    record.get('period', record.get('quarter', '')),
+                    district_name,
+                    record,
+                    {'district', 'period', 'meeting', 'quarter', 'date'},
+                )
 
-                period_id = get_period_id(db, period_label, period_cache)
-                district_lgd = matcher.resolve(district_name, state_lgd=state_lgd, source=slug)
-
-                if not period_id or not district_lgd:
-                    continue
-
-                for key, val in rec.items():
-                    if key in ('district', 'period', 'meeting', 'quarter', 'date') or '__' not in key:
-                        continue
-                    if val is None or str(val).strip() == '':
-                        continue
-
-                    field_id = get_or_create_field(db, key, field_cache)
-                    text, numeric = parse_numeric(val)
-
-                    batch.append((state_lgd, district_lgd, period_id, field_id, text, numeric, slug))
-                    rows += 1
-
-                    if len(batch) >= 10000:
-                        upsert_slbc_data(db, batch)
-                        batch = []
-
-    # Flush remaining
     if batch:
         upsert_slbc_data(db, batch)
-
+    if owns_audit:
+        audit.write()
     return rows
-
 
 def import_all():
     db = sqlite3.connect(DB_PATH)
@@ -215,15 +249,19 @@ def import_all():
     period_cache = {}
 
     total_rows = 0
+    audit = ImportAudit('slbc')
     t0 = time.time()
 
     for slug in SLBC_STATES:
-        rows = import_state_timeseries(db, matcher, slug, field_cache, period_cache)
+        rows = import_state_timeseries(
+            db, matcher, slug, field_cache, period_cache, audit=audit
+        )
         db.commit()
         total_rows += rows
         print(f"  {slug}: {rows:,} data points")
 
     elapsed = time.time() - t0
+    ledger_path, summary_path = audit.write()
 
     # Log import
     db.execute(
@@ -233,6 +271,14 @@ def import_all():
     db.commit()
 
     print(f"\nTotal: {total_rows:,} SLBC data points in {elapsed:.1f}s")
+    summary = audit.summary()
+    print(
+        f"Source records: {summary['records_observed']:,} observed; "
+        f"{summary['records_accepted']:,} accepted; "
+        f"{summary['records_rejected']:,} rejected"
+    )
+    print(f"Reject ledger: {ledger_path}")
+    print(f"Audit summary: {summary_path}")
     print(f"Fields: {db.execute('SELECT COUNT(*) FROM slbc_fields').fetchone()[0]}")
     print(f"slbc_data rows: {db.execute('SELECT COUNT(*) FROM slbc_data').fetchone()[0]:,}")
 

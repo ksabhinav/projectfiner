@@ -1,5 +1,7 @@
+import json
 import sqlite3
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -7,7 +9,8 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "db"))
 
-from import_safety import upsert_slbc_data
+from import_safety import ImportAudit, upsert_slbc_data
+import import_slbc
 
 
 class SlbcUpsertSafetyTests(unittest.TestCase):
@@ -79,6 +82,121 @@ class SlbcUpsertSafetyTests(unittest.TestCase):
             if "INSERT OR REPLACE INTO slbc_data" in path.read_text(encoding="utf-8"):
                 offenders.append(path.name)
         self.assertEqual(offenders, [])
+
+
+
+    def test_unified_importer_accounts_for_silent_skip_cases(self):
+        self.db.executescript(
+            """
+            CREATE TABLE periods (
+                id INTEGER PRIMARY KEY,
+                label TEXT UNIQUE,
+                code TEXT UNIQUE
+            );
+            CREATE TABLE slbc_fields (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                field_key TEXT UNIQUE,
+                category TEXT,
+                field_name TEXT,
+                unit TEXT
+            );
+            INSERT INTO periods(id, label, code)
+            VALUES (1, 'March 2025', '2025-03');
+            """
+        )
+
+        class Matcher:
+            @staticmethod
+            def state_lgd_from_slug(slug):
+                return 7
+
+            @staticmethod
+            def resolve(name, **kwargs):
+                return 101 if name == "Known" else None
+
+        source = {
+            "periods": [{
+                "period": "March 2025",
+                "districts": [
+                    {
+                        "district": "Known",
+                        "branch_network__total_branch": "4",
+                    },
+                    {
+                        "district": "Unknown",
+                        "branch_network__total_branch": "5",
+                    },
+                    {
+                        "district": "Known",
+                        "period": "",
+                        "branch_network__total_branch": "6",
+                    },
+                ],
+            }]
+        }
+        audit = ImportAudit("slbc")
+        with tempfile.TemporaryDirectory() as directory:
+            state_dir = Path(directory) / "delhi"
+            state_dir.mkdir()
+            (state_dir / "delhi_fi_timeseries.json").write_text(
+                json.dumps(source), encoding="utf-8"
+            )
+            original_dir = import_slbc.SLBC_DIR
+            import_slbc.SLBC_DIR = directory
+            try:
+                rows = import_slbc.import_state_timeseries(
+                    self.db, Matcher(), "delhi", {}, {}, audit=audit
+                )
+            finally:
+                import_slbc.SLBC_DIR = original_dir
+
+        self.assertEqual(rows, 1)
+        self.assertEqual(
+            self.db.execute("SELECT COUNT(*) FROM slbc_data").fetchone()[0],
+            1,
+        )
+        self.assertEqual(audit.summary()["records_observed"], 3)
+        self.assertEqual(audit.summary()["records_accepted"], 1)
+        self.assertEqual(audit.summary()["records_rejected"], 2)
+
+    def test_reject_ledger_is_deterministic_and_reconciles(self):
+        audit = ImportAudit("slbc")
+        audit.accept()
+        for _ in range(2):
+            audit.reject(
+                "unresolved_district",
+                state_slug="assam",
+                period_label="March 2025",
+                district_raw="Unknown",
+            )
+
+        self.assertEqual(
+            audit.summary(),
+            {
+                "source": "slbc",
+                "records_observed": 3,
+                "records_accepted": 1,
+                "records_rejected": 2,
+                "unique_rejects": 1,
+            },
+        )
+
+        with tempfile.TemporaryDirectory() as directory:
+            ledger_path, summary_path = audit.write(directory)
+            entries = [
+                json.loads(line)
+                for line in ledger_path.read_text(encoding="utf-8").splitlines()
+            ]
+            persisted_summary = json.loads(
+                summary_path.read_text(encoding="utf-8")
+            )
+
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(entries[0]["occurrence_count"], 2)
+        self.assertEqual(
+            entries[0]["reason"], "unresolved_district"
+        )
+        self.assertEqual(persisted_summary, audit.summary())
 
 
 if __name__ == "__main__":
