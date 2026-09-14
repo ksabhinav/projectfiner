@@ -319,13 +319,17 @@ def main():
                 "tables": categories,
             }
 
-    data["quarters"] = dict(sorted(data["quarters"].items()))
+    data, history = merge_complete_history(data, OUT_JSON)
 
     with open(OUT_JSON, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
     total_cats = sum(len(q["tables"]) for q in data["quarters"].values())
-    print(f"\nDone! {len(data['quarters'])} quarters, {total_cats} category-quarter combos")
+    print(
+        f"\nDone! {history['total']} quarters "
+        f"({history['added']} added, {history['retained']} retained), "
+        f"{total_cats} category-quarter combos"
+    )
     print(f"Output: {OUT_JSON}")
 
 
