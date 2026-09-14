@@ -35,7 +35,11 @@ class ReleaseManifestTests(unittest.TestCase):
         self.assertEqual(self.manifest["projectDataLicense"], None)
         self.assertEqual(self.manifest["rightsReviewStatus"], "not-legally-reviewed")
 
-        datasets = [*self.manifest["states"], *self.manifest["capitalMarkets"]]
+        datasets = [
+            *self.manifest["states"],
+            *self.manifest["capitalMarkets"],
+            *self.manifest["dataContracts"],
+        ]
         for dataset in datasets:
             self.assertEqual(dataset["qualityTier"], "raw-experimental")
             self.assertEqual(dataset["rightsStatus"], "not-reviewed")
@@ -78,7 +82,19 @@ class ReleaseManifestTests(unittest.TestCase):
             item for item in meghalaya["distributions"]
             if item.get("role") == "indicator-registry"
         )
-        self.assertEqual(self.manifest["summary"]["distributionCount"], 69)
+        self.assertEqual(self.manifest["summary"]["distributionCount"], 70)
+        self.assertEqual(self.manifest["summary"]["dataContractCount"], 1)
+        inventory = self.manifest["dataContracts"][0]
+        self.assertEqual(inventory["id"], "north-east-indicator-inventory")
+        self.assertEqual(len(inventory["sourceIds"]), 8)
+        inventory_distribution = inventory["distributions"][0]
+        self.assertEqual(
+            inventory_distribution["role"], "standardization-readiness-inventory"
+        )
+        self.assertEqual(
+            inventory_distribution["schemaVersion"],
+            "north-east-indicator-inventory-v1",
+        )
         self.assertEqual(preview["rowCount"], 3494)
         self.assertEqual(preview["indicatorCount"], 13)
         self.assertEqual(preview["qualityTier"], "standardized-preview")
