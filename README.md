@@ -4,7 +4,7 @@ Project FINER (Financial Inclusion in the North East Region) is a public researc
 
 The project is in a **research-preview** stage. Most public files are source-derived **raw / experimental** artifacts with uneven schemas and unresolved quality issues. The Meghalaya long-format product is a **standardized preview**, not a certified dataset. No FINER distribution is currently labelled Gold or certified.
 
-The authoritative broad inventory is [`public/release-manifest.json`](public/release-manifest.json). The state-scoped [`north-east-indicator-inventory.json`](public/data-contracts/north-east-indicator-inventory.json) records raw field coverage across all eight North-East states without asserting that matching labels are semantically comparable. Immutable product releases are listed in [`public/releases/index.json`](public/releases/index.json). The current candidate, [`meghalaya-standardized-preview-v2`](public/releases/meghalaya-standardized-preview-v2/release.json), records its exact files, hashes, row-level artifact provenance and certification blockers; v1 remains in the release catalog.
+The authoritative broad inventory is [`public/release-manifest.json`](public/release-manifest.json). The state-scoped [`north-east-indicator-inventory.json`](public/data-contracts/north-east-indicator-inventory.json) records raw field coverage across all eight North-East states without asserting that matching labels are semantically comparable. Its [`north-east-provenance.json`](public/data-contracts/north-east-provenance.json) registry identifies the exact committed input artifacts and unresolved upstream evidence. Immutable product releases are listed in [`public/releases/index.json`](public/releases/index.json). The current candidate, [`meghalaya-standardized-preview-v2`](public/releases/meghalaya-standardized-preview-v2/release.json), records its exact files, hashes, row-level artifact provenance and certification blockers; v1 remains in the release catalog.
 
 ## Start here
 
@@ -48,6 +48,7 @@ npm test
 python3 validate_data.py --waivers .github/validation-waivers --no-report
 python3 db/build_meghalaya_standardized.py --check
 python3 db/build_north_east_indicator_inventory.py --check
+python3 db/build_north_east_provenance.py --check
 python3 db/build_release_manifest.py --check
 python3 db/build_versioned_release.py --check
 python3 db/validate_release_data.py
