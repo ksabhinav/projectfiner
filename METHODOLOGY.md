@@ -16,6 +16,8 @@ Raw files are source-derived extraction outputs. They are retained because they 
 
 The machine-generated North-East indicator inventory profiles every raw field separately within its state. It records coverage and lexical value characteristics, while leaving units and measure types unreviewed. Exact labels shared by multiple states are listed only to support later review; they do not establish common definitions, units, reporting bases or cross-state comparability.
 
+The companion North-East provenance registry makes the inventory reproducible from the eight committed time-series artifacts by recording their byte sizes, SHA-256 hashes and Git blob identities. It also records that the upstream documents, pages and original extraction runs remain unlinked. Reproducibility from committed artifacts must not be read as reproducibility from the original publisher material.
+
 ### Standardized preview
 
 A standardized preview has a governed row shape and stable identifiers, but unresolved evidence or semantic issues remain. The current Meghalaya preview:
