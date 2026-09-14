@@ -178,10 +178,55 @@
       "title": "Depository participant service centres"
     }
   ],
+  "dataContracts": [
+    {
+      "distributions": [
+        {
+          "bytes": 3082538,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "path": "data-contracts/north-east-indicator-inventory.json",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "role": "standardization-readiness-inventory",
+          "schemaVersion": "north-east-field-inventory-v1",
+          "sha256": "3c5f66579f1145b6e9e759d2f853d7a22266596fa63b21a0b979b0c5b87f53c0",
+          "sourceIds": [
+            "slbc-arunachal-pradesh",
+            "slbc-assam",
+            "slbc-manipur",
+            "slbc-meghalaya",
+            "slbc-mizoram",
+            "slbc-nagaland",
+            "slbc-sikkim",
+            "slbc-tripura"
+          ],
+          "url": "/data-contracts/north-east-indicator-inventory.json"
+        }
+      ],
+      "id": "north-east-indicator-inventory",
+      "license": null,
+      "qualityTier": "raw-experimental",
+      "rightsStatus": "not-reviewed",
+      "sourceIds": [
+        "slbc-arunachal-pradesh",
+        "slbc-assam",
+        "slbc-manipur",
+        "slbc-meghalaya",
+        "slbc-mizoram",
+        "slbc-nagaland",
+        "slbc-sikkim",
+        "slbc-tripura"
+      ],
+      "title": "North-East SLBC indicator inventory"
+    }
+  ],
   "generatedBy": "db/build_release_manifest.py",
   "projectDataLicense": null,
   "qualityTier": "raw-experimental",
-  "releaseId": "finer-f38db4bd00fb",
+  "releaseId": "finer-5315b293f39b",
   "releaseStatus": "research-preview",
   "rightsNotice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
   "rightsReviewStatus": "not-legally-reviewed",
@@ -2521,7 +2566,8 @@
   ],
   "summary": {
     "capitalMarketRegistryCount": 4,
-    "distributionCount": 69,
+    "dataContractCount": 1,
+    "distributionCount": 70,
     "stateCount": 31
   }
 }
