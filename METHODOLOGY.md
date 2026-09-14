@@ -14,6 +14,8 @@ FINER separates publication status from file availability.
 
 Raw files are source-derived extraction outputs. They are retained because they are useful for inspection, recovery and further cleaning. Their field names, units, missing-value tokens and district coverage may vary by state and period. A raw label is a warning, not a claim that the file is unusable.
 
+The machine-generated North-East indicator inventory profiles every raw field separately within its state. It records coverage and lexical value characteristics, while leaving units and measure types unreviewed. Exact labels shared by multiple states are listed only to support later review; they do not establish common definitions, units, reporting bases or cross-state comparability.
+
 ### Standardized preview
 
 A standardized preview has a governed row shape and stable identifiers, but unresolved evidence or semantic issues remain. The current Meghalaya preview:
