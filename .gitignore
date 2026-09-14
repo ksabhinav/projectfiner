@@ -9,6 +9,7 @@ api/index_data/
 db/finer.db
 db/finer.db-wal
 db/finer.db-shm
+db/import-rejects/
 .wrangler/
 __pycache__/
 *.pyc
