@@ -20,6 +20,10 @@ import glob
 from pathlib import Path
 from collections import OrderedDict, Counter
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO_ROOT / "db"))
+from extractor_history import merge_complete_history
+
 # Odisha's 30 districts (canonical names — title case)
 ODISHA_DISTRICTS = [
     "Angul", "Balangir", "Balasore", "Bargarh", "Bhadrak",
@@ -793,10 +797,15 @@ def build_complete_json(all_quarters, output_dir):
         complete["quarters"][qk] = quarter_obj
 
     json_path = os.path.join(output_dir, 'odisha_complete.json')
+    complete, history = merge_complete_history(complete, json_path)
     with open(json_path, 'w') as f:
         json.dump(complete, f, indent=2)
 
-    print(f"\nSaved odisha_complete.json ({len(complete['quarters'])} quarters)")
+    print(
+        f"\nSaved odisha_complete.json "
+        f"({history['total']} quarters; {history['added']} added, "
+        f"{history['retained']} retained)"
+    )
     return complete
 
 

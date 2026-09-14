@@ -5,6 +5,13 @@ Produces karnataka_complete.json in the project's standard format.
 """
 
 import os, json, re, glob
+import sys
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO_ROOT / "db"))
+from extractor_history import merge_complete_history
+
 import pdfplumber
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -319,13 +326,17 @@ def main():
                 "tables": categories,
             }
 
-    data["quarters"] = dict(sorted(data["quarters"].items()))
+    data, history = merge_complete_history(data, OUT_JSON)
 
     with open(OUT_JSON, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
     total_cats = sum(len(q["tables"]) for q in data["quarters"].values())
-    print(f"\nDone! {len(data['quarters'])} quarters, {total_cats} category-quarter combos")
+    print(
+        f"\nDone! {history['total']} quarters "
+        f"({history['added']} added, {history['retained']} retained), "
+        f"{total_cats} category-quarter combos"
+    )
     print(f"Output: {OUT_JSON}")
 
 
