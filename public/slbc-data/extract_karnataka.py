@@ -5,6 +5,13 @@ Produces karnataka_complete.json in the project's standard format.
 """
 
 import os, json, re, glob
+import sys
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO_ROOT / "db"))
+from extractor_history import merge_complete_history
+
 import pdfplumber
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
