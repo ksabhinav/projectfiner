@@ -4,7 +4,7 @@ This dictionary describes FINER's standardized observation contract. It does not
 
 The machine-readable Meghalaya registry is [`meghalaya-indicator-registry.json`](https://projectfiner.com/data-contracts/meghalaya-indicator-registry.json). The source and extraction-run registry is [`meghalaya-provenance.json`](https://projectfiner.com/data-contracts/meghalaya-provenance.json).
 
-The [`north-east-indicator-inventory.json`](https://projectfiner.com/data-contracts/north-east-indicator-inventory.json) is a separate standardization-readiness artifact for all eight North-East states. Its IDs are scoped to a state and exact raw source field. Units and measure types remain `not-reviewed`, and exact label matches across states are discovery candidates—not claims of semantic equivalence or comparability.
+The [`north-east-indicator-inventory.json`](https://projectfiner.com/data-contracts/north-east-indicator-inventory.json) is a separate standardization-readiness artifact for all eight North-East states. Its IDs are scoped to a state and exact raw source field. Units and measure types remain `not-reviewed`, and exact label matches across states are discovery candidates—not claims of semantic equivalence or comparability. The companion [`north-east-provenance.json`](https://projectfiner.com/data-contracts/north-east-provenance.json) records the byte size, SHA-256, Git blob identity, publisher landing page and evidence status of each committed input artifact.
 
 ## Observation fields
 
