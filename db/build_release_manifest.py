@@ -25,6 +25,7 @@ MEGHALAYA_PREVIEW_PATH = PUBLIC / "data-contracts" / "meghalaya-standardized-pre
 MEGHALAYA_REGISTRY_PATH = PUBLIC / "data-contracts" / "meghalaya-indicator-registry.json"
 MEGHALAYA_PROVENANCE_PATH = PUBLIC / "data-contracts" / "meghalaya-provenance.json"
 NORTH_EAST_INVENTORY_PATH = PUBLIC / "data-contracts" / "north-east-indicator-inventory.json"
+NORTH_EAST_PROVENANCE_PATH = PUBLIC / "data-contracts" / "north-east-provenance.json"
 
 MONTHS = {
     "jan": "01", "january": "01", "feb": "02", "february": "02",
@@ -311,6 +312,30 @@ def build_manifest(registry_path: Path = REGISTRY_PATH) -> dict:
         "license": None,
         "rightsStatus": "not-reviewed",
     })
+    north_east_provenance = json.loads(
+        NORTH_EAST_PROVENANCE_PATH.read_text(encoding="utf-8")
+    )
+    provenance_product = north_east_provenance["product"]
+    if provenance_product["artifactPath"] != f"/{inventory_distribution['path']}":
+        raise ValueError("North-East provenance points to the wrong inventory artifact")
+    if provenance_product["artifactSha256"] != inventory_distribution["sha256"]:
+        raise ValueError("North-East provenance inventory hash is stale")
+    provenance_source_ids = [
+        item["sourceId"] for item in north_east_provenance["artifactInputs"]
+    ]
+    if provenance_source_ids != inventory_source_ids:
+        raise ValueError("North-East provenance sources do not match the inventory")
+    provenance_distribution = base_file_metadata(
+        NORTH_EAST_PROVENANCE_PATH, "application/json", "JSON"
+    )
+    provenance_distribution.update({
+        "role": "provenance-registry",
+        "schemaVersion": north_east_provenance["schemaVersion"],
+        "qualityTier": north_east_provenance["qualityTier"],
+        "sourceIds": provenance_source_ids,
+        "license": None,
+        "rightsStatus": "not-reviewed",
+    })
     data_contracts = [{
         "id": "north-east-indicator-inventory",
         "title": "North-East SLBC indicator inventory",
@@ -318,7 +343,7 @@ def build_manifest(registry_path: Path = REGISTRY_PATH) -> dict:
         "sourceIds": inventory_source_ids,
         "rightsStatus": "not-reviewed",
         "license": None,
-        "distributions": [inventory_distribution],
+        "distributions": [inventory_distribution, provenance_distribution],
     }]
 
     manifest = {
