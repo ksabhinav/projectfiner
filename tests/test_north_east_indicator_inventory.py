@@ -52,7 +52,7 @@ class NorthEastIndicatorInventoryTests(unittest.TestCase):
                 (state["periodCount"], state["recordCount"], state["fieldCount"]),
                 (periods, records, fields),
             )
-            source = ROOT / state["sourceArtifact"].lstrip("/")
+            source = ROOT / "public" / state["sourceArtifact"].lstrip("/")
             self.assertEqual(state["sourceGitBlobSha"], git_blob_sha(source))
 
     def test_inventory_does_not_guess_semantic_equivalence(self):
