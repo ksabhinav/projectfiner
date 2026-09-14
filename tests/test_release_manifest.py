@@ -93,7 +93,7 @@ class ReleaseManifestTests(unittest.TestCase):
         )
         self.assertEqual(
             inventory_distribution["schemaVersion"],
-            "north-east-indicator-inventory-v1",
+            "north-east-field-inventory-v1",
         )
         self.assertEqual(preview["rowCount"], 3494)
         self.assertEqual(preview["indicatorCount"], 13)
