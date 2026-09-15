@@ -25,6 +25,7 @@ MEGHALAYA_PREVIEW_PATH = PUBLIC / "data-contracts" / "meghalaya-standardized-pre
 MEGHALAYA_REGISTRY_PATH = PUBLIC / "data-contracts" / "meghalaya-indicator-registry.json"
 MEGHALAYA_PROVENANCE_PATH = PUBLIC / "data-contracts" / "meghalaya-provenance.json"
 NORTH_EAST_INVENTORY_PATH = PUBLIC / "data-contracts" / "north-east-indicator-inventory.json"
+NORTH_EAST_REVIEW_PATH = PUBLIC / "data-contracts" / "north-east-field-review.csv"
 
 MONTHS = {
     "jan": "01", "january": "01", "feb": "02", "february": "02",
@@ -311,6 +312,17 @@ def build_manifest(registry_path: Path = REGISTRY_PATH) -> dict:
         "license": None,
         "rightsStatus": "not-reviewed",
     })
+    review_distribution = inspect_csv(NORTH_EAST_REVIEW_PATH)
+    review_distribution.update({
+        "role": "field-value-review",
+        "schemaVersion": "north-east-field-review-v1",
+        "qualityTier": north_east_inventory["qualityTier"],
+        "sourceIds": inventory_source_ids,
+        "license": None,
+        "rightsStatus": "not-reviewed",
+    })
+    if review_distribution["rowCount"] != north_east_inventory["scope"]["fieldEntryCount"]:
+        raise ValueError("North-East review CSV row count disagrees with inventory")
     data_contracts = [{
         "id": "north-east-indicator-inventory",
         "title": "North-East SLBC indicator inventory",
@@ -318,7 +330,7 @@ def build_manifest(registry_path: Path = REGISTRY_PATH) -> dict:
         "sourceIds": inventory_source_ids,
         "rightsStatus": "not-reviewed",
         "license": None,
-        "distributions": [inventory_distribution],
+        "distributions": [inventory_distribution, review_distribution],
     }]
 
     manifest = {

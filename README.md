@@ -13,6 +13,7 @@ The authoritative broad inventory is [`public/release-manifest.json`](public/rel
 - [Canonical district directory](https://projectfiner.com/districts/)
 - [Data dictionary](DATA_DICTIONARY.md)
 - [North-East raw-field inventory](public/data-contracts/north-east-indicator-inventory.json)
+- [North-East field review CSV](public/data-contracts/north-east-field-review.csv)
 - [Data rights and reuse](https://projectfiner.com/data-rights/)
 - [Correction policy](CORRECTIONS.md)
 - [Changelog](CHANGELOG.md)
