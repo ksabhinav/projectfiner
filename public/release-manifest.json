@@ -182,7 +182,7 @@
     {
       "distributions": [
         {
-          "bytes": 3082538,
+          "bytes": 7395581,
           "encoding": "utf-8",
           "format": "JSON",
           "license": null,
@@ -191,8 +191,8 @@
           "qualityTier": "raw-experimental",
           "rightsStatus": "not-reviewed",
           "role": "standardization-readiness-inventory",
-          "schemaVersion": "north-east-field-inventory-v1",
-          "sha256": "3c5f66579f1145b6e9e759d2f853d7a22266596fa63b21a0b979b0c5b87f53c0",
+          "schemaVersion": "north-east-field-inventory-v2",
+          "sha256": "189b6f2e9ee5c3b5985a9f850103709e100809d8061afc90094bcb7e7ae17319",
           "sourceIds": [
             "slbc-arunachal-pradesh",
             "slbc-assam",
@@ -204,6 +204,33 @@
             "slbc-tripura"
           ],
           "url": "/data-contracts/north-east-indicator-inventory.json"
+        },
+        {
+          "bytes": 1731563,
+          "columnCount": 28,
+          "encoding": "utf-8",
+          "format": "CSV",
+          "irregularRowCount": 0,
+          "license": null,
+          "mediaType": "text/csv",
+          "path": "data-contracts/north-east-field-review.csv",
+          "qualityTier": "raw-experimental",
+          "rightsStatus": "not-reviewed",
+          "role": "field-value-review",
+          "rowCount": 4868,
+          "schemaVersion": "north-east-field-review-v1",
+          "sha256": "10c007a48ec406d90206f0b5bd5c99fc5c81198dd3274abc7f764cfa615216e2",
+          "sourceIds": [
+            "slbc-arunachal-pradesh",
+            "slbc-assam",
+            "slbc-manipur",
+            "slbc-meghalaya",
+            "slbc-mizoram",
+            "slbc-nagaland",
+            "slbc-sikkim",
+            "slbc-tripura"
+          ],
+          "url": "/data-contracts/north-east-field-review.csv"
         }
       ],
       "id": "north-east-indicator-inventory",
@@ -226,7 +253,7 @@
   "generatedBy": "db/build_release_manifest.py",
   "projectDataLicense": null,
   "qualityTier": "raw-experimental",
-  "releaseId": "finer-5315b293f39b",
+  "releaseId": "finer-371c524e72ca",
   "releaseStatus": "research-preview",
   "rightsNotice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
   "rightsReviewStatus": "not-legally-reviewed",
@@ -2567,7 +2594,7 @@
   "summary": {
     "capitalMarketRegistryCount": 4,
     "dataContractCount": 1,
-    "distributionCount": 70,
+    "distributionCount": 71,
     "stateCount": 31
   }
 }

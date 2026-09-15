@@ -4,6 +4,8 @@ Material trust-layer, public-contract and data corrections are recorded here. Th
 
 ## Unreleased
 
+- Added numeric-coverage and missing-value diagnostics for all eight North-East states, with a filterable 4,868-row field-review CSV, pinned source hashes and cell locators. The inventory distinguishes 268 Assam split-number cells, 69 percent-suffixed values, 39 unresolved missing markers and four Meghalaya spreadsheet errors without changing source values or clearing quarantines. Units and cross-state comparability remain unreviewed.
+
 - Replaced 18 public `#DIV/0!` spreadsheet-error tokens with blank missing cells, recorded each correction, and added a regression guard against reintroducing formula errors into public data files.
 
 - Replaced the PhonePe Pulse history with the upstream-restated January–March 2018 to April–June 2026 series, pinned its source revision and methodology break, and added district registered-merchant coverage.

@@ -57,6 +57,7 @@ jobs:
         # invalid JSON, unsafe paths, BOMs, or integrity drift block release.
         run: |
           npm run check:meghalaya-contract
+          npm run check:north-east-inventory
           npm run check:release-manifest
           npm run check:release-data
           npm run check:versioned-release
