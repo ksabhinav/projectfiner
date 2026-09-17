@@ -14,8 +14,9 @@ const descriptor = JSON.parse(readFileSync(
   new URL(`../../../public${entry.descriptor}`, import.meta.url), 'utf8',
 ));
 const base = import.meta.env.BASE_URL;
+const version = descriptor.releaseId.match(/-v(\d+)$/)?.[1];
 const label = descriptor.productId === 'meghalaya-standardized-preview'
-  ? 'Meghalaya standardized preview v1'
+  ? `Meghalaya standardized preview${version ? ` v${version}` : ''}`
   : descriptor.releaseId;
 const blockerLabel = (code: string) => code.replaceAll('_', ' ');
 ---
