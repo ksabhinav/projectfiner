@@ -228,10 +228,24 @@ a:hover { color: var(--vermillion-d); }
 .finer-header .nav-menu a:hover { background: var(--paper-deep); }
 .finer-header .nav-menu small { color: var(--vermillion-d); font-size: 7px; }
 
+.finer-header .nav-menu a.nav-menu-compact { display: none; }
+
+/* Pills that don't fit move into the More menu (the logo, Map, Districts and
+   More must fit in 320px). Methodology folds at 760px, Downloads at 480px. */
 @media (max-width: 760px) {
-  .finer-header { padding: 0 16px; }
+  .finer-header { padding: 0 16px; gap: 12px; }
   .finer-header .nav-cap { padding: 8px 10px; font-size: 9px; }
   .finer-header .nav > .nav-cap:nth-child(4) { display: none; }
+  .finer-header .nav-menu a.nav-menu-compact[href$="methodology/"] { display: flex; }
+  .finer-header .nav-cap.active-compact-760 { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+}
+@media (max-width: 480px) {
+  .finer-header { padding: 0 12px; }
+  .finer-header .brand { gap: 8px; }
+  .finer-header .brand-text { font-size: 17px; }
+  .finer-header .nav > .nav-cap:nth-child(3) { display: none; }
+  .finer-header .nav-menu a.nav-menu-compact { display: flex; }
+  .finer-header .nav-cap.active-compact-480 { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 }
 
 /* When focus mode is active, header + strip + timeline stay above the overlay
