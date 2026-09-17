@@ -24,7 +24,7 @@ const extraJsonLdArray = Array.isArray(extraJsonLd) ? extraJsonLd : (extraJsonLd
 const SITE_FOR_OG = 'https://projectfiner.com';
 const resolvedOgImage = ogImage
   ? (ogImage.startsWith('http') ? ogImage : SITE_FOR_OG + (ogImage.startsWith('/') ? ogImage : '/' + ogImage))
-  : `${SITE_FOR_OG}/og-image.png?v=2`;
+  : `${SITE_FOR_OG}/og-image.png?v=3`;
 const base = import.meta.env.BASE_URL;
 const SITE = 'https://projectfiner.com';
 const pagePath = path ?? Astro.url.pathname;

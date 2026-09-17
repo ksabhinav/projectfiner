@@ -1,0 +1,66 @@
+<!doctype html>
+<!--
+  FINER site-wide Open Graph card (1200×630). Rendered to public/og-image.png by
+  scripts/build_og_image.py, which fills {{MAP}} and {{CAPTION}} from real data.
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=IBM+Plex+Mono:wght@400;500&display=block" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F4EFE6; --ink: #1B140E; --mist: #6E665E; --rule: #D9D2C5;
+    --verm: #B84A2E; --saffron: #D4A24A;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; background: var(--paper); }
+  .card { position: relative; width: 1200px; height: 630px; }
+
+  .brand { position: absolute; left: 88px; top: 76px; display: flex; align-items: center; gap: 14px; }
+  .brand svg { width: 20px; height: 27px; }
+  .brand span { font: 400 28px/1 'Fraunces', serif; font-variation-settings: 'opsz' 60; letter-spacing: -0.01em; color: var(--ink); }
+  .brand i { font-style: normal; color: var(--verm); }
+
+  h1 {
+    position: absolute; left: 84px; top: 214px; width: 560px;
+    font: 340 68px/1.02 'Fraunces', serif; font-variation-settings: 'opsz' 144;
+    letter-spacing: -0.028em; color: var(--ink);
+  }
+  h1 em { font-style: italic; font-weight: 300; color: var(--verm); }
+
+  .foot { position: absolute; left: 88px; right: 88px; bottom: 70px; display: flex; justify-content: space-between; align-items: baseline; }
+  .mono { font: 400 12.5px/1 'IBM Plex Mono', monospace; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mist); }
+  .url { font: 400 15px/1 'IBM Plex Mono', monospace; letter-spacing: 0.04em; color: var(--ink); }
+
+  .rule { position: absolute; left: 88px; top: 506px; width: 64px; height: 2px; background: linear-gradient(90deg, var(--verm), var(--saffron)); }
+
+  .map { position: absolute; right: 70px; top: 44px; width: 480px; height: 480px; }
+  .map svg { width: 100%; height: 100%; overflow: visible; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="brand">
+    <svg viewBox="0 0 18 24" aria-hidden="true">
+      <rect x="0" y="2"  width="7"  height="3" fill="#B84A2E"/>
+      <rect x="0" y="7"  width="11" height="3" fill="#1B140E"/>
+      <rect x="0" y="12" width="18" height="3" fill="#1B140E"/>
+      <rect x="0" y="17" width="9"  height="3" fill="#D4A24A"/>
+    </svg>
+    <span>FINER<i>.</i></span>
+  </div>
+
+  <h1>Financial inclusion in India, <em>district by district.</em></h1>
+
+  <div class="rule"></div>
+
+  <div class="map">{{MAP}}</div>
+
+  <div class="foot">
+    <span class="url">projectfiner.com</span>
+    <span class="mono">{{CAPTION}}</span>
+  </div>
+</div>
+</body>
+</html>
