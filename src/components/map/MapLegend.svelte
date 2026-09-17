@@ -23,7 +23,8 @@
   let exportRows: Array<Record<string, unknown>> = $state([]);
   let showProxies = $state(false);
   let boundaryVintage = $state('undocumented');
-  let detailsExpanded = $state(false);
+  let legendDialog: HTMLDialogElement;
+  let isMobile = $state(false);
 
   function syncFromGlobal() {
     const s = getFinerState();
@@ -70,6 +71,13 @@
 
   onMount(() => {
     syncFromGlobal();
+    const mobileQuery = window.matchMedia('(max-width: 640px)');
+    const syncViewport = () => {
+      isMobile = mobileQuery.matches;
+      if (!isMobile) legendDialog?.close();
+    };
+    syncViewport();
+    mobileQuery.addEventListener('change', syncViewport);
 
     // The choropleth pipeline fires camelCase events (finer:indicatorChange,
     // finer:quarterChange, finer:stateFilterChange) — listen directly so the
@@ -102,7 +110,10 @@
       },
     ];
 
-    return () => unsubs.forEach(fn => fn());
+    return () => {
+      mobileQuery.removeEventListener('change', syncViewport);
+      unsubs.forEach(fn => fn());
+    };
   });
 
   function toggleProxies(event: Event) {
@@ -126,77 +137,145 @@
   }
 </script>
 
-{#if legendRamp.length > 0}
-  <div class="legend-wrap">
-    <div class="legend-box" class:expanded={detailsExpanded}>
-      <button
-        class="legend-toggle"
-        type="button"
-        aria-expanded={detailsExpanded}
-        aria-controls="map-legend-details"
-        onclick={() => detailsExpanded = !detailsExpanded}
-      >
-        {detailsExpanded ? 'Hide details' : 'Legend & data details'}
-        <span aria-hidden="true">{detailsExpanded ? '−' : '+'}</span>
-      </button>
-      <div class="legend-title">
-        <span class="legend-units">{legendUnit ? legendUnit : (legendTitle || 'Value')}</span>
-        <span class="legend-scope">{scopeLabel}</span>
-      </div>
-      <div class="legend-bar" style="background: {rampGradient};"></div>
-      <div class="choro-labels">
-        {#each legendBreaks as brk}
-          <span>{formatLabel(brk, legendUnit)}</span>
-        {/each}
-      </div>
-      <div id="map-legend-details" class="legend-details">
-        <div class="status-summary" aria-label="Data status for the displayed map">
-          <div class="status-heading">Displayed observations</div>
-          <div class="status-counts">
-            <span><i class="status-mark current"></i>{status.current} selected period</span>
-            <span><i class="status-mark stale"></i>{status.stale} different period</span>
-            <span><i class="status-mark suspect"></i>{status.suspect} suspect</span>
-            <span><i class="status-mark missing"></i>{status.missing} no data</span>
-          </div>
-          {#if status.periods.length > 1}
-            <div class="period-composition">
-              {#each status.periods as item}
-                <span>{item.period}: {item.count}</span>
-              {/each}
-            </div>
-          {/if}
-          {#if status.unclassified > 0}
-            <div class="quality-note">Quality status is not classified for {status.unclassified} displayed observations.</div>
-          {/if}
-          <div class="boundary-note">Boundary vintage: {boundaryVintage}.</div>
-          {#if status.proxyAvailable > 0}
-            <label class="proxy-toggle">
-              <input type="checkbox" checked={showProxies} onchange={toggleProxies} />
-              Show {status.proxyAvailable} inherited parent {status.proxyAvailable === 1 ? 'proxy' : 'proxies'}
-            </label>
-          {/if}
-          <button class="export-button" type="button" onclick={exportView} disabled={!exportRows.length}>
-            Export displayed data + status
-          </button>
-        </div>
-        <div class="legend-source" title={citation.attribution || citation.label}>
-          <span class="legend-source-prefix">Source:</span>
-          {#if citation.url}
-            <a href={citation.url} target="_blank" rel="noopener noreferrer" class="legend-source-link">{citation.label}</a>
-          {:else}
-            <span class="legend-source-label">{citation.label}</span>
-          {/if}
-        </div>
-        {#if citation.attribution}
-          <div class="legend-attribution">{citation.attribution}</div>
-        {/if}
-      </div>
-    </div>
+{#snippet legendContent()}
+  <div class="legend-title">
+    <span class="legend-units">{legendUnit ? legendUnit : (legendTitle || 'Value')}</span>
+    <span class="legend-scope">{scopeLabel}</span>
   </div>
+  <div class="legend-bar" style="background: {rampGradient};"></div>
+  <div class="choro-labels">
+    {#each legendBreaks as brk}
+      <span>{formatLabel(brk, legendUnit)}</span>
+    {/each}
+  </div>
+  <div class="legend-details">
+    <div class="status-summary" aria-label="Data status for the displayed map">
+      <div class="status-heading">Displayed observations</div>
+      <div class="status-counts">
+        <span><i class="status-mark current"></i>{status.current} selected period</span>
+        <span><i class="status-mark stale"></i>{status.stale} different period</span>
+        <span><i class="status-mark suspect"></i>{status.suspect} suspect</span>
+        <span><i class="status-mark missing"></i>{status.missing} no data</span>
+      </div>
+      {#if status.periods.length > 1}
+        <div class="period-composition">
+          {#each status.periods as item}
+            <span>{item.period}: {item.count}</span>
+          {/each}
+        </div>
+      {/if}
+      {#if status.unclassified > 0}
+        <div class="quality-note">Quality status is not classified for {status.unclassified} displayed observations.</div>
+      {/if}
+      <div class="boundary-note">Boundary vintage: {boundaryVintage}.</div>
+      {#if status.proxyAvailable > 0}
+        <label class="proxy-toggle">
+          <input type="checkbox" checked={showProxies} onchange={toggleProxies} />
+          Show {status.proxyAvailable} inherited parent {status.proxyAvailable === 1 ? 'proxy' : 'proxies'}
+        </label>
+      {/if}
+      <button class="export-button" type="button" onclick={exportView} disabled={!exportRows.length}>
+        Export displayed data + status
+      </button>
+    </div>
+    <div class="legend-source" title={citation.attribution || citation.label}>
+      <span class="legend-source-prefix">Source:</span>
+      {#if citation.url}
+        <a href={citation.url} target="_blank" rel="noopener noreferrer" class="legend-source-link">{citation.label}</a>
+      {:else}
+        <span class="legend-source-label">{citation.label}</span>
+      {/if}
+    </div>
+    {#if citation.attribution}
+      <div class="legend-attribution">{citation.attribution}</div>
+    {/if}
+  </div>
+{/snippet}
+
+{#if legendRamp.length > 0}
+  {#if isMobile}
+    <button class="legend-trigger" type="button" aria-haspopup="dialog" aria-controls="map-legend-panel" onclick={() => legendDialog.showModal()}>
+      Legend
+    </button>
+    <dialog bind:this={legendDialog} id="map-legend-panel" class="legend-panel" aria-labelledby="map-legend-heading">
+      <div class="panel-header">
+        <h2 id="map-legend-heading">Map legend</h2>
+        <button class="panel-close" type="button" aria-label="Close map legend" onclick={() => legendDialog.close()}>Close</button>
+      </div>
+      <div class="panel-content">{@render legendContent()}</div>
+    </dialog>
+  {:else}
+    <div class="legend-wrap">
+      <div class="legend-box">{@render legendContent()}</div>
+    </div>
+  {/if}
 {/if}
 
 <style>
-  .legend-toggle { display: none; }
+  .legend-trigger {
+    position: fixed;
+    left: 12px;
+    bottom: 80px;
+    z-index: 900;
+    min-height: 44px;
+    padding: 9px 13px;
+    border: 1px solid var(--rule, #D9D2C5);
+    border-radius: 4px;
+    background: var(--paper, #F4EFE6);
+    color: var(--ink, #1B140E);
+    font: 600 11px/1 var(--font-ui, 'Inter', sans-serif);
+    cursor: pointer;
+  }
+  .legend-panel {
+    position: fixed;
+    inset: 0 0 0 auto;
+    box-sizing: border-box;
+    margin: 0;
+    width: min(340px, calc(100vw - 32px));
+    max-width: none;
+    height: 100%;
+    height: 100dvh;
+    max-height: none;
+    padding: 0;
+    border: 0;
+    border-left: 1px solid var(--rule, #D9D2C5);
+    background: var(--paper, #F4EFE6);
+    color: var(--ink, #1B140E);
+    box-shadow: -8px 0 30px rgba(27,20,14,.18);
+  }
+  .legend-panel[open] { display: flex; flex-direction: column; }
+  .legend-panel::backdrop { background: rgba(27,20,14,.3); }
+  .panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: max(12px, env(safe-area-inset-top)) 16px 12px;
+    border-bottom: 1px solid var(--rule, #D9D2C5);
+    flex-shrink: 0;
+  }
+  .panel-header h2 { margin: 0; font: 600 16px/1.3 var(--font-ui, 'Inter', sans-serif); }
+  .panel-close {
+    min-height: 44px;
+    padding: 8px 12px;
+    border: 1px solid var(--rule, #D9D2C5);
+    border-radius: 4px;
+    background: transparent;
+    color: inherit;
+    font: 600 12px/1 var(--font-ui, 'Inter', sans-serif);
+    cursor: pointer;
+  }
+  .legend-trigger:focus-visible, .panel-close:focus-visible {
+    outline: 2px solid var(--vermillion, #B84A2E);
+    outline-offset: 2px;
+  }
+  .panel-content {
+    padding: 20px 16px max(20px, env(safe-area-inset-bottom));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    overflow-wrap: anywhere;
+    min-height: 0;
+  }
   .legend-wrap {
     position: fixed;
     bottom: 16px;
@@ -358,51 +437,12 @@
 
   /* ── Mobile ── */
   @media (max-width: 640px) {
-    .legend-wrap {
-      left: 8px;
-      bottom: 66px;
-      right: 104px;
-    }
-
-    .legend-box {
-      box-sizing: border-box;
-      padding: 0 10px 8px;
-      border-radius: 8px;
-      width: 100%;
-      max-width: none;
-    }
-
-    .legend-toggle {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      width: 100%;
-      min-height: 44px;
-      border: 0;
-      padding: 4px 0;
-      background: transparent;
-      color: var(--ink-soft, #3D332A);
-      font: 600 11px/1.3 var(--font-ui, 'Inter', sans-serif);
-      text-align: left;
-      cursor: pointer;
-    }
-    .legend-toggle:focus-visible {
-      outline: 2px solid var(--vermillion, #B84A2E);
-      outline-offset: 2px;
-    }
-    .legend-details { display: none; }
-    .expanded .legend-details {
-      display: block;
-      max-height: max(60px, calc(100dvh - 300px));
-      overflow-y: auto;
-      overscroll-behavior: contain;
-      overflow-wrap: anywhere;
-    }
+    /* Prevent a desktop legend flash before hydration detects the viewport. */
+    .legend-wrap { display: none; }
 
     .legend-title {
-      font-size: 9px;
-      margin-bottom: 4px;
+      font-size: 11px;
+      margin-bottom: 8px;
       gap: 6px;
     }
 
