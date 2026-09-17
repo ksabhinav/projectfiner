@@ -128,8 +128,8 @@ const base = import.meta.env.BASE_URL;
       var headerH = headerEl ? headerEl.offsetHeight : 52;
       var stripH = strip ? strip.offsetHeight : 56;
       if (isMobile) {
-        // Leave room for the compact legend and the docked timeline.
-        return { paddingTopLeft: [10, headerH + stripH + 12], paddingBottomRight: [10, 180] };
+        // Leave room for the small Legend / View data buttons and timeline.
+        return { paddingTopLeft: [10, headerH + stripH + 12], paddingBottomRight: [10, 136] };
       }
       // Desktop: J&K / Ladakh's northern fingers were grazing the strip's
       // bottom edge on the default All-India view. Bigger top buffer so
