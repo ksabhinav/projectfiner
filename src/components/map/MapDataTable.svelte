@@ -162,7 +162,8 @@
   th button { border:0;background:none;padding:0;color:var(--vermillion,#8E331E);font:inherit;text-align:left;text-decoration:underline;text-underline-offset:3px;cursor:pointer }
   td:nth-child(3),td:nth-child(4) { font-family:var(--font-mono,'IBM Plex Mono',monospace);font-size:11px;white-space:nowrap }
   @media (max-width:640px) {
-    .table-trigger { right:12px;bottom:88px }
+    /* Top-right under the indicator strip: the bottom edge belongs to the legend + timeline. */
+    .table-trigger { right:12px;bottom:auto;top:calc(var(--header-h, 52px) + 60px);padding:8px 10px;font-size:9px }
     .table-dialog { inset:2vh 10px;padding:16px }
     th,td { padding:8px }
   }

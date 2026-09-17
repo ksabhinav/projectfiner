@@ -358,10 +358,13 @@
 
   /* ── Mobile ── */
   @media (max-width: 640px) {
+    /* Full width, stacked directly above the timeline pill (bottom 16px,
+       ~34px tall). The table button lives top-right on phones, so nothing
+       else shares this row. */
     .legend-wrap {
-      left: 8px;
-      bottom: 66px;
-      right: 104px;
+      left: 12px;
+      right: 12px;
+      bottom: 62px;
     }
 
     .legend-box {

@@ -42,8 +42,10 @@ const base = import.meta.env.BASE_URL;
     <a href={`${base}downloads/`} class={`nav-cap ${activeNav === 'downloads' ? 'active' : ''}`}>Downloads</a>
     <a href={`${base}methodology/`} class={`nav-cap ${activeNav === 'methodology' ? 'active' : ''}`}>Methodology</a>
     <details class="nav-more">
-      <summary class={`nav-cap ${['analysis', 'ask', 'about'].includes(activeNav) ? 'active' : ''}`}>More</summary>
+      <summary class={`nav-cap ${['analysis', 'ask', 'about'].includes(activeNav) ? 'active' : ''} ${activeNav === 'methodology' ? 'active-compact-760' : ''} ${['downloads', 'methodology'].includes(activeNav) ? 'active-compact-480' : ''}`}>More</summary>
       <div class="nav-menu">
+        <a href={`${base}downloads/`} class="nav-menu-compact">Downloads</a>
+        <a href={`${base}methodology/`} class="nav-menu-compact">Methodology</a>
         <a href={`${base}analysis/`}>Analysis <small>Experimental</small></a>
         <a href={`${base}ask/`}>Ask <small>Experimental</small></a>
         <a href={`${base}about/`}>About</a>
