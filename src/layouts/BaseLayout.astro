@@ -2,6 +2,8 @@
 interface Props {
   title: string;
   description?: string;
+  /** Short og:/twitter: description for link previews. Defaults to `description`. */
+  shareDescription?: string;
   /** Page-relative path, e.g. "/about/". Used for canonical URL + og:url.
       Defaults to the current page's pathname when omitted. */
   path?: string;
@@ -18,7 +20,9 @@ interface Props {
 }
 
 const defaultDescription = 'Project FINER is a public research preview of district-level financial-inclusion data assembled from SLBC and other source datasets. Coverage, periods and comparability vary by indicator and state.';
-const { title, description = defaultDescription, path, extraJsonLd, ogImage, noindex = false } = Astro.props;
+const { title, description = defaultDescription, shareDescription, path, extraJsonLd, ogImage, noindex = false } = Astro.props;
+// Link previews (WhatsApp shows ~2 lines) get a short line; search keeps `description`.
+const resolvedShareDescription = shareDescription ?? description;
 const extraJsonLdArray = Array.isArray(extraJsonLd) ? extraJsonLd : (extraJsonLd ? [extraJsonLd] : []);
 
 const SITE_FOR_OG = 'https://projectfiner.com';
@@ -77,7 +81,7 @@ const webSiteLd = {
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonicalUrl} />
   <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
+  <meta property="og:description" content={resolvedShareDescription} />
   <meta property="og:image" content={resolvedOgImage} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -87,7 +91,7 @@ const webSiteLd = {
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={description} />
+  <meta name="twitter:description" content={resolvedShareDescription} />
   <meta name="twitter:image" content={resolvedOgImage} />
 
   <!-- JSON-LD structured data — Organization + WebSite -->
