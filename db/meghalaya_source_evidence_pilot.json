@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "source-evidence-pilot-v1",
+  "productId": "meghalaya-standardized-preview",
+  "releaseId": "meghalaya-standardized-preview-v2",
+  "sourceId": "slbc-meghalaya",
+  "sourceIndexUrl": "https://onlineslbcne.nic.in/ME",
+  "pilot": {
+    "period": "2025-12-31",
+    "quarterLabel": "December",
+    "financialYearLabel": "FY2025-2026",
+    "observationCount": 156,
+    "sourceTables": [
+      "aadhaar_authentication",
+      "branch_network",
+      "credit_deposit_ratio",
+      "pmjdy"
+    ],
+    "expectedEvidenceUnitIds": [
+      "meghalaya-2025-12-31-aadhaar-authentication",
+      "meghalaya-2025-12-31-branch-network",
+      "meghalaya-2025-12-31-credit-deposit-ratio",
+      "meghalaya-2025-12-31-pmjdy"
+    ],
+    "expectedEvidenceStatus": "pending"
+  },
+  "reportFamilies": [
+    {
+      "sourceTable": "credit_deposit_ratio",
+      "indicatorIds": [
+        "credit_deposit_ratio",
+        "total_advances_lakh",
+        "total_deposits_lakh"
+      ],
+      "portalLabel": "District wise Business and Credit Deposit Ratio",
+      "formUrl": "https://onlineslbcne.nic.in/CDRationdistrictwise.php",
+      "locatorRequirement": "Retain the returned table response, then record district rows and the Overall CD Ratio, Total Advances, and Total Deposit columns."
+    },
+    {
+      "sourceTable": "branch_network",
+      "indicatorIds": [
+        "atm_count",
+        "csp_count"
+      ],
+      "portalLabel": "District wise Branches / ATM / Banking Outlets / BC / DEPOSITS / ADVANCES / C.D.RATIO",
+      "formUrl": "https://onlineslbcne.nic.in/districtwiseCdrdata.php",
+      "locatorRequirement": "Retain the returned table response, then record district rows and the Total ATM and Total CSP columns."
+    },
+    {
+      "sourceTable": "pmjdy",
+      "indicatorIds": [
+        "pmjdy_rural_accounts",
+        "pmjdy_urban_accounts",
+        "pmjdy_male_accounts",
+        "pmjdy_female_accounts",
+        "pmjdy_deposits_lakh"
+      ],
+      "portalLabel": "District wise PMJDY",
+      "formUrl": "https://onlineslbcne.nic.in/districtwisePMJDY.php",
+      "locatorRequirement": "Retain the returned table response, then record district rows and the five registered PMJDY columns."
+    },
+    {
+      "sourceTable": "aadhaar_authentication",
+      "indicatorIds": [
+        "aadhaar_seeded_casa",
+        "aadhaar_authenticated_casa",
+        "operative_casa"
+      ],
+      "portalLabel": "District wise AADHAAR authentication",
+      "formUrl": "https://onlineslbcne.nic.in/districtwiseAadhaar.php",
+      "locatorRequirement": "Retain the returned table response, then record district rows and the three registered CASA columns."
+    }
+  ],
+  "capture": {
+    "status": "blocked",
+    "attemptedAt": "2026-09-19",
+    "observedFailureUrl": "https://onlineslbcne.nic.in/error.php",
+    "notes": "The public Meghalaya report forms load and expose the December/FY2025-2026 selectors. Submitting the PMJDY pilot selection redirected to the portal error page or timed out before a report response could be retained. No evidence unit is marked captured or verified."
+  }
+}
