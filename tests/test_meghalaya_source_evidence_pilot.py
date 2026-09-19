@@ -31,7 +31,7 @@ class MeghalayaSourceEvidencePilotTests(unittest.TestCase):
         self.assertEqual(
             set(scope["expectedEvidenceUnitIds"]),
             {
-                f"meghalaya-{table.replace('_', '-')}-{scope['period']}"
+                f"meghalaya-{scope['period']}-{table.replace('_', '-')}"
                 for table in scope["sourceTables"]
             },
         )
