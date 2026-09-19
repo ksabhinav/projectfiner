@@ -16,6 +16,7 @@ SLBC_DIR = os.path.join(PROJECT, 'public', 'slbc-data')
 sys.path.insert(0, os.path.dirname(__file__))
 from match_districts import DistrictMatcher
 from import_safety import ImportAudit, upsert_slbc_data
+from numeric_values import parse_number
 
 MONTHS = {'january': '01', 'february': '02', 'march': '03', 'april': '04',
           'may': '05', 'june': '06', 'july': '07', 'august': '08',
@@ -48,20 +49,10 @@ def normalize_period(label):
 
 
 def parse_numeric(val):
-    """Try to parse a string value as a float. Returns (text, numeric_or_None)."""
+    """Retain source text and parse only a whole finite number with no unit inference."""
     if val is None:
         return (None, None)
-    text = str(val).strip()
-    if not text or text in ('0', '0.0', '0.00', '-', 'NA', 'N/A', 'nil', 'Nil', 'NIL'):
-        if text in ('0', '0.0', '0.00'):
-            return (text, 0.0)
-        return (text, None)
-    # Strip commas, percentage signs, currency symbols
-    cleaned = text.replace(',', '').replace('%', '').replace('₹', '').strip()
-    try:
-        return (text, float(cleaned))
-    except (ValueError, TypeError):
-        return (text, None)
+    return (str(val).strip(), parse_number(val))
 
 
 def get_or_create_field(db, field_key, field_cache):

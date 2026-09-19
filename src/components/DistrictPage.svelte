@@ -5,6 +5,7 @@
    * that summarises "how stale is this district's data right now", and
    * a Sources & methods block that lists where every number came from.
    */
+  import { parseNumeric } from '../lib/numeric-value.mjs';
   import { getSourceCitation, type SourceCitation } from '../lib/indicator-sources';
 
   interface SeriesPoint { quarter: string; value: number | string; field?: string }
@@ -116,7 +117,7 @@
 
   function fmtValue(v: number | string, unit: string): string {
     if (v == null || v === '') return '—';
-    const n = typeof v === 'number' ? v : parseFloat(String(v));
+    const n = parseNumeric(v);
     if (Number.isNaN(n)) return String(v);
     if (unit === '%') return `${n.toFixed(2)}%`;
     if (unit === '₹') {
@@ -142,7 +143,7 @@
   function sparklinePath(series: SeriesPoint[], w = 120, h = 28, pad = 2): string | null {
     const pts: { x: number; y: number; v: number }[] = [];
     const nums = series
-      .map((s) => ({ q: s.quarter, n: typeof s.value === 'number' ? s.value : parseFloat(String(s.value)) }))
+      .map((s) => ({ q: s.quarter, n: parseNumeric(s.value) }))
       .filter((s) => !Number.isNaN(s.n));
     if (nums.length < 2) return null;
     const vals = nums.map((s) => s.n);

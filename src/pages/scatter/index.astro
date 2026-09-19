@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
+import { numericParserScript } from '../../lib/numeric-value.mjs';
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -164,6 +165,7 @@ const base = import.meta.env.BASE_URL;
 
 <script src="/vendor/plotly.min.js" is:inline></script>
 
+<script is:inline set:html={numericParserScript}></script>
 <script is:inline define:vars={{ base }}>
   // ─── Data definitions ─────────────────────────────────────────
   // Curated indicator + metric labels with friendly names. Mirrors the
@@ -453,7 +455,7 @@ const base = import.meta.env.BASE_URL;
     const yLookup = new Map();
     for (const r of yData.districts) {
       const key = norm(r.district) + '|' + norm(r.state);
-      const v = parseFloat(r[yMet]);
+      const v = parseNumeric(r[yMet]);
       if (!isNaN(v)) yLookup.set(key, { v, district: r.district, state: r.state });
     }
 
@@ -463,7 +465,7 @@ const base = import.meta.env.BASE_URL;
     const points = [];
     for (const r of xData.districts) {
       const key = norm(r.district) + '|' + norm(r.state);
-      const xVal = parseFloat(r[xMet]);
+      const xVal = parseNumeric(r[xMet]);
       if (isNaN(xVal)) continue;
       if (stateFilterNorm && norm(r.state) !== stateFilterNorm) continue;
       const yEntry = yLookup.get(key);

@@ -4,6 +4,10 @@ Material trust-layer, public-contract and data corrections are recorded here. Th
 
 ## Unreleased
 
+- Enforced whole-cell numeric parsing in maps, charts, rankings, district sparklines and the unified SLBC importer. Split values, malformed grouping, spreadsheet errors and unreviewed unit suffixes no longer become guessed numbers; reported zero is retained. Published 380 North-East cell dispositions, including an expanded 268-cell Assam quarantine and four Meghalaya formula-error exclusions, with source hashes and cell locators. Raw artifacts and immutable Meghalaya releases are preserved.
+
+- Added numeric-coverage and missing-value diagnostics for all eight North-East states, with a filterable 4,868-row field-review CSV, pinned source hashes and cell locators. The inventory distinguishes 268 Assam split-number cells, 69 percent-suffixed values, 39 unresolved missing markers and four Meghalaya spreadsheet errors without changing source values or clearing quarantines. Units and cross-state comparability remain unreviewed.
+
 - Replaced 18 public `#DIV/0!` spreadsheet-error tokens with blank missing cells, recorded each correction, and added a regression guard against reintroducing formula errors into public data files.
 
 - Replaced the PhonePe Pulse history with the upstream-restated January–March 2018 to April–June 2026 series, pinned its source revision and methodology break, and added district registered-merchant coverage.

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { parseNumeric } from '../../lib/numeric-value.mjs';
   import { CATEGORY_INFO, prettyCategoryName } from '../../lib/slbc-categories';
 
   const base = import.meta.env.BASE_URL;
@@ -159,8 +160,8 @@
       const distData = tbl.districts || tbl.data || {};
 
       for (const [dist, vals] of Object.entries(distData)) {
-        const xVal = parseFloat(String((vals as any)[selectedFieldX] || '').replace(/,/g, ''));
-        const yVal = parseFloat(String((vals as any)[selectedFieldY] || '').replace(/,/g, ''));
+        const xVal = parseNumeric((vals as any)[selectedFieldX]);
+        const yVal = parseNumeric((vals as any)[selectedFieldY]);
         if (!isNaN(xVal) && !isNaN(yVal)) {
           x.push(xVal);
           y.push(yVal);
@@ -181,8 +182,8 @@
     if (xi < 0 || yi < 0) return { x, y, labels, districts };
 
     for (const row of customData.rows) {
-      const xVal = parseFloat(String(row[xi] || '').replace(/,/g, ''));
-      const yVal = parseFloat(String(row[yi] || '').replace(/,/g, ''));
+      const xVal = parseNumeric(row[xi]);
+      const yVal = parseNumeric(row[yi]);
       if (!isNaN(xVal) && !isNaN(yVal)) {
         x.push(xVal);
         y.push(yVal);

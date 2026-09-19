@@ -82,7 +82,7 @@ class ReleaseManifestTests(unittest.TestCase):
             item for item in meghalaya["distributions"]
             if item.get("role") == "indicator-registry"
         )
-        self.assertEqual(self.manifest["summary"]["distributionCount"], 70)
+        self.assertEqual(self.manifest["summary"]["distributionCount"], 72)
         self.assertEqual(self.manifest["summary"]["dataContractCount"], 1)
         inventory = self.manifest["dataContracts"][0]
         self.assertEqual(inventory["id"], "north-east-indicator-inventory")
@@ -93,8 +93,15 @@ class ReleaseManifestTests(unittest.TestCase):
         )
         self.assertEqual(
             inventory_distribution["schemaVersion"],
-            "north-east-field-inventory-v1",
+            "north-east-field-inventory-v2",
         )
+        review_distribution = inventory["distributions"][1]
+        self.assertEqual(review_distribution["role"], "field-value-review")
+        self.assertEqual(review_distribution["schemaVersion"], "north-east-field-review-v1")
+        self.assertEqual(review_distribution["rowCount"], 4868)
+        disposition_distribution = inventory["distributions"][2]
+        self.assertEqual(disposition_distribution["role"], "cell-value-dispositions")
+        self.assertEqual(disposition_distribution["recordCount"], 380)
         self.assertEqual(preview["rowCount"], 3494)
         self.assertEqual(preview["indicatorCount"], 13)
         self.assertEqual(preview["qualityTier"], "standardized-preview")

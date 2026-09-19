@@ -1,22 +1,33 @@
 import json
-import re
+import unittest
+from collections import Counter
 from pathlib import Path
 
-REGISTRY = Path(__file__).parents[1] / "db" / "assam_split_number_quarantine.json"
-SPLIT_NUMBER = re.compile(r"^\s*\d+(?:\.\d+)?\s+\d+(?:\.\d+)?\s*$")
+ROOT = Path(__file__).parents[1]
 
 
-def test_assam_split_number_registry_is_explicit_and_complete():
-    data = json.loads(REGISTRY.read_text(encoding="utf-8"))
-    records = data["records"]
-    assert data["schema_version"] == "assam-split-number-quarantine-v1"
-    assert data["disposition"] == "excluded_from_clean_analytical_views"
-    assert len(records) == 36
-    assert {record["field"] for record in records} == {
-        "pmegp__pmegp_npa_pct",
-        "pmmy_mudra_os_npa__mudra_npa_pct",
-    }
-    assert all(record["quality_status"] == "quarantined" for record in records)
-    assert all(record["quality_flag"] == "split_numeric_tokens" for record in records)
-    assert all(SPLIT_NUMBER.fullmatch(record["raw_value"]) for record in records)
-    assert len({(r["period"], r["district"], r["field"]) for r in records}) == len(records)
+class AssamQuarantineTests(unittest.TestCase):
+    def test_all_affected_fields_and_original_cells_are_preserved(self):
+        data = json.loads((ROOT / "db/assam_split_number_quarantine.json").read_text())
+        source = json.loads((ROOT / data["source_artifact"]).read_text())
+        records = data["records"]
+        self.assertEqual(data["schema_version"], "assam-split-number-quarantine-v2")
+        self.assertEqual(data["issue_id"], "FINER-003")
+        self.assertEqual(len(records), 268)
+        self.assertEqual(Counter(r["field"] for r in records), {
+            "non_ps_outstanding__nps_npa_pct": 60,
+            "nrlm__nrlm_npa_pct": 30,
+            "pmegp__pmegp_npa_pct": 22,
+            "pmmy_mudra_os_npa__mudra_npa_pct": 31,
+            "shg__shg_npa_pct": 125,
+        })
+        identities = set()
+        for record in records:
+            self.assertEqual(record["quality_status"], "quarantined")
+            value = source
+            for token in record["source_json_pointer"].split("/")[1:]:
+                token = token.replace("~1", "/").replace("~0", "~")
+                value = value[int(token)] if isinstance(value, list) else value[token]
+            self.assertEqual(value, record["raw_value"])
+            identities.add((record["period"], record["district"], record["field"]))
+        self.assertEqual(len(identities), len(records))

@@ -13,6 +13,7 @@ The authoritative broad inventory is [`public/release-manifest.json`](public/rel
 - [Canonical district directory](https://projectfiner.com/districts/)
 - [Data dictionary](DATA_DICTIONARY.md)
 - [North-East raw-field inventory](public/data-contracts/north-east-indicator-inventory.json)
+- [North-East field review CSV](public/data-contracts/north-east-field-review.csv)
 - [Data rights and reuse](https://projectfiner.com/data-rights/)
 - [Correction policy](CORRECTIONS.md)
 - [Changelog](CHANGELOG.md)
@@ -89,3 +90,7 @@ Use the release manifest and row-level quality status when deciding whether mate
 Report a suspected data error through the [data-correction issue form](https://github.com/ksabhinav/projectfiner/issues/new?template=data-correction.yml). Include the state, district, period, indicator/source label, observed value and source evidence where possible. Security vulnerabilities should be reported privately as described in [`SECURITY.md`](SECURITY.md).
 
 Contribution expectations and required checks are documented in [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+### North-East value review
+
+The field inventory and cell dispositions cover all eight North-East states in one batch. Run `npm run check:north-east-inventory` and `npm run check:north-east-values` to verify their pinned sources and generated artifacts. The public cell ledger is `/data-contracts/north-east-value-dispositions.json`; original values remain available for source review.

@@ -10,6 +10,8 @@ import SearchPalette from '../components/map/SearchPalette.svelte';
 // FactCard renders the "A finding" modal triggered by the strip button.
 import FactCard from '../components/map/FactCard.svelte';
 
+import { numericParserScript } from '../lib/numeric-value.mjs';
+
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -54,6 +56,7 @@ const base = import.meta.env.BASE_URL;
   <FactCard client:load />
 
 
+  <script is:inline set:html={numericParserScript}></script>
   <script is:inline define:vars={{ base }}>
     window.__FINER_BASE = base;
     // Initialize shared state for Svelte components (they read from this in onMount)
@@ -969,7 +972,7 @@ const base = import.meta.env.BASE_URL;
     function tryFieldWithPrefix(record, catField) {
       // First try exact match
       var v = record[catField];
-      if (v != null && v !== '' && !isNaN(Number(v))) return Number(v);
+      if (!Number.isNaN(parseNumeric(v))) return parseNumeric(v);
       // Then try prefix match — but only if the suffix looks like a date/number
       // This prevents 'total' from matching 'total_advance' while allowing
       // 'pct_coverage' to match 'pct_coverage_mar_24'
@@ -980,7 +983,7 @@ const base = import.meta.env.BASE_URL;
           var suffix = key.substring(catField.length);
           if (DATE_SUFFIX_RE.test(suffix)) {
             v = record[key];
-            if (v != null && v !== '' && !isNaN(Number(v))) return Number(v);
+            if (!Number.isNaN(parseNumeric(v))) return parseNumeric(v);
           }
         }
       }
@@ -1041,7 +1044,7 @@ const base = import.meta.env.BASE_URL;
         for (var fi = 0; fi < tryFields.length; fi++) {
           var fv = rec[tryFields[fi]];
           if (fv !== undefined && fv !== null && fv !== '') {
-            val = parseFloat(String(fv).replace(/,/g, ''));
+            val = parseNumeric(fv);
             if (!isNaN(val)) break;
             val = null;
           }
@@ -1057,7 +1060,7 @@ const base = import.meta.env.BASE_URL;
           for (var mfi = 0; mfi < mFields.length; mfi++) {
             var mv = rec[mFields[mfi]];
             if (mv !== undefined && mv !== null && mv !== '') {
-              mval = parseFloat(String(mv).replace(/,/g, ''));
+              mval = parseNumeric(mv);
               if (!isNaN(mval)) break;
               mval = null;
             }

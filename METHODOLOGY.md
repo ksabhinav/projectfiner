@@ -16,6 +16,12 @@ Raw files are source-derived extraction outputs. They are retained because they 
 
 The machine-generated North-East indicator inventory profiles every raw field separately within its state. It records coverage and lexical value characteristics, while leaving units and measure types unreviewed. Exact labels shared by multiple states are listed only to support later review; they do not establish common definitions, units, reporting bases or cross-state comparability.
 
+Inventory v2 separates key presence from numeric coverage. Every present cell receives one syntax class; absent keys, blanks, nulls and missing markers remain distinct. Percent-suffixed values, formula errors, split numeric tokens and malformed comma grouping are excluded from numeric counts. Zero remains numeric. The companion field-review CSV provides the same counts for filtering. Source hashes and bounded JSON Pointer examples make findings traceable to the committed raw artifact; they do not replace original document/page evidence. Free text is not repeated in the inventory. Shared-label period overlap requires numeric cells in every state holding that label, but does not establish equivalent definitions or district boundaries.
+
+The public `data-contracts/north-east-value-dispositions.json` records every identified split-number cell, spreadsheet error, percentage string and unresolved missing marker in the eight pinned North-East time-series files. Each entry preserves the source value, artifact hash and exact cell locator. The Assam quarantine now covers all 268 split-number cells; the four Meghalaya formula errors also have explicit quarantined dispositions. The 69 percentage strings and 39 missing markers remain subject to definition or missingness review.
+
+The map, scatter plots, rankings, trends, district sparklines and unified SLBC importer now require a complete finite number with valid Indian or Western comma grouping. They do not select the first token of a split cell, strip an unreviewed percentage/currency suffix, turn whitespace into zero, or discard a reported numeric zero. Raw displays and downloads preserve source values. The cell ledger documents exclusions; its absence from a browser request cannot bypass the parser. Existing stored database values require an import rerun to receive the new parsing policy.
+
 ### Standardized preview
 
 A standardized preview has a governed row shape and stable identifiers, but unresolved evidence or semantic issues remain. The current Meghalaya preview:
@@ -106,6 +112,8 @@ From a clean checkout with Node.js 22.12+ and Python 3.12+:
 npm ci
 python3 db/build_meghalaya_standardized.py --check
 python3 db/build_meghalaya_source_evidence.py --check
+python3 db/build_north_east_indicator_inventory.py --check
+python3 db/build_north_east_value_dispositions.py --check
 python3 db/build_release_manifest.py --check
 python3 db/build_versioned_release.py --check
 python3 db/validate_release_data.py

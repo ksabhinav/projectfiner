@@ -17,6 +17,8 @@
     "test:python": "python3 -m unittest discover -s tests -p 'test_*.py'",
     "check:release-manifest": "python3 db/build_release_manifest.py --check",
     "check:meghalaya-contract": "python3 db/build_meghalaya_standardized.py --check",
+    "check:north-east-inventory": "python3 db/build_north_east_indicator_inventory.py --check",
+    "check:north-east-values": "python3 db/build_north_east_value_dispositions.py --check",
     "check:release-data": "python3 db/validate_release_data.py",
     "check:versioned-release": "python3 db/build_versioned_release.py --check",
     "check:data-quality": "python3 validate_data.py --waivers .github/validation-waivers --no-report",

@@ -6,6 +6,38 @@ The machine-readable Meghalaya registry is [`meghalaya-indicator-registry.json`]
 
 The [`north-east-indicator-inventory.json`](https://projectfiner.com/data-contracts/north-east-indicator-inventory.json) is a separate standardization-readiness artifact for all eight North-East states. Its IDs are scoped to a state and exact raw source field. Units and measure types remain `not-reviewed`, and exact label matches across states are discovery candidates—not claims of semantic equivalence or comparability.
 
+## North-East field review
+
+The inventory uses schema `north-east-field-inventory-v2`. Its companion [`north-east-field-review.csv`](https://projectfiner.com/data-contracts/north-east-field-review.csv) contains one row per state and raw field, with the same coverage counts and source-artifact SHA-256. Filter this file to find fields with no numeric observations, short reporting histories, missing markers or cells requiring inspection.
+
+| Inventory field | Meaning |
+|---|---|
+| `presentCount`, `periodCount`, `districtLabelCount` | Raw key presence, including blank and null cells. These legacy counts do not measure numeric coverage. District labels have not been harmonised. |
+| `absentCount` | Existing state district-period records that lack the field key. This does not mean the field was expected or applicable in those records. |
+| `nonblankCount` | Present cells excluding blank strings and nulls; includes missing markers and text. |
+| `numericCount`, `zeroCount` | Cells with accepted numeric syntax, and the subset equal to zero. Zero is retained as a reported value. Numeric syntax does not establish analytical validity. |
+| `numericPeriods`, `numericPeriodCount`, `numericDistrictLabelCount` | Reporting months (`YYYY-MM`) and distinct raw district labels with at least one numeric cell. This is observed coverage, not a complete geography or time series. |
+| `valueClassCounts` | Mutually exclusive classes for every present cell; their sum equals `presentCount`. |
+| `reviewExamples` | Up to two cells per non-numeric class, with raw district labels, ISO reporting months and a JSON Pointer into the hashed local source. Ordinary text is located but not copied. Blank/null examples are omitted. |
+| `sourceArtifactSha256`, `sourceGitBlobSha` | Exact local input bytes. The builder rejects changes to a pinned source. These hashes do not establish original source-page provenance. |
+| `commonNumericPeriods` | Months with numeric cells in every state holding an exact shared field label. Empty if any such state has no numeric cells. Overlap does not establish semantic comparability. |
+
+The CSV uses snake-case column names. `presence_period_count` corresponds to the legacy `periodCount`; `numeric_periods` joins ISO reporting months with `|`. Counts for each non-numeric class have the suffix `_count`.
+
+| Value class | Treatment |
+|---|---|
+| `numeric` | Plain decimal or correctly grouped Indian/Western thousands, including signed numbers and zero. No amount scale or unit is inferred. |
+| `blank`, `null` | Empty/whitespace string and JSON null are kept distinct. Absent field keys are counted separately. |
+| `missing-marker` | Exact `_`, `-`, `NA` or `N/A` tokens, case-insensitive. Their meaning remains unresolved; they are not assigned zero, suppression, unavailability or not-applicable status. |
+| `percentage-text` | Numeric syntax followed by `%`; retained separately until the measure and unit are reviewed. |
+| `spreadsheet-error` | Formula error token such as `#DIV/0!` or `#N/A`. |
+| `split-numeric-tokens` | Multiple whitespace-separated numeric tokens in a single cell; no token is selected or joined. |
+| `invalid-numeric-grouping` | Commas would need to be removed from an invalid grouping to produce a number. The inventory does not accept that repair. |
+| `non-finite` | Text such as `NaN` or `Infinity`. Non-finite JSON numbers are rejected when loading the source. |
+| `text`, `unsupported-type` | Other text (which can be legitimate names, dates or notes), or a boolean/container value. Classification alone is not an error finding. |
+
+Use `python3 db/build_north_east_indicator_inventory.py --check` to verify both files. Neither artifact changes the raw observations, creates a comparable dataset, or clears any existing quarantine.
+
 ## Observation fields
 
 | Field | Type | Meaning |
@@ -80,3 +112,20 @@ Every distribution includes:
 - row/column integrity metadata where applicable.
 
 Coverage counts describe source artifacts. They are not a certification that every period contains every district or comparable indicator.
+
+## North-East cell value dispositions
+
+`/data-contracts/north-east-value-dispositions.json` complements the field review CSV with exact cell records. It is a raw review artifact, not a corrected or certified dataset.
+
+| Field | Meaning |
+|---|---|
+| `observationId` | Deterministic SHA-256 of state, reporting month, district label and exact source field |
+| `stateSlug`, `period`, `districtLabel`, `sourceField` | State-scoped source identity; the district label is not a new LGD match |
+| `sourceValue` | Unmodified value from the pinned time-series artifact |
+| `sourceArtifact`, `sourceArtifactSha256`, `sourceJsonPointer` | File, exact byte hash and RFC 6901 cell locator; not original document/page evidence |
+| `valueClass` | Syntax class such as split numeric tokens, spreadsheet error, percentage text or missing marker |
+| `qualityStatus`, `qualityFlag`, `reason` | Quarantine or outstanding review and its stated basis |
+| `numericValue` | Null while the cell is excluded from numeric analysis; never an inferred zero |
+| `analyticalUse` | `excluded_pending_source_review`; no certification or corrected value is asserted |
+
+The `states` array pins every source artifact and counts findings even when a state has none. `summary` reconciles all record, quarantine and review totals. The companion Assam registry is regenerated from the same records with `python3 db/build_north_east_value_dispositions.py`.
