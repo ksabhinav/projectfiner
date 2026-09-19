@@ -6,14 +6,13 @@ import csv
 import hashlib
 import io
 import json
-import math
-import re
 from collections import Counter
 from decimal import Decimal
 from pathlib import Path
 
 from build_release_manifest import normalise_period
 from validate_release_data import strict_json_loads
+from numeric_values import classify_value
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -29,17 +28,6 @@ STATES = [
     ("sikkim", "c543b5a4d8d09b2051d941c4e9a197495b25ed34"),
     ("tripura", "8d40f215cbfff0b8fc67db4709b5cbf0c3a04e52"),
 ]
-# Accept plain decimals and correctly grouped Western or Indian thousands.
-# Blind comma removal would turn malformed values such as '1,2,3' into 123.
-NUMERIC_LIKE = re.compile(
-    r"^[+-]?(?:(?:[0-9]+|[0-9]{1,3}(?:,[0-9]{3})+|"
-    r"[0-9]{1,2}(?:,[0-9]{2})+,[0-9]{3})(?:\.[0-9]*)?|\.[0-9]+)$"
-)
-MISSING_MARKERS = {"_", "-", "NA", "N/A"}
-FORMULA_ERRORS = {
-    "#DIV/0!", "#N/A", "#VALUE!", "#REF!", "#NAME?", "#NUM!",
-    "#NULL!", "#SPILL!", "#CALC!",
-}
 VALUE_CLASSES = (
     "numeric", "blank", "null", "missing-marker", "percentage-text",
     "spreadsheet-error", "split-numeric-tokens", "invalid-numeric-grouping",
@@ -47,36 +35,6 @@ VALUE_CLASSES = (
 )
 EXAMPLE_CLASSES = set(VALUE_CLASSES) - {"numeric", "blank", "null"}
 EXAMPLES_PER_CLASS = 2
-
-
-def classify_value(value):
-    """Describe cell syntax without assigning units or interpreting missingness."""
-    if value is None:
-        return "null"
-    if isinstance(value, bool) or not isinstance(value, (str, int, float)):
-        return "unsupported-type"
-    if isinstance(value, (int, float)):
-        return "numeric" if isinstance(value, int) or math.isfinite(value) else "non-finite"
-    raw = value.strip()
-    if not raw:
-        return "blank"
-    if raw.upper() in MISSING_MARKERS:
-        return "missing-marker"
-    if raw.upper() in FORMULA_ERRORS:
-        return "spreadsheet-error"
-    if raw.lower() in {"nan", "+nan", "-nan", "inf", "+inf", "-inf",
-                        "infinity", "+infinity", "-infinity"}:
-        return "non-finite"
-    if NUMERIC_LIKE.fullmatch(raw):
-        return "numeric"
-    if raw.endswith("%") and NUMERIC_LIKE.fullmatch(raw[:-1].strip()):
-        return "percentage-text"
-    tokens = raw.split()
-    if len(tokens) > 1 and all(NUMERIC_LIKE.fullmatch(token) for token in tokens):
-        return "split-numeric-tokens"
-    if "," in raw and NUMERIC_LIKE.fullmatch(raw.replace(",", "")):
-        return "invalid-numeric-grouping"
-    return "text"
 
 
 def reporting_period(label):

@@ -26,6 +26,7 @@ MEGHALAYA_REGISTRY_PATH = PUBLIC / "data-contracts" / "meghalaya-indicator-regis
 MEGHALAYA_PROVENANCE_PATH = PUBLIC / "data-contracts" / "meghalaya-provenance.json"
 NORTH_EAST_INVENTORY_PATH = PUBLIC / "data-contracts" / "north-east-indicator-inventory.json"
 NORTH_EAST_REVIEW_PATH = PUBLIC / "data-contracts" / "north-east-field-review.csv"
+NORTH_EAST_DISPOSITIONS_PATH = PUBLIC / "data-contracts" / "north-east-value-dispositions.json"
 
 MONTHS = {
     "jan": "01", "january": "01", "feb": "02", "february": "02",
@@ -323,6 +324,21 @@ def build_manifest(registry_path: Path = REGISTRY_PATH) -> dict:
     })
     if review_distribution["rowCount"] != north_east_inventory["scope"]["fieldEntryCount"]:
         raise ValueError("North-East review CSV row count disagrees with inventory")
+    dispositions = json.loads(NORTH_EAST_DISPOSITIONS_PATH.read_text(encoding="utf-8"))
+    inventory_hashes = {s["stateSlug"]: s["sourceArtifactSha256"] for s in north_east_inventory["states"]}
+    disposition_hashes = {s["stateSlug"]: s["sourceArtifactSha256"] for s in dispositions["states"]}
+    if disposition_hashes != inventory_hashes:
+        raise ValueError("North-East value dispositions and inventory use different source artifacts")
+    disposition_distribution = base_file_metadata(NORTH_EAST_DISPOSITIONS_PATH, "application/json", "JSON")
+    disposition_distribution.update({
+        "role": "cell-value-dispositions",
+        "schemaVersion": dispositions["schemaVersion"],
+        "qualityTier": dispositions["qualityTier"],
+        "recordCount": len(dispositions["records"]),
+        "sourceIds": inventory_source_ids,
+        "license": None,
+        "rightsStatus": "not-reviewed",
+    })
     data_contracts = [{
         "id": "north-east-indicator-inventory",
         "title": "North-East SLBC indicator inventory",
@@ -330,7 +346,7 @@ def build_manifest(registry_path: Path = REGISTRY_PATH) -> dict:
         "sourceIds": inventory_source_ids,
         "rightsStatus": "not-reviewed",
         "license": None,
-        "distributions": [inventory_distribution, review_distribution],
+        "distributions": [inventory_distribution, review_distribution, disposition_distribution],
     }]
 
     manifest = {

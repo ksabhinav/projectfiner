@@ -231,6 +231,31 @@
             "slbc-tripura"
           ],
           "url": "/data-contracts/north-east-field-review.csv"
+        },
+        {
+          "bytes": 344387,
+          "encoding": "utf-8",
+          "format": "JSON",
+          "license": null,
+          "mediaType": "application/json",
+          "path": "data-contracts/north-east-value-dispositions.json",
+          "qualityTier": "raw-experimental",
+          "recordCount": 380,
+          "rightsStatus": "not-reviewed",
+          "role": "cell-value-dispositions",
+          "schemaVersion": "north-east-value-dispositions-v1",
+          "sha256": "e9a86ac7969178aa9076fac631531d9976a4d3a5807f78c9673ad874f22c4f70",
+          "sourceIds": [
+            "slbc-arunachal-pradesh",
+            "slbc-assam",
+            "slbc-manipur",
+            "slbc-meghalaya",
+            "slbc-mizoram",
+            "slbc-nagaland",
+            "slbc-sikkim",
+            "slbc-tripura"
+          ],
+          "url": "/data-contracts/north-east-value-dispositions.json"
         }
       ],
       "id": "north-east-indicator-inventory",
@@ -253,7 +278,7 @@
   "generatedBy": "db/build_release_manifest.py",
   "projectDataLicense": null,
   "qualityTier": "raw-experimental",
-  "releaseId": "finer-371c524e72ca",
+  "releaseId": "finer-16bca57bff3e",
   "releaseStatus": "research-preview",
   "rightsNotice": "Public availability does not establish permission to reuse, modify, or redistribute source-derived data. Consult the named publisher's terms before reuse.",
   "rightsReviewStatus": "not-legally-reviewed",
@@ -2594,7 +2619,7 @@
   "summary": {
     "capitalMarketRegistryCount": 4,
     "dataContractCount": 1,
-    "distributionCount": 71,
+    "distributionCount": 72,
     "stateCount": 31
   }
 }

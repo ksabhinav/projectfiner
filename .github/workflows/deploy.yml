@@ -58,6 +58,7 @@ jobs:
         run: |
           npm run check:meghalaya-contract
           npm run check:north-east-inventory
+          npm run check:north-east-values
           npm run check:release-manifest
           npm run check:release-data
           npm run check:versioned-release

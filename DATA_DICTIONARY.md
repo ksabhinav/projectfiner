@@ -112,3 +112,20 @@ Every distribution includes:
 - row/column integrity metadata where applicable.
 
 Coverage counts describe source artifacts. They are not a certification that every period contains every district or comparable indicator.
+
+## North-East cell value dispositions
+
+`/data-contracts/north-east-value-dispositions.json` complements the field review CSV with exact cell records. It is a raw review artifact, not a corrected or certified dataset.
+
+| Field | Meaning |
+|---|---|
+| `observationId` | Deterministic SHA-256 of state, reporting month, district label and exact source field |
+| `stateSlug`, `period`, `districtLabel`, `sourceField` | State-scoped source identity; the district label is not a new LGD match |
+| `sourceValue` | Unmodified value from the pinned time-series artifact |
+| `sourceArtifact`, `sourceArtifactSha256`, `sourceJsonPointer` | File, exact byte hash and RFC 6901 cell locator; not original document/page evidence |
+| `valueClass` | Syntax class such as split numeric tokens, spreadsheet error, percentage text or missing marker |
+| `qualityStatus`, `qualityFlag`, `reason` | Quarantine or outstanding review and its stated basis |
+| `numericValue` | Null while the cell is excluded from numeric analysis; never an inferred zero |
+| `analyticalUse` | `excluded_pending_source_review`; no certification or corrected value is asserted |
+
+The `states` array pins every source artifact and counts findings even when a state has none. `summary` reconciles all record, quarantine and review totals. The companion Assam registry is regenerated from the same records with `python3 db/build_north_east_value_dispositions.py`.

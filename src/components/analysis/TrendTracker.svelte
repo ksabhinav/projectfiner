@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { parseNumeric } from '../../lib/numeric-value.mjs';
   import { CATEGORY_INFO, prettyCategoryName, CATEGORY_TIERS, getCategoryTier, CATEGORY_DESCRIPTIONS } from '../../lib/slbc-categories';
   import { prettyFieldName as sharedPrettyField } from '../../lib/format-utils';
 
@@ -335,7 +336,7 @@
 
       for (const r of districtRecords) {
         const raw = r[key];
-        const num = parseFloat(String(raw ?? '').replace(/,/g, ''));
+        const num = parseNumeric(raw);
         values.push(isNaN(num) ? NaN : num);
         periods.push(r.normalizedPeriod);
       }

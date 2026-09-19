@@ -10,11 +10,14 @@ import SearchPalette from '../components/map/SearchPalette.svelte';
 // FactCard renders the "A finding" modal triggered by the strip button.
 import FactCard from '../components/map/FactCard.svelte';
 
+import { numericParserScript } from '../lib/numeric-value.mjs';
+
 const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
   title="Project FINER — Financial inclusion in India, district by district"
+  shareDescription="How India banks, borrows, saves and pays — mapped quarter by quarter from SLBC, RBI and PhonePe data. A public research preview."
   description="Interactive choropleth map of Indian districts across financial inclusion indicators including CD ratio, PMJDY, KCC, SHG, MUDRA, UPI, Aadhaar, NFHS health insurance, RBI banking outlets and capital markets. Coverage varies by indicator and state."
 >
   <Header title="" transparent />
@@ -53,6 +56,7 @@ const base = import.meta.env.BASE_URL;
   <FactCard client:load />
 
 
+  <script is:inline set:html={numericParserScript}></script>
   <script is:inline define:vars={{ base }}>
     window.__FINER_BASE = base;
     // Initialize shared state for Svelte components (they read from this in onMount)
@@ -118,7 +122,7 @@ const base = import.meta.env.BASE_URL;
     };
 
     // Map init — use fitBounds immediately to avoid layout shift when data loads
-    var map = L.map('map',{center:[22,82.5],zoom:5,minZoom:4,maxZoom:18,zoomSnap:0,zoomDelta:1,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false,preferCanvas:true,doubleClickZoom:false});
+    var map = L.map('map',{center:[22,82.5],zoom:5,minZoom:_isMobile ? 1 : 4,maxZoom:18,zoomSnap:0,zoomDelta:1,maxBounds:INDIA_BOUNDS,maxBoundsViscosity:1.0,attributionControl:false,zoomControl:false,preferCanvas:true,doubleClickZoom:false});
 
     // Atlas: chrome is now header (52px) + strip (56px) = 108px on top, no left panel
     function getPanelPadding() {
@@ -128,9 +132,8 @@ const base = import.meta.env.BASE_URL;
       var headerH = headerEl ? headerEl.offsetHeight : 52;
       var stripH = strip ? strip.offsetHeight : 56;
       if (isMobile) {
-        // Mobile: just enough room below the strip + standard bottom for
-        // the docked horizontal timeline. Tight here was fine.
-        return { paddingTopLeft: [10, headerH + stripH + 12], paddingBottomRight: [10, 80] };
+        // Leave room for the compact legend and the docked timeline.
+        return { paddingTopLeft: [10, headerH + stripH + 12], paddingBottomRight: [10, 180] };
       }
       // Desktop: J&K / Ladakh's northern fingers were grazing the strip's
       // bottom edge on the default All-India view. Bigger top buffer so
@@ -157,6 +160,7 @@ const base = import.meta.env.BASE_URL;
     window.addEventListener('resize', function() {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(function() {
+        map.setMinZoom(window.innerWidth <= 640 ? 1 : 4);
         map.invalidateSize({ animate: false });
         var pad = getPanelPadding();
         map.fitBounds(ALL_STATES_BOUNDS, Object.assign({}, pad, { animate: false }));
@@ -968,7 +972,7 @@ const base = import.meta.env.BASE_URL;
     function tryFieldWithPrefix(record, catField) {
       // First try exact match
       var v = record[catField];
-      if (v != null && v !== '' && !isNaN(Number(v))) return Number(v);
+      if (!Number.isNaN(parseNumeric(v))) return parseNumeric(v);
       // Then try prefix match — but only if the suffix looks like a date/number
       // This prevents 'total' from matching 'total_advance' while allowing
       // 'pct_coverage' to match 'pct_coverage_mar_24'
@@ -979,7 +983,7 @@ const base = import.meta.env.BASE_URL;
           var suffix = key.substring(catField.length);
           if (DATE_SUFFIX_RE.test(suffix)) {
             v = record[key];
-            if (v != null && v !== '' && !isNaN(Number(v))) return Number(v);
+            if (!Number.isNaN(parseNumeric(v))) return parseNumeric(v);
           }
         }
       }
@@ -1040,7 +1044,7 @@ const base = import.meta.env.BASE_URL;
         for (var fi = 0; fi < tryFields.length; fi++) {
           var fv = rec[tryFields[fi]];
           if (fv !== undefined && fv !== null && fv !== '') {
-            val = parseFloat(String(fv).replace(/,/g, ''));
+            val = parseNumeric(fv);
             if (!isNaN(val)) break;
             val = null;
           }
@@ -1056,7 +1060,7 @@ const base = import.meta.env.BASE_URL;
           for (var mfi = 0; mfi < mFields.length; mfi++) {
             var mv = rec[mFields[mfi]];
             if (mv !== undefined && mv !== null && mv !== '') {
-              mval = parseFloat(String(mv).replace(/,/g, ''));
+              mval = parseNumeric(mv);
               if (!isNaN(mval)) break;
               mval = null;
             }
@@ -2272,7 +2276,7 @@ const base = import.meta.env.BASE_URL;
 </BaseLayout>
 
 <style is:global>
-  body { height: 100vh; display: flex; flex-direction: column; overflow: hidden; margin: 0; padding: 0; min-height: unset; }
+  body { height: 100vh; height: 100dvh; display: flex; flex-direction: column; overflow: hidden; margin: 0; padding: 0; min-height: unset; }
   #map { flex: 1; width: 100%; min-height: 0; }
   .leaflet-marker-pane { transition: opacity 0.4s ease; }
   .clusters-hidden .leaflet-marker-pane { opacity: 0; pointer-events: none; }

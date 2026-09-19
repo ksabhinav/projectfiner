@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { parseNumeric } from '../../lib/numeric-value.mjs';
   import { CATEGORY_INFO, prettyCategoryName, CATEGORY_DESCRIPTIONS } from '../../lib/slbc-categories';
   import { prettyFieldName as sharedPrettyField } from '../../lib/format-utils';
 
@@ -140,14 +141,13 @@
     const rows: RankRow[] = [];
 
     for (const [dist, vals] of Object.entries(distData as Record<string, any>)) {
-      const raw = String(vals[selectedField] || '').replace(/,/g, '');
-      const value = parseFloat(raw);
+      const value = parseNumeric(vals[selectedField]);
       if (!isNaN(value)) {
         rows.push({
           district: dist,
           state: vals.__state || '',
           value,
-          raw: vals[selectedField] || '',
+          raw: vals[selectedField] ?? '',
         });
       }
     }

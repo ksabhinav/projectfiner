@@ -1,3 +1,5 @@
+import { parseNumeric } from './numeric-value.mjs';
+
 /**
  * Shared formatting utilities for financial data display.
  * Used by the homepage map, TrendTracker, DistrictRankings, and DataExplorer.
@@ -9,7 +11,7 @@
  */
 export function fmtNum(n: number | string | null | undefined): string {
   if (n === null || n === undefined || n === '') return '—';
-  const v = typeof n === 'string' ? parseFloat(n.replace(/,/g, '')) : n;
+  const v = parseNumeric(n);
   if (isNaN(v)) return String(n);
   if (v >= 1e7) return (v / 1e7).toFixed(1) + ' Cr';
   if (v >= 1e5) return (v / 1e5).toFixed(1) + ' L';
@@ -26,6 +28,7 @@ export function fmtNum(n: number | string | null | undefined): string {
  */
 export function fmtWithUnit(val: number | string, unit: '' | '₹' | '%'): string {
   const formatted = fmtNum(val);
+  if (Number.isNaN(parseNumeric(val))) return formatted;
   if (unit === '%') return formatted + '%';
   if (unit === '₹') return formatted + ' (₹ Lakhs)';
   return formatted;

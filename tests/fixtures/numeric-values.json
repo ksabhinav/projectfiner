@@ -1,0 +1,152 @@
+[
+  {
+    "value": 0,
+    "expected": 0
+  },
+  {
+    "value": "0",
+    "expected": 0
+  },
+  {
+    "value": "-0.00",
+    "expected": 0
+  },
+  {
+    "value": 0.25,
+    "expected": 0.25
+  },
+  {
+    "value": -15.2,
+    "expected": -15.2
+  },
+  {
+    "value": "  +1234.50  ",
+    "expected": 1234.5
+  },
+  {
+    "value": "1,234,567.89",
+    "expected": 1234567.89
+  },
+  {
+    "value": "1,23,456.78",
+    "expected": 123456.78
+  },
+  {
+    "value": "-.5",
+    "expected": -0.5
+  },
+  {
+    "value": "20.",
+    "expected": 20
+  },
+  {
+    "value": null,
+    "expected": null
+  },
+  {
+    "value": "",
+    "expected": null
+  },
+  {
+    "value": " \t ",
+    "expected": null
+  },
+  {
+    "value": true,
+    "expected": null
+  },
+  {
+    "value": [],
+    "expected": null
+  },
+  {
+    "value": [
+      12
+    ],
+    "expected": null
+  },
+  {
+    "value": {},
+    "expected": null
+  },
+  {
+    "value": "6 5.84",
+    "expected": null
+  },
+  {
+    "value": "1,234\n5,678",
+    "expected": null
+  },
+  {
+    "value": "1,2,3",
+    "expected": null
+  },
+  {
+    "value": "12,34",
+    "expected": null
+  },
+  {
+    "value": "1,,234",
+    "expected": null
+  },
+  {
+    "value": "1,234,56",
+    "expected": null
+  },
+  {
+    "value": "64%",
+    "expected": null
+  },
+  {
+    "value": "₹1,234",
+    "expected": null
+  },
+  {
+    "value": "#DIV/0!",
+    "expected": null
+  },
+  {
+    "value": "#N/A",
+    "expected": null
+  },
+  {
+    "value": "NA",
+    "expected": null
+  },
+  {
+    "value": "N/A",
+    "expected": null
+  },
+  {
+    "value": "_",
+    "expected": null
+  },
+  {
+    "value": "-",
+    "expected": null
+  },
+  {
+    "value": "Nil",
+    "expected": null
+  },
+  {
+    "value": "Infinity",
+    "expected": null
+  },
+  {
+    "value": "NaN",
+    "expected": null
+  },
+  {
+    "value": "0x10",
+    "expected": null
+  },
+  {
+    "value": "1e3",
+    "expected": null
+  },
+  {
+    "value": "12 accounts",
+    "expected": null
+  }
+]

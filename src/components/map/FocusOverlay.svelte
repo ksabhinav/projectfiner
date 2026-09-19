@@ -387,7 +387,7 @@
       box-shadow: 0 4px 20px rgba(184, 74, 46, 0.45);
     }
     .focus-close::after {
-      content: ' Close';
+      content: '\00a0Close';
     }
     .focus-close:active {
       background: rgba(142, 51, 30, 0.95);
@@ -395,5 +395,12 @@
     }
     /* Hide the ESC keyboard hint on mobile — there's no keyboard. */
     .focus-hint { display: none; }
+  }
+
+  /* ≤640px the timeline docks at the bottom (16px + ~34px tall) and stays
+     above this overlay, so lift the close pill clear of it. */
+  @media (max-width: 640px) {
+    .district-focus { padding-bottom: 150px; }
+    .focus-close { bottom: 66px; }
   }
 </style>
