@@ -94,3 +94,18 @@ Contribution expectations and required checks are documented in [`CONTRIBUTING.m
 ### North-East value review
 
 The field inventory and cell dispositions cover all eight North-East states in one batch. Run `npm run check:north-east-inventory` and `npm run check:north-east-values` to verify their pinned sources and generated artifacts. The public cell ledger is `/data-contracts/north-east-value-dispositions.json`; original values remain available for source review.
+
+### Retaining Meghalaya source evidence
+
+Before adding an entry to `db/meghalaya_source_evidence_input.json`, retain the
+exact primary-source report bytes in the repository and set
+`retainedDocumentPath` to their repository-relative path. Set `documentSha256`
+to the SHA-256 of those bytes. Do not retain session credentials or form tokens
+as source evidence. Keep the source URL, district/table/column locator, capture
+date and capturer alongside the retained file.
+
+Run `python3 db/build_meghalaya_source_evidence.py` to rebuild the ledger and
+`python3 db/build_meghalaya_source_evidence.py --check` to validate it. Missing,
+empty, altered or out-of-repository files fail validation. A matching hash
+establishes file integrity only: confirm the state, period, table and values
+before adding review metadata. Capture alone does not mark evidence verified.
