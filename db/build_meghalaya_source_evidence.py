@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import re
 from collections import defaultdict
@@ -44,7 +45,7 @@ def require_iso_date(value: str, field: str) -> None:
         raise ValueError(f"{field} must be an ISO date") from exc
 
 
-def validate_input(document: dict, expected_ids: set[str]) -> dict[str, dict]:
+def validate_input(document: dict, expected_ids: set[str], archive_root: Path = ROOT) -> dict[str, dict]:
     expected_header = {
         "schemaVersion": "source-evidence-input-v1",
         "productId": PRODUCT_ID,
@@ -77,6 +78,21 @@ def validate_input(document: dict, expected_ids: set[str]) -> dict[str, dict]:
             require_https(archive_url, "archivedDocumentUrl")
         if not SHA256_RE.fullmatch(item["documentSha256"]):
             raise ValueError(f"Evidence unit {unit_id} has an invalid SHA-256")
+        archive_path = item.get("retainedDocumentPath")
+        if not isinstance(archive_path, str) or not archive_path.strip():
+            raise ValueError(f"Evidence unit {unit_id} requires retainedDocumentPath")
+        relative_path = Path(archive_path)
+        root = archive_root.resolve()
+        retained = (root / relative_path).resolve()
+        if relative_path.is_absolute() or not retained.is_relative_to(root):
+            raise ValueError(f"Evidence unit {unit_id} archive must stay within the repository")
+        if not retained.is_file():
+            raise ValueError(f"Evidence unit {unit_id} retained document is missing")
+        content = retained.read_bytes()
+        if not content:
+            raise ValueError(f"Evidence unit {unit_id} retained document is empty")
+        if hashlib.sha256(content).hexdigest() != item["documentSha256"]:
+            raise ValueError(f"Evidence unit {unit_id} retained document SHA-256 mismatch")
         require_iso_date(item["capturedAt"], "capturedAt")
         reviewed_at = str(item.get("reviewedAt", "")).strip()
         reviewed_by = str(item.get("reviewedBy", "")).strip()
@@ -93,6 +109,7 @@ def validate_input(document: dict, expected_ids: set[str]) -> dict[str, dict]:
 def render(
     input_path: Path = INPUT_PATH,
     observations_path: Path = OBSERVATIONS_PATH,
+    archive_root: Path = ROOT,
 ) -> tuple[str, dict]:
     with observations_path.open(encoding="utf-8", newline="") as handle:
         rows = list(csv.DictReader(handle))
@@ -103,7 +120,7 @@ def render(
         evidence_unit_id(period, source_table)
         for period, source_table in grouped
     }
-    evidence = validate_input(load_json(input_path), expected_ids)
+    evidence = validate_input(load_json(input_path), expected_ids, archive_root)
     units = []
     for (period, source_table), observation_count in sorted(grouped.items()):
         unit_id = evidence_unit_id(period, source_table)
@@ -119,6 +136,7 @@ def render(
                 "sourceDocumentUrl": captured["sourceDocumentUrl"],
                 "archivedDocumentUrl": captured.get("archivedDocumentUrl"),
                 "documentSha256": captured["documentSha256"],
+                "retainedDocumentPath": captured["retainedDocumentPath"],
                 "sourceLocator": captured["sourceLocator"],
                 "capturedAt": captured["capturedAt"],
                 "capturedBy": captured["capturedBy"],
